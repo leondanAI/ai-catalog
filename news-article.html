@@ -103,8 +103,10 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/news.js"></script>
+<script src="js/db.js"></script>
 <script src="js/main.js"></script>
 <script>
 const ARTICLE_BODIES = {
@@ -195,20 +197,20 @@ const ARTICLE_BODIES = {
 <p>Apple Intelligence 2.0 is available on iPhone 15 Pro and later, iPad Pro with M-series chips, and all Apple Silicon Macs, via an over-the-air update to iOS 19.4, iPadOS 19.4 and macOS Sequoia 15.4.</p>`,
 };
 
-function renderArticle() {
-  const params = new URLSearchParams(window.location.search);
-  const id = parseInt(params.get('id'), 10);
-  const article = NEWS.find(n => n.id === id);
+function formatDate(dateStr) {
+  if (!dateStr) return '';
+  if (!dateStr.includes('-')) return dateStr;
+  return new Date(dateStr).toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' });
+}
+
+function renderStatic(article) {
   const el = document.getElementById('articleContent');
+  const color = article.catColor || '#7c6af7';
+  const label = article.catLabel || article.category;
+  const date  = article.date || '';
+  const body  = ARTICLE_BODIES[article.id] || `<p>${article.summary}</p>`;
 
-  if (!article) {
-    el.innerHTML = `<div class="not-found"><div class="icon">📰</div><p>Article not found.</p><a href="news.html" class="btn btn-outline" style="margin-top:1.5rem">← Back to News</a></div>`;
-    return;
-  }
-
-  document.title = `${article.title} — MyPedia`;
-
-  const related = NEWS.filter(n => n.id !== article.id && (n.category === article.category)).slice(0, 2);
+  const related = NEWS.filter(n => n.id !== article.id && n.category === article.category).slice(0, 2);
   const relatedHtml = related.length ? `
     <hr class="article-divider">
     <div class="related-title">Related articles</div>
@@ -221,22 +223,63 @@ function renderArticle() {
         </a>`).join('')}
     </div>` : '';
 
+  document.title = `${article.title} — MyPedia`;
   el.innerHTML = `
     <a href="news.html" class="article-back">← Back to News</a>
-    <div class="article-cat" style="background:${article.catColor}22;color:${article.catColor}">${article.catLabel}</div>
+    <div class="article-cat" style="background:${color}22;color:${color}">${label}</div>
     <h1 class="article-title">${article.title}</h1>
     <div class="article-meta">
-      <span>${article.date}</span>
-      <span class="article-meta-dot">·</span>
-      <span>${article.source}</span>
+      <span>${date}</span><span class="article-meta-dot">·</span><span>${article.source || ''}</span>
     </div>
-    <div class="article-body">
-      ${ARTICLE_BODIES[article.id] || `<p>${article.summary}</p>`}
-    </div>
+    <div class="article-body">${body}</div>
     ${relatedHtml}`;
 }
 
-renderArticle();
+function renderDB(article) {
+  const el = document.getElementById('articleContent');
+  const color = article.cat_color || '#7c6af7';
+  const label = article.cat_label || article.category;
+  const date  = formatDate(article.date);
+  const img   = article.image_url
+    ? `<img src="${article.image_url}" style="width:100%;border-radius:10px;margin-bottom:1.5rem;max-height:400px;object-fit:cover" alt="">`
+    : '';
+  const body  = article.body || `<p>${article.summary || ''}</p>`;
+
+  document.title = `${article.title} — MyPedia`;
+  el.innerHTML = `
+    <a href="news.html" class="article-back">← Back to News</a>
+    ${img}
+    <div class="article-cat" style="background:${color}22;color:${color}">${label}</div>
+    <h1 class="article-title">${article.title}</h1>
+    <div class="article-meta">
+      <span>${date}</span><span class="article-meta-dot">·</span><span>${article.source || ''}</span>
+    </div>
+    <div class="article-body">${body}</div>`;
+}
+
+async function loadArticle() {
+  const el = document.getElementById('articleContent');
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get('slug');
+  const id   = parseInt(params.get('id'), 10);
+
+  // Try Supabase first (slug-based)
+  if (slug) {
+    const lang = typeof I18N !== 'undefined' ? I18N.lang : 'en';
+    const article = await fetchArticle(slug, lang);
+    if (article) { renderDB(article); return; }
+  }
+
+  // Fallback to static NEWS array (id-based)
+  if (id) {
+    const article = NEWS.find(n => n.id === id);
+    if (article) { renderStatic(article); return; }
+  }
+
+  el.innerHTML = `<div class="not-found"><div class="icon">📰</div><p>Article not found.</p><a href="news.html" class="btn btn-outline" style="margin-top:1.5rem">← Back to News</a></div>`;
+}
+
+loadArticle();
 </script>
 </body>
 </html>
