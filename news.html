@@ -96,11 +96,19 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/news.js"></script>
+<script src="js/db.js"></script>
 <script src="js/main.js"></script>
 <script>
 let activeCat = 'all';
+let ARTICLES = null; // loaded from Supabase or fallback to NEWS
+
+function formatDate(dateStr) {
+  const d = new Date(dateStr);
+  return d.toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' });
+}
 
 function buildTabs() {
   document.getElementById('newsTabs').innerHTML = NEWS_CATS.map(c =>
@@ -115,34 +123,50 @@ function filterCat(id, el) {
   activeCat = id;
   document.querySelectorAll('#newsTabs .filter-btn').forEach(b => b.classList.remove('active'));
   if (el) el.classList.add('active');
-  else {
-    const found = [...document.querySelectorAll('#newsTabs .filter-btn')].find(b => b.textContent === NEWS_CATS.find(c=>c.id===id)?.label());
-    if (found) found.classList.add('active');
-  }
   render();
 }
 
 function render() {
-  const filtered = activeCat === 'all' ? NEWS : NEWS.filter(n => n.category === activeCat);
+  const list = ARTICLES || NEWS;
+  const filtered = activeCat === 'all' ? list : list.filter(n => n.category === activeCat);
   document.getElementById('newsCount').textContent = t('news.materials').replace('{n}', filtered.length);
-  document.getElementById('newsGrid').innerHTML = filtered.map(n => `
-    <a class="news-card fade-up" href="${n.url}">
+  document.getElementById('newsGrid').innerHTML = filtered.map(n => {
+    const color = n.cat_color || n.catColor || '#7c6af7';
+    const label = n.cat_label || n.catLabel || n.category;
+    const date  = n.date ? (typeof n.date === 'string' && n.date.includes('-') ? formatDate(n.date) : n.date) : '';
+    const url   = n.slug ? `news-article.html?slug=${n.slug}` : (n.url || '#');
+    const img   = n.image_url ? `<div class="news-img" style="background-image:url('${n.image_url}')"></div>` : '';
+    return `
+    <a class="news-card fade-up" href="${url}">
+      ${img}
       <div class="news-meta">
-        <span class="news-tag" style="background:${n.catColor}22;color:${n.catColor};border:1px solid ${n.catColor}44">${n.catLabel}</span>
-        <span class="news-date">${n.date}</span>
+        <span class="news-tag" style="background:${color}22;color:${color};border:1px solid ${color}44">${label}</span>
+        <span class="news-date">${date}</span>
       </div>
       <div class="news-title">${n.title}</div>
-      <p class="news-summary">${n.summary}</p>
+      <p class="news-summary">${n.summary || ''}</p>
       <div class="news-footer">
-        <span class="news-source">${n.source}</span>
+        <span class="news-source">${n.source || ''}</span>
         <span class="news-more">${t('news.readMore')}</span>
       </div>
-    </a>`).join('') || `<div class="empty"><div class="empty-icon">📰</div>No news in this category yet.</div>`;
+    </a>`;
+  }).join('') || `<div class="empty"><div class="empty-icon">📰</div>No news in this category yet.</div>`;
 }
 
-function onLangChange() { buildTabs(); render(); }
-buildTabs();
-render();
+async function loadNews() {
+  const lang = typeof I18N !== 'undefined' ? I18N.lang : 'en';
+  const data = await fetchNews(lang);
+  if (data && data.length > 0) ARTICLES = data;
+  buildTabs();
+  render();
+}
+
+async function onLangChange() {
+  ARTICLES = null;
+  await loadNews();
+}
+
+loadNews();
 </script>
 </body>
 </html>
