@@ -102,7 +102,7 @@ const I18N = (() => {
       'footer.desc':     'Best AI tools catalog in one place.',
       'footer.nav':      'Navigation',
       'footer.cats':     'Categories',
-      'footer.madeWith': 'Made with ♥ and Claude',
+      'footer.madeWith': 'Made with ♥ by Leondan & Claude',
       'footer.rights':   '© 2026 AI Portal',
     },
 
