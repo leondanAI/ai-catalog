@@ -1682,7 +1682,7 @@ const I18N = (() => {
     const btn  = document.getElementById(btnId);
     if (!menu) return;
     menu.innerHTML = Object.entries(LANGS).map(([code, meta]) =>
-      `<button class="lang-menu-item${code === _lang ? ' active' : ''}" onclick="I18N.set('${code}');toggleLangMenu(false)">${meta.flag} ${meta.label}</button>`
+      `<button class="lang-opt${code === _lang ? ' active' : ''}" onclick="I18N.set('${code}');toggleLangMenu(false)">${meta.flag} ${meta.label}</button>`
     ).join('');
     if (btn) btn.textContent = (LANGS[_lang]?.flag || '') + ' ' + _lang.toUpperCase() + ' ▾';
   }
