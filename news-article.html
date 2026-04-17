@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MyPedia — News Article">
+<title>News — MyPedia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .article-wrap { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  .article-back { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text3); margin-bottom: 2rem; transition: color 0.15s; }
+  .article-back:hover { color: var(--text); }
+  .article-cat { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; padding: 3px 12px; border-radius: 20px; margin-bottom: 1.25rem; }
+  .article-title { font-family: var(--font-display); font-size: clamp(22px, 4vw, 34px); font-weight: 600; line-height: 1.25; margin-bottom: 1.25rem; }
+  .article-meta { display: flex; align-items: center; gap: 1rem; font-size: 13px; color: var(--text3); margin-bottom: 2rem; flex-wrap: wrap; }
+  .article-meta-dot { opacity: 0.4; }
+  .article-body { font-size: 15.5px; line-height: 1.75; color: var(--text2); }
+  .article-body p { margin-bottom: 1.25rem; }
+  .article-body h2 { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--text); margin: 2rem 0 0.75rem; }
+  .article-body h3 { font-family: var(--font-display); font-size: 16px; font-weight: 500; color: var(--text); margin: 1.5rem 0 0.5rem; }
+  .article-body strong { color: var(--text); font-weight: 500; }
+  .article-divider { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
+  .related-title { font-family: var(--font-display); font-size: 16px; font-weight: 600; margin-bottom: 1.25rem; }
+  .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .related-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; transition: border-color 0.15s, background 0.15s; }
+  .related-card:hover { border-color: var(--border2); background: var(--bg3); }
+  .related-cat { font-size: 11px; font-weight: 500; margin-bottom: 0.5rem; }
+  .related-name { font-family: var(--font-display); font-size: 13px; font-weight: 500; line-height: 1.4; color: var(--text); }
+  .related-date { font-size: 11px; color: var(--text3); margin-top: 0.5rem; }
+  .not-found { text-align: center; padding: 5rem 2rem; color: var(--text3); }
+  .not-found .icon { font-size: 3rem; margin-bottom: 1rem; }
+  @media (max-width: 600px) { .related-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</a>
+    <nav class="nav-links">
+      <a href="index.html"      class="nav-link" data-nav="index.html"      data-i18n="nav.home">Home</a>
+      <a href="directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">Directory</a>
+      <a href="news.html"       class="nav-link active" data-nav="news.html" data-i18n="nav.news">News</a>
+      <a href="tools.html"      class="nav-link" data-nav="tools.html"      data-i18n="nav.tools">Free Tools</a>
+      <a href="compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
+      <a href="newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
+    </nav>
+    <div class="lang-picker">
+      <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇬🇧 EN <span style="opacity:.5;font-size:10px">▾</span></button>
+      <div class="lang-menu" id="langMenu"></div>
+    </div>
+    <button class="btn-hamburger" onclick="toggleMenu()">&#9776;</button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="index.html"      class="nav-link" data-i18n="nav.home">Home</a>
+    <a href="directory.html"  class="nav-link" data-i18n="nav.directory">Directory</a>
+    <a href="news.html"       class="nav-link" data-i18n="nav.news">News</a>
+    <a href="tools.html"      class="nav-link" data-i18n="nav.tools">Free Tools</a>
+    <a href="compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
+    <a href="newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
+  </nav>
+</header>
+
+<div class="article-wrap" id="articleContent"></div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</div>
+      <p class="footer-desc" data-i18n="footer.desc">Best AI tools catalog in one place.</p>
+    </div>
+    <div>
+      <div class="footer-col-title" data-i18n="footer.nav">Navigation</div>
+      <div class="footer-col-links">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="directory.html" data-i18n="nav.directory">Directory</a>
+        <a href="news.html" data-i18n="nav.news">News</a>
+        <a href="tools.html" data-i18n="nav.tools">Free Tools</a>
+        <a href="compare.html" data-i18n="nav.compare">Compare</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title" data-i18n="footer.cats">Categories</div>
+      <div class="footer-col-links">
+        <a href="directory.html?cat=chat">AI Chat</a>
+        <a href="directory.html?cat=code">Development</a>
+        <a href="directory.html?cat=image">Image Gen</a>
+        <a href="directory.html?cat=video">Video Gen</a>
+        <a href="directory.html?cat=data">Data & Analytics</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span data-i18n="footer.madeWith">Made with ♥ and Claude</span>
+    <span data-i18n="footer.rights">© 2026 MyPedia</span>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/news.js"></script>
+<script src="js/main.js"></script>
+<script>
+const ARTICLE_BODIES = {
+  1: `<p>OpenAI has officially unveiled <strong>GPT-5</strong>, the company's most capable language model to date. The announcement marks a major leap forward in context handling, reasoning and real-world task completion.</p>
+<h2>What's new in GPT-5</h2>
+<p>The most headline-grabbing feature is the <strong>1 million token context window</strong> — enough to process entire codebases, legal documents or book-length texts in a single session. OpenAI says this enables new classes of agentic tasks that simply weren't possible before.</p>
+<p>GPT-5 also ships with <strong>native reasoning</strong> built in, meaning the model deliberates before responding on complex questions without needing a separate "thinking" mode toggle. Early benchmarks show significant improvements on math, science and multi-step logic tasks.</p>
+<h3>Fact verification layer</h3>
+<p>For the first time, GPT-5 includes a built-in fact-checking mechanism that flags uncertain claims and provides confidence scores on factual assertions. OpenAI describes this as a step toward more reliable AI outputs in high-stakes domains.</p>
+<h2>Availability</h2>
+<p>GPT-5 is rolling out to ChatGPT Plus and Team subscribers first, with API access opening to developers in the coming weeks. Enterprise pricing has yet to be announced.</p>`,
+
+  2: `<p>Anthropic has closed a new <strong>$4 billion funding round</strong> led by Google, pushing the company's valuation to <strong>$61 billion</strong> — making it one of the most valuable AI companies in the world.</p>
+<h2>Where the money goes</h2>
+<p>According to Anthropic CEO Dario Amodei, the capital will fund three areas: expanded compute infrastructure for training future Claude models, safety research, and the opening of <strong>new research centers across Europe</strong> — with offices planned in London, Paris and Berlin.</p>
+<h3>Strategic implications</h3>
+<p>Google's continued backing cements a deeper partnership between the two companies. Anthropic's Claude models are already deeply integrated into Google Cloud services, and this round is expected to accelerate that collaboration.</p>
+<p>The funding comes as competition in the frontier AI space intensifies, with OpenAI, Meta, Mistral and DeepSeek all racing to ship increasingly capable models.</p>`,
+
+  3: `<p>Chinese AI company Kuaishou announced that its video generation platform <strong>Kling AI</strong> has surpassed <strong>60 million active users</strong>, cementing its position as one of the most widely used AI video tools globally.</p>
+<h2>Kling 2.0 highlights</h2>
+<p>Alongside the user milestone, Kuaishou shipped <strong>Kling 2.0</strong>, a major update that extends maximum video duration to <strong>3 minutes</strong> — a significant jump from the previous 90-second cap. The new model also features improved physics simulation, resulting in more natural-looking motion for water, fabric and object interactions.</p>
+<h3>Lighting and cinematography</h3>
+<p>Version 2.0 includes a revamped lighting engine that produces more realistic shadows and highlights, making it easier to achieve cinematic-quality footage directly from text prompts.</p>
+<p>Kling AI is available via web interface and API, with a free tier for casual users and professional plans for studios and creators.</p>`,
+
+  4: `<p>Meta AI has released <strong>Llama 4</strong> as a fully open-weights model, available for commercial use without restrictions. The release marks a new high watermark for open-source AI quality.</p>
+<h2>Performance</h2>
+<p>According to Meta's internal benchmarks, Llama 4 is competitive with <strong>GPT-4-class performance</strong> on standard reasoning, coding and language tasks. Independent evaluations by the research community have largely confirmed these claims.</p>
+<h3>Open for commercial use</h3>
+<p>Unlike earlier Llama releases that carried usage restrictions for large companies, Llama 4 is available to everyone — including businesses with over 700 million monthly active users, who previously needed a separate license. The model weights can be downloaded and run locally with no API dependency.</p>
+<p>Meta says the decision to go fully open reflects their belief that widespread access to capable AI benefits the entire ecosystem and accelerates safety research.</p>`,
+
+  5: `<p>ElevenLabs — best known for its text-to-speech and voice cloning technology — has launched <strong>ElevenMusic</strong>, a new product that generates complete music tracks including vocals from text descriptions.</p>
+<h2>Direct competition with Suno and Udio</h2>
+<p>The move puts ElevenLabs in direct competition with Suno and Udio, the current leaders in AI music generation. ElevenLabs differentiates itself by leveraging its existing audio quality expertise, promising <strong>higher fidelity vocals</strong> and more natural-sounding instrumentation.</p>
+<h3>How it works</h3>
+<p>Users describe the style, mood, tempo and lyrical theme they want, and ElevenMusic generates a full track — typically 2–4 minutes — in under 60 seconds. Tracks can be exported as high-quality audio files and used commercially under the platform's creator license.</p>
+<p>ElevenMusic is available to ElevenLabs subscribers starting at the Creator tier ($22/month).</p>`,
+
+  6: `<p>The final phase of the <strong>EU AI Act</strong> came into full effect in April 2026, imposing binding obligations on AI developers and deployers operating in the European Union.</p>
+<h2>What developers must do now</h2>
+<p>Companies deploying AI systems classified as "high-risk" — including tools used in hiring, credit scoring, healthcare triage and law enforcement — must complete formal <strong>risk assessments</strong> and register their systems in a new central EU AI database before launching.</p>
+<h3>General-purpose AI rules</h3>
+<p>For foundation model providers like OpenAI, Anthropic, Google and Mistral, new transparency requirements now apply. They must publish summaries of training data, disclose copyright-relevant information, and conduct adversarial testing before releasing models with over 10^25 FLOPs of compute.</p>
+<p>Violations can result in fines of up to <strong>€35 million or 7% of global annual turnover</strong> — whichever is higher. The European AI Office will oversee enforcement.</p>`,
+
+  7: `<p>Google DeepMind has unveiled <strong>Gemini 2.0 Ultra</strong>, the company's most powerful AI model and the direct successor to Gemini 1.5 Ultra.</p>
+<h2>Native multimodal from the ground up</h2>
+<p>Unlike previous Gemini versions that handled modalities somewhat separately, Gemini 2.0 Ultra is described as natively multimodal — it processes and reasons across <strong>text, images, audio, video and code</strong> in a unified architecture.</p>
+<h3>Reasoning improvements</h3>
+<p>Google reports substantial gains on complex reasoning benchmarks, particularly in scientific domains. Gemini 2.0 Ultra outperforms the previous Gemini generation by a wide margin on GPQA Diamond (graduate-level science questions) and AIME (math olympiad problems).</p>
+<p>The model is initially available to Gemini Advanced subscribers and through Google AI Studio for developers, with broader Vertex AI access rolling out over the next quarter.</p>`,
+
+  8: `<p>Midjourney has shipped <strong>version 7</strong> of its AI image generation platform, delivering what the company describes as the largest quality leap in its history — and introducing a completely new capability: native 3D generation.</p>
+<h2>Photorealism at a new level</h2>
+<p>V7 raises the bar for photorealistic image generation significantly. Textures, lighting and fine detail — particularly in human portraits — are noticeably more convincing compared to v6. Professional photographers testing the model have described the output as indistinguishable from studio photography in controlled conditions.</p>
+<h3>Native 3D output</h3>
+<p>For the first time in the industry, Midjourney v7 can generate <strong>3D assets directly from text prompts</strong> — outputting GLB and OBJ files compatible with standard 3D software and game engines. This puts Midjourney in competition with dedicated 3D generation tools for the first time.</p>
+<p>V7 is available to all Midjourney subscribers with no additional cost.</p>`,
+
+  9: `<p>Stack Overflow's annual Developer Survey for 2026 reveals a new milestone: <strong>78% of developers now use AI coding assistants daily</strong>, up from 44% in 2024.</p>
+<h2>Which tools lead</h2>
+<p><strong>GitHub Copilot</strong> remains the most-used AI coding tool, adopted by 54% of respondents. <strong>Cursor</strong> has seen the fastest growth, jumping from 12% to 31% year-over-year — driven by developers who want deeper AI integration than autocomplete alone provides.</p>
+<h3>Satisfaction vs. accuracy</h3>
+<p>Despite high adoption, satisfaction scores reveal nuance: 71% of developers say AI tools save them time, but only 43% say the generated code is "usually correct without modification." Debugging AI-generated code is now listed as a distinct developer skill in job postings.</p>
+<p>The survey covered 89,000 developers across 185 countries and was conducted in February 2026.</p>`,
+
+  10: `<p>Chinese AI lab DeepSeek has announced <strong>model R2</strong>, the successor to the widely celebrated R1, which shocked the industry in early 2025 by matching frontier model quality at a fraction of the compute cost.</p>
+<h2>Benchmark results</h2>
+<p>R2 outperforms most Western models on mathematical reasoning (MATH-500, AMC, AIME) and competitive coding benchmarks (HumanEval, Codeforces). DeepSeek claims the model achieves this with <strong>significantly lower inference costs</strong> than comparable models from OpenAI and Anthropic.</p>
+<h3>Free access</h3>
+<p>True to DeepSeek's philosophy, R2 is free to use via the web interface and API. The weights are also available for download under a permissive open license, enabling local deployment.</p>
+<p>The release has reignited debate about AI cost curves and whether frontier capability requires the scale of investment being poured in by US labs.</p>`,
+
+  11: `<p>Runway has launched <strong>Gen-4</strong>, introducing what it calls the industry's first AI video model with true <strong>character consistency across scenes</strong>.</p>
+<h2>The consistency problem — solved</h2>
+<p>Until now, AI video generation had a fundamental limitation: characters and objects would change appearance from shot to shot, making it impossible to create coherent narrative films. Gen-4 solves this by allowing users to define a "character reference" — a set of images that anchor the model to a consistent visual identity throughout a project.</p>
+<h3>What this enables</h3>
+<p>With Gen-4, directors can now generate multiple scenes featuring the same character — same face, same clothing, same mannerisms — and assemble them into a short film. Runway provided several example films during the launch, including a 4-minute sci-fi short generated entirely with Gen-4.</p>
+<p>Gen-4 is available to Runway Standard subscribers and above, with pricing starting at $15/month.</p>`,
+
+  12: `<p>Apple has shipped <strong>Apple Intelligence 2.0</strong>, a major update to its on-device AI platform that fundamentally changes how Siri works and what it can do.</p>
+<h2>Claude and GPT power the new Siri</h2>
+<p>The headline change: Apple has integrated both <strong>Anthropic's Claude</strong> and <strong>OpenAI's GPT models</strong> as optional cloud backends for Siri, giving users access to frontier-level intelligence for complex queries while keeping routine tasks on-device for privacy.</p>
+<h3>Multi-step task handling</h3>
+<p>For the first time, Siri can reliably execute <strong>multi-step tasks</strong> across apps — such as finding a restaurant, checking availability, booking a table and adding it to the calendar in a single request. Apple demoed these capabilities at a media event ahead of the software's release.</p>
+<p>Apple Intelligence 2.0 is available on iPhone 15 Pro and later, iPad Pro with M-series chips, and all Apple Silicon Macs, via an over-the-air update to iOS 19.4, iPadOS 19.4 and macOS Sequoia 15.4.</p>`,
+};
+
+function renderArticle() {
+  const params = new URLSearchParams(window.location.search);
+  const id = parseInt(params.get('id'), 10);
+  const article = NEWS.find(n => n.id === id);
+  const el = document.getElementById('articleContent');
+
+  if (!article) {
+    el.innerHTML = `<div class="not-found"><div class="icon">📰</div><p>Article not found.</p><a href="news.html" class="btn btn-outline" style="margin-top:1.5rem">← Back to News</a></div>`;
+    return;
+  }
+
+  document.title = `${article.title} — MyPedia`;
+
+  const related = NEWS.filter(n => n.id !== article.id && (n.category === article.category)).slice(0, 2);
+  const relatedHtml = related.length ? `
+    <hr class="article-divider">
+    <div class="related-title">Related articles</div>
+    <div class="related-grid">
+      ${related.map(n => `
+        <a class="related-card" href="news-article.html?id=${n.id}">
+          <div class="related-cat" style="color:${n.catColor}">${n.catLabel}</div>
+          <div class="related-name">${n.title}</div>
+          <div class="related-date">${n.date}</div>
+        </a>`).join('')}
+    </div>` : '';
+
+  el.innerHTML = `
+    <a href="news.html" class="article-back">← Back to News</a>
+    <div class="article-cat" style="background:${article.catColor}22;color:${article.catColor}">${article.catLabel}</div>
+    <h1 class="article-title">${article.title}</h1>
+    <div class="article-meta">
+      <span>${article.date}</span>
+      <span class="article-meta-dot">·</span>
+      <span>${article.source}</span>
+    </div>
+    <div class="article-body">
+      ${ARTICLE_BODIES[article.id] || `<p>${article.summary}</p>`}
+    </div>
+    ${relatedHtml}`;
+}
+
+renderArticle();
+</script>
+</body>
+</html>
