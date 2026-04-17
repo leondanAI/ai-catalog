@@ -144,7 +144,7 @@ function renderToolCard(tool, color) {
         ${usersHtml}
         <span class="badge badge-${tool.badge}">${badgeLabel(tool.badge)}</span>
       </div>
-      <p class="tool-desc">${tool.desc}</p>
+      <p class="tool-desc">${getToolDesc(tool)}</p>
       <div class="tool-footer">
         <span class="tool-domain">${domain}</span>
         <a class="tool-aff" href="${tool.aff || tool.url}" target="_blank" rel="noopener sponsored" onclick="event.stopPropagation()">${t('tool.open')}</a>
