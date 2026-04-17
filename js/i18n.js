@@ -1592,12 +1592,12 @@ const I18N = (() => {
   // ── language metadata ─────────────────────────────────────────────────────
   const LANGS = {
     en: { label: 'English',    flag: '🇬🇧', rtl: false },
-    ru: { label: 'Русский',    flag: '🇷🇺', rtl: false },
     es: { label: 'Español',    flag: '🇪🇸', rtl: false },
     fr: { label: 'Français',   flag: '🇫🇷', rtl: false },
     de: { label: 'Deutsch',    flag: '🇩🇪', rtl: false },
     pt: { label: 'Português',  flag: '🇧🇷', rtl: false },
     it: { label: 'Italiano',   flag: '🇮🇹', rtl: false },
+    ru: { label: 'Русский',    flag: '🇷🇺', rtl: false },
     zh: { label: '中文',        flag: '🇨🇳', rtl: false },
     ja: { label: '日本語',      flag: '🇯🇵', rtl: false },
     ko: { label: '한국어',      flag: '🇰🇷', rtl: false },
