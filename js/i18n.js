@@ -1785,6 +1785,10 @@ const I18N = (() => {
       if (!T[code]) return;
       _lang = code;
       localStorage.setItem('lang', code);
+      // Keep URL in sync so the current page is always shareable in the active language
+      const _url = new URL(window.location.href);
+      if (code === 'en') { _url.searchParams.delete('lang'); } else { _url.searchParams.set('lang', code); }
+      history.replaceState({}, '', _url);
       applyToDOM();
       buildLangMenu('langMenu', 'langBtn');
       if (typeof _onLangChange === 'function') _onLangChange();

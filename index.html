@@ -158,10 +158,12 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/translations.js"></script>
 <script src="js/data.js"></script>
 <script src="js/news.js"></script>
+<script src="js/db.js"></script>
 <script src="js/main.js"></script>
 <script>
 const TRENDING_NAMES = ['ChatGPT','Claude','Cursor','Midjourney','ElevenLabs','Kling AI'];
@@ -171,20 +173,34 @@ function renderTrending() {
   document.getElementById('trendingGrid').innerHTML = tools.map(t => renderToolCard(t)).join('');
 }
 
-function renderNewsGrid() {
-  document.getElementById('newsGrid').innerHTML = NEWS.slice(0,3).map(n => `
-    <a class="news-card fade-up" href="${n.url}">
+function renderNewsGrid(articles) {
+  const lang = typeof I18N !== 'undefined' ? I18N.lang : 'en';
+  const list = (articles || NEWS).slice(0, 3);
+  document.getElementById('newsGrid').innerHTML = list.map(n => {
+    const color = n.cat_color || n.catColor || '#7c6af7';
+    const label = n.cat_label || n.catLabel || n.category || '';
+    const date  = n.date || '';
+    const url   = n.slug ? `news-article.html?slug=${n.slug}&lang=${lang}` : (n.url || '#');
+    return `
+    <a class="news-card fade-up" href="${url}">
       <div class="news-meta">
-        <span class="news-tag" style="background:${n.catColor}22;color:${n.catColor};border:1px solid ${n.catColor}44">${n.catLabel}</span>
-        <span class="news-date">${n.date}</span>
+        <span class="news-tag" style="background:${color}22;color:${color};border:1px solid ${color}44">${label}</span>
+        <span class="news-date">${date}</span>
       </div>
       <div class="news-title">${n.title}</div>
-      <p class="news-summary">${n.summary}</p>
+      <p class="news-summary">${n.summary || ''}</p>
       <div class="news-footer">
-        <span class="news-source">${n.source}</span>
+        <span class="news-source">${n.source || ''}</span>
         <span class="news-more">${t('news.readMore')}</span>
       </div>
-    </a>`).join('');
+    </a>`;
+  }).join('');
+}
+
+async function loadIndexNews() {
+  const lang = typeof I18N !== 'undefined' ? I18N.lang : 'en';
+  const data = await fetchNews(lang);
+  renderNewsGrid(data && data.length ? data : null);
 }
 
 function renderCatsGrid() {
@@ -220,15 +236,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function onLangChange() {
   renderTrending();
-  renderNewsGrid();
+  loadIndexNews();
   renderCatsGrid();
   renderCatPills();
 }
 
 renderCatPills();
-
 renderTrending();
-renderNewsGrid();
+loadIndexNews();
 renderCatsGrid();
 </script>
 </body>
