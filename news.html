@@ -155,11 +155,17 @@ function render() {
 }
 
 async function loadNews() {
-  const lang = typeof I18N !== 'undefined' ? I18N.lang : 'en';
-  const data = await fetchNews(lang);
-  if (data && data.length > 0) ARTICLES = data;
+  // Show static content immediately — never leave the page blank
   buildTabs();
   render();
+
+  const lang = typeof I18N !== 'undefined' ? I18N.lang : 'en';
+  const timer = new Promise(resolve => setTimeout(() => resolve(null), 5000));
+  const data = await Promise.race([fetchNews(lang), timer]);
+  if (data && data.length > 0) {
+    ARTICLES = data;
+    render();
+  }
 }
 
 async function onLangChange() {

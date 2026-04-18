@@ -198,9 +198,13 @@ function renderNewsGrid(articles) {
 }
 
 async function loadIndexNews() {
+  // Render static fallback immediately
+  renderNewsGrid(null);
+
   const lang = typeof I18N !== 'undefined' ? I18N.lang : 'en';
-  const data = await fetchNews(lang);
-  renderNewsGrid(data && data.length ? data : null);
+  const timer = new Promise(resolve => setTimeout(() => resolve(null), 5000));
+  const data = await Promise.race([fetchNews(lang), timer]);
+  if (data && data.length > 0) renderNewsGrid(data);
 }
 
 function renderCatsGrid() {
