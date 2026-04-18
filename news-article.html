@@ -265,7 +265,8 @@ async function loadArticle() {
 
   // Try Supabase first (slug-based)
   if (slug) {
-    const lang = typeof I18N !== 'undefined' ? I18N.lang : 'en';
+    const urlLang = params.get('lang');
+    const lang = urlLang || (typeof I18N !== 'undefined' ? I18N.lang : 'en');
     const article = await fetchArticle(slug, lang);
     if (article) { renderDB(article); return; }
   }

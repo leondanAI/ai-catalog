@@ -1693,8 +1693,11 @@ const I18N = (() => {
   };
 
   // ── state ─────────────────────────────────────────────────────────────────
-  let _lang = localStorage.getItem('lang') || 'en';
+  // ?lang=XX in the URL takes priority over localStorage (for ad campaign links etc.)
+  const _urlLang = new URLSearchParams(window.location.search).get('lang');
+  let _lang = (_urlLang && T[_urlLang]) ? _urlLang : (localStorage.getItem('lang') || 'en');
   if (!T[_lang]) _lang = 'en';
+  if (_urlLang && T[_urlLang]) localStorage.setItem('lang', _urlLang);
 
   let _onLangChange = null;
 
