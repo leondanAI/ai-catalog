@@ -11,14 +11,17 @@ function sb() {
 
 // ─── News ─────────────────────────────────────────────────────────────────────
 
-// Fetch all published news for a given language.
-// Falls back to the lang='en' row when no translation exists for that slug.
+// Fetch published news for a given language.
+// Fetches only [lang] + 'en' rows, then picks lang over en per slug.
 async function fetchNews(lang = 'en', category = null) {
   try {
+    const langs = lang === 'en' ? ['en'] : [lang, 'en'];
+
     let q = sb()
       .from('news')
       .select('*')
       .eq('published', true)
+      .in('lang', langs)
       .order('date', { ascending: false });
 
     if (category) q = q.eq('category', category);
@@ -27,20 +30,18 @@ async function fetchNews(lang = 'en', category = null) {
     if (error) throw error;
     if (!rows || rows.length === 0) return null;
 
-    // Group by slug, prefer requested lang, fallback to 'en'
+    // Per slug: prefer requested lang, fall back to 'en'
     const bySlug = {};
     for (const row of rows) {
-      const key = row.slug;
-      if (!bySlug[key]) bySlug[key] = {};
-      bySlug[key][row.lang] = row;
+      if (!bySlug[row.slug] || row.lang === lang) {
+        bySlug[row.slug] = row;
+      }
     }
 
-    return Object.values(bySlug).map(versions =>
-      versions[lang] || versions['en'] || Object.values(versions)[0]
-    ).filter(Boolean).sort((a, b) => new Date(b.date) - new Date(a.date));
+    return Object.values(bySlug).sort((a, b) => new Date(b.date) - new Date(a.date));
 
   } catch (err) {
-    console.warn('Supabase fetchNews failed, using static fallback:', err.message);
+    console.warn('Supabase fetchNews failed:', err.message);
     return null;
   }
 }
