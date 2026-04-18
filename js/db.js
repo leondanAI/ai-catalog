@@ -1,4 +1,4 @@
-// ─── Supabase connection ──────────────────────────────────────────────────────
+// ─── Supabase connection ─────────────────────────────────────────────────────
 const SUPABASE_URL = 'https://lbjdwkvkkndvofysyssy.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG';
 
@@ -64,5 +64,24 @@ async function fetchArticle(slug, lang = 'en') {
   } catch (err) {
     console.warn('Supabase fetchArticle failed:', err.message);
     return null;
+  }
+}
+
+// ─── Newsletter ───────────────────────────────────────────────────────────────
+
+async function saveSubscriber(email, name, topics, lang) {
+  try {
+    const { error } = await sb()
+      .from('subscribers')
+      .insert({ email, name: name || null, topics: topics.length ? topics : null, lang });
+    if (error) {
+      // Duplicate email — treat as success so we don't leak whether email exists
+      if (error.code === '23505') return { ok: true, duplicate: true };
+      throw error;
+    }
+    return { ok: true };
+  } catch (err) {
+    console.warn('saveSubscriber failed:', err.message);
+    return { ok: false, error: err.message };
   }
 }

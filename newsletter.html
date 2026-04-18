@@ -172,21 +172,43 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <script src="js/i18n.js"></script>
+<script src="js/db.js"></script>
 <script src="js/main.js"></script>
 <script>
-function submitNewsletter() {
+async function submitNewsletter() {
   const email = document.getElementById('nlEmail').value.trim();
-  const err = document.getElementById('nlError');
+  const name  = document.getElementById('nlName').value.trim();
+  const err   = document.getElementById('nlError');
+  const btn   = document.querySelector('[onclick="submitNewsletter()"]');
+
   if (!email || !email.includes('@') || !email.includes('.')) {
     err.textContent = 'Please enter a valid email address.';
     err.style.display = 'block';
     return;
   }
+
+  const topics = Array.from(document.querySelectorAll('.nl-cats input[type=checkbox]:checked'))
+    .map(cb => cb.closest('label').querySelector('.checkbox-label').textContent.trim());
+
+  const lang = typeof I18N !== 'undefined' ? I18N.lang : 'en';
+
   err.style.display = 'none';
-  document.getElementById('nlForm').style.display = 'none';
-  document.getElementById('nlSuccess').style.display = 'block';
-  // TODO: integrate with email service (Mailchimp / ConvertKit / Resend)
+  btn.disabled = true;
+  btn.textContent = '...';
+
+  const result = await saveSubscriber(email, name, topics, lang);
+
+  if (result.ok) {
+    document.getElementById('nlForm').style.display = 'none';
+    document.getElementById('nlSuccess').style.display = 'block';
+  } else {
+    err.textContent = 'Something went wrong. Please try again.';
+    err.style.display = 'block';
+    btn.disabled = false;
+    btn.textContent = t('nl.subscribe');
+  }
 }
 </script>
 </body>
