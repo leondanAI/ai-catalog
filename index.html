@@ -198,12 +198,11 @@ function renderNewsGrid(articles) {
 }
 
 async function loadIndexNews() {
-  // Render static fallback immediately
+  // Render static fallback immediately, then replace with Supabase data when ready
   renderNewsGrid(null);
 
   const lang = typeof I18N !== 'undefined' ? I18N.lang : 'en';
-  const timer = new Promise(resolve => setTimeout(() => resolve(null), 5000));
-  const data = await Promise.race([fetchNews(lang), timer]);
+  const data = await fetchNews(lang);
   if (data && data.length > 0) renderNewsGrid(data);
 }
 

@@ -155,13 +155,14 @@ function render() {
 }
 
 async function loadNews() {
-  // Show static content immediately — never leave the page blank
+  // Render static fallback immediately so the page is never blank
   buildTabs();
   render();
 
+  // Then wait for Supabase (no timeout — it may take time to wake on free tier)
+  // Once it responds, silently replace the static content with real articles
   const lang = typeof I18N !== 'undefined' ? I18N.lang : 'en';
-  const timer = new Promise(resolve => setTimeout(() => resolve(null), 5000));
-  const data = await Promise.race([fetchNews(lang), timer]);
+  const data = await fetchNews(lang);
   if (data && data.length > 0) {
     ARTICLES = data;
     render();
