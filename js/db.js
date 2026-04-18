@@ -36,7 +36,7 @@ async function fetchNews(lang = 'en', category = null) {
     }
 
     return Object.values(bySlug).map(versions =>
-      versions[lang] || versions['en']
+      versions[lang] || versions['en'] || Object.values(versions)[0]
     ).filter(Boolean).sort((a, b) => new Date(b.date) - new Date(a.date));
 
   } catch (err) {
@@ -53,14 +53,13 @@ async function fetchArticle(slug, lang = 'en') {
       .select('*')
       .eq('slug', slug)
       .eq('published', true)
-      .in('lang', [lang, 'en'])
       .order('lang', { ascending: false }) // prefer requested lang
-      .limit(2);
+      .limit(10);
 
     if (error) throw error;
     if (!data || data.length === 0) return null;
 
-    return data.find(r => r.lang === lang) || data.find(r => r.lang === 'en') || null;
+    return data.find(r => r.lang === lang) || data.find(r => r.lang === 'en') || data[0] || null;
   } catch (err) {
     console.warn('Supabase fetchArticle failed:', err.message);
     return null;
