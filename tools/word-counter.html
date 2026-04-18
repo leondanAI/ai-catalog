@@ -69,6 +69,7 @@
     <div class="stat-chip"><div class="stat-chip-n" id="wcParas">0</div><div class="stat-chip-l">Paragraphs</div></div>
     <div class="stat-chip"><div class="stat-chip-n" id="wcRead">0 min</div><div class="stat-chip-l">Read time</div></div>
   </div>
+  <div id="toolDesc" style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);font-size:14px;line-height:1.75;color:var(--text2)"></div>
 </div>
 
 <footer class="site-footer">
@@ -103,8 +104,10 @@
 </footer>
 
 <script src="../js/i18n.js"></script>
+<script src="../js/tools-desc.js"></script>
 <script src="../js/main.js"></script>
 <script>
+function onLangChange() { renderToolDesc('word-counter'); }
 function calcWords() {
   const t = document.getElementById('wcInput').value;
   const words = t.trim() ? t.trim().split(/\s+/).length : 0;
@@ -115,6 +118,7 @@ function calcWords() {
   document.getElementById('wcParas').textContent   = t.split(/\n\n+/).filter(p=>p.trim()).length.toLocaleString();
   document.getElementById('wcRead').textContent    = Math.max(1, Math.round(words/200)) + ' min';
 }
+renderToolDesc('word-counter');
 </script>
 </body>
 </html>

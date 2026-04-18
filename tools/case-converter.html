@@ -68,6 +68,7 @@
   <textarea class="field-textarea" id="caseInput" placeholder="Type or paste text here — e.g. hello world or myVariableName" oninput="convertAll()" style="min-height:100px"></textarea>
 
   <div class="case-grid" id="caseGrid"></div>
+  <div id="toolDesc" style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);font-size:14px;line-height:1.75;color:var(--text2)"></div>
 </div>
 
 <div class="copy-toast" id="copyToast">✓ Copied!</div>
@@ -104,8 +105,10 @@
 </footer>
 
 <script src="../js/i18n.js"></script>
+<script src="../js/tools-desc.js"></script>
 <script src="../js/main.js"></script>
 <script>
+function onLangChange() { renderToolDesc('case-converter'); }
 function words(text) {
   return text.trim().replace(/([a-z])([A-Z])/g,'$1 $2').replace(/[-_]+/g,' ').replace(/\s+/g,' ').trim().toLowerCase().split(' ').filter(Boolean);
 }
@@ -131,6 +134,7 @@ function showToast() {
   setTimeout(()=>el.style.opacity='0',1500);
 }
 
+renderToolDesc('case-converter');
 function convertAll() {
   const text = document.getElementById('caseInput').value;
   if (!text.trim()) { document.getElementById('caseGrid').innerHTML=''; return; }

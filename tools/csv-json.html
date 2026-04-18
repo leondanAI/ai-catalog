@@ -87,6 +87,7 @@
       <label class="checkbox-row"><input type="checkbox" id="optQuote" checked><span class="checkbox-label" style="font-size:13px">Quote CSV strings</span></label>
     </div>
   </div>
+  <div id="toolDesc" style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);font-size:14px;line-height:1.75;color:var(--text2)"></div>
 </div>
 
 <footer class="site-footer">
@@ -121,8 +122,11 @@
 </footer>
 
 <script src="../js/i18n.js"></script>
+<script src="../js/tools-desc.js"></script>
 <script src="../js/main.js"></script>
 <script>
+function onLangChange() { renderToolDesc('csv-json'); }
+renderToolDesc('csv-json');
 function parseCSV(text) {
   const lines = text.trim().split(/\r?\n/);
   if (lines.length < 2) throw new Error('CSV must have a header row and at least one data row');

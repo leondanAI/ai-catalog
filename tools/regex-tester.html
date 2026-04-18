@@ -101,6 +101,7 @@
   <div class="regex-preview" id="rxPreview"><span style="color:var(--text3)">Matches will highlight here...</span></div>
 
   <div class="match-list" id="rxMatchList"></div>
+  <div id="toolDesc" style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);font-size:14px;line-height:1.75;color:var(--text2)"></div>
 </div>
 
 <footer class="site-footer">
@@ -135,8 +136,10 @@
 </footer>
 
 <script src="../js/i18n.js"></script>
+<script src="../js/tools-desc.js"></script>
 <script src="../js/main.js"></script>
 <script>
+function onLangChange() { renderToolDesc('regex-tester'); }
 function toggleFlag(f) {
   const inp = document.getElementById('rxFlags');
   let v = inp.value;
@@ -148,6 +151,7 @@ function toggleFlag(f) {
 
 function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
+renderToolDesc('regex-tester');
 function runRegex() {
   const pat  = document.getElementById('rxPattern').value;
   const flags= document.getElementById('rxFlags').value;

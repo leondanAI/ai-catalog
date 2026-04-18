@@ -66,6 +66,7 @@
   </div>
   <div id="b64Error" style="font-size:13px;color:var(--red);margin-bottom:8px;display:none"></div>
   <textarea class="field-textarea" id="b64Output" placeholder="Result appears here..." readonly style="min-height:140px;font-family:'Courier New',monospace;font-size:13px"></textarea>
+  <div id="toolDesc" style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);font-size:14px;line-height:1.75;color:var(--text2)"></div>
 </div>
 
 <footer class="site-footer">
@@ -100,8 +101,11 @@
 </footer>
 
 <script src="../js/i18n.js"></script>
+<script src="../js/tools-desc.js"></script>
 <script src="../js/main.js"></script>
 <script>
+function onLangChange() { renderToolDesc('base64'); }
+renderToolDesc('base64');
 function encodeB64() {
   const err=document.getElementById('b64Error'); err.style.display='none';
   try { document.getElementById('b64Output').value=btoa(unescape(encodeURIComponent(document.getElementById('b64Input').value))); }

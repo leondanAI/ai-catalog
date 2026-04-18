@@ -67,6 +67,7 @@
   </div>
   <div id="jsonError" style="font-size:13px;color:var(--red);margin-bottom:8px;display:none"></div>
   <textarea class="field-textarea mono" id="jsonOutput" placeholder="Result appears here..." readonly style="min-height:240px"></textarea>
+  <div id="toolDesc" style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);font-size:14px;line-height:1.75;color:var(--text2)"></div>
 </div>
 
 <footer class="site-footer">
@@ -101,8 +102,11 @@
 </footer>
 
 <script src="../js/i18n.js"></script>
+<script src="../js/tools-desc.js"></script>
 <script src="../js/main.js"></script>
 <script>
+function onLangChange() { renderToolDesc('json-formatter'); }
+renderToolDesc('json-formatter');
 function formatJson() {
   const inp=document.getElementById('jsonInput').value.trim(), err=document.getElementById('jsonError');
   err.style.display='none';
