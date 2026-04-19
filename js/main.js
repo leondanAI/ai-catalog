@@ -1,5 +1,10 @@
-// Return translated category title (falls back to English title from CATEGORIES data)
+// Return translated category title (uses i18n if available, falls back to English from CATEGORIES data)
 function catTitle(id) {
+  if (typeof I18N !== 'undefined') {
+    const key = 'cat.' + id;
+    const val = I18N.t(key);
+    if (val && val !== key) return val;
+  }
   if (typeof CATEGORIES !== 'undefined') {
     const cat = CATEGORIES.find(c => c.id === id);
     if (cat) return cat.title;
