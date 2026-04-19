@@ -1,4 +1,5 @@
 const CATEGORIES = [
+  // ── 1. Most popular ──────────────────────────────────────────────────────────
   {
     id: 'chat', title: 'AI Chat & Assistants', icon: '💬', color: '#7c6af7',
     tools: [
@@ -110,6 +111,62 @@ const CATEGORIES = [
       { name:'Rows', desc:'Smart spreadsheets with AI. Import data from any source and analyze it right in the browser.', url:'https://rows.com', aff:'https://rows.com?ref=aiportal', badge:'freemium', bestFor:'AI spreadsheets, data import', users:'200K+' },
       { name:'Akkio', desc:'No-code AI for business analysts. Build forecasting models from your CSV or CRM data without writing code.', url:'https://akkio.com', aff:'https://akkio.com?ref=aiportal', badge:'freemium', bestFor:'Forecasting, churn prediction, no-code ML', users:'100K+' },
       { name:'Looker Studio', desc:'Free Google BI tool with AI-powered dashboards. Connects to 800+ data sources including Google Analytics and Sheets.', url:'https://lookerstudio.google.com', aff:'https://lookerstudio.google.com?ref=aiportal', badge:'free', bestFor:'BI dashboards, reporting, free analytics', users:'10M+' },
+    ]
+  },
+
+  // ── NEW CATEGORIES ────────────────────────────────────────────────────────────
+  {
+    id: 'agents', title: 'AI Agents & Automation', icon: '🤖', color: '#ff6b35',
+    tools: [
+      { name:'n8n', desc:'Open-source workflow automation. Chain AI models, APIs and 400+ apps with a visual editor. Self-host or cloud.', url:'https://n8n.io', aff:'https://n8n.io?ref=aiportal', badge:'freemium', bestFor:'Workflow automation, AI pipelines', users:'500K+' },
+      { name:'Make', desc:'Visual automation platform connecting 1,000+ apps. More flexible than Zapier with advanced data routing.', url:'https://make.com', aff:'https://make.com?ref=aiportal', badge:'freemium', bestFor:'Complex automations, app integrations', users:'500K+' },
+      { name:'Lindy', desc:'Build AI agents for email, scheduling and customer support in minutes. No code needed.', url:'https://lindy.ai', aff:'https://lindy.ai?ref=aiportal', badge:'freemium', bestFor:'Email agents, scheduling, support bots', users:'100K+' },
+      { name:'Microsoft Copilot Studio', desc:'Build and deploy custom AI agents for your business. Direct integration with Office 365 and Teams.', url:'https://copilotstudio.microsoft.com', aff:'https://copilotstudio.microsoft.com?ref=aiportal', badge:'freemium', bestFor:'Enterprise agents, Microsoft ecosystem', users:'1M+' },
+      { name:'Relevance AI', desc:'No-code platform to build, train and deploy AI agents and multi-agent teams for any business workflow.', url:'https://relevanceai.com', aff:'https://relevanceai.com?ref=aiportal', badge:'freemium', bestFor:'Multi-agent teams, sales and support bots', users:'100K+' },
+      { name:'AutoGPT', desc:'Open-source autonomous AI agent. Give it a goal — it breaks it into steps and executes them automatically.', url:'https://agpt.co', aff:'https://agpt.co?ref=aiportal', badge:'free', bestFor:'Autonomous tasks, open-source AI agents', users:'200K+' },
+    ]
+  },
+  {
+    id: 'marketing', title: 'Marketing & SEO', icon: '📈', color: '#e63946',
+    tools: [
+      { name:'SurferSEO', desc:'Real-time AI content optimization for top Google rankings. Grade your article vs top results as you write.', url:'https://surferseo.com', aff:'https://surferseo.com?ref=aiportal', badge:'paid', bestFor:'On-page SEO, content scoring', users:'150K+' },
+      { name:'Semrush', desc:'All-in-one SEO platform with AI writing assistant, keyword research and competitor gap analysis.', url:'https://semrush.com', aff:'https://semrush.com?ref=aiportal', badge:'freemium', bestFor:'SEO research, competitor analysis', users:'10M+' },
+      { name:'Copy.ai', desc:'AI marketing copy for ads, emails and social media. 90+ templates, workflow automations and free tier.', url:'https://copy.ai', aff:'https://copy.ai?ref=aiportal', badge:'freemium', bestFor:'Ad copy, email campaigns, social posts', users:'10M+' },
+      { name:'AdCreative.ai', desc:'Generate high-converting ad creatives with AI. Connects to your ad accounts and learns what performs best.', url:'https://adcreative.ai', aff:'https://adcreative.ai?ref=aiportal', badge:'paid', bestFor:'Ad graphics, Facebook/Google ads', users:'1M+' },
+      { name:'Frase', desc:'AI research, content briefs and SEO optimization in one tool. Write 10× faster with full search context.', url:'https://frase.io', aff:'https://frase.io?ref=aiportal', badge:'paid', bestFor:'Content briefs, SEO writing, SERP analysis', users:'30K+' },
+      { name:'Clearscope', desc:'Content optimization platform trusted by top content teams at HubSpot, IBM and Adobe.', url:'https://clearscope.io', aff:'https://clearscope.io?ref=aiportal', badge:'paid', bestFor:'Content grading, keyword optimization', users:'50K+' },
+    ]
+  },
+  {
+    id: 'nocode', title: 'No-Code App Builders', icon: '🏗️', color: '#457b9d',
+    tools: [
+      { name:'Lovable', desc:'Build full-stack web apps from text descriptions. React + Supabase backend, deploy in one click. No coding needed.', url:'https://lovable.dev', aff:'https://lovable.dev?ref=aiportal', badge:'freemium', bestFor:'Full-stack apps, SaaS MVPs', users:'500K+' },
+      { name:'Bubble', desc:'The leading no-code platform. Build complex web apps with visual programming — used by 3M+ makers and startups.', url:'https://bubble.io', aff:'https://bubble.io?ref=aiportal', badge:'freemium', bestFor:'Web apps, marketplaces, SaaS', users:'3M+' },
+      { name:'Webflow', desc:'Professional AI-powered website builder with CMS. Design pixel-perfect sites, export clean code.', url:'https://webflow.com', aff:'https://webflow.com?ref=aiportal', badge:'freemium', bestFor:'Marketing sites, CMS, landing pages', users:'3M+' },
+      { name:'Glide', desc:'Turn Google Sheets or Airtable into mobile and web apps without code. 25K+ free rows included.', url:'https://glideapps.com', aff:'https://glideapps.com?ref=aiportal', badge:'freemium', bestFor:'Internal tools, data-driven apps', users:'100K+' },
+      { name:'Softr', desc:'Build client portals and internal tools from Airtable or Google Sheets in minutes. No code required.', url:'https://softr.io', aff:'https://softr.io?ref=aiportal', badge:'freemium', bestFor:'Client portals, internal dashboards', users:'50K+' },
+      { name:'FlutterFlow', desc:'Visual Flutter app builder. Build and deploy native iOS and Android apps without writing code.', url:'https://flutterflow.io', aff:'https://flutterflow.io?ref=aiportal', badge:'freemium', bestFor:'Mobile apps, iOS/Android, native performance', users:'500K+' },
+    ]
+  },
+  {
+    id: 'education', title: 'Education & Learning', icon: '🎓', color: '#2a9d8f',
+    tools: [
+      { name:'Khanmigo', desc:'AI tutor by Khan Academy. Uses the Socratic method — guides students to answers instead of giving them away.', url:'https://khanmigo.ai', aff:'https://khanmigo.ai?ref=aiportal', badge:'freemium', bestFor:'K-12 tutoring, math, science', users:'500K+' },
+      { name:'Duolingo Max', desc:'AI language learning with GPT-4 roleplay. Practice real conversations with an AI native speaker.', url:'https://duolingo.com', aff:'https://duolingo.com?ref=aiportal', badge:'freemium', bestFor:'Language learning, speaking practice', users:'100M+' },
+      { name:'Synthesis', desc:'AI-powered math and problem-solving for kids. Adaptive learning that adjusts to each student\'s level.', url:'https://synthesis.com', aff:'https://synthesis.com?ref=aiportal', badge:'paid', bestFor:'K-8 math, problem-solving skills', users:'200K+' },
+      { name:'Coursera Coach', desc:'AI learning assistant inside Coursera. Explains concepts, answers questions and personalizes your learning path.', url:'https://coursera.org', aff:'https://coursera.org?ref=aiportal', badge:'freemium', bestFor:'Online courses, professional certificates', users:'100M+' },
+      { name:'Photomath', desc:'Scan and solve math problems step-by-step with AI. 220M downloads — the most-used math app worldwide.', url:'https://photomath.com', aff:'https://photomath.com?ref=aiportal', badge:'freemium', bestFor:'Math homework, step-by-step solutions', users:'220M+' },
+      { name:'Socratic by Google', desc:'Photograph any homework question and get step-by-step visual explanations across all subjects.', url:'https://socratic.org', aff:'https://socratic.org?ref=aiportal', badge:'free', bestFor:'Homework help, all subjects', users:'20M+' },
+    ]
+  },
+  {
+    id: 'presentations', title: 'Presentations & Slides', icon: '🖥️', color: '#8338ec',
+    tools: [
+      { name:'Beautiful.ai', desc:'AI presentation maker with smart slides that auto-redesign as you add content. 60+ professional templates.', url:'https://beautiful.ai', aff:'https://beautiful.ai?ref=aiportal', badge:'freemium', bestFor:'Business presentations, pitch decks', users:'500K+' },
+      { name:'Tome', desc:'AI-native storytelling tool. Generate a full presentation from a one-line prompt in seconds.', url:'https://tome.app', aff:'https://tome.app?ref=aiportal', badge:'freemium', bestFor:'AI-generated decks, storytelling', users:'1M+' },
+      { name:'Pitch', desc:'Collaborative presentation builder with AI writing. Used by fast-growing startups and design teams.', url:'https://pitch.com', aff:'https://pitch.com?ref=aiportal', badge:'freemium', bestFor:'Team presentations, startup decks', users:'500K+' },
+      { name:'Slidesgo', desc:'AI presentation template generator. Thousands of Google Slides and PowerPoint themes, free to use.', url:'https://slidesgo.com', aff:'https://slidesgo.com?ref=aiportal', badge:'freemium', bestFor:'Templates, Google Slides, PowerPoint', users:'10M+' },
+      { name:'Prezi', desc:'Zoomable presentation canvas with AI design assistant. Stands out from standard slide decks.', url:'https://prezi.com', aff:'https://prezi.com?ref=aiportal', badge:'freemium', bestFor:'Dynamic presentations, storytelling visuals', users:'5M+' },
     ]
   }
 ];
