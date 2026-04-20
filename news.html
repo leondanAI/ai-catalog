@@ -156,10 +156,15 @@ function render() {
 
 async function loadNews() {
   const lang = typeof I18N !== 'undefined' ? I18N.lang : 'en';
-  const data = await fetchNews(lang);
-  if (data && data.length > 0) ARTICLES = data;
+  // Show static fallback immediately — no blank-page wait
   buildTabs();
   render();
+  // Fetch from Supabase in background, swap in when ready
+  const data = await fetchNews(lang);
+  if (data && data.length > 0) {
+    ARTICLES = data;
+    render();
+  }
 }
 
 async function onLangChange() {
