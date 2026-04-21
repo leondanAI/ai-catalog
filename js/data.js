@@ -65,6 +65,7 @@ const CATEGORIES = [
       { name:'Adobe Firefly', desc:'Adobe\'s AI inside Photoshop and Illustrator. Copyright-safe content for commercial use.', url:'https://firefly.adobe.com', aff:'https://firefly.adobe.com?ref=aiportal', badge:'freemium', bestFor:'Commercial design, Adobe ecosystem', users:'5M+' },
       { name:'Ideogram', desc:'Best for generating text inside images. Posters, logos and book covers with accurate type.', url:'https://ideogram.ai', aff:'https://ideogram.ai?ref=aiportal', badge:'freemium', bestFor:'Posters with text, typography', users:'3M+' },
       { name:'Recraft AI', desc:'AI that generates scalable SVG vector graphics and icons. 30 free daily credits, commercial use allowed.', url:'https://recraft.ai', aff:'https://recraft.ai?ref=aiportal', badge:'freemium', bestFor:'SVG icons, vector art, brand assets', users:'500K+' },
+      { name:'ComfyUI', desc:'The most powerful open-source node-based AI image generation platform. Build and automate full diffusion pipelines visually — connect Stable Diffusion models, LoRAs, ControlNet, upscalers and custom nodes on an infinite canvas. Supports image, video, 3D and audio generation. Used by Plarium and major game studios as a core tool for production-grade asset and model creation. Free forever, runs locally or in the cloud.', url:'https://www.comfy.org', aff:'https://www.comfy.org?ref=aiportal', badge:'free', bestFor:'Advanced pipelines, game studios, custom models, production workflows', users:'10M+' },
     ]
   },
   {
