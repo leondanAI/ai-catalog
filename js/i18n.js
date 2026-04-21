@@ -2099,11 +2099,38 @@ const I18N = (() => {
     t,
     set(code) {
       if (!T[code]) return;
-      _lang = code;
       localStorage.setItem('lang', code);
-      // Keep URL in sync so the current page is always shareable in the active language
+
+      // Redirect to the correct language subdirectory
+      const parts = window.location.pathname.split('/').filter(Boolean);
+      const langCodes = Object.keys(T).filter(c => c !== 'en');
+      const PAGES = ['index.html','directory.html','news.html','compare.html','tools.html','newsletter.html'];
+
+      // Detect current page filename
+      let page = parts[parts.length - 1] || 'index.html';
+      if (!page.endsWith('.html')) page = 'index.html';
+
+      // Are we in a language subdir already?
+      const inLangDir = parts.length >= 2 && langCodes.includes(parts[parts.length - 2]);
+      const isLangPage = parts.length >= 1 && langCodes.includes(parts[0]) && PAGES.includes(page);
+
+      if (PAGES.includes(page) || page === 'index.html') {
+        let target;
+        if (code === 'en') {
+          target = '/' + page;
+        } else {
+          target = '/' + code + '/' + page;
+        }
+        if (window.location.pathname !== target) {
+          window.location.href = target;
+          return;
+        }
+      }
+
+      // Same page — just update language in place
+      _lang = code;
       const _url = new URL(window.location.href);
-      if (code === 'en') { _url.searchParams.delete('lang'); } else { _url.searchParams.set('lang', code); }
+      _url.searchParams.delete('lang');
       history.replaceState({}, '', _url);
       applyToDOM();
       buildLangMenu('langMenu', 'langBtn');
