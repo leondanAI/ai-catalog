@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comments Admin — MyPedia</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #0a0a0a; color: #f0f0f0; font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+
+/* auth screen */
+.auth-screen {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 100vh; padding: 2rem;
+}
+.auth-box {
+  background: #141414; border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px; padding: 2.5rem; width: 100%; max-width: 420px;
+}
+.auth-logo { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; margin-bottom: 1.5rem; }
+.auth-logo span { color: #7c6af7; }
+.auth-title { font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; margin-bottom: 0.5rem; }
+.auth-sub { font-size: 14px; color: #888; margin-bottom: 1.5rem; line-height: 1.55; }
+.auth-input {
+  width: 100%; background: #1c1c1c; border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px; padding: 12px 14px; color: #f0f0f0;
+  font-family: 'DM Sans', sans-serif; font-size: 14px; outline: none;
+  transition: border-color 0.2s; margin-bottom: 12px;
+}
+.auth-input:focus { border-color: #7c6af7; }
+.auth-btn {
+  width: 100%; background: #7c6af7; color: #fff; border: none;
+  border-radius: 10px; padding: 12px; font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px; font-weight: 600; cursor: pointer; transition: background 0.15s;
+}
+.auth-btn:hover { background: #6a5ae0; }
+.auth-err { font-size: 13px; color: #f56565; margin-top: 10px; display: none; }
+
+/* main layout */
+.admin-wrap { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem 4rem; display: none; }
+.admin-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 2rem; flex-wrap: wrap; gap: 12px;
+}
+.admin-title { font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; }
+.admin-tabs { display: flex; gap: 8px; }
+.tab-btn {
+  padding: 7px 16px; border-radius: 8px; font-size: 13px; font-weight: 500;
+  border: 1px solid rgba(255,255,255,0.08); cursor: pointer;
+  background: #141414; color: #888; transition: all 0.15s;
+}
+.tab-btn.active { background: #7c6af7; color: #fff; border-color: #7c6af7; }
+.tab-btn:hover:not(.active) { border-color: rgba(255,255,255,0.18); color: #f0f0f0; }
+.tab-count {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,0.1); border-radius: 999px;
+  font-size: 11px; font-weight: 600; padding: 1px 7px; margin-left: 6px;
+}
+.tab-btn.active .tab-count { background: rgba(255,255,255,0.25); }
+
+.logout-btn {
+  padding: 7px 16px; border-radius: 8px; font-size: 13px; font-weight: 500;
+  border: 1px solid rgba(255,255,255,0.08); cursor: pointer;
+  background: transparent; color: #888; transition: all 0.15s;
+}
+.logout-btn:hover { color: #f56565; border-color: rgba(245,101,101,0.3); }
+
+/* comment cards */
+.comment-list { display: flex; flex-direction: column; gap: 12px; }
+.c-card {
+  background: #141414; border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px; padding: 1.25rem;
+  display: flex; gap: 16px; align-items: flex-start;
+}
+.c-card.approved { border-color: rgba(45,212,160,0.2); }
+.c-card.rejected { opacity: 0.45; }
+.c-check {
+  width: 22px; height: 22px; border-radius: 6px; border: 2px solid rgba(255,255,255,0.15);
+  background: #1c1c1c; cursor: pointer; flex-shrink: 0; margin-top: 2px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s;
+}
+.c-check.checked { background: #2dd4a0; border-color: #2dd4a0; }
+.c-check.checked::after { content: '✓'; color: #0a0a0a; font-size: 13px; font-weight: 700; }
+.c-body { flex: 1; }
+.c-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
+.c-author { font-weight: 500; font-size: 14px; }
+.c-stars { color: #f59e0b; font-size: 13px; }
+.c-slug {
+  font-size: 11px; background: #1c1c1c; border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 20px; padding: 2px 10px; color: #888;
+}
+.c-date { font-size: 12px; color: #555; margin-left: auto; }
+.c-text { font-size: 14px; color: #888; line-height: 1.6; margin-bottom: 10px; }
+.c-actions { display: flex; gap: 8px; }
+.btn-approve, .btn-reject, .btn-undo {
+  padding: 6px 14px; border-radius: 7px; font-size: 12px; font-weight: 600;
+  border: 1px solid; cursor: pointer; transition: all 0.15s;
+}
+.btn-approve { background: rgba(45,212,160,0.08); color: #2dd4a0; border-color: rgba(45,212,160,0.25); }
+.btn-approve:hover { background: rgba(45,212,160,0.18); }
+.btn-reject  { background: rgba(245,101,101,0.06); color: #f56565; border-color: rgba(245,101,101,0.2); }
+.btn-reject:hover  { background: rgba(245,101,101,0.14); }
+.btn-undo    { background: rgba(255,255,255,0.04); color: #888; border-color: rgba(255,255,255,0.1); }
+.btn-undo:hover    { color: #f0f0f0; border-color: rgba(255,255,255,0.2); }
+.c-status-badge {
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;
+  padding: 2px 10px; border-radius: 999px;
+}
+.c-status-badge.approved { background: rgba(45,212,160,0.1); color: #2dd4a0; }
+.c-status-badge.rejected { background: rgba(245,101,101,0.08); color: #f56565; }
+
+.empty-state { text-align: center; padding: 3rem; color: #555; font-size: 14px; }
+.loading-state { text-align: center; padding: 3rem; color: #555; font-size: 14px; }
+</style>
+</head>
+<body>
+
+<!-- Auth screen -->
+<div class="auth-screen" id="authScreen">
+  <div class="auth-box">
+    <div class="auth-logo">My<span>Pedia</span> Admin</div>
+    <div class="auth-title">Comments moderation</div>
+    <p class="auth-sub">Paste your Supabase <strong>service role</strong> key to access. It stays in your browser — never sent anywhere except directly to Supabase.</p>
+    <input class="auth-input" type="password" id="keyInput" placeholder="sb_service_role_..." autocomplete="off">
+    <button class="auth-btn" onclick="doLogin()">Enter</button>
+    <div class="auth-err" id="authErr">Invalid key or connection failed. Try again.</div>
+  </div>
+</div>
+
+<!-- Admin panel -->
+<div class="admin-wrap" id="adminWrap">
+  <div class="admin-header">
+    <div class="admin-title">Comments</div>
+    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+      <div class="admin-tabs">
+        <button class="tab-btn active" onclick="setTab('pending')" id="tab-pending">Pending <span class="tab-count" id="cnt-pending">0</span></button>
+        <button class="tab-btn" onclick="setTab('approved')" id="tab-approved">Approved <span class="tab-count" id="cnt-approved">0</span></button>
+        <button class="tab-btn" onclick="setTab('rejected')" id="tab-rejected">Rejected <span class="tab-count" id="cnt-rejected">0</span></button>
+      </div>
+      <button class="logout-btn" onclick="doLogout()">Sign out</button>
+    </div>
+  </div>
+  <div id="commentList" class="comment-list">
+    <div class="loading-state">Loading…</div>
+  </div>
+</div>
+
+<script>
+const SB_URL = 'https://lbjdwkvkkndvofysyssy.supabase.co';
+let serviceKey = sessionStorage.getItem('sb_admin_key') || '';
+let currentTab = 'pending';
+let allRows = [];
+
+// Auto-login if key stored in session
+if (serviceKey) { showAdmin(); loadAll(); }
+
+async function doLogin() {
+  const key = document.getElementById('keyInput').value.trim();
+  if (!key) return;
+  // Verify key with a lightweight request
+  try {
+    const r = await fetch(`${SB_URL}/rest/v1/comments?limit=1`, {
+      headers: { 'apikey': key, 'Authorization': `Bearer ${key}` }
+    });
+    if (!r.ok) throw new Error('auth failed');
+    serviceKey = key;
+    sessionStorage.setItem('sb_admin_key', key);
+    showAdmin();
+    loadAll();
+  } catch {
+    document.getElementById('authErr').style.display = 'block';
+  }
+}
+
+function doLogout() {
+  sessionStorage.removeItem('sb_admin_key');
+  serviceKey = '';
+  document.getElementById('adminWrap').style.display = 'none';
+  document.getElementById('authScreen').style.display = 'flex';
+  document.getElementById('keyInput').value = '';
+}
+
+function showAdmin() {
+  document.getElementById('authScreen').style.display = 'none';
+  document.getElementById('adminWrap').style.display = 'block';
+}
+
+async function loadAll() {
+  try {
+    const r = await fetch(`${SB_URL}/rest/v1/comments?order=created_at.desc`, {
+      headers: { 'apikey': serviceKey, 'Authorization': `Bearer ${serviceKey}` }
+    });
+    allRows = await r.json();
+    updateCounts();
+    renderTab();
+  } catch {
+    document.getElementById('commentList').innerHTML = '<div class="empty-state">Failed to load comments.</div>';
+  }
+}
+
+function updateCounts() {
+  ['pending','approved','rejected'].forEach(s => {
+    document.getElementById('cnt-' + s).textContent = allRows.filter(r => r.status === s).length;
+  });
+}
+
+function setTab(tab) {
+  currentTab = tab;
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  renderTab();
+}
+
+function renderTab() {
+  const rows = allRows.filter(r => r.status === currentTab);
+  const list = document.getElementById('commentList');
+  if (!rows.length) { list.innerHTML = `<div class="empty-state">No ${currentTab} comments.</div>`; return; }
+  list.innerHTML = rows.map(c => `
+    <div class="c-card ${currentTab}" id="card-${c.id}">
+      <div class="c-body">
+        <div class="c-meta">
+          <span class="c-author">${esc(c.author_name)}</span>
+          <span class="c-stars">${'★'.repeat(c.rating)}${'☆'.repeat(5-c.rating)}</span>
+          <span class="c-slug">${esc(c.tool_slug)}</span>
+          <span class="c-date">${new Date(c.created_at).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'})}</span>
+        </div>
+        <div class="c-text">${esc(c.content)}</div>
+        <div class="c-actions">
+          ${currentTab === 'pending' ? `
+            <button class="btn-approve" onclick="setStatus(${c.id},'approved')">✓ Approve</button>
+            <button class="btn-reject"  onclick="setStatus(${c.id},'rejected')">✕ Reject</button>
+          ` : `
+            <button class="btn-undo" onclick="setStatus(${c.id},'pending')">↩ Move to Pending</button>
+            ${currentTab === 'rejected' ? `<button class="btn-approve" onclick="setStatus(${c.id},'approved')">✓ Approve</button>` : ''}
+            ${currentTab === 'approved' ? `<button class="btn-reject" onclick="setStatus(${c.id},'rejected')">✕ Reject</button>` : ''}
+          `}
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+async function setStatus(id, status) {
+  const card = document.getElementById('card-' + id);
+  if (card) card.style.opacity = '0.4';
+  try {
+    const r = await fetch(`${SB_URL}/rest/v1/comments?id=eq.${id}`, {
+      method: 'PATCH',
+      headers: {
+        'apikey': serviceKey,
+        'Authorization': `Bearer ${serviceKey}`,
+        'Content-Type': 'application/json',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({ status })
+    });
+    if (!r.ok) throw new Error();
+    // Update local data and re-render
+    const row = allRows.find(r => r.id === id);
+    if (row) row.status = status;
+    updateCounts();
+    renderTab();
+  } catch {
+    if (card) card.style.opacity = '1';
+    alert('Failed to update. Please try again.');
+  }
+}
+
+function esc(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+document.getElementById('keyInput').addEventListener('keydown', e => { if (e.key === 'Enter') doLogin(); });
+</script>
+</body>
+</html>
