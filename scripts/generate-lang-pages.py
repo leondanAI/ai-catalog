@@ -9,7 +9,7 @@ Run: python3 scripts/generate-lang-pages.py
 import os, re
 
 BASE_URL = 'https://www.mypedia.ai'
-ROOT_DIR = os.path.join(os.path.dirname(__file__), '..')
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
 LANGUAGES = [
     ('ru', 'ru'),   ('es', 'es'),   ('fr', 'fr'),   ('de', 'de'),
@@ -38,15 +38,17 @@ def parse_i18n():
         content = f.read()
 
     result = {}
-    # Find each language block: "xx: {  ... },"
-    lang_blocks = re.finditer(r'\n    (\w{2,3}):\s*\{', content)
-    positions = [(m.group(1), m.end()) for m in lang_blocks]
+    lang_blocks = list(re.finditer(r'\n    (\w{2,3}):\s*\{', content))
 
-    for i, (lang, start) in enumerate(positions):
-        end = positions[i+1][1] - 20 if i+1 < len(positions) else len(content)
+    for i, m in enumerate(lang_blocks):
+        lang  = m.group(1)
+        start = m.end()                                           # after opening {
+        end   = lang_blocks[i+1].start() if i+1 < len(lang_blocks) else len(content)
         block = content[start:end]
-        pairs = re.findall(r"'([^']+)':\s*'([^']*(?:\\.[^']*)*)'", block)
-        result[lang] = {k: v.replace("\\'", "'") for k, v in pairs}
+        # Robust: handles backslash-escaped quotes inside values
+        pairs = re.findall(r"'([^']+)':\s*'((?:[^'\\]|\\.)*)'", block)
+        if lang not in result:   # keep first occurrence only (translations, not metadata)
+            result[lang] = {k: v.replace("\\'", "'") for k, v in pairs}
 
     return result
 
@@ -94,6 +96,10 @@ def inject_hreflang(html, page):
 def generate_lang_page(html, lang, page, title, desc):
     # Set html lang attribute
     html = re.sub(r'<html[^>]*>', f'<html lang="{lang}">', html)
+
+    # Fix relative CSS/JS paths to absolute so they work from subdirectory
+    html = html.replace('href="css/', 'href="/css/')
+    html = html.replace('src="js/', 'src="/js/')
 
     # Update title
     html = re.sub(r'<title>[^<]*</title>', f'<title>{title}</title>', html)

@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> | MyPedia</title>
-<meta name="description" content="">
+<title>Bezpłatne narzędzia | MyPedia</title>
+<meta name="description" content="Działają w przeglądarce — bez rejestracji">
 <meta name="keywords" content="free online tools, token counter, text diff, word counter, JSON formatter, regex tester, case converter, CSV JSON converter">
 <meta name="author" content="MyPedia">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="canonical" href="https://www.mypedia.ai/pl/tools.html">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.mypedia.ai/pl/tools.html">
-<meta property="og:title" content=" | MyPedia">
+<meta property="og:title" content="Bezpłatne narzędzia | MyPedia">
 <meta property="og:description" content="10 free browser tools — no signup, no install. Token counter, text diff, JSON formatter and more.">
 <meta property="og:image" content="https://www.mypedia.ai/og-image.svg">
 <meta property="og:site_name" content="MyPedia">
@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="/css/style.css">
 <style>
   .tools-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1rem; }
   .tool-card { display:flex; flex-direction:column; background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius); padding:1.5rem; transition:border-color .15s,background .15s,transform .15s; text-decoration:none; color:inherit; }
@@ -34,6 +34,28 @@
   .tool-card-desc { font-size:13px; color:var(--text2); line-height:1.55; flex:1; }
   .tool-card-link { display:inline-flex; align-items:center; gap:4px; margin-top:1.25rem; font-size:12px; font-weight:500; color:var(--accent); }
 </style>
+<link rel="alternate" hreflang="x-default" href="https://www.mypedia.ai/tools.html">
+<link rel="alternate" hreflang="en" href="https://www.mypedia.ai/tools.html">
+<link rel="alternate" hreflang="ru" href="https://www.mypedia.ai/ru/tools.html">
+<link rel="alternate" hreflang="es" href="https://www.mypedia.ai/es/tools.html">
+<link rel="alternate" hreflang="fr" href="https://www.mypedia.ai/fr/tools.html">
+<link rel="alternate" hreflang="de" href="https://www.mypedia.ai/de/tools.html">
+<link rel="alternate" hreflang="pt" href="https://www.mypedia.ai/pt/tools.html">
+<link rel="alternate" hreflang="it" href="https://www.mypedia.ai/it/tools.html">
+<link rel="alternate" hreflang="zh" href="https://www.mypedia.ai/zh/tools.html">
+<link rel="alternate" hreflang="ja" href="https://www.mypedia.ai/ja/tools.html">
+<link rel="alternate" hreflang="ko" href="https://www.mypedia.ai/ko/tools.html">
+<link rel="alternate" hreflang="ar" href="https://www.mypedia.ai/ar/tools.html">
+<link rel="alternate" hreflang="hi" href="https://www.mypedia.ai/hi/tools.html">
+<link rel="alternate" hreflang="tr" href="https://www.mypedia.ai/tr/tools.html">
+<link rel="alternate" hreflang="pl" href="https://www.mypedia.ai/pl/tools.html">
+<link rel="alternate" hreflang="nl" href="https://www.mypedia.ai/nl/tools.html">
+<link rel="alternate" hreflang="vi" href="https://www.mypedia.ai/vi/tools.html">
+<link rel="alternate" hreflang="id" href="https://www.mypedia.ai/id/tools.html">
+<link rel="alternate" hreflang="th" href="https://www.mypedia.ai/th/tools.html">
+<link rel="alternate" hreflang="uk" href="https://www.mypedia.ai/uk/tools.html">
+<link rel="alternate" hreflang="he" href="https://www.mypedia.ai/he/tools.html">
+<link rel="alternate" hreflang="ro" href="https://www.mypedia.ai/ro/tools.html">
 <link rel="alternate" hreflang="x-default" href="https://www.mypedia.ai/tools.html">
 <link rel="alternate" hreflang="en" href="https://www.mypedia.ai/tools.html">
 <link rel="alternate" hreflang="ru" href="https://www.mypedia.ai/ru/tools.html">
@@ -129,8 +151,8 @@
 </footer>
 
 <script>localStorage.setItem("lang","pl");</script>
-<script src="js/i18n.js"></script>
-<script src="js/main.js"></script>
+<script src="/js/i18n.js"></script>
+<script src="/js/main.js"></script>
 <script>
 const TOOLS = [
   { id:'token-counter',     icon:'🪙', color:'#7c6af7', title:'Token Counter',      desc:'Estimate token count for AI prompts — see how much of GPT-4, Claude or Gemini context you use.' },
