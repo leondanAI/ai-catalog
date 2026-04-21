@@ -384,11 +384,17 @@ function badgeLabel(b) {
   return map[b] || b;
 }
 
+function toSlug(name) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+
 function renderToolCard(tool, color) {
   const c = color || tool.catColor || '#7c6af7';
   const domain = getDomain(tool.url);
   const faviconSrc = `https://www.google.com/s2/favicons?sz=64&domain=${domain}`;
   const usersHtml = tool.users ? `<span class="tool-users">👥 ${tool.users}</span>` : '';
+  const slug = toSlug(tool.name);
+  const reviewUrl = `/tools/${slug}.html`;
   return `
     <div class="tool-card fade-up" onclick="showToolDetail(event,'${tool.name.replace(/'/g,"\\'")}')">
       <div class="tool-card-top">
@@ -404,7 +410,10 @@ function renderToolCard(tool, color) {
       <p class="tool-desc">${getToolDesc(tool)}</p>
       <div class="tool-footer">
         <span class="tool-domain">${domain}</span>
-        <a class="tool-aff" href="${tool.aff || tool.url}" target="_blank" rel="noopener sponsored" onclick="event.stopPropagation()">${t('tool.open')}</a>
+        <div style="display:flex;align-items:center;gap:6px">
+          <a class="tool-review" href="${reviewUrl}" onclick="event.stopPropagation()">More info →</a>
+          <a class="tool-aff" href="${tool.aff || tool.url}" target="_blank" rel="noopener sponsored" onclick="event.stopPropagation()">${t('tool.open')}</a>
+        </div>
       </div>
     </div>`;
 }
