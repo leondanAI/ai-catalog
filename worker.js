@@ -50,8 +50,18 @@ export default {
       return corsResponse(null, 204);
     }
 
-    // Only accept POST to /recommend
     const url = new URL(request.url);
+
+    // Debug: GET /models — lists available models for this API key
+    if (request.method === 'GET' && url.pathname === '/models') {
+      const r = await fetch('https://api.anthropic.com/v1/models', {
+        headers: { 'x-api-key': env.ANTHROPIC_API_KEY, 'anthropic-version': '2023-06-01' }
+      });
+      const data = await r.json();
+      return corsResponse(JSON.stringify(data), r.status);
+    }
+
+    // Only accept POST to /recommend
     if (request.method !== 'POST' || url.pathname !== '/recommend') {
       return corsResponse(JSON.stringify({ error: 'Not found' }), 404);
     }
@@ -78,7 +88,7 @@ export default {
         'anthropic-version': '2023-06-01'
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: 'claude-haiku-4-5-20251001',
         max_tokens: 1000,
         system: SYSTEM_PROMPT,
         messages: [{ role: 'user', content: `Task: ${task}` }]
