@@ -87,7 +87,7 @@ img { max-width: 100%; }
 .hero-search-btn:hover { background: var(--accent2); }
 
 /* ── HERO CATEGORY PILLS ── */
-.hero-cats-row { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem; }
+.hero-cats-row { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 2rem; margin-bottom: 2.5rem; }
 .hero-cat-pill { display: inline-flex; align-items: center; gap: 5px; padding: 7px 15px; background: var(--bg2); border: 1px solid var(--border); border-radius: 20px; font-size: 13px; color: var(--text2); cursor: pointer; transition: border-color 0.15s, color 0.15s, background 0.15s; white-space: nowrap; text-decoration: none; }
 .hero-cat-pill:hover { border-color: rgba(124,106,247,0.5); color: var(--text); background: rgba(124,106,247,0.08); }
 
