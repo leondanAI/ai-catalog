@@ -100,6 +100,8 @@ def render_page(tool, all_tools):
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{esc(name)} Review 2026 | MyPedia">
 <meta name="twitter:description" content="{esc(desc[:160])}">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L09EYV4S46"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-L09EYV4S46");</script>
 <script type="application/ld+json">
 {{"@context":"https://schema.org","@type":"SoftwareApplication","name":"{esc(name)}","description":"{esc(desc[:200])}","applicationCategory":"AIApplication","operatingSystem":"Web","url":"{esc(url)}","offers":{{"@type":"Offer","price":"{('0' if badge in ('free','freemium') else '')}","priceCurrency":"USD"}},"publisher":{{"@type":"Organization","name":"MyPedia","url":"https://www.mypedia.ai"}}}}
 </script>
