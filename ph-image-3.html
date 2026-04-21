@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  width:1270px; height:760px; overflow:hidden;
+  background:#0a0a0a;
+  font-family:'DM Sans', sans-serif;
+  color:#f0f0f0;
+  position:relative;
+}
+body::before {
+  content:'';
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  width:800px; height:800px;
+  background:radial-gradient(circle, rgba(124,106,247,0.08) 0%, transparent 65%);
+  pointer-events:none;
+}
+
+.layout {
+  position:relative; z-index:1;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:1fr 1fr;
+  gap:16px;
+  height:100%;
+  padding:44px 56px;
+}
+
+/* panel base */
+.panel {
+  background:#141414;
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:18px;
+  padding:28px 28px 24px;
+  display:flex; flex-direction:column;
+  overflow:hidden;
+  position:relative;
+}
+
+/* NEWS PANEL — top left */
+.panel-news {
+  border-color:rgba(124,106,247,0.2);
+}
+.panel-news::before {
+  content:'';
+  position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg, #7c6af7, transparent);
+}
+.panel-label {
+  font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:1.2px;
+  color:#555; margin-bottom:16px;
+}
+.panel-title {
+  font-family:'Space Grotesk',sans-serif;
+  font-size:20px; font-weight:700;
+  margin-bottom:18px;
+  line-height:1.2;
+}
+.panel-title span { color:#7c6af7; }
+
+.news-item {
+  display:flex; flex-direction:column; gap:4px;
+  padding:10px 0;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+.news-item:last-child { border-bottom:none; }
+.news-tag-sm {
+  font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px;
+}
+.news-headline { font-size:13px; color:#ccc; line-height:1.4; }
+.news-date { font-size:11px; color:#444; }
+
+/* COMPARE PANEL — top right */
+.panel-compare {
+  border-color:rgba(45,212,160,0.2);
+}
+.panel-compare::before {
+  content:'';
+  position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg, #2dd4a0, transparent);
+}
+
+.compare-row {
+  display:flex; gap:12px; align-items:stretch;
+  margin-bottom:16px; flex:1;
+}
+.compare-tool {
+  flex:1;
+  background:#1c1c1c;
+  border:1px solid rgba(255,255,255,0.07);
+  border-radius:12px;
+  padding:14px;
+}
+.ct-header { display:flex; align-items:center; gap:8px; margin-bottom:12px; }
+.ct-avatar {
+  width:32px; height:32px; border-radius:8px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:13px; font-weight:700;
+}
+.ct-name { font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:600; }
+.ct-row { display:flex; justify-content:space-between; margin-bottom:6px; font-size:11px; }
+.ct-key { color:#555; }
+.ct-val { color:#ccc; font-weight:500; }
+
+.vs-badge {
+  align-self:center;
+  background:rgba(45,212,160,0.1);
+  border:1px solid rgba(45,212,160,0.2);
+  color:#2dd4a0;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:12px; font-weight:700;
+  padding:6px 10px; border-radius:8px;
+}
+
+/* LANGUAGES PANEL — bottom left */
+.panel-lang {
+  border-color:rgba(74,174,245,0.2);
+}
+.panel-lang::before {
+  content:'';
+  position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg, #4aaef5, transparent);
+}
+.lang-grid {
+  display:flex; flex-wrap:wrap; gap:8px; margin-top:4px;
+}
+.lang-chip {
+  background:#1c1c1c;
+  border:1px solid rgba(255,255,255,0.07);
+  border-radius:8px;
+  padding:5px 11px;
+  font-size:12px; color:#888;
+  display:flex; align-items:center; gap:6px;
+}
+.lang-chip.highlight {
+  background:rgba(74,174,245,0.1);
+  border-color:rgba(74,174,245,0.25);
+  color:#4aaef5;
+}
+
+/* FREE TOOLS PANEL — bottom right */
+.panel-tools {
+  border-color:rgba(245,166,35,0.2);
+}
+.panel-tools::before {
+  content:'';
+  position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg, #f5a623, transparent);
+}
+.tool-list { display:flex; flex-direction:column; gap:10px; margin-top:4px; flex:1; }
+.tool-item {
+  display:flex; align-items:center; gap:12px;
+  background:#1c1c1c;
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:10px;
+  padding:11px 14px;
+}
+.tool-ico { font-size:18px; }
+.tool-info-name { font-size:13px; font-weight:500; margin-bottom:2px; }
+.tool-info-desc { font-size:11px; color:#555; }
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <!-- TOP LEFT: Daily News -->
+  <div class="panel panel-news">
+    <div class="panel-label">📰 Daily News</div>
+    <div class="panel-title">AI <span>News</span> — updated every day</div>
+    <div class="news-item">
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <span class="news-tag-sm" style="color:#7c6af7">Models</span>
+        <span class="news-date">Apr 19, 2026</span>
+      </div>
+      <div class="news-headline">xAI Releases Grok 4.3 Beta — 1 Trillion Parameters</div>
+    </div>
+    <div class="news-item">
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <span class="news-tag-sm" style="color:#2dd4a0">Tools</span>
+        <span class="news-date">Apr 18, 2026</span>
+      </div>
+      <div class="news-headline">Anthropic Launches Agent Memory — Long-Term Memory for Claude</div>
+    </div>
+    <div class="news-item">
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <span class="news-tag-sm" style="color:#7c6af7">Models</span>
+        <span class="news-date">Apr 17, 2026</span>
+      </div>
+      <div class="news-headline">Claude Opus 4.7 Tops SWE-bench with 87.6% Score</div>
+    </div>
+    <div class="news-item">
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <span class="news-tag-sm" style="color:#f5a623">Business</span>
+        <span class="news-date">Apr 16, 2026</span>
+      </div>
+      <div class="news-headline">Apple Rebuilds Siri on Google Gemini via Private Cloud</div>
+    </div>
+  </div>
+
+  <!-- TOP RIGHT: Compare -->
+  <div class="panel panel-compare">
+    <div class="panel-label">⚖️ Tool Comparison</div>
+    <div class="panel-title">Compare <span style="color:#2dd4a0">any two tools</span> side by side</div>
+    <div class="compare-row">
+      <div class="compare-tool">
+        <div class="ct-header">
+          <div class="ct-avatar" style="background:rgba(124,106,247,0.12);color:#7c6af7">C</div>
+          <span class="ct-name">Claude</span>
+        </div>
+        <div class="ct-row"><span class="ct-key">Price</span><span class="ct-val">Freemium</span></div>
+        <div class="ct-row"><span class="ct-key">Best for</span><span class="ct-val">Long tasks</span></div>
+        <div class="ct-row"><span class="ct-key">Context</span><span class="ct-val">200K</span></div>
+      </div>
+      <div class="vs-badge">VS</div>
+      <div class="compare-tool">
+        <div class="ct-header">
+          <div class="ct-avatar" style="background:rgba(45,212,160,0.12);color:#2dd4a0">G</div>
+          <span class="ct-name">Gemini</span>
+        </div>
+        <div class="ct-row"><span class="ct-key">Price</span><span class="ct-val">Freemium</span></div>
+        <div class="ct-row"><span class="ct-key">Best for</span><span class="ct-val">Multimodal</span></div>
+        <div class="ct-row"><span class="ct-key">Context</span><span class="ct-val">1M</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM LEFT: 20 Languages -->
+  <div class="panel panel-lang">
+    <div class="panel-label">🌍 Multilingual</div>
+    <div class="panel-title">Available in <span style="color:#4aaef5">20 languages</span></div>
+    <div class="lang-grid">
+      <div class="lang-chip highlight">🇬🇧 English</div>
+      <div class="lang-chip highlight">🇷🇺 Русский</div>
+      <div class="lang-chip highlight">🇪🇸 Español</div>
+      <div class="lang-chip highlight">🇫🇷 Français</div>
+      <div class="lang-chip">🇩🇪 Deutsch</div>
+      <div class="lang-chip">🇧🇷 Português</div>
+      <div class="lang-chip">🇮🇹 Italiano</div>
+      <div class="lang-chip">🇨🇳 中文</div>
+      <div class="lang-chip">🇯🇵 日本語</div>
+      <div class="lang-chip">🇰🇷 한국어</div>
+      <div class="lang-chip">🇸🇦 العربية</div>
+      <div class="lang-chip">+ 9 more</div>
+    </div>
+  </div>
+
+  <!-- BOTTOM RIGHT: Free Tools -->
+  <div class="panel panel-tools">
+    <div class="panel-label">⚡ Free Browser Utilities</div>
+    <div class="panel-title">Tools that run <span style="color:#f5a623">in your browser</span></div>
+    <div class="tool-list">
+      <div class="tool-item">
+        <span class="tool-ico">🔤</span>
+        <div><div class="tool-info-name">Token Counter</div><div class="tool-info-desc">Count tokens for any AI model</div></div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-ico">📝</span>
+        <div><div class="tool-info-name">Prompt Builder</div><div class="tool-info-desc">Structure better AI prompts</div></div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-ico">🔄</span>
+        <div><div class="tool-info-name">JSON Formatter</div><div class="tool-info-desc">Format & validate JSON output</div></div>
+      </div>
+      <div class="tool-item">
+        <span class="tool-ico">📊</span>
+        <div><div class="tool-info-name">Model Pricing Calc</div><div class="tool-info-desc">Estimate API costs instantly</div></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

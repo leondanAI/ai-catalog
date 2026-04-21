@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Tool Finder</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     EMBED INSTRUCTIONS
+     Copy everything between CUT HERE markers into your page.
+     Make sure the Google Fonts <link> is in your <head>.
+     Set PROXY_URL below to your Cloudflare Worker URL.
+     ============================================================ */
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #080808;
+    --surface: #131313;
+    --surface2: #1c1c1c;
+    --border: rgba(255,255,255,0.07);
+    --border-hover: rgba(255,255,255,0.16);
+    --text: #f0ede8;
+    --muted: rgba(240,237,232,0.42);
+    --accent: #c8f060;
+    --tag-bg: rgba(200,240,96,0.1);
+    --tag-text: #c8f060;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+  }
+
+  header {
+    position: relative; z-index: 2;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.25rem 2.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .logo { font-family: 'Instrument Serif', serif; font-size: 1.25rem; letter-spacing: -0.01em; }
+  .logo span { color: var(--accent); }
+  .beta-badge {
+    font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--tag-text); background: var(--tag-bg);
+    border: 1px solid rgba(200,240,96,0.18); padding: 4px 11px; border-radius: 999px;
+  }
+
+  /* ===================== CUT HERE — START ===================== */
+
+  .tf-section {
+    flex: 1; position: relative; z-index: 1;
+    display: flex; flex-direction: column; align-items: center;
+    padding: 6rem 1.5rem 4rem;
+  }
+
+  .tf-eyebrow {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 1.5rem;
+  }
+  .tf-eyebrow::before, .tf-eyebrow::after {
+    content: ''; display: block; width: 24px; height: 1px;
+    background: var(--accent); opacity: 0.5;
+  }
+
+  .tf-h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(2.4rem, 5.5vw, 4rem);
+    font-weight: 400; line-height: 1.1; text-align: center;
+    letter-spacing: -0.025em; max-width: 700px; margin-bottom: 1.1rem;
+  }
+  .tf-h1 em { font-style: italic; color: var(--accent); }
+
+  .tf-sub {
+    font-size: 1rem; font-weight: 300; color: var(--muted);
+    text-align: center; max-width: 420px; line-height: 1.65; margin-bottom: 3.5rem;
+  }
+
+  .tf-wrap { width: 100%; max-width: 620px; position: relative; margin-bottom: 1rem; }
+
+  .tf-input {
+    width: 100%; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 18px; padding: 1.15rem 4.8rem 1.15rem 1.5rem;
+    font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 300;
+    color: var(--text); resize: none; outline: none; line-height: 1.55;
+    transition: border-color 0.2s, box-shadow 0.2s; min-height: 62px;
+  }
+  .tf-input::placeholder { color: var(--muted); }
+  .tf-input:focus {
+    border-color: var(--border-hover);
+    box-shadow: 0 0 0 3px rgba(200,240,96,0.06);
+  }
+
+  .tf-btn {
+    position: absolute; right: 10px; bottom: 10px;
+    background: var(--accent); color: #080808; border: none; border-radius: 11px;
+    width: 42px; height: 42px; display: flex; align-items: center; justify-content: center;
+    cursor: pointer; font-size: 18px; font-weight: 500;
+    transition: background 0.18s, transform 0.15s;
+  }
+  .tf-btn:hover { background: #d5f577; transform: scale(1.05); }
+  .tf-btn:disabled { background: var(--surface2); color: var(--muted); cursor: not-allowed; transform: none; }
+
+  .tf-examples { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; max-width: 620px; }
+  .tf-pill {
+    font-size: 12px; color: var(--muted); background: var(--surface);
+    border: 1px solid var(--border); border-radius: 999px; padding: 5px 14px;
+    cursor: pointer; transition: border-color 0.2s, color 0.2s; white-space: nowrap;
+  }
+  .tf-pill:hover { color: var(--text); border-color: var(--border-hover); }
+
+  .tf-loading {
+    display: none; align-items: center; gap: 12px;
+    margin-top: 2.5rem; color: var(--muted); font-size: 14px;
+  }
+  .tf-spinner {
+    width: 18px; height: 18px;
+    border: 2px solid rgba(255,255,255,0.08); border-top-color: var(--accent);
+    border-radius: 50%; animation: tf-spin 0.65s linear infinite; flex-shrink: 0;
+  }
+  @keyframes tf-spin { to { transform: rotate(360deg); } }
+
+  .tf-error {
+    display: none; width: 100%; max-width: 620px; margin-top: 1.5rem;
+    background: rgba(255,70,70,0.06); border: 1px solid rgba(255,70,70,0.2);
+    color: #ff9090; border-radius: 12px; padding: 1rem 1.25rem; font-size: 13px; line-height: 1.5;
+  }
+
+  .tf-results {
+    display: none; flex-direction: column; gap: 12px;
+    width: 100%; max-width: 620px; margin-top: 2.5rem;
+    animation: tf-fadeUp 0.4s ease;
+  }
+  @keyframes tf-fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .tf-rlabel {
+    font-size: 10px; font-weight: 500; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--muted); padding-left: 2px;
+  }
+
+  .tf-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 18px; padding: 1.4rem 1.5rem; transition: border-color 0.2s;
+  }
+  .tf-card.tf-primary { border-color: rgba(200,240,96,0.22); }
+  .tf-card:hover { border-color: var(--border-hover); }
+
+  .tf-card-top {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    gap: 12px; margin-bottom: 10px;
+  }
+  .tf-card-name {
+    font-family: 'Instrument Serif', serif; font-size: 1.35rem;
+    font-weight: 400; letter-spacing: -0.01em;
+  }
+  .tf-card-tag {
+    font-size: 10px; font-weight: 500; text-transform: uppercase;
+    letter-spacing: 0.08em; padding: 4px 10px; border-radius: 999px;
+    white-space: nowrap; flex-shrink: 0; margin-top: 4px;
+  }
+  .tf-card-tag.tf-best { background: var(--tag-bg); color: var(--tag-text); border: 1px solid rgba(200,240,96,0.2); }
+  .tf-card-tag.tf-alt  { background: rgba(255,255,255,0.04); color: var(--muted); border: 1px solid var(--border); }
+
+  .tf-card-why {
+    font-size: 14px; font-weight: 300; color: rgba(240,237,232,0.68);
+    line-height: 1.65; margin-bottom: 14px;
+  }
+  .tf-card-footer { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .tf-pricing {
+    font-size: 11px; font-weight: 500; color: var(--muted);
+    background: var(--surface2); border: 1px solid var(--border);
+    padding: 3px 10px; border-radius: 999px;
+  }
+  .tf-link {
+    font-size: 13px; font-weight: 500; color: var(--accent);
+    text-decoration: none; margin-left: auto;
+    display: flex; align-items: center; gap: 4px;
+  }
+  .tf-link:hover { text-decoration: underline; }
+
+  /* ====================== CUT HERE — END ====================== */
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">tool<span>finder</span></div>
+  <span class="beta-badge">Prototype</span>
+</header>
+
+<!-- ===================== PASTE THIS BLOCK INTO YOUR HOMEPAGE ===================== -->
+<section class="tf-section">
+
+  <div class="tf-eyebrow">AI Tool Discovery</div>
+
+  <h1 class="tf-h1">Describe your task,<br>find the <em>perfect tool</em></h1>
+
+  <p class="tf-sub">
+    Tell us what you want to accomplish and we'll match you with the best AI tool — no browsing required.
+  </p>
+
+  <div class="tf-wrap">
+    <textarea
+      class="tf-input"
+      id="tfInput"
+      rows="2"
+      placeholder="e.g. I want to turn my podcast episodes into blog posts…"
+      onkeydown="tfHandleKey(event)"
+    ></textarea>
+    <button class="tf-btn" id="tfBtn" onclick="tfFind()" title="Find tools">→</button>
+  </div>
+
+  <div class="tf-examples">
+    <span class="tf-pill" onclick="tfFill(this)">Write landing page copy</span>
+    <span class="tf-pill" onclick="tfFill(this)">Remove background from photos</span>
+    <span class="tf-pill" onclick="tfFill(this)">Transcribe a meeting recording</span>
+    <span class="tf-pill" onclick="tfFill(this)">Generate product images</span>
+    <span class="tf-pill" onclick="tfFill(this)">Summarize long PDF documents</span>
+    <span class="tf-pill" onclick="tfFill(this)">Clone my voice for videos</span>
+  </div>
+
+  <div class="tf-loading" id="tfLoading">
+    <div class="tf-spinner"></div>
+    <span>Finding the best tools for your task…</span>
+  </div>
+
+  <div class="tf-error" id="tfError"></div>
+  <div class="tf-results" id="tfResults"></div>
+
+</section>
+<!-- ========================= END OF BLOCK ========================= -->
+
+<script>
+// ================================================================
+// CONFIGURATION — change this to your Cloudflare Worker URL
+// ================================================================
+const PROXY_URL = 'https://toolfinder.YOUR-NAME.workers.dev/recommend';
+// ================================================================
+
+function tfFill(el) {
+  document.getElementById('tfInput').value = el.textContent.trim();
+  document.getElementById('tfInput').focus();
+}
+
+function tfHandleKey(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); tfFind(); }
+}
+
+function tfEsc(str) {
+  return String(str || '')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+async function tfFind() {
+  const task = document.getElementById('tfInput').value.trim();
+  if (!task) return;
+
+  const btn     = document.getElementById('tfBtn');
+  const loading = document.getElementById('tfLoading');
+  const results = document.getElementById('tfResults');
+  const errBox  = document.getElementById('tfError');
+
+  btn.disabled = true;
+  loading.style.display = 'flex';
+  results.style.display = 'none';
+  errBox.style.display  = 'none';
+
+  try {
+    const res = await fetch(PROXY_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ task })
+    });
+
+    if (!res.ok) throw new Error(`Server error ${res.status}`);
+
+    const data = await res.json();
+    if (data.error) throw new Error(data.error);
+    tfRender(data);
+
+  } catch (err) {
+    errBox.textContent = 'Something went wrong: ' + err.message + '. Please try again.';
+    errBox.style.display = 'block';
+  } finally {
+    loading.style.display = 'none';
+    btn.disabled = false;
+  }
+}
+
+function tfRender(data) {
+  const el = document.getElementById('tfResults');
+  el.innerHTML = '';
+
+  if (data.primary) {
+    const p = data.primary;
+    el.innerHTML += `
+      <div class="tf-rlabel">Best match</div>
+      <div class="tf-card tf-primary">
+        <div class="tf-card-top">
+          <div class="tf-card-name">${tfEsc(p.name)}</div>
+          <span class="tf-card-tag tf-best">Best fit</span>
+        </div>
+        <div class="tf-card-why">${tfEsc(p.why)}</div>
+        <div class="tf-card-footer">
+          <span class="tf-pricing">${tfEsc(p.pricing)}</span>
+          <a class="tf-link" href="${tfEsc(p.url)}" target="_blank" rel="noopener">Visit ${tfEsc(p.name)} →</a>
+        </div>
+      </div>`;
+  }
+
+  if (data.alternatives?.length) {
+    el.innerHTML += `<div class="tf-rlabel" style="margin-top:6px">Also consider</div>`;
+    data.alternatives.forEach(a => {
+      el.innerHTML += `
+        <div class="tf-card">
+          <div class="tf-card-top">
+            <div class="tf-card-name">${tfEsc(a.name)}</div>
+            <span class="tf-card-tag tf-alt">Alternative</span>
+          </div>
+          <div class="tf-card-why">${tfEsc(a.why)}</div>
+          <div class="tf-card-footer">
+            <span class="tf-pricing">${tfEsc(a.pricing)}</span>
+            <a class="tf-link" href="${tfEsc(a.url)}" target="_blank" rel="noopener">Visit ${tfEsc(a.name)} →</a>
+          </div>
+        </div>`;
+    });
+  }
+
+  el.style.display = 'flex';
+}
+</script>
+
+</body>
+</html>

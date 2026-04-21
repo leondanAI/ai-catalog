@@ -61,6 +61,31 @@ export default {
       return corsResponse(JSON.stringify(data), r.status);
     }
 
+    // Debug: GET /test-log — test Supabase insert
+    if (request.method === 'GET' && url.pathname === '/test-log') {
+      const supabaseUrl = env.SUPABASE_URL || null;
+      const supabaseKey = env.SUPABASE_KEY ? 'set' : 'missing';
+      if (!supabaseUrl || !env.SUPABASE_KEY) {
+        return corsResponse(JSON.stringify({ error: 'Missing env vars', SUPABASE_URL: supabaseUrl, SUPABASE_KEY: supabaseKey }), 200);
+      }
+      try {
+        const r = await fetch(`${supabaseUrl}/rest/v1/tool_finder_logs`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': env.SUPABASE_KEY,
+            'Authorization': `Bearer ${env.SUPABASE_KEY}`,
+            'Prefer': 'return=representation'
+          },
+          body: JSON.stringify({ prompt: 'test prompt', primary_tool: 'TestTool', alternatives: ['Alt1'] })
+        });
+        const text = await r.text();
+        return corsResponse(JSON.stringify({ status: r.status, body: text }), 200);
+      } catch(e) {
+        return corsResponse(JSON.stringify({ error: e.message }), 200);
+      }
+    }
+
     // Only accept POST to /recommend
     if (request.method !== 'POST' || url.pathname !== '/recommend') {
       return corsResponse(JSON.stringify({ error: 'Not found' }), 404);
@@ -109,6 +134,29 @@ export default {
     } catch {
       return corsResponse(JSON.stringify({ error: 'Failed to parse AI response', raw }), 502);
     }
+
+    // Log prompt + recommendations to Supabase (fire and forget)
+    try {
+      const alt0 = result.alternatives?.[0] || {};
+      const alt1 = result.alternatives?.[1] || {};
+      await fetch(`${env.SUPABASE_URL}/rest/v1/tool_finder_logs`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': env.SUPABASE_KEY,
+          'Authorization': `Bearer ${env.SUPABASE_KEY}`
+        },
+        body: JSON.stringify({
+          prompt:       task,
+          primary_tool: result.primary?.name || null,
+          primary_url:  result.primary?.url  || null,
+          alt1_tool:    alt0.name || null,
+          alt1_url:     alt0.url  || null,
+          alt2_tool:    alt1.name || null,
+          alt2_url:     alt1.url  || null
+        })
+      });
+    } catch (_) {}
 
     return corsResponse(JSON.stringify(result), 200);
   }
