@@ -15,7 +15,7 @@ const I18N = (() => {
     en: {
       // nav
       'nav.home':         'Home',
-      'nav.directory':    'Directory',
+      'nav.directory':    'AI Directory',
       'nav.news':         'News',
       'nav.tools':        'Free Tools',
       'nav.compare':      'Compare',
@@ -124,7 +124,7 @@ const I18N = (() => {
 
     ru: {
       'nav.home':         'Главная',
-      'nav.directory':    'Каталог',
+      'nav.directory':'AI Каталог',
       'nav.news':         'Новости',
       'nav.tools':        'Инструменты',
       'nav.compare':      'Сравнение',
@@ -217,7 +217,7 @@ const I18N = (() => {
 
     es: {
       'nav.home':         'Inicio',
-      'nav.directory':    'Directorio',
+      'nav.directory':'AI Directorio',
       'nav.news':         'Noticias',
       'nav.tools':        'Herramientas',
       'nav.compare':      'Comparar',
@@ -310,7 +310,7 @@ const I18N = (() => {
 
     fr: {
       'nav.home':         'Accueil',
-      'nav.directory':    'Annuaire',
+      'nav.directory':'AI Annuaire',
       'nav.news':         'Actualités',
       'nav.tools':        'Outils',
       'nav.compare':      'Comparer',
@@ -403,7 +403,7 @@ const I18N = (() => {
 
     de: {
       'nav.home':         'Startseite',
-      'nav.directory':    'Verzeichnis',
+      'nav.directory':'AI Verzeichnis',
       'nav.news':         'Neuigkeiten',
       'nav.tools':        'Werkzeuge',
       'nav.compare':      'Vergleichen',
@@ -496,7 +496,7 @@ const I18N = (() => {
 
     pt: {
       'nav.home':         'Início',
-      'nav.directory':    'Diretório',
+      'nav.directory':'AI Diretório',
       'nav.news':         'Notícias',
       'nav.tools':        'Ferramentas',
       'nav.compare':      'Comparar',
@@ -589,7 +589,7 @@ const I18N = (() => {
 
     it: {
       'nav.home':         'Home',
-      'nav.directory':    'Directory',
+      'nav.directory':'AI Directory',
       'nav.news':         'Notizie',
       'nav.tools':        'Strumenti',
       'nav.compare':      'Confronta',
@@ -682,7 +682,7 @@ const I18N = (() => {
 
     zh: {
       'nav.home':         '首页',
-      'nav.directory':    '目录',
+      'nav.directory':'AI 目录',
       'nav.news':         '新闻',
       'nav.tools':        '工具',
       'nav.compare':      '对比',
@@ -775,7 +775,7 @@ const I18N = (() => {
 
     ja: {
       'nav.home':         'ホーム',
-      'nav.directory':    'ディレクトリ',
+      'nav.directory':'AI ディレクトリ',
       'nav.news':         'ニュース',
       'nav.tools':        'ツール',
       'nav.compare':      '比較',
@@ -868,7 +868,7 @@ const I18N = (() => {
 
     ko: {
       'nav.home':         '홈',
-      'nav.directory':    '디렉토리',
+      'nav.directory':'AI 디렉토리',
       'nav.news':         '뉴스',
       'nav.tools':        '도구',
       'nav.compare':      '비교',
@@ -961,7 +961,7 @@ const I18N = (() => {
 
     ar: {
       'nav.home':         'الرئيسية',
-      'nav.directory':    'الدليل',
+      'nav.directory':'AI الدليل',
       'nav.news':         'الأخبار',
       'nav.tools':        'الأدوات',
       'nav.compare':      'مقارنة',
@@ -1054,7 +1054,7 @@ const I18N = (() => {
 
     hi: {
       'nav.home':         'होम',
-      'nav.directory':    'डायरेक्टरी',
+      'nav.directory':'AI डायरेक्टरी',
       'nav.news':         'समाचार',
       'nav.tools':        'टूल्स',
       'nav.compare':      'तुलना',
@@ -1147,7 +1147,7 @@ const I18N = (() => {
 
     tr: {
       'nav.home':         'Ana Sayfa',
-      'nav.directory':    'Dizin',
+      'nav.directory':'AI Dizin',
       'nav.news':         'Haberler',
       'nav.tools':        'Araçlar',
       'nav.compare':      'Karşılaştır',
@@ -1240,7 +1240,7 @@ const I18N = (() => {
 
     pl: {
       'nav.home':         'Strona główna',
-      'nav.directory':    'Katalog',
+      'nav.directory':'AI Katalog',
       'nav.news':         'Aktualności',
       'nav.tools':        'Narzędzia',
       'nav.compare':      'Porównaj',
@@ -1333,7 +1333,7 @@ const I18N = (() => {
 
     nl: {
       'nav.home':         'Home',
-      'nav.directory':    'Directory',
+      'nav.directory':'AI Directory',
       'nav.news':         'Nieuws',
       'nav.tools':        'Tools',
       'nav.compare':      'Vergelijken',
@@ -1426,7 +1426,7 @@ const I18N = (() => {
 
     vi: {
       'nav.home':         'Trang chủ',
-      'nav.directory':    'Danh mục',
+      'nav.directory':'AI Danh mục',
       'nav.news':         'Tin tức',
       'nav.tools':        'Công cụ',
       'nav.compare':      'So sánh',
@@ -1519,7 +1519,7 @@ const I18N = (() => {
 
     id: {
       'nav.home':         'Beranda',
-      'nav.directory':    'Direktori',
+      'nav.directory':'AI Direktori',
       'nav.news':         'Berita',
       'nav.tools':        'Alat',
       'nav.compare':      'Bandingkan',
@@ -1612,7 +1612,7 @@ const I18N = (() => {
 
     th: {
       'nav.home':         'หน้าแรก',
-      'nav.directory':    'ไดเรกทอรี',
+      'nav.directory':'AI ไดเรกทอรี',
       'nav.news':         'ข่าวสาร',
       'nav.tools':        'เครื่องมือ',
       'nav.compare':      'เปรียบเทียบ',
@@ -1705,7 +1705,7 @@ const I18N = (() => {
 
     uk: {
       'nav.home':         'Головна',
-      'nav.directory':    'Каталог',
+      'nav.directory':'AI Каталог',
       'nav.news':         'Новини',
       'nav.tools':        'Інструменти',
       'nav.compare':      'Порівняння',
@@ -1798,7 +1798,7 @@ const I18N = (() => {
 
     he: {
       'nav.home':         'בית',
-      'nav.directory':    'קטלוג',
+      'nav.directory':'AI קטלוג',
       'nav.news':         'חדשות',
       'nav.tools':        'כלים',
       'nav.compare':      'השוואה',
@@ -1891,7 +1891,7 @@ const I18N = (() => {
 
     ro: {
       'nav.home':         'Acasă',
-      'nav.directory':    'Director',
+      'nav.directory':'AI Director',
       'nav.news':         'Știri',
       'nav.tools':        'Instrumente',
       'nav.compare':      'Compară',
