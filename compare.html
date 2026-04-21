@@ -139,6 +139,42 @@
 <script src="js/data.js"></script>
 <script src="js/main.js"></script>
 <script>
+const SB_URL  = 'https://lbjdwkvkkndvofysyssy.supabase.co';
+const SB_ANON = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG';
+
+function toSlug(name) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+}
+
+function starsHtml(avg) {
+  if (!avg) return '<span style="color:var(--text3);font-size:13px">No reviews yet</span>';
+  const full = Math.round(avg);
+  return '<span style="color:#f59e0b;font-size:13px;letter-spacing:1px">' + '★'.repeat(full) + '</span>' +
+         '<span style="color:#555;font-size:13px;letter-spacing:1px">'   + '★'.repeat(5-full) + '</span>' +
+         '<span style="font-size:13px;font-weight:600;color:#f0f0f0;margin-left:4px">' + avg.toFixed(1) + '</span>';
+}
+
+function listHtml(arr, color, icon) {
+  if (!arr || !arr.length) return '<span style="color:var(--text3)">—</span>';
+  return arr.map(p => `<div style="display:flex;gap:6px;align-items:flex-start;font-size:13px;color:var(--text2);margin-bottom:6px"><span>${icon}</span><span>${esc(p)}</span></div>`).join('');
+}
+
+async function fetchToolInfo(slug) {
+  const [toolRes, ratingsRes] = await Promise.all([
+    fetch(`${SB_URL}/rest/v1/tools?slug=eq.${slug}&select=pros,cons,description,best_for,badge,url,domain,category`, {
+      headers: { apikey: SB_ANON, Authorization: `Bearer ${SB_ANON}` }
+    }),
+    fetch(`${SB_URL}/rest/v1/comments?tool_slug=eq.${slug}&approved=eq.true&select=rating`, {
+      headers: { apikey: SB_ANON, Authorization: `Bearer ${SB_ANON}` }
+    })
+  ]);
+  const tools   = await toolRes.json();
+  const reviews = await ratingsRes.json();
+  const dbTool  = tools[0] || {};
+  const avgRating = reviews.length ? reviews.reduce((s,c) => s + c.rating, 0) / reviews.length : null;
+  return { dbTool, avgRating, reviewCount: reviews.length };
+}
+
 function populateSelects() {
   const placeholder = `<option value="">${t('compare.selectTool')}</option>`;
   const opts = CATEGORIES.map(cat =>
@@ -149,7 +185,7 @@ function populateSelects() {
   document.getElementById('selectB').innerHTML = placeholder + opts;
 }
 
-function updateCompare() {
+async function updateCompare() {
   const a = ALL_TOOLS.find(t2 => t2.name === document.getElementById('selectA').value);
   const b = ALL_TOOLS.find(t2 => t2.name === document.getElementById('selectB').value);
   const el = document.getElementById('compareResult');
@@ -157,15 +193,27 @@ function updateCompare() {
     el.innerHTML = `<div class="compare-placeholder"><div class="icon">⚖️</div><p>${t('compare.placeholder')}</p></div>`;
     return;
   }
+
+  el.innerHTML = `<div class="compare-placeholder"><div class="icon" style="font-size:1.5rem">⏳</div><p>Loading…</p></div>`;
+
+  const [infoA, infoB] = await Promise.all([
+    fetchToolInfo(toSlug(a.name)),
+    fetchToolInfo(toSlug(b.name))
+  ]);
+
   const rows = [
-    [t('compare.category'), `${a.catIcon} ${catTitle(a.catId)}`, `${b.catIcon} ${catTitle(b.catId)}`],
-    [t('compare.pricing'), `<span class="badge badge-${a.badge}">${badgeLabel(a.badge)}</span>`, `<span class="badge badge-${b.badge}">${badgeLabel(b.badge)}</span>`],
-    [t('compare.bestFor'), a.bestFor||'—', b.bestFor||'—'],
-    [t('compare.description'), a.desc, b.desc],
-    [t('compare.website'), getDomain(a.url), getDomain(b.url)],
-    ['', `<a class="tool-aff" href="${a.aff}" target="_blank" rel="noopener sponsored">${t('tool.open')}</a>`,
-         `<a class="tool-aff" href="${b.aff}" target="_blank" rel="noopener sponsored">${t('tool.open')}</a>`],
+    ['Category',    `${a.catIcon} ${catTitle(a.catId)}`,                         `${b.catIcon} ${catTitle(b.catId)}`],
+    ['Pricing',     `<span class="badge badge-${a.badge}">${badgeLabel(a.badge)}</span>`, `<span class="badge badge-${b.badge}">${badgeLabel(b.badge)}</span>`],
+    ['Best for',    a.bestFor||infoA.dbTool.best_for||'—',                        b.bestFor||infoB.dbTool.best_for||'—'],
+    ['Rating',      starsHtml(infoA.avgRating) + (infoA.reviewCount ? `<span style="font-size:11px;color:var(--text3);margin-left:4px">(${infoA.reviewCount})</span>` : ''),
+                    starsHtml(infoB.avgRating) + (infoB.reviewCount ? `<span style="font-size:11px;color:var(--text3);margin-left:4px">(${infoB.reviewCount})</span>` : '')],
+    ['Advantages',  listHtml(infoA.dbTool.pros, '#2dd4a0', '✅'),                 listHtml(infoB.dbTool.pros, '#2dd4a0', '✅')],
+    ['Disadvantages', listHtml(infoA.dbTool.cons, '#f56565', '❌'),               listHtml(infoB.dbTool.cons, '#f56565', '❌')],
+    ['Website',     getDomain(a.url),                                             getDomain(b.url)],
+    ['',            `<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="${a.aff}" target="_blank" rel="noopener sponsored">${t('tool.open')}</a><a class="tool-review" href="/tools/${toSlug(a.name)}.html">Full review →</a></div>`,
+                    `<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="${b.aff}" target="_blank" rel="noopener sponsored">${t('tool.open')}</a><a class="tool-review" href="/tools/${toSlug(b.name)}.html">Full review →</a></div>`],
   ];
+
   el.innerHTML = `<div class="compare-wrap fade-up">
     <table class="compare-table">
       <thead><tr><th></th>
@@ -179,6 +227,8 @@ function updateCompare() {
       <tbody>${rows.map(([label,va,vb]) => `<tr><th>${label}</th><td class="hl">${va}</td><td class="hl">${vb}</td></tr>`).join('')}</tbody>
     </table></div>`;
 }
+
+function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
 function quickCompare(nameA, nameB) {
   document.getElementById('selectA').value = nameA;

@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AutoGPT Review 2026 — Pros, Cons &amp; Alternatives | MyPedia</title>
 <meta name="description" content="AutoGPT — honest review, pros and cons, pricing, and best alternatives. AutoGPT was one of the first fully autonomous AI agents and sparked the &quot;agentic AI&quot; movement in early 2023. Given a hig">
-
 <link rel="canonical" href="https://www.mypedia.ai/tools/autogpt/">
 <meta property="og:title" content="AutoGPT Review 2026 | MyPedia">
 <meta property="og:description" content="AutoGPT was one of the first fully autonomous AI agents and sparked the &quot;agentic AI&quot; movement in early 2023. Given a high-level goal in plain English, it autono">
@@ -136,10 +135,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     </div>
   </div>
 
-  <div style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem">
-    <span style="color:#f59e0b;font-size:13px;letter-spacing:1px">★★★★</span><span style="color:#555;font-size:13px">★</span>
-    <span style="font-size:13px;font-weight:600;color:#f0f0f0">—</span>
-  </div>
+  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
 
   <div class="tool-desc-block">
     <h2>About AutoGPT</h2>
@@ -280,23 +276,35 @@ function showMsg(text, color) {
   const el = document.getElementById('formMsg');
   el.textContent = text; el.style.color = color; el.style.display = 'block';
 }
+function renderRating(avg, count) {
+  const full  = Math.round(avg);
+  const stars = '<span style="color:#f59e0b;font-size:14px;letter-spacing:1px">' + '★'.repeat(full) + '</span>' +
+                '<span style="color:#555;font-size:14px;letter-spacing:1px">'   + '★'.repeat(5-full) + '</span>';
+  document.getElementById('ratingDisplay').innerHTML =
+    stars +
+    '<span style="font-size:13px;font-weight:600;color:#f0f0f0;margin-left:4px">' + avg.toFixed(1) + '</span>' +
+    '<span style="font-size:12px;color:var(--text3);margin-left:4px">(' + count + ' review' + (count!==1?'s':'') + ')</span>';
+}
 async function loadComments() {
   try {
     const r = await fetch(`${SB_URL}/rest/v1/comments?tool_slug=eq.${TOOL_SLUG}&approved=eq.true&order=created_at.desc`, {
       headers: { 'apikey': SB_ANON, 'Authorization': `Bearer ${SB_ANON}` }
     });
     const rows = await r.json();
-    if (!rows.length) return;
-    const list = document.getElementById('commentList');
-    list.innerHTML = rows.map(c => `
-      <div class="comment-card">
-        <div class="comment-header">
-          <span class="comment-author">${esc(c.author_name)}</span>
-          <span class="comment-stars">${'★'.repeat(c.rating)}${('☆').repeat(5-c.rating)}</span>
-          <span class="comment-date">${new Date(c.created_at).toLocaleDateString('en-GB',{year:'numeric',month:'short',day:'numeric'})}</span>
-        </div>
-        <div class="comment-text">${esc(c.content)}</div>
-      </div>`).join('');
+    if (rows.length) {
+      const avg = rows.reduce((s,c) => s + c.rating, 0) / rows.length;
+      renderRating(avg, rows.length);
+      const list = document.getElementById('commentList');
+      list.innerHTML = rows.map(c => `
+        <div class="comment-card">
+          <div class="comment-header">
+            <span class="comment-author">${esc(c.author_name)}</span>
+            <span class="comment-stars">${'★'.repeat(c.rating)}${('☆').repeat(5-c.rating)}</span>
+            <span class="comment-date">${new Date(c.created_at).toLocaleDateString('en-GB',{year:'numeric',month:'short',day:'numeric'})}</span>
+          </div>
+          <div class="comment-text">${esc(c.content)}</div>
+        </div>`).join('');
+    }
   } catch(_) {}
 }
 function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
