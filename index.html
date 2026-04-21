@@ -74,11 +74,29 @@
   <h1><span data-i18n="hero.title1">Find the right AI tool</span><br><span class="hero-hl" data-i18n="hero.title2">for every task</span></h1>
   <p class="sub" data-i18n="hero.sub">Curated directory of the best AI tools, updated daily.</p>
 
-  <div class="hero-search-wrap">
-    <span class="hero-search-ico">⌕</span>
-    <input id="heroSearch" class="hero-search-input" type="text" data-i18n-ph="hero.search" placeholder="Search tools, categories, use cases...">
-    <button class="hero-search-btn" onclick="heroSearchGo()">Search</button>
+  <div class="tf-wrap">
+    <textarea class="tf-input" id="tfInput" rows="2"
+      data-i18n-ph="hero.search"
+      placeholder="e.g. I want to turn my podcast episodes into blog posts…"
+      onkeydown="tfHandleKey(event)"></textarea>
+    <button class="tf-btn" id="tfBtn" onclick="tfFind()" title="Find tools">→</button>
   </div>
+
+  <div class="tf-examples">
+    <span class="tf-pill" onclick="tfFill(this)">Write landing page copy</span>
+    <span class="tf-pill" onclick="tfFill(this)">Remove background from photos</span>
+    <span class="tf-pill" onclick="tfFill(this)">Transcribe a meeting</span>
+    <span class="tf-pill" onclick="tfFill(this)">Generate product images</span>
+    <span class="tf-pill" onclick="tfFill(this)">Summarize long documents</span>
+    <span class="tf-pill" onclick="tfFill(this)">Clone my voice for videos</span>
+  </div>
+
+  <div class="tf-loading" id="tfLoading">
+    <div class="tf-spinner"></div>
+    <span>Finding the best tools…</span>
+  </div>
+  <div class="tf-error" id="tfError"></div>
+  <div class="tf-results" id="tfResults"></div>
 
   <div class="hero-cats-row" id="heroCatPills"></div>
 
@@ -226,16 +244,68 @@ function renderCatPills() {
   ).join('');
 }
 
-function heroSearchGo() {
-  const q = document.getElementById('heroSearch').value.trim();
-  if (q) window.location.href = 'directory.html?q=' + encodeURIComponent(q);
-}
+// ── TOOL FINDER ──
+const PROXY_URL = 'https://mypedia-toolfinder.ldl-biz.workers.dev/recommend';
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('heroSearch').addEventListener('keydown', e => {
-    if (e.key === 'Enter') heroSearchGo();
-  });
-});
+function tfFill(el) {
+  const inp = document.getElementById('tfInput');
+  inp.value = el.textContent.trim();
+  inp.focus();
+}
+function tfHandleKey(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); tfFind(); }
+}
+function tfEsc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+async function tfFind() {
+  const task = document.getElementById('tfInput').value.trim();
+  if (!task) return;
+  const btn = document.getElementById('tfBtn');
+  const loading = document.getElementById('tfLoading');
+  const results = document.getElementById('tfResults');
+  const errBox = document.getElementById('tfError');
+  btn.disabled = true;
+  loading.style.display = 'flex';
+  results.style.display = 'none';
+  errBox.style.display = 'none';
+  try {
+    const res = await fetch(PROXY_URL, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({task}) });
+    const data = await res.json();
+    if (!res.ok || data.error) throw new Error(data.detail || data.error || 'Server error');
+    tfRender(data);
+  } catch(err) {
+    errBox.textContent = 'Something went wrong: ' + err.message;
+    errBox.style.display = 'block';
+  } finally {
+    loading.style.display = 'none';
+    btn.disabled = false;
+  }
+}
+function tfRender(data) {
+  const el = document.getElementById('tfResults');
+  el.innerHTML = '';
+  if (data.primary) {
+    const p = data.primary;
+    el.innerHTML += `<div class="tf-rlabel">Best match</div>
+      <div class="tf-card tf-primary">
+        <div class="tf-card-top"><div class="tf-card-name">${tfEsc(p.name)}</div><span class="tf-card-tag tf-best">Best fit</span></div>
+        <div class="tf-card-why">${tfEsc(p.why)}</div>
+        <div class="tf-card-footer"><span class="tf-pricing">${tfEsc(p.pricing)}</span><a class="tf-link" href="${tfEsc(p.url)}" target="_blank" rel="noopener">Visit ${tfEsc(p.name)} →</a></div>
+      </div>`;
+  }
+  if (data.alternatives?.length) {
+    el.innerHTML += `<div class="tf-rlabel" style="margin-top:4px">Also consider</div>`;
+    data.alternatives.forEach(a => {
+      el.innerHTML += `<div class="tf-card">
+        <div class="tf-card-top"><div class="tf-card-name">${tfEsc(a.name)}</div><span class="tf-card-tag tf-alt">Alternative</span></div>
+        <div class="tf-card-why">${tfEsc(a.why)}</div>
+        <div class="tf-card-footer"><span class="tf-pricing">${tfEsc(a.pricing)}</span><a class="tf-link" href="${tfEsc(a.url)}" target="_blank" rel="noopener">Visit ${tfEsc(a.name)} →</a></div>
+      </div>`;
+    });
+  }
+  el.style.display = 'flex';
+}
 
 function onLangChange() {
   renderTrending();
