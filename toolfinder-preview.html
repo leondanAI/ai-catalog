@@ -284,9 +284,8 @@ async function tfFind() {
       body: JSON.stringify({ task })
     });
 
-    if (!res.ok) throw new Error(`Server error ${res.status}`);
     const data = await res.json();
-    if (data.error) throw new Error(data.error);
+    if (!res.ok || data.error) throw new Error(data.detail || data.error || `Server error ${res.status}`);
     tfRender(data);
 
   } catch (err) {
