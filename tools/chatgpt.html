@@ -338,7 +338,7 @@ function highlight(n) {
 
 // Supabase config (read-only anon key — safe to expose)
 const SB_URL = 'https://lbjdwkvkkndvofysyssy.supabase.co';
-const SB_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxiamR3a3Zra25kdm9meXN5c3N5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM3MjIwMTksImV4cCI6MjA1OTI5ODAxOX0.o6Sk3iBpTWV3sIX5MKQdm2UtnpuH9jxnTOSEnFQbNZk';
+const SB_ANON = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG';
 const TOOL_SLUG = 'chatgpt';
 
 async function submitComment() {
@@ -371,7 +371,7 @@ async function submitComment() {
     document.getElementById('commentText').value = '';
     ratingVal.value = 0; highlight(0);
   } catch(e) {
-    showMsg('Something went wrong. Please try again.', '#f56565');
+    showMsg('Error: ' + e.message, '#f56565');
   } finally {
     btn.disabled = false; btn.textContent = 'Submit Review';
   }
