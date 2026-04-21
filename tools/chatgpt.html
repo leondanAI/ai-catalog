@@ -362,7 +362,7 @@ async function submitComment() {
         'apikey': SB_ANON,
         'Authorization': `Bearer ${SB_ANON}`
       },
-      body: JSON.stringify({ tool_slug: TOOL_SLUG, author_name: name, author_email: email || null, content: text, rating, status: 'pending' })
+      body: JSON.stringify({ tool_slug: TOOL_SLUG, author_name: name, author_email: email || null, content: text, rating, approved: false })
     });
     if (!r.ok) throw new Error(await r.text());
     showMsg('Thank you! Your review will appear after moderation.', '#2dd4a0');
@@ -385,7 +385,7 @@ function showMsg(text, color) {
 // Load approved comments
 async function loadComments() {
   try {
-    const r = await fetch(`${SB_URL}/rest/v1/comments?tool_slug=eq.${TOOL_SLUG}&status=eq.approved&order=created_at.desc`, {
+    const r = await fetch(`${SB_URL}/rest/v1/comments?tool_slug=eq.${TOOL_SLUG}&approved=eq.true&order=created_at.desc`, {
       headers: { 'apikey': SB_ANON, 'Authorization': `Bearer ${SB_ANON}` }
     });
     const rows = await r.json();
