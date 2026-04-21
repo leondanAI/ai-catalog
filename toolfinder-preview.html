@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Tool Finder — MyPedia (Preview)</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ── TF SECTION ─────────────────────────────────────────────────── */
+.tf-section {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; align-items: center;
+  padding: 5rem 1.5rem 4rem;
+  min-height: calc(100vh - 60px);
+}
+
+.tf-eyebrow {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase;
+  color: #c8f060; margin-bottom: 1.5rem;
+}
+.tf-eyebrow::before, .tf-eyebrow::after {
+  content: ''; display: block; width: 24px; height: 1px;
+  background: #c8f060; opacity: 0.5;
+}
+
+.tf-h1 {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 400; line-height: 1.1; text-align: center;
+  letter-spacing: -0.025em; max-width: 680px; margin-bottom: 1rem;
+  color: #f0ede8;
+}
+.tf-h1 em { font-style: italic; color: #c8f060; }
+
+.tf-sub {
+  font-size: 1rem; font-weight: 300; color: rgba(240,237,232,0.5);
+  text-align: center; max-width: 400px; line-height: 1.65; margin-bottom: 3rem;
+}
+
+.tf-wrap { width: 100%; max-width: 620px; position: relative; margin-bottom: 1rem; }
+
+.tf-input {
+  width: 100%; background: #141414; border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px; padding: 1.15rem 4.8rem 1.15rem 1.5rem;
+  font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 300;
+  color: #f0ede8; resize: none; outline: none; line-height: 1.55;
+  transition: border-color 0.2s, box-shadow 0.2s; min-height: 62px;
+}
+.tf-input::placeholder { color: rgba(240,237,232,0.35); }
+.tf-input:focus {
+  border-color: rgba(255,255,255,0.16);
+  box-shadow: 0 0 0 3px rgba(200,240,96,0.06);
+}
+
+.tf-btn {
+  position: absolute; right: 10px; bottom: 10px;
+  background: #c8f060; color: #080808; border: none; border-radius: 11px;
+  width: 42px; height: 42px; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-size: 20px; font-weight: 500;
+  transition: background 0.18s, transform 0.15s;
+}
+.tf-btn:hover { background: #d5f577; transform: scale(1.05); }
+.tf-btn:disabled { background: #1c1c1c; color: rgba(240,237,232,0.3); cursor: not-allowed; transform: none; }
+
+.tf-examples { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; max-width: 620px; }
+.tf-pill {
+  font-size: 12px; color: rgba(240,237,232,0.45); background: #141414;
+  border: 1px solid rgba(255,255,255,0.08); border-radius: 999px; padding: 5px 14px;
+  cursor: pointer; transition: border-color 0.2s, color 0.2s; white-space: nowrap;
+}
+.tf-pill:hover { color: #f0ede8; border-color: rgba(255,255,255,0.18); }
+
+.tf-loading {
+  display: none; align-items: center; gap: 12px;
+  margin-top: 2.5rem; color: rgba(240,237,232,0.45); font-size: 14px;
+}
+.tf-spinner {
+  width: 18px; height: 18px;
+  border: 2px solid rgba(255,255,255,0.08); border-top-color: #c8f060;
+  border-radius: 50%; animation: tf-spin 0.65s linear infinite; flex-shrink: 0;
+}
+@keyframes tf-spin { to { transform: rotate(360deg); } }
+
+.tf-error {
+  display: none; width: 100%; max-width: 620px; margin-top: 1.5rem;
+  background: rgba(255,70,70,0.06); border: 1px solid rgba(255,70,70,0.2);
+  color: #ff9090; border-radius: 12px; padding: 1rem 1.25rem; font-size: 13px; line-height: 1.5;
+}
+
+.tf-results {
+  display: none; flex-direction: column; gap: 12px;
+  width: 100%; max-width: 620px; margin-top: 2.5rem;
+  animation: tf-fadeUp 0.4s ease;
+}
+@keyframes tf-fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.tf-rlabel {
+  font-size: 10px; font-weight: 500; letter-spacing: 0.12em;
+  text-transform: uppercase; color: rgba(240,237,232,0.4); padding-left: 2px;
+}
+
+.tf-card {
+  background: #141414; border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 18px; padding: 1.4rem 1.5rem; transition: border-color 0.2s;
+}
+.tf-card.tf-primary { border-color: rgba(200,240,96,0.22); }
+.tf-card:hover { border-color: rgba(255,255,255,0.14); }
+
+.tf-card-top {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 12px; margin-bottom: 10px;
+}
+.tf-card-name {
+  font-family: 'Instrument Serif', serif; font-size: 1.35rem;
+  font-weight: 400; letter-spacing: -0.01em; color: #f0ede8;
+}
+.tf-card-tag {
+  font-size: 10px; font-weight: 500; text-transform: uppercase;
+  letter-spacing: 0.08em; padding: 4px 10px; border-radius: 999px;
+  white-space: nowrap; flex-shrink: 0; margin-top: 4px;
+}
+.tf-card-tag.tf-best { background: rgba(200,240,96,0.1); color: #c8f060; border: 1px solid rgba(200,240,96,0.2); }
+.tf-card-tag.tf-alt  { background: rgba(255,255,255,0.04); color: rgba(240,237,232,0.45); border: 1px solid rgba(255,255,255,0.07); }
+
+.tf-card-why {
+  font-size: 14px; font-weight: 300; color: rgba(240,237,232,0.65);
+  line-height: 1.65; margin-bottom: 14px;
+}
+.tf-card-footer { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.tf-pricing {
+  font-size: 11px; font-weight: 500; color: rgba(240,237,232,0.45);
+  background: #1c1c1c; border: 1px solid rgba(255,255,255,0.07);
+  padding: 3px 10px; border-radius: 999px;
+}
+.tf-link {
+  font-size: 13px; font-weight: 500; color: #c8f060;
+  text-decoration: none; margin-left: auto;
+  display: flex; align-items: center; gap: 4px;
+}
+.tf-link:hover { text-decoration: underline; }
+
+/* preview banner */
+.preview-banner {
+  background: rgba(200,240,96,0.07);
+  border-bottom: 1px solid rgba(200,240,96,0.18);
+  padding: 9px 1.5rem;
+  text-align: center;
+  font-size: 12px; color: rgba(200,240,96,0.8);
+  letter-spacing: 0.02em;
+}
+.preview-banner strong { color: #c8f060; }
+
+@media (max-width: 600px) {
+  .tf-section { padding: 3rem 1rem 3rem; }
+  .tf-h1 { font-size: 1.9rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="preview-banner">
+  <strong>Preview page</strong> — QA only · not linked from navigation ·
+  <a href="index.html" style="color:#c8f060;text-decoration:underline">← Back to homepage</a>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26">
+        <rect width="26" height="26" rx="7" fill="#7c6af7"/>
+        <path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      MyPedia
+    </a>
+    <nav class="nav-links">
+      <a href="index.html"      class="nav-link" data-nav="index.html">Home</a>
+      <a href="directory.html"  class="nav-link" data-nav="directory.html">Directory</a>
+      <a href="news.html"       class="nav-link" data-nav="news.html">News</a>
+      <a href="tools.html"      class="nav-link" data-nav="tools.html">Free Tools</a>
+      <a href="compare.html"    class="nav-link" data-nav="compare.html">Compare</a>
+    </nav>
+    <button class="btn-hamburger" onclick="toggleMenu()">&#9776;</button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="index.html"     class="nav-link">Home</a>
+    <a href="directory.html" class="nav-link">Directory</a>
+    <a href="news.html"      class="nav-link">News</a>
+    <a href="tools.html"     class="nav-link">Free Tools</a>
+    <a href="compare.html"   class="nav-link">Compare</a>
+  </nav>
+</header>
+
+<section class="tf-section">
+
+  <div class="tf-eyebrow">AI Tool Discovery</div>
+
+  <h1 class="tf-h1">Describe your task,<br>find the <em>perfect tool</em></h1>
+
+  <p class="tf-sub">
+    Tell us what you want to accomplish and we'll match you with the best AI tool — no browsing required.
+  </p>
+
+  <div class="tf-wrap">
+    <textarea
+      class="tf-input"
+      id="tfInput"
+      rows="2"
+      placeholder="e.g. I want to turn my podcast episodes into blog posts…"
+      onkeydown="tfHandleKey(event)"
+    ></textarea>
+    <button class="tf-btn" id="tfBtn" onclick="tfFind()" title="Find tools">→</button>
+  </div>
+
+  <div class="tf-examples">
+    <span class="tf-pill" onclick="tfFill(this)">Write landing page copy</span>
+    <span class="tf-pill" onclick="tfFill(this)">Remove background from photos</span>
+    <span class="tf-pill" onclick="tfFill(this)">Transcribe a meeting recording</span>
+    <span class="tf-pill" onclick="tfFill(this)">Generate product images</span>
+    <span class="tf-pill" onclick="tfFill(this)">Summarize long PDF documents</span>
+    <span class="tf-pill" onclick="tfFill(this)">Clone my voice for videos</span>
+  </div>
+
+  <div class="tf-loading" id="tfLoading">
+    <div class="tf-spinner"></div>
+    <span>Finding the best tools for your task…</span>
+  </div>
+
+  <div class="tf-error" id="tfError"></div>
+  <div class="tf-results" id="tfResults"></div>
+
+</section>
+
+<script src="js/main.js"></script>
+<script>
+// ================================================================
+// CONFIGURATION — update with your Cloudflare Worker URL
+// ================================================================
+const PROXY_URL = 'https://toolfinder.YOUR-NAME.workers.dev/recommend';
+// ================================================================
+
+function tfFill(el) {
+  const inp = document.getElementById('tfInput');
+  inp.value = el.textContent.trim();
+  inp.focus();
+}
+
+function tfHandleKey(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); tfFind(); }
+}
+
+function tfEsc(str) {
+  return String(str || '')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+async function tfFind() {
+  const task = document.getElementById('tfInput').value.trim();
+  if (!task) return;
+
+  const btn     = document.getElementById('tfBtn');
+  const loading = document.getElementById('tfLoading');
+  const results = document.getElementById('tfResults');
+  const errBox  = document.getElementById('tfError');
+
+  btn.disabled = true;
+  loading.style.display = 'flex';
+  results.style.display = 'none';
+  errBox.style.display  = 'none';
+
+  try {
+    const res = await fetch(PROXY_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ task })
+    });
+
+    if (!res.ok) throw new Error(`Server error ${res.status}`);
+    const data = await res.json();
+    if (data.error) throw new Error(data.error);
+    tfRender(data);
+
+  } catch (err) {
+    errBox.textContent = 'Something went wrong: ' + err.message + '. Please try again.';
+    errBox.style.display = 'block';
+  } finally {
+    loading.style.display = 'none';
+    btn.disabled = false;
+  }
+}
+
+function tfRender(data) {
+  const el = document.getElementById('tfResults');
+  el.innerHTML = '';
+
+  if (data.primary) {
+    const p = data.primary;
+    el.innerHTML += `
+      <div class="tf-rlabel">Best match</div>
+      <div class="tf-card tf-primary">
+        <div class="tf-card-top">
+          <div class="tf-card-name">${tfEsc(p.name)}</div>
+          <span class="tf-card-tag tf-best">Best fit</span>
+        </div>
+        <div class="tf-card-why">${tfEsc(p.why)}</div>
+        <div class="tf-card-footer">
+          <span class="tf-pricing">${tfEsc(p.pricing)}</span>
+          <a class="tf-link" href="${tfEsc(p.url)}" target="_blank" rel="noopener">Visit ${tfEsc(p.name)} →</a>
+        </div>
+      </div>`;
+  }
+
+  if (data.alternatives?.length) {
+    el.innerHTML += `<div class="tf-rlabel" style="margin-top:6px">Also consider</div>`;
+    data.alternatives.forEach(a => {
+      el.innerHTML += `
+        <div class="tf-card">
+          <div class="tf-card-top">
+            <div class="tf-card-name">${tfEsc(a.name)}</div>
+            <span class="tf-card-tag tf-alt">Alternative</span>
+          </div>
+          <div class="tf-card-why">${tfEsc(a.why)}</div>
+          <div class="tf-card-footer">
+            <span class="tf-pricing">${tfEsc(a.pricing)}</span>
+            <a class="tf-link" href="${tfEsc(a.url)}" target="_blank" rel="noopener">Visit ${tfEsc(a.name)} →</a>
+          </div>
+        </div>`;
+    });
+  }
+
+  el.style.display = 'flex';
+}
+</script>
+
+</body>
+</html>
