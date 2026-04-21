@@ -91,10 +91,18 @@ def render_page(tool, all_tools):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{esc(name)} Review 2026 — Pros, Cons &amp; Alternatives | MyPedia</title>
 <meta name="description" content="{esc(name)} — honest review, pros and cons, pricing, and best alternatives. {esc(desc[:120])}">
-<link rel="canonical" href="https://www.mypedia.ai/tools/{esc(slug)}/">
+<link rel="canonical" href="https://www.mypedia.ai/tools/{esc(slug)}.html">
 <meta property="og:title" content="{esc(name)} Review 2026 | MyPedia">
 <meta property="og:description" content="{esc(desc[:160])}">
-<meta property="og:url" content="https://www.mypedia.ai/tools/{esc(slug)}/">
+<meta property="og:url" content="https://www.mypedia.ai/tools/{esc(slug)}.html">
+<meta property="og:image" content="https://www.mypedia.ai/og-image.svg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{esc(name)} Review 2026 | MyPedia">
+<meta name="twitter:description" content="{esc(desc[:160])}">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"SoftwareApplication","name":"{esc(name)}","description":"{esc(desc[:200])}","applicationCategory":"AIApplication","operatingSystem":"Web","url":"{esc(url)}","offers":{{"@type":"Offer","price":"{('0' if badge in ('free','freemium') else '')}","priceCurrency":"USD"}},"publisher":{{"@type":"Organization","name":"MyPedia","url":"https://www.mypedia.ai"}}}}
+</script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -355,6 +363,15 @@ function renderRating(avg, count) {{
     stars +
     '<span style="font-size:13px;font-weight:600;color:#f0f0f0;margin-left:4px">' + avg.toFixed(1) + '</span>' +
     '<span style="font-size:12px;color:var(--text3);margin-left:4px">(' + count + ' review' + (count!==1?'s':'') + ')</span>';
+  // Inject aggregateRating into existing JSON-LD schema
+  try {{
+    const el = document.querySelector('script[type="application/ld+json"]');
+    if (el) {{
+      const schema = JSON.parse(el.textContent);
+      schema.aggregateRating = {{"@type":"AggregateRating","ratingValue":avg.toFixed(1),"reviewCount":count,"bestRating":"5","worstRating":"1"}};
+      el.textContent = JSON.stringify(schema);
+    }}
+  }} catch(_) {{}}
 }}
 async function loadComments() {{
   try {{

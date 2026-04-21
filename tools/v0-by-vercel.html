@@ -5,10 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>v0 by Vercel Review 2026 — Pros, Cons &amp; Alternatives | MyPedia</title>
 <meta name="description" content="v0 by Vercel — honest review, pros and cons, pricing, and best alternatives. v0 is Vercel's AI-powered UI generation tool that creates production-ready React and Tailwind CSS components from text d">
-<link rel="canonical" href="https://www.mypedia.ai/tools/v0-by-vercel/">
+<link rel="canonical" href="https://www.mypedia.ai/tools/v0-by-vercel.html">
 <meta property="og:title" content="v0 by Vercel Review 2026 | MyPedia">
 <meta property="og:description" content="v0 is Vercel's AI-powered UI generation tool that creates production-ready React and Tailwind CSS components from text descriptions or uploaded screenshots. It ">
-<meta property="og:url" content="https://www.mypedia.ai/tools/v0-by-vercel/">
+<meta property="og:url" content="https://www.mypedia.ai/tools/v0-by-vercel.html">
+<meta property="og:image" content="https://www.mypedia.ai/og-image.svg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v0 by Vercel Review 2026 | MyPedia">
+<meta name="twitter:description" content="v0 is Vercel's AI-powered UI generation tool that creates production-ready React and Tailwind CSS components from text descriptions or uploaded screenshots. It ">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"v0 by Vercel","description":"v0 is Vercel's AI-powered UI generation tool that creates production-ready React and Tailwind CSS components from text descriptions or uploaded screenshots. It was designed specifically for the Next.j","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://v0.dev","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"MyPedia","url":"https://www.mypedia.ai"}}
+</script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -284,6 +292,15 @@ function renderRating(avg, count) {
     stars +
     '<span style="font-size:13px;font-weight:600;color:#f0f0f0;margin-left:4px">' + avg.toFixed(1) + '</span>' +
     '<span style="font-size:12px;color:var(--text3);margin-left:4px">(' + count + ' review' + (count!==1?'s':'') + ')</span>';
+  // Inject aggregateRating into existing JSON-LD schema
+  try {
+    const el = document.querySelector('script[type="application/ld+json"]');
+    if (el) {
+      const schema = JSON.parse(el.textContent);
+      schema.aggregateRating = {"@type":"AggregateRating","ratingValue":avg.toFixed(1),"reviewCount":count,"bestRating":"5","worstRating":"1"};
+      el.textContent = JSON.stringify(schema);
+    }
+  } catch(_) {}
 }
 async function loadComments() {
   try {
