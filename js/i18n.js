@@ -25,7 +25,7 @@ const I18N = (() => {
       'hero.title1':      'Find the Best',
       'hero.title2':      'AI Tool for You',
       'hero.sub':         'Curated catalog of the most useful AI services — filtered by category, price and use case.',
-      'hero.search':      'Describe your task — we'll find the right AI tool for it…',
+      'hero.search':      'Describe your task — we’ll find the right AI tool for it…',
       // stats
       'stats.tools':      'AI Tools',
       'stats.categories': 'Categories',
