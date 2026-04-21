@@ -39,7 +39,7 @@ BADGE_LABELS = {'free': 'Free', 'freemium': 'Freemium', 'paid': 'Paid'}
 
 def fetch_tools():
     req = urllib.request.Request(
-        f'{SB_URL}/rest/v1/tools?order=name.asc&limit=200',
+        f'{SB_URL}/rest/v1/tools?order=name.asc&limit=200&select=*',
         headers={'apikey': SB_ANON, 'Authorization': f'Bearer {SB_ANON}'}
     )
     with urllib.request.urlopen(req) as r:
@@ -62,7 +62,7 @@ def render_page(tool, all_tools):
     badge     = tool['badge']
     users     = tool['users'] or ''
     best_for  = tool['best_for'] or ''
-    desc      = tool['description'] or ''
+    desc      = tool.get('description_long') or tool.get('description') or ''
     pros      = tool.get('pros') or []
     cons      = tool.get('cons') or []
 
@@ -229,7 +229,7 @@ textarea.form-input {{ resize: vertical; min-height: 90px; }}
 
   <div class="tool-desc-block">
     <h2>About {esc(name)}</h2>
-    <div class="tool-desc">{esc(desc)}</div>
+    <div class="tool-desc">{''.join(f'<p style="margin-top:1rem">{esc(p.strip())}</p>' for p in desc.split(chr(10)+chr(10)) if p.strip())}</div>
   </div>
 
   <div class="pros-cons">
