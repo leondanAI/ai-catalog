@@ -30,6 +30,7 @@
   width: 72px; height: 72px; border-radius: 18px; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
   font-family: var(--font-display); font-size: 26px; font-weight: 700;
+  border: 1px solid var(--border);
 }
 .tool-hero-name { font-family: var(--font-display); font-size: clamp(26px, 4vw, 38px); font-weight: 700; margin-bottom: 6px; }
 .tool-hero-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
@@ -136,7 +137,9 @@
 
   <!-- Tool Hero -->
   <div class="tool-hero">
-    <div class="tool-hero-avatar" style="background:rgba(124,106,247,0.12);color:#7c6af7">Ch</div>
+    <div class="tool-hero-avatar" style="background:#fff;overflow:hidden;padding:6px">
+      <img src="https://logo.clearbit.com/openai.com" alt="ChatGPT logo" width="60" height="60" style="width:100%;height:100%;object-fit:contain;border-radius:10px">
+    </div>
     <div>
       <h1 class="tool-hero-name">ChatGPT</h1>
       <div class="tool-hero-meta">
