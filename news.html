@@ -154,15 +154,58 @@ function render() {
   }).join('') || `<div class="empty"><div class="empty-icon">📰</div>No news in this category yet.</div>`;
 }
 
+// ── News cache (localStorage, TTL 60 min) ────────────────────────────────────
+const CACHE_TTL = 60 * 60 * 1000; // 60 minutes in ms
+
+function cacheKey(lang) {
+  return `mypedia_news_${lang}`;
+}
+
+function readCache(lang) {
+  try {
+    const raw = localStorage.getItem(cacheKey(lang));
+    if (!raw) return null;
+    const { ts, data } = JSON.parse(raw);
+    if (Date.now() - ts > CACHE_TTL) return null;
+    return data;
+  } catch { return null; }
+}
+
+function writeCache(lang, data) {
+  try {
+    localStorage.setItem(cacheKey(lang), JSON.stringify({ ts: Date.now(), data }));
+  } catch { /* storage full or disabled */ }
+}
+
+// Call clearNewsCache() in browser console after publishing new articles
+function clearNewsCache(lang) {
+  if (lang) {
+    localStorage.removeItem(cacheKey(lang));
+  } else {
+    Object.keys(localStorage)
+      .filter(k => k.startsWith('mypedia_news_'))
+      .forEach(k => localStorage.removeItem(k));
+  }
+}
+// ─────────────────────────────────────────────────────────────────────────────
+
 async function loadNews() {
   const lang = typeof I18N !== 'undefined' ? I18N.lang : 'en';
-  // Show static fallback immediately — no blank-page wait
+  // 1. Render static fallback instantly — no blank-page wait
   buildTabs();
   render();
-  // Fetch from Supabase in background, swap in when ready
+  // 2. Check cache — if fresh, use it and skip Supabase entirely
+  const cached = readCache(lang);
+  if (cached) {
+    ARTICLES = cached;
+    render();
+    return;
+  }
+  // 3. Cache empty or stale — fetch from Supabase, save to cache, render
   const data = await fetchNews(lang);
   if (data && data.length > 0) {
     ARTICLES = data;
+    writeCache(lang, data);
     render();
   }
 }
