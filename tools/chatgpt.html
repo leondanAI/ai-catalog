@@ -51,14 +51,14 @@
 
 /* rating summary */
 .rating-bar {
-  display: flex; align-items: center; gap: 10px;
-  padding: 1rem 1.25rem; background: var(--bg2); border: 1px solid var(--border);
-  border-radius: 12px; margin-bottom: 1.5rem;
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 5px 12px 5px 8px; background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 999px; margin-bottom: 1.5rem;
 }
-.stars { display: flex; gap: 3px; }
-.star { font-size: 18px; color: #f59e0b; }
+.stars { display: flex; gap: 2px; }
+.star { font-size: 13px; color: #f59e0b; }
 .star.empty { color: var(--bg3); filter: brightness(1.5); }
-.rating-score { font-family: var(--font-display); font-size: 22px; font-weight: 700; }
+.rating-score { font-family: var(--font-display); font-size: 13px; font-weight: 600; }
 .rating-count { font-size: 13px; color: var(--text3); }
 
 /* desc */
@@ -206,7 +206,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <span class="star empty">★</span>
     </div>
     <span class="rating-score">4.3</span>
-    <span class="rating-count">— 0 reviews · Be the first to rate</span>
+    <!-- <span class="rating-count">— 0 reviews · Be the first to rate</span> -->
   </div>
 
   <!-- Description -->
