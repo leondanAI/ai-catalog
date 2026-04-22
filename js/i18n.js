@@ -27,7 +27,7 @@ const I18N = (() => {
       'hero.title1':      'Find your',
       'hero.title2':      'AI',
       'hero.sub':         'Curated catalog of the most useful AI services — filtered by category, price and use case.',
-      'hero.search':      'Describe your task — we'll find the right AI tool for it…',
+      'hero.search':      'Describe your task — we\'ll find the right AI tool for it…',
       'hero.pill1':       'Write landing page copy',
       'hero.pill2':       'Remove background from photos',
       'hero.pill3':       'Transcribe a meeting',
