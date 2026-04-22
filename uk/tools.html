@@ -101,11 +101,11 @@
     <div>
       <div class="footer-col-title">Popular Tools</div>
       <div class="footer-col-links">
-        <a href="/tools/token-counter.html">Token Counter</a>
-        <a href="/tools/text-diff.html">Text Diff</a>
-        <a href="/tools/word-counter.html">Word Counter</a>
-        <a href="/tools/json-formatter.html">JSON Formatter</a>
-        <a href="/tools/regex-tester.html">Regex Tester</a>
+        <a href="/uk/tools/token-counter.html">Token Counter</a>
+        <a href="/uk/tools/text-diff.html">Text Diff</a>
+        <a href="/uk/tools/word-counter.html">Word Counter</a>
+        <a href="/uk/tools/json-formatter.html">JSON Formatter</a>
+        <a href="/uk/tools/regex-tester.html">Regex Tester</a>
       </div>
     </div>
   </div>
@@ -125,7 +125,7 @@ const SB_ANON = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG';
 function renderTools(tools) {
   const openLabel = t('toolbox.open') || 'Open tool →';
   document.getElementById('toolsGrid').innerHTML = tools.map(tool => `
-    <a class="tool-card fade-up" href="/tools/${tool.id}.html">
+    <a class="tool-card fade-up" href="/uk/tools/${tool.id}.html">
       <div class="tool-icon-box" style="background:${tool.color}22;color:${tool.color}">${tool.icon}</div>
       <div class="tool-card-name">${tool.title}</div>
       <div class="tool-card-desc">${tool.description}</div>

@@ -85,6 +85,8 @@ def fix_nav_links(html, lang):
     # Absolute page links: href="/directory.html" → href="/ru/directory.html"
     for page in PAGES:
         html = re.sub(rf'href="/{page}"', f'href="/{lang}/{page}"', html)
+    # Tool detail links: href="/tools/chatgpt.html" → href="/ru/tools/chatgpt.html"
+    html = re.sub(r'href="/tools/([^"]+\.html)"', f'href="/{lang}/tools/\\1"', html)
     return html
 
 def inject_hreflang(html, page):
