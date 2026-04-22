@@ -2034,12 +2034,12 @@ const I18N = (() => {
   // ── language metadata ─────────────────────────────────────────────────────
   const LANGS = {
     en: { label: 'English',    flag: '🇬🇧', rtl: false },
-    ru: { label: 'Русский',    flag: '🇷🇺', rtl: false },
-    uk: { label: 'Українська', flag: '🇺🇦', rtl: false },
     es: { label: 'Español',    flag: '🇪🇸', rtl: false },
     fr: { label: 'Français',   flag: '🇫🇷', rtl: false },
-    de: { label: 'Deutsch',    flag: '🇩🇪', rtl: false },
     pt: { label: 'Português',  flag: '🇧🇷', rtl: false },
+    ru: { label: 'Русский',    flag: '🇷🇺', rtl: false },
+    de: { label: 'Deutsch',    flag: '🇩🇪', rtl: false },
+    uk: { label: 'Українська', flag: '🇺🇦', rtl: false },
     he: { label: 'עברית',      flag: '🇮🇱', rtl: true  },
   };
 

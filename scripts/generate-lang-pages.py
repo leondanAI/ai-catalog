@@ -12,8 +12,8 @@ BASE_URL = 'https://www.mypedia.ai'
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
 LANGUAGES = [
-    ('ru', 'ru'),   ('uk', 'uk'),   ('es', 'es'),   ('fr', 'fr'),
-    ('de', 'de'),   ('pt', 'pt'),   ('he', 'he'),
+    ('es', 'es'),   ('fr', 'fr'),   ('pt', 'pt'),   ('ru', 'ru'),
+    ('de', 'de'),   ('uk', 'uk'),   ('he', 'he'),
 ]
 
 PAGES = ['index.html', 'directory.html', 'news.html', 'compare.html', 'tools.html', 'newsletter.html']
