@@ -128,7 +128,14 @@ def generate_lang_page(html, lang, page, title, desc):
     html = fix_nav_links(html, lang)
 
     # Inject language-setting script BEFORE first <script src=
-    lang_script = f'<script>localStorage.setItem("lang","{lang}");</script>\n'
+    # Sets localStorage early (so i18n.js picks up correct lang on init),
+    # then re-runs onLangChange on DOMContentLoaded to translate dynamic sections.
+    lang_script = (
+        f'<script>localStorage.setItem("lang","{lang}");'
+        f'document.addEventListener("DOMContentLoaded",function(){{'
+        f'if(typeof I18N!=="undefined")I18N.set("{lang}");'
+        f'}});</script>\n'
+    )
     html = re.sub(r'(<script\s+src=)', lang_script + r'\1', html, count=1)
 
     return html

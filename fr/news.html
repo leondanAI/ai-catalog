@@ -303,7 +303,7 @@
   </div>
 </footer>
 
-<script>localStorage.setItem("lang","fr");</script>
+<script>localStorage.setItem("lang","fr");document.addEventListener("DOMContentLoaded",function(){if(typeof I18N!=="undefined")I18N.set("fr");});</script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <script src="/js/i18n.js"></script>
 <script src="/js/news.js"></script>
