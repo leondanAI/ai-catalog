@@ -2137,7 +2137,7 @@ const I18N = (() => {
     pt: { label: 'Português',  flag: '🇧🇷', rtl: false },
     ru: { label: 'Русский',    flag: '🇷🇺', rtl: false },
     de: { label: 'Deutsch',    flag: '🇩🇪', rtl: false },
-    uk: { label: 'Українська', flag: '🇺🇦', rtl: false },
+    uk: { label: 'UA · Українська', flag: '🇺🇦', rtl: false },
     he: { label: 'עברית',      flag: '🇮🇱', rtl: true  },
   };
 

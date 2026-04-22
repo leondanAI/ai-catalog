@@ -100,6 +100,9 @@ LANG_FLAGS = {
     'en': '🇬🇧', 'ru': '🇷🇺', 'es': '🇪🇸', 'fr': '🇫🇷',
     'pt': '🇧🇷', 'de': '🇩🇪', 'uk': '🇺🇦', 'he': '🇮🇱',
 }
+LANG_LABELS = {
+    'uk': 'UA',
+}
 
 def generate_lang_page(html, lang, page, title, desc):
     # Set html lang attribute
@@ -107,9 +110,10 @@ def generate_lang_page(html, lang, page, title, desc):
 
     # Update lang-picker button to show correct flag
     flag = LANG_FLAGS.get(lang, '🌐')
+    label = LANG_LABELS.get(lang, lang.upper())
     html = re.sub(
         r'(<button class="lang-btn"[^>]*>)[^<]*(<span)',
-        rf'\g<1>{flag} {lang.upper()} \g<2>',
+        rf'\g<1>{flag} {label} \g<2>',
         html
     )
 
