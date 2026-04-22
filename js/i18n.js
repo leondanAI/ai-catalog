@@ -2204,6 +2204,16 @@ const I18N = (() => {
       const inLangDir = parts.length >= 2 && langCodes.includes(parts[parts.length - 2]);
       const isLangPage = parts.length >= 1 && langCodes.includes(parts[0]) && PAGES.includes(page);
 
+      // Tool detail pages: /tools/chatgpt.html or /ru/tools/chatgpt.html
+      const inToolsSection = parts.includes('tools') && page.endsWith('.html') && !PAGES.includes(page);
+      if (inToolsSection) {
+        const target = code === 'en' ? '/tools/' + page : '/' + code + '/tools/' + page;
+        if (window.location.pathname !== target) {
+          window.location.href = target;
+          return;
+        }
+      }
+
       if (PAGES.includes(page) || page === 'index.html') {
         let target;
         if (code === 'en') {
