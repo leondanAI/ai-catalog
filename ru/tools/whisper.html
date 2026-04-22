@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Whisper 2026 | MyPedia</title>
-<meta name="description" content="Whisper 2026 — Аудиотранскрибация от OpenAI. Open-source, поддерживает 100 языков с высокой точностью.">
+<meta name="description" content="Whisper 2026 — Whisper — это open-source модель автоматического распознавания речи (ASR) от OpenAI, выпущенная в 2022 году и широко при">
 <link rel="canonical" href="https://www.mypedia.ai/ru/tools/whisper.html">
 <link rel="alternate" hreflang="en" href="https://www.mypedia.ai/tools/whisper.html">
 <link rel="alternate" hreflang="ru" href="https://www.mypedia.ai/ru/tools/whisper.html">
 <link rel="alternate" hreflang="x-default" href="https://www.mypedia.ai/tools/whisper.html">
 <meta property="og:title" content="Whisper 2026 | MyPedia">
-<meta property="og:description" content="Whisper 2026 — Аудиотранскрибация от OpenAI. Open-source, поддерживает 100 языков с высокой точностью.">
+<meta property="og:description" content="Whisper 2026 — Whisper — это open-source модель автоматического распознавания речи (ASR) от OpenAI, выпущенная в 2022 году и широко при">
 <meta property="og:url" content="https://www.mypedia.ai/ru/tools/whisper.html">
 <meta property="og:image" content="https://www.mypedia.ai/og-image.svg">
 <meta property="og:type" content="website">
@@ -129,7 +129,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip">🎙️ Голос и аудио</span>
         <span class="tool-meta-chip">Бесплатно</span>
         <span class="tool-meta-chip">👥 2M+</span>
-        <span class="tool-meta-chip">🎯 Транскрибация, субтитры</span>
+        <span class="tool-meta-chip">🎯 Транскрипция, субтитры</span>
       </div>
     </div>
   </div>
@@ -138,23 +138,23 @@ textarea.form-input{resize:vertical;min-height:90px}
 
   <div class="tool-desc-block">
     <h2>О сервисе Whisper</h2>
-    <div class="tool-desc"><p>Аудиотранскрибация от OpenAI. Open-source, поддерживает 100 языков с высокой точностью.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Whisper — это open-source модель автоматического распознавания речи (ASR) от OpenAI, выпущенная в 2022 году и широко признанная наиболее точной публично доступной системой транскрипции. Обученная на 680 000 часах многоязычных аудиоданных, она поддерживает 100 языков с высокой точностью — включая множество языков с низкими ресурсами, с которыми испытывают трудности коммерческие сервисы транскрипции — и лучше справляется с акцентами, техническим жаргоном и фоновым шумом, чем большинство альтернатив.</p><p style="margin-top:1rem">Модель выпущена под лицензией MIT, что означает, что её можно использовать бесплатно для любых целей, включая коммерческие приложения. Локальный запуск Whisper не требует оплаты API — затраты на вычисления ограничены вашим собственным оборудованием или облачным экземпляром. Модель поставляется в пяти размерах (tiny, base, small, medium, large) с различными компромиссами между скоростью и точностью; модель large-v3 обеспечивает лучшую точность и работает на большинстве современных GPU с 10 ГБ+ VRAM. OpenAI также предоставляет хостируемый API стоимостью $0,006 в минуту, что конкурентоспособно с коммерческими сервисами транскрипции.</p><p style="margin-top:1rem">Основное ограничение состоит в том, что Whisper обрабатывает записанные аудиофайлы, а не потоки в реальном времени — встроенной функции живой транскрипции нет. Проекты сообщества, такие как Whisper Live и WhisperStream, добавляют функциональность в реальном времени, но требуют дополнительной инфраструктуры. Для приложений, требующих живых субтитров (видеовызовы, прямые трансляции), облачные сервисы, такие как AssemblyAI или Deepgram, являются лучшим выбором. Для пакетной транскрипции записей, подкастов, встреч и интервью Whisper обеспечивает наилучший соотношение точности к стоимости из доступных.</p></div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Преимущества</div>
       <ul class="pc-list">
-        <li>Open-source — бесплатно навсегда, без затрат на API при локальном использовании</li>
-        <li>Лучшая точность транскрибации среди всех моделей, особенно для речи с акцентом</li>
-        <li>Поддерживает 100 языков, включая редкие и малоресурсные</li>
+        <li>Open-source — навсегда бесплатно, без расходов на API при локальном использовании</li>
+        <li>Лучшая точность транскрипции из любой модели, особенно для речи с акцентом</li>
+        <li>Поддерживает 100 языков, включая редкие и языки с низкими ресурсами</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Недостатки</div>
       <ul class="pc-list">
-        <li>Нет транскрибации в реальном времени — обрабатывает только завершённые аудиофайлы</li>
-        <li>Требует локальной настройки или стороннего сервиса хостинга для API доступа</li>
+        <li>Нет транскрипции в реальном времени — обрабатывает только полные аудиофайлы</li>
+        <li>Требует локальной настройки или сервиса размещения третьей стороны для доступа к API</li>
       </ul>
     </div>
   </div>
