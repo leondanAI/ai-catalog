@@ -39,7 +39,7 @@ BADGE_LABELS = {'free': 'Free', 'freemium': 'Freemium', 'paid': 'Paid'}
 
 def fetch_tools():
     req = urllib.request.Request(
-        f'{SB_URL}/rest/v1/tools?order=name.asc&limit=200&select=*',
+        f'{SB_URL}/rest/v1/tools?lang=eq.en&order=name.asc&limit=200&select=*',
         headers={'apikey': SB_ANON, 'Authorization': f'Bearer {SB_ANON}'}
     )
     with urllib.request.urlopen(req) as r:
@@ -254,21 +254,26 @@ textarea.form-input {{ resize: vertical; min-height: 90px; }}
   <div class="header-inner">
     <a href="/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</a>
     <nav class="nav-links">
-      <a href="/" class="nav-link">Home</a>
-      <a href="/directory.html" class="nav-link active">Directory</a>
-      <a href="/news.html" class="nav-link">News</a>
-      <a href="/tools.html" class="nav-link">Free Tools</a>
-      <a href="/compare.html" class="nav-link">Compare</a>
-      <a href="/newsletter.html" class="nav-link">Newsletter</a>
+      <a href="/"               class="nav-link" data-nav="index.html"      data-i18n="nav.home">Find AI</a>
+      <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
+      <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
+      <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
+    <div class="lang-picker">
+      <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇬🇧 EN <span style="opacity:.5;font-size:10px">▾</span></button>
+      <div class="lang-menu" id="langMenu"></div>
+    </div>
     <button class="btn-hamburger" onclick="toggleMenu()">&#9776;</button>
   </div>
   <nav class="mobile-menu" id="mobileMenu">
-    <a href="/" class="nav-link">Home</a>
-    <a href="/directory.html" class="nav-link">Directory</a>
-    <a href="/news.html" class="nav-link">News</a>
-    <a href="/tools.html" class="nav-link">Free Tools</a>
-    <a href="/compare.html" class="nav-link">Compare</a>
+    <a href="/"               class="nav-link" data-i18n="nav.home">Find AI</a>
+    <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
+    <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
+    <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
 
