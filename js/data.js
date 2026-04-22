@@ -409,7 +409,8 @@ function renderToolCard(tool, color) {
   const faviconSrc = `https://www.google.com/s2/favicons?sz=64&domain=${domain}`;
   const usersHtml = tool.users ? `<span class="tool-users">👥 ${tool.users}</span>` : '';
   const slug = toSlug(tool.name);
-  const reviewUrl = `/tools/${slug}.html`;
+  const _lang = localStorage.getItem('lang') || 'en';
+  const reviewUrl = _lang === 'en' ? `/tools/${slug}.html` : `/${_lang}/tools/${slug}.html`;
   return `
     <div class="tool-card fade-up" onclick="showToolDetail(event,'${tool.name.replace(/'/g,"\\'")}')">
       <div class="tool-card-top">
