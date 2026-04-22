@@ -2131,14 +2131,14 @@ const I18N = (() => {
 
   // ── language metadata ─────────────────────────────────────────────────────
   const LANGS = {
-    en: { label: 'English',    flag: '🇬🇧', rtl: false },
-    es: { label: 'Español',    flag: '🇪🇸', rtl: false },
-    fr: { label: 'Français',   flag: '🇫🇷', rtl: false },
-    pt: { label: 'Português',  flag: '🇧🇷', rtl: false },
-    ru: { label: 'Русский',    flag: '🇷🇺', rtl: false },
-    de: { label: 'Deutsch',    flag: '🇩🇪', rtl: false },
-    ua: { label: 'UA · Українська', flag: '🇺🇦', rtl: false },
-    he: { label: 'עברית',      flag: '🇮🇱', rtl: true  },
+    en: { label: 'English',    flag: '🇬🇧', rtl: false, hidden: true },
+    es: { label: 'Español',    flag: '🇪🇸', rtl: false, hidden: true },
+    fr: { label: 'Français',   flag: '🇫🇷', rtl: false, hidden: true },
+    pt: { label: 'Português',  flag: '🇧🇷', rtl: false, hidden: true },
+    ru: { label: 'Русский',    flag: '🇷🇺', rtl: false, hidden: true },
+    de: { label: 'Deutsch',    flag: '🇩🇪', rtl: false, hidden: true },
+    ua: { label: 'UA · Українська', flag: '🇺🇦', rtl: false, hidden: true },
+    he: { label: 'עברית',      flag: '🇮🇱', rtl: true,  hidden: true },
   };
 
   // ── state ─────────────────────────────────────────────────────────────────
@@ -2191,7 +2191,7 @@ const I18N = (() => {
     const wrap = document.getElementById(containerId);
     if (!wrap) return;
     wrap.innerHTML = '';
-    Object.entries(LANGS).forEach(([code, meta]) => {
+    Object.entries(LANGS).filter(([, m]) => !m.hidden).forEach(([code, meta]) => {
       const btn = document.createElement('button');
       btn.className = 'lang-btn';
       btn.dataset.langBtn = code;
@@ -2208,6 +2208,7 @@ const I18N = (() => {
     if (!sel) return;
     sel.setAttribute('data-lang-select', '');
     sel.innerHTML = Object.entries(LANGS)
+      .filter(([, m]) => !m.hidden)
       .map(([code, meta]) =>
         `<option value="${code}"${code === _lang ? ' selected' : ''}>${meta.flag} ${meta.label}</option>`
       ).join('');
@@ -2219,7 +2220,7 @@ const I18N = (() => {
     const menu = document.getElementById(menuId);
     const btn  = document.getElementById(btnId);
     if (!menu) return;
-    menu.innerHTML = Object.entries(LANGS).map(([code, meta]) =>
+    menu.innerHTML = Object.entries(LANGS).filter(([, m]) => !m.hidden).map(([code, meta]) =>
       `<button class="lang-opt${code === _lang ? ' active' : ''}" onclick="I18N.set('${code}');toggleLangMenu(false)">${meta.flag} ${meta.label}</button>`
     ).join('');
     if (btn) btn.textContent = (LANGS[_lang]?.flag || '') + ' ' + _lang.toUpperCase() + ' ▾';
