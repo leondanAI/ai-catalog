@@ -172,6 +172,11 @@
 const SB_URL  = 'https://lbjdwkvkkndvofysyssy.supabase.co';
 const SB_ANON = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG';
 
+function toolPageUrl(slug) {
+  const lang = localStorage.getItem('lang') || 'en';
+  return lang === 'en' ? `/tools/${slug}.html` : `/${lang}/tools/${slug}.html`;
+}
+
 function toSlug(name) {
   return name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
 }
@@ -255,8 +260,8 @@ async function updateCompare() {
     ['Advantages',  listHtml(infoA.dbTool.pros, '#2dd4a0', '✅'),                 listHtml(infoB.dbTool.pros, '#2dd4a0', '✅')],
     ['Disadvantages', listHtml(infoA.dbTool.cons, '#f56565', '❌'),               listHtml(infoB.dbTool.cons, '#f56565', '❌')],
     ['Website',     getDomain(a.url),                                             getDomain(b.url)],
-    ['',            `<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="${a.aff}" target="_blank" rel="noopener sponsored">${t('tool.open')}</a><a class="tool-review" href="/tools/${toSlug(a.name)}.html">${t('tool.review')}</a></div>`,
-                    `<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="${b.aff}" target="_blank" rel="noopener sponsored">${t('tool.open')}</a><a class="tool-review" href="/tools/${toSlug(b.name)}.html">${t('tool.review')}</a></div>`],
+    ['',            `<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="${a.aff}" target="_blank" rel="noopener sponsored">${t('tool.open')}</a><a class="tool-review" href="${toolPageUrl(toSlug(a.name))}">${t('tool.review')}</a></div>`,
+                    `<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="${b.aff}" target="_blank" rel="noopener sponsored">${t('tool.open')}</a><a class="tool-review" href="${toolPageUrl(toSlug(b.name))}">${t('tool.review')}</a></div>`],
   ];
 
   el.innerHTML = `<div class="compare-wrap fade-up">
