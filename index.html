@@ -35,6 +35,68 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<style>
+#tfResults { max-width: 980px !important; }
+.tf3-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  width: 100%;
+  align-items: start;
+}
+.tf3-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s;
+}
+.tf3-card.tf3-in-catalog {
+  background: #161620;
+  border-color: rgba(124,106,247,0.2);
+}
+.tf3-best { border-color: rgba(124,106,247,0.5) !important; }
+.tf3-head {
+  display: flex; align-items: center; gap: 10px;
+  padding: 1rem 1.1rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+.tf3-avatar {
+  width: 38px; height: 38px; flex-shrink: 0;
+  background: var(--bg3); border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+}
+.tf3-name { font-family: var(--font-display); font-size: 15px; font-weight: 600; }
+.tf3-badge-row { margin-top: 4px; display: flex; gap: 5px; flex-wrap: wrap; align-items: center; }
+.tf3-in-catalog-tag {
+  font-size: 10px; font-weight: 600; letter-spacing: .05em;
+  color: #2dd4a0; background: rgba(45,212,160,0.1);
+  border: 1px solid rgba(45,212,160,0.2);
+  padding: 2px 7px; border-radius: 20px;
+}
+.tf3-external-tag {
+  font-size: 10px; font-weight: 500; letter-spacing: .04em;
+  color: var(--text3); background: var(--bg3);
+  border: 1px solid var(--border);
+  padding: 2px 7px; border-radius: 20px;
+}
+.tf3-section { padding: 0.75rem 1.1rem; border-bottom: 1px solid var(--border); font-size: 13px; }
+.tf3-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--text3); margin-bottom: 5px; }
+.tf3-why { color: var(--text2); line-height: 1.6; }
+.tf3-list { display: flex; flex-direction: column; gap: 5px; }
+.tf3-list-item { display: flex; gap: 6px; align-items: flex-start; color: var(--text2); line-height: 1.5; }
+.tf3-stars { display: flex; align-items: center; gap: 4px; }
+.tf3-footer {
+  display: flex; gap: 8px; padding: 0.75rem 1.1rem;
+  border-top: 1px solid var(--border); margin-top: auto;
+}
+.tf3-footer a { flex: 1; text-align: center; }
+@media (max-width: 720px) {
+  .tf3-grid { grid-template-columns: 1fr; }
+}
+</style>
 <link rel="alternate" hreflang="x-default" href="https://www.mypedia.ai/">
 <link rel="alternate" hreflang="en" href="https://www.mypedia.ai/">
 <link rel="alternate" hreflang="es" href="https://www.mypedia.ai/es/index.html">
@@ -293,29 +355,129 @@ async function tfFind() {
     btn.disabled = false;
   }
 }
-function tfRender(data) {
+const SB_URL3  = 'https://lbjdwkvkkndvofysyssy.supabase.co';
+const SB_ANON3 = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG';
+
+function tf3Slug(name) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+}
+function tf3ResolveSlug(aiName) {
+  const n = aiName.toLowerCase().trim();
+  const exact = ALL_TOOLS.find(t => t.name.toLowerCase() === n);
+  if (exact) return tf3Slug(exact.name);
+  const sub = ALL_TOOLS.find(t => n.includes(t.name.toLowerCase()));
+  if (sub) return tf3Slug(sub.name);
+  const rev = ALL_TOOLS.find(t => t.name.toLowerCase().includes(n));
+  if (rev) return tf3Slug(rev.name);
+  return tf3Slug(aiName);
+}
+function tf3Avatar(name, url) {
+  const domain = url ? url.replace(/https?:\/\//,'').split('/')[0] : '';
+  return domain
+    ? `<img src="https://www.google.com/s2/favicons?sz=64&domain=${domain}" width="26" height="26" style="border-radius:6px;display:block" onerror="this.outerHTML='<span style=font-weight:700;font-size:14px>${tfEsc(name[0])}</span>'">`
+    : `<span style="font-weight:700;font-size:14px">${tfEsc(name[0])}</span>`;
+}
+function tf3Stars(avg) {
+  if (!avg) return `<span style="font-size:12px;color:var(--text3)">No reviews yet</span>`;
+  const full = Math.round(avg);
+  return `<span style="color:#f59e0b;font-size:13px;letter-spacing:1px">${'★'.repeat(full)}</span>`
+       + `<span style="color:#444;font-size:13px;letter-spacing:1px">${'★'.repeat(5-full)}</span>`
+       + `<span style="font-size:12px;font-weight:600;color:var(--text);margin-left:4px">${avg.toFixed(1)}</span>`;
+}
+function tf3List(arr, icon, color) {
+  if (!arr || !arr.length) return `<span style="color:var(--text3);font-size:12px">—</span>`;
+  return arr.slice(0,3).map(p =>
+    `<div class="tf3-list-item"><span style="color:${color};flex-shrink:0">${icon}</span><span>${tfEsc(p)}</span></div>`
+  ).join('');
+}
+async function tf3Fetch(name) {
+  const slug = tf3ResolveSlug(name);
+  const [toolRes, ratingsRes] = await Promise.all([
+    fetch(`${SB_URL3}/rest/v1/tools?slug=eq.${slug}&select=pros,cons,description,best_for,badge,url`, {
+      headers: { apikey: SB_ANON3, Authorization: `Bearer ${SB_ANON3}` }
+    }),
+    fetch(`${SB_URL3}/rest/v1/comments?tool_slug=eq.${slug}&approved=eq.true&select=rating`, {
+      headers: { apikey: SB_ANON3, Authorization: `Bearer ${SB_ANON3}` }
+    })
+  ]);
+  const tools   = await toolRes.json();
+  const reviews = await ratingsRes.json();
+  const db = tools[0] || {};
+  const avg = reviews.length ? reviews.reduce((s,c) => s + c.rating, 0) / reviews.length : null;
+  return { db, avg, count: reviews.length };
+}
+async function tfRender(data) {
   const el = document.getElementById('tfResults');
-  el.innerHTML = '';
-  if (data.primary) {
-    const p = data.primary;
-    el.innerHTML += `<div class="tf-rlabel">Best match</div>
-      <div class="tf-card tf-primary">
-        <div class="tf-card-top"><div class="tf-card-name">${tfEsc(p.name)}</div><span class="tf-card-tag tf-best">Best fit</span></div>
-        <div class="tf-card-why">${tfEsc(p.why)}</div>
-        <div class="tf-card-footer"><span class="tf-pricing">${tfEsc(p.pricing)}</span><a class="tf-link" href="${tfEsc(p.url)}" target="_blank" rel="noopener">Visit ${tfEsc(p.name)} →</a></div>
+  el.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--text3);font-size:13px">Loading details…</div>';
+  el.style.display = 'block';
+
+  const tools = [];
+  if (data.primary) tools.push({ ...data.primary, best: true });
+  if (data.alternatives?.length) data.alternatives.slice(0,2).forEach(a => tools.push(a));
+
+  const infos = await Promise.all(tools.map(t => tf3Fetch(t.name)));
+
+  el.innerHTML = `<div class="tf3-grid">` + tools.map((t, i) => {
+    const info  = infos[i];
+    const slug  = tf3ResolveSlug(t.name);
+    const inCatalog = !!(info.db.pros || info.db.description);
+
+    const pricingHtml = inCatalog && info.db.badge
+      ? `<span class="badge badge-${info.db.badge}">${info.db.badge.charAt(0).toUpperCase()+info.db.badge.slice(1)}</span>`
+      : `<span style="color:var(--text2);font-size:13px">${tfEsc(t.pricing)}</span>`;
+
+    const detailSections = inCatalog ? `
+      <div class="tf3-section">
+        <div class="tf3-label">Rating</div>
+        <div class="tf3-stars">${tf3Stars(info.avg)}${info.count ? `<span style="font-size:11px;color:var(--text3);margin-left:3px">(${info.count})</span>` : ''}</div>
+      </div>
+      <div class="tf3-section">
+        <div class="tf3-label">Advantages</div>
+        <div class="tf3-list">${tf3List(info.db.pros, '✅', '#2dd4a0')}</div>
+      </div>
+      <div class="tf3-section">
+        <div class="tf3-label">Disadvantages</div>
+        <div class="tf3-list">${tf3List(info.db.cons, '❌', '#f56565')}</div>
+      </div>` : `
+      <div class="tf3-section" style="color:var(--text3);font-size:12px;font-style:italic">
+        This tool is not yet in our catalog — showing AI-sourced info only.
       </div>`;
-  }
-  if (data.alternatives?.length) {
-    el.innerHTML += `<div class="tf-rlabel" style="margin-top:4px">Also consider</div>`;
-    data.alternatives.forEach(a => {
-      el.innerHTML += `<div class="tf-card">
-        <div class="tf-card-top"><div class="tf-card-name">${tfEsc(a.name)}</div><span class="tf-card-tag tf-alt">Alternative</span></div>
-        <div class="tf-card-why">${tfEsc(a.why)}</div>
-        <div class="tf-card-footer"><span class="tf-pricing">${tfEsc(a.pricing)}</span><a class="tf-link" href="${tfEsc(a.url)}" target="_blank" rel="noopener">Visit ${tfEsc(a.name)} →</a></div>
-      </div>`;
-    });
-  }
-  el.style.display = 'flex';
+
+    const footerHtml = inCatalog
+      ? `<a class="tool-aff" href="${tfEsc(t.url)}" target="_blank" rel="noopener sponsored">Visit →</a>
+         <a class="tool-review" href="/tools/${slug}.html">Full review →</a>`
+      : `<a class="tool-aff" href="${tfEsc(t.url)}" target="_blank" rel="noopener sponsored" style="flex:1">Visit →</a>`;
+
+    return `
+    <div class="tf3-card ${inCatalog ? 'tf3-in-catalog' : ''} ${i === 0 ? 'tf3-best' : ''}">
+      <div class="tf3-head">
+        <div class="tf3-avatar">${tf3Avatar(t.name, t.url)}</div>
+        <div>
+          <div class="tf3-name">${tfEsc(t.name)}</div>
+          <div class="tf3-badge-row">
+            <span class="tf-card-tag ${i === 0 ? 'tf-best' : 'tf-alt'}">${i === 0 ? '★ Best match' : 'Alternative'}</span>
+            ${inCatalog
+              ? `<span class="tf3-in-catalog-tag">✓ Reviewed</span>`
+              : `<span class="tf3-external-tag">External</span>`}
+          </div>
+        </div>
+      </div>
+
+      <div class="tf3-section">
+        <div class="tf3-label">Why this tool</div>
+        <div class="tf3-why">${tfEsc(t.why)}</div>
+      </div>
+
+      <div class="tf3-section">
+        <div class="tf3-label">Pricing</div>
+        ${pricingHtml}
+      </div>
+
+      ${detailSections}
+
+      <div class="tf3-footer">${footerHtml}</div>
+    </div>`;
+  }).join('') + `</div>`;
 }
 
 function onLangChange() {
