@@ -2131,11 +2131,11 @@ const I18N = (() => {
 
   // ── language metadata ─────────────────────────────────────────────────────
   const LANGS = {
-    en: { label: 'English',    flag: '🇬🇧', rtl: false, hidden: true },
-    es: { label: 'Español',    flag: '🇪🇸', rtl: false, hidden: true },
+    en: { label: 'English',    flag: '🇬🇧', rtl: false, hidden: false },
+    es: { label: 'Español',    flag: '🇪🇸', rtl: false, hidden: false },
     fr: { label: 'Français',   flag: '🇫🇷', rtl: false, hidden: true },
     pt: { label: 'Português',  flag: '🇧🇷', rtl: false, hidden: true },
-    ru: { label: 'Русский',    flag: '🇷🇺', rtl: false, hidden: true },
+    ru: { label: 'Русский',    flag: '🇷🇺', rtl: false, hidden: false },
     de: { label: 'Deutsch',    flag: '🇩🇪', rtl: false, hidden: true },
     ua: { label: 'UA · Українська', flag: '🇺🇦', rtl: false, hidden: true },
     he: { label: 'עברית',      flag: '🇮🇱', rtl: true,  hidden: true },
