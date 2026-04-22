@@ -85,6 +85,9 @@ def fix_nav_links(html, lang):
     # Absolute page links: href="/directory.html" → href="/ru/directory.html"
     for page in PAGES:
         html = re.sub(rf'href="/{page}"', f'href="/{lang}/{page}"', html)
+    # Absolute page links with query strings: href="/compare.html?..." → href="/ru/compare.html?..."
+    for page in PAGES:
+        html = re.sub(rf'href="/{page}\?', f'href="/{lang}/{page}?', html)
     # Tool detail links: href="/tools/chatgpt.html" → href="/ru/tools/chatgpt.html"
     # Exclude toolbox utility pages (they only exist in English)
     TOOLBOX = {'token-counter','text-diff','word-counter','case-converter','regex-tester',

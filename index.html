@@ -445,7 +445,7 @@ async function tfRender(data) {
 
     const footerHtml = inCatalog
       ? `<a class="tool-aff" href="${tfEsc(t.url)}" target="_blank" rel="noopener sponsored">Visit →</a>
-         <a class="tool-review" href="/tools/${slug}.html">Full review →</a>`
+         <a class="tool-review" href="${(localStorage.getItem('lang')||'en')==='en'?'/tools/'+slug+'.html':'/'+(localStorage.getItem('lang')||'en')+'/tools/'+slug+'.html'}">Full review →</a>`
       : `<a class="tool-aff" href="${tfEsc(t.url)}" target="_blank" rel="noopener sponsored" style="flex:1">Visit →</a>`;
 
     return `
