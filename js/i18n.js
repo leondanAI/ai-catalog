@@ -136,7 +136,7 @@ const I18N = (() => {
       'footer.desc':     'Best AI tools catalog in one place.',
       'footer.nav':      'Navigation',
       'footer.cats':     'Categories',
-      'footer.madeWith': 'Made with ♥ by Leondan & Claude',
+      'footer.madeWith': 'Made with ♥ by Leondan & Claude · Updated daily',
       'footer.rights':   '© 2026 AI Portal',
     },
 
@@ -247,7 +247,7 @@ const I18N = (() => {
       'footer.desc':     'Лучший каталог ИИ-инструментов.',
       'footer.nav':      'Навигация',
       'footer.cats':     'Категории',
-      'footer.madeWith': 'Сделано с ♥ и Claude',
+      'footer.madeWith': 'Сделано с ♥ Leondan & Claude · Обновляется ежедневно',
       'footer.rights':   '© 2026 AI Portal',
     },
 
@@ -358,7 +358,7 @@ const I18N = (() => {
       'footer.desc':     'El mejor catálogo de IA en un solo lugar.',
       'footer.nav':      'Navegación',
       'footer.cats':     'Categorías',
-      'footer.madeWith': 'Hecho con ♥ y Claude',
+      'footer.madeWith': 'Hecho con ♥ por Leondan & Claude · Actualizado diariamente',
       'footer.rights':   '© 2026 AI Portal',
     },
 
@@ -469,7 +469,7 @@ const I18N = (() => {
       'footer.desc':     'Le meilleur catalogue IA en un seul endroit.',
       'footer.nav':      'Navigation',
       'footer.cats':     'Catégories',
-      'footer.madeWith': 'Fait avec ♥ et Claude',
+      'footer.madeWith': 'Fait avec ♥ par Leondan & Claude · Mis à jour quotidiennement',
       'footer.rights':   '© 2026 AI Portal',
     },
 
@@ -580,7 +580,7 @@ const I18N = (() => {
       'footer.desc':     'Bester KI-Katalog an einem Ort.',
       'footer.nav':      'Navigation',
       'footer.cats':     'Kategorien',
-      'footer.madeWith': 'Mit ♥ und Claude gemacht',
+      'footer.madeWith': 'Mit ♥ von Leondan & Claude · Täglich aktualisiert',
       'footer.rights':   '© 2026 AI Portal',
     },
 
@@ -691,7 +691,7 @@ const I18N = (() => {
       'footer.desc':     'O melhor catálogo de IA em um só lugar.',
       'footer.nav':      'Navegação',
       'footer.cats':     'Categorias',
-      'footer.madeWith': 'Feito com ♥ e Claude',
+      'footer.madeWith': 'Feito com ♥ por Leondan & Claude · Atualizado diariamente',
       'footer.rights':   '© 2026 AI Portal',
     },
 
@@ -784,7 +784,7 @@ const I18N = (() => {
       'footer.desc':     'Il miglior catalogo AI in un posto solo.',
       'footer.nav':      'Navigazione',
       'footer.cats':     'Categorie',
-      'footer.madeWith': 'Fatto con ♥ e Claude',
+      'footer.madeWith': 'Fatto con ♥ da Leondan & Claude · Aggiornato quotidianamente',
       'footer.rights':   '© 2026 AI Portal',
     },
 
@@ -877,7 +877,7 @@ const I18N = (() => {
       'footer.desc':     '一站式 AI 工具精选目录。',
       'footer.nav':      '导航',
       'footer.cats':     '类别',
-      'footer.madeWith': '用 ♥ 和 Claude 制作',
+      'footer.madeWith': '由 Leondan & Claude 用 ♥ 制作 · 每日更新',
       'footer.rights':   '© 2026 AI Portal',
     },
 
@@ -970,7 +970,7 @@ const I18N = (() => {
       'footer.desc':     '最高のAIツールカタログを一箇所に。',
       'footer.nav':      'ナビゲーション',
       'footer.cats':     'カテゴリ',
-      'footer.madeWith': '♥ と Claude で作られました',
+      'footer.madeWith': 'Leondan & Claude が ♥ を込めて制作 · 毎日更新',
       'footer.rights':   '© 2026 AI Portal',
     },
 
@@ -1063,7 +1063,7 @@ const I18N = (() => {
       'footer.desc':     '한 곳에서 최고의 AI 카탈로그.',
       'footer.nav':      '네비게이션',
       'footer.cats':     '카테고리',
-      'footer.madeWith': '♥ 와 Claude 로 만들어짐',
+      'footer.madeWith': 'Leondan & Claude가 ♥ 로 만든 · 매일 업데이트',
       'footer.rights':   '© 2026 AI Portal',
     },
 
@@ -1156,7 +1156,7 @@ const I18N = (() => {
       'footer.desc':     'أفضل كتالوج أدوات ذكاء اصطناعي في مكان واحد.',
       'footer.nav':      'التنقل',
       'footer.cats':     'الفئات',
-      'footer.madeWith': 'صُنع بـ ♥ و Claude',
+      'footer.madeWith': 'صُنع بـ ♥ من قِبَل Leondan & Claude · يُحدَّث يوميًا',
       'footer.rights':   '© 2026 AI Portal',
     },
 
@@ -1249,7 +1249,7 @@ const I18N = (() => {
       'footer.desc':     'एक जगह सबसे बेहतरीन AI कैटलॉग।',
       'footer.nav':      'नेविगेशन',
       'footer.cats':     'श्रेणियाँ',
-      'footer.madeWith': '♥ और Claude के साथ बनाया',
+      'footer.madeWith': 'Leondan & Claude द्वारा ♥ के साथ बनाया · दैनिक अपडेट',
       'footer.rights':   '© 2026 AI Portal',
     },
 
@@ -1342,7 +1342,7 @@ const I18N = (() => {
       'footer.desc':     'Tek yerde en iyi AI kataloğu.',
       'footer.nav':      'Navigasyon',
       'footer.cats':     'Kategoriler',
-      'footer.madeWith': '♥ ve Claude ile yapıldı',
+      'footer.madeWith': 'Leondan & Claude tarafından ♥ ile yapıldı · Günlük güncellenir',
       'footer.rights':   '© 2026 AI Portal',
     },
 
@@ -1435,7 +1435,7 @@ const I18N = (() => {
       'footer.desc':     'Najlepszy katalog AI w jednym miejscu.',
       'footer.nav':      'Nawigacja',
       'footer.cats':     'Kategorie',
-      'footer.madeWith': 'Stworzone z ♥ i Claude',
+      'footer.madeWith': 'Stworzone z ♥ przez Leondan & Claude · Aktualizowane codziennie',
       'footer.rights':   '© 2026 AI Portal',
     },
 
@@ -1528,7 +1528,7 @@ const I18N = (() => {
       'footer.desc':     'De beste AI-catalogus op één plek.',
       'footer.nav':      'Navigatie',
       'footer.cats':     'Categorieën',
-      'footer.madeWith': 'Gemaakt met ♥ en Claude',
+      'footer.madeWith': 'Gemaakt met ♥ door Leondan & Claude · Dagelijks bijgewerkt',
       'footer.rights':   '© 2026 AI Portal',
     },
 
@@ -1621,7 +1621,7 @@ const I18N = (() => {
       'footer.desc':     'Danh mục AI tốt nhất tại một nơi.',
       'footer.nav':      'Điều hướng',
       'footer.cats':     'Danh mục',
-      'footer.madeWith': 'Được tạo bằng ♥ và Claude',
+      'footer.madeWith': 'Được tạo bằng ♥ bởi Leondan & Claude · Cập nhật hàng ngày',
       'footer.rights':   '© 2026 AI Portal',
     },
 
@@ -1714,7 +1714,7 @@ const I18N = (() => {
       'footer.desc':     'Katalog alat AI terbaik di satu tempat.',
       'footer.nav':      'Navigasi',
       'footer.cats':     'Kategori',
-      'footer.madeWith': 'Dibuat dengan ♥ dan Claude',
+      'footer.madeWith': 'Dibuat dengan ♥ oleh Leondan & Claude · Diperbarui setiap hari',
       'footer.rights':   '© 2026 AI Portal',
     },
 
@@ -1807,7 +1807,7 @@ const I18N = (() => {
       'footer.desc':     'แค็ตตาล็อก AI ที่ดีที่สุดในที่เดียว',
       'footer.nav':      'การนำทาง',
       'footer.cats':     'หมวดหมู่',
-      'footer.madeWith': 'สร้างด้วย ♥ และ Claude',
+      'footer.madeWith': 'สร้างด้วย ♥ โดย Leondan & Claude · อัปเดตทุกวัน',
       'footer.rights':   '© 2026 AI Portal',
     },
 
@@ -1918,7 +1918,7 @@ const I18N = (() => {
       'footer.desc':     'Найкращий каталог ШІ-інструментів.',
       'footer.nav':      'Навігація',
       'footer.cats':     'Категорії',
-      'footer.madeWith': 'Зроблено з ♥ та Claude',
+      'footer.madeWith': 'Зроблено з ♥ Leondan & Claude · Оновлюється щодня',
       'footer.rights':   '© 2026 AI Portal',
     },
 
@@ -2029,7 +2029,7 @@ const I18N = (() => {
       'footer.desc':     'קטלוג כלי ה-AI הטוב ביותר במקום אחד.',
       'footer.nav':      'ניווט',
       'footer.cats':     'קטגוריות',
-      'footer.madeWith': 'נוצר עם ♥ על ידי Leondan & Claude',
+      'footer.madeWith': 'נוצר עם ♥ על ידי Leondan & Claude · מתעדכן יומיומית',
       'footer.rights':   '© 2026 AI Portal',
     },
 
@@ -2122,7 +2122,7 @@ const I18N = (() => {
       'footer.desc':     'Cel mai bun catalog AI într-un singur loc.',
       'footer.nav':      'Navigare',
       'footer.cats':     'Categorii',
-      'footer.madeWith': 'Făcut cu ♥ și Claude',
+      'footer.madeWith': 'Făcut cu ♥ de Leondan & Claude · Actualizat zilnic',
       'footer.rights':   '© 2026 AI Portal',
     },
   };
