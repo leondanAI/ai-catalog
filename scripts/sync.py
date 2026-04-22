@@ -13,6 +13,7 @@ steps = [
     ('Tool pages (102)',         ['python3', 'scripts/generate-pages.py']),
     ('Static content (dir+news)',['python3', 'scripts/generate-static-content.py']),
     ('Language pages (42)',      ['python3', 'scripts/generate-lang-pages.py']),
+    ('Sitemap',                  ['python3', 'scripts/generate-sitemap.py']),
 ]
 
 print('═' * 48)
