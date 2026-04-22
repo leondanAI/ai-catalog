@@ -94,7 +94,7 @@ def fix_nav_links(html, lang):
                'json-formatter','csv-json','markdown-preview','password-generator','base64'}
     def rewrite_tool_link(m):
         slug = m.group(1).replace('.html', '')
-        if slug in TOOLBOX:
+        if slug in TOOLBOX or '${' in slug:  # skip toolbox utilities and JS template literals
             return m.group(0)  # keep as-is
         return f'href="/{lang}/tools/{m.group(1)}"'
     html = re.sub(r'href="/tools/([^"]+\.html)"', rewrite_tool_link, html)

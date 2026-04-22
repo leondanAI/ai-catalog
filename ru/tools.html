@@ -125,7 +125,7 @@ const SB_ANON = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG';
 function renderTools(tools) {
   const openLabel = t('toolbox.open') || 'Open tool →';
   document.getElementById('toolsGrid').innerHTML = tools.map(tool => `
-    <a class="tool-card fade-up" href="/ru/tools/${tool.id}.html">
+    <a class="tool-card fade-up" href="/tools/${tool.id}.html">
       <div class="tool-icon-box" style="background:${tool.color}22;color:${tool.color}">${tool.icon}</div>
       <div class="tool-card-name">${tool.title}</div>
       <div class="tool-card-desc">${tool.description}</div>
