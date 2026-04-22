@@ -2255,7 +2255,8 @@ const I18N = (() => {
       const isLangPage = parts.length >= 1 && langCodes.includes(parts[0]) && PAGES.includes(page);
 
       // Tool detail pages: /tools/chatgpt.html or /ru/tools/chatgpt.html
-      const inToolsSection = parts.includes('tools') && page.endsWith('.html') && !PAGES.includes(page);
+      const TOOLBOX = ['token-counter','text-diff','word-counter','case-converter','regex-tester','json-formatter','csv-json','markdown-preview','password-generator','base64'];
+      const inToolsSection = parts.includes('tools') && page.endsWith('.html') && !PAGES.includes(page) && !TOOLBOX.includes(page.replace('.html',''));
       if (inToolsSection) {
         const target = code === 'en' ? '/tools/' + page : '/' + code + '/tools/' + page;
         if (window.location.pathname !== target) {
