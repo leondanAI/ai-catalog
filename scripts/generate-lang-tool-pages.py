@@ -16,6 +16,11 @@ SB_ANON = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG'
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 BASE_URL = 'https://www.mypedia.ai'
 
+LANG_FLAGS = {
+    'ru': '🇷🇺', 'es': '🇪🇸', 'fr': '🇫🇷', 'pt': '🇧🇷',
+    'de': '🇩🇪', 'uk': '🇺🇦', 'he': '🇮🇱',
+}
+
 LANGUAGES = {
     'ru': {
         'nav': {'home':'Главная','dir':'Каталог','news':'Новости','tools':'Инструменты','compare':'Сравнение','nl':'Рассылка'},
@@ -311,7 +316,7 @@ textarea.form-input{{resize:vertical;min-height:90px}}
       <a href="/{lang}/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">{nav['nl']}</a>
     </nav>
     <div class="lang-picker">
-      <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">&#127758; {lang.upper()} <span style="opacity:.5;font-size:10px">▾</span></button>
+      <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">{LANG_FLAGS.get(lang,'🌐')} {lang.upper()} <span style="opacity:.5;font-size:10px">▾</span></button>
       <div class="lang-menu" id="langMenu"></div>
     </div>
     <button class="btn-hamburger" onclick="toggleMenu()">&#9776;</button>

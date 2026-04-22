@@ -94,9 +94,22 @@ def inject_hreflang(html, page):
     tags = hreflang_tags(page)
     return html.replace('</head>', tags + '\n</head>', 1)
 
+LANG_FLAGS = {
+    'en': '🇬🇧', 'ru': '🇷🇺', 'es': '🇪🇸', 'fr': '🇫🇷',
+    'pt': '🇧🇷', 'de': '🇩🇪', 'uk': '🇺🇦', 'he': '🇮🇱',
+}
+
 def generate_lang_page(html, lang, page, title, desc):
     # Set html lang attribute
     html = re.sub(r'<html[^>]*>', f'<html lang="{lang}">', html)
+
+    # Update lang-picker button to show correct flag
+    flag = LANG_FLAGS.get(lang, '🌐')
+    html = re.sub(
+        r'(<button class="lang-btn"[^>]*>)[^<]*(<span)',
+        rf'\g<1>{flag} {lang.upper()} \g<2>',
+        html
+    )
 
     # Fix relative CSS/JS paths to absolute so they work from subdirectory
     html = html.replace('href="css/', 'href="/css/')

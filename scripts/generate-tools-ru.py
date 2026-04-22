@@ -1,31 +1,38 @@
 #!/usr/bin/env python3
 """
-Generate static HTML tool pages from Supabase tools table.
-Run: python3 scripts/generate-pages.py
+Generate Russian-translated AI tool detail pages at /ru/tools/*.html.
+Uses Anthropic API to translate description, pros, cons, best_for.
+Run: python3 scripts/generate-tools-ru.py
+Requires: pip install anthropic
 """
 
-import urllib.request, json, os, re
+import urllib.request, json, os, re, sys, time
 
+# ─── Config ───────────────────────────────────────────────────────────────────
 SB_URL  = 'https://lbjdwkvkkndvofysyssy.supabase.co'
 SB_ANON = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG'
-OUT_DIR = os.path.join(os.path.dirname(__file__), '..', 'tools')
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+OUT_DIR  = os.path.join(ROOT_DIR, 'ru', 'tools')
+CACHE_FILE = os.path.join(ROOT_DIR, 'scripts', 'ru_translations_cache.json')
+BASE_URL = 'https://www.mypedia.ai'
 
-CATEGORY_LABELS = {
-    'chat':          'AI Chat & Assistants',
-    'agents':        'AI Agents & Automation',
-    'code':          'AI for Development',
-    'writing':       'Text & Copywriting',
-    'marketing':     'Marketing & SEO',
-    'image':         'Image Generation',
-    'video':         'Video Generation',
-    'design':        'Design & UI/UX',
-    'voice':         'Voice & Audio',
-    'productivity':  'Productivity',
-    'research':      'Research',
-    'data':          'Data & Analytics',
-    'nocode':        'No-Code App Builders',
-    'education':     'Education & Learning',
-    'presentations': 'Presentations & Slides',
+# ─── Russian strings ──────────────────────────────────────────────────────────
+CATEGORY_LABELS_RU = {
+    'chat':          'ИИ-чат и ассистенты',
+    'agents':        'ИИ-агенты и автоматизация',
+    'code':          'ИИ для разработки',
+    'writing':       'Текст и копирайтинг',
+    'marketing':     'Маркетинг и SEO',
+    'image':         'Генерация изображений',
+    'video':         'Генерация видео',
+    'design':        'Дизайн и UI/UX',
+    'voice':         'Голос и аудио',
+    'productivity':  'Продуктивность',
+    'research':      'Исследования',
+    'data':          'Данные и аналитика',
+    'nocode':        'Конструкторы без кода',
+    'education':     'Образование и обучение',
+    'presentations': 'Презентации и слайды',
 }
 
 CATEGORY_ICONS = {
@@ -35,34 +42,18 @@ CATEGORY_ICONS = {
     'data': '📊', 'nocode': '🏗️', 'education': '🎓', 'presentations': '🖥️',
 }
 
-BADGE_LABELS = {'free': 'Free', 'freemium': 'Freemium', 'paid': 'Paid'}
+BADGE_LABELS_RU = {'free': 'Бесплатно', 'freemium': 'Freemium', 'paid': 'Платно'}
 
+# ─── Helpers ──────────────────────────────────────────────────────────────────
 def fetch_tools():
     req = urllib.request.Request(
-        f'{SB_URL}/rest/v1/tools?lang=eq.en&order=name.asc&limit=200&select=*',
+        f'{SB_URL}/rest/v1/tools?order=name.asc&limit=200&select=*',
         headers={'apikey': SB_ANON, 'Authorization': f'Bearer {SB_ANON}'}
     )
     with urllib.request.urlopen(req) as r:
         return json.loads(r.read())
 
-def build_meta_desc(name, description, badge, best_for):
-    """Build a unique 150-155 char meta description with keyword + CTA."""
-    badge_lbl  = {'free': 'Free', 'freemium': 'Freemium', 'paid': 'Paid'}.get(badge, '')
-    short_desc = (description or '').split('\n\n')[0].strip()
-    cta        = ' Pros, cons & alternatives →'
-    # Only append Best-for if "best for" doesn't already appear in the description
-    has_bestfor = best_for and 'best for' not in short_desc.lower()
-    suffix = f' {badge_lbl}. Best for {best_for}.{cta}' if has_bestfor else f' {badge_lbl}.{cta}'
-    prefix = f'{name} 2026 — '
-    available = 155 - len(prefix) - len(suffix)
-    if len(short_desc) > available:
-        short_desc = short_desc[:available].rsplit(' ', 1)[0].rstrip('.,;')
-    if short_desc and short_desc[-1] not in '.!?':
-        short_desc += '.'
-    return f'{prefix}{short_desc}{suffix}'
-
 def fetch_ratings():
-    """Fetch all approved comments and return {slug: {avg, count}}."""
     req = urllib.request.Request(
         f'{SB_URL}/rest/v1/comments?approved=eq.true&select=tool_slug,rating&limit=10000',
         headers={'apikey': SB_ANON, 'Authorization': f'Bearer {SB_ANON}'}
@@ -76,18 +67,60 @@ def fetch_ratings():
             ratings[slug] = []
         ratings[slug].append(row['rating'])
     return {
-        slug: {
-            'avg':   round(sum(vals) / len(vals), 1),
-            'count': len(vals)
-        }
-        for slug, vals in ratings.items()
+        slug: {'avg': round(sum(v)/len(v), 1), 'count': len(v)}
+        for slug, v in ratings.items()
     }
+
+def load_cache():
+    if os.path.exists(CACHE_FILE):
+        with open(CACHE_FILE) as f:
+            return json.load(f)
+    return {}
+
+def save_cache(cache):
+    with open(CACHE_FILE, 'w', encoding='utf-8') as f:
+        json.dump(cache, f, ensure_ascii=False, indent=2)
 
 def esc(s):
     return str(s or '').replace('&','&amp;').replace('<','&lt;').replace('>','&gt;').replace('"','&quot;')
 
+def translate_tool(client, tool):
+    """Use Anthropic API to translate a tool's content into Russian."""
+    name     = tool['name']
+    desc     = tool.get('description_long') or tool.get('description') or ''
+    pros     = tool.get('pros') or []
+    cons     = tool.get('cons') or []
+    best_for = tool.get('best_for') or ''
+
+    prompt = f"""Translate the following AI tool information into Russian.
+Keep the tool name "{name}" in its original form (do not translate it).
+Keep any technical terms, product names, and brand names in English.
+Return a JSON object with these exact keys: description, pros, cons, best_for.
+- description: full translation of the description text
+- pros: array of translated strings (same number as input)
+- cons: array of translated strings (same number as input)
+- best_for: translated string
+
+Input:
+description: {desc}
+pros: {json.dumps(pros, ensure_ascii=False)}
+cons: {json.dumps(cons, ensure_ascii=False)}
+best_for: {best_for}
+
+Return only valid JSON, no markdown, no explanation."""
+
+    message = client.messages.create(
+        model='claude-haiku-4-5-20251001',
+        max_tokens=2048,
+        messages=[{'role': 'user', 'content': prompt}]
+    )
+    raw = message.content[0].text.strip()
+    # Strip markdown code block if present
+    raw = re.sub(r'^```(?:json)?\n?', '', raw)
+    raw = re.sub(r'\n?```$', '', raw)
+    return json.loads(raw)
+
 def also_consider(tools, current):
-    """Pick up to 3 tools from same category, excluding current."""
     same = [t for t in tools if t['category'] == current['category'] and t['slug'] != current['slug']]
     return same[:3]
 
@@ -96,7 +129,7 @@ def build_jsonld(name, desc, url, badge, slug, rating_data):
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": name,
-        "description": desc[:200],
+        "description": desc[:200] if desc else '',
         "applicationCategory": "AIApplication",
         "operatingSystem": "Web",
         "url": url,
@@ -122,7 +155,7 @@ def build_jsonld(name, desc, url, badge, slug, rating_data):
         }
     return json.dumps(schema, ensure_ascii=False)
 
-def render_page(tool, all_tools, rating_data=None):
+def render_ru_page(tool, all_tools, ru_content, rating_data=None):
     slug      = tool['slug']
     name      = tool['name']
     url       = tool['url']
@@ -130,16 +163,20 @@ def render_page(tool, all_tools, rating_data=None):
     category  = tool['category']
     badge     = tool['badge']
     users     = tool['users'] or ''
-    best_for  = tool['best_for'] or ''
-    desc      = tool.get('description_long') or tool.get('description') or ''
-    short_desc = tool.get('description') or ''  # always short version for meta
-    meta_desc  = build_meta_desc(name, short_desc, badge, best_for)
-    pros      = tool.get('pros') or []
-    cons      = tool.get('cons') or []
+    best_for  = ru_content.get('best_for') or tool.get('best_for') or ''
+    desc      = ru_content.get('description') or tool.get('description_long') or tool.get('description') or ''
+    pros      = ru_content.get('pros') or tool.get('pros') or []
+    cons      = ru_content.get('cons') or tool.get('cons') or []
 
-    cat_label = CATEGORY_LABELS.get(category, category.title())
+    cat_label = CATEGORY_LABELS_RU.get(category, category.title())
     cat_icon  = CATEGORY_ICONS.get(category, '🤖')
-    badge_lbl = BADGE_LABELS.get(badge, badge.title())
+    badge_lbl = BADGE_LABELS_RU.get(badge, badge.title())
+
+    # Meta description in Russian
+    short_ru = (desc or '').split('\n\n')[0].strip()
+    if len(short_ru) > 155:
+        short_ru = short_ru[:152].rsplit(' ', 1)[0] + '...'
+    meta_desc = f'{name} 2026 — {short_ru}' if short_ru else f'{name} 2026 — ИИ-инструмент'
 
     pros_html = '\n'.join(f'        <li>{esc(p)}</li>' for p in pros)
     cons_html = '\n'.join(f'        <li>{esc(p)}</li>' for p in cons)
@@ -147,7 +184,7 @@ def render_page(tool, all_tools, rating_data=None):
     also = also_consider(all_tools, tool)
     also_html = ''
     for a in also:
-        also_html += f'''    <a class="also-card" href="/tools/{esc(a['slug'])}.html">
+        also_html += f'''    <a class="also-card" href="/ru/tools/{esc(a['slug'])}.html">
       <div class="also-card-name">{esc(a['name'])}</div>
       <div class="also-card-desc">{esc(a['best_for'] or '')}</div>
     </a>\n'''
@@ -155,29 +192,37 @@ def render_page(tool, all_tools, rating_data=None):
     users_chip = f'<span class="tool-meta-chip">👥 {esc(users)}</span>' if users else ''
     best_chip  = f'<span class="tool-meta-chip">🎯 {esc(best_for)}</span>' if best_for else ''
 
+    desc_html = ''.join(
+        f'<p style="margin-top:1rem">{esc(p.strip())}</p>'
+        for p in desc.split('\n\n') if p.strip()
+    )
+
+    jsonld = build_jsonld(name, desc, url, badge, slug, rating_data)
+
     return f'''<!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{esc(name)} Review 2026 — Pros, Cons &amp; Alternatives | MyPedia</title>
+<title>{esc(name)} Обзор 2026 — Плюсы, минусы и альтернативы | MyPedia</title>
 <meta name="description" content="{esc(meta_desc)}">
-<link rel="canonical" href="https://www.mypedia.ai/tools/{esc(slug)}.html">
-<link rel="alternate" hreflang="x-default" href="https://www.mypedia.ai/tools/{esc(slug)}.html">
-<link rel="alternate" hreflang="en" href="https://www.mypedia.ai/tools/{esc(slug)}.html">
-<link rel="alternate" hreflang="ru" href="https://www.mypedia.ai/ru/tools/{esc(slug)}.html">
-<meta property="og:title" content="{esc(name)} Review 2026 | MyPedia">
+<link rel="canonical" href="{BASE_URL}/ru/tools/{esc(slug)}.html">
+<link rel="alternate" hreflang="en" href="{BASE_URL}/tools/{esc(slug)}.html">
+<link rel="alternate" hreflang="ru" href="{BASE_URL}/ru/tools/{esc(slug)}.html">
+<link rel="alternate" hreflang="x-default" href="{BASE_URL}/tools/{esc(slug)}.html">
+<meta property="og:title" content="{esc(name)} Обзор 2026 | MyPedia">
 <meta property="og:description" content="{esc(meta_desc)}">
-<meta property="og:url" content="https://www.mypedia.ai/tools/{esc(slug)}.html">
-<meta property="og:image" content="https://www.mypedia.ai/og-image.svg">
+<meta property="og:url" content="{BASE_URL}/ru/tools/{esc(slug)}.html">
+<meta property="og:image" content="{BASE_URL}/og-image.svg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="{esc(name)} Review 2026 | MyPedia">
+<meta name="twitter:title" content="{esc(name)} Обзор 2026 | MyPedia">
 <meta name="twitter:description" content="{esc(meta_desc)}">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L09EYV4S46"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-L09EYV4S46");</script>
+<script>localStorage.setItem("lang","ru");</script>
 <script type="application/ld+json">
-{build_jsonld(name, desc, url, badge, slug, rating_data)}
+{jsonld}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -255,51 +300,46 @@ textarea.form-input {{ resize: vertical; min-height: 90px; }}
 
 <header class="site-header">
   <div class="header-inner">
-    <a href="/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</a>
+    <a href="/ru/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</a>
     <nav class="nav-links">
-      <a href="/"               class="nav-link" data-nav="index.html"      data-i18n="nav.home">Find AI</a>
-      <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
-      <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
-      <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
-      <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
+      <a href="/ru/index.html" class="nav-link">Главная</a>
+      <a href="/ru/directory.html" class="nav-link active">Каталог</a>
+      <a href="/ru/news.html" class="nav-link">Новости</a>
+      <a href="/ru/tools.html" class="nav-link">Инструменты</a>
+      <a href="/ru/compare.html" class="nav-link">Сравнение</a>
+      <a href="/ru/newsletter.html" class="nav-link">Рассылка</a>
     </nav>
-    <div class="lang-picker">
-      <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇬🇧 EN <span style="opacity:.5;font-size:10px" id="langArrow">▾</span></button>
-      <div class="lang-menu" id="langMenu"></div>
-    </div>
     <button class="btn-hamburger" onclick="toggleMenu()">&#9776;</button>
   </div>
   <nav class="mobile-menu" id="mobileMenu">
-    <a href="/"               class="nav-link" data-i18n="nav.home">Find AI</a>
-    <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
-    <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
-    <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
-    <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
+    <a href="/ru/index.html" class="nav-link">Главная</a>
+    <a href="/ru/directory.html" class="nav-link">Каталог</a>
+    <a href="/ru/news.html" class="nav-link">Новости</a>
+    <a href="/ru/tools.html" class="nav-link">Инструменты</a>
+    <a href="/ru/compare.html" class="nav-link">Сравнение</a>
   </nav>
 </header>
 
 <div class="tool-page">
 
   <nav class="breadcrumb">
-    <a href="/">Home</a>
+    <a href="/ru/">Главная</a>
     <span class="breadcrumb-sep">›</span>
-    <a href="/directory.html">Directory</a>
+    <a href="/ru/directory.html">Каталог</a>
     <span class="breadcrumb-sep">›</span>
-    <a href="/directory.html?cat={esc(category)}">{esc(cat_label)}</a>
+    <a href="/ru/directory.html?cat={esc(category)}">{esc(cat_label)}</a>
     <span class="breadcrumb-sep">›</span>
     <span>{esc(name)}</span>
   </nav>
 
   <div class="tool-hero">
     <div class="tool-hero-avatar" style="background:#fff;overflow:hidden;padding:6px">
-      <img src="https://www.google.com/s2/favicons?domain={esc(domain)}&sz=128" alt="{esc(name)} logo" width="60" height="60" style="width:100%;height:100%;object-fit:contain;border-radius:10px">
+      <img src="https://www.google.com/s2/favicons?domain={esc(domain)}&sz=128" alt="{esc(name)} логотип" width="60" height="60" style="width:100%;height:100%;object-fit:contain;border-radius:10px">
     </div>
     <div class="tool-hero-info">
       <div class="tool-hero-top">
         <h1 class="tool-hero-name">{esc(name)}</h1>
-        <a class="btn-visit" href="{esc(url)}" target="_blank" rel="noopener">Visit {esc(name)} →</a>
+        <a class="btn-visit" href="{esc(url)}" target="_blank" rel="noopener">Перейти на {esc(name)} →</a>
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">{cat_icon} {esc(cat_label)}</span>
@@ -313,48 +353,48 @@ textarea.form-input {{ resize: vertical; min-height: 90px; }}
   <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
 
   <div class="tool-desc-block">
-    <h2>About {esc(name)}</h2>
-    <div class="tool-desc">{''.join(f'<p style="margin-top:1rem">{esc(p.strip())}</p>' for p in desc.split(chr(10)+chr(10)) if p.strip())}</div>
+    <h2>О сервисе {esc(name)}</h2>
+    <div class="tool-desc">{desc_html}</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
-      <div class="pc-title">Advantages</div>
+      <div class="pc-title">Преимущества</div>
       <ul class="pc-list">
 {pros_html}
       </ul>
     </div>
     <div class="pc-box cons">
-      <div class="pc-title">Disadvantages</div>
+      <div class="pc-title">Недостатки</div>
       <ul class="pc-list">
 {cons_html}
       </ul>
     </div>
   </div>
 
-  <div class="section-title-sm">Also consider</div>
+  <div class="section-title-sm">Также рассмотрите</div>
   <div class="also-grid">
 {also_html}  </div>
 
   <div class="comments-section">
-    <div class="section-title-sm">User Reviews</div>
+    <div class="section-title-sm">Отзывы пользователей</div>
     <div class="comment-form">
-      <h3>Leave a Review</h3>
+      <h3>Оставить отзыв</h3>
       <div class="star-picker" id="starPicker">
         <span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span>
       </div>
       <input type="hidden" id="ratingVal" value="0">
       <div class="form-row">
-        <input class="form-input" type="text" id="authorName" placeholder="Your name" maxlength="60">
-        <input class="form-input" type="email" id="authorEmail" placeholder="Email (not published)" maxlength="120">
+        <input class="form-input" type="text" id="authorName" placeholder="Ваше имя" maxlength="60">
+        <input class="form-input" type="email" id="authorEmail" placeholder="Email (не публикуется)" maxlength="120">
       </div>
-      <textarea class="form-input" id="commentText" placeholder="Share your experience with {esc(name)}…" style="margin-bottom:10px"></textarea>
-      <p class="form-note">Reviews are published after moderation. We don&#39;t share your email.</p>
-      <button class="btn-submit" onclick="submitComment()">Submit Review</button>
+      <textarea class="form-input" id="commentText" placeholder="Расскажите о вашем опыте использования {esc(name)}…" style="margin-bottom:10px"></textarea>
+      <p class="form-note">Отзывы публикуются после модерации. Email не передаётся третьим лицам.</p>
+      <button class="btn-submit" onclick="submitComment()">Отправить отзыв</button>
       <div id="formMsg" style="margin-top:10px;font-size:13px;display:none"></div>
     </div>
     <div class="comment-list" id="commentList">
-      <div class="no-comments">No reviews yet — be the first to share your experience.</div>
+      <div class="no-comments">Пока нет отзывов — будьте первым!</div>
     </div>
   </div>
 
@@ -364,36 +404,35 @@ textarea.form-input {{ resize: vertical; min-height: 90px; }}
   <div class="footer-inner">
     <div>
       <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</div>
-      <p class="footer-desc">Best AI tools catalog in one place. 100+ services, up-to-date news and free browser utilities.</p>
+      <p class="footer-desc">Лучший каталог ИИ-инструментов. 100+ сервисов, актуальные новости и бесплатные утилиты.</p>
     </div>
     <div>
-      <div class="footer-col-title">Navigation</div>
+      <div class="footer-col-title">Навигация</div>
       <div class="footer-col-links">
-        <a href="/directory.html">Directory</a>
-        <a href="/news.html">News</a>
-        <a href="/tools.html">Free Tools</a>
-        <a href="/compare.html">Compare</a>
-        <a href="/newsletter.html">Newsletter</a>
+        <a href="/ru/directory.html">Каталог</a>
+        <a href="/ru/news.html">Новости</a>
+        <a href="/ru/tools.html">Инструменты</a>
+        <a href="/ru/compare.html">Сравнение</a>
+        <a href="/ru/newsletter.html">Рассылка</a>
       </div>
     </div>
     <div>
-      <div class="footer-col-title">Categories</div>
+      <div class="footer-col-title">Категории</div>
       <div class="footer-col-links">
-        <a href="/directory.html?cat=chat">AI Chat</a>
-        <a href="/directory.html?cat=code">Development</a>
-        <a href="/directory.html?cat=image">Image Gen</a>
-        <a href="/directory.html?cat=video">Video Gen</a>
-        <a href="/directory.html?cat=voice">Voice &amp; Audio</a>
+        <a href="/ru/directory.html?cat=chat">ИИ-чат</a>
+        <a href="/ru/directory.html?cat=code">Разработка</a>
+        <a href="/ru/directory.html?cat=image">Генерация изображений</a>
+        <a href="/ru/directory.html?cat=video">Генерация видео</a>
+        <a href="/ru/directory.html?cat=voice">Голос и аудио</a>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>Made with ♥ and Claude · Updated regularly</span>
+    <span>Сделано с ♥ и Claude · Обновляется регулярно</span>
     <span>© 2026 MyPedia</span>
   </div>
 </footer>
 
-<script src="/js/i18n.js"></script>
 <script src="/js/main.js"></script>
 <script>
 const picker = document.getElementById('starPicker');
@@ -414,10 +453,10 @@ async function submitComment() {{
   const email  = document.getElementById('authorEmail').value.trim();
   const text   = document.getElementById('commentText').value.trim();
   const rating = +document.getElementById('ratingVal').value;
-  if (!name || !text) {{ showMsg('Please enter your name and review.', '#f56565'); return; }}
-  if (rating < 1)     {{ showMsg('Please select a star rating.', '#f56565'); return; }}
+  if (!name || !text) {{ showMsg('Пожалуйста, введите имя и текст отзыва.', '#f56565'); return; }}
+  if (rating < 1)     {{ showMsg('Пожалуйста, выберите оценку.', '#f56565'); return; }}
   const btn = document.querySelector('.btn-submit');
-  btn.disabled = true; btn.textContent = 'Submitting…';
+  btn.disabled = true; btn.textContent = 'Отправка…';
   try {{
     const r = await fetch(`${{SB_URL}}/rest/v1/comments`, {{
       method: 'POST',
@@ -425,13 +464,13 @@ async function submitComment() {{
       body: JSON.stringify({{ tool_slug: TOOL_SLUG, author_name: name, author_email: email || null, content: text, rating, approved: false }})
     }});
     if (!r.ok) throw new Error(await r.text());
-    showMsg('Thank you! Your review will appear after moderation.', '#2dd4a0');
+    showMsg('Спасибо! Ваш отзыв появится после модерации.', '#2dd4a0');
     document.getElementById('authorName').value = '';
     document.getElementById('authorEmail').value = '';
     document.getElementById('commentText').value = '';
     ratingVal.value = 0; highlight(0);
-  }} catch(e) {{ showMsg('Error: ' + e.message, '#f56565'); }}
-  finally {{ btn.disabled = false; btn.textContent = 'Submit Review'; }}
+  }} catch(e) {{ showMsg('Ошибка: ' + e.message, '#f56565'); }}
+  finally {{ btn.disabled = false; btn.textContent = 'Отправить отзыв'; }}
 }}
 function showMsg(text, color) {{
   const el = document.getElementById('formMsg');
@@ -444,8 +483,7 @@ function renderRating(avg, count) {{
   document.getElementById('ratingDisplay').innerHTML =
     stars +
     '<span style="font-size:13px;font-weight:600;color:#f0f0f0;margin-left:4px">' + avg.toFixed(1) + '</span>' +
-    '<span style="font-size:12px;color:var(--text3);margin-left:4px">(' + count + ' review' + (count!==1?'s':'') + ')</span>';
-  // Inject aggregateRating into existing JSON-LD schema
+    '<span style="font-size:12px;color:var(--text3);margin-left:4px">(' + count + ' отз' + (count===1?'ыв':'ывов') + ')</span>';
   try {{
     const el = document.querySelector('script[type="application/ld+json"]');
     if (el) {{
@@ -470,7 +508,7 @@ async function loadComments() {{
           <div class="comment-header">
             <span class="comment-author">${{esc(c.author_name)}}</span>
             <span class="comment-stars">${{'★'.repeat(c.rating)}}${{('☆').repeat(5-c.rating)}}</span>
-            <span class="comment-date">${{new Date(c.created_at).toLocaleDateString('en-GB',{{year:'numeric',month:'short',day:'numeric'}})}}</span>
+            <span class="comment-date">${{new Date(c.created_at).toLocaleDateString('ru-RU',{{year:'numeric',month:'short',day:'numeric'}})}}</span>
           </div>
           <div class="comment-text">${{esc(c.content)}}</div>
         </div>`).join('');
@@ -483,28 +521,108 @@ loadComments();
 </body>
 </html>'''
 
+def update_sitemap(tools):
+    """Add /ru/tools/*.html URLs to sitemap.xml."""
+    sitemap_path = os.path.join(ROOT_DIR, 'sitemap.xml')
+    with open(sitemap_path) as f:
+        sitemap = f.read()
+
+    new_entries = []
+    for tool in tools:
+        slug = tool['slug']
+        url = f'{BASE_URL}/ru/tools/{slug}.html'
+        if url not in sitemap:
+            new_entries.append(f'''  <url>
+    <loc>{url}</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>''')
+
+    if new_entries:
+        sitemap = sitemap.replace('</urlset>', '\n'.join(new_entries) + '\n</urlset>')
+        with open(sitemap_path, 'w') as f:
+            f.write(sitemap)
+        print(f'  ✓ Added {len(new_entries)} URLs to sitemap.xml')
+    else:
+        print('  ✓ Sitemap already up to date')
+
 def main():
+    # Check for Anthropic API key
+    api_key = os.environ.get('ANTHROPIC_API_KEY')
+    if not api_key:
+        print('ERROR: ANTHROPIC_API_KEY environment variable not set.')
+        print('Set it with: export ANTHROPIC_API_KEY=your_key_here')
+        sys.exit(1)
+
+    try:
+        import anthropic
+    except ImportError:
+        print('ERROR: anthropic package not installed.')
+        print('Install it with: pip install anthropic')
+        sys.exit(1)
+
+    client = anthropic.Anthropic(api_key=api_key)
+
     print('Fetching tools from Supabase…')
     tools = fetch_tools()
     print(f'Got {len(tools)} tools')
 
-    print('Fetching ratings from Supabase…')
+    print('Fetching ratings…')
     ratings = fetch_ratings()
-    print(f'Got ratings for {len(ratings)} tools')
+
+    print('Loading translation cache…')
+    cache = load_cache()
+    print(f'Cache has {len(cache)} translated tools')
 
     os.makedirs(OUT_DIR, exist_ok=True)
-    generated = []
 
-    for tool in tools:
+    print('\nTranslating and generating /ru/tools/ pages…')
+    generated = 0
+    errors = 0
+
+    for i, tool in enumerate(tools):
         slug = tool['slug']
-        html = render_page(tool, tools, ratings)
-        path = os.path.join(OUT_DIR, f'{slug}.html')
-        with open(path, 'w', encoding='utf-8') as f:
-            f.write(html)
-        generated.append(slug)
-        print(f'  ✓ tools/{slug}.html')
+        name = tool['name']
 
-    print(f'\nDone — {len(generated)} pages generated.')
+        # Use cached translation if available
+        if slug in cache:
+            ru_content = cache[slug]
+            print(f'  [{i+1}/{len(tools)}] {slug} (cached)')
+        else:
+            # Translate via API
+            try:
+                print(f'  [{i+1}/{len(tools)}] Translating {name}…', end='', flush=True)
+                ru_content = translate_tool(client, tool)
+                cache[slug] = ru_content
+                save_cache(cache)
+                print(' ✓')
+                # Small delay to avoid rate limiting
+                time.sleep(0.3)
+            except Exception as e:
+                print(f' ERROR: {e}')
+                # Fall back to English content
+                ru_content = {
+                    'description': tool.get('description_long') or tool.get('description') or '',
+                    'pros': tool.get('pros') or [],
+                    'cons': tool.get('cons') or [],
+                    'best_for': tool.get('best_for') or '',
+                }
+                errors += 1
+
+        # Generate the page
+        html = render_ru_page(tool, tools, ru_content, ratings)
+        out_path = os.path.join(OUT_DIR, f'{slug}.html')
+        with open(out_path, 'w', encoding='utf-8') as f:
+            f.write(html)
+        generated += 1
+
+    print(f'\nUpdating sitemap…')
+    update_sitemap(tools)
+
+    print(f'\nDone — {generated} pages generated, {errors} translation errors.')
+    if errors:
+        print('Re-run the script to retry failed translations (they will be fetched from API again).')
 
 if __name__ == '__main__':
     main()
