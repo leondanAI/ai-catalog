@@ -342,7 +342,7 @@ function render() {
     const label = n.cat_label || n.catLabel || n.category;
     const date  = n.date ? (typeof n.date === 'string' && n.date.includes('-') ? formatDate(n.date) : n.date) : '';
     const lang  = typeof I18N !== 'undefined' ? I18N.lang : 'en';
-    const url   = n.slug ? `news-article.html?slug=${n.slug}&lang=${lang}` : (n.url || '#');
+    const url   = n.slug ? `/news-article.html?slug=${n.slug}&lang=${lang}` : (n.url || '#');
     const img   = n.image_url ? `<div class="news-img" style="background-image:url('${n.image_url}')"></div>` : '';
     return `
     <a class="news-card fade-up" href="${url}">

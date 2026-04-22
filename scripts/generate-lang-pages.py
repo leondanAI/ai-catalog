@@ -98,6 +98,9 @@ def fix_nav_links(html, lang):
             return m.group(0)  # keep as-is
         return f'href="/{lang}/tools/{m.group(1)}"'
     html = re.sub(r'href="/tools/([^"]+\.html)"', rewrite_tool_link, html)
+    # News article links: href="/news-article.html?slug=...&lang=en" → keep path, fix lang param
+    html = re.sub(r'(href="/news-article\.html\?[^"]*&amp;lang=)en"', rf'\g<1>{lang}"', html)
+    html = re.sub(r'(href="/news-article\.html\?[^"]*&lang=)en"', rf'\g<1>{lang}"', html)
     return html
 
 def inject_hreflang(html, page):
