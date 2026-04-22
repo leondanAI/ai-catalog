@@ -2092,9 +2092,16 @@ const I18N = (() => {
   };
 
   // ── state ─────────────────────────────────────────────────────────────────
+  // Detect language from URL path first (e.g. /ru/ → 'ru', / → 'en')
+  const _pathParts = window.location.pathname.split('/').filter(Boolean);
+  const _pathLang  = (LANGS[_pathParts[0]]) ? _pathParts[0] : null;
   // ?lang=XX in the URL takes priority over localStorage (for ad campaign links etc.)
   const _urlLang = new URLSearchParams(window.location.search).get('lang');
-  let _lang = (_urlLang && T[_urlLang]) ? _urlLang : (localStorage.getItem('lang') || 'en');
+  // If URL path has explicit lang, use it. If root path (no lang prefix), force 'en'.
+  // Otherwise fall back to localStorage.
+  let _lang = _pathLang
+    || (_urlLang && T[_urlLang] ? _urlLang : null)
+    || (_pathParts.length === 0 || !LANGS[_pathParts[0]] ? 'en' : localStorage.getItem('lang') || 'en');
   if (!T[_lang]) _lang = 'en';
   if (_urlLang && T[_urlLang]) localStorage.setItem('lang', _urlLang);
 
