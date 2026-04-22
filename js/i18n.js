@@ -2267,9 +2267,9 @@ const I18N = (() => {
       if (PAGES.includes(page) || page === 'index.html') {
         let target;
         if (code === 'en') {
-          target = '/' + page;
+          target = page === 'index.html' ? '/' : '/' + page;
         } else {
-          target = '/' + code + '/' + page;
+          target = page === 'index.html' ? '/' + code + '/' : '/' + code + '/' + page;
         }
         if (window.location.pathname !== target) {
           window.location.href = target;
