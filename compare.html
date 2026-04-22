@@ -44,6 +44,13 @@
   .compare-wrap { background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; }
   .compare-placeholder { text-align:center; padding:4rem 2rem; color:var(--text3); }
   .compare-placeholder .icon { font-size:3rem; margin-bottom:1rem; }
+  .popular-comparisons { margin-bottom:2rem; }
+  .popular-title { font-size:12px; color:var(--text3); text-transform:uppercase; letter-spacing:.06em; margin-bottom:12px; }
+  .popular-grid { display:flex; flex-wrap:wrap; gap:8px; }
+  .pop-pair { display:flex; align-items:center; gap:6px; background:var(--bg2); border:1px solid var(--border); border-radius:20px; padding:6px 14px; cursor:pointer; transition:border-color .15s; }
+  .pop-pair:hover { border-color:var(--accent); }
+  .pop-name { font-size:13px; color:var(--text); font-weight:500; }
+  .pop-vs { font-size:11px; color:var(--text3); }
   @media (max-width:600px) {
     .compare-selectors { grid-template-columns:1fr; }
     .vs-badge { display:none; }
@@ -105,6 +112,20 @@
     <div class="compare-select-wrap">
       <div class="compare-select-label" data-i18n="compare.toolB">Tool B</div>
       <select class="field-select" id="selectB" onchange="updateCompare()"></select>
+    </div>
+  </div>
+  <div class="popular-comparisons" id="popularComparisons">
+    <div class="popular-title" data-i18n="compare.popular">Popular comparisons</div>
+    <div class="popular-grid">
+      <button class="pop-pair" onclick="quickCompare('ChatGPT','Claude')"><span class="pop-name">ChatGPT</span><span class="pop-vs">vs</span><span class="pop-name">Claude</span></button>
+      <button class="pop-pair" onclick="quickCompare('Cursor','GitHub Copilot')"><span class="pop-name">Cursor</span><span class="pop-vs">vs</span><span class="pop-name">GitHub Copilot</span></button>
+      <button class="pop-pair" onclick="quickCompare('Midjourney','DALL-E 3')"><span class="pop-name">Midjourney</span><span class="pop-vs">vs</span><span class="pop-name">DALL-E 3</span></button>
+      <button class="pop-pair" onclick="quickCompare('Gemini','ChatGPT')"><span class="pop-name">Gemini</span><span class="pop-vs">vs</span><span class="pop-name">ChatGPT</span></button>
+      <button class="pop-pair" onclick="quickCompare('Suno','Udio')"><span class="pop-name">Suno</span><span class="pop-vs">vs</span><span class="pop-name">Udio</span></button>
+      <button class="pop-pair" onclick="quickCompare('Runway','Kling AI')"><span class="pop-name">Runway</span><span class="pop-vs">vs</span><span class="pop-name">Kling AI</span></button>
+      <button class="pop-pair" onclick="quickCompare('Notion AI','ChatGPT')"><span class="pop-name">Notion AI</span><span class="pop-vs">vs</span><span class="pop-name">ChatGPT</span></button>
+      <button class="pop-pair" onclick="quickCompare('Perplexity','Gemini')"><span class="pop-name">Perplexity</span><span class="pop-vs">vs</span><span class="pop-name">Gemini</span></button>
+      <button class="pop-pair" onclick="quickCompare('Lovable','Bolt.new')"><span class="pop-name">Lovable</span><span class="pop-vs">vs</span><span class="pop-name">Bolt.new</span></button>
     </div>
   </div>
   <div id="compareResult"></div>
@@ -216,6 +237,7 @@ async function updateCompare() {
   document.title = `${a.name} vs ${b.name} — AI Comparison 2026 | MyPedia`;
 
   el.innerHTML = `<div class="compare-placeholder"><div class="icon" style="font-size:1.5rem">⏳</div><p>Loading…</p></div>`;
+  document.getElementById('popularComparisons').style.display = 'none';
 
   const [infoA, infoB] = await Promise.all([
     fetchToolInfo(toSlug(a.name)),
