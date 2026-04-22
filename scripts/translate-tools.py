@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Translate AI tool content into target languages and save to tool_translations table.
+Translate AI tool content into target languages and save to tools table.
 One row per tool per language: (slug, lang, best_for, description, description_long, pros, cons)
 
 Usage:
   export ANTHROPIC_API_KEY=sk-ant-...
-  python3 scripts/translate-tools.py ru
-  python3 scripts/translate-tools.py ru es fr de pt uk he
+  python3 scripts/translate-tools.py es
+  python3 scripts/translate-tools.py es fr de pt uk he
 
 Skips rows that already exist. Re-run safely at any time.
 Requires: pip install anthropic
@@ -30,7 +30,7 @@ def sb_get(path):
 def sb_upsert(row):
     data = json.dumps([row]).encode()
     req = urllib.request.Request(
-        f'{SB_URL}/rest/v1/tool_translations?on_conflict=slug,lang',
+        f'{SB_URL}/rest/v1/tools?on_conflict=slug,lang',
         data=data, method='POST',
         headers={**headers(write=True), 'Prefer': 'resolution=merge-duplicates,return=minimal'}
     )
@@ -76,11 +76,11 @@ def main():
     client = anthropic.Anthropic(api_key=api_key)
 
     print('Fetching English tools…')
-    tools = sb_get('tools?order=name.asc&limit=200&select=slug,name,best_for,description,description_long,pros,cons')
+    tools = sb_get('tools?lang=eq.en&order=name.asc&limit=200')
     print(f'  {len(tools)} tools')
 
     print('Fetching existing translations…')
-    existing = sb_get('tool_translations?select=slug,lang,description_long&limit=10000')
+    existing = sb_get('tools?select=slug,lang,description_long&limit=10000')
     done = {(r['slug'], r['lang']) for r in existing if r.get('description_long')}
     print(f'  {len(done)} rows already complete (with description_long)')
 
@@ -93,15 +93,15 @@ def main():
             print(f'  [{i+1}/{len(to_do)}] {slug}…', end='', flush=True)
             try:
                 t = translate(client, tool, lang)
-                sb_upsert({
-                    'slug':             slug,
-                    'lang':             lang,
-                    'best_for':         t.get('best_for', ''),
-                    'description':      t.get('description', ''),
-                    'description_long': t.get('description_long', ''),
-                    'pros':             t.get('pros', []),
-                    'cons':             t.get('cons', []),
-                })
+                # Start with all English fields, override lang + translated fields
+                row = {k: v for k, v in tool.items() if k != 'id'}
+                row['lang']             = lang
+                row['best_for']         = t.get('best_for', '')
+                row['description']      = t.get('description', '')
+                row['description_long'] = t.get('description_long', '')
+                row['pros']             = t.get('pros', [])
+                row['cons']             = t.get('cons', [])
+                sb_upsert(row)
                 done.add((slug, lang))
                 print(' ✓')
                 time.sleep(0.2)
