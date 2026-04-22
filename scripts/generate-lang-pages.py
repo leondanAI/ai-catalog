@@ -86,7 +86,15 @@ def fix_nav_links(html, lang):
     for page in PAGES:
         html = re.sub(rf'href="/{page}"', f'href="/{lang}/{page}"', html)
     # Tool detail links: href="/tools/chatgpt.html" → href="/ru/tools/chatgpt.html"
-    html = re.sub(r'href="/tools/([^"]+\.html)"', f'href="/{lang}/tools/\\1"', html)
+    # Exclude toolbox utility pages (they only exist in English)
+    TOOLBOX = {'token-counter','text-diff','word-counter','case-converter','regex-tester',
+               'json-formatter','csv-json','markdown-preview','password-generator','base64'}
+    def rewrite_tool_link(m):
+        slug = m.group(1).replace('.html', '')
+        if slug in TOOLBOX:
+            return m.group(0)  # keep as-is
+        return f'href="/{lang}/tools/{m.group(1)}"'
+    html = re.sub(r'href="/tools/([^"]+\.html)"', rewrite_tool_link, html)
     return html
 
 def inject_hreflang(html, page):
