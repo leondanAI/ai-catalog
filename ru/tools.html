@@ -135,20 +135,15 @@ function renderTools(tools) {
 
 async function loadTools() {
   const lang = localStorage.getItem('lang') || 'en';
-  const res = await fetch(
-    `${SB_URL}/rest/v1/toolbox?lang=eq.${lang}&order=id.asc`,
-    { headers: { apikey: SB_ANON, Accept: 'application/json' } }
-  );
+  const hdrs = { apikey: SB_ANON, Authorization: `Bearer ${SB_ANON}`, Accept: 'application/json' };
+  const res = await fetch(`${SB_URL}/rest/v1/toolbox?lang=eq.${lang}&order=id.asc`, { headers: hdrs });
   const tools = await res.json();
-  // fallback to English if language not yet translated
-  if (!tools.length || tools[0].title === undefined) {
-    const res2 = await fetch(
-      `${SB_URL}/rest/v1/toolbox?lang=eq.en&order=id.asc`,
-      { headers: { apikey: SB_ANON, Accept: 'application/json' } }
-    );
-    renderTools(await res2.json());
-  } else {
+  if (tools.length) {
     renderTools(tools);
+  } else {
+    // fallback to English if language not yet translated
+    const res2 = await fetch(`${SB_URL}/rest/v1/toolbox?lang=eq.en&order=id.asc`, { headers: hdrs });
+    renderTools(await res2.json());
   }
 }
 
