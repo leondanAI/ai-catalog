@@ -23,10 +23,6 @@ LANG_FLAGS = {
 LANG_LABELS = {
     'ua': 'UA',
 }
-# Maps folder name → DB lang code (when they differ)
-LANG_DB = {
-    'ua': 'uk',
-}
 
 LANGUAGES = {
     'ru': {
@@ -494,8 +490,7 @@ def main():
 
     for lang in target_langs:
         print(f'\nGenerating /{lang}/tools/ …')
-        db_lang = LANG_DB.get(lang, lang)
-        trans = fetch_translations(db_lang)
+        trans = fetch_translations(lang)
         print(f'  {len(trans)} translations found')
 
         out_dir = os.path.join(ROOT_DIR, lang, 'tools')

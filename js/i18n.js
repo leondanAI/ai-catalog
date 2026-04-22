@@ -1813,7 +1813,7 @@ const I18N = (() => {
       'footer.rights':   '© 2026 AI Portal',
     },
 
-    uk: {
+    ua: {
       'nav.home':         'Знайти ШІ',
       'nav.directory':    'AI Каталог',
       'nav.news':         'Новини',
@@ -2142,8 +2142,6 @@ const I18N = (() => {
   };
 
   // ── state ─────────────────────────────────────────────────────────────────
-  // Maps URL folder codes → translation keys (when they differ)
-  const LANG_T_MAP = { ua: 'uk' };
   // Detect language from URL path first (e.g. /ru/ → 'ru', / → 'en')
   const _pathParts = window.location.pathname.split('/').filter(Boolean);
   const _pathLang  = (LANGS[_pathParts[0]]) ? _pathParts[0] : null;
@@ -2154,15 +2152,14 @@ const I18N = (() => {
   let _lang = _pathLang
     || (_urlLang && T[_urlLang] ? _urlLang : null)
     || (_pathParts.length === 0 || !LANGS[_pathParts[0]] ? 'en' : localStorage.getItem('lang') || 'en');
-  if (!T[_lang]) _lang = LANG_T_MAP[_lang] || 'en';
+  if (!T[_lang]) _lang = 'en';
   if (_urlLang && T[_urlLang]) localStorage.setItem('lang', _urlLang);
 
   let _onLangChange = null;
 
   // ── helpers ───────────────────────────────────────────────────────────────
   function t(key) {
-    const tLang = LANG_T_MAP[_lang] || _lang;
-    return (T[tLang] && T[tLang][key]) || (T['en'] && T['en'][key]) || key;
+    return (T[_lang] && T[_lang][key]) || (T['en'] && T['en'][key]) || key;
   }
 
   function applyToDOM() {

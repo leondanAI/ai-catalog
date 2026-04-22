@@ -13,7 +13,7 @@ ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
 LANGUAGES = [
     ('es', 'es'),   ('fr', 'fr'),   ('pt', 'pt'),   ('ru', 'ru'),
-    ('de', 'de'),   ('ua', 'uk'),   ('he', 'he'),
+    ('de', 'de'),   ('ua', 'ua'),   ('he', 'he'),
 ]
 
 PAGES = ['index.html', 'directory.html', 'news.html', 'compare.html', 'tools.html', 'newsletter.html']
