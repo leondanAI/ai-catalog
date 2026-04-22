@@ -18,10 +18,14 @@ BASE_URL = 'https://www.mypedia.ai'
 
 LANG_FLAGS = {
     'ru': '🇷🇺', 'es': '🇪🇸', 'fr': '🇫🇷', 'pt': '🇧🇷',
-    'de': '🇩🇪', 'uk': '🇺🇦', 'he': '🇮🇱',
+    'de': '🇩🇪', 'ua': '🇺🇦', 'he': '🇮🇱',
 }
 LANG_LABELS = {
-    'uk': 'UA',
+    'ua': 'UA',
+}
+# Maps folder name → DB lang code (when they differ)
+LANG_DB = {
+    'ua': 'uk',
 }
 
 LANGUAGES = {
@@ -95,7 +99,7 @@ LANGUAGES = {
         'cats': {'chat':'KI-Chat','code':'Entwicklung','image':'Bildgenerierung','video':'Videogenerierung','voice':'Stimme & Audio'},
         'date_locale': 'de-DE',
     },
-    'uk': {
+    'ua': {
         'nav': {'home':'Головна','dir':'Каталог','news':'Новини','tools':'Інструменти','compare':'Порівняння','nl':'Розсилка'},
         'ui':  {'about':'Про сервіс','pros':'Переваги','cons':'Недоліки','also':'Також розгляньте',
                 'reviews':'Відгуки користувачів','leave':'Залишити відгук','name_ph':'Ваше ім\'я',
@@ -131,7 +135,7 @@ CATEGORY_LABELS = {
     'fr': {'chat':'IA Chat','agents':'Agents IA','code':'IA Développement','writing':'Texte et Copywriting','marketing':'Marketing et SEO','image':'Génération d\'Images','video':'Génération Vidéo','design':'Design et UI/UX','voice':'Voix et Audio','productivity':'Productivité','research':'Recherche','data':'Données','nocode':'Sans Code','education':'Éducation','presentations':'Présentations'},
     'pt': {'chat':'IA Chat','agents':'Agentes IA','code':'IA Desenvolvimento','writing':'Texto e Copywriting','marketing':'Marketing e SEO','image':'Geração de Imagens','video':'Geração de Vídeo','design':'Design e UI/UX','voice':'Voz e Áudio','productivity':'Produtividade','research':'Pesquisa','data':'Dados','nocode':'Sem Código','education':'Educação','presentations':'Apresentações'},
     'de': {'chat':'KI-Chat','agents':'KI-Agenten','code':'KI Entwicklung','writing':'Text & Copywriting','marketing':'Marketing & SEO','image':'Bildgenerierung','video':'Videogenerierung','design':'Design & UI/UX','voice':'Stimme & Audio','productivity':'Produktivität','research':'Forschung','data':'Daten','nocode':'No-Code','education':'Bildung','presentations':'Präsentationen'},
-    'uk': {'chat':'ШІ-чат','agents':'ШІ-агенти','code':'ШІ для розробки','writing':'Текст та копірайтинг','marketing':'Маркетинг та SEO','image':'Генерація зображень','video':'Генерація відео','design':'Дизайн та UI/UX','voice':'Голос та аудіо','productivity':'Продуктивність','research':'Дослідження','data':'Дані','nocode':'Без коду','education':'Освіта','presentations':'Презентації'},
+    'ua': {'chat':'ШІ-чат','agents':'ШІ-агенти','code':'ШІ для розробки','writing':'Текст та копірайтинг','marketing':'Маркетинг та SEO','image':'Генерація зображень','video':'Генерація відео','design':'Дизайн та UI/UX','voice':'Голос та аудіо','productivity':'Продуктивність','research':'Дослідження','data':'Дані','nocode':'Без коду','education':'Освіта','presentations':'Презентації'},
     'he': {'chat':'צ\'אט AI','agents':'סוכני AI','code':'AI לפיתוח','writing':'כתיבה','marketing':'שיווק וSEO','image':'יצירת תמונות','video':'יצירת וידאו','design':'עיצוב','voice':'קול ואודיו','productivity':'פרודוקטיביות','research':'מחקר','data':'נתונים','nocode':'ללא קוד','education':'חינוך','presentations':'מצגות'},
 }
 
@@ -141,7 +145,7 @@ BADGE_LABELS = {
     'fr': {'free':'Gratuit','freemium':'Freemium','paid':'Payant'},
     'pt': {'free':'Grátis','freemium':'Freemium','paid':'Pago'},
     'de': {'free':'Kostenlos','freemium':'Freemium','paid':'Kostenpflichtig'},
-    'uk': {'free':'Безкоштовно','freemium':'Freemium','paid':'Платно'},
+    'ua': {'free':'Безкоштовно','freemium':'Freemium','paid':'Платно'},
     'he': {'free':'חינמי','freemium':'Freemium','paid':'בתשלום'},
 }
 
@@ -490,7 +494,8 @@ def main():
 
     for lang in target_langs:
         print(f'\nGenerating /{lang}/tools/ …')
-        trans = fetch_translations(lang)
+        db_lang = LANG_DB.get(lang, lang)
+        trans = fetch_translations(db_lang)
         print(f'  {len(trans)} translations found')
 
         out_dir = os.path.join(ROOT_DIR, lang, 'tools')

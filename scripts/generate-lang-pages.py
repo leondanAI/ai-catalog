@@ -13,7 +13,7 @@ ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
 LANGUAGES = [
     ('es', 'es'),   ('fr', 'fr'),   ('pt', 'pt'),   ('ru', 'ru'),
-    ('de', 'de'),   ('uk', 'uk'),   ('he', 'he'),
+    ('de', 'de'),   ('ua', 'uk'),   ('he', 'he'),
 ]
 
 PAGES = ['index.html', 'directory.html', 'news.html', 'compare.html', 'tools.html', 'newsletter.html']
@@ -98,10 +98,10 @@ def inject_hreflang(html, page):
 
 LANG_FLAGS = {
     'en': '🇬🇧', 'ru': '🇷🇺', 'es': '🇪🇸', 'fr': '🇫🇷',
-    'pt': '🇧🇷', 'de': '🇩🇪', 'uk': '🇺🇦', 'he': '🇮🇱',
+    'pt': '🇧🇷', 'de': '🇩🇪', 'ua': '🇺🇦', 'he': '🇮🇱',
 }
 LANG_LABELS = {
-    'uk': 'UA',
+    'ua': 'UA',
 }
 
 def generate_lang_page(html, lang, page, title, desc):
