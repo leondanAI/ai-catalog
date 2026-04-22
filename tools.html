@@ -101,11 +101,11 @@
     <div>
       <div class="footer-col-title">Popular Tools</div>
       <div class="footer-col-links">
-        <a href="tools/token-counter.html">Token Counter</a>
-        <a href="tools/text-diff.html">Text Diff</a>
-        <a href="tools/word-counter.html">Word Counter</a>
-        <a href="tools/json-formatter.html">JSON Formatter</a>
-        <a href="tools/regex-tester.html">Regex Tester</a>
+        <a href="/tools/token-counter.html">Token Counter</a>
+        <a href="/tools/text-diff.html">Text Diff</a>
+        <a href="/tools/word-counter.html">Word Counter</a>
+        <a href="/tools/json-formatter.html">JSON Formatter</a>
+        <a href="/tools/regex-tester.html">Regex Tester</a>
       </div>
     </div>
   </div>
@@ -133,11 +133,11 @@ const TOOLS = [
 
 function renderTools() {
   document.getElementById('toolsGrid').innerHTML = TOOLS.map(tool => `
-    <a class="tool-card fade-up" href="tools/${tool.id}.html">
+    <a class="tool-card fade-up" href="/tools/${tool.id}.html">
       <div class="tool-icon-box" style="background:${tool.color}22;color:${tool.color}">${tool.icon}</div>
-      <div class="tool-card-name">${tool.title}</div>
-      <div class="tool-card-desc">${tool.desc}</div>
-      <span class="tool-card-link">Open tool →</span>
+      <div class="tool-card-name">${t('toolbox.' + tool.id + '.title') || tool.title}</div>
+      <div class="tool-card-desc">${t('toolbox.' + tool.id + '.desc') || tool.desc}</div>
+      <span class="tool-card-link">${t('toolbox.open') || 'Open tool →'}</span>
     </a>`).join('');
 }
 
