@@ -119,31 +119,41 @@
 <script src="/js/i18n.js"></script>
 <script src="/js/main.js"></script>
 <script>
-const TOOLS = [
-  { id:'token-counter',     icon:'🪙', color:'#7c6af7', title:'Token Counter',      desc:'Estimate token count for AI prompts — see how much of GPT-4, Claude or Gemini context you use.' },
-  { id:'text-diff',         icon:'🔀', color:'#2dd4a0', title:'Text Diff',           desc:'Paste two texts and instantly see what was added, removed or changed — line by line.' },
-  { id:'word-counter',      icon:'📝', color:'#f59e0b', title:'Word Counter',        desc:'Count words, characters, sentences and get reading time for any text.' },
-  { id:'case-converter',    icon:'Aa', color:'#f56565', title:'Case Converter',      desc:'Convert text between camelCase, snake_case, UPPER, Title, kebab-case and more.' },
-  { id:'regex-tester',      icon:'⚡', color:'#7c6af7', title:'Regex Tester',        desc:'Test regular expressions with live match highlighting and a full match list.' },
-  { id:'json-formatter',    icon:'{}', color:'#2dd4a0', title:'JSON Formatter',      desc:'Format and validate JSON for readability, or minify it for production.' },
-  { id:'csv-json',          icon:'⇄',  color:'#f59e0b', title:'CSV ↔ JSON',         desc:'Convert CSV data to a JSON array, or convert a JSON array back to CSV.' },
-  { id:'markdown-preview',  icon:'✍️', color:'#f56565', title:'Markdown Preview',   desc:'Write Markdown on the left, see rendered HTML on the right in real time.' },
-  { id:'password-generator',icon:'🔐', color:'#7c6af7', title:'Password Generator', desc:'Generate strong random passwords with full control over length and character types.' },
-  { id:'base64',            icon:'🔢', color:'#2dd4a0', title:'Base64 Encoder',     desc:'Encode text to Base64 or decode Base64 strings back to plain text instantly.' },
-];
+const SB_URL  = 'https://lbjdwkvkkndvofysyssy.supabase.co';
+const SB_ANON = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG';
 
-function renderTools() {
-  document.getElementById('toolsGrid').innerHTML = TOOLS.map(tool => `
+function renderTools(tools) {
+  const openLabel = t('toolbox.open') || 'Open tool →';
+  document.getElementById('toolsGrid').innerHTML = tools.map(tool => `
     <a class="tool-card fade-up" href="/tools/${tool.id}.html">
       <div class="tool-icon-box" style="background:${tool.color}22;color:${tool.color}">${tool.icon}</div>
-      <div class="tool-card-name">${t('toolbox.' + tool.id + '.title') || tool.title}</div>
-      <div class="tool-card-desc">${t('toolbox.' + tool.id + '.desc') || tool.desc}</div>
-      <span class="tool-card-link">${t('toolbox.open') || 'Open tool →'}</span>
+      <div class="tool-card-name">${tool.title}</div>
+      <div class="tool-card-desc">${tool.description}</div>
+      <span class="tool-card-link">${openLabel}</span>
     </a>`).join('');
 }
 
-function onLangChange() { renderTools(); }
-renderTools();
+async function loadTools() {
+  const lang = localStorage.getItem('lang') || 'en';
+  const res = await fetch(
+    `${SB_URL}/rest/v1/toolbox?lang=eq.${lang}&order=id.asc`,
+    { headers: { apikey: SB_ANON, Accept: 'application/json' } }
+  );
+  const tools = await res.json();
+  // fallback to English if language not yet translated
+  if (!tools.length || tools[0].title === undefined) {
+    const res2 = await fetch(
+      `${SB_URL}/rest/v1/toolbox?lang=eq.en&order=id.asc`,
+      { headers: { apikey: SB_ANON, Accept: 'application/json' } }
+    );
+    renderTools(await res2.json());
+  } else {
+    renderTools(tools);
+  }
+}
+
+function onLangChange() { loadTools(); }
+loadTools();
 </script>
 </body>
 </html>
