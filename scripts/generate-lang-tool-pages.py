@@ -408,6 +408,7 @@ textarea.form-input{{resize:vertical;min-height:90px}}
   </div>
   <div class="footer-bottom"><span>{ui['made']}</span><span>© 2026 MyPedia</span></div>
 </footer>
+<script src="/js/i18n.js"></script>
 <script src="/js/main.js"></script>
 <script>
 const picker=document.getElementById('starPicker'),ratingVal=document.getElementById('ratingVal');
