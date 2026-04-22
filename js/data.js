@@ -26,6 +26,9 @@ const CATEGORIES = [
       { name:'Grok', desc:'AI by xAI with real-time access to X/Twitter data. Great for trending topics, news and unfiltered answers.', url:'https://x.com/i/grok', aff:'https://x.com/i/grok?ref=aiportal', badge:'freemium', bestFor:'Real-time news, X/Twitter insights', users:'10M+',
         pros:['Real-time X/Twitter data — unmatched for trending topics and social sentiment','Fewer content restrictions than OpenAI or Anthropic models','Free for all X users; SuperGrok unlocks extended capabilities'],
         cons:['X Premium subscription needed for full Grok access ($8/month)','Smaller knowledge base and shorter context than Claude or GPT-4o'] },
+      { name:'Character.AI', desc:'Platform for creating and chatting with AI characters. 200M+ users for roleplay, storytelling and entertainment.', url:'https://character.ai', aff:'https://character.ai?ref=aiportal', badge:'freemium', bestFor:'AI character chat, roleplay, creative writing', users:'200M+',
+        pros:['200M+ users and millions of community-built characters — largest roleplay AI library available','Characters maintain persona and memory across long conversations without breaking character','Completely free with unlimited chat — no message limits on standard tier'],
+        cons:['Not suitable for factual research or professional tasks — optimised for entertainment only','Content moderation inconsistent — some inappropriate characters reach the public library'] },
     ]
   },
   {
@@ -49,6 +52,9 @@ const CATEGORIES = [
       { name:'Relevance AI', desc:'No-code platform to build, train and deploy AI agents and multi-agent teams for any business workflow.', url:'https://relevanceai.com', aff:'https://relevanceai.com?ref=aiportal', badge:'freemium', bestFor:'Multi-agent teams, sales and support bots', users:'100K+',
         pros:['Best multi-agent orchestration — create teams of specialized agents that collaborate','Fine-tune agents on your own data and documents with no code','Enterprise security with audit trail and role-based access'],
         cons:['More expensive than simpler tools for basic single-agent use cases','Fewer third-party integrations compared to Make or Zapier'] },
+      { name:'Manus', desc:'Autonomous AI agent from Monica team. Give it a complex goal — it browses the web, writes code, manages files and delivers a finished result independently.', url:'https://manus.im', aff:'https://manus.im?ref=aiportal', badge:'freemium', bestFor:'Autonomous tasks, research, coding, web agents', users:'1M+',
+        pros:['Completes complex multi-step tasks end-to-end with minimal human input — highest task completion rate of any public agent','Real-time activity feed shows every action the agent takes — full transparency and control','Sandboxed virtual environment keeps all agent actions isolated and reversible'],
+        cons:['Free tier credits run out quickly for intensive research or coding tasks','Complex tasks with many steps can take 10–30 minutes — not suitable for time-sensitive work'] },
     ]
   },
   {
@@ -177,6 +183,12 @@ const CATEGORIES = [
       { name:'Pika', desc:'AI video generation with 80 free monthly credits. Known for "Pikaffects" — unique visual transformations.', url:'https://pika.art', aff:'https://pika.art?ref=aiportal', badge:'freemium', bestFor:'Short clips, creative effects, social', users:'2M+',
         pros:['Unique Pikaffects — transform objects into water, fire, pixel art, lego and more','80 free credits/month — enough for regular creative exploration','Simple interface with surprisingly creative and novel results'],
         cons:['Maximum 10 seconds per clip — not for longer narratives','Character and scene consistency weak vs Runway Gen-4 or Kling'] },
+      { name:'Sora', desc:'OpenAI\'s video generation model. Create realistic videos up to 20 seconds from text prompts or images.', url:'https://sora.com', aff:'https://sora.com?ref=aiportal', badge:'freemium', bestFor:'Text-to-video, cinematic AI clips', users:'10M+',
+        pros:['Best physics and motion coherence of any AI video model — realistic lighting, shadows and fluid movement','Deep ChatGPT integration — generate video directly from any conversation without switching platforms','Up to 1080p resolution on Pro plan with consistent multi-character scenes'],
+        cons:['Free tier limited to low-resolution short clips with watermark','Slower generation than Kling or Pika for quick creative iterations'] },
+      { name:'Luma AI', desc:'Luma Dream Machine generates cinematic AI video and photorealistic 3D scenes from text or images. Ray2 model leads on realism.', url:'https://lumalabs.ai', aff:'https://lumalabs.ai?ref=aiportal', badge:'freemium', bestFor:'Realistic video, 3D scenes, Dream Machine', users:'5M+',
+        pros:['Ray2 model delivers the most photorealistic material rendering of any AI video tool','30 free generations per month with no watermark — most generous free tier in AI video','3D Capture app turns iPhone scans into production-ready Blender, Unity or Unreal assets'],
+        cons:['Maximum 5-second clip length on standard plan — not suitable for longer narratives','Weaker on human characters and facial expressions compared to Kling or Runway'] },
     ]
   },
   {
@@ -203,6 +215,9 @@ const CATEGORIES = [
       { name:'Relume', desc:'AI website builder that generates sitemaps and wireframes in Figma and Webflow in minutes.', url:'https://relume.io', aff:'https://relume.io?ref=aiportal', badge:'freemium', bestFor:'Website wireframes, Figma, Webflow design', users:'200K+',
         pros:['Generates complete website sitemaps and Figma wireframes from a brief in minutes','Native export to both Figma and Webflow — fits design agency workflows perfectly','Saves 10+ hours per project on information architecture and wireframing'],
         cons:['Paid only — no meaningful free tier ($38/month)','Valuable mainly if you already use Figma or Webflow professionally'] },
+      { name:'Claude Design', desc:'Anthropic\'s AI design tool. Create slides, mockups and marketing materials from a conversation — with automatic brand consistency.', url:'https://www.anthropic.com/claude/design', aff:'https://www.anthropic.com/claude/design?ref=aiportal', badge:'freemium', bestFor:'AI slide decks, mockups, brand-consistent visuals', users:null,
+        pros:['Automatic brand system generation from your existing codebase and design files — no manual setup','Available at no extra cost for Claude Pro, Max, Team and Enterprise subscribers','Real-time collaborative editing with comments that Claude acts on as instructions'],
+        cons:['Currently in research preview — not yet available to all users','Requires existing Claude subscription — not a standalone tool'] },
     ]
   },
   {
@@ -411,7 +426,7 @@ function renderToolCard(tool, color) {
       <div class="tool-footer">
         <span class="tool-domain">${domain}</span>
         <div style="display:flex;align-items:center;gap:6px">
-          <a class="tool-review" href="${reviewUrl}" onclick="event.stopPropagation()">More info →</a>
+          <a class="tool-review" href="${reviewUrl}" onclick="event.stopPropagation()">${t('tool.review')}</a>
           <a class="tool-aff" href="${tool.aff || tool.url}" target="_blank" rel="noopener sponsored" onclick="event.stopPropagation()">${t('tool.open')}</a>
         </div>
       </div>

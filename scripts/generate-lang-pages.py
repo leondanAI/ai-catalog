@@ -12,11 +12,8 @@ BASE_URL = 'https://www.mypedia.ai'
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
 LANGUAGES = [
-    ('ru', 'ru'),   ('es', 'es'),   ('fr', 'fr'),   ('de', 'de'),
-    ('pt', 'pt'),   ('it', 'it'),   ('zh', 'zh'),   ('ja', 'ja'),
-    ('ko', 'ko'),   ('ar', 'ar'),   ('hi', 'hi'),   ('tr', 'tr'),
-    ('pl', 'pl'),   ('nl', 'nl'),   ('vi', 'vi'),   ('id', 'id'),
-    ('th', 'th'),   ('uk', 'uk'),   ('he', 'he'),   ('ro', 'ro'),
+    ('ru', 'ru'),   ('uk', 'uk'),   ('es', 'es'),   ('fr', 'fr'),
+    ('de', 'de'),   ('pt', 'pt'),   ('he', 'he'),
 ]
 
 PAGES = ['index.html', 'directory.html', 'news.html', 'compare.html', 'tools.html', 'newsletter.html']
@@ -70,8 +67,10 @@ def get_meta(translations, lang, page):
 
 def hreflang_tags(page):
     """Generate full set of hreflang <link> tags for a given page."""
-    lines = [f'<link rel="alternate" hreflang="x-default" href="{BASE_URL}/{page}">',
-             f'<link rel="alternate" hreflang="en" href="{BASE_URL}/{page}">']
+    # index.html lives at / (root), not /index.html — use canonical form
+    en_url = f'{BASE_URL}/' if page == 'index.html' else f'{BASE_URL}/{page}'
+    lines = [f'<link rel="alternate" hreflang="x-default" href="{en_url}">',
+             f'<link rel="alternate" hreflang="en" href="{en_url}">']
     for code, hl in LANGUAGES:
         lines.append(f'<link rel="alternate" hreflang="{hl}" href="{BASE_URL}/{code}/{page}">')
     return '\n'.join(lines)
@@ -89,7 +88,9 @@ def fix_nav_links(html, lang):
     return html
 
 def inject_hreflang(html, page):
-    """Inject hreflang tags just before </head>."""
+    """Replace or inject hreflang tags just before </head>."""
+    # Remove any existing hreflang tags first to avoid duplicates
+    html = re.sub(r'<link rel="alternate" hreflang="[^"]*"[^>]*>\n?', '', html)
     tags = hreflang_tags(page)
     return html.replace('</head>', tags + '\n</head>', 1)
 
@@ -141,10 +142,7 @@ def update_english_pages(pages):
         with open(path) as f:
             html = f.read()
 
-        # Skip if hreflang already present
-        if 'hreflang' in html:
-            continue
-
+        # Always refresh hreflang (inject_hreflang removes old tags first)
         html = inject_hreflang(html, page)
         with open(path, 'w') as f:
             f.write(html)

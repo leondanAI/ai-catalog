@@ -45,6 +45,44 @@ def fetch_tools():
     with urllib.request.urlopen(req) as r:
         return json.loads(r.read())
 
+def build_meta_desc(name, description, badge, best_for):
+    """Build a unique 150-155 char meta description with keyword + CTA."""
+    badge_lbl  = {'free': 'Free', 'freemium': 'Freemium', 'paid': 'Paid'}.get(badge, '')
+    short_desc = (description or '').split('\n\n')[0].strip()
+    cta        = ' Pros, cons & alternatives →'
+    # Only append Best-for if "best for" doesn't already appear in the description
+    has_bestfor = best_for and 'best for' not in short_desc.lower()
+    suffix = f' {badge_lbl}. Best for {best_for}.{cta}' if has_bestfor else f' {badge_lbl}.{cta}'
+    prefix = f'{name} 2026 — '
+    available = 155 - len(prefix) - len(suffix)
+    if len(short_desc) > available:
+        short_desc = short_desc[:available].rsplit(' ', 1)[0].rstrip('.,;')
+    if short_desc and short_desc[-1] not in '.!?':
+        short_desc += '.'
+    return f'{prefix}{short_desc}{suffix}'
+
+def fetch_ratings():
+    """Fetch all approved comments and return {slug: {avg, count}}."""
+    req = urllib.request.Request(
+        f'{SB_URL}/rest/v1/comments?approved=eq.true&select=tool_slug,rating&limit=10000',
+        headers={'apikey': SB_ANON, 'Authorization': f'Bearer {SB_ANON}'}
+    )
+    with urllib.request.urlopen(req) as r:
+        rows = json.loads(r.read())
+    ratings = {}
+    for row in rows:
+        slug = row['tool_slug']
+        if slug not in ratings:
+            ratings[slug] = []
+        ratings[slug].append(row['rating'])
+    return {
+        slug: {
+            'avg':   round(sum(vals) / len(vals), 1),
+            'count': len(vals)
+        }
+        for slug, vals in ratings.items()
+    }
+
 def esc(s):
     return str(s or '').replace('&','&amp;').replace('<','&lt;').replace('>','&gt;').replace('"','&quot;')
 
@@ -53,7 +91,38 @@ def also_consider(tools, current):
     same = [t for t in tools if t['category'] == current['category'] and t['slug'] != current['slug']]
     return same[:3]
 
-def render_page(tool, all_tools):
+def build_jsonld(name, desc, url, badge, slug, rating_data):
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": name,
+        "description": desc[:200],
+        "applicationCategory": "AIApplication",
+        "operatingSystem": "Web",
+        "url": url,
+        "offers": {
+            "@type": "Offer",
+            "price": "0" if badge in ('free', 'freemium') else "",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "MyPedia",
+            "url": "https://www.mypedia.ai"
+        }
+    }
+    if rating_data and slug in rating_data:
+        r = rating_data[slug]
+        schema["aggregateRating"] = {
+            "@type": "AggregateRating",
+            "ratingValue": str(r['avg']),
+            "reviewCount": r['count'],
+            "bestRating": "5",
+            "worstRating": "1"
+        }
+    return json.dumps(schema, ensure_ascii=False)
+
+def render_page(tool, all_tools, rating_data=None):
     slug      = tool['slug']
     name      = tool['name']
     url       = tool['url']
@@ -63,6 +132,8 @@ def render_page(tool, all_tools):
     users     = tool['users'] or ''
     best_for  = tool['best_for'] or ''
     desc      = tool.get('description_long') or tool.get('description') or ''
+    short_desc = tool.get('description') or ''  # always short version for meta
+    meta_desc  = build_meta_desc(name, short_desc, badge, best_for)
     pros      = tool.get('pros') or []
     cons      = tool.get('cons') or []
 
@@ -90,20 +161,20 @@ def render_page(tool, all_tools):
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{esc(name)} Review 2026 — Pros, Cons &amp; Alternatives | MyPedia</title>
-<meta name="description" content="{esc(name)} — honest review, pros and cons, pricing, and best alternatives. {esc(desc[:120])}">
+<meta name="description" content="{esc(meta_desc)}">
 <link rel="canonical" href="https://www.mypedia.ai/tools/{esc(slug)}.html">
 <meta property="og:title" content="{esc(name)} Review 2026 | MyPedia">
-<meta property="og:description" content="{esc(desc[:160])}">
+<meta property="og:description" content="{esc(meta_desc)}">
 <meta property="og:url" content="https://www.mypedia.ai/tools/{esc(slug)}.html">
 <meta property="og:image" content="https://www.mypedia.ai/og-image.svg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{esc(name)} Review 2026 | MyPedia">
-<meta name="twitter:description" content="{esc(desc[:160])}">
+<meta name="twitter:description" content="{esc(meta_desc)}">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L09EYV4S46"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-L09EYV4S46");</script>
 <script type="application/ld+json">
-{{"@context":"https://schema.org","@type":"SoftwareApplication","name":"{esc(name)}","description":"{esc(desc[:200])}","applicationCategory":"AIApplication","operatingSystem":"Web","url":"{esc(url)}","offers":{{"@type":"Offer","price":"{('0' if badge in ('free','freemium') else '')}","priceCurrency":"USD"}},"publisher":{{"@type":"Organization","name":"MyPedia","url":"https://www.mypedia.ai"}}}}
+{build_jsonld(name, desc, url, badge, slug, rating_data)}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -408,12 +479,16 @@ def main():
     tools = fetch_tools()
     print(f'Got {len(tools)} tools')
 
+    print('Fetching ratings from Supabase…')
+    ratings = fetch_ratings()
+    print(f'Got ratings for {len(ratings)} tools')
+
     os.makedirs(OUT_DIR, exist_ok=True)
     generated = []
 
     for tool in tools:
         slug = tool['slug']
-        html = render_page(tool, tools)
+        html = render_page(tool, tools, ratings)
         path = os.path.join(OUT_DIR, f'{slug}.html')
         with open(path, 'w', encoding='utf-8') as f:
             f.write(html)
