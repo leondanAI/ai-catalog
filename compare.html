@@ -254,7 +254,7 @@ async function updateCompare() {
     [t('compare.overview'),    esc(infoA.dbTool.description||'—'),                           esc(infoB.dbTool.description||'—')],
     [t('compare.category'),    `${a.catIcon} ${catTitle(a.catId)}`,                          `${b.catIcon} ${catTitle(b.catId)}`],
     [t('compare.pricing'),     `<span class="badge badge-${a.badge}">${badgeLabel(a.badge)}</span>`, `<span class="badge badge-${b.badge}">${badgeLabel(b.badge)}</span>`],
-    [t('compare.users'),       infoA.dbTool.users||'—',                                     infoB.dbTool.users||'—'],
+    [t('compare.users'),       infoA.dbTool.users||t('compare.noData')||'No data',          infoB.dbTool.users||t('compare.noData')||'No data'],
     [t('compare.bestFor'),     esc(a.bestFor||infoA.dbTool.best_for||'—'),                   esc(b.bestFor||infoB.dbTool.best_for||'—')],
     [t('compare.rating'),      starsHtml(infoA.avgRating) + (infoA.reviewCount ? `<span style="font-size:11px;color:var(--text3);margin-left:4px">(${infoA.reviewCount})</span>` : ''),
                     starsHtml(infoB.avgRating) + (infoB.reviewCount ? `<span style="font-size:11px;color:var(--text3);margin-left:4px">(${infoB.reviewCount})</span>` : '')],
