@@ -198,7 +198,7 @@ function listHtml(arr, color, icon) {
 async function fetchToolInfo(slug) {
   const lang = localStorage.getItem('lang') || 'en';
   const [toolRes, ratingsRes] = await Promise.all([
-    fetch(`${SB_URL}/rest/v1/tools?slug=eq.${slug}&lang=eq.${lang}&select=pros,cons,description,best_for,badge,url,domain,category,users`, {
+    fetch(`${SB_URL}/rest/v1/tools?slug=eq.${slug}&select=pros,cons,description,best_for,badge,url,domain,category,users`, {
       headers: { apikey: SB_ANON, Authorization: `Bearer ${SB_ANON}` }
     }),
     fetch(`${SB_URL}/rest/v1/comments?tool_slug=eq.${slug}&approved=eq.true&select=rating`, {
