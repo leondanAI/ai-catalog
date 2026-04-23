@@ -312,10 +312,10 @@ textarea.form-input{{resize:vertical;min-height:90px}}
     <a href="/{lang}/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</a>
     <nav class="nav-links">
       <a href="/{lang}/"               class="nav-link" data-nav="index.html"      data-i18n="nav.home">{nav['home']}</a>
-      <a href="/{lang}/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">{nav['dir']}</a>
+      <a href="/{lang}/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">{nav['dir']}</a>
       <a href="/{lang}/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">{nav['compare']}</a>
       <a href="/{lang}/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">{nav['news']}</a>
-      <a href="/{lang}/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">{nav['tools']}</a>
+      <a href="/{lang}/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">{nav['tools']}</a>
       <a href="/{lang}/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">{nav['nl']}</a>
     </nav>
     <div class="lang-picker">
