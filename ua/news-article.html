@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ua">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="MyPedia — News Article">
-<title>News — MyPedia</title>
+<meta name="description" content="Останні події у світі штучного інтелекту">
+<title>Новини ШІ | MyPedia</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L09EYV4S46"></script>
@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="/css/style.css">
 <style>
   .article-wrap { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
   .article-back { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text3); margin-bottom: 2rem; transition: color 0.15s; }
@@ -52,28 +52,28 @@
 
 <header class="site-header">
   <div class="header-inner">
-    <a href="/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</a>
+    <a href="/ua/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</a>
     <nav class="nav-links">
-      <a href="/"                class="nav-link" data-nav="index.html"      data-i18n="nav.home">Find AI</a>
-      <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
-      <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
-      <a href="/news.html"       class="nav-link active" data-nav="news.html" data-i18n="nav.news">News</a>
-      <a href="/tools.html"      class="nav-link" data-nav="tools.html"      data-i18n="nav.tools">Toolbox</a>
-      <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
+      <a href="/ua/"                class="nav-link" data-nav="index.html"      data-i18n="nav.home">Find AI</a>
+      <a href="/ua/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
+      <a href="/ua/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
+      <a href="/ua/news.html"       class="nav-link active" data-nav="news.html" data-i18n="nav.news">News</a>
+      <a href="/ua/tools.html"      class="nav-link" data-nav="tools.html"      data-i18n="nav.tools">Toolbox</a>
+      <a href="/ua/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
-      <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇬🇧 EN <span style="opacity:.5;font-size:10px">▾</span></button>
+      <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇺🇦 UA <span style="opacity:.5;font-size:10px">▾</span></button>
       <div class="lang-menu" id="langMenu"></div>
     </div>
     <button class="btn-hamburger" onclick="toggleMenu()">&#9776;</button>
   </div>
   <nav class="mobile-menu" id="mobileMenu">
-    <a href="/"                class="nav-link" data-i18n="nav.home">Find AI</a>
-    <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
-    <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
-    <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
-    <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
+    <a href="/ua/"                class="nav-link" data-i18n="nav.home">Find AI</a>
+    <a href="/ua/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
+    <a href="/ua/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
+    <a href="/ua/news.html"       class="nav-link" data-i18n="nav.news">News</a>
+    <a href="/ua/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/ua/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
 
@@ -88,21 +88,21 @@
     <div>
       <div class="footer-col-title" data-i18n="footer.nav">Navigation</div>
       <div class="footer-col-links">
-        <a href="/" data-i18n="nav.home">Home</a>
-        <a href="/directory.html" data-i18n="nav.directory">Directory</a>
-        <a href="/news.html" data-i18n="nav.news">News</a>
-        <a href="/tools.html" data-i18n="nav.tools">Free Tools</a>
-        <a href="/compare.html" data-i18n="nav.compare">Compare</a>
+        <a href="/ua/" data-i18n="nav.home">Home</a>
+        <a href="/ua/directory.html" data-i18n="nav.directory">Directory</a>
+        <a href="/ua/news.html" data-i18n="nav.news">News</a>
+        <a href="/ua/tools.html" data-i18n="nav.tools">Free Tools</a>
+        <a href="/ua/compare.html" data-i18n="nav.compare">Compare</a>
       </div>
     </div>
     <div>
       <div class="footer-col-title" data-i18n="footer.cats">Categories</div>
       <div class="footer-col-links">
-        <a href="/directory.html?cat=chat" data-i18n="cat.chat">AI Chat</a>
-        <a href="/directory.html?cat=code" data-i18n="cat.code">Development</a>
-        <a href="/directory.html?cat=image" data-i18n="cat.image">Image Gen</a>
-        <a href="/directory.html?cat=video" data-i18n="cat.video">Video Gen</a>
-        <a href="/directory.html?cat=data" data-i18n="cat.data">Data & Analytics</a>
+        <a href="/ua/directory.html?cat=chat" data-i18n="cat.chat">AI Chat</a>
+        <a href="/ua/directory.html?cat=code" data-i18n="cat.code">Development</a>
+        <a href="/ua/directory.html?cat=image" data-i18n="cat.image">Image Gen</a>
+        <a href="/ua/directory.html?cat=video" data-i18n="cat.video">Video Gen</a>
+        <a href="/ua/directory.html?cat=data" data-i18n="cat.data">Data & Analytics</a>
       </div>
     </div>
   </div>
@@ -112,11 +112,12 @@
   </div>
 </footer>
 
+<script>localStorage.setItem("lang","ua");document.addEventListener("DOMContentLoaded",function(){if(typeof I18N!=="undefined")I18N.set("ua");});</script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
-<script src="js/i18n.js"></script>
-<script src="js/news.js"></script>
-<script src="js/db.js"></script>
-<script src="js/main.js"></script>
+<script src="/js/i18n.js"></script>
+<script src="/js/news.js"></script>
+<script src="/js/db.js"></script>
+<script src="/js/main.js"></script>
 <script>
 const ARTICLE_BODIES = {
   1: `<p>OpenAI has officially unveiled <strong>GPT-5</strong>, the company's most capable language model to date. The announcement marks a major leap forward in context handling, reasoning and real-world task completion.</p>

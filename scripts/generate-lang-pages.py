@@ -16,16 +16,17 @@ LANGUAGES = [
     ('de', 'de'),   ('ua', 'ua'),   ('he', 'he'),
 ]
 
-PAGES = ['index.html', 'directory.html', 'news.html', 'compare.html', 'tools.html', 'newsletter.html']
+PAGES = ['index.html', 'directory.html', 'news.html', 'compare.html', 'tools.html', 'newsletter.html', 'news-article.html']
 
 # Key i18n strings per page (title_key, desc_key)
 PAGE_META_KEYS = {
-    'index.html':      (['hero.title1', 'hero.title2'], 'hero.sub'),
-    'directory.html':  (['dir.title'],                  'dir.sub'),
-    'news.html':       (['news.title'],                 'news.sub'),
-    'compare.html':    (['compare.title'],              'compare.sub'),
-    'tools.html':      (['tools.title'],                'tools.sub'),
-    'newsletter.html': (['nl.title'],                   'nl.sub'),
+    'index.html':         (['hero.title1', 'hero.title2'], 'hero.sub'),
+    'directory.html':     (['dir.title'],                  'dir.sub'),
+    'news.html':          (['news.title'],                 'news.sub'),
+    'compare.html':       (['compare.title'],              'compare.sub'),
+    'tools.html':         (['tools.title'],                'tools.sub'),
+    'newsletter.html':    (['nl.title'],                   'nl.sub'),
+    'news-article.html':  (['news.title'],                 'news.sub'),
 }
 
 def parse_i18n():
@@ -90,6 +91,8 @@ def fix_nav_links(html, lang):
         html = re.sub(rf'href="/{page}\?', f'href="/{lang}/{page}?', html)
     # Static comparison subpages: href="/compare/chatgpt-vs-claude.html" → href="/ru/compare/chatgpt-vs-claude.html"
     html = re.sub(r'href="/compare/([^"]+\.html)"', f'href="/{lang}/compare/\\1"', html)
+    # News article page: href="/news-article.html" → href="/ru/news-article.html"
+    html = re.sub(r'href="/news-article\.html([^"]*)"', f'href="/{lang}/news-article.html\\1"', html)
     # Tool detail links: href="/tools/chatgpt.html" → href="/ru/tools/chatgpt.html"
     # Exclude toolbox utility pages (they only exist in English)
     def rewrite_tool_link(m):
@@ -98,9 +101,6 @@ def fix_nav_links(html, lang):
             return m.group(0)  # keep as-is
         return f'href="/{lang}/tools/{m.group(1)}"'
     html = re.sub(r'href="/tools/([^"]+\.html)"', rewrite_tool_link, html)
-    # News article links: href="/news-article.html?slug=...&lang=en" → keep path, fix lang param
-    html = re.sub(r'(href="/news-article\.html\?[^"]*&amp;lang=)en"', rf'\g<1>{lang}"', html)
-    html = re.sub(r'(href="/news-article\.html\?[^"]*&lang=)en"', rf'\g<1>{lang}"', html)
     return html
 
 def inject_hreflang(html, page):
