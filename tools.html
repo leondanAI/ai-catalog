@@ -134,17 +134,25 @@ function renderTools(tools) {
     </a>`).join('');
 }
 
+function applyI18nToTools(tools) {
+  return tools.map(tool => ({
+    ...tool,
+    title:       t(`tbx.${tool.id}`)   || tool.title,
+    description: t(`tbx.${tool.id}.d`) || tool.description,
+  }));
+}
+
 async function loadTools() {
   const lang = localStorage.getItem('lang') || 'en';
   const hdrs = { apikey: SB_ANON, Authorization: `Bearer ${SB_ANON}`, Accept: 'application/json' };
   const res = await fetch(`${SB_URL}/rest/v1/toolbox?lang=eq.${lang}&order=id.asc`, { headers: hdrs });
   const tools = await res.json();
   if (tools.length) {
-    renderTools(tools);
+    renderTools(applyI18nToTools(tools));
   } else {
-    // fallback to English if language not yet translated
+    // fallback to English, then apply local i18n translations
     const res2 = await fetch(`${SB_URL}/rest/v1/toolbox?lang=eq.en&order=id.asc`, { headers: hdrs });
-    renderTools(await res2.json());
+    renderTools(applyI18nToTools(await res2.json()));
   }
 }
 
