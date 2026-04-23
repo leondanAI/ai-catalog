@@ -119,10 +119,22 @@
   var SLUG_B = 'github-copilot';
   var BASE   = '/ua';
 
+  var LABELS = {
+    en: {ov:'Overview',pr:'Pricing',us:'Users',bf:'Best for',rt:'Rating',ad:'Advantages',ds:'Disadvantages',wb:'Website',vt:'Visit',rv:'Full review',nr:'No reviews yet'},
+    ru: {ov:'Обзор',pr:'Цена',us:'Пользователи',bf:'Лучше для',rt:'Рейтинг',ad:'Преимущества',ds:'Недостатки',wb:'Сайт',vt:'Посетить',rv:'Полный обзор',nr:'Нет отзывов'},
+    es: {ov:'Descripción',pr:'Precio',us:'Usuarios',bf:'Mejor para',rt:'Calificación',ad:'Ventajas',ds:'Desventajas',wb:'Sitio web',vt:'Visitar',rv:'Reseña completa',nr:'Sin reseñas'},
+    fr: {ov:'Aperçu',pr:'Prix',us:'Utilisateurs',bf:'Idéal pour',rt:'Évaluation',ad:'Avantages',ds:'Inconvénients',wb:'Site web',vt:'Visiter',rv:'Avis complet',nr:'Pas encore d'avis'},
+    de: {ov:'Überblick',pr:'Preis',us:'Nutzer',bf:'Am besten für',rt:'Bewertung',ad:'Vorteile',ds:'Nachteile',wb:'Website',vt:'Besuchen',rv:'Vollständige Bewertung',nr:'Noch keine Bewertungen'},
+    pt: {ov:'Visão geral',pr:'Preço',us:'Usuários',bf:'Melhor para',rt:'Avaliação',ad:'Vantagens',ds:'Desvantagens',wb:'Site',vt:'Visitar',rv:'Avaliação completa',nr:'Sem avaliações'},
+    ua: {ov:'Огляд',pr:'Ціна',us:'Користувачі',bf:'Краще для',rt:'Рейтинг',ad:'Переваги',ds:'Недоліки',wb:'Сайт',vt:'Відвідати',rv:'Повний огляд',nr:'Немає відгуків'},
+    he: {ov:'סקירה',pr:'תמחור',us:'משתמשים',bf:'הטוב ביותר עבור',rt:'דירוג',ad:'יתרונות',ds:'חסרונות',wb:'אתר',vt:'בקר',rv:'סקירה מלאה',nr:'אין ביקורות עדיין'},
+  };
+  var L = LABELS[LANG] || LABELS['en'];
+
   function esc(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
   function starsHtml(avg) {
-    if (!avg) return '<span style="color:var(--text3);font-size:13px">No reviews yet</span>';
+    if (!avg) return '<span style="color:var(--text3);font-size:13px">'+L.nr+'</span>';
     var full = Math.round(avg);
     return '<span style="color:#f59e0b;font-size:13px;letter-spacing:1px">' + '★'.repeat(full) + '</span>' +
            '<span style="color:#555;font-size:13px;letter-spacing:1px">'   + '★'.repeat(5-full) + '</span>' +
@@ -141,7 +153,7 @@
   function getDomain(url) { return (url||'').replace(/https?:\/\//,'').split('/')[0]; }
 
   function fetchTool(slug, lang) {
-    return fetch(SB+'/rest/v1/tools?slug=eq.'+slug+'&lang=eq.'+lang+'&select=slug,name,description,best_for,pros,cons,badge,url,domain,users',
+    return fetch(SB+'/rest/v1/tools?slug=eq.'+slug+'&lang=eq.'+lang+'&select=slug,name,description,best_for,pros,cons,badge,url,users',
       {headers:{apikey:KEY,Authorization:'Bearer '+KEY}}).then(function(r){return r.json();});
   }
 
@@ -151,8 +163,10 @@
   }
 
   function render(a, b, rA, rB) {
-    var avgA = rA.length ? rA.reduce(function(s,c){return s+c.rating;},0)/rA.length : null;
-    var avgB = rB.length ? rB.reduce(function(s,c){return s+c.rating;},0)/rB.length : null;
+    rA = Array.isArray(rA) ? rA : [];
+    rB = Array.isArray(rB) ? rB : [];
+    var avgA = rA.length ? rA.reduce(function(s,c){return s+(+c.rating||0);},0)/rA.length : null;
+    var avgB = rB.length ? rB.reduce(function(s,c){return s+(+c.rating||0);},0)/rB.length : null;
     var domA = getDomain(a.url||''); var domB = getDomain(b.url||'');
     var ratingA = starsHtml(avgA) + (rA.length ? '<span style="font-size:11px;color:var(--text3);margin-left:4px">('+rA.length+')</span>' : '');
     var ratingB = starsHtml(avgB) + (rB.length ? '<span style="font-size:11px;color:var(--text3);margin-left:4px">('+rB.length+')</span>' : '');
@@ -161,17 +175,17 @@
     document.getElementById('pageTitle').textContent = a.name + ' vs ' + b.name + ' 2026 — Comparison | MyPedia';
 
     var rows = [
-      ['Overview',    esc(a.description||'—'),  esc(b.description||'—')],
-      ['Pricing',     '<span class="badge badge-'+esc(a.badge||'')+'">'+badgeLabel(a.badge)+'</span>', '<span class="badge badge-'+esc(b.badge||'')+'">'+badgeLabel(b.badge)+'</span>'],
-      ['Users',       esc(a.users||'—'),         esc(b.users||'—')],
-      ['Best for',    esc(a.best_for||'—'),      esc(b.best_for||'—')],
-      ['Rating',      ratingA,                   ratingB],
-      ['Advantages',  listHtml(a.pros,'✅'),     listHtml(b.pros,'✅')],
-      ['Disadvantages', listHtml(a.cons,'❌'),   listHtml(b.cons,'❌')],
-      ['Website',     domA ? '<a href="'+esc(a.url)+'" target="_blank" rel="noopener" style="color:var(--accent)">'+esc(domA)+'</a>' : '—',
-                      domB ? '<a href="'+esc(b.url)+'" target="_blank" rel="noopener" style="color:var(--accent)">'+esc(domB)+'</a>' : '—'],
-      ['',            '<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="'+esc(a.url||'#')+'" target="_blank" rel="noopener">Visit →</a><a class="tool-review" href="'+BASE+'/tools/'+esc(a.slug)+'.html">Full review</a></div>',
-                      '<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="'+esc(b.url||'#')+'" target="_blank" rel="noopener">Visit →</a><a class="tool-review" href="'+BASE+'/tools/'+esc(b.slug)+'.html">Full review</a></div>'],
+      [L.ov, esc(a.description||'—'),  esc(b.description||'—')],
+      [L.pr, '<span class="badge badge-'+esc(a.badge||'')+'">'+badgeLabel(a.badge)+'</span>', '<span class="badge badge-'+esc(b.badge||'')+'">'+badgeLabel(b.badge)+'</span>'],
+      [L.us, esc(a.users||'—'),         esc(b.users||'—')],
+      [L.bf, esc(a.best_for||'—'),      esc(b.best_for||'—')],
+      [L.rt, ratingA,                   ratingB],
+      [L.ad, listHtml(a.pros,'✅'),     listHtml(b.pros,'✅')],
+      [L.ds, listHtml(a.cons,'❌'),     listHtml(b.cons,'❌')],
+      [L.wb, domA ? '<a href="'+esc(a.url)+'" target="_blank" rel="noopener" style="color:var(--accent)">'+esc(domA)+'</a>' : '—',
+              domB ? '<a href="'+esc(b.url)+'" target="_blank" rel="noopener" style="color:var(--accent)">'+esc(domB)+'</a>' : '—'],
+      ['',   '<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="'+esc(a.url||'#')+'" target="_blank" rel="noopener">'+L.vt+' →</a><a class="tool-review" href="'+BASE+'/tools/'+esc(a.slug)+'.html">'+L.rv+'</a></div>',
+              '<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="'+esc(b.url||'#')+'" target="_blank" rel="noopener">'+L.vt+' →</a><a class="tool-review" href="'+BASE+'/tools/'+esc(b.slug)+'.html">'+L.rv+'</a></div>'],
     ];
 
     document.getElementById('cmpResult').innerHTML =
@@ -187,24 +201,33 @@
       '</tbody></table></div>';
   }
 
-  function load(lang) {
-    Promise.all([
-      fetchTool(SLUG_A, lang), fetchTool(SLUG_B, lang),
-      fetchRating(SLUG_A),     fetchRating(SLUG_B)
-    ]).then(function(res) {
-      var toolsA = res[0], toolsB = res[1], rA = res[2], rB = res[3];
-      if (!toolsA[0] || !toolsB[0]) {
-        if (lang !== 'en') { load('en'); return; }
-        document.getElementById('cmpResult').innerHTML = '<div class="cmp-loading">Content not found.</div>';
-        return;
-      }
-      render(toolsA[0], toolsB[0], rA, rB);
-    }).catch(function() {
-      document.getElementById('cmpResult').innerHTML = '<div class="cmp-loading">Failed to load.</div>';
-    });
+  // Fetch ratings independently — a rating error won't block tool content
+  var ratingsDone = Promise.all([fetchRating(SLUG_A), fetchRating(SLUG_B)]);
+
+  function getTools(lang) {
+    return Promise.all([fetchTool(SLUG_A, lang), fetchTool(SLUG_B, lang)])
+      .then(function(res) {
+        if (!Array.isArray(res[0]) || !res[0][0] || !Array.isArray(res[1]) || !res[1][0]) {
+          if (lang !== 'en') return getTools('en');
+          return null;
+        }
+        return [res[0][0], res[1][0]];
+      });
   }
 
-  load(LANG);
+  getTools(LANG).then(function(tools) {
+    if (!tools) {
+      document.getElementById('cmpResult').innerHTML = '<div class="cmp-loading">Content not found.</div>';
+      return;
+    }
+    ratingsDone.then(function(ratings) {
+      render(tools[0], tools[1], ratings[0], ratings[1]);
+    }).catch(function() {
+      render(tools[0], tools[1], [], []);
+    });
+  }).catch(function() {
+    document.getElementById('cmpResult').innerHTML = '<div class="cmp-loading">Failed to load.</div>';
+  });
 })();
 </script>
 </body>

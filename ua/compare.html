@@ -150,11 +150,11 @@
     <div>
       <div class="footer-col-title">Quick Compare</div>
       <div class="footer-col-links">
-        <a href="/compare/chatgpt-vs-claude.html">ChatGPT vs Claude</a>
-        <a href="/compare/cursor-vs-copilot.html">Cursor vs Copilot</a>
-        <a href="/compare/midjourney-vs-flux.html">Midjourney vs Flux</a>
-        <a href="/compare/suno-vs-udio.html">Suno vs Udio</a>
-        <a href="/compare/kling-vs-runway.html">Kling vs Runway</a>
+        <a href="/ua/compare/chatgpt-vs-claude.html">ChatGPT vs Claude</a>
+        <a href="/ua/compare/cursor-vs-copilot.html">Cursor vs Copilot</a>
+        <a href="/ua/compare/midjourney-vs-flux.html">Midjourney vs Flux</a>
+        <a href="/ua/compare/suno-vs-udio.html">Suno vs Udio</a>
+        <a href="/ua/compare/kling-vs-runway.html">Kling vs Runway</a>
       </div>
     </div>
   </div>
@@ -236,7 +236,8 @@ async function updateCompare() {
   // Update URL and page title to reflect the active comparison
   const slugA = toSlug(a.name);
   const slugB = toSlug(b.name);
-  const newUrl = `/compare.html?a=${slugA}&b=${slugB}`;
+  const basePath = window.location.pathname; // preserves /ru/compare.html etc.
+  const newUrl = `${basePath}?a=${slugA}&b=${slugB}`;
   if (window.location.search !== `?a=${slugA}&b=${slugB}`) {
     history.pushState({}, '', newUrl);
   }
@@ -260,7 +261,7 @@ async function updateCompare() {
                     starsHtml(infoB.avgRating) + (infoB.reviewCount ? `<span style="font-size:11px;color:var(--text3);margin-left:4px">(${infoB.reviewCount})</span>` : '')],
     [t('compare.advantages'),  listHtml(infoA.dbTool.pros, '#2dd4a0', '✅'),                 listHtml(infoB.dbTool.pros, '#2dd4a0', '✅')],
     [t('compare.disadvantages'), listHtml(infoA.dbTool.cons, '#f56565', '❌'),               listHtml(infoB.dbTool.cons, '#f56565', '❌')],
-    ['Website',     getDomain(a.url),                                             getDomain(b.url)],
+    [t('compare.website')||'Website', a.url ? `<a href="${a.url}" target="_blank" rel="noopener" style="color:var(--accent)">${getDomain(a.url)}</a>` : '—', b.url ? `<a href="${b.url}" target="_blank" rel="noopener" style="color:var(--accent)">${getDomain(b.url)}</a>` : '—'],
     ['',            `<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="${a.aff}" target="_blank" rel="noopener sponsored">${t('tool.open')}</a><a class="tool-review" href="${toolPageUrl(toSlug(a.name))}">${t('tool.review')}</a></div>`,
                     `<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="${b.aff}" target="_blank" rel="noopener sponsored">${t('tool.open')}</a><a class="tool-review" href="${toolPageUrl(toSlug(b.name))}">${t('tool.review')}</a></div>`],
   ];
