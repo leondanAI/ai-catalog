@@ -414,16 +414,16 @@ async function tfRender(data) {
   if (data.primary) tools.push({ ...data.primary, best: true });
   if (data.alternatives?.length) data.alternatives.slice(0,2).forEach(a => tools.push(a));
 
-  const infos = await Promise.all(tools.map(t => tf3Fetch(t.name)));
+  const infos = await Promise.all(tools.map(tool => tf3Fetch(tool.name)));
 
-  el.innerHTML = `<div class="tf3-grid">` + tools.map((t, i) => {
+  el.innerHTML = `<div class="tf3-grid">` + tools.map((tool, i) => {
     const info  = infos[i];
-    const slug  = tf3ResolveSlug(t.name);
+    const slug  = tf3ResolveSlug(tool.name);
     const inCatalog = !!(info.db.pros || info.db.description);
 
     const pricingHtml = inCatalog && info.db.badge
       ? `<span class="badge badge-${info.db.badge}">${info.db.badge.charAt(0).toUpperCase()+info.db.badge.slice(1)}</span>`
-      : `<span style="color:var(--text2);font-size:13px">${tfEsc(t.pricing)}</span>`;
+      : `<span style="color:var(--text2);font-size:13px">${tfEsc(tool.pricing)}</span>`;
 
     const detailSections = inCatalog ? `
       <div class="tf3-section">
@@ -443,16 +443,16 @@ async function tfRender(data) {
       </div>`;
 
     const footerHtml = inCatalog
-      ? `<a class="tool-aff" href="${tfEsc(t.url)}" target="_blank" rel="noopener sponsored">Visit →</a>
+      ? `<a class="tool-aff" href="${tfEsc(tool.url)}" target="_blank" rel="noopener sponsored">Visit →</a>
          <a class="tool-review" href="${(localStorage.getItem('lang')||'en')==='en'?'/tools/'+slug+'.html':'/'+(localStorage.getItem('lang')||'en')+'/tools/'+slug+'.html'}">Full review →</a>`
-      : `<a class="tool-aff" href="${tfEsc(t.url)}" target="_blank" rel="noopener sponsored" style="flex:1">Visit →</a>`;
+      : `<a class="tool-aff" href="${tfEsc(tool.url)}" target="_blank" rel="noopener sponsored" style="flex:1">Visit →</a>`;
 
     return `
     <div class="tf3-card ${inCatalog ? 'tf3-in-catalog' : ''} ${i === 0 ? 'tf3-best' : ''}">
       <div class="tf3-head">
-        <div class="tf3-avatar">${tf3Avatar(t.name, t.url)}</div>
+        <div class="tf3-avatar">${tf3Avatar(tool.name, tool.url)}</div>
         <div>
-          <div class="tf3-name">${tfEsc(t.name)}</div>
+          <div class="tf3-name">${tfEsc(tool.name)}</div>
           <div class="tf3-badge-row">
             <span class="tf-card-tag ${i === 0 ? 'tf-best' : 'tf-alt'}">${i === 0 ? t('tool.bestMatch') : t('tool.alternative')}</span>
             ${inCatalog
@@ -464,7 +464,7 @@ async function tfRender(data) {
 
       <div class="tf3-section">
         <div class="tf3-label">${t('tool.whyThis')}</div>
-        <div class="tf3-why">${tfEsc(t.why)}</div>
+        <div class="tf3-why">${tfEsc(tool.why)}</div>
       </div>
 
       <div class="tf3-section">
