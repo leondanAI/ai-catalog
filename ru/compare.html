@@ -227,7 +227,7 @@ async function updateCompare() {
   const b = ALL_TOOLS.find(t2 => t2.name === document.getElementById('selectB').value);
   const el = document.getElementById('compareResult');
   if (!a || !b) {
-    history.replaceState({}, '', '/compare.html');
+    history.replaceState({}, '', window.location.pathname);
     document.title = 'Compare AI Tools Side by Side 2026 — MyPedia';
     el.innerHTML = `<div class="compare-placeholder"><div class="icon">⚖️</div><p>${t('compare.placeholder')}</p></div>`;
     return;
