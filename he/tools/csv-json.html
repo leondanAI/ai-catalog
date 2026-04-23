@@ -30,14 +30,14 @@
 
 <header class="site-header">
   <div class="header-inner">
-    <a href="/he/index.html" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</a>
+    <a href="/he/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</a>
     <nav class="nav-links">
-      <a href="/he/index.html"      class="nav-link" data-i18n="nav.home">Home</a>
-      <a href="/he/directory.html"  class="nav-link" data-i18n="nav.directory">Directory</a>
-      <a href="/he/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-      <a href="/he/tools.html"      class="nav-link active" data-i18n="nav.tools">Free Tools</a>
-      <a href="/he/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
-      <a href="/he/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
+      <a href="/he/"                class="nav-link" data-nav="index.html"      data-i18n="nav.home">Find AI</a>
+      <a href="/he/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
+      <a href="/he/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
+      <a href="/he/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
+      <a href="/he/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/he/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
       <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇬🇧 EN <span style="opacity:.5;font-size:10px">▾</span></button>
@@ -46,11 +46,11 @@
     <button class="btn-hamburger" onclick="toggleMenu()">&#9776;</button>
   </div>
   <nav class="mobile-menu" id="mobileMenu">
-    <a href="/he/index.html"      class="nav-link" data-i18n="nav.home">Home</a>
-    <a href="/he/directory.html"  class="nav-link" data-i18n="nav.directory">Directory</a>
-    <a href="/he/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/he/tools.html"      class="nav-link" data-i18n="nav.tools">Free Tools</a>
+    <a href="/he/"                class="nav-link" data-i18n="nav.home">Find AI</a>
+    <a href="/he/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/he/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
+    <a href="/he/news.html"       class="nav-link" data-i18n="nav.news">News</a>
+    <a href="/he/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/he/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -99,7 +99,7 @@
     <div>
       <div class="footer-col-title" data-i18n="footer.nav">Navigation</div>
       <div class="footer-col-links">
-        <a href="/he/index.html" data-i18n="nav.home">Home</a>
+        <a href="/he/" data-i18n="nav.home">Home</a>
         <a href="/he/directory.html" data-i18n="nav.directory">Directory</a>
         <a href="/he/tools.html" data-i18n="nav.tools">Free Tools</a>
         <a href="/he/news.html" data-i18n="nav.news">News</a>
@@ -108,10 +108,10 @@
     <div>
       <div class="footer-col-title">Other Tools</div>
       <div class="footer-col-links">
-        <a href="json-formatter.html">JSON Formatter</a>
-        <a href="token-counter.html">Token Counter</a>
-        <a href="regex-tester.html">Regex Tester</a>
-        <a href="base64.html">Base64</a>
+        <a href="/tools/json-formatter.html">JSON Formatter</a>
+        <a href="/tools/token-counter.html">Token Counter</a>
+        <a href="/tools/regex-tester.html">Regex Tester</a>
+        <a href="/tools/base64.html">Base64</a>
       </div>
     </div>
   </div>

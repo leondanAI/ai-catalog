@@ -229,11 +229,15 @@ def generate_toolbox_pages(code):
         # Fix ../css/ and ../js/ relative paths to absolute
         html = html.replace('href="../css/', 'href="/css/')
         html = html.replace('src="../js/', 'src="/js/')
-        # Fix ../page.html nav links to /{lang}/page.html
+        # Fix relative ../page.html nav links → /{lang}/page.html
         for page in PAGES:
             html = html.replace(f'href="../{page}"', f'href="/{code}/{page}"')
         html = html.replace('href="../index.html"', f'href="/{code}/"')
-        # Fix "← All Tools" back link
+        # Fix absolute nav links /page.html → /{lang}/page.html
+        for page in PAGES:
+            html = html.replace(f'href="/{page}"', f'href="/{code}/{page}"')
+        html = html.replace('href="/"', f'href="/{code}/"')
+        # Fix "← All Tools" back link (relative)
         html = html.replace('href="../tools.html"', f'href="/{code}/tools.html"')
         # Inject lang script
         lang_script = (
