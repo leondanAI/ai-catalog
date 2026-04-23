@@ -1431,6 +1431,36 @@ const TOOL_TRANSLATIONS = {
     ro: 'Cel mai popular chat AI de la OpenAI. GPT-4o pentru text, imagini și voce. Folosit de peste 200 de milioane de persoane.',
   },
 
+  'UXPilot': {
+    ru: 'ИИ-дизайнер UX, генерирующий многоэкранные потоки, вайрфреймы и текст интерфейса из текстового брифа. Охватывает весь процесс продуктового дизайна.',
+    es: 'Diseñador UX con IA que genera flujos de pantallas, wireframes y copy de interfaz desde un brief de texto. Cubre todo el proceso de diseño de producto.',
+    fr: 'Designer UX IA qui génère des flows multi-écrans, des wireframes et du texte UI depuis un brief textuel. Couvre l\'ensemble du processus de design produit.',
+    de: 'KI-UX-Designer, der Mehrbildschirm-App-Flows, Wireframes und UI-Texte aus einem Textbriefing erstellt. Deckt den gesamten Produktdesignprozess ab.',
+    pt: 'Designer UX com IA que gera fluxos de telas, wireframes e copy de interface a partir de um briefing. Cobre todo o processo de design de produto.',
+    ua: 'ШІ-дизайнер UX, що генерує багатоекранні потоки, вайрфрейми та текст інтерфейсу з текстового брифу. Охоплює весь процес продуктового дизайну.',
+    he: 'מעצב UX בינה מלאכותית שמייצר זרימות מסך מרובות, wireframes וטקסט UI מתיאור טקסטואלי. מכסה את כל תהליך עיצוב המוצר.',
+  },
+
+  'Google Stitch': {
+    ru: 'Экспериментальный ИИ от Google, превращающий идеи приложений в рабочие UI-прототипы. Опишите идею — получите HTML/CSS/JavaScript и живой предпросмотр мгновенно.',
+    es: 'IA experimental de Google que convierte ideas de apps en prototipos UI funcionales. Describe lo que quieres — obtén HTML/CSS/JavaScript y una vista previa en vivo al instante.',
+    fr: 'IA expérimentale de Google qui transforme les idées d\'application en prototypes UI fonctionnels. Décrivez ce que vous voulez — obtenez du HTML/CSS/JavaScript et un aperçu en direct instantanément.',
+    de: 'Googles experimentelle KI, die App-Ideen in funktionierende UI-Prototypen verwandelt. Beschreiben Sie, was Sie möchten — erhalten Sie HTML/CSS/JavaScript und eine Live-Vorschau sofort.',
+    pt: 'IA experimental do Google que transforma ideias de apps em protótipos UI funcionais. Descreva o que quer — obtenha HTML/CSS/JavaScript e uma prévia ao vivo instantaneamente.',
+    ua: 'Експериментальний ШІ від Google, що перетворює ідеї додатків на робочі UI-прототипи. Опишіть ідею — отримайте HTML/CSS/JavaScript і живий попередній перегляд миттєво.',
+    he: 'בינה מלאכותית ניסיונית של Google שהופכת רעיונות לאפליקציות לאב-טיפוסי UI עובדים. תאר מה אתה רוצה — קבל HTML/CSS/JavaScript ותצוגה מקדימה חיה באופן מיידי.',
+  },
+
+  'YouLearn': {
+    ru: 'ИИ-помощник для обучения по YouTube-видео, PDF и документам. Задавайте вопросы, получайте резюме и автоматически сгенерированные конспекты по любому контенту.',
+    es: 'Compañero de aprendizaje IA para vídeos de YouTube, PDFs y documentos. Haz preguntas, obtén resúmenes y notas generadas automáticamente sobre cualquier contenido.',
+    fr: 'Compagnon d\'apprentissage IA pour les vidéos YouTube, PDF et documents. Posez des questions, obtenez des résumés et des notes générées automatiquement sur n\'importe quel contenu.',
+    de: 'KI-Lernbegleiter für YouTube-Videos, PDFs und Dokumente. Stellen Sie Fragen, erhalten Sie Zusammenfassungen und automatisch generierte Notizen zu beliebigen Inhalten.',
+    pt: 'Companheiro de aprendizagem IA para vídeos do YouTube, PDFs e documentos. Faça perguntas, obtenha resumos e notas geradas automaticamente sobre qualquer conteúdo.',
+    ua: 'ШІ-помічник для навчання за YouTube-відео, PDF та документами. Задавайте питання, отримуйте резюме та автоматично згенеровані конспекти будь-якого контенту.',
+    he: 'עוזר למידה בינה מלאכותית לסרטוני YouTube, PDF ומסמכים. שאל שאלות, קבל סיכומים והערות שנוצרו אוטומטית על כל תוכן.',
+  },
+
 };
 
 // ─── helper used by renderToolCard in data.js ────────────────────────────────
