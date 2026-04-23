@@ -226,7 +226,16 @@ def generate_toolbox_pages(code):
             continue
         with open(src_path) as f:
             html = f.read()
-        # Inject lang script (same as generate_lang_page)
+        # Fix ../css/ and ../js/ relative paths to absolute
+        html = html.replace('href="../css/', 'href="/css/')
+        html = html.replace('src="../js/', 'src="/js/')
+        # Fix ../page.html nav links to /{lang}/page.html
+        for page in PAGES:
+            html = html.replace(f'href="../{page}"', f'href="/{code}/{page}"')
+        html = html.replace('href="../index.html"', f'href="/{code}/"')
+        # Fix "← All Tools" back link
+        html = html.replace('href="../tools.html"', f'href="/{code}/tools.html"')
+        # Inject lang script
         lang_script = (
             f'<script>localStorage.setItem("lang","{code}");'
             f'document.addEventListener("DOMContentLoaded",function(){{'
