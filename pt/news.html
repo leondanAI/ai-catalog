@@ -293,7 +293,7 @@
       </div>
     </div>
     <div>
-      <div class="footer-col-title">News Categories</div>
+      <div class="footer-col-title" data-i18n="footer.newsCategories">News Categories</div>
       <div class="footer-col-links" id="footerNewsCats"></div>
     </div>
   </div>
@@ -359,7 +359,7 @@ function render() {
         <span class="news-more">${t('news.readMore')}</span>
       </div>
     </a>`;
-  }).join('') || `<div class="empty"><div class="empty-icon">📰</div>No news in this category yet.</div>`;
+  }).join('') || `<div class="empty"><div class="empty-icon">📰</div>${t('ui.noNews')}</div>`;
 }
 
 // ── News cache (localStorage, TTL 60 min) ────────────────────────────────────

@@ -164,7 +164,7 @@
 
   <div class="tf-loading" id="tfLoading">
     <div class="tf-spinner"></div>
-    <span>Finding the best tools…</span>
+    <span data-i18n="ui.findingTools">Finding the best tools…</span>
   </div>
   <div class="tf-error" id="tfError"></div>
   <div class="tf-results" id="tfResults"></div>
@@ -347,7 +347,7 @@ async function tfFind() {
     if (!res.ok || data.error) throw new Error(data.detail || data.error || 'Server error');
     tfRender(data);
   } catch(err) {
-    errBox.textContent = 'Something went wrong: ' + err.message;
+    errBox.textContent = t('ui.errGeneric') + ': ' + err.message;
     errBox.style.display = 'block';
   } finally {
     loading.style.display = 'none';
@@ -377,7 +377,7 @@ function tf3Avatar(name, url) {
     : `<span style="font-weight:700;font-size:14px">${tfEsc(name[0])}</span>`;
 }
 function tf3Stars(avg) {
-  if (!avg) return `<span style="font-size:12px;color:var(--text3)">No reviews yet</span>`;
+  if (!avg) return `<span style="font-size:12px;color:var(--text3)">${t('ui.noReviews')}</span>`;
   const full = Math.round(avg);
   return `<span style="color:#f59e0b;font-size:13px;letter-spacing:1px">${'★'.repeat(full)}</span>`
        + `<span style="color:#444;font-size:13px;letter-spacing:1px">${'★'.repeat(5-full)}</span>`
@@ -407,7 +407,7 @@ async function tf3Fetch(name) {
 }
 async function tfRender(data) {
   const el = document.getElementById('tfResults');
-  el.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--text3);font-size:13px">Loading details…</div>';
+  el.innerHTML = `<div style="text-align:center;padding:2rem;color:var(--text3);font-size:13px">${t('ui.loadingDetails')}</div>`;
   el.style.display = 'block';
 
   const tools = [];
@@ -427,15 +427,15 @@ async function tfRender(data) {
 
     const detailSections = inCatalog ? `
       <div class="tf3-section">
-        <div class="tf3-label">Rating</div>
+        <div class="tf3-label">${t('compare.rating')}</div>
         <div class="tf3-stars">${tf3Stars(info.avg)}${info.count ? `<span style="font-size:11px;color:var(--text3);margin-left:3px">(${info.count})</span>` : ''}</div>
       </div>
       <div class="tf3-section">
-        <div class="tf3-label">Advantages</div>
+        <div class="tf3-label">${t('compare.advantages')}</div>
         <div class="tf3-list">${tf3List(info.db.pros, '✅', '#2dd4a0')}</div>
       </div>
       <div class="tf3-section">
-        <div class="tf3-label">Disadvantages</div>
+        <div class="tf3-label">${t('compare.disadvantages')}</div>
         <div class="tf3-list">${tf3List(info.db.cons, '❌', '#f56565')}</div>
       </div>` : `
       <div class="tf3-section" style="color:var(--text3);font-size:12px;font-style:italic">
@@ -454,7 +454,7 @@ async function tfRender(data) {
         <div>
           <div class="tf3-name">${tfEsc(t.name)}</div>
           <div class="tf3-badge-row">
-            <span class="tf-card-tag ${i === 0 ? 'tf-best' : 'tf-alt'}">${i === 0 ? '★ Best match' : 'Alternative'}</span>
+            <span class="tf-card-tag ${i === 0 ? 'tf-best' : 'tf-alt'}">${i === 0 ? t('tool.bestMatch') : t('tool.alternative')}</span>
             ${inCatalog
               ? `<span class="tf3-in-catalog-tag">✓ Reviewed</span>`
               : `<span class="tf3-external-tag">External</span>`}
@@ -463,12 +463,12 @@ async function tfRender(data) {
       </div>
 
       <div class="tf3-section">
-        <div class="tf3-label">Why this tool</div>
+        <div class="tf3-label">${t('tool.whyThis')}</div>
         <div class="tf3-why">${tfEsc(t.why)}</div>
       </div>
 
       <div class="tf3-section">
-        <div class="tf3-label">Pricing</div>
+        <div class="tf3-label">${t('compare.pricing')}</div>
         ${pricingHtml}
       </div>
 

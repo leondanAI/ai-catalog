@@ -116,14 +116,14 @@
     <div class="divider"></div>
     <div class="nl-cats-title" data-i18n="nl.topics">Topics of interest (optional)</div>
     <div class="nl-cats">
-      <label class="checkbox-row"><input type="checkbox" checked><span class="checkbox-label">💬 AI Chat</span></label>
-      <label class="checkbox-row"><input type="checkbox" checked><span class="checkbox-label">💻 Development</span></label>
-      <label class="checkbox-row"><input type="checkbox"><span class="checkbox-label">🎨 Image Gen</span></label>
-      <label class="checkbox-row"><input type="checkbox"><span class="checkbox-label">🎬 Video Gen</span></label>
-      <label class="checkbox-row"><input type="checkbox"><span class="checkbox-label">🎙️ Voice & Audio</span></label>
-      <label class="checkbox-row"><input type="checkbox" checked><span class="checkbox-label">📰 AI News</span></label>
-      <label class="checkbox-row"><input type="checkbox"><span class="checkbox-label">🔬 Research</span></label>
-      <label class="checkbox-row"><input type="checkbox"><span class="checkbox-label">📊 Data & Analytics</span></label>
+      <label class="checkbox-row"><input type="checkbox" checked><span class="checkbox-label" data-i18n="nl.topicChat">💬 AI Chat</span></label>
+      <label class="checkbox-row"><input type="checkbox" checked><span class="checkbox-label" data-i18n="nl.topicDev">💻 Development</span></label>
+      <label class="checkbox-row"><input type="checkbox"><span class="checkbox-label" data-i18n="nl.topicImage">🎨 Image Gen</span></label>
+      <label class="checkbox-row"><input type="checkbox"><span class="checkbox-label" data-i18n="nl.topicVideo">🎬 Video Gen</span></label>
+      <label class="checkbox-row"><input type="checkbox"><span class="checkbox-label" data-i18n="nl.topicVoice">🎙️ Voice & Audio</span></label>
+      <label class="checkbox-row"><input type="checkbox" checked><span class="checkbox-label" data-i18n="nl.topicNews">📰 AI News</span></label>
+      <label class="checkbox-row"><input type="checkbox"><span class="checkbox-label" data-i18n="nl.topicResearch">🔬 Research</span></label>
+      <label class="checkbox-row"><input type="checkbox"><span class="checkbox-label" data-i18n="nl.topicData">📊 Data & Analytics</span></label>
     </div>
     <div id="nlError" style="font-size:13px;color:var(--red);margin-top:1rem;display:none"></div>
   </div>
@@ -166,11 +166,11 @@
     <div>
       <div class="footer-col-title" data-i18n="footer.cats">Categories</div>
       <div class="footer-col-links">
-        <a href="directory.html?cat=chat">AI Chat</a>
-        <a href="directory.html?cat=code">Development</a>
-        <a href="directory.html?cat=image">Image Gen</a>
-        <a href="directory.html?cat=video">Video Gen</a>
-        <a href="directory.html?cat=data">Data & Analytics</a>
+        <a href="directory.html?cat=chat" data-i18n="cat.chat">AI Chat</a>
+        <a href="directory.html?cat=code" data-i18n="cat.code">Development</a>
+        <a href="directory.html?cat=image" data-i18n="cat.image">Image Gen</a>
+        <a href="directory.html?cat=video" data-i18n="cat.video">Video Gen</a>
+        <a href="directory.html?cat=data" data-i18n="cat.data">Data & Analytics</a>
       </div>
     </div>
   </div>
@@ -192,7 +192,7 @@ async function submitNewsletter() {
   const btn   = document.querySelector('[onclick="submitNewsletter()"]');
 
   if (!email || !email.includes('@') || !email.includes('.')) {
-    err.textContent = 'Please enter a valid email address.';
+    err.textContent = t('nl.errEmail');
     err.style.display = 'block';
     return;
   }
@@ -212,7 +212,7 @@ async function submitNewsletter() {
     document.getElementById('nlForm').style.display = 'none';
     document.getElementById('nlSuccess').style.display = 'block';
   } else {
-    err.textContent = 'Something went wrong. Please try again.';
+    err.textContent = t('nl.errGeneric');
     err.style.display = 'block';
     btn.disabled = false;
     btn.textContent = t('nl.subscribe');

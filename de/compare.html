@@ -148,7 +148,7 @@
       </div>
     </div>
     <div>
-      <div class="footer-col-title">Quick Compare</div>
+      <div class="footer-col-title" data-i18n="footer.quickCompare">Quick Compare</div>
       <div class="footer-col-links">
         <a href="/de/compare/chatgpt-vs-claude.html">ChatGPT vs Claude</a>
         <a href="/de/compare/cursor-vs-copilot.html">Cursor vs Copilot</a>
@@ -183,7 +183,7 @@ function toSlug(name) {
 }
 
 function starsHtml(avg) {
-  if (!avg) return '<span style="color:var(--text3);font-size:13px">No reviews yet</span>';
+  if (!avg) return '<span style="color:var(--text3);font-size:13px">' + t('ui.noReviews') + '</span>';
   const full = Math.round(avg);
   return '<span style="color:#f59e0b;font-size:13px;letter-spacing:1px">' + '★'.repeat(full) + '</span>' +
          '<span style="color:#555;font-size:13px;letter-spacing:1px">'   + '★'.repeat(5-full) + '</span>' +
