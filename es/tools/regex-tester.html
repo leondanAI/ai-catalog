@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regex Tester — Live Regular Expression Tester — MyPedia</title>
+<meta name="description" content="Test regular expressions with live match highlighting, match list and group captures. Free, no signup.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L09EYV4S46"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-L09EYV4S46");</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .tool-wrap { max-width:800px; margin:0 auto; padding:2rem 1.5rem 4rem; }
+  .tool-back { display:inline-flex; align-items:center; gap:6px; font-size:13px; color:var(--text3); margin-bottom:2rem; transition:color .15s; }
+  .tool-back:hover { color:var(--text); }
+  .tool-head { margin-bottom:1.5rem; }
+  .tool-head h1 { font-family:var(--font-display); font-size:clamp(22px,4vw,30px); font-weight:600; margin-bottom:.375rem; }
+  .tool-head p { font-size:14px; color:var(--text2); }
+  .regex-row { display:flex; gap:8px; align-items:center; margin-bottom:1rem; }
+  .regex-slash { font-family:'Courier New',monospace; font-size:20px; color:var(--text3); }
+  .regex-input { flex:1; font-family:'Courier New',monospace; }
+  .flags-row { display:flex; gap:8px; margin-bottom:1rem; flex-wrap:wrap; }
+  .flag-btn { padding:4px 12px; border:1px solid var(--border); border-radius:var(--radius-sm); font-family:'Courier New',monospace; font-size:13px; color:var(--text2); cursor:pointer; background:var(--bg2); transition:all .15s; }
+  .flag-btn.on { background:var(--accent); border-color:var(--accent); color:#fff; }
+  .regex-preview { background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius-sm); padding:1rem; font-family:'Courier New',monospace; font-size:13.5px; line-height:1.75; min-height:120px; white-space:pre-wrap; word-break:break-word; }
+  mark.rx-match { background:rgba(124,106,247,.35); color:var(--text); border-radius:2px; padding:0 1px; }
+  .match-list { margin-top:1rem; }
+  .match-item { background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius-sm); padding:.6rem 1rem; margin-bottom:6px; font-family:'Courier New',monospace; font-size:13px; }
+  .match-idx { font-size:11px; color:var(--text3); margin-bottom:2px; }
+  .match-val { color:var(--accent); }
+  .match-group { font-size:11px; color:var(--text2); margin-top:2px; }
+  .regex-error { color:var(--red); font-size:13px; padding:.5rem; }
+  .stat-row { display:flex; gap:12px; align-items:center; margin-bottom:.75rem; font-size:13px; }
+  .match-count { font-family:var(--font-display); font-weight:600; color:var(--accent); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</a>
+    <nav class="nav-links">
+      <a href="../index.html"      class="nav-link" data-i18n="nav.home">Home</a>
+      <a href="../directory.html"  class="nav-link" data-i18n="nav.directory">Directory</a>
+      <a href="../news.html"       class="nav-link" data-i18n="nav.news">News</a>
+      <a href="../tools.html"      class="nav-link active" data-i18n="nav.tools">Free Tools</a>
+      <a href="../compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
+      <a href="../newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
+    </nav>
+    <div class="lang-picker">
+      <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇬🇧 EN <span style="opacity:.5;font-size:10px">▾</span></button>
+      <div class="lang-menu" id="langMenu"></div>
+    </div>
+    <button class="btn-hamburger" onclick="toggleMenu()">&#9776;</button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="../index.html"      class="nav-link" data-i18n="nav.home">Home</a>
+    <a href="../directory.html"  class="nav-link" data-i18n="nav.directory">Directory</a>
+    <a href="../news.html"       class="nav-link" data-i18n="nav.news">News</a>
+    <a href="../tools.html"      class="nav-link" data-i18n="nav.tools">Free Tools</a>
+    <a href="../compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
+    <a href="../newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
+  </nav>
+</header>
+
+<div class="tool-wrap">
+  <a href="../tools.html" class="tool-back">← All Tools</a>
+  <div class="tool-head">
+    <h1>⚡ Regex Tester</h1>
+    <p>Write a regular expression, paste test text — matches highlight live. Groups are shown per match.</p>
+  </div>
+
+  <div style="margin-bottom:.5rem;font-size:13px;color:var(--text3)">Pattern</div>
+  <div class="regex-row">
+    <span class="regex-slash">/</span>
+    <input class="field-input regex-input" id="rxPattern" placeholder="e.g. \b\w+@\w+\.\w+\b" oninput="runRegex()">
+    <span class="regex-slash">/</span>
+    <input class="field-input" id="rxFlags" value="g" style="width:70px;font-family:'Courier New',monospace" oninput="runRegex()" placeholder="flags">
+  </div>
+
+  <div class="flags-row">
+    <span style="font-size:12px;color:var(--text3);align-self:center">Quick flags:</span>
+    <button class="flag-btn on" id="flag-g" onclick="toggleFlag('g')">g global</button>
+    <button class="flag-btn"    id="flag-i" onclick="toggleFlag('i')">i ignore case</button>
+    <button class="flag-btn"    id="flag-m" onclick="toggleFlag('m')">m multiline</button>
+    <button class="flag-btn"    id="flag-s" onclick="toggleFlag('s')">s dotAll</button>
+  </div>
+
+  <div style="margin-bottom:.5rem;font-size:13px;color:var(--text3)">Test string</div>
+  <textarea class="field-textarea" id="rxText" placeholder="Paste test text here..." oninput="runRegex()" style="min-height:160px;font-family:'Courier New',monospace;font-size:13px"></textarea>
+
+  <div id="rxError" class="regex-error" style="display:none"></div>
+  <div class="stat-row" id="rxStat" style="display:none">
+    <span><span class="match-count" id="rxCount">0</span> matches</span>
+  </div>
+
+  <div style="margin-bottom:.5rem;font-size:13px;color:var(--text3)">Highlighted result</div>
+  <div class="regex-preview" id="rxPreview"><span style="color:var(--text3)">Matches will highlight here...</span></div>
+
+  <div class="match-list" id="rxMatchList"></div>
+  <div id="toolDesc" style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);font-size:14px;line-height:1.75;color:var(--text2)"></div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</div>
+      <p class="footer-desc" data-i18n="footer.desc">Best AI tools catalog in one place.</p>
+    </div>
+    <div>
+      <div class="footer-col-title" data-i18n="footer.nav">Navigation</div>
+      <div class="footer-col-links">
+        <a href="../index.html" data-i18n="nav.home">Home</a>
+        <a href="../directory.html" data-i18n="nav.directory">Directory</a>
+        <a href="../tools.html" data-i18n="nav.tools">Free Tools</a>
+        <a href="../news.html" data-i18n="nav.news">News</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Other Tools</div>
+      <div class="footer-col-links">
+        <a href="token-counter.html">Token Counter</a>
+        <a href="text-diff.html">Text Diff</a>
+        <a href="case-converter.html">Case Converter</a>
+        <a href="json-formatter.html">JSON Formatter</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span data-i18n="footer.madeWith">Made with ♥ and Claude</span>
+    <span data-i18n="footer.rights">© 2026 MyPedia</span>
+  </div>
+</footer>
+
+<script>localStorage.setItem("lang","es");document.addEventListener("DOMContentLoaded",function(){if(typeof I18N!=="undefined")I18N.set("es");});</script>
+<script src="../js/i18n.js"></script>
+<script src="../js/tools-desc.js"></script>
+<script src="../js/main.js"></script>
+<script>
+function onLangChange() { renderToolDesc('regex-tester'); }
+function toggleFlag(f) {
+  const inp = document.getElementById('rxFlags');
+  let v = inp.value;
+  if (v.includes(f)) { v = v.replace(f,''); } else { v += f; }
+  inp.value = v;
+  document.getElementById('flag-'+f).classList.toggle('on', v.includes(f));
+  runRegex();
+}
+
+function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+renderToolDesc('regex-tester');
+function runRegex() {
+  const pat  = document.getElementById('rxPattern').value;
+  const flags= document.getElementById('rxFlags').value;
+  const text = document.getElementById('rxText').value;
+  const err  = document.getElementById('rxError');
+  const prev = document.getElementById('rxPreview');
+  const mList= document.getElementById('rxMatchList');
+  const stat = document.getElementById('rxStat');
+
+  // Sync flag buttons
+  ['g','i','m','s'].forEach(f => document.getElementById('flag-'+f).classList.toggle('on', flags.includes(f)));
+
+  err.style.display='none';
+  if (!pat) { prev.innerHTML='<span style="color:var(--text3)">Matches will highlight here...</span>'; mList.innerHTML=''; stat.style.display='none'; return; }
+
+  let re;
+  try { re = new RegExp(pat, flags.replace(/[^gimsuy]/g,'')); }
+  catch(e) { err.textContent='Error: '+e.message; err.style.display='block'; prev.innerHTML=esc(text)||'<span style="color:var(--text3)">...</span>'; mList.innerHTML=''; stat.style.display='none'; return; }
+
+  if (!text) { prev.innerHTML='<span style="color:var(--text3)">Matches will highlight here...</span>'; mList.innerHTML=''; stat.style.display='none'; return; }
+
+  const matches=[];
+  if (flags.includes('g')) {
+    let m; re.lastIndex=0;
+    while ((m=re.exec(text))!==null) { matches.push(m); if (!flags.includes('g')) break; }
+  } else {
+    const m=re.exec(text); if (m) matches.push(m);
+  }
+
+  // Highlight
+  let highlighted='', last=0;
+  const gMatches = flags.includes('g') ? [...text.matchAll(re)] : (re.exec(text)?[re.exec(text)]:[]);
+  // Rebuild with global flag for highlight
+  let re2; try { re2=new RegExp(pat,'g'+(flags.replace('g',''))); } catch(e){ re2=null; }
+  if (re2) {
+    let m2, l2=0;
+    while((m2=re2.exec(text))!==null) {
+      highlighted += esc(text.slice(l2,m2.index));
+      highlighted += `<mark class="rx-match">${esc(m2[0])}</mark>`;
+      l2=m2.index+m2[0].length;
+      if (m2[0].length===0) re2.lastIndex++;
+    }
+    highlighted += esc(text.slice(l2));
+  } else { highlighted=esc(text); }
+  prev.innerHTML = highlighted || '<span style="color:var(--text3)">No text</span>';
+
+  // Match list
+  document.getElementById('rxCount').textContent = gMatches.length;
+  stat.style.display = 'flex';
+  if (gMatches.length===0) { mList.innerHTML='<div style="font-size:13px;color:var(--text3);padding:.5rem 0">No matches</div>'; return; }
+  mList.innerHTML = gMatches.slice(0,50).map((m,i)=>{
+    const groups = m.slice(1).map((g,gi)=>`Group ${gi+1}: <span style="color:var(--accent)">${g??'undefined'}</span>`).join(' &nbsp;·&nbsp; ');
+    return `<div class="match-item">
+      <div class="match-idx">Match ${i+1} &nbsp;·&nbsp; index ${m.index}</div>
+      <div class="match-val">${esc(m[0])}</div>
+      ${groups?`<div class="match-group">${groups}</div>`:''}
+    </div>`;
+  }).join('') + (gMatches.length>50?`<div style="font-size:12px;color:var(--text3);padding:.5rem">... and ${gMatches.length-50} more matches</div>`:'');
+}
+</script>
+</body>
+</html>

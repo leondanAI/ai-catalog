@@ -37,19 +37,23 @@ def sb_upsert(row):
     with urllib.request.urlopen(req) as r:
         return r.status
 
-def translate(client, tool, lang):
+def translate(client, tool, lang, skip_long_desc=False):
     name = tool['name']
+    fields = {
+        'best_for':    tool.get('best_for') or '',
+        'description': tool.get('description') or '',
+        'pros':        tool.get('pros') or [],
+        'cons':        tool.get('cons') or [],
+    }
+    if not skip_long_desc:
+        fields['description_long'] = tool.get('description_long') or ''
+
+    keys = ', '.join(fields.keys()) + ('' if skip_long_desc else ', description_long')
     prompt = f"""Translate this AI tool info into language "{lang}".
 Keep tool name "{name}" unchanged. Keep brand/product names in English.
-Return ONLY valid JSON with keys: best_for, description, description_long, pros (array), cons (array).
+Return ONLY valid JSON with keys: {', '.join(fields.keys())}.
 
-{json.dumps({
-    'best_for':         tool.get('best_for') or '',
-    'description':      tool.get('description') or '',
-    'description_long': tool.get('description_long') or '',
-    'pros':             tool.get('pros') or [],
-    'cons':             tool.get('cons') or [],
-}, ensure_ascii=False)}"""
+{json.dumps(fields, ensure_ascii=False)}"""
 
     msg = client.messages.create(
         model='claude-sonnet-4-6',
@@ -62,7 +66,10 @@ Return ONLY valid JSON with keys: best_for, description, description_long, pros 
     return json.loads(raw)
 
 def main():
-    langs = sys.argv[1:] if len(sys.argv) > 1 else ['ru']
+    args = sys.argv[1:]
+    skip_long_desc = '--no-long-desc' in args
+    force = '--force' in args
+    langs = [a for a in args if not a.startswith('--')] or ['ru']
 
     api_key = os.environ.get('ANTHROPIC_API_KEY')
     if not api_key:
@@ -80,27 +87,28 @@ def main():
     print(f'  {len(tools)} tools')
 
     print('Fetching existing translations…')
-    existing = sb_get('tools?select=slug,lang,description_long&limit=10000')
-    done = {(r['slug'], r['lang']) for r in existing if r.get('description_long')}
-    print(f'  {len(done)} rows already complete (with description_long)')
+    existing = sb_get('tools?select=slug,lang,description&limit=10000')
+    done = {(r['slug'], r['lang']) for r in existing if r.get('description')}
+    print(f'  {len(done)} rows already translated')
 
     for lang in langs:
-        to_do = [t for t in tools if (t['slug'], lang) not in done]
+        to_do = tools if force else [t for t in tools if (t['slug'], lang) not in done]
         print(f'\n→ {lang}: {len(to_do)} to translate ({len(tools)-len(to_do)} already done)')
 
         for i, tool in enumerate(to_do):
             slug = tool['slug']
             print(f'  [{i+1}/{len(to_do)}] {slug}…', end='', flush=True)
             try:
-                t = translate(client, tool, lang)
+                t = translate(client, tool, lang, skip_long_desc=skip_long_desc)
                 # Start with all English fields, override lang + translated fields
                 row = {k: v for k, v in tool.items() if k != 'id'}
-                row['lang']             = lang
-                row['best_for']         = t.get('best_for', '')
-                row['description']      = t.get('description', '')
-                row['description_long'] = t.get('description_long', '')
-                row['pros']             = t.get('pros', [])
-                row['cons']             = t.get('cons', [])
+                row['lang']        = lang
+                row['best_for']    = t.get('best_for', '')
+                row['description'] = t.get('description', '')
+                row['pros']        = t.get('pros', [])
+                row['cons']        = t.get('cons', [])
+                if not skip_long_desc:
+                    row['description_long'] = t.get('description_long', '')
                 sb_upsert(row)
                 done.add((slug, lang))
                 print(' ✓')

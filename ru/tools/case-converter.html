@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Converter — camelCase, snake_case, kebab-case — MyPedia</title>
+<meta name="description" content="Convert text between camelCase, PascalCase, snake_case, kebab-case, UPPER_CASE, Title Case and more. Free, no signup.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L09EYV4S46"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-L09EYV4S46");</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .tool-wrap { max-width:760px; margin:0 auto; padding:2rem 1.5rem 4rem; }
+  .tool-back { display:inline-flex; align-items:center; gap:6px; font-size:13px; color:var(--text3); margin-bottom:2rem; transition:color .15s; }
+  .tool-back:hover { color:var(--text); }
+  .tool-head { margin-bottom:1.5rem; }
+  .tool-head h1 { font-family:var(--font-display); font-size:clamp(22px,4vw,30px); font-weight:600; margin-bottom:.375rem; }
+  .tool-head p { font-size:14px; color:var(--text2); }
+  .case-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:.75rem; margin-top:1.25rem; }
+  .case-card { background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius-sm); padding:1rem; cursor:pointer; transition:border-color .15s,background .15s; }
+  .case-card:hover { border-color:var(--border2); background:var(--bg3); }
+  .case-label { font-size:11px; color:var(--text3); margin-bottom:4px; }
+  .case-value { font-family:'Courier New',monospace; font-size:13px; color:var(--text); word-break:break-all; }
+  .case-copy-hint { font-size:10px; color:var(--accent); margin-top:6px; opacity:0; transition:opacity .2s; }
+  .case-card:hover .case-copy-hint { opacity:1; }
+  .copy-toast { position:fixed; bottom:2rem; left:50%; transform:translateX(-50%); background:var(--bg3); border:1px solid var(--border2); border-radius:var(--radius-sm); padding:8px 20px; font-size:13px; color:var(--green); opacity:0; transition:opacity .3s; pointer-events:none; z-index:999; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</a>
+    <nav class="nav-links">
+      <a href="../index.html"      class="nav-link" data-i18n="nav.home">Home</a>
+      <a href="../directory.html"  class="nav-link" data-i18n="nav.directory">Directory</a>
+      <a href="../news.html"       class="nav-link" data-i18n="nav.news">News</a>
+      <a href="../tools.html"      class="nav-link active" data-i18n="nav.tools">Free Tools</a>
+      <a href="../compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
+      <a href="../newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
+    </nav>
+    <div class="lang-picker">
+      <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇬🇧 EN <span style="opacity:.5;font-size:10px">▾</span></button>
+      <div class="lang-menu" id="langMenu"></div>
+    </div>
+    <button class="btn-hamburger" onclick="toggleMenu()">&#9776;</button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="../index.html"      class="nav-link" data-i18n="nav.home">Home</a>
+    <a href="../directory.html"  class="nav-link" data-i18n="nav.directory">Directory</a>
+    <a href="../news.html"       class="nav-link" data-i18n="nav.news">News</a>
+    <a href="../tools.html"      class="nav-link" data-i18n="nav.tools">Free Tools</a>
+    <a href="../compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
+    <a href="../newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
+  </nav>
+</header>
+
+<div class="tool-wrap">
+  <a href="../tools.html" class="tool-back">← All Tools</a>
+  <div class="tool-head">
+    <h1>Aa Case Converter</h1>
+    <p>Type or paste text, get it instantly converted to every case format. Click any card to copy.</p>
+  </div>
+
+  <textarea class="field-textarea" id="caseInput" placeholder="Type or paste text here — e.g. hello world or myVariableName" oninput="convertAll()" style="min-height:100px"></textarea>
+
+  <div class="case-grid" id="caseGrid"></div>
+  <div id="toolDesc" style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);font-size:14px;line-height:1.75;color:var(--text2)"></div>
+</div>
+
+<div class="copy-toast" id="copyToast">✓ Copied!</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</div>
+      <p class="footer-desc" data-i18n="footer.desc">Best AI tools catalog in one place.</p>
+    </div>
+    <div>
+      <div class="footer-col-title" data-i18n="footer.nav">Navigation</div>
+      <div class="footer-col-links">
+        <a href="../index.html" data-i18n="nav.home">Home</a>
+        <a href="../directory.html" data-i18n="nav.directory">Directory</a>
+        <a href="../tools.html" data-i18n="nav.tools">Free Tools</a>
+        <a href="../news.html" data-i18n="nav.news">News</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Other Tools</div>
+      <div class="footer-col-links">
+        <a href="token-counter.html">Token Counter</a>
+        <a href="word-counter.html">Word Counter</a>
+        <a href="regex-tester.html">Regex Tester</a>
+        <a href="json-formatter.html">JSON Formatter</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span data-i18n="footer.madeWith">Made with ♥ and Claude</span>
+    <span data-i18n="footer.rights">© 2026 MyPedia</span>
+  </div>
+</footer>
+
+<script>localStorage.setItem("lang","ru");document.addEventListener("DOMContentLoaded",function(){if(typeof I18N!=="undefined")I18N.set("ru");});</script>
+<script src="../js/i18n.js"></script>
+<script src="../js/tools-desc.js"></script>
+<script src="../js/main.js"></script>
+<script>
+function onLangChange() { renderToolDesc('case-converter'); }
+function words(text) {
+  return text.trim().replace(/([a-z])([A-Z])/g,'$1 $2').replace(/[-_]+/g,' ').replace(/\s+/g,' ').trim().toLowerCase().split(' ').filter(Boolean);
+}
+
+const CASES = [
+  { label:'lowercase',       fn: t => words(t).join(' ') },
+  { label:'UPPERCASE',       fn: t => words(t).join(' ').toUpperCase() },
+  { label:'Title Case',      fn: t => words(t).map(w=>w[0].toUpperCase()+w.slice(1)).join(' ') },
+  { label:'Sentence case',   fn: t => { const s=words(t).join(' '); return s?s[0].toUpperCase()+s.slice(1):''; } },
+  { label:'camelCase',       fn: t => { const w=words(t); return w[0]+(w.slice(1).map(x=>x[0].toUpperCase()+x.slice(1)).join('')); } },
+  { label:'PascalCase',      fn: t => words(t).map(w=>w[0].toUpperCase()+w.slice(1)).join('') },
+  { label:'snake_case',      fn: t => words(t).join('_') },
+  { label:'CONSTANT_CASE',   fn: t => words(t).join('_').toUpperCase() },
+  { label:'kebab-case',      fn: t => words(t).join('-') },
+  { label:'COBOL-CASE',      fn: t => words(t).join('-').toUpperCase() },
+  { label:'dot.case',        fn: t => words(t).join('.') },
+  { label:'path/case',       fn: t => words(t).join('/') },
+];
+
+function showToast() {
+  const el=document.getElementById('copyToast');
+  el.style.opacity='1';
+  setTimeout(()=>el.style.opacity='0',1500);
+}
+
+renderToolDesc('case-converter');
+function convertAll() {
+  const text = document.getElementById('caseInput').value;
+  if (!text.trim()) { document.getElementById('caseGrid').innerHTML=''; return; }
+  document.getElementById('caseGrid').innerHTML = CASES.map(c => {
+    const val = c.fn(text) || '—';
+    return `<div class="case-card" onclick="navigator.clipboard.writeText('${val.replace(/'/g,"\\'")}');showToast()">
+      <div class="case-label">${c.label}</div>
+      <div class="case-value">${val}</div>
+      <div class="case-copy-hint">Click to copy</div>
+    </div>`;
+  }).join('');
+}
+</script>
+</body>
+</html>

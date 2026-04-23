@@ -90,11 +90,9 @@ def fix_nav_links(html, lang):
         html = re.sub(rf'href="/{page}\?', f'href="/{lang}/{page}?', html)
     # Tool detail links: href="/tools/chatgpt.html" → href="/ru/tools/chatgpt.html"
     # Exclude toolbox utility pages (they only exist in English)
-    TOOLBOX = {'token-counter','text-diff','word-counter','case-converter','regex-tester',
-               'json-formatter','csv-json','markdown-preview','password-generator','base64'}
     def rewrite_tool_link(m):
         slug = m.group(1).replace('.html', '')
-        if slug in TOOLBOX or '${' in slug:  # skip toolbox utilities and JS template literals
+        if '${' in slug:  # skip JS template literals
             return m.group(0)  # keep as-is
         return f'href="/{lang}/tools/{m.group(1)}"'
     html = re.sub(r'href="/tools/([^"]+\.html)"', rewrite_tool_link, html)
@@ -212,6 +210,41 @@ def update_sitemap(pages):
             f.write(sitemap)
         print(f'  ✓ Added {len(new_entries)} URLs to sitemap.xml')
 
+TOOLBOX_PAGES = [
+    'token-counter','text-diff','word-counter','case-converter','regex-tester',
+    'json-formatter','csv-json','markdown-preview','password-generator','base64',
+]
+
+def generate_toolbox_pages(code):
+    """Copy toolbox utility pages into /{lang}/tools/ with lang injection."""
+    tools_dir = os.path.join(ROOT_DIR, code, 'tools')
+    os.makedirs(tools_dir, exist_ok=True)
+    count = 0
+    for slug in TOOLBOX_PAGES:
+        src_path = os.path.join(ROOT_DIR, 'tools', f'{slug}.html')
+        if not os.path.exists(src_path):
+            continue
+        with open(src_path) as f:
+            html = f.read()
+        # Inject lang script (same as generate_lang_page)
+        lang_script = (
+            f'<script>localStorage.setItem("lang","{code}");'
+            f'document.addEventListener("DOMContentLoaded",function(){{'
+            f'if(typeof I18N!=="undefined")I18N.set("{code}");'
+            f'}});</script>\n'
+        )
+        html = re.sub(r'(<script\s+src=)', lang_script + r'\1', html, count=1)
+        # Fix canonical and og:url
+        html = re.sub(r'<link rel="canonical"[^>]*>',
+                      f'<link rel="canonical" href="{BASE_URL}/{code}/tools/{slug}.html">', html)
+        html = re.sub(r'<meta property="og:url"[^>]*>',
+                      f'<meta property="og:url" content="{BASE_URL}/{code}/tools/{slug}.html">', html)
+        out_path = os.path.join(tools_dir, f'{slug}.html')
+        with open(out_path, 'w') as f:
+            f.write(html)
+        count += 1
+    return count
+
 def main():
     print('Parsing i18n translations…')
     translations = parse_i18n()
@@ -237,7 +270,8 @@ def main():
             with open(out_path, 'w') as f:
                 f.write(out_html)
 
-        print(f'  ✓ /{code}/ — {len(PAGES)} pages')
+        tb_count = generate_toolbox_pages(code)
+        print(f'  ✓ /{code}/ — {len(PAGES)} pages + {tb_count} toolbox pages')
 
     print('\nUpdating English pages with hreflang…')
     update_english_pages(PAGES)

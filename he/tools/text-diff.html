@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Diff — Compare Two Texts — MyPedia</title>
+<meta name="description" content="Paste two texts and see exactly what changed — added, removed or modified lines highlighted. Free, no signup.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L09EYV4S46"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-L09EYV4S46");</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .tool-wrap { max-width:900px; margin:0 auto; padding:2rem 1.5rem 4rem; }
+  .tool-back { display:inline-flex; align-items:center; gap:6px; font-size:13px; color:var(--text3); margin-bottom:2rem; transition:color .15s; }
+  .tool-back:hover { color:var(--text); }
+  .tool-head { margin-bottom:1.5rem; }
+  .tool-head h1 { font-family:var(--font-display); font-size:clamp(22px,4vw,30px); font-weight:600; margin-bottom:.375rem; }
+  .tool-head p { font-size:14px; color:var(--text2); }
+  .diff-inputs { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:1rem; }
+  .diff-label { font-size:12px; font-weight:500; color:var(--text3); margin-bottom:6px; }
+  .diff-result { background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius-sm); padding:1rem; font-family:'Courier New',monospace; font-size:13px; line-height:1.7; min-height:200px; white-space:pre-wrap; word-break:break-word; }
+  .diff-add  { background:rgba(45,212,160,.15); color:#2dd4a0; display:block; padding:0 4px; border-radius:2px; }
+  .diff-del  { background:rgba(245,101,101,.15); color:#f56565; display:block; padding:0 4px; border-radius:2px; text-decoration:line-through; }
+  .diff-same { color:var(--text2); display:block; padding:0 4px; }
+  .diff-stats { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:1rem; }
+  .diff-stat { font-size:13px; padding:4px 12px; border-radius:20px; }
+  .diff-stat-add { background:rgba(45,212,160,.15); color:#2dd4a0; }
+  .diff-stat-del { background:rgba(245,101,101,.15); color:#f56565; }
+  .diff-stat-same { background:var(--bg3); color:var(--text3); }
+  .btn-row { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:1.25rem; }
+  @media (max-width:600px) { .diff-inputs { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</a>
+    <nav class="nav-links">
+      <a href="../index.html"      class="nav-link" data-i18n="nav.home">Home</a>
+      <a href="../directory.html"  class="nav-link" data-i18n="nav.directory">Directory</a>
+      <a href="../news.html"       class="nav-link" data-i18n="nav.news">News</a>
+      <a href="../tools.html"      class="nav-link active" data-i18n="nav.tools">Free Tools</a>
+      <a href="../compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
+      <a href="../newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
+    </nav>
+    <div class="lang-picker">
+      <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇬🇧 EN <span style="opacity:.5;font-size:10px">▾</span></button>
+      <div class="lang-menu" id="langMenu"></div>
+    </div>
+    <button class="btn-hamburger" onclick="toggleMenu()">&#9776;</button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="../index.html"      class="nav-link" data-i18n="nav.home">Home</a>
+    <a href="../directory.html"  class="nav-link" data-i18n="nav.directory">Directory</a>
+    <a href="../news.html"       class="nav-link" data-i18n="nav.news">News</a>
+    <a href="../tools.html"      class="nav-link" data-i18n="nav.tools">Free Tools</a>
+    <a href="../compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
+    <a href="../newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
+  </nav>
+</header>
+
+<div class="tool-wrap">
+  <a href="../tools.html" class="tool-back">← All Tools</a>
+  <div class="tool-head">
+    <h1>🔀 Text Diff</h1>
+    <p>Paste two texts and see exactly what changed — added lines in green, removed in red.</p>
+  </div>
+
+  <div class="diff-inputs">
+    <div>
+      <div class="diff-label">Original text (A)</div>
+      <textarea class="field-textarea" id="diffA" placeholder="Paste original text here..." style="min-height:200px;font-family:'Courier New',monospace;font-size:13px"></textarea>
+    </div>
+    <div>
+      <div class="diff-label">Modified text (B)</div>
+      <textarea class="field-textarea" id="diffB" placeholder="Paste modified text here..." style="min-height:200px;font-family:'Courier New',monospace;font-size:13px"></textarea>
+    </div>
+  </div>
+
+  <div class="btn-row">
+    <button class="btn btn-primary btn-sm" onclick="runDiff()">Compare →</button>
+    <button class="btn btn-ghost btn-sm" onclick="clearDiff()">Clear</button>
+    <label class="checkbox-row" style="margin-left:auto">
+      <input type="checkbox" id="diffLive" onchange="runDiff()">
+      <span class="checkbox-label" style="font-size:13px">Live</span>
+    </label>
+  </div>
+
+  <div id="diffStats" class="diff-stats" style="display:none"></div>
+  <div id="diffResult" class="diff-result" style="display:none"></div>
+  <div id="diffEmpty" style="text-align:center;padding:2rem;color:var(--text3);font-size:14px">Paste text in both boxes and click Compare</div>
+
+  <div id="toolDesc" style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);font-size:14px;line-height:1.75;color:var(--text2)"></div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</div>
+      <p class="footer-desc" data-i18n="footer.desc">Best AI tools catalog in one place.</p>
+    </div>
+    <div>
+      <div class="footer-col-title" data-i18n="footer.nav">Navigation</div>
+      <div class="footer-col-links">
+        <a href="../index.html" data-i18n="nav.home">Home</a>
+        <a href="../directory.html" data-i18n="nav.directory">Directory</a>
+        <a href="../tools.html" data-i18n="nav.tools">Free Tools</a>
+        <a href="../news.html" data-i18n="nav.news">News</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Other Tools</div>
+      <div class="footer-col-links">
+        <a href="token-counter.html">Token Counter</a>
+        <a href="word-counter.html">Word Counter</a>
+        <a href="json-formatter.html">JSON Formatter</a>
+        <a href="regex-tester.html">Regex Tester</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span data-i18n="footer.madeWith">Made with ♥ and Claude</span>
+    <span data-i18n="footer.rights">© 2026 MyPedia</span>
+  </div>
+</footer>
+
+<script>localStorage.setItem("lang","he");document.addEventListener("DOMContentLoaded",function(){if(typeof I18N!=="undefined")I18N.set("he");});</script>
+<script src="../js/i18n.js"></script>
+<script src="../js/tools-desc.js"></script>
+<script src="../js/main.js"></script>
+<script>
+function onLangChange() { renderToolDesc('text-diff'); }
+// LCS-based line diff
+function lcsMatrix(a, b) {
+  const m = a.length, n = b.length;
+  const dp = Array.from({length:m+1}, () => new Array(n+1).fill(0));
+  for (let i=1;i<=m;i++) for (let j=1;j<=n;j++)
+    dp[i][j] = a[i-1]===b[j-1] ? dp[i-1][j-1]+1 : Math.max(dp[i-1][j],dp[i][j-1]);
+  return dp;
+}
+
+function diffLines(a, b) {
+  const aL = a.split('\n'), bL = b.split('\n');
+  const dp = lcsMatrix(aL, bL);
+  const result = [];
+  let i=aL.length, j=bL.length;
+  while (i>0||j>0) {
+    if (i>0&&j>0&&aL[i-1]===bL[j-1]) { result.unshift({t:'same',v:aL[i-1]}); i--;j--; }
+    else if (j>0&&(i===0||dp[i][j-1]>=dp[i-1][j])) { result.unshift({t:'add',v:bL[j-1]}); j--; }
+    else { result.unshift({t:'del',v:aL[i-1]}); i--; }
+  }
+  return result;
+}
+
+function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function runDiff() {
+  const a = document.getElementById('diffA').value;
+  const b = document.getElementById('diffB').value;
+  if (!a && !b) { document.getElementById('diffResult').style.display='none'; document.getElementById('diffStats').style.display='none'; document.getElementById('diffEmpty').style.display='block'; return; }
+  const res = diffLines(a, b);
+  let adds=0, dels=0, same=0;
+  const html = res.map(r => {
+    if (r.t==='add') { adds++; return `<span class="diff-add">+ ${esc(r.v)}</span>`; }
+    if (r.t==='del') { dels++; return `<span class="diff-del">- ${esc(r.v)}</span>`; }
+    same++;
+    return `<span class="diff-same">  ${esc(r.v)}</span>`;
+  }).join('');
+  document.getElementById('diffResult').innerHTML = html;
+  document.getElementById('diffResult').style.display = 'block';
+  document.getElementById('diffEmpty').style.display = 'none';
+  document.getElementById('diffStats').style.display = 'flex';
+  document.getElementById('diffStats').innerHTML =
+    `<span class="diff-stat diff-stat-add">+${adds} added</span>` +
+    `<span class="diff-stat diff-stat-del">−${dels} removed</span>` +
+    `<span class="diff-stat diff-stat-same">${same} unchanged</span>`;
+}
+
+function clearDiff() {
+  document.getElementById('diffA').value='';
+  document.getElementById('diffB').value='';
+  document.getElementById('diffResult').style.display='none';
+  document.getElementById('diffStats').style.display='none';
+  document.getElementById('diffEmpty').style.display='block';
+}
+
+renderToolDesc('text-diff');
+['diffA','diffB'].forEach(id => {
+  document.getElementById(id).addEventListener('input', () => {
+    if (document.getElementById('diffLive').checked) runDiff();
+  });
+});
+</script>
+</body>
+</html>
