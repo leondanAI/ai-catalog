@@ -25,27 +25,20 @@
 <link rel="alternate" hreflang="he" href="https://www.mypedia.ai/he/compare/midjourney-vs-flux.html">
 <style>
 .cmp-wrap{max-width:900px;margin:0 auto;padding:2rem 1.5rem 4rem}
-.cmp-hero{text-align:center;margin-bottom:2.5rem}
+.cmp-hero{text-align:center;margin-bottom:2rem}
 .cmp-hero h1{font-family:var(--font-display);font-size:clamp(24px,4vw,38px);font-weight:700;margin-bottom:.75rem}
 .cmp-hero p{font-size:15px;color:var(--text2);line-height:1.75;max-width:640px;margin:0 auto}
-.cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:2rem}
-.cmp-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem}
-.cmp-card-header{display:flex;align-items:center;gap:12px;margin-bottom:1.25rem}
-.cmp-card-avatar{width:48px;height:48px;border-radius:12px;overflow:hidden;flex-shrink:0;background:#fff;display:flex;align-items:center;justify-content:center}
-.cmp-card-avatar img{width:100%;height:100%;object-fit:contain}
-.cmp-card-name{font-family:var(--font-display);font-size:18px;font-weight:700}
-.cmp-card-price{font-size:12px;color:var(--text3);margin-top:2px}
-.cmp-section-title{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--text3);margin-bottom:.625rem;font-family:var(--font-display)}
-.cmp-desc{font-size:13px;color:var(--text2);line-height:1.65;margin-bottom:1.25rem}
-.cmp-best{font-size:13px;color:var(--accent);margin-bottom:1.25rem;line-height:1.5}
-.pc-list{list-style:none;padding:0;margin:0 0 1rem;display:flex;flex-direction:column;gap:7px}
-.pc-list li{font-size:13px;color:var(--text2);line-height:1.5;padding-left:1.25rem;position:relative}
-.pc-pros li::before{content:"✅";position:absolute;left:0;font-size:11px;top:1px}
-.pc-cons li::before{content:"❌";position:absolute;left:0;font-size:11px;top:1px}
-.cmp-visit{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border-radius:8px;padding:9px 18px;font-size:13px;font-weight:600;font-family:var(--font-display);transition:background .15s;margin-top:.5rem}
-.cmp-visit:hover{background:var(--accent2)}
+.compare-wrap{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.compare-table{width:100%;border-collapse:collapse}
+.compare-table th,.compare-table td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--border);font-size:14px}
+.compare-table th{font-family:var(--font-display);font-size:13px;font-weight:500;color:var(--text3);width:28%}
+.compare-table td{color:var(--text2)}
+.compare-table td.hl{color:var(--text)}
+.tool-col-head{display:flex;flex-direction:column;align-items:center;gap:8px;padding:1.5rem 1rem}
+.tool-col-avatar{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:22px;font-weight:700}
+.tool-col-name{font-family:var(--font-display);font-size:16px;font-weight:600}
 .cmp-loading{text-align:center;padding:4rem;color:var(--text3);font-size:15px}
-@media(max-width:620px){.cmp-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.compare-table th{width:35%;font-size:12px}.compare-table th,.compare-table td{padding:10px;font-size:13px}}
 </style>
 </head>
 <body>
@@ -79,12 +72,8 @@
 <div class="cmp-wrap">
   <div class="cmp-hero">
     <h1 id="cmpTitle">Loading…</h1>
-    <p id="cmpIntro"></p>
   </div>
-  <div class="cmp-grid" id="cmpGrid">
-    <div class="cmp-loading">Loading…</div>
-    <div></div>
-  </div>
+  <div id="cmpResult"><div class="cmp-loading">Loading…</div></div>
 </div>
 
 <footer class="site-footer">
@@ -123,61 +112,96 @@
 <script src="/js/main.js"></script>
 <script>
 (function() {
-  var SB   = 'https://lbjdwkvkkndvofysyssy.supabase.co';
-  var KEY  = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG';
-  var LANG = 'ru';
+  var SB     = 'https://lbjdwkvkkndvofysyssy.supabase.co';
+  var KEY    = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG';
+  var LANG   = 'ru';
   var SLUG_A = 'midjourney';
   var SLUG_B = 'flux';
+  var BASE   = '/ru';
 
-  function esc(s) {
-    return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  function esc(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+  function starsHtml(avg) {
+    if (!avg) return '<span style="color:var(--text3);font-size:13px">No reviews yet</span>';
+    var full = Math.round(avg);
+    return '<span style="color:#f59e0b;font-size:13px;letter-spacing:1px">' + '★'.repeat(full) + '</span>' +
+           '<span style="color:#555;font-size:13px;letter-spacing:1px">'   + '★'.repeat(5-full) + '</span>' +
+           '<span style="font-size:13px;font-weight:600;color:#f0f0f0;margin-left:4px">' + avg.toFixed(1) + '</span>';
   }
 
-  function renderCard(t, base) {
-    var pros = (t.pros||[]).map(function(p){return '<li>'+esc(p)+'</li>';}).join('');
-    var cons = (t.cons||[]).map(function(c){return '<li>'+esc(c)+'</li>';}).join('');
-    var price = t.badge ? '<div class="cmp-card-price">'+esc(t.badge)+'</div>' : '';
-    var best  = t.best_for ? '<div class="cmp-section-title">Best for</div><div class="cmp-best">'+esc(t.best_for)+'</div>' : '';
-    var desc  = t.description ? '<div class="cmp-section-title">About</div><div class="cmp-desc">'+esc(t.description)+'</div>' : '';
-    var prosHtml = pros ? '<div class="cmp-section-title">Pros</div><ul class="pc-list pc-pros">'+pros+'</ul>' : '';
-    var consHtml = cons ? '<div class="cmp-section-title">Cons</div><ul class="pc-list pc-cons">'+cons+'</ul>' : '';
-    var domain = t.url ? t.url.replace(/https?:\/\//,'').split('/')[0] : '';
-    var avatar = domain ? '<img src="https://www.google.com/s2/favicons?domain='+domain+'&sz=64" alt="'+esc(t.name)+'">' : '';
-    var visitUrl = t.url || '#';
-    var toolLink = base + '/tools/' + esc(t.slug) + '.html';
-    return '<div class="cmp-card">' +
-      '<div class="cmp-card-header">' +
-        '<div class="cmp-card-avatar">'+avatar+'</div>' +
-        '<div><div class="cmp-card-name">'+esc(t.name)+'</div>'+price+'</div>' +
-      '</div>' +
-      desc + best + prosHtml + consHtml +
-      '<a class="cmp-visit" href="'+esc(visitUrl)+'" target="_blank" rel="noopener">Visit '+esc(t.name)+' →</a>' +
-      '<br><a href="'+esc(toolLink)+'" style="font-size:12px;color:var(--text3);margin-top:8px;display:inline-block">Full review →</a>' +
-    '</div>';
+  function listHtml(arr, icon) {
+    if (!arr || !arr.length) return '<span style="color:var(--text3)">—</span>';
+    return arr.map(function(p) {
+      return '<div style="display:flex;gap:6px;align-items:flex-start;font-size:13px;color:var(--text2);margin-bottom:6px"><span>'+icon+'</span><span>'+esc(p)+'</span></div>';
+    }).join('');
+  }
+
+  function badgeLabel(b) { return b === 'free' ? 'Free' : b === 'freemium' ? 'Freemium' : 'Paid'; }
+
+  function getDomain(url) { return (url||'').replace(/https?:\/\//,'').split('/')[0]; }
+
+  function fetchTool(slug, lang) {
+    return fetch(SB+'/rest/v1/tools?slug=eq.'+slug+'&lang=eq.'+lang+'&select=slug,name,description,best_for,pros,cons,badge,url,domain,users',
+      {headers:{apikey:KEY,Authorization:'Bearer '+KEY}}).then(function(r){return r.json();});
+  }
+
+  function fetchRating(slug) {
+    return fetch(SB+'/rest/v1/comments?tool_slug=eq.'+slug+'&approved=eq.true&select=rating',
+      {headers:{apikey:KEY,Authorization:'Bearer '+KEY}}).then(function(r){return r.json();});
+  }
+
+  function render(a, b, rA, rB) {
+    var avgA = rA.length ? rA.reduce(function(s,c){return s+c.rating;},0)/rA.length : null;
+    var avgB = rB.length ? rB.reduce(function(s,c){return s+c.rating;},0)/rB.length : null;
+    var domA = getDomain(a.url||''); var domB = getDomain(b.url||'');
+    var ratingA = starsHtml(avgA) + (rA.length ? '<span style="font-size:11px;color:var(--text3);margin-left:4px">('+rA.length+')</span>' : '');
+    var ratingB = starsHtml(avgB) + (rB.length ? '<span style="font-size:11px;color:var(--text3);margin-left:4px">('+rB.length+')</span>' : '');
+
+    document.getElementById('cmpTitle').textContent = a.name + ' vs ' + b.name;
+    document.getElementById('pageTitle').textContent = a.name + ' vs ' + b.name + ' 2026 — Comparison | MyPedia';
+
+    var rows = [
+      ['Overview',    esc(a.description||'—'),  esc(b.description||'—')],
+      ['Pricing',     '<span class="badge badge-'+esc(a.badge||'')+'">'+badgeLabel(a.badge)+'</span>', '<span class="badge badge-'+esc(b.badge||'')+'">'+badgeLabel(b.badge)+'</span>'],
+      ['Users',       esc(a.users||'—'),         esc(b.users||'—')],
+      ['Best for',    esc(a.best_for||'—'),      esc(b.best_for||'—')],
+      ['Rating',      ratingA,                   ratingB],
+      ['Advantages',  listHtml(a.pros,'✅'),     listHtml(b.pros,'✅')],
+      ['Disadvantages', listHtml(a.cons,'❌'),   listHtml(b.cons,'❌')],
+      ['Website',     domA ? '<a href="'+esc(a.url)+'" target="_blank" rel="noopener" style="color:var(--accent)">'+esc(domA)+'</a>' : '—',
+                      domB ? '<a href="'+esc(b.url)+'" target="_blank" rel="noopener" style="color:var(--accent)">'+esc(domB)+'</a>' : '—'],
+      ['',            '<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="'+esc(a.url||'#')+'" target="_blank" rel="noopener">Visit →</a><a class="tool-review" href="'+BASE+'/tools/'+esc(a.slug)+'.html">Full review</a></div>',
+                      '<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="'+esc(b.url||'#')+'" target="_blank" rel="noopener">Visit →</a><a class="tool-review" href="'+BASE+'/tools/'+esc(b.slug)+'.html">Full review</a></div>'],
+    ];
+
+    document.getElementById('cmpResult').innerHTML =
+      '<div class="compare-wrap fade-up"><table class="compare-table"><thead><tr><th></th>' +
+        '<td style="text-align:center"><div class="tool-col-head">' +
+          '<div class="tool-col-avatar" style="background:#7c6af722"><img src="https://www.google.com/s2/favicons?sz=64&domain='+domA+'" width="30" height="30" style="border-radius:6px"></div>' +
+          '<div class="tool-col-name">'+esc(a.name)+'</div></div></td>' +
+        '<td style="text-align:center"><div class="tool-col-head">' +
+          '<div class="tool-col-avatar" style="background:#7c6af722"><img src="https://www.google.com/s2/favicons?sz=64&domain='+domB+'" width="30" height="30" style="border-radius:6px"></div>' +
+          '<div class="tool-col-name">'+esc(b.name)+'</div></div></td>' +
+      '</tr></thead><tbody>' +
+      rows.map(function(r){return '<tr><th>'+r[0]+'</th><td class="hl">'+r[1]+'</td><td class="hl">'+r[2]+'</td></tr>';}).join('') +
+      '</tbody></table></div>';
   }
 
   function load(lang) {
-    var base = lang === 'en' ? '' : '/' + lang;
-    var url = SB + '/rest/v1/tools?slug=in.('+SLUG_A+','+SLUG_B+')&lang=eq.'+lang+'&select=slug,name,description,best_for,pros,cons,badge,url';
-    fetch(url, {headers:{apikey:KEY,Authorization:'Bearer '+KEY}})
-      .then(function(r){return r.json();})
-      .then(function(rows){
-        if (!rows || rows.length < 2) {
-          // fallback to English
-          if (lang !== 'en') { load('en'); return; }
-          document.getElementById('cmpGrid').innerHTML = '<div class="cmp-loading">Content not found.</div><div></div>';
-          return;
-        }
-        var a = rows.find(function(r){return r.slug===SLUG_A;}) || rows[0];
-        var b = rows.find(function(r){return r.slug===SLUG_B;}) || rows[1];
-        document.getElementById('cmpTitle').textContent = a.name + ' vs ' + b.name;
-        document.getElementById('pageTitle').textContent = a.name + ' vs ' + b.name + ' 2026 — Comparison | MyPedia';
-        document.getElementById('cmpIntro').textContent = '';
-        document.getElementById('cmpGrid').innerHTML = renderCard(a, base) + renderCard(b, base);
-      })
-      .catch(function(){
-        document.getElementById('cmpGrid').innerHTML = '<div class="cmp-loading">Failed to load.</div><div></div>';
-      });
+    Promise.all([
+      fetchTool(SLUG_A, lang), fetchTool(SLUG_B, lang),
+      fetchRating(SLUG_A),     fetchRating(SLUG_B)
+    ]).then(function(res) {
+      var toolsA = res[0], toolsB = res[1], rA = res[2], rB = res[3];
+      if (!toolsA[0] || !toolsB[0]) {
+        if (lang !== 'en') { load('en'); return; }
+        document.getElementById('cmpResult').innerHTML = '<div class="cmp-loading">Content not found.</div>';
+        return;
+      }
+      render(toolsA[0], toolsB[0], rA, rB);
+    }).catch(function() {
+      document.getElementById('cmpResult').innerHTML = '<div class="cmp-loading">Failed to load.</div>';
+    });
   }
 
   load(LANG);
