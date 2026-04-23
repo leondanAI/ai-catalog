@@ -24,32 +24,28 @@
 <link rel="alternate" hreflang="ua" href="https://www.mypedia.ai/ua/compare/kling-vs-runway.html">
 <link rel="alternate" hreflang="he" href="https://www.mypedia.ai/he/compare/kling-vs-runway.html">
 <style>
-.cmp-wrap{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem}
+.cmp-wrap{max-width:900px;margin:0 auto;padding:2rem 1.5rem 4rem}
 .cmp-hero{text-align:center;margin-bottom:2.5rem}
-.cmp-hero h1{font-family:var(--font-display);font-size:clamp(24px,4vw,38px);font-weight:700;margin-bottom:1rem}
+.cmp-hero h1{font-family:var(--font-display);font-size:clamp(24px,4vw,38px);font-weight:700;margin-bottom:.75rem}
 .cmp-hero p{font-size:15px;color:var(--text2);line-height:1.75;max-width:640px;margin:0 auto}
-.cmp-table{width:100%;border-collapse:collapse;margin-bottom:2.5rem;font-size:14px}
-.cmp-table th{background:var(--bg3);color:var(--text);font-family:var(--font-display);font-weight:600;padding:12px 16px;text-align:left;border-bottom:1px solid var(--border2)}
-.cmp-table td{padding:11px 16px;border-bottom:1px solid var(--border);color:var(--text2);vertical-align:top}
-.cmp-table tr:hover td{background:var(--bg2)}
-.cmp-table td:first-child{color:var(--text3);font-size:13px;width:30%}
-.best-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:2.5rem}
-.best-box{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem}
-.best-box h3{font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:.875rem;color:var(--accent)}
-.best-box ul{list-style:none;display:flex;flex-direction:column;gap:8px;padding:0;margin:0}
-.best-box li{font-size:13px;color:var(--text2);line-height:1.5;padding-left:1.25rem;position:relative}
-.best-box li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
-.verdict{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--radius);padding:1.5rem;margin-bottom:2.5rem}
-.verdict h2{font-family:var(--font-display);font-size:18px;font-weight:600;margin-bottom:1rem}
-.verdict-row{display:flex;flex-direction:column;gap:8px}
-.verdict-item{font-size:14px;color:var(--text2);line-height:1.6}
-.verdict-item strong{color:var(--text);font-family:var(--font-display)}
-.cmp-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
-.cmp-link{display:inline-flex;align-items:center;gap:6px;background:var(--bg3);border:1px solid var(--border2);border-radius:10px;padding:10px 20px;font-size:13px;color:var(--text2);transition:color .15s,border-color .15s}
-.cmp-link:hover{color:var(--text);border-color:var(--accent)}
-.section-label{font-family:var(--font-display);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--text3);margin-bottom:.75rem}
+.cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:2rem}
+.cmp-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem}
+.cmp-card-header{display:flex;align-items:center;gap:12px;margin-bottom:1.25rem}
+.cmp-card-avatar{width:48px;height:48px;border-radius:12px;overflow:hidden;flex-shrink:0;background:#fff;display:flex;align-items:center;justify-content:center}
+.cmp-card-avatar img{width:100%;height:100%;object-fit:contain}
+.cmp-card-name{font-family:var(--font-display);font-size:18px;font-weight:700}
+.cmp-card-price{font-size:12px;color:var(--text3);margin-top:2px}
+.cmp-section-title{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--text3);margin-bottom:.625rem;font-family:var(--font-display)}
+.cmp-desc{font-size:13px;color:var(--text2);line-height:1.65;margin-bottom:1.25rem}
+.cmp-best{font-size:13px;color:var(--accent);margin-bottom:1.25rem;line-height:1.5}
+.pc-list{list-style:none;padding:0;margin:0 0 1rem;display:flex;flex-direction:column;gap:7px}
+.pc-list li{font-size:13px;color:var(--text2);line-height:1.5;padding-left:1.25rem;position:relative}
+.pc-pros li::before{content:"✅";position:absolute;left:0;font-size:11px;top:1px}
+.pc-cons li::before{content:"❌";position:absolute;left:0;font-size:11px;top:1px}
+.cmp-visit{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;border-radius:8px;padding:9px 18px;font-size:13px;font-weight:600;font-family:var(--font-display);transition:background .15s;margin-top:.5rem}
+.cmp-visit:hover{background:var(--accent2)}
 .cmp-loading{text-align:center;padding:4rem;color:var(--text3);font-size:15px}
-@media(max-width:600px){.best-grid{grid-template-columns:1fr}.cmp-table td:first-child{width:40%}}
+@media(max-width:620px){.cmp-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -80,8 +76,15 @@
   </nav>
 </header>
 
-<div class="cmp-wrap" id="cmpWrap">
-  <div class="cmp-loading">Loading…</div>
+<div class="cmp-wrap">
+  <div class="cmp-hero">
+    <h1 id="cmpTitle">Loading…</h1>
+    <p id="cmpIntro"></p>
+  </div>
+  <div class="cmp-grid" id="cmpGrid">
+    <div class="cmp-loading">Loading…</div>
+    <div></div>
+  </div>
 </div>
 
 <footer class="site-footer">
@@ -120,70 +123,64 @@
 <script src="/js/main.js"></script>
 <script>
 (function() {
-  var SB  = 'https://lbjdwkvkkndvofysyssy.supabase.co';
-  var KEY = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG';
-  var SLUG = 'kling-vs-runway';
+  var SB   = 'https://lbjdwkvkkndvofysyssy.supabase.co';
+  var KEY  = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG';
   var LANG = 'es';
+  var SLUG_A = 'kling-ai';
+  var SLUG_B = 'runway';
 
   function esc(s) {
     return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   }
 
-  function render(d) {
-    // Update page title and meta
-    document.getElementById('pageTitle').textContent = d.title || (d.tool_a + ' vs ' + d.tool_b);
-    var md = document.getElementById('pageDesc');
-    if (md) md.setAttribute('content', d.meta_desc || '');
-
-    var tableRows = (d.table_data || []).map(function(r) {
-      return '<tr><td>' + esc(r[0]) + '</td><td>' + esc(r[1]) + '</td><td>' + esc(r[2]) + '</td></tr>';
-    }).join('');
-
-    var bestA = (d.best_a || []).map(function(b) { return '<li>' + esc(b) + '</li>'; }).join('');
-    var bestB = (d.best_b || []).map(function(b) { return '<li>' + esc(b) + '</li>'; }).join('');
-
-    var toolBase = LANG === 'en' ? '' : '/' + LANG;
-
-    document.getElementById('cmpWrap').innerHTML =
-      '<div class="cmp-hero">' +
-        '<h1>' + esc(d.tool_a) + ' vs ' + esc(d.tool_b) + '</h1>' +
-        '<p>' + esc(d.intro) + '</p>' +
+  function renderCard(t, base) {
+    var pros = (t.pros||[]).map(function(p){return '<li>'+esc(p)+'</li>';}).join('');
+    var cons = (t.cons||[]).map(function(c){return '<li>'+esc(c)+'</li>';}).join('');
+    var price = t.price ? '<div class="cmp-card-price">'+esc(t.price)+'</div>' : '';
+    var best  = t.best_for ? '<div class="cmp-section-title">Best for</div><div class="cmp-best">'+esc(t.best_for)+'</div>' : '';
+    var desc  = t.description ? '<div class="cmp-section-title">About</div><div class="cmp-desc">'+esc(t.description)+'</div>' : '';
+    var prosHtml = pros ? '<div class="cmp-section-title">Pros</div><ul class="pc-list pc-pros">'+pros+'</ul>' : '';
+    var consHtml = cons ? '<div class="cmp-section-title">Cons</div><ul class="pc-list pc-cons">'+cons+'</ul>' : '';
+    var domain = t.url ? t.url.replace(/https?:\/\//,'').split('/')[0] : '';
+    var avatar = domain ? '<img src="https://www.google.com/s2/favicons?domain='+domain+'&sz=64" alt="'+esc(t.name)+'">' : '';
+    var visitUrl = t.url || '#';
+    var toolLink = base + '/tools/' + esc(t.slug) + '.html';
+    return '<div class="cmp-card">' +
+      '<div class="cmp-card-header">' +
+        '<div class="cmp-card-avatar">'+avatar+'</div>' +
+        '<div><div class="cmp-card-name">'+esc(t.name)+'</div>'+price+'</div>' +
       '</div>' +
-      '<div class="section-label">Features</div>' +
-      '<table class="cmp-table"><thead><tr><th>Feature</th><th>' + esc(d.tool_a) + '</th><th>' + esc(d.tool_b) + '</th></tr></thead>' +
-      '<tbody>' + tableRows + '</tbody></table>' +
-      '<div class="section-label">Best for</div>' +
-      '<div class="best-grid">' +
-        '<div class="best-box"><h3>Best for ' + esc(d.tool_a) + '</h3><ul>' + bestA + '</ul></div>' +
-        '<div class="best-box"><h3>Best for ' + esc(d.tool_b) + '</h3><ul>' + bestB + '</ul></div>' +
-      '</div>' +
-      '<div class="verdict"><h2>Verdict</h2><div class="verdict-row">' +
-        '<div class="verdict-item"><strong>Choose ' + esc(d.tool_a) + '</strong> — ' + esc(d.verdict_a) + '</div>' +
-        '<div class="verdict-item"><strong>Choose ' + esc(d.tool_b) + '</strong> — ' + esc(d.verdict_b) + '</div>' +
-      '</div></div>' +
-      '<div class="cmp-links">' +
-        '<a class="cmp-link" href="' + toolBase + '/tools/' + esc(d.tool_a_slug) + '.html">Read full ' + esc(d.tool_a) + ' review →</a>' +
-        '<a class="cmp-link" href="' + toolBase + '/tools/' + esc(d.tool_b_slug) + '.html">Read full ' + esc(d.tool_b) + ' review →</a>' +
-      '</div>';
+      desc + best + prosHtml + consHtml +
+      '<a class="cmp-visit" href="'+esc(visitUrl)+'" target="_blank" rel="noopener">Visit '+esc(t.name)+' →</a>' +
+      '<br><a href="'+esc(toolLink)+'" style="font-size:12px;color:var(--text3);margin-top:8px;display:inline-block">Full review →</a>' +
+    '</div>';
   }
 
-  fetch(SB + '/rest/v1/comparisons?slug=eq.' + SLUG + '&lang=eq.' + LANG,
-    {headers: {apikey: KEY, Authorization: 'Bearer ' + KEY}})
-    .then(function(r) { return r.json(); })
-    .then(function(rows) {
-      if (rows && rows[0]) {
-        render(rows[0]);
-      } else {
-        // Fallback to English if lang not found
-        fetch(SB + '/rest/v1/comparisons?slug=eq.' + SLUG + '&lang=eq.en',
-          {headers: {apikey: KEY, Authorization: 'Bearer ' + KEY}})
-          .then(function(r) { return r.json(); })
-          .then(function(rows2) { if (rows2 && rows2[0]) render(rows2[0]); });
-      }
-    })
-    .catch(function(e) {
-      document.getElementById('cmpWrap').innerHTML = '<div class="cmp-loading">Failed to load content.</div>';
-    });
+  function load(lang) {
+    var base = lang === 'en' ? '' : '/' + lang;
+    var url = SB + '/rest/v1/tools?slug=in.('+SLUG_A+','+SLUG_B+')&lang=eq.'+lang+'&select=slug,name,description,best_for,pros,cons,price,url';
+    fetch(url, {headers:{apikey:KEY,Authorization:'Bearer '+KEY}})
+      .then(function(r){return r.json();})
+      .then(function(rows){
+        if (!rows || rows.length < 2) {
+          // fallback to English
+          if (lang !== 'en') { load('en'); return; }
+          document.getElementById('cmpGrid').innerHTML = '<div class="cmp-loading">Content not found.</div><div></div>';
+          return;
+        }
+        var a = rows.find(function(r){return r.slug===SLUG_A;}) || rows[0];
+        var b = rows.find(function(r){return r.slug===SLUG_B;}) || rows[1];
+        document.getElementById('cmpTitle').textContent = a.name + ' vs ' + b.name;
+        document.getElementById('pageTitle').textContent = a.name + ' vs ' + b.name + ' 2026 — Comparison | MyPedia';
+        document.getElementById('cmpIntro').textContent = '';
+        document.getElementById('cmpGrid').innerHTML = renderCard(a, base) + renderCard(b, base);
+      })
+      .catch(function(){
+        document.getElementById('cmpGrid').innerHTML = '<div class="cmp-loading">Failed to load.</div><div></div>';
+      });
+  }
+
+  load(LANG);
 })();
 </script>
 </body>
