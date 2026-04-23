@@ -29,6 +29,9 @@ const CATEGORIES = [
       { name:'Character.AI', desc:'Platform for creating and chatting with AI characters. 200M+ users for roleplay, storytelling and entertainment.', url:'https://character.ai', aff:'https://character.ai?ref=aiportal', badge:'freemium', bestFor:'AI character chat, roleplay, creative writing', users:'200M+',
         pros:['200M+ users and millions of community-built characters — largest roleplay AI library available','Characters maintain persona and memory across long conversations without breaking character','Completely free with unlimited chat — no message limits on standard tier'],
         cons:['Not suitable for factual research or professional tasks — optimised for entertainment only','Content moderation inconsistent — some inappropriate characters reach the public library'] },
+      { name:'Mistral Le Chat', desc:'AI assistant by Mistral AI — the leading European AI lab. Multilingual, fast, with web search and canvas. Open-weight models behind the scenes.', url:'https://chat.mistral.ai', aff:'https://chat.mistral.ai?ref=aiportal', badge:'freemium', bestFor:'Multilingual chat, European AI, open-weight models', users:'5M+',
+        pros:['Best-in-class multilingual support — particularly strong in European languages','Built on open-weight models (Mistral Large, Codestral) — transparency and reproducibility','Fast inference with web search and canvas — competitive with ChatGPT and Gemini'],
+        cons:['Smaller plugin/integration ecosystem compared to ChatGPT or Gemini','Brand recognition lower outside Europe — community and third-party tooling still catching up'] },
     ]
   },
   {
@@ -55,6 +58,9 @@ const CATEGORIES = [
       { name:'Manus', desc:'Autonomous AI agent from Monica team. Give it a complex goal — it browses the web, writes code, manages files and delivers a finished result independently.', url:'https://manus.im', aff:'https://manus.im?ref=aiportal', badge:'freemium', bestFor:'Autonomous tasks, research, coding, web agents', users:'1M+',
         pros:['Completes complex multi-step tasks end-to-end with minimal human input — highest task completion rate of any public agent','Real-time activity feed shows every action the agent takes — full transparency and control','Sandboxed virtual environment keeps all agent actions isolated and reversible'],
         cons:['Free tier credits run out quickly for intensive research or coding tasks','Complex tasks with many steps can take 10–30 minutes — not suitable for time-sensitive work'] },
+      { name:'Devin', desc:'World\'s first AI software engineer by Cognition. Autonomously plans, codes, debugs and deploys full features from a single prompt.', url:'https://cognition.ai/devin', aff:'https://cognition.ai/devin?ref=aiportal', badge:'paid', bestFor:'Autonomous coding, full-stack development, debugging', users:null,
+        pros:['Handles entire software tasks end-to-end — from planning to deployment autonomously','Real terminal, browser, and code editor in a sandboxed environment — works like a human developer','Can learn new technologies and APIs on the fly by reading documentation'],
+        cons:['Limited access — waitlist and paid team plans only','Complex tasks can be slow (30+ min) and sometimes require human course-correction'] },
     ]
   },
   {
@@ -81,6 +87,12 @@ const CATEGORIES = [
       { name:'Claude Code', desc:'Anthropic\'s CLI agent — the leading AI dev tool in 2026. Full cycle: code, tests, refactor in terminal.', url:'https://claude.ai/code', aff:'https://claude.ai/code?ref=aiportal', badge:'paid', bestFor:'Terminal, complex agentic tasks', users:'200K+',
         pros:['Best at complex, long-context development tasks — entire repo in context','Terminal-native — works in any environment without IDE plugin','Handles complete feature cycles: design, code, tests, refactor autonomously'],
         cons:['Paid only — requires active Anthropic API credits','Requires comfort with terminal-based workflow'] },
+      { name:'Phind', desc:'AI search engine built for developers. Answers coding questions with real-time web sources, code examples and explanations.', url:'https://phind.com', aff:'https://phind.com?ref=aiportal', badge:'freemium', bestFor:'Developer search, code answers, technical Q&A', users:'2M+',
+        pros:['Purpose-built for developers — understands code context and technical questions better than general search','Cites real-time sources — Stack Overflow, docs, GitHub — with inline code examples','Free tier is generous — most developer queries answered without payment'],
+        cons:['Less capable for non-programming queries — not a general-purpose assistant','Can hallucinate library names or API methods on newer or niche frameworks'] },
+      { name:'Continue.dev', desc:'Open-source AI code assistant that works in VS Code and JetBrains. Connect any LLM — local or cloud — as your copilot.', url:'https://continue.dev', aff:'https://continue.dev?ref=aiportal', badge:'free', bestFor:'Open-source copilot, VS Code, JetBrains, local LLMs', users:'500K+',
+        pros:['Fully open-source — inspect, modify and self-host with complete transparency','Connect any model: GPT-4, Claude, Llama, local Ollama — total flexibility','Works in both VS Code and JetBrains IDEs with autocomplete, chat and edit modes'],
+        cons:['Requires configuration to set up models — not plug-and-play like Copilot','Quality depends entirely on which LLM you connect — no proprietary model advantage'] },
     ]
   },
   {
@@ -160,6 +172,9 @@ const CATEGORIES = [
       { name:'Recraft AI', desc:'AI that generates scalable SVG vector graphics and icons. 30 free daily credits, commercial use allowed.', url:'https://recraft.ai', aff:'https://recraft.ai?ref=aiportal', badge:'freemium', bestFor:'SVG icons, vector art, brand assets', users:'500K+',
         pros:['Only AI tool that generates true SVG vector graphics — infinitely scalable','30 free raster credits daily, commercial use allowed','Perfect for brand assets: icons, illustrations, logos'],
         cons:['SVG export requires paid subscription','Specialized tool — not useful for photorealistic image generation'] },
+      { name:'Krea AI', desc:'Real-time AI image generation — see results update live as you type or sketch. Instant creative exploration with AI canvas and video tools.', url:'https://krea.ai', aff:'https://krea.ai?ref=aiportal', badge:'freemium', bestFor:'Real-time generation, AI canvas, live editing', users:'2M+',
+        pros:['Real-time generation — image updates live as you type or sketch on canvas','AI canvas lets you compose, move and transform elements with instant AI regeneration','Supports image, video and 3D — broad creative toolkit in one place'],
+        cons:['Real-time mode quality is lower than batch-generation tools like Midjourney','Free plan limited to low-resolution outputs and fewer daily credits'] },
     ]
   },
   {
@@ -189,6 +204,9 @@ const CATEGORIES = [
       { name:'Luma AI', desc:'Luma Dream Machine generates cinematic AI video and photorealistic 3D scenes from text or images. Ray2 model leads on realism.', url:'https://lumalabs.ai', aff:'https://lumalabs.ai?ref=aiportal', badge:'freemium', bestFor:'Realistic video, 3D scenes, Dream Machine', users:'5M+',
         pros:['Ray2 model delivers the most photorealistic material rendering of any AI video tool','30 free generations per month with no watermark — most generous free tier in AI video','3D Capture app turns iPhone scans into production-ready Blender, Unity or Unreal assets'],
         cons:['Maximum 5-second clip length on standard plan — not suitable for longer narratives','Weaker on human characters and facial expressions compared to Kling or Runway'] },
+      { name:'Synthesia', desc:'Create professional AI videos with 140+ lifelike avatars in 120+ languages. No camera, mic or actors needed. Trusted by 50K+ companies.', url:'https://synthesia.io', aff:'https://synthesia.io?ref=aiportal', badge:'paid', bestFor:'Corporate video, training, multilingual presenters', users:'50K+ companies',
+        pros:['140+ diverse AI avatars with lifelike lip-sync — most realistic talking heads in the market','120+ languages with native-quality voiceovers — one video, global distribution','Enterprise-ready: SSO, brand kits, collaboration, API — trusted by Xerox, Reuters, Zoom'],
+        cons:['Starts at $22/month — no free plan, only a free demo video','Avatar-based format limits creative flexibility — not for cinematic or artistic video'] },
     ]
   },
   {
@@ -250,6 +268,9 @@ const CATEGORIES = [
       { name:'Descript', desc:'Edit podcasts and video like a text document. Automatically removes filler words and pauses.', url:'https://descript.com', aff:'https://descript.com?ref=aiportal', badge:'freemium', bestFor:'Podcasts, text-based video editing', users:'500K+',
         pros:['Unique text-based editing — cut audio/video by editing the transcript','Removes filler words ("um", "uh", "like") and long pauses automatically','Screen recording and podcast publishing built into one tool'],
         cons:['$12/month for Hobbyist plan after free tier','Can introduce audio artifacts when splicing out words or sentences'] },
+      { name:'PlayHT', desc:'Ultra-realistic AI voice cloning and text-to-speech. 900+ voices, 142 languages. Instant voice clone from 30 seconds of audio.', url:'https://play.ht', aff:'https://play.ht?ref=aiportal', badge:'freemium', bestFor:'Voice cloning, text-to-speech, audiobook narration', users:'1M+',
+        pros:['Ultra-realistic voices with PlayHT 3.0 model — rivals ElevenLabs quality','Clone any voice from just 30 seconds of audio — instant and accurate','900+ stock voices across 142 languages with emotion and style control'],
+        cons:['Free plan limited to 2,500 characters/month — very restrictive','API pricing can be expensive at scale for commercial applications'] },
     ]
   },
   {
@@ -273,6 +294,9 @@ const CATEGORIES = [
       { name:'Reclaim.ai', desc:'AI that automatically plans your calendar and protects deep-work time from meetings.', url:'https://reclaim.ai', aff:'https://reclaim.ai?ref=aiportal', badge:'freemium', bestFor:'Time management, calendar AI', users:'500K+',
         pros:['Automatically schedules focus blocks and defends them from meeting invites','Habit scheduling keeps recurring tasks visible and time-boxed on your calendar','Learns your preferences and adjusts scheduling over time'],
         cons:['Google Calendar only — no Outlook or iCal support on free plan','AI scheduling suggestions can feel rigid for people with unpredictable schedules'] },
+      { name:'Motion', desc:'AI-powered project manager and calendar. Automatically prioritizes, schedules and reschedules your tasks based on deadlines and energy.', url:'https://usemotion.com', aff:'https://usemotion.com?ref=aiportal', badge:'paid', bestFor:'Auto-scheduling, task management, calendar AI', users:'1M+',
+        pros:['Automatically builds your daily schedule from tasks, deadlines and priorities — no manual planning','Reschedules everything dynamically when meetings change or tasks slip','Combines project management, calendar and task list into one AI-driven app'],
+        cons:['$19/month with no free plan — expensive for individual users','Learning curve: you must trust the AI scheduler and resist manual overrides'] },
     ]
   },
   {
@@ -296,6 +320,9 @@ const CATEGORIES = [
       { name:'Consensus', desc:'Search across scientific papers. Shows the scientific consensus on any question with percentages.', url:'https://consensus.app', aff:'https://consensus.app?ref=aiportal', badge:'freemium', bestFor:'Scientific consensus, fact-checking', users:'200K+',
         pros:['Unique consensus scoring — shows what percentage of studies agree on a claim','Answers yes/no research questions by analyzing 100+ papers simultaneously','Free for basic use with no account required'],
         cons:['Only covers peer-reviewed research — misses newer preprints and grey literature','Consensus scores can be misleading on actively contested scientific topics'] },
+      { name:'Scite', desc:'AI citation analysis — see how any paper has been cited: supported, contrasted or mentioned. Smart Citations for deeper research.', url:'https://scite.ai', aff:'https://scite.ai?ref=aiportal', badge:'freemium', bestFor:'Citation analysis, literature review, research quality', users:'1M+',
+        pros:['Smart Citations show context: whether a paper was supported, contrasted or just mentioned','1.2B+ citation statements indexed — deepest citation context database available','AI assistant answers research questions with citation-backed evidence'],
+        cons:['Full Smart Citations require paid subscription ($20/month)','Focused on citation analysis — less useful for initial topic discovery'] },
     ]
   },
   {
@@ -322,6 +349,9 @@ const CATEGORIES = [
       { name:'Obviously AI', desc:'Predictive analytics without code. Build ML models and get forecasts in minutes.', url:'https://obviously.ai', aff:'https://obviously.ai?ref=aiportal', badge:'paid', bestFor:'Forecasting, no-code ML', users:'50K+',
         pros:['Fastest no-code ML — predictive model from CSV in under 5 minutes','Automated feature selection and model comparison across multiple algorithms','Results explained in plain English for non-technical stakeholders'],
         cons:['Most expensive no-code ML option on the market','Black-box models — limited control or transparency over the training process'] },
+      { name:'Retool AI', desc:'Build internal AI-powered apps and dashboards in hours. Connect any database, API or LLM — deploy to your team instantly.', url:'https://retool.com', aff:'https://retool.com?ref=aiportal', badge:'freemium', bestFor:'Internal tools, AI dashboards, enterprise apps', users:'500K+',
+        pros:['Fastest way to build internal AI tools — drag-and-drop with 100+ integrations','Native AI components: chat, vector search, workflow automation built-in','Self-hosted option available — full data control for enterprise compliance'],
+        cons:['Free tier limited to 5 users and 5 apps — quickly outgrown by growing teams','UI components optimised for internal use — not suitable for customer-facing products'] },
     ]
   },
   {

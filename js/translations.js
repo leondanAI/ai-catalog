@@ -1461,6 +1461,106 @@ const TOOL_TRANSLATIONS = {
     he: 'הופך PDF, סרטוני YouTube והרצאות להערות, חידונים וצ\'אט לימוד אינטראקטיבי. נתמך על ידי Y Combinator. תוכנית חינמית זמינה. 2 מיליון+ משתמשים.',
   },
 
+  'Mistral Le Chat': {
+    ru: 'ИИ-ассистент от Mistral AI — ведущей европейской лаборатории. Мультиязычный, быстрый, с поиском и canvas. Open-weight модели.',
+    es: 'Asistente de IA de Mistral AI — el laboratorio europeo líder. Multilingüe, rápido, con búsqueda web y canvas. Modelos open-weight.',
+    fr: 'Assistant IA de Mistral AI — le laboratoire européen leader. Multilingue, rapide, avec recherche web et canvas. Modèles open-weight.',
+    de: 'KI-Assistent von Mistral AI — dem führenden europäischen Labor. Mehrsprachig, schnell, mit Websuche und Canvas. Open-Weight-Modelle.',
+    pt: 'Assistente de IA da Mistral AI — o laboratório europeu líder. Multilíngue, rápido, com busca web e canvas. Modelos open-weight.',
+    ua: 'ІІ-асистент від Mistral AI — провідної європейської лабораторії. Мультимовний, швидкий, з пошуком і canvas. Open-weight моделі.',
+    he: 'עוזר AI של Mistral AI — המעבדה האירופית המובילה. רב-לשוני, מהיר, עם חיפוש ו-canvas. מודלים open-weight.',
+  },
+
+  'Devin': {
+    ru: 'Первый в мире ИИ-инженер от Cognition. Автономно планирует, кодит, дебажит и деплоит фичи по одному промпту.',
+    es: 'El primer ingeniero de software IA del mundo por Cognition. Planifica, codifica, depura y despliega funciones de forma autónoma.',
+    fr: 'Le premier ingénieur logiciel IA au monde par Cognition. Planifie, code, débogue et déploie des fonctionnalités de manière autonome.',
+    de: 'Der weltweit erste KI-Software-Ingenieur von Cognition. Plant, programmiert, debuggt und deployt Features autonom.',
+    pt: 'O primeiro engenheiro de software IA do mundo pela Cognition. Planeja, codifica, depura e implanta funcionalidades de forma autônoma.',
+    ua: 'Перший у світі ІІ-інженер від Cognition. Автономно планує, кодить, дебажить і деплоїть фічі за одним промптом.',
+    he: 'מהנדס התוכנה הראשון בעולם מבוסס AI מבית Cognition. מתכנן, מקודד, מדבג ומפרסם פיצ\'רים באופן אוטונומי.',
+  },
+
+  'Phind': {
+    ru: 'ИИ-поисковик для разработчиков. Отвечает на вопросы по коду с реальными источниками, примерами и объяснениями.',
+    es: 'Motor de búsqueda IA para desarrolladores. Responde preguntas de código con fuentes reales, ejemplos y explicaciones.',
+    fr: 'Moteur de recherche IA pour développeurs. Répond aux questions de code avec des sources réelles, des exemples et des explications.',
+    de: 'KI-Suchmaschine für Entwickler. Beantwortet Code-Fragen mit realen Quellen, Beispielen und Erklärungen.',
+    pt: 'Motor de busca IA para desenvolvedores. Responde perguntas de código com fontes reais, exemplos e explicações.',
+    ua: 'ІІ-пошуковик для розробників. Відповідає на питання по коду з реальними джерелами, прикладами та поясненнями.',
+    he: 'מנוע חיפוש AI למפתחים. עונה על שאלות קוד עם מקורות אמיתיים, דוגמאות קוד והסברים.',
+  },
+
+  'Continue.dev': {
+    ru: 'Open-source ИИ-ассистент для кода в VS Code и JetBrains. Подключайте любую LLM — локальную или облачную.',
+    es: 'Asistente de código IA de código abierto para VS Code y JetBrains. Conecta cualquier LLM — local o en la nube.',
+    fr: 'Assistant de code IA open-source pour VS Code et JetBrains. Connectez n\'importe quel LLM — local ou cloud.',
+    de: 'Open-Source-KI-Code-Assistent für VS Code und JetBrains. Verbinden Sie jedes LLM — lokal oder Cloud.',
+    pt: 'Assistente de código IA de código aberto para VS Code e JetBrains. Conecte qualquer LLM — local ou na nuvem.',
+    ua: 'Open-source ІІ-асистент для коду у VS Code та JetBrains. Підключайте будь-яку LLM — локальну або хмарну.',
+    he: 'עוזר קוד AI בקוד פתוח ל-VS Code ו-JetBrains. חברו כל LLM — מקומי או ענן.',
+  },
+
+  'Krea AI': {
+    ru: 'Генерация изображений в реальном времени — результат обновляется по мере ввода текста или рисования. AI-холст и видеоинструменты.',
+    es: 'Generación de imágenes en tiempo real — los resultados se actualizan mientras escribes o dibujas. Canvas IA y herramientas de video.',
+    fr: 'Génération d\'images en temps réel — les résultats se mettent à jour en tapant ou en dessinant. Canvas IA et outils vidéo.',
+    de: 'Echtzeit-Bildgenerierung — Ergebnisse aktualisieren sich beim Tippen oder Zeichnen. KI-Canvas und Video-Tools.',
+    pt: 'Geração de imagens em tempo real — resultados atualizam enquanto você digita ou desenha. Canvas IA e ferramentas de vídeo.',
+    ua: 'Генерація зображень у реальному часі — результат оновлюється під час введення тексту або малювання. AI-полотно та відеоінструменти.',
+    he: 'יצירת תמונות בזמן אמת — התוצאות מתעדכנות תוך כדי הקלדה או ציור. קנבס AI וכלי וידאו.',
+  },
+
+  'Synthesia': {
+    ru: 'Создание профессиональных ИИ-видео со 140+ аватарами на 120+ языках. Без камеры, микрофона и актёров. 50K+ компаний.',
+    es: 'Crea videos profesionales con 140+ avatares IA en 120+ idiomas. Sin cámara, micrófono ni actores. 50K+ empresas.',
+    fr: 'Créez des vidéos professionnelles avec 140+ avatars IA en 120+ langues. Sans caméra, micro ni acteurs. 50K+ entreprises.',
+    de: 'Erstellen Sie professionelle KI-Videos mit 140+ Avataren in 120+ Sprachen. Keine Kamera, kein Mikrofon. 50K+ Unternehmen.',
+    pt: 'Crie vídeos profissionais com 140+ avatares IA em 120+ idiomas. Sem câmera, microfone ou atores. 50K+ empresas.',
+    ua: 'Створення професійних ІІ-відео зі 140+ аватарами 120+ мовами. Без камери, мікрофона та акторів. 50K+ компаній.',
+    he: 'צרו סרטונים מקצועיים עם 140+ אווטרים AI ב-120+ שפות. בלי מצלמה, מיקרופון או שחקנים. 50K+ חברות.',
+  },
+
+  'PlayHT': {
+    ru: 'Ультрареалистичное клонирование голоса и озвучка текста. 900+ голосов, 142 языка. Мгновенный клон голоса по 30 секундам аудио.',
+    es: 'Clonación de voz ultra-realista y texto a voz. 900+ voces, 142 idiomas. Clonación instantánea desde 30 segundos de audio.',
+    fr: 'Clonage vocal ultra-réaliste et synthèse vocale. 900+ voix, 142 langues. Clonage instantané à partir de 30 secondes d\'audio.',
+    de: 'Ultra-realistisches Stimmenklonen und Text-to-Speech. 900+ Stimmen, 142 Sprachen. Sofortiges Klonen aus 30 Sekunden Audio.',
+    pt: 'Clonagem de voz ultra-realista e texto para fala. 900+ vozes, 142 idiomas. Clone instantâneo a partir de 30 segundos de áudio.',
+    ua: 'Ультрареалістичне клонування голосу та озвучка тексту. 900+ голосів, 142 мови. Миттєвий клон голосу за 30 секунд аудіо.',
+    he: 'שיבוט קול אולטרה-ריאליסטי וטקסט לדיבור. 900+ קולות, 142 שפות. שיבוט מיידי מ-30 שניות אודיו.',
+  },
+
+  'Motion': {
+    ru: 'ИИ-планировщик и менеджер проектов. Автоматически расставляет приоритеты, планирует и переносит задачи по дедлайнам.',
+    es: 'Gestor de proyectos y calendario con IA. Prioriza, programa y reprograma tareas automáticamente según plazos.',
+    fr: 'Gestionnaire de projets et calendrier IA. Priorise, planifie et reprogramme automatiquement vos tâches selon les deadlines.',
+    de: 'KI-Projektmanager und Kalender. Priorisiert, plant und verschiebt Aufgaben automatisch nach Deadlines.',
+    pt: 'Gerenciador de projetos e calendário com IA. Prioriza, agenda e reagenda tarefas automaticamente por prazo.',
+    ua: 'ІІ-планувальник і менеджер проєктів. Автоматично розставляє пріоритети, планує і переносить завдання за дедлайнами.',
+    he: 'מנהל פרויקטים ולוח שנה עם AI. מתעדף, מתזמן ומתזמן מחדש משימות אוטומטית לפי דדליינים.',
+  },
+
+  'Retool AI': {
+    ru: 'Создавайте внутренние ИИ-приложения и дашборды за часы. Подключайте любую базу данных, API или LLM — деплой для команды мгновенно.',
+    es: 'Construye apps internas con IA y dashboards en horas. Conecta cualquier base de datos, API o LLM — despliega al instante.',
+    fr: 'Construisez des apps internes IA et des tableaux de bord en heures. Connectez n\'importe quelle base, API ou LLM — déployez instantanément.',
+    de: 'Erstellen Sie interne KI-Apps und Dashboards in Stunden. Verbinden Sie jede Datenbank, API oder LLM — sofortiges Deployment.',
+    pt: 'Construa apps internas com IA e dashboards em horas. Conecte qualquer banco de dados, API ou LLM — deploy instantâneo.',
+    ua: 'Створюйте внутрішні ІІ-додатки та дашборди за години. Підключайте будь-яку базу, API або LLM — деплой для команди миттєво.',
+    he: 'בנו אפליקציות פנימיות עם AI ודשבורדים בשעות. חברו כל בסיס נתונים, API או LLM — פריסה מיידית.',
+  },
+
+  'Scite': {
+    ru: 'ИИ-анализ цитирований — смотрите, как статья была процитирована: подтверждена, оспорена или упомянута. Smart Citations для глубокого исследования.',
+    es: 'Análisis de citas con IA — ve cómo un artículo fue citado: apoyado, contrastado o mencionado. Smart Citations para investigación profunda.',
+    fr: 'Analyse de citations IA — voyez comment un article a été cité : soutenu, contesté ou mentionné. Smart Citations pour la recherche approfondie.',
+    de: 'KI-Zitationsanalyse — sehen Sie, wie ein Paper zitiert wurde: bestätigt, widersprochen oder erwähnt. Smart Citations für tiefe Forschung.',
+    pt: 'Análise de citações com IA — veja como um artigo foi citado: apoiado, contrastado ou mencionado. Smart Citations para pesquisa profunda.',
+    ua: 'ІІ-аналіз цитувань — дивіться, як стаття була процитована: підтверджена, оспорена або згадана. Smart Citations для глибокого дослідження.',
+    he: 'ניתוח ציטוטים עם AI — ראו איך מאמר צוטט: נתמך, עורער או הוזכר. Smart Citations למחקר מעמיק.',
+  },
+
 };
 
 // ─── helper used by renderToolCard in data.js ────────────────────────────────
