@@ -365,6 +365,9 @@ textarea.form-input{{resize:vertical;min-height:90px}}
     <div class="pc-box pros"><div class="pc-title">{ui['pros']}</div><ul class="pc-list">{pros_html}</ul></div>
     <div class="pc-box cons"><div class="pc-title">{ui['cons']}</div><ul class="pc-list">{cons_html}</ul></div>
   </div>
+  <div style="text-align:center;margin:1.5rem 0">
+    <a class="btn-visit" href="{esc(url)}" target="_blank" rel="noopener">{ui['visit']} {esc(name)} →</a>
+  </div>
   <div class="section-title-sm">{ui['also']}</div>
   <div class="also-grid">{also_html}</div>
   <div class="comments-section">
