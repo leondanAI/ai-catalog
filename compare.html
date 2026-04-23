@@ -196,15 +196,18 @@ function listHtml(arr, color, icon) {
 
 async function fetchToolInfo(slug) {
   const lang = localStorage.getItem('lang') || 'en';
+  const hdrs = { apikey: SB_ANON, Authorization: `Bearer ${SB_ANON}` };
+  const sel = 'pros,cons,description,best_for,badge,url,domain,category,users';
   const [toolRes, ratingsRes] = await Promise.all([
-    fetch(`${SB_URL}/rest/v1/tools?slug=eq.${slug}&select=pros,cons,description,best_for,badge,url,domain,category,users`, {
-      headers: { apikey: SB_ANON, Authorization: `Bearer ${SB_ANON}` }
-    }),
-    fetch(`${SB_URL}/rest/v1/comments?tool_slug=eq.${slug}&approved=eq.true&select=rating`, {
-      headers: { apikey: SB_ANON, Authorization: `Bearer ${SB_ANON}` }
-    })
+    fetch(`${SB_URL}/rest/v1/tools?slug=eq.${slug}&lang=eq.${lang}&select=${sel}`, { headers: hdrs }),
+    fetch(`${SB_URL}/rest/v1/comments?tool_slug=eq.${slug}&approved=eq.true&select=rating`, { headers: hdrs })
   ]);
-  const tools   = await toolRes.json();
+  let tools = await toolRes.json();
+  // Fallback to English if no translation found
+  if (!tools.length && lang !== 'en') {
+    const fallback = await fetch(`${SB_URL}/rest/v1/tools?slug=eq.${slug}&lang=eq.en&select=${sel}`, { headers: hdrs });
+    tools = await fallback.json();
+  }
   const reviews = await ratingsRes.json();
   const dbTool  = tools[0] || {};
   const avgRating = reviews.length ? reviews.reduce((s,c) => s + c.rating, 0) / reviews.length : null;
