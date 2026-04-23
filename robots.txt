@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /directory.html?*
 
 Sitemap: https://www.mypedia.ai/sitemap.xml
