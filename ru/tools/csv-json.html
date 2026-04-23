@@ -184,5 +184,6 @@ function jsonToCsv() {
 function copyResult() { navigator.clipboard.writeText(document.getElementById('jsonOut').value); }
 function clearAll() { document.getElementById('csvIn').value=''; document.getElementById('jsonOut').value=''; clearErr(); }
 </script>
+<script>(function(){var SB="https://lbjdwkvkkndvofysyssy.supabase.co";var KEY="sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG";function updateToolHeader(lang){if(lang==="en")return;fetch(SB+"/rest/v1/toolbox?lang=eq."+lang+"&id=eq.csv-json",{headers:{apikey:KEY,Authorization:"Bearer "+KEY}}).then(function(r){return r.json();}).then(function(d){if(!d[0])return;var h=document.querySelector(".tool-head h1");var p=document.querySelector(".tool-head p");if(h&&d[0].title)h.textContent=d[0].title;if(p&&d[0].description)p.textContent=d[0].description;}).catch(function(){});}document.addEventListener("DOMContentLoaded",function(){updateToolHeader(localStorage.getItem("lang")||"en");});var _orig=window.onLangChange;window.onLangChange=function(){if(_orig)_orig();updateToolHeader(localStorage.getItem("lang")||"en");};})();</script>
 </body>
 </html>

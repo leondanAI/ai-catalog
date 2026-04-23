@@ -248,6 +248,37 @@ def generate_toolbox_pages(code):
                       f'<link rel="canonical" href="{BASE_URL}/{code}/tools/{slug}.html">', html)
         html = re.sub(r'<meta property="og:url"[^>]*>',
                       f'<meta property="og:url" content="{BASE_URL}/{code}/tools/{slug}.html">', html)
+        # Inject script to translate h1 and short description from toolbox DB
+        header_script = (
+            f'<script>'
+            f'(function(){{'
+            f'var SB="https://lbjdwkvkkndvofysyssy.supabase.co";'
+            f'var KEY="sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG";'
+            f'function updateToolHeader(lang){{'
+            f'if(lang==="en")return;'
+            f'fetch(SB+"/rest/v1/toolbox?lang=eq."+lang+"&id=eq.{slug}",'
+            f'{{headers:{{apikey:KEY,Authorization:"Bearer "+KEY}}}})'
+            f'.then(function(r){{return r.json();}})'
+            f'.then(function(d){{'
+            f'if(!d[0])return;'
+            f'var h=document.querySelector(".tool-head h1");'
+            f'var p=document.querySelector(".tool-head p");'
+            f'if(h&&d[0].title)h.textContent=d[0].title;'
+            f'if(p&&d[0].description)p.textContent=d[0].description;'
+            f'}}).catch(function(){{}});'
+            f'}}'
+            f'document.addEventListener("DOMContentLoaded",function(){{'
+            f'updateToolHeader(localStorage.getItem("lang")||"en");'
+            f'}});'
+            f'var _orig=window.onLangChange;'
+            f'window.onLangChange=function(){{'
+            f'if(_orig)_orig();'
+            f'updateToolHeader(localStorage.getItem("lang")||"en");'
+            f'}};'
+            f'}})();'
+            f'</script>\n'
+        )
+        html = html.replace('</body>', header_script + '</body>', 1)
         out_path = os.path.join(tools_dir, f'{slug}.html')
         with open(out_path, 'w') as f:
             f.write(html)
