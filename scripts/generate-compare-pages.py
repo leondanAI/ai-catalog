@@ -171,7 +171,7 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
   function renderCard(t, base) {{
     var pros = (t.pros||[]).map(function(p){{return '<li>'+esc(p)+'</li>';}}).join('');
     var cons = (t.cons||[]).map(function(c){{return '<li>'+esc(c)+'</li>';}}).join('');
-    var price = t.price ? '<div class="cmp-card-price">'+esc(t.price)+'</div>' : '';
+    var price = t.badge ? '<div class="cmp-card-price">'+esc(t.badge)+'</div>' : '';
     var best  = t.best_for ? '<div class="cmp-section-title">Best for</div><div class="cmp-best">'+esc(t.best_for)+'</div>' : '';
     var desc  = t.description ? '<div class="cmp-section-title">About</div><div class="cmp-desc">'+esc(t.description)+'</div>' : '';
     var prosHtml = pros ? '<div class="cmp-section-title">Pros</div><ul class="pc-list pc-pros">'+pros+'</ul>' : '';
@@ -193,7 +193,7 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
 
   function load(lang) {{
     var base = lang === 'en' ? '' : '/' + lang;
-    var url = SB + '/rest/v1/tools?slug=in.('+SLUG_A+','+SLUG_B+')&lang=eq.'+lang+'&select=slug,name,description,best_for,pros,cons,price,url';
+    var url = SB + '/rest/v1/tools?slug=in.('+SLUG_A+','+SLUG_B+')&lang=eq.'+lang+'&select=slug,name,description,best_for,pros,cons,badge,url';
     fetch(url, {{headers:{{apikey:KEY,Authorization:'Bearer '+KEY}}}})
       .then(function(r){{return r.json();}})
       .then(function(rows){{
