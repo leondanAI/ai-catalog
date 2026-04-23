@@ -189,7 +189,7 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
 
     t = trans.get(slug, {})
     best_for = t.get('best_for') or tool.get('best_for') or ''
-    desc     = t.get('description_long') or tool.get('description_long') or t.get('description') or tool.get('description') or ''
+    desc     = t.get('description_long') or t.get('description') or tool.get('description_long') or tool.get('description') or ''
     pros     = t.get('pros') or tool.get('pros') or []
     cons     = t.get('cons') or tool.get('cons') or []
 
