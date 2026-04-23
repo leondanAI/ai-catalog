@@ -218,9 +218,12 @@ const CATEGORIES = [
       { name:'Claude Design', desc:'Anthropic\'s AI design tool. Create slides, mockups and marketing materials from a conversation — with automatic brand consistency.', url:'https://www.anthropic.com/claude/design', aff:'https://www.anthropic.com/claude/design?ref=aiportal', badge:'freemium', bestFor:'AI slide decks, mockups, brand-consistent visuals', users:null,
         pros:['Automatic brand system generation from your existing codebase and design files — no manual setup','Available at no extra cost for Claude Pro, Max, Team and Enterprise subscribers','Real-time collaborative editing with comments that Claude acts on as instructions'],
         cons:['Currently in research preview — not yet available to all users','Requires existing Claude subscription — not a standalone tool'] },
-      { name:'UXPilot', desc:'AI UX designer that generates multi-screen app flows, wireframes and UI copy from a text brief. Covers the full product design process.', url:'https://uxpilot.ai', aff:'https://uxpilot.ai?ref=aiportal', badge:'freemium', bestFor:'UX design, screen generation, product wireframes', users:'200K+',
-        pros:['Generates complete multi-screen app flows from a single text prompt — not just one screen','Built-in UX research mode: personas, user journeys and problem statements on demand','Outputs Figma-compatible designs with proper component and layer structure'],
-        cons:['AI-generated screens need refinement before engineering handoff','Less fine-grained control than designing manually in Figma or Sketch'] },
+      { name:'UXPilot', desc:'Generate wireframes, hi-fi UI screens and production-ready code from a text prompt. Free plan included. Used by designers at Apple, Google, Spotify and Microsoft.', url:'https://uxpilot.ai', aff:'https://uxpilot.ai?ref=aiportal', badge:'freemium', bestFor:'Wireframes, UI generation, Figma export, design systems', users:'600K+',
+        pros:['Full design pipeline in one tool — from wireframe to hi-fi UI to exported code','Direct Figma integration and GitHub export — no copy-paste between tools','Supports design systems and templates for web and mobile out of the box'],
+        cons:['45 free credits go quickly on complex multi-screen flows','AI output needs designer review before handing off to engineers'] },
+      { name:'Google Stitch', desc:'⚡ Beta — AI canvas by Google Labs that generates UI designs and multi-screen prototypes from a text prompt or sketch. Exports to Figma and HTML/CSS. Powered by Gemini 2.5 Pro.', url:'https://stitch.withgoogle.com', aff:'https://stitch.withgoogle.com?ref=aiportal', badge:'free', bestFor:'UI prototypes, Figma export, design-to-code, multi-screen flows', users:null,
+        pros:['350 free generations per month on Standard plan — generous for a beta product','Voice commands and image input (sketch-to-UI) alongside text prompts','Exports to Figma and clean HTML/CSS — not locked into Google\'s ecosystem'],
+        cons:['Beta product from Google Labs — features and pricing may change without notice','Frontend only — no backend logic, data layer or user auth generated'] },
     ]
   },
   {
@@ -342,9 +345,6 @@ const CATEGORIES = [
       { name:'Softr', desc:'Build client portals and internal tools from Airtable or Google Sheets in minutes. No code required.', url:'https://softr.io', aff:'https://softr.io?ref=aiportal', badge:'freemium', bestFor:'Client portals, internal dashboards', users:'50K+',
         pros:['Best client portal builder from Airtable data without custom code','Free plan allows up to 5 internal users — genuinely useful for small teams','Membership, payments and user role management built-in'],
         cons:['Primarily optimized for Airtable — other data sources more limited','Not suitable for complex apps beyond portals, dashboards and directories'] },
-      { name:'Google Stitch', desc:'Google\'s experimental AI that turns app ideas into working UI prototypes. Describe what you want — get HTML/CSS/JavaScript and a live preview instantly.', url:'https://stitch.withgoogle.com', aff:'https://stitch.withgoogle.com?ref=aiportal', badge:'free', bestFor:'App UI prototypes, design-to-code, front-end generation', users:null,
-        pros:['From Google — powered by Gemini for state-of-the-art UI generation quality','Outputs clean, working HTML/CSS/JS code — not just a screenshot or mockup','Free during experimental phase — no subscription or waitlist required'],
-        cons:['Early-stage product — limited export options and customization depth','Frontend only — no backend, database or business logic generated'] },
     ]
   },
   {
@@ -368,9 +368,9 @@ const CATEGORIES = [
       { name:'Synthesis', desc:'AI-powered math and problem-solving for kids. Adaptive learning that adjusts to each student\'s level.', url:'https://synthesis.com', aff:'https://synthesis.com?ref=aiportal', badge:'paid', bestFor:'K-8 math, problem-solving skills', users:'200K+',
         pros:['Best adaptive math for K-8 — difficulty adjusts in real-time to each student','Teaches problem-solving thinking, not just memorization of formulas','Originally built for SpaceX\'s Ad Astra school by Elon Musk\'s team'],
         cons:['Paid only — $99/year, no meaningful free tier','Focused on math only — no other subjects covered'] },
-      { name:'YouLearn', desc:'AI learning companion for YouTube videos, PDFs and documents. Ask questions, get summaries and auto-generated notes on any content.', url:'https://youlearn.ai', aff:'https://youlearn.ai?ref=aiportal', badge:'freemium', bestFor:'Learning from videos, PDF summaries, study notes', users:'500K+',
-        pros:['Paste any YouTube URL or PDF — AI generates interactive notes and a study chat instantly','Ask follow-up questions about the content directly in context — like a personal tutor','Auto-generates quizzes and flashcards from your learning materials'],
-        cons:['Free tier limits number of uploads per month','Less structured than Coursera or Khan Academy for formal curriculum-based learning'] },
+      { name:'YouLearn', desc:'Turn any PDF, YouTube video or lecture into notes, quizzes and an interactive study chat. Backed by Y Combinator. Free plan available.', url:'https://youlearn.ai', aff:'https://youlearn.ai?ref=aiportal', badge:'freemium', bestFor:'PDF summaries, learning from video, study notes, quizzes', users:'2M+',
+        pros:['Works with any content — YouTube URLs, PDFs, lectures, any topic','Auto-generates notes, quizzes and flashcards, plus podcast mode for hands-free learning','2M+ users, Y Combinator-backed, partner of the White House AI initiative'],
+        cons:['Free tier limits the number of uploads per month','Less structured than Coursera or Khan Academy for formal curriculum-based courses'] },
     ]
   },
   {
