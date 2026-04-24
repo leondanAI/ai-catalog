@@ -263,9 +263,9 @@ const TRENDING_ITEMS = [
   { name:'Lovable',     badge:'↑ Fastest-growing app builder ever', type:'growth' },
   { name:'ElevenLabs',  badge:'↑ $11B — voice AI leader', type:'growth' },
   { name:'Claude',      badge:'↑ #1 fastest-growing B2B AI', type:'growth' },
-  { name:'Cursor',      badge:'🆕 v3.0 — Apr 2', type:'update' },
-  { name:'OpenAI Codex', badge:'🆕 Major update — Apr 16', type:'update', domain:'openai.com' },
-  { name:'Gemini Flash TTS', badge:'🆕 Voice AI — Apr 15', type:'update', domain:'deepmind.google' },
+  { name:'Cursor',        badge:'🆕 v3.0 — Apr 2', type:'update' },
+  { name:'Google Veo 3',  badge:'🆕 Now with audio — Apr 2026', type:'update' },
+  { name:'Claude Design', badge:'🆕 Just launched — Apr 2026', type:'update' },
 ];
 
 function renderTrending() {
@@ -286,6 +286,7 @@ function renderTrending() {
       </div>
       <span class="${badgeClass}">${h.badge}</span>
       <p class="tool-desc">${desc}</p>
+      <span style="font-size:12px;color:var(--accent);margin-top:auto;display:inline-block">Read more →</span>
     </a>`;
   }).join('');
   document.getElementById('trendingGrid').innerHTML = cards;
