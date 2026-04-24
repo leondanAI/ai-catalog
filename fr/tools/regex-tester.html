@@ -69,8 +69,8 @@
 <div class="tool-wrap">
   <a href="/fr/tools.html" class="tool-back">← All Tools</a>
   <div class="tool-head">
-    <h1>⚡ Regex Tester</h1>
-    <p>Write a regular expression, paste test text — matches highlight live. Groups are shown per match.</p>
+    <h1>Regex Tester</h1>
+    <p>Test regular expressions with live match highlighting and a full match list.</p>
   </div>
 
   <div style="margin-bottom:.5rem;font-size:13px;color:var(--text3)">Pattern</div>
@@ -213,6 +213,6 @@ function runRegex() {
   }).join('') + (gMatches.length>50?`<div style="font-size:12px;color:var(--text3);padding:.5rem">... and ${gMatches.length-50} more matches</div>`:'');
 }
 </script>
-<script>(function(){var SB="https://lbjdwkvkkndvofysyssy.supabase.co";var KEY="sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG";function applyI18nHeader(){var h=document.querySelector(".tool-head h1");var p=document.querySelector(".tool-head p");var ti=typeof t==="function"&&t("tbx.regex-tester");var di=typeof t==="function"&&t("tbx.regex-tester.d");if(h&&ti)h.textContent=ti;if(p&&di)p.textContent=di;}function updateToolHeader(lang){if(lang==="en")return;fetch(SB+"/rest/v1/toolbox?lang=eq."+lang+"&id=eq.regex-tester",{headers:{apikey:KEY,Authorization:"Bearer "+KEY}}).then(function(r){return r.json();}).then(function(d){if(d[0]){var h=document.querySelector(".tool-head h1");var p=document.querySelector(".tool-head p");if(h&&d[0].title)h.textContent=d[0].title;if(p&&d[0].description)p.textContent=d[0].description;}else{applyI18nHeader();}}).catch(function(){applyI18nHeader();});}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){updateToolHeader(localStorage.getItem("lang")||"en");});}else{updateToolHeader(localStorage.getItem("lang")||"en");}var _orig=window.onLangChange;window.onLangChange=function(){if(_orig)_orig();updateToolHeader(localStorage.getItem("lang")||"en");};})();</script>
+<script>(function(){var SB="https://lbjdwkvkkndvofysyssy.supabase.co";var KEY="sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG";function applyI18nHeader(){var h=document.querySelector(".tool-head h1");var p=document.querySelector(".tool-head p");var ti=typeof t==="function"&&t("tbx.regex-tester");var di=typeof t==="function"&&t("tbx.regex-tester.d");if(h&&ti)h.textContent=ti;if(p&&di)p.textContent=di;}function updateToolHeader(lang){if(lang==="en")return;fetch(SB+"/rest/v1/toolbox?lang=eq."+lang+"&id=eq.regex-tester",{headers:{apikey:KEY,Authorization:"Bearer "+KEY}}).then(function(r){return r.json();}).then(function(d){if(d[0]){var h=document.querySelector(".tool-head h1");var p=document.querySelector(".tool-head p");if(h&&d[0].title)h.textContent=d[0].title;if(p&&d[0].description)p.textContent=d[0].description;}else{applyI18nHeader();}}).catch(function(){applyI18nHeader();});}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){updateToolHeader("fr");});}else{updateToolHeader("fr");}var _orig=window.onLangChange;window.onLangChange=function(){if(_orig)_orig();updateToolHeader(localStorage.getItem("lang")||"en");};})();</script>
 </body>
 </html>

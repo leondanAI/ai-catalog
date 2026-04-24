@@ -54,8 +54,8 @@
 <div class="tool-wrap">
   <a href="/fr/tools.html" class="tool-back">← All Tools</a>
   <div class="tool-head">
-    <h1><span aria-hidden="true">🔢 </span>Base64 Encoder / Decoder</h1>
-    <p>Encode any text to Base64, or paste a Base64 string to decode it back to plain text.</p>
+    <h1>Base64 Encoder</h1>
+    <p>Encode text to Base64 or decode Base64 strings back to plain text instantly.</p>
   </div>
   <textarea class="field-textarea" id="b64Input" placeholder="Enter text to encode, or a Base64 string to decode..." style="min-height:140px"></textarea>
   <div class="btn-row">
@@ -120,6 +120,6 @@ function decodeB64() {
 function copyB64() { navigator.clipboard.writeText(document.getElementById('b64Output').value); }
 function clearB64() { document.getElementById('b64Input').value=''; document.getElementById('b64Output').value=''; document.getElementById('b64Error').style.display='none'; }
 </script>
-<script>(function(){var SB="https://lbjdwkvkkndvofysyssy.supabase.co";var KEY="sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG";function applyI18nHeader(){var h=document.querySelector(".tool-head h1");var p=document.querySelector(".tool-head p");var ti=typeof t==="function"&&t("tbx.base64");var di=typeof t==="function"&&t("tbx.base64.d");if(h&&ti)h.textContent=ti;if(p&&di)p.textContent=di;}function updateToolHeader(lang){if(lang==="en")return;fetch(SB+"/rest/v1/toolbox?lang=eq."+lang+"&id=eq.base64",{headers:{apikey:KEY,Authorization:"Bearer "+KEY}}).then(function(r){return r.json();}).then(function(d){if(d[0]){var h=document.querySelector(".tool-head h1");var p=document.querySelector(".tool-head p");if(h&&d[0].title)h.textContent=d[0].title;if(p&&d[0].description)p.textContent=d[0].description;}else{applyI18nHeader();}}).catch(function(){applyI18nHeader();});}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){updateToolHeader(localStorage.getItem("lang")||"en");});}else{updateToolHeader(localStorage.getItem("lang")||"en");}var _orig=window.onLangChange;window.onLangChange=function(){if(_orig)_orig();updateToolHeader(localStorage.getItem("lang")||"en");};})();</script>
+<script>(function(){var SB="https://lbjdwkvkkndvofysyssy.supabase.co";var KEY="sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG";function applyI18nHeader(){var h=document.querySelector(".tool-head h1");var p=document.querySelector(".tool-head p");var ti=typeof t==="function"&&t("tbx.base64");var di=typeof t==="function"&&t("tbx.base64.d");if(h&&ti)h.textContent=ti;if(p&&di)p.textContent=di;}function updateToolHeader(lang){if(lang==="en")return;fetch(SB+"/rest/v1/toolbox?lang=eq."+lang+"&id=eq.base64",{headers:{apikey:KEY,Authorization:"Bearer "+KEY}}).then(function(r){return r.json();}).then(function(d){if(d[0]){var h=document.querySelector(".tool-head h1");var p=document.querySelector(".tool-head p");if(h&&d[0].title)h.textContent=d[0].title;if(p&&d[0].description)p.textContent=d[0].description;}else{applyI18nHeader();}}).catch(function(){applyI18nHeader();});}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){updateToolHeader("fr");});}else{updateToolHeader("fr");}var _orig=window.onLangChange;window.onLangChange=function(){if(_orig)_orig();updateToolHeader(localStorage.getItem("lang")||"en");};})();</script>
 </body>
 </html>

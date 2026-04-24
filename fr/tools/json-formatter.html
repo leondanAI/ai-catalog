@@ -55,8 +55,8 @@
 <div class="tool-wrap">
   <a href="/fr/tools.html" class="tool-back">← All Tools</a>
   <div class="tool-head">
-    <h1>{} JSON Formatter</h1>
-    <p>Paste JSON to format it for readability or minify it for production. Validates syntax automatically.</p>
+    <h1>JSON Formatter</h1>
+    <p>Format and validate JSON for readability, or minify it for production.</p>
   </div>
   <textarea class="field-textarea mono" id="jsonInput" placeholder='{"key":"value","arr":[1,2,3]}' style="min-height:180px"></textarea>
   <div class="btn-row">
@@ -123,6 +123,6 @@ function minifyJson() {
 function copyJson() { navigator.clipboard.writeText(document.getElementById('jsonOutput').value); }
 function clearJson() { document.getElementById('jsonInput').value=''; document.getElementById('jsonOutput').value=''; document.getElementById('jsonError').style.display='none'; }
 </script>
-<script>(function(){var SB="https://lbjdwkvkkndvofysyssy.supabase.co";var KEY="sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG";function applyI18nHeader(){var h=document.querySelector(".tool-head h1");var p=document.querySelector(".tool-head p");var ti=typeof t==="function"&&t("tbx.json-formatter");var di=typeof t==="function"&&t("tbx.json-formatter.d");if(h&&ti)h.textContent=ti;if(p&&di)p.textContent=di;}function updateToolHeader(lang){if(lang==="en")return;fetch(SB+"/rest/v1/toolbox?lang=eq."+lang+"&id=eq.json-formatter",{headers:{apikey:KEY,Authorization:"Bearer "+KEY}}).then(function(r){return r.json();}).then(function(d){if(d[0]){var h=document.querySelector(".tool-head h1");var p=document.querySelector(".tool-head p");if(h&&d[0].title)h.textContent=d[0].title;if(p&&d[0].description)p.textContent=d[0].description;}else{applyI18nHeader();}}).catch(function(){applyI18nHeader();});}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){updateToolHeader(localStorage.getItem("lang")||"en");});}else{updateToolHeader(localStorage.getItem("lang")||"en");}var _orig=window.onLangChange;window.onLangChange=function(){if(_orig)_orig();updateToolHeader(localStorage.getItem("lang")||"en");};})();</script>
+<script>(function(){var SB="https://lbjdwkvkkndvofysyssy.supabase.co";var KEY="sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG";function applyI18nHeader(){var h=document.querySelector(".tool-head h1");var p=document.querySelector(".tool-head p");var ti=typeof t==="function"&&t("tbx.json-formatter");var di=typeof t==="function"&&t("tbx.json-formatter.d");if(h&&ti)h.textContent=ti;if(p&&di)p.textContent=di;}function updateToolHeader(lang){if(lang==="en")return;fetch(SB+"/rest/v1/toolbox?lang=eq."+lang+"&id=eq.json-formatter",{headers:{apikey:KEY,Authorization:"Bearer "+KEY}}).then(function(r){return r.json();}).then(function(d){if(d[0]){var h=document.querySelector(".tool-head h1");var p=document.querySelector(".tool-head p");if(h&&d[0].title)h.textContent=d[0].title;if(p&&d[0].description)p.textContent=d[0].description;}else{applyI18nHeader();}}).catch(function(){applyI18nHeader();});}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){updateToolHeader("fr");});}else{updateToolHeader("fr");}var _orig=window.onLangChange;window.onLangChange=function(){if(_orig)_orig();updateToolHeader(localStorage.getItem("lang")||"en");};})();</script>
 </body>
 </html>

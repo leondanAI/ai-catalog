@@ -63,8 +63,8 @@
 <div class="tool-wrap">
   <a href="/pt/tools.html" class="tool-back">← All Tools</a>
   <div class="tool-head">
-    <h1><span aria-hidden="true">🪙 </span>Token Counter</h1>
-    <p>Estimate how many tokens your prompt uses across major AI models. Based on the ~4 chars/token approximation used by OpenAI and Anthropic.</p>
+    <h1>Token Counter</h1>
+    <p>Estimate token count for AI prompts — see how much of GPT-4, Claude or Gemini context you use.</p>
   </div>
 
   <textarea class="field-textarea" id="tcInput" placeholder="Paste your prompt or text here..." oninput="calcTokens()" style="min-height:220px"></textarea>
@@ -156,6 +156,6 @@ function calcTokens() {
 buildModelGrid(0);
 renderToolDesc('token-counter');
 </script>
-<script>(function(){var SB="https://lbjdwkvkkndvofysyssy.supabase.co";var KEY="sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG";function applyI18nHeader(){var h=document.querySelector(".tool-head h1");var p=document.querySelector(".tool-head p");var ti=typeof t==="function"&&t("tbx.token-counter");var di=typeof t==="function"&&t("tbx.token-counter.d");if(h&&ti)h.textContent=ti;if(p&&di)p.textContent=di;}function updateToolHeader(lang){if(lang==="en")return;fetch(SB+"/rest/v1/toolbox?lang=eq."+lang+"&id=eq.token-counter",{headers:{apikey:KEY,Authorization:"Bearer "+KEY}}).then(function(r){return r.json();}).then(function(d){if(d[0]){var h=document.querySelector(".tool-head h1");var p=document.querySelector(".tool-head p");if(h&&d[0].title)h.textContent=d[0].title;if(p&&d[0].description)p.textContent=d[0].description;}else{applyI18nHeader();}}).catch(function(){applyI18nHeader();});}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){updateToolHeader(localStorage.getItem("lang")||"en");});}else{updateToolHeader(localStorage.getItem("lang")||"en");}var _orig=window.onLangChange;window.onLangChange=function(){if(_orig)_orig();updateToolHeader(localStorage.getItem("lang")||"en");};})();</script>
+<script>(function(){var SB="https://lbjdwkvkkndvofysyssy.supabase.co";var KEY="sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG";function applyI18nHeader(){var h=document.querySelector(".tool-head h1");var p=document.querySelector(".tool-head p");var ti=typeof t==="function"&&t("tbx.token-counter");var di=typeof t==="function"&&t("tbx.token-counter.d");if(h&&ti)h.textContent=ti;if(p&&di)p.textContent=di;}function updateToolHeader(lang){if(lang==="en")return;fetch(SB+"/rest/v1/toolbox?lang=eq."+lang+"&id=eq.token-counter",{headers:{apikey:KEY,Authorization:"Bearer "+KEY}}).then(function(r){return r.json();}).then(function(d){if(d[0]){var h=document.querySelector(".tool-head h1");var p=document.querySelector(".tool-head p");if(h&&d[0].title)h.textContent=d[0].title;if(p&&d[0].description)p.textContent=d[0].description;}else{applyI18nHeader();}}).catch(function(){applyI18nHeader();});}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){updateToolHeader("pt");});}else{updateToolHeader("pt");}var _orig=window.onLangChange;window.onLangChange=function(){if(_orig)_orig();updateToolHeader(localStorage.getItem("lang")||"en");};})();</script>
 </body>
 </html>

@@ -217,10 +217,27 @@ TOOLBOX_PAGES = [
     'json-formatter','csv-json','markdown-preview','password-generator','base64',
 ]
 
+def fetch_toolbox_translations(code):
+    """Fetch toolbox titles/descriptions from Supabase for a given language."""
+    import urllib.request, json
+    sb_url = 'https://lbjdwkvkkndvofysyssy.supabase.co'
+    sb_key = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG'
+    try:
+        req = urllib.request.Request(
+            f'{sb_url}/rest/v1/toolbox?lang=eq.{code}&select=id,title,description',
+            headers={'apikey': sb_key, 'Authorization': f'Bearer {sb_key}'}
+        )
+        with urllib.request.urlopen(req) as r:
+            rows = json.loads(r.read())
+        return {row['id']: row for row in rows}
+    except Exception:
+        return {}
+
 def generate_toolbox_pages(code):
     """Copy toolbox utility pages into /{lang}/tools/ with lang injection."""
     tools_dir = os.path.join(ROOT_DIR, code, 'tools')
     os.makedirs(tools_dir, exist_ok=True)
+    tbx_trans = fetch_toolbox_translations(code) if code != 'en' else {}
     count = 0
     for slug in TOOLBOX_PAGES:
         src_path = os.path.join(ROOT_DIR, 'tools', f'{slug}.html')
@@ -241,6 +258,13 @@ def generate_toolbox_pages(code):
         html = html.replace('href="/"', f'href="/{code}/"')
         # Fix "← All Tools" back link (relative)
         html = html.replace('href="../tools.html"', f'href="/{code}/tools.html"')
+        # Replace h1 and description with translated text from Supabase
+        t_data = tbx_trans.get(slug)
+        if t_data:
+            if t_data.get('title'):
+                html = re.sub(r'(<h1[^>]*>)(.*?)(</h1>)', rf'\1{t_data["title"]}\3', html, count=1)
+            if t_data.get('description'):
+                html = re.sub(r'(<div class="tool-head">.*?<p>)(.*?)(</p>)', rf'\1{t_data["description"]}\3', html, count=1, flags=re.DOTALL)
         # Inject lang script
         lang_script = (
             f'<script>localStorage.setItem("lang","{code}");'
@@ -284,9 +308,9 @@ def generate_toolbox_pages(code):
             f'}}'
             f'if(document.readyState==="loading"){{'
             f'document.addEventListener("DOMContentLoaded",function(){{'
-            f'updateToolHeader(localStorage.getItem("lang")||"en");'
+            f'updateToolHeader("{code}");'
             f'}});'
-            f'}}else{{updateToolHeader(localStorage.getItem("lang")||"en");}}'
+            f'}}else{{updateToolHeader("{code}");}}'
             f'var _orig=window.onLangChange;'
             f'window.onLangChange=function(){{'
             f'if(_orig)_orig();'
