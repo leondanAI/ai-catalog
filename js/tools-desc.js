@@ -19,6 +19,9 @@ const TOOL_DESCS = {
 
     de: `<p>Token sind die Grundeinheiten, die KI-Sprachmodelle zur Textverarbeitung verwenden — sie entsprechen weder Wörtern noch Zeichen. Die meisten Modelle berechnen Kosten pro Token und haben ein maximales Kontextfenster, das in Token gemessen wird. Die Kenntnis der Tokenanzahl hilft, Modellgrenzen einzuhalten und API-Kosten abzuschätzen.</p>
 <p>Dieses Tool schätzt die Tokenanzahl anhand der Standardnäherung von ~4 Zeichen pro Token, wie sie von OpenAI und Anthropic verwendet wird. Fügen Sie Ihren Prompt ein und sehen Sie sofort, wie viel des Kontextfensters von GPT-4o (128 k), Claude 3.5 Sonnet (200 k) oder Gemini 1.5 Pro (1 M Token) Sie nutzen.</p>`,
+
+    ua: `<p>Токени — базові одиниці, які мовні моделі ІІ використовують для обробки тексту. Це не те саме, що слова чи символи. Більшість моделей тарифікуються за токени та мають максимальне контекстне вікно, виміряне в токенах. Підрахунок токенів допомагає не перевищувати ліміти, оцінювати вартість API та писати ефективніші промпти.</p>
+<p>Інструмент оцінює кількість токенів за стандартним наближенням ~4 символи на токен, як у OpenAI та Anthropic. Вставте промпт і миттєво побачте, яку частину контекстного вікна GPT-4o (128 тис.), Claude 3.5 Sonnet (200 тис.) або Gemini 1.5 Pro (1 млн токенів) ви займаєте.</p>`,
   },
 
   'text-diff': {
@@ -36,6 +39,9 @@ const TOOL_DESCS = {
 
     de: `<p>Ein Text-Diff-Tool vergleicht zwei Versionen eines Textes und zeigt genau, was sich geändert hat — welche Zeilen hinzugefügt, entfernt oder unverändert geblieben sind. Es ist unverzichtbar beim Vergleichen von KI-Ausgaben, beim Überprüfen von Dokumentrevisionen oder beim Erkennen von Änderungen zwischen zwei Textversionen.</p>
 <p>Fügen Sie den Originaltext in das linke Feld und die geänderte Version in das rechte ein, dann klicken Sie auf Vergleichen. Hinzugefügte Zeilen werden grün hervorgehoben, entfernte rot, unveränderte normal dargestellt. Aktivieren Sie den Live-Modus, damit Unterschiede beim Tippen automatisch aktualisiert werden.</p>`,
+
+    ua: `<p>Інструмент порівняння текстів знаходить різниці між двома версіями та показує, що саме змінилося: які рядки додано, видалено або залишено без змін. Незамінний при порівнянні відповідей ІІ, перевірці правок у документах та аналізі змін.</p>
+<p>Вставте оригінальний текст у ліве поле, змінений — у праве, натисніть «Порівняти». Додані рядки виділяються зеленим, видалені — червоним. Увімкніть режим «Live» для автоматичного оновлення при введенні.</p>`,
   },
 
   'word-counter': {
@@ -53,6 +59,9 @@ const TOOL_DESCS = {
 
     de: `<p>Genaue Wort- und Zeichenzahlen sind für viele Schreibaufgaben wichtig — ob Sie einen Tweet mit einem Limit von 280 Zeichen schreiben, einen Aufsatz mit Anforderungen an die Wortanzahl oder prüfen, ob Ihr Inhalt den SEO-Längenrichtlinien entspricht. Dieses Tool zählt alles sofort beim Tippen oder Einfügen von Text.</p>
 <p>Sehen Sie die Gesamtwortzahl, Zeichenanzahl mit und ohne Leerzeichen, Satzanzahl, Absatzanzahl und geschätzte Lesezeit basierend auf einer durchschnittlichen Lesegeschwindigkeit von 200 Wörtern pro Minute. Die gesamte Verarbeitung erfolgt in Ihrem Browser — nichts wird an einen Server gesendet.</p>`,
+
+    ua: `<p>Точний підрахунок слів та символів важливий для багатьох завдань: твіт з лімітом 280 символів, есе з вимогою до обсягу або перевірка відповідності тексту рекомендаціям SEO. Інструмент рахує все миттєво при введенні або вставці тексту.</p>
+<p>Загальна кількість слів, символів (з пробілами та без), речень, абзаців та розрахунковий час читання (200 слів/хв). Всі обчислення відбуваються в браузері — дані нікуди не надсилаються.</p>`,
   },
 
   'case-converter': {
@@ -70,6 +79,9 @@ const TOOL_DESCS = {
 
     de: `<p>Groß- und Kleinschreibungskonvertierung ist eine tägliche Aufgabe für Entwickler und Autoren. Ob camelCase für JavaScript-Variablen, snake_case für Python, kebab-case für CSS-Klassen oder PascalCase für Komponentennamen — Text manuell umzutippen kostet Zeit. Dieses Tool konvertiert jede Eingabe sofort in alle gängigen Formate gleichzeitig.</p>
 <p>Geben Sie beliebigen Text ein oder fügen Sie ihn ein — einschließlich camelCase- oder snake_case-Eingaben — und erhalten Sie 12 Formate gleichzeitig. Klicken Sie auf eine Ergebniskarte, um sie in die Zwischenablage zu kopieren. Unterstützte Formate: lowercase, UPPERCASE, Title Case, Sentence case, camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case, COBOL-CASE, dot.case, path/case.</p>`,
+
+    ua: `<p>Конвертація регістру — щоденне завдання для розробників та авторів. camelCase для JavaScript, snake_case для Python, kebab-case для CSS, PascalCase для компонентів — ручне переписування займає час. Інструмент конвертує будь-який ввід одразу у всі основні формати.</p>
+<p>Введіть або вставте текст — включаючи camelCase або snake_case — і отримайте 12 форматів одночасно. Натисніть на картку, щоб скопіювати. Підтримуються: lowercase, UPPERCASE, Title Case, Sentence case, camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case, COBOL-CASE, dot.case, path/case.</p>`,
   },
 
   'regex-tester': {
@@ -87,6 +99,9 @@ const TOOL_DESCS = {
 
     de: `<p>Reguläre Ausdrücke (Regex) sind leistungsstarke Muster für die Suche, Validierung und Manipulation von Text in der Programmierung. Das Testen von Regex-Mustern in Isolation ist schwierig — dieser Live-Tester hebt Übereinstimmungen in Echtzeit hervor und zeigt Capture-Gruppen an, damit Sie Muster für E-Mail-Validierung, URL-Extraktion, Log-Parsing oder jede andere Textverarbeitungsaufgabe entwickeln und debuggen können.</p>
 <p>Geben Sie Ihr Muster in das Regex-Feld und Testtext in den Textbereich ein. Übereinstimmungen werden sofort lila hervorgehoben. Schalten Sie Flags — g (global), i (Groß-/Kleinschreibung ignorieren), m (mehrzeilig), s (dotAll) — über die Schaltflächen um. Die Trefferliste zeigt jede Übereinstimmung einzeln mit Index und Capture-Gruppenwerten.</p>`,
+
+    ua: `<p>Регулярні вирази (regex) — потужні шаблони для пошуку, валідації та обробки тексту в програмуванні. Тестування regex в ізоляції складне — цей інструмент підсвічує збіги в реальному часі та показує групи захоплення.</p>
+<p>Введіть паттерн у поле regex та тестовий текст. Збіги миттєво підсвічуються фіолетовим. Перемикайте прапори — g (глобальний), i (ігнорувати регістр), m (багаторядковий), s (dotAll). Список збігів показує кожен окремо з індексом та групами захоплення.</p>`,
   },
 
   'json-formatter': {
@@ -104,6 +119,9 @@ const TOOL_DESCS = {
 
     de: `<p>JSON (JavaScript Object Notation) ist das gängigste Datenformat für APIs und Konfigurationsdateien. Rohes JSON aus einer API-Antwort ist oft minifiziert — alles in einer Zeile — und damit unlesbar. Dieser Formatter fügt sofort korrekte Einrückungen und Zeilenumbrüche hinzu, damit Sie die Datenstruktur auf einen Blick verstehen können.</p>
 <p>Fügen Sie Ihr JSON ein und klicken Sie auf Formatieren, um es lesbar zu machen, oder auf Minifizieren, um es für die Produktion auf eine Zeile zu komprimieren. Das Tool validiert Ihr JSON und zeigt eine Fehlermeldung mit der genauen Position eines Syntaxproblems an, damit Sie fehlerhafte Daten schnell identifizieren und beheben können.</p>`,
+
+    ua: `<p>JSON (JavaScript Object Notation) — найпоширеніший формат даних для API та конфігураційних файлів. Сирий JSON з API часто мініфікований — все в один рядок — і нечитабельний. Цей форматувальник миттєво додає відступи та переноси рядків.</p>
+<p>Вставте JSON і натисніть «Форматувати» для зручного відображення або «Мініфікувати» для стиснення в один рядок. Інструмент валідує JSON і показує помилку з точним місцем синтаксичної проблеми.</p>`,
   },
 
   'csv-json': {
@@ -121,6 +139,9 @@ const TOOL_DESCS = {
 
     de: `<p>CSV und JSON sind zwei der gängigsten Datenaustauschformate. CSV ist kompakt und tabellenfreundlich; JSON wird von APIs und Webanwendungen bevorzugt. Die Konvertierung zwischen ihnen ist eine häufige Aufgabe beim Erstellen von Integrationen, Importieren von Daten oder Verarbeiten von Exporten aus Datenbanken und Tabellenkalkulationen.</p>
 <p>Fügen Sie CSV-Daten mit einer Kopfzeile ein und klicken Sie auf CSV → JSON, um ein JSON-Array zu erhalten, bei dem jede Zeile zu einem Objekt mit den Spaltennamen als Schlüssel wird. Für die Gegenrichtung fügen Sie ein JSON-Array ein und klicken Sie auf JSON → CSV. Aktivieren Sie Pretty-print für lesbare JSON-Ausgabe.</p>`,
+
+    ua: `<p>CSV та JSON — два найпоширеніших формати обміну даними. CSV компактний і зручний для таблиць; JSON — для API та веб-додатків. Конвертація між ними — часте завдання при інтеграціях, імпорті даних та обробці експортів.</p>
+<p>Вставте CSV з заголовковим рядком і натисніть «CSV → JSON» для масиву JSON. Для зворотного перетворення вставте JSON і натисніть «JSON → CSV». Використовуйте Pretty-print для зручного JSON.</p>`,
   },
 
   'markdown-preview': {
@@ -138,6 +159,9 @@ const TOOL_DESCS = {
 
     de: `<p>Markdown ist eine leichtgewichtige Auszeichnungssprache, mit der Sie Text mithilfe einfacher Symbole formatieren können — Sternchen für Fettschrift, Rauten für Überschriften, Bindestriche für Listen. Es wird in README-Dateien, Dokumentationen, Blogbeiträgen, GitHub-Kommentaren und vielen Content-Management-Systemen verwendet. Markdown zu schreiben ist schnell; die Vorschau in Echtzeit zu sehen macht es noch besser.</p>
 <p>Schreiben Sie Ihr Markdown im linken Bereich und sehen Sie das gerenderte HTML live auf der rechten Seite aktualisieren. Unterstützt Überschriften (H1–H3), Fettschrift, Kursivschrift, Inline-Code, Blockquotes, ungeordnete Listen und Links. Klicken Sie auf HTML kopieren, um die gerenderte HTML-Ausgabe zu erhalten.</p>`,
+
+    ua: `<p>Markdown — легка мова розмітки для форматування тексту простими символами: зірочки для жирного, решітки для заголовків, дефіси для списків. Використовується в README, документації, блогах, GitHub та CMS.</p>
+<p>Пишіть Markdown зліва — бачте відрендерений HTML справа в реальному часі. Підтримуються заголовки (H1–H3), жирний, курсив, код, цитати, списки та посилання. Натисніть «Скопіювати HTML» для вставки.</p>`,
   },
 
   'password-generator': {
@@ -155,6 +179,9 @@ const TOOL_DESCS = {
 
     de: `<p>Die Verwendung schwacher oder wiederverwendeter Passwörter ist eine der häufigsten Ursachen für Kontoverletzungen. Ein starkes Passwort sollte lang (mindestens 16 Zeichen), zufällig und eine Mischung aus Groß- und Kleinbuchstaben, Zahlen und Symbolen sein. Dieser Generator erstellt kryptografisch sichere Passwörter vollständig in Ihrem Browser — keine Daten verlassen Ihr Gerät.</p>
 <p>Stellen Sie die Länge mit dem Schieberegler ein (6 bis 64 Zeichen), wählen Sie die einzuschließenden Zeichentypen aus und klicken Sie auf Generieren. Der Stärkeanzeiger zeigt, wie sicher Ihr Passwort ist. Klicken Sie auf Kopieren, um es in die Zwischenablage zu speichern. Jedes Passwort ist einzigartig — generieren Sie so viele wie nötig.</p>`,
+
+    ua: `<p>Використання слабких або повторних паролів — одна з найчастіших причин зламу акаунтів. Надійний пароль має бути довгим (мінімум 16 символів), випадковим та містити великі й малі літери, цифри та спецсимволи. Генератор створює криптографічно стійкі паролі повністю в браузері — дані нікуди не надсилаються.</p>
+<p>Задайте довжину повзунком (6–64 символи), оберіть типи символів і натисніть «Згенерувати». Смужка надійності показує безпечність пароля. Натисніть «Копіювати» для збереження. Кожен пароль унікальний.</p>`,
   },
 
   'base64': {
@@ -172,6 +199,9 @@ const TOOL_DESCS = {
 
     de: `<p>Base64 ist ein Kodierungsschema, das Binärdaten oder Text in eine Zeichenkette aus ASCII-Zeichen umwandelt. Es wird häufig in der Webentwicklung verwendet — zum direkten Einbetten von Bildern in HTML oder CSS als Data-URLs, zum Kodieren von Binärdaten in JSON-Nutzlasten, zur Datei-Upload-Verarbeitung und in HTTP-Basic-Authentication-Headern. Base64 ist Kodierung, keine Verschlüsselung — es bietet keine Sicherheit.</p>
 <p>Fügen Sie beliebigen Text ein und klicken Sie auf Kodieren, um ihn in Base64 zu konvertieren. Um eine Base64-Zeichenkette wieder in Klartext zu dekodieren, fügen Sie sie in dasselbe Feld ein und klicken Sie auf Dekodieren. Das Tool unterstützt vollständig Unicode-Eingaben einschließlich Kyrillisch, Arabisch, Hebräisch, Chinesisch, Japanisch, Koreanisch und andere nicht-lateinische Schriften.</p>`,
+
+    ua: `<p>Base64 — схема кодування, що перетворює бінарні дані або текст у рядок ASCII-символів. Широко використовується у веб-розробці: вбудовування зображень у HTML/CSS як data URL, кодування бінарних даних у JSON, обробка завантажень файлів та HTTP Basic Authentication. Base64 — це кодування, не шифрування.</p>
+<p>Вставте текст і натисніть «Кодувати» для перетворення в Base64. Для декодування вставте Base64-рядок і натисніть «Декодувати». Повна підтримка Unicode: кирилиця, арабська, іврит, китайська, японська, корейська та інші.</p>`,
   },
 
 };
