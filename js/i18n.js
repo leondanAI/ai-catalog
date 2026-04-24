@@ -45,8 +45,8 @@ const I18N = (() => {
       'stats.utilities':   'Free utilities',
       'stats.updated':     'Updated',
       // sections
-      'section.trending':    'Hot Right Now 🔥',
-      'section.trendingSub': 'Fastest-growing AI tools — based on user growth and community activity.',
+      'section.trending':    'Trending & Updated 📈',
+      'section.trendingSub': 'Fastest-growing tools and freshest updates — curated weekly.',
       'section.allTools':    'View All Tools',
       'section.latestNews':  'Latest News',
       'section.allNews':     'View All News',
