@@ -151,13 +151,13 @@
     <button class="tf-btn" id="tfBtn" onclick="tfFind()" title="Find tools">→</button>
   </div>
 
+  <div style="font-size:12px;color:rgba(255,255,255,0.4);margin-bottom:6px">Try an example:</div>
   <div class="tf-examples">
-    <span class="tf-pill" onclick="tfFill(this)" data-i18n="hero.pill1">Write landing page copy</span>
-    <span class="tf-pill" onclick="tfFill(this)" data-i18n="hero.pill2">Remove background from photos</span>
-    <span class="tf-pill" onclick="tfFill(this)" data-i18n="hero.pill3">Transcribe a meeting</span>
-    <span class="tf-pill" onclick="tfFill(this)" data-i18n="hero.pill4">Generate product images</span>
-    <span class="tf-pill" onclick="tfFill(this)" data-i18n="hero.pill5">Summarize long documents</span>
-    <span class="tf-pill" onclick="tfFill(this)" data-i18n="hero.pill6">Clone my voice for videos</span>
+    <span class="tf-pill" onclick="tfFill(this)" data-task="I need to edit a podcast and add subtitles">Edit a podcast</span>
+    <span class="tf-pill" onclick="tfFill(this)" data-task="Generate product photos for my online store">Product photos</span>
+    <span class="tf-pill" onclick="tfFill(this)" data-task="Write cold emails that actually get replies">Cold emails</span>
+    <span class="tf-pill" onclick="tfFill(this)" data-task="Transcribe a 2-hour meeting into key points">Transcribe meeting</span>
+    <span class="tf-pill" onclick="tfFill(this)" data-task="Create short-form videos from my blog posts">Short-form videos</span>
   </div>
 
   <div class="tf-loading" id="tfLoading">
@@ -179,15 +179,16 @@
 
 <style>
 .growth-badge { display:inline-block; background:rgba(34,197,94,0.12); color:#22c55e; font-size:11px; font-weight:500; padding:2px 8px; border-radius:10px; margin-bottom:6px; }
+.update-badge { display:inline-block; background:rgba(59,130,246,0.12); color:#3b82f6; font-size:11px; font-weight:500; padding:2px 8px; border-radius:10px; margin-bottom:6px; }
 </style>
 
 <div class="wrap">
   <section class="section" style="padding-top:1rem">
     <div class="section-head">
-      <h2 class="section-title" data-i18n="section.trending">Hot Right Now 🔥</h2>
+      <h2 class="section-title" data-i18n="section.trending">Trending & Updated 📈</h2>
       <a href="directory.html" class="section-more" data-i18n="section.allTools">All tools →</a>
     </div>
-    <p style="color:var(--text2);font-size:14px;margin:-0.75rem 0 1.25rem" data-i18n="section.trendingSub">Fastest-growing AI tools — based on user growth and community activity.</p>
+    <p style="color:var(--text2);font-size:14px;margin:-0.75rem 0 1.25rem" data-i18n="section.trendingSub">Fastest-growing tools and freshest updates — curated weekly.</p>
     <div class="grid-auto" id="trendingGrid"></div>
   </section>
 
@@ -258,29 +259,32 @@
 <script src="js/db.js"></script>
 <script src="js/main.js"></script>
 <script>
-const HOT_TOOLS = [
-  { name:'Perplexity',  growth:'↑ 105% users YoY' },
-  { name:'Lovable',     growth:'↑ $20M ARR in 60 days' },
-  { name:'Cursor',      growth:'↑ $500M → $2B ARR' },
-  { name:'ElevenLabs',  growth:'↑ $11B valuation' },
-  { name:'Bolt.new',    growth:'↑ #1 fastest-growing category' },
-  { name:'Claude',      growth:'↑ #1 B2B AI growth' },
+const TRENDING_ITEMS = [
+  { name:'Perplexity',  badge:'↑ 105% users YoY', type:'growth' },
+  { name:'Lovable',     badge:'↑ $20M ARR in 60 days', type:'growth' },
+  { name:'ElevenLabs',  badge:'↑ $11B valuation', type:'growth' },
+  { name:'Cursor',      badge:'🆕 v3.0 — Apr 2', type:'update' },
+  { name:'OpenAI Codex', badge:'🆕 Major update — Apr 16', type:'update', domain:'openai.com' },
+  { name:'Gemini Flash TTS', badge:'🆕 Voice AI — Apr 15', type:'update', domain:'deepmind.google' },
 ];
 
 function renderTrending() {
-  const cards = HOT_TOOLS.map(h => {
+  const cards = TRENDING_ITEMS.map(h => {
     const tool = ALL_TOOLS.find(t => t.name === h.name);
-    if (!tool) return '';
-    const cat = CATEGORIES.find(c => c.tools.includes(tool));
+    const domain = h.domain || (tool ? tool.url.replace('https://','').split('/')[0] : '');
+    const cat = tool ? CATEGORIES.find(c => c.tools.includes(tool)) : null;
     const color = cat ? cat.color : '#7c6af7';
-    const desc = typeof getToolDesc === 'function' ? getToolDesc(tool) : tool.desc;
-    const slug = tool.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
-    return `<a class="tool-card fade-up" href="/tools/${slug}.html" style="border-color:${color}22">
+    const desc = tool ? (typeof getToolDesc === 'function' ? getToolDesc(tool) : tool.desc) : '';
+    const badgeText = tool ? tool.badge : 'free';
+    const slug = h.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+    const href = tool ? `/tools/${slug}.html` : '/directory.html';
+    const badgeClass = h.type === 'update' ? 'update-badge' : 'growth-badge';
+    return `<a class="tool-card fade-up" href="${href}" style="border-color:${color}22">
       <div class="tool-card-top">
-        <div class="tool-avatar" style="background:${color}22;color:${color}"><img src="https://www.google.com/s2/favicons?sz=64&domain=${tool.url.replace('https://','').split('/')[0]}" width="28" height="28" style="border-radius:6px" onerror="this.style.display='none';this.parentNode.textContent='${tool.name[0]}'"></div>
-        <div><div class="tool-name">${tool.name}</div><span class="badge badge-${tool.badge}">${tool.badge}</span></div>
+        <div class="tool-avatar" style="background:${color}22;color:${color}"><img src="https://www.google.com/s2/favicons?sz=64&domain=${domain}" width="28" height="28" style="border-radius:6px" onerror="this.style.display='none';this.parentNode.textContent='${h.name[0]}'"></div>
+        <div><div class="tool-name">${h.name}</div><span class="badge badge-${badgeText}">${badgeText}</span></div>
       </div>
-      <span class="growth-badge">${h.growth}</span>
+      <span class="${badgeClass}">${h.badge}</span>
       <p class="tool-desc">${desc}</p>
     </a>`;
   }).join('');
@@ -345,7 +349,7 @@ const PROXY_URL = 'https://mypedia-toolfinder.ldl-biz.workers.dev/recommend';
 
 function tfFill(el) {
   const inp = document.getElementById('tfInput');
-  inp.value = el.textContent.trim();
+  inp.value = el.dataset.task || el.textContent.trim();
   inp.focus();
 }
 function tfHandleKey(e) {
