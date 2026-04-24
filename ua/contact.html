@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Зв'язатися з нами — mypedia</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/ua/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</a>
+    <nav class="nav-links">
+      <a href="/ua/" class="nav-link">Find a Tool</a>
+      <a href="/ua/directory.html" class="nav-link">AI Catalog</a>
+      <a href="/ua/compare.html" class="nav-link">Compare</a>
+      <a href="/ua/news.html" class="nav-link">News</a>
+      <a href="/ua/tools.html" class="nav-link">Toolbox</a>
+      <a href="/ua/newsletter.html" class="nav-link">Newsletter</a>
+    </nav>
+    <div class="lang-picker">
+      <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇺🇦 UA <span style="opacity:.5;font-size:10px">▾</span></button>
+      <div class="lang-menu" id="langMenu"></div>
+    </div>
+    <button class="btn-hamburger" onclick="toggleMenu()">&#9776;</button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="/ua/" class="nav-link">Find a Tool</a>
+    <a href="/ua/directory.html" class="nav-link">AI Catalog</a>
+    <a href="/ua/compare.html" class="nav-link">Compare</a>
+    <a href="/ua/news.html" class="nav-link">News</a>
+    <a href="/ua/tools.html" class="nav-link">Toolbox</a>
+    <a href="/ua/newsletter.html" class="nav-link">Newsletter</a>
+  </nav>
+</header>
+
+<div class="wrap" style="max-width:720px;padding:3rem 1.5rem 4rem">
+  <h1 style="font-family:var(--font-display);font-size:clamp(22px,3vw,32px);font-weight:600;margin-bottom:1.5rem">Зв'язатися з нами</h1>
+  <div style="font-size:15px;color:var(--text2);line-height:1.75">
+    <p>Є питання? Хочете запропонувати AI-інструмент? Знайшли застарілу інформацію?</p><p>Будемо раді вашому повідомленню.</p><p style="font-size:20px;margin:1.5rem 0">📧 <a href="mailto:ldl.biz@gmail.com" style="color:var(--accent)">ldl.biz@gmail.com</a></p><p>Зазвичай відповідаємо протягом 24–48 годин.</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>mypedia</div>
+      <p class="footer-desc">Your AI tool finder.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Navigation</div>
+      <div class="footer-col-links">
+        <a href="/ua/directory.html">AI Catalog</a>
+        <a href="/ua/news.html">News</a>
+        <a href="/ua/compare.html">Compare</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>Made with ♥ by Leondan & Claude</span>
+    <span>© 2026 mypedia</span>
+  </div>
+</footer>
+<script>localStorage.setItem("lang","ua");document.addEventListener("DOMContentLoaded",function(){if(typeof I18N!=="undefined")I18N.set("ua");});</script>
+<script src="/js/i18n.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
