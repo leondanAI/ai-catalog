@@ -131,6 +131,40 @@ def generate_lang_page(html, lang, page, title, desc):
         html
     )
 
+    # Translate "← Back to News" in news-article.html
+    BACK_TO_NEWS = {
+        'ru': '← Назад к новостям', 'es': '← Volver a noticias',
+        'fr': '← Retour aux actualités', 'de': '← Zurück zu Nachrichten',
+        'pt': '← Voltar às notícias', 'ua': '← Назад до новин',
+        'he': '← חזרה לחדשות',
+    }
+    if lang in BACK_TO_NEWS:
+        html = html.replace('>← Back to News<', f'>{BACK_TO_NEWS[lang]}<')
+
+    # Translate news category labels in SEO pre-rendered cards
+    NEWS_CAT_LABELS = {
+        'ru': {'New Tool':'Инструменты','Models':'Модели','Business':'Бизнес','Research':'Исследования','Regulation':'Регуляция'},
+        'es': {'New Tool':'Herramientas','Models':'Modelos','Business':'Negocios','Research':'Investigación','Regulation':'Regulación'},
+        'fr': {'New Tool':'Outils','Models':'Modèles','Business':'Business','Research':'Recherche','Regulation':'Régulation'},
+        'de': {'New Tool':'Tools','Models':'Modelle','Business':'Business','Research':'Forschung','Regulation':'Regulierung'},
+        'pt': {'New Tool':'Ferramentas','Models':'Modelos','Business':'Negócios','Research':'Pesquisa','Regulation':'Regulação'},
+        'ua': {'New Tool':'Інструменти','Models':'Моделі','Business':'Бізнес','Research':'Дослідження','Regulation':'Регуляція'},
+        'he': {'New Tool':'כלים','Models':'מודלים','Business':'עסקים','Research':'מחקר','Regulation':'רגולציה'},
+    }
+    if lang in NEWS_CAT_LABELS:
+        for en_label, tr_label in NEWS_CAT_LABELS[lang].items():
+            html = html.replace(f'>{en_label}<', f'>{tr_label}<')
+
+    # Translate "← All Tools" on toolbox pages
+    ALL_TOOLS_LABEL = {
+        'ru': '← Все инструменты', 'es': '← Todos los instrumentos',
+        'fr': '← Tous les outils', 'de': '← Alle Tools',
+        'pt': '← Todas as ferramentas', 'ua': '← Усі інструменти',
+        'he': '← כל הכלים',
+    }
+    if lang in ALL_TOOLS_LABEL:
+        html = html.replace('>← All Tools<', f'>{ALL_TOOLS_LABEL[lang]}<')
+
     # Fix relative CSS/JS paths to absolute so they work from subdirectory
     html = html.replace('href="css/', 'href="/css/')
     html = html.replace('src="js/', 'src="/js/')
@@ -256,8 +290,16 @@ def generate_toolbox_pages(code):
         for page in PAGES:
             html = html.replace(f'href="/{page}"', f'href="/{code}/{page}"')
         html = html.replace('href="/"', f'href="/{code}/"')
-        # Fix "← All Tools" back link (relative)
+        # Fix "← All Tools" back link (relative) and translate label
         html = html.replace('href="../tools.html"', f'href="/{code}/tools.html"')
+        ALL_TOOLS_LABEL = {
+            'ru': '← Все инструменты', 'es': '← Todos los instrumentos',
+            'fr': '← Tous les outils', 'de': '← Alle Tools',
+            'pt': '← Todas as ferramentas', 'ua': '← Усі інструменти',
+            'he': '← כל הכלים',
+        }
+        if code in ALL_TOOLS_LABEL:
+            html = html.replace('>← All Tools<', f'>{ALL_TOOLS_LABEL[code]}<')
         # Replace h1 and description with translated text from Supabase
         t_data = tbx_trans.get(slug)
         if t_data:
