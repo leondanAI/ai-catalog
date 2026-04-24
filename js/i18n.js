@@ -26,7 +26,7 @@ const I18N = (() => {
       'hero.tag.reviewed': '100+ reviewed',
       'hero.tag.updated':  'Updated daily',
       'hero.title1':      'Stop browsing thousands of AI tools.',
-      'hero.title2':      'Start using what fits for you.',
+      'hero.title2':      'Start using what fits your task.',
       'hero.sub':         'Describe your task. Get 3 curated AI tools — AI-powered, community-reviewed.',
       'hero.search':      'Describe your task — we\'ll find the right AI tool for it…',
       'hero.pill1':       'Write landing page copy',
