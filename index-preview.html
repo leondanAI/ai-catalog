@@ -138,7 +138,7 @@
 
 <section class="hero">
   <div class="hero-tag">
-    <span data-i18n="hero.badge">✨ No paid placements</span>
+    <span data-i18n="hero.badge">✨ Free to use · No account needed</span>
   </div>
   <h1><span data-i18n="hero.title1">Stop browsing thousands of AI tools.</span><br><span class="hero-hl" data-i18n="hero.title2">Start using what fits your task.</span></h1>
   <p class="sub" data-i18n="hero.sub">Describe your task. Get 3 curated AI tools — AI-powered, community-reviewed.</p>
@@ -487,6 +487,35 @@ renderCatPills();
 renderTrending();
 loadIndexNews();
 renderCatsGrid();
+
+// ── Rotating placeholder ──
+(function(){
+  const el = document.getElementById('tfInput');
+  if (!el) return;
+  const phrases = [
+    'I need to edit a podcast and add subtitles…',
+    'Generate product photos for my online store…',
+    'Write cold emails that actually get replies…',
+    'Transcribe a 2-hour meeting into key points…',
+    'Create short-form videos from my blog posts…'
+  ];
+  let idx = 0, timer = null;
+  function fade(text) {
+    el.style.transition = 'opacity 0.3s';
+    el.style.opacity = '0';
+    setTimeout(function(){ el.placeholder = text; el.style.opacity = '1'; }, 300);
+  }
+  function cycle() {
+    idx = (idx + 1) % phrases.length;
+    fade(phrases[idx]);
+  }
+  function start() { if (!timer) timer = setInterval(cycle, 3000); }
+  function stop() { clearInterval(timer); timer = null; }
+  el.addEventListener('focus', function(){ stop(); el.placeholder = ''; });
+  el.addEventListener('blur', function(){ if (!el.value.trim()) { idx = (idx + 1) % phrases.length; el.placeholder = phrases[idx]; start(); } });
+  el.placeholder = phrases[0];
+  start();
+})();
 </script>
 </body>
 </html>

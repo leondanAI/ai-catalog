@@ -21,7 +21,7 @@ const I18N = (() => {
       'nav.compare':      'Compare',
       'nav.newsletter':   'Newsletter',
       // hero
-      'hero.badge':       '✨ No paid placements',
+      'hero.badge':       '✨ Free to use · No account needed',
       'hero.tag':         '100+ fully reviewed AI tools',
       'hero.tag.reviewed': '100+ reviewed',
       'hero.tag.updated':  'Updated daily',
