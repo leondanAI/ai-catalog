@@ -146,7 +146,7 @@ const I18N = (() => {
       'cat.education':     'Education & Learning',
       'cat.presentations': 'Presentations & Slides',
       // footer
-      'footer.desc':     'Best AI tools catalog in one place.',
+      'footer.desc':     'Your AI tool finder. Updated daily.',
       'footer.nav':      'Navigation',
       'footer.cats':     'Categories',
       'footer.madeWith': 'Made with ♥ by Leondan & Claude · Updated daily',
