@@ -151,13 +151,13 @@
     <button class="tf-btn" id="tfBtn" onclick="tfFind()" title="Find tools">→</button>
   </div>
 
-  <div style="font-size:12px;color:rgba(255,255,255,0.4);margin-bottom:6px">Try an example:</div>
   <div class="tf-examples">
-    <span class="tf-pill" onclick="tfFill(this)" data-task="I need to edit a podcast and add subtitles">Edit a podcast</span>
-    <span class="tf-pill" onclick="tfFill(this)" data-task="Generate product photos for my online store">Product photos</span>
-    <span class="tf-pill" onclick="tfFill(this)" data-task="Write cold emails that actually get replies">Cold emails</span>
-    <span class="tf-pill" onclick="tfFill(this)" data-task="Transcribe a 2-hour meeting into key points">Transcribe meeting</span>
-    <span class="tf-pill" onclick="tfFill(this)" data-task="Create short-form videos from my blog posts">Short-form videos</span>
+    <span class="tf-pill" onclick="tfFill(this)" data-i18n="hero.pill1">Write landing page copy</span>
+    <span class="tf-pill" onclick="tfFill(this)" data-i18n="hero.pill2">Remove background from photos</span>
+    <span class="tf-pill" onclick="tfFill(this)" data-i18n="hero.pill3">Transcribe a meeting</span>
+    <span class="tf-pill" onclick="tfFill(this)" data-i18n="hero.pill4">Generate product images</span>
+    <span class="tf-pill" onclick="tfFill(this)" data-i18n="hero.pill5">Summarize long documents</span>
+    <span class="tf-pill" onclick="tfFill(this)" data-i18n="hero.pill6">Clone my voice for videos</span>
   </div>
 
   <div class="tf-loading" id="tfLoading">
@@ -345,7 +345,7 @@ const PROXY_URL = 'https://mypedia-toolfinder.ldl-biz.workers.dev/recommend';
 
 function tfFill(el) {
   const inp = document.getElementById('tfInput');
-  inp.value = el.dataset.task || el.textContent.trim();
+  inp.value = el.textContent.trim();
   inp.focus();
 }
 function tfHandleKey(e) {
