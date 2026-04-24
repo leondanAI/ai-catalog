@@ -84,33 +84,56 @@
 </div>
 
 <footer class="site-footer">
-  <div class="footer-inner">
+  <div class="footer-inner" style="grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px">
     <div>
-      <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</div>
-      <p class="footer-desc" data-i18n="footer.desc">Best AI tools catalog in one place.</p>
-    </div>
-    <div>
-      <div class="footer-col-title" data-i18n="footer.nav">Navigation</div>
-      <div class="footer-col-links">
-        <a href="/es/" data-i18n="nav.home">Home</a>
-        <a href="/es/directory.html" data-i18n="nav.directory">Directory</a>
-        <a href="/es/tools.html" data-i18n="nav.tools">Free Tools</a>
-        <a href="/es/news.html" data-i18n="nav.news">News</a>
+      <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>mypedia</div>
+      <p class="footer-desc">Your AI tool finder.<br>Updated daily.</p>
+      <div style="display:flex;gap:12px;margin-top:12px">
+        <a href="https://linkedin.com/company/mypedia" target="_blank" rel="noopener" style="color:var(--text3);transition:color .15s" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="#" style="color:var(--text3);transition:color .15s" aria-label="X/Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
       </div>
     </div>
     <div>
-      <div class="footer-col-title">Other Tools</div>
+      <div class="footer-col-title">PRODUCT</div>
       <div class="footer-col-links">
-        <a href="/tools/text-diff.html">Text Diff</a>
-        <a href="/tools/word-counter.html">Word Counter</a>
-        <a href="/tools/json-formatter.html">JSON Formatter</a>
-        <a href="/tools/regex-tester.html">Regex Tester</a>
+        <a href="/es/">Find a Tool</a>
+        <a href="/es/directory.html">AI Catalog</a>
+        <a href="/es/compare.html">Compare</a>
+        <a href="/es/news.html">News</a>
+        <a href="/es/tools.html">Toolbox</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">CATEGORIES</div>
+      <div class="footer-col-links">
+        <a href="/directory.html?cat=chat">AI Chat</a>
+        <a href="/directory.html?cat=code">Development</a>
+        <a href="/directory.html?cat=image">Image Gen</a>
+        <a href="/directory.html?cat=video">Video Gen</a>
+        <a href="/directory.html?cat=voice">Voice & Audio</a>
+        <a href="/directory.html?cat=data">Data & Analytics</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">LANGUAGES</div>
+      <div class="footer-col-links">
+        <a href="/es/">🇬🇧 English</a>
+        <a href="/es/">🇪🇸 Español</a>
+        <a href="/de/">🇩🇪 Deutsch</a>
+        <a href="/ru/">🇷🇺 Русский</a>
+        <a href="/ua/">🇺🇦 Українська</a>
       </div>
     </div>
   </div>
-  <div class="footer-bottom">
-    <span data-i18n="footer.madeWith">Made with ♥ and Claude</span>
-    <span data-i18n="footer.rights">© 2026 MyPedia</span>
+  <div style="text-align:center;font-size:12px;color:rgba(255,255,255,0.45);padding:16px 1.5rem;margin-top:1.5rem;border-top:1px solid rgba(255,255,255,0.08)">
+    Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.
+  </div>
+  <div class="footer-bottom" style="flex-direction:column;gap:6px;align-items:flex-start">
+    <div style="display:flex;justify-content:space-between;width:100%;flex-wrap:wrap;gap:8px">
+      <div style="display:flex;gap:16px;font-size:12px"><a href="/privacy.html" style="color:var(--text3)">Privacy</a><a href="/terms.html" style="color:var(--text3)">Terms</a><a href="/contact.html" style="color:var(--text3)">Contact</a></div>
+      <span style="font-size:12px;color:var(--text3)">© 2026 mypedia. Not affiliated with Pearson MyPedia.</span>
+    </div>
+    <span style="font-size:11px;color:var(--text3);opacity:0.6">Made with ♥ by Leondan & Claude</span>
   </div>
 </footer>
 
