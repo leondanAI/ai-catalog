@@ -165,6 +165,14 @@ def generate_lang_page(html, lang, page, title, desc):
     if lang in ALL_TOOLS_LABEL:
         html = html.replace('>← All Tools<', f'>{ALL_TOOLS_LABEL[lang]}<')
 
+    # Translate "Open tool →" on toolbox listing page
+    OPEN_TOOL = {
+        'ru': 'Открыть →', 'es': 'Abrir →', 'fr': 'Ouvrir →',
+        'de': 'Öffnen →', 'pt': 'Abrir →', 'ua': 'Відкрити →', 'he': 'פתח →',
+    }
+    if lang in OPEN_TOOL:
+        html = html.replace("'Open tool →'", f"'{OPEN_TOOL[lang]}'")
+
     # Fix relative CSS/JS paths to absolute so they work from subdirectory
     html = html.replace('href="css/', 'href="/css/')
     html = html.replace('src="js/', 'src="/js/')

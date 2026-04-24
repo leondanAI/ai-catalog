@@ -123,7 +123,7 @@ const SB_URL  = 'https://lbjdwkvkkndvofysyssy.supabase.co';
 const SB_ANON = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG';
 
 function renderTools(tools) {
-  const openLabel = t('toolbox.open') || 'Open tool →';
+  const openLabel = 'Відкрити →';
   const lang = localStorage.getItem('lang') || 'en';
   const toolPath = lang === 'en' ? '/tools/' : `/${lang}/tools/`;
   document.getElementById('toolsGrid').innerHTML = tools.map(tool => `
@@ -135,25 +135,17 @@ function renderTools(tools) {
     </a>`).join('');
 }
 
-function applyI18nToTools(tools) {
-  return tools.map(tool => ({
-    ...tool,
-    title:       t(`tbx.${tool.id}`)   || tool.title,
-    description: t(`tbx.${tool.id}.d`) || tool.description,
-  }));
-}
-
 async function loadTools() {
   const lang = localStorage.getItem('lang') || 'en';
   const hdrs = { apikey: SB_ANON, Authorization: `Bearer ${SB_ANON}`, Accept: 'application/json' };
   const res = await fetch(`${SB_URL}/rest/v1/toolbox?lang=eq.${lang}&order=id.asc`, { headers: hdrs });
   const tools = await res.json();
   if (tools.length) {
-    renderTools(applyI18nToTools(tools));
+    renderTools(tools);
   } else {
-    // fallback to English, then apply local i18n translations
+    // fallback to English
     const res2 = await fetch(`${SB_URL}/rest/v1/toolbox?lang=eq.en&order=id.asc`, { headers: hdrs });
-    renderTools(applyI18nToTools(await res2.json()));
+    renderTools(await res2.json());
   }
 }
 
