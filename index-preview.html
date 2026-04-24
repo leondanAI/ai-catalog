@@ -167,22 +167,27 @@
   <div class="tf-error" id="tfError"></div>
   <div class="tf-results" id="tfResults"></div>
 
-  <div class="hero-cats-row" id="heroCatPills"></div>
-
   <div class="stats-row">
-    <div class="stat"><div class="stat-n">100+</div><div class="stat-l" data-i18n="stats.total_tools">Top AI tools</div></div>
-    <div class="stat"><div class="stat-n">100%</div><div class="stat-l" data-i18n="stats.reviewed">Fully reviewed</div></div>
-    <div class="stat"><div class="stat-n">15</div><div class="stat-l" data-i18n="stats.categories">Categories</div></div>
+    <div class="stat"><div class="stat-n">3</div><div class="stat-l" data-i18n="stats.picks">Picks per task</div></div>
+    <div class="stat"><div class="stat-n">100+</div><div class="stat-l" data-i18n="stats.reviewed">Tools reviewed</div></div>
+    <div class="stat"><div class="stat-n">15</div><div class="stat-l" data-i18n="stats.categories">Use cases</div></div>
     <div class="stat"><div class="stat-n">Daily</div><div class="stat-l" data-i18n="stats.updated">Updated</div></div>
   </div>
+
+  <div class="hero-cats-row" id="heroCatPills"></div>
 </section>
+
+<style>
+.growth-badge { display:inline-block; background:rgba(34,197,94,0.12); color:#22c55e; font-size:11px; font-weight:500; padding:2px 8px; border-radius:10px; margin-bottom:6px; }
+</style>
 
 <div class="wrap">
   <section class="section">
     <div class="section-head">
-      <h2 class="section-title" data-i18n="section.trending">🔥 Trending Tools</h2>
+      <h2 class="section-title" data-i18n="section.trending">Hot Right Now 🔥</h2>
       <a href="directory.html" class="section-more" data-i18n="section.allTools">All tools →</a>
     </div>
+    <p style="color:var(--text2);font-size:14px;margin:-0.75rem 0 1.25rem" data-i18n="section.trendingSub">Fastest-growing AI tools — based on user growth and community activity.</p>
     <div class="grid-auto" id="trendingGrid"></div>
   </section>
 
@@ -196,7 +201,7 @@
 
   <section class="section">
     <div class="section-head">
-      <h2 class="section-title" data-i18n="section.categories">📂 Categories</h2>
+      <h2 class="section-title" data-i18n="section.categories">Explore by Use Case</h2>
       <a href="directory.html" class="section-more" data-i18n="section.fullCatalog">Full catalog →</a>
     </div>
     <div class="grid-cats" id="catsGrid"></div>
@@ -253,11 +258,33 @@
 <script src="js/db.js"></script>
 <script src="js/main.js"></script>
 <script>
-const TRENDING_NAMES = ['ChatGPT','Claude','Cursor','Midjourney','ElevenLabs','Kling AI'];
+const HOT_TOOLS = [
+  { name:'Perplexity',  growth:'↑ 105% users YoY' },
+  { name:'Lovable',     growth:'↑ $20M ARR in 60 days' },
+  { name:'Cursor',      growth:'↑ $500M → $2B ARR' },
+  { name:'ElevenLabs',  growth:'↑ $11B valuation' },
+  { name:'Bolt.new',    growth:'↑ #1 fastest-growing category' },
+  { name:'Claude',      growth:'↑ #1 B2B AI growth' },
+];
 
 function renderTrending() {
-  const tools = TRENDING_NAMES.map(n => ALL_TOOLS.find(t => t.name === n)).filter(Boolean);
-  document.getElementById('trendingGrid').innerHTML = tools.map(t => renderToolCard(t)).join('');
+  const cards = HOT_TOOLS.map(h => {
+    const tool = ALL_TOOLS.find(t => t.name === h.name);
+    if (!tool) return '';
+    const cat = CATEGORIES.find(c => c.tools.includes(tool));
+    const color = cat ? cat.color : '#7c6af7';
+    const desc = typeof getToolDesc === 'function' ? getToolDesc(tool) : tool.desc;
+    const slug = tool.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+    return `<a class="tool-card fade-up" href="/tools/${slug}.html" style="border-color:${color}22">
+      <div class="tool-card-top">
+        <div class="tool-avatar" style="background:${color}22;color:${color}"><img src="https://www.google.com/s2/favicons?sz=64&domain=${tool.url.replace('https://','').split('/')[0]}" width="28" height="28" style="border-radius:6px" onerror="this.style.display='none';this.parentNode.textContent='${tool.name[0]}'"></div>
+        <div><div class="tool-name">${tool.name}</div><span class="badge badge-${tool.badge}">${tool.badge}</span></div>
+      </div>
+      <span class="growth-badge">${h.growth}</span>
+      <p class="tool-desc">${desc}</p>
+    </a>`;
+  }).join('');
+  document.getElementById('trendingGrid').innerHTML = cards;
 }
 
 function renderNewsGrid(articles) {
