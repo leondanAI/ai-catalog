@@ -105,10 +105,9 @@
 
 <script>localStorage.setItem("lang","ua");document.addEventListener("DOMContentLoaded",function(){if(typeof I18N!=="undefined")I18N.set("ua");});</script>
 <script src="/js/i18n.js"></script>
-<script src="/js/tools-desc.js"></script>
 <script src="/js/main.js"></script>
 <script>
-function onLangChange() { renderToolDesc('word-counter'); }
+function onLangChange() { (function(){var lang=(typeof I18N!=='undefined'?I18N.lang:null)||localStorage.getItem('lang')||'en';var SB='https://lbjdwkvkkndvofysyssy.supabase.co';var KEY='sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG';fetch(SB+'/rest/v1/toolbox?id=eq.word-counter&lang=eq.'+lang+'&select=description_long',{headers:{apikey:KEY,Authorization:'Bearer '+KEY}}).then(function(r){return r.json();}).then(function(d){var el=document.getElementById('toolDesc');if(el&&d[0]&&d[0].description_long){el.innerHTML=d[0].description_long;}else if(el){fetch(SB+'/rest/v1/toolbox?id=eq.word-counter&lang=eq.en&select=description_long',{headers:{apikey:KEY,Authorization:'Bearer '+KEY}}).then(function(r2){return r2.json();}).then(function(d2){if(d2[0]&&d2[0].description_long)el.innerHTML=d2[0].description_long;}).catch(function(){});}}).catch(function(){});})(); }
 function calcWords() {
   const t = document.getElementById('wcInput').value;
   const words = t.trim() ? t.trim().split(/\s+/).length : 0;
@@ -119,7 +118,7 @@ function calcWords() {
   document.getElementById('wcParas').textContent   = t.split(/\n\n+/).filter(p=>p.trim()).length.toLocaleString();
   document.getElementById('wcRead').textContent    = Math.max(1, Math.round(words/200)) + ' min';
 }
-renderToolDesc('word-counter');
+(function(){var lang=(typeof I18N!=='undefined'?I18N.lang:null)||localStorage.getItem('lang')||'en';var SB='https://lbjdwkvkkndvofysyssy.supabase.co';var KEY='sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG';fetch(SB+'/rest/v1/toolbox?id=eq.word-counter&lang=eq.'+lang+'&select=description_long',{headers:{apikey:KEY,Authorization:'Bearer '+KEY}}).then(function(r){return r.json();}).then(function(d){var el=document.getElementById('toolDesc');if(el&&d[0]&&d[0].description_long){el.innerHTML=d[0].description_long;}else if(el){fetch(SB+'/rest/v1/toolbox?id=eq.word-counter&lang=eq.en&select=description_long',{headers:{apikey:KEY,Authorization:'Bearer '+KEY}}).then(function(r2){return r2.json();}).then(function(d2){if(d2[0]&&d2[0].description_long)el.innerHTML=d2[0].description_long;}).catch(function(){});}}).catch(function(){});})();
 </script>
 <script>(function(){var SB="https://lbjdwkvkkndvofysyssy.supabase.co";var KEY="sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG";function applyI18nHeader(){var h=document.querySelector(".tool-head h1");var p=document.querySelector(".tool-head p");var ti=typeof t==="function"&&t("tbx.word-counter");var di=typeof t==="function"&&t("tbx.word-counter.d");if(h&&ti)h.textContent=ti;if(p&&di)p.textContent=di;}function updateToolHeader(lang){if(lang==="en")return;fetch(SB+"/rest/v1/toolbox?lang=eq."+lang+"&id=eq.word-counter",{headers:{apikey:KEY,Authorization:"Bearer "+KEY}}).then(function(r){return r.json();}).then(function(d){if(d[0]){var h=document.querySelector(".tool-head h1");var p=document.querySelector(".tool-head p");if(h&&d[0].title)h.textContent=d[0].title;if(p&&d[0].description)p.textContent=d[0].description;}else{applyI18nHeader();}}).catch(function(){applyI18nHeader();});}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",function(){updateToolHeader("ua");});}else{updateToolHeader("ua");}var _orig=window.onLangChange;window.onLangChange=function(){if(_orig)_orig();updateToolHeader(localStorage.getItem("lang")||"en");};})();</script>
 </body>
