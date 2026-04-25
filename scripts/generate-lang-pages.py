@@ -8,7 +8,7 @@ Run: python3 scripts/generate-lang-pages.py
 
 import os, re
 
-BASE_URL = 'https://www.mypedia.ai'
+BASE_URL = 'https://aitoolfit.ai'
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
 LANGUAGES = [
@@ -118,9 +118,64 @@ LANG_LABELS = {
     'ua': 'UA',
 }
 
+def translate_footer(html, lang):
+    """Translate footer content — used by both main pages and toolbox pages."""
+    FOOTER_COLS = {
+        'ru': {'PRODUCT':'ПРОДУКТ','CATEGORIES':'КАТЕГОРИИ','NEWS CATEGORIES':'КАТЕГОРИИ НОВОСТЕЙ','QUICK COMPARE':'БЫСТРОЕ СРАВНЕНИЕ','LANGUAGES':'ЯЗЫКИ'},
+        'es': {'PRODUCT':'PRODUCTO','CATEGORIES':'CATEGORÍAS','NEWS CATEGORIES':'CATEGORÍAS DE NOTICIAS','QUICK COMPARE':'COMPARACIÓN RÁPIDA','LANGUAGES':'IDIOMAS'},
+        'fr': {'PRODUCT':'PRODUIT','CATEGORIES':'CATÉGORIES','NEWS CATEGORIES':"CATÉGORIES D'ACTUALITÉS",'QUICK COMPARE':'COMPARAISON RAPIDE','LANGUAGES':'LANGUES'},
+        'de': {'PRODUCT':'PRODUKT','CATEGORIES':'KATEGORIEN','NEWS CATEGORIES':'NACHRICHTENKATEGORIEN','QUICK COMPARE':'SCHNELLVERGLEICH','LANGUAGES':'SPRACHEN'},
+        'pt': {'PRODUCT':'PRODUTO','CATEGORIES':'CATEGORIAS','NEWS CATEGORIES':'CATEGORIAS DE NOTÍCIAS','QUICK COMPARE':'COMPARAÇÃO RÁPIDA','LANGUAGES':'IDIOMAS'},
+        'ua': {'PRODUCT':'ПРОДУКТ','CATEGORIES':'КАТЕГОРІЇ','NEWS CATEGORIES':'КАТЕГОРІЇ НОВИН','QUICK COMPARE':'ШВИДКЕ ПОРІВНЯННЯ','LANGUAGES':'МОВИ'},
+        'he': {'PRODUCT':'מוצר','CATEGORIES':'קטגוריות','NEWS CATEGORIES':'קטגוריות חדשות','QUICK COMPARE':'השוואה מהירה','LANGUAGES':'שפות'},
+    }
+    if lang in FOOTER_COLS:
+        for en_h, tr_h in FOOTER_COLS[lang].items():
+            html = html.replace(f'footer-col-title">{en_h}</div>', f'footer-col-title">{tr_h}</div>')
+    FOOTER_TEXTS = {
+        'ru': {'Your AI tool finder.<br>Updated daily.':'Ваш ИИ-помощник по выбору инструментов.<br>Обновляется ежедневно.','>Find a Tool<':'>Найти инструмент<','>AI Catalog<':'>Каталог ИИ<','>Compare<':'>Сравнение<','>News<':'>Новости<','>Toolbox<':'>Инструменты<','>Privacy<':'>Конфиденциальность<','>Terms<':'>Условия<','>Contact<':'>Контакт<','Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':'Создано людьми, курируется с помощью ИИ. Без платных размещений — рекомендации ранжируются по релевантности и отзывам.','© 2026 mypedia. Not affiliated with Pearson MyPedia.':'© 2026 mypedia. Не связан с Pearson MyPedia.'},
+        'es': {'Your AI tool finder.<br>Updated daily.':'Tu buscador de herramientas IA.<br>Actualizado diariamente.','>Find a Tool<':'>Buscar herramienta<','>AI Catalog<':'>Catálogo IA<','>Compare<':'>Comparar<','>News<':'>Noticias<','>Toolbox<':'>Herramientas<','>Privacy<':'>Privacidad<','>Terms<':'>Términos<','>Contact<':'>Contacto<','Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':'Creado por humanos, curado con IA. Sin colocaciones pagadas — recomendaciones clasificadas por relevancia y reseñas.','© 2026 mypedia. Not affiliated with Pearson MyPedia.':'© 2026 mypedia. No afiliado con Pearson MyPedia.'},
+        'fr': {'Your AI tool finder.<br>Updated daily.':'Votre moteur de recherche d\'outils IA.<br>Mis à jour quotidiennement.','>Find a Tool<':'>Trouver un outil<','>AI Catalog<':'>Catalogue IA<','>Compare<':'>Comparer<','>News<':'>Actualités<','>Toolbox<':'>Outils<','>Privacy<':'>Confidentialité<','>Terms<':'>Conditions<','>Contact<':'>Contact<','Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':'Créé par des humains, sélectionné avec l\'IA. Aucun placement payant — recommandations classées par pertinence et avis.','© 2026 mypedia. Not affiliated with Pearson MyPedia.':'© 2026 mypedia. Non affilié à Pearson MyPedia.'},
+        'de': {'Your AI tool finder.<br>Updated daily.':'Ihr KI-Tool-Finder.<br>Täglich aktualisiert.','>Find a Tool<':'>Tool finden<','>AI Catalog<':'>KI-Katalog<','>Compare<':'>Vergleichen<','>News<':'>Nachrichten<','>Toolbox<':'>Werkzeuge<','>Privacy<':'>Datenschutz<','>Terms<':'>Nutzung<','>Contact<':'>Kontakt<','Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':'Von Menschen erstellt, mit KI kuratiert. Keine bezahlten Platzierungen — Empfehlungen nach Relevanz und Bewertungen.','© 2026 mypedia. Not affiliated with Pearson MyPedia.':'© 2026 mypedia. Nicht mit Pearson MyPedia verbunden.'},
+        'pt': {'Your AI tool finder.<br>Updated daily.':'Seu buscador de ferramentas IA.<br>Atualizado diariamente.','>Find a Tool<':'>Buscar ferramenta<','>AI Catalog<':'>Catálogo IA<','>Compare<':'>Comparar<','>News<':'>Notícias<','>Toolbox<':'>Ferramentas<','>Privacy<':'>Privacidade<','>Terms<':'>Termos<','>Contact<':'>Contato<','Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':'Criado por humanos, curado com IA. Sem posicionamentos pagos — recomendações por relevância e avaliações.','© 2026 mypedia. Not affiliated with Pearson MyPedia.':'© 2026 mypedia. Não afiliado à Pearson MyPedia.'},
+        'ua': {'Your AI tool finder.<br>Updated daily.':'Ваш ІІ-помічник з вибору інструментів.<br>Оновлюється щодня.','>Find a Tool<':'>Знайти інструмент<','>AI Catalog<':'>Каталог ІІ<','>Compare<':'>Порівняння<','>News<':'>Новини<','>Toolbox<':'>Інструменти<','>Privacy<':'>Конфіденційність<','>Terms<':'>Умови<','>Contact<':'>Контакт<','Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':'Створено людьми, курується за допомогою ІІ. Без платних розміщень — рекомендації за релевантністю та відгуками.','© 2026 mypedia. Not affiliated with Pearson MyPedia.':'© 2026 mypedia. Не пов\'язаний з Pearson MyPedia.'},
+        'he': {'Your AI tool finder.<br>Updated daily.':'מנוע החיפוש שלך לכלי AI.<br>מתעדכן יומית.','>Find a Tool<':'>מצא כלי<','>AI Catalog<':'>קטלוג AI<','>Compare<':'>השוואה<','>News<':'>חדשות<','>Toolbox<':'>ארגז כלים<','>Privacy<':'>פרטיות<','>Terms<':'>תנאים<','>Contact<':'>צור קשר<','Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':'נבנה על ידי בני אדם, נאצר עם AI. ללא מיקומים בתשלום — המלצות מדורגות לפי רלוונטיות וביקורות.','© 2026 mypedia. Not affiliated with Pearson MyPedia.':'© 2026 mypedia. לא קשור ל-Pearson MyPedia.'},
+    }
+    if lang in FOOTER_TEXTS:
+        for en_text, tr_text in FOOTER_TEXTS[lang].items():
+            html = html.replace(en_text, tr_text)
+    # Shared text replacements
+    MISC_TR = {
+        'ru': {'Read more →':'Подробнее →','Try an example:':'Попробуйте пример:'},
+        'es': {'Read more →':'Leer más →','Try an example:':'Prueba un ejemplo:'},
+        'fr': {'Read more →':'En savoir plus →','Try an example:':'Essayez un exemple :'},
+        'de': {'Read more →':'Mehr erfahren →','Try an example:':'Beispiel ausprobieren:'},
+        'pt': {'Read more →':'Saiba mais →','Try an example:':'Tente um exemplo:'},
+        'ua': {'Read more →':'Детальніше →','Try an example:':'Спробуйте приклад:'},
+        'he': {'Read more →':'קרא עוד →','Try an example:':'נסה דוגמה:'},
+    }
+    if lang in MISC_TR:
+        for en_text, tr_text in MISC_TR[lang].items():
+            html = html.replace(en_text, tr_text)
+    return html
+
 def generate_lang_page(html, lang, page, title, desc):
     # Set html lang attribute
     html = re.sub(r'<html[^>]*>', f'<html lang="{lang}">', html)
+
+    # Bake i18n translations into HTML — replace data-i18n element text with translated values
+    # This prevents English flash and ensures crawlers see the correct language
+    translations = parse_i18n()
+    t = translations.get(lang, {})
+    en = translations.get('en', {})
+    def replace_i18n(m):
+        tag_open = m.group(1)  # full opening tag including >
+        key = m.group(2)       # the i18n key
+        en_text = m.group(3)   # current English text
+        tag_close = m.group(4) # closing tag
+        translated = t.get(key) or en.get(key) or en_text
+        return f'{tag_open}{translated}{tag_close}'
+    html = re.sub(r'(<[^>]+data-i18n="([^"]+)"[^>]*>)(.*?)(</(?:span|a|h1|h2|p|div|button)[^>]*>)', replace_i18n, html)
 
     # Update lang-picker button to show correct flag
     flag = LANG_FLAGS.get(lang, '🌐')
@@ -173,183 +228,9 @@ def generate_lang_page(html, lang, page, title, desc):
     if lang in OPEN_TOOL:
         html = html.replace("'Open tool →'", f"'{OPEN_TOOL[lang]}'")
 
-    # Translate footer content
-    # Column headers use 'title">' prefix to avoid replacing JS variable CATEGORIES
-    FOOTER_COLS = {
-        'ru': {'PRODUCT':'ПРОДУКТ','CATEGORIES':'КАТЕГОРИИ','NEWS CATEGORIES':'КАТЕГОРИИ НОВОСТЕЙ','QUICK COMPARE':'БЫСТРОЕ СРАВНЕНИЕ','LANGUAGES':'ЯЗЫКИ'},
-        'es': {'PRODUCT':'PRODUCTO','CATEGORIES':'CATEGORÍAS','NEWS CATEGORIES':'CATEGORÍAS DE NOTICIAS','QUICK COMPARE':'COMPARACIÓN RÁPIDA','LANGUAGES':'IDIOMAS'},
-        'fr': {'PRODUCT':'PRODUIT','CATEGORIES':'CATÉGORIES','NEWS CATEGORIES':"CATÉGORIES D'ACTUALITÉS",'QUICK COMPARE':'COMPARAISON RAPIDE','LANGUAGES':'LANGUES'},
-        'de': {'PRODUCT':'PRODUKT','CATEGORIES':'KATEGORIEN','NEWS CATEGORIES':'NACHRICHTENKATEGORIEN','QUICK COMPARE':'SCHNELLVERGLEICH','LANGUAGES':'SPRACHEN'},
-        'pt': {'PRODUCT':'PRODUTO','CATEGORIES':'CATEGORIAS','NEWS CATEGORIES':'CATEGORIAS DE NOTÍCIAS','QUICK COMPARE':'COMPARAÇÃO RÁPIDA','LANGUAGES':'IDIOMAS'},
-        'ua': {'PRODUCT':'ПРОДУКТ','CATEGORIES':'КАТЕГОРІЇ','NEWS CATEGORIES':'КАТЕГОРІЇ НОВИН','QUICK COMPARE':'ШВИДКЕ ПОРІВНЯННЯ','LANGUAGES':'МОВИ'},
-        'he': {'PRODUCT':'מוצר','CATEGORIES':'קטגוריות','NEWS CATEGORIES':'קטגוריות חדשות','QUICK COMPARE':'השוואה מהירה','LANGUAGES':'שפות'},
-    }
-    if lang in FOOTER_COLS:
-        for en_h, tr_h in FOOTER_COLS[lang].items():
-            html = html.replace(f'footer-col-title">{en_h}</div>', f'footer-col-title">{tr_h}</div>')
+    # Translate footer content (shared function)
+    html = translate_footer(html, lang)
 
-    FOOTER_TR = {
-        'ru': {
-            'Your AI tool finder.<br>Updated daily.': 'Ваш ИИ-помощник по выбору инструментов.<br>Обновляется ежедневно.',
-            '>Find a Tool<': '>Найти инструмент<',
-            '>AI Catalog<': '>Каталог ИИ<',
-            '>Compare<': '>Сравнение<',
-            '>News<': '>Новости<',
-            '>Toolbox<': '>Инструменты<',
-            '>Privacy<': '>Конфиденциальность<',
-            '>Terms<': '>Условия<',
-            '>Contact<': '>Контакт<',
-
-
-
-            'Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':
-                'Создано людьми, курируется с помощью ИИ. Без платных размещений — рекомендации ранжируются по релевантности и отзывам.',
-            '© 2026 mypedia. Not affiliated with Pearson MyPedia.': '© 2026 mypedia. Не связан с Pearson MyPedia.',
-            'Read more →': 'Подробнее →',
-            'Try an example:': 'Попробуйте пример:',
-        },
-        'es': {
-            'Your AI tool finder.<br>Updated daily.': 'Tu buscador de herramientas IA.<br>Actualizado diariamente.',
-            '>Find a Tool<': '>Buscar herramienta<',
-            '>AI Catalog<': '>Catálogo IA<',
-            '>Compare<': '>Comparar<',
-            '>News<': '>Noticias<',
-            '>Toolbox<': '>Herramientas<',
-            '>Privacy<': '>Privacidad<',
-            '>Terms<': '>Términos<',
-            '>Contact<': '>Contacto<',
-
-
-
-
-
-
-
-            'Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':
-                'Creado por humanos, curado con IA. Sin colocaciones pagadas — recomendaciones clasificadas por relevancia y reseñas.',
-            '© 2026 mypedia. Not affiliated with Pearson MyPedia.': '© 2026 mypedia. No afiliado con Pearson MyPedia.',
-            'Read more →': 'Leer más →',
-            'Try an example:': 'Prueba un ejemplo:',
-        },
-        'fr': {
-            'Your AI tool finder.<br>Updated daily.': 'Votre moteur de recherche d\'outils IA.<br>Mis à jour quotidiennement.',
-            '>Find a Tool<': '>Trouver un outil<',
-            '>AI Catalog<': '>Catalogue IA<',
-            '>Compare<': '>Comparer<',
-            '>News<': '>Actualités<',
-            '>Toolbox<': '>Outils<',
-            '>Privacy<': '>Confidentialité<',
-            '>Terms<': '>Conditions<',
-            '>Contact<': '>Contact<',
-
-
-
-
-
-
-
-            'Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':
-                'Créé par des humains, sélectionné avec l\'IA. Aucun placement payant — recommandations classées par pertinence et avis.',
-            '© 2026 mypedia. Not affiliated with Pearson MyPedia.': '© 2026 mypedia. Non affilié à Pearson MyPedia.',
-            'Read more →': 'En savoir plus →',
-            'Try an example:': 'Essayez un exemple :',
-        },
-        'de': {
-            'Your AI tool finder.<br>Updated daily.': 'Ihr KI-Tool-Finder.<br>Täglich aktualisiert.',
-            '>Find a Tool<': '>Tool finden<',
-            '>AI Catalog<': '>KI-Katalog<',
-            '>Compare<': '>Vergleichen<',
-            '>News<': '>Nachrichten<',
-            '>Toolbox<': '>Werkzeuge<',
-            '>Privacy<': '>Datenschutz<',
-            '>Terms<': '>Nutzung<',
-            '>Contact<': '>Kontakt<',
-
-
-
-
-
-
-
-            'Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':
-                'Von Menschen erstellt, mit KI kuratiert. Keine bezahlten Platzierungen — Empfehlungen nach Relevanz und Bewertungen.',
-            '© 2026 mypedia. Not affiliated with Pearson MyPedia.': '© 2026 mypedia. Nicht mit Pearson MyPedia verbunden.',
-            'Read more →': 'Mehr erfahren →',
-            'Try an example:': 'Beispiel ausprobieren:',
-        },
-        'pt': {
-            'Your AI tool finder.<br>Updated daily.': 'Seu buscador de ferramentas IA.<br>Atualizado diariamente.',
-            '>Find a Tool<': '>Buscar ferramenta<',
-            '>AI Catalog<': '>Catálogo IA<',
-            '>Compare<': '>Comparar<',
-            '>News<': '>Notícias<',
-            '>Toolbox<': '>Ferramentas<',
-            '>Privacy<': '>Privacidade<',
-            '>Terms<': '>Termos<',
-            '>Contact<': '>Contato<',
-
-
-
-
-
-
-
-            'Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':
-                'Criado por humanos, curado com IA. Sem posicionamentos pagos — recomendações por relevância e avaliações.',
-            '© 2026 mypedia. Not affiliated with Pearson MyPedia.': '© 2026 mypedia. Não afiliado à Pearson MyPedia.',
-            'Read more →': 'Saiba mais →',
-            'Try an example:': 'Tente um exemplo:',
-        },
-        'ua': {
-            'Your AI tool finder.<br>Updated daily.': 'Ваш ІІ-помічник з вибору інструментів.<br>Оновлюється щодня.',
-            '>Find a Tool<': '>Знайти інструмент<',
-            '>AI Catalog<': '>Каталог ІІ<',
-            '>Compare<': '>Порівняння<',
-            '>News<': '>Новини<',
-            '>Toolbox<': '>Інструменти<',
-            '>Privacy<': '>Конфіденційність<',
-            '>Terms<': '>Умови<',
-            '>Contact<': '>Контакт<',
-
-
-
-
-
-
-
-            'Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':
-                'Створено людьми, курується за допомогою ІІ. Без платних розміщень — рекомендації за релевантністю та відгуками.',
-            '© 2026 mypedia. Not affiliated with Pearson MyPedia.': '© 2026 mypedia. Не пов\'язаний з Pearson MyPedia.',
-            'Read more →': 'Детальніше →',
-            'Try an example:': 'Спробуйте приклад:',
-        },
-        'he': {
-            'Your AI tool finder.<br>Updated daily.': 'מנוע החיפוש שלך לכלי AI.<br>מתעדכן יומית.',
-            '>Find a Tool<': '>מצא כלי<',
-            '>AI Catalog<': '>קטלוג AI<',
-            '>Compare<': '>השוואה<',
-            '>News<': '>חדשות<',
-            '>Toolbox<': '>ארגז כלים<',
-            '>Privacy<': '>פרטיות<',
-            '>Terms<': '>תנאים<',
-            '>Contact<': '>צור קשר<',
-
-
-
-
-
-
-
-            'Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':
-                'נבנה על ידי בני אדם, נאצר עם AI. ללא מיקומים בתשלום — המלצות מדורגות לפי רלוונטיות וביקורות.',
-            '© 2026 mypedia. Not affiliated with Pearson MyPedia.': '© 2026 mypedia. לא קשור ל-Pearson MyPedia.',
-            'Read more →': 'קרא עוד →',
-            'Try an example:': 'נסה דוגמה:',
-        },
-    }
-    if lang in FOOTER_TR:
-        for en_text, tr_text in FOOTER_TR[lang].items():
-            html = html.replace(en_text, tr_text)
 
     # Translate prompt pills, placeholder and rotating phrases
     PILLS = {
@@ -507,6 +388,10 @@ def generate_lang_page(html, lang, page, title, desc):
     if lang in SEARCH_PH:
         html = html.replace('Describe your task — we\'ll find the right AI tool for it…', SEARCH_PH[lang].replace("'", "\\'"))
         html = html.replace("Describe your task — we'll find the right AI tool for it…", SEARCH_PH[lang])
+
+    # Remove English SEO pre-rendered blocks — JS will fetch translated content from Supabase
+    html = re.sub(r'<!-- SEO:news:start -->.*?<!-- SEO:news:end -->', '<!-- SEO:news:start --><!-- SEO:news:end -->', html, flags=re.DOTALL)
+    html = re.sub(r'<!-- SEO:catalog:start -->.*?<!-- SEO:catalog:end -->', '<!-- SEO:catalog:start --><!-- SEO:catalog:end -->', html, flags=re.DOTALL)
 
     # Fix relative CSS/JS paths to absolute so they work from subdirectory
     html = html.replace('href="css/', 'href="/css/')
@@ -705,6 +590,8 @@ def generate_toolbox_pages(code):
             f'</script>\n'
         )
         html = html.replace('</body>', header_script + '</body>', 1)
+        # Apply footer translations (same as main pages)
+        html = translate_footer(html, code)
         out_path = os.path.join(tools_dir, f'{slug}.html')
         with open(out_path, 'w') as f:
             f.write(html)

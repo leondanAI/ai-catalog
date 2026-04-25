@@ -10,7 +10,7 @@ Usage:
 import os
 
 ROOT     = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-BASE_URL = 'https://www.mypedia.ai'
+BASE_URL = 'https://aitoolfit.ai'
 
 SB_URL  = 'https://lbjdwkvkkndvofysyssy.supabase.co'
 SB_ANON = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG'

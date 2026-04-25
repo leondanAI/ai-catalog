@@ -108,7 +108,7 @@ def build_jsonld(name, desc, url, badge, slug, rating_data):
         "publisher": {
             "@type": "Organization",
             "name": "MyPedia",
-            "url": "https://www.mypedia.ai"
+            "url": "https://aitoolfit.ai"
         }
     }
     if rating_data and slug in rating_data:
@@ -162,14 +162,14 @@ def render_page(tool, all_tools, rating_data=None):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{esc(name)} Review 2026 — Pros, Cons &amp; Alternatives | MyPedia</title>
 <meta name="description" content="{esc(meta_desc)}">
-<link rel="canonical" href="https://www.mypedia.ai/tools/{esc(slug)}.html">
-<link rel="alternate" hreflang="x-default" href="https://www.mypedia.ai/tools/{esc(slug)}.html">
-<link rel="alternate" hreflang="en" href="https://www.mypedia.ai/tools/{esc(slug)}.html">
-<link rel="alternate" hreflang="ru" href="https://www.mypedia.ai/ru/tools/{esc(slug)}.html">
+<link rel="canonical" href="https://aitoolfit.ai/tools/{esc(slug)}.html">
+<link rel="alternate" hreflang="x-default" href="https://aitoolfit.ai/tools/{esc(slug)}.html">
+<link rel="alternate" hreflang="en" href="https://aitoolfit.ai/tools/{esc(slug)}.html">
+<link rel="alternate" hreflang="ru" href="https://aitoolfit.ai/ru/tools/{esc(slug)}.html">
 <meta property="og:title" content="{esc(name)} Review 2026 | MyPedia">
 <meta property="og:description" content="{esc(meta_desc)}">
-<meta property="og:url" content="https://www.mypedia.ai/tools/{esc(slug)}.html">
-<meta property="og:image" content="https://www.mypedia.ai/og-image.svg">
+<meta property="og:url" content="https://aitoolfit.ai/tools/{esc(slug)}.html">
+<meta property="og:image" content="https://aitoolfit.ai/og-image.svg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{esc(name)} Review 2026 | MyPedia">

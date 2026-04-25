@@ -14,7 +14,7 @@ import urllib.request, json, os, sys
 SB_URL  = 'https://lbjdwkvkkndvofysyssy.supabase.co'
 SB_ANON = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG'
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-BASE_URL = 'https://www.mypedia.ai'
+BASE_URL = 'https://aitoolfit.ai'
 
 LANG_FLAGS = {
     'ru': '🇷🇺', 'es': '🇪🇸', 'fr': '🇫🇷', 'pt': '🇧🇷',

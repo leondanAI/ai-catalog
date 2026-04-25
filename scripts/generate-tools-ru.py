@@ -14,7 +14,7 @@ SB_ANON = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG'
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 OUT_DIR  = os.path.join(ROOT_DIR, 'ru', 'tools')
 CACHE_FILE = os.path.join(ROOT_DIR, 'scripts', 'ru_translations_cache.json')
-BASE_URL = 'https://www.mypedia.ai'
+BASE_URL = 'https://aitoolfit.ai'
 
 # ─── Russian strings ──────────────────────────────────────────────────────────
 CATEGORY_LABELS_RU = {
@@ -141,7 +141,7 @@ def build_jsonld(name, desc, url, badge, slug, rating_data):
         "publisher": {
             "@type": "Organization",
             "name": "MyPedia",
-            "url": "https://www.mypedia.ai"
+            "url": "https://aitoolfit.ai"
         }
     }
     if rating_data and slug in rating_data:

@@ -8,35 +8,35 @@
 <meta name="keywords" content="AI news 2026, artificial intelligence news, ChatGPT news, Claude news, AI models, AI research, AI business">
 <meta name="author" content="MyPedia">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="canonical" href="https://www.mypedia.ai/news.html">
+<link rel="canonical" href="https://aitoolfit.ai/news.html">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.mypedia.ai/news.html">
+<meta property="og:url" content="https://aitoolfit.ai/news.html">
 <meta property="og:title" content="AI News 2026 — Latest AI Updates — MyPedia">
 <meta property="og:description" content="Latest AI news in 2026 — new model releases, tool launches, research breakthroughs and business events. Updated daily.">
-<meta property="og:image" content="https://www.mypedia.ai/og-image.svg">
+<meta property="og:image" content="https://aitoolfit.ai/og-image.svg">
 <meta property="og:site_name" content="MyPedia">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="AI News 2026 — Latest AI Updates — MyPedia">
 <meta name="twitter:description" content="Latest AI news — model releases, tool launches, research breakthroughs. Updated daily.">
-<meta name="twitter:image" content="https://www.mypedia.ai/og-image.svg">
+<meta name="twitter:image" content="https://aitoolfit.ai/og-image.svg">
 <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L09EYV4S46"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-L09EYV4S46");</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<link rel="alternate" hreflang="x-default" href="https://www.mypedia.ai/news.html">
-<link rel="alternate" hreflang="en" href="https://www.mypedia.ai/news.html">
-<link rel="alternate" hreflang="es" href="https://www.mypedia.ai/es/news.html">
-<link rel="alternate" hreflang="fr" href="https://www.mypedia.ai/fr/news.html">
-<link rel="alternate" hreflang="pt" href="https://www.mypedia.ai/pt/news.html">
-<link rel="alternate" hreflang="ru" href="https://www.mypedia.ai/ru/news.html">
-<link rel="alternate" hreflang="de" href="https://www.mypedia.ai/de/news.html">
-<link rel="alternate" hreflang="ua" href="https://www.mypedia.ai/ua/news.html">
-<link rel="alternate" hreflang="he" href="https://www.mypedia.ai/he/news.html">
+<link rel="alternate" hreflang="x-default" href="https://aitoolfit.ai/news.html">
+<link rel="alternate" hreflang="en" href="https://aitoolfit.ai/news.html">
+<link rel="alternate" hreflang="es" href="https://aitoolfit.ai/es/news.html">
+<link rel="alternate" hreflang="fr" href="https://aitoolfit.ai/fr/news.html">
+<link rel="alternate" hreflang="pt" href="https://aitoolfit.ai/pt/news.html">
+<link rel="alternate" hreflang="ru" href="https://aitoolfit.ai/ru/news.html">
+<link rel="alternate" hreflang="de" href="https://aitoolfit.ai/de/news.html">
+<link rel="alternate" hreflang="ua" href="https://aitoolfit.ai/ua/news.html">
+<link rel="alternate" hreflang="he" href="https://aitoolfit.ai/he/news.html">
 </head>
 <body>
 
@@ -432,9 +432,9 @@ function clearNewsCache(lang) {
 
 async function loadNews() {
   const lang = typeof I18N !== 'undefined' ? I18N.lang : 'en';
-  // 1. Render static fallback instantly — no blank-page wait
+  // 1. Render tabs + fallback (English only — language pages wait for Supabase)
   buildTabs();
-  render();
+  if (lang === 'en') render();
   // 2. Check cache — if fresh, use it and skip Supabase entirely
   const cached = readCache(lang);
   if (cached) {

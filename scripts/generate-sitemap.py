@@ -20,7 +20,7 @@ import os
 from datetime import date
 
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-BASE_URL  = 'https://www.mypedia.ai'
+BASE_URL  = 'https://aitoolfit.ai'
 TODAY     = date.today().isoformat()
 
 LANGS = ['ru', 'es', 'fr', 'de', 'pt', 'uk', 'he']

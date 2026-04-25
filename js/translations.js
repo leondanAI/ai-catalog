@@ -1648,9 +1648,11 @@ const TOOL_TRANSLATIONS = {
     ua: 'Створюйте та розгортайте власних ІІ-агентів для бізнесу. Інтеграція з Microsoft 365 та Azure.',
   },
   'n8n': {
+    he: 'אוטומציה בקוד פתוח. מודלי AI, APIs ו-400+ שירותים בבונה ויזואלי.',
     ua: 'Open-source автоматизація. З\'єднуйте ІІ-моделі, API та 400+ сервісів у візуальному конструкторі.',
   },
   'Make': {
+    he: 'אוטומציה ויזואלית עם 1000+ אפליקציות. יותר גמישות לתרחישים מורכבים.',
     ru: 'Визуальная автоматизация с 1000+ приложениями. Больше гибкости для сложных сценариев.',
     es: 'Automatización visual con 1000+ apps. Más flexibilidad para escenarios complejos.',
     fr: 'Automatisation visuelle avec 1000+ apps. Plus de flexibilité pour les scénarios complexes.',
@@ -1659,6 +1661,7 @@ const TOOL_TRANSLATIONS = {
     ua: 'Візуальна автоматизація з підключенням 1000+ додатків. Більше гнучкості для складних сценаріїв.',
   },
   'AutoGPT': {
+    he: 'סוכן AI אוטונומי בקוד פתוח. תנו מטרה — הוא מפרק לשלבים ומבצע.',
     ru: 'Open-source автономный ИИ-агент. Задайте цель — он выполнит сам.',
     es: 'Agente IA autónomo open-source. Dale un objetivo — lo ejecuta solo.',
     fr: 'Agent IA autonome open-source. Donnez un objectif — il l\'exécute seul.',
@@ -1667,6 +1670,7 @@ const TOOL_TRANSLATIONS = {
     ua: 'Open-source автономний ІІ-агент. Задайте ціль — він розбиває на кроки, шукає і виконує.',
   },
   'Lindy': {
+    he: 'סוכני AI למייל, תזמון ותמיכה בדקות. ללא קוד, עם טריגרים חכמים.',
     ru: 'ИИ-агенты для почты, планирования и поддержки за минуты. Без кода.',
     es: 'Agentes IA para email, planificación y soporte en minutos. Sin código.',
     fr: 'Agents IA pour email, planification et support en minutes. Sans code.',
@@ -1683,6 +1687,7 @@ const TOOL_TRANSLATIONS = {
     ua: 'No-code платформа для створення та розгортання ІІ-агентів і мультистепових ланцюгів.',
   },
   'Manus': {
+    he: 'סוכן AI אוטונומי. מטרה מורכבת — חיפוש, קוד, קבצים, תוצאה מוכנה.',
     ru: 'Автономный ИИ-агент. Сложная цель — поиск, код, файлы, готовый результат.',
     es: 'Agente IA autónomo. Objetivo complejo — búsqueda, código, archivos, resultado listo.',
     fr: 'Agent IA autonome. Objectif complexe — recherche, code, fichiers, résultat prêt.',
@@ -1691,6 +1696,7 @@ const TOOL_TRANSLATIONS = {
     ua: 'Автономний ІІ-агент. Задайте складну ціль — він шукає, пише код, керує файлами і видає результат.',
   },
   'Windsurf': {
+    he: 'IDE AI חינמי מ-Codeium עם Flows — גישה אג׳נטית לתכנות.',
     ru: 'Бесплатная ИИ-IDE от Codeium с Flows — агентный подход к программированию.',
     es: 'IDE IA gratuito de Codeium con Flows — enfoque agente para programar.',
     fr: 'IDE IA gratuit de Codeium avec Flows — approche agent pour coder.',
@@ -1699,6 +1705,7 @@ const TOOL_TRANSLATIONS = {
     ua: 'Безкоштовна ІІ-IDE від Codeium з Flows — агентний підхід з розумінням всього проєкту.',
   },
   'Semrush': {
+    he: 'פלטפורמת SEO מקיפה עם עוזר AI וניתוח מתחרים.',
     ru: 'Комплексная SEO-платформа с ИИ-ассистентом и анализом конкурентов.',
     es: 'Plataforma SEO completa con asistente IA y análisis de competidores.',
     fr: 'Plateforme SEO complète avec assistant IA et analyse concurrentielle.',
@@ -1723,6 +1730,7 @@ const TOOL_TRANSLATIONS = {
     ua: 'Генеруйте конверсійні рекламні креативи з ІІ. Facebook, Google та LinkedIn.',
   },
   'SurferSEO': {
+    he: 'אופטימיזציית תוכן ל-Google. מאמרי SEO עם ניתוח NLP.',
     ru: 'Оптимизация контента для Google. SEO-статьи с NLP-анализом.',
     es: 'Optimización de contenido para Google. Artículos SEO con análisis NLP.',
     fr: 'Optimisation de contenu pour Google. Articles SEO avec analyse NLP.',
@@ -1731,6 +1739,7 @@ const TOOL_TRANSLATIONS = {
     ua: 'Оптимізація контенту для топових позицій у Google. Генерація SEO-статей з NLP-аналізом.',
   },
   'Clearscope': {
+    he: 'פלטפורמת אופטימיזציית תוכן לצוותים ולסוכנויות מובילות.',
     ru: 'Платформа оптимизации контента для ведущих команд и агентств.',
     es: 'Plataforma de optimización de contenido para equipos y agencias líderes.',
     fr: 'Plateforme d\'optimisation de contenu pour équipes et agences leaders.',
@@ -1739,6 +1748,7 @@ const TOOL_TRANSLATIONS = {
     ua: 'Платформа оптимізації контенту для провідних контент-команд та агентств.',
   },
   'Frase': {
+    he: 'AI למחקר, בריפים ואופטימיזציית SEO בכלי אחד.',
     ru: 'ИИ для исследования, контент-брифов и SEO-оптимизации.',
     es: 'IA para investigación, briefs de contenido y optimización SEO.',
     fr: 'IA pour recherche, briefs de contenu et optimisation SEO.',
@@ -1747,6 +1757,7 @@ const TOOL_TRANSLATIONS = {
     ua: 'ІІ для дослідження, контент-брифів та SEO-оптимізації в одному інструменті.',
   },
   'ComfyUI': {
+    he: 'עורך Node בקוד פתוח החזק ביותר ליצירת תמונות AI.',
     ru: 'Мощнейший open-source нодовый редактор для ИИ-изображений.',
     es: 'El editor nodal open-source más potente para imágenes IA.',
     fr: 'L\'éditeur nodal open-source le plus puissant pour images IA.',
@@ -1763,6 +1774,7 @@ const TOOL_TRANSLATIONS = {
     ua: 'Модель зображень від OpenAI в ChatGPT та API. Точне дотримання промптів з безпечним контентом.',
   },
   'Flux': {
+    he: 'מודל קוד פתוח מ-Black Forest Labs. מתחרה ב-Midjourney בחינם.',
     ru: 'Open-source модель от Black Forest Labs. Конкурирует с Midjourney бесплатно.',
     es: 'Modelo open-source de Black Forest Labs. Compite con Midjourney gratis.',
     fr: 'Modèle open-source de Black Forest Labs. Rivalise avec Midjourney gratuitement.',
@@ -1771,6 +1783,7 @@ const TOOL_TRANSLATIONS = {
     ua: 'Передова open-source модель від Black Forest Labs. Конкурує з Midjourney при нульовій вартості.',
   },
   'Sora': {
+    he: 'יצירת וידאו מ-OpenAI. סרטונים ריאליסטיים עד 20 שניות.',
     ru: 'Видеогенерация от OpenAI. Реалистичные видео до 20 секунд.',
     es: 'Generación de video de OpenAI. Videos realistas de hasta 20 segundos.',
     fr: 'Génération vidéo d\'OpenAI. Vidéos réalistes jusqu\'à 20 secondes.',
@@ -1795,6 +1808,7 @@ const TOOL_TRANSLATIONS = {
     ua: 'ІІ-інструмент дизайну від Anthropic. Слайди, мокапи та маркетингові матеріали.',
   },
   'Speechify': {
+    he: 'אפליקציית הטקסט-לדיבור מספר 1 בעולם. מאמרים, PDF לאודיו.',
     ru: 'Мировой №1 приложение для озвучки текста. Статьи, PDF в аудио.',
     es: 'App №1 mundial para texto a voz. Artículos y PDF en audio.',
     fr: 'App №1 mondiale de synthèse vocale. Articles et PDF en audio.',
@@ -1803,6 +1817,7 @@ const TOOL_TRANSLATIONS = {
     ua: 'Світовий №1 додаток для озвучки тексту. Статті, PDF та документи в аудіо.',
   },
   'Bubble': {
+    he: 'פלטפורמת no-code מובילה. אפליקציות web מורכבות ללא קוד.',
     ru: 'Ведущая no-code платформа. Сложные веб-приложения без кода.',
     es: 'Plataforma no-code líder. Apps web complejas sin código.',
     fr: 'Plateforme no-code leader. Apps web complexes sans code.',
@@ -1811,6 +1826,7 @@ const TOOL_TRANSLATIONS = {
     ua: 'Провідна no-code платформа. Складні веб-додатки з візуальним програмуванням та базами даних.',
   },
   'Webflow': {
+    he: 'בונה אתרים מקצועי עם AI ו-CMS. דיוק פיקסלי ללא קוד.',
     ru: 'Профессиональный ИИ-конструктор сайтов с CMS. Пиксельная точность.',
     es: 'Constructor web profesional con IA y CMS. Precisión al píxel.',
     fr: 'Constructeur web professionnel avec IA et CMS. Précision au pixel.',
@@ -1819,6 +1835,7 @@ const TOOL_TRANSLATIONS = {
     ua: 'Професійний ІІ-конструктор сайтів з CMS. Піксельна точність без коду.',
   },
   'Lovable': {
+    he: 'אפליקציות web מלאות מתיאור. React + Supabase + deploy בקליק.',
     ru: 'Полноценные веб-приложения по описанию. React + Supabase + деплой в клик.',
     es: 'Apps web completas por descripción. React + Supabase + deploy en un clic.',
     fr: 'Apps web complètes par description. React + Supabase + déploiement en un clic.',
@@ -1827,6 +1844,7 @@ const TOOL_TRANSLATIONS = {
     ua: 'Повноцінні веб-додатки за текстовим описом. React + Supabase + деплой в один клік.',
   },
   'FlutterFlow': {
+    he: 'בונה Flutter ויזואלי. אפליקציות iOS ו-Android נייטיב.',
     ru: 'Визуальный Flutter-конструктор. Нативные iOS и Android приложения.',
     es: 'Constructor visual Flutter. Apps nativas iOS y Android.',
     fr: 'Constructeur visuel Flutter. Apps natives iOS et Android.',
@@ -1835,6 +1853,7 @@ const TOOL_TRANSLATIONS = {
     ua: 'Візуальний конструктор Flutter-додатків. Нативні iOS та Android додатки.',
   },
   'Glide': {
+    he: 'הפכו Google Sheets או Airtable לאפליקציות מובייל ווב ללא קוד.',
     ru: 'Google Sheets → мобильные и веб-приложения без кода.',
     es: 'Google Sheets → apps móviles y web sin código.',
     fr: 'Google Sheets → apps mobiles et web sans code.',
@@ -1843,6 +1862,7 @@ const TOOL_TRANSLATIONS = {
     ua: 'Перетворюйте Google Sheets або Airtable на мобільні та веб-додатки без коду.',
   },
   'Softr': {
+    he: 'פורטלים ללקוחות וכלים פנימיים מ-Airtable או Google Sheets בדקות.',
     ru: 'Клиентские порталы из Airtable или Google Sheets за минуты.',
     es: 'Portales de clientes desde Airtable o Google Sheets en minutos.',
     fr: 'Portails clients depuis Airtable ou Google Sheets en minutes.',
@@ -1851,6 +1871,7 @@ const TOOL_TRANSLATIONS = {
     ua: 'Клієнтські портали та внутрішні інструменти з Airtable або Google Sheets за хвилини.',
   },
   'Photomath': {
+    he: 'צלמו בעיה מתמטית — קבלו פתרון שלב אחר שלב. 220M הורדות.',
     ua: 'Сфотографуйте задачу — отримайте покрокове розв\'язання з ІІ. 220M завантажень.',
   },
   'Duolingo Max': {
@@ -1878,6 +1899,7 @@ const TOOL_TRANSLATIONS = {
     ua: 'Сфотографуйте домашнє завдання — отримайте покрокові візуальні пояснення з ІІ.',
   },
   'Khanmigo': {
+    he: 'מורה AI מ-Khan Academy. שיטה סוקרטית — מנחה ולא נותן תשובות.',
     ru: 'ИИ-репетитор от Khan Academy. Сократический метод.',
     es: 'Tutor IA de Khan Academy. Método socrático.',
     fr: 'Tuteur IA de Khan Academy. Méthode socratique.',
@@ -1886,6 +1908,7 @@ const TOOL_TRANSLATIONS = {
     ua: 'ІІ-репетитор від Khan Academy. Сократівський метод — направляє, а не дає відповіді.',
   },
   'Synthesis': {
+    he: 'AI למתמטיקה ופתרון בעיות לילדים. למידה אדפטיבית.',
     ru: 'ИИ для математики и задач для детей. Адаптивное обучение.',
     es: 'IA para matemáticas y problemas para niños. Aprendizaje adaptativo.',
     fr: 'IA pour les maths et problèmes pour enfants. Apprentissage adaptatif.',
@@ -1894,6 +1917,7 @@ const TOOL_TRANSLATIONS = {
     ua: 'ІІ для математики та задач для дітей. Адаптивне навчання з ігровим підходом.',
   },
   'Slidesgo': {
+    he: 'מחולל תבניות מצגות AI. אלפי תבניות ל-Google Slides ו-PowerPoint.',
     ru: 'ИИ-генератор шаблонов презентаций. Google Slides и PowerPoint.',
     es: 'Generador IA de plantillas de presentaciones. Google Slides y PowerPoint.',
     fr: 'Générateur IA de modèles de présentations. Google Slides et PowerPoint.',
@@ -1902,6 +1926,7 @@ const TOOL_TRANSLATIONS = {
     ua: 'ІІ-генератор шаблонів презентацій. Тисячі шаблонів для Google Slides та PowerPoint.',
   },
   'Prezi': {
+    he: 'קנבס מצגות עם זום ועוזר עיצוב AI.',
     ru: 'Масштабируемый канвас для презентаций с ИИ-ассистентом.',
     es: 'Canvas escalable para presentaciones con asistente IA.',
     fr: 'Canvas évolutif pour présentations avec assistant IA.',
@@ -1910,6 +1935,7 @@ const TOOL_TRANSLATIONS = {
     ua: 'Масштабований канвас для презентацій з ІІ-дизайн-асистентом.',
   },
   'Tome': {
+    he: 'כלי סטוריטלינג AI. מצגת מלאה בפרומפט אחד.',
     ru: 'ИИ-сторителлинг. Полная презентация за один промпт.',
     es: 'Storytelling IA. Presentación completa en un prompt.',
     fr: 'Storytelling IA. Présentation complète en un prompt.',
@@ -1926,6 +1952,7 @@ const TOOL_TRANSLATIONS = {
     ua: 'ІІ-конструктор презентацій з розумними слайдами, що автоматично адаптуються.',
   },
   'Pitch': {
+    he: 'בונה מצגות שיתופי עם AI. סטארטאפים וצוותים יצירתיים.',
     ru: 'Совместный конструктор презентаций с ИИ. Стартапы и креативные команды.',
     es: 'Constructor colaborativo de presentaciones con IA. Startups y equipos creativos.',
     fr: 'Constructeur collaboratif de présentations avec IA. Startups et équipes créatives.',
