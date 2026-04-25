@@ -51,8 +51,8 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
 <meta name="description" id="pageDesc" content="">
 <link rel="canonical" href="{canonical_url}">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L09EYV4S46"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-L09EYV4S46");</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 {lang_script}<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
@@ -79,7 +79,7 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
 <body>
 <header class="site-header">
   <div class="header-inner">
-    <a href="{base}/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</a>
+    <a href="{base}/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>aitoolfit</a>
     <nav class="nav-links">
       <a href="{base}/"                class="nav-link" data-i18n="nav.home">Find AI</a>
       <a href="{base}/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
@@ -114,7 +114,7 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
 <footer class="site-footer">
   <div class="footer-inner">
     <div>
-      <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</div>
+      <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>aitoolfit</div>
       <p class="footer-desc" data-i18n="footer.desc">Best AI tools catalog in one place.</p>
     </div>
     <div>
@@ -139,7 +139,7 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
   </div>
   <div class="footer-bottom">
     <span data-i18n="footer.madeWith">Made with ♥ and Claude</span>
-    <span data-i18n="footer.rights">© 2026 MyPedia</span>
+    <span data-i18n="footer.rights">© 2026 aitoolfit</span>
   </div>
 </footer>
 
@@ -207,7 +207,7 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
     var ratingB = starsHtml(avgB) + (rB.length ? '<span style="font-size:11px;color:var(--text3);margin-left:4px">('+rB.length+')</span>' : '');
 
     document.getElementById('cmpTitle').textContent = a.name + ' vs ' + b.name;
-    document.getElementById('pageTitle').textContent = a.name + ' vs ' + b.name + ' 2026 — Comparison | MyPedia';
+    document.getElementById('pageTitle').textContent = a.name + ' vs ' + b.name + ' 2026 — Comparison | aitoolfit';
 
     var rows = [
       [L.ov, esc(a.description||'—'),  esc(b.description||'—')],

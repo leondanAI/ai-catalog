@@ -17,7 +17,7 @@ steps = [
 ]
 
 print('═' * 48)
-print('  MyPedia sync')
+print('  aitoolfit sync')
 print('═' * 48)
 
 start = time.time()

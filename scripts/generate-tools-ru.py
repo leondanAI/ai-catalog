@@ -140,7 +140,7 @@ def build_jsonld(name, desc, url, badge, slug, rating_data):
         },
         "publisher": {
             "@type": "Organization",
-            "name": "MyPedia",
+            "name": "aitoolfit",
             "url": "https://aitoolfit.ai"
         }
     }
@@ -204,22 +204,22 @@ def render_ru_page(tool, all_tools, ru_content, rating_data=None):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{esc(name)} Обзор 2026 — Плюсы, минусы и альтернативы | MyPedia</title>
+<title>{esc(name)} Обзор 2026 — Плюсы, минусы и альтернативы | aitoolfit</title>
 <meta name="description" content="{esc(meta_desc)}">
 <link rel="canonical" href="{BASE_URL}/ru/tools/{esc(slug)}.html">
 <link rel="alternate" hreflang="en" href="{BASE_URL}/tools/{esc(slug)}.html">
 <link rel="alternate" hreflang="ru" href="{BASE_URL}/ru/tools/{esc(slug)}.html">
 <link rel="alternate" hreflang="x-default" href="{BASE_URL}/tools/{esc(slug)}.html">
-<meta property="og:title" content="{esc(name)} Обзор 2026 | MyPedia">
+<meta property="og:title" content="{esc(name)} Обзор 2026 | aitoolfit">
 <meta property="og:description" content="{esc(meta_desc)}">
 <meta property="og:url" content="{BASE_URL}/ru/tools/{esc(slug)}.html">
 <meta property="og:image" content="{BASE_URL}/og-image.svg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="{esc(name)} Обзор 2026 | MyPedia">
+<meta name="twitter:title" content="{esc(name)} Обзор 2026 | aitoolfit">
 <meta name="twitter:description" content="{esc(meta_desc)}">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L09EYV4S46"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-L09EYV4S46");</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","ru");</script>
 <script type="application/ld+json">
 {jsonld}
@@ -300,7 +300,7 @@ textarea.form-input {{ resize: vertical; min-height: 90px; }}
 
 <header class="site-header">
   <div class="header-inner">
-    <a href="/ru/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</a>
+    <a href="/ru/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>aitoolfit</a>
     <nav class="nav-links">
       <a href="/ru/index.html" class="nav-link">Главная</a>
       <a href="/ru/directory.html" class="nav-link active">Каталог</a>
@@ -403,7 +403,7 @@ textarea.form-input {{ resize: vertical; min-height: 90px; }}
 <footer class="site-footer">
   <div class="footer-inner">
     <div>
-      <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</div>
+      <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>aitoolfit</div>
       <p class="footer-desc">Лучший каталог ИИ-инструментов. 100+ сервисов, актуальные новости и бесплатные утилиты.</p>
     </div>
     <div>
@@ -429,7 +429,7 @@ textarea.form-input {{ resize: vertical; min-height: 90px; }}
   </div>
   <div class="footer-bottom">
     <span>Сделано с ♥ и Claude · Обновляется регулярно</span>
-    <span>© 2026 MyPedia</span>
+    <span>© 2026 aitoolfit</span>
   </div>
 </footer>
 

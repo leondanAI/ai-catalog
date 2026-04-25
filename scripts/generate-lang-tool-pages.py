@@ -231,18 +231,18 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{esc(name)} 2026 | MyPedia</title>
+<title>{esc(name)} 2026 | aitoolfit</title>
 <meta name="description" content="{esc(meta_desc)}">
 <link rel="canonical" href="{BASE_URL}/{lang}/tools/{esc(slug)}.html">
 <link rel="alternate" hreflang="en" href="{BASE_URL}/tools/{esc(slug)}.html">
 <link rel="alternate" hreflang="{lang}" href="{BASE_URL}/{lang}/tools/{esc(slug)}.html">
 <link rel="alternate" hreflang="x-default" href="{BASE_URL}/tools/{esc(slug)}.html">
-<meta property="og:title" content="{esc(name)} 2026 | MyPedia">
+<meta property="og:title" content="{esc(name)} 2026 | aitoolfit">
 <meta property="og:description" content="{esc(meta_desc)}">
 <meta property="og:url" content="{BASE_URL}/{lang}/tools/{esc(slug)}.html">
 <meta property="og:image" content="{BASE_URL}/og-image.svg">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L09EYV4S46"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-L09EYV4S46");</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","{lang}");</script>
 <script type="application/ld+json">
 {{"@context":"https://schema.org","@type":"SoftwareApplication","name":"{esc(name)}","applicationCategory":"AIApplication","operatingSystem":"Web","url":"{esc(url)}"{jsonld_rating}}}
@@ -309,7 +309,7 @@ textarea.form-input{{resize:vertical;min-height:90px}}
 <body>
 <header class="site-header">
   <div class="header-inner">
-    <a href="/{lang}/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</a>
+    <a href="/{lang}/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>aitoolfit</a>
     <nav class="nav-links">
       <a href="/{lang}/"               class="nav-link" data-nav="index.html"      data-i18n="nav.home">{nav['home']}</a>
       <a href="/{lang}/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">{nav['dir']}</a>
@@ -393,7 +393,7 @@ textarea.form-input{{resize:vertical;min-height:90px}}
 <footer class="site-footer">
   <div class="footer-inner">
     <div>
-      <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</div>
+      <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>aitoolfit</div>
       <p class="footer-desc">{ui['footer_desc']}</p>
     </div>
     <div>
@@ -417,7 +417,7 @@ textarea.form-input{{resize:vertical;min-height:90px}}
       </div>
     </div>
   </div>
-  <div class="footer-bottom"><span>{ui['made']}</span><span>© 2026 MyPedia</span></div>
+  <div class="footer-bottom"><span>{ui['made']}</span><span>© 2026 aitoolfit</span></div>
 </footer>
 <script src="/js/i18n.js"></script>
 <script src="/js/main.js"></script>

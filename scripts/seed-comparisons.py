@@ -47,7 +47,7 @@ COMPARISONS = [
     'tool_a': 'ChatGPT', 'tool_b': 'Claude',
     'tool_a_slug': 'chatgpt', 'tool_b_slug': 'claude',
     'tool_a_url': 'https://chat.openai.com', 'tool_b_url': 'https://claude.ai',
-    'title': 'ChatGPT vs Claude 2026 — Side by Side Comparison | MyPedia',
+    'title': 'ChatGPT vs Claude 2026 — Side by Side Comparison | aitoolfit',
     'meta_desc': 'ChatGPT vs Claude: detailed comparison of features, pricing, pros and cons. Which AI assistant is right for you? Updated 2026.',
     'intro': 'ChatGPT and Claude are the two most widely used AI assistants in 2026. Both handle text, code, and analysis — but they have different strengths. This comparison helps you pick the right one for your workflow.',
     'table_data': [
@@ -78,7 +78,7 @@ COMPARISONS = [
     'tool_a': 'Cursor', 'tool_b': 'GitHub Copilot',
     'tool_a_slug': 'cursor', 'tool_b_slug': 'github-copilot',
     'tool_a_url': 'https://cursor.com', 'tool_b_url': 'https://github.com/features/copilot',
-    'title': 'Cursor vs GitHub Copilot 2026 — Side by Side Comparison | MyPedia',
+    'title': 'Cursor vs GitHub Copilot 2026 — Side by Side Comparison | aitoolfit',
     'meta_desc': 'Cursor vs GitHub Copilot: which AI coding tool is better in 2026? Compare features, pricing and use cases.',
     'intro': 'Cursor and GitHub Copilot are the leading AI coding tools in 2026. Cursor is a full AI-native IDE, while Copilot is an extension that works inside your existing editor. Here is how they compare.',
     'table_data': [
@@ -109,7 +109,7 @@ COMPARISONS = [
     'tool_a': 'Midjourney', 'tool_b': 'Flux',
     'tool_a_slug': 'midjourney', 'tool_b_slug': 'flux',
     'tool_a_url': 'https://midjourney.com', 'tool_b_url': 'https://blackforestlabs.ai',
-    'title': 'Midjourney vs Flux 2026 — Side by Side Comparison | MyPedia',
+    'title': 'Midjourney vs Flux 2026 — Side by Side Comparison | aitoolfit',
     'meta_desc': 'Midjourney vs Flux: which AI image generator wins in 2026? Compare style, pricing, API and use cases.',
     'intro': 'Midjourney and Flux are two of the best AI image generators in 2026. Midjourney is known for its distinctive artistic style, while Flux leads in photorealism and speed. Here is a detailed comparison.',
     'table_data': [
@@ -140,7 +140,7 @@ COMPARISONS = [
     'tool_a': 'Suno', 'tool_b': 'Udio',
     'tool_a_slug': 'suno', 'tool_b_slug': 'udio',
     'tool_a_url': 'https://suno.com', 'tool_b_url': 'https://udio.com',
-    'title': 'Suno vs Udio 2026 — Side by Side Comparison | MyPedia',
+    'title': 'Suno vs Udio 2026 — Side by Side Comparison | aitoolfit',
     'meta_desc': 'Suno vs Udio: which AI music generator is better in 2026? Compare sound quality, features and pricing.',
     'intro': 'Suno and Udio are the two leading AI music generators in 2026. Both can create full songs from a text prompt — but they differ in style, quality and features. Here is how they compare.',
     'table_data': [
@@ -171,7 +171,7 @@ COMPARISONS = [
     'tool_a': 'Kling AI', 'tool_b': 'Runway',
     'tool_a_slug': 'kling-ai', 'tool_b_slug': 'runway',
     'tool_a_url': 'https://klingai.com', 'tool_b_url': 'https://runwayml.com',
-    'title': 'Kling AI vs Runway 2026 — Side by Side Comparison | MyPedia',
+    'title': 'Kling AI vs Runway 2026 — Side by Side Comparison | aitoolfit',
     'meta_desc': 'Kling AI vs Runway: which AI video generator is better in 2026? Compare video quality, features and pricing.',
     'intro': 'Kling AI and Runway are two of the most powerful AI video generators in 2026. Kling impresses with its realistic motion physics, while Runway offers a broader creative toolkit. Here is a detailed comparison.',
     'table_data': [
@@ -213,8 +213,8 @@ def translate(client, c, lang):
         'verdict_b':  c['verdict_b'],
     }
     prompt = f"""Translate this comparison page content into language "{lang}".
-Keep brand/tool names unchanged: {c['tool_a']}, {c['tool_b']}, MyPedia, GitHub.
-Keep table values like prices ($20/mo), emojis (✅ ❌), tech specs, and "MyPedia" unchanged.
+Keep brand/tool names unchanged: {c['tool_a']}, {c['tool_b']}, aitoolfit, GitHub.
+Keep table values like prices ($20/mo), emojis (✅ ❌), tech specs, and "aitoolfit" unchanged.
 Return ONLY valid JSON with the same keys.
 
 {json.dumps(fields, ensure_ascii=False)}"""
