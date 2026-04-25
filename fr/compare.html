@@ -74,7 +74,7 @@
   <div class="header-inner">
     <a href="/fr/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</a>
     <nav class="nav-links">
-      <a href="/fr/"               class="nav-link" data-nav="index.html"      data-i18n="nav.home">Find AI</a>
+      <a href="/fr/"               class="nav-link" data-nav="index.html"      data-i18n="nav.home">Trouver un outil</a>
       <a href="/fr/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">Catalogue IA</a>
       <a href="/fr/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Comparer</a>
       <a href="/fr/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Actualités</a>
@@ -88,7 +88,7 @@
     <button class="btn-hamburger" onclick="toggleMenu()">&#9776;</button>
   </div>
   <nav class="mobile-menu" id="mobileMenu">
-    <a href="/fr/"               class="nav-link" data-i18n="nav.home">Find AI</a>
+    <a href="/fr/"               class="nav-link" data-i18n="nav.home">Trouver un outil</a>
     <a href="/fr/directory.html"  class="nav-link" data-i18n="nav.directory">Catalogue IA</a>
     <a href="/fr/compare.html"    class="nav-link" data-i18n="nav.compare">Comparer</a>
     <a href="/fr/news.html"       class="nav-link" data-i18n="nav.news">Actualités</a>
@@ -142,7 +142,7 @@
       </div>
     </div>
     <div>
-      <div class="footer-col-title">>PRODUIT<</div>
+      <div class="footer-col-title">PRODUIT</div>
       <div class="footer-col-links">
         <a href="/fr/">Trouver un outil</a>
         <a href="/fr/directory.html">Catalogue IA</a>
@@ -152,7 +152,7 @@
       </div>
     </div>
     <div>
-      <div class="footer-col-title">>COMPARAISON RAPIDE<</div>
+      <div class="footer-col-title">COMPARAISON RAPIDE</div>
       <div class="footer-col-links">
         <a href="/fr/compare/chatgpt-vs-claude.html">ChatGPT vs Claude</a>
         <a href="/fr/compare/cursor-vs-copilot.html">Cursor vs Copilot</a>
@@ -237,7 +237,7 @@ async function fetchToolInfo(slug) {
 
 function populateSelects() {
   const placeholder = `<option value="">${t('compare.selectTool')}</option>`;
-  const opts = >CATÉGORIES<.map(cat =>
+  const opts = CATEGORIES.map(cat =>
     `<optgroup label="${cat.icon} ${catTitle(cat.id)}">${cat.tools.map(tool =>
       `<option value="${tool.name}">${tool.name}</option>`).join('')}</optgroup>`
   ).join('');

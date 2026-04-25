@@ -303,7 +303,8 @@ function renderTrending() {
     const desc = tool ? (typeof getToolDesc === 'function' ? getToolDesc(tool) : tool.desc) : '';
     const badgeText = tool ? tool.badge : 'free';
     const slug = h.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
-    const href = tool ? `/tools/${slug}.html` : '/directory.html';
+    const langBase = (typeof I18N !== 'undefined' && I18N.lang !== 'en') ? '/' + I18N.lang : '';
+    const href = tool ? `${langBase}/tools/${slug}.html` : `${langBase}/directory.html`;
     const badgeClass = h.type === 'update' ? 'update-badge' : 'growth-badge';
     return `<a class="tool-card fade-up" href="${href}" style="border-color:${color}22">
       <div class="tool-card-top">

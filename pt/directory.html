@@ -59,7 +59,7 @@
   <div class="header-inner">
     <a href="/pt/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>MyPedia</a>
     <nav class="nav-links">
-      <a href="/pt/"               class="nav-link" data-nav="index.html"      data-i18n="nav.home">Find AI</a>
+      <a href="/pt/"               class="nav-link" data-nav="index.html"      data-i18n="nav.home">Buscar ferramenta</a>
       <a href="/pt/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">Catálogo IA</a>
       <a href="/pt/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Comparar</a>
       <a href="/pt/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Notícias</a>
@@ -73,7 +73,7 @@
     <button class="btn-hamburger" onclick="toggleMenu()">&#9776;</button>
   </div>
   <nav class="mobile-menu" id="mobileMenu">
-    <a href="/pt/"               class="nav-link" data-i18n="nav.home">Find AI</a>
+    <a href="/pt/"               class="nav-link" data-i18n="nav.home">Buscar ferramenta</a>
     <a href="/pt/directory.html"  class="nav-link" data-i18n="nav.directory">Catálogo IA</a>
     <a href="/pt/compare.html"    class="nav-link" data-i18n="nav.compare">Comparar</a>
     <a href="/pt/news.html"       class="nav-link" data-i18n="nav.news">Notícias</a>
@@ -2184,7 +2184,7 @@
       </div>
     </div>
     <div>
-      <div class="footer-col-title">>PRODUTO<</div>
+      <div class="footer-col-title">PRODUTO</div>
       <div class="footer-col-links">
         <a href="/pt/">Buscar ferramenta</a>
         <a href="/pt/directory.html">Catálogo IA</a>
@@ -2194,7 +2194,7 @@
       </div>
     </div>
     <div>
-      <div class="footer-col-title">>CATEGORIAS<</div>
+      <div class="footer-col-title">CATEGORIAS</div>
       <div class="footer-col-links">
         <a href="directory.html?cat=chat">AI Chat</a>
         <a href="directory.html?cat=code">Development</a>
@@ -2250,7 +2250,7 @@ function buildPriceFilters() {
 }
 
 function buildTabs() {
-  const all = [{ id:'all', title: t('dir.all'), icon:'✦' }, ...>CATEGORIAS<];
+  const all = [{ id:'all', title: t('dir.all'), icon:'✦' }, ...CATEGORIES];
   document.getElementById('catTabs').innerHTML = all.map(c =>
     `<button class="filter-btn ${c.id === activeCat ? 'active' : ''}" onclick="setCat('${c.id}',this)">${c.icon ? `<span>${c.icon}</span>` : ''}${c.id === 'all' ? c.title : catTitle(c.id)}</button>`
   ).join('');
@@ -2277,7 +2277,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function render() {
   const wrap = document.getElementById('catalog');
-  const cats = >CATEGORIAS<.filter(c => activeCat === 'all' || c.id === activeCat);
+  const cats = CATEGORIES.filter(c => activeCat === 'all' || c.id === activeCat);
   let total = 0, html = '';
   cats.forEach(cat => {
     const tools = cat.tools.filter(t2 => {

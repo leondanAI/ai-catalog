@@ -174,14 +174,23 @@ def generate_lang_page(html, lang, page, title, desc):
         html = html.replace("'Open tool →'", f"'{OPEN_TOOL[lang]}'")
 
     # Translate footer content
+    # Column headers use 'title">' prefix to avoid replacing JS variable CATEGORIES
+    FOOTER_COLS = {
+        'ru': {'PRODUCT':'ПРОДУКТ','CATEGORIES':'КАТЕГОРИИ','NEWS CATEGORIES':'КАТЕГОРИИ НОВОСТЕЙ','QUICK COMPARE':'БЫСТРОЕ СРАВНЕНИЕ','LANGUAGES':'ЯЗЫКИ'},
+        'es': {'PRODUCT':'PRODUCTO','CATEGORIES':'CATEGORÍAS','NEWS CATEGORIES':'CATEGORÍAS DE NOTICIAS','QUICK COMPARE':'COMPARACIÓN RÁPIDA','LANGUAGES':'IDIOMAS'},
+        'fr': {'PRODUCT':'PRODUIT','CATEGORIES':'CATÉGORIES','NEWS CATEGORIES':"CATÉGORIES D'ACTUALITÉS",'QUICK COMPARE':'COMPARAISON RAPIDE','LANGUAGES':'LANGUES'},
+        'de': {'PRODUCT':'PRODUKT','CATEGORIES':'KATEGORIEN','NEWS CATEGORIES':'NACHRICHTENKATEGORIEN','QUICK COMPARE':'SCHNELLVERGLEICH','LANGUAGES':'SPRACHEN'},
+        'pt': {'PRODUCT':'PRODUTO','CATEGORIES':'CATEGORIAS','NEWS CATEGORIES':'CATEGORIAS DE NOTÍCIAS','QUICK COMPARE':'COMPARAÇÃO RÁPIDA','LANGUAGES':'IDIOMAS'},
+        'ua': {'PRODUCT':'ПРОДУКТ','CATEGORIES':'КАТЕГОРІЇ','NEWS CATEGORIES':'КАТЕГОРІЇ НОВИН','QUICK COMPARE':'ШВИДКЕ ПОРІВНЯННЯ','LANGUAGES':'МОВИ'},
+        'he': {'PRODUCT':'מוצר','CATEGORIES':'קטגוריות','NEWS CATEGORIES':'קטגוריות חדשות','QUICK COMPARE':'השוואה מהירה','LANGUAGES':'שפות'},
+    }
+    if lang in FOOTER_COLS:
+        for en_h, tr_h in FOOTER_COLS[lang].items():
+            html = html.replace(f'footer-col-title">{en_h}</div>', f'footer-col-title">{tr_h}</div>')
+
     FOOTER_TR = {
         'ru': {
             'Your AI tool finder.<br>Updated daily.': 'Ваш ИИ-помощник по выбору инструментов.<br>Обновляется ежедневно.',
-            '>PRODUCT<': '>ПРОДУКТ<',
-            '>CATEGORIES<': '>КАТЕГОРИИ<',
-            '>NEWS CATEGORIES<': '>КАТЕГОРИИ НОВОСТЕЙ<',
-            '>QUICK COMPARE<': '>БЫСТРОЕ СРАВНЕНИЕ<',
-            '>LANGUAGES<': '>ЯЗЫКИ<',
             '>Find a Tool<': '>Найти инструмент<',
             '>AI Catalog<': '>Каталог ИИ<',
             '>Compare<': '>Сравнение<',
@@ -190,6 +199,9 @@ def generate_lang_page(html, lang, page, title, desc):
             '>Privacy<': '>Конфиденциальность<',
             '>Terms<': '>Условия<',
             '>Contact<': '>Контакт<',
+
+
+
             'Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':
                 'Создано людьми, курируется с помощью ИИ. Без платных размещений — рекомендации ранжируются по релевантности и отзывам.',
             '© 2026 mypedia. Not affiliated with Pearson MyPedia.': '© 2026 mypedia. Не связан с Pearson MyPedia.',
@@ -198,11 +210,6 @@ def generate_lang_page(html, lang, page, title, desc):
         },
         'es': {
             'Your AI tool finder.<br>Updated daily.': 'Tu buscador de herramientas IA.<br>Actualizado diariamente.',
-            'PRODUCT': '>PRODUCTO<',
-            'CATEGORIES': '>CATEGORÍAS<',
-            'NEWS CATEGORIES': '>CATEGORÍAS DE NOTICIAS<',
-            'QUICK COMPARE': '>COMPARACIÓN RÁPIDA<',
-            'LANGUAGES': 'IDIOMAS',
             '>Find a Tool<': '>Buscar herramienta<',
             '>AI Catalog<': '>Catálogo IA<',
             '>Compare<': '>Comparar<',
@@ -211,6 +218,13 @@ def generate_lang_page(html, lang, page, title, desc):
             '>Privacy<': '>Privacidad<',
             '>Terms<': '>Términos<',
             '>Contact<': '>Contacto<',
+
+
+
+
+
+
+
             'Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':
                 'Creado por humanos, curado con IA. Sin colocaciones pagadas — recomendaciones clasificadas por relevancia y reseñas.',
             '© 2026 mypedia. Not affiliated with Pearson MyPedia.': '© 2026 mypedia. No afiliado con Pearson MyPedia.',
@@ -219,11 +233,6 @@ def generate_lang_page(html, lang, page, title, desc):
         },
         'fr': {
             'Your AI tool finder.<br>Updated daily.': 'Votre moteur de recherche d\'outils IA.<br>Mis à jour quotidiennement.',
-            'PRODUCT': '>PRODUIT<',
-            'CATEGORIES': '>CATÉGORIES<',
-            'NEWS CATEGORIES': 'CATÉGORIES D\'ACTUALITÉS',
-            'QUICK COMPARE': '>COMPARAISON RAPIDE<',
-            'LANGUAGES': 'LANGUES',
             '>Find a Tool<': '>Trouver un outil<',
             '>AI Catalog<': '>Catalogue IA<',
             '>Compare<': '>Comparer<',
@@ -232,6 +241,13 @@ def generate_lang_page(html, lang, page, title, desc):
             '>Privacy<': '>Confidentialité<',
             '>Terms<': '>Conditions<',
             '>Contact<': '>Contact<',
+
+
+
+
+
+
+
             'Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':
                 'Créé par des humains, sélectionné avec l\'IA. Aucun placement payant — recommandations classées par pertinence et avis.',
             '© 2026 mypedia. Not affiliated with Pearson MyPedia.': '© 2026 mypedia. Non affilié à Pearson MyPedia.',
@@ -240,11 +256,6 @@ def generate_lang_page(html, lang, page, title, desc):
         },
         'de': {
             'Your AI tool finder.<br>Updated daily.': 'Ihr KI-Tool-Finder.<br>Täglich aktualisiert.',
-            'PRODUCT': '>PRODUKT<',
-            'CATEGORIES': '>KATEGORIEN<',
-            'NEWS CATEGORIES': '>NACHRICHTENKATEGORIEN<',
-            'QUICK COMPARE': '>SCHNELLVERGLEICH<',
-            'LANGUAGES': '>SPRACHEN<',
             '>Find a Tool<': '>Tool finden<',
             '>AI Catalog<': '>KI-Katalog<',
             '>Compare<': '>Vergleichen<',
@@ -253,6 +264,13 @@ def generate_lang_page(html, lang, page, title, desc):
             '>Privacy<': '>Datenschutz<',
             '>Terms<': '>Nutzung<',
             '>Contact<': '>Kontakt<',
+
+
+
+
+
+
+
             'Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':
                 'Von Menschen erstellt, mit KI kuratiert. Keine bezahlten Platzierungen — Empfehlungen nach Relevanz und Bewertungen.',
             '© 2026 mypedia. Not affiliated with Pearson MyPedia.': '© 2026 mypedia. Nicht mit Pearson MyPedia verbunden.',
@@ -261,11 +279,6 @@ def generate_lang_page(html, lang, page, title, desc):
         },
         'pt': {
             'Your AI tool finder.<br>Updated daily.': 'Seu buscador de ferramentas IA.<br>Atualizado diariamente.',
-            'PRODUCT': '>PRODUTO<',
-            'CATEGORIES': '>CATEGORIAS<',
-            'NEWS CATEGORIES': '>CATEGORIAS DE NOTÍCIAS<',
-            'QUICK COMPARE': '>COMPARAÇÃO RÁPIDA<',
-            'LANGUAGES': 'IDIOMAS',
             '>Find a Tool<': '>Buscar ferramenta<',
             '>AI Catalog<': '>Catálogo IA<',
             '>Compare<': '>Comparar<',
@@ -274,6 +287,13 @@ def generate_lang_page(html, lang, page, title, desc):
             '>Privacy<': '>Privacidade<',
             '>Terms<': '>Termos<',
             '>Contact<': '>Contato<',
+
+
+
+
+
+
+
             'Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':
                 'Criado por humanos, curado com IA. Sem posicionamentos pagos — recomendações por relevância e avaliações.',
             '© 2026 mypedia. Not affiliated with Pearson MyPedia.': '© 2026 mypedia. Não afiliado à Pearson MyPedia.',
@@ -282,11 +302,6 @@ def generate_lang_page(html, lang, page, title, desc):
         },
         'ua': {
             'Your AI tool finder.<br>Updated daily.': 'Ваш ІІ-помічник з вибору інструментів.<br>Оновлюється щодня.',
-            'PRODUCT': 'ПРОДУКТ',
-            'CATEGORIES': '>КАТЕГОРІЇ<',
-            'NEWS CATEGORIES': '>КАТЕГОРІЇ НОВИН<',
-            'QUICK COMPARE': '>ШВИДКЕ ПОРІВНЯННЯ<',
-            'LANGUAGES': '>МОВИ<',
             '>Find a Tool<': '>Знайти інструмент<',
             '>AI Catalog<': '>Каталог ІІ<',
             '>Compare<': '>Порівняння<',
@@ -295,6 +310,13 @@ def generate_lang_page(html, lang, page, title, desc):
             '>Privacy<': '>Конфіденційність<',
             '>Terms<': '>Умови<',
             '>Contact<': '>Контакт<',
+
+
+
+
+
+
+
             'Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':
                 'Створено людьми, курується за допомогою ІІ. Без платних розміщень — рекомендації за релевантністю та відгуками.',
             '© 2026 mypedia. Not affiliated with Pearson MyPedia.': '© 2026 mypedia. Не пов\'язаний з Pearson MyPedia.',
@@ -303,11 +325,6 @@ def generate_lang_page(html, lang, page, title, desc):
         },
         'he': {
             'Your AI tool finder.<br>Updated daily.': 'מנוע החיפוש שלך לכלי AI.<br>מתעדכן יומית.',
-            'PRODUCT': '>מוצר<',
-            'CATEGORIES': '>קטגוריות<',
-            'NEWS CATEGORIES': '>קטגוריות חדשות<',
-            'QUICK COMPARE': '>השוואה מהירה<',
-            'LANGUAGES': '>שפות<',
             '>Find a Tool<': '>מצא כלי<',
             '>AI Catalog<': '>קטלוג AI<',
             '>Compare<': '>השוואה<',
@@ -316,6 +333,13 @@ def generate_lang_page(html, lang, page, title, desc):
             '>Privacy<': '>פרטיות<',
             '>Terms<': '>תנאים<',
             '>Contact<': '>צור קשר<',
+
+
+
+
+
+
+
             'Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':
                 'נבנה על ידי בני אדם, נאצר עם AI. ללא מיקומים בתשלום — המלצות מדורגות לפי רלוונטיות וביקורות.',
             '© 2026 mypedia. Not affiliated with Pearson MyPedia.': '© 2026 mypedia. לא קשור ל-Pearson MyPedia.',
@@ -401,6 +425,85 @@ def generate_lang_page(html, lang, page, title, desc):
         # Rotating placeholder phrases (with trailing …)
         for (_, en_task), (_, tr_task) in zip(en_pills, PILLS[lang]):
             html = html.replace(f"'{en_task}…'", f"'{tr_task}…'")
+    # Translate trending badge text
+    TRENDING_BADGES = {
+        'ru': {
+            '↑ Fastest-growing app builder ever': '↑ Самый быстрорастущий конструктор приложений',
+            '↑ $11B — voice AI leader': '↑ $11B — лидер голосового ИИ',
+            '↑ #1 fastest-growing B2B AI': '↑ №1 по росту в B2B AI',
+            '🆕 v3.0 — Apr 2': '🆕 v3.0 — апрель 2',
+            '🆕 Now with audio — Apr 2026': '🆕 Теперь с аудио — апрель 2026',
+            '🆕 Just launched — Apr 2026': '🆕 Только запущен — апрель 2026',
+        },
+        'es': {
+            '↑ Fastest-growing app builder ever': '↑ Constructor de apps más rápido de la historia',
+            '↑ $11B — voice AI leader': '↑ $11B — líder en voz IA',
+            '↑ #1 fastest-growing B2B AI': '↑ #1 crecimiento B2B en IA',
+            '🆕 v3.0 — Apr 2': '🆕 v3.0 — abr 2',
+            '🆕 Now with audio — Apr 2026': '🆕 Ahora con audio — abr 2026',
+            '🆕 Just launched — Apr 2026': '🆕 Recién lanzado — abr 2026',
+        },
+        'fr': {
+            '↑ Fastest-growing app builder ever': '↑ Constructeur d\'apps le plus rapide',
+            '↑ $11B — voice AI leader': '↑ $11B — leader voix IA',
+            '↑ #1 fastest-growing B2B AI': '↑ #1 croissance B2B en IA',
+            '🆕 v3.0 — Apr 2': '🆕 v3.0 — avr 2',
+            '🆕 Now with audio — Apr 2026': '🆕 Maintenant avec audio — avr 2026',
+            '🆕 Just launched — Apr 2026': '🆕 Vient de sortir — avr 2026',
+        },
+        'de': {
+            '↑ Fastest-growing app builder ever': '↑ Am schnellsten wachsender App-Builder',
+            '↑ $11B — voice AI leader': '↑ $11B — Marktführer Sprach-KI',
+            '↑ #1 fastest-growing B2B AI': '↑ #1 B2B-KI-Wachstum',
+            '🆕 v3.0 — Apr 2': '🆕 v3.0 — Apr. 2',
+            '🆕 Now with audio — Apr 2026': '🆕 Jetzt mit Audio — Apr. 2026',
+            '🆕 Just launched — Apr 2026': '🆕 Gerade gestartet — Apr. 2026',
+        },
+        'pt': {
+            '↑ Fastest-growing app builder ever': '↑ Construtor de apps com maior crescimento',
+            '↑ $11B — voice AI leader': '↑ $11B — líder em voz IA',
+            '↑ #1 fastest-growing B2B AI': '↑ #1 crescimento B2B em IA',
+            '🆕 v3.0 — Apr 2': '🆕 v3.0 — abr 2',
+            '🆕 Now with audio — Apr 2026': '🆕 Agora com áudio — abr 2026',
+            '🆕 Just launched — Apr 2026': '🆕 Recém-lançado — abr 2026',
+        },
+        'ua': {
+            '↑ Fastest-growing app builder ever': '↑ Найшвидше зростаючий конструктор додатків',
+            '↑ $11B — voice AI leader': '↑ $11B — лідер голосового ІІ',
+            '↑ #1 fastest-growing B2B AI': '↑ №1 за зростанням у B2B ІІ',
+            '🆕 v3.0 — Apr 2': '🆕 v3.0 — квітень 2',
+            '🆕 Now with audio — Apr 2026': '🆕 Тепер з аудіо — квітень 2026',
+            '🆕 Just launched — Apr 2026': '🆕 Щойно запущений — квітень 2026',
+        },
+        'he': {
+            '↑ Fastest-growing app builder ever': '↑ בונה האפליקציות הצומח ביותר',
+            '↑ $11B — voice AI leader': '↑ $11B — מוביל AI קולי',
+            '↑ #1 fastest-growing B2B AI': '↑ #1 צמיחה B2B ב-AI',
+            '🆕 v3.0 — Apr 2': '🆕 v3.0 — אפר׳ 2',
+            '🆕 Now with audio — Apr 2026': '🆕 עכשיו עם אודיו — אפר׳ 2026',
+            '🆕 Just launched — Apr 2026': '🆕 הושק לאחרונה — אפר׳ 2026',
+        },
+    }
+    if lang in TRENDING_BADGES:
+        for en_b, tr_b in TRENDING_BADGES[lang].items():
+            html = html.replace(en_b, tr_b)
+
+    # Translate benefit pills
+    BENEFIT_PILLS = {
+        'ru': [('3 варианта','Не 500 результатов'),('Экспертная подборка','Рекомендовано специалистами'),('Рейтинги и сравнения','Реальные отзывы'),('Обновляется ежедневно','Новые инструменты каждый день')],
+        'es': [('3 opciones','No 500 resultados'),('Selección experta','Recomendado por especialistas'),('Valorado y comparado','Opiniones reales'),('Actualizado diario','Nuevas herramientas cada día')],
+        'fr': [('3 choix','Pas 500 résultats'),('Sélection d\'experts','Recommandé par des spécialistes'),('Évalué et comparé','Avis d\'utilisateurs réels'),('Mis à jour quotidien','Nouveaux outils chaque jour')],
+        'de': [('3 Empfehlungen','Keine 500 Ergebnisse'),('Expertenauswahl','Von Spezialisten empfohlen'),('Bewertet & verglichen','Echte Nutzerbewertungen'),('Täglich aktualisiert','Neue Tools jeden Tag')],
+        'pt': [('3 opções','Não 500 resultados'),('Seleção especializada','Recomendado por especialistas'),('Avaliado e comparado','Avaliações reais'),('Atualizado diariamente','Novas ferramentas todo dia')],
+        'ua': [('3 варіанти','Не 500 результатів'),('Експертна добірка','Рекомендовано фахівцями'),('Рейтинги та порівняння','Реальні відгуки'),('Оновлюється щодня','Нові інструменти щодня')],
+        'he': [('3 המלצות','לא 500 תוצאות'),('בחירת מומחים','מומלץ על ידי מומחים'),('מדורג ומושווה','ביקורות אמיתיות'),('מתעדכן יומית','כלים חדשים כל יום')],
+    }
+    en_pills = [('3 picks','Not 500 results'),('Expert-curated','Recommended by specialists'),('Rated & compared','Real user ratings'),('Updated daily','New tools every day')]
+    if lang in BENEFIT_PILLS:
+        for (en_label, en_sub), (tr_label, tr_sub) in zip(en_pills, BENEFIT_PILLS[lang]):
+            html = html.replace(f'>{en_label}<', f'>{tr_label}<')
+            html = html.replace(f'>{en_sub}<', f'>{tr_sub}<')
+
     if lang in SEARCH_PH:
         html = html.replace('Describe your task — we\'ll find the right AI tool for it…', SEARCH_PH[lang].replace("'", "\\'"))
         html = html.replace("Describe your task — we'll find the right AI tool for it…", SEARCH_PH[lang])
