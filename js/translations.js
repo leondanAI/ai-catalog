@@ -26,7 +26,7 @@ const TOOL_TRANSLATIONS = {
     th: 'AI จาก Anthropic เหมาะสำหรับเอกสารยาว การวิเคราะห์ และโค้ด รองรับ context window 200K tokens',
     uk: 'ШІ-асистент від Anthropic. Найкращий для довгих документів, аналізу та коду. Контекстне вікно 200К токенів.',
     ro: 'Asistent AI de la Anthropic. Cel mai bun pentru documente lungi, analiză și cod. Fereastră de context de 200K tokeni.',
-    ua: 'ІІ-асистент від Anthropic. Найкращий для довгих документів, аналізу та коду. Контекстне вікно 200К токенів.',
+    ua: 'ШІ-асистент від Anthropic. Найкращий для довгих документів, аналізу та коду. Контекстне вікно 200К токенів.',
   },
 
   'Gemini': {
@@ -50,7 +50,7 @@ const TOOL_TRANSLATIONS = {
     th: 'AI ของ Google ที่เข้าถึงอินเทอร์เน็ตแบบเรียลไทม์ Gemini 2.0 Ultra พร้อมความสามารถมัลติโมดัล',
     uk: 'ШІ Google з доступом до інтернету в реальному часі. Gemini 2.0 Ultra з мультимодальними можливостями.',
     ro: 'IA Google cu acces la internet în timp real. Gemini 2.0 Ultra cu capabilități multimodale.',
-    ua: 'ІІ від Google з доступом до інтернету в реальному часі. Gemini 2.0 Ultra з мультимодальними можливостями.',
+    ua: 'ШІ від Google з доступом до інтернету в реальному часі. Gemini 2.0 Ultra з мультимодальними можливостями.',
   },
 
   'Perplexity': {
@@ -74,7 +74,7 @@ const TOOL_TRANSLATIONS = {
     th: 'ค้นหาด้วย AI พร้อมแหล่งอ้างอิง โหมด Deep Research สำหรับการวิเคราะห์เชิงลึกทุกหัวข้อ',
     uk: 'ШІ-пошук із цитованими джерелами. Режим Deep Research для детального аналізу будь-якої теми.',
     ro: 'Căutare AI cu surse citate. Modul Deep Research pentru analiză detaliată pe orice subiect.',
-    ua: 'ІІ-пошук з джерелами. Режим Deep Research для детальних багатосторінкових звітів.',
+    ua: 'ШІ-пошук з джерелами. Режим Deep Research для детальних багатосторінкових звітів.',
   },
 
   'DeepSeek': {
@@ -122,7 +122,7 @@ const TOOL_TRANSLATIONS = {
     th: 'AI จาก xAI ที่เข้าถึงข้อมูล X/Twitter แบบเรียลไทม์ เหมาะสำหรับเทรนด์ ข่าวสาร และคำตอบตรงๆ',
     uk: 'ШІ від xAI з доступом до даних X/Twitter у реальному часі. Чудово для трендів, новин і прямих відповідей.',
     ro: 'AI de la xAI cu acces în timp real la datele X/Twitter. Excelent pentru tendințe, știri și răspunsuri directe.',
-    ua: 'ІІ від xAI з доступом до даних X/Twitter у реальному часі. Підходить для аналізу трендів і неформального спілкування.',
+    ua: 'ШІ від xAI з доступом до даних X/Twitter у реальному часі. Підходить для аналізу трендів і неформального спілкування.',
   },
 
   'Meta AI': {
@@ -146,7 +146,7 @@ const TOOL_TRANSLATIONS = {
     th: 'AI ฟรีของ Meta ที่ฝังอยู่ใน WhatsApp, Instagram และ Messenger ขับเคลื่อนด้วย Llama 4',
     uk: 'Безкоштовний ШІ-асистент Meta, вбудований у WhatsApp, Instagram і Messenger. На основі Llama 4.',
     ro: 'Asistent AI gratuit de la Meta integrat în WhatsApp, Instagram și Messenger. Alimentat de Llama 4.',
-    ua: 'Безкоштовний ІІ-асистент від Meta, вбудований у WhatsApp, Instagram та Facebook. Генерація зображень, відповіді на запити та допомога в повсякденних завданнях.',
+    ua: 'Безкоштовний ШІ-асистент від Meta, вбудований у WhatsApp, Instagram та Facebook. Генерація зображень, відповіді на запити та допомога в повсякденних завданнях.',
   },
 
   'Jasper': {
@@ -170,7 +170,7 @@ const TOOL_TRANSLATIONS = {
     th: 'นักเขียนคอนเทนต์ AI มืออาชีพพร้อมแม่แบบสำหรับบล็อก โฆษณา แคมเปญอีเมล และเนื้อหา SEO',
     uk: 'Професійний ШІ-копірайтер із шаблонами для блогів, реклами, email-кампаній та SEO-контенту.',
     ro: 'Copywriter AI profesional cu șabloane pentru bloguri, reclame, campanii email și conținut SEO.',
-    ua: 'Професійний ІІ-копірайтер із шаблонами для блогів, реклами, email та соцмереж.',
+    ua: 'Професійний ШІ-копірайтер із шаблонами для блогів, реклами, email та соцмереж.',
   },
 
   'Grammarly': {
@@ -218,7 +218,7 @@ const TOOL_TRANSLATIONS = {
     th: 'เครื่องมือ AI ฟรีสำหรับการเขียนใหม่และสรุป เขียนใหม่ใน 8 สไตล์ ฟรี 125 คำต่อครั้ง',
     uk: 'Безкоштовний ШІ для перефразування та резюмування. Переписує у 8 стилях, 125 слів безкоштовно.',
     ro: 'Instrument gratuit de parafrazare și rezumare AI. Rescrie în 8 stiluri, 125 de cuvinte gratuit per utilizare.',
-    ua: 'Безкоштовний ІІ-інструмент для перефразування та резюмування. Переписує текст у 9 стилях.',
+    ua: 'Безкоштовний ШІ-інструмент для перефразування та резюмування. Переписує текст у 9 стилях.',
   },
 
   'DeepL': {
@@ -242,7 +242,7 @@ const TOOL_TRANSLATIONS = {
     th: 'มาตรฐานทองคำสำหรับการแปลด้วย AI รองรับ 30+ ภาษา ฟรี 5,000 ตัวอักษรต่อการแปล',
     uk: 'Золотий стандарт ШІ-перекладу. Підтримує 30+ мов, 5 000 символів безкоштовно за переклад.',
     ro: 'Standardul de aur pentru traducere AI. Suportă 30+ limbi, 5.000 caractere gratuit per traducere.',
-    ua: 'Золотий стандарт ІІ-перекладу. Підтримує 30+ мов з якістю, що перевершує Google Translate.',
+    ua: 'Золотий стандарт ШІ-перекладу. Підтримує 30+ мов з якістю, що перевершує Google Translate.',
   },
 
   'Writesonic': {
@@ -266,7 +266,7 @@ const TOOL_TRANSLATIONS = {
     th: 'AI สำหรับบทความ SEO โฆษณา และโพสต์โซเชียลมีเดีย พร้อมเครื่องมือออปติไมซ์ในตัว',
     uk: 'ШІ для SEO-статей, рекламних текстів і постів у соцмережах із вбудованими інструментами оптимізації.',
     ro: 'AI pentru articole SEO, texte publicitare și postări pe rețele sociale cu instrumente de optimizare integrate.',
-    ua: 'ІІ для SEO-статей, рекламних текстів і постів у соцмережах з вбудованою перевіркою фактів.',
+    ua: 'ШІ для SEO-статей, рекламних текстів і постів у соцмережах з вбудованою перевіркою фактів.',
   },
 
   'Hemingway Editor': {
@@ -314,7 +314,7 @@ const TOOL_TRANSLATIONS = {
     th: 'คุณภาพงานศิลป์ AI ที่ดีที่สุด ทั้ง photorealism และสไตล์ศิลป์ทุกแนว มาตรฐานอุตสาหกรรมสำหรับนักออกแบบ',
     uk: 'Найвища якість ШІ-арту. Фотореалізм і художні стилі в будь-якому жанрі. Галузевий стандарт для дизайнерів.',
     ro: 'Cea mai bună calitate în arta AI. Fotorealism și stiluri artistice în orice gen. Standard al industriei pentru designeri.',
-    ua: 'Топова якість ІІ-арту. Фотореалізм та художні стилі через Discord або веб-інтерфейс.',
+    ua: 'Топова якість ШІ-арту. Фотореалізм та художні стилі через Discord або веб-інтерфейс.',
   },
 
   'Leonardo.ai': {
@@ -386,7 +386,7 @@ const TOOL_TRANSLATIONS = {
     th: 'AI ของ Adobe ภายใน Photoshop และ Illustrator เนื้อหาปลอดภัยด้านลิขสิทธิ์สำหรับใช้งานเชิงพาณิชย์',
     uk: 'ШІ Adobe всередині Photoshop і Illustrator. Безпечний для авторських прав контент для комерційного використання.',
     ro: 'AI-ul Adobe în Photoshop și Illustrator. Conținut sigur din punct de vedere al drepturilor de autor pentru uz comercial.',
-    ua: 'ІІ від Adobe в Photoshop та Illustrator. Безпечний для комерційного використання з навчанням на ліцензійному контенті.',
+    ua: 'ШІ від Adobe в Photoshop та Illustrator. Безпечний для комерційного використання з навчанням на ліцензійному контенті.',
   },
 
   'Ideogram': {
@@ -434,7 +434,7 @@ const TOOL_TRANSLATIONS = {
     th: 'AI สร้างกราฟิกเวกเตอร์ SVG และไอคอนที่ปรับขนาดได้ 30 เครดิตฟรีต่อวัน ใช้งานเชิงพาณิชย์ได้',
     uk: 'ШІ для масштабованої SVG-векторної графіки та іконок. 30 безкоштовних кредитів на день, комерційне використання дозволено.',
     ro: 'AI care generează grafică vectorială SVG scalabilă și pictograme. 30 de credite gratuite zilnic, utilizare comercială permisă.',
-    ua: 'ІІ для генерації масштабованих SVG-графіків та іконок. 30 безкоштовних кредитів щодня, комерційне використання дозволено.',
+    ua: 'ШІ для генерації масштабованих SVG-графіків та іконок. 30 безкоштовних кредитів щодня, комерційне використання дозволено.',
   },
 
   'GitHub Copilot': {
@@ -458,7 +458,7 @@ const TOOL_TRANSLATIONS = {
     th: 'เติมโค้ดอัตโนมัติด้วย AI ในตัวแก้ไขของคุณ รองรับ 40+ ภาษาพร้อมการเชื่อมต่อ GitHub',
     uk: 'ШІ-автодоповнення коду в редакторі. Підтримує 40+ мов з інтеграцією GitHub.',
     ro: 'Completare automată AI de cod în editor. Suportă 40+ limbaje cu integrare GitHub.',
-    ua: 'ІІ-автодоповнення коду прямо в редакторі. Підтримує 40+ мов програмування. 15M+ розробників.',
+    ua: 'ШІ-автодоповнення коду прямо в редакторі. Підтримує 40+ мов програмування. 15M+ розробників.',
   },
 
   'Cursor': {
@@ -482,7 +482,7 @@ const TOOL_TRANSLATIONS = {
     th: 'IDE ที่ใช้ VS Code พร้อม AI ในตัว แก้ไขไฟล์ทั้งหมดด้วยคำสั่งข้อความธรรมดา',
     uk: 'IDE на основі VS Code із вбудованим ШІ. Редагуйте цілі файли за допомогою звичайних текстових інструкцій.',
     ro: 'IDE bazat pe VS Code cu AI integrat. Editați fișiere întregi cu instrucțiuni text simplu.',
-    ua: 'IDE на базі VS Code з вбудованим ІІ. Редагуйте цілі файли з розумінням всього проєкту.',
+    ua: 'IDE на базі VS Code з вбудованим ШІ. Редагуйте цілі файли з розумінням всього проєкту.',
   },
 
   'Claude Code': {
@@ -506,7 +506,7 @@ const TOOL_TRANSLATIONS = {
     th: 'CLI agent ของ Anthropic — เครื่องมือพัฒนา AI ชั้นนำในปี 2026 วงจรครบถ้วน: โค้ด ทดสอบ refactor ในเทอร์มินัล',
     uk: 'CLI-агент Anthropic — провідний ШІ-інструмент для розробки у 2026 році. Повний цикл: код, тести, рефакторинг у терміналі.',
     ro: 'Agentul CLI al Anthropic — principalul instrument AI de dezvoltare în 2026. Ciclu complet: cod, teste, refactoring în terminal.',
-    ua: 'CLI-агент від Anthropic — провідний ІІ-інструмент для розробки 2026. Повний цикл: код, тести, рефакторинг у терміналі.',
+    ua: 'CLI-агент від Anthropic — провідний ШІ-інструмент для розробки 2026. Повний цикл: код, тести, рефакторинг у терміналі.',
   },
 
   'v0 by Vercel': {
@@ -578,7 +578,7 @@ const TOOL_TRANSLATIONS = {
     th: 'สภาพแวดล้อมเขียนโค้ดบนคลาวด์พร้อม AI agent ที่เขียน รัน และ deploy โค้ดในเบราว์เซอร์ได้เลย',
     uk: 'Хмарне середовище розробки з ШІ-агентом, який пише, запускає та деплоїть код прямо в браузері.',
     ro: 'Mediu de codare cloud cu agent AI care scrie, rulează și implementează cod direct în browser.',
-    ua: 'Хмарне середовище для програмування з ІІ-агентом, який пише, запускає та розгортає програми прямо в браузері.',
+    ua: 'Хмарне середовище для програмування з ШІ-агентом, який пише, запускає та розгортає програми прямо в браузері.',
   },
 
   'Google Veo 3': {
@@ -626,7 +626,7 @@ const TOOL_TRANSLATIONS = {
     th: 'โปรแกรมตัดต่อวิดีโอ AI มืออาชีพ Gen-4 รักษาความสม่ำเสมอของตัวละครข้ามฉากสำหรับการผลิตหนังสั้น',
     uk: 'Професійний ШІ-відеоредактор. Gen-4 зберігає персонажів стабільними між сценами для виробництва короткометражок.',
     ro: 'Editor video AI profesional. Gen-4 menține personajele consistente între scene pentru producția de scurtmetraje.',
-    ua: 'Професійний ІІ-відеоредактор. Gen-4 зберігає консистентність персонажів протягом усіх сцен.',
+    ua: 'Професійний ШІ-відеоредактор. Gen-4 зберігає консистентність персонажів протягом усіх сцен.',
   },
 
   'HeyGen': {
@@ -650,7 +650,7 @@ const TOOL_TRANSLATIONS = {
     th: 'อวาตาร์ AI และพากย์วิดีโอใน 40+ ภาษา เหมาะสำหรับการตลาดและการฝึกอบรมองค์กร',
     uk: 'ШІ-аватари та дубляж відео на 40+ мовах. Ідеально для маркетингу та корпоративних навчальних матеріалів.',
     ro: 'Avataruri AI și dublaj video în 40+ limbi. Perfect pentru marketing și formare corporativă.',
-    ua: 'ІІ-аватари та дубляж відео на 40+ мовах. Ідеально для маркетингу та навчальних відео.',
+    ua: 'ШІ-аватари та дубляж відео на 40+ мовах. Ідеально для маркетингу та навчальних відео.',
   },
 
   'Kling AI': {
@@ -698,7 +698,7 @@ const TOOL_TRANSLATIONS = {
     th: 'โปรแกรมตัดต่อวิดีโอ AI ฟรีทั้งหมด ไม่มีลายน้ำ ไม่มีสมาชิก ซับไตเติ้ลอัตโนมัติ ลบพื้นหลัง และเอฟเฟกต์ AI',
     uk: 'Повністю безкоштовний ШІ-відеоредактор — без водяного знака, без підписки. Авто-субтитри, видалення фону та ШІ-ефекти.',
     ro: 'Editor video AI complet gratuit — fără filigran, fără abonament. Subtitrări automate, eliminare fundal și efecte AI.',
-    ua: 'Повністю безкоштовний ІІ-відеоредактор — без водяних знаків, без підписки. Авто-субтитри та ефекти.',
+    ua: 'Повністю безкоштовний ШІ-відеоредактор — без водяних знаків, без підписки. Авто-субтитри та ефекти.',
   },
 
   'Pika': {
@@ -722,7 +722,7 @@ const TOOL_TRANSLATIONS = {
     th: 'สร้างวิดีโอด้วย 80 เครดิตฟรีต่อเดือน โดดเด่นด้วย "Pikaffects" — การเปลี่ยนแปลงภาพที่ไม่เหมือนใคร',
     uk: 'Генерація відео з 80 безкоштовними кредитами на місяць. Відомий «Pikaffects» — унікальними візуальними трансформаціями.',
     ro: 'Generare video cu 80 de credite gratuite lunare. Cunoscut pentru "Pikaffects" — transformări vizuale unice.',
-    ua: 'ІІ-генерація відео з 80 безкоштовними щомісячними кредитами. Відомий "Pikaffects" — унікальні візуальні ефекти.',
+    ua: 'ШІ-генерація відео з 80 безкоштовними щомісячними кредитами. Відомий "Pikaffects" — унікальні візуальні ефекти.',
   },
 
   'ElevenLabs': {
@@ -794,7 +794,7 @@ const TOOL_TRANSLATIONS = {
     th: 'เพลง AI ทุกแนวในไม่กี่วินาที ฟรี 50 เพลงต่อวันสำหรับการใช้งานส่วนตัว',
     uk: 'ШІ-музика в будь-якому жанрі за секунди. 50 безкоштовних пісень на день для особистого використання.',
     ro: 'Muzică AI în orice gen în câteva secunde. 50 de cântece gratuite pe zi pentru uz personal.',
-    ua: 'ІІ-музика в будь-якому жанрі за секунди. 50 безкоштовних пісень на день, повна генерація вокалу.',
+    ua: 'ШІ-музика в будь-якому жанрі за секунди. 50 безкоштовних пісень на день, повна генерація вокалу.',
   },
 
   'Udio': {
@@ -866,7 +866,7 @@ const TOOL_TRANSLATIONS = {
     th: 'ตัวปรับปรุงเสียง AI ฟรี ลบเสียงรบกวนพื้นหลังและเสียงสะท้อน ทำให้ไมโครโฟนทุกตัวฟังดูเหมือนสตูดิโอ',
     uk: 'Безкоштовний ШІ для покращення аудіо. Видаляє фоновий шум та ехо — будь-який мікрофон звучить як студійний.',
     ro: 'Îmbunătățitor audio AI gratuit. Elimină zgomotul de fundal și ecoul — orice microfon sună ca în studio.',
-    ua: 'Безкоштовний ІІ-покращувач аудіо. Видаляє фоновий шум та ехо — будь-який мікрофон звучить як студійний.',
+    ua: 'Безкоштовний ШІ-покращувач аудіо. Видаляє фоновий шум та ехо — будь-який мікрофон звучить як студійний.',
   },
 
   'Notion AI': {
@@ -890,7 +890,7 @@ const TOOL_TRANSLATIONS = {
     th: 'AI ภายใน workspace ของ Notion เขียน สรุป แปล และจัดโครงสร้างโน้ตได้ทันที',
     uk: 'ШІ всередині робочого простору Notion. Пишіть, резюмуйте, перекладайте та структуруйте нотатки миттєво.',
     ro: 'AI în spațiul de lucru Notion. Scrieți, rezumați, traduceți și structurați notițe instantaneu.',
-    ua: 'ІІ у вашому Notion. Пишіть, резюмуйте, перекладайте та створюйте бази даних за допомогою ІІ.',
+    ua: 'ШІ у вашому Notion. Пишіть, резюмуйте, перекладайте та створюйте бази даних за допомогою ШІ.',
   },
 
   'Otter.ai': {
@@ -938,7 +938,7 @@ const TOOL_TRANSLATIONS = {
     th: 'อัตโนมัติงานระหว่าง 6,000+ แอปด้วย logic AI และการกระทำแบบมีเงื่อนไข ไม่ต้องเขียนโค้ด',
     uk: 'Автоматизація завдань між 6 000+ додатками з ШІ-логікою та умовними діями. Без коду.',
     ro: 'Automatizați sarcini între 6.000+ aplicații cu logică AI și acțiuni condiționale. Fără cod.',
-    ua: 'Автоматизуйте завдання між 6000+ додатками з ІІ-логікою та умовними діями.',
+    ua: 'Автоматизуйте завдання між 6000+ додатками з ШІ-логікою та умовними діями.',
   },
 
   'Gamma': {
@@ -962,7 +962,7 @@ const TOOL_TRANSLATIONS = {
     th: 'สร้างงานนำเสนอ เอกสาร และเว็บไซต์ AI ที่สวยงามในไม่กี่นาที เครดิตฟรี 10 อัน ไม่ต้องมีทักษะการออกแบบ',
     uk: 'Створюйте приголомшливі презентації, документи та сайти за хвилини. 10 безкоштовних кредитів, навички дизайну не потрібні.',
     ro: 'Creați prezentări, documente și site-uri web uimitoare în minute. 10 credite gratuite, fără abilități de design.',
-    ua: 'Створюйте вражаючі ІІ-презентації, документи та сайти за хвилини. Без досвіду в дизайні.',
+    ua: 'Створюйте вражаючі ШІ-презентації, документи та сайти за хвилини. Без досвіду в дизайні.',
   },
 
   'Fireflies.ai': {
@@ -986,7 +986,7 @@ const TOOL_TRANSLATIONS = {
     th: 'AI ผู้ช่วยประชุมที่บันทึก ถอดเสียง และสรุปทุกการโทร พื้นที่จัดเก็บฟรี 800 นาที',
     uk: 'ШІ-асистент для нарад: записує, транскрибує та резюмує кожен дзвінок. 800 хвилин безкоштовного зберігання.',
     ro: 'Asistent AI pentru ședințe care înregistrează, transcrie și rezumă fiecare apel. 800 minute stocare gratuită.',
-    ua: 'ІІ-асистент для зустрічей — записує, транскрибує та резюмує кожен дзвінок. 800 хвилин безкоштовно.',
+    ua: 'ШІ-асистент для зустрічей — записує, транскрибує та резюмує кожен дзвінок. 800 хвилин безкоштовно.',
   },
 
   'Reclaim.ai': {
@@ -1010,7 +1010,7 @@ const TOOL_TRANSLATIONS = {
     th: 'AI ที่วางแผนปฏิทินของคุณโดยอัตโนมัติและปกป้องเวลาทำงานลึกจากการประชุม',
     uk: 'ШІ, який автоматично планує ваш календар і захищає час глибокої роботи від нарад.',
     ro: 'AI care vă planifică automat calendarul și protejează timpul de muncă profundă de ședințe.',
-    ua: 'ІІ для автоматичного планування календаря та захисту часу для глибокої роботи від зустрічей.',
+    ua: 'ШІ для автоматичного планування календаря та захисту часу для глибокої роботи від зустрічей.',
   },
 
   'NotebookLM': {
@@ -1034,7 +1034,7 @@ const TOOL_TRANSLATIONS = {
     th: 'AI ของ Google สำหรับเอกสารของคุณ อัพโหลด PDF รับพอดแคสต์ สรุป หรือ Q&A',
     uk: 'ШІ Google для ваших документів. Завантажте PDF — отримайте подкаст, резюме або сесію запитань і відповідей.',
     ro: 'AI Google pentru documentele dvs. Încărcați un PDF și obțineți un podcast, un rezumat sau o sesiune Q&A.',
-    ua: 'ІІ від Google для ваших документів. Завантажте PDF і отримайте подкаст, конспекти та інтерактивний чат.',
+    ua: 'ШІ від Google для ваших документів. Завантажте PDF і отримайте подкаст, конспекти та інтерактивний чат.',
   },
 
   'Elicit': {
@@ -1058,7 +1058,7 @@ const TOOL_TRANSLATIONS = {
     th: 'เครื่องมือวิจัย AI วิเคราะห์เอกสารวิทยาศาสตร์หลายร้อยฉบับพร้อมกันพร้อมข้อสรุปที่มีโครงสร้าง',
     uk: 'ШІ-інструмент для досліджень. Одночасно аналізує сотні наукових статей із структурованими висновками.',
     ro: 'Instrument de cercetare AI. Analizează sute de articole științifice simultan cu concluzii structurate.',
-    ua: 'ІІ для досліджень. Аналізує сотні статей одночасно та витягує ключові висновки.',
+    ua: 'ШІ для досліджень. Аналізує сотні статей одночасно та витягує ключові висновки.',
   },
 
   'Consensus': {
@@ -1106,7 +1106,7 @@ const TOOL_TRANSLATIONS = {
     th: 'AI สำหรับ PDF — ถามคำถามใดก็ได้และรับคำตอบทันทีพร้อมการอ้างอิงที่คลิกได้ ฟรี 60 หน้า',
     uk: 'ШІ для PDF: ставте будь-які питання та отримуйте миттєві відповіді з клікабельними цитатами. 60 сторінок безкоштовно.',
     ro: 'AI pentru PDF — puneți orice întrebare și primiți răspunsuri instantanee cu citate pe care se poate face clic. 60 de pagini gratuite.',
-    ua: 'ІІ для PDF — задайте будь-яке питання і отримайте миттєву відповідь з клікабельними цитатами. 60 сторінок безкоштовно.',
+    ua: 'ШІ для PDF — задайте будь-яке питання і отримайте миттєву відповідь з клікабельними цитатами. 60 сторінок безкоштовно.',
   },
 
   'Semantic Scholar': {
@@ -1130,7 +1130,7 @@ const TOOL_TRANSLATIONS = {
     th: 'ค้นหา AI ฟรีในบทความวิทยาศาสตร์ 200M+ พร้อมกราฟการอ้างอิงและผลการค้นพบที่สำคัญ',
     uk: 'Безкоштовний ШІ-пошук по 200 млн+ наукових статтях із графіками цитування та ключовими висновками.',
     ro: 'Căutare AI gratuită în 200M+ articole științifice cu grafice de citare și descoperiri cheie.',
-    ua: 'Безкоштовний ІІ-пошук по 200M+ наукових статей з графами цитувань та ключовими знахідками.',
+    ua: 'Безкоштовний ШІ-пошук по 200M+ наукових статей з графами цитувань та ключовими знахідками.',
   },
 
   'Figma AI': {
@@ -1154,7 +1154,7 @@ const TOOL_TRANSLATIONS = {
     th: 'ฟีเจอร์ AI ภายใน Figma ออกแบบอัตโนมัติ สร้าง component และตั้งชื่อเลเยอร์อัตโนมัติ',
     uk: 'ШІ-функції всередині Figma. Авто-розкладка, генерація компонентів та автоматичне іменування шарів.',
     ro: 'Funcții AI în Figma. Layout automat, generare de componente și denumire automată a straturilor.',
-    ua: 'ІІ-функції всередині Figma. Авто-лейаут, генерація компонентів та розумне автозаповнення.',
+    ua: 'ШІ-функції всередині Figma. Авто-лейаут, генерація компонентів та розумне автозаповнення.',
   },
 
   'Canva AI': {
@@ -1226,7 +1226,7 @@ const TOOL_TRANSLATIONS = {
     th: 'สร้างโลโก้มืออาชีพและชุดแบรนด์ครบถ้วนด้วย AI สำหรับทุกธุรกิจในไม่กี่นาที',
     uk: 'ШІ-генерація професійних логотипів і повних брендинг-китів для будь-якого бізнесу за хвилини.',
     ro: 'Generare AI de logo-uri profesionale și kituri de brand complete pentru orice afacere în minute.',
-    ua: 'ІІ-генерація професійних логотипів та повних брендбуків для бізнесу.',
+    ua: 'ШІ-генерація професійних логотипів та повних брендбуків для бізнесу.',
   },
 
   'Uizard': {
@@ -1298,7 +1298,7 @@ const TOOL_TRANSLATIONS = {
     th: 'ตัวสร้างเว็บไซต์ AI ที่สร้าง sitemap และ wireframe ใน Figma และ Webflow ในไม่กี่นาที',
     uk: 'ШІ-конструктор сайтів, який генерує карти сайтів і вайрфрейми у Figma та Webflow за хвилини.',
     ro: 'Constructor web AI care generează hărți de site și wireframe-uri în Figma și Webflow în minute.',
-    ua: 'ІІ-конструктор сайтів, що генерує сайтмепи та вайрфрейми за промптом.',
+    ua: 'ШІ-конструктор сайтів, що генерує сайтмепи та вайрфрейми за промптом.',
   },
 
   'Julius AI': {
@@ -1322,7 +1322,7 @@ const TOOL_TRANSLATIONS = {
     th: 'นักวิเคราะห์ข้อมูล AI อัพโหลด CSV รับกราฟสวยงาม ข้อมูลเชิงลึก และข้อสรุปโดยไม่ต้องเขียนโค้ด',
     uk: 'ШІ-аналітик даних. Завантажте CSV — отримайте гарні графіки, інсайти та висновки без коду.',
     ro: 'Analist de date AI. Încărcați un CSV și obțineți grafice frumoase, informații și concluzii fără cod.',
-    ua: 'ІІ-аналітик даних. Завантажте CSV і отримайте красиві графіки, інсайти та прогнози.',
+    ua: 'ШІ-аналітик даних. Завантажте CSV і отримайте красиві графіки, інсайти та прогнози.',
   },
 
   'Hex': {
@@ -1346,7 +1346,7 @@ const TOOL_TRANSLATIONS = {
     th: 'สมุดบันทึกข้อมูลแบบร่วมมือพร้อม AI assistant SQL, Python และกราฟสำหรับทั้งทีม',
     uk: 'Спільні блокноти для даних із ШІ-асистентом. SQL, Python і графіки для всієї команди.',
     ro: 'Notebook-uri de date colaborative cu asistent AI. SQL, Python și grafice pentru întreaga echipă.',
-    ua: 'Спільні дата-ноутбуки з ІІ-асистентом. SQL, Python та графіки для всієї команди.',
+    ua: 'Спільні дата-ноутбуки з ШІ-асистентом. SQL, Python та графіки для всієї команди.',
   },
 
   'Tableau AI': {
@@ -1418,7 +1418,7 @@ const TOOL_TRANSLATIONS = {
     th: 'สเปรดชีตอัจฉริยะพร้อม AI นำเข้าข้อมูลจากแหล่งใดก็ได้และวิเคราะห์ในเบราว์เซอร์',
     uk: 'Розумні таблиці з ШІ. Імпортуйте дані з будь-якого джерела та аналізуйте прямо у браузері.',
     ro: 'Foi de calcul inteligente cu AI. Importați date din orice sursă și analizați-le direct în browser.',
-    ua: 'Розумні таблиці з ІІ. Імпортуйте дані з будь-якого джерела та аналізуйте прямо в браузері.',
+    ua: 'Розумні таблиці з ШІ. Імпортуйте дані з будь-якого джерела та аналізуйте прямо в браузері.',
   },
 
   'Akkio': {
@@ -1442,7 +1442,7 @@ const TOOL_TRANSLATIONS = {
     th: 'AI ไม่ต้องเขียนโค้ดสำหรับนักวิเคราะห์ธุรกิจ สร้างโมเดลพยากรณ์จากข้อมูล CSV หรือ CRM โดยไม่ต้องเขียนโปรแกรม',
     uk: 'No-code ШІ для бізнес-аналітиків. Будуйте прогностичні моделі з CSV або CRM-даних без програмування.',
     ro: 'AI no-code pentru analiști de afaceri. Construiți modele predictive din datele CSV sau CRM fără programare.',
-    ua: 'No-code ІІ для бізнес-аналітиків. Створюйте моделі прогнозування з CSV або CRM даних без написання коду.',
+    ua: 'No-code ШІ для бізнес-аналітиків. Створюйте моделі прогнозування з CSV або CRM даних без написання коду.',
   },
 
   'Looker Studio': {
@@ -1466,7 +1466,7 @@ const TOOL_TRANSLATIONS = {
     th: 'เครื่องมือ BI ฟรีของ Google พร้อม dashboard ด้วย AI เชื่อมต่อกับแหล่งข้อมูล 800+ รายการรวมถึง Google Analytics',
     uk: 'Безкоштовний BI-інструмент Google з ШІ-дашбордами. Підключається до 800+ джерел даних, включаючи Google Analytics.',
     ro: 'Instrument BI gratuit Google cu tablouri de bord AI. Se conectează la 800+ surse de date inclusiv Google Analytics.',
-    ua: 'Безкоштовний BI-інструмент від Google з ІІ-дашбордами. Підключається до 800+ джерел даних.',
+    ua: 'Безкоштовний BI-інструмент від Google з ШІ-дашбордами. Підключається до 800+ джерел даних.',
   },
 
   'ChatGPT': {
@@ -1490,7 +1490,7 @@ const TOOL_TRANSLATIONS = {
     th: 'แชท AI ที่ได้รับความนิยมสูงสุดจาก OpenAI. GPT-4o สำหรับข้อความ รูปภาพ และเสียง มีผู้ใช้มากกว่า 200 ล้านคน',
     uk: 'Найпопулярніший ШІ-чат від OpenAI. GPT-4o для тексту, зображень і голосу. Понад 200 мільйонів користувачів.',
     ro: 'Cel mai popular chat AI de la OpenAI. GPT-4o pentru text, imagini și voce. Folosit de peste 200 de milioane de persoane.',
-    ua: 'Найпопулярніший ІІ-чат від OpenAI. GPT-4o для тексту, зображень і голосу. 400M+ користувачів щомісяця.',
+    ua: 'Найпопулярніший ШІ-чат від OpenAI. GPT-4o для тексту, зображень і голосу. 400M+ користувачів щомісяця.',
   },
 
   'UXPilot': {
@@ -1509,7 +1509,7 @@ const TOOL_TRANSLATIONS = {
     fr: '⚡ Bêta — Canvas IA de Google Labs pour créer des designs UI et des prototypes depuis du texte ou un croquis. Propulsé par Gemini 2.5 Pro. Export vers Figma et HTML/CSS. 350 générations/mois gratuit.',
     de: '⚡ Beta — KI-Canvas von Google Labs für UI-Designs und Prototypen aus Text oder Skizzen. Betrieben von Gemini 2.5 Pro. Export nach Figma und HTML/CSS. 350 Generierungen/Monat kostenlos.',
     pt: '⚡ Beta — Canvas IA do Google Labs para criar designs UI e protótipos a partir de texto ou esboço. Funciona com Gemini 2.5 Pro. Exporta para Figma e HTML/CSS. 350 gerações/mês gratuitas.',
-    ua: '⚡ Бета — ІІ-холст від Google Labs для створення UI-дизайну та прототипів із тексту або скетчу. Працює на Gemini 2.5 Pro. Експортує у Figma та HTML/CSS. 350 генерацій/місяць безкоштовно.',
+    ua: '⚡ Бета — ШІ-холст від Google Labs для створення UI-дизайну та прототипів із тексту або скетчу. Працює на Gemini 2.5 Pro. Експортує у Figma та HTML/CSS. 350 генерацій/місяць безкоштовно.',
     he: '⚡ בטא — קנבס AI של Google Labs ליצירת עיצובי UI ואב-טיפוסים מטקסט או סקיצה. מופעל על ידי Gemini 2.5 Pro. ייצוא ל-Figma ו-HTML/CSS. 350 גנרציות/חודש בחינם.',
   },
 
@@ -1529,7 +1529,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Assistant IA de Mistral AI — le laboratoire européen leader. Multilingue, rapide, avec recherche web et canvas. Modèles open-weight.',
     de: 'KI-Assistent von Mistral AI — dem führenden europäischen Labor. Mehrsprachig, schnell, mit Websuche und Canvas. Open-Weight-Modelle.',
     pt: 'Assistente de IA da Mistral AI — o laboratório europeu líder. Multilíngue, rápido, com busca web e canvas. Modelos open-weight.',
-    ua: 'ІІ-асистент від Mistral AI — провідної європейської лабораторії. Мультимовний, швидкий, з пошуком і canvas. Open-weight моделі.',
+    ua: 'ШІ-асистент від Mistral AI — провідної європейської лабораторії. Мультимовний, швидкий, з пошуком і canvas. Open-weight моделі.',
     he: 'עוזר AI של Mistral AI — המעבדה האירופית המובילה. רב-לשוני, מהיר, עם חיפוש ו-canvas. מודלים open-weight.',
   },
 
@@ -1539,7 +1539,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Le premier ingénieur logiciel IA au monde par Cognition. Planifie, code, débogue et déploie des fonctionnalités de manière autonome.',
     de: 'Der weltweit erste KI-Software-Ingenieur von Cognition. Plant, programmiert, debuggt und deployt Features autonom.',
     pt: 'O primeiro engenheiro de software IA do mundo pela Cognition. Planeja, codifica, depura e implanta funcionalidades de forma autônoma.',
-    ua: 'Перший у світі ІІ-інженер від Cognition. Автономно планує, кодить, дебажить і деплоїть фічі за одним промптом.',
+    ua: 'Перший у світі ШІ-інженер від Cognition. Автономно планує, кодить, дебажить і деплоїть фічі за одним промптом.',
     he: 'מהנדס התוכנה הראשון בעולם מבוסס AI מבית Cognition. מתכנן, מקודד, מדבג ומפרסם פיצ\'רים באופן אוטונומי.',
   },
 
@@ -1549,7 +1549,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Moteur de recherche IA pour développeurs. Répond aux questions de code avec des sources réelles, des exemples et des explications.',
     de: 'KI-Suchmaschine für Entwickler. Beantwortet Code-Fragen mit realen Quellen, Beispielen und Erklärungen.',
     pt: 'Motor de busca IA para desenvolvedores. Responde perguntas de código com fontes reais, exemplos e explicações.',
-    ua: 'ІІ-пошуковик для розробників. Відповідає на питання по коду з реальними джерелами, прикладами та поясненнями.',
+    ua: 'ШІ-пошуковик для розробників. Відповідає на питання по коду з реальними джерелами, прикладами та поясненнями.',
     he: 'מנוע חיפוש AI למפתחים. עונה על שאלות קוד עם מקורות אמיתיים, דוגמאות קוד והסברים.',
   },
 
@@ -1559,7 +1559,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Assistant de code IA open-source pour VS Code et JetBrains. Connectez n\'importe quel LLM — local ou cloud.',
     de: 'Open-Source-KI-Code-Assistent für VS Code und JetBrains. Verbinden Sie jedes LLM — lokal oder Cloud.',
     pt: 'Assistente de código IA de código aberto para VS Code e JetBrains. Conecte qualquer LLM — local ou na nuvem.',
-    ua: 'Open-source ІІ-асистент для коду у VS Code та JetBrains. Підключайте будь-яку LLM — локальну або хмарну.',
+    ua: 'Open-source ШІ-асистент для коду у VS Code та JetBrains. Підключайте будь-яку LLM — локальну або хмарну.',
     he: 'עוזר קוד AI בקוד פתוח ל-VS Code ו-JetBrains. חברו כל LLM — מקומי או ענן.',
   },
 
@@ -1579,7 +1579,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Créez des vidéos professionnelles avec 140+ avatars IA en 120+ langues. Sans caméra, micro ni acteurs. 50K+ entreprises.',
     de: 'Erstellen Sie professionelle KI-Videos mit 140+ Avataren in 120+ Sprachen. Keine Kamera, kein Mikrofon. 50K+ Unternehmen.',
     pt: 'Crie vídeos profissionais com 140+ avatares IA em 120+ idiomas. Sem câmera, microfone ou atores. 50K+ empresas.',
-    ua: 'Створення професійних ІІ-відео зі 140+ аватарами 120+ мовами. Без камери, мікрофона та акторів. 50K+ компаній.',
+    ua: 'Створення професійних ШІ-відео зі 140+ аватарами 120+ мовами. Без камери, мікрофона та акторів. 50K+ компаній.',
     he: 'צרו סרטונים מקצועיים עם 140+ אווטרים AI ב-120+ שפות. בלי מצלמה, מיקרופון או שחקנים. 50K+ חברות.',
   },
 
@@ -1599,7 +1599,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Gestionnaire de projets et calendrier IA. Priorise, planifie et reprogramme automatiquement vos tâches selon les deadlines.',
     de: 'KI-Projektmanager und Kalender. Priorisiert, plant und verschiebt Aufgaben automatisch nach Deadlines.',
     pt: 'Gerenciador de projetos e calendário com IA. Prioriza, agenda e reagenda tarefas automaticamente por prazo.',
-    ua: 'ІІ-планувальник і менеджер проєктів. Автоматично розставляє пріоритети, планує і переносить завдання за дедлайнами.',
+    ua: 'ШІ-планувальник і менеджер проєктів. Автоматично розставляє пріоритети, планує і переносить завдання за дедлайнами.',
     he: 'מנהל פרויקטים ולוח שנה עם AI. מתעדף, מתזמן ומתזמן מחדש משימות אוטומטית לפי דדליינים.',
   },
 
@@ -1609,7 +1609,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Construisez des apps internes IA et des tableaux de bord en heures. Connectez n\'importe quelle base, API ou LLM — déployez instantanément.',
     de: 'Erstellen Sie interne KI-Apps und Dashboards in Stunden. Verbinden Sie jede Datenbank, API oder LLM — sofortiges Deployment.',
     pt: 'Construa apps internas com IA e dashboards em horas. Conecte qualquer banco de dados, API ou LLM — deploy instantâneo.',
-    ua: 'Створюйте внутрішні ІІ-додатки та дашборди за години. Підключайте будь-яку базу, API або LLM — деплой для команди миттєво.',
+    ua: 'Створюйте внутрішні ШІ-додатки та дашборди за години. Підключайте будь-яку базу, API або LLM — деплой для команди миттєво.',
     he: 'בנו אפליקציות פנימיות עם AI ודשבורדים בשעות. חברו כל בסיס נתונים, API או LLM — פריסה מיידית.',
   },
 
@@ -1619,7 +1619,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Analyse de citations IA — voyez comment un article a été cité : soutenu, contesté ou mentionné. Smart Citations pour la recherche approfondie.',
     de: 'KI-Zitationsanalyse — sehen Sie, wie ein Paper zitiert wurde: bestätigt, widersprochen oder erwähnt. Smart Citations für tiefe Forschung.',
     pt: 'Análise de citações com IA — veja como um artigo foi citado: apoiado, contrastado ou mencionado. Smart Citations para pesquisa profunda.',
-    ua: 'ІІ-аналіз цитувань — дивіться, як стаття була процитована: підтверджена, оспорена або згадана. Smart Citations для глибокого дослідження.',
+    ua: 'ШІ-аналіз цитувань — дивіться, як стаття була процитована: підтверджена, оспорена або згадана. Smart Citations для глибокого дослідження.',
     he: 'ניתוח ציטוטים עם AI — ראו איך מאמר צוטט: נתמך, עורער או הוזכר. Smart Citations למחקר מעמיק.',
   },
 
@@ -1629,7 +1629,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Assistant IA dans Windows 11, Edge et Microsoft 365. GPT-4 gratuit avec recherche.',
     de: 'KI-Assistent in Windows 11, Edge und Microsoft 365. Kostenloses GPT-4 mit Suche.',
     pt: 'Assistente IA no Windows 11, Edge e Microsoft 365. GPT-4 grátis com busca.',
-    ua: 'ІІ-асистент, вбудований у Windows 11, Edge та Microsoft 365. Безкоштовний доступ до GPT-4 з пошуком.',
+    ua: 'ШІ-асистент, вбудований у Windows 11, Edge та Microsoft 365. Безкоштовний доступ до GPT-4 з пошуком.',
   },
   'Character.AI': {
     ru: 'Платформа для общения с ИИ-персонажами. 200M+ пользователей для ролевых игр и развлечений.',
@@ -1637,7 +1637,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Plateforme de chat avec des personnages IA. 200M+ utilisateurs pour le jeu de rôle.',
     de: 'Plattform zum Chatten mit KI-Charakteren. 200M+ Nutzer für Rollenspiele.',
     pt: 'Plataforma para conversar com personagens IA. 200M+ usuários para RPG.',
-    ua: 'Платформа для створення та спілкування з ІІ-персонажами. 200M+ користувачів для рольових ігор та розваг.',
+    ua: 'Платформа для створення та спілкування з ШІ-персонажами. 200M+ користувачів для рольових ігор та розваг.',
   },
   'Microsoft Copilot Studio': {
     ru: 'Создавайте ИИ-агентов для бизнеса. Интеграция с Microsoft 365 и Azure.',
@@ -1645,11 +1645,11 @@ const TOOL_TRANSLATIONS = {
     fr: 'Créez des agents IA pour votre entreprise. Intégration Microsoft 365 et Azure.',
     de: 'Erstellen Sie KI-Agenten für Ihr Unternehmen. Integration mit Microsoft 365 und Azure.',
     pt: 'Crie agentes IA para negócios. Integração com Microsoft 365 e Azure.',
-    ua: 'Створюйте та розгортайте власних ІІ-агентів для бізнесу. Інтеграція з Microsoft 365 та Azure.',
+    ua: 'Створюйте та розгортайте власних ШІ-агентів для бізнесу. Інтеграція з Microsoft 365 та Azure.',
   },
   'n8n': {
     he: 'אוטומציה בקוד פתוח. מודלי AI, APIs ו-400+ שירותים בבונה ויזואלי.',
-    ua: 'Open-source автоматизація. З\'єднуйте ІІ-моделі, API та 400+ сервісів у візуальному конструкторі.',
+    ua: 'Open-source автоматизація. З\'єднуйте ШІ-моделі, API та 400+ сервісів у візуальному конструкторі.',
   },
   'Make': {
     he: 'אוטומציה ויזואלית עם 1000+ אפליקציות. יותר גמישות לתרחישים מורכבים.',
@@ -1667,7 +1667,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Agent IA autonome open-source. Donnez un objectif — il l\'exécute seul.',
     de: 'Open-Source-autonomer KI-Agent. Geben Sie ein Ziel — er führt es aus.',
     pt: 'Agente IA autônomo open-source. Dê um objetivo — ele executa sozinho.',
-    ua: 'Open-source автономний ІІ-агент. Задайте ціль — він розбиває на кроки, шукає і виконує.',
+    ua: 'Open-source автономний ШІ-агент. Задайте ціль — він розбиває на кроки, шукає і виконує.',
   },
   'Lindy': {
     he: 'סוכני AI למייל, תזמון ותמיכה בדקות. ללא קוד, עם טריגרים חכמים.',
@@ -1676,7 +1676,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Agents IA pour email, planification et support en minutes. Sans code.',
     de: 'KI-Agenten für E-Mail, Planung und Support in Minuten. Ohne Code.',
     pt: 'Agentes IA para email, planejamento e suporte em minutos. Sem código.',
-    ua: 'ІІ-агенти для пошти, планування та підтримки за хвилини. Без коду, з розумними тригерами.',
+    ua: 'ШІ-агенти для пошти, планування та підтримки за хвилини. Без коду, з розумними тригерами.',
   },
   'Relevance AI': {
     ru: 'No-code платформа для ИИ-агентов и мультистеповых цепочек.',
@@ -1684,7 +1684,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Plateforme no-code pour agents IA et chaînes multi-étapes.',
     de: 'No-Code-Plattform für KI-Agenten und mehrstufige Ketten.',
     pt: 'Plataforma no-code para agentes IA e cadeias multi-passo.',
-    ua: 'No-code платформа для створення та розгортання ІІ-агентів і мультистепових ланцюгів.',
+    ua: 'No-code платформа для створення та розгортання ШІ-агентів і мультистепових ланцюгів.',
   },
   'Manus': {
     he: 'סוכן AI אוטונומי. מטרה מורכבת — חיפוש, קוד, קבצים, תוצאה מוכנה.',
@@ -1693,7 +1693,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Agent IA autonome. Objectif complexe — recherche, code, fichiers, résultat prêt.',
     de: 'Autonomer KI-Agent. Komplexes Ziel — Suche, Code, Dateien, fertiges Ergebnis.',
     pt: 'Agente IA autônomo. Objetivo complexo — busca, código, arquivos, resultado pronto.',
-    ua: 'Автономний ІІ-агент. Задайте складну ціль — він шукає, пише код, керує файлами і видає результат.',
+    ua: 'Автономний ШІ-агент. Задайте складну ціль — він шукає, пише код, керує файлами і видає результат.',
   },
   'Windsurf': {
     he: 'IDE AI חינמי מ-Codeium עם Flows — גישה אג׳נטית לתכנות.',
@@ -1702,7 +1702,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'IDE IA gratuit de Codeium avec Flows — approche agent pour coder.',
     de: 'Kostenlose KI-IDE von Codeium mit Flows — agentischer Ansatz zum Programmieren.',
     pt: 'IDE IA gratuito da Codeium com Flows — abordagem agente para programar.',
-    ua: 'Безкоштовна ІІ-IDE від Codeium з Flows — агентний підхід з розумінням всього проєкту.',
+    ua: 'Безкоштовна ШІ-IDE від Codeium з Flows — агентний підхід з розумінням всього проєкту.',
   },
   'Semrush': {
     he: 'פלטפורמת SEO מקיפה עם עוזר AI וניתוח מתחרים.',
@@ -1711,7 +1711,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Plateforme SEO complète avec assistant IA et analyse concurrentielle.',
     de: 'Umfassende SEO-Plattform mit KI-Assistent und Wettbewerbsanalyse.',
     pt: 'Plataforma SEO completa com assistente IA e análise de concorrentes.',
-    ua: 'Комплексна SEO-платформа з ІІ-асистентом, дослідженням ключових слів та аналізом конкурентів.',
+    ua: 'Комплексна SEO-платформа з ШІ-асистентом, дослідженням ключових слів та аналізом конкурентів.',
   },
   'Copy.ai': {
     ru: 'ИИ-копирайтинг для рекламы, email и соцсетей. 90+ шаблонов.',
@@ -1719,7 +1719,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Copywriting IA pour pubs, email et réseaux. 90+ modèles.',
     de: 'KI-Copywriting für Werbung, E-Mail und Social Media. 90+ Vorlagen.',
     pt: 'Copywriting IA para anúncios, email e redes. 90+ modelos.',
-    ua: 'ІІ-копірайтинг для реклами, email та соцмереж. 90+ шаблонів для маркетингових матеріалів.',
+    ua: 'ШІ-копірайтинг для реклами, email та соцмереж. 90+ шаблонів для маркетингових матеріалів.',
   },
   'AdCreative.ai': {
     ru: 'Конверсионные рекламные креативы с ИИ. Facebook, Google и LinkedIn.',
@@ -1727,7 +1727,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Créatifs publicitaires avec IA. Facebook, Google et LinkedIn.',
     de: 'Konversionsstarke Werbekreative mit KI. Facebook, Google und LinkedIn.',
     pt: 'Criativos publicitários com IA. Facebook, Google e LinkedIn.',
-    ua: 'Генеруйте конверсійні рекламні креативи з ІІ. Facebook, Google та LinkedIn.',
+    ua: 'Генеруйте конверсійні рекламні креативи з ШІ. Facebook, Google та LinkedIn.',
   },
   'SurferSEO': {
     he: 'אופטימיזציית תוכן ל-Google. מאמרי SEO עם ניתוח NLP.',
@@ -1754,7 +1754,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'IA pour recherche, briefs de contenu et optimisation SEO.',
     de: 'KI für Recherche, Content-Briefs und SEO-Optimierung.',
     pt: 'IA para pesquisa, briefs de conteúdo e otimização SEO.',
-    ua: 'ІІ для дослідження, контент-брифів та SEO-оптимізації в одному інструменті.',
+    ua: 'ШІ для дослідження, контент-брифів та SEO-оптимізації в одному інструменті.',
   },
   'ComfyUI': {
     he: 'עורך Node בקוד פתוח החזק ביותר ליצירת תמונות AI.',
@@ -1805,7 +1805,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Design IA d\'Anthropic. Slides, mockups et supports marketing.',
     de: 'KI-Design von Anthropic. Folien, Mockups und Marketingmaterialien.',
     pt: 'Design IA da Anthropic. Slides, mockups e materiais de marketing.',
-    ua: 'ІІ-інструмент дизайну від Anthropic. Слайди, мокапи та маркетингові матеріали.',
+    ua: 'ШІ-інструмент дизайну від Anthropic. Слайди, мокапи та маркетингові матеріали.',
   },
   'Speechify': {
     he: 'אפליקציית הטקסט-לדיבור מספר 1 בעולם. מאמרים, PDF לאודיו.',
@@ -1832,7 +1832,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Constructeur web professionnel avec IA et CMS. Précision au pixel.',
     de: 'Professioneller KI-Website-Builder mit CMS. Pixelgenaues Design.',
     pt: 'Construtor web profissional com IA e CMS. Precisão ao pixel.',
-    ua: 'Професійний ІІ-конструктор сайтів з CMS. Піксельна точність без коду.',
+    ua: 'Професійний ШІ-конструктор сайтів з CMS. Піксельна точність без коду.',
   },
   'Lovable': {
     he: 'אפליקציות web מלאות מתיאור. React + Supabase + deploy בקליק.',
@@ -1872,7 +1872,7 @@ const TOOL_TRANSLATIONS = {
   },
   'Photomath': {
     he: 'צלמו בעיה מתמטית — קבלו פתרון שלב אחר שלב. 220M הורדות.',
-    ua: 'Сфотографуйте задачу — отримайте покрокове розв\'язання з ІІ. 220M завантажень.',
+    ua: 'Сфотографуйте задачу — отримайте покрокове розв\'язання з ШІ. 220M завантажень.',
   },
   'Duolingo Max': {
     ru: 'ИИ-обучение языкам с GPT-4 ролевыми играми.',
@@ -1880,7 +1880,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Apprentissage des langues avec IA et jeux de rôle GPT-4.',
     de: 'KI-Sprachenlernen mit GPT-4-Rollenspielen.',
     pt: 'Aprendizagem de idiomas com IA e jogos de RPG GPT-4.',
-    ua: 'ІІ-навчання мов з GPT-4 рольовими іграми. Реальні розмови з ІІ-персонажами.',
+    ua: 'ШІ-навчання мов з GPT-4 рольовими іграми. Реальні розмови з ШІ-персонажами.',
   },
   'Coursera Coach': {
     ru: 'ИИ-ассистент в Coursera. Объясняет концепции и отвечает на вопросы.',
@@ -1888,7 +1888,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Assistant IA dans Coursera. Explique les concepts et répond aux questions.',
     de: 'KI-Assistent in Coursera. Erklärt Konzepte und beantwortet Fragen.',
     pt: 'Assistente IA no Coursera. Explica conceitos e responde perguntas.',
-    ua: 'ІІ-асистент для навчання всередині Coursera. Пояснює концепції та відповідає на питання.',
+    ua: 'ШІ-асистент для навчання всередині Coursera. Пояснює концепції та відповідає на питання.',
   },
   'Socratic by Google': {
     ru: 'Фото домашнего задания → пошаговые объяснения.',
@@ -1896,7 +1896,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Photo du devoir → explications étape par étape.',
     de: 'Foto der Hausaufgabe → Schritt-für-Schritt-Erklärungen.',
     pt: 'Foto da tarefa → explicações passo a passo.',
-    ua: 'Сфотографуйте домашнє завдання — отримайте покрокові візуальні пояснення з ІІ.',
+    ua: 'Сфотографуйте домашнє завдання — отримайте покрокові візуальні пояснення з ШІ.',
   },
   'Khanmigo': {
     he: 'מורה AI מ-Khan Academy. שיטה סוקרטית — מנחה ולא נותן תשובות.',
@@ -1905,7 +1905,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Tuteur IA de Khan Academy. Méthode socratique.',
     de: 'KI-Tutor von Khan Academy. Sokratische Methode.',
     pt: 'Tutor IA da Khan Academy. Método socrático.',
-    ua: 'ІІ-репетитор від Khan Academy. Сократівський метод — направляє, а не дає відповіді.',
+    ua: 'ШІ-репетитор від Khan Academy. Сократівський метод — направляє, а не дає відповіді.',
   },
   'Synthesis': {
     he: 'AI למתמטיקה ופתרון בעיות לילדים. למידה אדפטיבית.',
@@ -1914,7 +1914,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'IA pour les maths et problèmes pour enfants. Apprentissage adaptatif.',
     de: 'KI für Mathematik und Aufgaben für Kinder. Adaptives Lernen.',
     pt: 'IA para matemática e problemas para crianças. Aprendizagem adaptativa.',
-    ua: 'ІІ для математики та задач для дітей. Адаптивне навчання з ігровим підходом.',
+    ua: 'ШІ для математики та задач для дітей. Адаптивне навчання з ігровим підходом.',
   },
   'Slidesgo': {
     he: 'מחולל תבניות מצגות AI. אלפי תבניות ל-Google Slides ו-PowerPoint.',
@@ -1923,7 +1923,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Générateur IA de modèles de présentations. Google Slides et PowerPoint.',
     de: 'KI-Vorlagengenerator für Präsentationen. Google Slides und PowerPoint.',
     pt: 'Gerador IA de modelos de apresentações. Google Slides e PowerPoint.',
-    ua: 'ІІ-генератор шаблонів презентацій. Тисячі шаблонів для Google Slides та PowerPoint.',
+    ua: 'ШІ-генератор шаблонів презентацій. Тисячі шаблонів для Google Slides та PowerPoint.',
   },
   'Prezi': {
     he: 'קנבס מצגות עם זום ועוזר עיצוב AI.',
@@ -1932,7 +1932,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Canvas évolutif pour présentations avec assistant IA.',
     de: 'Skalierbarer Canvas für Präsentationen mit KI-Assistent.',
     pt: 'Canvas escalável para apresentações com assistente IA.',
-    ua: 'Масштабований канвас для презентацій з ІІ-дизайн-асистентом.',
+    ua: 'Масштабований канвас для презентацій з ШІ-дизайн-асистентом.',
   },
   'Tome': {
     he: 'כלי סטוריטלינג AI. מצגת מלאה בפרומפט אחד.',
@@ -1941,7 +1941,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Storytelling IA. Présentation complète en un prompt.',
     de: 'KI-Storytelling. Komplette Präsentation in einem Prompt.',
     pt: 'Storytelling IA. Apresentação completa em um prompt.',
-    ua: 'ІІ-інструмент для сторітелінгу. Повна презентація за одним промптом.',
+    ua: 'ШІ-інструмент для сторітелінгу. Повна презентація за одним промптом.',
   },
   'Beautiful.ai': {
     ru: 'ИИ-презентации с умными слайдами, которые адаптируются автоматически.',
@@ -1949,7 +1949,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Présentations IA avec des slides intelligentes qui s\'adaptent automatiquement.',
     de: 'KI-Präsentationen mit smarten Folien, die sich automatisch anpassen.',
     pt: 'Apresentações IA com slides inteligentes que se adaptam automaticamente.',
-    ua: 'ІІ-конструктор презентацій з розумними слайдами, що автоматично адаптуються.',
+    ua: 'ШІ-конструктор презентацій з розумними слайдами, що автоматично адаптуються.',
   },
   'Pitch': {
     he: 'בונה מצגות שיתופי עם AI. סטארטאפים וצוותים יצירתיים.',
@@ -1958,7 +1958,7 @@ const TOOL_TRANSLATIONS = {
     fr: 'Constructeur collaboratif de présentations avec IA. Startups et équipes créatives.',
     de: 'Kollaborativer Präsentations-Builder mit KI. Startups und Kreativteams.',
     pt: 'Construtor colaborativo de apresentações com IA. Startups e equipes criativas.',
-    ua: 'Спільний конструктор презентацій з ІІ-написанням. Стартапи та креативні команди.',
+    ua: 'Спільний конструктор презентацій з ШІ-написанням. Стартапи та креативні команди.',
   },
 
 };

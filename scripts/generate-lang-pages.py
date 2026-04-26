@@ -138,7 +138,7 @@ def translate_footer(html, lang):
         'fr': {'Your AI tool finder.<br>Updated daily.':'Votre moteur de recherche d\'outils IA.<br>Mis à jour quotidiennement.','>Find a Tool<':'>Trouver un outil<','>AI Catalog<':'>Catalogue IA<','>Compare<':'>Comparer<','>News<':'>Actualités<','>Toolbox<':'>Outils<','>Privacy<':'>Confidentialité<','>Terms<':'>Conditions<','>Contact<':'>Contact<','Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':'Créé par des humains, sélectionné avec l\'IA. Aucun placement payant — recommandations classées par pertinence et avis.','© 2026 aitoolfit.ai':'© 2026 mypedia. Non affilié à Pearson aitoolfit.'},
         'de': {'Your AI tool finder.<br>Updated daily.':'Ihr KI-Tool-Finder.<br>Täglich aktualisiert.','>Find a Tool<':'>Tool finden<','>AI Catalog<':'>KI-Katalog<','>Compare<':'>Vergleichen<','>News<':'>Nachrichten<','>Toolbox<':'>Werkzeuge<','>Privacy<':'>Datenschutz<','>Terms<':'>Nutzung<','>Contact<':'>Kontakt<','Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':'Von Menschen erstellt, mit KI kuratiert. Keine bezahlten Platzierungen — Empfehlungen nach Relevanz und Bewertungen.','© 2026 aitoolfit.ai':'© 2026 mypedia. Nicht mit Pearson aitoolfit verbunden.'},
         'pt': {'Your AI tool finder.<br>Updated daily.':'Seu buscador de ferramentas IA.<br>Atualizado diariamente.','>Find a Tool<':'>Buscar ferramenta<','>AI Catalog<':'>Catálogo IA<','>Compare<':'>Comparar<','>News<':'>Notícias<','>Toolbox<':'>Ferramentas<','>Privacy<':'>Privacidade<','>Terms<':'>Termos<','>Contact<':'>Contato<','Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':'Criado por humanos, curado com IA. Sem posicionamentos pagos — recomendações por relevância e avaliações.','© 2026 aitoolfit.ai':'© 2026 mypedia. Não afiliado à Pearson aitoolfit.'},
-        'ua': {'Your AI tool finder.<br>Updated daily.':'Ваш ІІ-помічник з вибору інструментів.<br>Оновлюється щодня.','>Find a Tool<':'>Знайти інструмент<','>AI Catalog<':'>Каталог ІІ<','>Compare<':'>Порівняння<','>News<':'>Новини<','>Toolbox<':'>Інструменти<','>Privacy<':'>Конфіденційність<','>Terms<':'>Умови<','>Contact<':'>Контакт<','Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':'Створено людьми, курується за допомогою ІІ. Без платних розміщень — рекомендації за релевантністю та відгуками.','© 2026 aitoolfit.ai':'© 2026 mypedia. Не пов\'язаний з Pearson aitoolfit.'},
+        'ua': {'Your AI tool finder.<br>Updated daily.':'Ваш ШІ-помічник з вибору інструментів.<br>Оновлюється щодня.','>Find a Tool<':'>Знайти інструмент<','>AI Catalog<':'>Каталог ШІ<','>Compare<':'>Порівняння<','>News<':'>Новини<','>Toolbox<':'>Інструменти<','>Privacy<':'>Конфіденційність<','>Terms<':'>Умови<','>Contact<':'>Контакт<','Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':'Створено людьми, курується за допомогою ШІ. Без платних розміщень — рекомендації за релевантністю та відгуками.','© 2026 aitoolfit.ai':'© 2026 mypedia. Не пов\'язаний з Pearson aitoolfit.'},
         'he': {'Your AI tool finder.<br>Updated daily.':'מנוע החיפוש שלך לכלי AI.<br>מתעדכן יומית.','>Find a Tool<':'>מצא כלי<','>AI Catalog<':'>קטלוג AI<','>Compare<':'>השוואה<','>News<':'>חדשות<','>Toolbox<':'>ארגז כלים<','>Privacy<':'>פרטיות<','>Terms<':'>תנאים<','>Contact<':'>צור קשר<','Built by humans, curated with AI. No paid placements — recommendations ranked by relevance and community reviews.':'נבנה על ידי בני אדם, נאצר עם AI. ללא מיקומים בתשלום — המלצות מדורגות לפי רלוונטיות וביקורות.','© 2026 aitoolfit.ai':'© 2026 mypedia. לא קשור ל-Pearson aitoolfit.'},
     }
     if lang in FOOTER_TEXTS:
@@ -290,7 +290,7 @@ def generate_lang_page(html, lang, page, title, desc):
         'fr': 'Décrivez votre tâche — on trouvera l\'outil IA idéal…',
         'de': 'Beschreiben Sie Ihre Aufgabe — wir finden das passende KI-Tool…',
         'pt': 'Descreva sua tarefa — encontraremos a ferramenta IA ideal…',
-        'ua': 'Опишіть завдання — ми знайдемо потрібний ІІ-інструмент…',
+        'ua': 'Опишіть завдання — ми знайдемо потрібний ШІ-інструмент…',
         'he': 'תארו את המשימה — נמצא את כלי ה-AI המתאים…',
     }
     if lang in PILLS:
@@ -350,8 +350,8 @@ def generate_lang_page(html, lang, page, title, desc):
         },
         'ua': {
             '↑ Fastest-growing app builder ever': '↑ Найшвидше зростаючий конструктор додатків',
-            '↑ $11B — voice AI leader': '↑ $11B — лідер голосового ІІ',
-            '↑ #1 fastest-growing B2B AI': '↑ №1 за зростанням у B2B ІІ',
+            '↑ $11B — voice AI leader': '↑ $11B — лідер голосового ШІ',
+            '↑ #1 fastest-growing B2B AI': '↑ №1 за зростанням у B2B ШІ',
             '🆕 v3.0 — Apr 2': '🆕 v3.0 — квітень 2',
             '🆕 Now with audio — Apr 2026': '🆕 Тепер з аудіо — квітень 2026',
             '🆕 Just launched — Apr 2026': '🆕 Щойно запущений — квітень 2026',
