@@ -75,7 +75,7 @@ img { max-width: 100%; }
 .hero h1 { font-family: var(--font-display); font-size: clamp(24px,3.5vw,42px); font-weight: 700; line-height: 1.12; margin-bottom: 1rem; position: relative; }
 .hero h1 .hl { color: var(--accent); }
 .hero-hl { background: linear-gradient(135deg, #7c6af7 0%, #4aaef5 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.hero .sub { font-size: 16px; color: var(--text2); max-width: 520px; margin: 0 auto 2rem; line-height: 1.65; }
+.hero .sub { font-size: 16px; color: var(--text2); max-width: 520px; margin: 0 auto 0.75rem; line-height: 1.65; }
 .hero-btns { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem; }
 
 /* ── HERO SEARCH ── */
@@ -227,6 +227,8 @@ img { max-width: 100%; }
   .btn-hamburger { display: flex; }
   .hero { padding: 2.5rem 1rem 2rem; }
   .hero .sub { font-size: 14px; }
+  .tf-input { min-height: 100px; font-size: 16px; padding: 1rem 5rem 1rem 1rem; border-radius: 12px; }
+  .tf-btn { width: 48px; height: 48px; right: 8px; bottom: 8px; border-radius: 9px; }
   .grid-3, .grid-2 { grid-template-columns: 1fr; }
   .grid-cats { grid-template-columns: 1fr 1fr; }
   .grid-auto { grid-template-columns: 1fr; }
@@ -340,24 +342,31 @@ img { max-width: 100%; }
 }
 
 /* ── TOOL FINDER ── */
-.tf-wrap { width: 100%; max-width: 620px; position: relative; margin: 0 auto 1rem; }
+.tf-wrap { position: relative; width: 100%; max-width: 680px; margin: 0 auto; }
+.tf-hint { font-size: 13px; color: rgba(255,255,255,0.45); margin: 0 0 12px; text-align: center; letter-spacing: 0.01em; }
 .tf-input {
-  width: 100%; background: var(--bg2); border: 1px solid var(--border);
-  border-radius: 16px; padding: 1rem 4.4rem 1rem 1.25rem;
-  font-family: var(--font); font-size: 15px; font-weight: 300;
-  color: var(--text); resize: none; outline: none; line-height: 1.55;
-  transition: border-color 0.2s, box-shadow 0.2s; min-height: 58px;
+  width: 100%; box-sizing: border-box;
+  background: rgba(255,255,255,0.07);
+  border: 1.5px solid rgba(124,106,247,0.45);
+  border-radius: 14px;
+  padding: 1.1rem 4.5rem 1.1rem 1.25rem;
+  font-family: var(--font); font-size: 16px; font-weight: 300;
+  color: rgba(255,255,255,0.95); resize: none; outline: none; line-height: 1.6;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  min-height: 90px;
 }
-.tf-input::placeholder { color: var(--text3); }
-.tf-input:focus { border-color: var(--border2); box-shadow: 0 0 0 3px rgba(124,106,247,0.08); }
+.tf-input::placeholder { color: rgba(255,255,255,0.45); }
+.tf-input:focus { border-color: rgba(124,106,247,0.9); background: rgba(255,255,255,0.10); box-shadow: 0 0 0 3px rgba(124,106,247,0.18); outline: none; }
 .tf-btn {
-  position: absolute; right: 9px; bottom: 9px;
-  background: var(--accent); color: #fff; border: none; border-radius: 10px;
-  width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
-  cursor: pointer; font-size: 18px; transition: background 0.18s, transform 0.15s;
+  position: absolute; right: 10px; bottom: 10px;
+  background: #7c6af7; color: #fff; border: none; border-radius: 10px;
+  width: 52px; height: 52px; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-size: 20px; flex-shrink: 0;
+  transition: background 0.15s, transform 0.1s;
 }
-.tf-btn:hover { background: var(--accent2); transform: scale(1.05); }
-.tf-btn:disabled { background: var(--bg3); color: var(--text3); cursor: not-allowed; transform: none; }
+.tf-btn:hover { background: #6b59e6; }
+.tf-btn:active { transform: scale(0.95); }
+.tf-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 .tf-examples { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; max-width: 620px; margin: 0 auto 0.75rem; }
 .tf-pill {
   font-size: 12px; color: var(--text3); background: var(--bg2);

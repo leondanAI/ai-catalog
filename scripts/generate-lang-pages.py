@@ -386,6 +386,32 @@ def generate_lang_page(html, lang, page, title, desc):
             html = html.replace(f'>{en_label}<', f'>{tr_label}<')
             html = html.replace(f'>{en_sub}<', f'>{tr_sub}<')
 
+    # Translate hint above prompt
+    HINT_TR = {
+        'ru': 'Опиши задачу → получи 3 подходящих ИИ инструмента',
+        'es': 'Describe tu tarea → obtén 3 herramientas de IA perfectas',
+        'fr': 'Décris ta tâche → obtiens 3 outils IA parfaits',
+        'de': 'Beschreibe deine Aufgabe → erhalte 3 passende KI-Tools',
+        'pt': 'Descreva sua tarefa → receba 3 ferramentas de IA perfeitas',
+        'ua': 'Опиши завдання → отримай 3 підходящих ШІ інструменти',
+        'he': 'תאר את המשימה → קבל 3 כלי AI מתאימים',
+    }
+    if lang in HINT_TR:
+        html = html.replace('Describe your task → get 3 AI tools that fit', HINT_TR[lang])
+
+    # Translate static placeholder
+    PLACEHOLDER_TR = {
+        'ru': 'Например: нужно расшифровать двухчасовую встречу в тезисы…',
+        'es': 'Por ejemplo: necesito transcribir una reunión de 2 horas en puntos clave…',
+        'fr': 'Par exemple: je dois transcrire une réunion de 2 heures en points clés…',
+        'de': 'Zum Beispiel: Ich möchte ein 2-stündiges Meeting in Stichpunkte zusammenfassen…',
+        'pt': 'Por exemplo: preciso transcrever uma reunião de 2 horas em pontos-chave…',
+        'ua': 'Наприклад: потрібно розшифрувати двогодинну зустріч у тези…',
+        'he': 'לדוגמה: צריך לתמלל פגישה של שעתיים לנקודות מפתח…',
+    }
+    if lang in PLACEHOLDER_TR:
+        html = html.replace('E.g. I need to transcribe a 2-hour meeting into key points…', PLACEHOLDER_TR[lang])
+
     if lang in SEARCH_PH:
         html = html.replace('Describe your task — we\'ll find the right AI tool for it…', SEARCH_PH[lang].replace("'", "\\'"))
         html = html.replace("Describe your task — we'll find the right AI tool for it…", SEARCH_PH[lang])

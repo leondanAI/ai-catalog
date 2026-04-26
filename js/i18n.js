@@ -27,7 +27,7 @@ const I18N = (() => {
       'hero.tag.updated':  'Updated daily',
       'hero.title1':      'Stop browsing thousands of AI tools.',
       'hero.title2':      'Start using what fits your task.',
-      'hero.sub':         'Describe your task and get 3 curated AI tools.',
+      'hero.sub':         'Describe your task → get 3 AI tools that fit',
       'hero.search':      'Describe your task — we\'ll find the right AI tool for it…',
       'hero.pill1':       'Write landing page copy',
       'hero.pill2':       'Remove background from photos',

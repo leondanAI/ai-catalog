@@ -144,9 +144,8 @@
   <p class="sub" data-i18n="hero.sub">Просто опиши задачу - мы подберём нужный.</p>
 
   <div class="tf-wrap">
-    <textarea class="tf-input" id="tfInput" rows="2"
-      data-i18n-ph="hero.search"
-      placeholder="Опишите задачу — мы найдём подходящий ИИ-инструмент…"
+    <textarea class="tf-input" id="tfInput" rows="3"
+      placeholder="Например: нужно расшифровать двухчасовую встречу в тезисы…"
       onkeydown="tfHandleKey(event)"></textarea>
     <button class="tf-btn" id="tfBtn" onclick="tfFind()" title="Find tools">→</button>
   </div>
@@ -167,7 +166,7 @@
   <div class="tf-error" id="tfError"></div>
   <div class="tf-results" id="tfResults"></div>
 
-  <div style="display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-top:0.5rem">
+  <div style="display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-top:3.5rem">
     <div style="text-align:center"><div style="font-size:20px;margin-bottom:2px">🎯</div><div style="font-size:14px;font-weight:600;color:#f0f0f0">3 варианта</div><div style="font-size:11px;color:rgba(255,255,255,0.45)">Не 500 результатов</div></div>
     <div style="text-align:center"><div style="font-size:20px;margin-bottom:2px">👨‍💼</div><div style="font-size:14px;font-weight:600;color:#f0f0f0">Экспертная подборка</div><div style="font-size:11px;color:rgba(255,255,255,0.45)">Рекомендовано специалистами</div></div>
     <div style="text-align:center"><div style="font-size:20px;margin-bottom:2px">⭐</div><div style="font-size:14px;font-weight:600;color:#f0f0f0">Рейтинги и сравнения</div><div style="font-size:11px;color:rgba(255,255,255,0.45)">Реальные отзывы</div></div>
@@ -551,34 +550,7 @@ renderTrending();
 loadIndexNews();
 renderCatsGrid();
 
-// ── Rotating placeholder ──
-(function(){
-  const el = document.getElementById('tfInput');
-  if (!el) return;
-  const phrases = [
-    'Нужно смонтировать подкаст и добавить субтитры…',
-    'Сделать красивые фото товаров для интернет-магазина…',
-    'Написать письмо клиенту которое точно прочитают…',
-    'Записать главное с двухчасовой встречи…',
-    'Сделать короткие ролики из статей блога…'
-  ];
-  let idx = 0, timer = null;
-  function fade(text) {
-    el.style.transition = 'opacity 0.3s';
-    el.style.opacity = '0';
-    setTimeout(function(){ el.placeholder = text; el.style.opacity = '1'; }, 300);
-  }
-  function cycle() {
-    idx = (idx + 1) % phrases.length;
-    fade(phrases[idx]);
-  }
-  function start() { if (!timer) timer = setInterval(cycle, 3000); }
-  function stop() { clearInterval(timer); timer = null; }
-  el.addEventListener('focus', function(){ stop(); el.placeholder = ''; });
-  el.addEventListener('blur', function(){ if (!el.value.trim()) { idx = (idx + 1) % phrases.length; el.placeholder = phrases[idx]; start(); } });
-  el.placeholder = phrases[0];
-  start();
-})();
+// Placeholder is now static — set in HTML attribute
 </script>
 </body>
 </html>

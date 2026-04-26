@@ -144,9 +144,8 @@
   <p class="sub" data-i18n="hero.sub">Décris ta tâche. On trouve l'outil qu'il te faut.</p>
 
   <div class="tf-wrap">
-    <textarea class="tf-input" id="tfInput" rows="2"
-      data-i18n-ph="hero.search"
-      placeholder="Décrivez votre tâche — on trouvera l\'outil IA idéal…"
+    <textarea class="tf-input" id="tfInput" rows="3"
+      placeholder="Par exemple: je dois transcrire une réunion de 2 heures en points clés…"
       onkeydown="tfHandleKey(event)"></textarea>
     <button class="tf-btn" id="tfBtn" onclick="tfFind()" title="Find tools">→</button>
   </div>
@@ -167,7 +166,7 @@
   <div class="tf-error" id="tfError"></div>
   <div class="tf-results" id="tfResults"></div>
 
-  <div style="display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-top:0.5rem">
+  <div style="display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-top:3.5rem">
     <div style="text-align:center"><div style="font-size:20px;margin-bottom:2px">🎯</div><div style="font-size:14px;font-weight:600;color:#f0f0f0">3 choix</div><div style="font-size:11px;color:rgba(255,255,255,0.45)">Pas 500 résultats</div></div>
     <div style="text-align:center"><div style="font-size:20px;margin-bottom:2px">👨‍💼</div><div style="font-size:14px;font-weight:600;color:#f0f0f0">Sélection d'experts</div><div style="font-size:11px;color:rgba(255,255,255,0.45)">Recommandé par des spécialistes</div></div>
     <div style="text-align:center"><div style="font-size:20px;margin-bottom:2px">⭐</div><div style="font-size:14px;font-weight:600;color:#f0f0f0">Évalué et comparé</div><div style="font-size:11px;color:rgba(255,255,255,0.45)">Avis d'utilisateurs réels</div></div>
@@ -551,34 +550,7 @@ renderTrending();
 loadIndexNews();
 renderCatsGrid();
 
-// ── Rotating placeholder ──
-(function(){
-  const el = document.getElementById('tfInput');
-  if (!el) return;
-  const phrases = [
-    'Je dois éditer un podcast et ajouter des sous-titres…',
-    'Générer des photos de produit pour ma boutique en ligne…',
-    'Écrire des emails à froid qui obtiennent des réponses…',
-    'Transcrire une réunion de 2 heures en points clés…',
-    'Créer des vidéos courtes à partir de mes articles de blog…'
-  ];
-  let idx = 0, timer = null;
-  function fade(text) {
-    el.style.transition = 'opacity 0.3s';
-    el.style.opacity = '0';
-    setTimeout(function(){ el.placeholder = text; el.style.opacity = '1'; }, 300);
-  }
-  function cycle() {
-    idx = (idx + 1) % phrases.length;
-    fade(phrases[idx]);
-  }
-  function start() { if (!timer) timer = setInterval(cycle, 3000); }
-  function stop() { clearInterval(timer); timer = null; }
-  el.addEventListener('focus', function(){ stop(); el.placeholder = ''; });
-  el.addEventListener('blur', function(){ if (!el.value.trim()) { idx = (idx + 1) % phrases.length; el.placeholder = phrases[idx]; start(); } });
-  el.placeholder = phrases[0];
-  start();
-})();
+// Placeholder is now static — set in HTML attribute
 </script>
 </body>
 </html>

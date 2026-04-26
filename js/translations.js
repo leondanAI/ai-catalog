@@ -30,13 +30,13 @@ const TOOL_TRANSLATIONS = {
   },
 
   'Gemini': {
-    ru: 'ИИ Google с доступом к интернету в реальном времени. Gemini 2.0 Ultra с мультимодальными возможностями.',
-    es: 'IA de Google con acceso a internet en tiempo real. Gemini 2.0 Ultra con capacidades multimodales.',
+    ru: 'Флагманский AI Google с глубочайшей интеграцией в Workspace. Gemini 3 лидирует в анализе видео/аудио. Самый щедрый бесплатный тариф.',
+    es: 'IA insignia de Google con la integración más profunda en Workspace. Gemini 3 lidera en análisis de vídeo/audio. Nivel gratuito más generoso.',
     fr: 'IA de Google avec accès internet en temps réel. Gemini 2.0 Ultra avec capacités multimodales.',
-    de: 'Googles KI mit Echtzeit-Internetzugang. Gemini 2.0 Ultra mit multimodalen Fähigkeiten.',
+    de: 'Googles Flaggschiff-KI mit tiefster Workspace-Integration. Gemini 3 führt bei Video-/Audioanalyse. Großzügigstes kostenloses Tier.',
     pt: 'IA do Google com acesso à internet em tempo real. Gemini 2.0 Ultra com capacidades multimodais.',
     it: 'IA di Google con accesso internet in tempo reale. Gemini 2.0 Ultra con capacità multimodali.',
-    he: 'ה-AI של Google עם גישה לאינטרנט בזמן אמת. Gemini 2.0 Ultra עם יכולות מולטימודאליות.',
+    he: 'ה-AI המוביל של Google עם שילוב Workspace העמוק ביותר. Gemini 3 מוביל בניתוח וידאו/אודיו. תוכנית חינמית נדיבה ביותר.',
     zh: 'Google 的 AI，支持实时联网。Gemini 2.0 Ultra 具备多模态能力。',
     ja: 'Googleのリアルタイムインターネットアクセス付きAI。Gemini 2.0 Ultraはマルチモーダル対応。',
     ko: '실시간 인터넷 접속이 가능한 Google AI. Gemini 2.0 Ultra로 멀티모달 기능 지원.',
@@ -50,7 +50,7 @@ const TOOL_TRANSLATIONS = {
     th: 'AI ของ Google ที่เข้าถึงอินเทอร์เน็ตแบบเรียลไทม์ Gemini 2.0 Ultra พร้อมความสามารถมัลติโมดัล',
     uk: 'ШІ Google з доступом до інтернету в реальному часі. Gemini 2.0 Ultra з мультимодальними можливостями.',
     ro: 'IA Google cu acces la internet în timp real. Gemini 2.0 Ultra cu capabilități multimodale.',
-    ua: 'ШІ від Google з доступом до інтернету в реальному часі. Gemini 2.0 Ultra з мультимодальними можливостями.',
+    ua: 'Флагманський AI Google з найглибшою інтеграцією в Workspace. Gemini 3 лідирує в аналізі відео/аудіо. Найщедріший безкоштовний тариф.',
   },
 
   'Perplexity': {
@@ -102,13 +102,13 @@ const TOOL_TRANSLATIONS = {
   },
 
   'Grok': {
-    ru: 'ИИ от xAI с доступом к данным X/Twitter в реальном времени. Отлично для трендов, новостей и прямых ответов.',
-    es: 'IA de xAI con acceso en tiempo real a X/Twitter. Ideal para tendencias, noticias y respuestas sin filtros.',
+    ru: 'Grok 4.3 beta от xAI — 1 триллион параметров с доступом к данным X/Twitter в реальном времени. Единственный AI со встроенной интеграцией соцсетей.',
+    es: 'Grok 4.3 beta de xAI — 1 billón de parámetros con acceso en tiempo real a datos de X/Twitter. El único IA con integración de redes sociales.',
     fr: 'IA de xAI avec accès en temps réel à X/Twitter. Idéal pour les tendances, l\'actualité et les réponses directes.',
-    de: 'KI von xAI mit Echtzeit-Zugang zu X/Twitter. Ideal für Trends, Nachrichten und unzensierte Antworten.',
+    de: 'Grok 4.3 Beta von xAI — 1 Billion Parameter mit Echtzeit-X/Twitter-Daten. Die einzige KI mit Live-Social-Media-Integration.',
     pt: 'IA da xAI com acesso em tempo real ao X/Twitter. Ótimo para tendências, notícias e respostas diretas.',
     it: 'IA di xAI con accesso in tempo reale a X/Twitter. Ottimo per trend, notizie e risposte senza filtri.',
-    he: 'AI של xAI עם גישה בזמן אמת לנתוני X/Twitter. נהדר לטרנדים, חדשות ותשובות ישירות.',
+    he: 'Grok 4.3 beta של xAI — טריליון פרמטרים עם גישה בזמן אמת לנתוני X/Twitter. ה-AI היחיד עם שילוב רשתות חברתיות.',
     zh: 'xAI 的 AI，可实时访问 X/Twitter 数据。适合了解热门话题、新闻和直接回答。',
     ja: 'xAIのAI。X/Twitterのリアルタイムデータにアクセス。トレンド、ニュース、率直な回答に最適。',
     ko: 'xAI의 AI로 X/Twitter 데이터에 실시간 접근. 트렌드, 뉴스, 솔직한 답변에 최적.',
@@ -122,7 +122,7 @@ const TOOL_TRANSLATIONS = {
     th: 'AI จาก xAI ที่เข้าถึงข้อมูล X/Twitter แบบเรียลไทม์ เหมาะสำหรับเทรนด์ ข่าวสาร และคำตอบตรงๆ',
     uk: 'ШІ від xAI з доступом до даних X/Twitter у реальному часі. Чудово для трендів, новин і прямих відповідей.',
     ro: 'AI de la xAI cu acces în timp real la datele X/Twitter. Excelent pentru tendințe, știri și răspunsuri directe.',
-    ua: 'ШІ від xAI з доступом до даних X/Twitter у реальному часі. Підходить для аналізу трендів і неформального спілкування.',
+    ua: 'Grok 4.3 beta від xAI — 1 трильйон параметрів з доступом до даних X/Twitter в реальному часі. Єдиний AI зі вбудованою інтеграцією соцмереж.',
   },
 
   'Meta AI': {
@@ -942,13 +942,13 @@ const TOOL_TRANSLATIONS = {
   },
 
   'Gamma': {
-    ru: 'Создавайте потрясающие презентации, документы и сайты за минуты. 10 бесплатных кредитов, навыки дизайна не нужны.',
-    es: 'Crea presentaciones, documentos y sitios web impresionantes en minutos. 10 créditos gratis, sin habilidades de diseño.',
+    ru: 'Создавайте ИИ-презентации, документы и сайты за минуты. Полная презентация за один промпт — без навыков дизайна.',
+    es: 'Crea presentaciones, documentos y sitios web con IA en minutos. Presentación completa desde un prompt — sin habilidades de diseño.',
     fr: 'Créez de superbes présentations, docs et sites en quelques minutes. 10 crédits gratuits, aucune compétence en design.',
-    de: 'Erstellen Sie beeindruckende KI-Präsentationen, Dokumente und Websites in Minuten. 10 kostenlose Credits.',
+    de: 'Erstellen Sie KI-Präsentationen, Dokumente und Websites in Minuten. Komplette Präsentation aus einem Prompt — ohne Designkenntnisse.',
     pt: 'Crie apresentações, documentos e sites incríveis em minutos. 10 créditos gratuitos, sem habilidades de design.',
     it: 'Crea presentazioni, documenti e siti web straordinari in pochi minuti. 10 crediti gratuiti, nessuna competenza di design.',
-    he: 'צור מצגות, מסמכים ואתרים מרשימים בדקות. 10 קרדיטים חינמיים, ללא צורך בכישורי עיצוב.',
+    he: 'צרו מצגות, מסמכים ואתרי אינטרנט עם AI בדקות. מצגת מלאה מפרומפט אחד — ללא מיומנויות עיצוב.',
     zh: '几分钟内创建精美的 AI 演示文稿、文档和网站。10 个免费积分，无需设计技能。',
     ja: '数分で素晴らしいAIプレゼン、ドキュメント、ウェブサイトを作成。10無料クレジット、デザインスキル不要。',
     ko: '몇 분 만에 멋진 AI 프레젠테이션, 문서, 웹사이트 만들기. 10 무료 크레딧, 디자인 기술 불필요.',
@@ -962,7 +962,7 @@ const TOOL_TRANSLATIONS = {
     th: 'สร้างงานนำเสนอ เอกสาร และเว็บไซต์ AI ที่สวยงามในไม่กี่นาที เครดิตฟรี 10 อัน ไม่ต้องมีทักษะการออกแบบ',
     uk: 'Створюйте приголомшливі презентації, документи та сайти за хвилини. 10 безкоштовних кредитів, навички дизайну не потрібні.',
     ro: 'Creați prezentări, documente și site-uri web uimitoare în minute. 10 credite gratuite, fără abilități de design.',
-    ua: 'Створюйте вражаючі ШІ-презентації, документи та сайти за хвилини. Без досвіду в дизайні.',
+    ua: 'Створюйте ШІ-презентації, документи та сайти за хвилини. Повна презентація за один промпт — без навичок дизайну.',
   },
 
   'Fireflies.ai': {
@@ -1470,13 +1470,13 @@ const TOOL_TRANSLATIONS = {
   },
 
   'ChatGPT': {
-    ru: 'Самый популярный ИИ-чат от OpenAI. GPT-4o для текста, изображений и голоса. Более 200 млн пользователей.',
-    es: 'El chat de IA más popular de OpenAI. GPT-4o para texto, imágenes y voz. Usado por más de 200 millones de personas.',
+    ru: 'Самый популярный в мире AI-ассистент на базе GPT-5.5 — нативная мультимодальность. 200M+ пользователей.',
+    es: 'El asistente de IA más popular del mundo, ahora con GPT-5.5 — nativamente multimodal. 200M+ usuarios.',
     fr: 'Le chat IA le plus populaire d\'OpenAI. GPT-4o pour le texte, les images et la voix. Utilisé par plus de 200 millions de personnes.',
-    de: 'Der beliebteste KI-Chat von OpenAI. GPT-4o für Text, Bilder und Sprache. Von über 200 Millionen Menschen genutzt.',
+    de: 'Der weltweit beliebteste KI-Assistent mit GPT-5.5 — nativ multimodal. 200M+ Nutzer.',
     pt: 'O chat de IA mais popular da OpenAI. GPT-4o para texto, imagens e voz. Usado por mais de 200 milhões de pessoas.',
     it: 'La chat IA più popolare di OpenAI. GPT-4o per testo, immagini e voce. Usato da oltre 200 milioni di persone.',
-    he: 'הצ\'אט המוביל של OpenAI. GPT-4o לטקסט, תמונות וקול. בשימוש של 200 מיליון+ אנשים.',
+    he: 'עוזר ה-AI הפופולרי בעולם, מופעל על ידי GPT-5.5 — מולטימודלי מובנה. 200M+ משתמשים.',
     zh: 'OpenAI 最受欢迎的 AI 聊天工具。GPT-4o 支持文本、图像和语音。全球超过 2 亿用户。',
     ja: 'OpenAIが提供する最も人気のAIチャット。GPT-4oはテキスト、画像、音声に対応。2億人以上が利用。',
     ko: 'OpenAI의 가장 인기 있는 AI 채팅. GPT-4o로 텍스트, 이미지, 음성 지원. 2억 명 이상이 사용.',
@@ -1490,7 +1490,7 @@ const TOOL_TRANSLATIONS = {
     th: 'แชท AI ที่ได้รับความนิยมสูงสุดจาก OpenAI. GPT-4o สำหรับข้อความ รูปภาพ และเสียง มีผู้ใช้มากกว่า 200 ล้านคน',
     uk: 'Найпопулярніший ШІ-чат від OpenAI. GPT-4o для тексту, зображень і голосу. Понад 200 мільйонів користувачів.',
     ro: 'Cel mai popular chat AI de la OpenAI. GPT-4o pentru text, imagini și voce. Folosit de peste 200 de milioane de persoane.',
-    ua: 'Найпопулярніший ШІ-чат від OpenAI. GPT-4o для тексту, зображень і голосу. 400M+ користувачів щомісяця.',
+    ua: 'Найпопулярніший у світі AI-асистент на базі GPT-5.5 — нативна мультимодальність. 200M+ користувачів.',
   },
 
   'UXPilot': {
@@ -1661,13 +1661,13 @@ const TOOL_TRANSLATIONS = {
     ua: 'Візуальна автоматизація з підключенням 1000+ додатків. Більше гнучкості для складних сценаріїв.',
   },
   'AutoGPT': {
-    he: 'סוכן AI אוטונומי בקוד פתוח. תנו מטרה — הוא מפרק לשלבים ומבצע.',
-    ru: 'Open-source автономный ИИ-агент. Задайте цель — он выполнит сам.',
-    es: 'Agente IA autónomo open-source. Dale un objetivo — lo ejecuta solo.',
+    he: 'סוכן AI אוטונומי בקוד פתוח (2023). הוחלף ב-2026 על ידי Claude Code, Cursor ו-Lovable. שימושי ללימוד ארכיטקטורת סוכנים.',
+    ru: 'Автономный AI-агент с открытым кодом (2023). В 2026 вытеснен Claude Code, Cursor и Lovable. Полезен для изучения архитектуры AI-агентов.',
+    es: 'Agente IA autónomo de código abierto (2023). Superado en 2026 por Claude Code, Cursor y Lovable. Útil para aprender arquitectura de agentes.',
     fr: 'Agent IA autonome open-source. Donnez un objectif — il l\'exécute seul.',
-    de: 'Open-Source-autonomer KI-Agent. Geben Sie ein Ziel — er führt es aus.',
+    de: 'Open-Source autonomer KI-Agent (2023). In 2026 durch Claude Code, Cursor und Lovable ersetzt. Nützlich zum Lernen der Agenten-Architektur.',
     pt: 'Agente IA autônomo open-source. Dê um objetivo — ele executa sozinho.',
-    ua: 'Open-source автономний ШІ-агент. Задайте ціль — він розбиває на кроки, шукає і виконує.',
+    ua: 'Автономний AI-агент з відкритим кодом (2023). У 2026 витіснений Claude Code, Cursor та Lovable. Корисний для вивчення архітектури AI-агентів.',
   },
   'Lindy': {
     he: 'סוכני AI למייל, תזמון ותמיכה בדקות. ללא קוד, עם טריגרים חכמים.',
@@ -1933,15 +1933,6 @@ const TOOL_TRANSLATIONS = {
     de: 'Skalierbarer Canvas für Präsentationen mit KI-Assistent.',
     pt: 'Canvas escalável para apresentações com assistente IA.',
     ua: 'Масштабований канвас для презентацій з ШІ-дизайн-асистентом.',
-  },
-  'Tome': {
-    he: 'כלי סטוריטלינג AI. מצגת מלאה בפרומפט אחד.',
-    ru: 'ИИ-сторителлинг. Полная презентация за один промпт.',
-    es: 'Storytelling IA. Presentación completa en un prompt.',
-    fr: 'Storytelling IA. Présentation complète en un prompt.',
-    de: 'KI-Storytelling. Komplette Präsentation in einem Prompt.',
-    pt: 'Storytelling IA. Apresentação completa em um prompt.',
-    ua: 'ШІ-інструмент для сторітелінгу. Повна презентація за одним промптом.',
   },
   'Beautiful.ai': {
     ru: 'ИИ-презентации с умными слайдами, которые адаптируются автоматически.',
