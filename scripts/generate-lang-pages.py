@@ -73,7 +73,8 @@ def hreflang_tags(page):
     lines = [f'<link rel="alternate" hreflang="x-default" href="{en_url}">',
              f'<link rel="alternate" hreflang="en" href="{en_url}">']
     for code, hl in LANGUAGES:
-        lines.append(f'<link rel="alternate" hreflang="{hl}" href="{BASE_URL}/{code}/{page}">')
+        lang_url = f'{BASE_URL}/{code}/' if page == 'index.html' else f'{BASE_URL}/{code}/{page}'
+        lines.append(f'<link rel="alternate" hreflang="{hl}" href="{lang_url}">')
     return '\n'.join(lines)
 
 def fix_nav_links(html, lang):

@@ -26,7 +26,7 @@
 {"@context":"https://schema.org","@type":"WebSite","name":"AItoolFit","description":"Task-based AI tool finder. Describe your task and get 3 curated recommendations.","url":"https://aitoolfit.ai","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://aitoolfit.ai/?q={search_term_string}"},"query-input":"required name=search_term_string"}}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ItemList","name":"Best AI Tools 2026","url":"https://aitoolfit.ai/directory.html","itemListElement":[{"@type":"ListItem","position":1,"name":"ChatGPT","url":"https://chat.openai.com"},{"@type":"ListItem","position":2,"name":"Claude","url":"https://claude.ai"},{"@type":"ListItem","position":3,"name":"Gemini","url":"https://gemini.google.com"},{"@type":"ListItem","position":4,"name":"Midjourney","url":"https://midjourney.com"},{"@type":"ListItem","position":5,"name":"GitHub Copilot","url":"https://github.com/features/copilot"},{"@type":"ListItem","position":6,"name":"ElevenLabs","url":"https://elevenlabs.io"},{"@type":"ListItem","position":7,"name":"Runway","url":"https://runwayml.com"},{"@type":"ListItem","position":8,"name":"Perplexity","url":"https://perplexity.ai"},{"@type":"ListItem","position":9,"name":"Notion AI","url":"https://notion.so"},{"@type":"ListItem","position":10,"name":"Canva AI","url":"https://canva.com"}]}
+{"@context":"https://schema.org","@type":"ItemList","name":"Best AI Tools 2026","url":"https://aitoolfit.ai/directory.html","itemListElement":[{"@type":"ListItem","position":1,"name":"ChatGPT","url":"https://aitoolfit.ai/tools/chatgpt.html"},{"@type":"ListItem","position":2,"name":"Claude","url":"https://aitoolfit.ai/tools/claude.html"},{"@type":"ListItem","position":3,"name":"Gemini","url":"https://aitoolfit.ai/tools/gemini.html"},{"@type":"ListItem","position":4,"name":"Midjourney","url":"https://aitoolfit.ai/tools/midjourney.html"},{"@type":"ListItem","position":5,"name":"GitHub Copilot","url":"https://aitoolfit.ai/tools/github-copilot.html"},{"@type":"ListItem","position":6,"name":"ElevenLabs","url":"https://aitoolfit.ai/tools/elevenlabs.html"},{"@type":"ListItem","position":7,"name":"Runway","url":"https://aitoolfit.ai/tools/runway.html"},{"@type":"ListItem","position":8,"name":"Perplexity","url":"https://aitoolfit.ai/tools/perplexity.html"},{"@type":"ListItem","position":9,"name":"Notion AI","url":"https://aitoolfit.ai/tools/notion-ai.html"},{"@type":"ListItem","position":10,"name":"Canva AI","url":"https://aitoolfit.ai/tools/canva-ai.html"}]}
 </script>
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
@@ -99,13 +99,13 @@
 </style>
 <link rel="alternate" hreflang="x-default" href="https://aitoolfit.ai/">
 <link rel="alternate" hreflang="en" href="https://aitoolfit.ai/">
-<link rel="alternate" hreflang="es" href="https://aitoolfit.ai/es/index.html">
-<link rel="alternate" hreflang="fr" href="https://aitoolfit.ai/fr/index.html">
-<link rel="alternate" hreflang="pt" href="https://aitoolfit.ai/pt/index.html">
-<link rel="alternate" hreflang="ru" href="https://aitoolfit.ai/ru/index.html">
-<link rel="alternate" hreflang="de" href="https://aitoolfit.ai/de/index.html">
-<link rel="alternate" hreflang="ua" href="https://aitoolfit.ai/ua/index.html">
-<link rel="alternate" hreflang="he" href="https://aitoolfit.ai/he/index.html">
+<link rel="alternate" hreflang="es" href="https://aitoolfit.ai/es/">
+<link rel="alternate" hreflang="fr" href="https://aitoolfit.ai/fr/">
+<link rel="alternate" hreflang="pt" href="https://aitoolfit.ai/pt/">
+<link rel="alternate" hreflang="ru" href="https://aitoolfit.ai/ru/">
+<link rel="alternate" hreflang="de" href="https://aitoolfit.ai/de/">
+<link rel="alternate" hreflang="ua" href="https://aitoolfit.ai/ua/">
+<link rel="alternate" hreflang="he" href="https://aitoolfit.ai/he/">
 </head>
 <body>
 
@@ -448,15 +448,18 @@ function tf3List(arr, icon, color) {
 }
 async function tf3Fetch(name) {
   const slug = tf3ResolveSlug(name);
+  const lang = (typeof I18N !== 'undefined' ? I18N.lang : null) || localStorage.getItem('lang') || 'en';
+  const hdrs = { apikey: SB_ANON3, Authorization: `Bearer ${SB_ANON3}` };
+  const sel = 'pros,cons,description,best_for,badge,url';
   const [toolRes, ratingsRes] = await Promise.all([
-    fetch(`${SB_URL3}/rest/v1/tools?slug=eq.${slug}&select=pros,cons,description,best_for,badge,url`, {
-      headers: { apikey: SB_ANON3, Authorization: `Bearer ${SB_ANON3}` }
-    }),
-    fetch(`${SB_URL3}/rest/v1/comments?tool_slug=eq.${slug}&approved=eq.true&select=rating`, {
-      headers: { apikey: SB_ANON3, Authorization: `Bearer ${SB_ANON3}` }
-    })
+    fetch(`${SB_URL3}/rest/v1/tools?slug=eq.${slug}&lang=eq.${lang}&select=${sel}`, { headers: hdrs }),
+    fetch(`${SB_URL3}/rest/v1/comments?tool_slug=eq.${slug}&approved=eq.true&select=rating`, { headers: hdrs })
   ]);
-  const tools   = await toolRes.json();
+  let tools = await toolRes.json();
+  if (!tools.length && lang !== 'en') {
+    const fallback = await fetch(`${SB_URL3}/rest/v1/tools?slug=eq.${slug}&lang=eq.en&select=${sel}`, { headers: hdrs });
+    tools = await fallback.json();
+  }
   const reviews = await ratingsRes.json();
   const db = tools[0] || {};
   const avg = reviews.length ? reviews.reduce((s,c) => s + c.rating, 0) / reviews.length : null;
@@ -496,7 +499,7 @@ async function tfRender(data) {
         <div class="tf3-list">${tf3List(info.db.cons, '❌', '#f56565')}</div>
       </div>` : `
       <div class="tf3-section" style="color:var(--text3);font-size:12px;font-style:italic">
-        This tool is not yet in our catalog — showing AI-sourced info only.
+        ${t('tool.notInCatalog') || 'This tool is not yet in our catalog — showing AI-sourced info only.'}
       </div>`;
 
     const footerHtml = inCatalog
@@ -513,8 +516,8 @@ async function tfRender(data) {
           <div class="tf3-badge-row">
             <span class="tf-card-tag ${i === 0 ? 'tf-best' : 'tf-alt'}">${i === 0 ? t('tool.bestMatch') : t('tool.alternative')}</span>
             ${inCatalog
-              ? `<span class="tf3-in-catalog-tag">✓ Reviewed</span>`
-              : `<span class="tf3-external-tag">External</span>`}
+              ? `<span class="tf3-in-catalog-tag">✓ ${t('tool.reviewed') || 'Reviewed'}</span>`
+              : `<span class="tf3-external-tag">${t('tool.external') || 'External'}</span>`}
           </div>
         </div>
       </div>
