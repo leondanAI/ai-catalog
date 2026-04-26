@@ -2424,7 +2424,7 @@ const I18N = (() => {
     de: { label: 'Deutsch',    flag: '🇩🇪', rtl: false, hidden: false },
     ru: { label: 'Русский',    flag: '🇷🇺', rtl: false, hidden: false },
     ua: { label: 'UA · Українська', flag: '🇺🇦', rtl: false, hidden: false },
-    he: { label: 'עברית',      flag: '🇮🇱', rtl: true,  hidden: true },
+    he: { label: 'עברית',      flag: '🇮🇱', rtl: true,  hidden: false },
   };
 
   // ── state ─────────────────────────────────────────────────────────────────
