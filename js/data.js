@@ -448,7 +448,7 @@ function renderToolCard(tool, color) {
   const _lang = localStorage.getItem('lang') || 'en';
   const reviewUrl = _lang === 'en' ? `/tools/${slug}.html` : `/${_lang}/tools/${slug}.html`;
   return `
-    <div class="tool-card fade-up" onclick="showToolDetail(event,'${tool.name.replace(/'/g,"\\'")}')">
+    <div class="tool-card fade-up" onclick="window.location.href='${reviewUrl}'" style="cursor:pointer">
       <div class="tool-card-top">
         <div class="tool-avatar" style="background:${c}22;border-color:${c}44;">
           <img class="tool-favicon" src="${faviconSrc}" alt="" width="24" height="24"
