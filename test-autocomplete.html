@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autocomplete Select Test</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --font: 'DM Sans', sans-serif;
+    --font-display: 'Space Grotesk', sans-serif;
+    --bg: #0a0a0a; --bg2: #141414; --bg3: #1c1c1c;
+    --accent: #7c6af7;
+    --text: #f0f0f0; --text2: #888; --text3: #555;
+    --border: rgba(255,255,255,0.08); --border2: rgba(255,255,255,0.14);
+    --radius: 12px; --radius-sm: 8px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: var(--font); padding: 3rem 1.5rem; }
+  h1 { font-family: var(--font-display); font-size: 22px; margin-bottom: 2rem; }
+
+  .test-grid { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: start; max-width: 700px; }
+  .vs { font-family: var(--font-display); font-size: 18px; color: var(--text3); text-align: center; padding-top: 36px; }
+  .label { font-size: 12px; color: var(--text3); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 8px; }
+
+  /* ── Autocomplete select ── */
+  .ac-wrap { position: relative; }
+  .ac-input {
+    width: 100%; padding: 10px 14px; background: var(--bg3);
+    border: 1px solid var(--border); border-radius: var(--radius-sm);
+    color: var(--text); font-family: var(--font); font-size: 14px;
+    outline: none; transition: border-color .2s;
+  }
+  .ac-input:focus { border-color: var(--accent); }
+  .ac-input::placeholder { color: var(--text3); }
+  .ac-dropdown {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    max-height: 320px; overflow-y: auto; z-index: 100;
+    background: var(--bg2); border: 1px solid var(--border2);
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    margin-top: -1px;
+    scrollbar-width: thin; scrollbar-color: var(--text3) transparent;
+  }
+  .ac-dropdown::-webkit-scrollbar { width: 6px; }
+  .ac-dropdown::-webkit-scrollbar-thumb { background: var(--text3); border-radius: 3px; }
+  .ac-wrap.open .ac-dropdown { display: block; }
+  .ac-wrap.open .ac-input { border-radius: var(--radius-sm) var(--radius-sm) 0 0; }
+  .ac-group-label {
+    padding: 8px 14px 4px; font-size: 11px; color: var(--text3);
+    text-transform: uppercase; letter-spacing: .06em;
+    font-family: var(--font-display); font-weight: 500;
+    position: sticky; top: 0; background: var(--bg2);
+  }
+  .ac-option {
+    padding: 8px 14px; font-size: 14px; color: var(--text2);
+    cursor: pointer; display: flex; align-items: center; gap: 8px;
+    transition: background .1s;
+  }
+  .ac-option:hover, .ac-option.active { background: var(--bg3); color: var(--text); }
+  .ac-option img { width: 18px; height: 18px; border-radius: 4px; flex-shrink: 0; }
+  .ac-empty { padding: 16px 14px; font-size: 13px; color: var(--text3); text-align: center; }
+
+  .result { margin-top: 2rem; padding: 1rem; background: var(--bg2); border-radius: var(--radius-sm); font-size: 14px; color: var(--text2); max-width: 700px; }
+
+  @media (max-width: 600px) {
+    .test-grid { grid-template-columns: 1fr; }
+    .vs { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Autocomplete Select — Test</h1>
+
+<div class="test-grid">
+  <div>
+    <div class="label">Tool A</div>
+    <div class="ac-wrap" id="wrapA">
+      <input class="ac-input" id="inputA" type="text" placeholder="Search or scroll..." autocomplete="off">
+      <div class="ac-dropdown" id="dropA"></div>
+    </div>
+  </div>
+  <div class="vs">vs</div>
+  <div>
+    <div class="label">Tool B</div>
+    <div class="ac-wrap" id="wrapB">
+      <input class="ac-input" id="inputB" type="text" placeholder="Search or scroll..." autocomplete="off">
+      <div class="ac-dropdown" id="dropB"></div>
+    </div>
+  </div>
+</div>
+
+<div class="result" id="result">Select two tools to compare.</div>
+
+<script src="js/data.js"></script>
+<script>
+function getDomain(url) { try { return new URL(url).hostname.replace('www.',''); } catch { return ''; } }
+
+/* ── Autocomplete component ── */
+function initAC(inputId, dropId, wrapId, onChange) {
+  const input = document.getElementById(inputId);
+  const drop  = document.getElementById(dropId);
+  const wrap  = document.getElementById(wrapId);
+  console.log('initAC', inputId, !!input, !!drop, !!wrap, 'tools:', ALL_TOOLS.length);
+  let selectedTool = null;
+  let activeIdx = -1;
+  let visibleOptions = [];
+
+  function render(filter) {
+    const q = (filter || '').toLowerCase().trim();
+    let html = '';
+    visibleOptions = [];
+
+    CATEGORIES.forEach(cat => {
+      const matches = cat.tools.filter(t => !q || t.name.toLowerCase().includes(q));
+      if (!matches.length) return;
+      html += `<div class="ac-group-label">${cat.icon} ${cat.title}</div>`;
+      matches.forEach(t => {
+        const idx = visibleOptions.length;
+        const domain = getDomain(t.url);
+        html += `<div class="ac-option" data-idx="${idx}" data-name="${t.name}">
+          <img src="https://www.google.com/s2/favicons?sz=32&domain=${domain}" alt="" onerror="this.style.display='none'">
+          ${t.name}
+        </div>`;
+        visibleOptions.push(t.name);
+      });
+    });
+
+    if (!visibleOptions.length) {
+      html = `<div class="ac-empty">No tools found</div>`;
+    }
+
+    drop.innerHTML = html;
+    activeIdx = -1;
+    highlightActive();
+  }
+
+  function highlightActive() {
+    drop.querySelectorAll('.ac-option').forEach(el => {
+      el.classList.toggle('active', parseInt(el.dataset.idx) === activeIdx);
+    });
+    // scroll active into view
+    const activeEl = drop.querySelector('.ac-option.active');
+    if (activeEl) activeEl.scrollIntoView({ block: 'nearest' });
+  }
+
+  function selectTool(name) {
+    selectedTool = name;
+    input.value = name;
+    close();
+    onChange();
+  }
+
+  function open() {
+    if (wrap.classList.contains('open')) return;
+    render(selectedTool ? '' : input.value);
+    wrap.classList.add('open');
+    // if tool already selected, highlight it
+    if (selectedTool) {
+      const idx = visibleOptions.indexOf(selectedTool);
+      if (idx >= 0) {
+        activeIdx = idx;
+        highlightActive();
+      }
+    }
+  }
+
+  function close() {
+    wrap.classList.remove('open');
+    activeIdx = -1;
+  }
+
+  // Click on input — open dropdown, select all text for easy retyping
+  input.addEventListener('click', () => {
+    open();
+    if (selectedTool) input.select();
+  });
+  input.addEventListener('focus', () => {
+    open();
+    if (selectedTool) input.select();
+  });
+
+  input.addEventListener('input', () => {
+    selectedTool = null;
+    render(input.value);
+    if (!wrap.classList.contains('open')) wrap.classList.add('open');
+  });
+
+  input.addEventListener('keydown', (e) => {
+    if (!wrap.classList.contains('open')) return;
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      activeIdx = Math.min(activeIdx + 1, visibleOptions.length - 1);
+      highlightActive();
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      activeIdx = Math.max(activeIdx - 1, 0);
+      highlightActive();
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      if (activeIdx >= 0 && visibleOptions[activeIdx]) {
+        selectTool(visibleOptions[activeIdx]);
+      }
+    } else if (e.key === 'Escape') {
+      close();
+      input.blur();
+    }
+  });
+
+  // Click on option
+  drop.addEventListener('mousedown', (e) => {
+    e.preventDefault(); // prevent blur
+    const opt = e.target.closest('.ac-option');
+    if (opt) selectTool(opt.dataset.name);
+  });
+
+  // Close on outside click
+  document.addEventListener('mousedown', (e) => {
+    if (!wrap.contains(e.target)) {
+      // if nothing selected and input has text, try to match
+      if (!selectedTool && input.value) {
+        const match = ALL_TOOLS.find(t => t.name.toLowerCase() === input.value.toLowerCase());
+        if (match) { selectTool(match.name); return; }
+        input.value = '';
+      }
+      close();
+    }
+  });
+
+  return {
+    getValue: () => selectedTool,
+    setValue: (name) => { selectedTool = name; input.value = name || ''; },
+    reset: () => { selectedTool = null; input.value = ''; }
+  };
+}
+
+/* ── Init both selectors ── */
+function onSelectionChange() {
+  const a = acA.getValue();
+  const b = acB.getValue();
+  const el = document.getElementById('result');
+  if (a && b) {
+    el.textContent = `Selected: ${a} vs ${b}`;
+  } else if (a || b) {
+    el.textContent = `Selected: ${a || b} — pick the second tool`;
+  } else {
+    el.textContent = 'Select two tools to compare.';
+  }
+}
+
+const acA = initAC('inputA', 'dropA', 'wrapA', onSelectionChange);
+const acB = initAC('inputB', 'dropB', 'wrapB', onSelectionChange);
+</script>
+</body>
+</html>
