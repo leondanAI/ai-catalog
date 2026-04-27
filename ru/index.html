@@ -483,9 +483,15 @@ async function tfRender(data) {
     const slug  = tf3ResolveSlug(tool.name);
     const inCatalog = !!(info.db.pros || info.db.description);
 
-    const pricingHtml = inCatalog && info.db.badge
-      ? `<span class="badge badge-${info.db.badge}">${info.db.badge.charAt(0).toUpperCase()+info.db.badge.slice(1)}</span>`
-      : `<span style="color:var(--text2);font-size:13px">${tfEsc(tool.pricing)}</span>`;
+    const inferBadge = (str) => {
+      const s = (str || '').toLowerCase();
+      if (s.includes('freemium')) return 'freemium';
+      if (s.startsWith('free') || s.includes('бесплат') || s.includes('gratis') || s.includes('kostenlos') || s.includes('חינם')) return 'free';
+      return 'paid';
+    };
+    const badgeKey = inCatalog && info.db.badge ? info.db.badge : inferBadge(tool.pricing);
+    const badgeLabel = badgeKey.charAt(0).toUpperCase() + badgeKey.slice(1);
+    const pricingHtml = `<span class="badge badge-${badgeKey}">${badgeLabel}</span>${!inCatalog && tool.pricing && !/^free$|^freemium$|^paid$/i.test(tool.pricing.trim()) ? ` <span style="color:var(--text3);font-size:11px;margin-left:4px">${tfEsc(tool.pricing)}</span>` : ''}`;
 
     const prosList = (inCatalog ? info.db.pros : tool.pros) || [];
     const consList = (inCatalog ? info.db.cons : tool.cons) || [];
