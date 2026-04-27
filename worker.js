@@ -24,14 +24,18 @@ Schema:
     "name": "Tool Name",
     "why": "2-3 sentences: exactly why this tool fits THIS specific task",
     "pricing": "e.g. Free / Freemium / From $12/mo / Free trial",
-    "url": "https://real-homepage.com"
+    "url": "https://real-homepage.com",
+    "pros": ["3-4 short bullet points, each 5-10 words", "..."],
+    "cons": ["3-4 short bullet points, each 5-10 words", "..."]
   },
   "alternatives": [
     {
       "name": "Tool Name",
       "why": "1-2 sentences on why this is a good alternative",
       "pricing": "...",
-      "url": "https://..."
+      "url": "https://...",
+      "pros": ["3-4 short bullet points", "..."],
+      "cons": ["3-4 short bullet points", "..."]
     }
   ]
 }
@@ -40,7 +44,24 @@ Rules:
 - alternatives: 1–2 items max
 - Recommend real, well-known tools with accurate URLs
 - Be specific about WHY the tool fits the stated task
-- Keep pricing concise and accurate`;
+- Keep pricing concise and accurate
+- pros/cons: ALWAYS provide 3-4 items each, concrete and verifiable, not generic platitudes
+- pros: focus on what makes this tool genuinely strong for this task
+- cons: real limitations users hit, not nitpicks
+
+CRITICAL — respect user constraints in the task description:
+- If the user mentions "free" / "бесплатно" / "gratis" / "kostenlos" / "no subscription" / "no credit card":
+  * Recommend ONLY tools that are TRULY usable for the task on a free plan
+  * "Truly usable" means: no time-limited trial, no one-shot demo, no per-month limit so tight it makes the task impractical (e.g. 1 video/month for "make videos" doesn't count as free)
+  * DO NOT invent or assume a free tier exists. If you are unsure whether a tool has a real free plan, EXCLUDE IT
+  * Examples of paid-only tools that should NOT be recommended for free queries: Synthesia (paid only, free demo doesn't count), Jasper, Midjourney (no free plan), Cursor Pro features, ChatGPT Plus features, GitHub Copilot
+  * Examples of genuinely free tools: DeepSeek, Claude (free tier with daily limit), ChatGPT (free tier), CapCut, Stable Diffusion (self-hosted), Whisper, Hemingway Editor, Krea (free tier), Flux (open weights)
+- If the user mentions a budget — recommended tools must fit it.
+- If the user mentions a platform constraint (Mac only, mobile, browser) — respect it.
+- If the user mentions language (e.g. "in Spanish", "на русском") — recommend tools that support that language.
+- If the user mentions "open-source" / "self-hosted" — only recommend open-source tools.
+- When constraints exist, mention how each tool meets them in the "why" field, and be specific (e.g. "free plan: 50 songs/day" — not just "free").
+- If you cannot find 3 tools that meet ALL constraints, return only as many as actually qualify (1 or 2 is fine — better than including non-qualifying tools).`;
 
 export default {
   async fetch(request, env) {
@@ -114,8 +135,10 @@ export default {
       },
       body: JSON.stringify({
         model: 'claude-haiku-4-5-20251001',
-        max_tokens: 1000,
-        system: SYSTEM_PROMPT,
+        max_tokens: 1500,
+        system: [
+          { type: 'text', text: SYSTEM_PROMPT, cache_control: { type: 'ephemeral' } }
+        ],
         messages: [{ role: 'user', content: `Task: ${task}` }]
       })
     });

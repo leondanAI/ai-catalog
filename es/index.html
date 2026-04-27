@@ -8,10 +8,10 @@
 <meta name="keywords" content="AI tools, best AI tools 2026, ChatGPT, Claude, Midjourney, AI catalog, artificial intelligence tools, AI directory">
 <meta name="author" content="AItoolFit">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="canonical" href="https://aitoolfit.ai/es/">
+<link rel="canonical" href="https://aitoolfit.ai/es/index.html">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://aitoolfit.ai/es/">
+<meta property="og:url" content="https://aitoolfit.ai/es/index.html">
 <meta property="og:title" content="En la red hay miles de herramientas IA, Tú solo necesitas una | aitoolfit">
 <meta property="og:description" content="Describe your task. Get 3 AI tools that work — not 500 you'll never open.">
 <meta property="og:image" content="https://aitoolfit.ai/og-image.svg">
@@ -97,11 +97,13 @@
   .tf3-grid { grid-template-columns: 1fr; }
 }
 </style>
+<!--  -->
+<!--  -->
 <link rel="alternate" hreflang="x-default" href="https://aitoolfit.ai/">
 <link rel="alternate" hreflang="en" href="https://aitoolfit.ai/">
 <link rel="alternate" hreflang="es" href="https://aitoolfit.ai/es/">
-<!-- <link rel="alternate" hreflang="fr" href="https://aitoolfit.ai/fr/"> -->
-<!-- <link rel="alternate" hreflang="pt" href="https://aitoolfit.ai/pt/"> -->
+<link rel="alternate" hreflang="fr" href="https://aitoolfit.ai/fr/">
+<link rel="alternate" hreflang="pt" href="https://aitoolfit.ai/pt/">
 <link rel="alternate" hreflang="ru" href="https://aitoolfit.ai/ru/">
 <link rel="alternate" hreflang="de" href="https://aitoolfit.ai/de/">
 <link rel="alternate" hreflang="ua" href="https://aitoolfit.ai/ua/">
@@ -485,27 +487,34 @@ async function tfRender(data) {
       ? `<span class="badge badge-${info.db.badge}">${info.db.badge.charAt(0).toUpperCase()+info.db.badge.slice(1)}</span>`
       : `<span style="color:var(--text2);font-size:13px">${tfEsc(tool.pricing)}</span>`;
 
-    const detailSections = inCatalog ? `
+    const prosList = (inCatalog ? info.db.pros : tool.pros) || [];
+    const consList = (inCatalog ? info.db.cons : tool.cons) || [];
+
+    const ratingHtml = inCatalog ? `
       <div class="tf3-section">
         <div class="tf3-label">${t('compare.rating')}</div>
         <div class="tf3-stars">${tf3Stars(info.avg)}${info.count ? `<span style="font-size:11px;color:var(--text3);margin-left:3px">(${info.count})</span>` : ''}</div>
-      </div>
+      </div>` : '';
+
+    const detailSections = `
+      ${ratingHtml}
+      ${prosList.length ? `
       <div class="tf3-section">
         <div class="tf3-label">${t('compare.advantages')}</div>
-        <div class="tf3-list">${tf3List(info.db.pros, '✅', '#2dd4a0')}</div>
-      </div>
+        <div class="tf3-list">${tf3List(prosList, '✅', '#2dd4a0')}</div>
+      </div>` : ''}
+      ${consList.length ? `
       <div class="tf3-section">
         <div class="tf3-label">${t('compare.disadvantages')}</div>
-        <div class="tf3-list">${tf3List(info.db.cons, '❌', '#f56565')}</div>
-      </div>` : `
-      <div class="tf3-section" style="color:var(--text3);font-size:12px;font-style:italic">
-        ${t('tool.notInCatalog') || 'This tool is not yet in our catalog — showing AI-sourced info only.'}
-      </div>`;
+        <div class="tf3-list">${tf3List(consList, '❌', '#f56565')}</div>
+      </div>` : ''}`;
 
+    const _lang = localStorage.getItem('lang') || 'en';
+    const reviewHref = _lang === 'en' ? `/tools/${slug}.html` : `/${_lang}/tools/${slug}.html`;
     const footerHtml = inCatalog
-      ? `<a class="tool-aff" href="${tfEsc(tool.url)}" target="_blank" rel="noopener sponsored">Visit →</a>
-         <a class="tool-review" href="${(localStorage.getItem('lang')||'en')==='en'?'/tools/'+slug+'.html':'/'+(localStorage.getItem('lang')||'en')+'/tools/'+slug+'.html'}">Full review →</a>`
-      : `<a class="tool-aff" href="${tfEsc(tool.url)}" target="_blank" rel="noopener sponsored" style="flex:1">Visit →</a>`;
+      ? `<a class="tool-review" href="${reviewHref}">${t('tool.review')}</a>
+         <a class="tool-aff" href="${tfEsc(tool.url)}" target="_blank" rel="noopener sponsored">${t('tool.open')}</a>`
+      : `<a class="tool-aff" href="${tfEsc(tool.url)}" target="_blank" rel="noopener sponsored" style="flex:1">${t('tool.open')}</a>`;
 
     return `
     <div class="tf3-card ${inCatalog ? 'tf3-in-catalog' : ''} ${i === 0 ? 'tf3-best' : ''}">
