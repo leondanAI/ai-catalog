@@ -24,7 +24,7 @@ def make_page(lang, title, content):
 <body>
 <header class="site-header">
   <div class="header-inner">
-    <a href="'''+base+'''/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>aitoolfit</a>
+    <a href="'''+base+'''/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>aitoolfit</a>
     <nav class="nav-links">
       <a href="'''+base+'''/" class="nav-link">Find a Tool</a>
       <a href="'''+base+'''/directory.html" class="nav-link">AI Catalog</a>
@@ -59,7 +59,7 @@ def make_page(lang, title, content):
 <footer class="site-footer">
   <div class="footer-inner">
     <div>
-      <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><path d="M6 19 L6 7 L13 14 L20 7 L20 19" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>mypedia</div>
+      <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>mypedia</div>
       <p class="footer-desc">Your AI tool finder.</p>
     </div>
     <div>

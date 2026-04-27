@@ -6,7 +6,7 @@
 <xsl:template match="/">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Sitemap — mypedia.ai</title>
+  <title>Sitemap — aitoolfit.ai</title>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <style>
@@ -31,7 +31,7 @@
 </head>
 <body>
   <header>
-    <a href="https://www.mypedia.ai">mypedia.ai</a>
+    <a href="https://aitoolfit.ai">aitoolfit.ai</a>
     <span>/ sitemap.xml</span>
     <span class="count"><xsl:value-of select="count(sm:urlset/sm:url)"/> URLs</span>
   </header>
