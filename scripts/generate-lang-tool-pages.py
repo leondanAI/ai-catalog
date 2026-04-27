@@ -200,6 +200,7 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
     nav        = L['nav']
     cats       = L['cats']
     dir_attr   = ' dir="rtl"' if lang in RTL_LANGS else ''
+    arrow      = '←' if lang in RTL_LANGS else '→'
     date_locale = L['date_locale']
 
     meta_desc = f'{name} 2026 — {(t.get("description") or tool.get("description") or "")[:120]}'
@@ -347,7 +348,7 @@ textarea.form-input{{resize:vertical;min-height:90px}}
     <div class="tool-hero-info">
       <div class="tool-hero-top">
         <h1 class="tool-hero-name">{esc(name)}</h1>
-        <a class="btn-visit" href="{esc(url)}" target="_blank" rel="noopener">{ui['visit']} {esc(name)} →</a>
+        <a class="btn-visit" href="{esc(url)}" target="_blank" rel="noopener">{ui['visit']} {esc(name)} {arrow}</a>
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">{cat_icon} {esc(cat_label)}</span>
@@ -366,7 +367,7 @@ textarea.form-input{{resize:vertical;min-height:90px}}
     <div class="pc-box cons"><div class="pc-title">{ui['cons']}</div><ul class="pc-list">{cons_html}</ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
-    <a class="btn-visit" href="{esc(url)}" target="_blank" rel="noopener">{ui['visit']} {esc(name)} →</a>
+    <a class="btn-visit" href="{esc(url)}" target="_blank" rel="noopener">{ui['visit']} {esc(name)} {arrow}</a>
   </div>
   <div class="section-title-sm">{ui['also']}</div>
   <div class="also-grid">{also_html}</div>
