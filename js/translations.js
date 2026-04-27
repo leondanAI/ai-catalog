@@ -1624,12 +1624,12 @@ const TOOL_TRANSLATIONS = {
   },
 
   'Microsoft Copilot': {
-    ru: 'ИИ-ассистент в Windows 11, Edge и Microsoft 365. Бесплатный GPT-4 с поиском.',
-    es: 'Asistente IA en Windows 11, Edge y Microsoft 365. GPT-4 gratis con búsqueda.',
-    fr: 'Assistant IA dans Windows 11, Edge et Microsoft 365. GPT-4 gratuit avec recherche.',
-    de: 'KI-Assistent in Windows 11, Edge und Microsoft 365. Kostenloses GPT-4 mit Suche.',
-    pt: 'Assistente IA no Windows 11, Edge e Microsoft 365. GPT-4 grátis com busca.',
-    ua: 'ШІ-асистент, вбудований у Windows 11, Edge та Microsoft 365. Безкоштовний доступ до GPT-4 з пошуком.',
+    ru: 'ИИ-ассистент в Windows 11, Edge и Microsoft 365. Бесплатный GPT-4o с поиском.',
+    es: 'Asistente IA en Windows 11, Edge y Microsoft 365. GPT-4o gratis con búsqueda.',
+    fr: 'Assistant IA dans Windows 11, Edge et Microsoft 365. GPT-4o gratuit avec recherche.',
+    de: 'KI-Assistent in Windows 11, Edge und Microsoft 365. Kostenloses GPT-4o mit Suche.',
+    pt: 'Assistente IA no Windows 11, Edge e Microsoft 365. GPT-4o grátis com busca.',
+    ua: 'ШІ-асистент, вбудований у Windows 11, Edge та Microsoft 365. Безкоштовний доступ до GPT-4o з пошуком.',
   },
   'Character.AI': {
     ru: 'Платформа для общения с ИИ-персонажами. 200M+ пользователей для ролевых игр и развлечений.',
