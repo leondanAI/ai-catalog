@@ -412,6 +412,17 @@ def generate_lang_page(html, lang, page, title, desc):
     if lang in PLACEHOLDER_TR:
         html = html.replace('E.g. I need to transcribe a 2-hour meeting into key points…', PLACEHOLDER_TR[lang])
 
+    # Translate "Show all" button in directory
+    SHOW_ALL = {
+        'ru': 'Показать все', 'es': 'Ver todos', 'fr': 'Voir tout',
+        'de': 'Alle anzeigen', 'pt': 'Ver todos', 'ua': 'Показати все', 'he': 'הצג הכל',
+    }
+    if lang in SHOW_ALL:
+        if lang == 'he':
+            html = html.replace('>Show all →<', f'>{SHOW_ALL[lang]} ←<')
+        else:
+            html = html.replace('>Show all →<', f'>{SHOW_ALL[lang]} →<')
+
     if lang in SEARCH_PH:
         html = html.replace('Describe your task — we\'ll find the right AI tool for it…', SEARCH_PH[lang].replace("'", "\\'"))
         html = html.replace("Describe your task — we'll find the right AI tool for it…", SEARCH_PH[lang])

@@ -37,8 +37,10 @@
   .dir-search-ico { position:absolute; left:11px; top:50%; transform:translateY(-50%); color:var(--text3); pointer-events:none; }
   .price-filters { display:flex; gap:6px; }
   .result-count { font-size:13px; color:var(--text3); margin-bottom:1.25rem; }
-  .cat-section { margin-bottom:2.5rem; }
-  .cat-head { display:flex; align-items:center; gap:10px; padding-bottom:.75rem; margin-bottom:1rem; border-bottom:1px solid var(--border); }
+  .cat-section { margin-bottom:3rem; }
+  #catalog { margin-bottom:-2rem; }
+  .cat-section:first-child { border-top:none; padding-top:0; }
+  .cat-head { display:flex; align-items:center; gap:10px; margin-bottom:1rem; }
   .cat-head-icon { width:34px; height:34px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:16px; }
   .cat-head-name { font-family:var(--font-display); font-size:15px; font-weight:500; flex:1; }
   .cat-head-count { font-size:12px; color:var(--text3); }
@@ -138,6 +140,7 @@
         <a href="/de/">🇩🇪 Deutsch</a>
         <a href="/ru/">🇷🇺 Русский</a>
         <a href="/ua/">🇺🇦 Українська</a>
+        <a href="/he/">🇮🇱 עברית</a>
       </div>
     </div>
   </div>
@@ -178,15 +181,17 @@ function buildPriceFilters() {
 function buildTabs() {
   const all = [{ id:'all', title: t('dir.all'), icon:'✦' }, ...CATEGORIES];
   document.getElementById('catTabs').innerHTML = all.map(c =>
-    `<button class="filter-btn ${c.id === activeCat ? 'active' : ''}" onclick="setCat('${c.id}',this)">${c.icon ? `<span>${c.icon}</span>` : ''}${c.id === 'all' ? c.title : catTitle(c.id)}</button>`
+    `<button class="filter-btn ${c.id === activeCat ? 'active' : ''}" onclick="setCat('${c.id}')">${c.icon ? `<span>${c.icon}</span>` : ''}${c.id === 'all' ? c.title : catTitle(c.id)}</button>`
   ).join('');
 }
 
-function setCat(id, el) {
+function setCat(id) {
   activeCat = id;
-  document.querySelectorAll('#catTabs .filter-btn').forEach(b => b.classList.remove('active'));
-  el.classList.add('active');
+  document.querySelectorAll('#catTabs .filter-btn').forEach(b => {
+    b.classList.toggle('active', b.textContent.includes(catTitle(id)) || (id === 'all' && b.textContent.includes(t('dir.all'))));
+  });
   render();
+  window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
 function setPrice(p, el) {
@@ -201,10 +206,34 @@ document.addEventListener('DOMContentLoaded', () => {
   if (query) document.getElementById('dirSearch').value = query;
 });
 
+const FEATURED_NAMES = ['ChatGPT', 'Claude', 'Cursor'];
+const SHOW_PER_CAT = 3;
+
 function render() {
   const wrap = document.getElementById('catalog');
+  const isFiltered = activeCat !== 'all' || query || activePrice !== 'all';
   const cats = CATEGORIES.filter(c => activeCat === 'all' || c.id === activeCat);
   let total = 0, html = '';
+
+  // Featured block — only when showing all, no search, no price filter
+  if (!isFiltered) {
+    const featured = FEATURED_NAMES.map(n => ALL_TOOLS.find(t2 => t2.name === n)).filter(Boolean);
+    if (featured.length) {
+      const badges = {'ChatGPT':'⭐ Most popular AI','Claude':'⭐ Best for professionals','Cursor':'⭐ Fastest-growing dev tool'};
+      html += `<div class="cat-section">
+        <div class="cat-head">
+          <div class="cat-head-icon" style="background:#7c6af722;color:#7c6af7">⭐</div>
+          <span class="cat-head-name">Featured</span>
+        </div>
+        <div class="grid-auto">${featured.map(tool => {
+          const cat = CATEGORIES.find(c => c.tools.includes(tool));
+          const card = renderToolCard(tool, cat ? cat.color : '#7c6af7');
+          return card;
+        }).join('')}</div>
+      </div>`;
+    }
+  }
+
   cats.forEach(cat => {
     const tools = cat.tools.filter(t2 => {
       const matchQ = !query || t2.name.toLowerCase().includes(query) || t2.desc.toLowerCase().includes(query);
@@ -213,13 +242,21 @@ function render() {
     });
     if (!tools.length) return;
     total += tools.length;
+
+    const showAll = isFiltered || activeCat === cat.id;
+    const visible = showAll ? tools : tools.slice(0, SHOW_PER_CAT);
+    const hasMore = !showAll && tools.length > SHOW_PER_CAT;
+
+    const moreLink = hasMore ? `<button class="filter-btn" onclick="setCat('${cat.id}')" style="margin-left:auto;font-size:13px">הצג הכל ←</button>` : '';
+
     html += `<div class="cat-section">
-      <div class="cat-head">
+      <div class="cat-head" style="display:flex;align-items:center">
         <div class="cat-head-icon" style="background:${cat.color}22;color:${cat.color}">${cat.icon}</div>
         <span class="cat-head-name">${catTitle(cat.id)}</span>
         <span class="cat-head-count">${tools.length}</span>
+        ${moreLink}
       </div>
-      <div class="grid-auto">${tools.map(tool => renderToolCard(tool, cat.color)).join('')}</div>
+      <div class="grid-auto">${visible.map(tool => renderToolCard(tool, cat.color)).join('')}</div>
     </div>`;
   });
   if (!html) html = `<div class="empty"><div class="empty-icon">🔍</div>${t('dir.noResults')}</div>`;
