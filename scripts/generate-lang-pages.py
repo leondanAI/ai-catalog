@@ -417,6 +417,21 @@ def generate_lang_page(html, lang, page, title, desc):
         'ru': 'Показать все', 'es': 'Ver todos', 'fr': 'Voir tout',
         'de': 'Alle anzeigen', 'pt': 'Ver todos', 'ua': 'Показати все', 'he': 'הצג הכל',
     }
+    # Translate autocomplete placeholder in compare page
+    AC_PLACEHOLDER = {
+        'ru': 'Поиск или прокрутка...', 'es': 'Buscar o desplazar...', 'fr': 'Rechercher ou parcourir...',
+        'de': 'Suchen oder scrollen...', 'pt': 'Pesquisar ou rolar...', 'ua': 'Пошук або прокрутка...', 'he': 'חיפוש או גלילה...',
+    }
+    if lang in AC_PLACEHOLDER:
+        html = html.replace('Search or scroll...', AC_PLACEHOLDER[lang])
+
+    AC_NO_RESULTS = {
+        'ru': 'Ничего не найдено', 'es': 'No se encontraron herramientas', 'fr': 'Aucun outil trouvé',
+        'de': 'Keine Tools gefunden', 'pt': 'Nenhuma ferramenta encontrada', 'ua': 'Нічого не знайдено', 'he': 'לא נמצאו כלים',
+    }
+    if lang in AC_NO_RESULTS:
+        html = html.replace("t('compare.noResults')||'No tools found'", f"'{AC_NO_RESULTS[lang]}'")
+
     if lang in SHOW_ALL:
         if lang == 'he':
             html = html.replace('>Show all →<', f'>{SHOW_ALL[lang]} ←<')

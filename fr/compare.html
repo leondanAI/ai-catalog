@@ -51,6 +51,43 @@
   .pop-pair:hover { border-color:var(--accent); }
   .pop-name { font-size:13px; color:var(--text); font-weight:500; }
   .pop-vs { font-size:11px; color:var(--text3); }
+  /* ── Autocomplete select ── */
+  .ac-wrap { position: relative; }
+  .ac-input {
+    width: 100%; padding: 10px 14px; background: var(--bg3);
+    border: 1px solid var(--border); border-radius: var(--radius-sm);
+    color: var(--text); font-family: var(--font); font-size: 14px;
+    outline: none; transition: border-color .2s;
+  }
+  .ac-input:focus { border-color: var(--accent); }
+  .ac-input::placeholder { color: var(--text3); }
+  .ac-dropdown {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    max-height: 320px; overflow-y: auto; z-index: 100;
+    background: var(--bg2); border: 1px solid var(--border2);
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    margin-top: -1px;
+    scrollbar-width: thin; scrollbar-color: var(--text3) transparent;
+  }
+  .ac-dropdown::-webkit-scrollbar { width: 6px; }
+  .ac-dropdown::-webkit-scrollbar-thumb { background: var(--text3); border-radius: 3px; }
+  .ac-wrap.open .ac-dropdown { display: block; }
+  .ac-wrap.open .ac-input { border-radius: var(--radius-sm) var(--radius-sm) 0 0; }
+  .ac-group-label {
+    padding: 8px 14px 4px; font-size: 11px; color: var(--text3);
+    text-transform: uppercase; letter-spacing: .06em;
+    font-family: var(--font-display); font-weight: 500;
+    position: sticky; top: 0; background: var(--bg2);
+  }
+  .ac-option {
+    padding: 8px 14px; font-size: 14px; color: var(--text2);
+    cursor: pointer; display: flex; align-items: center; gap: 8px;
+    transition: background .1s;
+  }
+  .ac-option:hover, .ac-option.active { background: var(--bg3); color: var(--text); }
+  .ac-option img { width: 18px; height: 18px; border-radius: 4px; flex-shrink: 0; }
+  .ac-empty { padding: 16px 14px; font-size: 13px; color: var(--text3); text-align: center; }
+
   @media (max-width:600px) {
     .compare-selectors { grid-template-columns:1fr; }
     .vs-badge { display:none; }
@@ -108,12 +145,18 @@
   <div class="compare-selectors">
     <div class="compare-select-wrap">
       <div class="compare-select-label" data-i18n="compare.toolA">Outil A</div>
-      <select class="field-select" id="selectA" onchange="updateCompare()"></select>
+      <div class="ac-wrap" id="wrapA">
+        <input class="ac-input" id="inputA" type="text" placeholder="Rechercher ou parcourir..." autocomplete="off">
+        <div class="ac-dropdown" id="dropA"></div>
+      </div>
     </div>
     <div class="vs-badge" data-i18n="compare.vs">vs</div>
     <div class="compare-select-wrap">
       <div class="compare-select-label" data-i18n="compare.toolB">Outil B</div>
-      <select class="field-select" id="selectB" onchange="updateCompare()"></select>
+      <div class="ac-wrap" id="wrapB">
+        <input class="ac-input" id="inputB" type="text" placeholder="Rechercher ou parcourir..." autocomplete="off">
+        <div class="ac-dropdown" id="dropB"></div>
+      </div>
     </div>
   </div>
   <div class="popular-comparisons" id="popularComparisons">
@@ -238,19 +281,106 @@ async function fetchToolInfo(slug) {
   return { dbTool, avgRating, reviewCount: reviews.length };
 }
 
-function populateSelects() {
-  const placeholder = `<option value="">${t('compare.selectTool')}</option>`;
-  const opts = CATEGORIES.map(cat =>
-    `<optgroup label="${cat.icon} ${catTitle(cat.id)}">${cat.tools.map(tool =>
-      `<option value="${tool.name}">${tool.name}</option>`).join('')}</optgroup>`
-  ).join('');
-  document.getElementById('selectA').innerHTML = placeholder + opts;
-  document.getElementById('selectB').innerHTML = placeholder + opts;
+/* ── Autocomplete component ── */
+function initAC(inputId, dropId, wrapId, onChange) {
+  const input = document.getElementById(inputId);
+  const drop  = document.getElementById(dropId);
+  const wrap  = document.getElementById(wrapId);
+  let selectedTool = null;
+  let activeIdx = -1;
+  let visibleOptions = [];
+
+  function render(filter) {
+    const q = (filter || '').toLowerCase().trim();
+    let html = '';
+    visibleOptions = [];
+    CATEGORIES.forEach(cat => {
+      const matches = cat.tools.filter(t2 => !q || t2.name.toLowerCase().includes(q));
+      if (!matches.length) return;
+      html += `<div class="ac-group-label">${cat.icon} ${catTitle(cat.id)}</div>`;
+      matches.forEach(t2 => {
+        const idx = visibleOptions.length;
+        const domain = getDomain(t2.url);
+        html += `<div class="ac-option" data-idx="${idx}" data-name="${t2.name}"><img src="https://www.google.com/s2/favicons?sz=32&domain=${domain}" alt="" onerror="this.style.display='none'">${t2.name}</div>`;
+        visibleOptions.push(t2.name);
+      });
+    });
+    if (!visibleOptions.length) html = `<div class="ac-empty">${'Aucun outil trouvé'}</div>`;
+    drop.innerHTML = html;
+    activeIdx = -1;
+    highlightActive();
+  }
+
+  function highlightActive() {
+    drop.querySelectorAll('.ac-option').forEach(el => {
+      el.classList.toggle('active', parseInt(el.dataset.idx) === activeIdx);
+    });
+    const activeEl = drop.querySelector('.ac-option.active');
+    if (activeEl) activeEl.scrollIntoView({ block: 'nearest' });
+  }
+
+  function selectTool(name) {
+    selectedTool = name;
+    input.value = name;
+    close();
+    onChange();
+  }
+
+  function open() {
+    if (wrap.classList.contains('open')) return;
+    render(selectedTool ? '' : input.value);
+    wrap.classList.add('open');
+    if (selectedTool) {
+      const idx = visibleOptions.indexOf(selectedTool);
+      if (idx >= 0) { activeIdx = idx; highlightActive(); }
+    }
+  }
+
+  function close() { wrap.classList.remove('open'); activeIdx = -1; }
+
+  input.addEventListener('click', () => { open(); if (selectedTool) input.select(); });
+  input.addEventListener('focus', () => { open(); if (selectedTool) input.select(); });
+  input.addEventListener('input', () => {
+    selectedTool = null;
+    render(input.value);
+    if (!wrap.classList.contains('open')) wrap.classList.add('open');
+  });
+  input.addEventListener('keydown', (e) => {
+    if (!wrap.classList.contains('open')) return;
+    if (e.key === 'ArrowDown') { e.preventDefault(); activeIdx = Math.min(activeIdx + 1, visibleOptions.length - 1); highlightActive(); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); activeIdx = Math.max(activeIdx - 1, 0); highlightActive(); }
+    else if (e.key === 'Enter') { e.preventDefault(); if (activeIdx >= 0 && visibleOptions[activeIdx]) selectTool(visibleOptions[activeIdx]); }
+    else if (e.key === 'Escape') { close(); input.blur(); }
+  });
+  drop.addEventListener('mousedown', (e) => {
+    e.preventDefault();
+    const opt = e.target.closest('.ac-option');
+    if (opt) selectTool(opt.dataset.name);
+  });
+  document.addEventListener('mousedown', (e) => {
+    if (!wrap.contains(e.target)) {
+      if (!selectedTool && input.value) {
+        const match = ALL_TOOLS.find(t2 => t2.name.toLowerCase() === input.value.toLowerCase());
+        if (match) { selectTool(match.name); return; }
+        input.value = '';
+      }
+      close();
+    }
+  });
+
+  return {
+    getValue: () => selectedTool,
+    setValue: (name) => { selectedTool = name; input.value = name || ''; },
+    reset: () => { selectedTool = null; input.value = ''; }
+  };
 }
 
+const acA = initAC('inputA', 'dropA', 'wrapA', updateCompare);
+const acB = initAC('inputB', 'dropB', 'wrapB', updateCompare);
+
 async function updateCompare() {
-  const a = ALL_TOOLS.find(t2 => t2.name === document.getElementById('selectA').value);
-  const b = ALL_TOOLS.find(t2 => t2.name === document.getElementById('selectB').value);
+  const a = ALL_TOOLS.find(t2 => t2.name === acA.getValue());
+  const b = ALL_TOOLS.find(t2 => t2.name === acB.getValue());
   const el = document.getElementById('compareResult');
   if (!a || !b) {
     history.replaceState({}, '', window.location.pathname);
@@ -309,8 +439,8 @@ async function updateCompare() {
 function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
 function quickCompare(nameA, nameB) {
-  document.getElementById('selectA').value = nameA;
-  document.getElementById('selectB').value = nameB;
+  acA.setValue(nameA);
+  acB.setValue(nameB);
   updateCompare();
   document.getElementById('compareResult').scrollIntoView({ behavior:'smooth' });
 }
@@ -326,16 +456,15 @@ function loadFromUrl() {
   if (!slugA || !slugB) return;
   const nameA = slugToName(slugA);
   const nameB = slugToName(slugB);
-  if (nameA) document.getElementById('selectA').value = nameA;
-  if (nameB) document.getElementById('selectB').value = nameB;
+  if (nameA) acA.setValue(nameA);
+  if (nameB) acB.setValue(nameB);
   if (nameA && nameB) {
     updateCompare();
     document.getElementById('compareResult').scrollIntoView({ behavior:'smooth', block:'start' });
   }
 }
 
-function onLangChange() { populateSelects(); updateCompare(); }
-populateSelects();
+function onLangChange() { updateCompare(); }
 loadFromUrl();
 </script>
 </body>
