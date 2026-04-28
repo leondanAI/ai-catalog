@@ -142,6 +142,9 @@ const CATEGORIES = [
   {
     id: 'image', title: 'Image Generation', icon: '🎨', color: '#e05bb5',
     tools: [
+      { name:'Nano Banana', desc:'AI image editor on Google’s Gemini 2.5/3 Pro Image. Industry-leading character consistency — keep faces, outfits and composition identical across multiple edits.', url:'https://nanobanana.io', aff:'https://nanobanana.io?ref=aiportal', badge:'freemium', bestFor:'Image editing, character consistency, AI influencers', users:'1M+',
+        pros:['Best-in-class character consistency across multiple edits and scenes','In-context editing preserves original lighting, perspective and composition','Powered by Google Gemini 2.5/3 Pro Image — competitive quality at no install cost','Fully browser-based with free credits on sign-up'],
+        cons:['Free credits are limited — heavy use requires Pro plan','Less suited for purely generative text-to-image workflows from scratch','Newer tool — smaller community and fewer tutorials than Midjourney or Flux'] },
       { name:'Midjourney', desc:'Top quality AI art. Photorealism and artistic styles across any genre. Industry standard for designers.', url:'https://midjourney.com', aff:'https://midjourney.com?ref=aiportal', badge:'paid', bestFor:'Artistic art, photorealism', users:'20M+',
         pros:['Best aesthetic quality — V6 sets the industry standard for photorealism and artistic styles','Active Discord community with millions of example prompts to learn from','Fastest iteration cycle — variations and remixes in seconds'],
         cons:['Requires Discord — no standalone web or API interface','No free tier since March 2023 — starts at $10/month'] },

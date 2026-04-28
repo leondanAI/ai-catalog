@@ -293,6 +293,14 @@ const TOOL_TRANSLATIONS = {
     ua: 'Безкоштовний інструмент для читабельності. Виділяє складні речення, пасивний стан та багатослівність.',
   },
 
+  'Nano Banana': {
+    he: 'עורך תמונות AI מבוסס Gemini 2.5/3 Pro Image של Google. עקביות דמויות מובילה בשוק — פנים, תלבושות וקומפוזיציה זהים בין עריכות מרובות.',
+    ru: 'AI-редактор изображений на базе Google Gemini 2.5/3 Pro Image. Лучшая в индустрии согласованность персонажей — лица, одежда и композиция идентичны между правками.',
+    es: 'Editor de imágenes con IA basado en Gemini 2.5/3 Pro Image de Google. Consistencia de personajes líder del sector — mantén rostros, atuendos y composición idénticos entre ediciones.',
+    de: 'KI-Bildeditor auf Basis von Googles Gemini 2.5/3 Pro Image. Branchenführende Charakterkonsistenz — Gesichter, Outfits und Komposition bleiben über Bearbeitungen identisch.',
+    ua: 'AI-редактор зображень на базі Google Gemini 2.5/3 Pro Image. Найкраща в галузі узгодженість персонажів — обличчя, одяг та композиція залишаються однаковими між правками.',
+  },
+
   'Midjourney': {
     ru: 'Лучшее качество ИИ-арта. Фотореализм и художественные стили в любом жанре. Отраслевой стандарт для дизайнеров.',
     es: 'La mejor calidad en arte IA. Fotorrealismo y estilos artísticos en cualquier género. Estándar de la industria para diseñadores.',
