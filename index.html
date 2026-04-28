@@ -501,7 +501,14 @@ async function tfRender(data) {
         <div class="tf3-stars">${tf3Stars(info.avg)}${info.count ? `<span style="font-size:11px;color:var(--text3);margin-left:3px">(${info.count})</span>` : ''}</div>
       </div>` : '';
 
+    const bestForText = inCatalog ? (info.db.best_for || '') : '';
+    const bestForHtml = bestForText ? `
+      <div class="tf3-section">
+        <div style="font-size:13px;color:var(--text);background:rgba(124,106,247,0.08);border-inline-start:3px solid var(--accent);padding:8px 12px;border-radius:6px;line-height:1.45"><strong style="color:var(--accent);font-weight:600">${t('compare.bestFor')}:</strong> ${tfEsc(bestForText)}</div>
+      </div>` : '';
+
     const detailSections = `
+      ${bestForHtml}
       ${ratingHtml}
       ${prosList.length ? `
       <div class="tf3-section">

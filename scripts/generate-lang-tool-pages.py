@@ -35,7 +35,7 @@ LANGUAGES = {
                 'visit':'Перейти на','footer_desc':'Лучший каталог ИИ-инструментов. 100+ сервисов, актуальные новости и бесплатные утилиты.',
                 'footer_nav':'Навигация','footer_cats':'Категории','made':'Сделано с ♥ Leondan & Claude · Обновляется ежедневно',
                 'err_name':'Пожалуйста, введите имя и текст отзыва.','err_rating':'Пожалуйста, выберите оценку.',
-                'submitting':'Отправка…','thanks':'Спасибо! Ваш отзыв появится после модерации.','err':'Ошибка: '},
+                'best_for':'Подходит для','submitting':'Отправка…','thanks':'Спасибо! Ваш отзыв появится после модерации.','err':'Ошибка: '},
         'cats': {'chat':'ИИ-чат','code':'Разработка','image':'Генерация изображений','video':'Генерация видео','voice':'Голос и аудио'},
         'date_locale': 'ru-RU',
     },
@@ -49,7 +49,7 @@ LANGUAGES = {
                 'visit':'Visitar','footer_desc':'El mejor catálogo de herramientas IA. 100+ servicios, noticias y utilidades gratuitas.',
                 'footer_nav':'Navegación','footer_cats':'Categorías','made':'Hecho con ♥ por Leondan & Claude · Actualizado diariamente',
                 'err_name':'Por favor ingresa tu nombre y reseña.','err_rating':'Por favor selecciona una calificación.',
-                'submitting':'Enviando…','thanks':'¡Gracias! Tu reseña aparecerá tras la moderación.','err':'Error: '},
+                'best_for':'Ideal para','submitting':'Enviando…','thanks':'¡Gracias! Tu reseña aparecerá tras la moderación.','err':'Error: '},
         'cats': {'chat':'IA Chat','code':'Desarrollo','image':'Generación de imágenes','video':'Generación de vídeo','voice':'Voz y audio'},
         'date_locale': 'es-ES',
     },
@@ -63,7 +63,7 @@ LANGUAGES = {
                 'visit':'Visiter','footer_desc':'Le meilleur catalogue d\'outils IA. 100+ services, actualités et utilitaires gratuits.',
                 'footer_nav':'Navigation','footer_cats':'Catégories','made':'Fait avec ♥ par Leondan & Claude · Mis à jour quotidiennement',
                 'err_name':'Veuillez entrer votre nom et votre avis.','err_rating':'Veuillez sélectionner une note.',
-                'submitting':'Envoi…','thanks':'Merci ! Votre avis apparaîtra après modération.','err':'Erreur : '},
+                'best_for':'Idéal pour','submitting':'Envoi…','thanks':'Merci ! Votre avis apparaîtra après modération.','err':'Erreur : '},
         'cats': {'chat':'IA Chat','code':'Développement','image':'Génération d\'images','video':'Génération vidéo','voice':'Voix et audio'},
         'date_locale': 'fr-FR',
     },
@@ -77,7 +77,7 @@ LANGUAGES = {
                 'visit':'Visitar','footer_desc':'O melhor catálogo de ferramentas IA. 100+ serviços, notícias e utilitários gratuitos.',
                 'footer_nav':'Navegação','footer_cats':'Categorias','made':'Feito com ♥ por Leondan & Claude · Atualizado diariamente',
                 'err_name':'Por favor insira seu nome e avaliação.','err_rating':'Por favor selecione uma avaliação.',
-                'submitting':'Enviando…','thanks':'Obrigado! Sua avaliação aparecerá após moderação.','err':'Erro: '},
+                'best_for':'Ideal para','submitting':'Enviando…','thanks':'Obrigado! Sua avaliação aparecerá após moderação.','err':'Erro: '},
         'cats': {'chat':'IA Chat','code':'Desenvolvimento','image':'Geração de imagens','video':'Geração de vídeo','voice':'Voz e áudio'},
         'date_locale': 'pt-BR',
     },
@@ -91,7 +91,7 @@ LANGUAGES = {
                 'visit':'Besuchen','footer_desc':'Das beste KI-Tool-Verzeichnis. 100+ Dienste, Nachrichten und kostenlose Hilfsprogramme.',
                 'footer_nav':'Navigation','footer_cats':'Kategorien','made':'Mit ♥ von Leondan & Claude · Täglich aktualisiert',
                 'err_name':'Bitte geben Sie Ihren Namen und Ihre Bewertung ein.','err_rating':'Bitte wählen Sie eine Bewertung.',
-                'submitting':'Wird gesendet…','thanks':'Danke! Ihre Bewertung erscheint nach der Moderation.','err':'Fehler: '},
+                'best_for':'Ideal für','submitting':'Wird gesendet…','thanks':'Danke! Ihre Bewertung erscheint nach der Moderation.','err':'Fehler: '},
         'cats': {'chat':'KI-Chat','code':'Entwicklung','image':'Bildgenerierung','video':'Videogenerierung','voice':'Stimme & Audio'},
         'date_locale': 'de-DE',
     },
@@ -105,7 +105,7 @@ LANGUAGES = {
                 'visit':'Перейти на','footer_desc':'Найкращий каталог ШІ-інструментів. 100+ сервісів, новини та безкоштовні утиліти.',
                 'footer_nav':'Навігація','footer_cats':'Категорії','made':'Зроблено з ♥ Leondan & Claude · Оновлюється щодня',
                 'err_name':'Будь ласка, введіть ім\'я та текст відгуку.','err_rating':'Будь ласка, оберіть оцінку.',
-                'submitting':'Надсилання…','thanks':'Дякуємо! Ваш відгук з\'явиться після модерації.','err':'Помилка: '},
+                'best_for':'Підходить для','submitting':'Надсилання…','thanks':'Дякуємо! Ваш відгук з\'явиться після модерації.','err':'Помилка: '},
         'cats': {'chat':'ШІ-чат','code':'Розробка','image':'Генерація зображень','video':'Генерація відео','voice':'Голос і аудіо'},
         'date_locale': 'uk-UA',
     },
@@ -119,7 +119,7 @@ LANGUAGES = {
                 'visit':'בקר ב','footer_desc':'קטלוג כלי הבינה המלאכותית הטוב ביותר. 100+ שירותים, חדשות וכלי עזר חינמיים.',
                 'footer_nav':'ניווט','footer_cats':'קטגוריות','made':'נעשה עם ♥ ו-Claude · מתעדכן באופן קבוע',
                 'err_name':'נא הכנס שם וביקורת.','err_rating':'נא בחר דירוג.',
-                'submitting':'שולח…','thanks':'תודה! הביקורת שלך תופיע לאחר אישור.','err':'שגיאה: '},
+                'best_for':'הכי מתאים ל','submitting':'שולח…','thanks':'תודה! הביקורת שלך תופיע לאחר אישור.','err':'שגיאה: '},
         'cats': {'chat':'צ\'אט AI','code':'פיתוח','image':'יצירת תמונות','video':'יצירת וידאו','voice':'קול ואודיו'},
         'date_locale': 'he-IL',
     },
@@ -217,7 +217,8 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
     )
 
     users_chip = f'<span class="tool-meta-chip">👥 {esc(users)}</span>' if users else ''
-    best_chip  = f'<span class="tool-meta-chip">🎯 {esc(best_for)}</span>' if best_for else ''
+    best_for_label = LANGUAGES[lang]['ui']['best_for']
+    best_for_line = f'<div class="tool-best-for"><strong>{best_for_label}:</strong> {esc(best_for)}</div>' if best_for else ''
 
     r = ratings.get(slug)
     jsonld_rating = f',"aggregateRating":{{"@type":"AggregateRating","ratingValue":"{r["avg"]}","reviewCount":{r["count"]},"bestRating":"5","worstRating":"1"}}' if r else ''
@@ -266,6 +267,9 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
 .btn-visit:hover{{background:var(--accent2)}}
 .tool-hero-meta{{display:flex;align-items:center;gap:8px;flex-wrap:wrap}}
 .tool-meta-chip{{display:inline-flex;align-items:center;gap:5px;background:var(--bg3);border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-size:12px;color:var(--text2)}}
+.tool-best-for{{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}}
+.tool-best-for strong{{color:var(--accent);font-weight:600}}
+[dir="rtl"] .tool-best-for{{border-left:none;border-right:3px solid var(--accent)}}
 .tool-desc-block{{margin-bottom:2rem}}
 .tool-desc-block h2{{font-size:11px;font-weight:600;margin-bottom:.75rem;color:var(--text2);text-transform:uppercase;letter-spacing:.05em}}
 .tool-desc{{font-size:15px;color:var(--text2);line-height:1.75}}
@@ -353,8 +357,9 @@ textarea.form-input{{resize:vertical;min-height:90px}}
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">{cat_icon} {esc(cat_label)}</span>
         <span class="tool-meta-chip">{esc(badge_lbl)}</span>
-        {users_chip}{best_chip}
+        {users_chip}
       </div>
+      {best_for_line}
     </div>
   </div>
   <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>

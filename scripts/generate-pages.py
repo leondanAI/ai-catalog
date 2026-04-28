@@ -153,7 +153,7 @@ def render_page(tool, all_tools, rating_data=None):
     </a>\n'''
 
     users_chip = f'<span class="tool-meta-chip">👥 {esc(users)}</span>' if users else ''
-    best_chip  = f'<span class="tool-meta-chip">🎯 {esc(best_for)}</span>' if best_for else ''
+    best_for_line = f'<div class="tool-best-for"><strong>Best for:</strong> {esc(best_for)}</div>' if best_for else ''
 
     return f'''<!DOCTYPE html>
 <html lang="en">
@@ -199,6 +199,9 @@ def render_page(tool, all_tools, rating_data=None):
 .btn-visit:hover {{ background: var(--accent2); transform: translateY(-1px); }}
 .tool-hero-meta {{ display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }}
 .tool-meta-chip {{ display: inline-flex; align-items: center; gap: 5px; background: var(--bg3); border: 1px solid var(--border); border-radius: 20px; padding: 4px 12px; font-size: 12px; color: var(--text2); }}
+.tool-best-for {{ font-size: 14px; color: var(--text); background: rgba(124,106,247,0.08); border-left: 3px solid var(--accent); padding: 10px 14px; border-radius: 6px; margin-top: 14px; line-height: 1.5; }}
+.tool-best-for strong {{ color: var(--accent); font-weight: 600; }}
+[dir="rtl"] .tool-best-for {{ border-left: none; border-right: 3px solid var(--accent); }}
 .tool-desc-block {{ margin-bottom: 2rem; }}
 .tool-desc-block h2 {{ font-family: var(--font-display); font-size: 11px; font-weight: 600; margin-bottom: 0.75rem; color: var(--text2); text-transform: uppercase; letter-spacing: 0.05em; }}
 .tool-desc {{ font-size: 15px; color: var(--text2); line-height: 1.75; }}
@@ -305,8 +308,8 @@ textarea.form-input {{ resize: vertical; min-height: 90px; }}
         <span class="tool-meta-chip">{cat_icon} {esc(cat_label)}</span>
         <span class="tool-meta-chip">{esc(badge_lbl)}</span>
         {users_chip}
-        {best_chip}
       </div>
+      {best_for_line}
     </div>
   </div>
 

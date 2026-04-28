@@ -34,7 +34,7 @@
   .compare-select-wrap { display:flex; flex-direction:column; gap:8px; }
   .compare-select-label { font-size:12px; color:var(--text3); text-transform:uppercase; letter-spacing:.06em; }
   .compare-table { width:100%; border-collapse:collapse; }
-  .compare-table th, .compare-table td { padding:14px 16px; text-align:left; border-bottom:1px solid var(--border); font-size:14px; }
+  .compare-table th, .compare-table td { padding:14px 16px; text-align:start; border-bottom:1px solid var(--border); font-size:14px; }
   .compare-table th { font-family:var(--font-display); font-size:13px; font-weight:500; color:var(--text3); width:28%; }
   .compare-table td { color:var(--text2); }
   .compare-table td.hl { color:var(--text); }
@@ -413,7 +413,7 @@ async function updateCompare() {
     [t('compare.category'),    `${a.catIcon} ${catTitle(a.catId)}`,                          `${b.catIcon} ${catTitle(b.catId)}`],
     [t('compare.pricing'),     `<span class="badge badge-${a.badge}">${badgeLabel(a.badge)}</span>`, `<span class="badge badge-${b.badge}">${badgeLabel(b.badge)}</span>`],
     [t('compare.users'),       infoA.dbTool.users||t('compare.noData')||'No data',          infoB.dbTool.users||t('compare.noData')||'No data'],
-    [t('compare.bestFor'),     esc(a.bestFor||infoA.dbTool.best_for||'—'),                   esc(b.bestFor||infoB.dbTool.best_for||'—')],
+    [t('compare.bestFor'),     esc(infoA.dbTool.best_for||a.bestFor||'—'),                   esc(infoB.dbTool.best_for||b.bestFor||'—')],
     [t('compare.rating'),      starsHtml(infoA.avgRating) + (infoA.reviewCount ? `<span style="font-size:11px;color:var(--text3);margin-left:4px">(${infoA.reviewCount})</span>` : ''),
                     starsHtml(infoB.avgRating) + (infoB.reviewCount ? `<span style="font-size:11px;color:var(--text3);margin-left:4px">(${infoB.reviewCount})</span>` : '')],
     [t('compare.advantages'),  listHtml(infoA.dbTool.pros, '#2dd4a0', '✅'),                 listHtml(infoB.dbTool.pros, '#2dd4a0', '✅')],
