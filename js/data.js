@@ -422,6 +422,23 @@ const CATEGORIES = [
         pros:['Best real-time collaboration for team-built presentations','Startup-focused templates used by Y Combinator companies','Version history and commenting similar to Google Docs workflow'],
         cons:['AI writing features less powerful than Tome or Gamma for generation speed','Smaller template library than Slidesgo or Beautiful.ai'] },
     ]
+  },
+  {
+    id: 'business-investment', title: 'Business & Investment', icon: '💰', color: '#10b981',
+    tools: [
+      { name:'TradingView', desc:'World’s most popular charting platform. AI screeners, real-time data across all asset classes, 50M+ user community.', url:'https://tradingview.com', aff:'https://tradingview.com?ref=aiportal', badge:'freemium', bestFor:'Charting, technical analysis, market screening', users:'50M+',
+        pros:['50M+ users and the largest trader community — ideas, scripts and strategies shared publicly','Covers every asset class: stocks, ETFs, crypto, forex, futures and commodities','Pine Script lets you build and backtest custom indicators and strategies'],
+        cons:['AI features are screener-based — no predictive signals or portfolio management tools','Real-time data for some exchanges requires paid plan'] },
+      { name:'FinChat', desc:'AI investment research with 100K+ companies, 2,000+ KPIs and cited answers. Bloomberg-style terminal for retail investors.', url:'https://finchat.io', aff:'https://finchat.io?ref=aiportal', badge:'freemium', bestFor:'Investment research, equity analysis, financial KPIs', users:'150K+',
+        pros:['Institutional-grade data on 100k+ companies with cited AI answers — no hallucinations','Tracks 2,000+ company-specific KPIs unavailable in standard screeners','Free plan includes AI Copilot and global financial data'],
+        cons:['Advanced features and API access require paid plan from $24/month','Focused on public equities only — no crypto, forex, or macro tools'] },
+      { name:'Tickeron', desc:'AI trading platform with bot marketplace, pattern recognition and portfolio analysis. Stocks, ETFs, forex, crypto.', url:'https://tickeron.com', aff:'https://tickeron.com?ref=aiportal', badge:'freemium', bestFor:'AI trading bots, signals, pattern recognition', users:'N/A',
+        pros:['AI Robots Marketplace with live performance track records — pick bots by win rate and style','Covers stocks, ETFs, forex and crypto in one platform with real-time pattern recognition','Portfolio Wizard gives diversification score and rebalancing recommendations'],
+        cons:['Pricing structure is complex and confusing — full platform costs up to $250/month','Signal quality varies — works best for active traders, less suitable for passive investors'] },
+      { name:'Uptrends.ai', desc:'AI tracks market 24/7 and surfaces momentum opportunities early. Each signal includes its reasoning.', url:'https://uptrends.ai', aff:'https://uptrends.ai?ref=aiportal', badge:'freemium', bestFor:'Momentum trading, trend tracking, early signals', users:'N/A',
+        pros:['Surfaces momentum opportunities early — before they appear in mainstream media','Each signal includes the reasoning behind it — unusual options, insider buys, technical breakouts','Free basic plan available with no credit card required'],
+        cons:['Focused on momentum and trend signals only — not a full research or portfolio platform','Momentum investing carries higher risk — signals require validation before acting'] },
+    ]
   }
 ];
 

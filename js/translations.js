@@ -1960,6 +1960,38 @@ const TOOL_TRANSLATIONS = {
     ua: 'Спільний конструктор презентацій з ШІ-написанням. Стартапи та креативні команди.',
   },
 
+  'TradingView': {
+    he: 'פלטפורמת הגרפים וניתוח השוק הפופולרית בעולם. סקרינרים מבוססי AI, נתונים בזמן אמת בכל סוגי הנכסים, קהילה של 50M+ סוחרים.',
+    ru: 'Самая популярная платформа для графиков и анализа рынка. AI-скринеры, данные в реальном времени по всем активам, сообщество 50M+ трейдеров.',
+    es: 'La plataforma de gráficos y análisis de mercado más popular. Screeners con IA, datos en tiempo real en todas las clases de activos, comunidad de 50M+ traders.',
+    de: 'Die weltweit beliebteste Charting- und Marktanalyseplattform. KI-Screener, Echtzeit-Daten über alle Anlageklassen, 50M+ Trader-Community.',
+    ua: 'Найпопулярніша платформа для графіків і аналізу ринку. AI-скринери, дані в реальному часі по всіх активах, спільнота 50M+ трейдерів.',
+  },
+
+  'FinChat': {
+    he: 'מחקר השקעות מבוסס AI עם 100K+ חברות, 2,000+ KPIs ותשובות עם ציטוטים. מסוף בסגנון Bloomberg למשקיע פרטי.',
+    ru: 'AI-исследование инвестиций по 100K+ компаниям, 2,000+ KPI и цитированные ответы. Терминал в стиле Bloomberg для частного инвестора.',
+    es: 'Investigación de inversiones con IA: 100K+ empresas, 2,000+ KPIs y respuestas citadas. Terminal estilo Bloomberg para inversores minoristas.',
+    de: 'KI-Investmentrecherche mit 100K+ Unternehmen, 2.000+ KPIs und zitierten Antworten. Bloomberg-Style-Terminal für Privatanleger.',
+    ua: 'AI-дослідження інвестицій по 100K+ компаніях, 2,000+ KPI та цитовані відповіді. Термінал у стилі Bloomberg для приватного інвестора.',
+  },
+
+  'Tickeron': {
+    he: 'פלטפורמת מסחר AI עם שוק של בוטים, זיהוי תבניות וניתוח תיקים. מניות, ETF, פורקס, קריפטו.',
+    ru: 'AI-платформа трейдинга с маркетплейсом ботов, распознаванием паттернов и анализом портфеля. Акции, ETF, форекс, крипто.',
+    es: 'Plataforma de trading IA con marketplace de bots, reconocimiento de patrones y análisis de cartera. Acciones, ETFs, forex, cripto.',
+    de: 'KI-Trading-Plattform mit Bot-Marketplace, Mustererkennung und Portfolio-Analyse. Aktien, ETFs, Forex, Krypto.',
+    ua: 'AI-платформа трейдингу з маркетплейсом ботів, розпізнаванням патернів та аналізом портфеля. Акції, ETF, форекс, крипто.',
+  },
+
+  'Uptrends.ai': {
+    he: 'AI מנטר את השוק 24/7 ומציף הזדמנויות מומנטום בשלב מוקדם. כל סיגנל מגיע עם הנימוק שלו.',
+    ru: 'AI мониторит рынок 24/7 и выявляет моментум-возможности на ранней стадии. Каждый сигнал с обоснованием.',
+    es: 'IA monitorea el mercado 24/7 y detecta oportunidades de momentum temprano. Cada señal incluye su razonamiento.',
+    de: 'KI überwacht den Markt 24/7 und erkennt Momentum-Chancen früh. Jedes Signal mit seiner Begründung.',
+    ua: 'AI моніторить ринок 24/7 і виявляє моментум-можливості на ранній стадії. Кожен сигнал з обґрунтуванням.',
+  },
+
 };
 
 // ─── helper used by renderToolCard in data.js ────────────────────────────────
