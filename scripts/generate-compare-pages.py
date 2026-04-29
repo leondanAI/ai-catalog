@@ -1,74 +1,283 @@
 #!/usr/bin/env python3
 """
-Generate static comparison pages fetching data from the existing tools table.
-No separate comparisons table needed — content updates automatically.
+Generate STATIC comparison pages — content baked into HTML at build time.
+Tool data is fetched from Supabase once per (slug, lang); the resulting page
+contains the full comparison table in static HTML so Google indexes the real
+content without executing JavaScript. Only the ratings block stays dynamic.
 
-Usage:
-  python3 scripts/generate-compare-pages.py
+Usage:  python3 scripts/generate-compare-pages.py
 """
 
-import os, re
+import os, re, json, html as _html
+import urllib.request, urllib.parse
 
 ROOT     = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 BASE_URL = 'https://aitoolfit.ai'
 
-# Modern footer is sourced from each language's /<lang>/compare.html so static
-# comparison pages share the exact same footer (4 columns, languages, legal links).
+SB_URL  = 'https://lbjdwkvkkndvofysyssy.supabase.co'
+SB_ANON = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG'
+
+LANGUAGES   = ['es', 'fr', 'pt', 'ru', 'de', 'ua', 'he']
+LANG_FLAGS  = {'en':'🇬🇧','ru':'🇷🇺','es':'🇪🇸','fr':'🇫🇷','pt':'🇧🇷','de':'🇩🇪','ua':'🇺🇦','he':'🇮🇱'}
+LANG_LABELS = {'ua': 'UA'}
+LANG_RTL    = {'he'}
+
+COMPARISONS = [
+    {'slug': 'chatgpt-vs-claude',  'a': 'chatgpt',    'b': 'claude'},
+    {'slug': 'cursor-vs-copilot',  'a': 'cursor',     'b': 'github-copilot'},
+    {'slug': 'midjourney-vs-flux', 'a': 'midjourney', 'b': 'flux'},
+    {'slug': 'suno-vs-udio',       'a': 'suno',       'b': 'udio'},
+    {'slug': 'kling-vs-runway',    'a': 'kling-ai',   'b': 'runway'},
+]
+
+# Per-language UI labels — baked into HTML at build time
+LABELS = {
+    'en': {'ov':'Overview','pr':'Pricing','us':'Users','bf':'Best for','rt':'Rating','ad':'Advantages','ds':'Disadvantages','wb':'Website','vt':'Visit','rv':'Full review','nr':'No reviews yet'},
+    'ru': {'ov':'Обзор','pr':'Цена','us':'Пользователи','bf':'Лучше для','rt':'Рейтинг','ad':'Преимущества','ds':'Недостатки','wb':'Сайт','vt':'Посетить','rv':'Полный обзор','nr':'Нет отзывов'},
+    'es': {'ov':'Descripción','pr':'Precio','us':'Usuarios','bf':'Mejor para','rt':'Calificación','ad':'Ventajas','ds':'Desventajas','wb':'Sitio web','vt':'Visitar','rv':'Reseña completa','nr':'Sin reseñas'},
+    'fr': {'ov':'Aperçu','pr':'Prix','us':'Utilisateurs','bf':'Idéal pour','rt':'Évaluation','ad':'Avantages','ds':'Inconvénients','wb':'Site web','vt':'Visiter','rv':'Avis complet','nr':'Aucun avis'},
+    'de': {'ov':'Überblick','pr':'Preis','us':'Nutzer','bf':'Am besten für','rt':'Bewertung','ad':'Vorteile','ds':'Nachteile','wb':'Website','vt':'Besuchen','rv':'Vollständige Bewertung','nr':'Noch keine Bewertungen'},
+    'pt': {'ov':'Visão geral','pr':'Preço','us':'Usuários','bf':'Melhor para','rt':'Avaliação','ad':'Vantagens','ds':'Desvantagens','wb':'Site','vt':'Visitar','rv':'Avaliação completa','nr':'Sem avaliações'},
+    'ua': {'ov':'Огляд','pr':'Ціна','us':'Користувачі','bf':'Краще для','rt':'Рейтинг','ad':'Переваги','ds':'Недоліки','wb':'Сайт','vt':'Відвідати','rv':'Повний огляд','nr':'Немає відгуків'},
+    'he': {'ov':'סקירה','pr':'תמחור','us':'משתמשים','bf':'הטוב ביותר עבור','rt':'דירוג','ad':'יתרונות','ds':'חסרונות','wb':'אתר','vt':'בקר','rv':'סקירה מלאה','nr':'אין ביקורות עדיין'},
+}
+
+BADGE_LABELS = {
+    'en':{'free':'Free','freemium':'Freemium','paid':'Paid'},
+    'ru':{'free':'Бесплатно','freemium':'Freemium','paid':'Платно'},
+    'es':{'free':'Gratis','freemium':'Freemium','paid':'De pago'},
+    'fr':{'free':'Gratuit','freemium':'Freemium','paid':'Payant'},
+    'de':{'free':'Kostenlos','freemium':'Freemium','paid':'Bezahlt'},
+    'pt':{'free':'Grátis','freemium':'Freemium','paid':'Pago'},
+    'ua':{'free':'Безкоштовно','freemium':'Freemium','paid':'Платно'},
+    'he':{'free':'חינם','freemium':'Freemium','paid':'בתשלום'},
+}
+
+# Per-language title and meta description templates ({a} and {b} are tool names)
+META_TEMPLATES = {
+    'en': {
+        'title': '{a} vs {b} 2026 — Comparison | AItoolFit',
+        'desc':  '{a} vs {b}: side-by-side comparison of features, pricing, pros and cons. Pick the right AI tool for your task.',
+        'headline': '{a} vs {b}: AI tool comparison 2026',
+        'schema_desc': 'Side-by-side comparison of {a} and {b} — features, pricing, pros and cons.',
+    },
+    'ru': {
+        'title': '{a} vs {b} 2026 — Сравнение | AItoolFit',
+        'desc':  '{a} против {b}: сравнение функций, цен, плюсов и минусов. Выберите подходящий AI-инструмент для задачи.',
+        'headline': '{a} vs {b}: сравнение AI-инструментов 2026',
+        'schema_desc': 'Сравнение {a} и {b} — функции, цены, плюсы и минусы.',
+    },
+    'es': {
+        'title': '{a} vs {b} 2026 — Comparación | AItoolFit',
+        'desc':  '{a} vs {b}: comparación lado a lado de funciones, precios, ventajas y desventajas. Elige la herramienta de IA adecuada para tu tarea.',
+        'headline': '{a} vs {b}: comparación de herramientas de IA 2026',
+        'schema_desc': 'Comparación lado a lado de {a} y {b} — funciones, precios, ventajas y desventajas.',
+    },
+    'fr': {
+        'title': '{a} vs {b} 2026 — Comparatif | AItoolFit',
+        'desc':  '{a} vs {b} : comparatif des fonctionnalités, prix, avantages et inconvénients. Choisissez le bon outil IA pour votre tâche.',
+        'headline': '{a} vs {b} : comparatif des outils IA 2026',
+        'schema_desc': 'Comparatif côte à côte de {a} et {b} — fonctionnalités, prix, avantages et inconvénients.',
+    },
+    'de': {
+        'title': '{a} vs {b} 2026 — Vergleich | AItoolFit',
+        'desc':  '{a} vs {b}: direkter Vergleich von Funktionen, Preisen, Vor- und Nachteilen. Finden Sie das passende KI-Tool für Ihre Aufgabe.',
+        'headline': '{a} vs {b}: KI-Tool-Vergleich 2026',
+        'schema_desc': 'Direkter Vergleich von {a} und {b} — Funktionen, Preise, Vor- und Nachteile.',
+    },
+    'pt': {
+        'title': '{a} vs {b} 2026 — Comparação | AItoolFit',
+        'desc':  '{a} vs {b}: comparação lado a lado de recursos, preços, prós e contras. Escolha a ferramenta de IA certa para sua tarefa.',
+        'headline': '{a} vs {b}: comparação de ferramentas de IA 2026',
+        'schema_desc': 'Comparação lado a lado de {a} e {b} — recursos, preços, prós e contras.',
+    },
+    'ua': {
+        'title': '{a} vs {b} 2026 — Порівняння | AItoolFit',
+        'desc':  '{a} проти {b}: порівняння функцій, цін, переваг і недоліків. Оберіть AI-інструмент, який підходить для вашого завдання.',
+        'headline': '{a} vs {b}: порівняння AI-інструментів 2026',
+        'schema_desc': 'Порівняння {a} та {b} — функції, ціни, переваги й недоліки.',
+    },
+    'he': {
+        'title': '{a} vs {b} 2026 — השוואה | AItoolFit',
+        'desc':  '{a} מול {b}: השוואה של תכונות, מחירים, יתרונות וחסרונות. בחרו את כלי ה-AI המתאים למשימה שלכם.',
+        'headline': '{a} vs {b}: השוואת כלי AI 2026',
+        'schema_desc': 'השוואה של {a} ו-{b} — תכונות, מחירים, יתרונות וחסרונות.',
+    },
+}
+
+# ── HTTP / data ───────────────────────────────────────────────────────────────
+def sb_get(slug, lang):
+    """Fetch a single tool by slug+lang from Supabase. Returns dict or None."""
+    qs = urllib.parse.urlencode({
+        'slug': f'eq.{slug}',
+        'lang': f'eq.{lang}',
+        'select': 'slug,name,description,best_for,pros,cons,badge,url,domain,users',
+    })
+    req = urllib.request.Request(
+        f'{SB_URL}/rest/v1/tools?{qs}',
+        headers={'apikey': SB_ANON, 'Authorization': f'Bearer {SB_ANON}'}
+    )
+    with urllib.request.urlopen(req, timeout=15) as resp:
+        rows = json.load(resp)
+    return rows[0] if rows else None
+
+def fetch_tool(slug, lang):
+    """Fetch with EN fallback if requested lang has no row."""
+    row = sb_get(slug, lang)
+    if not row and lang != 'en':
+        row = sb_get(slug, 'en')
+    return row
+
+# ── helpers ───────────────────────────────────────────────────────────────────
+def esc(s):
+    return _html.escape(str(s) if s is not None else '', quote=True)
+
+def get_domain(url):
+    return (url or '').replace('https://', '').replace('http://', '').split('/')[0]
+
+def list_html(items, icon):
+    if not items:
+        return '<span style="color:var(--text3)">—</span>'
+    return ''.join(
+        f'<div style="display:flex;gap:6px;align-items:flex-start;font-size:13px;color:var(--text2);margin-bottom:6px">'
+        f'<span>{icon}</span><span>{esc(p)}</span></div>'
+        for p in items
+    )
+
+def badge_html(badge, lang):
+    label = BADGE_LABELS.get(lang, BADGE_LABELS['en']).get(badge, badge or '')
+    return f'<span class="badge badge-{esc(badge or "")}">{esc(label)}</span>'
+
+def comparison_table_html(a, b, lang):
+    """Render the entire comparison table — server-side."""
+    L = LABELS.get(lang, LABELS['en'])
+    dom_a = get_domain(a.get('url'))
+    dom_b = get_domain(b.get('url'))
+
+    visit_a = a.get('url') or '#'
+    visit_b = b.get('url') or '#'
+    base = '' if lang == 'en' else f'/{lang}'
+    review_a = f'{base}/tools/{esc(a["slug"])}.html'
+    review_b = f'{base}/tools/{esc(b["slug"])}.html'
+
+    rows = [
+        (L['ov'], esc(a.get('description') or '—'),       esc(b.get('description') or '—')),
+        (L['pr'], badge_html(a.get('badge'), lang),       badge_html(b.get('badge'), lang)),
+        (L['us'], esc(a.get('users') or '—'),             esc(b.get('users') or '—')),
+        (L['ad'], list_html(a.get('pros'), '✅'),         list_html(b.get('pros'), '✅')),
+        (L['ds'], list_html(a.get('cons'), '❌'),         list_html(b.get('cons'), '❌')),
+        (L['wb'],
+         f'<a href="{esc(visit_a)}" target="_blank" rel="noopener" style="color:var(--accent)">{esc(dom_a)}</a>' if dom_a else '—',
+         f'<a href="{esc(visit_b)}" target="_blank" rel="noopener" style="color:var(--accent)">{esc(dom_b)}</a>' if dom_b else '—'),
+        ('',
+         f'<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="{esc(visit_a)}" target="_blank" rel="noopener">{L["vt"]} →</a><a class="tool-review" href="{review_a}">{L["rv"]}</a></div>',
+         f'<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="{esc(visit_b)}" target="_blank" rel="noopener">{L["vt"]} →</a><a class="tool-review" href="{review_b}">{L["rv"]}</a></div>'),
+    ]
+    rows_html = '\n'.join(
+        f'<tr><th>{th}</th><td class="hl">{va}</td><td class="hl">{vb}</td></tr>'
+        for th, va, vb in rows
+    )
+    rating_row_html = (
+        f'<tr><th>{L["rt"]}</th>'
+        f'<td class="hl"><span data-rating-slot="{esc(a["slug"])}" style="color:var(--text3);font-size:13px">…</span></td>'
+        f'<td class="hl"><span data-rating-slot="{esc(b["slug"])}" style="color:var(--text3);font-size:13px">…</span></td>'
+        f'</tr>'
+    )
+    rows_html_with_rating = rows_html.replace(
+        f'<tr><th>{L["wb"]}</th>',
+        rating_row_html + f'<tr><th>{L["wb"]}</th>',
+        1
+    )
+
+    return (
+        f'<div class="compare-wrap fade-up"><table class="compare-table"><thead><tr><th></th>'
+        f'<td style="text-align:center"><div class="tool-col-head">'
+        f'<div class="tool-col-avatar" style="background:#7c6af722"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain={esc(dom_a)}" width="30" height="30" style="border-radius:6px" alt=""></div>'
+        f'<div class="tool-col-name">{esc(a.get("name") or "")}</div>'
+        f'<div class="tool-col-bestfor"><strong>{L["bf"]}:</strong> {esc(a.get("best_for") or "—")}</div>'
+        f'</div></td>'
+        f'<td style="text-align:center"><div class="tool-col-head">'
+        f'<div class="tool-col-avatar" style="background:#7c6af722"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain={esc(dom_b)}" width="30" height="30" style="border-radius:6px" alt=""></div>'
+        f'<div class="tool-col-name">{esc(b.get("name") or "")}</div>'
+        f'<div class="tool-col-bestfor"><strong>{L["bf"]}:</strong> {esc(b.get("best_for") or "—")}</div>'
+        f'</div></td></tr></thead><tbody>{rows_html_with_rating}</tbody></table></div>'
+    )
+
+def schema_org_jsonld(a, b, canonical_url, lang):
+    M = META_TEMPLATES.get(lang, META_TEMPLATES['en'])
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "inLanguage": lang,
+        "headline": M['headline'].format(a=a.get('name'), b=b.get('name')),
+        "description": M['schema_desc'].format(a=a.get('name'), b=b.get('name')),
+        "url": canonical_url,
+        "datePublished": "2026-04-29",
+        "author": {"@type": "Organization", "name": "AItoolFit"},
+        "publisher": {"@type": "Organization", "name": "AItoolFit", "url": "https://aitoolfit.ai"},
+        "about": [
+            {"@type": "SoftwareApplication", "name": a.get('name'), "url": a.get('url')},
+            {"@type": "SoftwareApplication", "name": b.get('name'), "url": b.get('url')},
+        ],
+    }
+    return f'<script type="application/ld+json">{json.dumps(schema, ensure_ascii=False)}</script>'
+
+# ── footer (sourced from /<lang>/compare.html for consistency) ────────────────
 def load_footer(lang):
     src = os.path.join(ROOT, lang, 'compare.html') if lang != 'en' else os.path.join(ROOT, 'compare.html')
     if not os.path.exists(src):
         return ''
-    html = open(src, encoding='utf-8').read()
-    m = re.search(r'<footer\s+class="site-footer"[^>]*>.*?</footer>', html, re.DOTALL)
+    txt = open(src, encoding='utf-8').read()
+    m = re.search(r'<footer\s+class="site-footer"[^>]*>.*?</footer>', txt, re.DOTALL)
     return m.group(0) if m else ''
 
-SB_URL  = 'https://lbjdwkvkkndvofysyssy.supabase.co'
-SB_ANON = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG'
-
-LANGUAGES = ['es', 'fr', 'pt', 'ru', 'de', 'ua', 'he']
-LANG_FLAGS  = {'en':'🇬🇧','ru':'🇷🇺','es':'🇪🇸','fr':'🇫🇷','pt':'🇧🇷','de':'🇩🇪','ua':'🇺🇦','he':'🇮🇱'}
-LANG_LABELS = {'ua':'UA'}
-LANG_RTL    = {'he'}
-
-COMPARISONS = [
-    {'slug': 'chatgpt-vs-claude',    'a': 'chatgpt',       'b': 'claude'},
-    {'slug': 'cursor-vs-copilot',    'a': 'cursor',        'b': 'github-copilot'},
-    {'slug': 'midjourney-vs-flux',   'a': 'midjourney',    'b': 'flux'},
-    {'slug': 'suno-vs-udio',         'a': 'suno',          'b': 'udio'},
-    {'slug': 'kling-vs-runway',      'a': 'kling-ai',      'b': 'runway'},
-]
-
+# ── full page ─────────────────────────────────────────────────────────────────
 def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
-    dir_attr    = ' dir="rtl"' if rtl else ''
-    lang_script = '' if lang == 'en' else f'<script>localStorage.setItem("lang","{lang}");</script>\n'
-    base        = '' if lang == 'en' else f'/{lang}'
+    a = fetch_tool(cmp['a'], lang)
+    b = fetch_tool(cmp['b'], lang)
+    if not a or not b:
+        print(f'  ! missing tool data for {cmp["slug"]} / {lang}: a={bool(a)} b={bool(b)}')
+        return None
 
-    hreflang = '\n'.join(
+    dir_attr    = ' dir="rtl"' if rtl else ''
+    base        = '' if lang == 'en' else f'/{lang}'
+    L           = LABELS.get(lang, LABELS['en'])
+    M           = META_TEMPLATES.get(lang, META_TEMPLATES['en'])
+    title       = M['title'].format(a=a['name'], b=b['name'])
+    description = M['desc'].format(a=a['name'], b=b['name'])
+
+    hreflang_tags = '\n'.join(
         [f'<link rel="alternate" hreflang="x-default" href="{BASE_URL}/compare/{cmp["slug"]}.html">',
          f'<link rel="alternate" hreflang="en" href="{BASE_URL}/compare/{cmp["slug"]}.html">'] +
         [f'<link rel="alternate" hreflang="{lc}" href="{BASE_URL}/{lc}/compare/{cmp["slug"]}.html">' for lc in LANGUAGES]
     )
-
-    slug_a = cmp['a']
-    slug_b = cmp['b']
+    table_html  = comparison_table_html(a, b, lang)
+    schema      = schema_org_jsonld(a, b, canonical_url, lang)
     footer_html = load_footer(lang)
+    lang_script = '' if lang == 'en' else f'<script>localStorage.setItem("lang","{lang}");</script>\n'
 
     return f'''<!DOCTYPE html>
 <html lang="{lang}"{dir_attr}>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title id="pageTitle">Loading…</title>
-<meta name="description" id="pageDesc" content="">
+<title>{esc(title)}</title>
+<meta name="description" content="{esc(description)}">
 <link rel="canonical" href="{canonical_url}">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:title" content="{esc(title)}">
+<meta property="og:description" content="{esc(description)}">
+<meta property="og:url" content="{canonical_url}">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://aitoolfit.ai/og-image.svg">
+{schema}
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 {lang_script}<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
-{hreflang}
+{hreflang_tags}
 <style>
 .cmp-wrap{{max-width:900px;margin:0 auto;padding:2rem 1.5rem 4rem}}
 .cmp-hero{{text-align:center;margin-bottom:2rem}}
@@ -76,7 +285,7 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
 .cmp-hero p{{font-size:15px;color:var(--text2);line-height:1.75;max-width:640px;margin:0 auto}}
 .compare-wrap{{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}}
 .compare-table{{width:100%;border-collapse:collapse}}
-.compare-table th,.compare-table td{{padding:14px 16px;text-align:left;border-bottom:1px solid var(--border);font-size:14px}}
+.compare-table th,.compare-table td{{padding:14px 16px;text-align:start;border-bottom:1px solid var(--border);font-size:14px}}
 .compare-table th{{font-family:var(--font-display);font-size:13px;font-weight:500;color:var(--text3);width:28%}}
 .compare-table td{{color:var(--text2)}}
 .compare-table td.hl{{color:var(--text)}}
@@ -84,8 +293,7 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
 .tool-col-avatar{{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:22px;font-weight:700}}
 .tool-col-name{{font-family:var(--font-display);font-size:16px;font-weight:600}}
 .tool-col-bestfor{{margin-top:6px;font-size:13px;color:var(--text);background:rgba(124,106,247,0.08);border-inline-start:3px solid var(--accent);padding:8px 12px;border-radius:6px;line-height:1.45;text-align:start;max-width:280px}}
-.tool-col-bestfor strong{{color:var(--accent);font-weight:600}}
-.cmp-loading{{text-align:center;padding:4rem;color:var(--text3);font-size:15px}}
+.tool-col-bestfor strong{{color:var(--accent);font-weight:600;margin-inline-end:6px}}
 @media(max-width:600px){{.compare-table th{{width:35%;font-size:12px}}.compare-table th,.compare-table td{{padding:10px;font-size:13px}}}}
 </style>
 </head>
@@ -117,137 +325,44 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
   </nav>
 </header>
 
-<div class="cmp-wrap">
+<main class="cmp-wrap">
   <div class="cmp-hero">
-    <h1 id="cmpTitle">Loading…</h1>
+    <h1>{esc(a["name"])} vs {esc(b["name"])}</h1>
+    <p>{esc(description)}</p>
   </div>
-  <div id="cmpResult"><div class="cmp-loading">Loading…</div></div>
-</div>
+  {table_html}
+</main>
 
 {footer_html}
 
 <script src="/js/i18n.js"></script>
 <script src="/js/main.js"></script>
 <script>
+// Ratings only — load asynchronously, doesn't block static content
 (function() {{
-  var SB     = '{SB_URL}';
-  var KEY    = '{SB_ANON}';
-  var LANG   = '{lang}';
-  var SLUG_A = '{slug_a}';
-  var SLUG_B = '{slug_b}';
-  var BASE   = '{base}';
-
-  var LABELS = {{
-    en: {{ov:'Overview',pr:'Pricing',us:'Users',bf:'Best for',rt:'Rating',ad:'Advantages',ds:'Disadvantages',wb:'Website',vt:'Visit',rv:'Full review',nr:'No reviews yet'}},
-    ru: {{ov:'Обзор',pr:'Цена',us:'Пользователи',bf:'Лучше для',rt:'Рейтинг',ad:'Преимущества',ds:'Недостатки',wb:'Сайт',vt:'Посетить',rv:'Полный обзор',nr:'Нет отзывов'}},
-    es: {{ov:'Descripción',pr:'Precio',us:'Usuarios',bf:'Mejor para',rt:'Calificación',ad:'Ventajas',ds:'Desventajas',wb:'Sitio web',vt:'Visitar',rv:'Reseña completa',nr:'Sin reseñas'}},
-    fr: {{ov:'Aperçu',pr:'Prix',us:'Utilisateurs',bf:'Idéal pour',rt:'Évaluation',ad:'Avantages',ds:'Inconvénients',wb:'Site web',vt:'Visiter',rv:'Avis complet',nr:'Aucun avis'}},
-    de: {{ov:'Überblick',pr:'Preis',us:'Nutzer',bf:'Am besten für',rt:'Bewertung',ad:'Vorteile',ds:'Nachteile',wb:'Website',vt:'Besuchen',rv:'Vollständige Bewertung',nr:'Noch keine Bewertungen'}},
-    pt: {{ov:'Visão geral',pr:'Preço',us:'Usuários',bf:'Melhor para',rt:'Avaliação',ad:'Vantagens',ds:'Desvantagens',wb:'Site',vt:'Visitar',rv:'Avaliação completa',nr:'Sem avaliações'}},
-    ua: {{ov:'Огляд',pr:'Ціна',us:'Користувачі',bf:'Краще для',rt:'Рейтинг',ad:'Переваги',ds:'Недоліки',wb:'Сайт',vt:'Відвідати',rv:'Повний огляд',nr:'Немає відгуків'}},
-    he: {{ov:'סקירה',pr:'תמחור',us:'משתמשים',bf:'הטוב ביותר עבור',rt:'דירוג',ad:'יתרונות',ds:'חסרונות',wb:'אתר',vt:'בקר',rv:'סקירה מלאה',nr:'אין ביקורות עדיין'}},
-  }};
-  var L = LABELS[LANG] || LABELS['en'];
-
-  function esc(s) {{ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }}
-
-  function starsHtml(avg) {{
-    if (!avg) return '<span style="color:var(--text3);font-size:13px">'+L.nr+'</span>';
-    var full = Math.round(avg);
-    return '<span style="color:#f59e0b;font-size:13px;letter-spacing:1px">' + '★'.repeat(full) + '</span>' +
-           '<span style="color:#555;font-size:13px;letter-spacing:1px">'   + '★'.repeat(5-full) + '</span>' +
-           '<span style="font-size:13px;font-weight:600;color:#f0f0f0;margin-left:4px">' + avg.toFixed(1) + '</span>';
-  }}
-
-  function listHtml(arr, icon) {{
-    if (!arr || !arr.length) return '<span style="color:var(--text3)">—</span>';
-    return arr.map(function(p) {{
-      return '<div style="display:flex;gap:6px;align-items:flex-start;font-size:13px;color:var(--text2);margin-bottom:6px"><span>'+icon+'</span><span>'+esc(p)+'</span></div>';
-    }}).join('');
-  }}
-
-  function badgeLabel(b) {{ return b === 'free' ? 'Free' : b === 'freemium' ? 'Freemium' : 'Paid'; }}
-
-  function getDomain(url) {{ return (url||'').replace(/https?:\/\//,'').split('/')[0]; }}
-
-  function fetchTool(slug, lang) {{
-    return fetch(SB+'/rest/v1/tools?slug=eq.'+slug+'&lang=eq.'+lang+'&select=slug,name,description,best_for,pros,cons,badge,url,users',
-      {{headers:{{apikey:KEY,Authorization:'Bearer '+KEY}}}}).then(function(r){{return r.json();}});
-  }}
-
+  var SB = '{SB_URL}', KEY = '{SB_ANON}', NR = '{L["nr"]}';
   function fetchRating(slug) {{
     return fetch(SB+'/rest/v1/comments?tool_slug=eq.'+slug+'&approved=eq.true&select=rating',
       {{headers:{{apikey:KEY,Authorization:'Bearer '+KEY}}}}).then(function(r){{return r.json();}});
   }}
-
-  function render(a, b, rA, rB) {{
-    rA = Array.isArray(rA) ? rA : [];
-    rB = Array.isArray(rB) ? rB : [];
-    var avgA = rA.length ? rA.reduce(function(s,c){{return s+(+c.rating||0);}},0)/rA.length : null;
-    var avgB = rB.length ? rB.reduce(function(s,c){{return s+(+c.rating||0);}},0)/rB.length : null;
-    var domA = getDomain(a.url||''); var domB = getDomain(b.url||'');
-    var ratingA = starsHtml(avgA) + (rA.length ? '<span style="font-size:11px;color:var(--text3);margin-left:4px">('+rA.length+')</span>' : '');
-    var ratingB = starsHtml(avgB) + (rB.length ? '<span style="font-size:11px;color:var(--text3);margin-left:4px">('+rB.length+')</span>' : '');
-
-    document.getElementById('cmpTitle').textContent = a.name + ' vs ' + b.name;
-    document.getElementById('pageTitle').textContent = a.name + ' vs ' + b.name + ' 2026 — Comparison | aitoolfit';
-
-    var rows = [
-      [L.ov, esc(a.description||'—'),  esc(b.description||'—')],
-      [L.pr, '<span class="badge badge-'+esc(a.badge||'')+'">'+badgeLabel(a.badge)+'</span>', '<span class="badge badge-'+esc(b.badge||'')+'">'+badgeLabel(b.badge)+'</span>'],
-      [L.us, esc(a.users||'—'),         esc(b.users||'—')],
-      [L.rt, ratingA,                   ratingB],
-      [L.ad, listHtml(a.pros,'✅'),     listHtml(b.pros,'✅')],
-      [L.ds, listHtml(a.cons,'❌'),     listHtml(b.cons,'❌')],
-      [L.wb, domA ? '<a href="'+esc(a.url)+'" target="_blank" rel="noopener" style="color:var(--accent)">'+esc(domA)+'</a>' : '—',
-              domB ? '<a href="'+esc(b.url)+'" target="_blank" rel="noopener" style="color:var(--accent)">'+esc(domB)+'</a>' : '—'],
-      ['',   '<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="'+esc(a.url||'#')+'" target="_blank" rel="noopener">'+L.vt+' →</a><a class="tool-review" href="'+BASE+'/tools/'+esc(a.slug)+'.html">'+L.rv+'</a></div>',
-              '<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="'+esc(b.url||'#')+'" target="_blank" rel="noopener">'+L.vt+' →</a><a class="tool-review" href="'+BASE+'/tools/'+esc(b.slug)+'.html">'+L.rv+'</a></div>'],
-    ];
-
-    document.getElementById('cmpResult').innerHTML =
-      '<div class="compare-wrap fade-up"><table class="compare-table"><thead><tr><th></th>' +
-        '<td style="text-align:center"><div class="tool-col-head">' +
-          '<div class="tool-col-avatar" style="background:#7c6af722"><img src="https://www.google.com/s2/favicons?sz=64&domain='+domA+'" width="30" height="30" style="border-radius:6px"></div>' +
-          '<div class="tool-col-name">'+esc(a.name)+'</div>' +
-          '<div class="tool-col-bestfor"><strong>'+L.bf+':</strong> '+esc(a.best_for||'—')+'</div>' +
-          '</div></td>' +
-        '<td style="text-align:center"><div class="tool-col-head">' +
-          '<div class="tool-col-avatar" style="background:#7c6af722"><img src="https://www.google.com/s2/favicons?sz=64&domain='+domB+'" width="30" height="30" style="border-radius:6px"></div>' +
-          '<div class="tool-col-name">'+esc(b.name)+'</div>' +
-          '<div class="tool-col-bestfor"><strong>'+L.bf+':</strong> '+esc(b.best_for||'—')+'</div>' +
-          '</div></td>' +
-      '</tr></thead><tbody>' +
-      rows.map(function(r){{return '<tr><th>'+r[0]+'</th><td class="hl">'+r[1]+'</td><td class="hl">'+r[2]+'</td></tr>';}}).join('') +
-      '</tbody></table></div>';
+  function starsHtml(avg, count) {{
+    if (!count) return '<span style="color:var(--text3);font-size:13px">'+NR+'</span>';
+    var full = Math.round(avg);
+    return '<span style="color:#f59e0b;font-size:13px;letter-spacing:1px">' + '★'.repeat(full) + '</span>' +
+           '<span style="color:#555;font-size:13px;letter-spacing:1px">'   + '★'.repeat(5-full) + '</span>' +
+           '<span style="font-size:13px;font-weight:600;color:#f0f0f0;margin-left:4px">' + avg.toFixed(1) +
+           '</span><span style="font-size:11px;color:var(--text3);margin-left:4px">('+count+')</span>';
   }}
-
-  // Fetch ratings independently — a rating error won't block tool content
-  var ratingsDone = Promise.all([fetchRating(SLUG_A), fetchRating(SLUG_B)]);
-
-  function getTools(lang) {{
-    return Promise.all([fetchTool(SLUG_A, lang), fetchTool(SLUG_B, lang)])
-      .then(function(res) {{
-        if (!Array.isArray(res[0]) || !res[0][0] || !Array.isArray(res[1]) || !res[1][0]) {{
-          if (lang !== 'en') return getTools('en');
-          return null;
-        }}
-        return [res[0][0], res[1][0]];
-      }});
-  }}
-
-  getTools(LANG).then(function(tools) {{
-    if (!tools) {{
-      document.getElementById('cmpResult').innerHTML = '<div class="cmp-loading">Content not found.</div>';
-      return;
-    }}
-    ratingsDone.then(function(ratings) {{
-      render(tools[0], tools[1], ratings[0], ratings[1]);
+  ['{cmp["a"]}', '{cmp["b"]}'].forEach(function(slug) {{
+    fetchRating(slug).then(function(rows) {{
+      var arr = Array.isArray(rows) ? rows : [];
+      var avg = arr.length ? arr.reduce(function(s,c){{return s+(+c.rating||0);}},0)/arr.length : 0;
+      var slot = document.querySelector('[data-rating-slot="'+slug+'"]');
+      if (slot) slot.innerHTML = starsHtml(avg, arr.length);
     }}).catch(function() {{
-      render(tools[0], tools[1], [], []);
+      var slot = document.querySelector('[data-rating-slot="'+slug+'"]');
+      if (slot) slot.innerHTML = '<span style="color:var(--text3);font-size:13px">'+NR+'</span>';
     }});
-  }}).catch(function() {{
-    document.getElementById('cmpResult').innerHTML = '<div class="cmp-loading">Failed to load.</div>';
   }});
 }})();
 </script>
@@ -259,12 +374,16 @@ def main():
     os.makedirs(compare_dir, exist_ok=True)
 
     total = 0
+    skipped = 0
     for cmp in COMPARISONS:
         # English
         html = build_page(cmp, 'en', f'{BASE_URL}/compare/{cmp["slug"]}.html', '🇬🇧', 'EN')
-        with open(os.path.join(compare_dir, f'{cmp["slug"]}.html'), 'w') as f:
-            f.write(html)
-        total += 1
+        if html:
+            with open(os.path.join(compare_dir, f'{cmp["slug"]}.html'), 'w', encoding='utf-8') as f:
+                f.write(html)
+            total += 1
+        else:
+            skipped += 1
 
         # Language versions
         for lang in LANGUAGES:
@@ -274,11 +393,14 @@ def main():
             lang_dir = os.path.join(ROOT, lang, 'compare')
             os.makedirs(lang_dir, exist_ok=True)
             html = build_page(cmp, lang, f'{BASE_URL}/{lang}/compare/{cmp["slug"]}.html', flag, label, rtl)
-            with open(os.path.join(lang_dir, f'{cmp["slug"]}.html'), 'w') as f:
-                f.write(html)
-            total += 1
+            if html:
+                with open(os.path.join(lang_dir, f'{cmp["slug"]}.html'), 'w', encoding='utf-8') as f:
+                    f.write(html)
+                total += 1
+            else:
+                skipped += 1
 
-    print(f'Generated {total} comparison pages ({len(COMPARISONS)} comparisons × {1+len(LANGUAGES)} languages)')
+    print(f'Generated {total} comparison pages ({len(COMPARISONS)} comparisons × {1+len(LANGUAGES)} languages){"" if not skipped else f" ({skipped} skipped)"}')
 
 if __name__ == '__main__':
     main()
