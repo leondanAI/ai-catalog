@@ -43,7 +43,7 @@
 .tool-hero-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .tool-meta-chip { display: inline-flex; align-items: center; gap: 5px; background: var(--bg3); border: 1px solid var(--border); border-radius: 20px; padding: 4px 12px; font-size: 12px; color: var(--text2); }
 .tool-best-for { font-size: 14px; color: var(--text); background: rgba(124,106,247,0.08); border-left: 3px solid var(--accent); padding: 10px 14px; border-radius: 6px; margin-top: 14px; line-height: 1.5; }
-.tool-best-for strong { color: var(--accent); font-weight: 600; }
+.tool-best-for strong { color: var(--accent); font-weight: 600; margin-inline-end: 6px; }
 [dir="rtl"] .tool-best-for { border-left: none; border-right: 3px solid var(--accent); }
 .tool-desc-block { margin-bottom: 2rem; }
 .tool-desc-block h2 { font-family: var(--font-display); font-size: 11px; font-weight: 600; margin-bottom: 0.75rem; color: var(--text2); text-transform: uppercase; letter-spacing: 0.05em; }
@@ -160,14 +160,14 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Midjourney</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Midjourney is widely regarded as the highest-quality AI image generation service available, consistently producing artwork with superior aesthetics, lighting, composition, and detail compared to any other model. Operated through a Discord bot interface and a growing web platform at midjourney.com, it has become the industry standard for designers, concept artists, art directors, and creative professionals who need high-quality visual output.</p><p style="margin-top:1rem">The V6 and subsequent models represent a major leap in photorealism and stylistic consistency. Midjourney excels at a remarkable range of aesthetics — from hyperrealistic photography and cinematic stills to oil paintings, watercolors, architectural renderings, and fashion photography — and its understanding of composition, lighting, and visual storytelling is unmatched. The community aspect is significant: millions of example images with their prompts are publicly visible in Discord channels, making it easy to learn effective prompting by studying others' work.</p><p style="margin-top:1rem">There is no free tier as of 2024. The Basic plan starts at $10/month for approximately 200 image generations. The Standard plan ($30/month) adds unlimited &quot;relaxed&quot; generations (slower queue) alongside fast generations. Midjourney is paid-only because the computational costs of running its high-quality models are significant. For commercial projects, teams producing concept art, marketing visuals, or creative direction where visual quality is critical, Midjourney remains the clear first choice.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Midjourney is widely regarded as the highest-quality AI image generation service available, consistently producing artwork with superior aesthetics, lighting, composition, and detail compared to any other model. Operated through a Discord bot interface and a growing web platform at midjourney.com, it has become the industry standard for designers, concept artists, art directors, and creative professionals who need high-quality visual output.</p><p style="margin-top:1rem">V7 (default since June 2025) and the newer V8 Alpha represent a major leap in photorealism and stylistic consistency. Midjourney excels at a remarkable range of aesthetics — from hyperrealistic photography and cinematic stills to oil paintings, watercolors, architectural renderings, and fashion photography — and its understanding of composition, lighting, and visual storytelling is unmatched. The community aspect is significant: millions of example images with their prompts are publicly visible in Discord channels, making it easy to learn effective prompting by studying others' work.</p><p style="margin-top:1rem">There is no free tier as of 2026. The Basic plan starts at $10/month for approximately 200 image generations. The Standard plan ($30/month) adds unlimited &quot;relaxed&quot; generations (slower queue) alongside fast generations. Midjourney is paid-only because the computational costs of running its high-quality models are significant. For commercial projects, teams producing concept art, marketing visuals, or creative direction where visual quality is critical, Midjourney remains the clear first choice.</p><p style="margin-top:1rem">V8 Alpha launched March 17, 2026 (V8.1 Alpha April 14, 2026) on alpha.midjourney.com, alongside Niji 7 (anime model) released January 2026 with major coherency improvements. The web interface at midjourney.com is now fully featured alongside the original Discord workflow. Pricing unchanged: Basic $10, Standard $30, Pro $60, Mega $120/month.</p></div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Best aesthetic quality — V6 sets the industry standard for photorealism and artistic styles</li>
+        <li>Best aesthetic quality — V7 sets the industry standard for photorealism and artistic styles</li>
         <li>Active Discord community with millions of example prompts to learn from</li>
         <li>Fastest iteration cycle — variations and remixes in seconds</li>
       </ul>
@@ -187,13 +187,13 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="also-card-name">Adobe Firefly</div>
       <div class="also-card-desc">Commercial design, Adobe ecosystem</div>
     </a>
+    <a class="also-card" href="/tools/chatgpt-images.html">
+      <div class="also-card-name">ChatGPT Images 2.0</div>
+      <div class="also-card-desc">Image generation, character consistency, prompt accuracy</div>
+    </a>
     <a class="also-card" href="/tools/comfyui.html">
       <div class="also-card-name">ComfyUI</div>
       <div class="also-card-desc">Advanced pipelines, game studios, custom models</div>
-    </a>
-    <a class="also-card" href="/tools/dall-e-3.html">
-      <div class="also-card-name">DALL-E 3</div>
-      <div class="also-card-desc">Prompt-accurate images, ChatGPT integration</div>
     </a>
   </div>
 

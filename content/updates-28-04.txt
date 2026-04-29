@@ -1,0 +1,604 @@
+AITOOLFIT.AI — CATALOG RESEARCH REPORT
+Date: April 28, 2026
+Scope: All tools in the catalog checked for pricing changes, new versions,
+       rebranding, shutdowns, and major feature updates.
+Action tags: [UPDATE], [SHUTDOWN], [REBRAND], [PRICING], [NEW VERSION], [ADD]
+==========================================================================
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CRITICAL — REQUIRES IMMEDIATE ACTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[SHUTDOWN] sora
+OpenAI officially shut down Sora on March 24, 2026. The app, API, and mobile
+experience are all discontinued. The company cited unsustainable compute costs
+($15M/day in GPU spend, $2.1M total lifetime revenue), weak commercial traction,
+collapse of a rumored $1B Disney partnership, and a strategic pivot toward
+enterprise productivity tools ahead of a potential IPO. The API shutdown follows
+September 24, 2026.
+ACTION: Mark as discontinued or remove from catalog. If keeping, add clear
+"discontinued" badge and update description. Suggest alternatives: Kling 3.0,
+Runway Gen-4.5, Google Veo 3.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AI CHAT & ASSISTANTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[PRICING + NEW VERSION] chatgpt
+Major pricing restructure in 2026. New tier lineup:
+- Free: $0 (ads now shown to US users since Feb 9, 2026 — labeled "Sponsored")
+- Go: $8/month (new tier launched Jan 15, 2026 — 10x more messages than free,
+  file uploads, custom GPTs, but still shows ads in US and no Advanced Voice)
+- Plus: $20/month (unchanged — GPT-5.5, DALL-E 3, Advanced Voice, web browsing)
+- Pro $100: NEW tier launched April 9, 2026 (10x Codex usage promo until May 31)
+- Pro $200: remains unchanged
+- Business: dropped from $25 to $20/seat (effective April 2, 2026)
+Latest model: GPT-5.5 launched April 23, 2026 — available on Plus, Pro,
+Business, Enterprise. Free tier stays on GPT-5.3 Instant.
+New image model: ChatGPT Images 2.0 (gpt-image-2) launched April 21, replacing
+GPT Image 1.5. DALL-E 2 and DALL-E 3 retire May 12, 2026.
+ACTION: Update pricing table. Description still accurate but mention GPT-5 family.
+The catalog currently says "GPT-4o" as top model — update to "GPT-5.5".
+
+[NO CHANGE] claude
+Claude 4.6 family (Sonnet 4.6 + Opus 4.6) is current. Pricing unchanged:
+Free / Pro $20/month / Teams $25/user. Description in catalog is accurate.
+Context window 200K tokens still correct. No action needed.
+
+[UPDATE] gemini
+Current model: Gemini 3 Pro (Nano Banana Pro). Gemini 2.5 Flash is the default
+fast model. Gemini Advanced (Google One AI Premium) at $19.99/month unchanged.
+New feature: Nano Banana Pro image generation now integrated (see image section).
+Description in catalog still broadly accurate.
+
+[UPDATE] deepseek
+DeepSeek V3 and R1 remain free and fully operational. No major changes.
+Some enterprise organizations have added DeepSeek to approved tool lists.
+Privacy concerns remain valid. Description accurate.
+
+[UPDATE] grok
+Grok 3 and Grok 3 Think remain current. xAI has not released Grok 4 yet.
+Available to X Premium subscribers ($3–$8/month). Description accurate.
+
+[NO CHANGE] meta-ai
+Llama 4 still powering Meta AI across WhatsApp/Instagram/Messenger. No pricing
+change (still free). Description accurate.
+
+[PRICING] microsoft-copilot
+Microsoft 365 Copilot for Business pricing adjusted in some markets but broadly
+unchanged at ~$30/user/month. Free Copilot at copilot.microsoft.com unchanged.
+New Copilot+ PC features added but not relevant to catalog description.
+
+[NO CHANGE] perplexity
+Perplexity Pro still $20/month. Deep Research feature still available. No major
+changes. Description and pricing accurate.
+
+[NO CHANGE] character-ai
+No major changes. Still free with c.ai+ subscription. Description accurate.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AI AGENTS & AUTOMATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[NO CHANGE] autogpt
+Still open source, GitHub stars now ~170K+. No pricing change.
+
+[NO CHANGE] lindy
+Freemium model unchanged. $49/month+ plans unchanged. Description accurate.
+
+[NO CHANGE] make
+Make (formerly Integromat) unchanged. 1,000 operations free tier still active.
+Paid from $9/month. Description accurate.
+
+[NO CHANGE] manus
+Still Freemium with limited free Tasks. Growing user base. Description accurate.
+
+[NO CHANGE] microsoft-copilot-studio
+No major structural changes. Still $200/month standalone or included in M365.
+
+[NO CHANGE] n8n
+Still open source, self-hosted free. Cloud from $20/month. Description accurate.
+
+[NO CHANGE] relevance-ai
+Freemium model with 100 credits/day free. Paid from $19/month. No major changes.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AI FOR DEVELOPMENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[PRICING + UPDATE] cursor
+Cursor switched from request-based to credit-based billing in mid-2025.
+The $20/month Pro plan now includes a $20 credit pool — Agent mode and complex
+edits burn credits faster than simple completions. Cursor 3 launched April 2026
+with Composer 2, a proprietary coding model trained from scratch by Anysphere
+(not a fine-tune). Scored 61.3 on CursorBench (+39% over previous model). Runs
+200+ tokens/second with custom GPU kernels.
+Stats: $2B ARR as of Feb 2026, 2M+ users, 1M+ paying customers, $60B valuation.
+Also now supports JetBrains IDE in addition to VS Code.
+ACTION: Update description — mention Cursor 3 / Composer 2 model. Pricing note
+should mention credit-based billing and potential overages.
+
+[REBRAND + PRICING + ACQUISITION] windsurf
+Multiple major changes:
+1. Codeium officially rebranded to Windsurf in April 2025.
+2. Acquired by Cognition AI (makers of Devin) in December 2025 for ~$250M.
+3. Pricing overhauled March 19, 2026: switched from credit-based to quota-based
+   billing. Pro price raised from $15 to $20/month (matching Cursor). New Max tier
+   at $200/month. This triggered significant user backlash. Daily/weekly quotas
+   refresh automatically.
+4. New proprietary model SWE-1.5 — 13x faster than Sonnet 4.5, approaches
+   Claude 4.5-level performance on coding benchmarks.
+Stats: 1M+ users, 4,000+ enterprise customers (FedRAMP High authorized).
+ACTION: Update description — mention Cognition/Devin acquisition, SWE-1.5 model,
+and pricing change. The "free tier cheaper than Cursor" selling point is now
+outdated — both cost $20/month Pro.
+
+[UPDATE] github-copilot
+GitHub Copilot now at 4.7M paid subscribers (largest in market, 90% of Fortune
+100). Agent Mode and Copilot Workspace added. Free tier still 2,000 completions +
+50 premium requests/month. Pricing unchanged: $10/month Pro, $19/month Business.
+Description broadly accurate, but mention Agent Mode addition.
+
+[NO CHANGE] bolt-new
+Still Freemium with 150K tokens/day free. Pro from $20/month. Description accurate.
+
+[UPDATE] claude-code
+Now available as part of Claude Pro and Max plans. Added to Claude 4.6 family.
+Leads on SWE-Bench Verified (80.8% with Opus 4.6), tied with Cursor at 18%
+workplace adoption. Background Agents added (runs autonomously while you work).
+Supports 1M context window in Beta. Description broadly accurate.
+
+[UPDATE] replit
+Replit Agent now fully integrated. Replit Core at $25/month unchanged.
+10M+ registered users still accurate. Description accurate.
+
+[NO CHANGE] v0-by-vercel
+v0 by Vercel — no major pricing or feature changes. 200 credits/month free tier
+unchanged. Pro from $20/month. Description accurate.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TEXT & COPYWRITING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[NO CHANGE] deepl
+Still most accurate translation tool. 30+ languages. Free 5K chars. Pro from
+$7.49/month. Description accurate.
+
+[UPDATE] grammarly
+GrammarlyGO (generative AI) now standard across all plans. Tone adjustments,
+full sentence rewrites built in. Premium still $12–30/month range. Works in
+500+ platforms. Description accurate but could mention GrammarlyGO by name.
+
+[NO CHANGE] hemingway-editor
+No changes. Still free on web. Desktop $19.99 one-time. Description accurate.
+
+[NO CHANGE] jasper
+Still $49/month+. Brand Voice feature still key differentiator. Description accurate.
+
+[NO CHANGE] quillbot
+30M+ users, still 8 paraphrase modes. Free 125 words/125 chars. Premium $8.33/month
+annually. Description accurate.
+
+[NO CHANGE] writesonic
+Article Writer 6.0 still current. Free 25 credits. Paid from $16/month.
+Description accurate.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MARKETING & SEO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[NO CHANGE] adcreative-ai
+Freemium from $29/month. Description accurate.
+
+[NO CHANGE] clearscope
+Still $189/month+. Enterprise-focused. Description accurate.
+
+[NO CHANGE] copy-ai
+Free 2,000 words/month. Pro from $36/month. Workflows feature intact.
+Description accurate.
+
+[NO CHANGE] frase
+From $15/month basic, $45/month with AI writing. Description accurate.
+
+[NO CHANGE] semrush
+Still from $139/month. 25B+ keyword database. ContentShake AI still active.
+Description accurate.
+
+[NO CHANGE] surferseo
+Still from $89/month. Content Editor real-time scoring unchanged. Description accurate.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+IMAGE GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[UPDATE + NEW VERSION] midjourney
+Current default: V7 (released April 3, 2025, became default June 17, 2025).
+New: V8.1 Alpha preview launched April 14, 2026 on alpha.midjourney.com.
+V8 Alpha (first version) launched March 17, 2026 — still available.
+V7 introduced Draft Mode and Omni Reference for precise character consistency.
+Niji 7 (anime model) launched January 9, 2026 with major coherency improvements.
+Pricing: UNCHANGED — Basic $10, Standard $30, Pro $60, Mega $120/month.
+No free trial still (removed in late 2024).
+Web interface now available alongside Discord.
+ACTION: Update description — mention V7 as default, V8 Alpha in preview. Remove
+any reference to V6. Pricing unchanged — no update needed there.
+
+[NEW VERSION] adobe-firefly
+Firefly now integrated with Nano Banana Pro (Gemini 3 Pro Image) capabilities.
+Generative Credits system unchanged. Commercial safety still key differentiator.
+Description broadly accurate.
+
+[NO CHANGE] comfyui
+Still fully open source, node-based. No major changes. Description accurate.
+
+[UPDATE] dall-e-3
+DALL-E 3 being retired May 12, 2026. Replaced by ChatGPT Images 2.0 (gpt-image-2)
+as the default image model in ChatGPT. DALL-E 2 also retiring May 12.
+The slug "dall-e-3" may need to be updated to "chatgpt-images" or similar.
+ACTION: Update description and possibly slug. Mention ChatGPT Images 2.0 as
+successor. Note the retirement date.
+
+[NO CHANGE] flux
+Flux.1 family (Pro, Dev, Schnell) still active and widely used. No major pricing
+or availability changes. Description accurate.
+
+[NO CHANGE] ideogram
+Still Freemium with 10 free images/day. Ideogram 2.0 current version. Best-in-class
+for text in images. Description accurate.
+
+[NO CHANGE] leonardo-ai
+150 daily tokens still free. Paid from $12/month. Description accurate.
+
+[NEW VERSION] recraft-ai
+Recraft V3 launched in late 2025 and now leads on several image generation
+benchmarks. Still best-in-class for vector/SVG output. 30 free daily credits.
+Pro from $12/month. Description accurate but could mention V3.
+
+[NO CHANGE] stable-diffusion
+SDXL and SD3 still active. ComfyUI and Automatic1111 still main interfaces.
+Open source model unchanged. Description accurate.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+VIDEO GENERATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[SHUTDOWN] sora
+SEE CRITICAL SECTION ABOVE. Sora shut down March 24, 2026.
+
+[NEW VERSION] kling-ai
+Kling 3.0 launched Q1 2026 with major upgrades:
+- 4K resolution output (was 1080p)
+- Up to 2-minute videos (unchanged but now industry-leading by default)
+- Omni One architecture: unified text-to-video + image-to-video + editing
+- Best-in-class on-screen text rendering
+- Cinematic Series mode for multi-shot narrative content
+- Kling now holds ~27% of AI video market share by ARR
+Pricing: Standard from $6.99/month (was ~$10/month) — actually got cheaper.
+Stats: 60M registered users, $300M ARR.
+ACTION: Update description — mention Kling 3.0, 4K output, Omni architecture.
+Update pricing from old figure to $6.99/month Standard.
+
+[NEW VERSION] runway
+Runway Gen-4.5 is current version (was Gen-4 in our catalog description).
+Gen-4.5 leads on temporal consistency and character persistence for production.
+4K resolution now available. Standard plan still from $15/month.
+ACTION: Update "Gen-4" references to "Gen-4.5" in description.
+
+[NEW VERSION] google-veo-3
+Google Veo 3 launched 2025. Veo 3.1 is latest version (April 2026).
+Key differentiator: native audio generation (synchronized sound effects,
+dialogue, ambient audio) — first major model to do this natively.
+Available through VideoFX, Gemini Ultra, and Flow filmmaking tool.
+Pricing: Included with Google AI Ultra subscription.
+ACTION: Update description — mention Veo 3.1 and native audio as key feature.
+
+[UPDATE] luma-ai
+Luma Dream Machine updated to Ray2 model (our description already says Ray2 ✓).
+30 free credits still one-time. Paid from $29.99/month. Description largely accurate.
+
+[NO CHANGE] pika
+Pika 2.0 current. Pikaffects still unique viral features. 80 free credits/month.
+Standard $8/month. Description accurate.
+
+[UPDATE] heygen
+HeyGen now supports 175+ languages for lip sync (was 40+ — significant upgrade).
+2M+ users. Pricing from $29/month unchanged. Description mostly accurate but
+update language count from 40 to 175+.
+
+[NO CHANGE] capcut
+Still free with no watermark. CapCut Pro at $9.99/month. 300M+ users.
+Description accurate.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DESIGN & UI/UX
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[PRICING] canva-ai
+Canva Pro price updated: now $12.99/month (was $15/month in older references).
+Free tier still available. 150M+ users. Magic Studio features unchanged.
+ACTION: Update pricing from $15 to $12.99/month.
+
+[NO CHANGE] figma-ai
+Still $12–45/user/month for Professional/Organization. AI features unchanged.
+Description accurate.
+
+[NO CHANGE] framer-ai
+Free subdomain plan. Pro from $5/month. Description accurate.
+
+[NO CHANGE] looka
+Logo from $20 one-time. Brand Kit $65–96. Description accurate.
+
+[NO CHANGE] relume
+Pro at $38/month. Figma + Webflow ecosystem. Description accurate.
+
+[NO CHANGE] remove-bg
+Still per-image pricing (~$0.10–0.20/image). API available. Description accurate.
+
+[NO CHANGE] uizard
+Free 3 projects. Pro $12/month. Description accurate.
+
+[NO CHANGE] claude-design
+Included in Claude Pro/Teams. No separate pricing. Description accurate.
+
+[NO CHANGE] looka
+No changes. Description accurate.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+VOICE & AUDIO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[UPDATE] elevenlabs
+ElevenLabs now valued at $11B (our description says this ✓).
+Now supports 120+ custom voices across 29 languages and 50 accents.
+Flash v2.5 model: 75ms latency for conversational apps. Speech-to-Text API: 98%
+accuracy. 41% of Fortune 500 employees use it.
+Pricing: Free 10K chars/month. Starter $5/month. Creator $22/month.
+Our description says "5 dollar" Starter — still accurate.
+Description accurate overall.
+
+[NO CHANGE] adobe-podcast
+Still free for basic enhancement. Requires Creative Cloud for Studio.
+Description accurate.
+
+[UPDATE] descript
+Creator plan at $24/month (was different in older references — verify).
+Free plan: 1 hour transcription/month.
+Overdub and AI features unchanged. Description largely accurate.
+
+[NO CHANGE] speechify
+Still $139/year for Premium. 20M+ users. Description accurate.
+
+[UPDATE] suno
+Suno V4 launched (improved quality and consistency over V3).
+Still 50 free credits/day. Pro at $10/month. Commercial use requires Pro.
+ACTION: Mention Suno V4 in description as current model.
+
+[NO CHANGE] udio
+Still 1,200 free creations/month. Pro at $30/month. Description accurate.
+
+[NO CHANGE] whisper
+Still open source, free. API at $0.006/minute. Description accurate.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PRODUCTIVITY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[UPDATE] notion-ai
+Major updates in 2025–2026:
+- Notion AI pricing changed: now $8/member/month (was $10) and included in
+  higher-tier Notion plans rather than as a separate add-on
+- Context window tripled from 20 to 50 pages (Jan 2026)
+- Database autofill latency dropped 70% (Jan 2026)
+- AI-powered natural language search across entire workspace (Feb 2026)
+- Custom Agents launched (April 2026) — autonomous AI teammates for repetitive work
+- Workers for Agents launched (April 2026) — code execution (JS/Python) inside
+  Notion, turning it from text tool into programmable compute platform
+- Voice input for AI prompts on macOS/Windows (April 2026)
+- AI meeting notes now generally available
+- Notion 3.2 mobile: full Agent capabilities on mobile, voice transcription
+ACTION: Update description — mention Custom Agents, Workers, voice input, and
+new pricing. The tool has grown significantly beyond what's in our description.
+
+[NO CHANGE] fireflies-ai
+Free 800 min storage. Pro $18/month. Business $29/month. Description accurate.
+
+[NO CHANGE] gamma
+Free 400 AI credits (≈4 decks). Plus $10/month. Pro $20/month. Description accurate.
+
+[NO CHANGE] otter-ai
+Free 300 min/month. Pro $17/month. OtterPilot included in Pro. Description accurate.
+
+[NO CHANGE] reclaim-ai
+Lite free. Starter $10/month. Works only with Google Calendar — not Outlook.
+Description accurate.
+
+[NO CHANGE] zapier-ai
+6,000+ apps. Free 100 tasks/month. Starter $29/month. Description accurate.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RESEARCH
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[NO CHANGE] consensus
+Still $9.99/month Premium. Free limited daily searches. Description accurate.
+
+[NO CHANGE] elicit
+5,000 free credits. Plus $12/month. Description accurate.
+
+[NO CHANGE] humata
+60 free pages. Student $1.99/month. Expert $9.99/month. Description accurate.
+
+[NO CHANGE] notebooklm
+Still free. NotebookLM Plus via Google One AI Premium. Audio Overview still
+unique feature. Description accurate.
+
+[NO CHANGE] semantic-scholar
+Still free, 200M+ papers. TLDR and Citation Graph features unchanged.
+Description accurate.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DATA & ANALYTICS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[NO CHANGE] akkio
+Starter $49/month. Professional $299/month. Description accurate.
+
+[NO CHANGE] hex
+Free 5 projects. Team $24/user/month. Description accurate.
+
+[NO CHANGE] julius-ai
+Free 15 queries/month. Basic $25/month. Description accurate.
+
+[NO CHANGE] looker-studio
+Still free (Google). Pro $9/user/month. Description accurate.
+
+[NO CHANGE] obviously-ai
+From $75/month. Description accurate.
+
+[NO CHANGE] rows
+Free 5 sheets. Pro $59/month for teams. Description accurate.
+
+[NO CHANGE] tableau-ai
+Still $75/user/month for Tableau Creator. Enterprise BI standard. Description accurate.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NO-CODE APP BUILDERS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[NO CHANGE] bubble
+Free dev plan. Starter $29/month. Growth $119/month. Description accurate.
+
+[NO CHANGE] flutterflow
+Free plan (no publish). Standard $30/month. Pro $70/month. Description accurate.
+
+[NO CHANGE] glide
+Free 25K rows. Maker $49/month. Business $99/month. Description accurate.
+
+[UPDATE] lovable
+Valuation raised to $6.6B (one of fastest-growing AI startups in 2026).
+Free 5 credits. Pro from $25/month (was $20 in older references — verify).
+Real-time collaboration for up to 20 users added.
+ACTION: Update stats — mention $6.6B valuation. Verify current Pro pricing.
+
+[NO CHANGE] softr
+Free 5 apps. Starter $49/month. Description accurate.
+
+[NO CHANGE] webflow
+Free subdomain. Basic $14/month. CMS $23/month. Business $39/month.
+Description accurate.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+EDUCATION & LEARNING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[NO CHANGE] coursera-coach
+Coursera Plus $59/month. Coach included. Description accurate.
+
+[NO CHANGE] duolingo-max
+Max $30/month. Super $7/month. Roleplay + Explain My Answer features active.
+Description accurate.
+
+[NO CHANGE] khanmigo
+$9/month ($99/year). Socratic method unchanged. Description accurate.
+
+[NO CHANGE] photomath
+Free basic. Plus $9.99/month. 220M+ downloads. Description accurate.
+
+[NO CHANGE] socratic-by-google
+Still free, no ads, no subscription. Description accurate.
+
+[NO CHANGE] synthesis
+$22/month. Ages 6–14. Math and logic focus. Description accurate.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PRESENTATIONS & SLIDES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[NO CHANGE] beautiful-ai
+Pro $12/month. Team $40/month. Description accurate.
+
+[NO CHANGE] pitch
+Free 5 active decks. Pro $8/month. Business $22/month. Description accurate.
+
+[NO CHANGE] prezi
+Free public decks. Standard $7/month. Plus $19/month. Description accurate.
+
+[NO CHANGE] slidesgo
+Basic free. Go $5.99/month. Description accurate.
+
+[NO CHANGE] tome
+Free 500 AI credits. Pro $16/month. Description accurate.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TOOLS TO CONSIDER ADDING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[ADD] chatgpt-images (gpt-image-2)
+DALL-E 3 is retiring May 12, 2026. Its successor ChatGPT Images 2.0 (model ID
+gpt-image-2) launched April 21, 2026 and is now the default image model in
+ChatGPT. Includes Instant Mode (free) and Thinking Mode (Plus+) with character
+consistency across up to 8 images. Consider adding as new entry or updating
+dall-e-3 slug/description.
+
+[ADD] veo-3 (already exists as google-veo-3 ✓)
+Already in catalog. Just needs description update for Veo 3.1 and native audio.
+
+[ADD] kling-ai (already exists ✓)
+Just needs description update for version 3.0.
+
+[ADD] opencode (optional)
+Fully open-source MIT-license CLI coding tool (alternative to Cursor/Windsurf).
+112K+ GitHub stars. Go plan $10/month. Growing fast in developer community.
+Worth considering for the catalog.
+
+[ADD] seedance-2-0 (optional)
+ByteDance's AI video model — first unified audio-video joint generation model.
+Phoneme-level lip-sync in 8+ languages. Pricing from free to $167/month.
+Gaining traction post-Sora shutdown.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SUMMARY — PRIORITY ACTION LIST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+URGENT (affects accuracy of catalog right now):
+1. sora — REMOVE or mark DISCONTINUED (shut down March 24, 2026)
+2. dall-e-3 — UPDATE to reflect retirement May 12, 2026 / ChatGPT Images 2.0
+3. chatgpt — UPDATE pricing tiers (new Go $8, Pro $100, Business $20, GPT-5.5)
+4. windsurf — UPDATE: acquired by Cognition, Pro now $20/month (was $15),
+   SWE-1.5 model, rebranded from Codeium April 2025
+5. cursor — UPDATE: credit-based billing, Cursor 3 / Composer 2 model
+
+IMPORTANT (notable updates worth reflecting):
+6. kling-ai — UPDATE: version 3.0, 4K, $6.99/month Standard, 60M users
+7. runway — UPDATE: Gen-4.5 (not Gen-4)
+8. google-veo-3 — UPDATE: Veo 3.1, native audio generation
+9. notion-ai — UPDATE: major feature expansion (Workers, Custom Agents, voice)
+10. midjourney — UPDATE: V7 default, V8 Alpha preview, no free trial
+11. heygen — UPDATE: 175+ languages (was 40+)
+12. canva-ai — UPDATE: Pro pricing $12.99/month (was $15)
+13. suno — UPDATE: V4 current model
+14. lovable — UPDATE: $6.6B valuation, real-time collaboration
+
+OPTIONAL (minor or low-impact):
+15. grammarly — mention GrammarlyGO by name
+16. cursor — mention JetBrains support added
+17. recraft-ai — mention Recraft V3
+18. Add opencode or seedance-2-0 as new entries (if relevant to audience)

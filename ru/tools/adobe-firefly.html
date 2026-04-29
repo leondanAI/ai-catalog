@@ -38,7 +38,7 @@
 .tool-hero-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .tool-meta-chip{display:inline-flex;align-items:center;gap:5px;background:var(--bg3);border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-size:12px;color:var(--text2)}
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
-.tool-best-for strong{color:var(--accent);font-weight:600}
+.tool-best-for strong{color:var(--accent);font-weight:600;margin-inline-end:6px}
 [dir="rtl"] .tool-best-for{border-left:none;border-right:3px solid var(--accent)}
 .tool-desc-block{margin-bottom:2rem}
 .tool-desc-block h2{font-size:11px;font-weight:600;margin-bottom:.75rem;color:var(--text2);text-transform:uppercase;letter-spacing:.05em}
@@ -135,7 +135,7 @@ textarea.form-input{resize:vertical;min-height:90px}
   <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
   <div class="tool-desc-block">
     <h2>О сервисе Adobe Firefly</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Adobe Firefly — это семейство генеративных ИИ-моделей от Adobe, интегрированных во весь пакет Creative Cloud и доступных на firefly.adobe.com. Главное отличие от всех конкурирующих инструментов для генерации изображений заключается в том, что Firefly обучался исключительно на лицензионных стоковых изображениях, контенте Adobe Stock и материалах из общественного достояния — это означает, что каждое сгенерированное изображение можно безопасно использовать в коммерческих целях без опасений по поводу авторских прав.</p><p style="margin-top:1rem">Функция Generative Fill в Photoshop — пожалуй, самый практически полезный ИИ-инструмент для работы с изображениями из доступных сегодня: выделите любую область фотографии, опишите, что хотите добавить или заменить, и Photoshop сгенерирует фотореалистичный результат, органично вписывающийся в освещение, перспективу и стиль окружающего изображения. Удаляйте нежелательные объекты, расширяйте фоны, меняйте одежду или добавляйте элементы — всё это за секунды без ручного маскирования или ретуши. Одна эта функция оправдывает подписку на Creative Cloud для фотографов и ретушёров.</p><p style="margin-top:1rem">Firefly доступен как самостоятельный веб-инструмент с 25 бесплатными генеративными кредитами в месяц и глубоко интегрирован в Photoshop, Illustrator, InDesign, Express и Premiere Pro для подписчиков. Эстетический диапазон более сдержанный и корпоративный по сравнению с Midjourney — Firefly создаёт чистые, коммерчески ориентированные изображения, а не художественный или экспериментальный контент. Для маркетинговых команд, e-commerce бизнеса и креативных агентств, которым нужен ИИ-контент, разрешённый для коммерческого использования, Firefly — самый безопасный и юридически защищённый выбор.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Adobe Firefly — это семейство генеративных ИИ-моделей от Adobe, интегрированных во весь пакет Creative Cloud и доступных на firefly.adobe.com. Главное отличие от всех конкурирующих инструментов для генерации изображений заключается в том, что Firefly обучался исключительно на лицензионных стоковых изображениях, контенте Adobe Stock и материалах из общественного достояния — это означает, что каждое сгенерированное изображение можно безопасно использовать в коммерческих целях без опасений по поводу авторских прав.</p><p style="margin-top:1rem">Функция Generative Fill в Photoshop — пожалуй, самый практически полезный ИИ-инструмент для работы с изображениями из доступных сегодня: выделите любую область фотографии, опишите, что хотите добавить или заменить, и Photoshop сгенерирует фотореалистичный результат, органично вписывающийся в освещение, перспективу и стиль окружающего изображения. Удаляйте нежелательные объекты, расширяйте фоны, меняйте одежду или добавляйте элементы — всё это за секунды без ручного маскирования или ретуши. Одна эта функция оправдывает подписку на Creative Cloud для фотографов и ретушёров.</p><p style="margin-top:1rem">Firefly доступен как самостоятельный веб-инструмент с 25 бесплатными генеративными кредитами в месяц и глубоко интегрирован в Photoshop, Illustrator, InDesign, Express и Premiere Pro для подписчиков. Эстетический диапазон более сдержанный и корпоративный по сравнению с Midjourney — Firefly создаёт чистые, коммерчески ориентированные изображения, а не художественный или экспериментальный контент. Для маркетинговых команд, e-commerce бизнеса и креативных агентств, которым нужен ИИ-контент, разрешённый для коммерческого использования, Firefly — самый безопасный и юридически защищённый выбор.</p><p style="margin-top:1rem">В 2026 Adobe Firefly интегрирован с Nano Banana Pro (моделью Google Gemini 3 Pro Image), привнося в Creative Cloud согласованность персонажей и контекстное редактирование уровня Gemini рядом с собственной коммерчески-безопасной моделью Firefly от Adobe. Система Generative Credits без изменений.</p></div>
   </div>
   <div class="pros-cons">
     <div class="pc-box pros"><div class="pc-title">Преимущества</div><ul class="pc-list">        <li>Обучен исключительно на лицензионном контенте — коммерчески безопасен без опасений по поводу авторских прав</li>
@@ -148,17 +148,17 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a class="btn-visit" href="https://firefly.adobe.com" target="_blank" rel="noopener">Перейти на Adobe Firefly →</a>
   </div>
   <div class="section-title-sm">Также рассмотрите</div>
-  <div class="also-grid">    <a class="also-card" href="/ru/tools/comfyui.html">
+  <div class="also-grid">    <a class="also-card" href="/ru/tools/chatgpt-images.html">
+      <div class="also-card-name">ChatGPT Images 2.0</div>
+      <div class="also-card-desc">Image generation, character consistency, prompt accuracy</div>
+    </a>
+    <a class="also-card" href="/ru/tools/comfyui.html">
       <div class="also-card-name">ComfyUI</div>
       <div class="also-card-desc">Advanced pipelines, game studios, custom models</div>
     </a>
     <a class="also-card" href="/ru/tools/dall-e-3.html">
       <div class="also-card-name">DALL-E 3</div>
       <div class="also-card-desc">Prompt-accurate images, ChatGPT integration</div>
-    </a>
-    <a class="also-card" href="/ru/tools/flux.html">
-      <div class="also-card-name">Flux</div>
-      <div class="also-card-desc">Open-source, high quality, free Midjourney alternative</div>
     </a>
 </div>
   <div class="comments-section">

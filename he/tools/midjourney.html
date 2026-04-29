@@ -38,7 +38,7 @@
 .tool-hero-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .tool-meta-chip{display:inline-flex;align-items:center;gap:5px;background:var(--bg3);border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-size:12px;color:var(--text2)}
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
-.tool-best-for strong{color:var(--accent);font-weight:600}
+.tool-best-for strong{color:var(--accent);font-weight:600;margin-inline-end:6px}
 [dir="rtl"] .tool-best-for{border-left:none;border-right:3px solid var(--accent)}
 .tool-desc-block{margin-bottom:2rem}
 .tool-desc-block h2{font-size:11px;font-weight:600;margin-bottom:.75rem;color:var(--text2);text-transform:uppercase;letter-spacing:.05em}
@@ -135,7 +135,7 @@ textarea.form-input{resize:vertical;min-height:90px}
   <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
   <div class="tool-desc-block">
     <h2>אודות Midjourney</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Midjourney היא פלטפורמת יצירת התמונות היוקרתית ביותר בשוק — וב-2026 עדיין נחשבת לסטנדרט הזהב לאיכות אמנותית ופוטוריאליזם. עם למעלה מ-20 מיליון משתמשים, היא הכלי שמעצבים, צלמים ואמנים דיגיטליים מפנים אליו כשהם צריכים את הטוב ביותר — ולא פחות מזה.</p><p style="margin-top:1rem">גרסת Midjourney 6, שהושקה ב-2024, הציגה קפיצת מדרגה משמעותית: ריאליזם ברמה שקשה להבחין מצילום אמיתי, הבנת הנחיות עמוקה יותר, ואיכות פרטים מרשימה בטקסטורות, תאורה והבעות פנים. גרסה 7 שהושקה ב-2025 הוסיפה יכולות וידאו קצר ישירות מהפלטפורמה.</p><p style="margin-top:1rem">Midjourney פועלת דרך Discord בלבד — ממשק שדורש קצת הסתגלות אבל בנוי לקהילה: ניתן לראות מה יוצרים אחרים, להתעורר על סגנונות חדשים, ולשתף פעולה. המחיר מתחיל מ-10 דולר לחודש (200 יצירות). אין גרסה חינמית. עבור מי שרוצה את תקרת האיכות הגבוהה ביותר ביצירת תמונות AI — Midjourney היא עדיין המלכה.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Midjourney היא פלטפורמת יצירת התמונות היוקרתית ביותר בשוק — וב-2026 עדיין נחשבת לסטנדרט הזהב לאיכות אמנותית ופוטוריאליזם. עם למעלה מ-20 מיליון משתמשים, היא הכלי שמעצבים, צלמים ואמנים דיגיטליים מפנים אליו כשהם צריכים את הטוב ביותר — ולא פחות מזה.</p><p style="margin-top:1rem">גרסת Midjourney 6, שהושקה ב-2024, הציגה קפיצת מדרגה משמעותית: ריאליזם ברמה שקשה להבחין מצילום אמיתי, הבנת הנחיות עמוקה יותר, ואיכות פרטים מרשימה בטקסטורות, תאורה והבעות פנים. גרסה 7 שהושקה ב-2025 הוסיפה יכולות וידאו קצר ישירות מהפלטפורמה.</p><p style="margin-top:1rem">Midjourney פועלת דרך Discord בלבד — ממשק שדורש קצת הסתגלות אבל בנוי לקהילה: ניתן לראות מה יוצרים אחרים, להתעורר על סגנונות חדשים, ולשתף פעולה. המחיר מתחיל מ-10 דולר לחודש (200 יצירות). אין גרסה חינמית. עבור מי שרוצה את תקרת האיכות הגבוהה ביותר ביצירת תמונות AI — Midjourney היא עדיין המלכה.</p><p style="margin-top:1rem">V8 Alpha הושקה ב-17 במרץ 2026 (V8.1 Alpha ב-14 באפריל 2026) ב-alpha.midjourney.com, יחד עם Niji 7 (מודל אנימה) שיצא בינואר 2026 עם שיפורי קוהרנטיות משמעותיים. ממשק האינטרנט ב-midjourney.com מוצע כעת במלוא היכולות לצד workflow המקורי ב-Discord. תמחור ללא שינוי: Basic $10, Standard $30, Pro $60, Mega $120/חודש.</p></div>
   </div>
   <div class="pros-cons">
     <div class="pc-box pros"><div class="pc-title">יתרונות</div><ul class="pc-list">        <li>איכות האמנות והריאליזם הגבוהה ביותר בשוק — סטנדרט הזהב</li>
@@ -152,13 +152,13 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="also-card-name">Adobe Firefly</div>
       <div class="also-card-desc">Commercial design, Adobe ecosystem</div>
     </a>
+    <a class="also-card" href="/he/tools/chatgpt-images.html">
+      <div class="also-card-name">ChatGPT Images 2.0</div>
+      <div class="also-card-desc">Image generation, character consistency, prompt accuracy</div>
+    </a>
     <a class="also-card" href="/he/tools/comfyui.html">
       <div class="also-card-name">ComfyUI</div>
       <div class="also-card-desc">Advanced pipelines, game studios, custom models</div>
-    </a>
-    <a class="also-card" href="/he/tools/dall-e-3.html">
-      <div class="also-card-name">DALL-E 3</div>
-      <div class="also-card-desc">Prompt-accurate images, ChatGPT integration</div>
     </a>
 </div>
   <div class="comments-section">

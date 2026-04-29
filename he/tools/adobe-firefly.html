@@ -38,7 +38,7 @@
 .tool-hero-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .tool-meta-chip{display:inline-flex;align-items:center;gap:5px;background:var(--bg3);border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-size:12px;color:var(--text2)}
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
-.tool-best-for strong{color:var(--accent);font-weight:600}
+.tool-best-for strong{color:var(--accent);font-weight:600;margin-inline-end:6px}
 [dir="rtl"] .tool-best-for{border-left:none;border-right:3px solid var(--accent)}
 .tool-desc-block{margin-bottom:2rem}
 .tool-desc-block h2{font-size:11px;font-weight:600;margin-bottom:.75rem;color:var(--text2);text-transform:uppercase;letter-spacing:.05em}
@@ -135,7 +135,7 @@ textarea.form-input{resize:vertical;min-height:90px}
   <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
   <div class="tool-desc-block">
     <h2>אודות Adobe Firefly</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Adobe Firefly הוא מחולל התמונות של Adobe — מובנה ישירות בתוך Photoshop, Illustrator ו-Adobe Express. מה שמייחד אותו מכל מחולל תמונות אחר הוא ההיבט המשפטי: Firefly אומן אך ורק על תמונות מ-Adobe Stock וממאגרי תמונות עם רישיון פתוח, כך שכל תמונה שנוצרת בו בטוחה לשימוש מסחרי ללא חשש מתביעות זכויות יוצרים.</p><p style="margin-top:1rem">הפיצ'רים הבולטים של Firefly בתוך Photoshop הם Generative Fill ו-Generative Expand: ניתן לסמן אזור בתמונה ולבקש ממנו למלא אותו בתוכן חדש שמשתלב בצורה מושלמת, או להרחיב את גבולות התמונה לכיוון כלשהו — והכל נראה טבעי ואמין. זה שינה לחלוטין את תהליך העריכה לצלמים ומעצבים.</p><p style="margin-top:1rem">Adobe Firefly זמין בחינם עם 25 קרדיטים גנרטיביים לחודש, ומנויי Creative Cloud מקבלים קרדיטים נוספים לפי רמת המנוי. עבור מעצבים גרפיים, צלמים ויוצרי תוכן שכבר עובדים עם כלי Adobe — Firefly הוא השדרוג הטבעי שמוסיף AI לזרימת העבודה הקיימת בלי לשנות שום הרגל.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Adobe Firefly הוא מחולל התמונות של Adobe — מובנה ישירות בתוך Photoshop, Illustrator ו-Adobe Express. מה שמייחד אותו מכל מחולל תמונות אחר הוא ההיבט המשפטי: Firefly אומן אך ורק על תמונות מ-Adobe Stock וממאגרי תמונות עם רישיון פתוח, כך שכל תמונה שנוצרת בו בטוחה לשימוש מסחרי ללא חשש מתביעות זכויות יוצרים.</p><p style="margin-top:1rem">הפיצ'רים הבולטים של Firefly בתוך Photoshop הם Generative Fill ו-Generative Expand: ניתן לסמן אזור בתמונה ולבקש ממנו למלא אותו בתוכן חדש שמשתלב בצורה מושלמת, או להרחיב את גבולות התמונה לכיוון כלשהו — והכל נראה טבעי ואמין. זה שינה לחלוטין את תהליך העריכה לצלמים ומעצבים.</p><p style="margin-top:1rem">Adobe Firefly זמין בחינם עם 25 קרדיטים גנרטיביים לחודש, ומנויי Creative Cloud מקבלים קרדיטים נוספים לפי רמת המנוי. עבור מעצבים גרפיים, צלמים ויוצרי תוכן שכבר עובדים עם כלי Adobe — Firefly הוא השדרוג הטבעי שמוסיף AI לזרימת העבודה הקיימת בלי לשנות שום הרגל.</p><p style="margin-top:1rem">ב-2026 Adobe Firefly הוסיף אינטגרציה עם Nano Banana Pro (מודל Gemini 3 Pro Image של Google), והביא ל-Creative Cloud עקביות דמויות ועריכה בהקשר ברמת Gemini לצד מודל Firefly הבטוח מסחרית של Adobe. מערכת Generative Credits ללא שינוי.</p></div>
   </div>
   <div class="pros-cons">
     <div class="pc-box pros"><div class="pc-title">יתרונות</div><ul class="pc-list">        <li>אומן על תמונות ברישיון בלבד — בטוח לשימוש מסחרי ללא חשש מזכויות יוצרים</li>
@@ -148,17 +148,17 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a class="btn-visit" href="https://firefly.adobe.com" target="_blank" rel="noopener">בקר ב Adobe Firefly ←</a>
   </div>
   <div class="section-title-sm">שקול גם</div>
-  <div class="also-grid">    <a class="also-card" href="/he/tools/comfyui.html">
+  <div class="also-grid">    <a class="also-card" href="/he/tools/chatgpt-images.html">
+      <div class="also-card-name">ChatGPT Images 2.0</div>
+      <div class="also-card-desc">Image generation, character consistency, prompt accuracy</div>
+    </a>
+    <a class="also-card" href="/he/tools/comfyui.html">
       <div class="also-card-name">ComfyUI</div>
       <div class="also-card-desc">Advanced pipelines, game studios, custom models</div>
     </a>
     <a class="also-card" href="/he/tools/dall-e-3.html">
       <div class="also-card-name">DALL-E 3</div>
       <div class="also-card-desc">Prompt-accurate images, ChatGPT integration</div>
-    </a>
-    <a class="also-card" href="/he/tools/flux.html">
-      <div class="also-card-name">Flux</div>
-      <div class="also-card-desc">Open-source, high quality, free Midjourney alternative</div>
     </a>
 </div>
   <div class="comments-section">

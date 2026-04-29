@@ -38,7 +38,7 @@
 .tool-hero-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .tool-meta-chip{display:inline-flex;align-items:center;gap:5px;background:var(--bg3);border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-size:12px;color:var(--text2)}
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
-.tool-best-for strong{color:var(--accent);font-weight:600}
+.tool-best-for strong{color:var(--accent);font-weight:600;margin-inline-end:6px}
 [dir="rtl"] .tool-best-for{border-left:none;border-right:3px solid var(--accent)}
 .tool-desc-block{margin-bottom:2rem}
 .tool-desc-block h2{font-size:11px;font-weight:600;margin-bottom:.75rem;color:var(--text2);text-transform:uppercase;letter-spacing:.05em}
@@ -135,7 +135,7 @@ textarea.form-input{resize:vertical;min-height:90px}
   <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
   <div class="tool-desc-block">
     <h2>אודות DALL-E 3</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">DALL-E 3 הוא מחולל התמונות של OpenAI — מובנה ישירות בתוך ChatGPT ונגיש גם דרך ה-API. בניגוד לגרסאות הקודמות, DALL-E 3 מצטיין בהבנת הנחיות מורכבות: ניתן לכתוב פסקה שלמה עם פרטים, מצב רוח, סגנון ואלמנטים ספציפיים — והתוצאה תשקף את הבקשה בדיוק. זה הפך אותו לנגיש מאוד גם למי שלא מכיר &quot;prompt engineering&quot;.</p><p style="margin-top:1rem">היתרון הגדול של DALL-E 3 על פני מתחרים הוא האינטגרציה עם ChatGPT: ניתן לנהל שיחה על התמונה שרוצים ליצור, לבקש עדכונים בשפה טבעית, ולשלב בין יצירת טקסט ותמונות בסשן אחד. ChatGPT גם יכול לשפר אוטומטית את ה-prompt שלכם לפני שהוא שולח אותו ל-DALL-E 3.</p><p style="margin-top:1rem">DALL-E 3 זמין בחינם למשתמשי ChatGPT עם מגבלות יומיות, ו-ChatGPT Plus (20 דולר לחודש) מסיר את המגבלות. דרך ה-API של OpenAI, המחיר הוא כ-0.04 דולר לתמונה ברזולוציה סטנדרטית. לאנשים שכבר עובדים עם ChatGPT ורוצים לשלב יצירת תמונות בזרימת העבודה — DALL-E 3 הוא הפתרון הנוח ביותר.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">DALL-E 3 הוא מחולל התמונות של OpenAI — מובנה ישירות בתוך ChatGPT ונגיש גם דרך ה-API. בניגוד לגרסאות הקודמות, DALL-E 3 מצטיין בהבנת הנחיות מורכבות: ניתן לכתוב פסקה שלמה עם פרטים, מצב רוח, סגנון ואלמנטים ספציפיים — והתוצאה תשקף את הבקשה בדיוק. זה הפך אותו לנגיש מאוד גם למי שלא מכיר &quot;prompt engineering&quot;.</p><p style="margin-top:1rem">היתרון הגדול של DALL-E 3 על פני מתחרים הוא האינטגרציה עם ChatGPT: ניתן לנהל שיחה על התמונה שרוצים ליצור, לבקש עדכונים בשפה טבעית, ולשלב בין יצירת טקסט ותמונות בסשן אחד. ChatGPT גם יכול לשפר אוטומטית את ה-prompt שלכם לפני שהוא שולח אותו ל-DALL-E 3.</p><p style="margin-top:1rem">DALL-E 3 זמין בחינם למשתמשי ChatGPT עם מגבלות יומיות, ו-ChatGPT Plus (20 דולר לחודש) מסיר את המגבלות. דרך ה-API של OpenAI, המחיר הוא כ-0.04 דולר לתמונה ברזולוציה סטנדרטית. לאנשים שכבר עובדים עם ChatGPT ורוצים לשלב יצירת תמונות בזרימת העבודה — DALL-E 3 הוא הפתרון הנוח ביותר.</p><p style="margin-top:1rem">DALL·E 3 ייצא משימוש ב-12 במאי 2026 יחד עם DALL·E 2. היורש שלו — ChatGPT Images 2.0 (model ID gpt-image-2) — הושק ב-21 באפריל 2026 והוא כעת מודל התמונות ברירת המחדל ב-ChatGPT. לפרויקטים חדשים מומלץ להשתמש ב-ChatGPT Images 2.0 ישירות.</p></div>
   </div>
   <div class="pros-cons">
     <div class="pc-box pros"><div class="pc-title">יתרונות</div><ul class="pc-list">        <li>הבנת הנחיות מורכבות מצוינת — ניתן לתאר פסקה שלמה</li>
@@ -152,13 +152,13 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="also-card-name">Adobe Firefly</div>
       <div class="also-card-desc">Commercial design, Adobe ecosystem</div>
     </a>
+    <a class="also-card" href="/he/tools/chatgpt-images.html">
+      <div class="also-card-name">ChatGPT Images 2.0</div>
+      <div class="also-card-desc">Image generation, character consistency, prompt accuracy</div>
+    </a>
     <a class="also-card" href="/he/tools/comfyui.html">
       <div class="also-card-name">ComfyUI</div>
       <div class="also-card-desc">Advanced pipelines, game studios, custom models</div>
-    </a>
-    <a class="also-card" href="/he/tools/flux.html">
-      <div class="also-card-name">Flux</div>
-      <div class="also-card-desc">Open-source, high quality, free Midjourney alternative</div>
     </a>
 </div>
   <div class="comments-section">

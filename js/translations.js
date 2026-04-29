@@ -301,6 +301,30 @@ const TOOL_TRANSLATIONS = {
     ua: 'AI-редактор зображень на базі Google Gemini 2.5/3 Pro Image. Найкраща в галузі узгодженість персонажів — обличчя, одяг та композиція залишаються однаковими між правками.',
   },
 
+  'ChatGPT Images 2.0': {
+    he: 'מודל התמונות הדגל של OpenAI — gpt-image-2, הושק ב-21 באפריל 2026 כברירת מחדל ב-ChatGPT. חשיבה טבעית, רזולוציית 2K ועקביות דמויות עד 8 תמונות.',
+    ru: 'Флагманская модель изображений OpenAI — gpt-image-2, запущена 21 апреля 2026 как дефолтная в ChatGPT. Нативное reasoning, разрешение 2K, согласованность персонажей до 8 изображений.',
+    es: 'Modelo insignia de imágenes de OpenAI — gpt-image-2, lanzado el 21 de abril de 2026 como predeterminado en ChatGPT. Razonamiento nativo, resolución 2K y consistencia de personajes en hasta 8 imágenes.',
+    de: 'OpenAIs Flaggschiff-Bildmodell — gpt-image-2, veröffentlicht am 21. April 2026 als Standard in ChatGPT. Natives Reasoning, 2K-Auflösung und Charakterkonsistenz über bis zu 8 Bilder.',
+    ua: 'Флагманська модель зображень OpenAI — gpt-image-2, запущена 21 квітня 2026 як модель за замовчуванням у ChatGPT. Нативне reasoning, роздільна здатність 2K, узгодженість персонажів до 8 зображень.',
+  },
+
+  'OpenCode': {
+    he: 'סוכן קידוד AI בקוד פתוח (רישיון MIT) לטרמינל. תומך בלמעלה מ-75 ספקי LLM (Claude, GPT, Gemini, Grok, DeepSeek, Ollama מקומי). 140K+ כוכבי GitHub.',
+    ru: 'Open-source AI-агент для кодинга (лицензия MIT) для терминала. Поддерживает 75+ LLM-провайдеров (Claude, GPT, Gemini, Grok, DeepSeek, локальный Ollama). 140K+ звёзд GitHub.',
+    es: 'Agente de codificación con IA open source (licencia MIT) para la terminal. Soporta 75+ proveedores LLM (Claude, GPT, Gemini, Grok, DeepSeek, Ollama local). 140K+ estrellas en GitHub.',
+    de: 'Open-Source-AI-Coding-Agent (MIT-Lizenz) für das Terminal. Unterstützt 75+ LLM-Anbieter (Claude, GPT, Gemini, Grok, DeepSeek, lokales Ollama). 140K+ GitHub-Stars.',
+    ua: 'Open-source AI-агент для кодінгу (ліцензія MIT) для терміналу. Підтримує 75+ LLM-провайдерів (Claude, GPT, Gemini, Grok, DeepSeek, локальний Ollama). 140K+ зірок GitHub.',
+  },
+
+  'Seedance 2.0': {
+    he: 'מודל הווידאו AI מהדור הבא של ByteDance — יצירה משותפת רב-מודאלית של אודיו ווידאו. 1080p, לי-סינק טבעי ב-8+ שפות, סרטונים רב-שוטיים עד 15 שניות.',
+    ru: 'AI-видео модель нового поколения от ByteDance — единая мультимодальная совместная генерация аудио-видео. 1080p, нативный lip-sync на 8+ языках, мульти-планные ролики до 15 секунд.',
+    es: 'Modelo de vídeo IA de próxima generación de ByteDance — generación conjunta multimodal audio-vídeo unificada. 1080p, lip-sync nativo en 8+ idiomas, vídeos multi-toma de hasta 15 segundos.',
+    de: 'ByteDances KI-Videomodell der nächsten Generation — vereinheitlichte multimodale Audio-Video-Generierung. 1080p, natives Lip-Sync in 8+ Sprachen, Multi-Shot-Videos bis 15 Sekunden.',
+    ua: 'AI-відео модель нового покоління від ByteDance — єдина мультимодальна спільна генерація аудіо-відео. 1080p, нативний lip-sync 8+ мовами, багатопланові ролики до 15 секунд.',
+  },
+
   'Midjourney': {
     ru: 'Лучшее качество ИИ-арта. Фотореализм и художественные стили в любом жанре. Отраслевой стандарт для дизайнеров.',
     es: 'La mejor calidad en arte IA. Fotorrealismo y estilos artísticos en cualquier género. Estándar de la industria para diseñadores.',

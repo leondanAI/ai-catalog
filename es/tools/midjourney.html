@@ -38,7 +38,7 @@
 .tool-hero-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .tool-meta-chip{display:inline-flex;align-items:center;gap:5px;background:var(--bg3);border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-size:12px;color:var(--text2)}
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
-.tool-best-for strong{color:var(--accent);font-weight:600}
+.tool-best-for strong{color:var(--accent);font-weight:600;margin-inline-end:6px}
 [dir="rtl"] .tool-best-for{border-left:none;border-right:3px solid var(--accent)}
 .tool-desc-block{margin-bottom:2rem}
 .tool-desc-block h2{font-size:11px;font-weight:600;margin-bottom:.75rem;color:var(--text2);text-transform:uppercase;letter-spacing:.05em}
@@ -135,10 +135,10 @@ textarea.form-input{resize:vertical;min-height:90px}
   <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
   <div class="tool-desc-block">
     <h2>Acerca de Midjourney</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Midjourney es ampliamente considerado el servicio de generación de imágenes con IA de mayor calidad disponible, produciendo de forma consistente obras de arte con una estética, iluminación, composición y nivel de detalle superiores a cualquier otro modelo. Operado a través de un bot de Discord y una creciente plataforma web en midjourney.com, se ha convertido en el estándar de la industria para diseñadores, artistas conceptuales, directores de arte y profesionales creativos que necesitan resultados visuales de alta calidad.</p><p style="margin-top:1rem">Los modelos V6 y posteriores representan un gran avance en fotorrealismo y coherencia estilística. Midjourney destaca en una notable variedad de estéticas — desde fotografía hiperrealista y fotogramas cinematográficos hasta pinturas al óleo, acuarelas, renderizados arquitectónicos y fotografía de moda — y su comprensión de la composición, la iluminación y la narrativa visual no tiene rival. El aspecto comunitario es significativo: millones de imágenes de ejemplo con sus prompts son visibles públicamente en los canales de Discord, lo que facilita aprender a crear prompts efectivos estudiando el trabajo de otros.</p><p style="margin-top:1rem">No existe un nivel gratuito desde 2024. El plan Basic comienza en $10/mes para aproximadamente 200 generaciones de imágenes. El plan Standard ($30/mes) añade generaciones &quot;relajadas&quot; ilimitadas (cola más lenta) junto con generaciones rápidas. Midjourney es de pago exclusivo porque los costes computacionales de ejecutar sus modelos de alta calidad son significativos. Para proyectos comerciales, equipos que producen arte conceptual, visuales de marketing o dirección creativa donde la calidad visual es crítica, Midjourney sigue siendo la primera opción indiscutible.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Midjourney es ampliamente considerado el servicio de generación de imágenes con IA de mayor calidad disponible, produciendo de forma consistente obras de arte con una estética, iluminación, composición y nivel de detalle superiores a cualquier otro modelo. Operado a través de un bot de Discord y una creciente plataforma web en midjourney.com, se ha convertido en el estándar de la industria para diseñadores, artistas conceptuales, directores de arte y profesionales creativos que necesitan resultados visuales de alta calidad.</p><p style="margin-top:1rem">Los modelos V6 y posteriores representan un gran avance en fotorrealismo y coherencia estilística. Midjourney destaca en una notable variedad de estéticas — desde fotografía hiperrealista y fotogramas cinematográficos hasta pinturas al óleo, acuarelas, renderizados arquitectónicos y fotografía de moda — y su comprensión de la composición, la iluminación y la narrativa visual no tiene rival. El aspecto comunitario es significativo: millones de imágenes de ejemplo con sus prompts son visibles públicamente en los canales de Discord, lo que facilita aprender a crear prompts efectivos estudiando el trabajo de otros.</p><p style="margin-top:1rem">No existe un nivel gratuito desde 2024. El plan Basic comienza en $10/mes para aproximadamente 200 generaciones de imágenes. El plan Standard ($30/mes) añade generaciones &quot;relajadas&quot; ilimitadas (cola más lenta) junto con generaciones rápidas. Midjourney es de pago exclusivo porque los costes computacionales de ejecutar sus modelos de alta calidad son significativos. Para proyectos comerciales, equipos que producen arte conceptual, visuales de marketing o dirección creativa donde la calidad visual es crítica, Midjourney sigue siendo la primera opción indiscutible.</p><p style="margin-top:1rem">V8 Alpha se lanzó el 17 de marzo de 2026 (V8.1 Alpha el 14 de abril de 2026) en alpha.midjourney.com, junto con Niji 7 (modelo anime) lanzado en enero 2026 con grandes mejoras de coherencia. La interfaz web en midjourney.com ahora está completamente equipada junto al flujo original de Discord. Precios sin cambios: Basic $10, Standard $30, Pro $60, Mega $120/mes.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Ventajas</div><ul class="pc-list">        <li>Mejor calidad estética — V6 establece el estándar de la industria en fotorrealismo y estilos artísticos</li>
+    <div class="pc-box pros"><div class="pc-title">Ventajas</div><ul class="pc-list">        <li>Mejor calidad estética — V7 establece el estándar de la industria en fotorrealismo y estilos artísticos</li>
         <li>Comunidad activa en Discord con millones de prompts de ejemplo para aprender</li>
         <li>Ciclo de iteración más rápido — variaciones y remixes en segundos</li></ul></div>
     <div class="pc-box cons"><div class="pc-title">Desventajas</div><ul class="pc-list">        <li>Requiere Discord — sin interfaz web independiente ni API</li>
@@ -152,13 +152,13 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="also-card-name">Adobe Firefly</div>
       <div class="also-card-desc">Commercial design, Adobe ecosystem</div>
     </a>
+    <a class="also-card" href="/es/tools/chatgpt-images.html">
+      <div class="also-card-name">ChatGPT Images 2.0</div>
+      <div class="also-card-desc">Image generation, character consistency, prompt accuracy</div>
+    </a>
     <a class="also-card" href="/es/tools/comfyui.html">
       <div class="also-card-name">ComfyUI</div>
       <div class="also-card-desc">Advanced pipelines, game studios, custom models</div>
-    </a>
-    <a class="also-card" href="/es/tools/dall-e-3.html">
-      <div class="also-card-name">DALL-E 3</div>
-      <div class="also-card-desc">Prompt-accurate images, ChatGPT integration</div>
     </a>
 </div>
   <div class="comments-section">

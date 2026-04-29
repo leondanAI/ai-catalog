@@ -505,7 +505,7 @@ async function tfRender(data) {
     const bestForText = inCatalog ? (info.db.best_for || '') : '';
     const bestForHtml = bestForText ? `
       <div class="tf3-section">
-        <div style="font-size:13px;color:var(--text);background:rgba(124,106,247,0.08);border-inline-start:3px solid var(--accent);padding:8px 12px;border-radius:6px;line-height:1.45"><strong style="color:var(--accent);font-weight:600">${t('compare.bestFor')}:</strong> ${tfEsc(bestForText)}</div>
+        <div style="font-size:13px;color:var(--text);background:rgba(124,106,247,0.08);border-inline-start:3px solid var(--accent);padding:8px 12px;border-radius:6px;line-height:1.45"><strong style="color:var(--accent);font-weight:600;margin-inline-end:6px">${t('compare.bestFor')}:</strong> ${tfEsc(bestForText)}</div>
       </div>` : '';
 
     const detailSections = `

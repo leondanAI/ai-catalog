@@ -16,8 +16,8 @@
 <link rel="alternate" hreflang="x-default" href="https://aitoolfit.ai/compare/chatgpt-vs-claude.html">
 <link rel="alternate" hreflang="en" href="https://aitoolfit.ai/compare/chatgpt-vs-claude.html">
 <link rel="alternate" hreflang="es" href="https://aitoolfit.ai/es/compare/chatgpt-vs-claude.html">
-<!-- <link rel="alternate" hreflang="fr" href="https://aitoolfit.ai/fr/compare/chatgpt-vs-claude.html"> -->
-<!-- <link rel="alternate" hreflang="pt" href="https://aitoolfit.ai/pt/compare/chatgpt-vs-claude.html"> -->
+<link rel="alternate" hreflang="fr" href="https://aitoolfit.ai/fr/compare/chatgpt-vs-claude.html">
+<link rel="alternate" hreflang="pt" href="https://aitoolfit.ai/pt/compare/chatgpt-vs-claude.html">
 <link rel="alternate" hreflang="ru" href="https://aitoolfit.ai/ru/compare/chatgpt-vs-claude.html">
 <link rel="alternate" hreflang="de" href="https://aitoolfit.ai/de/compare/chatgpt-vs-claude.html">
 <link rel="alternate" hreflang="ua" href="https://aitoolfit.ai/ua/compare/chatgpt-vs-claude.html">
@@ -36,6 +36,8 @@
 .tool-col-head{display:flex;flex-direction:column;align-items:center;gap:8px;padding:1.5rem 1rem}
 .tool-col-avatar{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:22px;font-weight:700}
 .tool-col-name{font-family:var(--font-display);font-size:16px;font-weight:600}
+.tool-col-bestfor{margin-top:6px;font-size:13px;color:var(--text);background:rgba(124,106,247,0.08);border-inline-start:3px solid var(--accent);padding:8px 12px;border-radius:6px;line-height:1.45;text-align:start;max-width:280px}
+.tool-col-bestfor strong{color:var(--accent);font-weight:600}
 .cmp-loading{text-align:center;padding:4rem;color:var(--text3);font-size:15px}
 @media(max-width:600px){.compare-table th{width:35%;font-size:12px}.compare-table th,.compare-table td{padding:10px;font-size:13px}}
 </style>
@@ -43,7 +45,7 @@
 <body>
 <header class="site-header">
   <div class="header-inner">
-    <a href="/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>AItoolFit</a>
+    <a href="/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>aitoolfit</a>
     <nav class="nav-links">
       <a href="/"                class="nav-link" data-i18n="nav.home">Find AI</a>
       <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
@@ -89,21 +91,20 @@
       <div class="footer-col-title">PRODUCT</div>
       <div class="footer-col-links">
         <a href="/">Find a Tool</a>
-        <a href="/directory.html">AI Catalog</a>
-        <a href="/compare.html">Compare</a>
-        <a href="/news.html">News</a>
-        <a href="/tools.html">Toolbox</a>
+        <a href="directory.html">AI Catalog</a>
+        <a href="compare.html">Compare</a>
+        <a href="news.html">News</a>
+        <a href="tools.html">Toolbox</a>
       </div>
     </div>
     <div>
-      <div class="footer-col-title">CATEGORIES</div>
+      <div class="footer-col-title">QUICK COMPARE</div>
       <div class="footer-col-links">
-        <a href="/directory.html?cat=chat">AI Chat</a>
-        <a href="/directory.html?cat=code">Development</a>
-        <a href="/directory.html?cat=image">Image Gen</a>
-        <a href="/directory.html?cat=video">Video Gen</a>
-        <a href="/directory.html?cat=voice">Voice & Audio</a>
-        <a href="/directory.html?cat=data">Data & Analytics</a>
+        <a href="/compare/chatgpt-vs-claude.html">ChatGPT vs Claude</a>
+        <a href="/compare/cursor-vs-copilot.html">Cursor vs Copilot</a>
+        <a href="/compare/midjourney-vs-flux.html">Midjourney vs Flux</a>
+        <a href="/compare/suno-vs-udio.html">Suno vs Udio</a>
+        <a href="/compare/kling-vs-runway.html">Kling vs Runway</a>
       </div>
     </div>
     <div>
@@ -194,13 +195,12 @@
     var ratingB = starsHtml(avgB) + (rB.length ? '<span style="font-size:11px;color:var(--text3);margin-left:4px">('+rB.length+')</span>' : '');
 
     document.getElementById('cmpTitle').textContent = a.name + ' vs ' + b.name;
-    document.getElementById('pageTitle').textContent = a.name + ' vs ' + b.name + ' 2026 — Comparison | mypedia';
+    document.getElementById('pageTitle').textContent = a.name + ' vs ' + b.name + ' 2026 — Comparison | aitoolfit';
 
     var rows = [
       [L.ov, esc(a.description||'—'),  esc(b.description||'—')],
       [L.pr, '<span class="badge badge-'+esc(a.badge||'')+'">'+badgeLabel(a.badge)+'</span>', '<span class="badge badge-'+esc(b.badge||'')+'">'+badgeLabel(b.badge)+'</span>'],
       [L.us, esc(a.users||'—'),         esc(b.users||'—')],
-      [L.bf, esc(a.best_for||'—'),      esc(b.best_for||'—')],
       [L.rt, ratingA,                   ratingB],
       [L.ad, listHtml(a.pros,'✅'),     listHtml(b.pros,'✅')],
       [L.ds, listHtml(a.cons,'❌'),     listHtml(b.cons,'❌')],
@@ -214,10 +214,14 @@
       '<div class="compare-wrap fade-up"><table class="compare-table"><thead><tr><th></th>' +
         '<td style="text-align:center"><div class="tool-col-head">' +
           '<div class="tool-col-avatar" style="background:#7c6af722"><img src="https://www.google.com/s2/favicons?sz=64&domain='+domA+'" width="30" height="30" style="border-radius:6px"></div>' +
-          '<div class="tool-col-name">'+esc(a.name)+'</div></div></td>' +
+          '<div class="tool-col-name">'+esc(a.name)+'</div>' +
+          '<div class="tool-col-bestfor"><strong>'+L.bf+':</strong> '+esc(a.best_for||'—')+'</div>' +
+          '</div></td>' +
         '<td style="text-align:center"><div class="tool-col-head">' +
           '<div class="tool-col-avatar" style="background:#7c6af722"><img src="https://www.google.com/s2/favicons?sz=64&domain='+domB+'" width="30" height="30" style="border-radius:6px"></div>' +
-          '<div class="tool-col-name">'+esc(b.name)+'</div></div></td>' +
+          '<div class="tool-col-name">'+esc(b.name)+'</div>' +
+          '<div class="tool-col-bestfor"><strong>'+L.bf+':</strong> '+esc(b.best_for||'—')+'</div>' +
+          '</div></td>' +
       '</tr></thead><tbody>' +
       rows.map(function(r){return '<tr><th>'+r[0]+'</th><td class="hl">'+r[1]+'</td><td class="hl">'+r[2]+'</td></tr>';}).join('') +
       '</tbody></table></div>';

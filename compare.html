@@ -41,6 +41,8 @@
   .tool-col-head { display:flex; flex-direction:column; align-items:center; gap:8px; padding:1.5rem 1rem; }
   .tool-col-avatar { width:52px; height:52px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:22px; font-weight:700; }
   .tool-col-name { font-family:var(--font-display); font-size:16px; font-weight:600; }
+  .tool-col-bestfor { margin-top:6px; font-size:13px; color:var(--text); background:rgba(124,106,247,0.08); border-inline-start:3px solid var(--accent); padding:8px 12px; border-radius:6px; line-height:1.45; text-align:start; max-width:280px; }
+  .tool-col-bestfor strong { color:var(--accent); font-weight:600; margin-inline-end:6px; }
   .compare-wrap { background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; }
   .compare-placeholder { text-align:center; padding:4rem 2rem; color:var(--text3); }
   .compare-placeholder .icon { font-size:3rem; margin-bottom:1rem; }
@@ -413,7 +415,6 @@ async function updateCompare() {
     [t('compare.category'),    `${a.catIcon} ${catTitle(a.catId)}`,                          `${b.catIcon} ${catTitle(b.catId)}`],
     [t('compare.pricing'),     `<span class="badge badge-${a.badge}">${badgeLabel(a.badge)}</span>`, `<span class="badge badge-${b.badge}">${badgeLabel(b.badge)}</span>`],
     [t('compare.users'),       infoA.dbTool.users||t('compare.noData')||'No data',          infoB.dbTool.users||t('compare.noData')||'No data'],
-    [t('compare.bestFor'),     esc(infoA.dbTool.best_for||a.bestFor||'—'),                   esc(infoB.dbTool.best_for||b.bestFor||'—')],
     [t('compare.rating'),      starsHtml(infoA.avgRating) + (infoA.reviewCount ? `<span style="font-size:11px;color:var(--text3);margin-left:4px">(${infoA.reviewCount})</span>` : ''),
                     starsHtml(infoB.avgRating) + (infoB.reviewCount ? `<span style="font-size:11px;color:var(--text3);margin-left:4px">(${infoB.reviewCount})</span>` : '')],
     [t('compare.advantages'),  listHtml(infoA.dbTool.pros, '#2dd4a0', '✅'),                 listHtml(infoB.dbTool.pros, '#2dd4a0', '✅')],
@@ -428,10 +429,14 @@ async function updateCompare() {
       <thead><tr><th></th>
         <td style="text-align:center"><div class="tool-col-head">
           <div class="tool-col-avatar" style="background:${a.catColor}22;color:${a.catColor}"><img src="https://www.google.com/s2/favicons?sz=64&domain=${getDomain(a.url)}" width="30" height="30" style="border-radius:6px" onerror="this.style.display='none';this.insertAdjacentText('afterend','${a.name[0]}')"></div>
-          <div class="tool-col-name">${a.name}</div></div></td>
+          <div class="tool-col-name">${a.name}</div>
+          <div class="tool-col-bestfor"><strong>${t('compare.bestFor')}:</strong> ${esc(infoA.dbTool.best_for||a.bestFor||'—')}</div>
+        </div></td>
         <td style="text-align:center"><div class="tool-col-head">
           <div class="tool-col-avatar" style="background:${b.catColor}22;color:${b.catColor}"><img src="https://www.google.com/s2/favicons?sz=64&domain=${getDomain(b.url)}" width="30" height="30" style="border-radius:6px" onerror="this.style.display='none';this.insertAdjacentText('afterend','${b.name[0]}')"></div>
-          <div class="tool-col-name">${b.name}</div></div></td>
+          <div class="tool-col-name">${b.name}</div>
+          <div class="tool-col-bestfor"><strong>${t('compare.bestFor')}:</strong> ${esc(infoB.dbTool.best_for||b.bestFor||'—')}</div>
+        </div></td>
       </tr></thead>
       <tbody>${rows.map(([label,va,vb]) => `<tr><th>${label}</th><td class="hl">${va}</td><td class="hl">${vb}</td></tr>`).join('')}</tbody>
     </table></div>`;

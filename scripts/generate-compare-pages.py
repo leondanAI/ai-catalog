@@ -7,10 +7,20 @@ Usage:
   python3 scripts/generate-compare-pages.py
 """
 
-import os
+import os, re
 
 ROOT     = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 BASE_URL = 'https://aitoolfit.ai'
+
+# Modern footer is sourced from each language's /<lang>/compare.html so static
+# comparison pages share the exact same footer (4 columns, languages, legal links).
+def load_footer(lang):
+    src = os.path.join(ROOT, lang, 'compare.html') if lang != 'en' else os.path.join(ROOT, 'compare.html')
+    if not os.path.exists(src):
+        return ''
+    html = open(src, encoding='utf-8').read()
+    m = re.search(r'<footer\s+class="site-footer"[^>]*>.*?</footer>', html, re.DOTALL)
+    return m.group(0) if m else ''
 
 SB_URL  = 'https://lbjdwkvkkndvofysyssy.supabase.co'
 SB_ANON = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG'
@@ -41,6 +51,7 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
 
     slug_a = cmp['a']
     slug_b = cmp['b']
+    footer_html = load_footer(lang)
 
     return f'''<!DOCTYPE html>
 <html lang="{lang}"{dir_attr}>
@@ -72,6 +83,8 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
 .tool-col-head{{display:flex;flex-direction:column;align-items:center;gap:8px;padding:1.5rem 1rem}}
 .tool-col-avatar{{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:22px;font-weight:700}}
 .tool-col-name{{font-family:var(--font-display);font-size:16px;font-weight:600}}
+.tool-col-bestfor{{margin-top:6px;font-size:13px;color:var(--text);background:rgba(124,106,247,0.08);border-inline-start:3px solid var(--accent);padding:8px 12px;border-radius:6px;line-height:1.45;text-align:start;max-width:280px}}
+.tool-col-bestfor strong{{color:var(--accent);font-weight:600}}
 .cmp-loading{{text-align:center;padding:4rem;color:var(--text3);font-size:15px}}
 @media(max-width:600px){{.compare-table th{{width:35%;font-size:12px}}.compare-table th,.compare-table td{{padding:10px;font-size:13px}}}}
 </style>
@@ -111,37 +124,7 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
   <div id="cmpResult"><div class="cmp-loading">Loading…</div></div>
 </div>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div>
-      <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>aitoolfit</div>
-      <p class="footer-desc" data-i18n="footer.desc">Best AI tools catalog in one place.</p>
-    </div>
-    <div>
-      <div class="footer-col-title" data-i18n="footer.nav">Navigation</div>
-      <div class="footer-col-links">
-        <a href="{base}/" data-i18n="nav.home">Find AI</a>
-        <a href="{base}/directory.html" data-i18n="nav.directory">AI Catalog</a>
-        <a href="{base}/compare.html" data-i18n="nav.compare">Compare</a>
-        <a href="{base}/news.html" data-i18n="nav.news">News</a>
-      </div>
-    </div>
-    <div>
-      <div class="footer-col-title">Quick Compare</div>
-      <div class="footer-col-links">
-        <a href="{base}/compare/chatgpt-vs-claude.html">ChatGPT vs Claude</a>
-        <a href="{base}/compare/cursor-vs-copilot.html">Cursor vs Copilot</a>
-        <a href="{base}/compare/midjourney-vs-flux.html">Midjourney vs Flux</a>
-        <a href="{base}/compare/suno-vs-udio.html">Suno vs Udio</a>
-        <a href="{base}/compare/kling-vs-runway.html">Kling vs Runway</a>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span data-i18n="footer.madeWith">Made with ♥ and Claude</span>
-    <span data-i18n="footer.rights">© 2026 aitoolfit</span>
-  </div>
-</footer>
+{footer_html}
 
 <script src="/js/i18n.js"></script>
 <script src="/js/main.js"></script>
@@ -213,7 +196,6 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
       [L.ov, esc(a.description||'—'),  esc(b.description||'—')],
       [L.pr, '<span class="badge badge-'+esc(a.badge||'')+'">'+badgeLabel(a.badge)+'</span>', '<span class="badge badge-'+esc(b.badge||'')+'">'+badgeLabel(b.badge)+'</span>'],
       [L.us, esc(a.users||'—'),         esc(b.users||'—')],
-      [L.bf, esc(a.best_for||'—'),      esc(b.best_for||'—')],
       [L.rt, ratingA,                   ratingB],
       [L.ad, listHtml(a.pros,'✅'),     listHtml(b.pros,'✅')],
       [L.ds, listHtml(a.cons,'❌'),     listHtml(b.cons,'❌')],
@@ -227,10 +209,14 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
       '<div class="compare-wrap fade-up"><table class="compare-table"><thead><tr><th></th>' +
         '<td style="text-align:center"><div class="tool-col-head">' +
           '<div class="tool-col-avatar" style="background:#7c6af722"><img src="https://www.google.com/s2/favicons?sz=64&domain='+domA+'" width="30" height="30" style="border-radius:6px"></div>' +
-          '<div class="tool-col-name">'+esc(a.name)+'</div></div></td>' +
+          '<div class="tool-col-name">'+esc(a.name)+'</div>' +
+          '<div class="tool-col-bestfor"><strong>'+L.bf+':</strong> '+esc(a.best_for||'—')+'</div>' +
+          '</div></td>' +
         '<td style="text-align:center"><div class="tool-col-head">' +
           '<div class="tool-col-avatar" style="background:#7c6af722"><img src="https://www.google.com/s2/favicons?sz=64&domain='+domB+'" width="30" height="30" style="border-radius:6px"></div>' +
-          '<div class="tool-col-name">'+esc(b.name)+'</div></div></td>' +
+          '<div class="tool-col-name">'+esc(b.name)+'</div>' +
+          '<div class="tool-col-bestfor"><strong>'+L.bf+':</strong> '+esc(b.best_for||'—')+'</div>' +
+          '</div></td>' +
       '</tr></thead><tbody>' +
       rows.map(function(r){{return '<tr><th>'+r[0]+'</th><td class="hl">'+r[1]+'</td><td class="hl">'+r[2]+'</td></tr>';}}).join('') +
       '</tbody></table></div>';

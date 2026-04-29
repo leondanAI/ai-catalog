@@ -38,7 +38,7 @@
 .tool-hero-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .tool-meta-chip{display:inline-flex;align-items:center;gap:5px;background:var(--bg3);border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-size:12px;color:var(--text2)}
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
-.tool-best-for strong{color:var(--accent);font-weight:600}
+.tool-best-for strong{color:var(--accent);font-weight:600;margin-inline-end:6px}
 [dir="rtl"] .tool-best-for{border-left:none;border-right:3px solid var(--accent)}
 .tool-desc-block{margin-bottom:2rem}
 .tool-desc-block h2{font-size:11px;font-weight:600;margin-bottom:.75rem;color:var(--text2);text-transform:uppercase;letter-spacing:.05em}
@@ -135,7 +135,7 @@ textarea.form-input{resize:vertical;min-height:90px}
   <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
   <div class="tool-desc-block">
     <h2>О сервисе DALL-E 3</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">DALL-E 3 — это модель генерации изображений по тексту от OpenAI, встроенная непосредственно в ChatGPT Plus и доступная через OpenAI API. Главное её преимущество — точное следование промптам: DALL-E 3 выполняет детальные, многосложные инструкции точнее большинства других моделей, корректно учитывая конкретные детали композиции, стиля, цветов и объектов, которые другие генераторы часто игнорируют или интерпретируют неверно.</p><p style="margin-top:1rem">Для подписчиков ChatGPT Plus ($20/месяц) DALL-E 3 доступен прямо в интерфейсе чата — достаточно описать изображение, и ChatGPT его сгенерирует. Такая интеграция делает создание изображений максимально удобным для пользователей, уже использующих ChatGPT для других задач. Оболочка ChatGPT также помогает с составлением промптов: ChatGPT может взять простое описание и автоматически расширить его до детального промпта, оптимизированного под возможности DALL-E 3.</p><p style="margin-top:1rem">Основные ограничения — контентные фильтры и стилистический диапазон. Фильтры безопасности DALL-E 3 значительно строже, чем у Midjourney или Stable Diffusion — запросы с реальными людьми, насилием или взрослыми темами часто отклоняются. Визуальный результат, хотя и аккуратный и точный, уступает Midjourney по художественной глубине и стилистическому разнообразию. DALL-E 3 — правильный выбор для тех, кому нужны точные, безопасные для коммерческого использования иллюстрации и графика без необходимости осваивать промпт-инжиниринг в отдельном инструменте.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">DALL-E 3 — это модель генерации изображений по тексту от OpenAI, встроенная непосредственно в ChatGPT Plus и доступная через OpenAI API. Главное её преимущество — точное следование промптам: DALL-E 3 выполняет детальные, многосложные инструкции точнее большинства других моделей, корректно учитывая конкретные детали композиции, стиля, цветов и объектов, которые другие генераторы часто игнорируют или интерпретируют неверно.</p><p style="margin-top:1rem">Для подписчиков ChatGPT Plus ($20/месяц) DALL-E 3 доступен прямо в интерфейсе чата — достаточно описать изображение, и ChatGPT его сгенерирует. Такая интеграция делает создание изображений максимально удобным для пользователей, уже использующих ChatGPT для других задач. Оболочка ChatGPT также помогает с составлением промптов: ChatGPT может взять простое описание и автоматически расширить его до детального промпта, оптимизированного под возможности DALL-E 3.</p><p style="margin-top:1rem">Основные ограничения — контентные фильтры и стилистический диапазон. Фильтры безопасности DALL-E 3 значительно строже, чем у Midjourney или Stable Diffusion — запросы с реальными людьми, насилием или взрослыми темами часто отклоняются. Визуальный результат, хотя и аккуратный и точный, уступает Midjourney по художественной глубине и стилистическому разнообразию. DALL-E 3 — правильный выбор для тех, кому нужны точные, безопасные для коммерческого использования иллюстрации и графика без необходимости осваивать промпт-инжиниринг в отдельном инструменте.</p><p style="margin-top:1rem">DALL·E 3 будет выведен из эксплуатации 12 мая 2026 года вместе с DALL·E 2. Его преемник — ChatGPT Images 2.0 (model ID gpt-image-2) — был запущен 21 апреля 2026 и теперь является дефолтной моделью изображений в ChatGPT. Новые проекты следует строить на ChatGPT Images 2.0 напрямую.</p></div>
   </div>
   <div class="pros-cons">
     <div class="pc-box pros"><div class="pc-title">Преимущества</div><ul class="pc-list">        <li>Лучше всего справляется со сложными, многосложными промптами</li>
@@ -152,13 +152,13 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="also-card-name">Adobe Firefly</div>
       <div class="also-card-desc">Commercial design, Adobe ecosystem</div>
     </a>
+    <a class="also-card" href="/ru/tools/chatgpt-images.html">
+      <div class="also-card-name">ChatGPT Images 2.0</div>
+      <div class="also-card-desc">Image generation, character consistency, prompt accuracy</div>
+    </a>
     <a class="also-card" href="/ru/tools/comfyui.html">
       <div class="also-card-name">ComfyUI</div>
       <div class="also-card-desc">Advanced pipelines, game studios, custom models</div>
-    </a>
-    <a class="also-card" href="/ru/tools/flux.html">
-      <div class="also-card-name">Flux</div>
-      <div class="also-card-desc">Open-source, high quality, free Midjourney alternative</div>
     </a>
 </div>
   <div class="comments-section">
