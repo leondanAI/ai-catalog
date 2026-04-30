@@ -53,34 +53,6 @@ LANGUAGES = {
         'cats': {'chat':'IA Chat','code':'Desarrollo','image':'Generación de imágenes','video':'Generación de vídeo','voice':'Voz y audio'},
         'date_locale': 'es-ES',
     },
-    'fr': {
-        'nav': {'home':'Accueil','dir':'Annuaire','news':'Actualités','tools':'Outils','compare':'Comparer','nl':'Newsletter'},
-        'ui':  {'about':'À propos de','pros':'Avantages','cons':'Inconvénients','also':'À considérer aussi',
-                'reviews':'Avis des utilisateurs','leave':'Laisser un avis','name_ph':'Votre nom',
-                'email_ph':'Email (non publié)','text_ph':'Partagez votre expérience avec',
-                'note':'Les avis sont publiés après modération. Nous ne partageons pas votre email.',
-                'submit':'Soumettre un avis','no_reviews':'Pas encore d\'avis — soyez le premier !',
-                'visit':'Visiter','footer_desc':'Le meilleur catalogue d\'outils IA. 100+ services, actualités et utilitaires gratuits.',
-                'footer_nav':'Navigation','footer_cats':'Catégories','made':'Fait avec ♥ par Leondan & Claude · Mis à jour quotidiennement',
-                'err_name':'Veuillez entrer votre nom et votre avis.','err_rating':'Veuillez sélectionner une note.',
-                'best_for':'Idéal pour','submitting':'Envoi…','thanks':'Merci ! Votre avis apparaîtra après modération.','err':'Erreur : '},
-        'cats': {'chat':'IA Chat','code':'Développement','image':'Génération d\'images','video':'Génération vidéo','voice':'Voix et audio'},
-        'date_locale': 'fr-FR',
-    },
-    'pt': {
-        'nav': {'home':'Início','dir':'Diretório','news':'Notícias','tools':'Ferramentas','compare':'Comparar','nl':'Newsletter'},
-        'ui':  {'about':'Sobre','pros':'Vantagens','cons':'Desvantagens','also':'Considere também',
-                'reviews':'Avaliações de usuários','leave':'Deixar avaliação','name_ph':'Seu nome',
-                'email_ph':'Email (não publicado)','text_ph':'Compartilhe sua experiência com',
-                'note':'As avaliações são publicadas após moderação. Não compartilhamos seu email.',
-                'submit':'Enviar avaliação','no_reviews':'Sem avaliações ainda — seja o primeiro!',
-                'visit':'Visitar','footer_desc':'O melhor catálogo de ferramentas IA. 100+ serviços, notícias e utilitários gratuitos.',
-                'footer_nav':'Navegação','footer_cats':'Categorias','made':'Feito com ♥ por Leondan & Claude · Atualizado diariamente',
-                'err_name':'Por favor insira seu nome e avaliação.','err_rating':'Por favor selecione uma avaliação.',
-                'best_for':'Ideal para','submitting':'Enviando…','thanks':'Obrigado! Sua avaliação aparecerá após moderação.','err':'Erro: '},
-        'cats': {'chat':'IA Chat','code':'Desenvolvimento','image':'Geração de imagens','video':'Geração de vídeo','voice':'Voz e áudio'},
-        'date_locale': 'pt-BR',
-    },
     'de': {
         'nav': {'home':'Startseite','dir':'Verzeichnis','news':'Neuigkeiten','tools':'Werkzeuge','compare':'Vergleichen','nl':'Newsletter'},
         'ui':  {'about':'Über','pros':'Vorteile','cons':'Nachteile','also':'Auch erwägen',
@@ -128,8 +100,6 @@ LANGUAGES = {
 CATEGORY_LABELS = {
     'ru': {'chat':'ИИ-чат и ассистенты','agents':'ИИ-агенты и автоматизация','code':'ИИ для разработки','writing':'Текст и копирайтинг','marketing':'Маркетинг и SEO','image':'Генерация изображений','video':'Генерация видео','design':'Дизайн и UI/UX','voice':'Голос и аудио','productivity':'Продуктивность','research':'Исследования','data':'Данные и аналитика','nocode':'Конструкторы без кода','education':'Образование','presentations':'Презентации'},
     'es': {'chat':'IA Chat y Asistentes','agents':'Agentes IA','code':'IA para Desarrollo','writing':'Texto y Copywriting','marketing':'Marketing y SEO','image':'Generación de Imágenes','video':'Generación de Vídeo','design':'Diseño y UI/UX','voice':'Voz y Audio','productivity':'Productividad','research':'Investigación','data':'Datos y Analítica','nocode':'Sin Código','education':'Educación','presentations':'Presentaciones'},
-    'fr': {'chat':'IA Chat','agents':'Agents IA','code':'IA Développement','writing':'Texte et Copywriting','marketing':'Marketing et SEO','image':'Génération d\'Images','video':'Génération Vidéo','design':'Design et UI/UX','voice':'Voix et Audio','productivity':'Productivité','research':'Recherche','data':'Données','nocode':'Sans Code','education':'Éducation','presentations':'Présentations'},
-    'pt': {'chat':'IA Chat','agents':'Agentes IA','code':'IA Desenvolvimento','writing':'Texto e Copywriting','marketing':'Marketing e SEO','image':'Geração de Imagens','video':'Geração de Vídeo','design':'Design e UI/UX','voice':'Voz e Áudio','productivity':'Produtividade','research':'Pesquisa','data':'Dados','nocode':'Sem Código','education':'Educação','presentations':'Apresentações'},
     'de': {'chat':'KI-Chat','agents':'KI-Agenten','code':'KI Entwicklung','writing':'Text & Copywriting','marketing':'Marketing & SEO','image':'Bildgenerierung','video':'Videogenerierung','design':'Design & UI/UX','voice':'Stimme & Audio','productivity':'Produktivität','research':'Forschung','data':'Daten','nocode':'No-Code','education':'Bildung','presentations':'Präsentationen'},
     'ua': {'chat':'ШІ-чат','agents':'ШІ-агенти','code':'ШІ для розробки','writing':'Текст та копірайтинг','marketing':'Маркетинг та SEO','image':'Генерація зображень','video':'Генерація відео','design':'Дизайн та UI/UX','voice':'Голос та аудіо','productivity':'Продуктивність','research':'Дослідження','data':'Дані','nocode':'Без коду','education':'Освіта','presentations':'Презентації'},
     'he': {'chat':'צ\'אט AI','agents':'סוכני AI','code':'AI לפיתוח','writing':'כתיבה','marketing':'שיווק וSEO','image':'יצירת תמונות','video':'יצירת וידאו','design':'עיצוב','voice':'קול ואודיו','productivity':'פרודוקטיביות','research':'מחקר','data':'נתונים','nocode':'ללא קוד','education':'חינוך','presentations':'מצגות'},
@@ -138,8 +108,6 @@ CATEGORY_LABELS = {
 BADGE_LABELS = {
     'ru': {'free':'Бесплатно','freemium':'Freemium','paid':'Платно'},
     'es': {'free':'Gratis','freemium':'Freemium','paid':'De pago'},
-    'fr': {'free':'Gratuit','freemium':'Freemium','paid':'Payant'},
-    'pt': {'free':'Grátis','freemium':'Freemium','paid':'Pago'},
     'de': {'free':'Kostenlos','freemium':'Freemium','paid':'Kostenpflichtig'},
     'ua': {'free':'Безкоштовно','freemium':'Freemium','paid':'Платно'},
     'he': {'free':'חינמי','freemium':'Freemium','paid':'בתשלום'},
@@ -152,6 +120,8 @@ CATEGORY_ICONS = {
 }
 
 RTL_LANGS = {'he'}
+
+ACTIVE_NON_EN_LANGS = ['es', 'de', 'ru', 'ua', 'he']
 
 def sb_get(path):
     req = urllib.request.Request(
@@ -228,6 +198,12 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
         for p in desc.split('\n\n') if p.strip()
     ) or f'<p>{esc(desc)}</p>'
 
+    hreflang_block = '\n'.join(
+        [f'<link rel="alternate" hreflang="x-default" href="{BASE_URL}/tools/{esc(slug)}.html">',
+         f'<link rel="alternate" hreflang="en" href="{BASE_URL}/tools/{esc(slug)}.html">'] +
+        [f'<link rel="alternate" hreflang="{l}" href="{BASE_URL}/{l}/tools/{esc(slug)}.html">' for l in ACTIVE_NON_EN_LANGS]
+    )
+
     return f'''<!DOCTYPE html>
 <html lang="{lang}"{dir_attr}>
 <head>
@@ -236,9 +212,7 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
 <title>{esc(name)} 2026 | aitoolfit</title>
 <meta name="description" content="{esc(meta_desc)}">
 <link rel="canonical" href="{BASE_URL}/{lang}/tools/{esc(slug)}.html">
-<link rel="alternate" hreflang="en" href="{BASE_URL}/tools/{esc(slug)}.html">
-<link rel="alternate" hreflang="{lang}" href="{BASE_URL}/{lang}/tools/{esc(slug)}.html">
-<link rel="alternate" hreflang="x-default" href="{BASE_URL}/tools/{esc(slug)}.html">
+{hreflang_block}
 <meta property="og:title" content="{esc(name)} 2026 | aitoolfit">
 <meta property="og:description" content="{esc(meta_desc)}">
 <meta property="og:url" content="{BASE_URL}/{lang}/tools/{esc(slug)}.html">

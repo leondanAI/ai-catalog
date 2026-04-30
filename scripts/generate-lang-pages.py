@@ -12,7 +12,7 @@ BASE_URL = 'https://aitoolfit.ai'
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
 LANGUAGES = [
-    ('es', 'es'),   ('fr', 'fr'),   ('pt', 'pt'),   ('ru', 'ru'),
+    ('es', 'es'),   ('ru', 'ru'),
     ('de', 'de'),   ('ua', 'ua'),   ('he', 'he'),
 ]
 

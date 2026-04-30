@@ -37,6 +37,8 @@ CATEGORY_ICONS = {
 
 BADGE_LABELS = {'free': 'Free', 'freemium': 'Freemium', 'paid': 'Paid'}
 
+ACTIVE_NON_EN_LANGS = ['es', 'de', 'ru', 'ua', 'he']
+
 def fetch_tools():
     req = urllib.request.Request(
         f'{SB_URL}/rest/v1/tools?lang=eq.en&order=name.asc&limit=200&select=*',
@@ -155,6 +157,12 @@ def render_page(tool, all_tools, rating_data=None):
     users_chip = f'<span class="tool-meta-chip">👥 {esc(users)}</span>' if users else ''
     best_for_line = f'<div class="tool-best-for"><strong>Best for:</strong> {esc(best_for)}</div>' if best_for else ''
 
+    hreflang_block = '\n'.join(
+        [f'<link rel="alternate" hreflang="x-default" href="https://aitoolfit.ai/tools/{esc(slug)}.html">',
+         f'<link rel="alternate" hreflang="en" href="https://aitoolfit.ai/tools/{esc(slug)}.html">'] +
+        [f'<link rel="alternate" hreflang="{l}" href="https://aitoolfit.ai/{l}/tools/{esc(slug)}.html">' for l in ACTIVE_NON_EN_LANGS]
+    )
+
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -163,9 +171,7 @@ def render_page(tool, all_tools, rating_data=None):
 <title>{esc(name)} Review 2026 — Pros, Cons &amp; Alternatives | aitoolfit</title>
 <meta name="description" content="{esc(meta_desc)}">
 <link rel="canonical" href="https://aitoolfit.ai/tools/{esc(slug)}.html">
-<link rel="alternate" hreflang="x-default" href="https://aitoolfit.ai/tools/{esc(slug)}.html">
-<link rel="alternate" hreflang="en" href="https://aitoolfit.ai/tools/{esc(slug)}.html">
-<link rel="alternate" hreflang="ru" href="https://aitoolfit.ai/ru/tools/{esc(slug)}.html">
+{hreflang_block}
 <meta property="og:title" content="{esc(name)} Review 2026 | aitoolfit">
 <meta property="og:description" content="{esc(meta_desc)}">
 <meta property="og:url" content="https://aitoolfit.ai/tools/{esc(slug)}.html">
