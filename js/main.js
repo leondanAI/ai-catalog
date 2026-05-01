@@ -169,5 +169,5 @@ function initClickTracking() {
       document.querySelector('h1.tool-title, h1')?.textContent?.trim() ||
       null;
     _trackClick(toolName, toolUrl);
-  });
+  }, true);
 }
