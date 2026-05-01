@@ -115,4 +115,59 @@ document.addEventListener('DOMContentLoaded', () => {
   initNav();
   const s = document.getElementById('gSearch');
   if (s) s.addEventListener('keydown', submitGlobalSearch);
+  initClickTracking();
 });
+
+// ── Tool click tracking ──────────────────────────────────────────────────────
+
+const _SB_URL = 'https://lbjdwkvkkndvofysyssy.supabase.co';
+const _SB_KEY = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG';
+
+function _getAnonId() {
+  const KEY = 'atf_uid';
+  let id = localStorage.getItem(KEY);
+  if (!id) {
+    id = 'u_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+    localStorage.setItem(KEY, id);
+  }
+  return id;
+}
+
+function _getLang() {
+  const parts = window.location.pathname.split('/').filter(Boolean);
+  const langs = ['ru', 'de', 'es', 'he', 'ua'];
+  return langs.includes(parts[0]) ? parts[0] : 'en';
+}
+
+function _trackClick(toolName, toolUrl) {
+  fetch(`${_SB_URL}/rest/v1/tool_clicks`, {
+    method:  'POST',
+    headers: {
+      apikey:         _SB_KEY,
+      Authorization:  `Bearer ${_SB_KEY}`,
+      'Content-Type': 'application/json',
+      Prefer:         'return=minimal'
+    },
+    body: JSON.stringify({
+      tool_name: toolName || null,
+      tool_url:  toolUrl  || null,
+      lang:      _getLang(),
+      page_url:  window.location.pathname,
+      anon_id:   _getAnonId()
+    })
+  }).catch(() => {});
+}
+
+function initClickTracking() {
+  document.addEventListener('click', e => {
+    const link = e.target.closest('a.btn-visit, a.tool-aff, a.modal-open-btn');
+    if (!link) return;
+    const toolUrl  = link.href;
+    const toolName =
+      link.closest('[data-tool-name]')?.dataset.toolName ||
+      link.closest('.tf3-card, .tool-card, .result-card')?.querySelector('.tf3-name, .tool-name')?.textContent?.trim() ||
+      document.querySelector('h1.tool-title, h1')?.textContent?.trim() ||
+      null;
+    _trackClick(toolName, toolUrl);
+  });
+}
