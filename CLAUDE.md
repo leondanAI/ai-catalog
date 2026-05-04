@@ -42,10 +42,10 @@ Site runs in 6 active languages. Every content update MUST be applied to ALL 6:
 - 🇷🇺 RU — Russian
 - 🇺🇦 UA — Ukrainian
 - 🇮🇱 HE — Hebrew (RTL — ensure dir="rtl" on html tag)
+- 🇫🇷 FR — French (activated 2026-05-04)
+- 🇧🇷 PT — Portuguese (activated 2026-05-04)
 
-FR and PT exist in DB and generated pages but are NOT active (hidden in language picker). Do not update them.
-
-**Rule:** never update EN only. If content changes in EN, translate and update all 5 other active languages in the same operation.
+**Rule:** never update EN only. If content changes in EN, translate and update all 7 other active languages in the same operation.
 
 ---
 
