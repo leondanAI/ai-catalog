@@ -31,7 +31,7 @@ ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 BASE_URL = 'https://aitoolfit.ai'
 TODAY    = date.today().isoformat()
 
-LANGS_ACTIVE = ['es', 'de', 'ru', 'ua', 'he']
+LANGS_ACTIVE = ['es', 'de', 'ru', 'ua', 'he', 'fr', 'pt']
 
 UTILITY_SLUGS = {
     'token-counter', 'text-diff', 'word-counter', 'case-converter',
