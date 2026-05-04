@@ -95,6 +95,34 @@ LANGUAGES = {
         'cats': {'chat':'צ\'אט AI','code':'פיתוח','image':'יצירת תמונות','video':'יצירת וידאו','voice':'קול ואודיו'},
         'date_locale': 'he-IL',
     },
+    'fr': {
+        'nav': {'home':'Accueil','dir':'Répertoire','news':'Actualités','tools':'Outils','compare':'Comparer','nl':'Newsletter'},
+        'ui':  {'about':'À propos','pros':'Avantages','cons':'Inconvénients','also':'Considérez aussi',
+                'reviews':'Avis des utilisateurs','leave':'Laisser un avis','name_ph':'Votre nom',
+                'email_ph':'Email (non publié)','text_ph':'Partagez votre expérience avec',
+                'note':'Les avis sont publiés après modération. Nous ne partageons pas votre email.',
+                'submit':'Envoyer l\'avis','no_reviews':'Pas encore d\'avis — soyez le premier !',
+                'visit':'Visiter','footer_desc':'Le meilleur répertoire d\'outils IA. 100+ services, actualités et utilitaires gratuits.',
+                'footer_nav':'Navigation','footer_cats':'Catégories','made':'Fait avec ♥ par Leondan & Claude · Mis à jour quotidiennement',
+                'err_name':'Veuillez entrer votre nom et avis.','err_rating':'Veuillez sélectionner une note.',
+                'best_for':'Idéal pour','submitting':'Envoi…','thanks':'Merci ! Votre avis apparaîtra après modération.','err':'Erreur : '},
+        'cats': {'chat':'IA Chat','code':'Développement','image':'Génération d\'images','video':'Génération de vidéo','voice':'Voix et audio'},
+        'date_locale': 'fr-FR',
+    },
+    'pt': {
+        'nav': {'home':'Início','dir':'Diretório','news':'Notícias','tools':'Ferramentas','compare':'Comparar','nl':'Newsletter'},
+        'ui':  {'about':'Sobre','pros':'Vantagens','cons':'Desvantagens','also':'Considere também',
+                'reviews':'Avaliações dos usuários','leave':'Deixar avaliação','name_ph':'Seu nome',
+                'email_ph':'Email (não publicado)','text_ph':'Compartilhe sua experiência com',
+                'note':'As avaliações são publicadas após moderação. Não compartilhamos seu email.',
+                'submit':'Enviar avaliação','no_reviews':'Sem avaliações ainda — seja o primeiro!',
+                'visit':'Visitar','footer_desc':'O melhor diretório de ferramentas de IA. 100+ serviços, notícias e utilitários gratuitos.',
+                'footer_nav':'Navegação','footer_cats':'Categorias','made':'Feito com ♥ por Leondan & Claude · Atualizado diariamente',
+                'err_name':'Por favor insira seu nome e avaliação.','err_rating':'Por favor selecione uma nota.',
+                'best_for':'Ideal para','submitting':'Enviando…','thanks':'Obrigado! Sua avaliação aparecerá após moderação.','err':'Erro: '},
+        'cats': {'chat':'IA Chat','code':'Desenvolvimento','image':'Geração de imagens','video':'Geração de vídeo','voice':'Voz e áudio'},
+        'date_locale': 'pt-BR',
+    },
 }
 
 CATEGORY_LABELS = {
@@ -103,6 +131,8 @@ CATEGORY_LABELS = {
     'de': {'chat':'KI-Chat','agents':'KI-Agenten','code':'KI Entwicklung','writing':'Text & Copywriting','marketing':'Marketing & SEO','image':'Bildgenerierung','video':'Videogenerierung','design':'Design & UI/UX','voice':'Stimme & Audio','productivity':'Produktivität','research':'Forschung','data':'Daten','nocode':'No-Code','education':'Bildung','presentations':'Präsentationen'},
     'ua': {'chat':'ШІ-чат','agents':'ШІ-агенти','code':'ШІ для розробки','writing':'Текст та копірайтинг','marketing':'Маркетинг та SEO','image':'Генерація зображень','video':'Генерація відео','design':'Дизайн та UI/UX','voice':'Голос та аудіо','productivity':'Продуктивність','research':'Дослідження','data':'Дані','nocode':'Без коду','education':'Освіта','presentations':'Презентації'},
     'he': {'chat':'צ\'אט AI','agents':'סוכני AI','code':'AI לפיתוח','writing':'כתיבה','marketing':'שיווק וSEO','image':'יצירת תמונות','video':'יצירת וידאו','design':'עיצוב','voice':'קול ואודיו','productivity':'פרודוקטיביות','research':'מחקר','data':'נתונים','nocode':'ללא קוד','education':'חינוך','presentations':'מצגות'},
+    'fr': {'chat':'IA Chat et Assistants','agents':'Agents IA','code':'IA pour le Développement','writing':'Texte et Copywriting','marketing':'Marketing et SEO','image':'Génération d\'images','video':'Génération de vidéo','design':'Design et UI/UX','voice':'Voix et Audio','productivity':'Productivité','research':'Recherche','data':'Données et Analytique','nocode':'Sans Code','education':'Éducation','presentations':'Présentations'},
+    'pt': {'chat':'IA Chat e Assistentes','agents':'Agentes de IA','code':'IA para Desenvolvimento','writing':'Texto e Copywriting','marketing':'Marketing e SEO','image':'Geração de imagens','video':'Geração de vídeo','design':'Design e UI/UX','voice':'Voz e Áudio','productivity':'Produtividade','research':'Pesquisa','data':'Dados e Análise','nocode':'Sem Código','education':'Educação','presentations':'Apresentações'},
 }
 
 BADGE_LABELS = {
