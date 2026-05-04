@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comparar Ferramentas | aitoolfit</title>
+<meta name="description" content="Escolha duas ferramentas e compare-as lado a lado">
+<meta name="keywords" content="compare AI tools, ChatGPT vs Claude, AI comparison, best AI tool, AI tools review, Midjourney vs DALL-E">
+<meta name="author" content="AItoolFit">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="canonical" href="https://aitoolfit.ai/pt/compare.html">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aitoolfit.ai/pt/compare.html">
+<meta property="og:title" content="Comparar Ferramentas | aitoolfit">
+<meta property="og:description" content="Compare any two AI tools side by side. Features, pricing and use cases at a glance.">
+<meta property="og:image" content="https://aitoolfit.ai/og-image.svg">
+<meta property="og:site_name" content="AItoolFit">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Compare AI Tools Side by Side — aitoolfit">
+<meta name="twitter:description" content="Compare any two AI tools side by side. Features, pricing and use cases at a glance.">
+<meta name="twitter:image" content="https://aitoolfit.ai/og-image.svg">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<style>
+  .compare-selectors { display:grid; grid-template-columns:1fr auto 1fr; gap:1rem; align-items:center; margin-bottom:2rem; }
+  .vs-badge { font-family:var(--font-display); font-size:18px; font-weight:600; color:var(--text3); text-align:center; }
+  .compare-select-wrap { display:flex; flex-direction:column; gap:8px; }
+  .compare-select-label { font-size:12px; color:var(--text3); text-transform:uppercase; letter-spacing:.06em; }
+  .compare-table { width:100%; border-collapse:collapse; }
+  .compare-table th, .compare-table td { padding:14px 16px; text-align:start; border-bottom:1px solid var(--border); font-size:14px; }
+  .compare-table th { font-family:var(--font-display); font-size:13px; font-weight:500; color:var(--text3); width:28%; }
+  .compare-table td { color:var(--text2); }
+  .compare-table td.hl { color:var(--text); }
+  .tool-col-head { display:flex; flex-direction:column; align-items:center; gap:8px; padding:1.5rem 1rem; }
+  .tool-col-avatar { width:52px; height:52px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:22px; font-weight:700; }
+  .tool-col-name { font-family:var(--font-display); font-size:16px; font-weight:600; }
+  .tool-col-bestfor { margin-top:6px; font-size:13px; color:var(--text); background:rgba(124,106,247,0.08); border-inline-start:3px solid var(--accent); padding:8px 12px; border-radius:6px; line-height:1.45; text-align:start; max-width:280px; }
+  .tool-col-bestfor strong { color:var(--accent); font-weight:600; margin-inline-end:6px; }
+  .compare-wrap { background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; }
+  .compare-placeholder { text-align:center; padding:4rem 2rem; color:var(--text3); }
+  .compare-placeholder .icon { font-size:3rem; margin-bottom:1rem; }
+  .popular-comparisons { margin-bottom:2rem; }
+  .popular-title { font-size:12px; color:var(--text3); text-transform:uppercase; letter-spacing:.06em; margin-bottom:12px; }
+  .popular-grid { display:flex; flex-wrap:wrap; gap:8px; }
+  .pop-pair { display:flex; align-items:center; gap:6px; background:var(--bg2); border:1px solid var(--border); border-radius:20px; padding:6px 14px; cursor:pointer; transition:border-color .15s; }
+  .pop-pair:hover { border-color:var(--accent); }
+  .pop-name { font-size:13px; color:var(--text); font-weight:500; }
+  .pop-vs { font-size:11px; color:var(--text3); }
+  /* ── Autocomplete select ── */
+  .ac-wrap { position: relative; }
+  .ac-input {
+    width: 100%; padding: 10px 14px; background: var(--bg3);
+    border: 1px solid var(--border); border-radius: var(--radius-sm);
+    color: var(--text); font-family: var(--font); font-size: 14px;
+    outline: none; transition: border-color .2s;
+  }
+  .ac-input:focus { border-color: var(--accent); }
+  .ac-input::placeholder { color: var(--text3); }
+  .ac-dropdown {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    max-height: 320px; overflow-y: auto; z-index: 100;
+    background: var(--bg2); border: 1px solid var(--border2);
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    margin-top: -1px;
+    scrollbar-width: thin; scrollbar-color: var(--text3) transparent;
+  }
+  .ac-dropdown::-webkit-scrollbar { width: 6px; }
+  .ac-dropdown::-webkit-scrollbar-thumb { background: var(--text3); border-radius: 3px; }
+  .ac-wrap.open .ac-dropdown { display: block; }
+  .ac-wrap.open .ac-input { border-radius: var(--radius-sm) var(--radius-sm) 0 0; }
+  .ac-group-label {
+    padding: 8px 14px 4px; font-size: 11px; color: var(--text3);
+    text-transform: uppercase; letter-spacing: .06em;
+    font-family: var(--font-display); font-weight: 500;
+    position: sticky; top: 0; background: var(--bg2);
+  }
+  .ac-option {
+    padding: 8px 14px; font-size: 14px; color: var(--text2);
+    cursor: pointer; display: flex; align-items: center; gap: 8px;
+    transition: background .1s;
+  }
+  .ac-option:hover, .ac-option.active { background: var(--bg3); color: var(--text); }
+  .ac-option img { width: 18px; height: 18px; border-radius: 4px; flex-shrink: 0; }
+  .ac-empty { padding: 16px 14px; font-size: 13px; color: var(--text3); text-align: center; }
+
+  @media (max-width:600px) {
+    .compare-selectors { grid-template-columns:1fr; }
+    .vs-badge { display:none; }
+    .compare-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+    .compare-table { min-width:600px; }
+    .compare-table th { width:25%; font-size:12px; }
+    .compare-table th,.compare-table td { padding:10px; font-size:13px; }
+  }
+</style>
+<!--  -->
+<!--  -->
+<link rel="alternate" hreflang="x-default" href="https://aitoolfit.ai/compare.html">
+<link rel="alternate" hreflang="en" href="https://aitoolfit.ai/compare.html">
+<link rel="alternate" hreflang="es" href="https://aitoolfit.ai/es/compare.html">
+<link rel="alternate" hreflang="ru" href="https://aitoolfit.ai/ru/compare.html">
+<link rel="alternate" hreflang="de" href="https://aitoolfit.ai/de/compare.html">
+<link rel="alternate" hreflang="ua" href="https://aitoolfit.ai/ua/compare.html">
+<link rel="alternate" hreflang="he" href="https://aitoolfit.ai/he/compare.html">
+<link rel="alternate" hreflang="fr" href="https://aitoolfit.ai/fr/compare.html">
+<link rel="alternate" hreflang="pt" href="https://aitoolfit.ai/pt/compare.html">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/pt/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>AItoolFit</a>
+    <nav class="nav-links">
+      <a href="/pt/"               class="nav-link" data-nav="index.html"      data-i18n="nav.home">Buscar IA</a>
+      <a href="/pt/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catálogo</a>
+      <a href="/pt/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Comparar</a>
+      <a href="/pt/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Notícias</a>
+      <a href="/pt/tools.html"      class="nav-link" data-nav="tools.html"      data-i18n="nav.tools">Ferramentas</a>
+      <a href="/pt/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
+    </nav>
+    <div class="lang-picker">
+      <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇧🇷 PT <span style="opacity:.5;font-size:10px">▾</span></button>
+      <div class="lang-menu" id="langMenu"></div>
+    </div>
+    <button class="btn-hamburger" onclick="toggleMenu()">&#9776;</button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="/pt/"               class="nav-link" data-i18n="nav.home">Buscar IA</a>
+    <a href="/pt/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catálogo</a>
+    <a href="/pt/compare.html"    class="nav-link" data-i18n="nav.compare">Comparar</a>
+    <a href="/pt/news.html"       class="nav-link" data-i18n="nav.news">Notícias</a>
+    <a href="/pt/tools.html"      class="nav-link" data-i18n="nav.tools">Ferramentas</a>
+    <a href="/pt/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
+  </nav>
+</header>
+
+<div class="page-hero wrap">
+  <h1 data-i18n="compare.title">Comparar Ferramentas</h1>
+  <p data-i18n="compare.sub">Escolha duas ferramentas e compare-as lado a lado</p>
+</div>
+
+<div class="wrap">
+  <div class="compare-selectors">
+    <div class="compare-select-wrap">
+      <div class="compare-select-label" data-i18n="compare.toolA">Ferramenta A</div>
+      <div class="ac-wrap" id="wrapA">
+        <input class="ac-input" id="inputA" type="text" placeholder="Pesquisar ou rolar..." autocomplete="off">
+        <div class="ac-dropdown" id="dropA"></div>
+      </div>
+    </div>
+    <div class="vs-badge" data-i18n="compare.vs">vs</div>
+    <div class="compare-select-wrap">
+      <div class="compare-select-label" data-i18n="compare.toolB">Ferramenta B</div>
+      <div class="ac-wrap" id="wrapB">
+        <input class="ac-input" id="inputB" type="text" placeholder="Pesquisar ou rolar..." autocomplete="off">
+        <div class="ac-dropdown" id="dropB"></div>
+      </div>
+    </div>
+  </div>
+  <div class="popular-comparisons" id="popularComparisons">
+    <div class="popular-title" data-i18n="compare.popular">Comparações populares</div>
+    <div class="popular-grid">
+      <button class="pop-pair" onclick="quickCompare('ChatGPT','Claude')"><span class="pop-name">ChatGPT</span><span class="pop-vs">vs</span><span class="pop-name">Claude</span></button>
+      <button class="pop-pair" onclick="quickCompare('Cursor','GitHub Copilot')"><span class="pop-name">Cursor</span><span class="pop-vs">vs</span><span class="pop-name">GitHub Copilot</span></button>
+      <button class="pop-pair" onclick="quickCompare('Midjourney','DALL-E 3')"><span class="pop-name">Midjourney</span><span class="pop-vs">vs</span><span class="pop-name">DALL-E 3</span></button>
+      <button class="pop-pair" onclick="quickCompare('Gemini','ChatGPT')"><span class="pop-name">Gemini</span><span class="pop-vs">vs</span><span class="pop-name">ChatGPT</span></button>
+      <button class="pop-pair" onclick="quickCompare('Suno','Udio')"><span class="pop-name">Suno</span><span class="pop-vs">vs</span><span class="pop-name">Udio</span></button>
+      <button class="pop-pair" onclick="quickCompare('Runway','Kling AI')"><span class="pop-name">Runway</span><span class="pop-vs">vs</span><span class="pop-name">Kling AI</span></button>
+      <button class="pop-pair" onclick="quickCompare('Notion AI','ChatGPT')"><span class="pop-name">Notion AI</span><span class="pop-vs">vs</span><span class="pop-name">ChatGPT</span></button>
+      <button class="pop-pair" onclick="quickCompare('Perplexity','Gemini')"><span class="pop-name">Perplexity</span><span class="pop-vs">vs</span><span class="pop-name">Gemini</span></button>
+      <button class="pop-pair" onclick="quickCompare('Lovable','Bolt.new')"><span class="pop-name">Lovable</span><span class="pop-vs">vs</span><span class="pop-name">Bolt.new</span></button>
+    </div>
+  </div>
+  <div id="compareResult"></div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner" style="grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px">
+    <div>
+      <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>AItoolFit</div>
+      <p class="footer-desc">Seu buscador de ferramentas IA.<br>Atualizado diariamente.</p>
+      <div style="display:flex;gap:12px;margin-top:12px">
+        <a href="https://www.linkedin.com/in/leon-danilov-94174620/" target="_blank" rel="noopener" style="color:var(--text3);transition:color .15s" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="#" style="color:var(--text3);transition:color .15s" aria-label="X/Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">PRODUTO</div>
+      <div class="footer-col-links">
+        <a href="/pt/">Buscar ferramenta</a>
+        <a href="/pt/directory.html">Catálogo IA</a>
+        <a href="/pt/compare.html">Comparar</a>
+        <a href="/pt/news.html">Notícias</a>
+        <a href="/pt/tools.html">Ferramentas</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">COMPARAÇÃO RÁPIDA</div>
+      <div class="footer-col-links">
+        <a href="/pt/compare/chatgpt-vs-claude.html">ChatGPT vs Claude</a>
+        <a href="/pt/compare/cursor-vs-copilot.html">Cursor vs Copilot</a>
+        <a href="/pt/compare/midjourney-vs-flux.html">Midjourney vs Flux</a>
+        <a href="/pt/compare/suno-vs-udio.html">Suno vs Udio</a>
+        <a href="/pt/compare/kling-vs-runway.html">Kling vs Runway</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">IDIOMAS</div>
+      <div class="footer-col-links">
+        <a href="/pt/">🇬🇧 English</a>
+        <a href="/es/">🇪🇸 Español</a>
+        <a href="/de/">🇩🇪 Deutsch</a>
+        <a href="/ru/">🇷🇺 Русский</a>
+        <a href="/ua/">🇺🇦 Українська</a>
+        <a href="/he/">🇮🇱 עברית</a>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;font-size:12px;color:rgba(255,255,255,0.45);padding:16px 1.5rem;margin-top:1.5rem;border-top:1px solid rgba(255,255,255,0.08)">
+    Criado por humanos, curado com IA. Sem posicionamentos pagos — recomendações por relevância e avaliações.
+  </div>
+  <div class="footer-bottom" style="flex-direction:column;gap:6px;align-items:flex-start">
+    <div style="display:flex;justify-content:space-between;width:100%;flex-wrap:wrap;gap:8px">
+      <div style="display:flex;gap:16px;font-size:12px"><a href="/privacy.html" style="color:var(--text3)">Privacidade</a><a href="/terms.html" style="color:var(--text3)">Termos</a><a href="/contact.html" style="color:var(--text3)">Contato</a></div>
+      <span style="font-size:12px;color:var(--text3)">© 2026 AItoolFit.ai</span>
+    </div>
+    <span style="font-size:11px;color:var(--text3);opacity:0.6">Made with ♥ by Leondan & Claude</span>
+  </div>
+</footer>
+
+<script>localStorage.setItem("lang","pt");document.addEventListener("DOMContentLoaded",function(){if(typeof I18N!=="undefined")I18N.set("pt");});</script>
+<script src="/js/i18n.js"></script>
+<script src="/js/translations.js"></script>
+<script src="/js/data.js"></script>
+<script src="/js/main.js"></script>
+<script>
+const SB_URL  = 'https://lbjdwkvkkndvofysyssy.supabase.co';
+const SB_ANON = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG';
+
+function toolPageUrl(slug) {
+  const lang = localStorage.getItem('lang') || 'en';
+  return lang === 'en' ? `/tools/${slug}.html` : `/${lang}/tools/${slug}.html`;
+}
+
+function toSlug(name) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+}
+
+function starsHtml(avg) {
+  if (!avg) return '<span style="color:var(--text3);font-size:13px">' + t('ui.noReviews') + '</span>';
+  const full = Math.round(avg);
+  return '<span style="color:#f59e0b;font-size:13px;letter-spacing:1px">' + '★'.repeat(full) + '</span>' +
+         '<span style="color:#555;font-size:13px;letter-spacing:1px">'   + '★'.repeat(5-full) + '</span>' +
+         '<span style="font-size:13px;font-weight:600;color:#f0f0f0;margin-left:4px">' + avg.toFixed(1) + '</span>';
+}
+
+function listHtml(arr, color, icon) {
+  if (!arr || !arr.length) return '<span style="color:var(--text3)">—</span>';
+  return arr.map(p => `<div style="display:flex;gap:6px;align-items:flex-start;font-size:13px;color:var(--text2);margin-bottom:6px"><span>${icon}</span><span>${esc(p)}</span></div>`).join('');
+}
+
+async function fetchToolInfo(slug) {
+  const lang = localStorage.getItem('lang') || 'en';
+  const hdrs = { apikey: SB_ANON, Authorization: `Bearer ${SB_ANON}` };
+  const sel = 'pros,cons,description,best_for,badge,url,domain,category,users';
+  const [toolRes, ratingsRes] = await Promise.all([
+    fetch(`${SB_URL}/rest/v1/tools?slug=eq.${slug}&lang=eq.${lang}&select=${sel}`, { headers: hdrs }),
+    fetch(`${SB_URL}/rest/v1/comments?tool_slug=eq.${slug}&approved=eq.true&select=rating`, { headers: hdrs })
+  ]);
+  let tools = await toolRes.json();
+  // Fallback to English if no translation found
+  if (!tools.length && lang !== 'en') {
+    const fallback = await fetch(`${SB_URL}/rest/v1/tools?slug=eq.${slug}&lang=eq.en&select=${sel}`, { headers: hdrs });
+    tools = await fallback.json();
+  }
+  const reviews = await ratingsRes.json();
+  const dbTool  = tools[0] || {};
+  const avgRating = reviews.length ? reviews.reduce((s,c) => s + c.rating, 0) / reviews.length : null;
+  return { dbTool, avgRating, reviewCount: reviews.length };
+}
+
+/* ── Autocomplete component ── */
+function initAC(inputId, dropId, wrapId, onChange) {
+  const input = document.getElementById(inputId);
+  const drop  = document.getElementById(dropId);
+  const wrap  = document.getElementById(wrapId);
+  let selectedTool = null;
+  let activeIdx = -1;
+  let visibleOptions = [];
+
+  function render(filter) {
+    const q = (filter || '').toLowerCase().trim();
+    let html = '';
+    visibleOptions = [];
+    CATEGORIES.forEach(cat => {
+      const matches = cat.tools.filter(t2 => !q || t2.name.toLowerCase().includes(q));
+      if (!matches.length) return;
+      html += `<div class="ac-group-label">${cat.icon} ${catTitle(cat.id)}</div>`;
+      matches.forEach(t2 => {
+        const idx = visibleOptions.length;
+        const domain = getDomain(t2.url);
+        html += `<div class="ac-option" data-idx="${idx}" data-name="${t2.name}"><img src="https://www.google.com/s2/favicons?sz=32&domain=${domain}" alt="" onerror="this.style.display='none'">${t2.name}</div>`;
+        visibleOptions.push(t2.name);
+      });
+    });
+    if (!visibleOptions.length) html = `<div class="ac-empty">${'Nenhuma ferramenta encontrada'}</div>`;
+    drop.innerHTML = html;
+    activeIdx = -1;
+    highlightActive();
+  }
+
+  function highlightActive() {
+    drop.querySelectorAll('.ac-option').forEach(el => {
+      el.classList.toggle('active', parseInt(el.dataset.idx) === activeIdx);
+    });
+    const activeEl = drop.querySelector('.ac-option.active');
+    if (activeEl) activeEl.scrollIntoView({ block: 'nearest' });
+  }
+
+  function selectTool(name) {
+    selectedTool = name;
+    input.value = name;
+    close();
+    onChange();
+  }
+
+  function open() {
+    if (wrap.classList.contains('open')) return;
+    render(selectedTool ? '' : input.value);
+    wrap.classList.add('open');
+    if (selectedTool) {
+      const idx = visibleOptions.indexOf(selectedTool);
+      if (idx >= 0) { activeIdx = idx; highlightActive(); }
+    }
+  }
+
+  function close() { wrap.classList.remove('open'); activeIdx = -1; }
+
+  input.addEventListener('click', () => { open(); if (selectedTool) input.select(); });
+  input.addEventListener('focus', () => { open(); if (selectedTool) input.select(); });
+  input.addEventListener('input', () => {
+    selectedTool = null;
+    render(input.value);
+    if (!wrap.classList.contains('open')) wrap.classList.add('open');
+  });
+  input.addEventListener('keydown', (e) => {
+    if (!wrap.classList.contains('open')) return;
+    if (e.key === 'ArrowDown') { e.preventDefault(); activeIdx = Math.min(activeIdx + 1, visibleOptions.length - 1); highlightActive(); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); activeIdx = Math.max(activeIdx - 1, 0); highlightActive(); }
+    else if (e.key === 'Enter') { e.preventDefault(); if (activeIdx >= 0 && visibleOptions[activeIdx]) selectTool(visibleOptions[activeIdx]); }
+    else if (e.key === 'Escape') { close(); input.blur(); }
+  });
+  drop.addEventListener('mousedown', (e) => {
+    e.preventDefault();
+    const opt = e.target.closest('.ac-option');
+    if (opt) selectTool(opt.dataset.name);
+  });
+  document.addEventListener('mousedown', (e) => {
+    if (!wrap.contains(e.target)) {
+      if (!selectedTool && input.value) {
+        const match = ALL_TOOLS.find(t2 => t2.name.toLowerCase() === input.value.toLowerCase());
+        if (match) { selectTool(match.name); return; }
+        input.value = '';
+      }
+      close();
+    }
+  });
+
+  return {
+    getValue: () => selectedTool,
+    setValue: (name) => { selectedTool = name; input.value = name || ''; },
+    reset: () => { selectedTool = null; input.value = ''; }
+  };
+}
+
+const acA = initAC('inputA', 'dropA', 'wrapA', updateCompare);
+const acB = initAC('inputB', 'dropB', 'wrapB', updateCompare);
+
+async function updateCompare() {
+  const a = ALL_TOOLS.find(t2 => t2.name === acA.getValue());
+  const b = ALL_TOOLS.find(t2 => t2.name === acB.getValue());
+  const el = document.getElementById('compareResult');
+  if (!a || !b) {
+    history.replaceState({}, '', window.location.pathname);
+    document.title = 'Compare AI Tools Side by Side 2026 — aitoolfit';
+    el.innerHTML = `<div class="compare-placeholder"><div class="icon">⚖️</div><p>${t('compare.placeholder')}</p></div>`;
+    return;
+  }
+
+  // Update URL and page title to reflect the active comparison
+  const slugA = toSlug(a.name);
+  const slugB = toSlug(b.name);
+  const basePath = window.location.pathname; // preserves /ru/compare.html etc.
+  const newUrl = `${basePath}?a=${slugA}&b=${slugB}`;
+  if (window.location.search !== `?a=${slugA}&b=${slugB}`) {
+    history.pushState({}, '', newUrl);
+  }
+  document.title = `${a.name} vs ${b.name} — AI Comparison 2026 | aitoolfit`;
+
+  el.innerHTML = `<div class="compare-placeholder"><div class="icon" style="font-size:1.5rem">⏳</div><p>Loading…</p></div>`;
+  document.getElementById('popularComparisons').style.display = 'none';
+
+  const [infoA, infoB] = await Promise.all([
+    fetchToolInfo(toSlug(a.name)),
+    fetchToolInfo(toSlug(b.name))
+  ]);
+
+  const rows = [
+    [t('compare.overview'),    esc(infoA.dbTool.description||'—'),                           esc(infoB.dbTool.description||'—')],
+    [t('compare.category'),    `${a.catIcon} ${catTitle(a.catId)}`,                          `${b.catIcon} ${catTitle(b.catId)}`],
+    [t('compare.pricing'),     `<span class="badge badge-${a.badge}">${badgeLabel(a.badge)}</span>`, `<span class="badge badge-${b.badge}">${badgeLabel(b.badge)}</span>`],
+    [t('compare.users'),       infoA.dbTool.users||t('compare.noData')||'No data',          infoB.dbTool.users||t('compare.noData')||'No data'],
+    [t('compare.rating'),      starsHtml(infoA.avgRating) + (infoA.reviewCount ? `<span style="font-size:11px;color:var(--text3);margin-left:4px">(${infoA.reviewCount})</span>` : ''),
+                    starsHtml(infoB.avgRating) + (infoB.reviewCount ? `<span style="font-size:11px;color:var(--text3);margin-left:4px">(${infoB.reviewCount})</span>` : '')],
+    [t('compare.advantages'),  listHtml(infoA.dbTool.pros, '#2dd4a0', '✅'),                 listHtml(infoB.dbTool.pros, '#2dd4a0', '✅')],
+    [t('compare.disadvantages'), listHtml(infoA.dbTool.cons, '#f56565', '❌'),               listHtml(infoB.dbTool.cons, '#f56565', '❌')],
+    [t('compare.website')||'Website', a.url ? `<a href="${a.url}" target="_blank" rel="noopener" style="color:var(--accent)">${getDomain(a.url)}</a>` : '—', b.url ? `<a href="${b.url}" target="_blank" rel="noopener" style="color:var(--accent)">${getDomain(b.url)}</a>` : '—'],
+    ['',            `<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="${a.aff}" target="_blank" rel="noopener sponsored">${t('tool.open')}</a><a class="tool-review" href="${toolPageUrl(toSlug(a.name))}">${t('tool.review')}</a></div>`,
+                    `<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="${b.aff}" target="_blank" rel="noopener sponsored">${t('tool.open')}</a><a class="tool-review" href="${toolPageUrl(toSlug(b.name))}">${t('tool.review')}</a></div>`],
+  ];
+
+  el.innerHTML = `<div class="compare-wrap fade-up">
+    <table class="compare-table">
+      <thead><tr><th></th>
+        <td style="text-align:center"><div class="tool-col-head">
+          <div class="tool-col-avatar" style="background:${a.catColor}22;color:${a.catColor}"><img src="https://www.google.com/s2/favicons?sz=64&domain=${getDomain(a.url)}" width="30" height="30" style="border-radius:6px" onerror="this.style.display='none';this.insertAdjacentText('afterend','${a.name[0]}')"></div>
+          <div class="tool-col-name">${a.name}</div>
+          <div class="tool-col-bestfor"><strong>${t('compare.bestFor')}:</strong> ${esc(infoA.dbTool.best_for||a.bestFor||'—')}</div>
+        </div></td>
+        <td style="text-align:center"><div class="tool-col-head">
+          <div class="tool-col-avatar" style="background:${b.catColor}22;color:${b.catColor}"><img src="https://www.google.com/s2/favicons?sz=64&domain=${getDomain(b.url)}" width="30" height="30" style="border-radius:6px" onerror="this.style.display='none';this.insertAdjacentText('afterend','${b.name[0]}')"></div>
+          <div class="tool-col-name">${b.name}</div>
+          <div class="tool-col-bestfor"><strong>${t('compare.bestFor')}:</strong> ${esc(infoB.dbTool.best_for||b.bestFor||'—')}</div>
+        </div></td>
+      </tr></thead>
+      <tbody>${rows.map(([label,va,vb]) => `<tr><th>${label}</th><td class="hl">${va}</td><td class="hl">${vb}</td></tr>`).join('')}</tbody>
+    </table></div>`;
+}
+
+function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function quickCompare(nameA, nameB) {
+  acA.setValue(nameA);
+  acB.setValue(nameB);
+  updateCompare();
+  document.getElementById('compareResult').scrollIntoView({ behavior:'smooth' });
+}
+
+function slugToName(slug) {
+  return ALL_TOOLS.find(t => toSlug(t.name) === slug)?.name || null;
+}
+
+function loadFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const slugA  = params.get('a');
+  const slugB  = params.get('b');
+  if (!slugA || !slugB) return;
+  const nameA = slugToName(slugA);
+  const nameB = slugToName(slugB);
+  if (nameA) acA.setValue(nameA);
+  if (nameB) acB.setValue(nameB);
+  if (nameA && nameB) {
+    updateCompare();
+    document.getElementById('compareResult').scrollIntoView({ behavior:'smooth', block:'start' });
+  }
+}
+
+function onLangChange() { updateCompare(); }
+loadFromUrl();
+</script>
+</body>
+</html>
