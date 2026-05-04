@@ -17,7 +17,7 @@ BASE_URL = 'https://aitoolfit.ai'
 SB_URL  = 'https://lbjdwkvkkndvofysyssy.supabase.co'
 SB_ANON = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG'
 
-LANGUAGES   = ['es', 'ru', 'de', 'ua', 'he']
+LANGUAGES   = ['es', 'ru', 'de', 'ua', 'he', 'fr', 'pt']
 LANG_FLAGS  = {'en':'🇬🇧','ru':'🇷🇺','es':'🇪🇸','fr':'🇫🇷','pt':'🇧🇷','de':'🇩🇪','ua':'🇺🇦','he':'🇮🇱'}
 LANG_LABELS = {'ua': 'UA'}
 LANG_RTL    = {'he'}

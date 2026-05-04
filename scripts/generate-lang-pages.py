@@ -369,7 +369,7 @@ def generate_lang_page(html, lang, page, title, desc):
     }
     if lang in TRENDING_BADGES:
         for en_b, tr_b in TRENDING_BADGES[lang].items():
-            html = html.replace(en_b, tr_b)
+            html = html.replace(en_b, tr_b.replace("'", "\\'"))
 
     # Translate benefit pills
     BENEFIT_PILLS = {

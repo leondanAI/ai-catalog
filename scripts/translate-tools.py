@@ -87,34 +87,50 @@ def main():
     print(f'  {len(tools)} tools')
 
     print('Fetching existing translations…')
-    existing = sb_get('tools?select=slug,lang,description&limit=10000')
-    done = {(r['slug'], r['lang']) for r in existing if r.get('description')}
+    existing = sb_get('tools?select=slug,lang,description,description_long&limit=10000')
+    if skip_long_desc:
+        done = {(r['slug'], r['lang']) for r in existing if r.get('description')}
+    else:
+        done = {(r['slug'], r['lang']) for r in existing if r.get('description') and r.get('description_long')}
     print(f'  {len(done)} rows already translated')
+
+    limit = None
+    for a in args:
+        if a.startswith('--limit='):
+            limit = int(a.split('=')[1])
 
     for lang in langs:
         to_do = tools if force else [t for t in tools if (t['slug'], lang) not in done]
+        if limit:
+            to_do = to_do[:limit]
         print(f'\n→ {lang}: {len(to_do)} to translate ({len(tools)-len(to_do)} already done)')
 
         for i, tool in enumerate(to_do):
             slug = tool['slug']
             print(f'  [{i+1}/{len(to_do)}] {slug}…', end='', flush=True)
-            try:
-                t = translate(client, tool, lang, skip_long_desc=skip_long_desc)
-                # Start with all English fields, override lang + translated fields
-                row = {k: v for k, v in tool.items() if k != 'id'}
-                row['lang']        = lang
-                row['best_for']    = t.get('best_for', '')
-                row['description'] = t.get('description', '')
-                row['pros']        = t.get('pros', [])
-                row['cons']        = t.get('cons', [])
-                if not skip_long_desc:
-                    row['description_long'] = t.get('description_long', '')
-                sb_upsert(row)
-                done.add((slug, lang))
-                print(' ✓')
-                time.sleep(0.2)
-            except Exception as e:
-                print(f' ERROR: {e}')
+            for attempt in range(3):
+                try:
+                    t = translate(client, tool, lang, skip_long_desc=skip_long_desc)
+                    row = {k: v for k, v in tool.items() if k != 'id'}
+                    row['lang']        = lang
+                    row['best_for']    = t.get('best_for', '')
+                    row['description'] = t.get('description', '')
+                    row['pros']        = t.get('pros', [])
+                    row['cons']        = t.get('cons', [])
+                    if not skip_long_desc:
+                        row['description_long'] = t.get('description_long', '')
+                    sb_upsert(row)
+                    done.add((slug, lang))
+                    print(' ✓')
+                    time.sleep(2)
+                    break
+                except Exception as e:
+                    if '429' in str(e) and attempt < 2:
+                        print(f' rate limit, жду 60s…', end='', flush=True)
+                        time.sleep(60)
+                    else:
+                        print(f' ERROR: {e}')
+                        break
 
     print('\nDone.')
 

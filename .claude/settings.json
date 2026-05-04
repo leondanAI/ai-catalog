@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s https://lbjdwkvkkndvofysyssy.supabase.co/*)",
+      "Bash(kill *)",
+      "Bash(pip3 install *)"
+    ]
+  }
+}
