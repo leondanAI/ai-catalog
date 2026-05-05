@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OpenCode 2026 | aitoolfit</title>
-<meta name="description" content="OpenCode 2026 — Open-source AI-агент для кодинга (лицензия MIT) для терминала. Поддерживает 75+ LLM-провайдеров (Claude, GPT, Gemini, Gr">
+<meta name="description" content="OpenCode 2026 — Open-source терминальный агент для кодирования, поддерживающий 75+ провайдеров LLM с интеграцией LSP, сохранением сессий">
 <link rel="canonical" href="https://aitoolfit.ai/ru/tools/opencode.html">
 <link rel="alternate" hreflang="x-default" href="https://aitoolfit.ai/tools/opencode.html">
 <link rel="alternate" hreflang="en" href="https://aitoolfit.ai/tools/opencode.html">
@@ -16,7 +16,7 @@
 <link rel="alternate" hreflang="fr" href="https://aitoolfit.ai/fr/tools/opencode.html">
 <link rel="alternate" hreflang="pt" href="https://aitoolfit.ai/pt/tools/opencode.html">
 <meta property="og:title" content="OpenCode 2026 | aitoolfit">
-<meta property="og:description" content="OpenCode 2026 — Open-source AI-агент для кодинга (лицензия MIT) для терминала. Поддерживает 75+ LLM-провайдеров (Claude, GPT, Gemini, Gr">
+<meta property="og:description" content="OpenCode 2026 — Open-source терминальный агент для кодирования, поддерживающий 75+ провайдеров LLM с интеграцией LSP, сохранением сессий">
 <meta property="og:url" content="https://aitoolfit.ai/ru/tools/opencode.html">
 <meta property="og:image" content="https://aitoolfit.ai/og-image.svg">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
@@ -135,24 +135,28 @@ textarea.form-input{resize:vertical;min-height:90px}
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">💻 ИИ для разработки</span>
-        <span class="tool-meta-chip badge-freemium">Freemium</span>
+        <span class="tool-meta-chip badge-free">Бесплатно</span>
         <span class="tool-meta-chip">👥 N/A</span>
       </div>
-      <div class="tool-best-for"><strong>Подходит для:</strong> Open-source CLI-кодинг, AI-агент в терминале, мульти-модельный</div>
+      <div class="tool-best-for"><strong>Подходит для:</strong> Разработчики, работающие в терминале и ищущие бесплатного провайдер-независимого кодирующего агента</div>
     </div>
   </div>
   <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
   <div class="tool-desc-block">
     <h2>О сервисе OpenCode</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">OpenCode — open-source AI-агент для кодинга, построенный для терминала, на 100% под лицензией MIT — альтернатива Cursor и Windsurf для разработчиков, которым нужен полный контроль над инструментами и свобода выбора любого LLM. Написан на Go, с чистым терминальным интерфейсом (TUI), интегрирует AI-помощь прямо в рабочий процесс разработчиков, которые живут в vim, tmux и командной строке.</p><p style="margin-top:1rem">Главная фича — гибкость провайдеров: из коробки OpenCode поддерживает больше 75 LLM-провайдеров — Claude, GPT, Gemini, Grok, DeepSeek, Mistral и многие другие — плюс локальные модели через Ollama для полностью офлайн-работы. Реализует Model Context Protocol (MCP), что позволяет расширять возможности через внешние инструменты. По дизайну OpenCode не хранит ваш код на сторонних серверах — значимое отличие для разработчиков, работающих с проприетарными или чувствительными кодобазами.</p><p style="margin-top:1rem">У проекта более 140 000 звёзд на GitHub, 850+ контрибьюторов и 11 000+ коммитов — один из самых быстрорастущих open-source проектов для разработчиков в 2026. Бесплатный тариф — это весь CLI; опциональный тариф Go ($10/месяц) добавляет quality-of-life функции для опытных пользователей. Для разработчиков, которым нужен агентный кодинг уровня Cursor без привязки к IDE, без привязки к вендору и без отправки кода одному LLM-провайдеру — OpenCode это убедительная открытая альтернатива.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">OpenCode — это терминальный агент для кодирования на Go с TUI (Terminal User Interface), построенный на фреймворке Bubble Tea. Полностью open source (лицензия MIT) и бесплатен в использовании — вы приносите свои API ключи к любому из 75+ поддерживаемых провайдеров LLM или запускаете локальные модели бесплатно через Ollama. Поддерживаемые провайдеры включают Anthropic, OpenAI, Google Gemini, AWS Bedrock, xAI Grok, DeepSeek, Mistral и Groq.</p><p style="margin-top:1rem">Инструмент интегрирует LSP (Language Server Protocol) для диагностики в реальном времени и встроенной аналитики кода, предоставляя агенту такую же контекстную осведомленность, как в полноценной IDE, не покидая терминал. Сессии сохраняются при разрывах соединения через архитектуру client/server с SQLite, что означает, что длительные задачи кодирования выживают при сбоях сети. Интеграция GitHub Actions позволяет упоминать /opencode в комментариях к issue или PR для инициирования автоматизированных задач кодирования в CI.</p><p style="margin-top:1rem">Основные возможности включают поддержку нескольких сессий, навигацию в стиле vim, TUI с выделением синтаксиса и возможность работать с любой кодовой базой на любом языке. Интеграция GitHub Actions особенно полезна для команд, желающих автоматизацию кодирования на уровне CI без платной подписки.</p><p style="margin-top:1rem">Цена: OpenCode полностью бесплатен и open source. Вы платите только за вызовы API LLM к выбранному провайдеру. Работа исключительно на локальных моделях через Ollama ничего не стоит, кроме оборудования.</p><p style="margin-top:1rem">Ограничения: OpenCode работает только в терминале — нет GUI, расширений IDE или веб-интерфейса. Настройка требует технических знаний, включая управление API ключами и конфигурацию провайдера. UX менее отточен, чем у коммерческих инструментов, а качество результатов полностью зависит от выбранной LLM.</p><p style="margin-top:1rem">Лучше всего подходит для разработчиков, которые в основном работают в терминале и хотят бесплатного, высококонфигурируемого провайдер-независимого агента для кодирования без стоимости подписки.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Преимущества</div><ul class="pc-list">        <li>100% open-source MIT — полный контроль, никакой привязки к вендору</li>
-        <li>Поддержка 75+ LLM-провайдеров из коробки, включая локальный Ollama</li>
-        <li>Нативный для терминала (TUI) — вписывается в workflow vim/tmux/CLI</li>
-        <li>Не отправляет ваш код на сторонние серверы</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Недостатки</div><ul class="pc-list">        <li>Нет графической IDE — только терминал, есть кривая обучения</li>
-        <li>Вы приносите свои API-ключи к LLM; затраты на использование сверх любого тарифа</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Преимущества</div><ul class="pc-list">        <li>Полностью бесплатный и open source — без стоимости подписки, только API ключи LLM</li>
+        <li>Поддерживает 75+ провайдеров LLM, включая бесплатные локальные модели Ollama</li>
+        <li>Интеграция LSP для аналитики кода в реальном времени в терминале</li>
+        <li>Сессии сохраняются при разрывах соединения через архитектуру client/server с SQLite</li>
+        <li>Интеграция GitHub Actions для автоматизации кодирования на уровне CI</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Недостатки</div><ul class="pc-list">        <li>Только терминал — нет GUI, расширений IDE или веб-интерфейса</li>
+        <li>Требует технической подготовки, включая управление API ключами</li>
+        <li>Менее отточенный UX, чем коммерческие инструменты вроде Cursor или Copilot</li>
+        <li>Меньшая экосистема поддержки и документации, чем у устоявшихся инструментов</li>
+        <li>Качество результатов полностью зависит от настроенного провайдера LLM</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://opencode.ai" target="_blank" rel="noopener">Перейти на OpenCode →</a>
@@ -160,15 +164,15 @@ textarea.form-input{resize:vertical;min-height:90px}
   <div class="section-title-sm">Также рассмотрите</div>
   <div class="also-grid">    <a class="also-card" href="/ru/tools/bolt-new.html">
       <div class="also-card-name">Bolt.new</div>
-      <div class="also-card-desc">Quick prototypes, fullstack MVP</div>
+      <div class="also-card-desc">Browser-based full-stack app prototyping</div>
     </a>
     <a class="also-card" href="/ru/tools/claude-code.html">
       <div class="also-card-name">Claude Code</div>
-      <div class="also-card-desc">Terminal, complex agentic tasks</div>
+      <div class="also-card-desc">Complex multi-file refactoring and agentic workflows</div>
     </a>
     <a class="also-card" href="/ru/tools/continue-dev.html">
       <div class="also-card-name">Continue.dev</div>
-      <div class="also-card-desc">Open-source copilot, VS Code, JetBrains, local LLMs</div>
+      <div class="also-card-desc">Privacy-first development with any LLM</div>
     </a>
 </div>
   <div class="comments-section">
