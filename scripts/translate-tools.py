@@ -69,7 +69,7 @@ def main():
     args = sys.argv[1:]
     skip_long_desc = '--no-long-desc' in args
     force = '--force' in args
-    langs = [a for a in args if not a.startswith('--')] or ['ru']
+    langs = [a for a in args if not a.startswith('--')] or ['es','de','ru','ua','he','fr','pt']
 
     api_key = os.environ.get('ANTHROPIC_API_KEY')
     if not api_key:
