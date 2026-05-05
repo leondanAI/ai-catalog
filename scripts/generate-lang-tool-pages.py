@@ -196,6 +196,17 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
     cat_label  = CATEGORY_LABELS.get(lang, {}).get(category, category.title())
     cat_icon   = CATEGORY_ICONS.get(category, '🤖')
     badge_lbl  = BADGE_LABELS.get(lang, {}).get(badge, badge.title())
+    is_price   = bool(users and (users.startswith('Free') or users.startswith('from $')))
+    if badge == 'paid' and is_price:
+        FROM = {'ru':'от','es':'desde','de':'ab','ua':'від','he':'מ-','fr':'dès','pt':'a partir de'}
+        MO   = {'ru':'/мес','es':'/mes','de':'/Mo.','ua':'/міс','he':"/חו'",'fr':'/mois','pt':'/mês'}
+        FREE = {'ru':'Бесплатно','es':'Gratis','de':'Kostenlos','ua':'Безкоштовно','he':'חינם','fr':'Gratuit','pt':'Grátis'}
+        import re as _re
+        m = _re.search(r'from \$(\d+(?:\.\d+)?)', users)
+        if m:
+            amt = m.group(1)
+            f, mo = FROM.get(lang, 'from'), MO.get(lang, '/mo')
+            badge_lbl = f'{FREE.get(lang,"Free")} / {f} ${amt}{mo}' if users.startswith('Free /') else f'{f} ${amt}{mo}'
     ui         = L['ui']
     nav        = L['nav']
     cats       = L['cats']
@@ -216,7 +227,7 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
         f'    </a>\n' for a in also
     )
 
-    users_chip = f'<span class="tool-meta-chip">👥 {esc(users)}</span>' if users else ''
+    users_chip = f'<span class="tool-meta-chip">👥 {esc(users)}</span>' if (users and not is_price) else ''
     best_for_label = LANGUAGES[lang]['ui']['best_for']
     best_for_line = f'<div class="tool-best-for"><strong>{best_for_label}:</strong> {esc(best_for)}</div>' if best_for else ''
 
@@ -271,6 +282,9 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
 .btn-visit:hover{{background:var(--accent2)}}
 .tool-hero-meta{{display:flex;align-items:center;gap:8px;flex-wrap:wrap}}
 .tool-meta-chip{{display:inline-flex;align-items:center;gap:5px;background:var(--bg3);border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-size:12px;color:var(--text2)}}
+.tool-meta-chip.badge-paid{{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}}
+.tool-meta-chip.badge-free{{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}}
+.tool-meta-chip.badge-freemium{{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}}
 .tool-best-for{{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}}
 .tool-best-for strong{{color:var(--accent);font-weight:600}}
 [dir="rtl"] .tool-best-for{{border-left:none;border-right:3px solid var(--accent)}}
