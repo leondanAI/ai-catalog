@@ -21,7 +21,11 @@
       "Bash(node *)",
       "Bash(awk *)",
       "Bash(grep -n \"from \\\\$\\\\|from_price\\\\|badgeLabel\\\\|badge.*label\\\\|BADGE\" /Users/leondanilov/Desktop/AI-catalog/js/translations.js)",
-      "Bash(grep badge-paid\\\\|badge-free\\\\|Pricing\\\\|from \\\\$ *)"
+      "Bash(grep badge-paid\\\\|badge-free\\\\|Pricing\\\\|from \\\\$ *)",
+      "Bash(git rm *)",
+      "Bash(git reset *)",
+      "Bash(git restore *)",
+      "Bash(grep -A5 \"badge-paid\\\\|badge_lbl\\\\|from \\\\$\\\\|tool-meta-chip\" ru/tools/midjourney.html)"
     ]
   }
 }

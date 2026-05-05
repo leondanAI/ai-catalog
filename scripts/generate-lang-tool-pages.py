@@ -374,7 +374,7 @@ textarea.form-input{{resize:vertical;min-height:90px}}
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">{cat_icon} {esc(cat_label)}</span>
-        <span class="tool-meta-chip">{esc(badge_lbl)}</span>
+        <span class="tool-meta-chip badge-{badge}">{esc(badge_lbl)}</span>
         {users_chip}
       </div>
       {best_for_line}
