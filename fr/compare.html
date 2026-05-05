@@ -265,6 +265,11 @@ function listHtml(arr, color, icon) {
   return arr.map(p => `<div style="display:flex;gap:6px;align-items:flex-start;font-size:13px;color:var(--text2);margin-bottom:6px"><span>${icon}</span><span>${esc(p)}</span></div>`).join('');
 }
 
+function priceBadge(badge, users) {
+  const isPrice = users && (users.startsWith("Free") || users.startsWith("from $"));
+  return (badge === 'paid' && isPrice) ? localizePrice(users) : badgeLabel(badge);
+}
+
 async function fetchToolInfo(slug) {
   const lang = localStorage.getItem('lang') || 'en';
   const hdrs = { apikey: SB_ANON, Authorization: `Bearer ${SB_ANON}` };
@@ -414,7 +419,7 @@ async function updateCompare() {
   const rows = [
     [t('compare.overview'),    esc(infoA.dbTool.description||'—'),                           esc(infoB.dbTool.description||'—')],
     [t('compare.category'),    `${a.catIcon} ${catTitle(a.catId)}`,                          `${b.catIcon} ${catTitle(b.catId)}`],
-    [t('compare.pricing'),     `<span class="badge badge-${a.badge}">${badgeLabel(a.badge)}</span>`, `<span class="badge badge-${b.badge}">${badgeLabel(b.badge)}</span>`],
+    [t('compare.pricing'),     `<span class="badge badge-${a.badge}">${priceBadge(a.badge, infoA.dbTool.users)}</span>`, `<span class="badge badge-${b.badge}">${priceBadge(b.badge, infoB.dbTool.users)}</span>`],
     [t('compare.users'),       infoA.dbTool.users||t('compare.noData')||'No data',          infoB.dbTool.users||t('compare.noData')||'No data'],
     [t('compare.rating'),      starsHtml(infoA.avgRating) + (infoA.reviewCount ? `<span style="font-size:11px;color:var(--text3);margin-left:4px">(${infoA.reviewCount})</span>` : ''),
                     starsHtml(infoB.avgRating) + (infoB.reviewCount ? `<span style="font-size:11px;color:var(--text3);margin-left:4px">(${infoB.reviewCount})</span>` : '')],

@@ -25,7 +25,8 @@
       "Bash(git rm *)",
       "Bash(git reset *)",
       "Bash(git restore *)",
-      "Bash(grep -A5 \"badge-paid\\\\|badge_lbl\\\\|from \\\\$\\\\|tool-meta-chip\" ru/tools/midjourney.html)"
+      "Bash(grep -A5 \"badge-paid\\\\|badge_lbl\\\\|from \\\\$\\\\|tool-meta-chip\" ru/tools/midjourney.html)",
+      "Bash(grep -n \"Paid\\\\|Платно\\\\|badge-paid\\\\|from \\\\$\\\\|/mo\" ru/compare/midjourney-vs-flux.html)"
     ]
   }
 }
