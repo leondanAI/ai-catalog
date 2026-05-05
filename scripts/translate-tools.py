@@ -56,7 +56,7 @@ Return ONLY valid JSON with keys: {', '.join(fields.keys())}.
 {json.dumps(fields, ensure_ascii=False)}"""
 
     msg = client.messages.create(
-        model='claude-sonnet-4-6',
+        model='claude-haiku-4-5-20251001',
         max_tokens=2048,
         messages=[{'role': 'user', 'content': prompt}]
     )
@@ -95,12 +95,18 @@ def main():
     print(f'  {len(done)} rows already translated')
 
     limit = None
+    slugs = None
     for a in args:
         if a.startswith('--limit='):
             limit = int(a.split('=')[1])
+        if a.startswith('--slugs='):
+            slugs = a.split('=')[1].split(',')
 
     for lang in langs:
-        to_do = tools if force else [t for t in tools if (t['slug'], lang) not in done]
+        if slugs:
+            to_do = [t for t in tools if t['slug'] in slugs]
+        else:
+            to_do = tools if force else [t for t in tools if (t['slug'], lang) not in done]
         if limit:
             to_do = to_do[:limit]
         print(f'\n→ {lang}: {len(to_do)} to translate ({len(tools)-len(to_do)} already done)')
@@ -122,7 +128,7 @@ def main():
                     sb_upsert(row)
                     done.add((slug, lang))
                     print(' ✓')
-                    time.sleep(2)
+                    time.sleep(8)
                     break
                 except Exception as e:
                     if '429' in str(e) and attempt < 2:
