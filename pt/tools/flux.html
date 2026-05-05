@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Flux 2026 | aitoolfit</title>
-<meta name="description" content="Flux 2026 — Modelo de imagem open-source de última geração da Black Forest Labs. Rivaliza com a qualidade do Midjourney a custo zero">
+<meta name="description" content="Flux 2026 — Família de modelos de imagem em código aberto da Black Forest Labs. FLUX.2 (Nov 2025) oferece qualidade de topo — pesos ">
 <link rel="canonical" href="https://aitoolfit.ai/pt/tools/flux.html">
 <link rel="alternate" hreflang="x-default" href="https://aitoolfit.ai/tools/flux.html">
 <link rel="alternate" hreflang="en" href="https://aitoolfit.ai/tools/flux.html">
@@ -13,8 +13,10 @@
 <link rel="alternate" hreflang="ru" href="https://aitoolfit.ai/ru/tools/flux.html">
 <link rel="alternate" hreflang="ua" href="https://aitoolfit.ai/ua/tools/flux.html">
 <link rel="alternate" hreflang="he" href="https://aitoolfit.ai/he/tools/flux.html">
+<link rel="alternate" hreflang="fr" href="https://aitoolfit.ai/fr/tools/flux.html">
+<link rel="alternate" hreflang="pt" href="https://aitoolfit.ai/pt/tools/flux.html">
 <meta property="og:title" content="Flux 2026 | aitoolfit">
-<meta property="og:description" content="Flux 2026 — Modelo de imagem open-source de última geração da Black Forest Labs. Rivaliza com a qualidade do Midjourney a custo zero">
+<meta property="og:description" content="Flux 2026 — Família de modelos de imagem em código aberto da Black Forest Labs. FLUX.2 (Nov 2025) oferece qualidade de topo — pesos ">
 <meta property="og:url" content="https://aitoolfit.ai/pt/tools/flux.html">
 <meta property="og:image" content="https://aitoolfit.ai/og-image.svg">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
@@ -133,20 +135,23 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip">Free</span>
         <span class="tool-meta-chip">👥 5M+</span>
       </div>
-      <div class="tool-best-for"><strong>Ideal para:</strong> Alternativa gratuita e de código aberto ao Midjourney com alta qualidade</div>
+      <div class="tool-best-for"><strong>Ideal para:</strong> Geração de imagens de alta qualidade em código aberto</div>
     </div>
   </div>
   <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
   <div class="tool-desc-block">
     <h2>Sobre Flux</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Flux é uma família de modelos open-source de geração de imagens a partir de texto, desenvolvida pela Black Forest Labs, fundada pelos criadores originais do Stable Diffusion. Lançados em meados de 2024, os modelos Flux se estabeleceram imediatamente como a opção open-source de maior qualidade disponível para geração de imagens, com resultados que rivalizam ou superam o Midjourney V6 a custo zero quando executados localmente.</p><p style="margin-top:1rem">A família Flux inclui três variantes para diferentes casos de uso: Flux Schnell é otimizado para velocidade (2-4 etapas, extremamente rápido), Flux Dev oferece maior qualidade com velocidade moderada para desenvolvimento e experimentação, e Flux Pro entrega a melhor qualidade para uso em produção. Todos os pesos dos modelos estão disponíveis publicamente no Hugging Face. Os modelos se destacam especialmente em retratos fotorrealistas, cenas complexas com múltiplos sujeitos e renderização precisa de texto dentro das imagens.</p><p style="margin-top:1rem">O Flux é acessado por meio de plataformas de terceiros, e não por uma interface web nativa: Replicate, fal.ai e Together.ai oferecem acesso à API do Flux com preços por imagem em torno de $0,003 a $0,05 por geração, dependendo da variante. ComfyUI e Automatic1111 suportam o Flux para uso local. O estilo de prompt difere um pouco do Midjourney — o Flux responde melhor a textos descritivos em prosa do que a prompts repletos de palavras-chave no estilo Midjourney. Para desenvolvedores e usuários com conhecimento técnico, o Flux oferece qualidade no nível do Midjourney a uma fração do custo ou totalmente de graça.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Flux é uma família de modelos de texto para imagem em código aberto desenvolvida pela Black Forest Labs, fundada pelos criadores originais do Stable Diffusion. Desde o lançamento do FLUX.1 original em meados de 2024, os modelos ocupam consistentemente o topo dos rankings de qualidade de imagem.</p><p style="margin-top:1rem">A geração FLUX.2 foi lançada em novembro de 2025 e inclui múltiplas variantes de modelo: FLUX.2 [dev] (32B parâmetros, texto para imagem além de edição de imagem), FLUX.2 [pro] (qualidade/velocidade equilibradas), FLUX.2 [max] (qualidade mais alta), e FLUX.2 [flex] (passos ajustáveis). FLUX.2 [klein], lançado em janeiro de 2026, é um modelo de parâmetros 4B/9B que gera imagens em menos de um segundo em GPUs consumer. FLUX Kontext adiciona geração de imagem contextual e conversacional.</p><p style="margin-top:1rem">Os pesos do modelo central são código aberto e gratuitos para download. O acesso à API está disponível diretamente via Black Forest Labs (baseado em crédito, ~$0.04/imagem para FLUX.1 Pro), e através de plataformas de terceiros incluindo fal.ai, Replicate, Cloudflare Workers AI, e Azure AI Foundry.</p><p style="margin-top:1rem">O modelo lida significativamente melhor com renderização de texto do que a maioria das alternativas. A velocidade de geração em menos de um segundo do FLUX.2 [klein] o torna viável para aplicações em tempo real e configurações de GPU consumer que anteriormente exigiam inferência na nuvem.</p><p style="margin-top:1rem">Limitações: os maiores modelos (FLUX.2 dev com 32B) requerem VRAM significativa para uso local. Os preços em APIs gerenciadas aumentam para geração de alto volume. O ecossistema de modelos é menos maduro que Stable Diffusion em termos de ajustes personalizados da comunidade.</p><p style="margin-top:1rem">Melhor para desenvolvedores, pesquisadores e usuários avançados que desejam a mais alta qualidade de imagem em código aberto sem bloqueio proprietário.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Vantagens</div><ul class="pc-list">        <li>Pesos open-source — execute localmente ou via API sem custo</li>
-        <li>Qualidade rivaliza com o Midjourney a uma fração do preço</li>
-        <li>Múltiplas variantes: Flux Schnell (rápido), Flux Dev (qualidade), Flux Pro (melhor)</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Desvantagens</div><ul class="pc-list">        <li>Sem aplicativo web nativo — acessado por plataformas de terceiros (Replicate, fal.ai, etc.)</li>
-        <li>O estilo de engenharia de prompts difere do Midjourney — requer adaptação</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Vantagens</div><ul class="pc-list">        <li>FLUX.2 [klein] gera imagens em menos de 1 segundo em GPUs consumer</li>
+        <li>Pesos abertos — gratuitos para baixar, ajustar e executar localmente</li>
+        <li>FLUX.2 dev com 32B parâmetros: melhor qualidade em código aberto disponível</li>
+        <li>Disponível em fal.ai, Replicate, Cloudflare Workers AI, Azure</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Desvantagens</div><ul class="pc-list">        <li>FLUX.2 dev (32B parâmetros) requer muita VRAM para inferência local</li>
+        <li>Ecossistema de ajustes da comunidade menor que Stable Diffusion</li>
+        <li>Custos de API gerenciada aumentam em alto volume</li>
+        <li>FLUX Kontext ainda relativamente novo — menos testado em produção</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://blackforestlabs.ai" target="_blank" rel="noopener">Visitar Flux →</a>
@@ -154,7 +159,7 @@ textarea.form-input{resize:vertical;min-height:90px}
   <div class="section-title-sm">Considere também</div>
   <div class="also-grid">    <a class="also-card" href="/pt/tools/adobe-firefly.html">
       <div class="also-card-name">Adobe Firefly</div>
-      <div class="also-card-desc">Commercial design, Adobe ecosystem</div>
+      <div class="also-card-desc">Commercial design in Photoshop and Illustrator</div>
     </a>
     <a class="also-card" href="/pt/tools/chatgpt-images.html">
       <div class="also-card-name">ChatGPT Images 2.0</div>

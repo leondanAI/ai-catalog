@@ -151,7 +151,7 @@ CATEGORY_ICONS = {
 
 RTL_LANGS = {'he'}
 
-ACTIVE_NON_EN_LANGS = ['es', 'de', 'ru', 'ua', 'he']
+ACTIVE_NON_EN_LANGS = ['es', 'de', 'ru', 'ua', 'he', 'fr', 'pt']
 
 def sb_get(path):
     req = urllib.request.Request(
