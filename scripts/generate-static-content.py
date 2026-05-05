@@ -78,8 +78,9 @@ def render_tool_card(tool, color):
     users  = tool.get('users') or ''
     url    = tool.get('url', '#')
     sl     = slug(name)
-    users_html = f'<span class="tool-users">👥 {esc(users)}</span>' if users else ''
-    badge_lbl  = BADGE_LABELS.get(badge, badge.title())
+    is_price   = users and (users.startswith('Free') or users.startswith('from $'))
+    badge_lbl  = users if (badge == 'paid' and is_price) else BADGE_LABELS.get(badge, badge.title())
+    users_html = f'<span class="tool-users">👥 {esc(users)}</span>' if (users and not is_price) else ''
     return f'''
     <div class="tool-card fade-up" data-cat="{esc(tool.get('category',''))}" data-name="{esc(name.lower())}">
       <div class="tool-card-top">
@@ -223,7 +224,7 @@ def inject_news(articles):
 
 def main():
     print('Fetching tools from Supabase…')
-    tools = fetch('tools?order=name.asc&limit=200&select=slug,name,url,domain,category,badge,users,description')
+    tools = fetch('tools?lang=eq.en&published=eq.true&order=name.asc&limit=200&select=slug,name,url,domain,category,badge,users,description')
     print(f'  {len(tools)} tools')
 
     print('Fetching English news from Supabase…')

@@ -55,7 +55,7 @@ const CATEGORIES = [
       { name:'Manus', desc:'Autonomous AI agent from Monica team. Give it a complex goal — it browses the web, writes code, manages files and delivers a finished result independently.', url:'https://manus.im', aff:'https://manus.im?ref=aiportal', badge:'freemium', bestFor:'Autonomous tasks, research, coding, web agents', users:'1M+',
         pros:['Completes complex multi-step tasks end-to-end with minimal human input — highest task completion rate of any public agent','Real-time activity feed shows every action the agent takes — full transparency and control','Sandboxed virtual environment keeps all agent actions isolated and reversible'],
         cons:['Free tier credits run out quickly for intensive research or coding tasks','Complex tasks with many steps can take 10–30 minutes — not suitable for time-sensitive work'] },
-      { name:'Devin', desc:'World\'s first AI software engineer by Cognition. Autonomously plans, codes, debugs and deploys full features from a single prompt.', url:'https://cognition.ai/devin', aff:'https://cognition.ai/devin?ref=aiportal', badge:'paid', bestFor:'Autonomous coding, full-stack development, debugging', users:null,
+      { name:'Devin', desc:'World\'s first AI software engineer by Cognition. Autonomously plans, codes, debugs and deploys full features from a single prompt.', url:'https://cognition.ai/devin', aff:'https://cognition.ai/devin?ref=aiportal', badge:'paid', bestFor:'Autonomous coding, full-stack development, debugging', users:'from $20/mo',
         pros:['Handles entire software tasks end-to-end — from planning to deployment autonomously','Real terminal, browser, and code editor in a sandboxed environment — works like a human developer','Can learn new technologies and APIs on the fly by reading documentation'],
         cons:['Limited access — waitlist and paid team plans only','Complex tasks can be slow (30+ min) and sometimes require human course-correction'] },
     ]
@@ -148,7 +148,7 @@ const CATEGORIES = [
       { name:'Nano Banana', desc:'AI image editor on Google’s Gemini 2.5/3 Pro Image. Industry-leading character consistency — keep faces, outfits and composition identical across multiple edits.', url:'https://nanobanana.io', aff:'https://nanobanana.io?ref=aiportal', badge:'freemium', bestFor:'Image editing, character consistency, AI influencers', users:'N/A',
         pros:['Best-in-class character consistency across multiple edits and scenes','In-context editing preserves original lighting, perspective and composition','Powered by Google Gemini 2.5/3 Pro Image — competitive quality at no install cost','Fully browser-based with free credits on sign-up'],
         cons:['Free credits are limited — heavy use requires Pro plan','Less suited for purely generative text-to-image workflows from scratch','Newer tool — smaller community and fewer tutorials than Midjourney or Flux'] },
-      { name:'Midjourney', desc:'Top quality AI art. Photorealism and artistic styles across any genre. Industry standard for designers.', url:'https://midjourney.com', aff:'https://midjourney.com?ref=aiportal', badge:'paid', bestFor:'Artistic art, photorealism', users:'20M+',
+      { name:'Midjourney', desc:'Top quality AI art. Photorealism and artistic styles across any genre. Industry standard for designers.', url:'https://midjourney.com', aff:'https://midjourney.com?ref=aiportal', badge:'paid', bestFor:'Artistic art, photorealism', users:'from $10/mo',
         pros:['Best aesthetic quality — V6 sets the industry standard for photorealism and artistic styles','Active Discord community with millions of example prompts to learn from','Fastest iteration cycle — variations and remixes in seconds'],
         cons:['Requires Discord — no standalone web or API interface','No free tier since March 2023 — starts at $10/month'] },
       { name:'Stable Diffusion', desc:'Open-source image generation model. Run locally for full control over every parameter.', url:'https://stability.ai', aff:'https://stability.ai?ref=aiportal', badge:'free', bestFor:'Local run, full customization', users:'10M+',
@@ -461,6 +461,22 @@ function badgeLabel(b) {
   return map[b] || b;
 }
 
+function localizePrice(price) {
+  if (!price) return price;
+  const lang = localStorage.getItem('lang') || 'en';
+  const FROM = { ru:'от', es:'desde', de:'ab', ua:'від', he:'מ-', fr:'dès', pt:'a partir de' };
+  const MO   = { ru:'/мес', es:'/mes', de:'/Mo.', ua:'/міс', he:"/חו'", fr:'/mois', pt:'/mês' };
+  const FREE = { ru:'Бесплатно', es:'Gratis', de:'Kostenlos', ua:'Безкоштовно', he:'חינם', fr:'Gratuit', pt:'Grátis' };
+  const from = FROM[lang] || 'from';
+  const mo   = MO[lang]   || '/mo';
+  const free = FREE[lang]  || 'Free';
+  if (price === 'Free') return free;
+  const m = price.match(/from \$(\d+(?:\.\d+)?)/);
+  if (!m) return price;
+  const amt = m[1];
+  return price.startsWith('Free /') ? `${free} / ${from} $${amt}${mo}` : `${from} $${amt}${mo}`;
+}
+
 function toSlug(name) {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 }
@@ -469,7 +485,9 @@ function renderToolCard(tool, color) {
   const c = color || tool.catColor || '#7c6af7';
   const domain = getDomain(tool.url);
   const faviconSrc = `https://www.google.com/s2/favicons?sz=64&domain=${domain}`;
-  const usersHtml = tool.users ? `<span class="tool-users">👥 ${tool.users}</span>` : '';
+  const isPrice = tool.users && (tool.users.startsWith('Free') || tool.users.startsWith('from $'));
+  const badgeLbl = (tool.badge === 'paid' && isPrice) ? localizePrice(tool.users) : badgeLabel(tool.badge);
+  const usersHtml = (tool.users && !isPrice) ? `<span class="tool-users">👥 ${tool.users}</span>` : '';
   const slug = toSlug(tool.name);
   const _lang = localStorage.getItem('lang') || 'en';
   const reviewUrl = _lang === 'en' ? `/tools/${slug}.html` : `/${_lang}/tools/${slug}.html`;
@@ -483,7 +501,7 @@ function renderToolCard(tool, color) {
         </div>
         <span class="tool-name">${tool.name}</span>
         ${usersHtml}
-        <span class="badge badge-${tool.badge}">${badgeLabel(tool.badge)}</span>
+        <span class="badge badge-${tool.badge}">${badgeLbl}</span>
       </div>
       <p class="tool-desc">${getToolDesc(tool)}</p>
       <div class="tool-footer">

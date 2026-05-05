@@ -141,7 +141,8 @@ def render_page(tool, all_tools, rating_data=None):
 
     cat_label = CATEGORY_LABELS.get(category, category.title())
     cat_icon  = CATEGORY_ICONS.get(category, '🤖')
-    badge_lbl = BADGE_LABELS.get(badge, badge.title())
+    is_price  = bool(users and (users.startswith('Free') or users.startswith('from $')))
+    badge_lbl = users if (badge == 'paid' and is_price) else BADGE_LABELS.get(badge, badge.title())
 
     pros_html = '\n'.join(f'        <li>{esc(p)}</li>' for p in pros)
     cons_html = '\n'.join(f'        <li>{esc(p)}</li>' for p in cons)
@@ -154,7 +155,7 @@ def render_page(tool, all_tools, rating_data=None):
       <div class="also-card-desc">{esc(a['best_for'] or '')}</div>
     </a>\n'''
 
-    users_chip = f'<span class="tool-meta-chip">👥 {esc(users)}</span>' if users else ''
+    users_chip = f'<span class="tool-meta-chip">👥 {esc(users)}</span>' if (users and not is_price) else ''
     best_for_line = f'<div class="tool-best-for"><strong>Best for:</strong> {esc(best_for)}</div>' if best_for else ''
 
     hreflang_block = '\n'.join(
@@ -205,6 +206,9 @@ def render_page(tool, all_tools, rating_data=None):
 .btn-visit:hover {{ background: var(--accent2); transform: translateY(-1px); }}
 .tool-hero-meta {{ display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }}
 .tool-meta-chip {{ display: inline-flex; align-items: center; gap: 5px; background: var(--bg3); border: 1px solid var(--border); border-radius: 20px; padding: 4px 12px; font-size: 12px; color: var(--text2); }}
+.tool-meta-chip.badge-paid {{ background: rgba(239,68,68,0.12); color: #f87171; border-color: rgba(239,68,68,0.25); }}
+.tool-meta-chip.badge-free {{ background: rgba(45,212,160,0.12); color: var(--green); border-color: rgba(45,212,160,0.2); }}
+.tool-meta-chip.badge-freemium {{ background: rgba(124,106,247,0.12); color: #a89cf7; border-color: rgba(124,106,247,0.2); }}
 .tool-best-for {{ font-size: 14px; color: var(--text); background: rgba(124,106,247,0.08); border-left: 3px solid var(--accent); padding: 10px 14px; border-radius: 6px; margin-top: 14px; line-height: 1.5; }}
 .tool-best-for strong {{ color: var(--accent); font-weight: 600; }}
 [dir="rtl"] .tool-best-for {{ border-left: none; border-right: 3px solid var(--accent); }}
@@ -312,7 +316,7 @@ textarea.form-input {{ resize: vertical; min-height: 90px; }}
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">{cat_icon} {esc(cat_label)}</span>
-        <span class="tool-meta-chip">{esc(badge_lbl)}</span>
+        <span class="tool-meta-chip{' badge-paid' if badge == 'paid' else (' badge-free' if badge == 'free' else ' badge-freemium')}">{esc(badge_lbl)}</span>
         {users_chip}
       </div>
       {best_for_line}
