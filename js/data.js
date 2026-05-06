@@ -501,7 +501,7 @@ function renderToolCard(tool, color) {
   const badgeLbl = (tool.badge === 'paid' && isPrice) ? localizePrice(tool.users) : badgeLabel(tool.badge);
   const usersHtml = (tool.users && !isPrice) ? `<span class="tool-users">👥 ${tool.users}</span>` : '';
   const slug = toSlug(tool.name);
-  const _lang = localStorage.getItem('lang') || 'en';
+  const _lang = (typeof I18N !== 'undefined' ? I18N.lang : null) || localStorage.getItem('lang') || 'en';
   const reviewUrl = _lang === 'en' ? `/tools/${slug}.html` : `/${_lang}/tools/${slug}.html`;
   return `
     <div class="tool-card fade-up" onclick="window.location.href='${reviewUrl}'" style="cursor:pointer">
