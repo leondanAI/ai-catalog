@@ -9,10 +9,32 @@ Usage:
   python3 scripts/generate-lang-tool-pages.py ru es fr  # multiple
 """
 
-import urllib.request, json, os, sys
+import urllib.request, json, os, sys, re
 
 SB_URL  = 'https://lbjdwkvkkndvofysyssy.supabase.co'
 SB_ANON = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG'
+
+# Localized title templates per language
+TITLE_TEMPLATES = {
+    'ru': lambda n: f'{n} 2026 — Обзор, плюсы и минусы, цены | AItoolFit',
+    'es': lambda n: f'{n} 2026 — Ventajas, Desventajas y Precios | AItoolFit',
+    'de': lambda n: f'{n} 2026 — Vor- und Nachteile, Preise | AItoolFit',
+    'ua': lambda n: f'{n} 2026 — Огляд, плюси та мінуси, ціни | AItoolFit',
+    'he': lambda n: f'{n} 2026 — יתרונות, חסרונות ומחירים | AItoolFit',
+    'fr': lambda n: f'{n} 2026 — Avantages, Inconvénients et Prix | AItoolFit',
+    'pt': lambda n: f'{n} 2026 — Vantagens, Desvantagens e Preços | AItoolFit',
+}
+
+def _load_seo_overrides():
+    path = os.path.join(os.path.dirname(__file__), 'seo_titles_meta.json')
+    try:
+        with open(path, encoding='utf-8') as f:
+            raw = re.sub(r'//[^\n]*', '', f.read())
+        return {item['slug']: item for item in json.loads(raw)}
+    except Exception:
+        return {}
+
+SEO_OVERRIDES = _load_seo_overrides()
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 BASE_URL = 'https://aitoolfit.ai'
 
@@ -225,6 +247,7 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
         else:
             raw_desc = truncated.rsplit(' ', 1)[0].rstrip('.,;:') + '...'
     meta_desc = f'{name} 2026 — {raw_desc}'
+    page_title = TITLE_TEMPLATES.get(lang, lambda n: f'{n} 2026 | AItoolFit')(name)
 
     pros_html = '\n'.join(f'        <li>{esc(p)}</li>' for p in pros)
     cons_html = '\n'.join(f'        <li>{esc(p)}</li>' for p in cons)
@@ -260,11 +283,11 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{esc(name)} 2026 | aitoolfit</title>
+<title>{esc(page_title)}</title>
 <meta name="description" content="{esc(meta_desc)}">
 <link rel="canonical" href="{BASE_URL}/{lang}/tools/{esc(slug)}.html">
 {hreflang_block}
-<meta property="og:title" content="{esc(name)} 2026 | aitoolfit">
+<meta property="og:title" content="{esc(page_title)}">
 <meta property="og:description" content="{esc(meta_desc)}">
 <meta property="og:url" content="{BASE_URL}/{lang}/tools/{esc(slug)}.html">
 <meta property="og:image" content="{BASE_URL}/og-image.png">

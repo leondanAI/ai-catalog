@@ -6,6 +6,18 @@ Run: python3 scripts/generate-pages.py
 
 import urllib.request, json, os, re
 
+# Load SEO overrides (keyword-optimized title + meta per slug)
+def _load_seo_overrides():
+    path = os.path.join(os.path.dirname(__file__), 'seo_titles_meta.json')
+    try:
+        with open(path, encoding='utf-8') as f:
+            raw = re.sub(r'//[^\n]*', '', f.read())
+        return {item['slug']: item for item in json.loads(raw)}
+    except Exception:
+        return {}
+
+SEO_OVERRIDES = _load_seo_overrides()
+
 SB_URL  = 'https://lbjdwkvkkndvofysyssy.supabase.co'
 SB_ANON = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG'
 OUT_DIR = os.path.join(os.path.dirname(__file__), '..', 'tools')
@@ -137,7 +149,9 @@ def render_page(tool, all_tools, rating_data=None):
     best_for  = tool['best_for'] or ''
     desc      = tool.get('description_long') or tool.get('description') or ''
     short_desc = tool.get('description') or ''  # always short version for meta
-    meta_desc  = build_meta_desc(name, short_desc, badge, best_for)
+    _seo = SEO_OVERRIDES.get(slug, {})
+    page_title = _seo.get('title') or f'{name} Review 2026 — Pros, Cons & Alternatives | AItoolFit'
+    meta_desc  = _seo.get('meta') or build_meta_desc(name, short_desc, badge, best_for)
     pros      = tool.get('pros') or []
     cons      = tool.get('cons') or []
 
@@ -171,17 +185,17 @@ def render_page(tool, all_tools, rating_data=None):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{esc(name)} Review 2026 — Pros, Cons &amp; Alternatives | aitoolfit</title>
+<title>{esc(page_title)}</title>
 <meta name="description" content="{esc(meta_desc)}">
 <link rel="canonical" href="https://aitoolfit.ai/tools/{esc(slug)}.html">
 {hreflang_block}
-<meta property="og:title" content="{esc(name)} Review 2026 | aitoolfit">
+<meta property="og:title" content="{esc(page_title)}">
 <meta property="og:description" content="{esc(meta_desc)}">
 <meta property="og:url" content="https://aitoolfit.ai/tools/{esc(slug)}.html">
 <meta property="og:image" content="https://aitoolfit.ai/og-image.png">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="{esc(name)} Review 2026 | aitoolfit">
+<meta name="twitter:title" content="{esc(page_title)}">
 <meta name="twitter:description" content="{esc(meta_desc)}">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
