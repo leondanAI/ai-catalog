@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> הסרה מיידית של רקע באמצעות AI מתמונות ותמונות מוצרים</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>אודות Remove.bg</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Remove.bg הוא הכלי בתקן התעשייה להסרת רקע מופעלת by AI, בבעלות Kaleido AI. הוא מעבד כל תמונה בכ-5 שניות בלחיצה אחת — ללא בחירה ידנית, masking או מיומנויות עיצוב נדרשות. השירות תומך בפורמטים JPEG, PNG, WebP וRAW עד 50MB, עם פלט ב-PNG שקוף.</p><p style="margin-top:1rem">הכלי משתלב על פני משטחים מרובים: האפליקציה באינטרנט ב-remove.bg, יישום desktop עבור Windows, macOS וLinux, אפליקציות סלולר, פלאגין Figma, פלאגין Photoshop, שילובי Shopify וWooCommerce, ו-REST API לעיבוד אוטומטי. ה-API תומך בעיבוד בתפזורת, מה שהופך זאת למעשית לפעולות e-commerce להסרת רקע מאלפי תמונות מוצרים.</p><p style="margin-top:1rem">יכולויות עיקריות כוללות זיהוי נושא אוטומטי (אנשים, מוצרים, חיות, כלים), פלט בהחלטה גבוהה, עיבוד בתפזורת דרך API, פלט PNG בעל רקע שקוף, ושילובים עם כלים עיצוביים ופלטפורמות e-commerce עיקריות.</p><p style="margin-top:1rem">תמחור: תכנית חינמית מספקת תמונות תצוגה מקדימה מוגבלות בהחלטה נמוכה ומספר קטן של קרדיטים בהחלטה מלאה חינמיים. Pay-as-you-go מתחיל בכ-$3 לחבילת קרדיט קטנה. מנוי Lite בכ-$8.10 לחודש מספק 40 קרדיטים בהחלטה מלאה לחודש. תוכניות Pro Volume+ מתרחבות לכ-$80.10 לחודש עבור 500 קרדיטים. תוכניות Enterprise עם נפח API מותאם אישית זמינות לפעולות בתפזורת גבוהה. המחירים מתומחרים בדולר EUR וייתכן שיהיו שונים מעט לפי אזור.</p><p style="margin-top:1rem">מגבלות: נושאים מורכבים עם שיער, פרווה או חומרים שקופים דורשים עריכה ידנית. קרדיטים חינמיים מוגבלים והחלטת התצוגה המקדימה אינה מספקת לשימוש מקצועי ללא רכישה. עלויות קרדיט מצטברות במהירות לשימוש בתפזורת גבוהה של e-commerce.</p><p style="margin-top:1rem">מתאים ביותר למוכרי e-commerce, צלמי מוצרים וצוותי שיווק שצריכים להסיר רקע במהירות מתמונות מוצרים בקנה מידה.</p></div>

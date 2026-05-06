@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Aplicaciones sin código construidas a partir de datos de Google Sheets, Excel y Airtable</div>
     </div>
   </div>
-  <a href="/es/compare/glide-vs-bubble.html" class="compare-strip">⚖️ Glide vs Bubble →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/es/compare/glide-vs-bubble.html" class="compare-strip">⚖️ Glide vs Bubble →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de Glide</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Glide es un constructor de aplicaciones sin código que crea aplicaciones móviles y web directamente a partir de datos de hojas de cálculo — Google Sheets, Excel, Airtable o las tablas nativas de Glide. Ocupa un nicho diferente de Bubble (que maneja lógica personalizada compleja) enfocándose en hacer que los datos en hojas de cálculo sean interactivos y presentables como una aplicación orientada al usuario.</p><p style="margin-top:1rem">Los casos de uso comunes incluyen herramientas internas (gestión de inventario, directorios de equipos, registro de eventos), aplicaciones orientadas al cliente (catálogos de servicios, herramientas de reserva, directorios) y aplicaciones impulsadas por datos donde los datos subyacentes residen en una hoja de cálculo que los stakeholders ya administran. Las aplicaciones Glide se actualizan automáticamente cuando se actualiza la hoja de cálculo de origen.</p><p style="margin-top:1rem">Las capacidades clave incluyen conexiones de fuentes de datos (Google Sheets, Excel, Airtable, Glide Tables), construcción de UI mediante arrastrar y soltar, columnas impulsadas por IA (ejecutar fórmulas de IA en cada fila — clasificar texto, extraer datos, generar descripciones), autenticación de usuario, envío de formularios, botones de acción, e integración con Zapier y Make.</p><p style="margin-top:1rem">Precios: El plan gratuito proporciona construcción de aplicaciones básica con filas limitadas y un subdominio de Glide. Maker a $25 por mes agrega dominios personalizados y más filas. Team a $99 por mes proporciona colaboración en equipo y límites de datos más altos. Business a $249 por mes proporciona los límites más altos y características empresariales.</p><p style="margin-top:1rem">Limitaciones: Glide es mejor para aplicaciones de presentación de datos y formularios/acciones simples — no es adecuado para flujos de trabajo de varios pasos complejos o aplicaciones con lógica comercial sofisticada. La escalabilidad está limitada por las restricciones de la fuente de datos de hojas de cálculo. El plan Business a $249/mes es caro para lo que es fundamentalmente un convertidor de hojas de cálculo a aplicaciones.</p><p style="margin-top:1rem">Más adecuado para equipos con datos en hojas de cálculo que necesitan crear aplicaciones funcionales para uso interno o del cliente — sin requerir recursos de desarrollo.</p></div>

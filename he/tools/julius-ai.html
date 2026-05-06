@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> ניתוח נתונים בAI שיחתי — העלה כל מערך נתונים, שאל שאלות בשפה טבעית</div>
     </div>
   </div>
-  <a href="/he/compare/julius-ai-vs-looker-studio.html" class="compare-strip">⚖️ Julius AI vs Looker Studio →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/he/compare/julius-ai-vs-looker-studio.html" class="compare-strip">⚖️ Julius AI vs Looker Studio →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>אודות Julius AI</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Julius AI הוא כלי ניתוח נתונים שיחתי המאפשר למשתמשים להעלות גיליונות נתונים, CSVs, ולחבר מסדי נתונים, ואז לנתח נתונים על ידי שאילת שאלות באנגלית פשוטה. הוא יוצר תרשימים, סיכומים סטטיסטיים והשכלות נתונים כתובות מחקירות שפה טבעית — מה שהופך ניתוח נתונים לנגיש למשתמשי עסק ללא ידע SQL או Python.</p><p style="margin-top:1rem">הפלטפורמה מטפלת בעבודות ניתוח נתונים סטנדרטיות בשיחה: ניתוח מגמות, סיכומים סטטיסטיים, גילוי מתאמים, יצירת תרשימים, והצעות לניקיון נתונים. היא תומכת בהעלאות קבצים (CSV, Excel, JSON) וחיבור ל-Google Sheets, Dropbox ו-OneDrive. תרשימים הם אינטראקטיביים וניתנים לייצוא. Julius יכול גם ליצור ולהריץ קוד Python לניתוח מורכב יותר במידת הצורך.</p><p style="margin-top:1rem">יכולות עיקריות כוללות שאילת נתונים שיחתית באנגלית פשוטה, יצירת תרשימים וויזואליזציה, ניתוח סטטיסטי (רגרסיה, מתאם, סטטיסטיקה תיאורית), סיוע בניקיון נתונים, יצירה והרצת קוד Python, וייצוא ל-CSV, PNG ו-PDF.</p><p style="margin-top:1rem">תמחור: תוכנית חינמית מספקת 15 הודעות לחודש — מוגבלת לשימוש רגיל. Plus ב-$29 לחודש מספק 250 הודעות לחודש והעלאות קבצים בלתי מוגבלות. Pro ב-$37 לחודש מספק 500 הודעות לחודש, עיבוד בעדיפות וגישה API. Business ב-$375 לחודש מספק 5,000 הודעות ותכונות צוות.</p><p style="margin-top:1rem">מגבלות: תמחור מבוסס הודעות מגביל משתמשים כבדים — 500 הודעות/חודש על Pro נצרך במהירות בעבודות ניתוח איטרטיביות. הכלי מצטיין בניתוח חקרוני אך אינו מעוצב לעבודות צינור אוטומטיות או פריסות BI בקנה מידה ארגוני. מודלינג סטטיסטי מורכב דורש הנחיה ליצירת Python ולא תמיכה מקורית.</p><p style="margin-top:1rem">מתאים ביותר לאנליסטים עסקיים, חוקרים ומנהלים העובדים באופן קבוע עם נתונים מובנים ורוצים לחקור ולסכם מערכי נתונים ללא כתיבת SQL או Python.</p></div>

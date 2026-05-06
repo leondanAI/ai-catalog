@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Programmeur pair IA en terminal avec commits git automatiques</div>
     </div>
   </div>
-  <a href="/fr/compare/aider-vs-github-copilot.html" class="compare-strip">⚖️ Aider vs GitHub Copilot →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/aider-vs-github-copilot.html" class="compare-strip">⚖️ Aider vs GitHub Copilot →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Aider</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Aider est un programmeur pair IA open-source basé sur Python qui s'exécute entièrement dans le terminal. Sa caractéristique déterminante est le fonctionnement natif git : chaque modification que l'IA effectue est automatiquement validée avec un message de commit descriptif, afin que vous puissiez utiliser git diff, git log et git revert pour auditer ou annuler toute modification IA. Cela le rend particulièrement sûr pour les bases de code en production où le suivi des modifications est important.</p><p style="margin-top:1rem">L'outil traite 15 milliards de tokens par semaine dans sa base d'utilisateurs depuis début 2026. Aider construit une carte du référentiel — un index sémantique de l'ensemble de la base de code — permettant des modifications multi-fichiers précises sur de grands projets. Il se connecte à n'importe quel LLM : Claude Sonnet, GPT-4o, Gemini, DeepSeek, modèles Ollama locaux, et des dizaines de fournisseurs via OpenRouter. La communauté open-source publie des mises à jour fréquentes.</p><p style="margin-top:1rem">Les capacités clés incluent les commits git automatiques pour chaque modification IA, l'édition multi-fichiers sur de grandes bases de code via carte du référentiel, mode entrée vocale, support des images dans l'éditeur pour le débogage visuel, et un mode veille qui répond aux commentaires spéciaux dans votre code. Aider fonctionne dans n'importe quel répertoire sans plugins IDE ou configuration au-delà d'une clé API.</p><p style="margin-top:1rem">Tarification : Aider est complètement gratuit et open source. Vous payez uniquement pour les appels API LLM auprès de votre fournisseur choisi. L'exécution sur des modèles locaux via Ollama ne coûte rien au-delà du matériel.</p><p style="margin-top:1rem">Limitations : Aider est terminal uniquement — il n'y a pas d'interface graphique, d'extension IDE ou d'interface navigateur. La configuration nécessite une installation via pip et la configuration d'une clé API. Comme tous les outils BYOK, les coûts LLM sont payés séparément.</p><p style="margin-top:1rem">Mieux adapté aux développeurs qui vivent dans le terminal et veulent un programmeur pair IA avec une responsabilité git complète — où chaque modification IA est suivie, examinable et réversible.</p></div>

@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Remoção instantânea de fundo por IA de fotos e imagens de produtos</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Remove.bg</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Remove.bg é a ferramenta padrão da indústria para remoção de fundo alimentada por IA, propriedade da Kaleido AI. Processa qualquer foto em aproximadamente 5 segundos com um único clique — sem seleção manual, mascaramento ou necessidade de habilidades de design. O serviço suporta formatos JPEG, PNG, WebP e RAW até 50MB, com saída em PNG transparente.</p><p style="margin-top:1rem">A ferramenta integra-se em múltiplas superfícies: o aplicativo web em remove.bg, um aplicativo de desktop para Windows, macOS e Linux, aplicativos móveis, um plugin Figma, um plugin Photoshop, integrações Shopify e WooCommerce, e uma REST API para processamento automatizado. A API suporta processamento em massa, tornando prático para operações de e-commerce que removem fundos de milhares de fotos de produtos.</p><p style="margin-top:1rem">Os principais recursos incluem detecção automática de assuntos (pessoas, produtos, animais, carros), saída em alta resolução, processamento em lote via API, saída PNG com fundo transparente e integrações com principais ferramentas de design e plataformas de e-commerce.</p><p style="margin-top:1rem">Preços: O plano gratuito fornece imagens de visualização limitadas em baixa resolução e um pequeno número de créditos em resolução total gratuitos. Pay-as-you-go começa em aproximadamente €3 por um pequeno pacote de créditos. A assinatura Lite em aproximadamente €8,10 por mês fornece 40 créditos em resolução total por mês. Os planos Pro Volume+ escalam até €80,10 por mês para 500 créditos. Planos Enterprise com volume de API personalizado estão disponíveis para operações de alto rendimento. Os preços são denominados em EUR e podem variar ligeiramente por região.</p><p style="margin-top:1rem">Limitações: Assuntos complexos com cabelos, pelos ou materiais transparentes requerem ajuste manual. Créditos gratuitos são limitados e a resolução de visualização é insuficiente para uso profissional sem adquirir. Custos de crédito se acumulam rapidamente para uso em e-commerce em alto volume.</p><p style="margin-top:1rem">Mais adequado para vendedores de e-commerce, fotógrafos de produtos e equipes de marketing que precisam remover rapidamente fundos de imagens de produtos em escala.</p></div>

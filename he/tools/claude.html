@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> עוזר AI לכתיבה, ניתוח, קידוד ומשימות מחקר אגנטיות</div>
     </div>
   </div>
-  <a href="/he/compare/chatgpt-vs-claude.html" class="compare-strip">⚖️ Claude vs ChatGPT →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/he/compare/chatgpt-vs-claude.html" class="compare-strip">⚖️ Claude vs ChatGPT →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>אודות Claude</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Claude הוא עוזר AI מ-Anthropic, מעבדת AI ממוקדת בטיחות שהוקמה על ידי חוקרים לשעבר מ-OpenAI. הוא מדורג בעקביות כאחד מהמודלים הטובים ביותר לעקיבות אחר הוראות, ניתוח בהקשר ארוך וייצור קוד.</p><p style="margin-top:1rem">Claude 4 היא משפחת המודל הנוכחית (2026), כאשר Sonnet 4.6 ו-Opus 4.7 הם המודלים הדגל. כל מודלי Claude 4.x תומכים בחלון הקשר של 1 מיליון טוקנים — מספיק לניתוח של בסיסי קודים שלמים, בסיסי נתונים של מחקר או מסמכים רב-כרכיים בשיחה אחת. מודל Sonnet 4.6 מאזן בין מהירות ובינה; Opus 4.7 היא האפשרות הכי יכולת הזמינה בשכבות Max והAPI.</p><p style="margin-top:1rem">תמחור: רמת החינם כוללת Projects, Artifacts, חיפוש ברשת וטעינת קבצים (עד 20 קבצים לכל צ'אט). Claude Pro ב-$20 לחודש מספק 5x יותר שימוש וגישה לכל המודלים. Max ב-$100 או $200 לחודש מציע עד 20x שימוש למשתמשים כבדים.</p><p style="margin-top:1rem">Claude אינו יוצר תמונות ברכיבים — זו פער אמיתי בהשוואה ל-ChatGPT ו-Gemini. חיפוש ברשת זמין ברמת החינם. Claude חזק במיוחד בעקיבות אחר הוראות ניואנסיות מרובות-שלבים, עריכת מסמכים ארוכים וכתיבת קוד מדויק עם הזיות מינימליות.</p><p style="margin-top:1rem">גישת API דרך פלטפורמת Anthropic מציעה Sonnet 4.6 בתמחור סטנדרטי לכל טוקן עם caching prompt להפחתת עלויות ב-system prompts חוזרים.</p><p style="margin-top:1rem">מיטבי לאנשי מקצוע ומפתחים שזקוקים לעקיבות הוראות אמינה, ניתוח בהקשר ארוך וייצור קוד דיוק גבוה — ולמי שאין צורך ביצירת תמונות.</p></div>

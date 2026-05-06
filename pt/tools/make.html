@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Automações complexas, integrações de aplicativos</div>
     </div>
   </div>
-  <a href="/pt/compare/make-vs-n8n.html" class="compare-strip">⚖️ Make vs n8n →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/pt/compare/make-vs-n8n.html" class="compare-strip">⚖️ Make vs n8n →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Make</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Make (antigo Integromat) é uma plataforma de automação de fluxo de trabalho visual que conecta mais de 1.000 aplicativos através de um canvas de arrastar e soltar. Cada automação — chamada de cenário — é exibida como um fluxograma visual mostrando exatamente como os dados fluem entre aplicativos, com lógica condicional, loops, tratamento de erros e transformação de dados.</p><p style="margin-top:1rem">Em agosto de 2025, Make migrou de um modelo baseado em operações para um sistema baseado em créditos. Planos atuais: Gratuito (1.000 créditos/mês, 2 cenários ativos), Core ($9/mês, 10.000 créditos, cenários ilimitados), Pro ($16/mês), Teams ($29/mês). Créditos extras podem ser adquiridos com um prêmio de 25% sobre a taxa do plano base. Módulos nativos de IA com um clique para OpenAI, Claude e Anthropic estão agora disponíveis diretamente no construtor de cenários.</p><p style="margin-top:1rem">Make fica entre Zapier (mais simples, mais caro) e n8n (mais poderoso, requer configuração técnica). A interface do canvas é seu maior diferencial — você pode ver toda a automação visualmente, o que facilita significativamente a depuração e colaboração em comparação com plataformas concorrentes.</p><p style="margin-top:1rem">A plataforma lida bem com fluxos de trabalho complexos de múltiplas etapas: caminhos com ramificações, agregação de dados, execuções agendadas, webhooks e iteração sobre arrays. Equipes empresariais a utilizam para processamento de documentos, roteamento de leads e sincronização de dados entre plataformas.</p><p style="margin-top:1rem">Limitações: o modelo de créditos introduzido em 2025 tornou os custos menos previsíveis para usuários existentes acostumados a contar operações. Cenários de volume muito alto ainda requerem o plano Teams ou superior para evitar excedentes.</p><p style="margin-top:1rem">Melhor para equipes de marketing, gerentes de operações e desenvolvedores que precisam de automação flexível em muitos aplicativos sem escrever código — e desejam mais poder que Zapier a um preço mais baixo.</p></div>

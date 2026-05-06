@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> מסוף פיננסי חלופי ל-Bloomberg עבור משקיעים קמעונאיים ומקצועיים</div>
     </div>
   </div>
-  <a href="/he/compare/koyfin-vs-tradingview.html" class="compare-strip">⚖️ Koyfin vs TradingView →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/he/compare/koyfin-vs-tradingview.html" class="compare-strip">⚖️ Koyfin vs TradingView →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>אודות Koyfin</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Koyfin היא פלטפורמת נתונים וניתוחים פיננסיים המוצבת כחלופה ל-Bloomberg Terminal עבור משקיעים קמעונאיים, RIAs ויועצי מחקר עצמאיים. כאשר Bloomberg גובה $24,000 לשנה למסוף אחד, Koyfin מספקת כיסוי נתונים פיננסי דומה — נתוני שוק, יסודות, תמלילי הכנסות, אינדיקטורים כלכליים וניתוח תיקים — בשבריר מהעלות.</p><p style="margin-top:1rem">הפלטפורמה מכסה 90,000+ ניירות ערך גלובליים כולל מניות, ETFs, אגרות חוב, קרנות נאמנות וקרנות כלכליות. לוחות בקרה של Koyfin משכפלים את מודל מרחב העבודה הניתן להתאמה של Bloomberg — משתמשים בונים פריסות מותאמות אישית עם יישומוני הנתונים שבהם הם משתמשים בתדירות הגבוהה ביותר. תכונות AI שנוספו ב-2025 כוללות סיכומי שיחות הכנסות AI, שאילתות פיננסיות בשפה טבעית וסיכומי חברה שנוצרו על ידי AI.</p><p style="margin-top:1rem">יכולות עיקריות כוללות נתוני שוק בזמן אמת והיסטוריים עבור 90K+ ניירות ערך, לוח בקרה הניתן להתאמה עם יישומוני דמויי Bloomberg, נתונים יסודיים (פיננסיים, יחסים, הערכות), תמלילי הכנסות עם סיכומי AI, מאגר אינדיקטורים כלכליים, ניטור רשימת השגחה וניתוח תיק, מסננים, שאילתות AI בשפה טבעית וייצוא ל-Excel.</p><p style="margin-top:1rem">תמחור: תוכנית חינמית מספקת נתוני שוק בסיסיים ופונקציונליות מוגבלת. Plus ב-$39 לחודש מספקת גישה מורחבת לנתונים, לוחות בקרה מותאמים אישית ותכונות AI. Pro ב-$79 לחודש מספקת את הפלטפורמה המלאה כולל סינון מתקדם, ספריית תמלילים מלאה ותמיכה בעדיפות. תמחור Enterprise וקבוצתי הוא מותאם אישית.</p><p style="margin-top:1rem">מגבלות: בעוד הרבה יותר זול מ-Bloomberg, עומק הנתונים של Koyfin ונתוני tick-level בזמן אמת עדיין מפגרים מאחורי Bloomberg לשימוש מסחור מקצועי. הפלטפורמה ממוקדת בעיקר בארה&quot;ב — כיסוי שוק בינלאומי הוא פחות מקיף. תכונות AI הן חדשות יותר ועדיין בהבשלה.</p><p style="margin-top:1rem">מתאים ביותר למשקיעים קמעונאיים, אנליסטים במחקר עצמאי, RIAs ויועצי מימון הזקוקים לכלים נתונים ניתוח פיננסי מדרגה מקצועית ללא תג המחיר של Bloomberg.</p></div>

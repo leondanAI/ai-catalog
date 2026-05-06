@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Artigos científicos, revisão de literatura</div>
     </div>
   </div>
-  <a href="/pt/compare/elicit-vs-consensus.html" class="compare-strip">⚖️ Elicit vs Consensus →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/pt/compare/elicit-vs-consensus.html" class="compare-strip">⚖️ Elicit vs Consensus →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Elicit</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Elicit é uma plataforma de pesquisa com IA desenvolvida especificamente para revisão de literatura científica, capaz de analisar centenas de artigos acadêmicos simultaneamente e sintetizar seus resultados em tabelas comparativas estruturadas. Desenvolvido pela Ought, uma organização sem fins lucrativos voltada para segurança em IA, foi projetado para tornar a síntese de evidências — o tipo de análise rigorosa de múltiplos artigos exigida em revisões sistemáticas, meta-análises e tomadas de decisão baseadas em evidências — muito mais rápida.</p><p style="margin-top:1rem">O fluxo de trabalho central começa com uma pergunta de pesquisa: &quot;A suplementação de magnésio melhora a qualidade do sono?&quot; O Elicit busca automaticamente no PubMed e no Semantic Scholar, recupera artigos relevantes e utiliza IA para extrair dados estruturados de cada artigo em colunas definidas pelo usuário: design do estudo, tamanho da amostra, intervenção, métricas de resultado, principais descobertas e limitações. O resultado é uma tabela de pesquisa preenchida que um pesquisador humano levaria dias para compilar manualmente.</p><p style="margin-top:1rem">A plataforma também gera resumos narrativos que sintetizam as descobertas de todos os artigos analisados, identificando áreas de consenso, resultados conflitantes e lacunas na literatura existente. O plano gratuito limita a análise a 5 artigos por consulta. O Elicit Plus (US$ 10/mês) permite artigos ilimitados por consulta, acesso a colunas de extração mais detalhadas e a possibilidade de exportar os resultados para CSV ou Notion. O Elicit é utilizado por pesquisadores acadêmicos, profissionais de medicina baseada em evidências, analistas de políticas públicas e equipes de investimento que realizam pesquisas aprofundadas sobre questões científicas específicas.</p></div>

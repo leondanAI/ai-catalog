@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Traducción de IA de nivel profesional para documentos y contenido empresarial</div>
     </div>
   </div>
-  <a href="/es/compare/deepl-vs-grammarly.html" class="compare-strip">⚖️ DeepL vs Grammarly →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/es/compare/deepl-vs-grammarly.html" class="compare-strip">⚖️ DeepL vs Grammarly →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de DeepL</h2>
     <div class="tool-desc"><p style="margin-top:1rem">DeepL es el servicio de traducción de IA de nivel profesional reconocido por lingüistas y traductores como productor de las traducciones más naturales de cualquier servicio automatizado. Admite 33 idiomas y es utilizado por más de 250,000 empresas y 100 millones de usuarios en todo el mundo — incluyendo el Parlamento Europeo, que utiliza DeepL para la traducción oficial de documentos.</p><p style="margin-top:1rem">La línea de productos DeepL incluye una interfaz web para traducción de texto, carga y descarga de documentos (preservando formato en Word, PowerPoint y PDF), aplicación de escritorio, extensiones de navegador y una API para desarrolladores. DeepL Agent, lanzado en 2025, permite flujos de trabajo de traducción automatizados — activando traducciones desde cargas de archivos, conectándose a sistemas de gestión de contenidos y procesando grandes volúmenes de documentos sin intervención manual.</p><p style="margin-top:1rem">Las capacidades clave incluyen traducción de texto y documentos de alta precisión (Word, PowerPoint, PDF), gestión de glosario para terminología consistente específica de la empresa, configuraciones de tono (formal vs. informal), DeepL Agent para flujos de trabajo de traducción automatizados, API con SLA de tiempo de actividad del 99.9%, y extensiones de navegador.</p><p style="margin-top:1rem">Precios: El plan gratuito proporciona traducciones de caracteres limitadas. Starter a $10.49 por mes (anual) proporciona 1 millón de caracteres por mes y traducciones de documentos. Advanced a $34.49 por mes proporciona 5 millones de caracteres, gestión de glosario y funciones de equipo. Ultimate a $68.99 por mes proporciona 20 millones de caracteres y máxima prioridad de API. Los planes de negocio con volúmenes personalizados están disponibles.</p><p style="margin-top:1rem">Limitaciones: DeepL cubre 33 idiomas — significativamente menos que Google Translate (133 idiomas). Para pares de idiomas de bajo recurso o poco comunes, la calidad puede no superar servicios competidores. El límite de caracteres en Starter (1M/mes) se agota rápidamente para uso profesional con muchos documentos.</p><p style="margin-top:1rem">Más adecuado para empresas, despachos legales, firmas de consultoría y equipos de contenido que necesitan traducción de calidad profesional de documentos empresariales, comunicaciones y contenido de marketing.</p></div>

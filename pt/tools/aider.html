@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Programador de par IA em terminal com commits git automáticos</div>
     </div>
   </div>
-  <a href="/pt/compare/aider-vs-github-copilot.html" class="compare-strip">⚖️ Aider vs GitHub Copilot →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/pt/compare/aider-vs-github-copilot.html" class="compare-strip">⚖️ Aider vs GitHub Copilot →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Aider</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Aider é um programador de par IA de código aberto baseado em Python que funciona inteiramente no terminal. Sua característica definidora é a operação nativa do git: cada mudança que o IA faz é automaticamente commitada com uma mensagem de commit descritiva, para que você possa usar git diff, git log e git revert para auditar ou desfazer qualquer modificação do IA. Isso o torna únicamente seguro para codebases em produção onde rastrear mudanças importa.</p><p style="margin-top:1rem">A ferramenta processa 15 bilhões de tokens por semana em sua base de usuários a partir do início de 2026. Aider constrói um mapa do repositório — um índice semântico de toda a base de código — permitindo edições precisas em múltiplos arquivos em projetos grandes. Ele se conecta a qualquer LLM: Claude Sonnet, GPT-4o, Gemini, DeepSeek, modelos Ollama locais e dezenas de provedores via OpenRouter. A comunidade de código aberto lança atualizações frequentes.</p><p style="margin-top:1rem">Capacidades principais incluem commits git automáticos para cada mudança do IA, edição em múltiplos arquivos em grandes codebases via mapa do repositório, modo de entrada de voz, suporte a imagens no editor para debug visual e modo de observação que responde a comentários especiais em seu código. Aider funciona em qualquer diretório sem plugins IDE ou configuração além de uma chave de API.</p><p style="margin-top:1rem">Preço: Aider é completamente gratuito e de código aberto. Você paga apenas pelas chamadas de API LLM ao seu provedor escolhido. Executar em modelos locais via Ollama não custa nada além do hardware.</p><p style="margin-top:1rem">Limitações: Aider é apenas para terminal — não há GUI, extensão IDE ou interface de navegador. Setup requer instalação via pip e configuração de chave de API. Como todas as ferramentas BYOK, custos de LLM são pagos separadamente.</p><p style="margin-top:1rem">Mais adequado para desenvolvedores que vivem no terminal e querem um programador de par IA com total responsabilidade no git — onde cada mudança do IA é rastreada, revisável e reversível.</p></div>

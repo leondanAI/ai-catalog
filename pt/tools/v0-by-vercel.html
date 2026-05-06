@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Componentes de UI, React, protótipos</div>
     </div>
   </div>
-  <a href="/pt/compare/v0-by-vercel-vs-cursor.html" class="compare-strip">⚖️ v0 by Vercel vs Cursor →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/pt/compare/v0-by-vercel-vs-cursor.html" class="compare-strip">⚖️ v0 by Vercel vs Cursor →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre v0 by Vercel</h2>
     <div class="tool-desc"><p style="margin-top:1rem">v0 by Vercel é uma ferramenta de geração de UI com inteligência artificial que cria componentes React e Tailwind CSS prontos para produção a partir de descrições de texto ou capturas de tela enviadas. Foi desenvolvida especificamente para o ecossistema Next.js e React, e sua saída se integra diretamente a projetos hospedados na Vercel com um único clique — tornando-se o caminho mais rápido de uma ideia de design para um código frontend funcional.</p><p style="margin-top:1rem">A qualidade de geração é genuinamente impressionante para padrões comuns de UI: landing pages, dashboards, tabelas de preços, formulários de autenticação e tabelas de dados saem limpos e bem estruturados. O código dos componentes utiliza shadcn/ui como biblioteca de componentes, que se tornou a escolha dominante na comunidade React, o que significa que o código gerado se encaixa naturalmente na maioria das stacks modernas de Next.js sem necessidade de modificações.</p><p style="margin-top:1rem">O plano gratuito inclui 200 créditos por mês, suficiente para uso pessoal regular. Os planos pagos começam em $20/mês para limites maiores. A principal limitação do v0 by Vercel é o escopo — ele se destaca em UI frontend, mas não tem compreensão de lógica backend, esquemas de banco de dados ou design de APIs. Para geração full-stack a partir de um prompt, Bolt.new ou Lovable são escolhas melhores. Para componentes frontend refinados que se encaixam em uma base de código existente, o v0 by Vercel é o líder absoluto.</p></div>

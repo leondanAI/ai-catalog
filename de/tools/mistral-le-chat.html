@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal für:</strong> Schneller europäischer KI-Assistent mit starkem Datenschutz und mehrsprachigen Fähigkeiten</div>
     </div>
   </div>
-  <a href="/de/compare/mistral-le-chat-vs-chatgpt.html" class="compare-strip">⚖️ Mistral Le Chat vs ChatGPT →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/de/compare/mistral-le-chat-vs-chatgpt.html" class="compare-strip">⚖️ Mistral Le Chat vs ChatGPT →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Über Mistral Le Chat</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Mistral Le Chat ist der Consumer-KI-Assistent von Mistral AI, dem führenden europäischen KI-Labor mit Sitz in Paris. Er basiert auf Mistrals eigenen Open-Weight-Modellen und positioniert sich als europäische Alternative zu ChatGPT und Gemini mit starkem Fokus auf Datenschutz, DSGVO-Compliance und Mehrsprachigkeit.</p><p style="margin-top:1rem">Der aktuelle Modell-Stack (Stand Ende 2025–2026) umfasst Mistral Large 3 für fortgeschrittenes Reasoning, Ministral 3 für schnelle Antworten, Devstral 2 für Coding und Devstral Small 2 für leichte Aufgaben. Le Chat wählt das passende Modell kontextabhängig aus. Mistral-Modelle sind besonders stark in europäischen Sprachen — Französisch, Deutsch, Spanisch, Italienisch und Portugiesisch — durch Schwerpunkt auf europäische Trainingsdaten.</p><p style="margin-top:1rem">Die kostenlose Stufe bietet Zugriff auf die neuesten Modelle, Websuche, Bildgenerierung, Datei-Upload und Canvas (ein Artifact-ähnlicher Editor). Kostenlose Nutzung ist auf etwa 25 Nachrichten pro Tag bei Mid-Tier-Modellen begrenzt. Die Pro-Stufe ab 14,99 €/Monat bietet etwa 6x höhere tägliche Nachrichtenlimits (~150/Tag), prioritären Zugang und API-Rabatte. Ein Student-Plan ist für 7,04 €/Monat verfügbar.</p><p style="margin-top:1rem">Enterprise-Pläne (Team/Enterprise) sind für Unternehmen mit Anforderungen an EU-Datenspeicherung, On-Premises-Deployment oder strikte DSGVO-Compliance verfügbar — Mistral ist eine ernsthafte Option für europäische Unternehmen mit regulatorischen Anforderungen.</p><p style="margin-top:1rem">Einschränkungen: Mistral hat ein kleineres Plugin- und Integrations-Ökosystem im Vergleich zu ChatGPT oder Gemini. Die Markenbekanntheit ist außerhalb Europas niedrig, und das Third-Party-Tool-Ökosystem entwickelt sich noch.</p><p style="margin-top:1rem">Best für europäische Nutzer, mehrsprachige Anwendungsfälle und Organisationen, die EU-Datenspeicherung oder DSGVO-konformes KI benötigen.</p></div>

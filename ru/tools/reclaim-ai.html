@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> Управление временем, календарный ИИ</div>
     </div>
   </div>
-  <a href="/ru/compare/motion-vs-reclaim-ai.html" class="compare-strip">⚖️ Reclaim.ai vs Motion →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/motion-vs-reclaim-ai.html" class="compare-strip">⚖️ Reclaim.ai vs Motion →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе Reclaim.ai</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Reclaim.ai — это ИИ-инструмент для управления календарём, который автоматически защищает и планирует продуктивное время в вашем Google Calendar на основе ваших приоритетов, привычек и рабочих паттернов. В отличие от традиционных календарных приложений, которые лишь отображают запланированные события, Reclaim активно оптимизирует распределение вашего времени — автоматически находит свободные слоты для глубокой работы, планирует повторяющиеся привычки и защищает время фокусировки от вытеснения встречами.</p><p style="margin-top:1rem">Функция Habits является основным продуктом: вы определяете распорядок, который хотите соблюдать (90 минут сосредоточенного программирования, ежедневный командный стендап, вечерний обзор дня), а Reclaim автоматически назначает их в оптимальное время на основе паттернов вашего календаря, перенося их при возникновении конфликтов, а не просто пропуская. Функция Smart 1:1 планирует регулярные командные встречи в наиболее удобное время для обоих участников и автоматически переносит их при изменении расписания.</p><p style="margin-top:1rem">Интеграция с задачами подключается к Linear, Asana, Todoist и другим инструментам управления проектами — Reclaim подтягивает назначенные вам задачи и автоматически планирует время для их выполнения с учётом приоритета и дедлайна, грамотно заполняя доступные блоки фокусировки. Бесплатный план поддерживает одну привычку и базовое планирование. Тариф Starter (8 $/месяц) открывает доступ ко всем функциям. Основное ограничение — работа исключительно с Google Calendar: Outlook и Apple Calendar не поддерживаются, что сужает аудиторию до пользователей Google Workspace.</p></div>

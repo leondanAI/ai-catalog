@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> AI vibe coding — генерировать полнофункциональные веб-приложения из подсказок на естественном языке</div>
     </div>
   </div>
-  <a href="/ru/compare/lovable-vs-bubble.html" class="compare-strip">⚖️ Lovable vs Bubble →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/lovable-vs-bubble.html" class="compare-strip">⚖️ Lovable vs Bubble →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе Lovable</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Lovable — это AI-первый конструктор полнофункциональных веб-приложений, генерирующий полные React-приложения — с Supabase backend, аутентификацией и базой данных — из описаний на естественном языке. Это один из самых быстрорастущих инструментов разработчиков в 2025 году, представляющий тренд &quot;vibe coding&quot; создания и итерирования полных приложений через диалог.</p><p style="margin-top:1rem">Рабочий процесс основан на диалоге: описываете функцию, Lovable генерирует код, развертывает URL live preview и ждет обратной связи. Итерирование происходит путем описания изменений обычным языком — &quot;добавить поисковую строку вверху&quot;, &quot;сделать сетку карточек из 3 колонок на десктопе&quot;, &quot;добавить аутентификацию пользователя&quot;. Генерируемый код — это реальный React/TypeScript, который можно экспортировать, развернуть на пользовательских доменах или синхронизировать с GitHub.</p><p style="margin-top:1rem">Основные возможности включают генерацию полнофункциональных приложений на естественном языке, генерацию React и TypeScript кода, встроенную интеграцию Supabase (база данных, аутентификация, хранилище), URL live preview для каждой итерации, синхронизацию GitHub, развертывание на пользовательском домене, интеграцию Stripe для платежей и визуальный редактор для корректировки дизайна.</p><p style="margin-top:1rem">Цены: Free план предоставляет 5 кредитов генерации в день. Starter по 20 долл./месяц предоставляет 100 кредитов в месяц и пользовательские домены. Pro по 25 долл./месяц предоставляет 200 кредитов в месяц и все функции. Доступны дополнительные пакеты кредитов. Доступны цены для Teams и Enterprise.</p><p style="margin-top:1rem">Ограничения: кредиты генерации потребляются на каждый AI запрос — сложные функции и итеративная отладка могут быстро исчерпать кредиты. Генерируемый код, хотя и функциональный, часто требует проверки разработчиком и очистки для production-качества. Сложные корпоративные паттерны приложений находятся за пределами текущих возможностей.</p><p style="margin-top:1rem">Оптимально подходит для предпринимателей, дизайнеров и менеджеров продукта, которые хотят создавать и прототипировать функциональные веб-приложения без написания кода — и для разработчиков, которые хотят ускорить создание скелета и прототипирование.</p></div>

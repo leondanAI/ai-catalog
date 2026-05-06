@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> יצירת תמונות AI מקומית וכיוונון עדין</div>
     </div>
   </div>
-  <a href="/he/compare/midjourney-vs-stable-diffusion.html" class="compare-strip">⚖️ Stable Diffusion vs Midjourney →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/he/compare/midjourney-vs-stable-diffusion.html" class="compare-strip">⚖️ Stable Diffusion vs Midjourney →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>אודות Stable Diffusion</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Stable Diffusion היא משפחת המודלים הבסיסית בקוד פתוח text-to-image שפורסמה על ידי Stability AI, והטכנולוגיה המניעה את רוב אקוסיסטם יצירת התמונות AI בקוד פתוח. בניגוד לשירותים קנייניים, משקלי המודל של Stable Diffusion זמינים בחינם להורדה, כיוונון עדין והרצה מקומית בחומרה צרכנית.</p><p style="margin-top:1rem">הגרסה הנוכחית היא Stable Diffusion 3.5. SD 3.5 Large כולל 8.1 מיליארד פרמטרים ומשתמש בארכיטקטורת MM-DiT עם שלושה מקודדי טקסט לשם הבנה משופרת של הנושא. SD 3.5 Medium (2.5B פרמטרים) רץ על GPU צרכניים. שניהם זמינים תחת Community License חינמי לשימוש לא-מסחרי; השימוש המסחרי דורש רישיון בתשלום מ-Stability AI.</p><p style="margin-top:1rem">Stability AI עצמה עברה כמעט קריסה בתחילת 2024 — פיטורים המוניים וומשבר מימון. החברה ביצעה התאוששות יוצאת דופן תחת הנהגה חדשה, עם Sean Parker כיו״ר בפועל וJames Cameron בהצטרפות לדירקטוריון. כל החוב נמחק עד דצמבר 2024 והחברה דיווחה על גדילה בתלוש תלת-ספרתי.</p><p style="margin-top:1rem">המודל רץ באופן מקומי דרך ממשקים כמו ComfyUI או Automatic1111, או דרך Stability AI API (בתשלום, מבוסס אשראי). כיווני עדין וLoRA של הקהילה מסתכמים באלפים בפלטפורמות כמו Civitai וHugging Face, המכסים כל סגנון אפשרי.</p><p style="margin-top:1rem">מגבלות: איכות גולמית כבר לא מובילה את השדה — Flux וMidjourney V7 מייצרים פלט טוב יותר. הרצה מקומית דורשת GPU מסוגל (8GB+ VRAM מומלץ). השימוש המסחרי במשקלים דורש הסכם רישיון נפרד.</p><p style="margin-top:1rem">מובן ביותר למפתחים וחוקרים שרוצים שליטה מלאה — ביצוע מקומי, כיוונון עדין, צינורות מותאמים, וללא עלויות לתמונה.</p></div>

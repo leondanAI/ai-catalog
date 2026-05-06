@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Programação na nuvem, aprendizado, deploys rápidos</div>
     </div>
   </div>
-  <a href="/pt/compare/replit-vs-github-copilot.html" class="compare-strip">⚖️ Replit vs GitHub Copilot →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/pt/compare/replit-vs-github-copilot.html" class="compare-strip">⚖️ Replit vs GitHub Copilot →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Replit</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Replit é um ambiente de desenvolvimento baseado na nuvem que funciona inteiramente no navegador — sem instalação, sem configuração, sem necessidade de preparar um ambiente. Suporta mais de 50 linguagens de programação e frameworks, e seu agente de IA pode escrever, executar, depurar e fazer deploy de aplicações completas diretamente a partir de uma descrição em linguagem natural, tornando-o a plataforma de programação mais acessível para iniciantes e a mais rápida para prototipagem.</p><p style="margin-top:1rem">O agente de IA (desenvolvido com uma combinação de Claude e modelos proprietários) está profundamente integrado à experiência de programação. Você descreve o que quer construir, e o agente gera o código, instala as dependências, executa o programa, corrige erros e itera — tudo dentro da mesma aba do navegador. Para aprender a programar, o Replit elimina a frustrante configuração de ambiente que impede a maioria dos iniciantes antes mesmo de escreverem sua primeira linha.</p><p style="margin-top:1rem">O Replit Deployments (incluído no plano Core por $25/mês) permite publicar sua aplicação em uma URL ao vivo com um único clique, gerenciando hospedagem, SSL e escalabilidade automaticamente. O plano gratuito oferece capacidade de processamento suficiente para aprendizado e projetos pequenos. Para cargas de trabalho de produção mais sérias, as instâncias em nuvem do Replit são menos potentes e mais caras do que AWS ou DigitalOcean, mas para prototipagem rápida e demonstrações, continua sendo incomparável em velocidade e simplicidade.</p></div>

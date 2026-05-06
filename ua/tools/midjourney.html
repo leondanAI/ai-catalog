@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Підходить для:</strong> Професійне AI мистецтво та дизайн</div>
     </div>
   </div>
-  <a href="/ua/compare/midjourney-vs-stable-diffusion.html" class="compare-strip">⚖️ Midjourney vs Stable Diffusion →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ua/compare/midjourney-vs-stable-diffusion.html" class="compare-strip">⚖️ Midjourney vs Stable Diffusion →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Midjourney</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Midjourney широко визнається як сервіс генерації AI зображень найвищої якості, послідовно створюючи твори мистецтва з найвищою естетикою, освітленням та композицією. Працює через Discord бота та веб-платформу на midjourney.com.</p><p style="margin-top:1rem">Midjourney V7 — поточна модель за замовчуванням станом на 2026 рік, що забезпечує найкращу якість зображень в історії сервісу. V8 з'явилася у тестах, але V7 залишається виробничим стандартом. Платформа не має безплатного пробного періоду — весь доступ вимагає оплачену підписку.</p><p style="margin-top:1rem">Ціни: Basic $10/місяць (200 зображень/місяць), Standard $30/місяць (безліміт релаксованих, 15 швидких годин), Pro $60/місяць (30 швидких годин, режим невидимості), Mega $120/місяць (60 швидких годин). Річна оплата економить 20%. Компанії з річним доходом понад $1M повинні використовувати Pro або Mega для комерційного використання.</p><p style="margin-top:1rem">Веб-платформа додає функції за межами Discord: інструменти редагування, inpainting, outpainting, посилання на стиль та узгодженість персонажів між генераціями. Команда /blend об'єднує зображення; /describe здійснює зворотний інжиніринг промптів з фотографій.</p><p style="margin-top:1rem">Омеження: взагалі немає безплатного рівня, що незвично серед конкурентів. Естетика тяжіє до характерного &quot;Midjourney look&quot;, який складно повністю придушити. Не з відкритим кодом — немає локального або API доступу для звичайних користувачів.</p><p style="margin-top:1rem">Найкраще підходить для професійних дизайнерів, художників та творчих агентств, які потребують найкращих результатів та можуть виправдати вартість підписки. Не підходить для розробників, яким потрібен API доступ, або користувачів, які хочуть безплатного експериментування.</p></div>

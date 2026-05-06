@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Podcasts, montage vidéo basé sur le texte</div>
     </div>
   </div>
-  <a href="/fr/compare/descript-vs-adobe-podcast.html" class="compare-strip">⚖️ Descript vs Adobe Podcast →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/descript-vs-adobe-podcast.html" class="compare-strip">⚖️ Descript vs Adobe Podcast →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Descript</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Descript est une plateforme de montage audio et vidéo au concept unique, où toute l'édition s'effectue via une transcription textuelle plutôt qu'une interface traditionnelle de forme d'onde ou de timeline. Comme Descript transcrit automatiquement chaque enregistrement, vous pouvez supprimer une phrase prononcée en la sélectionnant dans le texte et en appuyant sur Supprimer — l'audio et la vidéo correspondants étant retirés automatiquement. Cela rend l'édition de contenu aussi accessible que la modification d'un document Word.</p><p style="margin-top:1rem">Les fonctionnalités d'IA construites sur cette base textuelle sont puissantes : Overdub crée un clone vocal capable de lire n'importe quel nouveau texte avec votre voix, vous permettant d'ajouter ou de remplacer des phrases sans avoir à réenregistrer. La suppression des mots de remplissage identifie et élimine automatiquement chaque « euh », « hum », « genre » et « tu vois » d'un enregistrement. Le suppresseur de silences réduit toutes les pauses dépassant un seuil défini. Studio Sound améliore la qualité audio de manière similaire à Adobe Podcast. Ces fonctionnalités combinées réduisent considérablement le temps de post-production pour les podcasts en format interview, les essais vidéo et les contenus de formation en ligne.</p><p style="margin-top:1rem">Descript est principalement utilisé par des producteurs de podcasts, des YouTubeurs, des créateurs de formations et des équipes marketing produisant des vidéos de type face caméra. Le plan gratuit inclut 1 heure de transcription par mois. Le plan Hobbyist débute à 16 $/mois avec facturation annuelle (24 $/mois en facturation mensuelle) — 10 heures/mois et sans filigrane. Le plan Creator à 24 $/mois en annuel (35 $/mois en mensuel) donne accès à l'ensemble complet des fonctionnalités d'IA et constitue le choix habituel pour les podcasteurs et les YouTubeurs. Les principales limitations concernent les performances sur les enregistrements longs (les fichiers de plus d'une heure peuvent être lents), les erreurs occasionnelles de transcription dans les enregistrements bruités, ainsi que les artefacts audio lorsque l'IA assemble des phrases éditées d'une manière qui altère le rythme naturel de la parole.</p></div>

@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> גרפיקה וקטורית ואיכות תמונות AI מובילה</div>
     </div>
   </div>
-  <a href="/he/compare/recraft-ai-vs-midjourney.html" class="compare-strip">⚖️ Recraft AI vs Midjourney →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/he/compare/recraft-ai-vs-midjourney.html" class="compare-strip">⚖️ Recraft AI vs Midjourney →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>אודות Recraft AI</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Recraft AI היא פלטפורמת יצירת תמונות עם שתי יכולויות ייחודיות: היא יוצרת גרפיקה וקטורית סקיילבילית אמיתית (SVG), והמודל העדכני שלה הוביל את לוח הדירוג של Hugging Face Text-to-Image Arena בתחילת 2026, עדיף על Midjourney V7, DALL-E 3 ו-FLUX.</p><p style="margin-top:1rem">Recraft V4 הושקט בפברואר 2026 והשיג מיד ביצוע עדיף לכל המתחרים בלוח הדירוג — הישג בולט לצוות של כ-50 איש. V3 כבר הוביל את אותו לוח הדירוג בסוף 2024. וריאנטי מודל: V4 Standard (רסטר, 1024×1024), V4 Vector (פלט SVG אמיתי), V4 Pro (רסטר, 2048×2048), V4 Pro Vector (וקטור ברזולוציה גבוהה).</p><p style="margin-top:1rem">פלט הווקטור הוא SVG אמיתי עם נתיבים נקיים, לא תמונה רסטורית המומרת לפורמט וקטורי. ה-SVG שנוצר ניתן לעריכה ב-Illustrator, Figma או בכל עורך וקטור — והוא בלתי תלוי ברזולוציה. זה ייחודי בין יוצרי תמונות AI הזמינים מסחרית.</p><p style="margin-top:1rem">תמחור: התוכנית החינמית כוללת 50 קרדיטים יומיים, שימוש אישי וציבורי בלבד. תוכניות בתשלום מתחילות ב-$10/חודש (1,000 קרדיטים, זכויות מסחריות, דורים פרטיים). Pro היא $25/חודש. Team היא $30/משתמש/חודש. גישת API דרך fal.ai עולה בערך $0.04/תמונה לרסטר ו-$0.08/תמונה לווקטור.</p><p style="margin-top:1rem">מגבלות: התוכנית החינמית אינה מאפשרת שימוש מסחרי. מערכת הקרדיטים יכולה להיות מגבילה עבור זרימות עבודה בנפח גבוה. הפלטפורמה חדשה יחסית, עם קהילה קטנה יותר בהשוואה ל-Midjourney או Stable Diffusion.</p><p style="margin-top:1rem">מתאימה ביותר למעצבים, צוותי ברנד ואילוסטרטורים הזקוקים לנכסים וקטוריים בשימוש מסחרי או לאיכות רסטר הטובה ביותר הזמינה — במיוחד עבור סמלים, לוגוים ונכסי מערכת עיצוב.</p></div>

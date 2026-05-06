@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Terminal, tarefas agênticas complexas</div>
     </div>
   </div>
-  <a href="/pt/compare/claude-code-vs-github-copilot.html" class="compare-strip">⚖️ Claude Code vs GitHub Copilot →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/pt/compare/claude-code-vs-github-copilot.html" class="compare-strip">⚖️ Claude Code vs GitHub Copilot →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Claude Code</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Claude Code é o agente oficial de linha de comando da Anthropic para desenvolvimento de software, lançado em 2025 e rapidamente adotado como a principal ferramenta de codificação agêntica entre engenheiros profissionais. Ao contrário dos plugins de IDE que auxiliam com arquivos individuais, o Claude Code opera no nível do repositório — ele lê toda a sua base de código, compreende a arquitetura e pode executar ciclos completos de desenvolvimento: design, implementação, escrita de testes, correção de bugs e refatoração, tudo a partir de uma única instrução em linguagem natural no terminal.</p><p style="margin-top:1rem">A ferramenta utiliza os modelos Claude Sonnet ou Opus com sua janela de contexto completa, o que significa que pode manter toda uma base de código grande na memória simultaneamente. Isso viabiliza tarefas que fragmentam outras ferramentas: migrar um esquema de banco de dados enquanto atualiza todas as queries e models afetados, refatorar uma biblioteca de componentes enquanto corrige todos os pontos de uso, ou implementar uma funcionalidade completa de ponta a ponta, incluindo rotas, controllers, testes e documentação.</p><p style="margin-top:1rem">Claude Code requer créditos ativos na API da Anthropic e é cobrado por token, tornando-o mais caro para uso intenso do que uma assinatura de IDE com valor fixo. É nativo do terminal, o que significa que se integra naturalmente a qualquer ambiente de desenvolvimento sem plugins de IDE — especialmente útil para trabalho no lado do servidor, scripts e pipelines de CI/CD. Desenvolvedores que constroem funcionalidades complexas e de longa duração o avaliam consistentemente como a ferramenta de codificação agêntica mais capaz disponível em 2026.</p><p style="margin-top:1rem">Em 2026, o Claude Code adicionou Agentes em Segundo Plano que rodam de forma autônoma enquanto você trabalha em outra coisa, expandiu a janela de contexto para 1 milhão de tokens (Beta) e foi incluído nos planos Claude Pro e Max (sem necessidade de créditos de API separados para muitos fluxos de trabalho). Lidera o benchmark SWE-Bench Verified com 80,8% usando o Opus 4.6.</p></div>

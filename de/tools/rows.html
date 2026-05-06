@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal für:</strong> KI-gestütztes Tabellenkalkulationsprogramm mit integrierten Datenintegrationen und Web-Scraping</div>
     </div>
   </div>
-  <a href="/de/compare/rows-vs-hex.html" class="compare-strip">⚖️ Rows vs Hex →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/de/compare/rows-vs-hex.html" class="compare-strip">⚖️ Rows vs Hex →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Über Rows</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Rows ist eine Tabellenkalkulationsplattform, die KI- und Datenintegrationsfunktionen direkt in die Tabellenkalkulationserfahrung bringt, ohne externe Tools oder APIs zu benötigen. Im Gegensatz zu Excel oder Google Sheets, wo KI als Add-in hinzugefügt wird, hat Rows KI als native Funktion neben 50+ Datenquellenintegrationen entwickelt — damit können Benutzer Live-Daten von Twitter, LinkedIn, HubSpot, Stripe, Google Analytics und anderen direkt in Tabellenzellen abrufen.</p><p style="margin-top:1rem">Der KI-Assistent ist in der Bearbeitungsleiste und überall auf der Schnittstelle eingebettet — er erzeugt Formeln aus Beschreibungen in natürlicher Sprache, fasst Datensätze zusammen, bereichert Daten durch Abfragen externer Quellen und erstellt Analysen aus Anfragen in natürlicher Sprache. Die integrierte Web-Scraping-Funktion ermöglicht das Extrahieren strukturierter Daten von jeder öffentlichen Website ohne Drittanbieter-Tools.</p><p style="margin-top:1rem">Die wichtigsten Funktionen umfassen native KI-Formelerzeugung und Datenanalyse, 50+ Live-Datenintegrationen (Twitter, LinkedIn, HubSpot, Stripe und mehr), integriertes Web-Scraping, Echtzeit-Datenaktualisierung, Freigabe und Einbettung von Tabellenkalkulationen sowie API für automatisierte Updates.</p><p style="margin-top:1rem">Preisgestaltung: Der kostenlose Plan bietet 20 KI-Aufgaben pro Monat und Zugriff auf die meisten Funktionen. Plus zu 8 US-Dollar pro Benutzer pro Monat bietet 200 KI-Aufgaben pro Monat und alle Datenintegrationen. Pro zu 79 US-Dollar pro Monat bietet 1.000 KI-Aufgaben pro Monat, Team-Funktionen und höhere Datenaktualisierungsraten. Enterprise-Preise sind individuell.</p><p style="margin-top:1rem">Einschränkungen: KI-Aufgabenlimits auf den kostenlosen und Plus-Tarifen schränken intensive KI-Nutzung ein. Die Plattform ist neuerer als etablierte Tabellenkalkulationstools — einige Benutzer treffen auf Schwachstellen in der Schnittstelle. Rows eignet sich am besten als Daten-Pull- und Analyse-Tool, nicht als Ersatz für komplexe Excel-Finanzmodelle.</p><p style="margin-top:1rem">Am besten geeignet für Growth-, Marketing- und Sales-Teams, die regelmäßig Daten aus externen Quellen in Tabellenkalkulationen abrufen und möchten, dass KI bei der Analyse und Formelerzeugung hilft, ohne die Tabellenkalkulationsumgebung zu verlassen.</p></div>

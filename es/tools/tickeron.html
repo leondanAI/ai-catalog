@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Señales comerciales de IA y reconocimiento de patrones para operadores activos</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de Tickeron</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Tickeron es una plataforma comercial de IA que utiliza aprendizaje automático para identificar patrones técnicos, generar predicciones de precios y proporcionar señales comerciales para inversores y operadores activos. La plataforma cubre acciones, ETFs, Forex y criptomonedas, ofreciendo análisis de IA en tiempo real junto con contenido educativo y herramientas de backtesting.</p><p style="margin-top:1rem">Los Robots de IA de Tickeron son señales comerciales automatizadas que identifican puntos de entrada y salida basados en patrones técnicos — dobles fondos, cabeza y hombros, niveles de soporte/resistencia y señales de tendencia. Los niveles de confianza adjuntos a cada señal ayudan a los operadores a filtrar configuraciones de mayor probabilidad. La plataforma también proporciona análisis de cartera de IA con sugerencias de rebalanceo y gestión de riesgos.</p><p style="margin-top:1rem">Las capacidades clave incluyen reconocimiento de patrones de IA y señales comerciales, Robots de IA para generación automatizada de señales, predicción de precios con niveles de confianza, análisis y sugerencias de rebalanceo de cartera, backtesting, señales de Forex y criptomonedas, escaneo de mercado y contenido educativo comercial.</p><p style="margin-top:1rem">Precios: Los planes varían según el tipo de operador. Investor a $60 por mes se dirige a inversores a largo plazo. Swing a $80 por mes se dirige a operadores swing. Day a $90 por mes se dirige a operadores de día con señales en tiempo real. Expert a $250 por mes proporciona todas las características más herramientas de nivel experto. La facturación anual proporciona un descuento del 50% en todos los planes.</p><p style="margin-top:1rem">Limitaciones: Las señales comerciales y el reconocimiento de patrones son probabilísticos — ninguna herramienta de IA puede garantizar resultados comerciales rentables. Las herramientas de reconocimiento de patrones han enfrentado escrutinio por sobreajuste de backtesting, donde las señales parecen fuertes históricamente pero tienen un rendimiento inferior futuro. La calidad de ejecución de la plataforma depende enteramente de cómo los operadores usen las señales, no solo de las señales mismas.</p><p style="margin-top:1rem">Mejor adaptado para operadores minoristas activos que desean análisis técnico asistido por IA e identificación de señales comerciales — con la comprensión de que las señales requieren criterio independiente y no se garantiza que sean rentables.</p></div>

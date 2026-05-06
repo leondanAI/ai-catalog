@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal für:</strong> Kostenlose akademische Suchmaschine mit KI-gestützten Zusammenfassungen von Papieren über 214M+ Arbeiten</div>
     </div>
   </div>
-  <a href="/de/compare/scite-vs-semantic-scholar.html" class="compare-strip">⚖️ Semantic Scholar vs Scite →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/de/compare/scite-vs-semantic-scholar.html" class="compare-strip">⚖️ Semantic Scholar vs Scite →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Über Semantic Scholar</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Semantic Scholar ist eine kostenlose KI-gestützte akademische Suchmaschine, die vom Allen Institute for Artificial Intelligence (AI2), einer der führenden gemeinnützigen KI-Forschungsorganisationen, entwickelt wurde. Sie indexiert über 214 Millionen akademische Papiere über alle Disziplinen hinweg und nutzt KI, um die Fachliteratur zugänglicher und auffindbar zu machen.</p><p style="margin-top:1rem">Die KI-Funktionen umfassen TLDR-Zusammenfassungen (KI-generierte Zusammenfassungen in einem Satz für Papiere ohne Abstrakte), semantische Suche, die die Bedeutung einer Anfrage versteht, Zitationsgeschwindigkeit-Tracking (Papiere mit schnellen Zitationen) und den Konzeptgraph, der zeigt, wie Themen und Ideen über die Literatur verbunden sind. Die kostenlose Research API ermöglicht es Forschern und Entwicklern, Anwendungen auf Basis von Semantic Scholars Daten zu erstellen.</p><p style="margin-top:1rem">Schlüsselfunktionen: Natürlichsprachige Papiersuche über 214M+ Papiere, KI-generierte TLDR-Zusammenfassungen, semantische Suche für Konzept-Level Discovery, Zitationsgraph-Visualisierung, Zitationsgeschwindigkeit-Tracking, Papierempfehlungen, Autorprofile und eine vollständig kostenlose Research API.</p><p style="margin-top:1rem">Preisgestaltung: Semantic Scholar ist vollständig kostenlos — die Weboberfläche, alle KI-Features und die Research API sind ohne Kosten. Das Allen Institute for AI finanziert den Service als öffentliches Gut für die wissenschaftliche Gemeinschaft. Es gibt keine Premium-Stufen oder bezahlte Upgrades.</p><p style="margin-top:1rem">Einschränkungen: Semantic Scholar ist ein Such- und Discovery-Tool — es extrahiert keine strukturierten Daten aus Papieren wie Elicit oder klassifiziert Zitationen als unterstützend oder kontrastierend wie Scite. Die Abdeckung über Disziplinen ist breit, aber die Tiefe variiert — hochspezialisierte Felder können unvollständige Abdeckung haben.</p><p style="margin-top:1rem">Am besten geeignet für Forscher, Studenten und Entwickler, die eine kostenlose, umfassende akademische Suchmaschine mit semantischen Suchfunktionen und API-Zugang benötigen — besonders als Ergänzung zu Elicit oder Scite für spezifische Forschungsworkflows.</p></div>

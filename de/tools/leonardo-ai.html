@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal für:</strong> Spiel-Assets, Produktbilder, Charaktere</div>
     </div>
   </div>
-  <a href="/de/compare/leonardo-ai-vs-midjourney.html" class="compare-strip">⚖️ Leonardo.ai vs Midjourney →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/de/compare/leonardo-ai-vs-midjourney.html" class="compare-strip">⚖️ Leonardo.ai vs Midjourney →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Über Leonardo.ai</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Leonardo.ai is a generative AI platform focused on consistency, control, and creative production — particularly for game assets, product imagery, and character design. Its most distinguishing feature is the ability to maintain consistent characters, styles, and visual identities across multiple generated images, which is critical for game development, illustration series, and brand asset creation.</p><p style="margin-top:1rem">The free tier provides 150 credits daily, which translates to roughly 30-50 standard image generations — the most generous free allowance of any major image platform. The platform includes a library of pre-trained fine-tuned models for different aesthetic styles (realistic, anime, comic, cinematic) and a training tool that lets you create your own LoRA models from a small dataset of reference images. The Phoenix model, Leonardo's flagship, produces high-quality photorealistic and artistic images competitive with top-tier alternatives.</p><p style="margin-top:1rem">The Canvas editor provides inpainting and outpainting tools for editing specific regions of generated images without affecting the surrounding areas. The 3D texture generation feature is unique: upload a 3D model and Leonardo generates seamless textures for it — directly applicable to game asset pipelines. The interface is feature-rich to the point of being overwhelming for new users, but for game developers, concept artists, and digital creators who invest the time, Leonardo offers a level of control and consistency that simpler tools cannot match.</p></div>

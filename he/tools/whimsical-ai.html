@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> דיאגרמות, מפות חשיבה וחוטי תיל שנוצרו על ידי AI מטקסט</div>
     </div>
   </div>
-  <a href="/he/compare/whimsical-ai-vs-figma-ai.html" class="compare-strip">⚖️ Whimsical AI vs Figma AI →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/he/compare/whimsical-ai-vs-figma-ai.html" class="compare-strip">⚖️ Whimsical AI vs Figma AI →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>אודות Whimsical AI</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Whimsical היא פלטפורמת שיתוף פעולה חזותית ליצירת דיאגרמות, מפות חשיבה, חוטי תיל, פתקים דביקים ודוקומנטים — כולם בממשק קנבס משולב. עם למעלה מ-4 מיליון משתמשים ו-135,000+ חיפושים חודשיים, זהו אחד הכלים הנפוצים ביותר לחשיבה חזותית ותיעוד.</p><p style="margin-top:1rem">Whimsical AI, שנוסף ב-2023 והורחב ב-2024-2025, יוצר דיאגרמות, מפות חשיבה וחוטי תיל מתיאורים טקסטואליים. מעצב יכול לתאר זרימת משתמש או ארכיטקטורת מידע בשפה טבעית וקבל דיאגרמה שלמה שניתן לערוך מיד. זה מקטין את הזמן המושקע ביצירת דיאגרמה ראשונית משעות לדקות.</p><p style="margin-top:1rem">יכולות מרכזיות כוללות יצירת דיאגרמות AI מטקסט, יצירת מפת חשיבה AI, יצירת חוטי תיל AI, שיתוף פעולה בזמן אמת מרובה משתתפים, קנבס אינסופי, בניית דיאגרמות גרירה ושחרור, השתלבות עם Figma, Notion ו-Confluence, ספריית תבניות וקישורים שניתן לשיתוף לתצוגה.</p><p style="margin-top:1rem">תמחור: תוכנית בחינם מספקת לוחות בלתי מוגבלים עם סימן מימי של Whimsical. Pro ב-$10 לעורך לחודש מספק לוחות פרטיים בלתי מוגבלים, הגנת סיסמה, גישת אורח, מרחב עבודה מותאם אישית ואפשרויות ייצוא ללא סימני מימי. תוכנית Org ב-$20 לעורך לחודש מוסיפה בקרות ניהול ו-SSO.</p><p style="margin-top:1rem">מגבלות: Whimsical AI מתמקדת יותר בדיאגרמות ודיאגרמות תזרים מאשר עיצוב ממשק משתמש מלא — זה לא מתחרה של Figma לעיצוב ממשק משתמש מורכב. יצירת AI חזקה לדיאגרמות מובנות אך פחות יכולה לחוטי תיל מפורטים. סימן המימי של התוכנית בחינם מגביל שימוש מקצועי.</p><p style="margin-top:1rem">מתאים ביותר למנהלי מוצר, מעצבים וקבוצות שעושות הרבה תיעוד תהליכים, מיפוי זרימת משתמש ועבודת ארכיטקטורת מידע — ורוצות של-AI תישא בהאצת יצירת דיאגרמה ראשונית.</p></div>

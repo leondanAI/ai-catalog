@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> Универсальный AI-помощник для написания текстов, программирования, анализа и генерации изображений</div>
     </div>
   </div>
-  <a href="/ru/compare/chatgpt-vs-claude.html" class="compare-strip">⚖️ ChatGPT vs Claude →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/chatgpt-vs-claude.html" class="compare-strip">⚖️ ChatGPT vs Claude →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе ChatGPT</h2>
     <div class="tool-desc"><p style="margin-top:1rem">ChatGPT — самый широко используемый в мире AI-помощник, разработанный OpenAI, с более чем 1 миллиардом активных пользователей в месяц и 50 миллионами платящих подписчиков по состоянию на 2026 год. Платформа поддерживает генерацию текста, программирование, анализ данных, создание изображений (ChatGPT Images 2.0, запущен в апреле 2026), веб-просмотр, анализ файлов и голосовые беседы — всё из одного интерфейса.</p><p style="margin-top:1rem">GPT-5.5 стала моделью по умолчанию для всех пользователей ChatGPT 23 апреля 2026 года, обеспечивая значительно улучшенные возможности рассуждения и следования инструкциям. В феврале 2026 года OpenAI ввела контекстную рекламу на бесплатном уровне в Соединённых Штатах, а затем на уровне Go ($8/мес) — что знаменует значительный сдвиг в монетизации платформы. Plus за $20/мес остаётся без рекламы. План Pro $100/мес (запущен 9 апреля 2026) предоставляет 5-кратное увеличение лимитов использования Plus. План Pro $200/мес предлагает максимальные лимиты.</p><p style="margin-top:1rem">Ключевые возможности включают мультимодальный ввод (текст, изображения, файлы, голос), рассуждение GPT-5.5, ChatGPT Images 2.0, веб-просмотр, выполнение кода на Python, анализ данных, Custom GPTs (персональные AI-конфигурации) и режим Canvas для совместной работы над текстом и кодом.</p><p style="margin-top:1rem">Цены: Бесплатный план включает доступ к GPT-5.5 с рекламой (США). Go за $8/мес включает повышенные лимиты с рекламой. Plus за $20/мес без рекламы с полным доступом к GPT-5.5 и 50 генерациями изображений в день. Pro за $100/мес предоставляет 5-кратные лимиты Plus. Pro за $200/мес предоставляет максимальные лимиты. Планы Team и Enterprise доступны для организаций.</p><p style="margin-top:1rem">Ограничения: Введение рекламы на бесплатном и Go уровнях значительно снизило их ценность. Ограничения использования на Plus могут быть разочаровывающими в часы пиковой нагрузки. Широкий спектр функций может сделать ChatGPT менее специализированным в сравнении с инструментами, созданными специально для программирования (Claude Code) или исследований (Perplexity).</p><p style="margin-top:1rem">Лучше всего подходит для людей и команд, нуждающихся в универсальном AI-помощнике для разнообразных задач — написания текстов, анализа, программирования, генерации изображений и исследований — с самой большой установленной экосистемой моделей.</p></div>

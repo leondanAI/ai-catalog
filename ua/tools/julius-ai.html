@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Підходить для:</strong> Conversational AI data analysis — upload any dataset, ask questions in plain language</div>
     </div>
   </div>
-  <a href="/ua/compare/julius-ai-vs-looker-studio.html" class="compare-strip">⚖️ Julius AI vs Looker Studio →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ua/compare/julius-ai-vs-looker-studio.html" class="compare-strip">⚖️ Julius AI vs Looker Studio →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Julius AI</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Julius AI — це інструмент для conversational аналізу даних, який дозволяє користувачам завантажувати таблиці, CSV-файли та підключати бази даних, а потім аналізувати дані, задаючи питання простою англійською мовою. Він генерує графіки, статистичні зведення та письмові висновки з даних на основі запитів природної мови — роблячи аналіз даних доступним для користувачів без знань SQL або Python.</p><p style="margin-top:1rem">Платформа обробляє стандартні завдання аналізу даних в режимі розмови: аналіз тенденцій, статистичні зведення, виявлення кореляцій, генерацію графіків та пропозиції з очищення даних. Він підтримує завантаження файлів (CSV, Excel, JSON) та підключення до Google Sheets, Dropbox та OneDrive. Графіки інтерактивні та можуть бути експортовані. Julius також може генерувати та виконувати код Python для більш складного аналізу, якщо потрібно.</p><p style="margin-top:1rem">Ключові можливості включають conversational запити до даних простою англійською мовою, генерацію графіків та візуалізацій, статистичний аналіз (регресія, кореляція, описова статистика), допомогу в очищенні даних, генерацію та виконання коду Python, експорт до CSV, PNG та PDF.</p><p style="margin-top:1rem">Ціни: Безплатний план надає 15 повідомлень на місяць — обмежено для регулярного використання. Plus за $29 на місяць надає 250 повідомлень на місяць та необмежене завантаження файлів. Pro за $37 на місяць надає 500 повідомлень на місяць, пріоритетну обробку та доступ API. Business за $375 на місяць надає 5,000 повідомлень та функції команди.</p><p style="margin-top:1rem">Обмеження: Ціноутворення на основі повідомлень обмежує важких користувачів — 500 повідомлень/місяць на Pro швидко витрачаються в ітеративних сеансах аналізу. Інструмент відмінно підходить для дослідницького аналізу, але не розроблений для автоматизованої роботи pipeline або розгортань enterprise BI. Складне статистичне моделювання потребує запиту на генерацію Python, а не вбудованої підтримки.</p><p style="margin-top:1rem">Найкраще підходить для бізнес-аналітиків, дослідників та менеджерів, які регулярно працюють зі структурованими даними та хочуть дослідити та підсумувати набори даних без написання SQL або Python.</p></div>

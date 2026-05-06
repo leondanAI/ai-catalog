@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Підходить для:</strong> AI перефразування, підсумовування та перевірка граматики для студентів і письменників</div>
     </div>
   </div>
-  <a href="/ua/compare/quillbot-vs-grammarly.html" class="compare-strip">⚖️ QuillBot vs Grammarly →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ua/compare/quillbot-vs-grammarly.html" class="compare-strip">⚖️ QuillBot vs Grammarly →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Про сервіс QuillBot</h2>
     <div class="tool-desc"><p style="margin-top:1rem">QuillBot — це спеціалізований AI інструмент для письма з 35 мільйонами активних користувачів на місяць, побудований навколо перефразування, підсумовування, перевірки граматики та генерації цитувань. На відміну від універсальних AI письменників, QuillBot зосереджується на вдосконаленні та трансформації існуючого тексту, а не на генеруванні з нуля — що робить його особливо популярним серед студентів та письменників з англійською як іноземною мовою.</p><p style="margin-top:1rem">Основний інструмент перефразування пропонує кілька режимів (Standard, Fluency, Formal, Academic, Creative, Concise та Expand), які трансформують текст різними способами, зберігаючи значення. AI Summarizer скорочує довгі документи до ключових моментів. Grammar Checker виявляє помилки та пропонує переписи. У 2024 році QuillBot додав функцію AI Humanizer, яка намагається зробити AI-генерований текст менш виявляємим для інструментів виявлення AI.</p><p style="margin-top:1rem">Основні можливості включають багаторежимний перефразувальник, підсумовувач документів, перевірку граматики, генератор цитувань (MLA, APA, Chicago), перевірку плагіату, перекладач, AI Humanizer та інтеграцію з Microsoft Word, Google Docs та Chrome.</p><p style="margin-top:1rem">Ціноутворення: Безплатний план забезпечує перефразування до 125 слів за раз, підсумовування до 600 слів та базову перевірку граматики. Premium за $8.33 на місяць (річна підписка) або $19.95 на місяць (місячна підписка) знімає обмеження на кількість слів, розблоковує всі режими та додає повний набір функцій, включаючи AI Humanizer та необмежені перевірки на плагіат. Доступна студентська знижка.</p><p style="margin-top:1rem">Обмеження: Обмеження на 125 слів у безплатному інструменті перефразування дуже суворе — це основний стимул до оновлення на Premium. AI Humanizer, хоча й корисний, не гарантує уникнення виявлення, оскільки інструменти виявлення AI постійно вдосконалюються. Проблеми академічної доброчесності стосуються інструментів перефразування в освітніх контекстах.</p><p style="margin-top:1rem">Найбільш придатний для студентів, авторів англійської мови як іноземної та розробників контенту, які потребують перефразування, підсумовування або перевірки існуючого тексту — а не генерування оригінального довгого контенту з нуля.</p></div>

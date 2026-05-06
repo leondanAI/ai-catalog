@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Q&amp;A de IA sobre documentos — hacer preguntas sobre PDFs y artículos de investigación</div>
     </div>
   </div>
-  <a href="/es/compare/notebooklm-vs-humata.html" class="compare-strip">⚖️ Humata vs NotebookLM →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/es/compare/notebooklm-vs-humata.html" class="compare-strip">⚖️ Humata vs NotebookLM →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de Humata</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Humata es una herramienta de respuesta de preguntas sobre documentos de IA que permite a los usuarios cargar archivos PDF — artículos de investigación, documentos legales, informes, libros de texto — y hacer preguntas en lenguaje natural sobre el contenido. La IA lee y comprende los documentos y responde preguntas con citas que apuntan a las secciones específicas que contienen la información relevante.</p><p style="margin-top:1rem">La herramienta se utiliza en investigación, legal, finanzas y educación para extraer información específica de documentos largos sin leerlos completamente. Los usuarios pueden comparar múltiples documentos, generar resúmenes, extraer términos clave y obtener respuestas a preguntas muy específicas que requerirían una búsqueda manual extensiva en la revisión de documentos tradicional.</p><p style="margin-top:1rem">Las capacidades clave incluyen carga de PDF y Q&amp;A en lenguaje natural, respuestas respaldadas por citas vinculadas a secciones de origen, comparación de múltiples documentos, resumen de IA, extracción de términos clave y búsqueda de documentos.</p><p style="margin-top:1rem">Precios: El plan gratuito proporciona 60 páginas de procesamiento de documentos por mes. Estudiante a $1.99 por mes proporciona 200 páginas por mes — excelente valor para estudiantes. Experto a $9.99 por mes proporciona 1,000 páginas por mes. Equipo a $99 por mes proporciona 10 asientos de equipo y páginas ilimitadas.</p><p style="margin-top:1rem">Limitaciones: Humata se especializa en Q&amp;A de documentos — no es una herramienta de investigación general y no busca en bases de datos externas. La calidad de las respuestas depende de la calidad y estructura del PDF cargado. Las tablas complejas, gráficos y ecuaciones en PDFs pueden no extraerse con precisión. El límite de 60 páginas del nivel gratuito se agota rápidamente incluso con una sola carga de artículo de investigación.</p><p style="margin-top:1rem">Mejor adecuado para estudiantes de derecho, investigadores y profesionales que trabajan regularmente con PDFs largos y desean encontrar rápidamente información específica sin lectura manual — particularmente para diligencia debida, revisión de literatura y flujos de trabajo intensivos en documentos.</p></div>

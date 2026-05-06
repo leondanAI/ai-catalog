@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal für:</strong> Hochwertige KI-Videogenerierung mit nativer Audio von Google DeepMind</div>
     </div>
   </div>
-  <a href="/de/compare/google-veo-3-vs-runway.html" class="compare-strip">⚖️ Google Veo 3 vs Runway →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/de/compare/google-veo-3-vs-runway.html" class="compare-strip">⚖️ Google Veo 3 vs Runway →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Über Google Veo 3</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Google Veo 3 ist das hochmoderne KI-Videogenerierungsmodell von Google DeepMind, das hochauflösende Videoclips mit synchronisierter nativer Audio — einschließlich Dialog, Soundeffekte und Umgebungsgeräusche — aus Text- und Bildanfragen generieren kann. Es ist derzeit das einzige große KI-Videomodell, das Audio nativ zusammen mit dem Video generiert, anstatt separate Audio-Nachbearbeitung zu erfordern.</p><p style="margin-top:1rem">Veo 3 ist für Verbraucher über Googles Gemini AI Pro-Abonnement ($19,99/Monat) verfügbar, das etwa 90 Videogenerierungs-Gutscheine pro Monat enthält. Veo 3.1, zusammen mit Veo 3 veröffentlicht, führte Veo 3.1 Lite ein — eine schnellere, 50% günstigere Variante, die für hochvolumige Anwendungsfälle optimiert ist. Die API ermöglicht es Entwicklern und Unternehmen, Veo in ihre eigenen Anwendungen zu integrieren.</p><p style="margin-top:1rem">Zu den Hauptfunktionen gehören 1080p-Videogenerierung aus Text- und Bildanfragen, native synchronisierte Audiogenerierung (Dialog, Effekte, Umgebung), Veo 3.1 Lite für kosteneffiziente Volumengenerierung, API-Zugriff mit Pro-Sekunden-Preisgestaltung und Integration mit Googles Vertex AI für Enterprise-Workflows.</p><p style="margin-top:1rem">Preisgestaltung: Verbraucherzugriff über Gemini AI Pro kostet $19,99 pro Monat und enthält Veo 3-Generierungsgutscheine (~90 Videos/Monat). API-Preisgestaltung reicht von $0,05 pro Sekunde für Veo 3.1 Lite bis $0,60 pro Sekunde für Veo 3 (volle Qualität). Enterprise-Preisgestaltung über Google Cloud Vertex AI ist auf Anfrage verfügbar.</p><p style="margin-top:1rem">Einschränkungen: Verbrauchergenerierung ist hinter einem Gemini AI Pro-Abonnement gesperrt. API-Kosten können sich bei hochvolumiger Produktion schnell ansammeln. Die maximale Clip-Länge ist derzeit begrenzt (typischerweise unter 60 Sekunden pro Generierung). Als neueres Modell ist Veo 3 noch nicht weit in Drittanbieter-Bearbeitungstools integriert.</p><p style="margin-top:1rem">Best geeignet für Content-Creator, Filmemacher und Marketing-Teams, die hochwertige KI-Videos mit synchronisierter Audio benötigen — insbesondere für diejenigen, die bereits im Google-Ökosystem sind und Gemini AI Pro nutzen.</p></div>

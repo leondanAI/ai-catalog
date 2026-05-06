@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> AI-генерируемые веб-сайты с выходом дизайнерского качества и CMS</div>
     </div>
   </div>
-  <a href="/ru/compare/framer-ai-vs-canva-ai.html" class="compare-strip">⚖️ Framer AI vs Canva AI →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/framer-ai-vs-canva-ai.html" class="compare-strip">⚖️ Framer AI vs Canva AI →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе Framer AI</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Framer AI — это конструктор веб-сайтов на основе ИИ, популярный среди независимых дизайнеров и дизайн-ориентированных команд. В отличие от конструкторов на основе шаблонов, Framer AI создает сайты с подлинным качеством дизайна — пользовательские макеты, плавные анимации и адаптивные точки останова, которые обычно требуют профессиональной работы дизайнера. ИИ генерирует полный сайт на основе текстового описания, который затем можно настроить в визуальном редакторе.</p><p style="margin-top:1rem">Ключевые функции ИИ включают AI Wireframer для быстрого создания макетов, AI Workshop (помощник по кодированию для пользовательских взаимодействий и логики), автоматический перевод с поддержкой многоязычных сайтов и интеграции с API OpenAI, Anthropic и Gemini в виде возможностей плагинов третьих сторон.</p><p style="margin-top:1rem">Платформа обеспечивает хостинг, CMS и аналитику. Сайты публикуются на поддомене Framer в бесплатном плане или на собственный домен в платных планах. Framer особенно популярен для портфолио, целевых страниц, сайтов маркетинга продуктов и веб-сайтов стартапов, где качество визуального оформления имеет значение.</p><p style="margin-top:1rem">Цены: Бесплатный план включает полные инструменты дизайна и поддомен Framer с значком «Made in Framer». Basic за $10 в месяц (годовой) или $15 в месяц добавляет собственный домен. Pro за $30 в месяц (годовой) или $45 в месяц добавляет CMS, аналитику и защиту паролем. Scale за $100 в месяц (годовой) добавляет более высокие лимиты трафика и расширенную CMS. Цены Enterprise устанавливаются индивидуально.</p><p style="margin-top:1rem">Ограничения: Framer AI оптимизирован для маркетинговых сайтов — он не подходит для сложных веб-приложений или электронной коммерции сверх базовых витрин. Визуальный редактор имеет кривую обучения по сравнению с более простыми конструкторами типа Squarespace. Возможности CMS более ограничены, чем на специализированных платформах, таких как WordPress или Webflow.</p><p style="margin-top:1rem">Лучше всего подходит для дизайнеров, агентств и стартапов, которые хотят создавать визуально исключительные маркетинговые веб-сайты и портфолио без написания кода.</p></div>

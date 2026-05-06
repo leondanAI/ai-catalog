@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Graphiques, analyse technique, screening de marché</div>
     </div>
   </div>
-  <a href="/fr/compare/tradingview-vs-fiscal-ai.html" class="compare-strip">⚖️ TradingView vs Fiscal.ai →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/tradingview-vs-fiscal-ai.html" class="compare-strip">⚖️ TradingView vs Fiscal.ai →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos TradingView</h2>
     <div class="tool-desc"><p style="margin-top:1rem">TradingView est la plateforme de graphiques et d'analyse de marché la plus populaire au monde — avec plus de 50 millions d'utilisateurs dans le monde et un réseau social de traders sans véritable concurrent. À l'origine un outil de graphiques, elle a évolué vers un hub complet d'intelligence de marché combinant une analyse technique de niveau professionnel, des screeners propulsés par l'IA, des données en temps réel sur toutes les classes d'actifs, et une communauté où les traders partagent publiquement leurs idées, scripts et stratégies.</p><p style="margin-top:1rem">Les fonctionnalités IA de TradingView se concentrent sur ses outils de screener et de signaux : vous pouvez configurer des filtres multi-conditions complexes sur des milliers d'actions, ETF, cryptos et paires forex, et laisser la plateforme analyser automatiquement et faire remonter les candidats correspondant à vos critères. Les Smart Alerts vous notifient dès qu'un seuil de prix, de volume ou d'indicateur est franchi — sur n'importe quel instrument, sur n'importe quelle unité de temps. La plateforme prend également en charge Pine Script, un langage de script propriétaire qui vous permet d'écrire des indicateurs et des stratégies personnalisés et de les backtester sur des données historiques. Un marketplace actif de scripts écrits par la communauté signifie que la plupart des idées auxquelles vous pouvez penser disposent déjà d'un indicateur prêt à l'emploi.</p><p style="margin-top:1rem">TradingView propose un plan gratuit riche en fonctionnalités avec des données en temps réel pour la plupart des marchés. Les plans payants débutent à 14,95 $ par mois (Essential) et vont jusqu'à 59,95 $ par mois (Ultimate) pour des panneaux de graphiques supplémentaires, des alertes plus rapides, plus d'indicateurs par graphique et des données historiques étendues. Pour tout investisseur ou trader ayant besoin de graphiques professionnels, d'une couverture multi-marchés et d'une intelligence communautaire en un seul endroit — TradingView est la référence du secteur que tout le monde finit par adopter.</p></div>

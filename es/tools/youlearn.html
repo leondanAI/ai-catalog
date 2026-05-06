@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Asistente de estudio impulsado por IA que aprende de tus propios documentos y videos</div>
     </div>
   </div>
-  <a href="/es/compare/youlearn-vs-notebooklm.html" class="compare-strip">⚖️ YouLearn vs NotebookLM →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/es/compare/youlearn-vs-notebooklm.html" class="compare-strip">⚖️ YouLearn vs NotebookLM →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de YouLearn</h2>
     <div class="tool-desc"><p style="margin-top:1rem">YouLearn es un asistente de estudio de IA que convierte cualquier material de aprendizaje — PDFs, libros de texto, videos de YouTube, páginas web y documentos cargados — en una experiencia de tutoría interactiva. En lugar de enseñar un currículo fijo, YouLearn se convierte en un tutor para cualquier contenido que proporcione el estudiante, permitiendo el aprendizaje asistido por IA desde diapositivas de cursos, capítulos de libros de texto, grabaciones de conferencias y artículos de investigación.</p><p style="margin-top:1rem">La plataforma analiza el contenido cargado o vinculado y permite a los estudiantes hacer preguntas al respecto, solicitar resúmenes de secciones específicas, generar cuestionarios de práctica a partir del material, crear mapas conceptuales y obtener explicaciones en lenguaje más simple. Esto lo hace particularmente valioso para estudiantes universitarios y profesionales que trabajan con sus propios materiales de curso.</p><p style="margin-top:1rem">Las capacidades clave incluyen carga de documentos y videos, importación de YouTube y URLs, preguntas y respuestas conversacionales sobre contenido cargado, resúmenes generados por IA, generación automática de cuestionarios a partir de contenido, creación de mapas conceptuales, análisis multidocumento y seguimiento de sesiones de estudio.</p><p style="margin-top:1rem">Precios: El plan gratuito proporciona cargas y consultas limitadas por mes. Pro a $12 por mes (anual, aproximadamente $10 por mes) proporciona cargas y consultas ilimitadas. Max a $45 por mes proporciona límites de procesamiento más altos y soporte prioritario para usuarios intensivos.</p><p style="margin-top:1rem">Limitaciones: YouLearn requiere que el usuario proporcione sus propios materiales de aprendizaje — no enseña un currículo de forma independiente. Las explicaciones de IA se generan a partir del contenido proporcionado y pueden no detectar errores conceptuales en el material de origen. El nivel Max a $45/mes es caro para lo que es fundamentalmente una herramienta de Q&amp;A de documentos.</p><p style="margin-top:1rem">Más adecuado para estudiantes universitarios, profesionales que estudian para certificaciones y estudiantes autodidactas que tienen sus propios materiales de estudio y desean que la IA los ayude a comprender, resumir y autoevaluarse en ese contenido específico.</p></div>

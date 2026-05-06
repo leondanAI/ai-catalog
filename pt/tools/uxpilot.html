@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Design UX com IA, gerando wireframes, fluxos de tela e heatmaps preditivos</div>
     </div>
   </div>
-  <a href="/pt/compare/uxpilot-vs-figma-ai.html" class="compare-strip">⚖️ UXPilot vs Figma AI →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/pt/compare/uxpilot-vs-figma-ai.html" class="compare-strip">⚖️ UXPilot vs Figma AI →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre UXPilot</h2>
     <div class="tool-desc"><p style="margin-top:1rem">UXPilot é uma ferramenta de design UX alimentada por IA que gera wireframes, telas de UI e fluxos de tela completos a partir de prompts de texto. É direcionada para designers de UX e equipes de produto que desejam acelerar a fase de wireframing sem começar do zero. O plugin do Figma integra a geração com IA diretamente nos fluxos de trabalho existentes do Figma.</p><p style="margin-top:1rem">A ferramenta gera múltiplas variações de tela a partir de um único prompt, permitindo que designers escolham e iterem a direção que melhor se adequa. Heatmaps preditivos simulam onde os usuários provavelmente olharão e clicarão em um design — útil para validar decisões de layout antes de testes com usuários. A geração de fluxos de tela cria protótipos multi-tela conectados a partir de uma descrição de funcionalidade.</p><p style="margin-top:1rem">Os recursos principais incluem geração de texto para wireframe, geração de tela de UI, criação de fluxos de tela, análise de heatmap preditivo, plugin do Figma para geração no editor e exportação de código para transferência aos desenvolvedores.</p><p style="margin-top:1rem">Preços: O plano gratuito suporta até 7 telas por vez com gerações de IA limitadas. Planos pagos começam em $14 por mês para maior capacidade de geração de telas e recursos adicionais. Camadas mais altas por volta de $22 por mês adicionam colaboração em equipe e limites de uso mais altos. Os níveis de preço são mais simples que a maioria dos concorrentes.</p><p style="margin-top:1rem">Limitações: O plano gratuito e básico parecem limitantes para uso profissional sério — a qualidade do resultado e os limites de geração empurram usuários para camadas mais altas rapidamente. Designs gerados tendem a padrões genéricos de UI e requerem customização para parecerem distintos.</p><p style="margin-top:1rem">Mais adequado para designers de UX que desejam acelerar o wireframing e gerar rapidamente múltiplas direções de tela para revisão de stakeholders, particularmente aqueles que já trabalham no Figma.</p></div>

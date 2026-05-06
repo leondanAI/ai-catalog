@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Conception UX IA avec wireframes, flux d'écrans et heatmaps prédictives</div>
     </div>
   </div>
-  <a href="/fr/compare/uxpilot-vs-figma-ai.html" class="compare-strip">⚖️ UXPilot vs Figma AI →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/uxpilot-vs-figma-ai.html" class="compare-strip">⚖️ UXPilot vs Figma AI →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos UXPilot</h2>
     <div class="tool-desc"><p style="margin-top:1rem">UXPilot est un outil de conception UX alimenté par l'IA qui génère des wireframes, des écrans UI et des flux d'écrans complets à partir de prompts texte. Il cible les designers UX et les équipes produit qui souhaitent accélérer la phase de wireframing sans partir d'une toile blanche. Le plugin Figma intègre la génération IA directement dans les workflows Figma existants.</p><p style="margin-top:1rem">L'outil génère plusieurs variantes d'écran à partir d'un seul prompt, permettant aux designers de choisir et d'itérer sur la direction qui convient le mieux. Les heatmaps prédictives simulent où les utilisateurs sont susceptibles de regarder et de cliquer sur un design — utile pour valider les décisions de mise en page avant les tests utilisateur. La génération de flux d'écrans crée des prototypes multi-écrans connectés à partir d'une description de fonctionnalité.</p><p style="margin-top:1rem">Les capacités clés incluent la génération de texte à wireframe, la génération d'écrans UI, la création de flux d'écrans, l'analyse de heatmaps prédictives, le plugin Figma pour la génération en éditeur et l'export de code pour la transmission aux développeurs.</p><p style="margin-top:1rem">Tarification : Le plan gratuit supporte jusqu'à 7 écrans à la fois avec des générations IA limitées. Les plans payants commencent à 14 $ par mois pour une capacité de génération d'écrans accrue et des fonctionnalités supplémentaires. Les niveaux supérieurs autour de 22 $ par mois ajoutent la collaboration en équipe et des limites d'utilisation plus élevées. Les niveaux de tarification sont plus simples que la plupart des concurrents.</p><p style="margin-top:1rem">Limitations : Le plan gratuit et le plan payant basique semblent limitants pour un usage professionnel sérieux — la qualité de la sortie et les limites de génération poussent les utilisateurs vers les niveaux supérieurs rapidement. Les designs générés tendent vers des motifs UI génériques et nécessitent une personnalisation pour être distinctifs.</p><p style="margin-top:1rem">Mieux adapté aux designers UX qui souhaitent accélérer le wireframing et générer rapidement plusieurs directions d'écrans pour l'examen des parties prenantes, en particulier ceux qui travaillent déjà dans Figma.</p></div>

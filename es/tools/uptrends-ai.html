@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Análisis de tendencias del mercado de valores con IA y análisis de momentum para inversores minoristas</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de Uptrends.ai</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Uptrends.ai es una plataforma de análisis de mercado que utiliza IA para detectar tendencias de precios de acciones, momentum sectorial y señales de mercado para inversores minoristas. La plataforma se enfoca en hacer que el análisis de tendencias de nivel institucional sea accesible para inversores individuales sin requerir conocimiento técnico avanzado o suscripciones de datos costosas.</p><p style="margin-top:1rem">La IA analiza la acción del precio, volumen y amplitud del mercado para identificar acciones que muestren cambios de tendencia significativos, momentum inusual o configuraciones de patrones técnicos. El análisis de rotación sectorial identifica hacia dónde parece estar fluyendo el dinero institucional en todos los sectores del mercado. La plataforma proporciona explicaciones en lenguaje natural de sus hallazgos de IA en lugar de indicadores técnicos crudos.</p><p style="margin-top:1rem">Las capacidades clave incluyen detección de tendencias con IA para acciones y ETFs, análisis de rotación sectorial y momentum, resúmenes de condiciones de mercado con IA, gestión de listas de vigilancia con alertas de IA, filtrado de acciones por criterios de momentum y tendencia, y un resumen de mercado diario.</p><p style="margin-top:1rem">Precios: El plan gratuito proporciona análisis de acciones limitado y resúmenes de mercado básicos. Essentials a $15 por mes proporciona análisis de tendencias completo, datos sectoriales y mayor capacidad de lista de vigilancia. Pro a $49 por mes proporciona análisis avanzado, límites de lista de vigilancia más altos y acceso prioritario a funciones.</p><p style="margin-top:1rem">Limitaciones: Uptrends.ai es una herramienta de tendencias enfocada en minoristas — no proporciona la profundidad de análisis fundamental disponible en plataformas como Fiscal.ai o la sofisticación técnica de TradingView. La cobertura es principalmente de valores estadounidenses. Como plataforma más nueva, el historial de calidad de señales es más corto que el de competidores establecidos.</p><p style="margin-top:1rem">Más adecuado para inversores minoristas que desean que la IA identifique acciones en tendencia y momentum sectorial sin construir configuraciones complejas de análisis técnico por sí mismos.</p></div>

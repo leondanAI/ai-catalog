@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> AI инструмент для Q&amp;A документов — задавайте вопросы о PDF файлах и научных статьях</div>
     </div>
   </div>
-  <a href="/ru/compare/notebooklm-vs-humata.html" class="compare-strip">⚖️ Humata vs NotebookLM →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/notebooklm-vs-humata.html" class="compare-strip">⚖️ Humata vs NotebookLM →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе Humata</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Humata — это AI инструмент для вопросов и ответов о документах, который позволяет пользователям загружать PDF файлы (научные статьи, юридические документы, отчеты, учебники) и задавать вопросы на естественном языке о содержимом. AI читает и понимает документы, отвечая на вопросы со ссылками на конкретные разделы с релевантной информацией.</p><p style="margin-top:1rem">Инструмент используется в научных исследованиях, праве, финансах и образовании для извлечения конкретной информации из больших документов без полного прочтения. Пользователи могут сравнивать несколько документов, создавать резюме, извлекать ключевые термины и получать ответы на высокоспециализированные вопросы, которые требовали бы обширного ручного поиска при традиционной обработке документов.</p><p style="margin-top:1rem">Основные возможности включают загрузку PDF и Q&amp;A на естественном языке, ответы со ссылками на исходные разделы, сравнение нескольких документов, AI суммаризацию, извлечение ключевых терминов и поиск в документах.</p><p style="margin-top:1rem">Цены: Бесплатный план предоставляет 60 страниц обработки документов в месяц. Student за $1.99 в месяц предоставляет 200 страниц в месяц — отличное соотношение для студентов. Expert за $9.99 в месяц предоставляет 1,000 страниц в месяц. Team за $99 в месяц предоставляет 10 мест в команде и неограниченное количество страниц.</p><p style="margin-top:1rem">Ограничения: Humata специализирован на Q&amp;A документов — это не универсальный инструмент исследования и не ищет во внешних базах данных. Качество ответов зависит от качества и структуры загруженного PDF. Сложные таблицы, диаграммы и уравнения в PDF могут извлекаться неточно. Лимит 60 страниц в бесплатном тарифе быстро исчерпывается даже при загрузке одной научной статьи.</p><p style="margin-top:1rem">Оптимален для студентов-юристов, исследователей и профессионалов, регулярно работающих с большими PDF и желающих быстро найти конкретную информацию без ручного прочтения — особенно для due diligence, обзора литературы и документоемких рабочих процессов.</p></div>

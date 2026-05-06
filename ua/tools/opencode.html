@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Підходить для:</strong> Open-source CLI-кодінг, AI-агент у терміналі, мультимодельний</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Про сервіс OpenCode</h2>
     <div class="tool-desc"><p style="margin-top:1rem">OpenCode — open-source AI-агент для кодінгу, побудований для терміналу, на 100% під ліцензією MIT — альтернатива Cursor та Windsurf для розробників, яким потрібен повний контроль над інструментами і свобода вибору будь-якого LLM. Написаний на Go, з чистим термінальним інтерфейсом (TUI), інтегрує AI-допомогу безпосередньо в робочий процес розробників, які живуть у vim, tmux та командному рядку.</p><p style="margin-top:1rem">Ключова фіча — гнучкість провайдерів: з коробки OpenCode підтримує понад 75 LLM-провайдерів — Claude, GPT, Gemini, Grok, DeepSeek, Mistral і багато інших — плюс локальні моделі через Ollama для повністю офлайн-роботи. Реалізує Model Context Protocol (MCP), що дозволяє розширювати можливості через зовнішні інструменти. За дизайном OpenCode не зберігає ваш код на сторонніх серверах — значуща відмінність для розробників, які працюють із пропрієтарними або чутливими кодбазами.</p><p style="margin-top:1rem">У проекту понад 140 000 зірок на GitHub, 850+ контриб'юторів та 11 000+ комітів — один із найшвидше зростаючих open-source проектів для розробників у 2026. Безкоштовний тариф — це весь CLI; опціональний тариф Go ($10/місяць) додає quality-of-life функції для досвідчених користувачів. Для розробників, яким потрібен агентний кодінг рівня Cursor без прив'язки до IDE, без прив'язки до вендора і без відправки коду одному LLM-провайдеру — OpenCode це переконлива відкрита альтернатива.</p></div>

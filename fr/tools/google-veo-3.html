@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Audio haute qualité et réaliste</div>
     </div>
   </div>
-  <a href="/fr/compare/google-veo-3-vs-runway.html" class="compare-strip">⚖️ Google Veo 3 vs Runway →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/google-veo-3-vs-runway.html" class="compare-strip">⚖️ Google Veo 3 vs Runway →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Google Veo 3</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Google Veo 3 est le modèle de génération vidéo le plus avancé de Google DeepMind et le premier outil vidéo IA disponible commercialement capable de générer un audio réaliste synchronisé avec la vidéo — sons ambiants, dialogues, musique et effets sonores correspondant au contenu visuel, sans aucun outil supplémentaire. Cette intégration audio-visuelle constitue une véritable avancée technique qu'aucun modèle concurrent n'a encore reproduite.</p><p style="margin-top:1rem">La qualité visuelle égale ou surpasse Runway et Kling sur la plupart des benchmarks, avec d'excellentes performances sur l'éclairage cinématographique, les mouvements humains réalistes et les scènes complexes à plusieurs sujets. Google Veo 3 est accessible aux abonnés Gemini Ultra et via l'API Vertex AI pour les développeurs, avec une tarification à la génération. L'intégration à l'écosystème Google permet un déploiement simplifié pour les équipes déjà sur Google Cloud.</p><p style="margin-top:1rem">Les principales limitations sont l'accès et le coût : Google Veo 3 n'est pas disponible en tant que produit grand public autonome et nécessite soit un abonnement Gemini Ultra, soit un accès à l'API Vertex AI, ce qui le rend moins accessible que Kling ou Pika pour les utilisateurs occasionnels. Les coûts par génération sont parmi les plus élevés de la catégorie. Pour les studios de production, les agences publicitaires et les équipes en entreprise qui construisent des pipelines vidéo IA sur Google Cloud, Google Veo 3 représente l'état de l'art actuel. Pour les créateurs individuels, les contraintes d'accès limitent actuellement sa praticité par rapport à des alternatives plus accessibles au grand public.</p><p style="margin-top:1rem">Veo 3.1 (avril 2026) est la dernière version, disponible via VideoFX, l'abonnement Gemini Ultra et l'outil de réalisation Flow. L'audio synchronisé natif (dialogues, ambiances, musique, effets sonores) reste le différenciateur majeur — aucun autre modèle vidéo IA commercial n'a encore atteint ce niveau.</p></div>

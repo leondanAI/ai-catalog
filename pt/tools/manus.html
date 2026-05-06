@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Tarefas autônomas, pesquisa, codificação, agentes web</div>
     </div>
   </div>
-  <a href="/pt/compare/copilot-studio-vs-manus.html" class="compare-strip">⚖️ Manus vs Copilot Studio →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/pt/compare/copilot-studio-vs-manus.html" class="compare-strip">⚖️ Manus vs Copilot Studio →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Manus</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Manus viralizou em março de 2026 como o lançamento de IA mais discutido desde ChatGPT — um agente autônomo da equipe Monica que aceita objetivos de alto nível e os executa de ponta a ponta operando um computador virtual: navegando na web, escrevendo e executando código, gerenciando arquivos e produzindo entregas sem orientação humana passo a passo.</p><p style="margin-top:1rem">No final de 2025, Manus foi adquirido pela Meta por aproximadamente $2 bilhões. Desde a aquisição, o produto expandiu significativamente: Web App Builder (criar aplicativos web funcionais a partir de uma descrição), slides com IA, um aplicativo desktop e integrações nativas com Slack, WhatsApp e Telegram.</p><p style="margin-top:1rem">Preços: O plano gratuito inclui 300 créditos com atualização diária e até 5 tarefas simultâneas. O plano Pro fornece 8.000 créditos/mês com 20 tarefas simultâneas. Tarefas complexas consomem 500–900 créditos cada, tornando a camada gratuita adequada apenas para uso ocasional.</p><p style="margin-top:1rem">A experiência central difere de Devin (apenas código) ou AutoGPT (apenas pesquisa) — Manus lida com cargas de trabalho mistas: pesquisar um mercado, construir uma planilha, escrever um relatório e enviá-lo — tudo como uma cadeia de tarefas única.</p><p style="margin-top:1rem">Limitações: o consumo de créditos em tarefas complexas é alto. A camada gratuita de 300 créditos diários pode ser esgotada por uma única tarefa pesada. A aquisição pela Meta levanta questões sobre a direção do produto a longo prazo.</p><p style="margin-top:1rem">Melhor para profissionais do conhecimento, fundadores e consultores que desejam delegar tarefas complexas de pesquisa e conteúdo com múltiplas etapas a um agente que entrega resultados finais em vez de rascunhos.</p></div>

@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> חיפוש וחקר מופעלים בבינה מלאכותית עם ציטוטים בזמן אמת</div>
     </div>
   </div>
-  <a href="/he/compare/perplexity-vs-notebooklm.html" class="compare-strip">⚖️ Perplexity vs NotebookLM →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/he/compare/perplexity-vs-notebooklm.html" class="compare-strip">⚖️ Perplexity vs NotebookLM →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>אודות Perplexity</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Perplexity הוא מנוע חיפוש מופעל בבינה מלאכותית שענה על שאלות עם מקורות אינטרנט בזמן אמת וציטוטים — המשלב חיפוש, סינתזה וייצור תשובות בממשק יחיד. זה הפך להיות האלטרנטיבה המובילה לחיפוש מסורתי עבור עובדי ידע, חוקרים ואנשי מקצוע.</p><p style="margin-top:1rem">בתחילת 2026, Perplexity יש 45 מיליון משתמשים פעילים חודשיים, עלייה מ-22 מיליון בתחילת 2025 — יותר מהכפלה בשנה אחת. הפלטפורמה מעבדת בערך 780 מיליון שאילתות חיפוש בחודש. Perplexity הוערך ב-20 מיליארד דולר בעקבות סיבוב מימון של 200 מיליון דולר בספטמבר 2025, כשהכנסה חוזרת שנתית צפויה להגיע ל-656 מיליון דולר בשנת 2026.</p><p style="margin-top:1rem">שכבה בחינם מספקת חיפושים בסיסיים ללא הגבלה עם ציטוטים. Perplexity Pro (20 דולר/חודש) מוסיפה מצב Deep Research — המבצע תוכניות מחקר רב-שלביות, קורא עשרות מקורות ומייצר דוחות אנליטיים מפורטים דומים לעוזר מחקר. Pro כולל גם העלאות קבצים, יצירת תמונות ומצב Academic Focus עבור מקורות בעלי ביקורת עמיתים בלבד.</p><p style="margin-top:1rem">כל תשובה כוללת ציטוטי מקור שניתן ללחוץ עליהם, מה שמקל לאמת טענות או לחקור עמוק יותר. שקיפות זו מייחדת את Perplexity מצ'אטבוטים בבינה מלאכותית שמייצרים תשובות ללא ייחוס מקור.</p><p style="margin-top:1rem">Perplexity התרחבה ל-Perplexity Pages (מסמכי מחקר שניתן לשתף), חיפוש פנימי לארגון ו-API עבור מפתחים שבונים יישומים משופרים בחיפוש.</p><p style="margin-top:1rem">הטוב ביותר עבור עובדי ידע, חוקרים, סטודנטים ואנשי מקצוע שרוצים תשובות מהירות וממוקדות — לא עמוד ריק של בינה מלאכותית שעלולה להזיק.</p></div>

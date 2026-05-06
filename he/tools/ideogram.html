@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> תמונות עם טקסט: פוסטרים, לוגואים, עטיפות ספרים</div>
     </div>
   </div>
-  <a href="/he/compare/ideogram-vs-midjourney.html" class="compare-strip">⚖️ Ideogram vs Midjourney →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/he/compare/ideogram-vs-midjourney.html" class="compare-strip">⚖️ Ideogram vs Midjourney →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>אודות Ideogram</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Ideogram היא פלטפורמת יצירת תמונות AI עם התמחות ייחודית: זהו כלי ה-AI המדויק ביותר לרינדור טקסט קריא וממוצב בתוך תמונות שנוצרו. יכולת זו מאפשרת מקרי שימוש שמודלים אחרים מתקשים איתם — פוסטרים, כרטיסי ברכה, עטיפות ספרים, לוגואים וגרפיקה למדיה חברתית שבה טיפוגרפיה היא חלק מהעיצוב.</p><p style="margin-top:1rem">Ideogram 3.0 הושק במרץ 2025 והוסיף עקביות דמויות: כעת תוכל לשמור על אותה דמות בתמונות שנוצרו מרובות על ידי העברת תמונת התייחסות. זה מרחיב משמעותית את מקרי השימוש לסיפור סדרתי, מוקטים של מוצרים ופיתוח דמות מותג.</p><p style="margin-top:1rem">תמחור: התוכנית החינמית כוללת 10 קרדיטים בשבוע. Plus הוא $15/חודש, Pro הוא $20/חודש, Team הוא $42/משתמש/חודש, תמחור Enterprise מותאם אישית. תמחור API עבור Ideogram 3.0: איכות Turbo ב-$0.0375/תמונה, Default ב-$0.075/תמונה, איכות גבוהה ב-$0.1125/תמונה.</p><p style="margin-top:1rem">Ideogram 3.0 יוצר תמונות ברזולוציה של עד 2048×2048 ותומך ביחסי גובה-רוחב שונים. הממשק קליל ומבוסס-אינטרנט, עם הצעות הנושא והגדרות עיצוב מוקדמות. יצירה בקבוצה ומצב פרטי זמינים בתוכניות בתשלום.</p><p style="margin-top:1rem">מגבלות: בעוד שדיוק הטקסט הוא ברמה עולמית, איכות אסתטית כוללת לתמונות פוטורליאליסטיות עדיין נופלת מאחורי Midjourney V7 ו-FLUX.2. השכבה החינמית של 10 קרדיטים בשבוע היא מאוד מוגבלת לשימוש רציני.</p><p style="margin-top:1rem">טוב ביותר לעיצובים, משווקים ויוצרי תוכן שבקביעות צריכים תמונות עם טקסט — במיוחד אלה היוצרים תוכן למדיה חברתית, חומרים קידום ומוצרי מותג.</p></div>

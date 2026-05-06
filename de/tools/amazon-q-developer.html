@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal für:</strong> AWS-natives AI-Coding-Assistent für Cloud- und Infrastrukturentwicklung</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Über Amazon Q Developer</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Amazon Q Developer ist AWS's AI-Coding-Assistent, der Mitte 2024 von CodeWhisperer umbenannt und erheblich erweitert wurde. Seine Hauptstärke ist das tiefe AWS-Service-Bewusstsein: Im Gegensatz zu generischen Coding-Tools versteht Q Developer Ihre IAM-Richtlinien, CloudFormation-Stacks, CDK-Konstrukte und die breitere AWS-Architektur. Es kann Code generieren, der korrekt auf Ihre spezifischen AWS-Ressourcen verweist, Richtlinien mit minimalen Privilegien vorschlagen und Cloud-Infrastruktur-Probleme kontextabhängig debuggen.</p><p style="margin-top:1rem">Das Tool enthält eine Code-Transformation-Funktion, die veraltete Codebases automatisch aktualisiert — Migration von Java 8/11 zu Java 17/21 oder Python 2 zu Python 3 — über ganze Repositories hinweg. Der Agent kann komplexe Aufgaben ausführen, wie das Refaktorieren eines Service, Schreiben von Unit-Tests für ein bestehendes Modul oder die end-to-end-Implementierung einer neuen Funktion. Q Developer ist mit VS Code, JetBrains, Visual Studio und der AWS Console direkt integriert.</p><p style="margin-top:1rem">Schlüsselfunktionen umfassen AWS-kontextabhängige Code-Generierung, automatische Code-Transformation für Sprachversions-Upgrades, Inline-Vervollständigungen in über 15 Sprachen, agentengestützte Task-Ausführung, Sicherheitslücken-Scanning und direkte Integration mit der AWS Console. Für Teams, die auf AWS bauen, bietet es einen Infrastruktur-Level-Kontext, den kein anderes Coding-Tool bietet.</p><p style="margin-top:1rem">Preisgestaltung: Die kostenlose Stufe umfasst unbegrenzte Code-Vervollständigungen und 50 agentengestützte Developer-Chats pro Monat. Die Pro-Stufe kostet 19 USD pro Benutzer pro Monat und fügt unbegrenzte agentengestützte Chats, Code-Transformation für größere Projekte und erweiterten Kontext hinzu. Enterprise-Preisgestaltung ist mit zusätzlichen Compliance-Kontrollen verfügbar.</p><p style="margin-top:1rem">Einschränkungen: Außerhalb der AWS-Entwicklung ist Amazon Q Developer nicht besonders wettbewerbsfähig im Vergleich zu Cursor oder GitHub Copilot. Die 50 agentengestützten Chats pro Monat der kostenlosen Stufe werden bei aktiven Projekten schnell aufgebraucht. Das Tool bietet weniger Nutzen für GCP, Azure oder nicht-Cloud-Entwicklung.</p><p style="margin-top:1rem">Am besten geeignet für Entwicklungsteams, die auf AWS bauen und einen AI-Assistenten möchten, der ihre Cloud-Infrastruktur — IAM, CloudFormation, CDK und AWS-Services — neben standardmäßigen Coding-Funktionen versteht.</p></div>

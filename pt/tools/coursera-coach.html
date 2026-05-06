@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Cursos online, certificados profissionais</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Coursera Coach</h2>
     <div class="tool-desc"><p style="margin-top:1rem">O Coursera é o maior marketplace de aprendizado online do mundo, oferecendo mais de 7.000 cursos e programas de certificados profissionais de mais de 300 universidades e empresas, incluindo Stanford, Yale, Google, IBM, Meta e DeepLearning.AI. O Coursera Coach, seu assistente de aprendizagem com IA, oferece orientação personalizada ao longo de toda a experiência de aprendizado: respondendo perguntas sobre o conteúdo dos cursos, sugerindo o que estudar a seguir, explicando conceitos difíceis de formas alternativas e ajudando os alunos a manterem o foco nos seus objetivos.</p><p style="margin-top:1rem">Os programas de certificado da plataforma são sua oferta mais relevante para o mercado de trabalho: os Google Career Certificates (Suporte em TI, Análise de Dados, Gerenciamento de Projetos, UX Design, Cibersegurança, Engenharia de Dados) e as especializações de IA e Ciência de Dados da IBM são reconhecidos por milhares de empregadores como credenciais alternativas a diplomas de quatro anos para funções técnicas específicas. Esses programas geralmente levam de 3 a 6 meses de estudo em tempo parcial e custam aproximadamente $49/mês pelo Coursera Plus.</p><p style="margin-top:1rem">O Coursera Plus ($59/mês ou $399/ano) oferece acesso ilimitado a 90% do catálogo, incluindo a maioria dos programas de certificado. A auditoria de cursos individuais é gratuita na maioria dos casos, caso você não precise de atividades avaliadas ou do certificado. A qualidade do Coursera Coach varia bastante conforme o curso — em disciplinas técnicas com respostas objetivas, ele é genuinamente útil; em humanidades e ciências sociais, suas explicações são menos aprofundadas. A principal limitação da plataforma para quem está em transição de carreira é que os certificados por si só raramente são suficientes — eles funcionam melhor quando combinados com projetos de portfólio e networking.</p></div>

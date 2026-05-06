@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Autocompletado, integración con IDE</div>
     </div>
   </div>
-  <a href="/es/compare/cursor-vs-copilot.html" class="compare-strip">⚖️ GitHub Copilot vs Cursor →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/es/compare/cursor-vs-copilot.html" class="compare-strip">⚖️ GitHub Copilot vs Cursor →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de GitHub Copilot</h2>
     <div class="tool-desc"><p style="margin-top:1rem">GitHub Copilot es el asistente de programación con IA más adoptado en el desarrollo de software profesional, utilizado por más de 4,7 millones de suscriptores de pago — la mayor base de pago de cualquier asistente de codificación con IA e integrado en prácticamente todos los editores de código principales. Ofrece completado de código en tiempo real: mientras escribes, Copilot sugiere funciones completas, clases, casos de prueba y documentación basándose en el contexto del archivo y el repositorio.</p><p style="margin-top:1rem">Las integraciones con IDE son de primer nivel: compatibilidad total con VS Code, Visual Studio, IDEs de JetBrains (IntelliJ, PyCharm, WebStorm), Neovim y Xcode. Copilot Chat va más allá del autocompletado para responder preguntas sobre tu código, explicar código desconocido, sugerir refactorizaciones y depurar errores, todo con conciencia de los archivos abiertos y la estructura general del repositorio mediante la función de contexto del espacio de trabajo.</p><p style="margin-top:1rem">GitHub Copilot está disponible de forma gratuita para estudiantes verificados y mantenedores de proyectos de código abierto, y tiene un costo de $10/mes para particulares o $19/mes para el nivel Business con gestión centralizada de políticas. Una crítica habitual es que las sugerencias pueden incluir patrones de bibliotecas desactualizados o introducir vulnerabilidades de seguridad sutiles, por lo que la revisión del código sigue siendo esencial. Para equipos que ya usan GitHub, la profunda integración con pull requests, issues y Actions convierte a Copilot en una capa de productividad natural.</p><p style="margin-top:1rem">Se añadieron Agent Mode y Copilot Workspace a la plataforma: Agent Mode realiza tareas de codificación de varios pasos en múltiples archivos, mientras que Copilot Workspace convierte una issue de GitHub en un pull request preliminar con cambios de código propuestos. A 2026, GitHub Copilot lo usan el 90% de las empresas Fortune 100. El plan gratuito se mantiene: 2.000 autocompletados y 50 solicitudes premium al mes.</p></div>

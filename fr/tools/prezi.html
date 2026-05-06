@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Présentations dynamiques, visuels narratifs</div>
     </div>
   </div>
-  <a href="/fr/compare/gamma-vs-prezi.html" class="compare-strip">⚖️ Prezi vs Gamma →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/gamma-vs-prezi.html" class="compare-strip">⚖️ Prezi vs Gamma →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Prezi</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Prezi est une plateforme de présentation basée sur un canevas zoomable plutôt que sur le format linéaire de diaporamas de PowerPoint et Google Slides. Au lieu de faire défiler des diapositives séquentielles, une présentation Prezi se déplace à travers une carte spatiale — zoomant sur les détails, se déplaçant entre des concepts connectés et effectuant des zooms arrière pour révéler la vue d'ensemble — créant ainsi une expérience narrative dynamique qui renforce les relations entre les idées d'une manière que les formats diapositives classiques ne permettent pas.</p><p style="margin-top:1rem">L'assistant de conception IA de Prezi améliore automatiquement la mise en forme visuelle de votre contenu : il suggère de meilleures dispositions, optimise la taille des polices, ajuste le contraste des couleurs pour une meilleure lisibilité et rééquilibre l'agencement spatial des éléments pour plus de clarté visuelle. La fonctionnalité de présentation vidéo vous permet d'enregistrer votre présentation directement dans l'interface Prezi, votre vidéo apparaissant aux côtés du canevas et mettant automatiquement en évidence la section que vous commentez — créant ainsi une présentation enregistrée plus engageante qu'un simple diaporama avec narration.</p><p style="margin-top:1rem">Prezi Basic est gratuit avec un ensemble de fonctionnalités limité et des présentations publiques uniquement. Prezi Standard (5 $/mois) ajoute les présentations privées et l'accès hors ligne. Les principales limitations concernent le confort du public et l'adéquation au cas d'usage : l'animation de zoom — bien que visuellement engageante — peut provoquer une gêne chez certains spectateurs, en particulier lors de présentations longues. Prezi est plus efficace pour la narration non linéaire, la visualisation des relations entre concepts et les présentations où montrer les connexions entre les idées est essentiel. Pour les présentations d'entreprise riches en données, les démonstrations de produits ou les contenus techniques séquentiels, le format de diaporama linéaire convient généralement mieux.</p></div>

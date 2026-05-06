@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Підходить для:</strong> AI помічник, інтегрований у Microsoft 365, Teams, Word, Excel та Outlook</div>
     </div>
   </div>
-  <a href="/ua/compare/microsoft-copilot-vs-chatgpt.html" class="compare-strip">⚖️ Microsoft Copilot vs ChatGPT →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ua/compare/microsoft-copilot-vs-chatgpt.html" class="compare-strip">⚖️ Microsoft Copilot vs ChatGPT →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Microsoft Copilot</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Microsoft Copilot — це споживацький AI помічник Microsoft, доступний безплатно у Windows 11, браузері Edge та на copilot.microsoft.com. Він відрізняється від Microsoft 365 Copilot, який є корпоративним продуктом, інтегрованим у Word, Excel, Outlook та Teams.</p><p style="margin-top:1rem">Споживацька версія працює на OpenAI GPT-5.2 (станом на квітень 2026), з інтегрованим пошуком Bing для доступу до веб у реальному часі. Copilot Chat також пропонує GPT-5.5 як опцію для глибшого аналізу. У березні 2026 Microsoft додав опцію моделі Claude всередину Copilot у Word, надаючи користувачам вибір між моделями OpenAI та Anthropic для редагування та написання текстів.</p><p style="margin-top:1rem">Безплатна версія включає: пошук на основі Bing, генерування зображень через Designer (раніше DALL·E), аналіз документів та голосову взаємодію в Edge. Користувачі Windows 11 отримують доступ через спеціальну клавішу Copilot на новіших клавіатурах або кнопку на панелі завдань.</p><p style="margin-top:1rem">Корпоративна Microsoft 365 Copilot додає глибоко інтегрований AI у Word, Excel, Outlook, PowerPoint та Teams за додатковою вартістю $30 на користувача на місяць понад існуючу підписку Microsoft 365. Це версія, яка забезпечує бізнес-адаптацію.</p><p style="margin-top:1rem">Обмеження: якість споживацького продукту непостійна порівняно з прямим використанням ChatGPT чи Claude. Базові моделі часто є новішими випусками OpenAI з додатковим настроюванням Microsoft, що іноді неочікувано змінює поведінку.</p><p style="margin-top:1rem">Найкраще підходить для користувачів Windows та Microsoft 365, які хочуть AI без окремої підписки, або організацій, які вже платять за Microsoft 365.</p></div>

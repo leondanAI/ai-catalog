@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal für:</strong> AI-Videogenerierungsplattform mit Zugang zu mehreren Modellen einschließlich Kling</div>
     </div>
   </div>
-  <a href="/de/compare/luma-ai-vs-runway.html" class="compare-strip">⚖️ Luma AI vs Runway →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/de/compare/luma-ai-vs-runway.html" class="compare-strip">⚖️ Luma AI vs Runway →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Über Luma AI</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Luma AI ist ein KI-Labor aus San Francisco, bekannt für fotorealistische Videogenerierung und 3D-Szenenrekonstruktion. Die Plattform hat sich von ihrer ursprünglichen NeRF-basierten 3D-Erfassungstechnologie zu einem führenden cinematischen KI-Videogenerator entwickelt.</p><p style="margin-top:1rem">Die aktuelle Modellreihe ist Ray3 und Ray3.14 (das Dream Machine Branding von 2024 wurde eingestellt). Ray3 ist das Standard-Modell; Ray3.14 ist die höherwertige Variante, optimiert für cinematische Stimmung, Beleuchtung und atmosphärische Umgebungen. Luma-Modelle sind besonders stark bei umgebungsintensiven Aufnahmen — weitläufige Landschaften, stimmungsvolle Innenräume und atmosphärische Szenen, bei denen andere Modelle flache Ergebnisse liefern.</p><p style="margin-top:1rem">Luma AI ist sowohl direkt bei lumalabs.ai als auch über Runaways Multi-Model-Abonnement verfügbar. Das Runway Bundle bietet Zugang zu Ray3 zusammen mit Gen-4.5, Veo 3.1, Kling 3.0 und Seedance unter einem Abonnement.</p><p style="margin-top:1rem">Die Preisgestaltung folgt einem Freemium-Modell: kostenloser Plan mit begrenzten monatlichen Generierungen, Dream (Legacy-Planname) zu niedrigeren Kosten, Pro und höhere Stufen für Vielnutzer.</p><p style="margin-top:1rem">Einschränkungen: Luma ist schwächer als Kling 3.0 bei Charakterkonsistenz und Realismus menschlicher Objekte. Gesichter von Subjekten können über Frames hinweg driften. Besser geeignet für abstrakte, atmosphärische oder landschaftsorientierte Inhalte als für charaktergesteuerte Narrative.</p><p style="margin-top:1rem">Am besten geeignet für Filmemacher und visuelle Künstler, die cinematische Umgebungs- und Atmosphärenqualität benötigen — nicht für charaktergesteuerte Videos oder Social-Media-Inhalte.</p></div>

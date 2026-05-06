@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Codificação por intuição com IA — gerar aplicações web full-stack a partir de prompts em linguagem natural</div>
     </div>
   </div>
-  <a href="/pt/compare/lovable-vs-bubble.html" class="compare-strip">⚖️ Lovable vs Bubble →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/pt/compare/lovable-vs-bubble.html" class="compare-strip">⚖️ Lovable vs Bubble →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Lovable</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Lovable é um construtor de aplicações web full-stack orientado por IA que gera aplicações React completas — com backend Supabase, autenticação e banco de dados — a partir de descrições em linguagem natural. Emergiu como uma das ferramentas para desenvolvedores de crescimento mais rápido em 2025, representando a tendência de 'vibe coding' de gerar e iterar sobre aplicações completas através de conversação.</p><p style="margin-top:1rem">O fluxo de trabalho é conversacional: descreva um recurso, Lovable gera o código, faz deploy de uma URL de visualização ao vivo e aguarda feedback. A iteração acontece descrevendo alterações em linguagem simples — 'adicione uma barra de pesquisa no topo', 'faça a grade de cartões mostrar 3 colunas no desktop', 'adicione autenticação de usuário'. O código gerado é React/TypeScript real que pode ser exportado, implantado em domínios personalizados ou sincronizado com GitHub.</p><p style="margin-top:1rem">Os principais recursos incluem geração de aplicações full-stack em linguagem natural, geração de código React e TypeScript, integração nativa com Supabase (banco de dados, autenticação, armazenamento), URLs de visualização ao vivo para cada iteração, sincronização com GitHub, deployment em domínio personalizado, integração de pagamento Stripe e editor visual para ajustes de design.</p><p style="margin-top:1rem">Preços: O plano gratuito fornece 5 créditos de geração por dia. Starter a $20 por mês fornece 100 créditos por mês e domínios personalizados. Pro a $25 por mês fornece 200 créditos por mês e todos os recursos. Pacotes de créditos adicionais são adquiríveis. Preços para Teams e Enterprise estão disponíveis.</p><p style="margin-top:1rem">Limitações: Créditos de geração são consumidos por requisição de IA — recursos complexos e depuração iterativa podem esgotar créditos rapidamente. Código gerado, embora funcional, frequentemente requer revisão do desenvolvedor e limpeza para padrões de qualidade de produção. Padrões complexos de aplicações empresariais estão além das capacidades atuais.</p><p style="margin-top:1rem">Melhor adequado para empreendedores, designers e gerentes de produto que desejam construir e prototipizar aplicações web funcionais sem escrever código — e para desenvolvedores que desejam acelerar scaffolding e prototipagem.</p></div>

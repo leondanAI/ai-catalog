@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> AI-ассистированный дизайн UI/UX и интерактивное прототипирование внутри Figma</div>
     </div>
   </div>
-  <a href="/ru/compare/figma-ai-vs-canva-ai.html" class="compare-strip">⚖️ Figma AI vs Canva AI →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/figma-ai-vs-canva-ai.html" class="compare-strip">⚖️ Figma AI vs Canva AI →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе Figma AI</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Figma AI — это набор AI-возможностей, встроенных напрямую в платформу проектирования Figma, которую используют более 5 миллионов активных дизайнеров. Флагманская функция — Figma Make, представленная в 2026 году, позволяет дизайнерам описать UI на естественном языке и получить функциональный интерактивный прототип с подключением к базе данных через интеграцию Supabase. Это переводит Figma из статического инструмента дизайна в AI-native среду разработки продуктов.</p><p style="margin-top:1rem">Figma приобрела Diagram (создателей плагина Magician AI) и интегрировала их возможности в нативный Figma AI, включая генерацию и редактирование AI изображений прямо на холсте, AI-ассистированное переименование слоёв, умные предложения компонентов и AI поиск по ассетам дизайна. Генерация кода преобразует дизайны Figma в production-ready React, HTML или CSS.</p><p style="margin-top:1rem">Основные возможности: Figma Make (текст в интерактивный прототип), генерация и редактирование AI изображений, умные предложения auto-layout, интеллектуальное сопоставление компонентов, AI переименование слоёв, генерация с учётом кодовой базы и подключение базы данных Supabase для прототипов, управляемых данными.</p><p style="margin-top:1rem">Цены: План Starter бесплатный с ограниченными ежемесячными AI кредитами. Professional стоит $15 за пользователя в месяц (годовой) и включает 500 AI кредитов в месяц. Organization стоит $55 за пользователя в месяц с 2000 кредитами. Enterprise стоит $90 за пользователя в месяц с 4250 кредитами. Дополнительные пакеты AI кредитов и pay-as-you-go кредиты по $0,03 за кредит доступны с Q2 2026.</p><p style="margin-top:1rem">Ограничения: AI кредиты расходуются на все AI функции и могут быстро закончиться для команд, активно использующих генерацию. Выходные данные Figma Make требуют проверки разработчиком перед production использованием. Платформа работает только в веб-версии, что может быть медленным с большими сложными файлами.</p><p style="margin-top:1rem">Оптимально подходит для UI/UX дизайнеров и product команд, которые хотят встроенного AI-ассистента в их существующий Figma рабочий процесс, особенно для быстрого прототипирования и вывода дизайна в код.</p></div>

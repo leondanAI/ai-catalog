@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> Академический поиск, цитирования</div>
     </div>
   </div>
-  <a href="/ru/compare/scite-vs-semantic-scholar.html" class="compare-strip">⚖️ Semantic Scholar vs Scite →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/scite-vs-semantic-scholar.html" class="compare-strip">⚖️ Semantic Scholar vs Scite →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе Semantic Scholar</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Semantic Scholar — бесплатный инструмент для академических исследований на базе искусственного интеллекта, созданный Allen Institute for AI. Он индексирует более 200 миллионов научных статей по всем дисциплинам. В отличие от Google Scholar, который предоставляет лишь базовый поиск и подсчёт цитирований, Semantic Scholar использует машинное обучение для выявления наиболее влиятельных и релевантных работ, извлечения ключевых выводов на понятном языке, визуализации сетей цитирований и определения наиболее значимых статей в той или иной области — без необходимости платного доступа к журналам.</p><p style="margin-top:1rem">Функция Semantic Reader отображает статьи с AI-аннотациями: наведите курсор на любую ссылку в тексте — и увидите краткое изложение цитируемой работы прямо в интерфейсе, не открывая новую вкладку. Функция TLDR генерирует краткое резюме из одного предложения, описывающее ключевой вклад любой статьи. Визуализация сети цитирований показывает, как статья связана с работами до и после неё — это помогает понять эволюцию научного направления и найти основополагающие труды, которые могли быть упущены.</p><p style="margin-top:1rem">Платформа полностью бесплатна: большинство функций доступны без регистрации и без платных барьеров для доступа к статьям (хотя Semantic Scholar ссылается на материалы, которые могут находиться за платными барьерами журналов, он также предоставляет ссылки на свободно доступные препринты, если они существуют). По сравнению с более специализированными инструментами, такими как Elicit, Semantic Scholar отлично справляется с поиском и навигацией, однако менее пригоден для систематических обзоров, требующих структурированного извлечения данных из большого числа статей одновременно.</p></div>

@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> Математика и навыки решения задач для учеников 1–8 классов</div>
     </div>
   </div>
-  <a href="/ru/compare/synthesis-vs-khanmigo.html" class="compare-strip">⚖️ Synthesis vs Khanmigo →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/synthesis-vs-khanmigo.html" class="compare-strip">⚖️ Synthesis vs Khanmigo →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе Synthesis</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Synthesis — адаптивная обучающая платформа по математике и навыкам решения задач, ориентированная на учеников 1–8 классов. Изначально она была разработана для школы Ad Astra в штаб-квартире SpaceX — экспериментальной школы Илона Маска для детей сотрудников компании. Отличительный подход платформы делает акцент на развитии математического мышления, стратегического рассуждения и умения решать задачи, а не на зазубривании правил и отработке алгоритмов.</p><p style="margin-top:1rem">Движок адаптивной сложности корректирует задания в режиме реального времени на основе ответов каждого ученика: тот, кто быстро справляется с серией задач на дроби, автоматически получает более сложные примеры, а тот, кто испытывает затруднения, — упрощённые подсказки без необходимости вмешательства учителя. Упражнения часто встроены в игровые симуляции, где математика служит инструментом для достижения игровых целей — это делает математические рассуждения осмысленными, а не абстрактными.</p><p style="margin-top:1rem">Исследования подтверждают высокую эффективность: независимые исследования показали, что ученики, занимающиеся в Synthesis, значительно быстрее прогрессируют по стандартизированным тестам по математике по сравнению с контрольными группами, использующими традиционную программу. Стоимость платформы составляет $99 в год с бесплатным 30-дневным пробным периодом — она позиционируется как премиальное образовательное дополнение, а не бесплатный инструмент. Охват ограничен математикой и логическим мышлением; семьям, которым нужна комплексная академическая поддержка по нескольким предметам, придётся сочетать Synthesis с другими инструментами. Платформа наиболее эффективна как ежедневное 20–30-минутное дополнение к традиционному обучению для мотивированных учеников и вовлечённых родителей.</p></div>

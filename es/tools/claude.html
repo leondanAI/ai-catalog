@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Asistente de IA para escritura, análisis, codificación y tareas de investigación agencial</div>
     </div>
   </div>
-  <a href="/es/compare/chatgpt-vs-claude.html" class="compare-strip">⚖️ Claude vs ChatGPT →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/es/compare/chatgpt-vs-claude.html" class="compare-strip">⚖️ Claude vs ChatGPT →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de Claude</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Claude es el asistente de IA de Anthropic, un laboratorio de IA enfocado en seguridad fundado por investigadores anteriores de OpenAI. Está constantemente clasificado como uno de los mejores modelos para seguimiento de instrucciones, análisis de contexto largo y generación de código.</p><p style="margin-top:1rem">Claude 4 es la familia de modelos actual (2026), con Sonnet 4.6 y Opus 4.7 como los modelos insignia. Todos los modelos Claude 4.x admiten una ventana de contexto de 1 millón de tokens — suficiente para analizar bases de código completas, bases de datos de investigación o documentos de múltiples volúmenes en una única conversación. El modelo Sonnet 4.6 equilibra velocidad e inteligencia; Opus 4.7 es la opción más capaz disponible en los niveles Max y API.</p><p style="margin-top:1rem">Precios: La versión gratuita incluye Projects, Artifacts, búsqueda web y carga de archivos (hasta 20 archivos por chat). Claude Pro a $20/mes proporciona 5 veces más uso y acceso a todos los modelos. Max a $100/mes o $200/mes ofrece hasta 20 veces más uso para usuarios intensivos.</p><p style="margin-top:1rem">Claude no genera imágenes de forma nativa — esta es una brecha genuina en comparación con ChatGPT y Gemini. La búsqueda web está disponible en la versión gratuita. Claude es especialmente fuerte en seguir instrucciones matizadas de múltiples pasos, editar documentos largos y escribir código preciso con mínimas alucinaciones.</p><p style="margin-top:1rem">El acceso a API a través de la plataforma de Anthropic ofrece Sonnet 4.6 a precios estándar por token con almacenamiento en caché de indicaciones para reducir costos en indicaciones de sistema repetidas.</p><p style="margin-top:1rem">Mejor para profesionales y desarrolladores que necesitan seguimiento confiable de instrucciones, análisis de contexto largo y generación de código de alta precisión — y que no necesitan generación de imágenes.</p></div>

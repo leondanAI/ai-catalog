@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> Графики, технический анализ, скрининг рынка</div>
     </div>
   </div>
-  <a href="/ru/compare/tradingview-vs-fiscal-ai.html" class="compare-strip">⚖️ TradingView vs Fiscal.ai →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/tradingview-vs-fiscal-ai.html" class="compare-strip">⚖️ TradingView vs Fiscal.ai →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе TradingView</h2>
     <div class="tool-desc"><p style="margin-top:1rem">TradingView — самая популярная платформа для построения графиков и рыночного анализа в мире — с более чем 50 миллионами пользователей и социальной сетью трейдеров, у которой нет реального конкурента. Начав как инструмент для графиков, платформа эволюционировала в комплексный центр рыночной аналитики, сочетающий профессиональный технический анализ, AI-скринеры, данные в реальном времени по всем классам активов и сообщество, где трейдеры публично делятся идеями, скриптами и стратегиями.</p><p style="margin-top:1rem">AI-функции TradingView сосредоточены в инструментах скринера и сигналов: можно настраивать сложные многоусловные фильтры по тысячам акций, ETF, крипто и форекс-пар, и платформа автоматически сканирует и выдаёт кандидатов по заданным критериям. Smart Alerts уведомляют в момент пересечения ценового, объёмного или индикаторного порога. Платформа также поддерживает Pine Script — собственный язык для написания кастомных индикаторов и стратегий с бэктестингом.</p><p style="margin-top:1rem">TradingView предлагает богатый бесплатный план с данными в реальном времени для большинства рынков. Платные планы начинаются от $14.95 в месяц. Для любого инвестора или трейдера, которому нужны профессиональные графики, мультирыночное покрытие и коллективный интеллект в одном месте — TradingView это отраслевой стандарт, к которому все в итоге приходят.</p></div>

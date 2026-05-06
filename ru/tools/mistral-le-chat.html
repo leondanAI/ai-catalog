@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> Быстрый европейский ИИ-помощник с сильной приватностью и многоязычными возможностями</div>
     </div>
   </div>
-  <a href="/ru/compare/mistral-le-chat-vs-chatgpt.html" class="compare-strip">⚖️ Mistral Le Chat vs ChatGPT →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/mistral-le-chat-vs-chatgpt.html" class="compare-strip">⚖️ Mistral Le Chat vs ChatGPT →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе Mistral Le Chat</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Mistral Le Chat — консьюмерский ИИ-помощник от Mistral AI, ведущей европейской лаборатории ИИ, базирующейся в Париже. Построена на собственных открытых моделях Mistral и позиционируется как европейская альтернатива ChatGPT и Gemini с упором на приватность, GDPR-совместимость и многоязычность.</p><p style="margin-top:1rem">Текущий стек моделей (конец 2025 — 2026) включает Mistral Large 3 для сложного анализа, Ministral 3 для быстрых ответов, Devstral 2 для программирования и Devstral Small 2 для лёгких задач. Le Chat выбирает подходящую модель в зависимости от контекста. Модели Mistral особенно сильны в европейских языках — французском, немецком, испанском, итальянском и португальском — благодаря акценту на европейские данные для обучения.</p><p style="margin-top:1rem">Бесплатный уровень включает доступ к новейшим моделям, поиск в веб, генерацию изображений, загрузку документов и canvas (редактор в стиле артефактов). Бесплатное использование ограничено примерно 25 сообщениями в день на моделях среднего уровня. Pro уровень за $14.99/месяц обеспечивает примерно в 6 раз больше дневного лимита (~150/день), приоритетный доступ и скидки на API. Доступен план для студентов за $7.04/месяц.</p><p style="margin-top:1rem">Корпоративные планы (Team/Enterprise) доступны для компаний, требующих хранения данных в Европе, развёртывания на своих серверах или строгого соответствия GDPR — что делает Mistral серьёзным вариантом для европейских компаний с нормативными требованиями.</p><p style="margin-top:1rem">Ограничения: Mistral имеет меньший экосистем плагинов и интеграций по сравнению с ChatGPT или Gemini. Узнаваемость бренда низкая за пределами Европы, и экосистема сторонних инструментов ещё развивается.</p><p style="margin-top:1rem">Лучше всего подходит для европейских пользователей, многоязычных случаев использования и организаций, требующих хранения данных в ЕС или GDPR-совместимого ИИ.</p></div>

@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Protótipos rápidos, MVP fullstack</div>
     </div>
   </div>
-  <a href="/pt/compare/bolt-new-vs-cursor.html" class="compare-strip">⚖️ Bolt.new vs Cursor →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/pt/compare/bolt-new-vs-cursor.html" class="compare-strip">⚖️ Bolt.new vs Cursor →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Bolt.new</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Bolt.new é o construtor de aplicações web full-stack com inteligência artificial da StackBlitz, que cria apps completos e prontos para deploy a partir de um único prompt de texto — inteiramente no navegador. Ao contrário de ferramentas que geram código para você configurar localmente, o Bolt executa um ambiente Node.js completo em WebAssembly dentro do navegador, o que significa que o código gerado é executado, instala pacotes e roda imediatamente sem nenhuma ferramenta local.</p><p style="margin-top:1rem">O pipeline de geração é impressionante: descreva um aplicativo e o Bolt produz um frontend funcional (React, Svelte ou Vue), conecta-o a uma API de backend, configura um banco de dados (via integração com Supabase) e faz o deploy para uma URL ao vivo através do Netlify — tudo a partir de um único prompt. O fluxo de edição iterativa permite fazer alterações descrevendo-as em linguagem natural, que a IA aplica em múltiplos arquivos simultaneamente.</p><p style="margin-top:1rem">A principal limitação é a confiabilidade em aplicações complexas: lógica de negócio intrincada, fluxos de autenticação personalizados e esquemas de banco de dados com múltiplas tabelas frequentemente quebram entre edições e exigem novos prompts para correção. Os custos de tokens se acumulam rapidamente em projetos grandes. O Bolt é mais adequado para MVPs, protótipos de demonstração, landing pages e ferramentas internas onde a velocidade importa mais do que a qualidade perfeita do código. Para equipes familiarizadas com revisão de código, o resultado gerado é um excelente ponto de partida que economiza horas de trabalho com código repetitivo.</p></div>

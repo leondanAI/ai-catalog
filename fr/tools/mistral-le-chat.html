@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Assistant IA rapide européen avec une forte confidentialité et des capacités multilingues</div>
     </div>
   </div>
-  <a href="/fr/compare/mistral-le-chat-vs-chatgpt.html" class="compare-strip">⚖️ Mistral Le Chat vs ChatGPT →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/mistral-le-chat-vs-chatgpt.html" class="compare-strip">⚖️ Mistral Le Chat vs ChatGPT →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Mistral Le Chat</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Mistral Le Chat est l'assistant IA grand public de Mistral AI, le laboratoire IA leader en Europe basé à Paris. Il est construit sur les propres modèles open-weight de Mistral et est positionné comme l'alternative européenne à ChatGPT et Gemini, avec un accent fort sur la confidentialité, la conformité RGPD et la capacité multilingue.</p><p style="margin-top:1rem">La pile de modèles actuelle (fin 2025 – 2026) inclut Mistral Large 3 pour le raisonnement avancé, Ministral 3 pour les réponses rapides, Devstral 2 pour le codage, et Devstral Small 2 pour les tâches légères. Le Chat sélectionne le modèle approprié en fonction du contexte. Les modèles Mistral sont particulièrement forts dans les langues européennes — français, allemand, espagnol, italien et portugais — en raison de l'accent mis sur les données d'entraînement européennes.</p><p style="margin-top:1rem">Le niveau gratuit inclut l'accès aux derniers modèles, la recherche web, la génération d'images, les uploads de documents et le canvas (un éditeur de style artifact). L'utilisation gratuite est limitée à environ 25 messages par jour sur les modèles de niveau moyen. Le niveau Pro à 14,99 $/mois offre approximativement 6 fois la limite quotidienne de messages (~150/jour), l'accès prioritaire et les réductions API. Un plan Étudiant est disponible à 7,04 $/mois.</p><p style="margin-top:1rem">Les plans Entreprise (Team/Enterprise) sont disponibles pour les entreprises nécessitant une résidence des données en Europe, un déploiement on-premises ou une conformité RGPD stricte — ce qui fait de Mistral une option sérieuse pour les entreprises européennes avec des exigences réglementaires.</p><p style="margin-top:1rem">Limitations : Mistral possède un écosystème de plugins et d'intégrations plus petit comparé à ChatGPT ou Gemini. La reconnaissance de marque est faible en dehors de l'Europe, et l'écosystème des outils tiers est encore en développement.</p><p style="margin-top:1rem">Parfait pour les utilisateurs européens, les cas d'usage multilingues et les organisations nécessitant une résidence des données dans l'UE ou une IA conforme au RGPD.</p></div>

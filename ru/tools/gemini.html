@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> Ассистент AI от Google с глубокой интеграцией Workspace и мультимодальными возможностями</div>
     </div>
   </div>
-  <a href="/ru/compare/gemini-vs-chatgpt.html" class="compare-strip">⚖️ Gemini vs ChatGPT →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/gemini-vs-chatgpt.html" class="compare-strip">⚖️ Gemini vs ChatGPT →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе Gemini</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Google Gemini — это ассистент AI и семейство моделей от Google DeepMind. Это основной слой AI во всех потребительских и корпоративных продуктах Google — Gmail, Docs, Sheets, Drive, YouTube и Search.</p><p style="margin-top:1rem">Бесплатный план включает Gemini 2.5 Flash и ограниченный доступ к Gemini 2.5 Pro, а также Deep Research, Gemini Live (голосовые разговоры в реальном времени), Canvas и Gems (пользовательские персоны AI). Бесплатные пользователи также получают 100 ежемесячных AI-кредитов для генерации видео через Flow и Whisk. Это делает его самым щедрым бесплатным уровнем среди всех AI-ассистентов в 2026 году.</p><p style="margin-top:1rem">Платные уровни: AI Pro за $19.99/месяц добавляет полный Gemini 2.5 Pro, неограниченный Deep Research, генерацию видео Veo 3.1 и доступ к модели Gemini 3 для подписчиков из США. AI Ultra за $124.99 за квартал ($41.67/месяц в пересчете) разблокирует Gemini 3.1 Pro, Gemini 2.5 Deep Think и 25,000 ежемесячных AI-кредитов — премиум-уровень для продвинутых пользователей.</p><p style="margin-top:1rem">Gemini 3 — это самая продвинутая модель Google, лидирующая по бенчмаркам понимания видео и аудио, доступная для подписчиков Pro и Ultra. Бесплатная функция Gemini Live для голосовых разговоров в реальном времени уникальна среди бесплатных AI-продуктов.</p><p style="margin-top:1rem">Ограничения: Gemini менее точен, чем Claude, при выполнении сложных многошаговых инструкций. Набор моделей (Flash, Pro, 3, 3.1) может быть запутанным, и лучшие возможности требуют платную подписку.</p><p style="margin-top:1rem">Идеален для пользователей, встроенных в экосистему Google, которые хотят AI, работающий встроенно в Gmail, Docs и Drive.</p></div>

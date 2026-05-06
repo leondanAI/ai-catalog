@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Підходить для:</strong> Професійна генерація та редагування AI видео з доступом до кількох моделей</div>
     </div>
   </div>
-  <a href="/ua/compare/runway-vs-capcut.html" class="compare-strip">⚖️ Runway vs CapCut →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ua/compare/runway-vs-capcut.html" class="compare-strip">⚖️ Runway vs CapCut →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Runway</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Runway — це професійна платформа AI для відео та творчості, базована в Нью-Йорку. Її використовують кінематографісти, студії та творчі команди для генерації AI відео, редагування та візуальних ефектів.</p><p style="margin-top:1rem">Gen-4.5, випущена в листопаді 2025, є поточною флагманською моделлю і займає 1-ше місце в рейтингу Artificial Analysis Text-to-Video з показником Elo 1,247. Gen-4.5 запровадила послідовність багатокадрових сцен — збереження персонажів, середовищ та об'єктів між сценами без ручного впровадження референцій.</p><p style="margin-top:1rem">Важливий розвиток 2026: підписка Runway тепер включає доступ до кількох моделей. Один план дає користувачам доступ до Gen-4.5, Google Veo 3.1, Kling 3.0 Pro, Seedance та FLUX одночасно — найширший багатомодельний комплект генерації відео, доступний на ринку. Це перетворює Runway з однієї моделі на платформу для доступу до найкращих моделей для кожного випадку використання.</p><p style="margin-top:1rem">Ціни: Безплатна пробна версія (125 кредитів) → Standard $15/місяць → Pro $35/місяць → Unlimited $95/місяць (річна оплата економить ~20%). План Standard уже включає весь доступ до багатомодельних моделей і є найкращою точкою входу для творців.</p><p style="margin-top:1rem">Персонажі та середовища залишаються послідовними на протязі кадрів у Gen-4.5, що робить це інструмент найкращим для короткометражних фільмів, музичних кліпів та контенту реклами, що вимагає наративної послідовності.</p><p style="margin-top:1rem">Обмеження: ціноутворення вище, ніж у Kling або Pika за еквівалентні обсяги кредитів. Безплатна пробна версія обмежена і швидко закінчується.</p><p style="margin-top:1rem">Найкраще підходить для професійних кінематографістів, творчих агентств та продвинутих творців, які потребують топової якості бенчмарку та послідовності персонажів між сценами.</p></div>

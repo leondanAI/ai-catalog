@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> AI-боты для трейдинга, сигналы, распознавание паттернов</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе Tickeron</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Tickeron — это AI-платформа для трейдинга и инвестиций, основанная в 2017 году, ставшая одним из наиболее функционально насыщенных AI-инструментов для розничных инвесторов в 2026 году. Платформа использует алгоритмы машинного обучения для анализа финансовых рынков по акциям, ETF, форексу и криптовалюте — генерируя торговые сигналы, предупреждения о графических паттернах и анализ портфеля, которые дают рядовым инвесторам инсайты, ранее доступные только институциональным трейдерам.</p><p style="margin-top:1rem">Ядро Tickeron — это Marketplace AI Robots: библиотека готовых AI-торговых ботов, каждый с живым треком результатов, показывающим процент побед, средние доходности и стиль торговли. Pattern Search Engine ежедневно сканирует графики тысяч инструментов и выявляет фигуры вроде &quot;голова и плечи&quot;, двойного дна и флагов, выдавая оценки уверенности и прогнозные ценовые цели. Portfolio Wizard оценивает ваши текущие позиции и даёт оценку диверсификации, риска и рекомендации по ребалансировке.</p><p style="margin-top:1rem">Tickeron предлагает бесплатный план с базовым доступом и 14-дневный триал на платных тарифах. Премиальные планы — от $15 в месяц до $250 в месяц за полную платформу. Для активных трейдеров и инвесторов, которым нужны AI-сигналы без необходимости строить собственные модели — Tickeron даёт готовый инструментарий для анализа, прогнозирования и управления портфелем в одном месте.</p></div>

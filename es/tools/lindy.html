@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Agentes de email, programación, bots de soporte</div>
     </div>
   </div>
-  <a href="/es/compare/lindy-vs-copilot-studio.html" class="compare-strip">⚖️ Lindy vs Copilot Studio →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/es/compare/lindy-vs-copilot-studio.html" class="compare-strip">⚖️ Lindy vs Copilot Studio →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de Lindy</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Lindy es una plataforma sin código para desplegar agentes de IA prácticos sin conocimientos técnicos. El caso de uso principal es la gestión autónoma de email: Lindy lee bandejas de entrada, redacta respuestas conscientes del contexto, programa seguimientos y enruta mensajes sin intervención humana. Agentes adicionales manejan soporte al cliente, programación de reuniones, actualizaciones de CRM y calificación de leads.</p><p style="margin-top:1rem">La plataforma está diseñada para usuarios empresariales, no desarrolladores. Construir un agente toma minutos usando una biblioteca de plantillas con flujos de trabajo preconfigurados para escenarios comunes. Cada agente se conecta a Gmail, Outlook, Salesforce, HubSpot, Slack y 200+ otras herramientas a través de integraciones nativas.</p><p style="margin-top:1rem">Los precios utilizan un sistema de créditos. El plan gratuito incluye 400 créditos por mes. El plan Pro es $49.99/mes con 5,000 créditos. El plan Max es $199.99/mes. El precio Enterprise es personalizado. Las acciones simples cuestan alrededor de 1 crédito cada una; los flujos de trabajo complejos de múltiples pasos cuestan 5–10+ créditos por ejecución. Una prueba gratuita de 7 días está disponible para características Pro.</p><p style="margin-top:1rem">Lindy compite con Zapier AI y Make en el espacio de automatización, pero se enfoca en interacciones de estilo de agente — conversaciones y decisiones — en lugar de enrutamiento puro de datos. Es notablemente más fácil de configurar que n8n o Relevance AI.</p><p style="margin-top:1rem">Limitaciones: el modelo de créditos puede parecer impredecible para usuarios pesados — una bandeja de entrada ocupada podría consumir la asignación Pro en días. La lógica personalizada compleja aún requiere soluciones alternativas comparada con alternativas basadas en código.</p><p style="margin-top:1rem">Mejor para equipos de ventas, fundadores y operadores de pequeños negocios que quieren automatizar email y comunicación con clientes sin contratar desarrolladores.</p></div>

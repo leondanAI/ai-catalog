@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Science des données, analyse en équipe</div>
     </div>
   </div>
-  <a href="/fr/compare/hex-vs-looker-studio.html" class="compare-strip">⚖️ Hex vs Looker Studio →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/hex-vs-looker-studio.html" class="compare-strip">⚖️ Hex vs Looker Studio →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Hex</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Hex est une plateforme de notebooks de données collaboratifs qui combine SQL, Python, R et la visualisation sans code dans une interface unique, permettant aux équipes data d'explorer, d'analyser et de présenter leurs résultats dans un flux de travail cohérent. Contrairement aux notebooks Jupyter, qui sont principalement des outils pour développeurs, Hex est conçu pour des équipes data complètes — analystes, data scientists et parties prenantes métier peuvent tous travailler simultanément dans le même notebook, à la manière d'un Google Docs dédié à l'analyse de données.</p><p style="margin-top:1rem">L'assistant IA (Magic AI) rédige du SQL et du Python à partir de descriptions en anglais courant, explique le code, suggère des optimisations et corrige les erreurs — réduisant ainsi la barrière à une analyse sophistiquée pour les analystes à l'aise avec les questions métier mais moins familiers avec la syntaxe de requêtes complexes ou les bibliothèques Python. Le format notebook permet de documenter les analyses aux côtés du code, les rendant reproductibles et partageables sans avoir à rédiger de rapports séparés.</p><p style="margin-top:1rem">La couche de présentation transforme les notebooks en applications de données soignées : ajoutez des filtres interactifs, des menus déroulants et des sélecteurs de plages de dates que les parties prenantes peuvent utiliser pour explorer les données elles-mêmes, sans modifier le code sous-jacent. Les applications publiées ressemblent à des tableaux de bord internes personnalisés, sans nécessiter de développement frontend. Le plan gratuit permet un utilisateur et cinq projets. Les plans Growth débutent à 24 $/utilisateur/mois. Hex est particulièrement utile pour les équipes data de 3 à 20 personnes qui ont besoin de collaborer sur des analyses et de communiquer leurs résultats à des parties prenantes non techniques via des rapports interactifs.</p></div>

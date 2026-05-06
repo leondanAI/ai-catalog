@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Génération d'images IA locale et fine-tuning</div>
     </div>
   </div>
-  <a href="/fr/compare/midjourney-vs-stable-diffusion.html" class="compare-strip">⚖️ Stable Diffusion vs Midjourney →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/midjourney-vs-stable-diffusion.html" class="compare-strip">⚖️ Stable Diffusion vs Midjourney →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Stable Diffusion</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Stable Diffusion est la famille de modèles texte-vers-image open-source fondamentale publiée par Stability AI, et la technologie qui alimente la plupart de l'écosystème de génération d'images IA open-source. Contrairement aux services propriétaires, les poids du modèle de Stable Diffusion sont librement disponibles à télécharger, affiner et exécuter localement sur du matériel grand public.</p><p style="margin-top:1rem">La version actuelle est Stable Diffusion 3.5. SD 3.5 Large dispose de 8,1 milliards de paramètres et utilise l'architecture MM-DiT avec trois encodeurs de texte pour une meilleure compréhension des prompts. SD 3.5 Medium (2,5B paramètres) fonctionne sur les GPU grand public. Les deux sont disponibles sous une Community License gratuite pour un usage non commercial ; l'utilisation commerciale nécessite une licence payante de Stability AI.</p><p style="margin-top:1rem">Stability AI a connu un quasi-effondrement début 2024 — licenciements massifs et crise de financement. L'entreprise a réalisé un redressement remarquable sous nouvelle direction, avec Sean Parker comme Président Exécutif et James Cameron rejoignant le conseil d'administration. Toute dette a été effacée en décembre 2024 et l'entreprise a signalé une croissance des revenus triple chiffre.</p><p style="margin-top:1rem">Le modèle s'exécute localement via des interfaces comme ComfyUI ou Automatic1111, ou via l'API Stability AI (payante, basée sur crédit). Les fine-tunes communautaires et modèles LoRA sont au nombre de milliers sur des plateformes comme Civitai et Hugging Face, couvrant tous les styles imaginables.</p><p style="margin-top:1rem">Limitations : la qualité brute ne domine plus le domaine — Flux et Midjourney V7 produisent une meilleure sortie. Exécuter localement nécessite un GPU capable (8 Go+ VRAM recommandé). L'utilisation commerciale des poids nécessite un accord de licence distinct.</p><p style="margin-top:1rem">Parfait pour les développeurs et chercheurs qui veulent un contrôle total — exécution locale, fine-tuning, pipelines personnalisés et sans frais par image.</p></div>

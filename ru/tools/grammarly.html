@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> AI-ассистент письма для улучшения грамматики, стиля, тона и ясности</div>
     </div>
   </div>
-  <a href="/ru/compare/deepl-vs-grammarly.html" class="compare-strip">⚖️ Grammarly vs DeepL →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/deepl-vs-grammarly.html" class="compare-strip">⚖️ Grammarly vs DeepL →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе Grammarly</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Grammarly — наиболее широко используемый AI-ассистент письма с 40 миллионами ежедневных активных пользователей и интеграциями с Microsoft Office, Google Docs, Gmail, Slack и практически любым текстовым полем через расширение браузера. Продукт используется как отдельными пользователями для улучшения письма, так и компаниями для поддержания стандартов коммуникации.</p><p style="margin-top:1rem">Grammarly проверяет и исправляет грамматику, орфографию, пунктуацию, стиль, ясность, вовлеченность и доставку. Функции генеративного AI (Pro) позволяют переписать целые предложения, отрегулировать тон, составить письма из маркеров и суммировать документы. Детектор тона особенно полезен для деловых коммуникаций — определяет, звучит ли сообщение уверенно, дипломатично, формально или сочувственно перед отправкой.</p><p style="margin-top:1rem">Основные возможности: проверка грамматики и стиля в реальном времени, определение и корректировка тона, генерация и переписывание текста AI, суммирование документов, определение плагиата (Pro), база данных проверки орфографии 500K+, расширение браузера для всех веб-приложений, надстройки Microsoft Office и Google Docs, клавиатура Grammarly для мобильных устройств.</p><p style="margin-top:1rem">Цены: Бесплатный план предоставляет исправление грамматики и орфографии с базовыми предложениями стиля и 100 использованиями AI подсказок в месяц. Pro за $12 в месяц (годовое) или $30 в месяц (ежемесячное) предоставляет полные функции генеративного AI, переписывание с регулировкой тона, определение плагиата и неограниченные AI подсказки. Business (ранее доступный как отдельный план) перемещен только на Enterprise для организаций определенного размера — деловым командам теперь нужно обратиться в отдел продаж.</p><p style="margin-top:1rem">Ограничения: Pro-план $30/мес (ежемесячный) дорогой — $12/мес требует годовое обязательство. Удаление Business-плана создает пробел между индивидуальным Pro и Enterprise, что усложняет ценообразование для небольших деловых команд. Исправления Grammarly в масштабе лишены контекста — иногда помечают намеренные стилистические выборы как ошибки.</p><p style="margin-top:1rem">Лучше всего подходит для профессионалов, студентов и создателей контента, которые пишут значительные объемы писем, документов и контента и хотят получать обратную связь AI в реальном времени о ясности и правильности без переключения инструментов.</p></div>

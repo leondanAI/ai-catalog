@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> Автоматизация рабочих процессов, AI-конвейеры</div>
     </div>
   </div>
-  <a href="/ru/compare/n8n-vs-copilot-studio.html" class="compare-strip">⚖️ n8n vs Copilot Studio →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/n8n-vs-copilot-studio.html" class="compare-strip">⚖️ n8n vs Copilot Studio →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе n8n</h2>
     <div class="tool-desc"><p style="margin-top:1rem">n8n — это open-source платформа для автоматизации рабочих процессов, позволяющая бесплатно разворачивать self-hosted версию с неограниченными выполнениями — основная причина выбора n8n инженерными и ориентированными на приватность командами вместо Make или Zapier. Визуальный редактор соединяет 400+ сервисов и поддерживает сложную логику: ветвления, циклы, обработку ошибок и пользовательские узлы JavaScript/Python.</p><p style="margin-top:1rem">В апреле 2026 года n8n удалила все ограничения активных рабочих процессов во всех облачных планах — теперь имеют значение только количества выполнений. Облачные цены: Starter (24 EUR/месяц, 2500 выполнений), Pro (60 EUR/месяц, 10000 выполнений), Business (800 EUR/месяц, 40000 выполнений с SSO). Self-hosted Community Edition остаётся полностью бесплатной с неограниченными выполнениями и рабочими процессами. Добавлены встроенные узлы AI: Claude, Gemini и интеграции vector store теперь являются первоклассными элементами редактора.</p><p style="margin-top:1rem">Автохостируемый вариант — главный дифференциатор n8n. Команды могут запускать его на VPS за $5/месяц с полным контролем над данными, без платежей за выполнение и неограниченным масштабированием. Компромисс — ответственность за инфраструктуру.</p><p style="margin-top:1rem">Библиотека узлов AI значительно выросла в 2025–2026: цепочки в стиле LangChain, RAG-конвейеры и многомодельная маршрутизация могут быть построены визуально. Это позволяет n8n стать серьёзным вариантом для команд, разрабатывающих AI-powered внутренние инструменты.</p><p style="margin-top:1rem">Ограничения: кривая обучения круче, чем у Make или Zapier. Self-hosting требует комфорта с DevOps. Интерфейс, хотя и улучшается, менее отполирован, чем у конкурентов.</p><p style="margin-top:1rem">Более всего подходит инженерным командам и техническим операторам, которые хотят максимальную гибкость, приватность данных и нулевые затраты на выполнение — и комфортно ощущают себя запуская собственную инфраструктуру.</p></div>

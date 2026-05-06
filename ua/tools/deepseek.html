@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Підходить для:</strong> Безплатний AI чат з потужним міркуванням і дуже низькими витратами на API</div>
     </div>
   </div>
-  <a href="/ua/compare/deepseek-vs-chatgpt.html" class="compare-strip">⚖️ DeepSeek vs ChatGPT →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ua/compare/deepseek-vs-chatgpt.html" class="compare-strip">⚖️ DeepSeek vs ChatGPT →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Про сервіс DeepSeek</h2>
     <div class="tool-desc"><p style="margin-top:1rem">DeepSeek — це лабораторія AI, розташована в Ханчжоу, Китай, яка постійно випускає моделі з відкритими вагами, які дорівнюють або перевищують продуктивність провідних закритих моделей — за частку вартості навчання та запуску.</p><p style="margin-top:1rem">DeepSeek V4, випущений 24 квітня 2026 року, є поточним флагманом. Він випускається в двох варіантах: V4-Pro з 1,6 трильйона параметрів (49B активних через архітектуру mixture-of-experts) та V4-Flash з 284B параметрів (13B активних). Обидва підтримують контекстне вікно 1 мільйон токенів. Бенчмарки V4-Pro розміщують його поруч із GPT-5.5 та Claude для більшості завдань міркування, кодування та математики.</p><p style="margin-top:1rem">Веб-інтерфейс на chat.deepseek.com залишається повністю безплатним без обмежень частоти в стандартному режимі. Відкриті ваги доступні для локального та комерційного розгортання. Цінова політика API є надзвичайно конкурентною: V4-Flash є одним із найдешевших API фронтіерної якості, доступних.</p><p style="margin-top:1rem">По стану на квітень 2025 року DeepSeek мав 96,88 мільйонів щомісячно активних користувачів у всьому світі — цифра, яка продовжила зростати з випуском V4. Він займає №1 найбільш завантажена програма в App Store в більш ніж 156 країнах.</p><p style="margin-top:1rem">Ключове обмеження: DeepSeek є китайською компанією, і її сервери працюють у Китаї. Це створює проблеми конфіденційності даних для користувачів, які працюють з чутливою діловою, юридичною або урядовою інформацією. Китайський уряд має широкі права доступу до даних. Доступність серверів також може бути повільною під час пікових годин.</p><p style="margin-top:1rem">Найкраще для розробників, дослідників та користувачів, які економлять гроші, які хочуть AI фронтіерної якості безплатно та комфортно з компромісами конфіденційності даних китайської сервісу.</p></div>

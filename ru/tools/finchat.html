@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> AI-powered финансовых исследований и анализа акций для инвесторов</div>
     </div>
   </div>
-  <a href="/ru/compare/fiscal-ai-vs-koyfin.html" class="compare-strip">⚖️ Fiscal.ai vs Koyfin →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/fiscal-ai-vs-koyfin.html" class="compare-strip">⚖️ Fiscal.ai vs Koyfin →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе Fiscal.ai</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Fiscal.ai (ранее FinChat.io, переименован в 2025) — это AI-powered платформа финансовых исследований, предоставляющая данные и анализ по более чем 100,000 публичных компаний по всему миру. Она объединяет структурированные финансовые данные — отчёты о доходах, балансовые листы, денежные потоки, KPI — с AI, который может анализировать транскрипты заработков, генерировать резюме компаний и отвечать на специфические финансовые вопросы на основе этих данных.</p><p style="margin-top:1rem">Платформа агрегирует данные из SEC-филингов, транскриптов заработков и финансовых баз данных, затем применяет AI для интерактивной работы с этой информацией. Пользователи могут задавать вопросы вроде «какова была динамика валовой маржи Apple за последние 8 кварталов» и получить ответы с диаграммами прямо из данных — вместо ручного построения моделей в Excel.</p><p style="margin-top:1rem">Основные возможности: финансовые показатели и KPI для 100K+ публичных компаний, AI-анализ транскриптов заработков, финансовые запросы на естественном языке с генерацией диаграмм, инструменты сравнения компаний, анализ peer-компаний в индустрии, экспорт в Excel и Google Sheets, AI-генерируемые резюме инвестиционного тезиса.</p><p style="margin-top:1rem">Цены: бесплатный план предоставляет ограниченные запросы и базовый доступ к данным. Plus за $24/месяц обеспечивает расширенный доступ к данным, неограниченные AI-запросы и полный поиск транскриптов. Pro за $64/месяц предоставляет продвинутые функции, данные institutional-grade уровня и повышенные лимиты экспорта.</p><p style="margin-top:1rem">Ограничения: Fiscal.ai охватывает только публичные компании — нет данных о приватных компаниях или альтернативных источников данных. AI-анализ основан на публично доступных данных и не должен рассматриваться как инвестиционный совет. Полнота покрытия данных для non-US компаний варьируется по сравнению с US публичными компаниями.</p><p style="margin-top:1rem">Оптимально подходит для розничных инвесторов, студентов финансовых специальностей и профессионалов, которые хотят быстро получить AI-ассистированный анализ финансов публичных компаний без содержания дорогих подписок Bloomberg или FactSet.</p></div>

@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Tableaux de bord BI, reporting, analytics gratuit</div>
     </div>
   </div>
-  <a href="/fr/compare/looker-studio-vs-tableau-ai.html" class="compare-strip">⚖️ Looker Studio vs Tableau AI →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/looker-studio-vs-tableau-ai.html" class="compare-strip">⚖️ Looker Studio vs Tableau AI →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Looker Studio</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Looker Studio (anciennement Google Data Studio) est la plateforme gratuite de business intelligence et de visualisation de données de Google, utilisée par plus de 10 millions de marketeurs, analystes et professionnels pour créer des tableaux de bord interactifs et des rapports à partir de n'importe quelle source de données connectée. En tant que produit Google, il est entièrement gratuit sans limite d'utilisation — ce qui est rare pour un outil BI de ce niveau de capacité.</p><p style="margin-top:1rem">La bibliothèque de connecteurs est le principal atout de Looker Studio : plus de 800 connecteurs de sources de données préconfigurés couvrent Google Analytics 4, Google Ads, Google Search Console, YouTube Analytics, Google Sheets, BigQuery, Facebook Ads, Salesforce, HubSpot, MySQL et des centaines d'autres. Connecter une source de données, sélectionner des métriques et des dimensions, puis produire un tableau de bord prend généralement moins de 15 minutes pour les cas d'usage analytiques courants. Les tableaux de bord peuvent être partagés publiquement via un lien ou avec des comptes Google spécifiques, avec des autorisations de consultation et de modification granulaires.</p><p style="margin-top:1rem">Les fonctionnalités IA de Looker Studio sont limitées par rapport aux plateformes BI dédiées : il n'y a pas d'interface de requête en langage naturel, pas de génération automatique d'insights et pas de détection d'anomalies. C'est un outil de visualisation et de reporting, non un outil d'intelligence analytique. Pour une analyse de données alimentée par l'IA où la plateforme explique les tendances et génère des insights automatiquement, Tableau ou ThoughtSpot sont des choix plus adaptés. Pour le reporting marketing, les tableaux de bord de performance des campagnes et le partage de métriques opérationnelles avec des parties prenantes ayant besoin de visualisations claires et accessibles sans accès direct aux données, Looker Studio est difficile à surpasser à n'importe quel prix.</p></div>

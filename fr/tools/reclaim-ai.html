@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Gestion du temps, IA de calendrier</div>
     </div>
   </div>
-  <a href="/fr/compare/motion-vs-reclaim-ai.html" class="compare-strip">⚖️ Reclaim.ai vs Motion →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/motion-vs-reclaim-ai.html" class="compare-strip">⚖️ Reclaim.ai vs Motion →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Reclaim.ai</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Reclaim.ai est un outil de gestion de calendrier par IA qui défend et planifie automatiquement du temps productif dans votre Google Calendar en fonction de vos priorités, habitudes et modes de travail. Contrairement aux applications de calendrier traditionnelles qui affichent uniquement ce qui est prévu, Reclaim optimise activement la façon dont votre temps est alloué — en trouvant automatiquement des créneaux disponibles pour le travail en profondeur, en planifiant des habitudes récurrentes et en protégeant le temps de concentration contre les réunions intempestives.</p><p style="margin-top:1rem">La fonctionnalité Habits est au cœur du produit : définissez les routines que vous souhaitez maintenir (90 minutes de codage concentré, une réunion d'équipe quotidienne, une revue de fin de journée) et Reclaim les planifie automatiquement aux moments optimaux en fonction de vos habitudes de calendrier, en les reprogrammant en cas de conflits plutôt que de simplement les ignorer. La fonctionnalité Smart 1:1 planifie les réunions d'équipe récurrentes au meilleur moment pour les deux participants et les reprogramme automatiquement lorsque le calendrier de l'un ou l'autre change.</p><p style="margin-top:1rem">L'intégration des tâches se connecte avec Linear, Asana, Todoist et d'autres outils de gestion de projet — Reclaim récupère vos tâches assignées et planifie automatiquement du temps pour y travailler en fonction de la priorité et de l'échéance, en remplissant intelligemment les blocs de concentration disponibles. Le plan gratuit prend en charge une habitude et la planification de base. Le plan Starter (8 $/mois) déverrouille toutes les fonctionnalités. La principale limitation est l'exclusivité Google Calendar — Outlook et Apple Calendar ne sont pas pris en charge, ce qui limite le public aux utilisateurs de Google Workspace.</p></div>

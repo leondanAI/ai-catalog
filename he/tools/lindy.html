@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> סוכני דוא״ל, תזמון פגישות, בוטי תמיכה</div>
     </div>
   </div>
-  <a href="/he/compare/lindy-vs-copilot-studio.html" class="compare-strip">⚖️ Lindy vs Copilot Studio →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/he/compare/lindy-vs-copilot-studio.html" class="compare-strip">⚖️ Lindy vs Copilot Studio →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>אודות Lindy</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Lindy היא פלטפורמה ללא קוד להפעלת סוכנים בעלי AI מעשיים ללא ידע טכני. המקרה השימוש הבסיסי הוא ניהול דוא״ל אוטונומי: Lindy קורא תיבות דוא״ל, כותב תשובות תואמות הקשר, מתזמן מעקבים וניתב הודעות ללא התערבות אדם. סוכנים נוספים מטפלים בתמיכה לקוחות, תזמון פגישות, עדכוני CRM וזיהוי לידים.</p><p style="margin-top:1rem">הפלטפורמה מעוצבת למשתמשי עסקים, לא למפתחים. בניית סוכן לוקחת דקות בעזרת ספריית תבניות עם זרימות עבודה שנבנו מראש לתרחישים נפוצים. כל סוכן מתחבר ל-Gmail, Outlook, Salesforce, HubSpot, Slack ו-200+ כלים נוספים דרך אינטגרציות מקוריות.</p><p style="margin-top:1rem">התמחור משתמש במערכת קרדיטים. התכנית החינמית כוללת 400 קרדיטים לחודש. התכנית Pro היא $49.99/חודש עם 5,000 קרדיטים. תכנית Max היא $199.99/חודש. תמחור Enterprise מותאם. פעולות פשוטות עולות כ-1 קרדיט כל אחת; זרימות עבודה מורכבות של מספר שלבים עולות 5–10+ קרדיטים לביצוע. ניסיון חינמי של 7 ימים זמין לתכניות Pro.</p><p style="margin-top:1rem">Lindy מתחרה עם Zapier AI ו-Make בתחום האוטומציה, אך מתמקדת בתוך סוכנים — שיחות והחלטות — במקום ניתוב נתונים טהור. זה בעליל קל יותר להגדרה מ-n8n או Relevance AI.</p><p style="margin-top:1rem">מגבלות: מודל הקרדיטים יכול להרגיש בלתי צפוי למשתמשים כבדי משקל — תיבת דוא״ל תופסת יכולה לצרוך את הקצבה של Pro תוך ימים. לוגיקה מותאמת מורכבת עדיין דורשת פתרונות חלופיים בהשוואה לחלופות מבוססות קוד.</p><p style="margin-top:1rem">מתאים ביותר לצוותי מכירות, מייסדים ובעלי עסקים קטנים שרוצים לאוטומט דוא״ל ותקשורת לקוחות ללא הצורך בהעסקת מפתחים.</p></div>

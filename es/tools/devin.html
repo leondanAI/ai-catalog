@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Codificación autónoma, desarrollo full-stack, depuración</div>
     </div>
   </div>
-  <a href="/es/compare/devin-vs-copilot-studio.html" class="compare-strip">⚖️ Devin vs Copilot Studio →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/es/compare/devin-vs-copilot-studio.html" class="compare-strip">⚖️ Devin vs Copilot Studio →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de Devin</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Devin es un ingeniero de software IA completamente autónomo construido por Cognition AI que maneja tareas de desarrollo de extremo a extremo: agregar sistemas de pago, reparar canalizaciones CI/CD, migrar bases de datos y escribir pruebas sin intervención humana. Opera en un entorno aislado con su propia terminal, navegador y editor de código.</p><p style="margin-top:1rem">Devin 2.0 se lanzó en 2025 y representó un gran avance — completando 83% más tareas de desarrollador junior por unidad de cálculo en comparación con v1. Cognition simultáneamente redujo el precio de entrada de $500/mes a $20/mes, haciéndolo accesible más allá de presupuestos empresariales.</p><p style="margin-top:1rem">Los precios se basan en ACU (Agent Compute Units), donde 1 ACU equivale aproximadamente a 15 minutos de trabajo activo del agente. El plan Core cuesta $20/mes con ACUs a $2.25 cada uno. El plan Team es $500/mes e incluye 250 ACUs a $2.00 cada uno. Los precios Enterprise son personalizados. Una tarea compleja de varias horas puede costar $10–30 en ACUs además de la suscripción.</p><p style="margin-top:1rem">El diferenciador clave es la autonomía genuina. A diferencia de los asistentes de codificación IA que sugieren finalizaciones, Devin toma una descripción de tarea y ejecuta el ciclo completo independientemente — leyendo documentación, escribiendo código, ejecutando pruebas, corrigiendo fallas y abriendo un pull request. Se integra con GitHub, Slack y Jira para integración de flujo de trabajo real.</p><p style="margin-top:1rem">Limitaciones: Devin aún tiene dificultades con requisitos profundamente ambiguos y grandes bases de código legacy sin buena documentación. Funciona mejor en tareas bien definidas y autónomas. El modelo ACU puede volverse costoso para trabajo exploratorio donde el agente toma caminos incorrectos.</p><p style="margin-top:1rem">Mejor para equipos de ingeniería que desean delegar tareas de nivel junior — correcciones de errores, adiciones de funciones, cobertura de pruebas, documentación — y obtener un pull request en lugar de una sugerencia de código.</p></div>

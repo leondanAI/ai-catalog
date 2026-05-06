@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal für:</strong> Keine Code erforderlich – Apps aus Google Sheets, Excel und Airtable Daten</div>
     </div>
   </div>
-  <a href="/de/compare/glide-vs-bubble.html" class="compare-strip">⚖️ Glide vs Bubble →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/de/compare/glide-vs-bubble.html" class="compare-strip">⚖️ Glide vs Bubble →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Über Glide</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Glide ist ein No-Code App Builder, der mobile und Web-Anwendungen direkt aus Tabellenkalkulationsdaten erstellt – Google Sheets, Excel, Airtable oder Glides eigene native Tabellen. Es besetzt eine andere Nische als Bubble (das komplexe benutzerdefinierte Logik handhabt), indem es sich auf die Interaktivität und Präsentation von Daten in Tabellenkalkulationen als benutzergerichtete App konzentriert.</p><p style="margin-top:1rem">Gängige Anwendungsfälle umfassen interne Tools (Bestandsverwaltung, Team-Verzeichnisse, Event Check-in), kundengerichtete Apps (Service-Kataloge, Buchungstools, Verzeichnisse) und datengesteuerte Apps, bei denen die zugrunde liegenden Daten in einer Tabellenkalkulation gespeichert sind, die Interessenvertreter bereits verwalten. Glide Apps aktualisieren sich automatisch, wenn die Quell-Tabellenkalkulation aktualisiert wird.</p><p style="margin-top:1rem">Die Schlüsselfunktionen umfassen Datenquellen-Verbindungen (Google Sheets, Excel, Airtable, Glide Tables), Drag-and-Drop UI-Erstellung, KI-gestützte Spalten (KI-Formeln für jede Zeile ausführen – Text klassifizieren, Daten extrahieren, Beschreibungen generieren), Benutzerauthentifizierung, Formularübermittlung, Aktionsschaltflächen und Integration mit Zapier und Make.</p><p style="margin-top:1rem">Preisgestaltung: Der kostenlose Plan bietet grundlegende App-Erstellung mit begrenzten Zeilen und einer Glide-Subdomain. Maker für $25 pro Monat fügt benutzerdefinierte Domains und mehr Zeilen hinzu. Team für $99 pro Monat bietet Team-Zusammenarbeit und höhere Datenlimits. Business für $249 pro Monat bietet die höchsten Limits und Enterprise-Funktionen.</p><p style="margin-top:1rem">Einschränkungen: Glide ist am besten für Datenpräsentation und einfache Formular-/Action-Apps geeignet – es ist nicht geeignet für komplexe mehrstufige Workflows oder Apps mit anspruchsvoller Geschäftslogik. Die Skalierbarkeit ist durch Constraints der Tabellenkalkulations-Datenquelle begrenzt. Der Business Plan für $249/Monat ist teuer für das, was grundsätzlich ein Tabellenkalkulations-zu-App-Konverter ist.</p><p style="margin-top:1rem">Am besten geeignet für Teams mit Daten in Tabellenkalkulationen, die funktionale Apps für interne oder Client-Nutzung erstellen müssen – ohne dass Entwicklungsressourcen erforderlich sind.</p></div>

@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> עזרה בשיעורי בית, כל המקצועות</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>אודות Socratic by Google</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Socratic by Google הוא אפליקציית למידה AI שמאפשרת לצלם כל שאלת שיעורי בית — ולקבל הסברים ויזואליים צעד-אחר-צעד בכל מקצוע: מתמטיקה, מדעים, היסטוריה, ספרות, כלכלה ועוד. עם למעלה מ-20 מיליון משתמשים, Socratic הפך לאפליקציית הלמידה הנפוצה ביותר בקרב תלמידי תיכון.</p><p style="margin-top:1rem">מה שמייחד את Socratic הוא הגישה הוויזואלית: הסברים כוללים לא רק טקסט אלא גם תרשימים, גרפים, ציר זמן, ומפות מושגים — מה שמסייע לסוגי למידה שונים. לכל מקצוע הכלי מחפש את ההסבר הטוב ביותר הקיים ברשת, מה שמבטיח איכות גבוהה ומגוון גישות הסבר.</p><p style="margin-top:1rem">Socratic by Google חינמי לחלוטין — ללא מנוי, ללא פרסומות, ללא תשלום. Google משמרת אותו כשירות חינמי לקהילה. עבור תלמידים שנתקעים בשיעורי בית, להורים שרוצים לעזור לילדיהם מבלי לזכור את החומר עצמם, ולכל מי שצריך הסבר מהיר ואמין על כל נושא לימודי — Socratic הוא אחד המשאבים החינמיים הטובים ביותר שקיימים.</p></div>

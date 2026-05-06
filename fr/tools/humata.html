@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Questions-réponses sur PDF, documents juridiques, articles de recherche</div>
     </div>
   </div>
-  <a href="/fr/compare/notebooklm-vs-humata.html" class="compare-strip">⚖️ Humata vs NotebookLM →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/notebooklm-vs-humata.html" class="compare-strip">⚖️ Humata vs NotebookLM →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Humata</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Humata est une plateforme d'intelligence documentaire par IA qui permet aux utilisateurs de télécharger des fichiers PDF et d'interagir avec leur contenu via des questions en langage naturel, en recevant des réponses précises accompagnées de citations cliquables qui renvoient directement au passage pertinent dans le document source. Elle est utilisée par des chercheurs, des juristes, des consultants et des étudiants qui passent beaucoup de temps à extraire des informations de documents longs et denses.</p><p style="margin-top:1rem">Le système de citations est le principal atout différenciateur de Humata : chaque réponse inclut des passages sources mis en évidence dans le PDF téléchargé, et cliquer sur la citation amène directement à l'emplacement exact dans le document — ce qui rend la vérification des réponses de l'IA par rapport au document source extrêmement simple. C'est essentiel dans les contextes professionnels où l'exactitude des informations extraites a des conséquences réelles, et où faire confiance aux résultats de l'IA sans vérification n'est pas acceptable.</p><p style="margin-top:1rem">Le plan gratuit permet d'analyser 60 pages de documents par mois, ce qui couvre la plupart des usages occasionnels. Le plan Student (9,99 $/mois) offre 1 000 pages et constitue un choix populaire pour la recherche de thèse et les travaux académiques. Le plan Expert (16,99 $/mois) permet un nombre de pages illimité et le partage de bibliothèques de documents en équipe. Les cas d'usage courants incluent la revue de contrats juridiques, l'analyse d'articles académiques, la compréhension de documentation technique, l'analyse de rapports financiers et la revue de littérature médicale. Les performances de Humata se dégradent sur les PDF scannés ou basés sur des images lorsque la qualité de l'OCR est faible — pour de meilleurs résultats, des PDF avec couche de texte sont requis.</p></div>

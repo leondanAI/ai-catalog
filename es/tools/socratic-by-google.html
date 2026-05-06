@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Ayuda con tareas, todas las materias</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de Socratic by Google</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Socratic by Google es una aplicación gratuita de ayuda con tareas para estudiantes de secundaria, preparatoria y primeros años de universidad, que utiliza visión por computadora e inteligencia artificial para proporcionar explicaciones paso a paso de cualquier pregunta de tarea fotografiada. Apunta tu teléfono a un problema de matemáticas, ciencias, historia, literatura o estudios sociales, y Socratic identifica la pregunta, encuentra recursos educativos relevantes y genera una explicación visual paso a paso, todo en segundos y completamente gratis.</p><p style="margin-top:1rem">La cobertura de materias es amplia: matemáticas (desde aritmética hasta cálculo), química (reacciones, ecuaciones, tabla periódica), física (mecánica, electricidad, óptica), biología, historia, análisis literario y gramática. Para cada pregunta, Socratic combina varios tipos de recursos: su propia explicación generada por IA, enlaces a videos de Khan Academy, secciones relevantes de Wikipedia y conjuntos de estudio de Quizlet, ofreciendo múltiples perspectivas sobre el concepto consultado.</p><p style="margin-top:1rem">Desarrollada originalmente como una startup y adquirida por Google en 2018, Socratic se mantiene como una herramienta educativa gratuita sin suscripción requerida, en línea con la inversión más amplia de Google en herramientas educativas. Se requiere una cuenta de Google para usar la aplicación. La principal limitación es la profundidad: para temas avanzados (cursos universitarios, materias muy especializadas), las explicaciones de Socratic son menos completas y confiables que las de tutores especializados o recursos dedicados. Para el plan de estudios básico de K-12, es un recurso gratuito excepcional que genuinamente ayuda a los estudiantes a comprender en lugar de simplemente copiar respuestas.</p></div>

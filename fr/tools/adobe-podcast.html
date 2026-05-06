@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Nettoyage audio, qualité podcast, enregistrement à distance</div>
     </div>
   </div>
-  <a href="/fr/compare/descript-vs-adobe-podcast.html" class="compare-strip">⚖️ Adobe Podcast vs Descript →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/descript-vs-adobe-podcast.html" class="compare-strip">⚖️ Adobe Podcast vs Descript →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Adobe Podcast</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Adobe Podcast (désormais intégré à Adobe Express) est un outil gratuit d'amélioration audio par IA qui donne à n'importe quel enregistrement vocal le son d'une prise réalisée dans un studio d'enregistrement professionnel — quel que soit le microphone ou l'environnement d'enregistrement utilisé. La fonctionnalité principale, Enhance Speech, supprime le bruit de fond, l'écho, la réverbération et les artefacts audio de tout enregistrement importé en moins de 30 secondes, sans aucune connaissance technique en audio.</p><p style="margin-top:1rem">Les résultats sont véritablement remarquables : un enregistrement réalisé avec un téléphone dans un bureau bruyant ou avec le microphone d'un ordinateur portable dans une pièce réverbérante ressort propre, intimiste et de qualité broadcast. Les podcasteurs, les YouTubeurs, les télétravailleurs enregistrant des screencasts et les formateurs créant du contenu de cours utilisent tous Enhance Speech pour élever la valeur de production de leurs enregistrements sans investir dans un traitement acoustique ou des microphones professionnels.</p><p style="margin-top:1rem">Adobe Podcast est gratuit avec un compte Adobe, sans abonnement requis pour la fonctionnalité Enhance Speech. La fonctionnalité Mic Check est un ajout unique : avant l'enregistrement, elle analyse votre configuration de microphone en temps réel et vous indique précisément comment améliorer le positionnement, la distance et le bruit de fond pour obtenir la meilleure source d'enregistrement possible. La limitation de la plateforme réside dans son périmètre — il s'agit uniquement d'un outil de nettoyage audio, sans fonctionnalités d'enregistrement, de montage, de marquage de chapitres ou de distribution. Les utilisateurs ayant besoin d'une suite complète de production de podcast devraient le combiner avec Descript ou Audacity.</p></div>

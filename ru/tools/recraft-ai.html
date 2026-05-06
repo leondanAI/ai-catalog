@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> Векторная графика и лучшее качество изображений AI</div>
     </div>
   </div>
-  <a href="/ru/compare/recraft-ai-vs-midjourney.html" class="compare-strip">⚖️ Recraft AI vs Midjourney →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/recraft-ai-vs-midjourney.html" class="compare-strip">⚖️ Recraft AI vs Midjourney →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе Recraft AI</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Recraft AI — это платформа генеративных изображений с двумя уникальными возможностями: она генерирует истинную масштабируемую векторную графику (SVG), а её последняя модель возглавила рейтинг Text-to-Image Arena Hugging Face в начале 2026 года, опередив Midjourney V7, DALL-E 3 и FLUX.</p><p style="margin-top:1rem">Recraft V4 запущена в феврале 2026 года и немедленно превзошла всех конкурентов в рейтинге — заметное достижение для команды примерно из 50 человек. V3 уже возглавляла тот же рейтинг в конце 2024 года. Варианты модели: V4 Standard (растр, 1024×1024), V4 Vector (истинный вывод SVG), V4 Pro (растр, 2048×2048), V4 Pro Vector (векторная графика высокого разрешения).</p><p style="margin-top:1rem">Векторный вывод — это настоящий SVG с чистыми путями, а не растеризованное изображение, преобразованное в векторный формат. Созданные SVG редактируются в Illustrator, Figma или любом векторном редакторе — и не зависят от разрешения. Это уникально среди коммерчески доступных генераторов AI изображений.</p><p style="margin-top:1rem">Цены: Бесплатный план включает 50 ежедневных кредитов, только личное и публичное использование. Платные планы начинаются с $10/месяц (1000 кредитов, коммерческие права, приватные генерации). Pro — $25/месяц. Team — $30/пользователь/месяц. Доступ API через fal.ai стоит примерно $0.04/изображение для растра и $0.08/изображение для вектора.</p><p style="margin-top:1rem">Ограничения: бесплатный план не позволяет коммерческое использование. Система кредитов может быть ограничивающей для рабочих процессов с большим объемом. Платформа относительно новая, с меньшим сообществом по сравнению с Midjourney или Stable Diffusion.</p><p style="margin-top:1rem">Лучше всего подходит для дизайнеров, брендов и иллюстраторов, которым нужны коммерчески используемые векторные активы или лучшее доступное качество растра — особенно для иконок, логотипов и активов системы дизайна.</p></div>

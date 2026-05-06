@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> Маркетинговые сайты, CMS, лендинги</div>
     </div>
   </div>
-  <a href="/ru/compare/bubble-vs-webflow.html" class="compare-strip">⚖️ Webflow vs Bubble →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/bubble-vs-webflow.html" class="compare-strip">⚖️ Webflow vs Bubble →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе Webflow</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Webflow — профессиональная визуальная платформа для веб-разработки, которая генерирует HTML, CSS и JavaScript производственного качества через интерфейс drag-and-drop дизайнера, позволяя создавать pixel-perfect сайты без написания кода — с полной творческой свободой над каждой деталью дизайна. Платформа занимает нишу между простыми конструкторами сайтов (Squarespace, Wix) и разработкой на заказ (React, Next.js): предлагает больше контроля над дизайном, чем первые, и более низкий порог входа, чем вторая.</p><p style="margin-top:1rem">CMS (система управления контентом) — ключевое преимущество платформы: определяйте пользовательские типы контента (посты блога с конкретными полями, профили сотрудников, кейсы), заполняйте их через визуальный редактор базы данных, а Webflow автоматически генерирует соответствующие страницы коллекций, списки и отдельные страницы элементов с применением ваших шаблонов. Это позволяет создавать сайты с динамическим контентом — портфолио, маркетинговые сайты, корпоративные блоги — без отдельного бэкенда или headless CMS.</p><p style="margin-top:1rem">Экспортируемый HTML/CSS код чистый и прокомментированный, без проприетарной разметки — при миграции с Webflow кодовая база остаётся вашей и полностью переносимой. Режим Editor позволяет нетехническим контент-менеджерам обновлять тексты и изображения, не затрагивая дизайн. Webflow University предоставляет бесплатные обучающие курсы по платформе. Стоимость начинается от $14/месяц для базовых сайтов; план Business за $39/месяц необходим для крупных сайтов и командной работы. Порог вхождения достаточно высок — дизайнерам без знания CSS обычно требуется 20+ часов для достижения продуктивности.</p></div>

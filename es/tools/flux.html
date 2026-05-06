@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Generación de imágenes de alta calidad de código abierto</div>
     </div>
   </div>
-  <a href="/es/compare/midjourney-vs-flux.html" class="compare-strip">⚖️ Flux vs Midjourney →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/es/compare/midjourney-vs-flux.html" class="compare-strip">⚖️ Flux vs Midjourney →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de Flux</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Flux es una familia de modelos de texto a imagen de código abierto desarrollados por Black Forest Labs, fundada por los creadores originales de Stable Diffusion. Desde el lanzamiento original de FLUX.1 a mediados de 2024, los modelos se han posicionado consistentemente en la parte superior de los rankings de calidad de imagen.</p><p style="margin-top:1rem">La generación FLUX.2 se lanzó en noviembre de 2025 e incluye múltiples variantes de modelo: FLUX.2 [dev] (32B parámetros, texto a imagen más edición de imagen), FLUX.2 [pro] (calidad/velocidad equilibrada), FLUX.2 [max] (calidad más alta) y FLUX.2 [flex] (pasos ajustables). FLUX.2 [klein], lanzado en enero de 2026, es un modelo de 4B/9B parámetros que genera imágenes en menos de un segundo en GPUs de consumidor. FLUX Kontext añade generación de imagen consciente del contexto y conversacional.</p><p style="margin-top:1rem">Los pesos del modelo central son de código abierto y gratuitos para descargar. El acceso a API está disponible directamente a través de Black Forest Labs (basado en crédito, ~$0.04/imagen para FLUX.1 Pro) y mediante plataformas de terceros incluyendo fal.ai, Replicate, Cloudflare Workers AI y Azure AI Foundry.</p><p style="margin-top:1rem">El modelo maneja la representación de texto significativamente mejor que la mayoría de alternativas. La velocidad de generación en menos de un segundo de FLUX.2 [klein] lo hace viable para aplicaciones en tiempo real y configuraciones de GPU de consumidor que previamente requerían inferencia en la nube.</p><p style="margin-top:1rem">Limitaciones: los modelos más grandes (FLUX.2 dev con 32B) requieren VRAM significativa para uso local. El precio en APIs administradas se acumula para generación de alto volumen. El ecosistema del modelo es menos maduro que Stable Diffusion en términos de fine-tunes comunitarios.</p><p style="margin-top:1rem">Mejor para desarrolladores, investigadores y usuarios avanzados que desean la más alta calidad de imagen de código abierto sin dependencia de proveedores.</p></div>

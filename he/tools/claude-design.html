@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> עיצובים ויזואליים שנוצרו בעזרת AI, מצגות וגלעדים דרך שיחה</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>אודות Claude Design</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Claude Design הוא כלי עיצוב AI ייעודי מ-Anthropic, שהושק ב-17 באפריל 2026 כתצוגה מקדימה של מחקר תחת Anthropic Labs. זהו מוצר נפרד מ-Claude כללי — מופעל על ידי Claude Opus 4.7 והוא מיוחד מאומן ליצור פלט ויזואלי מעוטר כולל מצגות, דפי אחד, סדרות שקופיות, גלעדים, ודוחות ויזואליים מהנושאות בשפה טבעית.</p><p style="margin-top:1rem">בהפעלה ראשונה, Claude Design מנתח את קוד הבסיס או קבצי העיצוב שלך כדי לבנות מערכת עיצוב — חלץ את צבעי הברנד, הטיפוגרפיה והדפוסי הרכיבים שלך. עיצובים עוקבים תואמים אוטומטית למערכת זו, ויוצרים פלט בעל ברנד עקבי ללא הגדרה ידנית. הייצואים זמינים כ-PDF, URL שניתן לשיתוף, PPTX, או ישירות ל-Canva לעריכה נוספת.</p><p style="margin-top:1rem">יכולות עיקריות כוללות איטרציה עיצוב שיחה (בקש שינויים בשפה פשוטה), יצירת מצגות, יצירת גלעדים אינטראקטיביים, עיצוב דפי אחד ודוחות, וגילוי מערכת ברנד אוטומטי. הכלי מבין כוונות עיצוב במקום דרישה למפרטים מדויקים — תאר מה אתה צריך והוא יוצר ויזואל שלם.</p><p style="margin-top:1rem">תמחור: Claude Design כלול ב-Claude Pro ב-$20 לחודש, Claude Max ב-$100 ו-$200 לחודש, תוכניות Team ו-Enterprise. זה לא זמין ב-Free tier. אין תמחור עצמאי — הגישה דורשת מנוי Claude פעיל.</p><p style="margin-top:1rem">מגבלות: כתצוגה מקדימה של מחקר שהושקה באפריל 2026, Claude Design עדיין בהתפתחות. איכות הפלט יכולה להשתנות בפריסות מסובכות של מספר דפים. זה לא תחליף לכלים מקצועיים של עיצוב כמו Figma לעבודת UI/UX — הוא מצטיין בעיצוב מצגות ומסמכים במקום עיצוב מוצר אינטראקטיבי.</p><p style="margin-top:1rem">מתאים ביותר לאנשי מקצוע הזקוקים למצגות, דוחות ודפי אחד מעוטרים במהירות ללא פתיחת כלי עיצוב — במיוחד לאלה שכבר משתמשים ב-Claude Pro לעבודה אחרת.</p></div>

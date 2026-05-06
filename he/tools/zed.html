@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> עורך קוד AI במהירות אולטימטיבית עם שיתוף פעולה מרובה משחקנים מקומי</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>אודות Zed</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Zed הוא עורך קוד דור הבא שנבנה לחלוטין מאפס ב-Rust, תוך שימוש ב-framework UI בשם GPUI שמואץ ע&quot;י GPU. בשונה מ-VS Code forks כגון Cursor או Windsurf, Zed לא מבוסס על Electron — הוא נבנה מאפס לביצועים. התוצאה היא תגובת keystroke sub-millisecond, הפעלה בפחות משנייה, ועריכה חלקה גם בקובצים גדולים מאוד. Zed הגיע ל-1.0 ב-29 באפריל 2026 לאחר חמש שנים של פיתוח ויש לו 81,700+ כוכבים ב-GitHub.</p><p style="margin-top:1rem">תכונת multiplayer המקומית של Zed ייחודית: מספר מפתחים יכולים לערוך את אותו קובץ בו-זמנית בזמן אמת, דומה ל-Google Docs אך לקוד. החל מ-v1.0, Zed תומך בסוכנים AI במקביל — מספר סוכנים AI יכולים לעבוד על חלקים שונים של ה-codebase בו-זמנית בתוך אותו חלון עורך. מודל Zeta ההקנייה מנהל תכונות AI בתוכנית בתשלום, בעוד BYOK נתמך לתצורות LLM מותאמות אישית.</p><p style="margin-top:1rem">יכולויות מרכזיות כוללות שיתוף פעולה בזמן אמת מקומי ללא פלגינים, סוכנים AI במקביל, תמיכת LSP לכל השפות הגדולות, vim mode, terminal מובנה וצמידות דרך מערכת plugin מבוססת WebAssembly. Zed זמין ב-macOS וב-Linux; תמיכת Windows בתהליך.</p><p style="margin-top:1rem">תמחור: העורך עצמו חינמי וקוד פתוח. תכונות AI משתמשות במערכת credits — חלק מהשימוש כלול בחינם, עם תוכנית בתשלום לשימוש כבד יותר ב-Zed AI. BYOK נתמך לצוותים עם חוזי LLM קיימים.</p><p style="margin-top:1rem">מגבלות: Zed לא יכול להריץ VS Code extensions — אקוסיסטם ה-extensions קטן יותר מ-VS Code או Cursor. תמיכת Windows עדיין בתהליך נכון לאמצע 2026. צוותים שהשקיעו רבות בـ VS Code extensions עלולים למצוא את המעבר יקר.</p><p style="margin-top:1rem">מתאים ביותר למפתחים שנותנים עדיפות ליצועי עורך, שיתוף פעולה בזמן אמת של צוות וארכיטקטורת עורך מודרנית — במיוחד ב-macOS וב-Linux.</p></div>

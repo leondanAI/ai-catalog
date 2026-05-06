@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Edição de imagens, consistência de personagens, influenciadores de IA</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Nano Banana</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Nano Banana é uma plataforma de geração e edição de imagens com IA desenvolvida sobre o modelo Google Gemini 2.5 Flash Image — e sua versão Pro roda no Gemini 3 Pro Image. Ao contrário das ferramentas de texto para imagem que geram do zero, o Nano Banana é especializado em edição em contexto: você faz o upload de uma foto, descreve as alterações em linguagem simples e o modelo as aplica preservando a composição, iluminação e estrutura de cena originais.</p><p style="margin-top:1rem">O recurso de destaque é a consistência de personagens. A maioria das ferramentas de imagem com IA tem dificuldade em manter o mesmo rosto, roupa ou objeto com aparência idêntica em múltiplas edições ou cenas. O Nano Banana foi criado especificamente para resolver isso — tornando-se a ferramenta ideal para criadores de conteúdo seriado, influenciadores de IA, campanhas de marca e pipelines de assets de jogos onde a coerência visual entre imagens é indispensável.</p><p style="margin-top:1rem">O plano gratuito oferece créditos no cadastro sem necessidade de instalação — tudo funciona no navegador. O Nano Banana Pro desbloqueia resolução 4K, edição avançada em múltiplas etapas, renderização nítida de texto e geração em maior volume. Para designers, profissionais de marketing e criadores de conteúdo que precisam de edição de imagens com IA precisa e reproduzível — o Nano Banana entrega resultados que as ferramentas concorrentes consistentemente não conseguem alcançar.</p></div>

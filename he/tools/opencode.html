@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> קידוד CLI בקוד פתוח, סוכן AI בטרמינל, רב-מודלי</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>אודות OpenCode</h2>
     <div class="tool-desc"><p style="margin-top:1rem">OpenCode הוא סוכן קידוד AI בקוד פתוח שנבנה לטרמינל — אלטרנטיבה ברישיון MIT מלא ל-Cursor ול-Windsurf למפתחים שרוצים שליטה מלאה על הכלים שלהם ואת החופש לבחור כל LLM. נכתב ב-Go עם ממשק טרמינל נקי (TUI), הוא משלב סיוע AI ישירות בזרימת העבודה של מפתחים שחיים ב-vim, tmux ושורת פקודה.</p><p style="margin-top:1rem">הפיצ׳ר הבולט הוא גמישות הספקים: מהקופסה, OpenCode תומך בלמעלה מ-75 ספקי LLM — Claude, GPT, Gemini, Grok, DeepSeek, Mistral ורבים אחרים — בנוסף למודלים מקומיים שרצים דרך Ollama לשימוש לא-מקוון מלא. הוא מיישם את Model Context Protocol (MCP), כך שניתן להרחיב יכולות באמצעות כלים חיצוניים. מתוך עיצוב, OpenCode לא שומר את הקוד שלך בשרתים של צד שלישי — הבדל משמעותי למפתחים שעובדים על קודבייסים קנייניים או רגישים.</p><p style="margin-top:1rem">הפרויקט עבר את 140,000 כוכבי GitHub עם 850+ תורמים ו-11,000+ commits, מה שהופך אותו לאחד מהפרויקטים בקוד פתוח הצומחים הכי מהר ב-2026 שמכוונים למפתחים. התוכנית החינמית היא ה-CLI כולו; תוכנית Go האופציונלית ($10/חודש) מוסיפה פיצ׳רי איכות חיים למשתמשים מתקדמים. למפתחים שרוצים חוויית קידוד אגנטית ברמת Cursor ללא נעילה ל-IDE, נעילה לספק או שליחת הקוד לספק LLM יחיד — OpenCode היא האלטרנטיבה הפתוחה האמינה.</p></div>

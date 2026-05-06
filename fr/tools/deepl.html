@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Traduction précise, contenu multilingue</div>
     </div>
   </div>
-  <a href="/fr/compare/deepl-vs-grammarly.html" class="compare-strip">⚖️ DeepL vs Grammarly →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/deepl-vs-grammarly.html" class="compare-strip">⚖️ DeepL vs Grammarly →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos DeepL</h2>
     <div class="tool-desc"><p style="margin-top:1rem">DeepL est largement considéré comme la référence absolue en matière de traduction propulsée par l'IA, surpassant systématiquement Google Translate et Microsoft Translator en termes de nuance, de formulation naturelle et de précision contextuelle — en particulier pour les paires de langues européennes. Fondée à Cologne en 2017, la plateforme prend désormais en charge plus de 30 langues et compte plus de 100 millions d'utilisateurs dans le monde, dont de grandes entreprises comme LinkedIn, Zendesk et Deutsche Bahn.</p><p style="margin-top:1rem">L'architecture de traduction neuronale de DeepL est spécifiquement entraînée pour préserver le sens, le ton et le registre entre les langues — et non pas seulement convertir des mots. Le résultat se lit comme s'il avait été rédigé par un locuteur natif plutôt que traduit par une machine. La version gratuite permet de traiter 5 000 caractères par traduction dans le navigateur, ce qui est suffisant pour la plupart des usages quotidiens. DeepL Pro (à partir de 8,99 $/mois) supprime les limites de caractères, permet la traduction de documents (Word, PowerPoint, PDF) et offre un accès à l'API.</p><p style="margin-top:1rem">DeepL Write, inclus avec Pro, est un outil distinct qui améliore la grammaire, la clarté et le style d'un texte dans votre langue maternelle — fonctionnant comme Grammarly, mais avec une meilleure maîtrise du ton et du registre. L'API est utilisée par des milliers de développeurs pour créer des applications multilingues, des outils de support client et des pipelines de localisation de contenu. La principale limitation reste la couverture linguistique : plus de 30 langues, soit bien moins que les 130+ de Google Translate, sans prise en charge de nombreuses langues africaines, d'Asie du Sud-Est ou du Pacifique.</p></div>

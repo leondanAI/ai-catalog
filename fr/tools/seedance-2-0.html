@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Vidéo IA, génération audio-vidéo conjointe, synchronisation labiale</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Seedance 2.0</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Seedance 2.0 est le modèle vidéo IA de nouvelle génération de ByteDance et le premier générateur vidéo commercial conçu autour d'une génération audio-vidéo multimodale unifiée — le modèle prend en entrée du texte, des images, de l'audio et de la vidéo simultanément et produit une sortie synchronisée plutôt que de traiter l'audio comme une étape de post-traitement. Comblant le vide laissé par Sora, il a gagné une traction significative en 2026.</p><p style="margin-top:1rem">La fonctionnalité phare est la synchronisation labiale au niveau du phonème en 8+ langues : lors de la génération de dialogues, les mouvements de la bouche s'alignent précisément avec les phonèmes prononcés, et pas seulement avec les pics grossiers de la forme d'onde — le rendant utilisable pour les contenus centrés sur des personnages où les répliques parlées doivent paraître crédibles. Chaque génération produit des vidéos jusqu'à 15 secondes en 1080p, et dans cette fenêtre, le modèle peut restituer plusieurs plans avec des coupes et des transitions naturelles, de sorte qu'une seule sortie peut ressembler à une séquence montée plutôt qu'à un clip continu unique.</p><p style="margin-top:1rem">Seedance 2.0 prend en charge des images, de l'audio et de la vidéo comme références, donnant aux créateurs un contrôle sur la performance, l'éclairage, les ombres et les mouvements de caméra. Les tarifs vont d'un niveau gratuit à des plans entreprise jusqu'à 167 $/mois, et le modèle est également accessible via l'API fal.ai pour les développeurs qui construisent des pipelines vidéo. Après la fermeture de Sora par OpenAI en mars 2026, Seedance 2.0 est devenu l'une des options les plus crédibles pour les créateurs ayant besoin d'une sortie audio-vidéo synchronisée avec une forte cohérence narrative.</p></div>

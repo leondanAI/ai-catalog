@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> Визуальный конструктор мобильных и веб-приложений, экспортирующий чистый код Flutter</div>
     </div>
   </div>
-  <a href="/ru/compare/flutterflow-vs-bubble.html" class="compare-strip">⚖️ FlutterFlow vs Bubble →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/flutterflow-vs-bubble.html" class="compare-strip">⚖️ FlutterFlow vs Bubble →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе FlutterFlow</h2>
     <div class="tool-desc"><p style="margin-top:1rem">FlutterFlow — это визуальный конструктор приложений, который генерирует готовый к производству код Flutter/Dart для приложений iOS, Android и веб. В отличие от других no-code инструментов, которые привязывают пользователей к проприетарной среде выполнения, FlutterFlow создает реальный, экспортируемый код Flutter — это означает, что команды могут начать с визуального подхода и перейти к разработке на основе кода, когда сложность этого требует.</p><p style="margin-top:1rem">Платформа включает визуальный редактор UI с drag-and-drop компонентами, систему управления состоянием, интеграции с API и бэкендом (Firebase, Supabase, REST API), построитель логики для условных действий и AI функции, которые генерируют компоненты и страницы из описаний на естественном языке. FlutterFlow AI (на базе Claude) может создавать полные экраны приложения из текстовых подсказок.</p><p style="margin-top:1rem">Основные возможности включают визуальное построение UI на Flutter, экспорт готового к производству кода Dart, встроенную интеграцию Firebase и Supabase, интеграцию REST API, управление состоянием, FlutterFlow AI для генерации приложений на основе естественного языка, систему пользовательских действий для написания кода на Dart при необходимости и прямое развертывание в TestFlight/Play Store.</p><p style="margin-top:1rem">Цены: Бесплатный план предоставляет полные возможности построения с развертыванием на поддомене FlutterFlow (без экспорта кода). Basic за $39 в месяц добавляет экспорт кода и пользовательский домен. Growth за $80 в месяц добавляет синхронизацию GitHub и командные функции. Business за $150 в месяц обеспечивает приоритетную поддержку и продвинутое управление командой.</p><p style="margin-top:1rem">Ограничения: Экспорт кода требует плана Basic или выше — это ключевое отличие от других no-code инструментов требует оплаты. Построение сложных пользовательских взаимодействий иногда требует написания собственного кода на Dart, что снижает полноту no-code подхода. Знание Flutter значительно помогает при доработке экспортированного кода.</p><p style="margin-top:1rem">Наиболее подходит для разработчиков мобильных приложений, которые хотят ускорить разработку UI, агентств, создающих клиентские мобильные приложения, и предпринимателей, которые хотят начать с no-code подхода и имеют четкую стратегию перехода к коду.</p></div>

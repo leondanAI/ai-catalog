@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> קוד אוטונומי, פיתוח full-stack, ניפוי באגים</div>
     </div>
   </div>
-  <a href="/he/compare/devin-vs-copilot-studio.html" class="compare-strip">⚖️ Devin vs Copilot Studio →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/he/compare/devin-vs-copilot-studio.html" class="compare-strip">⚖️ Devin vs Copilot Studio →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>אודות Devin</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Devin היא מהנדסת AI אוטונומית לחלוטין שנבנתה על ידי Cognition AI המטפלת במשימות פיתוח מקצה לקצה: הוספת מערכות תשלום, תיקון צינורות CI/CD, הסבת בסיסי נתונים וכתיבת בדיקות ללא התערבות אנושית. היא פועלת בסביבה מבודדת עם טרמינל, דפדפן ועורך קוד משלה.</p><p style="margin-top:1rem">Devin 2.0 הושקה ב-2025 וייצגה קפיצה משמעותית — השלמת 83% יותר משימות של מפתחים זוניים לכל יחידת חישוב בהשוואה ל-v1. Cognition גם הורידה את מחיר הכניסה מ-$500/חודש ל-$20/חודש, מה שהעניקה גישה מעבר לתקציבים ארגוניים.</p><p style="margin-top:1rem">התמחור מבוסס על ACU (Agent Compute Units), כאשר 1 ACU שווה בערך 15 דקות של עבודה פעילה של סוכן. תוכנית Core עולה $20/חודש עם ACUs ב-$2.25 כל אחד. תוכנית Team היא $500/חודש וכוללת 250 ACUs ב-$2.00 כל אחד. התמחור Enterprise מותאם אישית. משימה מורכבת של מספר שעות יכולה לעלות $10–30 ב-ACUs על גבי המנוי.</p><p style="margin-top:1rem">המבחין המרכזי הוא אוטונומיה אמיתית. בניגוד לעוזרי קוד AI המציעים השלמות, Devin לוקחת תיאור משימה ומריצה את המחזור המלא באופן עצמאי — קוראת תיעוד, כותבת קוד, מריצה בדיקות, מתקנת כשלים ופותחת בקשת pull. היא משולבת עם GitHub, Slack ו-Jira לשיבוץ זרימת עבודה אמיתי.</p><p style="margin-top:1rem">הגבלות: Devin עדיין מתקשה עם דרישות עמומות עמוקות ו-codebases ישנים גדולים ללא תיעוד טוב. היא מתבצעת הטובה ביותר על משימות בעלות היקף טוב ועצמאיות. מודל ACU יכול להיות יקר למשימות חקרוניות כאשר הסוכן הולך בנתיבים שגויים.</p><p style="margin-top:1rem">הטוב ביותר עבור צוי הנדסה המעוניינים להעביר משימות ברמת זוניים — תיקוני באגים, הוספות תכונות, כיסוי בדיקה, תיעוד — וקבלת בקשת pull חזרה במקום הצעת קוד.</p></div>

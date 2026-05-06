@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> Ультра-быстрый AI редактор кода с встроенной многопользовательской совместной работой</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе Zed</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Zed — это редактор кода нового поколения, полностью написанный с нуля на Rust с использованием пользовательского фреймворка GPU-ускоренного интерфейса GPUI. В отличие от форков VS Code, таких как Cursor или Windsurf, Zed не основан на Electron — он был построен с нуля для производительности. Результат — отклик в миллисекунды, запуск менее чем за секунду и плавное редактирование даже очень больших файлов. Zed достиг версии 1.0 29 апреля 2026 после пяти лет разработки и имеет более 81 700 звёзд на GitHub.</p><p style="margin-top:1rem">Уникальная функция многопользовательской совместной работы Zed позволяет нескольким разработчикам редактировать один файл одновременно в реальном времени, как Google Docs, но для кода. Начиная с v1.0, Zed поддерживает одновременную работу AI агентов — несколько AI агентов могут одновременно работать на разными частями кодовой базы в одном окне редактора. Фирменная модель Zeta обеспечивает AI функции в платном плане, при этом поддерживается BYOK для пользовательских конфигураций LLM.</p><p style="margin-top:1rem">Основные возможности включают встроенную совместную работу в реальном времени без плагинов, одновременных AI агентов, поддержку LSP для всех основных языков, режим vim, встроенный терминал и расширяемость через WASM-систему плагинов. Zed доступен на macOS и Linux; поддержка Windows находится в разработке.</p><p style="margin-top:1rem">Цены: Сам редактор бесплатный и открытым исходным кодом. AI функции используют систему кредитов — некоторое использование включено бесплатно, с платным планом для большего использования Zed AI. BYOK поддерживается для команд с существующими контрактами LLM.</p><p style="margin-top:1rem">Ограничения: Zed не может запускать расширения VS Code — экосистема расширений меньше, чем у VS Code или Cursor. Поддержка Windows всё ещё в разработке на середину 2026. Команды, активно использующие расширения VS Code, могут столкнуться с высокими затратами на переход.</p><p style="margin-top:1rem">Лучше всего подходит для разработчиков, которые отдают приоритет производительности редактора, совместной работе команды в реальном времени и современной архитектуре редактора — особенно на macOS и Linux.</p></div>

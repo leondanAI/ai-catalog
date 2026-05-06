@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Підходить для:</strong> Автономне кодування, full-stack розробка, налагодження</div>
     </div>
   </div>
-  <a href="/ua/compare/devin-vs-copilot-studio.html" class="compare-strip">⚖️ Devin vs Copilot Studio →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ua/compare/devin-vs-copilot-studio.html" class="compare-strip">⚖️ Devin vs Copilot Studio →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Devin</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Devin — це повністю автономний AI інженер-програміст, розроблений Cognition AI, який обробляє наскрізні завдання розробки: додавання платіжних систем, виправлення CI/CD конвеєрів, міграцію баз даних та написання тестів без втручання людини. Працює в ізольованому середовищі з власним терміналом, браузером та редактором коду.</p><p style="margin-top:1rem">Devin 2.0 запущений у 2025 році і став великим кроком вперед — виконав на 83% більше завдань junior-розробника на одиницю обчислювальних ресурсів порівняно з v1. Cognition одночасно знизила вступну ціну з $500/місяць до $20/місяць, зробивши її доступною поза enterprise бюджетами.</p><p style="margin-top:1rem">Ціноутворення базується на ACU (Agent Compute Units), де 1 ACU дорівнює приблизно 15 хвилинам активної роботи агента. Базовий план коштує $20/місяць з ACU по $2,25 кожен. Team план — $500/місяць і включає 250 ACU по $2,00 кожен. Enterprise ціна розраховується індивідуально. Складне багатигодинне завдання може коштувати $10–30 в ACU поверх підписки.</p><p style="margin-top:1rem">Ключова відмінність — справжня автономія. На відміну від AI помічників кодування, які пропонують доповнення, Devin отримує описання завдання і самостійно виконує повний цикл — читає документацію, пише код, запускає тести, виправляє помилки та відкриває pull request. Інтегрується з GitHub, Slack та Jira для реальної інтеграції в робочий процес.</p><p style="margin-top:1rem">Омеження: Devin все ще важко працює з глибоко неоднозначними вимогами та великими legacy-кодами без хорошої документації. Найкраще працює на добре визначених, самостійних завданнях. Модель ACU може стати дорогою для дослідницької роботи, коли агент йде неправильним шляхом.</p><p style="margin-top:1rem">Найкраще підходить для команд розробників, які хочуть делегувати завдання junior-рівня — виправлення помилок, додавання функцій, покриття тестами, документацію — і отримати pull request замість пропозиції коду.</p></div>

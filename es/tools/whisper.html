@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Herramienta de desarrollador para transcripción de voz a texto de código abierto, no un producto para consumidores</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de Whisper</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Whisper es el modelo de reconocimiento de voz de código abierto de OpenAI, lanzado en septiembre de 2022 y actualizado a Whisper v3 Large a finales de 2023. Se entrena con 680,000 horas de audio web multilingüe y logra precisión de transcripción de última generación en 99 idiomas, con rendimiento particularmente sólido en discurso no inglés en comparación con servicios comerciales competidores.</p><p style="margin-top:1rem">Whisper es una herramienta orientada a desarrolladores — se distribuye como un paquete de Python sin aplicación orientada al consumidor. Los desarrolladores lo ejecutan localmente en su propio hardware (GPU recomendada para velocidad), lo integran a través de la API de OpenAI, o lo utilizan a través de envolturas de terceros que agregan interfaces de usuario. Muchas de las herramientas de transcripción en este catálogo (Descript, Otter.ai) utilizan Whisper o modelos derivados de Whisper como motor de transcripción subyacente.</p><p style="margin-top:1rem">Las capacidades clave incluyen transcripción de voz a texto en 99 idiomas, detección automática de idioma, traducción al inglés desde cualquier idioma compatible, salida a nivel de marca de tiempo (palabra y segmento), y múltiples variantes de tamaño de modelo desde tiny (más rápido) hasta large-v3 (más preciso). El modelo large-v3 logra precisión casi humana en audio limpio en idiomas principales.</p><p style="margin-top:1rem">Precios: El modelo en sí es gratuito y de código abierto (licencia MIT) — descargable desde GitHub y ejecutable en hardware local. La API Whisper alojada de OpenAI cuesta $0.006 por minuto de audio, lo que la convierte en una de las APIs de transcripción comercial más asequibles. No hay suscripción — paga solo por lo que utiliza.</p><p style="margin-top:1rem">Limitaciones: Whisper no tiene interfaz orientada al consumidor — los usuarios necesitan conocimientos técnicos para ejecutarlo localmente o usar una envoltura de terceros. La inferencia local requiere RAM significativa y se beneficia sustancialmente de una GPU. La API se basa en el uso sin panel de control de uso integrado en un producto para consumidores.</p><p style="margin-top:1rem">Mejor adaptado para desarrolladores que integran transcripción en aplicaciones, investigadores que necesitan transcripción multilingüe de alta precisión, y usuarios técnicamente capacitados cómodos ejecutando scripts de Python o usando la API.</p></div>

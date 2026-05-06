@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> Приватная разработка с любой LLM</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе Continue.dev</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Continue.dev — это расширение IDE с открытым исходным кодом (MIT) для VS Code и JetBrains, которое бесплатно добавляет AI автодополнение, встроенное редактирование, чат и режим агента для любого разработчика.</p><p style="margin-top:1rem">Оно не зависит от модели: настройте его на использование любой LLM через API (Anthropic, OpenAI, Gemini, AWS Bedrock) или запускайте локальные модели бесплатно через Ollama. Код никогда не отправляется на серверы Continue, если вы не выберете командные функции Hub.</p><p style="margin-top:1rem">Continue 1.0 представила Hub — платформу для обмена правилами, агентами и конфигурациями маршрутизации моделей в командах. Платная версия Hub добавляет Mission Control с метриками, отслеживающими запуски рабочих процессов, результаты PR и тренды автоматизации в организации. Режим агента обрабатывает рефакторинг нескольких файлов и крупномасштабные модификации кода с любой настроенной моделью.</p><p style="margin-top:1rem">Ключевые возможности включают автодополнение в реальном времени, встроенное редактирование, инициируемое комментариями, интерфейс чата с контекстом кодовой базы и полностью кастомизируемые правила и промпты через YAML-конфигурации. Расширение активно поддерживается с частыми обновлениями и большим сообществом контрибьюторов.</p><p style="margin-top:1rem">Цены: расширение для VS Code и JetBrains полностью бесплатно при использовании ваших API-ключей. Hub Team стоит примерно $10 в месяц и включает общие приватные агенты, аналитику команды и контроль доступа. Hub Company и Enterprise добавляют SSO, локальное развертывание и функции соответствия требованиям по пользовательским ценам. Расходы на API LLM оплачиваются отдельно непосредственно вашему поставщику.</p><p style="margin-top:1rem">Ограничения: настройка требует технических знаний для конфигурации, управления API-ключами и редактирования YAML. Нет встроенной подписки на модель — расходы на LLM управляются отдельно. UX менее отполирован, чем в коммерческих инструментах Cursor или Copilot. Командные функции Hub находятся на относительно ранней стадии.</p><p style="margin-top:1rem">Наилучше подходит для разработчиков и команд, которым нужна максимальная конфиденциальность, гибкость моделей и отсутствие привязки к поставщику — особенно для тех, кто располагает существующей LLM-инфраструктурой или предпочитает запускать локальные модели.</p></div>

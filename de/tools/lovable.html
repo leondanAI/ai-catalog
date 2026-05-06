@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal für:</strong> AI Vibe Coding — vollständige Full-Stack-Web-Apps aus natürlichsprachigen Prompts generieren</div>
     </div>
   </div>
-  <a href="/de/compare/lovable-vs-bubble.html" class="compare-strip">⚖️ Lovable vs Bubble →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/de/compare/lovable-vs-bubble.html" class="compare-strip">⚖️ Lovable vs Bubble →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Über Lovable</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Lovable ist ein KI-gestützter Full-Stack-Web-Application-Builder, der vollständige React-Anwendungen — mit Supabase Backend, Authentifizierung und Datenbank — aus natürlichsprachigen Beschreibungen generiert. Das Tool etablierte sich 2025 als eines der am schnellsten wachsenden Developer Tools und repräsentiert den Trend des 'Vibe Coding' — das Generieren und Iterieren von vollständigen Anwendungen durch Konversation.</p><p style="margin-top:1rem">Der Workflow ist gesprächsorientiert: Beschreiben Sie eine Funktion, Lovable generiert den Code, stellt eine Live-Preview-URL zur Verfügung und wartet auf Feedback. Iterationen erfolgen durch Beschreibungen von Änderungen in natürlicher Sprache — 'füge oben eine Suchleiste hinzu', 'mache das Card-Grid zu 3 Spalten auf Desktop', 'füge Benutzerauthentifizierung hinzu'. Der generierte Code ist echter React/TypeScript, der exportiert, auf Custom Domains bereitgestellt oder mit GitHub synchronisiert werden kann.</p><p style="margin-top:1rem">Schlüsselfunktionen umfassen natürlichsprachige Full-Stack-App-Generierung, React- und TypeScript-Code-Generierung, native Supabase-Integration (Datenbank, Auth, Storage), Live-Preview-URLs für jede Iteration, GitHub Sync, Custom-Domain-Deployment, Stripe-Zahlungsintegration und einen visuellen Editor für Design-Anpassungen.</p><p style="margin-top:1rem">Preisgestaltung: Kostenlos mit 5 Generierungsguthaben pro Tag. Starter mit $20/Monat bietet 100 Guthaben monatlich und Custom Domains. Pro mit $25/Monat bietet 200 Guthaben monatlich und alle Features. Zusätzliche Gutschein-Pakete sind käuflich. Teams und Enterprise Preise sind verfügbar.</p><p style="margin-top:1rem">Einschränkungen: Generierungsguthaben werden pro KI-Anfrage verbraucht — komplexe Features und iteratives Debugging können Guthaben schnell aufbrauchen. Generierter Code ist zwar funktional, erfordert aber oft Developer-Review und Cleanup für Production-Qualitätsstandards. Komplexe Enterprise-Anwendungsmuster liegen außerhalb der aktuellen Möglichkeiten.</p><p style="margin-top:1rem">Am besten geeignet für Unternehmer, Designer und Product Manager, die funktionale Web-Anwendungen ohne Code-Schreiben bauen und prototypisieren möchten — und für Entwickler, die Scaffolding und Prototyping beschleunigen möchten.</p></div>

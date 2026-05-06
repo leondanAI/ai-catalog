@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> IDE מבוסס AI, ריפקטור קוד</div>
     </div>
   </div>
-  <a href="/he/compare/cursor-vs-copilot.html" class="compare-strip">⚖️ Cursor vs GitHub Copilot →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/he/compare/cursor-vs-copilot.html" class="compare-strip">⚖️ Cursor vs GitHub Copilot →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>אודות Cursor</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Cursor הוא עורך קוד ילידי בינה מלאכותית הבנוי על גבי VS Code, שתוכנן מהיסוד עבור מפתחים שרוצים בינה מלאכותית משולבת עמוקות בזרימת העבודה שלהם ולא מודול מוסף. נכון לשנת 2026, הוא חצה $1 מיליארד בהכנסות שנתיות עם למעלה ממיליון מפתחים משלמים — מסלול צמיחה יוצא דופן לכלי פיתוח.</p><p style="margin-top:1rem">מה שמייחד את Cursor הוא הקשר מלא של בסיס הקוד. בשונה מ-GitHub Copilot שפועל בעיקר על הקובץ הנוכחי, Cursor מבין את כל המאגר שלך. אתה יכול לבקש ממנו לעצב מחדש פונקציה על פני קבצים מרובים, להסביר מדוע שגיאה מתרחשת שלוש שכבות עמוק, או לממש פיצ'ר חדש מקצה לקצה — והוא יפעל על כל בסיס הקוד ולא רק על מה שפתוח כרגע.</p><p style="margin-top:1rem">Cursor תומך במספר מודלי בינה מלאכותית חזיתיים בו זמנית: Claude Opus 4.7, GPT-5.5 ו-Gemini, הניתנים להחלפה לפי משימה. Cloud Agents מריצים משימות תכנות ברקע בזמן שאתה עובד על משהו אחר. חברות כמו Stripe, OpenAI, Figma ו-Adobe משתמשות ב-Cursor ככלי פיתוח סטנדרטי.</p><p style="margin-top:1rem">התמחור השתנה משמעותית ביוני 2025, עבר ממודל פשוט מבוסס בקשות למערכת קרדיטים הקשורה לצריכת טוקן בפועל. זה גרם לתסכול משמעותי בקהילה — העלויות יכלו לזנק באופן בלתי צפוי. Cursor הוציא התנצלות והחזר כספי. נכון לשנת 2026, התוכניות נעות מחינמי (Hobby) עד Pro ב-$20/חודש, Pro+ ב-$60 ו-Ultra ב-$200. צוותים משלמים $40 למושב.</p><p style="margin-top:1rem">עלות ההגירה מ-VS Code היא אמיתית — צפה ל-4 עד 8 שעות למפתח. ו-Cursor עולה פי שניים מ-GitHub Copilot ברמה הבסיסית. אך למפתחים העובדים עם עבודה מורכבת על קבצים מרובים, היכולות המודעות לבסיס הקוד מצדיקות את ההפרש.</p><p style="margin-top:1rem">Cursor 3 הושק באפריל 2026 עם Composer 2 — מודל קידוד קנייני שאומן מאפס על ידי Anysphere (לא fine-tune). הוא קיבל ציון 61.3 ב-CursorBench (+39% לעומת המודל הקודם) ורץ ב-200+ טוקנים לשנייה עם kernel-ים ייחודיים ל-GPU. Cursor כעת תומך באופן רשמי גם ב-JetBrains IDEs (IntelliJ, PyCharm, WebStorm) בנוסף ל-VS Code, וההערכה השווי הגיעה ל-$60 מיליארד עד פברואר 2026.</p></div>

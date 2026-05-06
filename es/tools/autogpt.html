@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Tareas autónomas, agentes de IA de código abierto</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de AutoGPT</h2>
     <div class="tool-desc"><p style="margin-top:1rem">AutoGPT fue uno de los primeros agentes de IA completamente autónomos e impulsó el movimiento de 'IA agéntica' a principios de 2023. Dado un objetivo de alto nivel en lenguaje natural, divide la tarea de forma autónoma en subtareas, busca en la web, escribe y ejecuta código, lee y escribe archivos, e itera hasta completar el objetivo, todo sin intervención humana en cada paso.</p><p style="margin-top:1rem">El proyecto es completamente de código abierto con el código disponible en GitHub (más de 160.000 estrellas), lo que permite ejecutarlo de forma gratuita con tus propias claves de API. La arquitectura es modular: AutoGPT puede ampliarse con plugins personalizados para navegación web, acceso a bases de datos, generación de imágenes y más. La versión alojada en agpt.co ofrece una interfaz web para ejecutar agentes sin configuración local.</p><p style="margin-top:1rem">En la práctica, AutoGPT funciona mejor con tareas bien definidas y acotadas: resúmenes de investigación, generación de código para funciones específicas, borradores de contenido o pipelines de procesamiento de datos. Se vuelve poco fiable en tareas abiertas o de muy largo alcance, donde puede entrar en bucles, alucinar resultados intermedios o acumular errores a lo largo de muchos pasos. Requiere una clave de API de OpenAI con saldo y los costes pueden aumentar rápidamente en ejecuciones largas del agente. Para flujos de trabajo agénticos en producción, plataformas como n8n o Relevance AI ofrecen una ejecución más fiable con mejor manejo de errores.</p></div>

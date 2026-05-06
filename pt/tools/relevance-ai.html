@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Equipes multi-agentes, bots de vendas e suporte</div>
     </div>
   </div>
-  <a href="/pt/compare/relevance-ai-vs-copilot-studio.html" class="compare-strip">⚖️ Relevance AI vs Copilot Studio →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/pt/compare/relevance-ai-vs-copilot-studio.html" class="compare-strip">⚖️ Relevance AI vs Copilot Studio →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Relevance AI</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Relevance AI é uma plataforma sem código para construir e implantar agentes de IA e equipes multi-agentes. Sua especialidade é orquestração multi-agentes — sistemas onde agentes especializados (um pesquisador, um redator, um revisor de QA) colaboram para completar fluxos de trabalho complexos que um único agente não conseguiria lidar de forma confiável.</p><p style="margin-top:1rem">Em setembro de 2025, Relevance AI reformulou seu preço, dividindo custos em dois componentes: Actions (o que os agentes fazem) e Vendor Credits (custos do modelo, repassados sem margem). Planos pagos permitem trazer suas próprias chaves de API (BYOK) para contornar vendor credits completamente, reduzindo custos para usuários de alto volume. Camadas atuais: Free (200 actions/mês + 1.000 vendor credits no cadastro), Pro ($19/assento/mês), Team ($234/assento/mês), Enterprise (customizado).</p><p style="margin-top:1rem">A plataforma inclui um construtor visual de fluxos de trabalho, biblioteca de ferramentas com 100+ capacidades de agentes pré-construídas e ajuste fino em documentos específicos da empresa. Os agentes se conectam a sistemas CRM, bancos de dados, Slack e email. A orquestração multi-agentes trata delegação de tarefas, agregação de resultados e verificação de qualidade automaticamente.</p><p style="margin-top:1rem">Relevance AI tem como alvo equipes de operações e RevOps que precisam de agentes manipulando processos comerciais reais — pesquisa de prospects, geração de propostas, triagem de tickets de suporte — não apenas resposta a perguntas simples.</p><p style="margin-top:1rem">Limitações: curva de aprendizado mais acentuada que Lindy para automação simples. O plano Team a $234/assento é caro para pequenas equipes. O modelo de duas moedas pode confundir novos usuários.</p><p style="margin-top:1rem">Melhor para equipes de operações de receita, automação de marketing e suporte que precisam de fluxos de trabalho multi-agentes manipulando processos empresariais complexos e multi-etapas.</p></div>

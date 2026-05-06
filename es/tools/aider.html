@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Programador de IA para terminal con commits automáticos en git</div>
     </div>
   </div>
-  <a href="/es/compare/aider-vs-github-copilot.html" class="compare-strip">⚖️ Aider vs GitHub Copilot →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/es/compare/aider-vs-github-copilot.html" class="compare-strip">⚖️ Aider vs GitHub Copilot →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de Aider</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Aider es un programador de IA de código abierto basado en Python que se ejecuta completamente en la terminal. Su característica definitoria es la operación nativa con git: cada cambio que realiza la IA se confirma automáticamente con un mensaje de commit descriptivo, permitiendo usar git diff, git log y git revert para auditar o deshacer cualquier modificación de IA. Esto lo hace único y seguro para bases de código de producción donde el seguimiento de cambios es importante.</p><p style="margin-top:1rem">La herramienta procesa 15 mil millones de tokens por semana en su base de usuarios a principios de 2026. Aider construye un mapa del repositorio — un índice semántico de todo el código — permitiendo ediciones precisas en múltiples archivos en proyectos grandes. Se conecta a cualquier LLM: Claude Sonnet, GPT-4o, Gemini, DeepSeek, modelos locales Ollama, y docenas de proveedores a través de OpenRouter. La comunidad de código abierto publica actualizaciones frecuentes.</p><p style="margin-top:1rem">Las capacidades clave incluyen commits automáticos de git para cada cambio de IA, edición de múltiples archivos en bases de código grandes a través del mapa del repositorio, modo de entrada de voz, soporte de imágenes en el editor para depuración visual, y un modo de vigilancia que responde a comentarios especiales en tu código. Aider funciona en cualquier directorio sin plugins IDE ni configuración más allá de una clave API.</p><p style="margin-top:1rem">Precio: Aider es completamente gratuito y de código abierto. Solo pagas por llamadas a API del LLM a tu proveedor elegido. Ejecutar en modelos locales vía Ollama no tiene costo más allá del hardware.</p><p style="margin-top:1rem">Limitaciones: Aider es solo terminal — no hay GUI, extensión IDE o interfaz de navegador. La configuración requiere instalar vía pip y configurar una clave API. Como todas las herramientas BYOK, los costos del LLM se pagan por separado.</p><p style="margin-top:1rem">Más adecuado para desarrolladores que viven en la terminal y quieren un programador de IA con responsabilidad git completa — donde cada cambio de IA se rastrea, revisa y revierte.</p></div>

@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal für:</strong> AI-gestützte UI/UX-Gestaltung und interaktive Prototypenerstellung in Figma</div>
     </div>
   </div>
-  <a href="/de/compare/figma-ai-vs-canva-ai.html" class="compare-strip">⚖️ Figma AI vs Canva AI →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/de/compare/figma-ai-vs-canva-ai.html" class="compare-strip">⚖️ Figma AI vs Canva AI →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Über Figma AI</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Figma AI bezieht sich auf die Suite von AI-Funktionen, die direkt in Figmas Design-Plattform integriert sind und von über 5 Millionen aktiven Design-Profis verwendet wird. Die Flaggschiff-AI-Funktion ist Figma Make — eingeführt 2026 — die es Designern ermöglicht, eine UI in natürlicher Sprache zu beschreiben und einen funktionalen interaktiven Prototyp mit Datenbankanbindung über Supabase-Integration zu erhalten. Dies verschiebt Figma von einem statischen Design-Tool hin zu einer AI-nativen Produktentwicklungsumgebung.</p><p style="margin-top:1rem">Figma erwarb Diagram (Hersteller des Magician AI Plugins) und integrierte diese Funktionen nativ in Figma AI, einschließlich AI-Bildgenerierung und -bearbeitung direkt auf der Arbeitsfläche, AI-gestützte Layer-Umbenennung, intelligente Komponentenvorschläge und AI-Suche über Design-Assets. Die Code-Generierung übersetzt Figma-Designs in produktionsreife React-, HTML- oder CSS-Code.</p><p style="margin-top:1rem">Schlüsselfunktionen umfassen Figma Make (Text zu interaktivem Prototyp), AI-Bildgenerierung und -bearbeitung, Auto-Layout-Vorschläge, intelligente Komponentenabstimmung, AI-Layer-Umbenennung, Codebasis-bewusste Generierung und Supabase-Datenbankanbindung für datengesteuerte Prototypen.</p><p style="margin-top:1rem">Preisgestaltung: Starter-Plan ist kostenlos mit begrenzten monatlichen AI-Credits. Professional bei $15 pro Benutzer pro Monat (jährlich) enthält 500 AI-Credits pro Monat. Organization bei $55 pro Benutzer pro Monat enthält 2.000 Credits. Enterprise bei $90 pro Benutzer pro Monat enthält 4.250 Credits. Zusätzliche AI-Credit-Pakete und Pay-as-you-go-Credits bei $0,03 pro Credit sind ab Q2 2026 verfügbar.</p><p style="margin-top:1rem">Einschränkungen: AI-Credits werden über alle AI-Funktionen verteilt und können bei Teams mit intensiver generativer Arbeit schnell aufgebraucht sein. Figma Make-Ausgaben erfordern Entwickler-Überprüfung vor Produktiveinsatz. Die Plattform ist nur webbasiert, was bei großen komplexen Dateien langsam sein kann.</p><p style="margin-top:1rem">Am besten geeignet für UI/UX-Designer und Produktteams, die AI-Unterstützung in ihren bestehenden Figma-Workflow integriert haben möchten, besonders für schnelle Prototypenerstellung und Design-zu-Code-Ausgabe.</p></div>

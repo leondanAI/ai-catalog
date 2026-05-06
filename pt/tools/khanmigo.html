@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Tutoria K-12, matemática, ciências</div>
     </div>
   </div>
-  <a href="/pt/compare/khanmigo-vs-photomath.html" class="compare-strip">⚖️ Khanmigo vs Photomath →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/pt/compare/khanmigo-vs-photomath.html" class="compare-strip">⚖️ Khanmigo vs Photomath →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Khanmigo</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Khanmigo é o tutor de IA da Khan Academy desenvolvido com base no GPT-4, projetado em torno do método socrático: em vez de fornecer respostas diretamente aos alunos, ele faz perguntas orientadoras que levam os estudantes a descobrirem a solução por si mesmos. Essa abordagem pedagógica reflete décadas de pesquisa mostrando que a resolução ativa de problemas produz melhores resultados de aprendizado a longo prazo do que o consumo passivo de respostas.</p><p style="margin-top:1rem">A plataforma atende tanto alunos quanto professores. Para os alunos, o Khanmigo percorre todo o currículo K-12 da Khan Academy — matemática, ciências, computação, história, economia, gramática — como um tutor paciente e adaptativo que ajusta a dificuldade, identifica conceitos equivocados e celebra o progresso. Para os professores, o Khanmigo oferece ferramentas para gerar planos de aula, criar tarefas diferenciadas em múltiplos níveis de dificuldade, fornecer feedback de redações com rubricas detalhadas e redigir comunicados para os pais.</p><p style="margin-top:1rem">O Khanmigo está disponível por meio da Khan Academy a $4/mês para estudantes individuais (com planos familiares disponíveis), com acesso gratuito oferecido por meio de programas de parceria escolar e bolsas para alunos de famílias de baixa renda. A recusa deliberada em fornecer respostas diretas — que é pedagogicamente fundamentada — pode frustrar alunos que desejam concluir tarefas rapidamente em vez de aprender. Pais e professores geralmente veem essa limitação de forma positiva. A profundidade e a abrangência da integração com o currículo da Khan Academy tornam o Khanmigo muito mais educacionalmente embasado do que chatbots de IA de uso geral utilizados para ajuda com tarefas escolares.</p></div>

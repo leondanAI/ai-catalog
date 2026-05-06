@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Підходить для:</strong> AI UX дизайн з макетами, потоками екранів та прогностичними тепловими картами</div>
     </div>
   </div>
-  <a href="/ua/compare/uxpilot-vs-figma-ai.html" class="compare-strip">⚖️ UXPilot vs Figma AI →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ua/compare/uxpilot-vs-figma-ai.html" class="compare-strip">⚖️ UXPilot vs Figma AI →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Про сервіс UXPilot</h2>
     <div class="tool-desc"><p style="margin-top:1rem">UXPilot — це AI-орієнтований інструмент UX дизайну, який генерує макети, UI екрани та повні потоки екранів з текстових запитів. Він орієнтований на UX дизайнерів та продуктові команди, які хочуть прискорити фазу прототипування без початку з чистого аркуша. Плагін Figma інтегрує AI генерацію безпосередньо в існуючі робочі процеси Figma.</p><p style="margin-top:1rem">Інструмент генерує кілька варіацій екранів з одного запиту, дозволяючи дизайнерам вибрати та ітерувати напрямок, який найкраще відповідає їхнім потребам. Прогностичні теплові карти моделюють, де користувачі, ймовірно, будуть дивитися та клікати на дизайн — корисно для перевірки рішень щодо макета перед тестуванням користувачами. Генерація потоків екранів створює пов'язані багатоекранні прототипи з описання функції.</p><p style="margin-top:1rem">Ключові можливості включають генерацію макетів з тексту, генерацію UI екранів, створення потоків екранів, аналіз прогностичних теплових карт, плагін Figma для генерації в редакторі та експорт коду для передачі розробникам.</p><p style="margin-top:1rem">Ціноутворення: Безплатний план підтримує до 7 екранів одночасно з обмеженими AI генераціями. Платні плани починаються з $14 на місяць для збільшення пропускної здатності генерації екранів та додаткових функцій. Вищі рівні близько $22 на місяць додають командну співпрацю та вищі ліміти використання. Цінові рівні простіші, ніж у більшості конкурентів.</p><p style="margin-top:1rem">Обмеження: Безплатний та базовий платний план здаються обмеженими для серйозного професійного використання — якість результатів та ліміти генерації швидко спонукають користувачів переходити на вищі рівні. Згенеровані дизайни мають тенденцію до загальних UI паттернів і потребують настройки для виразності.</p><p style="margin-top:1rem">Найкраще підходить для UX дизайнерів, які хочуть прискорити прототипування та швидко генерувати кілька напрямків екранів для огляду зацікавленими сторонами, особливо тих, хто вже працює в Figma.</p></div>

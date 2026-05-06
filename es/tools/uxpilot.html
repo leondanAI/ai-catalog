@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Diseño UX con IA con wireframes, flujos de pantalla y mapas de calor predictivos</div>
     </div>
   </div>
-  <a href="/es/compare/uxpilot-vs-figma-ai.html" class="compare-strip">⚖️ UXPilot vs Figma AI →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/es/compare/uxpilot-vs-figma-ai.html" class="compare-strip">⚖️ UXPilot vs Figma AI →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de UXPilot</h2>
     <div class="tool-desc"><p style="margin-top:1rem">UXPilot es una herramienta de diseño UX impulsada por IA que genera wireframes, pantallas UI y flujos de pantalla completos a partir de indicaciones de texto. Se dirige a diseñadores UX y equipos de producto que desean acelerar la fase de wireframing sin partir de un lienzo en blanco. El plugin de Figma integra la generación de IA directamente en flujos de trabajo de Figma existentes.</p><p style="margin-top:1rem">La herramienta genera múltiples variaciones de pantalla a partir de una única indicación, permitiendo a los diseñadores elegir e iterar sobre la dirección que mejor se ajuste. Los mapas de calor predictivos simulan dónde es probable que los usuarios miren y hagan clic en un diseño — útil para validar decisiones de diseño antes de pruebas con usuarios. La generación de flujos de pantalla crea prototipos multi-pantalla conectados a partir de una descripción de características.</p><p style="margin-top:1rem">Las capacidades clave incluyen generación de texto a wireframe, generación de pantallas UI, creación de flujos de pantalla, análisis de mapas de calor predictivos, plugin de Figma para generación en el editor y exportación de código para transferencia a desarrolladores.</p><p style="margin-top:1rem">Precios: El plan gratuito admite hasta 7 pantallas a la vez con generaciones de IA limitadas. Los planes pagos comienzan en $14 por mes para aumentar la capacidad de generación de pantallas y características adicionales. Los niveles superiores alrededor de $22 por mes agregan colaboración en equipo y límites de uso más altos. Los niveles de precios son más simples que la mayoría de los competidores.</p><p style="margin-top:1rem">Limitaciones: El plan gratuito y básico pagado parecen limitantes para uso profesional serio — la calidad de salida y los límites de generación impulsan a los usuarios hacia niveles más altos rápidamente. Los diseños generados tienden hacia patrones UI genéricos y requieren personalización para sentirse distintivos.</p><p style="margin-top:1rem">Más adecuado para diseñadores UX que deseen acelerar el wireframing y generar rápidamente múltiples direcciones de pantalla para revisión de partes interesadas, particularmente aquellos que ya trabajan en Figma.</p></div>

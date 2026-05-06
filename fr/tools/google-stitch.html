@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Conception et prototypage d'interface utilisateur gratuits avec IA à partir d'invites texte, avec canvas infini</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Google Stitch</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Google Stitch est un outil de conception gratuit et natif IA de Google Labs, résultant de l'acquisition de Galileo AI par Google en mai 2025. Il a été considérablement reconstruit et relancé en mars 2026 en tant que plateforme de conception IA complète, concurrençant directement Figma et Adobe dans l'espace de la conception native IA.</p><p style="margin-top:1rem">La mise à jour de mars 2026 a introduit Voice Canvas (parlez directement au canvas de conception pour des critiques et des modifications en temps réel), Vibe Design (génération basée sur les objectifs qui produit plusieurs directions de conception simultanément), génération multi-pages de 5 écrans à partir d'une seule invite, canvas infini pour les grands systèmes de conception, et prototypage interactif. Les conceptions utilisent DESIGN.md — un format de système de conception en langage naturel développé par Google — pour maintenir la cohérence sur les écrans générés.</p><p style="margin-top:1rem">Les capacités clés incluent la génération texte-vers-interface utilisateur, l'interaction vocale avec le canvas, l'exploration de conception multi-directionnelle, le prototypage interactif, la gestion du système de conception via DESIGN.md, et l'export vers des formats standard.</p><p style="margin-top:1rem">Tarification : Complètement gratuit. Le modèle standard fournit 350 générations par mois. Un niveau de modèle expérimental fournit 50 générations par mois pour tester les capacités de pointe. Aucune carte de crédit requise.</p><p style="margin-top:1rem">Limitations : En tant qu'expérience Google Labs, Stitch peut changer considérablement ou être arrêté — Google a un historique d'arrêt des produits expérimentaux. L'outil est plus récent que les alternatives Figma ou Adobe, avec un écosystème plus petit de plugins, de modèles et de ressources communautaires.</p><p style="margin-top:1rem">Idéal pour les concepteurs et les équipes produit qui souhaitent explorer la conception native IA sans frais, et les développeurs cherchant à générer rapidement des écrans d'interface utilisateur pour le prototypage avant d'investir dans un travail de conception détaillé.</p></div>

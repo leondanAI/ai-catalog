@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> אוטומציות מורכבות, אינטגרציות אפליקציות</div>
     </div>
   </div>
-  <a href="/he/compare/make-vs-n8n.html" class="compare-strip">⚖️ Make vs n8n →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/he/compare/make-vs-n8n.html" class="compare-strip">⚖️ Make vs n8n →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>אודות Make</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Make (לשעבר Integromat) היא פלטפורמת אוטומציה של זרימות עבודה חזותית המחברת למעלה מ-1,000 אפליקציות דרך קנבס Drag-and-Drop. כל אוטומציה — הנקראת תרחיש — מוצגת כתרשים זרימה חזותי המראה בדיוק כיצד נתונים זורמים בין אפליקציות, עם לוגיקה מותנית, לולאות, טיפול בשגיאות והמרת נתונים.</p><p style="margin-top:1rem">באוגוסט 2025, Make עברה ממודל מבוסס פעולות למערכת מבוססת קרדיט. תוכניות נוכחיות: Free (1,000 קרדיטים/חודש, 2 תרחישים פעילים), Core ($9/month, 10,000 קרדיטים, תרחישים בלתי מוגבלים), Pro ($16/month), Teams ($29/month). קרדיטים נוספים ניתן לרכוש בעלות פרמיה של 25% על שיעור התוכנית הבסיסית. מודולי AI מקוריים בלחיצה אחת עבור OpenAI, Claude, ו-Anthropic זמינים כעת ישירות בבנאי התרחיש.</p><p style="margin-top:1rem">Make נמצאת בין Zapier (פשוט יותר, יקר יותר) ל-n8n (חזק יותר, דורש הגדרה טכנית). ממשק הקנבס הוא ההבדל החזק ביותר שלה — אתה יכול לראות את כל האוטומציה באופן חזותי, מה שהופך את ניפוי הבאגים והשיתוף פעולה לקל משמעותית יותר מפלטפורמות מתחרות.</p><p style="margin-top:1rem">הפלטפורמה מטפלת היטב בזרימות עבודה רב-שלביות מורכבות: נתיבים מסתעפים, צבירת נתונים, הרצות מתוזמנות, webhooks, וחזרה על מערכים. צוותים של Enterprise משתמשים בה לעיבוד מסמכים, ניתוב leads, וסנכרון נתונים בין-פלטפורמות.</p><p style="margin-top:1rem">מגבלות: מודל הקרדיט שהוצג ב-2025 הפך את העלויות לפחות צפויות למשתמשים קיימים שהיו רגילים לספור פעולות. תרחישים בעלי נפח גבוה מאוד עדיין דורשים תוכנית Teams או גבוהה יותר כדי להימנע מעלויות נוספות.</p><p style="margin-top:1rem">הטוב ביותר עבור צוותי שיווק, מנהלי תפעול, ומפתחים שצריכים אוטומציה גמישה על פני אפליקציות רבות ללא כתיבת קוד — ורוצים יותר כוח מ-Zapier במחיר נמוך יותר.</p></div>

@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal für:</strong> Kollaborative Teampräsentationen mit Echtzeit-Bearbeitung und Analytik</div>
     </div>
   </div>
-  <a href="/de/compare/gamma-vs-pitch.html" class="compare-strip">⚖️ Pitch vs Gamma →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/de/compare/gamma-vs-pitch.html" class="compare-strip">⚖️ Pitch vs Gamma →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Über Pitch</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Pitch ist ein Präsentationstool für Teamzusammenarbeit mit Echtzeit-Multi-User-Bearbeitung ähnlich wie Figmas Kollaborationsmodell für Folien. Es hat über 1 Million Nutzer erreicht und verzeichnet besonders starke Akzeptanz bei Start-ups und Tech-Teams.</p><p style="margin-top:1rem">Pitchs Designphilosophie priorisiert moderne, saubere Ästhetik — die Template-Bibliothek ist kleiner als Canva, aber für professionelle Geschäftsnutzung kuratiert. Die Plattform enthält Präsentationsanalytiken, die zeigen, wer das Deck geöffnet hat, wie lange sie bei jeder Folie verbracht haben und ob sie es heruntergeladen haben. KI-Funktionen generieren Gliederungsstrukturen und Folieninhalte aus Text-Prompts.</p><p style="margin-top:1rem">Wichtige Funktionen sind Echtzeit-Kollaborationsbearbeitung, KI-Präsentationsgenerierung aus Gliederungen, Folienanalytiken (Aufrufe, Verbrauchte Zeit, Downloads), Workspace-Management für Team-Assets, 100+ kuratierte Templates, Einbettung und Sharing per Link, Integrationen mit Slack, Notion und Figma sowie Export zu PDF und PowerPoint.</p><p style="margin-top:1rem">Preisgestaltung: Der kostenlose Plan bietet vollständiges Präsentationserstellung mit unbegrenzten Decks und 1 Workspace. Pro mit $12 pro Monat bietet unbegrenzte Workspaces, erweiterte Analytik, benutzerdefinierte Domain und vorrangigen Support. Team-Plan bietet mehrere Plätze mit gemeinsamen Brand-Assets.</p><p style="margin-top:1rem">Einschränkungen: Pitchs Template-Bibliothek ist kuratiert, aber kleiner als Canva oder Gamma. Die KI-Funktionen sind weniger fortgeschritten als spezialisierte KI-Präsentationstools wie Gamma. Für Einzelnutzer sind Pitchs Kollaborationsfunktionen weniger wertvoll.</p><p style="margin-top:1rem">Am besten geeignet für Start-ups, Agenturen und Produktteams, die an Präsentationen zusammenarbeiten und sauberes Design und Engagement-Analytik schätzen.</p></div>

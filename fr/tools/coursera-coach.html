@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Cours en ligne, certificats professionnels</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Coursera Coach</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Coursera est la plus grande plateforme d'apprentissage en ligne au monde, proposant plus de 7 000 cours et programmes de certificats professionnels issus de plus de 300 universités et entreprises, dont Stanford, Yale, Google, IBM, Meta et DeepLearning.AI. Coursera Coach, son assistant d'apprentissage IA, offre un accompagnement personnalisé tout au long de l'expérience d'apprentissage : répondre aux questions sur le contenu des cours, suggérer les prochaines étapes d'étude, expliquer les concepts difficiles de manière alternative et aider les apprenants à rester sur la bonne voie par rapport à leurs objectifs.</p><p style="margin-top:1rem">Les programmes de certification de la plateforme constituent son offre la plus pertinente pour la carrière : les Google Career Certificates (support informatique, analyse de données, gestion de projet, design UX, cybersécurité, ingénierie des données) et les spécialisations IBM en IA et science des données sont reconnus par des milliers d'employeurs comme des diplômes alternatifs aux licences en quatre ans pour des postes techniques spécifiques. Ces programmes nécessitent généralement entre 3 et 6 mois d'études à temps partiel et coûtent environ 49 $/mois via Coursera Plus.</p><p style="margin-top:1rem">Coursera Plus (59 $/mois ou 399 $/an) offre un accès illimité à 90 % du catalogue, y compris la plupart des programmes de certification. L'audit individuel des cours est gratuit pour la majorité d'entre eux si vous n'avez pas besoin des devoirs notés ni du certificat. La qualité de Coursera Coach varie sensiblement selon les cours — pour les matières techniques avec des réponses clairement correctes ou incorrectes, il est véritablement utile ; pour les sciences humaines et sociales, ses explications manquent de nuance. La principale limite de la plateforme pour les personnes en reconversion professionnelle est que les certificats seuls sont rarement suffisants — ils fonctionnent mieux associés à des projets de portfolio et à du réseautage.</p></div>

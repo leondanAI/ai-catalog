@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Feuilles de calcul IA, importation de données</div>
     </div>
   </div>
-  <a href="/fr/compare/rows-vs-hex.html" class="compare-strip">⚖️ Rows vs Hex →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/rows-vs-hex.html" class="compare-strip">⚖️ Rows vs Hex →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Rows</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Rows est une plateforme de feuilles de calcul propulsée par l'IA qui reprend l'interface en grille familière d'Excel ou Google Sheets, tout en ajoutant des connexions directes aux API de services externes et des fonctions IA qui s'exécutent nativement dans les cellules. Là où une feuille de calcul standard nécessite d'exporter des données, d'exécuter un script et d'importer les résultats, Rows peut extraire des données en temps réel depuis Salesforce, HubSpot, Twitter, Stripe, Google Analytics et plus de 50 autres plateformes directement dans les cellules — maintenant ainsi les rapports automatiquement à jour.</p><p style="margin-top:1rem">Les fonctions IA constituent la fonctionnalité la plus innovante de la plateforme : =AI.EXTRACT(), =AI.TRANSLATE(), =AI.CATEGORIZE() et des fonctions similaires appliquent des opérations IA aux valeurs des cellules, exactement comme des formules Excel standard. Vous pouvez classifier une colonne de retours clients par catégories de sentiment, traduire des descriptions de produits en plusieurs langues, extraire des entités nommées d'un texte ou résumer de longs paragraphes — le tout en saisissant une formule, sans écrire de code ni appeler une API séparément.</p><p style="margin-top:1rem">La tarification commence par un plan gratuit avec un nombre limité de lignes et d'intégrations, avec le plan Starter à 59 $/mois pour les équipes. La principale limitation par rapport à Google Sheets ou Excel réside dans l'ensemble de fonctionnalités plus restreint pour les fonctions avancées — les formules matricielles complexes, les tableaux croisés dynamiques et les très grands ensembles de données (100 000+ lignes) fonctionnent mieux dans les outils de tableur établis. Rows est particulièrement utile pour les équipes qui créent des tableaux de bord opérationnels combinant des données externes en temps réel avec des analyses enrichies par l'IA, plutôt que comme remplacement d'un tableur polyvalent.</p></div>

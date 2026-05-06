@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Reuniões, transcrição, notas</div>
     </div>
   </div>
-  <a href="/pt/compare/otter-ai-vs-fireflies-ai.html" class="compare-strip">⚖️ Otter.ai vs Fireflies.ai →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/pt/compare/otter-ai-vs-fireflies-ai.html" class="compare-strip">⚖️ Otter.ai vs Fireflies.ai →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Otter.ai</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Otter.ai é um serviço de transcrição de reuniões em tempo real e tomada de notas que entra automaticamente nas suas chamadas do Zoom, Google Meet e Microsoft Teams, transcreve a conversa com identificação de falantes, gera um resumo de IA com os principais pontos e decisões, e torna a transcrição completa pesquisável poucos minutos após o término da reunião. É utilizado por mais de 2 milhões de profissionais para substituir a tomada manual de notas em reuniões.</p><p style="margin-top:1rem">A transcrição em tempo real aparece na aplicação web ou móvel do Otter.ai enquanto a reunião está a decorrer, permitindo que os participantes acompanhem sem precisar de tomar notas. Após a reunião, a IA gera um resumo escrito destacando os principais tópicos discutidos, as decisões tomadas e os itens de ação com os nomes das pessoas a quem foram atribuídos. A funcionalidade AI Chat permite fazer perguntas sobre transcrições de reuniões anteriores em linguagem natural: &quot;O que é que a Sarah disse sobre o orçamento do terceiro trimestre?&quot; ou &quot;Que itens de ação me foram atribuídos na semana passada?&quot;</p><p style="margin-top:1rem">O plano gratuito oferece 300 minutos de transcrição por mês, num máximo de 3 reuniões. O plano Pro (16,99 $/mês) oferece 1.200 minutos/mês e permite reuniões mais longas. A principal limitação em termos de precisão é o jargão técnico e os sotaques carregados — o Otter tem bom desempenho com inglês americano padrão em boas condições de áudio, mas tem dificuldades com terminologia especializada, fala rápida e falantes não nativos. Para reuniões com muitos nomes de produtos, termos técnicos ou falantes não nativos de inglês, a edição da transcrição é normalmente necessária.</p></div>

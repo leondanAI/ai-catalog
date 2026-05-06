@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> סוכן קידוד עצמאי ב-VS Code עם אישור שלב אחר שלב</div>
     </div>
   </div>
-  <a href="/he/compare/cline-vs-github-copilot.html" class="compare-strip">⚖️ Cline vs GitHub Copilot →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/he/compare/cline-vs-github-copilot.html" class="compare-strip">⚖️ Cline vs GitHub Copilot →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>אודות Cline</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Cline (בעבר Claude Dev) הוא סוכן קידוד עצמאי בקוד פתוח להרחבת VS Code, JetBrains, Cursor, Windsurf, Zed ו-Neovim. הוא פועל בלולאת אישור שלב אחר שלב: הסוכן מציע כל פעולה (יצירת קובץ, הרצת פקודה, פתיחת דפדפן) והמשתמש מאשר לפני ביצוע — מה שהופך אותו לשקוף וביטוח בהשוואה לכלים עצמאיים לחלוטין. עם יותר מ-59,000 כוכבים בGitHub ו-5 מיליון התקנות, זהו סוכן הקידוד בקוד פתוח המאומץ ביותר בבעולם VS Code.</p><p style="margin-top:1rem">Cline הגיע לגרסה 3.81 במאי 2026 ומקבל עדכונים יומיומיים. הוא תומך ב-Model Context Protocol (MCP) באופן מקורי, מה שמאפשר שילובי כלים מותאמים אישית. ההרחבה עובדת עם כל LLM דרך הגדרת מפתח משלך: Anthropic Claude, OpenAI, Gemini, AWS Bedrock, OpenRouter ומודלים מקומיים. היא יכולה לקרוא ולערוך קבצים בכל בסיס הקוד, להריץ פקודות טרמינל, להריץ בדיקות ולהשתמש בדפדפן למחקר או בדיקות end-to-end.</p><p style="margin-top:1rem">יכולויות עיקריות כוללות עריכת קבצים מרובים עם הקשר מלא של בסיס הקוד, שימוש בדפדפן למחקר ובדיקות ממשק משתמש, תמיכת כלים MCP וזרימת עבודה המבוססת על אישור השומרת על השליטה של המפתח בכל שלב. בניגוד לעורכים מפוצלים כמו Cursor או Windsurf, Cline רץ בתוך העורך הקיים שלך ללא צורך בהעברה.</p><p style="margin-top:1rem">תמחור: Cline עצמו הוא ללא תמורה וקוד פתוח. אתה משלם רק עבור קריאות ה-API של LLM שאתה עושה לספק שבחרת. הרצה על מודלים מקומיים דרך Ollama היא חינם.</p><p style="margin-top:1rem">מגבלות: זרימת העבודה המבוססת על אישור שלב אחר שלב, אם כי בטוחה, יכולה להאט משימות מורכבות של קבצים מרובים בהשוואה לכלים עצמאיים לחלוטין. איכות תלויה לחלוטין בـ LLM שאתה מגדיר. המודל BYOK אומר שאתה מנהל עלויות API בנפרד.</p><p style="margin-top:1rem">מתאים ביותר למפתחים שרוצים סוכן קידוד עוצמתי עצמאי בתוך העורך הקיים שלהם ללא מעבר ל-IDE חדש, ויעדיפים שליטה שקופה שלב אחר שלב על פני ביצוע עצמאי לחלוטין.</p></div>

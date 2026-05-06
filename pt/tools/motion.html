@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Agendamento automático, gestão de tarefas, calendário com IA</div>
     </div>
   </div>
-  <a href="/pt/compare/motion-vs-reclaim-ai.html" class="compare-strip">⚖️ Motion vs Reclaim.ai →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/pt/compare/motion-vs-reclaim-ai.html" class="compare-strip">⚖️ Motion vs Reclaim.ai →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Motion</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Motion constrói automaticamente sua agenda diária a partir de tarefas, reuniões, prazos e prioridades. Em vez de planejar manualmente, basta adicionar tarefas com prazos e a IA do Motion determina quando cada uma deve acontecer — preenchendo lacunas, respeitando blocos de foco e reagendando dinamicamente.</p><p style="margin-top:1rem">Combina gestão de projetos, calendário e lista de tarefas em uma interface unificada e orientada por IA. Quando reuniões mudam ou tarefas urgentes surgem, o Motion reorganiza tudo automaticamente. Os recursos para equipes exibem cronogramas realistas com base na disponibilidade real do calendário.</p><p style="margin-top:1rem">Custa $19/mês sem plano gratuito (teste de 7 dias). Usuários que confiam no agendador de IA relatam reduções significativas no tempo gasto com planejamento. Requer disposição para deixar a IA gerenciar sua rotina.</p></div>

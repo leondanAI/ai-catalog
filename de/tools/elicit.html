@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal für:</strong> KI-Forschungsassistent für systematische Literaturreviews und Papieranalyse</div>
     </div>
   </div>
-  <a href="/de/compare/elicit-vs-consensus.html" class="compare-strip">⚖️ Elicit vs Consensus →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/de/compare/elicit-vs-consensus.html" class="compare-strip">⚖️ Elicit vs Consensus →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Über Elicit</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Elicit ist ein KI-Forschungsassistent, der für systematische Literaturreviews konzipiert ist — den Prozess des umfassenden Findens, Bewertens und Extrahierens von Informationen aus wissenschaftlichen Arbeiten zu einer spezifischen Forschungsfrage. Es wird von über 2 Millionen Forschern verwendet und ist zu einem Standard-Tool für akademische und professionelle Forschungs-Workflows geworden.</p><p style="margin-top:1rem">Elicits Kern-Workflow ist strukturierter als eine Suchmaschine: Benutzer definieren eine Forschungsfrage, Elicit findet relevante Arbeiten, und ermöglicht dann Benutzern, spezifische Informationsspalten aus jeder Arbeit zu extrahieren (Methodik, Population, Ergebnisse, Limitationen). Dies wandelt einen Literaturreview in eine strukturierte Tabelle um — statt in eine Sammlung von Links — und ermöglicht eine schnelle Synthese über Dutzende oder Hunderte von Arbeiten.</p><p style="margin-top:1rem">Schlüsselfunktionen umfassen semantische Suche über 100 Millionen+ Arbeiten, strukturierte Datenextraktion in Tabellen, KI-Papierzusammenfassungen, PDF-Upload und -Analyse, Zitierexport (RIS, BibTeX), mehrere Spalten zur Evidenzextraktion (Methodik, Stichprobengröße, Erkenntnisse), Automatisierung für wiederkehrende Reviews und API für die Forschungs-Workflow-Integration.</p><p style="margin-top:1rem">Preisgestaltung: Der kostenlose Plan bietet 2 Forschungsberichte pro Monat und begrenzte Funktionen. Plus mit etwa 10 USD pro Monat bietet 15 Berichte pro Monat und vollständige Datenextraktion. Pro mit etwa 42 USD pro Monat bietet 50 Berichte pro Monat, Automatisierung und API-Zugang. Team-Pläne mit etwa 79 USD pro Monat fügen Zusammenarbeitsfunktionen hinzu.</p><p style="margin-top:1rem">Limitationen: Elicits strukturierte Extraktion ist leistungsstark für quantitative Forschung, aber weniger nützlich für qualitative Analyse, bei der Erkenntnisse kontextuell statt extrahierbar sind. Berichtsgrenzen bei niedrigeren Tarifen beschränken die Nutzung für Forscher mit hohem Volumen. Die Plattform ist am besten für empirische Forschung geeignet — Literatur in Geisteswissenschaften und Sozialwissenschaften ist weniger gut bedient.</p><p style="margin-top:1rem">Am besten geeignet für akademische Forscher, Doktoranden und evidenzbasierte Fachleute, die systematische Literaturreviews effizient durchführen oder aktualisieren müssen.</p></div>

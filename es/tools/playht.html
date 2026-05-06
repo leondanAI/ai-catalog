@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Síntesis de voz con IA y clonación de voz para podcasts, artículos y aplicaciones</div>
     </div>
   </div>
-  <a href="/es/compare/elevenlabs-vs-playht.html" class="compare-strip">⚖️ PlayHT vs ElevenLabs →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/es/compare/elevenlabs-vs-playht.html" class="compare-strip">⚖️ PlayHT vs ElevenLabs →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de PlayHT</h2>
     <div class="tool-desc"><p style="margin-top:1rem">PlayHT es una plataforma de síntesis de voz con IA que convierte contenido escrito — publicaciones de blog, artículos, boletines, scripts — en audio con sonido natural. Ha establecido una posición sólida con editores de contenido a través de su plugin de WordPress, que agrega automáticamente un reproductor de audio a cada artículo usando voz generada por IA. La plataforma ofrece más de 900 voces en 142 idiomas.</p><p style="margin-top:1rem">PlayHT 3.0 introdujo generación de voz ultrarrealista utilizando una nueva arquitectura de modelo, y la función de Clonación de Voz crea una voz personalizada a partir de una muestra de audio corta. La plataforma ofrece una API para desarrolladores que integren síntesis de voz en aplicaciones. El plugin de WordPress es particularmente valioso para editores que agregan audio a artículos sin un flujo de trabajo de grabación manual.</p><p style="margin-top:1rem">Las capacidades clave incluyen más de 900 voces de IA, clonación de voz, plugin de WordPress para audio de artículos, API para integración de aplicaciones, alojamiento de podcasts (a través de infraestructura asociada) y soporte para marcado SSML para control de pronunciación granular.</p><p style="margin-top:1rem">Precios: El plan gratuito proporciona 12,500 caracteres por mes con audio marcado con marca de agua. Creator a $31.20 por mes (anual) proporciona 200,000 caracteres por mes y derechos comerciales. El plan Unlimited a $29 por mes proporciona caracteres ilimitados con política de uso justo. Los precios empresariales son personalizados.</p><p style="margin-top:1rem">Limitaciones: El límite de caracteres del plan Creator de $31.20 (200K/mes) puede agotarse por editores de artículos de alto volumen. La calidad de voz, aunque sólida, obtiene puntuaciones ligeramente por debajo de ElevenLabs en métricas de naturalidad. El plugin de WordPress es el diferenciador clave — sin un flujo de trabajo editorial, PlayHT tiene menos diferenciación frente a competidores.</p><p style="margin-top:1rem">Más adecuado para editores de contenido, bloggers y creadores de boletines que desean agregar versiones de audio de su contenido escrito, y desarrolladores que necesitan una API de síntesis de voz directa.</p></div>

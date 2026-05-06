@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Análisis de IA sin código y modelado predictivo para agencias de marketing</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de Akkio</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Akkio es una plataforma de análisis de IA sin código dirigida a agencias de marketing y equipos de análisis empresarial que necesitan modelado predictivo sin científicos de datos. La plataforma permite a los usuarios cargar conjuntos de datos y crear modelos predictivos a través de una interfaz guiada, prediciendo abandono de clientes, puntuaciones de leads, pronósticos de ventas y resultados de campañas a partir de datos históricos sin escribir código ni comprender aprendizaje automático.</p><p style="margin-top:1rem">La asociación de enero de 2026 con Hayas Media Group — una de las redes de agencias de medios más grandes del mundo — validó el posicionamiento empresarial de Akkio. La integración permite a los planificadores de medios de Havas utilizar la IA de Akkio para predicción de audiencia, pronóstico de desempeño de campañas y modelado de atribución a escala.</p><p style="margin-top:1rem">Las capacidades clave incluyen construcción de modelos predictivos sin código a partir de datos de CSV o CRM, selección automática de características, predicciones en tiempo real vía API, integración con HubSpot, Salesforce, Google Sheets y Airtable, y generación de reportes en lenguaje natural. La plataforma maneja tareas de clasificación, regresión y pronósticos de series temporales.</p><p style="margin-top:1rem">Precio: Akkio comienza en $49 por mes para el plan básico. Los planes profesionales con límites de datos más altos y características de colaboración tienen precios más altos. Los planes de agencia con gestión multicliente y opciones de etiqueta blanca están disponibles a precios personalizados. No hay nivel gratuito permanente, solo un período de prueba.</p><p style="margin-top:1rem">Limitaciones: Akkio está diseñado específicamente para predicción de datos tabulares estructurados — no maneja datos no estructurados (texto, imágenes) y no es una plataforma de análisis general. El enfoque sin código limita la personalización para equipos con experiencia en ciencia de datos que necesitan control granular del modelo. El precio comienza en $49/mes sin nivel gratuito.</p><p style="margin-top:1rem">Ideal para agencias de marketing, equipos de crecimiento y analistas empresariales que necesitan modelado predictivo a partir de datos de CRM y campañas sin recursos de ciencia de datos.</p></div>

@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> Пошаговое решение математических задач с помощью камеры или текстового ввода</div>
     </div>
   </div>
-  <a href="/ru/compare/photomath-vs-duolingo-max.html" class="compare-strip">⚖️ Photomath vs Duolingo Max →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/photomath-vs-duolingo-max.html" class="compare-strip">⚖️ Photomath vs Duolingo Max →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе Photomath</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Photomath — ведущее приложение для решения математических задач, позволяющее студентам сфотографировать рукописную или печатную математическую задачу и получить мгновенное пошаговое решение с объяснениями. С момента запуска оно накопило более 100 млн загрузок и охватывает арифметику, алгебру, тригонометрию, исчисление, статистику и текстовые задачи на уровне K-12 и вводного курса колледжа.</p><p style="margin-top:1rem">Основная функция — распознавание математических задач с помощью камеры. Наведение камеры на задачу в учебнике или рабочем листе обеспечивает мгновенное распознавание и решение. AI предоставляет несколько методов решения, если применимо (например, показывает как метод подстановки, так и метод исключения для системы уравнений), а анимированные пошаговые объяснения проводят через каждый шаг решения. Также поддерживается текстовый ввод для случаев, когда распознавание камерой затруднено.</p><p style="margin-top:1rem">Ключевые возможности включают сканирование камерой печатных и рукописных математических задач, пошаговые решения с анимированными объяснениями, несколько методов решения, визуализацию графиков функций, решение текстовых задач и научный калькулятор.</p><p style="margin-top:1rem">Цены: Бесплатный уровень включает сканирование задач и базовое отображение решения. Photomath Plus за $9.99 в месяц или $69.99 в год разблокирует детальные анимированные объяснения шагов, несколько подходов к решению и решение текстовых задач. Доступна 7-дневная бесплатная пробная версия.</p><p style="margin-top:1rem">Ограничения: Photomath — пошаговый решатель, а не концептуальный репетитор. Он показывает, как решать задачи, но не развивает понимание так, как это делает Khanmigo. Чрезмерное использование Photomath для домашней работы может препятствовать обучению. Продвинутая вузовская математика (доказательства, абстрактная алгебра) вне области применения.</p><p style="margin-top:1rem">Лучше всего подходит для учащихся средней и старшей школы, которым нужны пошаговые инструкции по решению конкретных математических задач, и для родителей, помогающих с математической домашней работой.</p></div>

@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Musique avec voix, pistes complètes</div>
     </div>
   </div>
-  <a href="/fr/compare/suno-vs-udio.html" class="compare-strip">⚖️ Udio vs Suno →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/suno-vs-udio.html" class="compare-strip">⚖️ Udio vs Suno →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Udio</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Udio est une plateforme de génération musicale par IA qui concurrence directement Suno, proposant une approche différente de la composition par IA qui séduit les utilisateurs souhaitant un contrôle plus précis sur le résultat musical. Là où Suno privilégie la simplicité et le volume (50 chansons/jour gratuitement), Udio mise sur la qualité et le contrôle, permettant aux utilisateurs de spécifier la tonalité, le tempo, les instruments et les paramètres d'ambiance en plus de la description textuelle standard.</p><p style="margin-top:1rem">Le flux de composition basé sur des segments est la fonctionnalité distinctive d'Udio : plutôt que de générer une chanson complète d'un coup, Udio génère des sections que vous pouvez étendre, fusionner et agencer — construisant une chanson complète morceau par morceau, avec un contrôle sur l'emplacement des couplets, refrains et ponts. Cela crée des structures de chansons plus intentionnelles que la génération en une seule étape de Suno. Udio vous permet également de référencer des clips audio importés comme source d'inspiration stylistique tout en générant des compositions originales.</p><p style="margin-top:1rem">La qualité vocale d'Udio est généralement considérée comme supérieure à celle de Suno pour des genres spécifiques comme le jazz, la soul, le classique crossover et le folk, où la nuance tonale compte plus que le traitement sonore. Le niveau gratuit est plus limité que celui de Suno, avec environ 10 générations gratuites par jour. Le tarif du plan Standard est de 10 $/mois pour 1 200 crédits mensuels. La communauté de musiciens et producteurs est plus petite et les ressources tutorielles sont moins nombreuses que dans l'écosystème de Suno, mais pour les utilisateurs qui souhaitent un contrôle compositionnel plus poussé, l'approche d'Udio vaut le compromis.</p></div>

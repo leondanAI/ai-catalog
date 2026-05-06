@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Consenso científico, verificação de fatos</div>
     </div>
   </div>
-  <a href="/pt/compare/consensus-vs-perplexity.html" class="compare-strip">⚖️ Consensus vs Perplexity →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/pt/compare/consensus-vs-perplexity.html" class="compare-strip">⚖️ Consensus vs Perplexity →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Consensus</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Consensus é um motor de busca de IA especializado em investigação científica que vai além de encontrar artigos para responder à questão de investigação subjacente: dada uma pergunta, analisa mais de 100 artigos relevantes revisados por pares e indica qual a percentagem de estudos que suportam, contradizem ou encontram resultados mistos para a afirmação. O Consensus Meter — um resumo simples de sim/não/inconclusivo — fornece uma resposta imediata baseada em evidências para questões empiricamente testáveis.</p><p style="margin-top:1rem">A plataforma indexa mais de 200 milhões de artigos do PubMed, Semantic Scholar e outras fontes académicas, e utiliza IA para compreender a questão de investigação que cada artigo aborda e que conclusão alcança. Isto torna o Consensus particularmente útil para questões de saúde e estilo de vida onde existe consenso científico, mas que está disperso por milhares de artigos: &quot;A cafeína melhora o desempenho no exercício?&quot;, &quot;O jejum intermitente é mais eficaz do que a restrição calórica?&quot;, &quot;A meditação mindfulness reduz a ansiedade?&quot; — todas retornam resumos de evidências imediatos.</p><p style="margin-top:1rem">O plano gratuito permite pesquisas básicas com funcionalidades limitadas, e uma conta gratuita oferece 20 pesquisas premium por mês. Os planos pagos começam em $8,99/mês para pesquisas premium ilimitadas, resumos gerados por IA e integração com o plugin GPT. A principal limitação é o âmbito: o Consensus funciona bem para questões empíricas bem estudadas onde existe uma literatura substancial, mas produz resultados pouco fiáveis para tópicos emergentes, questões de ciências sociais com metodologia contestada ou áreas onde o consenso científico está ativamente em debate. Não substitui a revisão especializada dos artigos subjacentes.</p></div>

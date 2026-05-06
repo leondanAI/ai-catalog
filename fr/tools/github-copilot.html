@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Autocomplétion, intégration IDE</div>
     </div>
   </div>
-  <a href="/fr/compare/cursor-vs-copilot.html" class="compare-strip">⚖️ GitHub Copilot vs Cursor →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/cursor-vs-copilot.html" class="compare-strip">⚖️ GitHub Copilot vs Cursor →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos GitHub Copilot</h2>
     <div class="tool-desc"><p style="margin-top:1rem">GitHub Copilot est l'assistant de codage IA le plus largement adopté dans le développement logiciel professionnel, utilisé par plus de 4,7 millions d'abonnés payants — la plus grande base payante de tout assistant de codage IA — et intégré dans pratiquement tous les principaux éditeurs de code. Il fournit une complétion de code en temps réel : au fur et à mesure que vous tapez, Copilot suggère des fonctions entières, des classes, des cas de test et de la documentation en fonction du contexte environnant de votre fichier et de votre dépôt.</p><p style="margin-top:1rem">Les intégrations IDE sont de premier ordre : prise en charge complète de VS Code, Visual Studio, les IDE JetBrains (IntelliJ, PyCharm, WebStorm), Neovim et Xcode. Copilot Chat va au-delà de l'autocomplétion pour répondre aux questions sur votre base de code, expliquer du code inconnu, suggérer des refactorisations et déboguer des erreurs — le tout avec une connaissance des fichiers actuellement ouverts et de la structure globale du dépôt via la fonctionnalité de contexte workspace.</p><p style="margin-top:1rem">GitHub Copilot est disponible gratuitement pour les étudiants vérifiés et les mainteneurs de projets open source, et coûte 10 $/mois pour les particuliers ou 19 $/mois pour le niveau Business avec une gestion centralisée des politiques. Une critique fréquente est que les suggestions peuvent inclure des modèles de bibliothèques obsolètes ou introduire parfois des vulnérabilités de sécurité subtiles — la revue de code reste essentielle. Pour les équipes déjà sur GitHub, l'intégration poussée avec les pull requests, les issues et Actions fait de Copilot une couche de productivité naturelle.</p><p style="margin-top:1rem">Le Mode Agent et Copilot Workspace ont été ajoutés à la plateforme : le Mode Agent effectue des tâches de codage en plusieurs étapes sur plusieurs fichiers, tandis que Copilot Workspace transforme une issue GitHub en une ébauche de pull request avec des modifications de code proposées. En 2026, GitHub Copilot est utilisé par 90 % des entreprises du Fortune 100. Le niveau gratuit reste disponible : 2 000 complétion et 50 requêtes premium par mois.</p></div>

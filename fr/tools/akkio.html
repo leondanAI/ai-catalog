@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Prévision, prédiction du churn, ML sans code</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Akkio</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Akkio est une plateforme de machine learning sans code conçue pour les analystes métier qui ont besoin d'insights prédictifs — prédiction du churn, scoring des leads, prévision de la demande, détection de fraude — sans expertise en data science ni ressources en ingénierie. La philosophie de la plateforme est que le machine learning doit être accessible aux personnes disposant du plus grand savoir métier (analystes et équipes opérationnelles), et pas seulement à celles ayant les connaissances techniques les plus poussées (data scientists).</p><p style="margin-top:1rem">Le processus commence par l'importation d'un fichier CSV ou la connexion d'un CRM (Salesforce, HubSpot), la sélection de la colonne à prédire (churn : oui/non, affaire conclue : oui/non, chiffre d'affaires du mois suivant : valeur numérique), puis un clic sur &quot;Entraîner le modèle&quot;. Akkio sélectionne automatiquement les variables, gère le prétraitement des données, entraîne et évalue plusieurs algorithmes, puis présente le modèle le plus performant avec des métriques de précision, des scores d'importance des variables et des prédictions sur de nouvelles données — le tout en moins de 10 minutes.</p><p style="margin-top:1rem">Les intégrations CRM sont particulièrement utiles pour les équipes commerciales et marketing : connectez vos données HubSpot ou Salesforce, entraînez un modèle de scoring des leads sur les affaires historiques gagnées/perdues, et Akkio attribue automatiquement un score aux nouveaux leads et synchronise les prédictions dans votre CRM sous forme de champ personnalisé. Les tarifs débutent à 50 $/mois pour le plan Starter. La limite par rapport à un travail de data science sur mesure réside dans la précision et la flexibilité des modèles — l'approche de ML automatisé d'Akkio est excellente pour les problèmes de prédiction métier standard, mais ne peut pas rivaliser avec un modèle développé sur mesure pour des structures de données complexes ou atypiques.</p></div>

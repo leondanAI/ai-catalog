@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> AI прототипирование UI из скриншотов, эскизов и текстовых запросов</div>
     </div>
   </div>
-  <a href="/ru/compare/uizard-vs-figma-ai.html" class="compare-strip">⚖️ Uizard vs Figma AI →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/uizard-vs-figma-ai.html" class="compare-strip">⚖️ Uizard vs Figma AI →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе Uizard</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Uizard — это инструмент AI для прототипирования UI, приобретенный компанией Miro в мае 2024 года и теперь работающий как Uizard by Miro Labs. Инструмент преобразует скриншоты существующих приложений, рукописные эскизы и текстовые описания в редактируемые макеты UI — один из самых быстрых способов перейти от идеи к визуальному прототипу без навыков дизайна.</p><p style="margin-top:1rem">Флагманская функция — Autodesigner 2.0 (доступна в платных тарифах), которая позволяет редактировать дизайн в диалоговом режиме раздел за разделом: опишите изменение своего дизайна на простом языке, и Autodesigner применит его. Это более гибко, чем инструменты с одноразовой генерацией. Screenshot Scanner преобразует любой скриншот приложения в редактируемый шаблон Uizard за секунды, а Wireframe Scanner преобразует рукописные эскизы в цифровые вайрфреймы.</p><p style="margin-top:1rem">Основные возможности включают генерацию UI из текста, преобразование скриншотов в редактируемые шаблоны, распознавание рукописных эскизов, редактирование дизайна в диалоговом режиме (Autodesigner 2.0), интерактивное прототипирование с click-through потоками и библиотеку компонентов для частых элементов UI.</p><p style="margin-top:1rem">Цены: Бесплатный тариф поддерживает 3 проекта и 5 экранов на проект, с 3 AI генерациями в месяц и доступом только к Autodesigner 1.5. Pro за $12 за пользователя в месяц (годовой) предоставляет 500 AI генераций в месяц, 100 проектов, полную библиотеку шаблонов и Autodesigner 2.0. Business за $39 за пользователя в месяц предоставляет 5000 AI генераций в месяц и неограниченные проекты. Цены Enterprise — индивидуальные.</p><p style="margin-top:1rem">Ограничения: Autodesigner 2.0 — самая мощная функция AI — требует платный тариф. Результаты на нижних уровнях могут выглядеть стандартно. Приобретение Miro означает, что дорожная карта продукта может измениться в направлении более широкой экосистемы сотрудничества Miro, что создает некоторую неопределенность в отношении развития независимого продукта Uizard.</p><p style="margin-top:1rem">Лучше всего подходит для менеджеров продуктов, основателей стартапов и не-дизайнеров, которым нужно быстро создать макеты экранов приложений для просмотра заинтересованными лицами или тестирования пользователем без найма дизайнера.</p></div>

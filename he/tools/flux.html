@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> יצירת תמונות באיכות גבוהה בקוד פתוח</div>
     </div>
   </div>
-  <a href="/he/compare/midjourney-vs-flux.html" class="compare-strip">⚖️ Flux vs Midjourney →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/he/compare/midjourney-vs-flux.html" class="compare-strip">⚖️ Flux vs Midjourney →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>אודות Flux</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Flux היא משפחת של מודלים טקסט-לתמונה בקוד פתוח שפותחה על ידי Black Forest Labs, שנוסדה על ידי יוצרי Stable Diffusion המקוריים. מאז השיקור המקורי של FLUX.1 באמצע 2024, המודלים דורגו ברציפות בחלק העליון של לוחות דירוג איכות תמונה.</p><p style="margin-top:1rem">דור FLUX.2 שוגר בנובמבר 2025 ומכיל גרסאות מודל מרובות: FLUX.2 [dev] (32B פרמטרים, טקסט-לתמונה בתוספת עריכת תמונות), FLUX.2 [pro] (איכות/מהירות מאוזנת), FLUX.2 [max] (איכות הגבוהה ביותר), ו-FLUX.2 [flex] (שלבים ניתנים לכיוונון). FLUX.2 [klein], שוגר בינואר 2026, הוא מודל 4B/9B פרמטרים שיוצר תמונות בפחות משנייה על GPUs צרכניים. FLUX Kontext מוסיף יצירת תמונה מודעת הקשר וקונברסציונית.</p><p style="margin-top:1rem">משקלי המודל הליבה הם בקוד פתוח וחינם להורדה. גישה ל-API זמינה דרך Black Forest Labs ישירות (מבוסס קרדיט, ~$0.04/תמונה עבור FLUX.1 Pro), וודרך פלטפורמות של צד שלישי כולל fal.ai, Replicate, Cloudflare Workers AI, ו-Azure AI Foundry.</p><p style="margin-top:1rem">המודל מטפל ברינדור טקסט משמעותית טוב יותר מרוב החלופות. מהירות היצירה תת-שנייה של FLUX.2 [klein] הופכת אותו קיימא ליישומים בזמן אמת וביצוגי GPU צרכניים שדרשו בעבר סקירת ענן.</p><p style="margin-top:1rem">מגבלות: המודלים הגדולים ביותר (FLUX.2 dev עם 32B) דורשים VRAM משמעותי לשימוש מקומי. תמחור בממשקי API מנוהלים צומחות להפקת נפח גבוה. אקוסיסטם המודל פחות בשל מ-Stable Diffusion מבחינת כיוונונים עדינים של קהילה.</p><p style="margin-top:1rem">הטוב ביותר עבור מפתחים, חוקרים ומשתמשי כוח שרוצים את איכות התמונה בקוד פתוח הגבוהה ביותר ללא נעילה קנייני.</p></div>

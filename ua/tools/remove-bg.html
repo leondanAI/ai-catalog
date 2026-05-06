@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Підходить для:</strong> Миттєве видалення фону AI з фото та зображень товарів</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Remove.bg</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Remove.bg — стандартний у галузі інструмент для видалення фону на базі штучного інтелекту, власником якого є Kaleido AI. Він обробляє будь-яке фото приблизно за 5 секунд одним кліком — без ручного виділення, маскування або дизайнерських навичок. Сервіс підтримує формати JPEG, PNG, WebP та RAW розміром до 50 МБ, з виводом у прозорому PNG.</p><p style="margin-top:1rem">Інструмент інтегрується з кількома платформами: веб-додаток на remove.bg, настільний додаток для Windows, macOS та Linux, мобільні додатки, плагін Figma, плагін Photoshop, інтеграції Shopify та WooCommerce, а також REST API для автоматизованої обробки. API підтримує масову обробку, що робить його практичним для e-commerce операцій з видалення фону з тисяч фото товарів.</p><p style="margin-top:1rem">Основні можливості включають автоматичне виявлення об'єктів (люди, товари, тварини, автомобілі), висока якість виводу, пакетна обробка через API, вивід PNG з прозорим фоном та інтеграції з основними інструментами дизайну та платформами e-commerce.</p><p style="margin-top:1rem">Цінування: Безплатний тариф надає обмежені низькорозрішення зображення попередньої версії та невелику кількість безплатних кредитів повної розрізненості. Оплата за використанням починається приблизно з $3 за невелику комплектацію кредитів. Підписка Lite за приблизно $8,10 на місяць надає 40 кредитів на місяць. Pro Volume+ плани масштабуються до $80,10 на місяць за 500 кредитів. Корпоративні плани з дозвіленим обсягом API доступні для високопродуктивних операцій. Ціни позначені в EUR і можуть дещо відрізнятися залежно від регіону.</p><p style="margin-top:1rem">Омеження: Складні об'єкти з волоссям, хутром або прозорими матеріалами потребують ручного коригування. Безплатні кредити обмежені, а якість попередньої версії недостатня для професійного використання без покупки. Вартість кредитів швидко накопичується при високовартісному використанні для e-commerce.</p><p style="margin-top:1rem">Найбільш підходить для продавців e-commerce, фотографів товарів та маркетингових команд, які потребують швидко видалити фон із зображень товарів у великих масштабах.</p></div>

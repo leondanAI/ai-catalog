@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> Генерация изображений, согласованность персонажей, точность промптов</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе ChatGPT Images 2.0</h2>
     <div class="tool-desc"><p style="margin-top:1rem">ChatGPT Images 2.0 (model ID gpt-image-2) — модель изображений нового поколения от OpenAI, запущенная 21 апреля 2026 как дефолтный генератор изображений в ChatGPT и в OpenAI API. Заменяет DALL·E 2 и DALL·E 3, которые выводятся из эксплуатации 12 мая 2026.</p><p style="margin-top:1rem">Ключевая возможность — нативное reasoning перед генерацией: модель «обдумывает» промпт — композицию, раскладку, когерентность персонажей и ограничения — до рендера, что даёт заметный прирост качества в деталях, с которыми модели изображений исторически плохо справляются. Мелкий текст, иконография, UI-элементы, плотные композиции и тонкие стилистические ограничения рендерятся с заметно более высокой точностью. Поддерживается разрешение до 2K и соотношения сторон от 3:1 до 1:3.</p><p style="margin-top:1rem">Доступны два режима. Instant Mode даёт основные улучшения качества каждому пользователю ChatGPT, включая бесплатный тариф. Thinking Mode — добавляет веб-поиск, рассуждения о раскладке, batching нескольких изображений и верификацию вывода — доступен только подписчикам Plus ($20/мес), Pro ($200/мес), Business и Enterprise. Thinking Mode выдаёт до 8 когерентных изображений за промпт с непрерывностью персонажей и объектов между ними, что особенно полезно для storyboards, кампаний в соцсетях и продуктовых снимков, которые должны выглядеть как серия.</p><p style="margin-top:1rem">За 12 часов после запуска ChatGPT Images 2.0 занял первое место во всех категориях лидерборда Image Arena с отрывом в +242 пункта. Для пользователей ChatGPT, которым нужно лучшее качество изображений без ухода из чата — и для разработчиков, которым нужен один API и для текста, и для изображений — gpt-image-2 теперь дефолт.</p></div>

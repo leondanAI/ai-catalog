@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Planilhas com IA, importação de dados</div>
     </div>
   </div>
-  <a href="/pt/compare/rows-vs-hex.html" class="compare-strip">⚖️ Rows vs Hex →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/pt/compare/rows-vs-hex.html" class="compare-strip">⚖️ Rows vs Hex →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Rows</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Rows é uma plataforma de planilhas com IA que traz a interface de grade familiar do Excel ou Google Sheets, mas adiciona conexões diretas via API com serviços externos e funções de IA que funcionam nativamente dentro das células da planilha. Enquanto uma planilha convencional exige exportar dados, executar um script e importar os resultados, o Rows consegue buscar dados em tempo real do Salesforce, HubSpot, Twitter, Stripe, Google Analytics e mais de 50 outras plataformas diretamente nas células — mantendo os relatórios atualizados automaticamente.</p><p style="margin-top:1rem">As funções de IA são o recurso mais inovador da plataforma: =AI.EXTRACT(), =AI.TRANSLATE(), =AI.CATEGORIZE() e funções similares aplicam operações de IA aos valores das células assim como fórmulas padrão do Excel. É possível classificar uma coluna de feedbacks de clientes em categorias de sentimento, traduzir descrições de produtos para vários idiomas, extrair entidades nomeadas de textos ou resumir parágrafos longos — tudo isso inserindo uma fórmula, sem escrever código ou chamar uma API separadamente.</p><p style="margin-top:1rem">Os preços começam com um plano gratuito com linhas e integrações limitadas, e o plano Starter custa US$ 59/mês para equipes. A principal limitação em comparação ao Google Sheets ou Excel é o conjunto menor de recursos para funções avançadas de planilha — fórmulas matriciais complexas, tabelas dinâmicas e conjuntos de dados muito grandes (mais de 100 mil linhas) têm melhor desempenho nas ferramentas de planilha consolidadas. O Rows é mais valioso para equipes que constroem dashboards operacionais combinando dados externos em tempo real com análises enriquecidas por IA, e não como substituto para trabalhos gerais com planilhas.</p></div>

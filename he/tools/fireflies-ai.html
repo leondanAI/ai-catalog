@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> סיכומי פגישות, משימות, סיכומים</div>
     </div>
   </div>
-  <a href="/he/compare/otter-ai-vs-fireflies-ai.html" class="compare-strip">⚖️ Fireflies.ai vs Otter.ai →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/he/compare/otter-ai-vs-fireflies-ai.html" class="compare-strip">⚖️ Fireflies.ai vs Otter.ai →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>אודות Fireflies.ai</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Fireflies.ai הוא עוזר פגישות AI שמצטרף לשיחות Zoom, Google Meet ו-Microsoft Teams שלכם, מתמלל הכל בזמן אמת, ומגיש בסיום הפגישה סיכום מובנה עם פריטי פעולה, החלטות ורגעים מרכזיים. עם למעלה ממיליון משתמשים, הוא הכלי שצוותים רבים השתמשו בו לחסל לחלוטין את כתיבת הפתקים בפגישות.</p><p style="margin-top:1rem">מה שמייחד את Fireflies.ai מעל כלי תמלול פשוטים הוא ה-Intelligence Layer: לאחר כל פגישה, ניתן לחפש ברחבי כל ההקלטות שלכם (&quot;מתי הבטחנו ללקוח X את הפיצ'ר הזה?&quot;), לבדוק מי דיבר כמה אחוז מהזמן, ולקבל ניתוח סנטימנט על האווירה בשיחה. ה-Integrations כוללות Slack, Notion, HubSpot, Salesforce ועוד — כך שפריטי הפעולה עוברים אוטומטית לניהול המשימות.</p><p style="margin-top:1rem">Fireflies.ai מציעה גרסה חינמית עם 800 דקות אחסון תמלול. Pro (18 דולר לחודש) מסיר את מגבלת האחסון ומוסיף AI Summaries מלאות. Business (29 דולר לחודש) מוסיף ניתוחים מתקדמים ו-CRM integrations. לכל צוות שמנהל יותר מ-5 פגישות שבועיות — Fireflies.ai מחזיר לפחות שעת עבודה אחת בשבוע לכל איש צוות.</p></div>

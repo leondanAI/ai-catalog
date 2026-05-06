@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Підходить для:</strong> Безплатний AI дизайн UI та прототипування з текстових запитів з нескінченним полотном</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Google Stitch</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Google Stitch — це безплатний AI-native інструмент дизайну від Google Labs, результат придбання Google компанії Galileo AI у травні 2025 року. Він був суттєво перебудований та перезапущений у березні 2026 року як комплексна платформа AI дизайну, яка тепер прямо конкурує з Figma та Adobe у просторі AI-native дизайну.</p><p style="margin-top:1rem">Оновлення березня 2026 року запровадило Voice Canvas (говоріть прямо на полотно дизайну для критики та редагування в реальному часі), Vibe Design (генерування на основі цілей, яке створює кілька напрямів дизайну одночасно), генерування 5-екранного багатосторінкового дизайну з одного запиту, нескінченне полотно для великих дизайн-систем та інтерактивне прототипування. Дизайни використовують DESIGN.md — формат природної мови дизайн-системи розроблений Google — для забезпечення послідовності між згенерованими екранами.</p><p style="margin-top:1rem">Ключові можливості включають генерування текст-у-UI, голосову взаємодію з полотном, багатонаправлене дослідження дизайну, інтерактивне прототипування, керування дизайн-системою через DESIGN.md та експорт у стандартні формати.</p><p style="margin-top:1rem">Ціноутворення: Повністю безплатно. Стандартна модель забезпечує 350 поколінь на місяць. Експериментальний рівень моделі забезпечує 50 поколінь на місяць для тестування передових можливостей. Кредитна карта не потрібна.</p><p style="margin-top:1rem">Обмеження: Як експеримент Google Labs, Stitch може значно змінитися або бути припинений — Google має історію закриття експериментальних продуктів. Інструмент новіший за Figma або Adobe альтернативи з меншим екосистемом плагінів, шаблонів та ресурсів спільноти.</p><p style="margin-top:1rem">Найкраще підходить для дизайнерів та команд продукту, які хочуть дослідити AI-native дизайн без витрат, та розробників, які хочуть швидко згенерувати UI екрани для прототипування перед інвестуванням у детальну роботу з дизайном.</p></div>

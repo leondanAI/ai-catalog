@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> IDE com IA, codificação agêntica, edições em múltiplos arquivos</div>
     </div>
   </div>
-  <a href="/pt/compare/windsurf-vs-cursor.html" class="compare-strip">⚖️ Windsurf vs Cursor →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/pt/compare/windsurf-vs-cursor.html" class="compare-strip">⚖️ Windsurf vs Cursor →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Windsurf</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Windsurf é um IDE nativo com IA construído sobre o VS Code, lançado originalmente como Codeium no final de 2024. O produto foi oficialmente renomeado para Windsurf em abril de 2025 e adquirido pela Cognition AI (empresa por trás do Devin) em dezembro de 2025 por aproximadamente $250 milhões — reunindo-o sob o mesmo teto de um dos principais produtos de codificação agêntica do mercado.</p><p style="margin-top:1rem">O recurso central é o Flows — um modo de codificação agêntica em que a IA não apenas sugere trechos de código, mas escreve ativamente código em múltiplos arquivos, executa comandos de terminal, lê a saída de erros e itera até concluir a tarefa com mínima intervenção manual. O Windsurf 2 (março de 2026) introduziu o SWE-1.5, um modelo de codificação proprietário 13x mais rápido que o Claude Sonnet 4.5 com qualidade comparável em benchmarks de codificação — gerado inteiramente na infraestrutura própria da Cognition.</p><p style="margin-top:1rem">Os preços foram reformulados em 19 de março de 2026: o sistema baseado em créditos foi substituído por cobrança baseada em cotas (cotas diárias e semanais renovadas automaticamente). O plano Pro é $20/mês — igualando o Cursor — e um novo nível Max a $200/mês atende usuários avançados com cotas significativamente maiores. O aumento de preço de $15 para $20 gerou reações negativas consideráveis dos usuários, já que &quot;nível gratuito mais generoso que o Cursor&quot; era o argumento original de venda do Codeium/Windsurf.</p><p style="margin-top:1rem">Em 2026: mais de 1 milhão de usuários, mais de 4.000 clientes empresariais, autorização FedRAMP High para uso governamental. Para desenvolvedores que desejam compatibilidade com VS Code, edição agêntica em múltiplos arquivos e o respaldo da empresa que criou o Devin, o Windsurf é agora uma alternativa credível ao Cursor — embora não seja mais a opção econômica que costumava ser.</p></div>

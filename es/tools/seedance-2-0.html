@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Modelo de generación de vídeo AI de ByteDance — integrado en CapCut, API a través de fal.ai</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de Seedance 2.0</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Seedance 2.0 es el modelo de generación de vídeo AI de ByteDance, que representa la tecnología de generación de vídeo de mayor capacidad de la empresa a partir de 2026. Es el modelo que potencia las características de generación de vídeo AI de CapCut globalmente y está disponible para desarrolladores a través del mercado API de fal.ai. El modelo produce clips de vídeo de calidad cinematográfica con fuerte realismo de movimiento y sigue indicaciones compositivas complejas.</p><p style="margin-top:1rem">Seedance 2.0 no está directamente disponible como producto independiente para consumidores en Estados Unidos. Disney envió una orden de cese y desistimiento a ByteDance a principios de 2026 por preocupaciones de derechos de autor, y ByteDance restringió preventivamente la disponibilidad de Seedance en EE.UU. como resultado. El modelo permanece totalmente accesible en todos los demás mercados a través de CapCut y la API de fal.ai.</p><p style="margin-top:1rem">Las capacidades clave incluyen generación de texto a vídeo, animación de imagen a vídeo, controles de movimiento de cámara, física de movimiento de alta fidelidad y acceso API a través de fal.ai para integración de desarrolladores. La resolución de salida y la duración del clip coinciden con los modelos de vídeo competidores principales (hasta 1080p, hasta 10 segundos por clip).</p><p style="margin-top:1rem">Precio: El acceso a Seedance 2.0 a través de CapCut se incluye en los planes existentes de CapCut. El acceso API a través de fal.ai utiliza precios por generación que varían según la duración de salida y el nivel de calidad — generalmente comparable a otras APIs de modelos de vídeo fronterizos. No existe suscripción independiente de Seedance.</p><p style="margin-top:1rem">Limitaciones: La restricción del mercado estadounidense es una limitación significativa para creadores y desarrolladores con sede en EE.UU. La propiedad de ByteDance crea la misma exposición regulatoria que CapCut y TikTok. Como modelo accesible principalmente a través de otras plataformas (CapCut, fal.ai), no hay interfaz directa de Seedance para consumidores.</p><p style="margin-top:1rem">Más adecuado para creadores de contenido no estadounidenses que utilizan CapCut y desean acceso al mejor modelo de generación de vídeo de ByteDance, y desarrolladores que construyen aplicaciones de vídeo fuera del mercado estadounidense a través de fal.ai.</p></div>

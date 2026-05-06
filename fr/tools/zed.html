@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Éditeur de code IA ultra-rapide avec collaboration multiplayer native</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Zed</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Zed est un éditeur de code nouvelle génération construit entièrement de zéro en Rust, utilisant un framework d'interface utilisateur personnalisé accéléré par GPU appelé GPUI. Contrairement aux forks de VS Code tels que Cursor ou Windsurf, Zed n'est pas basé sur Electron — il a été construit à partir de zéro pour la performance. Le résultat est une réponse aux frappes sub-milliseconde, un démarrage en moins d'une seconde, et une édition fluide même sur des fichiers très volumineux. Zed a atteint la version 1.0 le 29 avril 2026 après cinq ans de développement et compte 81 700+ étoiles GitHub.</p><p style="margin-top:1rem">La fonction multiplayer native de Zed est unique : plusieurs développeurs peuvent éditer le même fichier simultanément en temps réel, similaire à Google Docs mais pour le code. À partir de v1.0, Zed supporte les agents IA concurrents — plusieurs agents IA peuvent travailler sur différentes parties de la base de code simultanément dans la même fenêtre d'éditeur. Le modèle propriétaire Zeta alimente les fonctionnalités IA sur le plan payant, tandis que BYOK est supporté pour les configurations LLM personnalisées.</p><p style="margin-top:1rem">Les capacités clés incluent la collaboration en temps réel native sans plugins, les agents IA concurrents, le support LSP pour tous les langages majeurs, le mode vim, un terminal intégré, et l'extensibilité via un système de plugins basé sur WebAssembly. Zed est disponible sur macOS et Linux ; le support Windows est en cours de développement.</p><p style="margin-top:1rem">Tarification : L'éditeur lui-même est gratuit et open source. Les fonctionnalités IA utilisent un système de crédits — une certaine utilisation est incluse gratuitement, avec un plan payant pour une utilisation plus importante de Zed AI. BYOK est supporté pour les équipes ayant des contrats LLM existants.</p><p style="margin-top:1rem">Limitations : Zed ne peut pas exécuter les extensions VS Code — l'écosystème d'extensions est plus petit que VS Code ou Cursor. Le support Windows est toujours en cours à partir de mi-2026. Les équipes fortement investies dans les extensions VS Code pourraient trouver la transition coûteuse.</p><p style="margin-top:1rem">Mieux adapté aux développeurs qui privilégient la performance de l'éditeur, la collaboration en équipe en temps réel, et une architecture d'éditeur moderne — particulièrement sur macOS et Linux.</p></div>

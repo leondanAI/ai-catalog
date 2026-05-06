@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> Исследовательский AI-блокнот — задавайте вопросы и генерируйте Audio Overviews из ваших источников</div>
     </div>
   </div>
-  <a href="/ru/compare/perplexity-vs-notebooklm.html" class="compare-strip">⚖️ NotebookLM vs Perplexity →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/perplexity-vs-notebooklm.html" class="compare-strip">⚖️ NotebookLM vs Perplexity →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе NotebookLM</h2>
     <div class="tool-desc"><p style="margin-top:1rem">NotebookLM — это инструмент AI для исследования и синтеза от Google, разработанный для анализа ваших собственных документов, а не поиска в интернете. Вы загружаете источники — PDF, Google Docs, YouTube ссылки, аудиофайлы, EPUB книги — и NotebookLM становится экспертом по этому материалу, отвечая на вопросы, генерируя резюме и создавая учебные материалы, полностью основанные на загруженном контенте.</p><p style="margin-top:1rem">Функция Audio Overview генерирует реалистичное подкаст-обсуждение с двумя ведущими ваших источников — один из самых отличительных форматов AI-вывода. Это была одна из первых функций, ставших вирусными, и остается ключевым преимуществом.</p><p style="margin-top:1rem">Обновления 2026 года существенные. Cinematic Video Overviews, выпущенные в марте 2026, генерируют плавные анимированные нарративные видео из ваших источников — значительное улучшение по сравнению со статичными слайдами с озвучкой (в настоящее время доступно в плане Google AI Ultra). Редактирование слайдов теперь позволяет целевым образом редактировать отдельные слайды с инструкциями в промптах, вместо регенерации всей колоды. Добавлена поддержка файлов EPUB. NotebookLM интегрирован в Google Classroom для преподавателей высших учебных заведений.</p><p style="margin-top:1rem">NotebookLM бесплатно с стандартными лимитами. NotebookLM Plus, доступный через Google AI Pro за $19.99/месяц, открывает повышенные лимиты использования, больше источников на блокнот, дополнительные запросы в чат, расширенные учебные инструменты и Cinematic Video Overviews.</p><p style="margin-top:1rem">Оптимален для студентов, исследователей, юристов и аналитиков, которым нужно синтезировать и анализировать большие объемы своих собственных документов, а не искать в открытом интернете.</p></div>

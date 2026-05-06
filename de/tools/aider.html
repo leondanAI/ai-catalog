@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal für:</strong> Terminal-AI-Pair-Programmer mit automatischen Git-Commits</div>
     </div>
   </div>
-  <a href="/de/compare/aider-vs-github-copilot.html" class="compare-strip">⚖️ Aider vs GitHub Copilot →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/de/compare/aider-vs-github-copilot.html" class="compare-strip">⚖️ Aider vs GitHub Copilot →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Über Aider</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Aider ist ein Open-Source-Python-basierter AI-Pair-Programmer, der vollständig im Terminal läuft. Seine charakteristische Funktion ist der Git-native Betrieb: Jede Änderung, die die KI vornimmt, wird automatisch mit einer aussagekräftigen Commit-Nachricht committed, sodass Sie git diff, git log und git revert verwenden können, um jede KI-Änderung zu überprüfen oder rückgängig zu machen. Dies macht es einzigartig sicher für Production-Codebases, wo das Tracking von Änderungen wichtig ist.</p><p style="margin-top:1rem">Das Tool verarbeitet pro Woche 15 Milliarden Token in seiner Benutzerbasis (Stand Anfang 2026). Aider erstellt eine Repo-Map — einen semantischen Index der gesamten Codebase — und ermöglicht präzise Multi-File-Edits in großen Projekten. Es verbindet sich mit jedem LLM: Claude Sonnet, GPT-4o, Gemini, DeepSeek, lokale Ollama-Modelle und Dutzende von Anbietern via OpenRouter. Die Open-Source-Community veröffentlicht häufig Updates.</p><p style="margin-top:1rem">Zu den Hauptfunktionen gehören automatische Git-Commits für jede KI-Änderung, Multi-File-Editing in großen Codebases via Repo-Map, Spracheingabemodus, In-Editor-Bildunterstützung für visuelles Debugging und ein Watch-Modus, der auf spezielle Kommentare in Ihrem Code reagiert. Aider funktioniert in jedem Verzeichnis ohne IDE-Plugins oder Konfiguration über einen API-Key hinaus.</p><p style="margin-top:1rem">Preisgestaltung: Aider ist völlig kostenlos und Open Source. Sie zahlen nur für LLM-API-Aufrufe bei Ihrem gewählten Anbieter. Das Ausführen auf lokalen Modellen via Ollama kostet nichts über die Hardware hinaus.</p><p style="margin-top:1rem">Einschränkungen: Aider ist nur Terminal — es gibt keine GUI, IDE-Erweiterung oder Browser-Interface. Das Setup erfordert die Installation via pip und die Konfiguration eines API-Keys. Wie alle BYOK-Tools werden LLM-Kosten separat bezahlt.</p><p style="margin-top:1rem">Am besten geeignet für Entwickler, die im Terminal arbeiten und einen AI-Pair-Programmer mit vollständiger Git-Verantwortung wünschen — wo jede KI-Änderung nachverfolgbar, überprüfbar und reversibel ist.</p></div>

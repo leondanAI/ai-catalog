@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Chat IA gratuit avec raisonnement puissant et coûts API très faibles</div>
     </div>
   </div>
-  <a href="/fr/compare/deepseek-vs-chatgpt.html" class="compare-strip">⚖️ DeepSeek vs ChatGPT →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/deepseek-vs-chatgpt.html" class="compare-strip">⚖️ DeepSeek vs ChatGPT →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos DeepSeek</h2>
     <div class="tool-desc"><p style="margin-top:1rem">DeepSeek est un laboratoire IA basé à Hangzhou, en Chine, qui a régulièrement publié des modèles open-weight rivalisent ou dépassant les performances des modèles fermés leaders — à une fraction du coût d'entraînement et d'exécution.</p><p style="margin-top:1rem">DeepSeek V4, lancé le 24 avril 2026, est le vaisseau amiral actuel. Il se décline en deux variantes : V4-Pro avec 1,6 trillion de paramètres (49B activés via architecture mixture-of-experts) et V4-Flash avec 284B paramètres (13B activés). Les deux supportent une fenêtre de contexte d'1 million de tokens. Les benchmarks V4-Pro le placent aux côtés de GPT-5.5 et Claude sur la plupart des tâches de raisonnement, codage et mathématiques.</p><p style="margin-top:1rem">L'interface web sur chat.deepseek.com reste complètement gratuite sans limites de débit en mode standard. Les poids open-source sont disponibles pour le déploiement local et commercial. Les tarifs API sont extrêmement compétitifs : V4-Flash figure parmi les API de qualité frontière les moins chers disponibles.</p><p style="margin-top:1rem">Au 24 avril 2025, DeepSeek comptait 96,88 millions d'utilisateurs actifs mensuels dans le monde — un chiffre qui a continué à augmenter avec la sortie de V4. Il se classe comme l'application #1 la plus téléchargée sur l'App Store dans plus de 156 pays.</p><p style="margin-top:1rem">Limitation clé : DeepSeek est une entreprise chinoise et ses serveurs sont exploités en Chine. Cela crée des préoccupations concernant la confidentialité des données pour les utilisateurs traitant des informations sensibles en affaires, juridiques ou gouvernementales. Le gouvernement chinois dispose de droits d'accès aux données très larges. La disponibilité des serveurs peut également être lente pendant les heures de pointe.</p><p style="margin-top:1rem">Idéal pour les développeurs, chercheurs et utilisateurs conscients des coûts qui souhaitent une IA de qualité frontière gratuitement et sont à l'aise avec les compromis de confidentialité d'un service hébergé en Chine.</p></div>

@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Creación de videos con avatar AI y traducción de videos con sincronización de labios en 175+ idiomas</div>
     </div>
   </div>
-  <a href="/es/compare/heygen-vs-synthesia.html" class="compare-strip">⚖️ HeyGen vs Synthesia →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/es/compare/heygen-vs-synthesia.html" class="compare-strip">⚖️ HeyGen vs Synthesia →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de HeyGen</h2>
     <div class="tool-desc"><p style="margin-top:1rem">HeyGen es la plataforma líder de video con avatar AI, utilizada por más de 2 millones de usuarios en equipos de marketing, departamentos de L&amp;D y creadores de contenido. Ha superado los $100 millones en ingresos recurrentes anuales y tiene una valoración de $500 millones, lo que la convierte en la plataforma de video AI más exitosa comercialmente enfocada en contenido basado en avatares.</p><p style="margin-top:1rem">Producto principal: crear videos profesionales escribiendo un guion. Los avatares de HeyGen sincronizan labios en 175+ idiomas con calidad casi de transmisión. Avatar IV, la generación actual, ofrece la precisión de sincronización de labios más realista que HeyGen ha lanzado.</p><p style="margin-top:1rem">Los añadidos recientes incluyen Video Agent API (crear videos programáticamente desde disparadores externos), creación de video impulsada por ChatGPT (generar guiones y escenas desde prompts directamente en HeyGen) y abastecimiento premium de metraje de fondo a través de Sora 2 y Veo 3.1 para metraje de fondo. Synthesia es el competidor más cercano, comenzando en $22/mes con 160+ avatares y fuertes características de L&amp;D.</p><p style="margin-top:1rem">Los precios comienzan en $24/mes para el plan Creator, que incluye 200+ avatares e idiomas 175+. Los niveles superiores desbloquean entrenamiento de avatar personalizado (tu cara/voz), acceso a API y SSO empresarial.</p><p style="margin-top:1rem">Limitaciones: los avatares aún tienen ocasionalmente calidad uncanny valley en planos cercanos. El entrenamiento de avatar personalizado requiere enviar video de ti mismo y toma algunos días hábiles.</p><p style="margin-top:1rem">Mejor para equipos de marketing, departamentos de HR/L&amp;D y creadores de contenido que necesitan videos basados en avatares profesionales a escala sin costos de cámara, estudio o doblaje multilingüe.</p></div>

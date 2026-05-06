@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Présentations d'équipe, decks de startups</div>
     </div>
   </div>
-  <a href="/fr/compare/gamma-vs-pitch.html" class="compare-strip">⚖️ Pitch vs Gamma →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/gamma-vs-pitch.html" class="compare-strip">⚖️ Pitch vs Gamma →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Pitch</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Pitch est une plateforme de présentation collaborative conçue pour les équipes modernes — en particulier les startups et les entreprises axées sur le design — qui souhaitent appliquer la collaboration en temps réel de Google Docs à la création de présentations. Plusieurs membres d'une équipe peuvent modifier le même deck simultanément, voir les modifications des autres en direct, laisser des commentaires sur des diapositives spécifiques et gérer des flux de validation avant tout partage externe.</p><p style="margin-top:1rem">La bibliothèque de modèles est orientée vers les cas d'usage des startups et des entreprises : pitch decks, bilans trimestriels, plans de mise sur le marché, présentations OKR et réunions générales d'entreprise. De nombreux modèles s'inspirent de présentations réelles issues d'entreprises de Y Combinator et de startups en forte croissance, reflétant les sensibilités design de la communauté tech et venture. La fonctionnalité d'analyse indique qui a consulté une présentation partagée, le temps passé sur chaque diapositive et à quel moment les spectateurs ont décroché — fournissant ainsi des signaux sur l'engagement des parties prenantes avec les supports de pitch.</p><p style="margin-top:1rem">Pitch s'intègre avec Figma (importation directe de designs dans les diapositives), Unsplash (bibliothèque de photos gratuites) et les principaux outils de gestion de projet. Le plan gratuit couvre un nombre illimité de decks et 5 espaces de travail. Les plans Pro démarrent à 8 $/utilisateur/mois. La principale limitation par rapport à Gamma ou Tome concerne la vitesse de génération IA — les fonctionnalités de rédaction IA de Pitch sont compétentes mais plus lentes et moins abouties que les générateurs de decks IA pensés en priorité pour cette fonction. Pour les équipes qui privilégient la collaboration, l'historique des versions et la qualité du design plutôt que la rapidité de génération IA, Pitch est le choix le plus solide dans sa catégorie.</p></div>

@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> React и Next.js компоненты UI, генерируемые из текстовых подсказок или дизайнов Figma</div>
     </div>
   </div>
-  <a href="/ru/compare/v0-by-vercel-vs-cursor.html" class="compare-strip">⚖️ v0 by Vercel vs Cursor →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/v0-by-vercel-vs-cursor.html" class="compare-strip">⚖️ v0 by Vercel vs Cursor →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе v0 by Vercel</h2>
     <div class="tool-desc"><p style="margin-top:1rem">v0 by Vercel — это AI-инструмент для генерации UI, который преобразует текстовые подсказки и дизайны Figma в production-ready код компонентов React и Next.js. По умолчанию использует компоненты shadcn/ui и Tailwind CSS, создавая доступный и адаптивный код, готовый к использованию в production. Платформа выросла до 6 миллионов разработчиков и 80 000 активных команд с момента запуска.</p><p style="margin-top:1rem">Обновление от 4 февраля 2026 года добавило интеграцию Git, полнофункциональный редактор кода в стиле VS Code в браузере, подключение к базам данных и агентивные рабочие процессы. Агент теперь может исследовать, планировать, отлаживать и итерировать свой результат — выходя за пределы однократной генерации UI для обработки многошаговых функций продукта. Импорт из Figma доступен на планах Premium и выше.</p><p style="margin-top:1rem">Ключевые возможности включают многофреймворковый вывод React, реальный предпросмотр с редактированием в реальном времени, агентивную самоотладку и итерацию, прямое развёртывание Vercel в один клик и v0 API для программного доступа на Premium. Система кредитов использует разные уровни моделей (Mini, Pro, Max) за поколение на основе сложности и объёма.</p><p style="margin-top:1rem">Цены: Free tier включает $5 ежемесячных кредитов и до 200 проектов. Premium стоит $20 в месяц с $20 ежемесячными кредитами, импортом Figma и доступом к v0 API. Team план — $30 за пользователя в месяц с функциями сотрудничества. Business — $100 за пользователя в месяц с отказом от обучения по умолчанию и расширенными элементами управления. Кредиты расходуются за поколение на основе уровня модели.</p><p style="margin-top:1rem">Ограничения: v0 сосредоточен исключительно на React, Next.js и Tailwind — плохо подходит для Vue, Angular, Svelte или других фронтенд-стеков. Кредиты Free tier заканчиваются очень быстро. Это в первую очередь инструмент для UI слоя, не полнофункциональное решение. Business план за $100 за пользователя дорогой по сравнению с аналогичными инструментами.</p><p style="margin-top:1rem">Лучше всего подходит для фронтенд-разработчиков и дизайнеров, создающих UI React и Next.js, которые хотят production-ready код доступных компонентов из текстовой подсказки или импорта Figma.</p></div>

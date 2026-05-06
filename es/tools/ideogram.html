@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Imágenes con texto: pósters, logotipos, portadas de libros</div>
     </div>
   </div>
-  <a href="/es/compare/ideogram-vs-midjourney.html" class="compare-strip">⚖️ Ideogram vs Midjourney →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/es/compare/ideogram-vs-midjourney.html" class="compare-strip">⚖️ Ideogram vs Midjourney →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de Ideogram</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Ideogram es una plataforma de generación de imágenes IA con una especialización única: es la herramienta IA más precisa para renderizar texto legible y bien formado dentro de imágenes generadas. Esta capacidad habilita casos de uso con los que otros modelos luchan — pósters, tarjetas de felicitación, portadas de libros, logotipos y gráficos de redes sociales donde la tipografía es parte del diseño.</p><p style="margin-top:1rem">Ideogram 3.0 se lanzó en marzo de 2025 y añadió consistencia de personajes: ahora puedes mantener el mismo personaje en múltiples imágenes generadas pasando una imagen de referencia. Esto expande significativamente los casos de uso a narrativa secuencial, mockups de productos y desarrollo de personajes de marca.</p><p style="margin-top:1rem">Precios: El plan gratuito incluye 10 créditos por semana. Plus es $15/mes, Pro es $20/mes, Team es $42/usuario/mes, precios Enterprise personalizados. Precios de API para Ideogram 3.0: calidad Turbo a $0.0375/imagen, Default a $0.075/imagen, alta calidad a $0.1125/imagen.</p><p style="margin-top:1rem">Ideogram 3.0 genera imágenes hasta resolución 2048×2048 y soporta varias relaciones de aspecto. La interfaz es limpia y basada en web, con sugerencias de prompts y presets de estilo. Generación por lotes y modo privado están disponibles en planes pagos.</p><p style="margin-top:1rem">Limitaciones: aunque la precisión de texto es de clase mundial, la calidad estética general para imágenes fotorrealistas aún se queda atrás de Midjourney V7 y FLUX.2. El nivel gratuito de 10 créditos por semana es muy limitado para uso serio.</p><p style="margin-top:1rem">Mejor para diseñadores, especialistas en marketing y creadores de contenido que regularmente necesitan imágenes con texto — particularmente aquellos que crean contenido de redes sociales, materiales promocionales o activos de marca.</p></div>

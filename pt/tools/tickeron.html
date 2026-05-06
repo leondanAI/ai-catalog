@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Robôs de trading com IA, sinais e reconhecimento de padrões</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Tickeron</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Tickeron é uma plataforma de trading e investimento baseada em IA, fundada em 2017, que se tornou uma das ferramentas de trading com IA mais completas disponíveis para investidores individuais em 2026. A plataforma utiliza algoritmos de machine learning para analisar mercados financeiros em ações, ETFs, forex e criptomoedas — gerando sinais de trading acionáveis, alertas de padrões gráficos e análises de portfólio projetadas para oferecer aos investidores comuns insights baseados em dados que antes estavam disponíveis apenas para traders institucionais.</p><p style="margin-top:1rem">O núcleo do Tickeron é o seu Marketplace de Robôs de IA: uma biblioteca de bots de trading pré-configurados, cada um com um histórico de desempenho em tempo real que exibe taxas de acerto, retornos médios e estilo de operação. É possível navegar pelos bots por estratégia — momentum, swing trading, ações de alta volatilidade — e seguir seus sinais diretamente. O Pattern Search Engine varre gráficos diariamente em milhares de instrumentos e identifica formações como ombro-cabeça-ombro, fundos duplos e padrões de bandeira, fornecendo pontuações de confiança e alvos de preço projetados para cada sinal. Para quem possui portfólios, o Portfolio Wizard avalia as posições existentes e oferece uma pontuação de diversificação, análise de risco e recomendações de rebalanceamento.</p><p style="margin-top:1rem">O Tickeron oferece um plano gratuito com acesso básico e um período de teste de 14 dias nos planos pagos. Os planos premium variam de US$ 15 por mês para recursos intermediários até US$ 250 por mês pela plataforma completa, com todos os robôs de IA, dados em tempo real e screeners ilimitados. Para traders e investidores ativos que desejam sinais baseados em IA sem precisar construir seus próprios modelos do zero — o Tickeron oferece um kit de ferramentas pronto que reúne análise, previsão e gestão de portfólio em um único lugar.</p></div>

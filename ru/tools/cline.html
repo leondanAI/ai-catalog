@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> Автономный агент кодирования VS Code с пошаговым одобрением</div>
     </div>
   </div>
-  <a href="/ru/compare/cline-vs-github-copilot.html" class="compare-strip">⚖️ Cline vs GitHub Copilot →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/cline-vs-github-copilot.html" class="compare-strip">⚖️ Cline vs GitHub Copilot →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе Cline</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Cline (ранее Claude Dev) — это расширение автономного агента кодирования с открытым исходным кодом для VS Code, JetBrains, Cursor, Windsurf, Zed и Neovim. Он работает в цикле пошагового одобрения: агент предлагает каждое действие (создание файла, выполнение команды, открытие браузера), и пользователь одобряет перед выполнением — что делает его прозрачным и безопасным в сравнении с полностью автономными инструментами. С более чем 59 000 звезд на GitHub и 5 миллионами установок он является наиболее широко применяемым агентом кодирования с открытым исходным кодом в экосистеме VS Code.</p><p style="margin-top:1rem">Cline достиг версии 3.81 в мае 2026 года и получает ежедневные обновления. Он изначально поддерживает Model Context Protocol (MCP), позволяя интеграцию пользовательских инструментов. Расширение работает с любой LLM через bring-your-own-key: Anthropic Claude, OpenAI, Gemini, AWS Bedrock, OpenRouter и локальными моделями. Он может читать и редактировать файлы по всей кодовой базе, выполнять команды терминала, запускать тесты и использовать браузер для исследований или сквозного тестирования.</p><p style="margin-top:1rem">Основные возможности включают многофайловое редактирование с полным контекстом кодовой базы, использование браузера для исследований и тестирования UI, поддержку инструментов MCP и рабочий процесс на основе одобрения, который дает разработчику контроль на каждом шаге. В отличие от разветвленных редакторов, таких как Cursor или Windsurf, Cline работает внутри вашего существующего редактора без необходимости миграции.</p><p style="margin-top:1rem">Ценовая модель: Cline совершенно бесплатен и имеет открытый исходный код. Вы платите только за использованные вами вызовы API LLM выбранному провайдеру. Запуск на локальных моделях через Ollama бесплатен.</p><p style="margin-top:1rem">Ограничения: Рабочий процесс пошагового одобрения, хотя и безопасный, может замедлить сложные многофайловые задачи по сравнению с полностью автономными инструментами. Качество полностью зависит от настроенной вами LLM. Модель BYOK означает, что вы управляете затратами на API отдельно.</p><p style="margin-top:1rem">Больше всего подходит для разработчиков, которые хотят мощного автономного агента кодирования внутри своего существующего редактора без переключения на новую IDE и которые предпочитают прозрачный пошаговый контроль полностью автономному выполнению.</p></div>

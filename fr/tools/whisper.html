@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Transcription, sous-titres</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Whisper</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Whisper est le modèle de reconnaissance automatique de la parole (ASR) open-source d'OpenAI, publié en 2022 et largement considéré comme le système de transcription public le plus précis disponible. Entraîné sur 680 000 heures de données audio multilingues, il prend en charge 100 langues avec une haute précision — y compris de nombreuses langues à faibles ressources avec lesquelles les services de transcription commerciaux peinent — et gère les accents, le jargon technique et le bruit de fond mieux que la plupart des alternatives.</p><p style="margin-top:1rem">Le modèle est publié sous licence MIT, ce qui signifie qu'il peut être utilisé gratuitement à n'importe quelle fin, y compris pour des applications commerciales. L'exécution de Whisper en local ne nécessite aucun frais d'API — les coûts de calcul se limitent à votre propre matériel ou à une instance cloud. Le modèle est disponible en cinq tailles (tiny, base, small, medium, large) offrant différents compromis entre vitesse et précision ; le modèle large-v3 offre la meilleure précision et fonctionne sur la plupart des GPU modernes disposant de 10 Go+ de VRAM. OpenAI propose également une API hébergée à 0,006 $/minute, ce qui est compétitif par rapport aux services de transcription commerciaux.</p><p style="margin-top:1rem">La principale limitation est que Whisper traite des fichiers audio enregistrés, et non des flux en temps réel — il n'existe pas de fonctionnalité de transcription en direct intégrée. Des projets communautaires comme Whisper Live et WhisperStream ajoutent des fonctionnalités en temps réel, mais nécessitent une infrastructure supplémentaire. Pour les applications nécessitant des sous-titres en direct (appels vidéo, événements en direct), des services cloud comme AssemblyAI ou Deepgram sont de meilleurs choix. Pour la transcription par lots d'enregistrements, de podcasts, de réunions et d'entretiens, Whisper offre le meilleur rapport précision/coût disponible.</p></div>

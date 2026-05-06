@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Geração local de imagens por IA e fine-tuning</div>
     </div>
   </div>
-  <a href="/pt/compare/midjourney-vs-stable-diffusion.html" class="compare-strip">⚖️ Stable Diffusion vs Midjourney →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/pt/compare/midjourney-vs-stable-diffusion.html" class="compare-strip">⚖️ Stable Diffusion vs Midjourney →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Stable Diffusion</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Stable Diffusion é a família de modelos texto-para-imagem open-source foundacional lançada pela Stability AI, e a tecnologia que alimenta a maior parte do ecossistema de geração de imagens por IA open-source. Ao contrário dos serviços proprietários, os pesos do modelo Stable Diffusion estão livremente disponíveis para download, fine-tuning e execução local em hardware consumer.</p><p style="margin-top:1rem">O lançamento atual é Stable Diffusion 3.5. SD 3.5 Large possui 8,1 bilhões de parâmetros e usa arquitetura MM-DiT com três codificadores de texto para compreensão de prompt aprimorada. SD 3.5 Medium (2,5B parâmetros) executa em GPUs consumer. Ambos estão disponíveis sob uma Licença Comunitária gratuita para uso não-comercial; uso comercial requer licença paga da Stability AI.</p><p style="margin-top:1rem">A Stability AI enfrentou um quase-colapso no início de 2024 — demissões em massa e crise de financiamento. A empresa realizou uma recuperação notável sob nova liderança, com Sean Parker como Presidente Executivo e James Cameron entrando no conselho. Todas as dívidas foram apagadas em dezembro de 2024 e a empresa reportou crescimento de receita de três dígitos.</p><p style="margin-top:1rem">O modelo executa localmente via interfaces como ComfyUI ou Automatic1111, ou via API Stability AI (pago, baseado em créditos). Fine-tunes comunitários e modelos LoRA somam milhares em plataformas como Civitai e Hugging Face, cobrindo todos os estilos concebíveis.</p><p style="margin-top:1rem">Limitações: qualidade bruta não lidera mais o campo — Flux e Midjourney V7 produzem saída melhor. Executar localmente requer uma GPU capaz (8GB+ VRAM recomendado). Uso comercial dos pesos requer um acordo de licença separado.</p><p style="margin-top:1rem">Melhor para desenvolvedores e pesquisadores que desejam controle total — execução local, fine-tuning, pipelines customizados e sem taxas por imagem.</p></div>

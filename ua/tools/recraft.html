@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Підходить для:</strong> AI генерація зображень та векторної графіки/SVG для брендингу та ілюстрацій</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Recraft</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Recraft — це платформа для AI генерації зображень та векторного дизайну, яка унікально генерує як растрові зображення, так і нативні векторні/SVG вихід — єдиний великий AI інструмент, що виробляє повністю редаговану векторну графіку із текстових підказок. Ця можливість критично важлива для дизайнерів брендів, яким потрібні логотипи, іконки та ілюстрації у масштабованих векторних форматах, а не у піксельних зображеннях.</p><p style="margin-top:1rem">Recraft V3, випущений наприкінці 2024 року, став одним із найвищерейтингових моделей на FLUX.1 бенчмарку та досяг найвищого балу на T2I-CompBench для вирівнювання текст-зображення. Платформу використовують дизайнери в Netflix, HubSpot та Airbus для генерації брендових активів. Інтерфейс чистий та орієнтований на дизайн — з контролем стилю, налаштуваннями палітри кольорів та brand kit для послідовного візуального вихідного результату.</p><p style="margin-top:1rem">Ключові можливості включають: генерацію текст-зображення (Recraft V3), нативний векторний/SVG вихід, генерацію іконок, генерацію ілюстрацій, редагування зображень (розширення, видалення фону, заміна фону), brand kit для послідовності стилю, бібліотеку стилів для послідовної візуальної ідентичності та API для інтеграції.</p><p style="margin-top:1rem">Ціни: Безплатний план забезпечує 50 генерацій на день — щедро порівняно з більшістю AI інструментів для зображень. Pro за $25 на місяць забезпечує 3000 швидких генерацій на місяць, комерційні права та вищу якість розділення. Ціни для підприємств індивідуальні.</p><p style="margin-top:1rem">Омеження: План Pro з 3000 генерацій на місяць може обмежити високопродуктивні робочі потоки. Інструмент орієнтований на дизайн, а не на загальний творчий інструмент — він відмінний для брендових активів та ілюстрацій, але менше підходить для фотореалістичної генерації, де Midjourney або Flux сильніші.</p><p style="margin-top:1rem">Найкраще підходить для дизайнерів брендів, графічних дизайнерів та маркетингових команд, яким потрібні AI-генеровані брендові активи — особливо тим, хто потребує масштабованих векторних/SVG форматів для логотипів, іконок та ілюстрацій.</p></div>

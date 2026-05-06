@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Design com IA alimentado para não-designers e equipes</div>
     </div>
   </div>
-  <a href="/pt/compare/canva-ai-vs-figma-ai.html" class="compare-strip">⚖️ Canva AI vs Figma AI →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/pt/compare/canva-ai-vs-figma-ai.html" class="compare-strip">⚖️ Canva AI vs Figma AI →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Canva AI</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Canva é a plataforma de design visual mais popular do mundo com 220 milhões de usuários ativos mensais. Originalmente construída como uma alternativa simplificada ao Adobe, evoluiu para uma suíte criativa abrangente e alimentada por IA através do Magic Studio — sua camada de recursos de IA.</p><p style="margin-top:1rem">Canva AI 2.0, lançado em 16 de abril de 2026, representa o reposicionamento mais agressivo da plataforma: de &quot;ferramenta de design com recursos de IA&quot; para uma plataforma criativa com IA completa com capacidades agentic. A IA agora gerencia todo o fluxo de trabalho de criação por conversa — pesquisa, escrita, layout de design e agendamento de redes sociais podem ser iniciados e iterados com prompts em linguagem natural.</p><p style="margin-top:1rem">Recursos principais do Magic Studio: Magic Design (gerar designs completos a partir de um prompt de texto), Magic Write (redação com IA incorporada no editor), Magic Edit (modificar qualquer elemento descrevendo a mudança), Removedor de Fundo (um clique), Magic Resize (reformatar qualquer design para qualquer plataforma instantaneamente) e Text to Video (geração de vídeo curto a partir de um prompt).</p><p style="margin-top:1rem">Preços: A camada gratuita cobre a maioria dos casos de uso casual. Canva Pro a $15/mês desbloqueia Brand Kit, modelos premium ilimitados, removedor de fundo, Magic Resize e 1TB de armazenamento. Teams a $10/usuário/mês (mínimo 3 usuários). Preços Enterprise a partir de ~$30/usuário/mês.</p><p style="margin-top:1rem">Limitações: Canva é otimizado para volume e velocidade, não para precisão de design profissional. Controles de tipografia, sistemas de grade e controle fino de design são limitados em comparação com Figma ou ferramentas Adobe. Não adequado para design de UI de produto.</p><p style="margin-top:1rem">Melhor para profissionais de marketing, criadores de conteúdo, gerenciadores de redes sociais e pequenas empresas que precisam de conteúdo visual atraente em alta velocidade.</p></div>

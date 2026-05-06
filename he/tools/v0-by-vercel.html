@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> קומפוננטות UI, React, אבות-טיפוס</div>
     </div>
   </div>
-  <a href="/he/compare/v0-by-vercel-vs-cursor.html" class="compare-strip">⚖️ v0 by Vercel vs Cursor →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/he/compare/v0-by-vercel-vs-cursor.html" class="compare-strip">⚖️ v0 by Vercel vs Cursor →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>אודות v0 by Vercel</h2>
     <div class="tool-desc"><p style="margin-top:1rem">v0 הוא כלי ה-AI של Vercel לייצור רכיבי UI — מבוסס על תיאור טקסטואלי ומוציא קוד React ו-Tailwind CSS מוכן לייצור. בניגוד לכלים שמייצרים תמונות של ממשק משתמש, v0 מייצר קוד אמיתי שניתן להעתיק ישירות לפרויקט Next.js הבא. זה הופך אותו לכלי חיוני עבור מפתחי Frontend שרוצים לדלג על השלב המייגע של בניית רכיבים בסיסיים.</p><p style="margin-top:1rem">הממשק של v0 פשוט במיוחד: מתארים מה רוצים (&quot;כרטיס מוצר עם תמונה, כותרת, מחיר וכפתור הוספה לעגלה&quot;), v0 מייצר כמה וריאנטים ויזואליים לבחירה, ואפשר לעדן בשיחה (&quot;שנה את הצבע לכחול, הוסף badge של מלאי&quot;). כל שינוי מתעדכן בזמן אמת ב-preview חי. לאחר מכן — Export, הדבקה בפרויקט, ומוכן.</p><p style="margin-top:1rem">v0 תומך בספריות UI פופולריות כולל shadcn/ui, Radix UI ו-Lucide Icons, ומייצר קוד שנראה כאילו נכתב על ידי מפתח מנוסה — לא קוד גנרי. הגרסה החינמית מציעה 200 קרדיטים לחודש, ותוכניות Pro מתחילות מ-20 דולר לחודש. למפתחי React ו-Next.js שבונים אפליקציות בסטק של Vercel — v0 הוא הכלי שחוסך שעות על כל רכיב חדש.</p></div>

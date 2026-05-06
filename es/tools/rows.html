@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Hoja de cálculo mejorada con IA con integraciones de datos integradas y web scraping</div>
     </div>
   </div>
-  <a href="/es/compare/rows-vs-hex.html" class="compare-strip">⚖️ Rows vs Hex →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/es/compare/rows-vs-hex.html" class="compare-strip">⚖️ Rows vs Hex →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de Rows</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Rows es una plataforma de hojas de cálculo que incorpora capacidades de IA e integración de datos directamente en la experiencia de hoja de cálculo, sin requerir herramientas o APIs externas. A diferencia de Excel o Google Sheets donde la IA se añade como un complemento, Rows integró la IA como una capacidad nativa junto con integraciones de 50+ fuentes de datos — permitiendo a los usuarios extraer datos en vivo de Twitter, LinkedIn, HubSpot, Stripe, Google Analytics y otros directamente en celdas de hoja de cálculo.</p><p style="margin-top:1rem">El asistente de IA está integrado en la barra de fórmulas y en toda la interfaz — genera fórmulas a partir de descripciones en lenguaje natural, resume conjuntos de datos, enriquece datos consultando fuentes externas y crea análisis a partir de solicitudes en lenguaje natural. La capacidad de web scraping integrada permite extraer datos estructurados de cualquier sitio web público sin herramientas de terceros.</p><p style="margin-top:1rem">Las capacidades clave incluyen generación de fórmulas de IA nativa y análisis de datos, integraciones de datos en vivo 50+ (Twitter, LinkedIn, HubSpot, Stripe y más), web scraping integrado, actualización de datos en tiempo real, compartición e incrustación de hojas de cálculo e API para actualizaciones automatizadas.</p><p style="margin-top:1rem">Precios: El plan gratuito proporciona 20 tareas de IA por mes y acceso a la mayoría de características. Plus a $8 por usuario por mes proporciona 200 tareas de IA por mes e todas las integraciones de datos. Pro a $79 por mes proporciona 1,000 tareas de IA por mes, características de equipo y mayores frecuencias de actualización de datos. Los precios Enterprise son personalizados.</p><p style="margin-top:1rem">Limitaciones: Los límites de tareas de IA en los niveles gratuito y Plus restringen el uso intensivo de IA. La plataforma es más nueva que las herramientas de hoja de cálculo establecidas — algunos usuarios encuentran aspectos ásperos en la interfaz. Rows es mejor como herramienta de extracción y análisis de datos, no como reemplazo para modelos financieros complejos de Excel.</p><p style="margin-top:1rem">Más adecuado para equipos de crecimiento, marketing y ventas que regularmente extraen datos de fuentes externas en hojas de cálculo y desean que la IA ayude con análisis y creación de fórmulas sin salir del entorno de hoja de cálculo.</p></div>

@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> Профессиональный перевод документов и корпоративного контента с помощью искусственного интеллекта</div>
     </div>
   </div>
-  <a href="/ru/compare/deepl-vs-grammarly.html" class="compare-strip">⚖️ DeepL vs Grammarly →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/deepl-vs-grammarly.html" class="compare-strip">⚖️ DeepL vs Grammarly →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе DeepL</h2>
     <div class="tool-desc"><p style="margin-top:1rem">DeepL — это профессиональный AI-сервис перевода, признанный лингвистами и переводчиками как создающий самые естественно звучащие переводы среди автоматических сервисов. Поддерживает 33 языка и используется более чем 250 тысячами компаний и 100 миллионами пользователей по всему миру, включая Европейский парламент, который использует DeepL для перевода официальных документов.</p><p style="margin-top:1rem">Линия продуктов DeepL включает веб-интерфейс для перевода текста, загрузку и скачивание документов (с сохранением форматирования в Word, PowerPoint и PDF), мобильное приложение, расширения для браузера и Developer API. DeepL Agent, запущенный в 2025 году, позволяет автоматизировать рабочие процессы перевода — запуск переводов при загрузке файлов, интеграция с системами управления контентом и обработка больших объемов документов без ручного вмешательства.</p><p style="margin-top:1rem">Основные возможности: высокоточный перевод текста и документов (Word, PowerPoint, PDF), управление глоссариями для согласованной корпоративной терминологии, настройки тона (формальный или неформальный), DeepL Agent для автоматизированных рабочих процессов, API с гарантией 99,9% доступности и расширения для браузера.</p><p style="margin-top:1rem">Цены: бесплатный план с ограниченным переводом символов. Starter за $10,49 в месяц (годовой) — 1 млн символов в месяц и переводы документов. Advanced за $34,49 в месяц — 5 млн символов, управление глоссариями и командные функции. Ultimate за $68,99 в месяц — 20 млн символов и наивысший приоритет API. Доступны бизнес-планы с пользовательскими объемами.</p><p style="margin-top:1rem">Ограничения: DeepL охватывает 33 языка — значительно меньше, чем Google Translate (133 языка). Для редко используемых языковых пар качество может быть ниже, чем у конкурентов. Лимит символов Starter (1М/месяц) быстро исчерпывается при работе с большим объемом документов.</p><p style="margin-top:1rem">Оптимально подходит для компаний, юридических фирм, консалтинговых агентств и контент-команд, которым требуется профессиональный перевод деловых документов, коммуникации и маркетингового контента.</p></div>

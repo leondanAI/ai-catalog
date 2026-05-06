@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Conception graphique alimentée par l'IA pour les non-designers et les équipes</div>
     </div>
   </div>
-  <a href="/fr/compare/canva-ai-vs-figma-ai.html" class="compare-strip">⚖️ Canva AI vs Figma AI →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/canva-ai-vs-figma-ai.html" class="compare-strip">⚖️ Canva AI vs Figma AI →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Canva AI</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Canva est la plateforme de conception visuelle la plus populaire au monde avec 220 millions d'utilisateurs actifs mensuels. Initialement conçu comme une alternative simplifiée à Adobe, il a évolué en une suite créative complète alimentée par l'IA via Magic Studio — sa couche de fonctionnalités IA.</p><p style="margin-top:1rem">Canva AI 2.0, lancé le 16 avril 2026, représente le repositionnement le plus agressif de la plateforme : d'un « outil de conception avec fonctionnalités IA » à une plateforme créative IA complète avec capacités agentic. L'IA gère désormais l'intégralité du flux de création par conversation — la recherche, la rédaction, la mise en page de design et la planification des réseaux sociaux peuvent tous être initiés et itérés avec des invites en langage naturel.</p><p style="margin-top:1rem">Fonctionnalités clés de Magic Studio : Magic Design (générer des designs complets à partir d'une invite textuelle), Magic Write (rédaction IA intégrée dans l'éditeur), Magic Edit (modifier n'importe quel élément en décrivant le changement), Background Remover (un clic), Magic Resize (reformater n'importe quel design pour n'importe quelle plateforme instantanément), et Text to Video (génération de courtes vidéos à partir d'une invite).</p><p style="margin-top:1rem">Tarification : L'offre gratuite couvre la plupart des cas d'utilisation occasionnels. Canva Pro à $15/mois déverrouille Brand Kit, modèles premium illimités, suppresseur d'arrière-plan, Magic Resize et stockage 1TB. Teams à $10/utilisateur/mois (minimum 3 utilisateurs). Tarification Enterprise à partir de ~$30/utilisateur/mois.</p><p style="margin-top:1rem">Limitations : Canva est optimisé pour le volume et la rapidité, pas pour la précision de design professionnelle. Les contrôles typographiques, les systèmes de grille et le contrôle fin de la conception sont limités par rapport à Figma ou aux outils Adobe. Non adapté pour la conception d'UI produit.</p><p style="margin-top:1rem">Idéal pour les spécialistes du marketing, les créateurs de contenu, les responsables des réseaux sociaux et les petites entreprises qui ont besoin de contenu visuel attrayant rapidement.</p></div>

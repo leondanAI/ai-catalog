@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal für:</strong> Professionelle KI-Kunst und Design</div>
     </div>
   </div>
-  <a href="/de/compare/midjourney-vs-stable-diffusion.html" class="compare-strip">⚖️ Midjourney vs Stable Diffusion →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/de/compare/midjourney-vs-stable-diffusion.html" class="compare-strip">⚖️ Midjourney vs Stable Diffusion →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Über Midjourney</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Midjourney gilt vielen als der höchstwertige KI-Bildgenerierungsdienst und produziert durchgehend Kunstwerke mit überlegener Ästhetik, Beleuchtung und Komposition. Die Plattform läuft über einen Discord Bot und eine Web-Plattform auf midjourney.com.</p><p style="margin-top:1rem">Midjourney V7 ist seit 2026 das aktuelle Standardmodell und liefert die beste Bildqualität in der Geschichte des Dienstes. V8 ist in Benchmarks aufgetaucht, aber V7 bleibt das Produktions-Standard. Die Plattform bietet keine kostenlose Testversion — jeder Zugriff erfordert ein bezahltes Abonnement.</p><p style="margin-top:1rem">Preisgestaltung: Basic $10/Monat (200 Bilder/Monat), Standard $30/Monat (unbegrenzt entspannt, 15 schnelle Stunden), Pro $60/Monat (30 schnelle Stunden, Stealth-Modus), Mega $120/Monat (60 schnelle Stunden). Jährliche Abrechnung spart 20%. Unternehmen mit über $1M Jahresumsatz müssen Pro oder Mega für kommerzielle Nutzung verwenden.</p><p style="margin-top:1rem">Die Web-Plattform bietet Funktionen über Discord hinaus: Bearbeitungswerkzeuge, Inpainting, Outpainting, Style-Referenz und Character-Konsistenz über Generationen. Der /blend-Befehl verschmilzt Bilder; /describe rekonstruiert Prompts aus Fotos.</p><p style="margin-top:1rem">Einschränkungen: Gar keine kostenlose Version, was unter Konkurrenten ungewöhnlich ist. Die Ästhetik neigt zu einem charakteristischen &quot;Midjourney-Look&quot;, der schwer vollständig zu unterdrücken ist. Nicht Open Source — kein lokaler oder API-Zugang für allgemeine Nutzer.</p><p style="margin-top:1rem">Am besten geeignet für professionelle Designer, Künstler und Kreativagenturen, die die beste Ausgabe benötigen und die Abonnementkosten rechtfertigen können. Nicht geeignet für Entwickler, die API-Zugang benötigen, oder Benutzer, die kostenlos experimentieren möchten.</p></div>

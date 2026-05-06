@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Editor de código ultra rápido con colaboración multiplayer nativa</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de Zed</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Zed es un editor de código de próxima generación construido completamente desde cero en Rust, utilizando un marco de interfaz acelerado por GPU personalizado llamado GPUI. A diferencia de los forks de VS Code como Cursor o Windsurf, Zed no se basa en Electron — fue construido desde cero para el rendimiento. El resultado es una respuesta de teclado sub-milisegundo, inicio en menos de un segundo y edición suave incluso en archivos muy grandes. Zed alcanzó 1.0 el 29 de abril de 2026 después de cinco años de desarrollo y tiene 81,700+ estrellas en GitHub.</p><p style="margin-top:1rem">La característica multiplayer nativa de Zed es única: múltiples desarrolladores pueden editar el mismo archivo simultáneamente en tiempo real, similar a Google Docs pero para código. A partir de v1.0, Zed admite agentes de IA concurrentes — múltiples agentes de IA pueden trabajar en diferentes partes de la base de código simultáneamente dentro de la misma ventana del editor. El modelo propietario Zeta potencia características de IA en el plan de pago, mientras que BYOK es compatible con configuraciones de LLM personalizadas.</p><p style="margin-top:1rem">Las capacidades clave incluyen colaboración en tiempo real nativa sin plugins, agentes de IA concurrentes, soporte LSP para todos los lenguajes principales, modo vim, una terminal integrada y extensibilidad a través de un sistema de plugins basado en WebAssembly. Zed está disponible en macOS y Linux; el soporte de Windows está en progreso.</p><p style="margin-top:1rem">Precios: El editor en sí es gratuito y de código abierto. Las características de IA utilizan un sistema de créditos — parte del uso se incluye gratis, con un plan de pago para un uso más intensivo de Zed AI. BYOK es compatible con equipos que tienen contratos de LLM existentes.</p><p style="margin-top:1rem">Limitaciones: Zed no puede ejecutar extensiones de VS Code — el ecosistema de extensiones es más pequeño que VS Code o Cursor. El soporte de Windows aún está en progreso a mediados de 2026. Los equipos fuertemente invertidos en extensiones de VS Code pueden encontrar la transición costosa.</p><p style="margin-top:1rem">Más adecuado para desarrolladores que priorizan el rendimiento del editor, colaboración en equipo en tiempo real y una arquitectura de editor moderna — particularmente en macOS y Linux.</p></div>

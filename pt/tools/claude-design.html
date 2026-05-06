@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Designs visuais gerados por IA, apresentações e protótipos via conversa</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Claude Design</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Claude Design é uma ferramenta de design de IA criada especificamente pela Anthropic, lançada em 17 de abril de 2026 como visualização de pesquisa sob Anthropic Labs. É um produto distinto do Claude geral — alimentado por Claude Opus 4.7 e especificamente treinado para gerar saída visual refinada incluindo apresentações, one-pagers, decks de slides, protótipos e relatórios visuais a partir de prompts em linguagem natural.</p><p style="margin-top:1rem">Na primeira execução, Claude Design analisa sua base de código ou arquivos de design para construir um sistema de design — extraindo suas cores de marca, tipografia e padrões de componentes. Designs subsequentes conformam-se automaticamente a este sistema, produzindo saída de marca consistente sem configuração manual. As exportações estão disponíveis como PDF, URL compartilhável, PPTX ou diretamente para Canva para edição posterior.</p><p style="margin-top:1rem">Os recursos principais incluem iteração de design conversacional (peça mudanças em linguagem simples), geração de apresentações, criação de protótipos interativos, design de one-pager e relatório, e detecção automática de sistema de marca. A ferramenta compreende intenção de design em vez de exigir especificações precisas — descreva o que você precisa e ela produz um visual completo.</p><p style="margin-top:1rem">Preços: Claude Design está incluído no Claude Pro a $20 por mês, Claude Max a $100 e $200 por mês, planos Team e Enterprise. Não está disponível no tier Free. Não há preço standalone — o acesso requer uma assinatura ativa do Claude.</p><p style="margin-top:1rem">Limitações: Como visualização de pesquisa lançada em abril de 2026, Claude Design ainda está em desenvolvimento. A qualidade da saída pode variar em layouts complexos de múltiplas páginas. Não é um substituto para ferramentas de design profissional como Figma para trabalho de UI/UX — destaca-se em design de apresentação e documento em vez de design de produto interativo.</p><p style="margin-top:1rem">Mais adequado para profissionais que precisam de apresentações, relatórios e one-pagers refinados rapidamente sem abrir uma ferramenta de design — particularmente aqueles que já usam Claude Pro para outros trabalhos.</p></div>

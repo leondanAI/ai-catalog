@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Agents d'entreprise, écosystème Microsoft</div>
     </div>
   </div>
-  <a href="/fr/compare/copilot-studio-vs-manus.html" class="compare-strip">⚖️ Microsoft Copilot Studio vs Manus →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/copilot-studio-vs-manus.html" class="compare-strip">⚖️ Microsoft Copilot Studio vs Manus →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Microsoft Copilot Studio</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Microsoft Copilot Studio est une plateforme d'entreprise pour créer des agents IA personnalisés sans écrire de code. Elle cible les équipes informatiques, les analystes métier et les développeurs citoyens qui ont besoin d'assistants IA intégrés aux flux de travail Microsoft 365 — Teams, SharePoint, Outlook et Dynamics 365.</p><p style="margin-top:1rem">En septembre 2025, Microsoft a remplacé la tarification par message par Copilot Credits — une devise unifiée sur tous les produits Copilot. La tarification standard est de 200 $/mois par pack de 25 000 Copilot Credits, avec une option de paiement à l'usage également disponible et des remises de volume jusqu'à 20 %. Une mise à jour majeure en 2026 a ajouté le support multi-modèles : les utilisateurs peuvent désormais choisir entre GPT-4o, Claude Sonnet 4.5 ou Claude Opus 4.7 lors de la création d'agents personnalisés.</p><p style="margin-top:1rem">La plateforme utilise un canevas visuel pour concevoir des flux de conversation avec des connecteurs prédéfinis aux services Microsoft. Les agents peuvent être publiés sur les canaux Teams, les sites Web ou intégrés à SharePoint. Pour les scénarios d'entreprise complexes, la plateforme prend en charge l'orchestration multi-agents où les agents spécialisés se transmettent les tâches les uns aux autres.</p><p style="margin-top:1rem">Les réactions des développeurs en avril 2026 ont noté que le système de crédit offrait effectivement moins de valeur que l'ancien modèle à des prix similaires. Microsoft a reconnu la préoccupation sans annuler le changement.</p><p style="margin-top:1rem">Limitations : le déploiement vraiment utile nécessite un écosystème Microsoft 365 existant. En dehors de cela, des alternatives comme Relevance AI ou Lindy offrent plus de flexibilité à moindre coût.</p><p style="margin-top:1rem">Meilleur pour les entreprises déjà standardisées sur Microsoft 365 qui ont besoin d'agents IA intégrés directement dans Teams et SharePoint sans impliquer de plateformes externes.</p></div>

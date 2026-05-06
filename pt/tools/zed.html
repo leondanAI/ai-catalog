@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Editor de IA ultra-rápido com colaboração multiplayer nativa</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Zed</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Zed é um editor de código de próxima geração construído inteiramente do zero em Rust, usando um framework de UI acelerado por GPU chamado GPUI. Diferentemente de forks do VS Code como Cursor ou Windsurf, Zed não é baseado em Electron — foi construído do zero para performance. O resultado é resposta de keystroke sub-milissegundo, inicialização em menos de um segundo e edição suave até em arquivos muito grandes. Zed atingiu 1.0 em 29 de abril de 2026 após cinco anos de desenvolvimento e tem 81.700+ estrelas no GitHub.</p><p style="margin-top:1rem">O recurso multiplayer nativo do Zed é único: múltiplos desenvolvedores podem editar o mesmo arquivo simultaneamente em tempo real, similar ao Google Docs mas para código. A partir da v1.0, Zed suporta agentes de IA concorrentes — múltiplos agentes de IA podem trabalhar em diferentes partes da codebase simultaneamente dentro da mesma janela do editor. O modelo proprietário Zeta alimenta recursos de IA no plano pago, enquanto BYOK é suportado para configurações de LLM personalizadas.</p><p style="margin-top:1rem">Capacidades principais incluem colaboração em tempo real nativa sem plugins, agentes de IA concorrentes, suporte LSP para todas as linguagens principais, modo vim, terminal integrado e extensibilidade via sistema de plugins baseado em WebAssembly. Zed está disponível em macOS e Linux; suporte para Windows está em progresso.</p><p style="margin-top:1rem">Preços: O editor em si é gratuito e open source. Recursos de IA usam um sistema de créditos — algum uso está incluído grátis, com um plano pago para uso mais pesado de Zed AI. BYOK é suportado para equipes com contratos de LLM existentes.</p><p style="margin-top:1rem">Limitações: Zed não pode executar extensões do VS Code — o ecossistema de extensões é menor que VS Code ou Cursor. Suporte para Windows ainda está em progresso a partir de meados de 2026. Equipes fortemente investidas em extensões do VS Code podem achar a transição custosa.</p><p style="margin-top:1rem">Mais adequado para desenvolvedores que priorizam performance do editor, colaboração em tempo real em equipe e arquitetura de editor moderna — particularmente em macOS e Linux.</p></div>

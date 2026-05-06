@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Creación de música IA con alta calidad sónica — nota: se aplican restricciones de descarga</div>
     </div>
   </div>
-  <a href="/es/compare/suno-vs-udio.html" class="compare-strip">⚖️ Udio vs Suno →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/es/compare/suno-vs-udio.html" class="compare-strip">⚖️ Udio vs Suno →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de Udio</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Udio es una plataforma de generación de música IA que compite con Suno en calidad de audio — muchos usuarios califican la fidelidad sónica y calidad de producción de Udio más alta que la de competidores en ciertos géneros, particularmente música electrónica, ambiental e instrumental. La plataforma genera pistas completas desde prompts de texto especificando género, estado de ánimo, tempo y estilo.</p><p style="margin-top:1rem">Tras un acuerdo de derechos de autor con Universal Music Group y Warner Music Group a principios de 2026, Udio implementó restricciones significativas en el nivel gratuito. Los usuarios gratuitos pueden generar música y escuchar dentro de la plataforma pero no pueden descargar pistas completas. Las descargas de pistas generadas completas están restringidas a suscriptores pagos (Standard en adelante). Esto crea una limitación significativa para usuarios de nivel gratuito que quieren usar audio generado en su propio contenido.</p><p style="margin-top:1rem">Capacidades clave incluyen generación de texto a música con alta fidelidad sónica, controles de estilo y estado de ánimo, extensión y variación de pistas, inpainting para editar secciones específicas de pistas generadas e interfaz de generación basada en navegador.</p><p style="margin-top:1rem">Precios: Plan gratuito proporciona generaciones limitadas por mes con reproducción dentro de la plataforma solamente — sin descargas de pistas completas. Standard a $10 por mes proporciona 1.200 créditos (aproximadamente 120 pistas) y acceso de descarga. Pro a $30 por mes proporciona 4.800 créditos y generación prioritaria.</p><p style="margin-top:1rem">Limitaciones: Las restricciones de descarga en el nivel gratuito hacen que Udio sea en gran medida un jardín cerrado para usuarios no pagadores — puedes escuchar lo que generaste pero no puedes exportarlo o usarlo. El acuerdo de derechos de autor indica riesgo legal continuo en el espacio de música IA. Suno tiene una comunidad más grande y más datos de entrenamiento en esta etapa.</p><p style="margin-top:1rem">Mejor indicado para músicos y productores que priorizan calidad de audio sobre tamaño de comunidad de plataforma, y que están dispuestos a suscribirse para acceder a descargas — particularmente para géneros electrónico, ambiental e instrumental.</p></div>

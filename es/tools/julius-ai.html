@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Análisis de datos conversacional — carga cualquier conjunto de datos, haz preguntas en lenguaje natural</div>
     </div>
   </div>
-  <a href="/es/compare/julius-ai-vs-looker-studio.html" class="compare-strip">⚖️ Julius AI vs Looker Studio →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/es/compare/julius-ai-vs-looker-studio.html" class="compare-strip">⚖️ Julius AI vs Looker Studio →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de Julius AI</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Julius AI es una herramienta de análisis de datos conversacional que permite a los usuarios cargar hojas de cálculo, CSVs y conectar bases de datos, luego analizar datos haciendo preguntas en inglés simple. Genera gráficos, resúmenes estadísticos e insights de datos escritos a partir de consultas en lenguaje natural — haciendo el análisis de datos accesible para usuarios empresariales sin conocimiento de SQL o Python.</p><p style="margin-top:1rem">La plataforma maneja tareas estándar de análisis de datos conversacionalmente: análisis de tendencias, resúmenes estadísticos, detección de correlaciones, generación de gráficos y sugerencias de limpieza de datos. Soporta cargas de archivos (CSV, Excel, JSON) y se conecta a Google Sheets, Dropbox y OneDrive. Los gráficos son interactivos y exportables. Julius también puede generar y ejecutar código Python para análisis más complejos si es necesario.</p><p style="margin-top:1rem">Las capacidades clave incluyen consultas de datos conversacionales en inglés simple, generación de gráficos y visualizaciones, análisis estadístico (regresión, correlación, estadísticas descriptivas), asistencia en limpieza de datos, generación y ejecución de código Python, y exportación a CSV, PNG y PDF.</p><p style="margin-top:1rem">Precios: Plan gratuito proporciona 15 mensajes por mes — limitado para uso regular. Plus a $29 por mes proporciona 250 mensajes por mes y cargas de archivos ilimitadas. Pro a $37 por mes proporciona 500 mensajes por mes, procesamiento prioritario y acceso API. Business a $375 por mes proporciona 5,000 mensajes y características de equipo.</p><p style="margin-top:1rem">Limitaciones: Los precios basados en mensajes limitan a usuarios activos — 500 mensajes/mes en Pro se consume rápidamente en sesiones de análisis iterativo. La herramienta destaca en análisis exploratorio pero no está diseñada para trabajo de tuberías automatizadas o implementaciones BI empresariales. El modelado estadístico complejo requiere generar Python de manera manual en lugar de soporte nativo.</p><p style="margin-top:1rem">Más adecuado para analistas de negocio, investigadores y gerentes que trabajan regularmente con datos estructurados y desean explorar y resumir conjuntos de datos sin escribir SQL o Python.</p></div>

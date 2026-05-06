@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Notas de reuniões, itens de ação, resumos</div>
     </div>
   </div>
-  <a href="/pt/compare/otter-ai-vs-fireflies-ai.html" class="compare-strip">⚖️ Fireflies.ai vs Otter.ai →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/pt/compare/otter-ai-vs-fireflies-ai.html" class="compare-strip">⚖️ Fireflies.ai vs Otter.ai →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Fireflies.ai</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Fireflies.ai é um assistente de reuniões com IA que entra automaticamente nas suas chamadas (Zoom, Google Meet, Teams, Webex), grava o áudio, produz uma transcrição completa e gera um resumo estruturado com tópicos principais, itens de ação, perguntas feitas e decisões tomadas — tudo disponível em um banco de dados pesquisável poucos minutos após o término da reunião. A plataforma é utilizada por mais de 1 milhão de equipes ao redor do mundo para eliminar a documentação manual de reuniões.</p><p style="margin-top:1rem">A integração com CRM é o recurso empresarial mais forte do Fireflies.ai: após cada chamada de vendas, ele envia automaticamente um resumo estruturado — incluindo tarefas de acompanhamento, próximos passos e sentimento do cliente — para Salesforce, HubSpot ou Pipedrive, mantendo os registros do CRM atualizados sem que os representantes precisem registrar as notas manualmente. A integração com o Slack envia os resumos das reuniões diretamente para os canais relevantes ou mensagens privadas. &quot;Tópicos&quot; personalizados podem ser definidos para rastrear automaticamente menções a concorrentes, nomes de produtos ou preocupações específicas em todas as chamadas.</p><p style="margin-top:1rem">O plano gratuito inclui 800 minutos de armazenamento de reuniões — suficiente para as chamadas mensais de uma equipe pequena. O plano Pro (US$ 18/usuário/mês) desbloqueia armazenamento ilimitado, gravação de vídeo e análises avançadas. A principal preocupação com a experiência do usuário é o bot do Fireflies.ai aparecer como um participante visível nas reuniões, o que alguns clientes e participantes externos consideram perturbador ou interpretam como problemas de consentimento para gravação. Em setores regulamentados ou em contextos voltados ao cliente, a transparência sobre a gravação é legalmente exigida em muitas jurisdições.</p></div>

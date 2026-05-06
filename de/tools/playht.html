@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal für:</strong> AI Text-to-Speech und Voice Cloning für Podcasts, Artikel und Apps</div>
     </div>
   </div>
-  <a href="/de/compare/elevenlabs-vs-playht.html" class="compare-strip">⚖️ PlayHT vs ElevenLabs →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/de/compare/elevenlabs-vs-playht.html" class="compare-strip">⚖️ PlayHT vs ElevenLabs →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Über PlayHT</h2>
     <div class="tool-desc"><p style="margin-top:1rem">PlayHT ist eine AI Text-to-Speech-Plattform, die geschriebene Inhalte — Blog-Beiträge, Artikel, Newsletter, Skripte — in natürlich klingende Audio umwandelt. Die Plattform hat eine starke Position bei Content-Publishern durch ihr WordPress-Plugin aufgebaut, das automatisch einen Audio-Player zu jedem Artikel mit AI-generierter Stimme hinzufügt. Die Plattform bietet 900+ Stimmen in 142 Sprachen.</p><p style="margin-top:1rem">PlayHT 3.0 führte ultrarealistische Sprachgenerierung mit einer neuen Modellarchitektur ein, und die Voice-Cloning-Funktion erstellt eine benutzerdefinierte Stimme aus einem kurzen Audiobeispiel. Die Plattform bietet eine API für Entwickler, die Text-to-Speech in Anwendungen integrieren. Das WordPress-Plugin ist besonders wertvoll für Publisher, die Audio zu Artikeln hinzufügen, ohne einen manuellen Aufnahmeworkflow zu benötigen.</p><p style="margin-top:1rem">Schlüsselfunktionen sind 900+ AI-Stimmen, Voice Cloning, WordPress-Plugin für Artikel-Audio, API für Anwendungsintegration, Podcast-Hosting (über Partner-Infrastruktur) und Unterstützung für SSML-Markup für präzise Aussprachesteuerung.</p><p style="margin-top:1rem">Preisgestaltung: Kostenlos 12.500 Zeichen pro Monat mit Wasserzeichen-Audio. Creator zu 31,20 € pro Monat (jährlich) bietet 200.000 Zeichen pro Monat und kommerzielle Rechte. Der Unlimited-Plan für 29 € pro Monat bietet unbegrenzte Zeichen mit Fair-Use-Richtlinie. Enterprise-Preisgestaltung ist individuell.</p><p style="margin-top:1rem">Einschränkungen: Das 200.000-Zeichen-Limit des Creator-Plans pro Monat kann von High-Volume-Publishern aufgebraucht werden. Die Sprachqualität, obwohl stark, schneidet bei Natürlichkeitskennzahlen leicht unter ElevenLabs ab. Das WordPress-Plugin ist der Hauptvorteil — ohne Publishing-Workflow hat PlayHT weniger Unterscheidungsfaktoren gegenüber Konkurrenten.</p><p style="margin-top:1rem">Am besten geeignet für Content-Publisher, Blogger und Newsletter-Ersteller, die Audio-Versionen ihrer schriftlichen Inhalte hinzufügen möchten, und Entwickler, die eine unkomplizierte Text-to-Speech-API benötigen.</p></div>

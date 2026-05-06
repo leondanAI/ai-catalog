@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Recherche et recherche alimentées par l'IA avec citations en temps réel</div>
     </div>
   </div>
-  <a href="/fr/compare/perplexity-vs-notebooklm.html" class="compare-strip">⚖️ Perplexity vs NotebookLM →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/perplexity-vs-notebooklm.html" class="compare-strip">⚖️ Perplexity vs NotebookLM →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Perplexity</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Perplexity est un moteur de recherche alimenté par l'IA qui répond aux questions avec des sources web en temps réel et des citations — combinant recherche, synthèse et génération de réponses dans une seule interface. Il est devenu l'alternative principale à la recherche traditionnelle pour les travailleurs du savoir, les chercheurs et les professionnels.</p><p style="margin-top:1rem">Débutant 2026, Perplexity compte 45 millions d'utilisateurs actifs mensuels, en hausse par rapport à 22 millions au début 2025 — plus que doubler en un an. La plateforme traite environ 780 millions de requêtes de recherche par mois. Perplexity est valorisée à $20 milliards suite à un tour de financement de $200 millions en septembre 2025, avec un revenu récurrent annuel projeté à $656 millions en 2026.</p><p style="margin-top:1rem">Le tier gratuit offre des recherches de base illimitées avec citations. Perplexity Pro ($20/mois) ajoute le mode Deep Research — qui exécute des plans de recherche multi-étapes, lit des dizaines de sources et produit des rapports analytiques détaillés similaires à un assistant de recherche. Pro inclut également les téléchargements de fichiers, la génération d'images et le mode Academic Focus pour les sources évaluées par les pairs uniquement.</p><p style="margin-top:1rem">Chaque réponse inclut des citations de sources cliquables, ce qui facilite la vérification des affirmations ou l'approfondissement. Cette transparence distingue Perplexity des chatbots IA qui génèrent des réponses sans attribution de source.</p><p style="margin-top:1rem">Perplexity s'est étendu à Perplexity Pages (documents de recherche partageables), recherche interne pour les entreprises et une API pour les développeurs créant des applications augmentées par la recherche.</p><p style="margin-top:1rem">Idéal pour les travailleurs du savoir, les chercheurs, les étudiants et les professionnels qui souhaitent des réponses rapides et citées — pas une page blanche IA qui pourrait halluciner.</p></div>

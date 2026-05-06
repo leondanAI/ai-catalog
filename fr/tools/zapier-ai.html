@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Automatisation, intégrations sans code</div>
     </div>
   </div>
-  <a href="/fr/compare/zapier-ai-vs-make.html" class="compare-strip">⚖️ Zapier AI vs Make →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/zapier-ai-vs-make.html" class="compare-strip">⚖️ Zapier AI vs Make →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Zapier AI</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Zapier est la plateforme d'automatisation de workflows la plus grande et la plus établie, connectant plus de 6 000 applications via des intégrations prédéfinies appelées « Zaps » — des workflows automatisés qui déclenchent des actions dans une application en fonction d'événements survenus dans une autre. Les fonctionnalités IA ajoutées en 2023-2024 rendent Zapier nettement plus puissant : la création de workflows en langage naturel vous permet de décrire ce que vous souhaitez automatiser et Zapier configure le workflow, les étapes de logique IA effectuent des analyses et des prises de décision au sein des workflows, et le formatage assisté par IA transforme automatiquement les données entre des formats incompatibles.</p><p style="margin-top:1rem">Les 6 000+ intégrations d'applications représentent le principal avantage concurrentiel de Zapier — aucune plateforme d'automatisation n'approche cette étendue de couverture. Si un outil professionnel dispose d'une API publique, il possède presque certainement une intégration Zapier. La fiabilité est éprouvée : Zapier exécute plus de 2 milliards de tâches automatisées par mois pour des millions d'entreprises, et la plateforme a largement investi dans la gestion des erreurs, la logique de nouvelle tentative et les outils de surveillance que les concurrents plus récents ne possèdent pas.</p><p style="margin-top:1rem">La tarification est basée sur le nombre de tâches consommées par mois : le plan gratuit autorise 100 tâches/mois (suffisant pour tester), tandis qu'une automatisation significative commence avec le plan Starter à 19,99 $/mois pour 750 tâches. La principale limite est le coût à grande échelle — les workflows d'automatisation à volume élevé deviennent rapidement onéreux, et les utilisateurs avancés migrent souvent les charges de travail importantes vers Make ou n8n pour de meilleures économies. La proposition de valeur de Zapier repose sur l'étendue des intégrations, la fiabilité et la facilité d'utilisation plutôt que sur la puissance brute d'automatisation ou la rentabilité.</p></div>

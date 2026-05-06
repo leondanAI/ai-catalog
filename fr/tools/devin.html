@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Codage autonome, développement full-stack, débogage</div>
     </div>
   </div>
-  <a href="/fr/compare/devin-vs-copilot-studio.html" class="compare-strip">⚖️ Devin vs Copilot Studio →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/devin-vs-copilot-studio.html" class="compare-strip">⚖️ Devin vs Copilot Studio →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Devin</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Devin est un ingénieur logiciel IA entièrement autonome construit par Cognition AI qui gère les tâches de développement de bout en bout : ajouter des systèmes de paiement, corriger les pipelines CI/CD, migrer les bases de données et écrire des tests sans intervention humaine. Il fonctionne dans un environnement sandbox avec son propre terminal, navigateur et éditeur de code.</p><p style="margin-top:1rem">Devin 2.0 a été lancé en 2025 et représente une avancée majeure — accomplissant 83% plus de tâches de développeur junior par unité de calcul par rapport à v1. Cognition a simultanément réduit le prix d'entrée de $500/mois à $20/mois, le rendant accessible au-delà des budgets d'entreprise.</p><p style="margin-top:1rem">Le tarification est basée sur les ACU (Agent Compute Units), où 1 ACU équivaut à environ 15 minutes de travail d'agent actif. Le plan Core coûte $20/mois avec des ACU à $2,25 chacun. Le plan Team est $500/mois et inclut 250 ACU à $2,00 chacun. La tarification Enterprise est personnalisée. Une tâche complexe de plusieurs heures peut coûter $10-30 en ACU en plus de l'abonnement.</p><p style="margin-top:1rem">Le différenciateur clé est l'autonomie véritable. Contrairement aux assistants de codage IA qui suggèrent des complétions, Devin prend une description de tâche et exécute le cycle complet indépendamment — lisant la documentation, écrivant le code, exécutant les tests, corrigeant les défaillances et ouvrant une pull request. Il s'intègre avec GitHub, Slack et Jira pour l'intégration des workflows réels.</p><p style="margin-top:1rem">Limitations : Devin éprouve toujours des difficultés avec les exigences profondément ambiguës et les grandes bases de code héritées sans bonne documentation. Il fonctionne mieux sur les tâches bien délimitées et autonomes. Le modèle ACU peut devenir coûteux pour le travail exploratoire où l'agent emprunte les mauvais chemins.</p><p style="margin-top:1rem">Idéal pour les équipes d'ingénierie qui souhaitent déléguer des tâches de niveau junior — corrections de bogues, ajouts de fonctionnalités, couverture de tests, documentation — et obtenir une pull request plutôt qu'une suggestion de code.</p></div>

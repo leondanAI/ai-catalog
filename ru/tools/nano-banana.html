@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> Редактирование изображений, согласованность персонажей, AI-инфлюенсеры</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе Nano Banana</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Nano Banana — это платформа для генерации и редактирования изображений на базе ИИ, построенная на модели Google Gemini 2.5 Flash Image, а версия Pro работает на Gemini 3 Pro Image. В отличие от инструментов, генерирующих изображения с нуля, Nano Banana специализируется на контекстном редактировании: загружаешь фото, описываешь желаемые изменения на естественном языке, и модель применяет их, точно сохраняя оригинальную композицию, освещение и структуру сцены.</p><p style="margin-top:1rem">Ключевая особенность — согласованность персонажей. Большинство AI-инструментов с трудом сохраняют одно и то же лицо, одежду или объект идентичными в нескольких правках или сценах. Nano Banana был создан именно для решения этой проблемы — что делает его незаменимым инструментом для создателей сериального контента, AI-инфлюенсеров, брендированных кампаний и пайплайнов игровых ассетов.</p><p style="margin-top:1rem">Бесплатный тариф предоставляет кредиты при регистрации без установки — всё работает в браузере. Nano Banana Pro открывает разрешение 4K, расширенное многошаговое редактирование, чёткий рендеринг текста и генерацию в большем объёме. Для дизайнеров, маркетологов и контент-мейкеров, которым нужно точное и воспроизводимое AI-редактирование изображений — Nano Banana даёт результаты, которых конкуренты стабильно не могут достичь.</p></div>

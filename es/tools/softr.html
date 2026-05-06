@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Portales de cliente sin código y herramientas internas construidas en Airtable y Google Sheets</div>
     </div>
   </div>
-  <a href="/es/compare/softr-vs-bubble.html" class="compare-strip">⚖️ Softr vs Bubble →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/es/compare/softr-vs-bubble.html" class="compare-strip">⚖️ Softr vs Bubble →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de Softr</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Softr es un constructor de aplicaciones sin código especializado en crear portales de cliente, directorios de miembros, paneles internos y sitios web impulsados por datos usando Airtable, Google Sheets o HubSpot como base de datos backend. Su enfoque en portales — aplicaciones web cerradas que requieren login y presentan datos externos a usuarios específicos — lo diferencia de herramientas sin código de propósito general.</p><p style="margin-top:1rem">El caso de uso típico de Softr es un portal de cliente donde los clientes pueden iniciar sesión y ver el estado de su proyecto, facturas o datos de servicio de una base de datos de Airtable o Google Sheets que la agencia gestiona en segundo plano. Esto no requiere código — la interfaz de Softr permite arrastrar componentes de portal, configurar autenticación de login y definir qué registros son visibles para qué usuarios según coincidencia de correo electrónico.</p><p style="margin-top:1rem">Las capacidades clave incluyen integración nativa con Airtable y Google Sheets, autenticación de usuario y membresía, filtrado de datos por usuario que ha iniciado sesión, pago mediante Stripe y PayPal, plantillas de portal y directorio, constructor de páginas de arrastrar y soltar, dominios personalizados y envíos de formularios de vuelta a la fuente de datos.</p><p style="margin-top:1rem">Precios: El plan gratuito proporciona bloques limitados y sin dominio personalizado. Business a $269 por mes (facturación anual) es el nivel de pago principal para uso profesional — proporciona dominios personalizados, registros ilimitados, todas las características de autenticación y gestión de equipos. Los precios Enterprise son personalizados.</p><p style="margin-top:1rem">Limitaciones: Softr es especializado — destaca en portales y aplicaciones de presentación de datos pero carece de la flexibilidad de Bubble para lógica compleja de múltiples pasos. El salto de precio del plan Business de gratuito a $269/mes es pronunciado sin opción intermedia para equipos pequeños. La plataforma funciona mejor cuando Airtable o Google Sheets es ya la fuente de datos.</p><p style="margin-top:1rem">Mejor adecuado para agencias, consultores y empresas SaaS que necesitan dar a los clientes acceso cerrado a sus propios datos — típicamente empresas que ya gestionan datos de clientes en Airtable.</p></div>

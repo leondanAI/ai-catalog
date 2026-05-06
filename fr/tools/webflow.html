@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Sites marketing, CMS, pages d'atterrissage</div>
     </div>
   </div>
-  <a href="/fr/compare/bubble-vs-webflow.html" class="compare-strip">⚖️ Webflow vs Bubble →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/bubble-vs-webflow.html" class="compare-strip">⚖️ Webflow vs Bubble →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Webflow</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Webflow est une plateforme professionnelle de développement web visuel qui génère du code HTML, CSS et JavaScript de qualité production derrière une interface de conception par glisser-déposer, permettant aux designers de créer des sites web pixel-perfect sans écrire de code — tout en conservant une liberté créative totale sur chaque détail de conception. Elle occupe l'espace entre les créateurs de sites simples (Squarespace, Wix) et le développement personnalisé (React, Next.js), offrant plus de contrôle sur le design que les premiers et plus d'accessibilité que le second.</p><p style="margin-top:1rem">Le CMS (Content Management System) est un point fort essentiel : définissez des types de contenu personnalisés (articles de blog avec des champs spécifiques, profils de membres d'équipe, études de cas), renseignez-les depuis un éditeur de base de données visuel, et Webflow génère automatiquement les pages de collection correspondantes, les vues en liste et les pages d'éléments individuels avec vos modèles conçus appliqués. Cela permet de créer des sites à contenu dynamique — portfolios, sites marketing, blogs d'entreprise — sans backend séparé ni CMS headless.</p><p style="margin-top:1rem">Le code HTML/CSS exporté est propre et commenté, sans balisage propriétaire — si vous migrez un jour hors de Webflow, la base de code vous appartient et est entièrement portable. Le mode Éditeur permet aux gestionnaires de contenu non techniques de mettre à jour les textes et les images sans toucher au design. Webflow University propose des cours gratuits complets couvrant la plateforme. Les tarifs commencent à 14 $/mois pour les sites de base, avec le plan Business à 39 $/mois requis pour les sites plus importants et la collaboration en équipe. La courbe d'apprentissage est significative — les designers sans connaissance du CSS ont généralement besoin de plus de 20 heures pour devenir productifs.</p></div>

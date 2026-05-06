@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Génération de musique IA — créer des chansons complètes à partir d'invites textuelles</div>
     </div>
   </div>
-  <a href="/fr/compare/suno-vs-udio.html" class="compare-strip">⚖️ Suno vs Udio →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/suno-vs-udio.html" class="compare-strip">⚖️ Suno vs Udio →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Suno</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Suno est le générateur de musique IA le plus populaire pour les créateurs grand public, produisant des chansons complètes — voix, instruments, paroles — à partir d'une invite textuelle dans n'importe quel genre. Il est utilisé par plus de 10 millions de personnes dans le monde pour la production musicale créative, la création de contenu et le divertissement.</p><p style="margin-top:1rem">Suno v4.5, lancé au début de 2026, est le modèle actuel et leader en qualité de sortie dans la plupart des catégories de genres — pop, rock, électronique, ambient et orchestral. Les chansons générées sonnent prêtes pour la production avec arrangement complet, mixage et performance vocale.</p><p style="margin-top:1rem">Un développement majeur en novembre 2025 : Warner Music Group et Suno ont annoncé un partenariat réglant leur litige en matière de droits d'auteur. Suno construit de nouveaux modèles IA entraînés exclusivement sur de la musique sous licence provenant de détenteurs de droits, pour un lancement en 2026. Cela résout le plus grand problème juridique de la plateforme et positionne Suno pour un déploiement commercial plus large.</p><p style="margin-top:1rem">Tarification : Gratuit (50 crédits/jour, non-commercial uniquement), Pro (10 $/mois — 2 500 crédits mensuels, droits commerciaux), Premier (30 $/mois — 10 000 crédits mensuels, droits commerciaux, Suno Studio DAW pour la post-production). Les droits commerciaux persistent pour les chansons créées pendant l'abonnement, même après l'annulation.</p><p style="margin-top:1rem">Udio est un concurrent proche à des tarifs similaires, avec une esthétique différente — généralement considéré comme plus fort dans le jazz, la musique classique et les pistes fusionnant les genres, tandis que Suno excelle dans la pop et les genres grand public.</p><p style="margin-top:1rem">Idéal pour les créateurs de contenu, les producteurs de médias sociaux, les cinéastes et les musiciens qui veulent rapidement de la musique générée par IA commercialement utilisable.</p></div>

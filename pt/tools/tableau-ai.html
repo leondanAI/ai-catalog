@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> BI, empresas, visualização</div>
     </div>
   </div>
-  <a href="/pt/compare/looker-studio-vs-tableau-ai.html" class="compare-strip">⚖️ Tableau AI vs Looker Studio →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/pt/compare/looker-studio-vs-tableau-ai.html" class="compare-strip">⚖️ Tableau AI vs Looker Studio →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Tableau AI</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Tableau é a plataforma empresarial de business intelligence que definiu o padrão para visualização interativa de dados por mais de duas décadas, utilizada por equipes de dados em milhares de grandes corporações. Os recursos Einstein AI (desenvolvidos após a aquisição pela Salesforce em 2019) integram inteligência artificial em toda a plataforma: o Einstein Discovery analisa conjuntos de dados automaticamente, identifica os padrões estatisticamente mais relevantes, gera explicações em linguagem simples sobre o que os dados mostram e produz previsões para métricas-chave.</p><p style="margin-top:1rem">A capacidade de processamento de dados da plataforma é um diferencial central para o mercado corporativo: o Tableau conecta-se a praticamente qualquer fonte de dados — data warehouses na nuvem (Snowflake, BigQuery, Redshift), bancos de dados locais (Oracle, SQL Server, Teradata), arquivos simples e APIs REST — e processa bilhões de linhas nativamente por meio de seu mecanismo de consulta em memória VizQL. A biblioteca de visualizações abrange centenas de tipos de gráficos, e a interface de arrastar e soltar permite que usuários de negócios sem conhecimento técnico criem análises complexas sem precisar de SQL.</p><p style="margin-top:1rem">As licenças Tableau Creator começam em $70/usuário/mês, com licenças Viewer a $15/usuário/mês — representando um investimento significativo que se justifica para organizações com grandes volumes de dados complexos e equipes dedicadas de análise. A curva de aprendizado é considerável: a certificação Tableau Desktop é uma credencial profissional reconhecida que exige meses de estudo. Para equipes menores ou necessidades de análise mais simples, ferramentas como Looker Studio, Metabase ou Julius AI oferecem funcionalidade adequada com custo e complexidade significativamente menores.</p></div>

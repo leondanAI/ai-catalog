@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Підходить для:</strong> Високоякісне генерування зображень з відкритим кодом</div>
     </div>
   </div>
-  <a href="/ua/compare/midjourney-vs-flux.html" class="compare-strip">⚖️ Flux vs Midjourney →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ua/compare/midjourney-vs-flux.html" class="compare-strip">⚖️ Flux vs Midjourney →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Flux</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Flux — це родина моделей генування тексту в зображення з відкритим кодом, розроблена Black Forest Labs, компанією заснованою оригінальними творцями Stable Diffusion. З запуску оригінальної FLUX.1 в середині 2024 року моделі постійно займають топові позиції в рейтингах якості зображень.</p><p style="margin-top:1rem">Покоління FLUX.2, запущене в листопаді 2025 року, включає кілька варіантів моделей: FLUX.2 [dev] (32B параметрів, генування тексту в зображення та редагування зображень), FLUX.2 [pro] (збалансована якість/швидкість), FLUX.2 [max] (найвища якість) та FLUX.2 [flex] (регульовані кроки). FLUX.2 [klein], випущена в січні 2026 року, — це модель з 4B/9B параметрами, яка генерує зображення менш ніж за одну секунду на споживацьких GPU. FLUX Kontext додає контекстно-обізнане та розмовне генерування зображень.</p><p style="margin-top:1rem">Ваги базової моделі мають відкритий код і доступні безплатно для завантаження. Доступ через API доступний безпосередньо через Black Forest Labs (кредитна система, ~$0.04/зображення для FLUX.1 Pro) та через сторонні платформи, включаючи fal.ai, Replicate, Cloudflare Workers AI та Azure AI Foundry.</p><p style="margin-top:1rem">Модель значно краще обробляє текстовий рендеринг ніж більшість альтернатив. Швидкість генерування менше однієї секунди FLUX.2 [klein] робить її життєздатною для програм реального часу та налаштувань споживацьких GPU, які раніше вимагали хмарного виведення.</p><p style="margin-top:1rem">Обмеження: найбільші моделі (FLUX.2 dev з 32B) вимагають значної VRAM для локального використання. Ціни в керованих API накопичуються для генерування великих обсягів. Екосистема моделей менш зріла ніж Stable Diffusion з точки зору спільнотних fine-tune.</p><p style="margin-top:1rem">Найкраще для розробників, дослідників та досвідчених користувачів, які хочуть найвищої якості генування зображень з відкритим кодом без привласнення власником.</p></div>

@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Portais para clientes, dashboards internos</div>
     </div>
   </div>
-  <a href="/pt/compare/softr-vs-bubble.html" class="compare-strip">⚖️ Softr vs Bubble →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/pt/compare/softr-vs-bubble.html" class="compare-strip">⚖️ Softr vs Bubble →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Softr</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Softr é uma plataforma no-code para criar portais para clientes, ferramentas internas, diretórios de membros e aplicações web baseadas em dados, utilizando o Airtable ou Google Sheets como base de dados de backend. Posiciona-se entre o Glide (orientado para mobile, baseado em folhas de cálculo) e o Bubble (completo e complexo) — oferecendo mais flexibilidade de design web do que o Glide e muito menos complexidade do que o Bubble para casos de uso de portais de dados.</p><p style="margin-top:1rem">A plataforma disponibiliza uma biblioteca de blocos de página pré-construídos (secções hero, vistas de lista, páginas de detalhe, formulários, tabelas, calendários, mapas) que se ligam diretamente à sua base do Airtable ou Google Sheet, filtrando e apresentando registos com base nas permissões do utilizador e na identidade do utilizador autenticado. Isto permite criar portais exclusivos para membros onde cada utilizador vê apenas os seus próprios dados, portais para clientes onde agências partilham o estado de projetos com clientes, ou diretórios de equipas onde os colaboradores podem encontrar-se e comunicar entre si.</p><p style="margin-top:1rem">O plano gratuito permite páginas ilimitadas, mas limita os utilizadores internos a 5 e os utilizadores externos a 100, sendo funcional para ferramentas de pequenas equipas e projetos piloto. Os planos Business começam em 49$/mês para bases de utilizadores maiores. A integração de pagamentos (Stripe), autenticação de utilizadores, notificações por email e exportações em PDF são todas suportadas sem código. O Softr está principalmente otimizado para o ecossistema Airtable — o Google Sheets funciona, mas com menos suporte de funcionalidades, e outras fontes de dados (bases de dados SQL, REST APIs) requerem o Airtable como intermediário via Zapier ou Make, o que aumenta a complexidade.</p></div>

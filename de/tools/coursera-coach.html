@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal für:</strong> AI-Lerncoach für Coursera-Kurse mit personalisierter Anleitung</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Über Coursera Coach</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Coursera Coach ist der KI-gestützte Lernassistent, der in die Online-Lernplattform von Coursera integriert ist. Es ist kein eigenständiges Produkt — der Zugriff erfordert ein Coursera Plus Abo ($399 pro Jahr oder $59 pro Monat). Coursera Plus bietet unbegrenzten Zugriff auf 10.000+ Kurse und professionelle Zertifikate von über 300 Universitäten und Unternehmen, und Coach ist überall in diesem Angebot integriert.</p><p style="margin-top:1rem">Coach fungiert als kontextueller Tutor innerhalb von Kursen: Er kann schwierige Konzepte aus der aktuellen Vorlesung erklären, Übungsaufgaben vorschlagen, Fragen zum Kursmaterial beantworten und verwandte Kurse basierend auf Lernfortschritt und Zielen empfehlen. Er unterstützt auch bei Aufgaben — bietet Hinweise und Erklärungen ohne direkte Lösungen gemäß akademischen Integritätsrichtlinien.</p><p style="margin-top:1rem">Zu den Hauptfunktionen gehören personalisierte Kursempfehlungen basierend auf Lernzielen und Historie, Konzepterklärungen in aktiven Kursen, Aufgabenhilfe mit Hinweisen und Erklärungen, Fortschrittsanalyse, Identifikation von Wissenslücken und Lernpfadvorschläge aus Courseras Katalog.</p><p style="margin-top:1rem">Preisgestaltung: Coursera Coach ist in Coursera Plus für $399 pro Jahr ($33,25/Monat effektiv) oder $59 pro Monat enthalten. Einzelne Kurskäufe beinhalten keinen Coach-Zugriff. Enterprise- und Teams-Pläne haben separate Preise.</p><p style="margin-top:1rem">Einschränkungen: Coursera Coach ist ohne Coursera Plus Abo nicht verfügbar — es kann nicht separat erworben werden. Die KI ist auf die Unterstützung von Courseras bestehendem Kurskatalog beschränkt und kann keine allgemeine Nachhilfe außerhalb von Kursinhalten bieten. Die $399/Jahr Kosten sind nur gerechtfertigt, wenn der Lernende das ganze Jahr über aktiv mehrere Kurse nutzt.</p><p style="margin-top:1rem">Am besten geeignet für Fachleute, die mehrere Zertifikate oder kontinuierliches Lernen auf Coursera verfolgen und KI-gestützte Anleitung wünschen, sowie für diejenigen, die den Wert des breiteren Coursera Plus Katalogs über den KI-Assistenten hinaus schätzen.</p></div>

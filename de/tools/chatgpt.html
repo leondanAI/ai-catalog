@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal für:</strong> Vielseitiger KI-Assistent zum Schreiben, Codieren, Analysieren und Generieren von Bildern</div>
     </div>
   </div>
-  <a href="/de/compare/chatgpt-vs-claude.html" class="compare-strip">⚖️ ChatGPT vs Claude →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/de/compare/chatgpt-vs-claude.html" class="compare-strip">⚖️ ChatGPT vs Claude →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Über ChatGPT</h2>
     <div class="tool-desc"><p style="margin-top:1rem">ChatGPT ist der weltweit am häufigsten verwendete KI-Assistent von OpenAI mit über 1 Milliarde monatlich aktiven Nutzern und 50 Millionen zahlenden Abonnenten ab 2026. Die Plattform unterstützt Textgenerierung, Codierung, Datenanalyse, Bilderstellung (ChatGPT Images 2.0, veröffentlicht April 2026), Web-Browsing, Dateianalyse und Sprachkonversation — alles über eine einzige Benutzeroberfläche.</p><p style="margin-top:1rem">GPT-5.5 wurde am 23. April 2026 zum Standardmodell für alle ChatGPT-Nutzer mit deutlich verbessertem Reasoning und Befehlsverständnis. Im Februar 2026 führte OpenAI kontextuelle Werbung im kostenlosen Tarif in den USA ein, gefolgt vom Go-Tarif ($8/Monat) — ein großer Wendepunkt bei der Monetarisierung der Plattform. Plus bleibt bei $20/Monat anzeigenfrei. Der Pro-Plan mit $100/Monat (veröffentlicht am 9. April 2026) bietet die 5-fache Nutzungsgrenze von Plus. Der Pro-Plan mit $200/Monat bietet die höchsten Limits.</p><p style="margin-top:1rem">Schlüsselfunktionen umfassen multimodalen Input (Text, Bilder, Dateien, Sprache), GPT-5.5-Reasoning, ChatGPT Images 2.0, Web-Browsing, Python-Code-Ausführung, Datenanalyse, Custom GPTs (persönliche KI-Konfigurationen) und den Canvas-Modus für kollaboratives Schreiben und Codieren.</p><p style="margin-top:1rem">Preisgestaltung: Der kostenlose Plan bietet Zugang zu GPT-5.5 mit Anzeigen (USA). Go für $8/Monat mit höheren Limits und Anzeigen. Plus für $20/Monat ist anzeigenfrei mit vollem GPT-5.5-Zugang und 50 Bildgenerierungen pro Tag. Pro für $100/Monat bietet die 5-fache Plus-Limits. Pro für $200/Monat bietet maximale Limits. Team- und Enterprise-Pläne sind für Organisationen verfügbar.</p><p style="margin-top:1rem">Einschränkungen: Die Einführung von Anzeigen in kostenlosen und Go-Tarifen verringerte deren Wert erheblich. Nutzungslimits beim Plus-Plan können während Stoßzeiten frustrierend sein. Die Breite der Funktionen kann dazu führen, dass ChatGPT sich weniger spezialisiert anfühlt als Tools, die speziell für Codierung (Claude Code) oder Forschung (Perplexity) entwickelt wurden.</p><p style="margin-top:1rem">Am besten geeignet für Einzelpersonen und Teams, die einen vielseitigen KI-Assistenten für verschiedenste Aufgaben benötigen — Schreiben, Analyse, Codierung, Bildgenerierung und Forschung — mit dem größten etablierten Modell-Ökosystem.</p></div>

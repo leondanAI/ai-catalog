@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Generación de video de IA de alta calidad con audio nativo de Google DeepMind</div>
     </div>
   </div>
-  <a href="/es/compare/google-veo-3-vs-runway.html" class="compare-strip">⚖️ Google Veo 3 vs Runway →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/es/compare/google-veo-3-vs-runway.html" class="compare-strip">⚖️ Google Veo 3 vs Runway →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de Google Veo 3</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Google Veo 3 es el modelo de generación de video de IA de vanguardia de Google DeepMind, capaz de producir clips de video de alta definición con audio nativo sincronizado — incluyendo diálogos, efectos de sonido y sonido ambiental — a partir de indicaciones de texto e imagen. Es actualmente el único modelo de video de IA importante que genera audio de forma nativa junto con el video, en lugar de requerir post-producción de audio separada.</p><p style="margin-top:1rem">Veo 3 está disponible para consumidores a través de la suscripción Google Gemini AI Pro ($19.99/mes), que incluye aproximadamente 90 créditos de generación de video por mes. Veo 3.1, lanzado junto con Veo 3, introdujo Veo 3.1 Lite — una variante más rápida y 50% más barata optimizada para casos de uso de mayor volumen. La API permite a desarrolladores y empresas integrar Veo en sus propias aplicaciones.</p><p style="margin-top:1rem">Las capacidades clave incluyen generación de video 1080p a partir de indicaciones de texto e imagen, generación de audio nativo sincronizado (diálogos, efectos, ambiente), Veo 3.1 Lite para generación eficiente en volumen, acceso a API con precios por segundo, e integración con Google Vertex AI para flujos de trabajo empresariales.</p><p style="margin-top:1rem">Precios: El acceso de consumidor a través de Gemini AI Pro es $19.99 por mes e incluye créditos de generación Veo 3 (~90 videos/mes). Los precios de API oscilan entre $0.05 por segundo para Veo 3.1 Lite y $0.60 por segundo para Veo 3 (calidad completa). Los precios empresariales a través de Google Cloud Vertex AI están disponibles bajo solicitud.</p><p style="margin-top:1rem">Limitaciones: La generación de consumidor está limitada a una suscripción a Gemini AI Pro. Los costos de API pueden acumularse rápidamente para producción de alto volumen. La duración máxima del clip es actualmente limitada (típicamente menos de 60 segundos por generación). Como modelo más nuevo, Veo 3 aún no está ampliamente integrado en herramientas de edición de terceros.</p><p style="margin-top:1rem">Más adecuado para creadores de contenido, cineastas y equipos de marketing que necesitan video de IA de alta calidad con audio sincronizado — particularmente aquellos ya en el ecosistema de Google y que usan Gemini AI Pro.</p></div>

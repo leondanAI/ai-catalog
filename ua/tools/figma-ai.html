@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Підходить для:</strong> AI-асистований дизайн UI/UX та інтерактивне прототипування всередину Figma</div>
     </div>
   </div>
-  <a href="/ua/compare/figma-ai-vs-canva-ai.html" class="compare-strip">⚖️ Figma AI vs Canva AI →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ua/compare/figma-ai-vs-canva-ai.html" class="compare-strip">⚖️ Figma AI vs Canva AI →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Figma AI</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Figma AI — це набір AI можливостей, вбудованих безпосередньо в платформу дизайну Figma, яку використовують понад 5 мільйонів активних дизайнерів. Головна AI функція — Figma Make, представлена в 2026 році, дозволяє дизайнерам описати UI природною мовою та отримати функціональний інтерактивний прототип з підключенням до бази даних через інтеграцію Supabase. Це переміщує Figma від статичного інструменту дизайну до AI-нативного середовища розробки продуктів.</p><p style="margin-top:1rem">Figma придбала Diagram (творців плагіна Magician AI) та інтегрувала ці можливості в нативний Figma AI, включаючи генерування та редагування AI зображень безпосередньо на полотні, AI-керовуне перейменування шарів, розумні пропозиції компонентів та AI пошук по активах дизайну. Генерування коду перетворює дизайни Figma в готовий до виробництва React, HTML або CSS.</p><p style="margin-top:1rem">Ключові можливості включають Figma Make (текст до інтерактивного прототипу), генерування та редагування AI зображень, пропозиції автолаяуту, розумне зіставлення компонентів, AI перейменування шарів, генерування з урахуванням кодової бази та підключення бази даних Supabase для прототипів, керованих даними.</p><p style="margin-top:1rem">Ціноутворення: тариф Starter безплатний з обмеженими місячними AI кредитами. Professional за $15 за користувача на місяць (річно) включає 500 AI кредитів на місяць. Organization за $55 за користувача на місяць включає 2000 кредитів. Enterprise за $90 за користувача на місяць включає 4250 кредитів. Додаткові пакети AI кредитів та кредити на основі використання доступні за $0.03 за кредит з Q2 2026.</p><p style="margin-top:1rem">Омеження: AI кредити витрачаються на всі AI функції та можуть швидко закінчитися для команд, які багато працюють з генерацією. Figma Make вихід вимагає перевірки розробником перед виробничим використанням. Платформа працює тільки в браузері, що може бути повільним на великих складних файлах.</p><p style="margin-top:1rem">Найбільше підходить для дизайнерів UI/UX та команд продуктів, які хочуть AI асистенцію, вбудовану в їхній існуючий робочий процес Figma, особливо для швидкого прототипування та вихідного коду дизайну.</p></div>

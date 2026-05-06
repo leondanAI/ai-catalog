@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Assistant IA gratuit intégré à Facebook, Instagram, WhatsApp et Messenger</div>
     </div>
   </div>
-  <a href="/fr/compare/meta-ai-vs-chatgpt.html" class="compare-strip">⚖️ Meta AI vs ChatGPT →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/meta-ai-vs-chatgpt.html" class="compare-strip">⚖️ Meta AI vs ChatGPT →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Meta AI</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Meta AI est l'assistant IA intégré directement dans la famille d'applications de Meta — WhatsApp, Instagram, Facebook et Messenger — ce qui lui donne la plus grande distribution de tout assistant IA au monde. Contrairement aux produits IA autonomes, Meta AI ne nécessite aucune inscription ou téléchargement supplémentaire si vous utilisez déjà les plateformes Meta.</p><p style="margin-top:1rem">Les modèles sous-jacents sont Llama 4 Scout et Llama 4 Maverick, lancés en avril 2025. Maverick est un modèle mixture-of-experts de 400B paramètres qui correspond ou dépasse GPT-4o et Gemini 1.5 Pro sur la plupart des benchmarks, y compris les tâches multilingues. Scout est une variante plus rapide et plus légère. Les deux sont nativement multimodaux, traitant texte et images. Le modèle complet Llama 4 Behemoth reste en entraînement.</p><p style="margin-top:1rem">Meta AI est complètement gratuit sans limites d'utilisation, sans niveaux d'abonnement et sans limitation de débit sur l'interface grand public. Il peut répondre à des questions, aider à la rédaction, analyser des images et générer des images via la fonctionnalité Imagine. La recherche web en temps réel est intégrée sur toutes les plateformes.</p><p style="margin-top:1rem">Au début 2026, Meta AI a dépassé 1 milliard d'utilisateurs actifs mensuels — plus que tout autre assistant IA. Les utilisateurs actifs hebdomadaires s'élèvent à 185 millions qui interagissent intentionnellement avec celui-ci en tant qu'outil IA plutôt que passivement via les fonctionnalités de plateforme.</p><p style="margin-top:1rem">Limitation clé : Meta utilise les données de conversation pour améliorer ses modèles et informer la publicité, ce qui représente un compromis important en matière de confidentialité pour les utilisateurs qui partagent des informations sensibles. Le modèle est moins capable que Claude ou GPT-5.5 sur le raisonnement multi-étapes complexe et les tâches professionnelles.</p><p style="margin-top:1rem">Idéal pour les utilisateurs ordinaires déjà sur les plateformes Meta qui veulent une IA gratuite et capable sans changer d'application ni payer d'abonnement.</p></div>

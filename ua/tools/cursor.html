@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Підходить для:</strong> AI IDE, рефакторинг коду</div>
     </div>
   </div>
-  <a href="/ua/compare/cursor-vs-copilot.html" class="compare-strip">⚖️ Cursor vs GitHub Copilot →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ua/compare/cursor-vs-copilot.html" class="compare-strip">⚖️ Cursor vs GitHub Copilot →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Cursor</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Cursor — нативний AI-редактор коду, побудований на основі VS Code і розроблений з нуля для програмістів, які хочуть глибокої інтеграції AI у робочий процес, а не плагіна-надбудови. Станом на 2026 рік він перевищив $1 мільярд річної виручки з понад 1 мільйоном платних розробників — вражаюча траєкторія зростання для інструменту розробки.</p><p style="margin-top:1rem">Головна відмінність Cursor — повний контекст кодової бази. На відміну від GitHub Copilot, який працює переважно з поточним файлом, Cursor розуміє весь репозиторій. Можна попросити його відрефакторити функцію в кількох файлах, пояснити причину помилки на три рівні глибини або реалізувати нову функцію від початку до кінця — і він діятиме на основі всієї кодової бази, а не лише відкритого файлу.</p><p style="margin-top:1rem">Cursor підтримує кілька фронтирних AI-моделей одночасно: Claude Opus 4.7, GPT-5.5 та Gemini, що перемикаються залежно від завдання. Cloud Agents виконують завдання кодування у фоновому режимі, поки ви працюєте над чимось іншим. Такі компанії, як Stripe, OpenAI, Figma та Adobe, використовують Cursor як стандартний інструмент розробки.</p><p style="margin-top:1rem">У червні 2025 року ціноутворення кардинально змінилося — з простої моделі на основі запитів на систему кредитів, привязану до фактичного споживання токенів. Це викликало хвилю невдоволення в спільноті: витрати могли непередбачувано зростати. Cursor вибачився і повернув кошти за перехідний період. У 2026 році плани варіюються від безкоштовного (Hobby) до Pro за $20/місяць, Pro+ за $60 та Ultra за $200. Командний план — $40 за місце.</p><p style="margin-top:1rem">Витрати на міграцію з VS Code реальні — очікуйте 4–8 годин на розробника. І Cursor коштує вдвічі дорожче ніж GitHub Copilot на базовому рівні. Але для розробників, що працюють зі складними багатофайловими завданнями, контекстно-усвідомлені можливості виправдовують різницю.</p><p style="margin-top:1rem">Cursor 3 був запущений у квітні 2026 з Composer 2 — власною моделлю для кодингу, навченою з нуля Anysphere (не fine-tune). Вона отримала 61,3 на CursorBench (+39% до попередньої моделі) і працює зі швидкістю 200+ токенів/сек на кастомних GPU-ядрах. Cursor тепер також офіційно підтримує JetBrains IDEs (IntelliJ, PyCharm, WebStorm) на додаток до VS Code; оцінка компанії досягла $60 млрд до лютого 2026.</p></div>

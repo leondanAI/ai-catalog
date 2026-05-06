@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Підходить для:</strong> Візуальний конструктор мобільних та веб-додатків, який експортує чистий код Flutter</div>
     </div>
   </div>
-  <a href="/ua/compare/flutterflow-vs-bubble.html" class="compare-strip">⚖️ FlutterFlow vs Bubble →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ua/compare/flutterflow-vs-bubble.html" class="compare-strip">⚖️ FlutterFlow vs Bubble →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Про сервіс FlutterFlow</h2>
     <div class="tool-desc"><p style="margin-top:1rem">FlutterFlow — це візуальний конструктор додатків, який генерує код Flutter/Dart виробничої якості для програм iOS, Android та веб. На відміну від інших no-code інструментів, які блокують користувачів у власній runtime, FlutterFlow створює реальний, експортований код Flutter — це означає, що команди можуть почати з візуального режиму та перейти на розробку на основі коду, коли того вимагає складність.</p><p style="margin-top:1rem">Платформа включає візуальний редактор UI з drag-and-drop компонентами, систему управління станом, інтеграції API та бекенду (Firebase, Supabase, REST API), конструктор логіки для умовних дій та AI функції, які генерують компоненти та сторінки з описів природною мовою. FlutterFlow AI (на основі Claude) може будувати повні екрани додатків на основі текстових запитів.</p><p style="margin-top:1rem">Ключові можливості включають: візуальну розробку Flutter UI, експорт коду Dart виробничої якості, нативну інтеграцію Firebase та Supabase, інтеграцію REST API, управління станом, FlutterFlow AI для генерування додатків природною мовою, спеціальну систему дій для написання коду Dart при необхідності та пряме розгортання у TestFlight/Play Store.</p><p style="margin-top:1rem">Ціни: Безплатний план забезпечує повну можливість будування з розгортанням на субдомені FlutterFlow (без експорту коду). Basic за $39 на місяць додає експорт коду та спеціальний домен. Growth за $80 на місяць додає синхронізацію GitHub та командні функції. Business за $150 на місяць забезпечує пріоритетну підтримку та розширене управління командою.</p><p style="margin-top:1rem">Обмеження: експорт коду вимагає плану Basic або вище — це ключова відмінність від інших no-code інструментів потребує оплати. Побудова складних спеціальних взаємодій іноді вимагає переходу до спеціального коду Dart, що зменшує pure no-code. Знання Flutter значно допомагає при налаштуванні експортованого коду.</p><p style="margin-top:1rem">Найкраще підходить для розробників мобільних додатків, які хочуть прискорити розробку UI, агентств, що розробляють мобільні додатки для клієнтів, та підприємців, які хочуть начати без коду з чіткою стратегією виходу на код.</p></div>

@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Підходить для:</strong> Автономний агент VS Code з покроковим схваленням</div>
     </div>
   </div>
-  <a href="/ua/compare/cline-vs-github-copilot.html" class="compare-strip">⚖️ Cline vs GitHub Copilot →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ua/compare/cline-vs-github-copilot.html" class="compare-strip">⚖️ Cline vs GitHub Copilot →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Cline</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Cline (раніше Claude Dev) — автономний агент кодування з відкритим кодом для VS Code, JetBrains, Cursor, Windsurf, Zed та Neovim. Він працює в циклі з покроковим схваленням: агент пропонує кожну дію (створення файлу, запуск команди, відкриття браузера), а користувач схвалює перед виконанням — це робить його прозорим і безпечним порівняно з повністю автономними інструментами. З понад 59 000 зірок на GitHub і 5 мільйонів інсталяцій, це найбільш розповсюджений агент кодування з відкритим кодом в екосистемі VS Code.</p><p style="margin-top:1rem">Cline досяг v3.81 у травні 2026 року і отримує щоденні оновлення. Він має нативну підтримку Model Context Protocol (MCP), що дозволяє інтегрувати користувацькі інструменти. Розширення працює з будь-яким LLM через bring-your-own-key: Anthropic Claude, OpenAI, Gemini, AWS Bedrock, OpenRouter та локальні моделі. Він може читати та редагувати файли по всій кодовій базі, виконувати команди терміналу, запускати тести та використовувати браузер для дослідження або комплексного тестування.</p><p style="margin-top:1rem">Ключові можливості включають редагування кількох файлів з повним контекстом кодової бази, використання браузера для дослідження та тестування UI, підтримку MCP-інструментів та робочий процес на основі схвалення, який тримає розробника в курсі на кожному кроці. На відміну від форкованих редакторів, таких як Cursor чи Windsurf, Cline працює всередині вашого існуючого редактора без потреби в міграції.</p><p style="margin-top:1rem">Ціни: Cline абсолютно безкоштовний та з відкритим кодом. Ви платите лише за виклики API LLM до вибраного вами постачальника. Запуск на локальних моделях через Ollama безкоштовний.</p><p style="margin-top:1rem">Обмеження: Робочий процес з покроковим схваленням, хоча й безпечний, може сповільнити складні багатофайлові завдання порівняно з повністю автономними інструментами. Якість повністю залежить від налаштованого вами LLM. BYOK модель означає, що ви керуєте витратами на API окремо.</p><p style="margin-top:1rem">Найкраще підходить для розробників, які хочуть потужного автономного агента кодування всередині свого існуючого редактора без переходу на нову IDE, і які надають перевагу прозорому покроковому контролю перед повністю автономним виконанням.</p></div>

@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> מתכנת AI בטרמינל עם commit אוטומטי ל-git</div>
     </div>
   </div>
-  <a href="/he/compare/aider-vs-github-copilot.html" class="compare-strip">⚖️ Aider vs GitHub Copilot →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/he/compare/aider-vs-github-copilot.html" class="compare-strip">⚖️ Aider vs GitHub Copilot →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>אודות Aider</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Aider הוא מתכנת AI בקוד פתוח מבוסס Python המופעל כולו בטרמינל. התכונה המגדירה שלו היא פעולה native ל-git: כל שינוי שה-AI עושה מובטח אוטומטית עם הודעת commit תיאורית, כך שאתה יכול להשתמש ב-git diff, git log, ו-git revert כדי לבדוק או לבטל כל שינוי של AI. זה הופך אותו בטוח ייחודי עבור codebases בייצור שבהם מעקב אחר שינויים חשוב.</p><p style="margin-top:1rem">הכלי מעבד 15 מיליארד tokenים בשבוע על פני בסיס המשתמשים שלו החל מתחילת 2026. Aider בונה מפת repo — אינדקס סמנטי של כל ה-codebase — המאפשר עריכות מדויקות בריבוי קבצים בפרויקטים גדולים. הוא מתחבר לכל LLM: Claude Sonnet, GPT-4o, Gemini, DeepSeek, מודלי Ollama מקומיים, ועשרות ספקים דרך OpenRouter. הקהילה בקוד פתוח משחררת עדכונים תכופים.</p><p style="margin-top:1rem">היכולות העיקריות כוללות commit אוטומטי של git עבור כל שינוי של AI, עריכה בריבוי קבצים ב-codebases גדולים דרך מפת repo, מצב קלט קולי, תמיכה בתמונות בעורך לניפוי שגיאות ויזואלי, ומצב watch שמגיב להערות מיוחדות בקודשלך. Aider עובד בכל ספרייה ללא פלאגיני IDE או הגדרה מעבר ל-API key.</p><p style="margin-top:1rem">מחירים: Aider הוא בחינם לחלוטין וקוד פתוח. אתה משלם רק עבור קריאות API של LLM לספק שלך. הרצה על מודלים מקומיים דרך Ollama לא עולה כלום מעבר לחומware.</p><p style="margin-top:1rem">הגבלות: Aider הוא טרמינל בלבד — אין GUI, סיומת IDE, או ממשק דפדפן. ההתקנה דורשת התקנה דרך pip והגדרת API key. כמו כל כלים BYOK, עלויות LLM משולמות בנפרד.</p><p style="margin-top:1rem">מתאים ביותר למפתחים שחיים בטרמינל ורוצים מתכנת AI בקוד שלהם עם אחריות ל-git מלאה — כאשר כל שינוי של AI מעוקב, ניתן לבדיקה, וניתן להשוב עליו.</p></div>

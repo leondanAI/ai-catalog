@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Assistente de codificação IA nativa da AWS para desenvolvimento em nuvem e infraestrutura</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Amazon Q Developer</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Amazon Q Developer é o assistente de codificação IA da AWS, renomeado de CodeWhisperer em meados de 2024 e significativamente expandido. Seu recurso definidor é a consciência profunda de serviços AWS: diferentemente de ferramentas genéricas, Q Developer entende suas políticas IAM, stacks CloudFormation, construtos CDK e arquitetura AWS mais ampla. Pode gerar código que referencia corretamente seus recursos AWS específicos, sugerir políticas IAM com privilégio mínimo e ajudar a depurar problemas de infraestrutura em nuvem em contexto.</p><p style="margin-top:1rem">A ferramenta inclui um recurso de transformação de código que atualiza automaticamente bases legadas — migrando Java 8/11 para Java 17/21 ou Python 2 para Python 3 — em repositórios inteiros. O agente pode ser atribuído a tarefas complexas como refatorar um serviço, escrever testes unitários para um módulo existente ou implementar um novo recurso de ponta a ponta. Q Developer integra com VS Code, JetBrains, Visual Studio e AWS Console diretamente.</p><p style="margin-top:1rem">Capacidades principais incluem geração de código com contexto AWS, transformação automatizada de código para atualizações de versão de linguagem, conclusões inline em 15+ linguagens, execução de tarefas agentivas, verificação de vulnerabilidades de segurança e integração direta com AWS Console. Para equipes construindo na AWS, fornece contexto em nível de infraestrutura que nenhuma outra ferramenta de codificação oferece.</p><p style="margin-top:1rem">Preços: A camada gratuita inclui conclusões de código ilimitadas e 50 chats de desenvolvedor agentivos por mês. O nível Pro custa $19 por usuário por mês e adiciona chats agentivos ilimitados, transformação de código para projetos maiores e contexto estendido. Preços Enterprise estão disponíveis com controles de conformidade adicionais.</p><p style="margin-top:1rem">Limitações: Fora do desenvolvimento AWS, Amazon Q Developer não é particularmente competitivo comparado ao Cursor ou GitHub Copilot. Os 50 chats agentivos por mês da camada gratuita se esgotam rapidamente em projetos ativos. A ferramenta oferece menos valor para GCP, Azure ou desenvolvimento não-nuvem.</p><p style="margin-top:1rem">Mais adequado para equipes de desenvolvimento construindo na AWS que desejam um assistente IA que entenda sua infraestrutura em nuvem — IAM, CloudFormation, CDK e serviços AWS — junto com capacidades de codificação padrão.</p></div>

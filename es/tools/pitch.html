@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Presentaciones colaborativas de equipos con edición en tiempo real y análisis</div>
     </div>
   </div>
-  <a href="/es/compare/gamma-vs-pitch.html" class="compare-strip">⚖️ Pitch vs Gamma →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/es/compare/gamma-vs-pitch.html" class="compare-strip">⚖️ Pitch vs Gamma →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de Pitch</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Pitch es una herramienta de presentación diseñada para la colaboración en equipo, ofreciendo edición multiusuario en tiempo real similar al modelo de edición colaborativa de Figma para presentaciones. Ha crecido a más de 1 millón de usuarios con una adopción particularmente fuerte entre equipos de startups y tecnología.</p><p style="margin-top:1rem">La sensibilidad de diseño de Pitch prioriza estéticas modernas y limpias — su biblioteca de plantillas es más pequeña que Canva pero seleccionada para uso empresarial profesional. La plataforma incluye análisis de presentaciones que muestran quién abrió la presentación, cuánto tiempo pasó en cada diapositiva y si la descargaron. Las funciones de IA generan estructuras de esquemas y contenido de diapositivas a partir de indicaciones de texto.</p><p style="margin-top:1rem">Las capacidades clave incluyen edición colaborativa en tiempo real, generación de presentaciones de IA a partir de esquemas, análisis de diapositivas (aperturas, tiempo dedicado, descargas), gestión de workspace para activos de equipo, más de 100 plantillas seleccionadas, incrustación y uso compartido mediante enlace, integraciones con Slack, Notion y Figma, y exportación a PDF y PowerPoint.</p><p style="margin-top:1rem">Precio: El plan gratuito proporciona creación de presentaciones completa con presentaciones ilimitadas y 1 workspace. Pro a $12 por mes proporciona workspaces ilimitados, análisis avanzados, dominio personalizado y soporte prioritario. El plan Team proporciona múltiples asientos con activos de marca compartidos.</p><p style="margin-top:1rem">Limitaciones: La biblioteca de plantillas de Pitch está seleccionada pero es más pequeña que Canva o Gamma. Las funciones de IA son menos sofisticadas que herramientas de presentación de IA dedicadas como Gamma. Para usuarios individuales, las funciones colaborativas de Pitch son menos valiosas.</p><p style="margin-top:1rem">Más adecuado para startups, agencias y equipos de productos que colaboran en presentaciones y valoran estéticas de diseño limpio y análisis de participación.</p></div>

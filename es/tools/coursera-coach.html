@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Asistente de IA para aprender cursos de Coursera con orientación personalizada</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de Coursera Coach</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Coursera Coach es el asistente de aprendizaje impulsado por IA integrado en la plataforma de aprendizaje en línea de Coursera. No es un producto independiente — el acceso requiere una suscripción a Coursera Plus ($399 por año u $59 por mes). Coursera Plus proporciona acceso ilimitado a 10,000+ cursos y certificados profesionales de 300+ universidades y empresas, y Coach está integrado en toda esta experiencia.</p><p style="margin-top:1rem">Coach funciona como tutor contextual dentro de cursos: puede explicar conceptos difíciles en la lección actual, sugerir problemas de práctica, responder preguntas sobre material del curso y recomendar cursos relacionados basado en el progreso de aprendizaje y objetivos. También apoya la ayuda en tareas — proporcionando sugerencias y explicaciones sin dar respuestas directas, en línea con las políticas de integridad académica.</p><p style="margin-top:1rem">Las capacidades clave incluyen recomendaciones de cursos personalizadas basadas en objetivos e historial de aprendizaje, explicación de conceptos dentro de cursos activos, asistencia en tareas con sugerencias y explicaciones, análisis de progreso, identificación de brechas de habilidades y sugerencias de rutas de aprendizaje en el catálogo de Coursera.</p><p style="margin-top:1rem">Precio: Coursera Coach está incluido en Coursera Plus a $399 por año ($33.25/mes efectivos) u $59 por mes. Las compras de cursos individuales no incluyen acceso a Coach. Los planes Enterprise y Teams tienen precios separados.</p><p style="margin-top:1rem">Limitaciones: Coursera Coach no está disponible sin una suscripción a Coursera Plus — no puede comprarse por separado. La IA está limitada a apoyar el catálogo de cursos existentes de Coursera y no puede proporcionar tutoría general fuera del contenido del curso. El costo de $399/año solo se justifica si el estudiante está utilizando activamente múltiples cursos durante todo el año.</p><p style="margin-top:1rem">Más adecuado para profesionales que persiguen múltiples certificados o aprendizaje continuo en Coursera que desean orientación asistida por IA, y que encuentran valor en el catálogo más amplio de Coursera Plus más allá del asistente de IA.</p></div>

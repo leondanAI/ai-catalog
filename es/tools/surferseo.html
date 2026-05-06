@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> SEO en página, puntuación de contenido</div>
     </div>
   </div>
-  <a href="/es/compare/surferseo-vs-semrush.html" class="compare-strip">⚖️ SurferSEO vs Semrush →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/es/compare/surferseo-vs-semrush.html" class="compare-strip">⚖️ SurferSEO vs Semrush →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de SurferSEO</h2>
     <div class="tool-desc"><p style="margin-top:1rem">SurferSEO es una plataforma de optimización de contenido que puntúa tu artículo frente a las páginas mejor posicionadas en Google para tu palabra clave objetivo, indicándote en tiempo real qué agregar, eliminar o ajustar para mejorar tus posibilidades de posicionamiento. Lo hace analizando el contenido de las 10-20 páginas mejor rankeadas y extrayendo los temas clave, términos semánticos, recuentos de palabras y patrones estructurales que comparten.</p><p style="margin-top:1rem">El Editor de Contenido es el producto principal: escribe o pega tu artículo, ingresa tu palabra clave objetivo y SurferSEO te muestra una puntuación de contenido (0-100) junto con una lista de términos y frases sugeridos para incluir, derivados de los competidores mejor posicionados. La puntuación se actualiza mientras escribes, dándote retroalimentación inmediata sobre si agregar una sección o párrafo mejora la cobertura temática de tu contenido. La herramienta se integra directamente con Google Docs y cuenta con un plugin para WordPress para optimización en el lugar.</p><p style="margin-top:1rem">SurferSEO es una herramienta de evaluación y optimización, no de estrategia de contenido: te indica cómo posicionarte mejor para palabras clave que ya has elegido, pero no ayuda con la investigación de palabras clave, la construcción de enlaces o el SEO técnico. Para un flujo de trabajo SEO completo, la mayoría de los equipos lo combinan con Semrush o Ahrefs para la investigación y Surfer para la optimización de contenido. El plan Starter cuesta $79/mes, lo que lo hace más rentable para equipos que publican al menos 10-15 artículos optimizados por mes.</p></div>

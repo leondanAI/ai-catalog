@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> משימות אוטונומיות, סוכני AI בקוד פתוח</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>אודות AutoGPT</h2>
     <div class="tool-desc"><p style="margin-top:1rem">AutoGPT הוא אחד מפרויקטי ה-AI הפופולריים ביותר בגיטהאב, עם למעלה מ-170,000 כוכבים — ואחד הפרויקטים שהגדירו את קטגוריית &quot;סוכני AI אוטונומיים&quot;. הרעיון פשוט ומהפכני: במקום לשוחח עם AI שאלה-תשובה, אתם נותנים ל-AutoGPT מטרה, והוא מפרק אותה לשלבים, מבצע כל שלב בעצמו, ומדווח על ההתקדמות — ללא התערבות אנושית בכל צעד.</p><p style="margin-top:1rem">AutoGPT מסוגל לגלוש באינטרנט לאיסוף מידע, לכתוב ולהריץ קוד, לנהל קבצים, לשלוח בקשות API ולתקשר עם שירותים חיצוניים. לדוגמה: תנו לו מטרה כמו &quot;חקור את המתחרים העיקריים בתחום X וצור דוח מפורט&quot; — והוא יחפש, יאסוף, יסכם ויפרמט את הדוח לבד. זה בדיוק מה שה-AI Agent אמור לעשות.</p><p style="margin-top:1rem">הפרויקט הוא קוד פתוח לחלוטין וניתן להרצה עצמית — אין עלות תוכנה, אם כי השימוש ב-API של OpenAI כרוך בעלות לפי שימוש. ה-Forge של AutoGPT מאפשר גם לבנות סוכני AI מותאמים אישית ולפרסם אותם בשוק. עבור מפתחים ואנשי טכנולוגיה שרוצים להבין ולהפעיל AI Agents בצורה המלאה ביותר — AutoGPT הוא נקודת ההתחלה הקלאסית.</p></div>

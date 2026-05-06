@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Terminal, tâches agentiques complexes</div>
     </div>
   </div>
-  <a href="/fr/compare/claude-code-vs-github-copilot.html" class="compare-strip">⚖️ Claude Code vs GitHub Copilot →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/claude-code-vs-github-copilot.html" class="compare-strip">⚖️ Claude Code vs GitHub Copilot →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Claude Code</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Claude Code est l'agent IA officiel en ligne de commande d'Anthropic pour le développement logiciel, lancé en 2025 et rapidement adopté comme le principal outil de codage agentique parmi les ingénieurs professionnels. Contrairement aux plugins IDE qui assistent sur des fichiers individuels, Claude Code opère au niveau du dépôt — il lit l'intégralité de votre base de code, comprend l'architecture et peut exécuter des cycles de développement complets : conception, implémentation, écriture de tests, correction de bugs et refactorisation, le tout à partir d'une seule instruction en langage naturel dans le terminal.</p><p style="margin-top:1rem">L'outil utilise les modèles Claude Sonnet ou Opus avec leur fenêtre de contexte complète, ce qui lui permet de conserver simultanément en mémoire une grande base de code entière. Cela rend possible des tâches qui fragmentent d'autres outils : migrer un schéma de base de données tout en mettant à jour toutes les requêtes et modèles concernés, refactoriser une bibliothèque de composants tout en corrigeant chaque point d'appel, ou implémenter une fonctionnalité complète de bout en bout incluant les routes, les contrôleurs, les tests et la documentation.</p><p style="margin-top:1rem">Claude Code nécessite des crédits API Anthropic actifs et est facturé par token, ce qui le rend plus coûteux pour une utilisation intensive qu'un abonnement IDE à tarif fixe. Il est natif dans le terminal, ce qui signifie qu'il s'intègre naturellement dans n'importe quel environnement de développement sans plugins IDE — particulièrement utile pour le travail côté serveur, les scripts et les pipelines CI/CD. Les développeurs travaillant sur des fonctionnalités complexes et de longue durée le classent régulièrement comme l'outil de codage agentique le plus performant disponible en 2026.</p><p style="margin-top:1rem">En 2026, Claude Code a ajouté des Agents en arrière-plan qui s'exécutent de manière autonome pendant que vous travaillez sur autre chose, a étendu la fenêtre de contexte à 1 million de tokens (Bêta), et a été intégré aux plans Claude Pro et Max (sans crédits API séparés requis pour de nombreux flux de travail). Il domine le benchmark SWE-Bench Verified avec un score de 80,8 % grâce à Opus 4.6.</p></div>

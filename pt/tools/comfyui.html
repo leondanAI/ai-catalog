@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Pipelines avançados, estúdios de jogos, modelos personalizados</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre ComfyUI</h2>
     <div class="tool-desc"><p style="margin-top:1rem">ComfyUI é a interface open-source mais poderosa e flexível para executar fluxos de trabalho de geração de imagens (e vídeos) com IA, baseada em uma arquitetura de grafo de nós onde cada etapa do pipeline de difusão — carregamento de modelos, amostragem, condicionamento, upscaling, composição — é um nó visível e editável em um canvas infinito. Usado por estúdios de jogos profissionais, empresas de VFX e artistas sérios de IA, representa o nível mais profundo de controle disponível em qualquer ferramenta de geração de imagens.</p><p style="margin-top:1rem">O sistema de fluxo de trabalho baseado em nós permite construir exatamente o pipeline que você precisa: encadear vários modelos, adicionar ControlNet para controle de pose ou profundidade, executar passagens de refinamento img2img, aplicar adaptadores de estilo LoRA, compor múltiplas gerações e automatizar todo o processo com uma única execução. Plarium e outros grandes estúdios de jogos usam ComfyUI como ferramenta central de produção para gerar assets de jogos, conceitos de personagens e arte ambiental em escala. A comunidade publicou milhares de templates de fluxo de trabalho cobrindo todos os casos de uso imagináveis.</p><p style="margin-top:1rem">ComfyUI é gratuito para sempre e roda localmente no seu hardware. A extensão ComfyUI Manager facilita a instalação de nós personalizados e arquivos de modelos. A principal limitação é a curva de aprendizado — o canvas de nós é intimidador para iniciantes e requer compreensão dos conceitos de difusão para ser usado de forma eficaz. Para usuários que precisam de uma interface mais simples sobre Stable Diffusion, Automatic1111 é um ponto de partida melhor. ComfyUI é a ferramenta certa quando você precisa de pipelines de geração de imagens automatizados, repetíveis e em nível de produção.</p></div>

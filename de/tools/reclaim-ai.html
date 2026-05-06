@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal für:</strong> KI-Kalenderoptimierung — plant automatisch Fokuszeit und Gewohnheiten ein</div>
     </div>
   </div>
-  <a href="/de/compare/motion-vs-reclaim-ai.html" class="compare-strip">⚖️ Reclaim.ai vs Motion →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/de/compare/motion-vs-reclaim-ai.html" class="compare-strip">⚖️ Reclaim.ai vs Motion →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Über Reclaim.ai</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Reclaim.ai ist ein KI-Kalenderoptimierungstool, das innerhalb von Google Calendar automatisch Fokuszeit, regelmäßige Gewohnheiten, persönliche Aufgaben und flexible Meetings um feste Termine herum plant. Im Gegensatz zu Motion, das einen vollständigen Tagesplan erstellt, konzentriert sich Reclaim darauf, Zeit innerhalb eines bestehenden Kalenders zu schützen und zu optimieren, anstatt die Kalenderverwaltung vollständig zu ersetzen.</p><p style="margin-top:1rem">Die wichtigsten Use Cases sind: Planung von fokussierten Arbeitsphasen, die sich automatisch um Meetings verschieben, Aufrechterhaltung täglicher und wöchentlicher Gewohnheiten (Training, Lernen, tiefe Arbeit) durch automatisches Finden und Schützen von Zeit dafür, und Planung von 1:1-Meetings innerhalb gemeinsamer Verfügbarkeitsfenster. Reclaim passt automatisch geplante Blöcke an, wenn Meetings hinzugefügt oder geändert werden, um sicherzustellen, dass die geschützte Zeit immer aktuell ist.</p><p style="margin-top:1rem">Schlüsselfunktionen umfassen automatische Fokuszeitplanung, Gewohnheitsplanung und -schutz, intelligente 1:1-Meeting-Planung, Aufgabendauerabschätzung, Pufferzeit zwischen Meetings, Team-Kalenderanalysen und Integrationen mit Slack (zeigt Meeting-Status), Asana, Linear, Todoist, Jira und Google Tasks.</p><p style="margin-top:1rem">Preisgestaltung: Der kostenlose Lite-Plan bietet grundlegende Fokuszeit- und Gewohnheitsplanung für einen Benutzer. Starter kostet $8 pro Benutzer pro Monat und bietet vollständige Funktionen für Einzelpersonen. Business kostet $12 pro Benutzer pro Monat und fügt Team-Analysen, Admin-Kontrollen und Prioritätssupport hinzu. Enterprise-Preisgestaltung umfasst SSO und Compliance-Funktionen.</p><p style="margin-top:1rem">Einschränkungen: Reclaim integriert sich nur mit Google Calendar — Outlook- und Microsoft 365-Benutzer können es nicht verwenden. Die KI-Planung ist konservativ — sie schützt Zeit, baut Zeitpläne aber nicht so aggressiv um wie Motion. Die Aufgabenplanung erfordert Reclaim's eigene Task-Oberfläche oder integrierte Task-Tools (Asana, Jira) statt beliebiger Task-Listen.</p><p style="margin-top:1rem">Am besten geeignet für Wissensarbeiter und Teams in Google Calendar, die Fokuszeit schützen und Arbeitsgewohnheiten beibehalten möchten, ohne jede Woche manuell Kalenderzeit zu blockieren.</p></div>

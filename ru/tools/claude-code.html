@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> Комплексный рефакторинг файлов и агентные рабочие процессы</div>
     </div>
   </div>
-  <a href="/ru/compare/claude-code-vs-github-copilot.html" class="compare-strip">⚖️ Claude Code vs GitHub Copilot →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/claude-code-vs-github-copilot.html" class="compare-strip">⚖️ Claude Code vs GitHub Copilot →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе Claude Code</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Claude Code — агентный инструмент кодирования от Anthropic, доступный как CLI, десктопное приложение и расширение для VS Code/JetBrains. Он работает непосредственно в вашей локальной среде разработки — читает полную кодовую базу, планирует изменения нескольких файлов, пишет и редактирует код, запускает тесты и коммитит в git — все это из инструкций на естественном языке. В отличие от инструментов на основе песочниц, Claude Code работает в вашей реальной файловой системе без искусственных ограничений.</p><p style="margin-top:1rem">На 2026 год Claude Code поддерживает оркестрацию нескольких агентов: главный агент может создавать параллельные подагенты Claude Code для одновременной обработки различных частей сложной задачи. Возможности взаимодействия с компьютером позволяют ему управлять браузерами для автоматизированных тестовых рабочих процессов. Model Context Protocol (MCP) позволяет интегрировать внешние инструменты и пользовательские источники данных.</p><p style="margin-top:1rem">Основные возможности включают осведомленность о перекрестных репозиториях, автономные операции git (коммит, ветвление, создание PR), выполнение команд bash и итеративную отладку. Десктопное приложение добавляет интерфейс с разделенными панелями и боковой панелью плана, облегчая отслеживание долгоиграющих агентных задач в больших кодовых базах.</p><p style="margin-top:1rem">Цены: Claude Code включен в Claude Pro за $20 в месяц. Планы Claude Max стоимостью $100 и $200 в месяц предоставляют значительно более высокие лимиты использования для активных пользователей. Командные планы начинаются с $100 за место в месяц. Корпоративное ценообразование доступно по запросу. Прямое использование API оплачивается по $3–$25 за миллион токенов в зависимости от модели.</p><p style="margin-top:1rem">Ограничения: Claude Code требует знакомства с терминалом и имеет более крутую кривую обучения, чем графические инструменты. Интенсивное использование быстро превышает лимиты тарифа Pro, а планы Max дорогие. Он не имеет встроенного предпросмотра UI или функций дизайн-в-код.</p><p style="margin-top:1rem">Наиболее подходит для профессиональных разработчиков, работающих со сложным рефакторингом файлов, крупномасштабными агентными рабочими процессами и командами, которым требуется глубокое рассуждение на уровне всей кодовой базы для крупных проектов.</p></div>

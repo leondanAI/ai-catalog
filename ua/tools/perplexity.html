@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Підходить для:</strong> AI-пошук та дослідження з посиланнями в реальному часі</div>
     </div>
   </div>
-  <a href="/ua/compare/perplexity-vs-notebooklm.html" class="compare-strip">⚖️ Perplexity vs NotebookLM →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ua/compare/perplexity-vs-notebooklm.html" class="compare-strip">⚖️ Perplexity vs NotebookLM →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Perplexity</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Perplexity — це AI-пошукова машина, яка відповідає на запитання з веб-джерелами в реальному часі та цитуваннями — поєднуючи пошук, синтез та генерацію відповідей в одному інтерфейсі. Вона стала провідною альтернативою традиційному пошуку для фахівців знань, дослідників та професіоналів.</p><p style="margin-top:1rem">На початку 2026 року Perplexity має 45 мільйонів активних користувачів на місяць, порівняно з 22 мільйонами на початку 2025 року — більш ніж подвоєння за один рік. Платформа обробляє приблизно 780 мільйонів пошукових запитів на місяць. Perplexity оцінюється в $20 мільярдів після раунду фінансування в розмірі $200 мільйонів у вересні 2025 року, з прогнозованим річним повторюваним доходом $656 мільйонів у 2026 році.</p><p style="margin-top:1rem">Безплатний рівень забезпечує необмежені базові пошуки з цитуваннями. Perplexity Pro ($20/місяць) додає режим Deep Research — який виконує багатоетапні плани дослідження, читає десятки джерел та створює детальні аналітичні звіти подібно до помічника дослідника. Pro також включає завантаження файлів, генерацію зображень та режим Academic Focus для тільки рецензованих джерел.</p><p style="margin-top:1rem">Кожна відповідь включає клікабельні цитування джерел, що полегшує перевірку тверджень або глибше занурення. Ця прозорість відрізняє Perplexity від AI чатботів, які генерують відповіді без посилання на джерела.</p><p style="margin-top:1rem">Perplexity розширилася на Perplexity Pages (документи для поділу досліджень), внутрішній пошук для підприємств та API для розробників, які будують додатки, розширені пошуком.</p><p style="margin-top:1rem">Найкраще підходить для фахівців знань, дослідників, студентів та професіоналів, які хочуть швидкі, цитовані відповіді — а не порожню сторінку AI, яка може галюцинувати.</p></div>

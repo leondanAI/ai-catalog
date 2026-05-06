@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Automatización de flujos de trabajo, tuberías de IA</div>
     </div>
   </div>
-  <a href="/es/compare/n8n-vs-copilot-studio.html" class="compare-strip">⚖️ n8n vs Copilot Studio →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/es/compare/n8n-vs-copilot-studio.html" class="compare-strip">⚖️ n8n vs Copilot Studio →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de n8n</h2>
     <div class="tool-desc"><p style="margin-top:1rem">n8n es una plataforma de automatización de flujos de trabajo de código abierto que permite auto-hospedaje sin costo con ejecuciones ilimitadas — la razón principal por la que equipos de ingeniería y conscientes de privacidad la eligen sobre Make o Zapier. El editor visual conecta más de 400 servicios y soporta lógica compleja: ramificación, bucles, manejo de errores y nodos personalizados en JavaScript/Python.</p><p style="margin-top:1rem">En abril de 2026, n8n eliminó todos los límites de flujos de trabajo activos en todos los planes en la nube — ahora solo importan los conteos de ejecución. Precios en la nube: Starter (24 EUR/mes, 2,500 ejecuciones), Pro (60 EUR/mes, 10,000 ejecuciones), Business (800 EUR/mes, 40,000 ejecuciones con SSO). La Community Edition auto-hospedada sigue siendo completamente gratuita con ejecuciones y flujos de trabajo ilimitados. Se agregaron nodos de IA nativos: integraciones de Claude, Gemini y almacén de vectores ahora son ciudadanos de primera clase en el editor.</p><p style="margin-top:1rem">La opción auto-hospedada es el mayor diferenciador de n8n. Los equipos pueden ejecutarla en un VPS de $5/mes con control total sobre sus datos, sin tarifas por ejecución y escala ilimitada. La compensación es la responsabilidad de la infraestructura.</p><p style="margin-top:1rem">La biblioteca de nodos de IA creció sustancialmente en 2025–2026: cadenas estilo LangChain, tuberías RAG y enrutamiento multi-modelo pueden construirse visualmente. Esto posiciona a n8n como una opción seria para equipos que construyen herramientas internas impulsadas por IA.</p><p style="margin-top:1rem">Limitaciones: la curva de aprendizaje es más pronunciada que Make o Zapier. El auto-hospedaje requiere comodidad con DevOps. La interfaz, aunque mejora, es menos pulida que la de los competidores.</p><p style="margin-top:1rem">Mejor para equipos de ingeniería y operadores técnicos que desean flexibilidad máxima, privacidad de datos y cero costos por ejecución — y se sienten cómodos ejecutando su propia infraestructura.</p></div>

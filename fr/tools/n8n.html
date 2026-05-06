@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Automatisation de flux de travail, pipelines IA</div>
     </div>
   </div>
-  <a href="/fr/compare/n8n-vs-copilot-studio.html" class="compare-strip">⚖️ n8n vs Copilot Studio →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/n8n-vs-copilot-studio.html" class="compare-strip">⚖️ n8n vs Copilot Studio →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos n8n</h2>
     <div class="tool-desc"><p style="margin-top:1rem">n8n est une plateforme open-source d'automatisation de flux de travail qui permet l'auto-hébergement sans frais avec exécutions illimitées — la raison principale pour laquelle les équipes d'ingénierie et conscientes de la confidentialité la choisissent plutôt que Make ou Zapier. L'éditeur visuel connecte 400+ services et supporte une logique complexe : branchement, boucles, gestion des erreurs et nœuds JavaScript/Python personnalisés.</p><p style="margin-top:1rem">En avril 2026, n8n a supprimé toutes les limites de workflows actifs sur tous les plans cloud — seul le nombre d'exécutions compte désormais. Tarification cloud : Starter (24 EUR/mois, 2 500 exécutions), Pro (60 EUR/mois, 10 000 exécutions), Business (800 EUR/mois, 40 000 exécutions avec SSO). L'édition Community auto-hébergée reste entièrement gratuite avec workflows et exécutions illimitées. Des nœuds IA natifs ont été ajoutés : les intégrations Claude, Gemini et vector store sont maintenant des citoyens de première classe dans l'éditeur.</p><p style="margin-top:1rem">L'option auto-hébergée est le plus grand différenciateur de n8n. Les équipes peuvent l'exécuter sur un VPS à 5 EUR/mois avec contrôle total de leurs données, sans frais par exécution et une scalabilité illimitée. Le compromis concerne la responsabilité d'infrastructure.</p><p style="margin-top:1rem">La bibliothèque de nœuds IA s'est considérablement développée en 2025–2026 : chaînes de style LangChain, pipelines RAG et routage multi-modèles peuvent tous être construits visuellement. Cela positionne n8n comme une option sérieuse pour les équipes construisant des outils internes alimentés par l'IA.</p><p style="margin-top:1rem">Limitations : la courbe d'apprentissage est plus abrupte que Make ou Zapier. L'auto-hébergement nécessite une aisance DevOps. L'interface, bien qu'en amélioration, est moins polissée que celle des concurrents.</p><p style="margin-top:1rem">Idéal pour les équipes d'ingénierie et les opérateurs techniques qui veulent la flexibilité maximale, la confidentialité des données et zéro frais par exécution — et qui sont à l'aise pour gérer leur propre infrastructure.</p></div>

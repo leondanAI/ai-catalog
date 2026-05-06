@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> Высочайшее качество синтеза голоса AI и клонирования голоса для профессионалов</div>
     </div>
   </div>
-  <a href="/ru/compare/speechify-vs-elevenlabs.html" class="compare-strip">⚖️ ElevenLabs vs Speechify →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/speechify-vs-elevenlabs.html" class="compare-strip">⚖️ ElevenLabs vs Speechify →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе ElevenLabs</h2>
     <div class="tool-desc"><p style="margin-top:1rem">ElevenLabs — ведущая платформа AI-голоса, охватывающая синтез текста в речь, клонирование голоса, дубляж, звуковые эффекты, генерацию музыки и разговорные AI-агенты — всё под единой системой кредитов. Основана в 2022 году, достигла оценки $11 млрд к середине 2025 года и используется издательствами, игровыми студиями, производителями аудиокниг и разработчиками приложений по всему миру.</p><p style="margin-top:1rem">Основной продукт TTS поддерживает 32+ языка с точностью клонирования голоса, устанавливающей эталон индустрии. Instant Voice Cloning создаёт клон из одной минуты аудио; Professional Voice Cloning производит студийные клоны из более длинных образцов. Библиотека голосов включает 3000+ готовых голосов по акцентам, возрастам и стилям.</p><p style="margin-top:1rem">Eleven Music, запущена в конце 2025 года, добавила генерацию AI-музыки на основе лицензированного контента — ElevenLabs заключила партнёрства с Merlin и Kobalt, так что модель музыки построена на материалах, одобренных правами. Это отличает её от Suno и Udio, которые сталкиваются с судебными исками по авторскому праву.</p><p style="margin-top:1rem">Разговорные AI-агенты позволяют разработчикам создавать голосовых агентов реального времени, которые слушают, рассуждают и отвечают менее чем за 500ms — подходят для ботов поддержки клиентов, голосовых помощников и интерактивных приложений.</p><p style="margin-top:1rem">Цены: Free ($0 — 10000 символов/месяц), Starter ($5/mo), Creator ($22/mo — 100000 символов, коммерческое использование), Pro ($99/mo — 500000 символов, профессиональное клонирование), Scale ($330/mo). Все платные тарифы включают права на коммерческое использование.</p><p style="margin-top:1rem">Лучше всего подходит для издательств, разработчиков игр, создателей контента и разработчиков, создающих голосовые приложения, которым нужен высокий качественный, лицензируемый голосовой AI.</p></div>

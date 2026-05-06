@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> צ'אט בינה מלאכותית חינם עם יכולות הנמקה חזקות ועלויות API נמוכות מאוד</div>
     </div>
   </div>
-  <a href="/he/compare/deepseek-vs-chatgpt.html" class="compare-strip">⚖️ DeepSeek vs ChatGPT →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/he/compare/deepseek-vs-chatgpt.html" class="compare-strip">⚖️ DeepSeek vs ChatGPT →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>אודות DeepSeek</h2>
     <div class="tool-desc"><p style="margin-top:1rem">DeepSeek היא מעבדת בינה מלאכותית המצויה בהנגג'ו, סין, שהשיקה ברציפות מודלים בעלי משקולות פתוחות התחרותיים או עולים על ביצועים של מודלים סגורים מובילים — בחלק קטן מעלות ההכשרה וההפעלה.</p><p style="margin-top:1rem">DeepSeek V4, שוחרר ב-24 באפריל 2026, הוא ה-flagship הנוכחי. הוא מגיע בשני גרסות: V4-Pro עם 1.6 טריליון פרמטרים (49B פעילים דרך ארכיטקטורת mixture-of-experts) ו-V4-Flash עם 284B פרמטרים (13B פעילים). שניהם תומכים בחלון הקשר של מיליון טוקנים. בנצ'מרקים של V4-Pro הם מציבים אותו בצד ל-GPT-5.5 ו-Claude ברוב משימות הנמקה, קוד ומתמטיקה.</p><p style="margin-top:1rem">ממשק האינטרנט בכתובת chat.deepseek.com נשאר חינם לחלוטין ללא הגבלות קצב במצב סטנדרטי. משקולות קוד פתוח זמינות לפריסה מקומית וקומרציאלית. תמחור ה-API תחרותי מאוד: V4-Flash הוא בין ה-API הזולים ביותר בעלי איכות frontier זמינים.</p><p style="margin-top:1rem">נכון לאפריל 2025, ל-DeepSeek היו 96.88 מיליון משתמשים פעילים חודשיים ברחבי העולם — מספר שהמשיך לגדול עם שחרור V4. הוא מדורג כאפליקציה #1 המוundloaded ביותר ב-App Store ביותר מ-156 מדינות.</p><p style="margin-top:1rem">מגבלה עיקרית: DeepSeek היא חברה סינית, והשרתים שלה מופעלים בסין. זה יוצר חששות בנוגע לפרטיות נתונים עבור משתמשים המטפלים במידע עסקי, משפטי או ממשלתי רגיש. לממשלה הסינית יש זכויות גישה נרחבות לנתונים. זמינות השרתים יכולה גם להיות איטית במהלך שעות פיק.</p><p style="margin-top:1rem">מתאים ביותר למפתחים, חוקרים ומשתמשים חסכוניים שרוצים בינה מלאכותית בדרגת frontier בחינם, ובנוח עם ההחלפות של פרטיות נתונים של שירות מארוח בסין.</p></div>

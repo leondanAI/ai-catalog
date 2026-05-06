@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Suppression instantanée de l'arrière-plan par IA à partir de photos et d'images de produits</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Remove.bg</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Remove.bg est l'outil standard de l'industrie pour la suppression d'arrière-plan alimentée par l'IA, détenu par Kaleido AI. Il traite n'importe quelle photo en environ 5 secondes en un seul clic — aucune sélection manuelle, masquage ou compétences en conception requises. Le service supporte les formats JPEG, PNG, WebP et RAW jusqu'à 50MB, avec une sortie en PNG transparent.</p><p style="margin-top:1rem">L'outil s'intègre sur plusieurs surfaces : l'application web sur remove.bg, une application de bureau pour Windows, macOS et Linux, des applications mobiles, un plugin Figma, un plugin Photoshop, des intégrations Shopify et WooCommerce, et une API REST pour le traitement automatisé. L'API prend en charge le traitement en masse, ce qui la rend pratique pour les opérations de commerce électronique supprimant les arrière-plans de milliers de photos de produits.</p><p style="margin-top:1rem">Les capacités clés incluent la détection automatique des sujets (personnes, produits, animaux, voitures), la sortie haute résolution, le traitement par lot via API, la sortie PNG à arrière-plan transparent et les intégrations avec les principaux outils de conception et plateformes de commerce électronique.</p><p style="margin-top:1rem">Tarification : Le plan gratuit fournit des images d'aperçu limitées en basse résolution et un petit nombre de crédits à haute résolution gratuits. Le modèle pay-as-you-go commence à environ 3 EUR pour un petit pack de crédits. L'abonnement Lite à environ 8,10 EUR par mois fournit 40 crédits à haute résolution par mois. Les plans Pro Volume+ montent jusqu'à 80,10 EUR par mois pour 500 crédits. Des plans Enterprise avec volume API personnalisé sont disponibles pour les opérations à haut débit. Les prix sont libellés en EUR et peuvent varier légèrement selon la région.</p><p style="margin-top:1rem">Limitations : Les sujets complexes avec des cheveux, des fourrures ou des matériaux transparents nécessitent un ajustement manuel. Les crédits gratuits sont limités et la résolution de l'aperçu est insuffisante pour un usage professionnel sans achat. Les coûts de crédit s'accumulent rapidement pour l'utilisation à haut volume du commerce électronique.</p><p style="margin-top:1rem">Parfait pour les vendeurs de commerce électronique, les photographes de produits et les équipes marketing qui ont besoin de supprimer rapidement les arrière-plans des images de produits à grande échelle.</p></div>

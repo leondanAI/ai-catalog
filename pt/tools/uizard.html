@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Prototipagem de UI com IA a partir de capturas de tela, esboços e prompts de texto</div>
     </div>
   </div>
-  <a href="/pt/compare/uizard-vs-figma-ai.html" class="compare-strip">⚖️ Uizard vs Figma AI →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/pt/compare/uizard-vs-figma-ai.html" class="compare-strip">⚖️ Uizard vs Figma AI →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Uizard</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Uizard é uma ferramenta de prototipagem de UI com IA adquirida pelo Miro em maio de 2024 e agora operando como Uizard by Miro Labs. A ferramenta converte capturas de tela de aplicativos existentes, esboços desenhados à mão e descrições de texto em mockups de UI editáveis — tornando-a uma das formas mais rápidas de ir de ideia para protótipo visual sem habilidades de design.</p><p style="margin-top:1rem">O recurso principal é o Autodesigner 2.0 (disponível em planos pagos), que permite edição conversacional seção por seção: descreva uma alteração no seu design em linguagem natural e o Autodesigner a aplica. Isso é mais flexível do que ferramentas de geração única. O Screenshot Scanner converte qualquer captura de tela de aplicativo em um modelo Uizard editável em segundos, e o Wireframe Scanner converte esboços desenhados à mão em wireframes digitais.</p><p style="margin-top:1rem">Os recursos principais incluem geração de texto para UI, conversão de captura de tela para modelo editável, reconhecimento de esboços desenhados à mão, edição de design conversacional (Autodesigner 2.0), prototipagem interativa com fluxos clicáveis e uma biblioteca de componentes para elementos de UI comuns.</p><p style="margin-top:1rem">Preços: O plano gratuito suporta 3 projetos e 5 telas por projeto, com 3 gerações de IA por mês e acesso apenas ao Autodesigner 1.5. Pro a $12 por usuário por mês (anual) fornece 500 gerações de IA por mês, 100 projetos, a biblioteca de modelos completa e Autodesigner 2.0. Business a $39 por usuário por mês fornece 5.000 gerações de IA por mês e projetos ilimitados. Preços Enterprise são personalizados.</p><p style="margin-top:1rem">Limitações: Autodesigner 2.0 — o recurso de IA mais capaz — requer um plano pago. A saída em camadas inferiores pode parecer genérica. A aquisição do Miro significa que o roteiro do produto pode mudar em direção ao ecossistema de colaboração mais amplo do Miro, criando alguma incerteza sobre a trajetória de desenvolvimento do Uizard independente.</p><p style="margin-top:1rem">Melhor adequado para gerentes de produto, fundadores de startups e não-designers que precisam prototipificar rapidamente telas de aplicativos para revisão de stakeholders ou testes com usuários sem contratar um designer.</p></div>

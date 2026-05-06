@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal für:</strong> ByteDance's KI-Videogenerierungsmodell — integriert in CapCut, API über fal.ai</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Über Seedance 2.0</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Seedance 2.0 ist ByteDances KI-Videogenerierungsmodell und stellt die Hochleistungs-Videogenerierungstechnologie des Unternehmens ab 2026 dar. Es ist das Modell, das CapCuts KI-Videogenerierungsfunktionen weltweit antreibt, und ist Entwicklern über fal.ai's API-Marketplace verfügbar. Das Modell erzeugt kinematografische Videoclips mit starkem Bewegungsrealismus und folgt komplexen Kompositionsaufforderungen.</p><p style="margin-top:1rem">Seedance 2.0 ist in den USA nicht direkt als eigenständiges Verbraucherprodukt verfügbar. Disney reichte Anfang 2026 eine Unterlassungsverfügung gegen ByteDance wegen Urheberbedenken ein, und ByteDance beschränkte proaktiv die Seedance-Verfügbarkeit in den USA. Das Modell bleibt in allen anderen Märkten durch CapCut und die fal.ai-API vollständig zugänglich.</p><p style="margin-top:1rem">Zu den Kernfähigkeiten gehören Text-zu-Video-Generierung, Bild-zu-Video-Animation, Kamerabewegungssteuerung, hochwertige Bewegungsphysik und API-Zugriff über fal.ai für Entwicklerintegration. Die Ausgabeauflösung und Clip-Länge entsprechen großen konkurrierenden Modellen (bis zu 1080p, bis zu 10 Sekunden pro Clip).</p><p style="margin-top:1rem">Preisgestaltung: Der Seedance 2.0-Zugriff über CapCut ist in CapCuts bestehenden Plänen enthalten. API-Zugriff über fal.ai nutzt Pro-Generierungs-Preisgestaltung, die je nach Ausgabelänge und Qualitätsstufe variiert — im Allgemeinen vergleichbar mit anderen frontier-Videogenerierungs-APIs. Es existiert kein eigenständiges Seedance-Abonnement.</p><p style="margin-top:1rem">Einschränkungen: Die Marktbeschränkung in den USA ist eine erhebliche Einschränkung für in den USA ansässige Ersteller und Entwickler. ByteDance-Eigentum schafft dieselbe Regulierungsexposition wie CapCut und TikTok. Als Modell, das in erster Linie über andere Plattformen zugänglich ist (CapCut, fal.ai), gibt es keine direkte Seedance-Verbraucherschnittstelle.</p><p style="margin-top:1rem">Am besten geeignet für Inhaltsersteller außerhalb der USA, die CapCut nutzen und Zugriff auf ByteDances bestes Videogenerierungsmodell wünschen, sowie für Entwickler, die Videoanwendungen außerhalb des US-Markts über fal.ai erstellen.</p></div>

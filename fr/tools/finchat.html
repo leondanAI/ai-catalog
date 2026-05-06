@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Recherche en investissement, analyse actions, KPIs financiers</div>
     </div>
   </div>
-  <a href="/fr/compare/fiscal-ai-vs-koyfin.html" class="compare-strip">⚖️ Fiscal.ai vs Koyfin →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/fiscal-ai-vs-koyfin.html" class="compare-strip">⚖️ Fiscal.ai vs Koyfin →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Fiscal.ai</h2>
     <div class="tool-desc"><p style="margin-top:1rem">FinChat est une plateforme de recherche en investissement propulsée par l'IA, utilisée par plus de 150 000 investisseurs — et ce qui se rapproche le plus d'un terminal Bloomberg institutionnel pour les investisseurs particuliers. La plateforme associe des données financières vérifiées sur plus de 100 000 entreprises cotées dans le monde à un copilote IA conversationnel qui vous permet de poser des questions complexes et d'obtenir des réponses précises et sourcées en quelques secondes. Au lieu de fouiller dans des PDF et des feuilles de calcul, il vous suffit de demander : « Quelle a été la croissance du chiffre d'affaires AWS d'Amazon au cours des 8 derniers trimestres ? » — et FinChat extrait les données, génère le graphique et explique la tendance.</p><p style="margin-top:1rem">Ce qui distingue FinChat des outils IA généralistes comme ChatGPT, c'est la qualité et la précision de ses données. Il suit plus de 2 000 KPIs spécifiques aux entreprises — des indicateurs tels que le nombre d'abonnés payants de Netflix, les ventes à périmètre comparable de Starbucks ou le prix de vente moyen de l'iPhone d'Apple — qui n'apparaissent jamais dans les screeners financiers standard. Il intègre également des retranscriptions d'appels de résultats, des dépôts SEC, des estimations d'analystes, la détention par des initiés et les participations institutionnelles, tous accessibles en langage naturel. Vous pouvez construire des modèles DCF, filtrer des actions et comparer des entreprises sur plus de 10 000 indicateurs au cours d'une même session.</p><p style="margin-top:1rem">FinChat propose un plan gratuit donnant accès aux fonctionnalités principales, notamment l'AI Copilot et les données financières mondiales. Les plans payants débutent à 24 $ par mois et débloquent des limites de données plus élevées, un accès prioritaire et une intégration API pour les utilisateurs professionnels et les équipes d'investissement. Pour tout investisseur ayant déjà copié des données d'un onglet pour les coller dans ChatGPT — FinChat élimine entièrement cette friction et fournit l'analyse plus rapidement, avec de vraies sources à l'appui.</p></div>

@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> סוכנים enterprise, אקוסיסטם Microsoft</div>
     </div>
   </div>
-  <a href="/he/compare/copilot-studio-vs-manus.html" class="compare-strip">⚖️ Microsoft Copilot Studio vs Manus →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/he/compare/copilot-studio-vs-manus.html" class="compare-strip">⚖️ Microsoft Copilot Studio vs Manus →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>אודות Microsoft Copilot Studio</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Microsoft Copilot Studio היא פלטפורמה enterprise לבניית סוכנים AI מותאמים אישית ללא כתיבת קוד. היא מכוונת לצוותי IT, אנליסטים עסקיים ו-citizen developers הזקוקים לעוזרי AI משובצים בסדרי עבודה של Microsoft 365 — Teams, SharePoint, Outlook ו-Dynamics 365.</p><p style="margin-top:1rem">בספטמבר 2025, Microsoft החליפה את התמחור לכל הודעה בـ Copilot Credits — מטבע אחיד בכל מוצרי Copilot. התמחור הסטנדרטי הוא $200/חודש לחבילה של 25,000 Copilot Credits, עם אפשרות pay-as-you-go וגם הנחות נפח של עד 20%. עדכון משמעותי ב-2026 הוסיף תמיכה ברובוטים מרובים: משתמשים יכולים כעת לבחור בין GPT-4o, Claude Sonnet 4.5 או Claude Opus 4.7 בעת בניית סוכנים מותאמים.</p><p style="margin-top:1rem">הפלטפורמה משתמשת בקנבס ויזואלי לעיצוב זרימות שיחה עם חיבורים מובנים לשירותי Microsoft. סוכנים יכולים להיות פורסומים לערוצי Teams, אתרים אינטרנטיים או משובצים ב-SharePoint. לתרחישי enterprise מורכבים, הפלטפורמה תומכת בתיאום סוכנים מרובים כאשר סוכנים מיוחדים מעבירים משימות זה לזה.</p><p style="margin-top:1rem">התנגדות של מפתחים באפריל 2026 ציינה שמערכת ה-credits סיפקה למעשה פחות ערך מהמודל הקודם בנקודות מחיר דומות. Microsoft הכירה בחשש ללא הפוך את השינוי.</p><p style="margin-top:1rem">מגבלות: פריסה שימושית באמת דורשת אקוסיסטם קיים של Microsoft 365. מחוץ לכך, חלופות כמו Relevance AI או Lindy מציעות גמישות רבה יותר בעלות נמוכה יותר.</p><p style="margin-top:1rem">הטוב ביותר עבור enterprises שכבר מתוקננים ב-Microsoft 365 הזקוקים לסוכנים AI משובצים ישירות בـ Teams ו-SharePoint ללא הצורך בפלטפורמות חיצוניות.</p></div>

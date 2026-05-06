@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal für:</strong> VS Code autonomer Coding Agent mit schrittweiser Genehmigung</div>
     </div>
   </div>
-  <a href="/de/compare/cline-vs-github-copilot.html" class="compare-strip">⚖️ Cline vs GitHub Copilot →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/de/compare/cline-vs-github-copilot.html" class="compare-strip">⚖️ Cline vs GitHub Copilot →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Über Cline</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Cline (ehemals Claude Dev) ist eine Open-Source autonome Coding-Agent-Extension für VS Code, JetBrains, Cursor, Windsurf, Zed und Neovim. Sie arbeitet in einer schrittweisen Genehmigungsschleife: Der Agent schlägt jede Aktion vor (Datei erstellen, Befehl ausführen, Browser öffnen) und der Benutzer genehmigt vor der Ausführung — transparent und sicher im Vergleich zu vollständig autonomen Tools. Mit über 59.000 GitHub Stars und 5 Millionen Installationen ist sie der am weitesten verbreitete Open-Source-Coding-Agent im VS Code Ökosystem.</p><p style="margin-top:1rem">Cline erreichte v3.81 im Mai 2026 und erhält tägliche Updates. Es unterstützt nativ Model Context Protocol (MCP) und ermöglicht benutzerdefinierte Tool-Integrationen. Die Extension funktioniert mit jedem LLM über eigene Schlüssel: Anthropic Claude, OpenAI, Gemini, AWS Bedrock, OpenRouter und lokale Modelle. Sie kann Dateien im gesamten Codebase lesen und bearbeiten, Terminal-Befehle ausführen, Tests durchführen und einen Browser für Recherchen oder End-to-End-Tests nutzen.</p><p style="margin-top:1rem">Schlüsselfunktionen umfassen Multi-Datei-Bearbeitung mit vollständigem Codebase-Kontext, Browser-Nutzung für Recherchen und UI-Tests, MCP-Tool-Unterstützung und einen genehmigungsbasierten Workflow, der den Entwickler bei jedem Schritt unter Kontrolle behält. Anders als abgezweigte Editoren wie Cursor oder Windsurf läuft Cline in Ihrem bestehenden Editor, ohne eine Migration zu erfordern.</p><p style="margin-top:1rem">Preisgestaltung: Cline selbst ist völlig kostenlos und Open Source. Sie zahlen nur für die LLM API-Aufrufe an Ihren gewählten Anbieter. Die Ausführung auf lokalen Modellen über Ollama ist kostenlos.</p><p style="margin-top:1rem">Einschränkungen: Der schrittweise Genehmigungsworkflow, obwohl sicher, kann komplexe Multi-Datei-Aufgaben im Vergleich zu vollständig autonomen Tools verlangsamen. Die Qualität hängt vollständig von dem von Ihnen konfigurierten LLM ab. Das BYOK-Modell bedeutet, dass Sie API-Kosten separat verwalten.</p><p style="margin-top:1rem">Am besten geeignet für Entwickler, die einen leistungsstarken autonomen Coding-Agent in ihrem bestehenden Editor ohne IDE-Wechsel wünschen und die transparente schrittweise Kontrolle einer vollständig autonomen Ausführung vorziehen.</p></div>

@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Designs visuels générés par IA, présentations et prototypes via conversation</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Claude Design</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Claude Design est un outil de design IA spécialisé d'Anthropic, lancé le 17 avril 2026 comme aperçu de recherche sous Anthropic Labs. C'est un produit distinct de Claude généraliste — propulsé par Claude Opus 4.7 et spécifiquement entraîné pour générer des visuels raffinés incluant des présentations, des one-pagers, des decks de diapositives, des prototypes et des rapports visuels à partir d'invites en langage naturel.</p><p style="margin-top:1rem">Au premier lancement, Claude Design analyse votre codebase ou vos fichiers de design pour créer un système de design — extrayant vos couleurs de marque, votre typographie et vos modèles de composants. Les designs suivants se conforment automatiquement à ce système, produisant des visuels de marque cohérents sans configuration manuelle. Les exports sont disponibles en PDF, URL partageable, PPTX ou directement vers Canva pour une édition ultérieure.</p><p style="margin-top:1rem">Les capacités clés incluent l'itération de design conversationnelle (demandez des modifications en langage simple), la génération de présentations, la création de prototypes interactifs, le design de one-pagers et rapports, et la détection automatique du système de marque. L'outil comprend l'intention de design plutôt que de nécessiter des spécifications précises — décrivez ce dont vous avez besoin et il produit un visuel complet.</p><p style="margin-top:1rem">Tarification : Claude Design est inclus avec Claude Pro à 20 $ par mois, Claude Max à 100 et 200 $ par mois, les plans Team et Enterprise. Il n'est pas disponible sur le tier Free. Il n'y a pas de tarification autonome — l'accès nécessite un abonnement Claude actif.</p><p style="margin-top:1rem">Limitations : En tant qu'aperçu de recherche lancé en avril 2026, Claude Design est toujours en maturation. La qualité de sortie peut varier sur les mises en page multi-pages complexes. Ce n'est pas un remplacement pour les outils de design professionnels comme Figma pour le travail UI/UX — il excelle dans le design de présentations et documents plutôt que de design de produits interactifs.</p><p style="margin-top:1rem">Idéal pour les professionnels qui ont besoin de présentations, rapports et one-pagers raffinés rapidement sans ouvrir un outil de design — particulièrement ceux qui utilisent déjà Claude Pro pour d'autres tâches.</p></div>

@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> Высококачественная генерация видео с реалистичным движением и физикой</div>
     </div>
   </div>
-  <a href="/ru/compare/kling-vs-runway.html" class="compare-strip">⚖️ Kling AI vs Runway →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/kling-vs-runway.html" class="compare-strip">⚖️ Kling AI vs Runway →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе Kling AI</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Kling AI — платформа для генерации видео от Kuaishou, одной из крупнейших технологических компаний Китая. Она стала одним из ведущих генераторов видео AI в мире с 60 миллионами зарегистрированных пользователей на начало 2026 года.</p><p style="margin-top:1rem">Kling 3.0, выпущенная 7 февраля 2026 года, — это текущая версия и представляет значительный технологический прорыв. Новое в 3.0: нативный выход в 4K, инструмент раскадровки для управления камерой и темпом по каждому кадру, нативная генерация синхронизированного звука в едином конвейере и многокадровые последовательности (3–15 секунд) с согласованностью объектов под разными углами камеры. Функция согласованности объектов, в частности, стала прорывом — сохранение внешнего вида персонажа между разрезами — одна из сложнейших проблем в видео AI.</p><p style="margin-top:1rem">Цены весьма конкурентоспособны: бесплатный уровень предоставляет 66 ежедневных кредитов (достаточно для нескольких коротких клипов), а платные планы варьируются от Standard приблизительно $6.99/месяц до Pro и Ultra уровней с большими объемами кредитов. Это делает Kling одним из самых доступных высококачественных видеогенераторов.</p><p style="margin-top:1rem">Kling 3.0 доступен непосредственно на kling.ai и через подписку Runway на множественные модели, которая объединяет Kling, Runway, Google Veo, Seedance и FLUX в единый план.</p><p style="margin-top:1rem">Ограничения: выходные данные имеют отчетливо кинематографический, полированный вид, который может казаться переработанным для повседневного или документального контента. Интерфейс менее отшлифован, чем Runway или Pika.</p><p style="margin-top:1rem">Лучше всего подходит для создателей, которым нужно высококачественное видео с согласованностью персонажей в формате 4K по доступной цене.</p></div>

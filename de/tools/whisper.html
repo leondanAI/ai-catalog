@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal für:</strong> Open-Source Speech-to-Text Transkription — Entwickler-Tool, kein Konsumentenprodukt</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Über Whisper</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Whisper ist OpenAI's Open-Source Spracherkennungsmodell, das im September 2022 veröffentlicht und Ende 2023 auf Whisper v3 Large aktualisiert wurde. Es wurde auf 680.000 Stunden mehrsprachiger Web-Audio trainiert und erreicht State-of-the-Art Transkriptionsgenauigkeit in 99 Sprachen, mit besonders starker Leistung bei nicht-englischer Sprache im Vergleich zu konkurrierenden kommerziellen Diensten.</p><p style="margin-top:1rem">Whisper ist ein entwicklerorientiertes Tool — es wird als Python-Paket ohne verbraucherfokussierte Anwendung bereitgestellt. Entwickler führen es lokal auf ihrer eigenen Hardware aus (GPU wird für Geschwindigkeit empfohlen), integrieren es über OpenAI's API oder nutzen es über Drittanbieter-Wrapper, die Benutzeroberflächen hinzufügen. Viele der Transkriptions-Tools in diesem Katalog (Descript, Otter.ai) verwenden Whisper oder von Whisper abgeleitete Modelle als ihre zugrunde liegende Transkriptionsengine.</p><p style="margin-top:1rem">Schlüsselfunktionen umfassen Speech-to-Text Transkription in 99 Sprachen, automatische Spracherkennung, Übersetzung ins Englische aus jeder unterstützten Sprache, Ausgaben auf Zeitstempel-Ebene (Wort und Segment) und mehrere Modellgrößen-Varianten von Tiny (schnellste) bis Large-v3 (genaueste). Das Large-v3 Modell erreicht nahezu menschliche Genauigkeit bei sauberen Audiodateien in Hauptsprachen.</p><p style="margin-top:1rem">Preisgestaltung: Das Modell selbst ist kostenlos und Open-Source (MIT-Lizenz) — herunterladbar von GitHub und lauffähig auf lokaler Hardware. OpenAI's gehostete Whisper API kostet $0,006 pro Minute Audio, was sie zu einer der günstigsten kommerziellen Transkriptions-APIs macht. Es gibt kein Abonnement — zahlen Sie nur für das, was Sie nutzen.</p><p style="margin-top:1rem">Einschränkungen: Whisper hat keine verbraucherfokussierte Schnittstelle — Benutzer benötigen entweder technisches Wissen, um es lokal auszuführen, oder nutzen einen Drittanbieter-Wrapper. Lokale Inferenz erfordert erheblichen RAM und profitiert erheblich von einer GPU. Die API ist nutzungsbasiert ohne integriertes Nutzungs-Dashboard in einem Konsumentenprodukt.</p><p style="margin-top:1rem">Am besten geeignet für Entwickler, die Transkription in Anwendungen integrieren, Forscher, die hochgenaue mehrsprachige Transkription benötigen, und technisch versierte Benutzer, die sich mit der Ausführung von Python-Skripten oder der Nutzung der API wohlfühlen.</p></div>

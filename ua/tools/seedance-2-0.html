@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Підходить для:</strong> AI-відео, спільна генерація аудіо-відео, lip-sync</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Seedance 2.0</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Seedance 2.0 — AI-відео модель нового покоління від ByteDance і перший комерційний генератор відео, побудований навколо єдиної мультимодальної спільної генерації аудіо-відео — модель приймає текст, зображення, аудіо та відео разом і видає синхронізований результат, а не обробляє аудіо як пост-ефект. Заповнюючи нішу після відходу Sora, вона набула значного поширення у 2026.</p><p style="margin-top:1rem">Ключова можливість — lip-sync на рівні фонем для 8+ мов: при генерації діалогу рухи губ точно збігаються з вимовленими фонемами, а не лише з грубими піками хвильової форми — що робить модель придатною для контенту з персонажами, де мовні репліки мають виглядати достовірно. Кожна генерація видає ролики до 15 секунд у 1080p, і в цьому вікні модель може рендерити кілька планів із природними склейками та переходами — один вивід може відчуватися як змонтована послідовність, а не один безперервний кліп.</p><p style="margin-top:1rem">Seedance 2.0 підтримує зображення, аудіо та відео як референси, даючи авторам контроль над виконанням, освітленням, тінями та рухом камери. Тарифи — від безкоштовного до корпоративних до $167/місяць, модель також доступна через API fal.ai для розробників відео-пайплайнів. Після закриття Sora OpenAI у березні 2026, Seedance 2.0 став одним із найпереконливіших варіантів для авторів, яким потрібен синхронізований аудіо-відео вивід із сильною наративною узгодженістю.</p></div>

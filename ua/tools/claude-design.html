@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Підходить для:</strong> AI-генеровані візуальні дизайни, презентації та прототипи через розмову</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Claude Design</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Claude Design — спеціалізований інструмент AI дизайну від Anthropic, запущений 17 квітня 2026 року як дослідницький попередній перегляд в Anthropic Labs. Це окремий продукт від загального Claude — працює на Claude Opus 4.7 і спеціально навчений генерувати відполіровані візуальні результати, включаючи презентації, одноаркушеві документи, набори слайдів, прототипи та візуальні звіти на основі текстових запитів.</p><p style="margin-top:1rem">При першому запуску Claude Design аналізує вашу кодову базу або файли дизайну для створення системи дизайну — витягує кольори вашого бренду, типографію та паттерни компонентів. Наступні дизайни автоматично відповідають цій системі, виробляючи послідовний брендований результат без ручної конфігурації. Експорт доступний як PDF, URL для спільного доступу, PPTX або безпосередньо в Canva для подальшого редагування.</p><p style="margin-top:1rem">Ключові можливості включають ітеративний дизайн через розмову (просіть змін звичайною мовою), генерування презентацій, створення інтерактивних прототипів, дизайн одноаркушевих документів і звітів, а також автоматичне виявлення системи бренду. Інструмент розуміє намір дизайну, а не потребує точних специфікацій — опишіть, що вам потрібно, і він створює повний візуальний результат.</p><p style="margin-top:1rem">Ціни: Claude Design включений у Claude Pro за $20 на місяць, Claude Max за $100 та $200 на місяць, командні плани та Enterprise. Недоступний на безплатному рівні. Немає окремої ціни — доступ потребує активної підписки Claude.</p><p style="margin-top:1rem">Омеження: Як дослідницький попередній перегляд, запущений у квітні 2026 року, Claude Design все ще розвивається. Якість результатів може варіюватися на складних багатосторінкових макетах. Це не замінює професійні інструменти дизайну, такі як Figma для UI/UX роботи — він відмінно підходить для дизайну презентацій та документів, а не для інтерактивного дизайну продуктів.</p><p style="margin-top:1rem">Найкраще підходить для професіоналів, яким потрібні відполіровані презентації, звіти та одноаркушеві документи швидко без відкриття інструменту дизайну — особливо тих, хто вже використовує Claude Pro для інших завдань.</p></div>

@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> פלטפורמת יצירת וידאו AI עם גישה למודלים מרובים כולל Kling</div>
     </div>
   </div>
-  <a href="/he/compare/luma-ai-vs-runway.html" class="compare-strip">⚖️ Luma AI vs Runway →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/he/compare/luma-ai-vs-runway.html" class="compare-strip">⚖️ Luma AI vs Runway →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>אודות Luma AI</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Luma AI היא חברת AI בסן פרנסיסקו המוכרת ביצירת וידאו פוטוריאליסטי ושחזור סצנות 3D. הפלטפורמה התפתחה מטכנולוגיית CapturE 3D מבוססת NeRF המקורית שלה להיות יוצר וידאו AI קולנועי מוביל.</p><p style="margin-top:1rem">משפחת המודלים הנוכחית היא Ray3 ו-Ray3.14 (Dream Machine branding מ-2024 פרש). Ray3 הוא המודל הסטנדרטי; Ray3.14 הוא הגרסה באיכות גבוהה יותר המותאמת לאווירה קולנועית, הדלקה וסביבות אטמוספריות. מודלי Luma חזקים במיוחד בצילומים עתירי סביבה — נופים פורחים, פנימי עממיים וסצנות אטמוספריות שבהן מודלים אחרים מייצרים תוצאות שטוחות.</p><p style="margin-top:1rem">Luma AI זמין הן ישירות ב-lumalabs.ai והן דרך מנוי ריבוי-המודל של Runway. החבילה של Runway נותנת גישה ל-Ray3 לצד Gen-4.5, Veo 3.1, Kling 3.0, ו-Seedance תחת מנוי אחד.</p><p style="margin-top:1rem">תמחור עוקב לדגם freemium: שכבה חינמית עם דור חודשי מוגבל, Dream (שם תכנית legacy) בעלות נמוכה יותר, תכניות Pro וגבוהות יותר למשתמשי נפח.</p><p style="margin-top:1rem">מגבלות: Luma חלש יותר מ-Kling 3.0 בעקביות דמויות וריאליזם נושאים אנושיים. פנים נושא יכולות להסחף על פני פריימים. טוב יותר לתוכן מופשט, אטמוספרי או ממוקד נוף מאשר וידאו מונע דמויות.</p><p style="margin-top:1rem">הטוב ביותר לעריכי סרטים ואמנים ויזואליים שזקוקים לאיכות קולנועית של סביבה ואווירה — לא לוידאו מונע דמויות או תוכן חברתי.</p></div>

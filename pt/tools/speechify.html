@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> TTS, auxílio à leitura, estudos, acessibilidade</div>
     </div>
   </div>
-  <a href="/pt/compare/speechify-vs-elevenlabs.html" class="compare-strip">⚖️ Speechify vs ElevenLabs →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/pt/compare/speechify-vs-elevenlabs.html" class="compare-strip">⚖️ Speechify vs ElevenLabs →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Speechify</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Speechify é o aplicativo de texto para voz mais popular do mundo, utilizado por mais de 20 milhões de pessoas, incluindo estudantes com dislexia, profissionais que se deslocam diariamente, pesquisadores que processam grandes volumes de texto e qualquer pessoa que absorve informações de forma mais eficaz ouvindo do que lendo. Ele converte qualquer conteúdo de texto — artigos da web, PDFs, documentos Word, e-mails, Google Docs, livros didáticos — em áudio com som natural, usando vozes de IA disponíveis em mais de 30 idiomas.</p><p style="margin-top:1rem">O controle de velocidade é o recurso mais característico do Speechify: os usuários podem se treinar para ouvir a 1,5x, 2x, 3x ou até 4,5x a velocidade normal de fala, absorvendo conteúdo até três vezes mais rápido do que lendo. Estudos e relatos de usuários mostram consistentemente que a compreensão permanece alta em velocidades de 1,5x a 2x após o treinamento, e muitos usuários avançados ouvem rotineiramente a 2x ou 3x para processar informações com mais agilidade. O aplicativo móvel funciona offline e sincroniza a posição de escuta entre dispositivos.</p><p style="margin-top:1rem">O Speechify Premium (US$ 139/ano) desbloqueia as vozes de IA de maior qualidade, as velocidades de reprodução mais rápidas, acesso offline e o recurso de câmera com OCR para fotografar livros físicos ou documentos impressos. O plano gratuito oferece vozes de IA com velocidade limitada. Para estudantes com deficiências de leitura, o Speechify muitas vezes é coberto por acomodações educacionais. A qualidade das vozes, embora excelente para um sistema de TTS com IA, ainda é notavelmente inferior ao ElevenLabs para produção de áudio em nível profissional — mas para uso de consumo pessoal, as vozes são naturais e agradáveis para longas sessões de escuta.</p></div>

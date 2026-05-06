@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Підходить для:</strong> Корпоративні агенти, екосистема Microsoft</div>
     </div>
   </div>
-  <a href="/ua/compare/copilot-studio-vs-manus.html" class="compare-strip">⚖️ Microsoft Copilot Studio vs Manus →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ua/compare/copilot-studio-vs-manus.html" class="compare-strip">⚖️ Microsoft Copilot Studio vs Manus →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Microsoft Copilot Studio</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Microsoft Copilot Studio — це корпоративна платформа для створення спеціальних AI-агентів без написання коду. Вона спрямована на IT-команди, бізнес-аналітиків і громадянських розробників, які потребують AI-асистентів, вбудованих у робочі процеси Microsoft 365 — Teams, SharePoint, Outlook і Dynamics 365.</p><p style="margin-top:1rem">У вересні 2025 року Microsoft замінила тарифікацію за повідомлення на Copilot Credits — єдину валюту для всіх продуктів Copilot. Стандартна ціна становить $200 на місяць за пакет з 25 000 Copilot Credits, також доступна оплата за спожиганням і знижки на обсяг до 20%. Основне оновлення 2026 року додало підтримку багатьох моделей: користувачі можуть тепер вибирати між GPT-4o, Claude Sonnet 4.5 або Claude Opus 4.7 при створенні спеціальних агентів.</p><p style="margin-top:1rem">Платформа використовує візуальний холст для проектування потоків розмов з попередньо вбудованими з'єднувачами до сервісів Microsoft. Агентів можна опублікувати на каналах Teams, веб-сайтах або вбудувати у SharePoint. Для складних корпоративних сценаріїв платформа підтримує оркестровку багатьох агентів, де спеціалізовані агенти передають завдання один одному.</p><p style="margin-top:1rem">Розробники вказали у квітні 2026 року, що система кредитів фактично забезпечила меншу цінність, ніж старий розрахунок при подібних цінах. Microsoft визнала занепокоєння без скасування змін.</p><p style="margin-top:1rem">Обмеження: справді корисне розгортання вимагає існуючої екосистеми Microsoft 365. Поза нею альтернативи на кшталт Relevance AI або Lindy пропонують більшу гнучкість за нижчої вартості.</p><p style="margin-top:1rem">Найкраще для корпорацій, які стандартизовані на Microsoft 365 і потребують AI-агентів, вбудованих безпосередньо в Teams і SharePoint без залучення зовнішніх платформ.</p></div>

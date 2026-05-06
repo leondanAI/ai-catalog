@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Génération de voix AI de la plus haute qualité et clonage de voix pour les professionnels</div>
     </div>
   </div>
-  <a href="/fr/compare/speechify-vs-elevenlabs.html" class="compare-strip">⚖️ ElevenLabs vs Speechify →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/speechify-vs-elevenlabs.html" class="compare-strip">⚖️ ElevenLabs vs Speechify →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos ElevenLabs</h2>
     <div class="tool-desc"><p style="margin-top:1rem">ElevenLabs est la plateforme IA vocale leader, couvrant la synthèse vocale, le clonage de voix, le doublage, les effets sonores, la génération musicale et les agents IA conversationnels — tous sous un système de crédits unifié. Fondée en 2022, elle a atteint une valorisation de $11 milliards en mi-2025 et est utilisée par des éditeurs, studios de jeux, producteurs d'audiolivres et développeurs d'applications dans le monde entier.</p><p style="margin-top:1rem">Le produit TTS principal supporte 32+ langues avec une précision de clonage de voix qui établit la référence de l'industrie. Instant Voice Cloning crée un clone à partir d'une minute d'audio seulement ; Professional Voice Cloning produit des clones de qualité studio à partir d'échantillons plus longs. La bibliothèque vocale inclut 3 000+ voix pré-faites avec divers accents, âges et styles.</p><p style="margin-top:1rem">Eleven Music, lancé fin 2025, a ajouté la génération musicale IA entraînée sur du contenu sous licence — ElevenLabs a sécurisé des partenariats avec Merlin et Kobalt, ce qui signifie que le modèle musical est construit sur du matériel dégagé de droits. Cela le distingue de Suno et Udio, qui font face à des litiges en cours concernant les droits d'auteur.</p><p style="margin-top:1rem">Les Agents IA conversationnels permettent aux développeurs de construire des agents vocaux en temps réel qui écoutent, raisonnent et répondent en moins de 500ms — adaptés pour les bots d'assistance clientèle, assistants vocaux et applications interactives.</p><p style="margin-top:1rem">Tarification : Gratuit ($0 — 10 000 caractères/mois), Starter ($5/mois), Creator ($22/mois — 100 000 caractères, usage commercial), Pro ($99/mois — 500 000 caractères, clonage professionnel), Scale ($330/mois). Tous les tiers payants incluent les droits d'usage commercial.</p><p style="margin-top:1rem">Mieux adapté pour les éditeurs, développeurs de jeux, créateurs de contenu et développeurs construisant des applications vocales qui ont besoin d'une IA vocale de haute qualité et commercialisable.</p></div>

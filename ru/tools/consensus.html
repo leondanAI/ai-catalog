@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> Поиск ИИ по 220М+ академическим статьям с синтезом консенсуса</div>
     </div>
   </div>
-  <a href="/ru/compare/consensus-vs-perplexity.html" class="compare-strip">⚖️ Consensus vs Perplexity →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/consensus-vs-perplexity.html" class="compare-strip">⚖️ Consensus vs Perplexity →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе Consensus</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Consensus — это поисковик академических работ на основе ИИ, который ищет более 220 миллионов научных статей и синтезирует то, что научная литература говорит о конкретном вопросе. В отличие от Google Scholar (который просто возвращает список статей), Consensus извлекает ключевые выводы из каждой статьи и генерирует Consensus Meter — совокупный обзор того, поддерживает, противоречит или носит смешанный характер отношение литературы к конкретному утверждению.</p><p style="margin-top:1rem">Платформа предназначена для исследователей, студентов и специалистов, основанных на доказательствах, которым необходимо быстро определить, что говорит рецензируемая наука по теме без прочтения десятков статей. Каждый результат показывает статью, методологию, размер выборки и направление вывода — с AI-сгенерированными резюме для каждой статьи.</p><p style="margin-top:1rem">Ключевые возможности включают поиск на естественном языке по академическим работам, Consensus Meter (визуальный синтез того, что говорит исследование), AI-резюме по каждой статье, карточки снимков исследования (методология, выборка, вывод), экспорт цитирования, фильтрацию по типу исследования (RCT, мета-анализ) и поиск по 220М+ статьям из PubMed, Semantic Scholar и других баз данных.</p><p style="margin-top:1rem">Цены: Бесплатный план предоставляет ограниченное количество поисков в день с базовыми функциями. Pro за $15 в месяц предоставляет неограниченные поиски, расширенные фильтры и GPT-4 Synthesis (AI-сгенерированные комплексные резюме). Teams за $9.99 на место в месяц предоставляет общее рабочее пространство и командные функции. Академические учреждения могут получить доступ через институциональные лицензии.</p><p style="margin-top:1rem">Ограничения: Consensus наиболее эффективен для эмпирических вопросов исследования в здравоохранении, науке и социальных науках. Менее полезен для исторических, юридических или гуманитарных исследований, где рецензируемые статьи не являются основным источником доказательств. Охват смещен в сторону англоязычной литературы. Consensus Meter упрощает сложные научные дебаты.</p><p style="margin-top:1rem">Лучше всего подходит для медицинских работников, исследователей, специалистов в области политики на основе доказательств и студентов, которым необходимо быстро обследовать научную литературу по конкретным вопросам с AI-сгенерированным синтезом.</p></div>

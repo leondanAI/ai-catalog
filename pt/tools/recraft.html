@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Geração de imagens e vetores/SVG com IA para design de marca e ilustração</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Recraft</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Recraft é uma plataforma de IA para geração de imagens e design vetorial que gera exclusivamente imagens raster e saída nativa em vetor/SVG — tornando-se a única ferramenta de IA importante que produz gráficos vetoriais totalmente editáveis a partir de prompts de texto. Esta capacidade é crítica para designers de marca que precisam de logos, ícones e ilustrações em formatos vetoriais escalonáveis em vez de imagens baseadas em pixels.</p><p style="margin-top:1rem">Recraft V3, lançado no final de 2024, tornou-se um dos modelos mais bem avaliados no benchmark FLUX.1 e alcançou a pontuação mais alta no T2I-CompBench para alinhamento texto-imagem. A plataforma é usada por designers na Netflix, HubSpot e Airbus para geração de ativos de marca. A interface é limpa e focada em design — com controles de estilo, configurações de paleta de cores e kit de marca para saída visual consistente.</p><p style="margin-top:1rem">Capacidades principais incluem geração texto-para-imagem (Recraft V3), saída nativa em vetor/SVG, geração de ícones, geração de ilustrações, edição de imagens (expandir, remover fundo, substituir fundo), kit de marca para consistência de estilo, biblioteca de estilos para identidade visual consistente e API para integração.</p><p style="margin-top:1rem">Preços: Plano gratuito fornece 50 gerações por dia — generoso comparado à maioria das ferramentas de imagem com IA. Pro a $25 por mês fornece 3.000 gerações rápidas por mês, direitos comerciais e saída em resolução mais alta. Preços Enterprise são personalizados.</p><p style="margin-top:1rem">Limitações: O plano Pro de 3.000 gerações por mês pode limitar fluxos de trabalho de produção em alto volume. A ferramenta é focada em design em vez de uma ferramenta criativa geral — excela em ativos de marca e ilustrações, mas é menos adequada para geração de imagens fotorrealistas onde Midjourney ou Flux são mais fortes.</p><p style="margin-top:1rem">Mais adequado para designers de marca, designers gráficos e equipes de marketing que precisam de ativos de marca gerados por IA — particularmente aqueles que precisam de formatos vetoriais/SVG escalonáveis para logos, ícones e ilustrações.</p></div>

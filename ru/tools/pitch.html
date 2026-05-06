@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Подходит для:</strong> Командные презентации, питч-деки для стартапов</div>
     </div>
   </div>
-  <a href="/ru/compare/gamma-vs-pitch.html" class="compare-strip">⚖️ Pitch vs Gamma →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ru/compare/gamma-vs-pitch.html" class="compare-strip">⚖️ Pitch vs Gamma →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>О сервисе Pitch</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Pitch — это коллаборативная платформа для создания презентаций, разработанная для современных команд, особенно стартапов и компаний с высокой дизайн-культурой, которым нужно совместное редактирование в реальном времени, как в Google Docs, но применительно к созданию слайдов. Несколько участников команды могут одновременно редактировать одну и ту же презентацию, видеть изменения друг друга в прямом эфире, оставлять комментарии к конкретным слайдам и управлять процессом согласования перед отправкой внешним получателям.</p><p style="margin-top:1rem">Библиотека шаблонов ориентирована на сценарии для стартапов и бизнеса: питч-деки, квартальные отчёты, планы выхода на рынок, OKR-презентации и общекорпоративные собрания. Многие шаблоны вдохновлены реальными презентациями компаний из Y Combinator и быстрорастущих стартапов, что отражает дизайнерские предпочтения технологического и венчурного сообщества. Функция аналитики показывает, кто просматривал расшаренную презентацию, сколько времени провёл на каждом слайде и на каком моменте прекратил просмотр — это даёт сигнал об уровне вовлечённости стейкхолдеров.</p><p style="margin-top:1rem">Pitch интегрируется с Figma (импорт дизайнов напрямую в слайды), Unsplash (библиотека бесплатных фотографий) и основными инструментами управления проектами. Бесплатный тариф включает неограниченное количество презентаций и 5 рабочих пространств. Платные тарифы начинаются от $8 за пользователя в месяц. Главное ограничение по сравнению с Gamma или Tome — скорость AI-генерации: функции AI-написания в Pitch компетентны, но работают медленнее и выглядят менее полированно, чем у специализированных AI-генераторов презентаций. Для команд, которые ценят совместную работу, историю версий и качество дизайна выше скорости AI-генерации, Pitch — лучший выбор в своей категории.</p></div>

@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> עוזר קוד AI מקורי AWS לפיתוח ענן ותשתיות</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>אודות Amazon Q Developer</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Amazon Q Developer היא עוזרת הקוד AI של AWS, שהשתנתה שמה מ-CodeWhisperer באמצע 2024 והורחבה משמעותית. התכונה המגדירה שלה היא מודעות עמוקה לשירותי AWS: בניגוד לכלים קוד גנריים, Q Developer מבינה את מדיניות ה-IAM שלך, סטקי CloudFormation, בנייה CDK וארכיטקטורת AWS רחבה יותר. היא יכולה ליצור קוד שמפנה נכון למשאבי AWS ספציפיים שלך, להציע מדיניות IAM בעלות הרשאות מינימליות, ולעזור בדיבוג בעיות תשתיות ענן בהקשר.</p><p style="margin-top:1rem">הכלי כולל תכונת טרנספורמציה קוד המשדרגת באופן אוטומטי קודקס legacy — מעבר Java 8/11 ל-Java 17/21 או Python 2 ל-Python 3 — בכל המאגרים. ניתן להקצות ל-agent משימות מורכבות כמו refactoring של שירות, כתיבת בדיקות יחידה לחודול קיים, או הטמעת תכונה חדשה מקצה לקצה. Q Developer משתלב עם VS Code, JetBrains, Visual Studio וה-AWS Console ישירות.</p><p style="margin-top:1rem">יכולות מפתח כוללות ייצור קוד מודע להקשר AWS, טרנספורמציה קוד אוטומטית לשדרוגי גרסאות שפה, השלמות inline ב-15+ שפות, ביצוע משימות agentic, סריקת פגיעויות אבטחה, ואינטגרציה ישירה עם AWS Console. עבור צוותים שבונים על AWS, היא מספקת הקשר ברמת תשתיות שלא קיים בשום כלי קוד אחר.</p><p style="margin-top:1rem">תמחור: השכבה החינמית כוללת השלמות קוד בלתי מוגבלות ו-50 שיחות agentic developer חודשיות. שכבה Pro עולה 19$ לכל משתמש לחודש ומוסיפה שיחות agentic בלתי מוגבלות, טרנספורמציה קוד לפרויקטים גדולים יותר והקשר מורחב. תמחור Enterprise זמין עם פקדי תאימות נוספים.</p><p style="margin-top:1rem">מגבלות: מחוץ לפיתוח AWS, Amazon Q Developer אינה תחרותית במיוחד בהשוואה ל-Cursor או GitHub Copilot. 50 השיחות ה-agentic החודשיות של השכבה החינמית מסתיימות במהירות בפרויקטים פעילים. הכלי מספק ערך נמוך יותר עבור GCP, Azure או פיתוח שאינו ענן.</p><p style="margin-top:1rem">מתאימה ביותר לצוותי פיתוח הבונים על AWS המחפשים עוזר AI המבין את תשתיות הענן שלהם — IAM, CloudFormation, CDK ושירותי AWS — לצד יכולות קוד סטנדרטיות.</p></div>

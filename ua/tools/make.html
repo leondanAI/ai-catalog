@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Підходить для:</strong> Складні автоматизації, інтеграції додатків</div>
     </div>
   </div>
-  <a href="/ua/compare/make-vs-n8n.html" class="compare-strip">⚖️ Make vs n8n →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/ua/compare/make-vs-n8n.html" class="compare-strip">⚖️ Make vs n8n →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Make</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Make (раніше Integromat) — це платформа для автоматизації робочих процесів з візуальним інтерфейсом, яка з'єднує понад 1000 додатків через drag-and-drop canvas. Кожну автоматизацію — сценарій — можна переглянути як візуальну блок-схему, яка показує, як дані передаються між додатками, з умовною логікою, циклами, обробкою помилок і трансформацією даних.</p><p style="margin-top:1rem">У серпні 2025 Make перейшла з операційної моделі на кредитну систему. Поточні плани: Free (1000 кредитів/місяць, 2 активні сценарії), Core ($9/місяць, 10 000 кредитів, безліміт сценаріїв), Pro ($16/місяць), Teams ($29/місяць). Додаткові кредити можна придбати з надбавкою 25% над базовою ставкою плану. Вбудовані модулі ШІ з однією кліком для OpenAI, Claude та Anthropic тепер доступні прямо в конструкторі сценаріїв.</p><p style="margin-top:1rem">Make займає позицію між Zapier (простіша, дорожча) та n8n (потужніша, потребує технічної настройки). Інтерфейс canvas — його найсильніша відмінність: ви можете побачити всю автоматизацію візуально, що значно полегшує налагодження та співпрацю порівняно з конкуруючими платформами.</p><p style="margin-top:1rem">Платформа добре справляється зі складними багатоетапними робочими процесами: розгалужені шляхи, агрегування даних, запланували запуски, webhooks та ітерація по масивах. Корпоративні команди використовують її для обробки документів, маршрутизації лідів і синхронізації даних між платформами.</p><p style="margin-top:1rem">Обмеження: модель кредитів, введена в 2025, зробила витрати менш передбачуваними для існуючих користувачів, звикли рахувати операції. Сценарії з дуже великим обсягом все ще потребують плану Teams або вище, щоб уникнути переплати.</p><p style="margin-top:1rem">Бажаний для маркетингових команд, менеджерів операцій та розробників, які потребують гнучкої автоматизації на багатьох додатках без написання коду — і хочуть більшої потужності за меншою ціною, ніж Zapier.</p></div>

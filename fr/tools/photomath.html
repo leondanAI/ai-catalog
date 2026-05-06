@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Devoirs de mathématiques, solutions étape par étape</div>
     </div>
   </div>
-  <a href="/fr/compare/photomath-vs-duolingo-max.html" class="compare-strip">⚖️ Photomath vs Duolingo Max →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/fr/compare/photomath-vs-duolingo-max.html" class="compare-strip">⚖️ Photomath vs Duolingo Max →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>À propos Photomath</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Photomath est l'application d'éducation mathématique la plus téléchargée au monde, avec plus de 220 millions de téléchargements. Elle est utilisée par des élèves du primaire jusqu'à l'université pour scanner et résoudre des problèmes de mathématiques à l'aide de la caméra de leur smartphone. Pointez la caméra vers n'importe quel problème mathématique imprimé ou manuscrit — arithmétique, algèbre, géométrie, trigonométrie, calcul, statistiques — et Photomath reconnaît le problème, le résout étape par étape et explique chaque étape en langage clair.</p><p style="margin-top:1rem">L'explication étape par étape est le facteur éducatif différenciant qui distingue Photomath des solutions fournissant uniquement la réponse finale : plutôt que de donner simplement le résultat, elle montre chaque étape intermédiaire avec des explications du principe mathématique appliqué. Un élève travaillant sur de l'algèbre peut voir exactement où il s'est trompé et comprendre la bonne approche, plutôt que de simplement copier un résultat. Plusieurs méthodes de résolution sont souvent proposées lorsque cela est pertinent — par exemple, en montrant à la fois la factorisation et la formule quadratique pour résoudre une équation du second degré.</p><p style="margin-top:1rem">Photomath Basic (gratuit) couvre le scan et la résolution principale avec des solutions étape par étape. Photomath Plus (9,99 $/mois ou 59,99 $/an) ajoute des explications détaillées pour les problèmes textuels, des tutoriels animés et une bibliothèque de programmes plus étendue incluant des contenus de niveau AP. La principale préoccupation légitime concerne l'intégrité académique : l'application permet très facilement aux élèves de faire leurs devoirs sans s'engager avec la matière, et de nombreux enseignants en restreignent l'usage lors des travaux évalués. Utilisée comme outil de tutorat et de vérification, elle est véritablement éducative ; utilisée pour contourner l'apprentissage, elle va à l'encontre de l'objectif de l'enseignement des mathématiques.</p></div>

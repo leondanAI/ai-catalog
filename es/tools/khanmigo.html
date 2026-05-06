@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Tutor IA de Khan Academy — enseñanza con método socrático para estudiantes</div>
     </div>
   </div>
-  <a href="/es/compare/khanmigo-vs-photomath.html" class="compare-strip">⚖️ Khanmigo vs Photomath →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/es/compare/khanmigo-vs-photomath.html" class="compare-strip">⚖️ Khanmigo vs Photomath →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Acerca de Khanmigo</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Khanmigo es el asistente de tutoría impulsado por IA de Khan Academy, diseñado específicamente para apoyar el aprendizaje estudiantil sin hacer el trabajo de los estudiantes por ellos. A diferencia de la mayoría de asistentes de IA que proporcionan respuestas directas, Khanmigo utiliza el método socrático — responde las preguntas de los estudiantes con preguntas guiadas que los conducen hacia la comprensión, preservando el proceso de aprendizaje.</p><p style="margin-top:1rem">Khanmigo está estrechamente integrado con el currículo de Khan Academy, que cubre matemáticas K-12, ciencias, historia, gramática, preparación SAT e informática. Cuando un estudiante está trabajando en un ejercicio de Khan Academy y se queda atrapado, Khanmigo puede guiarlo a través del problema paso a paso sin revelar la respuesta. También proporciona retroalimentación de escritura, coaching de ensayos y tutoría general en todas las materias. Para maestros, Khanmigo ofrece planificación de lecciones, generación de preguntas de discusión y redacción de comunicaciones con padres.</p><p style="margin-top:1rem">Las capacidades clave incluyen tutoría socrática en todos los temas de Khan Academy, coaching y retroalimentación de escritura de ensayos, asistencia de preparación SAT, generación de planes de lecciones para maestros, generación de preguntas de discusión y plantillas de comunicación con padres.</p><p style="margin-top:1rem">Precios: Khanmigo es gratuito para maestros (no se requiere suscripción). Los estudiantes pueden acceder a Khanmigo por $4 por mes o $44 por año. La asociación de Khan Academy con Anthropic y Microsoft subsidia el acceso. Algunos distritos escolares proporcionan Khanmigo de forma gratuita a todos los estudiantes a través de acuerdos institucionales.</p><p style="margin-top:1rem">Limitaciones: Khanmigo está limitado a apoyar el aprendizaje — intencionalmente no hará tareas para estudiantes, que es la opción pedagógica correcta pero frustrante para usuarios que esperan una IA de propósito general. La cobertura se limita al alcance del currículo de Khan Academy.</p><p style="margin-top:1rem">Más adecuado para estudiantes K-12 que desean un tutor guiado para tareas de matemáticas y ciencias, padres que complementan el aprendizaje escolar, y maestros que desean asistencia de IA para planificación de lecciones y comunicación estudiantil.</p></div>

@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Ideal para:</strong> Agente de codificação autônomo VS Code com aprovação passo a passo</div>
     </div>
   </div>
-  <a href="/pt/compare/cline-vs-github-copilot.html" class="compare-strip">⚖️ Cline vs GitHub Copilot →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/pt/compare/cline-vs-github-copilot.html" class="compare-strip">⚖️ Cline vs GitHub Copilot →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>Sobre Cline</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Cline (anteriormente Claude Dev) é uma extensão open-source de agente de codificação autônomo para VS Code, JetBrains, Cursor, Windsurf, Zed e Neovim. Funciona em um loop de aprovação passo a passo: o agente propõe cada ação (criar arquivo, executar comando, abrir navegador) e o usuário aprova antes da execução — tornando-o transparente e seguro comparado a ferramentas totalmente autônomas. Com mais de 59.000 stars no GitHub e 5 milhões de instalações, é o agente de codificação open-source mais amplamente adotado no ecossistema VS Code.</p><p style="margin-top:1rem">Cline atingiu a v3.81 em maio de 2026 e recebe atualizações diárias. Suporta Model Context Protocol (MCP) nativamente, permitindo integrações de ferramentas personalizadas. A extensão funciona com qualquer LLM via bring-your-own-key: Anthropic Claude, OpenAI, Gemini, AWS Bedrock, OpenRouter e modelos locais. Pode ler e editar arquivos em toda a base de código, executar comandos de terminal, executar testes e usar um navegador para pesquisa ou testes end-to-end.</p><p style="margin-top:1rem">Capacidades principais incluem edição multi-arquivo com contexto completo da base de código, uso de navegador para pesquisa e testes de UI, suporte a ferramentas MCP e um fluxo de trabalho baseado em aprovação que mantém o desenvolvedor no controle em cada etapa. Ao contrário de editores bifurcados como Cursor ou Windsurf, Cline funciona dentro do seu editor existente sem exigir uma migração.</p><p style="margin-top:1rem">Preços: Cline em si é completamente gratuito e open source. Você paga apenas pelas chamadas de API do LLM que faz ao provedor escolhido. Executar em modelos locais via Ollama é gratuito.</p><p style="margin-top:1rem">Limitações: O fluxo de trabalho de aprovação passo a passo, embora seguro, pode reduzir a velocidade em tarefas complexas com múltiplos arquivos comparado a ferramentas totalmente autônomas. A qualidade depende inteiramente do LLM configurado. O modelo BYOK significa que você gerencia custos de API separadamente.</p><p style="margin-top:1rem">Mais adequado para desenvolvedores que desejam um agente de codificação autônomo poderoso dentro do seu editor existente sem mudar para um novo IDE, e que preferem controle transparente passo a passo em relação à execução totalmente autônoma.</p></div>

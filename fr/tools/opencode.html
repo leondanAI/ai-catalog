@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>Idéal pour:</strong> Codage CLI open-source, agent IA en terminal, multi-modèles</div>
     </div>
   </div>
-  
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    
+  </div>
   <div class="tool-desc-block">
     <h2>À propos OpenCode</h2>
     <div class="tool-desc"><p style="margin-top:1rem">OpenCode est un agent de codage IA open-source conçu pour le terminal — une alternative 100% sous licence MIT à Cursor et Windsurf pour les développeurs souhaitant un contrôle total sur leurs outils et la liberté de choisir n'importe quel LLM. Écrit en Go avec une interface utilisateur terminal (TUI) épurée, il intègre l'assistance IA directement dans le workflow des développeurs qui travaillent dans vim, tmux et la ligne de commande.</p><p style="margin-top:1rem">Sa fonctionnalité phare est la flexibilité des fournisseurs : nativement, OpenCode prend en charge plus de 75 fournisseurs LLM — Claude, GPT, Gemini, Grok, DeepSeek, Mistral, et bien d'autres — ainsi que des modèles locaux via Ollama pour une utilisation entièrement hors ligne. Il implémente le Model Context Protocol (MCP), permettant d'étendre les fonctionnalités via des outils externes. Par conception, OpenCode ne stocke pas votre code sur des serveurs tiers — une différence significative pour les développeurs travaillant avec des bases de code propriétaires ou sensibles.</p><p style="margin-top:1rem">Le projet a dépassé 140 000 étoiles sur GitHub avec plus de 850 contributeurs et 11 000 commits, ce qui en fait l'un des projets open-source axés sur les développeurs à la croissance la plus rapide de 2026. Le niveau gratuit correspond à l'intégralité du CLI ; l'abonnement Go optionnel (10 $/mois) ajoute des fonctionnalités de confort pour les utilisateurs avancés. Pour les développeurs souhaitant une expérience de codage agentique de niveau Cursor sans enfermement dans un IDE, sans dépendance à un fournisseur, ni transmission de leur code à un seul fournisseur LLM — OpenCode est l'alternative open-source crédible.</p></div>

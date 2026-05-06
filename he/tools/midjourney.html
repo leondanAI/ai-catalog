@@ -46,7 +46,7 @@
 .tool-meta-chip.badge-paid{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}
 .tool-meta-chip.badge-free{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}
 .tool-meta-chip.badge-freemium{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}
-.compare-strip{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.tool-action-bar{display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;margin-top:16px;margin-bottom:1.5rem;min-height:42px;flex-wrap:wrap;gap:8px}.compare-strip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
 .compare-strip:hover{text-decoration:underline}
 
 .tool-best-for{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}
@@ -144,8 +144,10 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> עיצוב ואמנות AI מקצועיים</div>
     </div>
   </div>
-  <a href="/he/compare/midjourney-vs-stable-diffusion.html" class="compare-strip">⚖️ Midjourney vs Stable Diffusion →</a>
-  <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
+  <div class="tool-action-bar">
+    <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;min-height:22px"></div>
+    <a href="/he/compare/midjourney-vs-stable-diffusion.html" class="compare-strip">⚖️ Midjourney vs Stable Diffusion →</a>
+  </div>
   <div class="tool-desc-block">
     <h2>אודות Midjourney</h2>
     <div class="tool-desc"><p style="margin-top:1rem">Midjourney נחשבת לשירות ייצור תמונות AI באיכות הגבוהה ביותר, והיא מייצרת כעקביות עבודות אמנות עם סגנון, תאורה והרכב עדיפים. היא פועלת דרך בוט Discord ודרך פלטפורמת ווב ב-midjourney.com.</p><p style="margin-top:1rem">Midjourney V7 הוא דגם ברירת המחדל הנוכחי החל מ-2026, ומספק את איכות התמונה הטובה ביותר בהיסטוריה השירות. V8 הופיע בנקודות ייחוס אך V7 נשאר ברירת המחדל של הייצור. הפלטפורמה אינה מציעה ניסיון חינמי — כל גישה דורשת מנוי בתשלום.</p><p style="margin-top:1rem">מחירים: Basic $10/חודש (200 תמונות/חודש), Standard $30/חודש (רלקס בלתי מוגבל, 15 שעות מהירות), Pro $60/חודש (30 שעות מהירות, מצב התגנבות), Mega $120/חודש (60 שעות מהירות). ביעד שנתי חוסכים 20%. חברות עם הכנסה שנתית עולה על $1M חייבות להשתמש ב-Pro או Mega לשימוש מסחרי.</p><p style="margin-top:1rem">פלטפורמת הווב מוסיפה תכונות מעבר ל-Discord: כלים לעריכה, inpainting, outpainting, התייחסות סגנון ועקביות דמויות בדורות. הפקודה /blend ממזגת תמונות; /describe הופכת הנדסה של prompts מתצלומים.</p><p style="margin-top:1rem">מגבלות: ללא שכבה חינמית כלל, וזה חריג בין מתחרים. האסתטיקה נוטה לכיוון &quot;Midjourney look&quot; אופייני שקשה להימנע ממנו לחלוטין. לא קוד פתוח — ללא גישה מקומית או API עבור משתמשים כלליים.</p><p style="margin-top:1rem">מתאים ביותר לעיצובים מקצועיים, אמנים וסוכנויות יצירתיות הזקוקות לתפוקה יפה ביותר ויכולות להצדיק את עלות המנוי. לא מתאים לפתחים הזקוקים לגישת API או למשתמשים שרוצים ניסיון חינמי.</p></div>
