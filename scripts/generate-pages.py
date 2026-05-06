@@ -6,15 +6,40 @@ Run: python3 scripts/generate-pages.py
 
 import urllib.request, json, os, re
 
-# Load SEO overrides (keyword-optimized title + meta per slug)
+# Load SEO overrides — unified from all 3 source files
 def _load_seo_overrides():
-    path = os.path.join(os.path.dirname(__file__), 'seo_titles_meta.json')
+    base = os.path.dirname(__file__)
+    overrides = {}
+    # seo_all_languages.json: {lang: [{slug, title, meta}]}
     try:
-        with open(path, encoding='utf-8') as f:
+        with open(os.path.join(base, 'seo_all_languages.json'), encoding='utf-8') as f:
             raw = re.sub(r'//[^\n]*', '', f.read())
-        return {item['slug']: item for item in json.loads(raw)}
+        for lang, entries in json.loads(raw).items():
+            overrides[lang] = {e['slug']: e for e in entries}
     except Exception:
-        return {}
+        pass
+    # seo_fr_pt.json: {fr: [...], pt: [...]}
+    try:
+        with open(os.path.join(base, 'seo_fr_pt.json'), encoding='utf-8') as f:
+            raw = re.sub(r'//[^\n]*', '', f.read())
+        for lang, entries in json.loads(raw).items():
+            overrides[lang] = {e['slug']: e for e in entries}
+    except Exception:
+        pass
+    # seo_titles_meta.json: legacy EN list [{slug, title, meta}]
+    try:
+        with open(os.path.join(base, 'seo_titles_meta.json'), encoding='utf-8') as f:
+            raw = re.sub(r'//[^\n]*', '', f.read())
+        en_legacy = {e['slug']: e for e in json.loads(raw)}
+        if 'en' not in overrides:
+            overrides['en'] = en_legacy
+        else:
+            # seo_all_languages.json takes priority, fill gaps from legacy
+            for slug, item in en_legacy.items():
+                overrides['en'].setdefault(slug, item)
+    except Exception:
+        pass
+    return overrides
 
 SEO_OVERRIDES = _load_seo_overrides()
 
@@ -149,7 +174,7 @@ def render_page(tool, all_tools, rating_data=None):
     best_for  = tool['best_for'] or ''
     desc      = tool.get('description_long') or tool.get('description') or ''
     short_desc = tool.get('description') or ''  # always short version for meta
-    _seo = SEO_OVERRIDES.get(slug, {})
+    _seo = SEO_OVERRIDES.get('en', {}).get(slug, {})
     page_title = _seo.get('title') or f'{name} Review 2026 — Pros, Cons & Alternatives | AItoolFit'
     meta_desc  = _seo.get('meta') or build_meta_desc(name, short_desc, badge, best_for)
     pros      = tool.get('pros') or []

@@ -26,13 +26,17 @@ TITLE_TEMPLATES = {
 }
 
 def _load_seo_overrides():
-    path = os.path.join(os.path.dirname(__file__), 'seo_titles_meta.json')
-    try:
-        with open(path, encoding='utf-8') as f:
-            raw = re.sub(r'//[^\n]*', '', f.read())
-        return {item['slug']: item for item in json.loads(raw)}
-    except Exception:
-        return {}
+    base = os.path.dirname(__file__)
+    overrides = {}
+    for fname in ('seo_all_languages.json', 'seo_fr_pt.json'):
+        try:
+            with open(os.path.join(base, fname), encoding='utf-8') as f:
+                raw = re.sub(r'//[^\n]*', '', f.read())
+            for lang, entries in json.loads(raw).items():
+                overrides[lang] = {e['slug']: e for e in entries}
+        except Exception:
+            pass
+    return overrides
 
 SEO_OVERRIDES = _load_seo_overrides()
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
@@ -246,8 +250,9 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
             raw_desc = raw_desc[:last_period + 1]
         else:
             raw_desc = truncated.rsplit(' ', 1)[0].rstrip('.,;:') + '...'
-    meta_desc = f'{name} 2026 — {raw_desc}'
-    page_title = TITLE_TEMPLATES.get(lang, lambda n: f'{n} 2026 | AItoolFit')(name)
+    _seo = SEO_OVERRIDES.get(lang, {}).get(slug, {})
+    meta_desc  = _seo.get('meta') or f'{name} 2026 — {raw_desc}'
+    page_title = _seo.get('title') or TITLE_TEMPLATES.get(lang, lambda n: f'{n} 2026 | AItoolFit')(name)
 
     pros_html = '\n'.join(f'        <li>{esc(p)}</li>' for p in pros)
     cons_html = '\n'.join(f'        <li>{esc(p)}</li>' for p in cons)
