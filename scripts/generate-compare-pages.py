@@ -23,11 +23,22 @@ LANG_LABELS = {'ua': 'UA'}
 LANG_RTL    = {'he'}
 
 COMPARISONS = [
-    {'slug': 'chatgpt-vs-claude',  'a': 'chatgpt',    'b': 'claude'},
-    {'slug': 'cursor-vs-copilot',  'a': 'cursor',     'b': 'github-copilot'},
-    {'slug': 'midjourney-vs-flux', 'a': 'midjourney', 'b': 'flux'},
-    {'slug': 'suno-vs-udio',       'a': 'suno',       'b': 'udio'},
-    {'slug': 'kling-vs-runway',    'a': 'kling-ai',   'b': 'runway'},
+    # ── Chat & Assistants (leader: ChatGPT, #2: Claude) ──────────────────────
+    {'slug': 'chatgpt-vs-claude',             'a': 'chatgpt',          'b': 'claude'},
+    {'slug': 'gemini-vs-chatgpt',             'a': 'gemini',           'b': 'chatgpt'},
+    {'slug': 'deepseek-vs-chatgpt',           'a': 'deepseek',         'b': 'chatgpt'},
+    {'slug': 'microsoft-copilot-vs-chatgpt',  'a': 'microsoft-copilot','b': 'chatgpt'},
+    {'slug': 'meta-ai-vs-chatgpt',            'a': 'meta-ai',          'b': 'chatgpt'},
+    {'slug': 'grok-vs-chatgpt',               'a': 'grok',             'b': 'chatgpt'},
+    {'slug': 'mistral-le-chat-vs-chatgpt',    'a': 'mistral-le-chat',  'b': 'chatgpt'},
+    {'slug': 'character-ai-vs-chatgpt',       'a': 'character-ai',     'b': 'chatgpt'},
+    # ── Code (existing) ───────────────────────────────────────────────────────
+    {'slug': 'cursor-vs-copilot',             'a': 'cursor',           'b': 'github-copilot'},
+    # ── Image (existing) ──────────────────────────────────────────────────────
+    {'slug': 'midjourney-vs-flux',            'a': 'midjourney',       'b': 'flux'},
+    # ── Voice / Music (existing) ──────────────────────────────────────────────
+    {'slug': 'suno-vs-udio',                  'a': 'suno',             'b': 'udio'},
+    {'slug': 'kling-vs-runway',               'a': 'kling-ai',         'b': 'runway'},
 ]
 
 # Per-language UI labels — baked into HTML at build time
