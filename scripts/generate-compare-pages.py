@@ -24,21 +24,21 @@ LANG_RTL    = {'he'}
 
 COMPARISONS = [
     # ── Chat & Assistants (leader: ChatGPT, #2: Claude) ──────────────────────
-    {'slug': 'chatgpt-vs-claude',             'a': 'chatgpt',          'b': 'claude'},
-    {'slug': 'gemini-vs-chatgpt',             'a': 'gemini',           'b': 'chatgpt'},
-    {'slug': 'deepseek-vs-chatgpt',           'a': 'deepseek',         'b': 'chatgpt'},
-    {'slug': 'microsoft-copilot-vs-chatgpt',  'a': 'microsoft-copilot','b': 'chatgpt'},
-    {'slug': 'meta-ai-vs-chatgpt',            'a': 'meta-ai',          'b': 'chatgpt'},
-    {'slug': 'grok-vs-chatgpt',               'a': 'grok',             'b': 'chatgpt'},
-    {'slug': 'mistral-le-chat-vs-chatgpt',    'a': 'mistral-le-chat',  'b': 'chatgpt'},
-    {'slug': 'character-ai-vs-chatgpt',       'a': 'character-ai',     'b': 'chatgpt'},
-    # ── Code (existing) ───────────────────────────────────────────────────────
-    {'slug': 'cursor-vs-copilot',             'a': 'cursor',           'b': 'github-copilot'},
-    # ── Image (existing) ──────────────────────────────────────────────────────
-    {'slug': 'midjourney-vs-flux',            'a': 'midjourney',       'b': 'flux'},
-    # ── Voice / Music (existing) ──────────────────────────────────────────────
-    {'slug': 'suno-vs-udio',                  'a': 'suno',             'b': 'udio'},
-    {'slug': 'kling-vs-runway',               'a': 'kling-ai',         'b': 'runway'},
+    {'slug': 'chatgpt-vs-claude',             'a': 'chatgpt',          'b': 'claude',          'cat': 'chat',  'label': 'ChatGPT vs Claude'},
+    {'slug': 'gemini-vs-chatgpt',             'a': 'gemini',           'b': 'chatgpt',         'cat': 'chat',  'label': 'Gemini vs ChatGPT'},
+    {'slug': 'deepseek-vs-chatgpt',           'a': 'deepseek',         'b': 'chatgpt',         'cat': 'chat',  'label': 'DeepSeek vs ChatGPT'},
+    {'slug': 'microsoft-copilot-vs-chatgpt',  'a': 'microsoft-copilot','b': 'chatgpt',         'cat': 'chat',  'label': 'Microsoft Copilot vs ChatGPT'},
+    {'slug': 'meta-ai-vs-chatgpt',            'a': 'meta-ai',          'b': 'chatgpt',         'cat': 'chat',  'label': 'Meta AI vs ChatGPT'},
+    {'slug': 'grok-vs-chatgpt',               'a': 'grok',             'b': 'chatgpt',         'cat': 'chat',  'label': 'Grok vs ChatGPT'},
+    {'slug': 'mistral-le-chat-vs-chatgpt',    'a': 'mistral-le-chat',  'b': 'chatgpt',         'cat': 'chat',  'label': 'Mistral Le Chat vs ChatGPT'},
+    {'slug': 'character-ai-vs-chatgpt',       'a': 'character-ai',     'b': 'chatgpt',         'cat': 'chat',  'label': 'Character.AI vs ChatGPT'},
+    # ── Code ─────────────────────────────────────────────────────────────────
+    {'slug': 'cursor-vs-copilot',             'a': 'cursor',           'b': 'github-copilot',  'cat': 'code',  'label': 'Cursor vs GitHub Copilot'},
+    # ── Image ────────────────────────────────────────────────────────────────
+    {'slug': 'midjourney-vs-flux',            'a': 'midjourney',       'b': 'flux',            'cat': 'image', 'label': 'Midjourney vs Flux'},
+    # ── Music ────────────────────────────────────────────────────────────────
+    {'slug': 'suno-vs-udio',                  'a': 'suno',             'b': 'udio',            'cat': 'music', 'label': 'Suno vs Udio'},
+    {'slug': 'kling-vs-runway',               'a': 'kling-ai',         'b': 'runway',          'cat': 'video', 'label': 'Kling AI vs Runway'},
 ]
 
 # Per-language UI labels — baked into HTML at build time
@@ -233,14 +233,50 @@ def schema_org_jsonld(a, b, canonical_url, lang):
     }
     return f'<script type="application/ld+json">{json.dumps(schema, ensure_ascii=False)}</script>'
 
-# ── footer (sourced from /<lang>/compare.html for consistency) ────────────────
-def load_footer(lang):
+# ── Category compare titles per language ──────────────────────────────────────
+CAT_COMPARE_LABELS = {
+    'en': 'Compare in this category',
+    'ru': 'Сравнения в этой категории',
+    'es': 'Comparar en esta categoría',
+    'de': 'Vergleiche in dieser Kategorie',
+    'ua': 'Порівняння в цій категорії',
+    'he': 'השוואות בקטגוריה זו',
+    'fr': 'Comparatifs dans cette catégorie',
+    'pt': 'Comparações nesta categoria',
+}
+
+# ── footer (sourced from /<lang>/compare.html, QUICK COMPARE replaced by category links) ──
+def load_footer(lang, current_slug=None, current_cat=None):
     src = os.path.join(ROOT, lang, 'compare.html') if lang != 'en' else os.path.join(ROOT, 'compare.html')
     if not os.path.exists(src):
         return ''
     txt = open(src, encoding='utf-8').read()
     m = re.search(r'<footer\s+class="site-footer"[^>]*>.*?</footer>', txt, re.DOTALL)
-    return m.group(0) if m else ''
+    footer = m.group(0) if m else ''
+
+    # Replace QUICK COMPARE section with category-specific links
+    if current_cat and current_slug:
+        base = '' if lang == 'en' else f'/{lang}'
+        siblings = [c for c in COMPARISONS if c.get('cat') == current_cat and c['slug'] != current_slug]
+        if siblings:
+            label = CAT_COMPARE_LABELS.get(lang, 'Compare in this category')
+            links = '\n'.join(
+                f'        <a href="{base}/compare/{c["slug"]}.html">'
+                f'{esc_foot(c.get("label", c["slug"]))}</a>'
+                for c in siblings[:7]
+            )
+            new_section = f'      <div class="footer-col-title">{label}</div>\n      <div class="footer-col-links">\n{links}\n      </div>'
+            # Replace existing QUICK COMPARE block (any language variant)
+            footer = re.sub(
+                r'<div class="footer-col-title">(?:QUICK COMPARE|БЫСТРОЕ СРАВНЕНИЕ|SCHNELLVERGLEICH|'
+                r'COMPARACIÓN RÁPIDA|COMPARAISON RAPIDE|ШВИДКЕ ПОРІВНЯННЯ|השוואה מהירה|COMPARAÇÃO RÁPIDA)'
+                r'</div>\s*<div class="footer-col-links">.*?</div>',
+                new_section, footer, flags=re.DOTALL
+            )
+    return footer
+
+def esc_foot(s):
+    return _html.escape(s, quote=True)
 
 # ── full page ─────────────────────────────────────────────────────────────────
 def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
@@ -264,7 +300,7 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
     )
     table_html  = comparison_table_html(a, b, lang)
     schema      = schema_org_jsonld(a, b, canonical_url, lang)
-    footer_html = load_footer(lang)
+    footer_html = load_footer(lang, cmp['slug'], cmp.get('cat'))
     lang_script = '' if lang == 'en' else f'<script>localStorage.setItem("lang","{lang}");</script>\n'
 
     return f'''<!DOCTYPE html>
