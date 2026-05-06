@@ -269,7 +269,7 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:url" content="{canonical_url}">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://aitoolfit.ai/og-image.svg">
+<meta property="og:image" content="https://aitoolfit.ai/og-image.png">
 {schema}
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>

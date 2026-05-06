@@ -48,20 +48,23 @@ def fetch_tools():
         return json.loads(r.read())
 
 def build_meta_desc(name, description, badge, best_for):
-    """Build a unique 150-155 char meta description with keyword + CTA."""
+    """Build a unique meta description under 155 chars, never truncating mid-sentence."""
     badge_lbl  = {'free': 'Free', 'freemium': 'Freemium', 'paid': 'Paid'}.get(badge, '')
     short_desc = (description or '').split('\n\n')[0].strip()
-    cta        = ' Pros, cons & alternatives →'
-    # Only append Best-for if "best for" doesn't already appear in the description
-    has_bestfor = best_for and 'best for' not in short_desc.lower()
-    suffix = f' {badge_lbl}. Best for {best_for}.{cta}' if has_bestfor else f' {badge_lbl}.{cta}'
-    prefix = f'{name} 2026 — '
-    available = 155 - len(prefix) - len(suffix)
-    if len(short_desc) > available:
-        short_desc = short_desc[:available].rsplit(' ', 1)[0].rstrip('.,;')
-    if short_desc and short_desc[-1] not in '.!?':
-        short_desc += '.'
-    return f'{prefix}{short_desc}{suffix}'
+    # Use first sentence only to avoid mid-sentence cuts
+    for sep in ['. ', '! ', '? ']:
+        idx = short_desc.find(sep)
+        if idx != -1 and idx < 120:
+            short_desc = short_desc[:idx + 1]
+            break
+    else:
+        if len(short_desc) > 100:
+            short_desc = short_desc[:100].rsplit(' ', 1)[0].rstrip('.,;') + '.'
+    suffix = f' {badge_lbl}. Pros, cons & alternatives →'
+    result = f'{name} 2026 — {short_desc}{suffix}'
+    if len(result) > 155:
+        result = result[:152] + '...'
+    return result
 
 def fetch_ratings():
     """Fetch all approved comments and return {slug: {avg, count}}."""
@@ -176,7 +179,7 @@ def render_page(tool, all_tools, rating_data=None):
 <meta property="og:title" content="{esc(name)} Review 2026 | aitoolfit">
 <meta property="og:description" content="{esc(meta_desc)}">
 <meta property="og:url" content="https://aitoolfit.ai/tools/{esc(slug)}.html">
-<meta property="og:image" content="https://aitoolfit.ai/og-image.svg">
+<meta property="og:image" content="https://aitoolfit.ai/og-image.png">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{esc(name)} Review 2026 | aitoolfit">

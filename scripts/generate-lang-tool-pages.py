@@ -214,7 +214,18 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
     arrow      = '←' if lang in RTL_LANGS else '→'
     date_locale = L['date_locale']
 
-    meta_desc = f'{name} 2026 — {(t.get("description") or tool.get("description") or "")[:120]}'
+    raw_desc = (t.get("description") or tool.get("description") or "").split('\n\n')[0].strip()
+    for sep in ['. ', '! ', '? ']:
+        idx = raw_desc.find(sep)
+        if idx != -1 and idx < 120:
+            raw_desc = raw_desc[:idx + 1]
+            break
+    else:
+        if len(raw_desc) > 100:
+            raw_desc = raw_desc[:100].rsplit(' ', 1)[0].rstrip('.,;') + '.'
+    meta_desc = f'{name} 2026 — {raw_desc}'
+    if len(meta_desc) > 155:
+        meta_desc = meta_desc[:152] + '...'
 
     pros_html = '\n'.join(f'        <li>{esc(p)}</li>' for p in pros)
     cons_html = '\n'.join(f'        <li>{esc(p)}</li>' for p in cons)
@@ -257,7 +268,7 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
 <meta property="og:title" content="{esc(name)} 2026 | aitoolfit">
 <meta property="og:description" content="{esc(meta_desc)}">
 <meta property="og:url" content="{BASE_URL}/{lang}/tools/{esc(slug)}.html">
-<meta property="og:image" content="{BASE_URL}/og-image.svg">
+<meta property="og:image" content="{BASE_URL}/og-image.png">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","{lang}");</script>
