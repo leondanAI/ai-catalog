@@ -369,11 +369,11 @@ img { max-width: 100%; }
 .tf-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 .tf-examples { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; max-width: 620px; margin: 0 auto 0.75rem; }
 .tf-pill {
-  font-size: 12px; color: var(--text3); background: var(--bg2);
-  border: 1px solid var(--border); border-radius: 999px; padding: 5px 13px;
-  cursor: pointer; transition: border-color 0.2s, color 0.2s; white-space: nowrap;
+  font-size: 12px; color: var(--text2); background: var(--bg2);
+  border: 1px solid rgba(124,106,247,0.45); border-radius: 999px; padding: 5px 13px;
+  cursor: pointer; transition: border-color 0.2s, color 0.2s, background 0.2s; white-space: nowrap;
 }
-.tf-pill:hover { color: var(--text); border-color: var(--border2); }
+.tf-pill:hover { color: var(--text); border-color: var(--accent); background: rgba(124,106,247,0.08); }
 .tf-loading {
   display: none; align-items: center; justify-content: center; gap: 10px;
   margin-top: 1.5rem; color: var(--text3); font-size: 13px;
