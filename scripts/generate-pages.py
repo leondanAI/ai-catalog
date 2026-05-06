@@ -48,23 +48,22 @@ def fetch_tools():
         return json.loads(r.read())
 
 def build_meta_desc(name, description, badge, best_for):
-    """Build a unique meta description under 155 chars, never truncating mid-sentence."""
+    """Build a unique meta description under 155 chars, always ending on a complete sentence."""
     badge_lbl  = {'free': 'Free', 'freemium': 'Freemium', 'paid': 'Paid'}.get(badge, '')
     short_desc = (description or '').split('\n\n')[0].strip()
-    # Use first sentence only to avoid mid-sentence cuts
-    for sep in ['. ', '! ', '? ']:
-        idx = short_desc.find(sep)
-        if idx != -1 and idx < 120:
-            short_desc = short_desc[:idx + 1]
-            break
-    else:
-        if len(short_desc) > 100:
-            short_desc = short_desc[:100].rsplit(' ', 1)[0].rstrip('.,;') + '.'
     suffix = f' {badge_lbl}. Pros, cons & alternatives →'
-    result = f'{name} 2026 — {short_desc}{suffix}'
-    if len(result) > 155:
-        result = result[:152] + '...'
-    return result
+    prefix = f'{name} 2026 — '
+    available = 155 - len(prefix) - len(suffix)
+    if len(short_desc) > available:
+        # Try to find the last complete sentence that fits
+        truncated = short_desc[:available]
+        last_period = max(truncated.rfind('. '), truncated.rfind('! '), truncated.rfind('? '))
+        if last_period > 30:
+            short_desc = short_desc[:last_period + 1]
+        else:
+            # No sentence boundary — cut at last word, add ellipsis
+            short_desc = truncated.rsplit(' ', 1)[0].rstrip('.,;:') + '...'
+    return f'{prefix}{short_desc}{suffix}'
 
 def fetch_ratings():
     """Fetch all approved comments and return {slug: {avg, count}}."""

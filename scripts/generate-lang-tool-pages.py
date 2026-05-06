@@ -215,17 +215,16 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
     date_locale = L['date_locale']
 
     raw_desc = (t.get("description") or tool.get("description") or "").split('\n\n')[0].strip()
-    for sep in ['. ', '! ', '? ']:
-        idx = raw_desc.find(sep)
-        if idx != -1 and idx < 120:
-            raw_desc = raw_desc[:idx + 1]
-            break
-    else:
-        if len(raw_desc) > 100:
-            raw_desc = raw_desc[:100].rsplit(' ', 1)[0].rstrip('.,;') + '.'
+    prefix_len = len(f'{name} 2026 — ')
+    available = 155 - prefix_len
+    if len(raw_desc) > available:
+        truncated = raw_desc[:available]
+        last_period = max(truncated.rfind('. '), truncated.rfind('! '), truncated.rfind('? '))
+        if last_period > 30:
+            raw_desc = raw_desc[:last_period + 1]
+        else:
+            raw_desc = truncated.rsplit(' ', 1)[0].rstrip('.,;:') + '...'
     meta_desc = f'{name} 2026 — {raw_desc}'
-    if len(meta_desc) > 155:
-        meta_desc = meta_desc[:152] + '...'
 
     pros_html = '\n'.join(f'        <li>{esc(p)}</li>' for p in pros)
     cons_html = '\n'.join(f'        <li>{esc(p)}</li>' for p in cons)
