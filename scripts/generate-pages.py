@@ -334,9 +334,11 @@ def render_page(tool, all_tools, rating_data=None):
     if _cmp:
         cmp_slug, cmp_other = _cmp
         compare_strip = (
-            f'<a href="/compare/{esc(cmp_slug)}.html" class="compare-strip">'
-            f'⚖️ {esc(name)} vs {esc(cmp_other)} →'
-            f'</a>'
+            f'<span class="compare-strip">'
+            f'⚖️ Compare '
+            f'<a href="/compare/{esc(cmp_slug)}.html" class="compare-strip-link">'
+            f'{esc(name)} vs {esc(cmp_other)}</a>'
+            f'</span>'
         )
         compare_footer = (
             f'<div>'
@@ -400,8 +402,9 @@ def render_page(tool, all_tools, rating_data=None):
 .tool-meta-chip.badge-free {{ background: rgba(45,212,160,0.12); color: var(--green); border-color: rgba(45,212,160,0.2); }}
 .tool-meta-chip.badge-freemium {{ background: rgba(124,106,247,0.12); color: #a89cf7; border-color: rgba(124,106,247,0.2); }}
 .tool-action-bar {{ display:flex; align-items:center; justify-content:space-between; background:var(--bg2); border:1px solid var(--border); border-radius:8px; padding:10px 16px; margin-top:16px; margin-bottom:1.5rem; min-height:42px; flex-wrap:wrap; gap:8px; }}
-.compare-strip {{ display:inline-flex; align-items:center; gap:6px; font-size:13px; font-weight:600; color:var(--accent); text-decoration:none; white-space:nowrap; }}
-.compare-strip:hover {{ text-decoration:underline; }}
+.compare-strip {{ display:inline-flex; align-items:center; gap:5px; font-size:13px; color:var(--text2); white-space:nowrap; }}
+.compare-strip-link {{ color:var(--accent); font-weight:600; text-decoration:none; }}
+.compare-strip-link:hover {{ text-decoration:underline; }}
 .tool-best-for {{ font-size: 14px; color: var(--text); background: rgba(124,106,247,0.08); border-left: 3px solid var(--accent); padding: 10px 14px; border-radius: 6px; margin-top: 14px; line-height: 1.5; }}
 .tool-best-for strong {{ color: var(--accent); font-weight: 600; }}
 [dir="rtl"] .tool-best-for {{ border-left: none; border-right: 3px solid var(--accent); }}
