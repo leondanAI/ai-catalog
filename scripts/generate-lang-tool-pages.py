@@ -273,6 +273,58 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
     best_for_label = LANGUAGES[lang]['ui']['best_for']
     best_for_line = f'<div class="tool-best-for"><strong>{best_for_label}:</strong> {esc(best_for)}</div>' if best_for else ''
 
+    TOOL_COMPARE = {
+        'chatgpt':           ('chatgpt-vs-claude',            'Claude'),
+        'claude':            ('chatgpt-vs-claude',            'ChatGPT'),
+        'gemini':            ('gemini-vs-chatgpt',            'ChatGPT'),
+        'deepseek':          ('deepseek-vs-chatgpt',          'ChatGPT'),
+        'microsoft-copilot': ('microsoft-copilot-vs-chatgpt', 'ChatGPT'),
+        'meta-ai':           ('meta-ai-vs-chatgpt',           'ChatGPT'),
+        'grok':              ('grok-vs-chatgpt',              'ChatGPT'),
+        'mistral-le-chat':   ('mistral-le-chat-vs-chatgpt',   'ChatGPT'),
+        'character-ai':      ('character-ai-vs-chatgpt',      'ChatGPT'),
+        'cursor':            ('cursor-vs-copilot',            'GitHub Copilot'),
+        'github-copilot':    ('cursor-vs-copilot',            'Cursor'),
+        'midjourney':        ('midjourney-vs-flux',           'Flux'),
+        'flux':              ('midjourney-vs-flux',           'Midjourney'),
+        'suno':              ('suno-vs-udio',                 'Udio'),
+        'udio':              ('suno-vs-udio',                 'Suno'),
+        'kling-ai':          ('kling-vs-runway',              'Runway'),
+        'runway':            ('kling-vs-runway',              'Kling AI'),
+    }
+    COMPARE_LABELS = {
+        'ru': ('📊 Как сравнивается {}?', 'Все сравнения'),
+        'es': ('📊 ¿Cómo se compara {}?', 'Ver todas'),
+        'de': ('📊 Wie schneidet {} ab?', 'Alle Vergleiche'),
+        'ua': ('📊 Як порівнюється {}?', 'Всі порівняння'),
+        'he': ('📊 כיצד {} משתווה?', 'כל ההשוואות'),
+        'fr': ('📊 Comment se compare {} ?', 'Toutes les comparaisons'),
+        'pt': ('📊 Como se compara {}?', 'Todas as comparações'),
+    }
+    _cmp = TOOL_COMPARE.get(slug)
+    compare_strip = ''
+    compare_footer = ''
+    if _cmp:
+        cmp_slug, cmp_other = _cmp
+        lbl_q, lbl_all = COMPARE_LABELS.get(lang, ('📊 Compare {}', 'All comparisons'))
+        base = f'/{lang}'
+        compare_strip = (
+            f'<div class="compare-strip">'
+            f'<span>{lbl_q.format(esc(name))}</span>'
+            f'<a href="{base}/compare/{esc(cmp_slug)}.html" class="compare-strip-link">'
+            f'{esc(name)} vs {esc(cmp_other)} →</a>'
+            f'</div>'
+        )
+        compare_footer = (
+            f'<div>'
+            f'<div class="footer-col-title">Compare</div>'
+            f'<div class="footer-col-links">'
+            f'<a href="{base}/compare/{esc(cmp_slug)}.html">{esc(name)} vs {esc(cmp_other)}</a>'
+            f'<a href="{base}/compare.html">{lbl_all}</a>'
+            f'</div>'
+            f'</div>'
+        )
+
     r = ratings.get(slug)
     jsonld_rating = f',"aggregateRating":{{"@type":"AggregateRating","ratingValue":"{r["avg"]}","reviewCount":{r["count"]},"bestRating":"5","worstRating":"1"}}' if r else ''
 
@@ -327,6 +379,9 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
 .tool-meta-chip.badge-paid{{background:rgba(239,68,68,0.12);color:#f87171;border-color:rgba(239,68,68,0.25)}}
 .tool-meta-chip.badge-free{{background:rgba(45,212,160,0.12);color:var(--green);border-color:rgba(45,212,160,0.2)}}
 .tool-meta-chip.badge-freemium{{background:rgba(124,106,247,0.12);color:#a89cf7;border-color:rgba(124,106,247,0.2)}}
+.compare-strip{{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:rgba(124,106,247,0.06);border:1px solid rgba(124,106,247,0.2);border-radius:8px;padding:10px 16px;margin-top:16px;font-size:13px;color:var(--text2)}}
+.compare-strip-link{{color:var(--accent);font-weight:600;text-decoration:none;white-space:nowrap}}
+.compare-strip-link:hover{{text-decoration:underline}}
 .tool-best-for{{font-size:14px;color:var(--text);background:rgba(124,106,247,0.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin-top:14px;line-height:1.5}}
 .tool-best-for strong{{color:var(--accent);font-weight:600}}
 [dir="rtl"] .tool-best-for{{border-left:none;border-right:3px solid var(--accent)}}
@@ -422,6 +477,7 @@ textarea.form-input{{resize:vertical;min-height:90px}}
       {best_for_line}
     </div>
   </div>
+  {compare_strip}
   <div id="ratingDisplay" style="display:flex;align-items:center;gap:5px;margin-bottom:1.5rem;min-height:22px"></div>
   <div class="tool-desc-block">
     <h2>{ui['about']} {esc(name)}</h2>
@@ -480,8 +536,10 @@ textarea.form-input{{resize:vertical;min-height:90px}}
         <a href="/{lang}/directory.html?cat=image">{cats['image']}</a>
         <a href="/{lang}/directory.html?cat=video">{cats['video']}</a>
         <a href="/{lang}/directory.html?cat=voice">{cats['voice']}</a>
+        <a href="/{lang}/directory.html" style="color:var(--accent);margin-top:4px">More →</a>
       </div>
     </div>
+    {compare_footer}
   </div>
   <div class="footer-bottom"><span>{ui['made']}</span><span>© 2026 aitoolfit</span></div>
 </footer>
