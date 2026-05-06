@@ -23,22 +23,118 @@ LANG_LABELS = {'ua': 'UA'}
 LANG_RTL    = {'he'}
 
 COMPARISONS = [
-    # ── Chat & Assistants (leader: ChatGPT, #2: Claude) ──────────────────────
-    {'slug': 'chatgpt-vs-claude',             'a': 'chatgpt',          'b': 'claude',          'cat': 'chat',  'label': 'ChatGPT vs Claude'},
-    {'slug': 'gemini-vs-chatgpt',             'a': 'gemini',           'b': 'chatgpt',         'cat': 'chat',  'label': 'Gemini vs ChatGPT'},
-    {'slug': 'deepseek-vs-chatgpt',           'a': 'deepseek',         'b': 'chatgpt',         'cat': 'chat',  'label': 'DeepSeek vs ChatGPT'},
-    {'slug': 'microsoft-copilot-vs-chatgpt',  'a': 'microsoft-copilot','b': 'chatgpt',         'cat': 'chat',  'label': 'Microsoft Copilot vs ChatGPT'},
-    {'slug': 'meta-ai-vs-chatgpt',            'a': 'meta-ai',          'b': 'chatgpt',         'cat': 'chat',  'label': 'Meta AI vs ChatGPT'},
-    {'slug': 'grok-vs-chatgpt',               'a': 'grok',             'b': 'chatgpt',         'cat': 'chat',  'label': 'Grok vs ChatGPT'},
-    {'slug': 'mistral-le-chat-vs-chatgpt',    'a': 'mistral-le-chat',  'b': 'chatgpt',         'cat': 'chat',  'label': 'Mistral Le Chat vs ChatGPT'},
-    {'slug': 'character-ai-vs-chatgpt',       'a': 'character-ai',     'b': 'chatgpt',         'cat': 'chat',  'label': 'Character.AI vs ChatGPT'},
-    # ── Code ─────────────────────────────────────────────────────────────────
-    {'slug': 'cursor-vs-copilot',             'a': 'cursor',           'b': 'github-copilot',  'cat': 'code',  'label': 'Cursor vs GitHub Copilot'},
-    # ── Image ────────────────────────────────────────────────────────────────
-    {'slug': 'midjourney-vs-flux',            'a': 'midjourney',       'b': 'flux',            'cat': 'image', 'label': 'Midjourney vs Flux'},
-    # ── Music ────────────────────────────────────────────────────────────────
-    {'slug': 'suno-vs-udio',                  'a': 'suno',             'b': 'udio',            'cat': 'music', 'label': 'Suno vs Udio'},
-    {'slug': 'kling-vs-runway',               'a': 'kling-ai',         'b': 'runway',          'cat': 'video', 'label': 'Kling AI vs Runway'},
+    # ── Chat (leader: ChatGPT, #2: Claude) ───────────────────────────────────
+    {'slug': 'chatgpt-vs-claude',                    'a': 'chatgpt',                'b': 'claude',                'cat': 'chat',     'label': 'ChatGPT vs Claude'},
+    {'slug': 'gemini-vs-chatgpt',                    'a': 'gemini',                 'b': 'chatgpt',               'cat': 'chat',     'label': 'Gemini vs ChatGPT'},
+    {'slug': 'deepseek-vs-chatgpt',                  'a': 'deepseek',               'b': 'chatgpt',               'cat': 'chat',     'label': 'DeepSeek vs ChatGPT'},
+    {'slug': 'microsoft-copilot-vs-chatgpt',         'a': 'microsoft-copilot',      'b': 'chatgpt',               'cat': 'chat',     'label': 'Microsoft Copilot vs ChatGPT'},
+    {'slug': 'meta-ai-vs-chatgpt',                   'a': 'meta-ai',                'b': 'chatgpt',               'cat': 'chat',     'label': 'Meta AI vs ChatGPT'},
+    {'slug': 'grok-vs-chatgpt',                      'a': 'grok',                   'b': 'chatgpt',               'cat': 'chat',     'label': 'Grok vs ChatGPT'},
+    {'slug': 'mistral-le-chat-vs-chatgpt',           'a': 'mistral-le-chat',        'b': 'chatgpt',               'cat': 'chat',     'label': 'Mistral Le Chat vs ChatGPT'},
+    {'slug': 'character-ai-vs-chatgpt',              'a': 'character-ai',           'b': 'chatgpt',               'cat': 'chat',     'label': 'Character.AI vs ChatGPT'},
+    # ── Agents (leader: Microsoft Copilot Studio, #2: Manus) ─────────────────
+    {'slug': 'copilot-studio-vs-manus',              'a': 'microsoft-copilot-studio','b': 'manus',                'cat': 'agents',   'label': 'Copilot Studio vs Manus'},
+    {'slug': 'n8n-vs-copilot-studio',                'a': 'n8n',                    'b': 'microsoft-copilot-studio','cat': 'agents',  'label': 'n8n vs Copilot Studio'},
+    {'slug': 'make-vs-copilot-studio',               'a': 'make',                   'b': 'microsoft-copilot-studio','cat': 'agents',  'label': 'Make vs Copilot Studio'},
+    {'slug': 'lindy-vs-copilot-studio',              'a': 'lindy',                  'b': 'microsoft-copilot-studio','cat': 'agents',  'label': 'Lindy vs Copilot Studio'},
+    {'slug': 'relevance-ai-vs-copilot-studio',       'a': 'relevance-ai',           'b': 'microsoft-copilot-studio','cat': 'agents',  'label': 'Relevance AI vs Copilot Studio'},
+    {'slug': 'devin-vs-copilot-studio',              'a': 'devin',                  'b': 'microsoft-copilot-studio','cat': 'agents',  'label': 'Devin vs Copilot Studio'},
+    {'slug': 'make-vs-n8n',                          'a': 'make',                   'b': 'n8n',                   'cat': 'agents',   'label': 'Make vs n8n'},
+    # ── Code (leader: GitHub Copilot, #2: Cursor) ────────────────────────────
+    {'slug': 'cursor-vs-copilot',                    'a': 'cursor',                 'b': 'github-copilot',        'cat': 'code',     'label': 'Cursor vs GitHub Copilot'},
+    {'slug': 'windsurf-vs-cursor',                   'a': 'windsurf',               'b': 'cursor',                'cat': 'code',     'label': 'Windsurf vs Cursor'},
+    {'slug': 'claude-code-vs-github-copilot',        'a': 'claude-code',            'b': 'github-copilot',        'cat': 'code',     'label': 'Claude Code vs GitHub Copilot'},
+    {'slug': 'replit-vs-github-copilot',             'a': 'replit',                 'b': 'github-copilot',        'cat': 'code',     'label': 'Replit vs GitHub Copilot'},
+    {'slug': 'bolt-new-vs-cursor',                   'a': 'bolt-new',               'b': 'cursor',                'cat': 'code',     'label': 'Bolt.new vs Cursor'},
+    {'slug': 'v0-by-vercel-vs-cursor',               'a': 'v0-by-vercel',           'b': 'cursor',                'cat': 'code',     'label': 'v0 by Vercel vs Cursor'},
+    {'slug': 'cline-vs-github-copilot',              'a': 'cline',                  'b': 'github-copilot',        'cat': 'code',     'label': 'Cline vs GitHub Copilot'},
+    {'slug': 'aider-vs-github-copilot',              'a': 'aider',                  'b': 'github-copilot',        'cat': 'code',     'label': 'Aider vs GitHub Copilot'},
+    {'slug': 'windsurf-vs-github-copilot',           'a': 'windsurf',               'b': 'github-copilot',        'cat': 'code',     'label': 'Windsurf vs GitHub Copilot'},
+    # ── Writing (leader: DeepL, #2: Grammarly) ───────────────────────────────
+    {'slug': 'deepl-vs-grammarly',                   'a': 'deepl',                  'b': 'grammarly',             'cat': 'writing',  'label': 'DeepL vs Grammarly'},
+    {'slug': 'quillbot-vs-grammarly',                'a': 'quillbot',               'b': 'grammarly',             'cat': 'writing',  'label': 'QuillBot vs Grammarly'},
+    {'slug': 'jasper-vs-writesonic',                 'a': 'jasper',                 'b': 'writesonic',            'cat': 'writing',  'label': 'Jasper vs Writesonic'},
+    {'slug': 'writesonic-vs-grammarly',              'a': 'writesonic',             'b': 'grammarly',             'cat': 'writing',  'label': 'Writesonic vs Grammarly'},
+    {'slug': 'hemingway-editor-vs-grammarly',        'a': 'hemingway-editor',       'b': 'grammarly',             'cat': 'writing',  'label': 'Hemingway Editor vs Grammarly'},
+    # ── Marketing (leader: Semrush, #2: Copy.ai) ─────────────────────────────
+    {'slug': 'semrush-vs-copy-ai',                   'a': 'semrush',                'b': 'copy-ai',               'cat': 'marketing','label': 'Semrush vs Copy.ai'},
+    {'slug': 'surferseo-vs-semrush',                 'a': 'surferseo',              'b': 'semrush',               'cat': 'marketing','label': 'SurferSEO vs Semrush'},
+    {'slug': 'frase-vs-semrush',                     'a': 'frase',                  'b': 'semrush',               'cat': 'marketing','label': 'Frase vs Semrush'},
+    {'slug': 'clearscope-vs-surferseo',              'a': 'clearscope',             'b': 'surferseo',             'cat': 'marketing','label': 'Clearscope vs SurferSEO'},
+    {'slug': 'copy-ai-vs-jasper',                    'a': 'copy-ai',                'b': 'jasper',                'cat': 'marketing','label': 'Copy.ai vs Jasper'},
+    # ── Image (leader: Midjourney, #2: Stable Diffusion) ─────────────────────
+    {'slug': 'midjourney-vs-flux',                   'a': 'midjourney',             'b': 'flux',                  'cat': 'image',    'label': 'Midjourney vs Flux'},
+    {'slug': 'midjourney-vs-stable-diffusion',       'a': 'midjourney',             'b': 'stable-diffusion',      'cat': 'image',    'label': 'Midjourney vs Stable Diffusion'},
+    {'slug': 'ideogram-vs-midjourney',               'a': 'ideogram',               'b': 'midjourney',            'cat': 'image',    'label': 'Ideogram vs Midjourney'},
+    {'slug': 'adobe-firefly-vs-midjourney',          'a': 'adobe-firefly',          'b': 'midjourney',            'cat': 'image',    'label': 'Adobe Firefly vs Midjourney'},
+    {'slug': 'recraft-ai-vs-midjourney',             'a': 'recraft-ai',             'b': 'midjourney',            'cat': 'image',    'label': 'Recraft AI vs Midjourney'},
+    {'slug': 'flux-vs-stable-diffusion',             'a': 'flux',                   'b': 'stable-diffusion',      'cat': 'image',    'label': 'Flux vs Stable Diffusion'},
+    {'slug': 'leonardo-ai-vs-midjourney',            'a': 'leonardo-ai',            'b': 'midjourney',            'cat': 'image',    'label': 'Leonardo.ai vs Midjourney'},
+    # ── Video (leader: CapCut, #2: Kling AI) ─────────────────────────────────
+    {'slug': 'kling-vs-runway',                      'a': 'kling-ai',               'b': 'runway',                'cat': 'video',    'label': 'Kling AI vs Runway'},
+    {'slug': 'capcut-vs-kling-ai',                   'a': 'capcut',                 'b': 'kling-ai',              'cat': 'video',    'label': 'CapCut vs Kling AI'},
+    {'slug': 'runway-vs-capcut',                     'a': 'runway',                 'b': 'capcut',                'cat': 'video',    'label': 'Runway vs CapCut'},
+    {'slug': 'heygen-vs-synthesia',                  'a': 'heygen',                 'b': 'synthesia',             'cat': 'video',    'label': 'HeyGen vs Synthesia'},
+    {'slug': 'pika-vs-kling-ai',                     'a': 'pika',                   'b': 'kling-ai',              'cat': 'video',    'label': 'Pika vs Kling AI'},
+    {'slug': 'luma-ai-vs-runway',                    'a': 'luma-ai',                'b': 'runway',                'cat': 'video',    'label': 'Luma AI vs Runway'},
+    {'slug': 'google-veo-3-vs-runway',               'a': 'google-veo-3',           'b': 'runway',                'cat': 'video',    'label': 'Google Veo 3 vs Runway'},
+    # ── Design (leader: Canva AI, #2: Figma AI) ──────────────────────────────
+    {'slug': 'canva-ai-vs-figma-ai',                 'a': 'canva-ai',               'b': 'figma-ai',              'cat': 'design',   'label': 'Canva AI vs Figma AI'},
+    {'slug': 'figma-ai-vs-canva-ai',                 'a': 'figma-ai',               'b': 'canva-ai',              'cat': 'design',   'label': 'Figma AI vs Canva AI'},
+    {'slug': 'framer-ai-vs-canva-ai',                'a': 'framer-ai',              'b': 'canva-ai',              'cat': 'design',   'label': 'Framer AI vs Canva AI'},
+    {'slug': 'looka-vs-canva-ai',                    'a': 'looka',                  'b': 'canva-ai',              'cat': 'design',   'label': 'Looka vs Canva AI'},
+    {'slug': 'uizard-vs-figma-ai',                   'a': 'uizard',                 'b': 'figma-ai',              'cat': 'design',   'label': 'Uizard vs Figma AI'},
+    {'slug': 'uxpilot-vs-figma-ai',                  'a': 'uxpilot',                'b': 'figma-ai',              'cat': 'design',   'label': 'UXPilot vs Figma AI'},
+    {'slug': 'relume-vs-framer-ai',                  'a': 'relume',                 'b': 'framer-ai',             'cat': 'design',   'label': 'Relume vs Framer AI'},
+    {'slug': 'whimsical-ai-vs-figma-ai',             'a': 'whimsical-ai',           'b': 'figma-ai',              'cat': 'design',   'label': 'Whimsical AI vs Figma AI'},
+    # ── Voice (leader: Speechify, #2: ElevenLabs) ────────────────────────────
+    {'slug': 'suno-vs-udio',                         'a': 'suno',                   'b': 'udio',                  'cat': 'music',    'label': 'Suno vs Udio'},
+    {'slug': 'speechify-vs-elevenlabs',              'a': 'speechify',              'b': 'elevenlabs',            'cat': 'voice',    'label': 'Speechify vs ElevenLabs'},
+    {'slug': 'elevenlabs-vs-murf-ai',                'a': 'elevenlabs',             'b': 'murf-ai',               'cat': 'voice',    'label': 'ElevenLabs vs Murf AI'},
+    {'slug': 'elevenlabs-vs-playht',                 'a': 'elevenlabs',             'b': 'playht',                'cat': 'voice',    'label': 'ElevenLabs vs PlayHT'},
+    {'slug': 'descript-vs-adobe-podcast',            'a': 'descript',               'b': 'adobe-podcast',         'cat': 'voice',    'label': 'Descript vs Adobe Podcast'},
+    {'slug': 'suno-vs-elevenlabs',                   'a': 'suno',                   'b': 'elevenlabs',            'cat': 'voice',    'label': 'Suno vs ElevenLabs'},
+    # ── Productivity (leader: Notion AI, #2: Zapier AI) ──────────────────────
+    {'slug': 'notion-ai-vs-zapier-ai',               'a': 'notion-ai',              'b': 'zapier-ai',             'cat': 'productivity','label': 'Notion AI vs Zapier AI'},
+    {'slug': 'gamma-vs-notion-ai',                   'a': 'gamma',                  'b': 'notion-ai',             'cat': 'productivity','label': 'Gamma vs Notion AI'},
+    {'slug': 'otter-ai-vs-fireflies-ai',             'a': 'otter-ai',               'b': 'fireflies-ai',          'cat': 'productivity','label': 'Otter.ai vs Fireflies.ai'},
+    {'slug': 'motion-vs-reclaim-ai',                 'a': 'motion',                 'b': 'reclaim-ai',            'cat': 'productivity','label': 'Motion vs Reclaim.ai'},
+    {'slug': 'zapier-ai-vs-make',                    'a': 'zapier-ai',              'b': 'make',                  'cat': 'productivity','label': 'Zapier AI vs Make'},
+    # ── Research (leader: Perplexity, #2: NotebookLM) ────────────────────────
+    {'slug': 'perplexity-vs-notebooklm',             'a': 'perplexity',             'b': 'notebooklm',            'cat': 'research',  'label': 'Perplexity vs NotebookLM'},
+    {'slug': 'elicit-vs-consensus',                  'a': 'elicit',                 'b': 'consensus',             'cat': 'research',  'label': 'Elicit vs Consensus'},
+    {'slug': 'consensus-vs-perplexity',              'a': 'consensus',              'b': 'perplexity',            'cat': 'research',  'label': 'Consensus vs Perplexity'},
+    {'slug': 'notebooklm-vs-humata',                 'a': 'notebooklm',             'b': 'humata',                'cat': 'research',  'label': 'NotebookLM vs Humata'},
+    {'slug': 'scite-vs-semantic-scholar',            'a': 'scite',                  'b': 'semantic-scholar',      'cat': 'research',  'label': 'Scite vs Semantic Scholar'},
+    # ── Data (leader: Looker Studio, #2: Tableau AI) ─────────────────────────
+    {'slug': 'looker-studio-vs-tableau-ai',          'a': 'looker-studio',          'b': 'tableau-ai',            'cat': 'data',      'label': 'Looker Studio vs Tableau AI'},
+    {'slug': 'julius-ai-vs-looker-studio',           'a': 'julius-ai',              'b': 'looker-studio',         'cat': 'data',      'label': 'Julius AI vs Looker Studio'},
+    {'slug': 'hex-vs-looker-studio',                 'a': 'hex',                    'b': 'looker-studio',         'cat': 'data',      'label': 'Hex vs Looker Studio'},
+    {'slug': 'rows-vs-hex',                          'a': 'rows',                   'b': 'hex',                   'cat': 'data',      'label': 'Rows vs Hex'},
+    {'slug': 'retool-ai-vs-looker-studio',           'a': 'retool-ai',              'b': 'looker-studio',         'cat': 'data',      'label': 'Retool AI vs Looker Studio'},
+    # ── No-Code (leader: Bubble, #2: Webflow) ────────────────────────────────
+    {'slug': 'bubble-vs-webflow',                    'a': 'bubble',                 'b': 'webflow',               'cat': 'nocode',    'label': 'Bubble vs Webflow'},
+    {'slug': 'lovable-vs-bubble',                    'a': 'lovable',                'b': 'bubble',                'cat': 'nocode',    'label': 'Lovable vs Bubble'},
+    {'slug': 'flutterflow-vs-bubble',                'a': 'flutterflow',            'b': 'bubble',                'cat': 'nocode',    'label': 'FlutterFlow vs Bubble'},
+    {'slug': 'glide-vs-bubble',                      'a': 'glide',                  'b': 'bubble',                'cat': 'nocode',    'label': 'Glide vs Bubble'},
+    {'slug': 'softr-vs-bubble',                      'a': 'softr',                  'b': 'bubble',                'cat': 'nocode',    'label': 'Softr vs Bubble'},
+    {'slug': 'webflow-vs-framer-ai',                 'a': 'webflow',                'b': 'framer-ai',             'cat': 'nocode',    'label': 'Webflow vs Framer AI'},
+    # ── Education (leader: Photomath, #2: Duolingo Max) ──────────────────────
+    {'slug': 'photomath-vs-duolingo-max',            'a': 'photomath',              'b': 'duolingo-max',          'cat': 'education', 'label': 'Photomath vs Duolingo Max'},
+    {'slug': 'khanmigo-vs-photomath',                'a': 'khanmigo',               'b': 'photomath',             'cat': 'education', 'label': 'Khanmigo vs Photomath'},
+    {'slug': 'duolingo-max-vs-khanmigo',             'a': 'duolingo-max',           'b': 'khanmigo',              'cat': 'education', 'label': 'Duolingo Max vs Khanmigo'},
+    {'slug': 'youlearn-vs-notebooklm',               'a': 'youlearn',               'b': 'notebooklm',            'cat': 'education', 'label': 'YouLearn vs NotebookLM'},
+    {'slug': 'synthesis-vs-khanmigo',                'a': 'synthesis',              'b': 'khanmigo',              'cat': 'education', 'label': 'Synthesis vs Khanmigo'},
+    # ── Presentations (leader: Gamma, #2: Slidesgo) ──────────────────────────
+    {'slug': 'gamma-vs-beautiful-ai',                'a': 'gamma',                  'b': 'beautiful-ai',          'cat': 'presentations','label': 'Gamma vs Beautiful.ai'},
+    {'slug': 'gamma-vs-pitch',                       'a': 'gamma',                  'b': 'pitch',                 'cat': 'presentations','label': 'Gamma vs Pitch'},
+    {'slug': 'gamma-vs-prezi',                       'a': 'gamma',                  'b': 'prezi',                 'cat': 'presentations','label': 'Gamma vs Prezi'},
+    {'slug': 'beautiful-ai-vs-pitch',                'a': 'beautiful-ai',           'b': 'pitch',                 'cat': 'presentations','label': 'Beautiful.ai vs Pitch'},
+    {'slug': 'slidesgo-vs-gamma',                    'a': 'slidesgo',               'b': 'gamma',                 'cat': 'presentations','label': 'Slidesgo vs Gamma'},
+    # ── Business & Investment (leader: TradingView, #2: Fiscal.ai) ───────────
+    {'slug': 'tradingview-vs-fiscal-ai',             'a': 'tradingview',            'b': 'finchat',             'cat': 'business',  'label': 'TradingView vs Fiscal.ai'},
+    {'slug': 'koyfin-vs-tradingview',                'a': 'koyfin',                 'b': 'tradingview',           'cat': 'business',  'label': 'Koyfin vs TradingView'},
+    {'slug': 'fiscal-ai-vs-koyfin',                  'a': 'finchat',              'b': 'koyfin',                'cat': 'business',  'label': 'Fiscal.ai vs Koyfin'},
 ]
 
 # Per-language UI labels — baked into HTML at build time
