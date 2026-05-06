@@ -475,7 +475,7 @@ function badgeLabel(b) {
 
 function localizePrice(price) {
   if (!price) return price;
-  const lang = localStorage.getItem('lang') || 'en';
+  const lang = (typeof I18N !== 'undefined' ? I18N.lang : null) || localStorage.getItem('lang') || 'en';
   const FROM = { ru:'от', es:'desde', de:'ab', ua:'від', he:'מ-', fr:'dès', pt:'a partir de' };
   const MO   = { ru:'/мес', es:'/mes', de:'/Mo.', ua:'/міс', he:"/חו'", fr:'/mois', pt:'/mês' };
   const FREE = { ru:'Бесплатно', es:'Gratis', de:'Kostenlos', ua:'Безкоштовно', he:'חינם', fr:'Gratuit', pt:'Grátis' };
