@@ -28,12 +28,16 @@ TITLE_TEMPLATES = {
 def _load_seo_overrides():
     base = os.path.dirname(__file__)
     overrides = {}
-    for fname in ('seo_all_languages.json', 'seo_fr_pt.json'):
+    for fname in ('seo_all_languages.json', 'seo_fr_pt.json', 'seo_missing_tools.json'):
         try:
             with open(os.path.join(base, fname), encoding='utf-8') as f:
                 raw = re.sub(r'//[^\n]*', '', f.read())
             for lang, entries in json.loads(raw).items():
-                overrides[lang] = {e['slug']: e for e in entries}
+                if lang not in overrides:
+                    overrides[lang] = {}
+                for e in entries:
+                    # First file wins — higher quality hand-crafted content takes priority
+                    overrides[lang].setdefault(e['slug'], e)
         except Exception:
             pass
     return overrides

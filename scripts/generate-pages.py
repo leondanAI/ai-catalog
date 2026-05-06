@@ -18,14 +18,18 @@ def _load_seo_overrides():
             overrides[lang] = {e['slug']: e for e in entries}
     except Exception:
         pass
-    # seo_fr_pt.json: {fr: [...], pt: [...]}
-    try:
-        with open(os.path.join(base, 'seo_fr_pt.json'), encoding='utf-8') as f:
-            raw = re.sub(r'//[^\n]*', '', f.read())
-        for lang, entries in json.loads(raw).items():
-            overrides[lang] = {e['slug']: e for e in entries}
-    except Exception:
-        pass
+    # seo_fr_pt.json + seo_missing_tools.json: {lang: [...]}
+    for extra in ('seo_fr_pt.json', 'seo_missing_tools.json'):
+        try:
+            with open(os.path.join(base, extra), encoding='utf-8') as f:
+                raw = re.sub(r'//[^\n]*', '', f.read())
+            for lang, entries in json.loads(raw).items():
+                if lang not in overrides:
+                    overrides[lang] = {}
+                for e in entries:
+                    overrides[lang].setdefault(e['slug'], e)
+        except Exception:
+            pass
     # seo_titles_meta.json: legacy EN list [{slug, title, meta}]
     try:
         with open(os.path.join(base, 'seo_titles_meta.json'), encoding='utf-8') as f:
