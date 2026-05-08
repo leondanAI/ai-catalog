@@ -7,7 +7,7 @@ Or with specific slugs: python3 scripts/indexnow.py --slugs=chatgpt,claude
 
 import urllib.request, json, sys, os
 
-KEY      = '2bad1f6196ab41dc952169b12f11d86e'
+KEY      = '3beaa04400cd4c92b52449c150d26e11'
 HOST     = 'aitoolfit.ai'
 KEY_URL  = f'https://{HOST}/{KEY}.txt'
 API_URL  = 'https://api.indexnow.org/IndexNow'
