@@ -500,8 +500,8 @@ async function tfRender(data) {
     const badgeLabel = badgeKey.charAt(0).toUpperCase() + badgeKey.slice(1);
     const pricingHtml = `<span class="badge badge-${badgeKey}">${badgeLabel}</span>${!inCatalog && tool.pricing && !/^free$|^freemium$|^paid$/i.test(tool.pricing.trim()) ? ` <span style="color:var(--text3);font-size:11px;margin-left:4px">${tfEsc(tool.pricing)}</span>` : ''}`;
 
-    const prosList = (inCatalog ? info.db.pros : tool.pros) || [];
-    const consList = (inCatalog ? info.db.cons : tool.cons) || [];
+    const prosList = (inCatalog && info.db.pros?.length ? info.db.pros : tool.pros) || [];
+    const consList = (inCatalog && info.db.cons?.length ? info.db.cons : tool.cons) || [];
 
     const ratingHtml = `
       <div class="tf3-section tf3-section-rating">

@@ -82,8 +82,8 @@ SELECTION: Return 1-3 tools with these slots:
 
 FREE CONSTRAINT: If user asks for free/бесплатно/gratis — ONLY include tools with a real permanent free tier. If unsure, exclude the tool. Set meets_free_constraint: false if a tool doesn't meet it.
 
-OUTPUT FORMAT (return exactly this structure):
-{"tools":[{"slot":"BEST OVERALL","name":"Tool Name","url":"https://homepage.com","best_for":"5-8 words: who this tool is best for","why_it_fits":"3-4 sentences on why this fits the specific task","pricing":"free tier / from $X/mo","pros":["fact 1","fact 2","fact 3"],"cons":["limitation 1","limitation 2","limitation 3"]}]}
+OUTPUT FORMAT (return exactly this structure — ALL text fields in the user's language):
+{"tools":[{"slot":"BEST OVERALL","name":"Tool Name","url":"https://homepage.com","best_for":"5-8 words in user language","why_it_fits":"3-4 sentences in user language","pricing":"free tier / from $X/mo","pros":["specific verifiable fact in user language","specific verifiable fact in user language","specific verifiable fact in user language"],"cons":["real limitation in user language","real limitation in user language","real limitation in user language"]}]}
 
 QUALITY: pros/cons must be specific verifiable facts. No "easy to use", "powerful AI", "great for beginners".
 
