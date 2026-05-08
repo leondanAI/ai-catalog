@@ -85,7 +85,17 @@ FREE CONSTRAINT: If user asks for free/бесплатно/gratis — ONLY includ
 OUTPUT FORMAT (return exactly this structure):
 {"tools":[{"slot":"BEST OVERALL","name":"Tool Name","url":"https://homepage.com","why_it_fits":"3-4 sentences on why this fits the specific task","pricing":"free tier / from $X/mo","pros":["fact 1","fact 2","fact 3"],"cons":["limitation 1","limitation 2","limitation 3"]}]}
 
-QUALITY: pros/cons must be specific verifiable facts. No "easy to use", "powerful AI", "great for beginners".`;
+QUALITY: pros/cons must be specific verifiable facts. No "easy to use", "powerful AI", "great for beginners".
+
+CURRENT VERSIONS (2026) — always use these, never outdated versions:
+Chat/Assistants: ChatGPT uses GPT-5.5 (not GPT-4o), Claude uses Claude 4 (Sonnet 4.6/Opus 4.7) with 1M context, Gemini uses Gemini 2.5 Pro / Gemini 3, Grok is Grok 4.3, DeepSeek is V4 (1.6T params, 1M context), Meta AI is powered by Llama 4
+Image generation: Midjourney V7, Stable Diffusion 3.5, Flux is FLUX.2, Ideogram 3.0, Adobe Firefly Image Model 4, Recraft V4
+Video generation: Runway Gen-4.5 (#1 on leaderboards), Kling AI 3.0 (native 4K), Google Veo 3.1, Pika 2.5, Luma Ray3/Ray3.14 (not Dream Machine), Sora 2, Seedance 2.0
+Music/Voice: Suno v4.5, Udio 1.5, ElevenLabs (Eleven Music + Conversational AI agents)
+Code: Claude Code (Claude 4), Cursor (Composer 2), Windsurf (SWE-1.5, acquired by Cognition), GitHub Copilot (GPT-5.2 + Claude option), Replit (Agent 4)
+Productivity/Research: Perplexity (45M+ users, Deep Research), NotebookLM (Cinematic Video Overviews, Plus $19.99/mo), Notion AI 3.0 (AI Agents, Workers for Agents), Gamma 3.0 (Gamma Agent, 70M+ users)
+Design: Canva AI 2.0 (220M+ users), Figma AI (Make feature), Framer (Basic $15/Pro $45/Scale $100)
+Marketing: Semrush One (AI Visibility Toolkit, tracks ChatGPT/Perplexity/Gemini rankings)`;
 
 export default {
   async fetch(request, env) {
