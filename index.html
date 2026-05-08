@@ -378,7 +378,7 @@ function renderCatPills() {
 }
 
 // ── TOOL FINDER ──
-const PROXY_URL = 'https://mypedia-toolfinder.ldl-biz.workers.dev/recommend';
+const PROXY_URL = 'https://mypedia-toolfinder.ldl-biz.workers.dev/recommend?v=2';
 
 function tfFill(el) {
   const inp = document.getElementById('tfInput');
@@ -475,8 +475,14 @@ async function tfRender(data) {
   el.style.display = 'block';
 
   const tools = [];
-  if (data.primary) tools.push({ ...data.primary, best: true });
-  if (data.alternatives?.length) data.alternatives.slice(0,2).forEach(a => tools.push(a));
+  if (data.tools?.length) {
+    // V2 schema: {tools: [{slot, name, url, why_it_fits, ...}]}
+    data.tools.forEach((t, i) => tools.push({ ...t, why: t.why_it_fits, best: i === 0 }));
+  } else if (data.primary) {
+    // V1 fallback
+    tools.push({ ...data.primary, best: true });
+    if (data.alternatives?.length) data.alternatives.slice(0,2).forEach(a => tools.push(a));
+  }
 
   const infos = await Promise.all(tools.map(tool => tf3Fetch(tool.name)));
 
