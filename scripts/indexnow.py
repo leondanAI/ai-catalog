@@ -39,12 +39,16 @@ def get_urls(slugs=None):
                 f'{prefix}/tools.html',
             ]
 
-        # All tool pages (EN only for full run — lang pages follow)
+        # AI tool pages only (skip toolbox utilities)
+        SKIP = {'base64','csv-json','json-formatter','markdown-preview',
+                'password-generator','regex-tester','text-diff','token-counter',
+                'word-counter','case-converter','obviously-ai','phind','tome','socratic-by-google'}
         tools_dir = os.path.join(os.path.dirname(__file__), '..', 'tools')
         for f in sorted(os.listdir(tools_dir)):
             if f.endswith('.html'):
                 slug = f.replace('.html', '')
-                urls.append(f'{base}/tools/{slug}.html')
+                if slug not in SKIP:
+                    urls.append(f'{base}/tools/{slug}.html')
 
         # All compare pages (EN only)
         compare_dir = os.path.join(os.path.dirname(__file__), '..', 'compare')
