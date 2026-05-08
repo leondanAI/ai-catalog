@@ -506,11 +506,11 @@ async function tfRender(data) {
     const prosList = (inCatalog ? info.db.pros : tool.pros) || [];
     const consList = (inCatalog ? info.db.cons : tool.cons) || [];
 
-    const ratingHtml = inCatalog ? `
-      <div class="tf3-section">
+    const ratingHtml = `
+      <div class="tf3-section tf3-section-rating">
         <div class="tf3-label">${t('compare.rating')}</div>
-        <div class="tf3-stars">${tf3Stars(info.avg)}${info.count ? `<span style="font-size:11px;color:var(--text3);margin-left:3px">(${info.count})</span>` : ''}</div>
-      </div>` : '';
+        <div class="tf3-stars">${inCatalog ? tf3Stars(info.avg) + (info.count ? `<span style="font-size:11px;color:var(--text3);margin-left:3px">(${info.count})</span>` : '') : `<span style="font-size:12px;color:var(--text3)">${t('ui.noReviews') || 'No reviews yet'}</span>`}</div>
+      </div>`;
 
     const bestForText = inCatalog ? (info.db.best_for || '') : (tool.best_for || '');
     const bestForHtml = `
