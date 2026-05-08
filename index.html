@@ -571,6 +571,19 @@ async function tfRender(data) {
       <div class="tf3-footer">${footerHtml}</div>
     </div>`;
   }).join('') + `</div>`;
+
+  // Equalize card section heights for visual alignment
+  requestAnimationFrame(() => {
+    const cards = el.querySelectorAll('.tf3-card');
+    if (cards.length < 2) return;
+    const maxLen = Math.max(...[...cards].map(c => c.children.length));
+    for (let i = 0; i < maxLen; i++) {
+      const sections = [...cards].map(c => c.children[i]).filter(Boolean);
+      sections.forEach(s => s.style.minHeight = '');
+      const maxH = Math.max(...sections.map(s => s.offsetHeight));
+      sections.forEach(s => s.style.minHeight = maxH + 'px');
+    }
+  });
 }
 
 function onLangChange() {
