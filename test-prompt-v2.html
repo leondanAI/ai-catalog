@@ -182,8 +182,9 @@ async function tfFind() {
     const data = await res.json();
     if (!res.ok || data.error) throw new Error(data.detail || data.error || 'Server error');
 
-    // Show raw JSON for debugging
+    // Show raw JSON for debugging — always visible
     debugBox.textContent = JSON.stringify(data, null, 2);
+    debugBox.style.display = 'block';
     debugToggle.style.display = 'inline-block';
 
     // Support both v2 schema {tools:[]} and v1 schema {primary, alternatives}
@@ -203,6 +204,9 @@ async function tfFind() {
   } catch(err) {
     errBox.textContent = 'Error: ' + err.message;
     errBox.style.display = 'block';
+    // Show debug even on error
+    debugBox.style.display = 'block';
+    debugToggle.style.display = 'inline-block';
   } finally {
     loading.style.display = 'none';
     btn.disabled = false;
