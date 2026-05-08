@@ -186,7 +186,17 @@ async function tfFind() {
     debugBox.textContent = JSON.stringify(data, null, 2);
     debugToggle.style.display = 'inline-block';
 
-    const tools = data.tools || [];
+    // Support both v2 schema {tools:[]} and v1 schema {primary, alternatives}
+    let tools = [];
+    if (data.tools?.length) {
+      tools = data.tools;
+    } else if (data.primary) {
+      // Convert v1 → v2 display format
+      tools.push({ slot: 'BEST OVERALL', ...data.primary, why_it_fits: data.primary.why });
+      (data.alternatives || []).slice(0,2).forEach((a, i) => {
+        tools.push({ slot: i === 0 ? 'BEST FREE' : 'BEST PREMIUM', ...a, why_it_fits: a.why });
+      });
+    }
     if (!tools.length) throw new Error('No tools returned');
 
     results.innerHTML = `<div class="v2-grid">${renderCards(tools)}</div>`;
