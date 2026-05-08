@@ -40,9 +40,15 @@
 .tf3-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
   gap: 14px;
   width: 100%;
   align-items: start;
+}
+.tf3-grid .tf3-card {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 6;
 }
 .tf3-card {
   background: var(--bg2);
@@ -544,7 +550,7 @@ async function tfRender(data) {
         <div>
           <div class="tf3-name">${tfEsc(tool.name)}</div>
           <div class="tf3-badge-row">
-            <span class="tf-card-tag ${i === 0 ? 'tf-best' : 'tf-alt'}">${i === 0 ? t('tool.bestMatch') : t('tool.alternative')}</span>
+            <span class="tf-card-tag ${i === 0 ? 'tf-best' : 'tf-alt'}">${tool.slot || (i === 0 ? t('tool.bestMatch') : t('tool.alternative'))}</span>
             ${inCatalog
               ? `<span class="tf3-in-catalog-tag">✓ ${t('tool.reviewed') || 'Reviewed'}</span>`
               : `<span class="tf3-external-tag">${t('tool.external') || 'External'}</span>`}
