@@ -379,7 +379,7 @@ function renderCatPills() {
 }
 
 // ── TOOL FINDER ──
-const PROXY_URL = 'https://mypedia-toolfinder.ldl-biz.workers.dev/recommend';
+const PROXY_URL = 'https://mypedia-toolfinder.ldl-biz.workers.dev/recommend?v=2';
 
 function tfFill(el) {
   const inp = document.getElementById('tfInput');
@@ -476,8 +476,12 @@ async function tfRender(data) {
   el.style.display = 'block';
 
   const tools = [];
-  if (data.primary) tools.push({ ...data.primary, best: true });
-  if (data.alternatives?.length) data.alternatives.slice(0,2).forEach(a => tools.push(a));
+  if (data.tools?.length) {
+    data.tools.forEach((t, i) => tools.push({ ...t, why: t.why_it_fits, best: i === 0 }));
+  } else if (data.primary) {
+    tools.push({ ...data.primary, best: true });
+    if (data.alternatives?.length) data.alternatives.slice(0,2).forEach(a => tools.push(a));
+  }
 
   const infos = await Promise.all(tools.map(tool => tf3Fetch(tool.name)));
 
@@ -499,13 +503,13 @@ async function tfRender(data) {
     const prosList = (inCatalog ? info.db.pros : tool.pros) || [];
     const consList = (inCatalog ? info.db.cons : tool.cons) || [];
 
-    const ratingHtml = inCatalog ? `
-      <div class="tf3-section">
+    const ratingHtml = `
+      <div class="tf3-section tf3-section-rating">
         <div class="tf3-label">${t('compare.rating')}</div>
-        <div class="tf3-stars">${tf3Stars(info.avg)}${info.count ? `<span style="font-size:11px;color:var(--text3);margin-left:3px">(${info.count})</span>` : ''}</div>
-      </div>` : '';
+        <div class="tf3-stars">${inCatalog ? tf3Stars(info.avg) + (info.count ? `<span style="font-size:11px;color:var(--text3);margin-left:3px">(${info.count})</span>` : '') : `<span style="font-size:12px;color:var(--text3)">${t('ui.noReviews') || 'No reviews yet'}</span>`}</div>
+      </div>`;
 
-    const bestForText = inCatalog ? (info.db.best_for || '') : '';
+    const bestForText = inCatalog ? (info.db.best_for || '') : (tool.best_for || '');
     const bestForHtml = bestForText ? `
       <div class="tf3-section">
         <div style="font-size:13px;color:var(--text);background:rgba(124,106,247,0.08);border-inline-start:3px solid var(--accent);padding:8px 12px;border-radius:6px;line-height:1.45"><strong style="color:var(--accent);font-weight:600;margin-inline-end:6px">${t('compare.bestFor')}:</strong> ${tfEsc(bestForText)}</div>
@@ -539,7 +543,7 @@ async function tfRender(data) {
         <div>
           <div class="tf3-name">${tfEsc(tool.name)}</div>
           <div class="tf3-badge-row">
-            <span class="tf-card-tag ${i === 0 ? 'tf-best' : 'tf-alt'}">${i === 0 ? t('tool.bestMatch') : t('tool.alternative')}</span>
+            <span class="tf-card-tag ${i === 0 ? 'tf-best' : 'tf-alt'}">${tool.slot || (i === 0 ? t('tool.bestMatch') : t('tool.alternative'))}</span>
             ${inCatalog
               ? `<span class="tf3-in-catalog-tag">✓ ${t('tool.reviewed') || 'Reviewed'}</span>`
               : `<span class="tf3-external-tag">${t('tool.external') || 'External'}</span>`}
@@ -562,6 +566,18 @@ async function tfRender(data) {
       <div class="tf3-footer">${footerHtml}</div>
     </div>`;
   }).join('') + `</div>`;
+
+  requestAnimationFrame(() => {
+    const cards = el.querySelectorAll('.tf3-card');
+    if (cards.length < 2) return;
+    const maxLen = Math.max(...[...cards].map(c => c.children.length));
+    for (let i = 0; i < maxLen; i++) {
+      const sections = [...cards].map(c => c.children[i]).filter(Boolean);
+      sections.forEach(s => s.style.minHeight = '');
+      const maxH = Math.max(...sections.map(s => s.offsetHeight));
+      sections.forEach(s => s.style.minHeight = maxH + 'px');
+    }
+  });
 }
 
 function onLangChange() {
