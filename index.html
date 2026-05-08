@@ -512,7 +512,7 @@ async function tfRender(data) {
         <div class="tf3-stars">${tf3Stars(info.avg)}${info.count ? `<span style="font-size:11px;color:var(--text3);margin-left:3px">(${info.count})</span>` : ''}</div>
       </div>` : '';
 
-    const bestForText = inCatalog ? (info.db.best_for || '') : '';
+    const bestForText = inCatalog ? (info.db.best_for || '') : (tool.best_for || '');
     const bestForHtml = `
       <div class="tf3-section tf3-section-bestfor">
         ${bestForText
