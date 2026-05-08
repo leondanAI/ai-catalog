@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prompt V2 — Test Page</title>
+<link rel="stylesheet" href="/css/style.css">
+<style>
+body { background: var(--bg); color: var(--text); font-family: var(--font-body); padding: 2rem; }
+.test-header { background: rgba(124,106,247,0.1); border: 1px solid rgba(124,106,247,0.3); border-radius: 8px; padding: 12px 16px; margin-bottom: 2rem; font-size: 13px; color: var(--accent); }
+.tf-wrap { max-width: 680px; margin: 0 auto; }
+.tf-input { width: 100%; background: var(--bg2); border: 1.5px solid rgba(124,106,247,0.5); border-radius: 12px; color: var(--text); font-size: 15px; padding: 14px 52px 14px 18px; resize: none; box-sizing: border-box; }
+.tf-input:focus { outline: none; border-color: var(--accent); }
+.tf-row { position: relative; margin-bottom: 12px; }
+.tf-btn { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: var(--accent); color: #fff; border: none; border-radius: 8px; width: 36px; height: 36px; font-size: 18px; cursor: pointer; }
+.tf-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.5rem; }
+.tf-pill { font-size: 12px; color: var(--text2); background: var(--bg2); border: 1px solid rgba(124,106,247,0.45); border-radius: 999px; padding: 5px 13px; cursor: pointer; }
+.tf-pill:hover { color: var(--text); border-color: var(--accent); }
+.tf-loading { display: none; align-items: center; gap: 10px; color: var(--text2); font-size: 14px; padding: 1rem 0; }
+.tf-error { color: #f56565; font-size: 13px; padding: 8px 0; display: none; }
+
+/* Result cards */
+.v2-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-top: 1.5rem; }
+.v2-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; display: flex; flex-direction: column; gap: 12px; }
+.v2-slot { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; display: inline-block; }
+.v2-slot.overall { background: rgba(124,106,247,0.15); color: var(--accent); }
+.v2-slot.free    { background: rgba(45,212,160,0.15); color: var(--green); }
+.v2-slot.premium { background: rgba(245,158,11,0.15); color: var(--amber); }
+.v2-head { display: flex; align-items: center; gap: 10px; }
+.v2-name { font-family: var(--font-display); font-size: 16px; font-weight: 600; }
+.v2-why { font-size: 13px; color: var(--text2); line-height: 1.6; }
+.v2-pricing { font-size: 12px; }
+.v2-label { font-size: 11px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; font-weight: 600; }
+.v2-list { display: flex; flex-direction: column; gap: 4px; }
+.v2-list-item { display: flex; gap: 6px; font-size: 12px; color: var(--text2); line-height: 1.4; }
+.v2-actions { display: flex; gap: 8px; margin-top: auto; padding-top: 4px; }
+.v2-btn { font-size: 12px; padding: 6px 12px; border-radius: 6px; text-decoration: none; font-weight: 600; }
+.v2-visit { background: var(--accent); color: #fff; }
+.v2-visit:hover { opacity: 0.85; }
+.v2-constraint { font-size: 11px; padding: 4px 8px; border-radius: 4px; }
+.v2-constraint.ok  { background: rgba(45,212,160,0.1); color: var(--green); }
+.v2-constraint.no  { background: rgba(245,99,99,0.1); color: #f56565; }
+
+/* Raw JSON debug */
+.v2-debug { margin-top: 2rem; background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; font-family: monospace; font-size: 12px; color: var(--text2); white-space: pre-wrap; word-break: break-all; display: none; }
+.v2-debug-toggle { font-size: 12px; color: var(--text3); cursor: pointer; margin-top: 1rem; display: inline-block; }
+.v2-debug-toggle:hover { color: var(--text); }
+</style>
+</head>
+<body>
+
+<div class="test-header">
+  ⚗️ <strong>Prompt V2 — Test Page</strong> &nbsp;|&nbsp;
+  New schema: BEST OVERALL / BEST FREE / BEST PREMIUM slots &nbsp;|&nbsp;
+  <a href="/" style="color:var(--accent)">← Back to main</a>
+</div>
+
+<div class="tf-wrap">
+  <div class="tf-row">
+    <textarea class="tf-input" id="tfInput" rows="2" placeholder="Describe your task... (e.g. I need to edit a podcast and add subtitles)" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();tfFind()}"></textarea>
+    <button class="tf-btn" onclick="tfFind()">→</button>
+  </div>
+
+  <div class="tf-pills">
+    <span class="tf-pill" onclick="tfFill(this)" data-task="Edit a podcast and add subtitles">Edit a podcast</span>
+    <span class="tf-pill" onclick="tfFill(this)" data-task="Generate product photos for my online store">Product photos</span>
+    <span class="tf-pill" onclick="tfFill(this)" data-task="Write cold emails that actually get replies">Cold emails</span>
+    <span class="tf-pill" onclick="tfFill(this)" data-task="Free AI tool to transcribe a 2-hour meeting">Free transcription</span>
+    <span class="tf-pill" onclick="tfFill(this)" data-task="Create short-form videos from my blog posts">Short-form videos</span>
+    <span class="tf-pill" onclick="tfFill(this)" data-task="Бесплатный инструмент для создания презентаций">Презентация бесплатно</span>
+  </div>
+
+  <div class="tf-loading" id="tfLoading">
+    <div style="width:18px;height:18px;border:2px solid var(--accent);border-top-color:transparent;border-radius:50%;animation:spin 0.7s linear infinite"></div>
+    Finding best tools…
+  </div>
+  <div class="tf-error" id="tfError"></div>
+  <div id="tfResults"></div>
+  <span class="v2-debug-toggle" id="debugToggle" style="display:none" onclick="toggleDebug()">Show raw JSON ▾</span>
+  <pre class="v2-debug" id="debugBox"></pre>
+</div>
+
+<style>@keyframes spin{to{transform:rotate(360deg)}}</style>
+
+<script>
+const PROXY_URL_V2 = 'https://mypedia-toolfinder.ldl-biz.workers.dev/recommend?v=2';
+
+function tfFill(el) {
+  document.getElementById('tfInput').value = el.dataset.task || el.textContent.trim();
+  document.getElementById('tfInput').focus();
+}
+
+function toggleDebug() {
+  const box = document.getElementById('debugBox');
+  const toggle = document.getElementById('debugToggle');
+  const visible = box.style.display === 'block';
+  box.style.display = visible ? 'none' : 'block';
+  toggle.textContent = visible ? 'Show raw JSON ▾' : 'Hide raw JSON ▴';
+}
+
+function slotClass(slot) {
+  if (!slot) return 'overall';
+  const s = slot.toLowerCase();
+  if (s.includes('free')) return 'free';
+  if (s.includes('premium')) return 'premium';
+  return 'overall';
+}
+
+function favicon(url) {
+  try {
+    const domain = new URL(url).hostname;
+    return `<img src="https://www.google.com/s2/favicons?sz=64&domain=${domain}" width="28" height="28" style="border-radius:6px" onerror="this.style.display='none'">`;
+  } catch { return ''; }
+}
+
+function listHtml(items, icon, color) {
+  if (!items?.length) return '<span style="color:var(--text3);font-size:12px">—</span>';
+  return `<div class="v2-list">${items.slice(0,3).map(p =>
+    `<div class="v2-list-item"><span style="color:${color};flex-shrink:0">${icon}</span><span>${p}</span></div>`
+  ).join('')}</div>`;
+}
+
+function renderCards(tools) {
+  const hasFreeConstraint = tools.some(t => 'meets_free_constraint' in t);
+  return tools.map(tool => {
+    const sc = slotClass(tool.slot);
+    const constraintHtml = hasFreeConstraint
+      ? `<span class="v2-constraint ${tool.meets_free_constraint ? 'ok' : 'no'}">${tool.meets_free_constraint ? '✓ Free plan available' : '✗ No free plan'}</span>`
+      : '';
+    return `
+    <div class="v2-card">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+        <span class="v2-slot ${sc}">${tool.slot || 'BEST OVERALL'}</span>
+        ${constraintHtml}
+      </div>
+      <div class="v2-head">
+        ${favicon(tool.url || '')}
+        <div>
+          <div class="v2-name">${tool.name}</div>
+          <div class="v2-pricing">${tool.pricing || ''}</div>
+        </div>
+      </div>
+      <div class="v2-why">${tool.why_it_fits || ''}</div>
+      <div>
+        <div class="v2-label">Pros</div>
+        ${listHtml(tool.pros, '✅', '#2dd4a0')}
+      </div>
+      <div>
+        <div class="v2-label">Cons</div>
+        ${listHtml(tool.cons, '❌', '#f56565')}
+      </div>
+      <div class="v2-actions">
+        <a href="${tool.url || '#'}" target="_blank" rel="noopener" class="v2-btn v2-visit">Visit →</a>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+async function tfFind() {
+  const task = document.getElementById('tfInput').value.trim();
+  if (!task) return;
+  const btn = document.querySelector('.tf-btn');
+  const loading = document.getElementById('tfLoading');
+  const results = document.getElementById('tfResults');
+  const errBox = document.getElementById('tfError');
+  const debugToggle = document.getElementById('debugToggle');
+  const debugBox = document.getElementById('debugBox');
+
+  btn.disabled = true;
+  loading.style.display = 'flex';
+  results.innerHTML = '';
+  errBox.style.display = 'none';
+  debugToggle.style.display = 'none';
+  debugBox.style.display = 'none';
+
+  try {
+    const res = await fetch(PROXY_URL_V2, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ task })
+    });
+    const data = await res.json();
+    if (!res.ok || data.error) throw new Error(data.detail || data.error || 'Server error');
+
+    // Show raw JSON for debugging
+    debugBox.textContent = JSON.stringify(data, null, 2);
+    debugToggle.style.display = 'inline-block';
+
+    const tools = data.tools || [];
+    if (!tools.length) throw new Error('No tools returned');
+
+    results.innerHTML = `<div class="v2-grid">${renderCards(tools)}</div>`;
+  } catch(err) {
+    errBox.textContent = 'Error: ' + err.message;
+    errBox.style.display = 'block';
+  } finally {
+    loading.style.display = 'none';
+    btn.disabled = false;
+  }
+}
+</script>
+</body>
+</html>
