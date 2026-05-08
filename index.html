@@ -40,15 +40,9 @@
 .tf3-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: auto;
   gap: 14px;
   width: 100%;
   align-items: start;
-}
-.tf3-grid .tf3-card {
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: span 6;
 }
 .tf3-card {
   background: var(--bg2);
@@ -65,9 +59,10 @@
 }
 .tf3-best { border-color: rgba(124,106,247,0.5) !important; }
 .tf3-head {
-  display: flex; align-items: center; gap: 10px;
+  display: flex; align-items: flex-start; gap: 10px;
   padding: 1rem 1.1rem 0.75rem;
   border-bottom: 1px solid var(--border);
+  min-height: 72px;
 }
 .tf3-avatar {
   width: 38px; height: 38px; flex-shrink: 0;
@@ -89,6 +84,7 @@
   padding: 2px 7px; border-radius: 20px;
 }
 .tf3-section { padding: 0.75rem 1.1rem; border-bottom: 1px solid var(--border); font-size: 13px; }
+.tf3-section-bestfor { min-height: 54px; }
 .tf3-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--text3); margin-bottom: 5px; }
 .tf3-why { color: var(--text2); line-height: 1.6; }
 .tf3-list { display: flex; flex-direction: column; gap: 5px; }
@@ -517,10 +513,12 @@ async function tfRender(data) {
       </div>` : '';
 
     const bestForText = inCatalog ? (info.db.best_for || '') : '';
-    const bestForHtml = bestForText ? `
-      <div class="tf3-section">
-        <div style="font-size:13px;color:var(--text);background:rgba(124,106,247,0.08);border-inline-start:3px solid var(--accent);padding:8px 12px;border-radius:6px;line-height:1.45"><strong style="color:var(--accent);font-weight:600;margin-inline-end:6px">${t('compare.bestFor')}:</strong> ${tfEsc(bestForText)}</div>
-      </div>` : '';
+    const bestForHtml = `
+      <div class="tf3-section tf3-section-bestfor">
+        ${bestForText
+          ? `<div style="font-size:13px;color:var(--text);background:rgba(124,106,247,0.08);border-inline-start:3px solid var(--accent);padding:8px 12px;border-radius:6px;line-height:1.45"><strong style="color:var(--accent);font-weight:600;margin-inline-end:6px">${t('compare.bestFor')}:</strong> ${tfEsc(bestForText)}</div>`
+          : `<div style="min-height:20px"></div>`}
+      </div>`;
 
     const detailSections = `
       ${bestForHtml}
