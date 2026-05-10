@@ -235,6 +235,88 @@ def fetch_tool(slug, lang):
         row = sb_get(slug, 'en')
     return row
 
+def fetch_comparison(slug, lang):
+    """Fetch verdict + FAQ from comparisons table. Falls back to EN."""
+    for l in ([lang] if lang == 'en' else [lang, 'en']):
+        qs = urllib.parse.urlencode({
+            'slug': f'eq.{slug}',
+            'lang': f'eq.{l}',
+            'select': 'choose_a,choose_b,faq',
+        })
+        req = urllib.request.Request(
+            f'{SB_URL}/rest/v1/comparisons?{qs}',
+            headers={'apikey': SB_ANON, 'Authorization': f'Bearer {SB_ANON}'}
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                rows = json.load(resp)
+            if rows and (rows[0].get('choose_a') or rows[0].get('faq')):
+                return rows[0]
+        except Exception:
+            pass
+    return None
+
+def build_verdict_faq_html(comp, a_name, b_name):
+    """Build the Verdict + FAQ section HTML from comparisons table data."""
+    if not comp:
+        return ''
+    choose_a = comp.get('choose_a')
+    choose_b = comp.get('choose_b')
+    faq = comp.get('faq')
+    if not (choose_a or faq):
+        return ''
+
+    if isinstance(choose_a, str):
+        try: choose_a = json.loads(choose_a)
+        except Exception: choose_a = []
+    if isinstance(choose_b, str):
+        try: choose_b = json.loads(choose_b)
+        except Exception: choose_b = []
+    choose_a = choose_a or []
+    choose_b = choose_b or []
+    faq = faq or []
+
+    ca_html = ''.join(
+        f'<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px">'
+        f'<span style="flex-shrink:0">{esc(b)}</span></li>' for b in choose_a
+    )
+    cb_html = ''.join(
+        f'<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px">'
+        f'<span style="flex-shrink:0">{esc(b)}</span></li>' for b in choose_b
+    )
+    faq_html = ''
+    for item in faq:
+        faq_html += (
+            f'<div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" '
+            f'itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">'
+            f'<div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">{esc(item.get("q",""))}</div>'
+            f'<div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">'
+            f'<span itemprop="text">{esc(item.get("a",""))}</span></div></div>'
+        )
+
+    verdict_block = ''
+    if choose_a or choose_b:
+        verdict_block = (
+            f'<h2 style="font-family:var(--font-display);font-size:22px;font-weight:700;margin-bottom:1.25rem">Verdict: Which Should You Choose?</h2>'
+            f'<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:2.5rem">'
+            f'<div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem">'
+            f'<div style="font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--accent);margin-bottom:0.75rem">Choose {esc(a_name)} if…</div>'
+            f'<ul style="list-style:none;padding:0;margin:0">{ca_html}</ul></div>'
+            f'<div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem">'
+            f'<div style="font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--accent);margin-bottom:0.75rem">Choose {esc(b_name)} if…</div>'
+            f'<ul style="list-style:none;padding:0;margin:0">{cb_html}</ul></div></div>'
+        )
+
+    faq_section = ''
+    if faq_html:
+        faq_section = (
+            f'<h2 style="font-family:var(--font-display);font-size:22px;font-weight:700;margin-bottom:1.25rem">Frequently Asked Questions</h2>'
+            f'<div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage">'
+            f'{faq_html}</div>'
+        )
+
+    return f'\n  <div style="margin-top:2.5rem">\n    {verdict_block}\n    {faq_section}\n  </div>'
+
 # ── helpers ───────────────────────────────────────────────────────────────────
 def esc(s):
     return _html.escape(str(s) if s is not None else '', quote=True)
@@ -394,10 +476,12 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
          f'<link rel="alternate" hreflang="en" href="{BASE_URL}/compare/{cmp["slug"]}.html">'] +
         [f'<link rel="alternate" hreflang="{lc}" href="{BASE_URL}/{lc}/compare/{cmp["slug"]}.html">' for lc in LANGUAGES]
     )
-    table_html  = comparison_table_html(a, b, lang)
-    schema      = schema_org_jsonld(a, b, canonical_url, lang)
-    footer_html = load_footer(lang, cmp['slug'], cmp.get('cat'))
-    lang_script = '' if lang == 'en' else f'<script>localStorage.setItem("lang","{lang}");</script>\n'
+    table_html     = comparison_table_html(a, b, lang)
+    schema         = schema_org_jsonld(a, b, canonical_url, lang)
+    footer_html    = load_footer(lang, cmp['slug'], cmp.get('cat'))
+    lang_script    = '' if lang == 'en' else f'<script>localStorage.setItem("lang","{lang}");</script>\n'
+    comp_row       = fetch_comparison(cmp['slug'], lang)
+    verdict_faq    = build_verdict_faq_html(comp_row, a['name'], b['name'])
 
     return f'''<!DOCTYPE html>
 <html lang="{lang}"{dir_attr}>
@@ -474,6 +558,7 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
     <p>{esc(description)}</p>
   </div>
   {table_html}
+{verdict_faq}
 </main>
 
 {footer_html}
