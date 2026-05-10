@@ -756,10 +756,12 @@ for slug, data in DATA.items():
         html = f.read()
     section = build_section(data)
     if '<!-- verdict-start -->' in html or 'Verdict: Which Should You Choose?' in html:
-        # Remove everything from verdict-start marker (or old style div) to </main>
+        # Remove old-style verdict section (no marker) — matches from the verdict div to </main>
+        html = re.sub(r'\n  <div style="margin-top:2\.5rem">\n    <h2[^>]*>Verdict:.*?</main>', '\n</main>', html, flags=re.DOTALL)
+        # Remove new-style verdict section (with marker)
         html = re.sub(r'\n<!-- verdict-start -->.*?</main>', '\n</main>', html, flags=re.DOTALL)
-        # Also clean up any orphaned <style>.vgrid tags from older runs
-        html = re.sub(r'\n  <style>\.vgrid[^<]*</style>', '', html)
+        # Clean up any orphaned <style>.vgrid tags
+        html = re.sub(r'  <style>\.vgrid[^\n]*\n?', '', html)
     new_html = html.replace('</main>', section + '\n</main>')
     if new_html == html:
         print(f"❌ NO </main> TAG: {slug}")
