@@ -308,6 +308,8 @@ def render_page(tool, all_tools, rating_data=None):
     meta_desc  = _seo.get('meta') or build_meta_desc(name, short_desc, badge, best_for)
     pros      = tool.get('pros') or []
     cons      = tool.get('cons') or []
+    choose_if = tool.get('choose_if') or []
+    faq_items = tool.get('faq') or []
 
     cat_label = CATEGORY_LABELS.get(category, category.title())
     cat_icon  = CATEGORY_ICONS.get(category, '🤖')
@@ -316,6 +318,43 @@ def render_page(tool, all_tools, rating_data=None):
 
     pros_html = '\n'.join(f'        <li>{esc(p)}</li>' for p in pros)
     cons_html = '\n'.join(f'        <li>{esc(p)}</li>' for p in cons)
+
+    # Choose if section
+    if choose_if:
+        ci_items = '\n'.join(
+            f'<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px">'
+            f'<span style="min-width:0;word-break:break-word">{esc(b)}</span></li>'
+            for b in choose_if
+        )
+        choose_if_html = (
+            f'<div style="margin-top:2rem">'
+            f'<h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose {esc(name)} if…</h2>'
+            f'<div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem">'
+            f'<ul style="list-style:none;padding:0;margin:0">{ci_items}</ul>'
+            f'</div></div>'
+        )
+    else:
+        choose_if_html = ''
+
+    # FAQ section
+    if faq_items:
+        faq_rows = ''
+        for item in faq_items:
+            faq_rows += (
+                f'<div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" '
+                f'itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">'
+                f'<div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">{esc(item.get("q",""))}</div>'
+                f'<div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">'
+                f'<span itemprop="text">{esc(item.get("a",""))}</span></div></div>'
+            )
+        faq_html = (
+            f'<div style="margin-top:2rem">'
+            f'<h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2>'
+            f'<div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage">'
+            f'{faq_rows}</div></div>'
+        )
+    else:
+        faq_html = ''
 
     also = also_consider(all_tools, tool)
     also_html = ''
@@ -539,6 +578,9 @@ textarea.form-input {{ resize: vertical; min-height: 90px; }}
       </ul>
     </div>
   </div>
+
+  {choose_if_html}
+  {faq_html}
 
   <div class="section-title-sm">Also consider</div>
   <div class="also-grid">
