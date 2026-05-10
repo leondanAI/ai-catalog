@@ -132,9 +132,39 @@ COMPARISONS = [
     {'slug': 'beautiful-ai-vs-pitch',                'a': 'beautiful-ai',           'b': 'pitch',                 'cat': 'presentations','label': 'Beautiful.ai vs Pitch'},
     {'slug': 'slidesgo-vs-gamma',                    'a': 'slidesgo',               'b': 'gamma',                 'cat': 'presentations','label': 'Slidesgo vs Gamma'},
     # ── Business & Investment (leader: TradingView, #2: Fiscal.ai) ───────────
-    {'slug': 'tradingview-vs-fiscal-ai',             'a': 'tradingview',            'b': 'finchat',             'cat': 'business',  'label': 'TradingView vs Fiscal.ai'},
-    {'slug': 'koyfin-vs-tradingview',                'a': 'koyfin',                 'b': 'tradingview',           'cat': 'business',  'label': 'Koyfin vs TradingView'},
-    {'slug': 'fiscal-ai-vs-koyfin',                  'a': 'finchat',              'b': 'koyfin',                'cat': 'business',  'label': 'Fiscal.ai vs Koyfin'},
+    {'slug': 'tradingview-vs-fiscal-ai',             'a': 'tradingview',            'b': 'finchat',               'cat': 'business',      'label': 'TradingView vs Fiscal.ai'},
+    {'slug': 'koyfin-vs-tradingview',                'a': 'koyfin',                 'b': 'tradingview',           'cat': 'business',      'label': 'Koyfin vs TradingView'},
+    {'slug': 'fiscal-ai-vs-koyfin',                  'a': 'finchat',                'b': 'koyfin',                'cat': 'business',      'label': 'Fiscal.ai vs Koyfin'},
+    {'slug': 'tickeron-vs-tradingview',              'a': 'tickeron',               'b': 'tradingview',           'cat': 'business',      'label': 'Tickeron vs TradingView'},
+    {'slug': 'uptrends-ai-vs-koyfin',               'a': 'uptrends-ai',            'b': 'koyfin',                'cat': 'business',      'label': 'Uptrends.ai vs Koyfin'},
+    # ── Code (new) ────────────────────────────────────────────────────────────
+    {'slug': 'amazon-q-developer-vs-github-copilot','a': 'amazon-q-developer',     'b': 'github-copilot',        'cat': 'code',          'label': 'Amazon Q Developer vs GitHub Copilot'},
+    {'slug': 'continue-dev-vs-github-copilot',      'a': 'continue-dev',           'b': 'github-copilot',        'cat': 'code',          'label': 'Continue.dev vs GitHub Copilot'},
+    {'slug': 'opencode-vs-claude-code',             'a': 'opencode',               'b': 'claude-code',           'cat': 'code',          'label': 'OpenCode vs Claude Code'},
+    {'slug': 'zed-vs-cursor',                       'a': 'zed',                    'b': 'cursor',                'cat': 'code',          'label': 'Zed vs Cursor'},
+    # ── Image (new) ───────────────────────────────────────────────────────────
+    {'slug': 'comfyui-vs-stable-diffusion',         'a': 'comfyui',                'b': 'stable-diffusion',      'cat': 'image',         'label': 'ComfyUI vs Stable Diffusion'},
+    {'slug': 'krea-ai-vs-midjourney',               'a': 'krea-ai',                'b': 'midjourney',            'cat': 'image',         'label': 'Krea AI vs Midjourney'},
+    {'slug': 'nano-banana-vs-leonardo-ai',          'a': 'nano-banana',            'b': 'leonardo-ai',           'cat': 'image',         'label': 'Nano Banana vs Leonardo.ai'},
+    {'slug': 'chatgpt-images-vs-adobe-firefly',     'a': 'chatgpt-images',         'b': 'adobe-firefly',         'cat': 'image',         'label': 'ChatGPT Images vs Adobe Firefly'},
+    # ── Design (new) ──────────────────────────────────────────────────────────
+    {'slug': 'claude-design-vs-figma-ai',           'a': 'claude-design',          'b': 'figma-ai',              'cat': 'design',        'label': 'Claude Design vs Figma AI'},
+    {'slug': 'google-stitch-vs-figma-ai',           'a': 'google-stitch',          'b': 'figma-ai',              'cat': 'design',        'label': 'Google Stitch vs Figma AI'},
+    {'slug': 'recraft-vs-canva-ai',                 'a': 'recraft',                'b': 'canva-ai',              'cat': 'design',        'label': 'Recraft vs Canva AI'},
+    {'slug': 'remove-bg-vs-canva-ai',               'a': 'remove-bg',              'b': 'canva-ai',              'cat': 'design',        'label': 'Remove.bg vs Canva AI'},
+    # ── Video (new) ───────────────────────────────────────────────────────────
+    {'slug': 'seedance-vs-runway',                  'a': 'seedance-2-0',           'b': 'runway',                'cat': 'video',         'label': 'Seedance vs Runway'},
+    # ── Voice (new) ───────────────────────────────────────────────────────────
+    {'slug': 'whisper-vs-otter-ai',                 'a': 'whisper',                'b': 'otter-ai',              'cat': 'voice',         'label': 'Whisper vs Otter.ai'},
+    # ── Marketing (new) ───────────────────────────────────────────────────────
+    {'slug': 'adcreative-ai-vs-canva-ai',           'a': 'adcreative-ai',          'b': 'canva-ai',              'cat': 'marketing',     'label': 'AdCreative.ai vs Canva AI'},
+    # ── Data (new) ────────────────────────────────────────────────────────────
+    {'slug': 'akkio-vs-julius-ai',                  'a': 'akkio',                  'b': 'julius-ai',             'cat': 'data',          'label': 'Akkio vs Julius AI'},
+    # ── Agents (new) ──────────────────────────────────────────────────────────
+    {'slug': 'autogpt-vs-manus',                    'a': 'autogpt',                'b': 'manus',                 'cat': 'agents',        'label': 'AutoGPT vs Manus'},
+    # ── Education (new) ───────────────────────────────────────────────────────
+    {'slug': 'coursera-coach-vs-khanmigo',          'a': 'coursera-coach',         'b': 'khanmigo',              'cat': 'education',     'label': 'Coursera Coach vs Khanmigo'},
+    {'slug': 'socratic-vs-khanmigo',                'a': 'socratic-by-google',     'b': 'khanmigo',              'cat': 'education',     'label': 'Socratic vs Khanmigo'},
 ]
 
 # Per-language UI labels — baked into HTML at build time
@@ -278,11 +308,11 @@ def build_verdict_faq_html(comp, a_name, b_name):
 
     ca_html = ''.join(
         f'<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px">'
-        f'<span style="flex-shrink:0">{esc(b)}</span></li>' for b in choose_a
+        f'<span style="min-width:0;word-break:break-word">{esc(b)}</span></li>' for b in choose_a
     )
     cb_html = ''.join(
         f'<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px">'
-        f'<span style="flex-shrink:0">{esc(b)}</span></li>' for b in choose_b
+        f'<span style="min-width:0;word-break:break-word">{esc(b)}</span></li>' for b in choose_b
     )
     faq_html = ''
     for item in faq:
@@ -297,13 +327,14 @@ def build_verdict_faq_html(comp, a_name, b_name):
     verdict_block = ''
     if choose_a or choose_b:
         verdict_block = (
+            f'<style>.vgrid{{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-bottom:2.5rem}}@media(max-width:600px){{.vgrid{{grid-template-columns:1fr}}}}</style>'
             f'<h2 style="font-family:var(--font-display);font-size:22px;font-weight:700;margin-bottom:1.25rem">Verdict: Which Should You Choose?</h2>'
-            f'<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:2.5rem">'
+            f'<div class="vgrid">'
             f'<div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem">'
-            f'<div style="font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--accent);margin-bottom:0.75rem">Choose {esc(a_name)} if…</div>'
+            f'<div style="font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--accent);margin-bottom:0.75rem;word-break:break-word">Choose {esc(a_name)} if…</div>'
             f'<ul style="list-style:none;padding:0;margin:0">{ca_html}</ul></div>'
             f'<div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem">'
-            f'<div style="font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--accent);margin-bottom:0.75rem">Choose {esc(b_name)} if…</div>'
+            f'<div style="font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--accent);margin-bottom:0.75rem;word-break:break-word">Choose {esc(b_name)} if…</div>'
             f'<ul style="list-style:none;padding:0;margin:0">{cb_html}</ul></div></div>'
         )
 
