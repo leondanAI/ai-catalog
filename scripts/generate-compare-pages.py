@@ -169,14 +169,14 @@ COMPARISONS = [
 
 # Per-language UI labels — baked into HTML at build time
 LABELS = {
-    'en': {'ov':'Overview','pr':'Pricing','us':'Users','bf':'Best for','rt':'Rating','ad':'Advantages','ds':'Disadvantages','wb':'Website','vt':'Visit','rv':'Full review','nr':'No reviews yet'},
-    'ru': {'ov':'Обзор','pr':'Цена','us':'Пользователи','bf':'Лучше для','rt':'Рейтинг','ad':'Преимущества','ds':'Недостатки','wb':'Сайт','vt':'Посетить','rv':'Полный обзор','nr':'Нет отзывов'},
-    'es': {'ov':'Descripción','pr':'Precio','us':'Usuarios','bf':'Mejor para','rt':'Calificación','ad':'Ventajas','ds':'Desventajas','wb':'Sitio web','vt':'Visitar','rv':'Reseña completa','nr':'Sin reseñas'},
-    'fr': {'ov':'Aperçu','pr':'Prix','us':'Utilisateurs','bf':'Idéal pour','rt':'Évaluation','ad':'Avantages','ds':'Inconvénients','wb':'Site web','vt':'Visiter','rv':'Avis complet','nr':'Aucun avis'},
-    'de': {'ov':'Überblick','pr':'Preis','us':'Nutzer','bf':'Am besten für','rt':'Bewertung','ad':'Vorteile','ds':'Nachteile','wb':'Website','vt':'Besuchen','rv':'Vollständige Bewertung','nr':'Noch keine Bewertungen'},
-    'pt': {'ov':'Visão geral','pr':'Preço','us':'Usuários','bf':'Melhor para','rt':'Avaliação','ad':'Vantagens','ds':'Desvantagens','wb':'Site','vt':'Visitar','rv':'Avaliação completa','nr':'Sem avaliações'},
-    'ua': {'ov':'Огляд','pr':'Ціна','us':'Користувачі','bf':'Краще для','rt':'Рейтинг','ad':'Переваги','ds':'Недоліки','wb':'Сайт','vt':'Відвідати','rv':'Повний огляд','nr':'Немає відгуків'},
-    'he': {'ov':'סקירה','pr':'תמחור','us':'משתמשים','bf':'הטוב ביותר עבור','rt':'דירוג','ad':'יתרונות','ds':'חסרונות','wb':'אתר','vt':'בקר','rv':'סקירה מלאה','nr':'אין ביקורות עדיין'},
+    'en': {'ov':'Overview','pr':'Pricing','us':'Users','bf':'Best for','rt':'Rating','ad':'Advantages','ds':'Disadvantages','wb':'Website','vt':'Visit','rv':'Full review','nr':'No reviews yet','vd':'Verdict: Which Should You Choose?','ci_pre':'Choose','ci_suf':'if…','fq':'Frequently Asked Questions'},
+    'ru': {'ov':'Обзор','pr':'Цена','us':'Пользователи','bf':'Лучше для','rt':'Рейтинг','ad':'Преимущества','ds':'Недостатки','wb':'Сайт','vt':'Посетить','rv':'Полный обзор','nr':'Нет отзывов','vd':'Вердикт: что выбрать?','ci_pre':'Выбирайте','ci_suf':'если…','fq':'Часто задаваемые вопросы'},
+    'es': {'ov':'Descripción','pr':'Precio','us':'Usuarios','bf':'Mejor para','rt':'Calificación','ad':'Ventajas','ds':'Desventajas','wb':'Sitio web','vt':'Visitar','rv':'Reseña completa','nr':'Sin reseñas','vd':'Veredicto: ¿cuál elegir?','ci_pre':'Elige','ci_suf':'si…','fq':'Preguntas frecuentes'},
+    'fr': {'ov':'Aperçu','pr':'Prix','us':'Utilisateurs','bf':'Idéal pour','rt':'Évaluation','ad':'Avantages','ds':'Inconvénients','wb':'Site web','vt':'Visiter','rv':'Avis complet','nr':'Aucun avis','vd':'Verdict : lequel choisir ?','ci_pre':'Choisissez','ci_suf':'si…','fq':'Questions fréquentes'},
+    'de': {'ov':'Überblick','pr':'Preis','us':'Nutzer','bf':'Am besten für','rt':'Bewertung','ad':'Vorteile','ds':'Nachteile','wb':'Website','vt':'Besuchen','rv':'Vollständige Bewertung','nr':'Noch keine Bewertungen','vd':'Fazit: Was sollten Sie wählen?','ci_pre':'Wählen Sie','ci_suf':'wenn…','fq':'Häufig gestellte Fragen'},
+    'pt': {'ov':'Visão geral','pr':'Preço','us':'Usuários','bf':'Melhor para','rt':'Avaliação','ad':'Vantagens','ds':'Desvantagens','wb':'Site','vt':'Visitar','rv':'Avaliação completa','nr':'Sem avaliações','vd':'Veredicto: qual escolher?','ci_pre':'Escolha','ci_suf':'se…','fq':'Perguntas frequentes'},
+    'ua': {'ov':'Огляд','pr':'Ціна','us':'Користувачі','bf':'Краще для','rt':'Рейтинг','ad':'Переваги','ds':'Недоліки','wb':'Сайт','vt':'Відвідати','rv':'Повний огляд','nr':'Немає відгуків','vd':'Вердикт: що обрати?','ci_pre':'Обирайте','ci_suf':'якщо…','fq':'Часті запитання'},
+    'he': {'ov':'סקירה','pr':'תמחור','us':'משתמשים','bf':'הטוב ביותר עבור','rt':'דירוג','ad':'יתרונות','ds':'חסרונות','wb':'אתר','vt':'בקר','rv':'סקירה מלאה','nr':'אין ביקורות עדיין','vd':'פסיקה: מה לבחור?','ci_pre':'בחר','ci_suf':'אם…','fq':'שאלות נפוצות'},
 }
 
 BADGE_LABELS = {
@@ -286,8 +286,10 @@ def fetch_comparison(slug, lang):
             pass
     return None
 
-def build_verdict_faq_html(comp, a_name, b_name):
+def build_verdict_faq_html(comp, a_name, b_name, lang='en', L=None):
     """Build the Verdict + FAQ section HTML from comparisons table data."""
+    if L is None:
+        L = LABELS.get(lang, LABELS['en'])
     if not comp:
         return ''
     choose_a = comp.get('choose_a')
@@ -328,20 +330,20 @@ def build_verdict_faq_html(comp, a_name, b_name):
     if choose_a or choose_b:
         verdict_block = (
             f'<style>.vgrid{{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-bottom:2.5rem}}@media(max-width:600px){{.vgrid{{grid-template-columns:1fr}}}}</style>'
-            f'<h2 style="font-family:var(--font-display);font-size:22px;font-weight:700;margin-bottom:1.25rem">Verdict: Which Should You Choose?</h2>'
+            f'<h2 style="font-family:var(--font-display);font-size:22px;font-weight:700;margin-bottom:1.25rem">{esc(L.get("vd","Verdict: Which Should You Choose?"))}</h2>'
             f'<div class="vgrid">'
             f'<div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem">'
-            f'<div style="font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--accent);margin-bottom:0.75rem;word-break:break-word">Choose {esc(a_name)} if…</div>'
+            f'<div style="font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--accent);margin-bottom:0.75rem;word-break:break-word">{esc(L.get("ci_pre","Choose"))} {esc(a_name)} {esc(L.get("ci_suf","if…"))}</div>'
             f'<ul style="list-style:none;padding:0;margin:0">{ca_html}</ul></div>'
             f'<div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem">'
-            f'<div style="font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--accent);margin-bottom:0.75rem;word-break:break-word">Choose {esc(b_name)} if…</div>'
+            f'<div style="font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--accent);margin-bottom:0.75rem;word-break:break-word">{esc(L.get("ci_pre","Choose"))} {esc(b_name)} {esc(L.get("ci_suf","if…"))}</div>'
             f'<ul style="list-style:none;padding:0;margin:0">{cb_html}</ul></div></div>'
         )
 
     faq_section = ''
     if faq_html:
         faq_section = (
-            f'<h2 style="font-family:var(--font-display);font-size:22px;font-weight:700;margin-bottom:1.25rem">Frequently Asked Questions</h2>'
+            f'<h2 style="font-family:var(--font-display);font-size:22px;font-weight:700;margin-bottom:1.25rem">{esc(L.get("fq","Frequently Asked Questions"))}</h2>'
             f'<div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage">'
             f'{faq_html}</div>'
         )
@@ -512,7 +514,7 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
     footer_html    = load_footer(lang, cmp['slug'], cmp.get('cat'))
     lang_script    = '' if lang == 'en' else f'<script>localStorage.setItem("lang","{lang}");</script>\n'
     comp_row       = fetch_comparison(cmp['slug'], lang)
-    verdict_faq    = build_verdict_faq_html(comp_row, a['name'], b['name'])
+    verdict_faq    = build_verdict_faq_html(comp_row, a['name'], b['name'], lang, L)
 
     return f'''<!DOCTYPE html>
 <html lang="{lang}"{dir_attr}>

@@ -195,7 +195,7 @@ def fetch_tools():
     return sb_get('tools?lang=eq.en&order=name.asc&limit=200&select=slug,name,url,domain,category,badge,users,best_for,description,description_long,pros,cons,choose_if,faq')
 
 def fetch_translations(lang):
-    rows = sb_get(f'tools?lang=eq.{lang}&select=slug,best_for,description,description_long,pros,cons&limit=500')
+    rows = sb_get(f'tools?lang=eq.{lang}&select=slug,best_for,description,description_long,pros,cons,choose_if,faq&limit=500')
     return {r['slug']: r for r in rows}
 
 def fetch_ratings():
@@ -222,8 +222,8 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
     desc     = t.get('description_long') or t.get('description') or tool.get('description_long') or tool.get('description') or ''
     pros     = t.get('pros') or tool.get('pros') or []
     cons     = t.get('cons') or tool.get('cons') or []
-    choose_if = tool.get('choose_if') or []
-    faq_items = tool.get('faq') or []
+    choose_if = t.get('choose_if') or tool.get('choose_if') or []
+    faq_items = t.get('faq') or tool.get('faq') or []
 
     cat_label  = CATEGORY_LABELS.get(lang, {}).get(category, category.title())
     cat_icon   = CATEGORY_ICONS.get(category, '🤖')
