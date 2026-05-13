@@ -141,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
-      <div class="tool-best-for"><strong>Подходит для:</strong> Платформа для генерации AI видео с доступом к нескольким моделям, включая Kling</div>
+      <div class="tool-best-for"><strong>Подходит для:</strong> AI-генерация видео, редактирование по кейфреймам, качество 1080p</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -150,15 +150,18 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>О сервисе Luma AI</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Luma AI — это AI лаборатория из Сан-Франциско, известная своей фотореалистичной генерацией видео и реконструкцией 3D сцен. Платформа эволюционировала от своей первоначальной NeRF-технологии захвата 3D до лидирующего кинематографичного генератора AI видео.</p><p style="margin-top:1rem">Текущее семейство моделей — Ray3 и Ray3.14 (брендинг Dream Machine с 2024 года был снят). Ray3 — стандартная модель; Ray3.14 — высокачественный вариант, оптимизированный для кинематографичного настроения, освещения и атмосферных окружений. Модели Luma особенно сильны на кадрах с акцентом на окружение — обширные ландшафты, мрачные интерьеры и атмосферные сцены, где другие модели дают плоские результаты.</p><p style="margin-top:1rem">Luma AI доступна как непосредственно на lumalabs.ai, так и через подписку Runway с несколькими моделями. Пакет Runway дает доступ к Ray3 наряду с Gen-4.5, Veo 3.1, Kling 3.0 и Seedance в одной подписке.</p><p style="margin-top:1rem">Ценообразование следует модели freemium: бесплатный уровень с ограниченным ежемесячным генерированием, Dream (название устаревшего плана) по более низкой цене, Pro и более высокие уровни для пользователей с большими объемами.</p><p style="margin-top:1rem">Ограничения: Luma слабее Kling 3.0 в согласованности персонажей и реалистичности человеческих субъектов. Лица объектов могут смещаться между кадрами. Лучше подходит для абстрактного, атмосферного или ландшафтного контента, чем для видео, ориентированного на персонажей.</p><p style="margin-top:1rem">Лучше всего подходит для кинематографистов и визуальных художников, которым нужно качество кинематографичного окружения и атмосферы — не для видео, ориентированного на персонажей, или социального контента.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Luma AI — платформа AI-генерации видео, известная продуктом Dream Machine и серией моделей Ray. Платформа доступна через веб-приложение с бесплатным тарифом и платными планами, её модели также лицензированы другим платформам через API.</p><p style="margin-top:1rem">Ray3, текущее поколение модели, выпущенное в 2026 году, — существенный скачок. Нативный вывод 1080p теперь разрешение по умолчанию. Скорость генерации в четыре раза выше Ray2, стоимость на генерацию снизилась в три раза.</p><p style="margin-top:1rem">Ray3 Modify — режим редактирования, позволяющий изменять существующие видеоклипы вместо генерации с нуля. Кейфрейм-контроли задают что именно должно появляться в начале, середине и конце клипа, а контроли референса персонажа сохраняют идентичность субъекта между редактированием и генерациями. Контроль Start и End Frame даёт точный авторитет над началом и завершением видео.</p><p style="margin-top:1rem">Modify with Instructions расширяет редактирование на естественный язык: пользователь описывает желаемые изменения в клипе в свободной форме, и модель применяет их направленно.</p><p style="margin-top:1rem">Enterprise Zero-Retention — опция конфиденциальности данных для корпоративных клиентов: загруженный контент и сгенерированные результаты не хранятся в инфраструктуре Luma AI после завершения сессии.</p><p style="margin-top:1rem">Лучший выбор для видеокреаторов, агентств и разработчиков, которым нужна высококачественная 1080p генерация видео с возможностями редактирования, и для предприятий с требованиями к конфиденциальности данных.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Преимущества</div><ul class="pc-list">        <li>Ray3 и Ray3.14 лидируют по качеству кинематографичного настроения и кадров с акцентом на окружение</li>
-        <li>Лучшая фотореалистичная реконструкция 3D сцен из видео или изображений</li>
-        <li>Доступна как отдельно, так и через подписку Runway с несколькими моделями</li>
-        <li>Высокое качество атмосферы и освещения по сравнению с другими генераторами видео</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Недостатки</div><ul class="pc-list">        <li>Слабее Kling 3.0 в согласованности персонажей — лица могут смещаться между кадрами</li>
-        <li>Брендинг Dream Machine снят — некоторые учебники и обзоры ссылаются на устаревшие названия моделей</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Преимущества</div><ul class="pc-list">        <li>Ray3: нативное 1080p в 4 раза быстрее и в 3 раза дешевле Ray2</li>
+        <li>Ray3 Modify: кейфреймы и контроли референса персонажа для точного редактирования клипов</li>
+        <li>Контроль Start/End Frame для плавных переходов и петель</li>
+        <li>Modify with Instructions: направленные изменения по всему клипу на естественном языке</li>
+        <li>Enterprise Zero-Retention для конфиденциальности данных на чувствительных проектах</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Недостатки</div><ul class="pc-list">        <li>Бесплатный тариф ограничивает длину клипов и ежемесячный объём генераций</li>
+        <li>Высококачественные 1080p генерации быстро расходуют кредиты на платных планах</li>
+        <li>Согласованность референса персонажа может нарушаться в сложных сценах или при быстром движении</li>
+        <li>Меньше встроенных функций совместной работы, чем у специализированных платформ видеопроизводства</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://lumalabs.ai" target="_blank" rel="noopener">Перейти на Luma AI →</a>
@@ -171,15 +174,15 @@ textarea.form-input{resize:vertical;min-height:90px}
   <div class="section-title-sm">Также рассмотрите</div>
   <div class="also-grid">    <a class="also-card" href="/ru/tools/capcut.html">
       <div class="also-card-name">CapCut</div>
-      <div class="also-card-desc">AI-powered video editing for social media and short-form content</div>
+      <div class="also-card-desc">AI video editing, auto-edit, story generation, 2K/4K export</div>
     </a>
     <a class="also-card" href="/ru/tools/google-veo-3.html">
-      <div class="also-card-name">Google Veo 3</div>
-      <div class="also-card-desc">High-quality AI video generation with native audio from Google DeepMind</div>
+      <div class="also-card-name">Google Veo</div>
+      <div class="also-card-desc">AI video generation, native audio, image-to-video, 4K upscaling</div>
     </a>
     <a class="also-card" href="/ru/tools/heygen.html">
       <div class="also-card-name">HeyGen</div>
-      <div class="also-card-desc">AI avatar video creation and video translation with lip sync in 175+ languages</div>
+      <div class="also-card-desc">AI avatar videos, 4K upscaling, brand-consistent content</div>
     </a>
 </div>
   <div class="comments-section">

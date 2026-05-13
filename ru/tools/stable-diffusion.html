@@ -141,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-free">Бесплатно</span>
         
       </div>
-      <div class="tool-best-for"><strong>Подходит для:</strong> Локальное создание изображений с помощью AI и тонкая настройка</div>
+      <div class="tool-best-for"><strong>Подходит для:</strong> Open-source генерация изображений, локальный инференс, видео AI, генерация аудио</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -150,17 +150,18 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>О сервисе Stable Diffusion</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Stable Diffusion — это основополагающая open-source семейство моделей text-to-image, выпущенное Stability AI, и технология, лежащая в основе большинства экосистемы open-source генерации изображений с AI. В отличие от проприетарных сервисов, веса модели Stable Diffusion свободно доступны для загрузки, тонкой настройки и локального запуска на потребительском оборудовании.</p><p style="margin-top:1rem">Текущий релиз — Stable Diffusion 3.5. SD 3.5 Large имеет 8.1 миллиарда параметров и использует архитектуру MM-DiT с тремя текстовыми энкодерами для улучшенного понимания промптов. SD 3.5 Medium (2.5B параметров) работает на потребительских GPU. Оба доступны по бесплатной Community License для некоммерческого использования; коммерческое использование требует платной лицензии от Stability AI.</p><p style="margin-top:1rem">Samuel Stability AI в начале 2024 года пережила почти коллапс — массовые увольнения и кризис финансирования. Компания совершила замечательный возврат под новым руководством, с Sean Parker в качестве Executive Chairman и James Cameron в составе совета директоров. Весь долг был погашен к декабрю 2024 года, и компания сообщила о трёхзначном росте доходов.</p><p style="margin-top:1rem">Модель работает локально через интерфейсы, такие как ComfyUI или Automatic1111, или через Stability AI API (платно, на основе кредитов). Сообщество создало тысячи доработок и LoRA моделей на платформах Civitai и Hugging Face, охватывая каждый возможный стиль.</p><p style="margin-top:1rem">Ограничения: качество выходных данных больше не лидирует на рынке — Flux и Midjourney V7 производят лучший результат. Локальный запуск требует мощный GPU (рекомендуется 8GB+ VRAM). Коммерческое использование весов требует отдельного лицензионного соглашения.</p><p style="margin-top:1rem">Оптимально для разработчиков и исследователей, которые хотят полный контроль — локальное выполнение, тонкая настройка, пользовательские конвейеры и нулевые комиссии за изображение.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Stable Diffusion — серия open-source моделей генерации изображений от Stability AI, широко используемая для локального инференса, дообучения и коммерческого деплоя. В отличие от закрытых моделей, веса Stable Diffusion публично выпущены и могут работать на потребительском железе, что делает её основой большой экосистемы сторонних инструментов, кастомных дообучений и коммерческих приложений.</p><p style="margin-top:1rem">Stability AI пережила значимое корпоративное восстановление в начале 2026 года. Долги компании были полностью погашены, разрешив финансовую нестабильность, угрожавшую операциям в 2024–2025 годах. Стратегическое партнёрство с Electronic Arts (EA) подписано в феврале 2026 года. Джеймс Кэмерон присоединился как советник.</p><p style="margin-top:1rem">Производительность SD3.5 улучшена через оптимизации для NVIDIA TensorRT с квантизацией FP8. Эта комбинация обеспечивает более быстрый инференс и значительно сниженные требования к VRAM на GPU серии RTX, делая SD3.5 более практичным на потребительском железе среднего класса. Поддержка AMD расширена через ONNX-оптимизированные варианты моделей для Radeon GPU и Ryzen AI-акселераторов.</p><p style="margin-top:1rem">SV4D 2.0 (Stable Video 4D 2.0) — новый релиз модели генерации видео с более качественным результатом для реальных сцен. Stable Audio Open Small — компактная модель генерации аудио, открытая в партнёрстве с Arm и оптимизированная для эффективного инференса на оборудовании Arm.</p><p style="margin-top:1rem">Все модели Stable Diffusion остаются бесплатными и open-source. Платформа Stability AI предлагает freemium API для хостингового инференса. Лучший выбор для разработчиков, исследователей и творческих профессионалов, которым нужна open-source генерация изображений и видео с возможностью локального запуска, дообучения или коммерческого деплоя без платы за изображение.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Преимущества</div><ul class="pc-list">        <li>Бесплатные веса модели — запуск локально с нулевой стоимостью на изображение</li>
-        <li>SD 3.5 Large: 8.1B параметров, архитектура MM-DiT, сильная точность выполнения промптов</li>
-        <li>Тысячи доработок и LoRA от сообщества на Civitai и Hugging Face</li>
-        <li>Stability AI полностью восстановилась — компания финансово стабильна на 2025 год</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Недостатки</div><ul class="pc-list">        <li>Качество выходных данных уступает Flux и Midjourney V7</li>
-        <li>Требует 8GB+ VRAM для локального использования; настройка занимает время</li>
-        <li>Коммерческое использование весов требует платной лицензии от Stability AI</li>
-        <li>Нет управляемого сервиса — самохостинг означает, что вы отвечаете за обслуживание</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Преимущества</div><ul class="pc-list">        <li>Полностью open-source — веса свободно доступны для локального использования, дообучения и коммерческого деплоя</li>
+        <li>SD3.5 оптимизирован для NVIDIA TensorRT/FP8: быстрее и меньше VRAM на RTX GPU</li>
+        <li>ONNX-оптимизированные варианты для AMD Radeon и Ryzen AI — не только NVIDIA</li>
+        <li>SV4D 2.0 обеспечивает более высокое качество реальных видеовыходов</li>
+        <li>Stable Audio Open Small в открытом доступе с Arm — генерация аудио на edge-оборудовании</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Недостатки</div><ul class="pc-list">        <li>Локальная установка требует технических знаний — не подходит для нетехнических пользователей</li>
+        <li>Лучшие результаты на SD3.5 по-прежнему требуют мощного GPU; инференс только на CPU медленный</li>
+        <li>Open-source экосистема фрагментирована — множество форков, версий и UI с непоследовательным качеством</li>
+        <li>История корпоративной нестабильности Stability AI — устойчивость партнёрства ещё предстоит доказать</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://stability.ai" target="_blank" rel="noopener">Перейти на Stable Diffusion →</a>
@@ -177,11 +178,11 @@ textarea.form-input{resize:vertical;min-height:90px}
     </a>
     <a class="also-card" href="/ru/tools/comfyui.html">
       <div class="also-card-name">ComfyUI</div>
-      <div class="also-card-desc">Advanced pipelines, game studios, custom models</div>
+      <div class="also-card-desc">open-source AI image generation, node workflows, local GPU, 4K video</div>
     </a>
     <a class="also-card" href="/ru/tools/flux.html">
-      <div class="also-card-name">Flux</div>
-      <div class="also-card-desc">High-quality open-source image generation</div>
+      <div class="also-card-name">FLUX</div>
+      <div class="also-card-desc">AI image generation, sub-second speed, text rendering, multi-reference</div>
     </a>
 </div>
   <div class="comments-section">

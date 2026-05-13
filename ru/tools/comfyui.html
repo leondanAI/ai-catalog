@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","ru");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ComfyUI","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://www.comfy.org"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ComfyUI","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://comfyui.org"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -129,19 +129,19 @@ textarea.form-input{resize:vertical;min-height:90px}
   </nav>
   <div class="tool-hero">
     <div class="tool-hero-avatar">
-      <img src="https://www.google.com/s2/favicons?domain=comfy.org&sz=128" alt="ComfyUI" width="60" height="60" style="width:100%;height:100%;object-fit:contain;border-radius:10px">
+      <img src="https://www.google.com/s2/favicons?domain=comfyui.org&sz=128" alt="ComfyUI" width="60" height="60" style="width:100%;height:100%;object-fit:contain;border-radius:10px">
     </div>
     <div class="tool-hero-info">
       <div class="tool-hero-top">
         <h1 class="tool-hero-name">ComfyUI</h1>
-        <a class="btn-visit" href="https://www.comfy.org" target="_blank" rel="noopener">Перейти на ComfyUI →</a>
+        <a class="btn-visit" href="https://comfyui.org" target="_blank" rel="noopener">Перейти на ComfyUI →</a>
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">🎨 Генерация изображений</span>
         <span class="tool-meta-chip badge-free">Бесплатно</span>
         
       </div>
-      <div class="tool-best-for"><strong>Подходит для:</strong> Продвинутые пайплайны, игровые студии, кастомные модели</div>
+      <div class="tool-best-for"><strong>Подходит для:</strong> Open-source AI-генерация изображений, нодовые воркфлоу, локальный GPU, видео 4K</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -150,17 +150,21 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>О сервисе ComfyUI</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">ComfyUI — это самый мощный и гибкий open-source интерфейс для запуска воркфлоу генерации AI-изображений (и видео), основанный на архитектуре графа нод, где каждый шаг диффузионного пайплайна — загрузка модели, сэмплинг, кондиционирование, апскейлинг, композитинг — представлен в виде видимой и редактируемой ноды на бесконечном канвасе. Используемый профессиональными игровыми студиями, VFX-компаниями и серьёзными AI-художниками, он обеспечивает наиболее глубокий уровень контроля среди всех инструментов генерации изображений.</p><p style="margin-top:1rem">Система воркфлоу на основе нод позволяет построить именно тот пайплайн, который вам нужен: объединять несколько моделей в цепочку, добавлять ControlNet для управления позой или глубиной, запускать проходы img2img-уточнения, применять LoRA-адаптеры стилей, компоновать несколько генераций и автоматизировать весь процесс одним запуском. Plarium и другие крупные игровые студии используют ComfyUI как основной производственный инструмент для масштабной генерации игровых ассетов, концептов персонажей и окружения. Сообщество опубликовало тысячи шаблонов воркфлоу для всех мыслимых задач.</p><p style="margin-top:1rem">ComfyUI бесплатен навсегда и работает локально на вашем оборудовании. Расширение ComfyUI Manager упрощает установку кастомных нод и файлов моделей. Основное ограничение — порог вхождения: нодовый канвас пугает новичков и требует понимания концепций диффузии для эффективного использования. Для пользователей, которым нужен более простой интерфейс для Stable Diffusion, лучшей отправной точкой станет Automatic1111. ComfyUI — правильный инструмент, когда вам нужны производственные, воспроизводимые и автоматизированные пайплайны генерации изображений.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">ComfyUI — бесплатный open-source нодовый интерфейс для локального запуска AI-моделей генерации изображений и видео. Пользователи строят воркфлоу, соединяя ноды — каждый выполняет одну операцию — что даёт точный контроль над каждым шагом генерации. Это основной интерфейс для пользователей, запускающих Stable Diffusion и другие open-weight модели на собственном железе.</p><p style="margin-top:1rem">App View — крупное UX-дополнение, предоставляющее упрощённый интерфейс с формами без отображения нодового графа для новичков. Node View по-прежнему полностью доступен. Двухрежимный подход делает ComfyUI доступным для начинающих без урезания возможностей опытных пользователей.</p><p style="margin-top:1rem">Квантизация NVFP4, введённая для NVIDIA RTX 50 Series GPU, обеспечивает генерацию в 2.5 раза быстрее при снижении потребления VRAM примерно на 60%. Пользователи с картами RTX 50 Series могут запускать более крупные модели или существующие — на значительно большей скорости.</p><p style="margin-top:1rem">Официальная поддержка AMD ROCm появилась в приложении Windows Desktop, делая ComfyUI полностью поддерживаемым на AMD GPU в Windows впервые без ручных обходных решений. Добавлены новые ноды для Veo 3, Veo 3 Lite и Kling 3.0, поддержка вывода 4K и RTX Video Super Resolution для апскейлинга видео в реальном времени до 4K.</p><p style="margin-top:1rem">Добавлена совместимость с Python 3.13, обеспечивая актуальность ComfyUI с последним релизом Python.</p><p style="margin-top:1rem">ComfyUI лучший выбор для опытных пользователей, исследователей и разработчиков, которым нужен полный контроль над воркфлоу AI-генерации, локальный запуск на собственном железе и поддержка последних open-weight и сторонних моделей.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Преимущества</div><ul class="pc-list">        <li>Самый мощный конструктор диффузионных пайплайнов — любой воркфлоу возможен на нодовом канвасе</li>
-        <li>Используется Plarium, игровыми студиями и VFX-командами для создания ассетов производственного уровня</li>
-        <li>Поддерживает изображения, видео, 3D и аудио в одном инструменте — бесплатно навсегда</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Недостатки</div><ul class="pc-list">        <li>Самый высокий порог вхождения среди всех инструментов для работы с изображениями — не подходит для новичков</li>
-        <li>Требует локальной настройки GPU или платного облачного инстанса для полной производительности</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Преимущества</div><ul class="pc-list">        <li>Полностью бесплатен и open-source — нет подписки, лимитов кредитов или зависимости от вендора</li>
+        <li>App View: удобный для начинающих интерфейс без убирания полного нодового графа</li>
+        <li>Квантизация NVFP4: генерация в 2.5x быстрее и 60% меньше VRAM на RTX 50 Series GPU</li>
+        <li>Официальная поддержка AMD ROCm в Windows — не нужны ручные обходные решения</li>
+        <li>Ноды Veo 3, Kling 3.0 и поддержка 4K-видео через ByteDance/Veo/Kling пайплайны</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Недостатки</div><ul class="pc-list">        <li>Нодовый интерфейс имеет крутую кривую обучения для новичков в воркфлоу-генерации</li>
+        <li>Требует локального GPU — не подходит для пользователей без мощной видеокарты</li>
+        <li>Кастомные ноды от сообщества варьируются по качеству и могут конфликтовать друг с другом</li>
+        <li>Нет облачного варианта — все вычисления локальны; мощное железо требуется для больших моделей</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
-    <a class="btn-visit" href="https://www.comfy.org" target="_blank" rel="noopener">Перейти на ComfyUI →</a>
+    <a class="btn-visit" href="https://comfyui.org" target="_blank" rel="noopener">Перейти на ComfyUI →</a>
   </div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Выберите ComfyUI если…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Хотите максимальный контроль над пайплайном генерации через визуальные нодовые потоки</span></li>
 <li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Создаёте кастомные рабочие процессы: ControlNet + LoRA + Upscaler в одной схеме</span></li>
@@ -173,12 +177,12 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="also-card-desc">Image generation, character consistency, prompt accuracy</div>
     </a>
     <a class="also-card" href="/ru/tools/flux.html">
-      <div class="also-card-name">Flux</div>
-      <div class="also-card-desc">High-quality open-source image generation</div>
+      <div class="also-card-name">FLUX</div>
+      <div class="also-card-desc">AI image generation, sub-second speed, text rendering, multi-reference</div>
     </a>
     <a class="also-card" href="/ru/tools/ideogram.html">
       <div class="also-card-name">Ideogram</div>
-      <div class="also-card-desc">Images with text: posters, logos, book covers</div>
+      <div class="also-card-desc">AI image generation, text-in-image, face swap, canvas editing</div>
     </a>
 </div>
   <div class="comments-section">
