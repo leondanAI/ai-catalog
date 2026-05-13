@@ -56,9 +56,15 @@ def add_if_exists(entries, rel_path, *url_args):
 entries = []
 
 tools_dir = os.path.join(ROOT_DIR, 'tools')
+def _is_redirect(path):
+    with open(path, encoding='utf-8', errors='ignore') as _f:
+        snippet = _f.read(512)
+    return 'http-equiv="refresh"' in snippet or 'location.replace' in snippet
+
 tool_slugs = sorted(
     f[:-5] for f in os.listdir(tools_dir)
     if f.endswith('.html') and not f.startswith('_')
+    and not _is_redirect(os.path.join(tools_dir, f))
 )
 
 compare_dir = os.path.join(ROOT_DIR, 'compare')
