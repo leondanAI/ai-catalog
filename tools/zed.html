@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Zed", "description": "Zed is a next-generation code editor built entirely from scratch in Rust, using a custom GPU-accelerated UI framework called GPUI. Unlike VS Code forks such as Cursor or Windsurf, Zed is not based on ", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://zed.dev", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Zed", "description": "Zed is a code editor built entirely in Rust, designed from the ground up for performance and low latency. Version 1.0, released April 29, 2026, marks a five-year development milestone and the first st", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://zed.dev", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -164,7 +164,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
         <span class="tool-meta-chip badge-freemium">Freemium</span>
         <span class="tool-meta-chip">👥 500K+</span>
       </div>
-      <div class="tool-best-for"><strong>Best for:</strong> Ultra-fast AI code editor with native multiplayer collaboration</div>
+      <div class="tool-best-for"><strong>Best for:</strong> Fast AI code editor, parallel agents, Rust-powered speed</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -174,27 +174,27 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Zed</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Zed is a next-generation code editor built entirely from scratch in Rust, using a custom GPU-accelerated UI framework called GPUI. Unlike VS Code forks such as Cursor or Windsurf, Zed is not based on Electron — it was built from the ground up for performance. The result is sub-millisecond keystroke response, startup in under a second, and smooth editing even on very large files. Zed reached 1.0 on April 29, 2026 after five years of development and has 81,700+ GitHub stars.</p><p style="margin-top:1rem">Zed's native multiplayer feature is unique: multiple developers can edit the same file simultaneously in real time, similar to Google Docs but for code. As of v1.0, Zed supports concurrent AI agents — multiple AI agents can work on different parts of the codebase simultaneously within the same editor window. The proprietary Zeta model powers AI features on the paid plan, while BYOK is supported for custom LLM configurations.</p><p style="margin-top:1rem">Key capabilities include native real-time collaboration without plugins, concurrent AI agents, LSP support for all major languages, vim mode, a built-in terminal, and extensibility via a WebAssembly-based plugin system. Zed is available on macOS and Linux; Windows support is in progress.</p><p style="margin-top:1rem">Pricing: The editor itself is free and open source. AI features use a credit system — some usage is included free, with a paid plan for heavier Zed AI usage. BYOK is supported for teams with existing LLM contracts.</p><p style="margin-top:1rem">Limitations: Zed cannot run VS Code extensions — the extension ecosystem is smaller than VS Code or Cursor. Windows support is still in progress as of mid-2026. Teams heavily invested in VS Code extensions may find the transition costly.</p><p style="margin-top:1rem">Best suited for developers prioritizing editor performance, real-time team collaboration, and a modern editor architecture — particularly on macOS and Linux.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Zed is a code editor built entirely in Rust, designed from the ground up for performance and low latency. Version 1.0, released April 29, 2026, marks a five-year development milestone and the first stable release suitable for production teams. The editor is fast by design — Rust eliminates the overhead that slows Electron-based editors like VS Code and Cursor under heavy load.</p><p style="margin-top:1rem">The flagship feature of Zed 1.0 is Parallel Agents: users can run multiple AI agents simultaneously, each working on a different part of the codebase independently. One agent can refactor a module while another writes tests for a second module and a third agent handles documentation — all concurrently. This is a meaningful productivity gain over single-threaded agent workflows that require waiting for one task to finish before starting the next.</p><p style="margin-top:1rem">In January 2026, Zed co-authored the Agent Client Protocol (ACP) with JetBrains, establishing a cross-editor standard for how AI agents communicate with development environments. ACP means agents built for Zed can also run in JetBrains IDEs and vice versa, reducing vendor lock-in in the AI coding agent ecosystem.</p><p style="margin-top:1rem">Model support in Zed 1.0 includes GPT-5.5, DeepSeek V4, and MiMo V2.5, giving developers access to a range of frontier models directly inside the editor without configuring separate API keys per provider. Git graph view and split diffs are new interface features that improve code review workflows within the editor itself.</p><p style="margin-top:1rem">Zed is free for individual developers. The Business plan adds organization-wide AI policy enforcement, centralized billing, and AI governance controls — useful for engineering teams that need to manage model access and usage across large groups.</p><p style="margin-top:1rem">Zed is best for developers who want a fast, resource-efficient editor with serious parallel AI agent capability, and for teams that need centralized AI governance without adopting a heavyweight enterprise tool.</p></div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Fastest code editor available — sub-millisecond keystrokes built in Rust</li>
-        <li>Native real-time multiplayer — multiple developers edit simultaneously without plugins</li>
-        <li>Concurrent AI agents work on different codebase parts in the same window</li>
-        <li>Free and open source — 81K+ GitHub stars with active development</li>
-        <li>Released v1.0 in April 2026 after five years of careful development</li>
+        <li>Built in Rust — significantly faster and lighter than Electron-based editors like VS Code</li>
+        <li>Parallel Agents: run multiple AI agents concurrently on different codebase sections</li>
+        <li>Agent Client Protocol (ACP) with JetBrains — agents are cross-editor compatible</li>
+        <li>Supports GPT-5.5, DeepSeek V4, MiMo V2.5 — broad frontier model access built in</li>
+        <li>Free for individuals; Business plan adds org-wide AI policy and centralized billing</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Cannot run VS Code extensions — smaller extension ecosystem than Cursor or VS Code</li>
-        <li>Windows support still in progress as of mid-2026</li>
-        <li>WASM-based plugin system has fewer extensions than VS Code marketplace</li>
-        <li>Smaller community and fewer tutorials compared to established editors</li>
+        <li>Version 1.0 — ecosystem of extensions and plugins is smaller than VS Code or JetBrains</li>
+        <li>Business plan governance features require paid subscription — pricing not publicly listed</li>
+        <li>Rust-native architecture means some VS Code extensions are not compatible</li>
+        <li>Parallel agents feature is new — complex multi-agent coordination can produce conflicts</li>
       </ul>
     </div>
   </div>
@@ -217,7 +217,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     </a>
     <a class="also-card" href="/tools/bolt-new.html">
       <div class="also-card-name">Bolt.new</div>
-      <div class="also-card-desc">Browser-based full-stack app prototyping</div>
+      <div class="also-card-desc">AI full-stack builder, built-in hosting and auth, team workspaces</div>
     </a>
   </div>
 
