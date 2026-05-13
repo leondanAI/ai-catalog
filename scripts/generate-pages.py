@@ -203,7 +203,7 @@ CATEGORY_ICONS = {
 
 BADGE_LABELS = {'free': 'Free', 'freemium': 'Freemium', 'paid': 'Paid'}
 
-ACTIVE_NON_EN_LANGS = ['es', 'de', 'ru', 'ua', 'he']
+ACTIVE_NON_EN_LANGS = ['es', 'de', 'ru', 'ua', 'he', 'fr', 'pt']
 
 def fetch_tools():
     req = urllib.request.Request(
@@ -390,7 +390,7 @@ def render_page(tool, all_tools, rating_data=None):
     hreflang_block = '\n'.join(
         [f'<link rel="alternate" hreflang="x-default" href="https://aitoolfit.ai/tools/{esc(slug)}.html">',
          f'<link rel="alternate" hreflang="en" href="https://aitoolfit.ai/tools/{esc(slug)}.html">'] +
-        [f'<link rel="alternate" hreflang="{l}" href="https://aitoolfit.ai/{l}/tools/{esc(slug)}.html">' for l in ACTIVE_NON_EN_LANGS]
+        [f'<link rel="alternate" hreflang="{"uk" if l == "ua" else l}" href="https://aitoolfit.ai/{l}/tools/{esc(slug)}.html">' for l in ACTIVE_NON_EN_LANGS]
     )
 
     return f'''<!DOCTYPE html>
