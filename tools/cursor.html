@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Cursor", "description": "Cursor is a VS Code fork with AI deeply integrated across every interaction — tab autocomplete, inline edits, and a full Composer/Agent mode for autonomous multi-file workflows. The familiar\n   interf", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://cursor.sh", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": 3, "bestRating": "5", "worstRating": "1"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Cursor", "description": "Cursor is an AI-first code editor built on VS Code, designed to make AI assistance the primary interface for software development rather than a plugin layered on top. Cursor 3, the current major relea", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://cursor.com", "offers": {"@type": "Offer", "price": "", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": 3, "bestRating": "5", "worstRating": "1"}}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -152,19 +152,19 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-hero">
     <div class="tool-hero-avatar" style="background:#fff;overflow:hidden;padding:6px">
-      <img src="https://www.google.com/s2/favicons?domain=cursor.sh&sz=128" alt="Cursor logo" width="60" height="60" style="width:100%;height:100%;object-fit:contain;border-radius:10px">
+      <img src="https://www.google.com/s2/favicons?domain=cursor.com&sz=128" alt="Cursor logo" width="60" height="60" style="width:100%;height:100%;object-fit:contain;border-radius:10px">
     </div>
     <div class="tool-hero-info">
       <div class="tool-hero-top">
         <h1 class="tool-hero-name">Cursor</h1>
-        <a class="btn-visit" href="https://cursor.sh" target="_blank" rel="noopener">Visit Cursor →</a>
+        <a class="btn-visit" href="https://cursor.com" target="_blank" rel="noopener">Visit Cursor →</a>
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">💻 AI for Development</span>
-        <span class="tool-meta-chip badge-freemium">Freemium</span>
+        <span class="tool-meta-chip badge-paid">Paid</span>
         <span class="tool-meta-chip">👥 1M+</span>
       </div>
-      <div class="tool-best-for"><strong>Best for:</strong> Professional developers and teams, VS Code power users</div>
+      <div class="tool-best-for"><strong>Best for:</strong> AI coding, multi-repo, cloud agents, security review</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -174,47 +174,28 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Cursor</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Cursor is a VS Code fork with AI deeply integrated across every interaction — tab autocomplete, inline edits, and a full Composer/Agent mode for autonomous multi-file workflows. The familiar
-   interface means minimal transition time for existing VS Code users, while the AI capabilities go well beyond Copilot-style completions. Composer translates natural language into coordinated edits across entire  
-  repositories, and Agent mode runs these tasks autonomously in a controlled environment.                                                                                                                             
-                                                                                                                                                                                                                      
-  The 2026 version introduced the /multitask command, which spawns async subagents to parallelize large tasks. Cursor's proprietary Composer 2 model achieves frontier-level coding performance at lower cost than 
-  routing every request to external APIs. The Cursor SDK enables teams to build custom agents on Cursor's runtime. The tool is trusted by over half of Fortune 500 companies with approximately 1 million developers 
-  on the platform.
-                                                                                                                                                                                                                      
-  Key capabilities include multi-model support (Claude, GPT-4o, Gemini), privacy mode that prevents code from being sent to external servers, shared team rules, SSO for enterprise use, and a credit system that 
-  allows mixing premium and standard model requests within a monthly budget.                                                                                                                                          
-   
-  Pricing: Hobby (Free) tier includes limited agent requests and tab completions. Pro costs $20 per month with unlimited tab completions and a $20 monthly AI credit pool. Pro+ at $60 per month triples the credit   
-  pool. Ultra at $200 per month provides a 20x credit multiplier and priority access to new features. Teams plans start at $40 per user per month.                                                                    
-   
-  Limitations: Being a VS Code fork means occasional lag behind upstream VS Code updates. The credit-based pricing system can be confusing and runs out quickly on premium models. Code is sent to Cursor servers by  
-  default — privacy mode must be explicitly enabled. Pro+ and Ultra tiers are expensive for individual developers.                                                                                                    
-   
-  Best suited for professional developers and teams who want the most capable AI-integrated code editor with VS Code familiarity and broad model flexibility.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Cursor is an AI-first code editor built on VS Code, designed to make AI assistance the primary interface for software development rather than a plugin layered on top. Cursor 3, the current major release, represents a substantial architectural expansion beyond a single-file editor into a full development platform.</p><p style="margin-top:1rem">The centerpiece of Cursor 3 is the unified multi-repo workspace: developers can open and navigate multiple repositories simultaneously, with the AI agent maintaining context across all of them. Cloud agents run in parallel on dedicated virtual machines, each capable of executing long-running tasks autonomously while recording their work via video and logs for review. This makes Cursor 3 the first mainstream coding tool where you can delegate a batch of parallel implementation tasks to agents and come back to reviewed, logged results.</p><p style="margin-top:1rem">Canvases is a new visual output layer: agents can produce PR review summaries, architecture diagrams, test dashboards, and other structured visual artifacts directly inside the Cursor workspace. Cursor Automations allows tasks to be triggered from Slack messages, scheduled timers, or specific codebase events — moving Cursor toward a CI/CD-adjacent automation role in addition to its editing function.</p><p style="margin-top:1rem">Security Review, available in Teams and Enterprise tiers, is an always-on vulnerability scanner that runs continuously in the background and surfaces security issues as code is written, rather than as a separate audit step. Composer 2 is an in-house model developed by the Cursor team, optimized specifically for code editing tasks.</p><p style="margin-top:1rem">Pricing uses a usage-credit model: Pro at $20/month covers standard usage, Pro+ at $60/month provides 3x usage limits for heavy users. There is no free tier — Cursor is a paid product from day one.</p><p style="margin-top:1rem">Cursor is the best choice for professional developers and engineering teams who want AI deeply integrated into the full development workflow — writing, reviewing, testing, and deploying — rather than as a suggestion engine.</p></div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Familiar VS Code interface — minimal learning curve for existing VS Code users</li>
-        <li>Composer/Agent mode handles large multi-file tasks autonomously</li>
-        <li>Parallel subagent execution for complex tasks  
-  via /multitask</li>
-        <li>Broad model choice: Claude, GPT-4o, Gemini in a single editor</li>
-        <li>Used by 50%+ of Fortune 500 companies</li>
+        <li>Multi-repo unified workspace — AI maintains context across multiple repositories simultaneously</li>
+        <li>Cloud agents run in parallel on dedicated VMs with video/log recording for async review</li>
+        <li>Canvases feature: agents produce visual outputs — PR reviews, dashboards, architecture diagrams</li>
+        <li>Cursor Automations: trigger agents from Slack, timers, or codebase events</li>
+        <li>Always-on Security Review (Teams/Enterprise) — continuous vulnerability scanning as you write</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>VS Code fork can lag behind upstream VS Code updates</li>
-        <li>Credit-based pricing is complex and runs out on premium models</li>
-        <li>Code sent to Cursor servers by default — privacy mode must be enabled     
-  manually</li>
-        <li>Pro+ and Ultra tiers expensive for individual developers</li>
-        <li>Agent mode can make incorrect changes requiring careful review</li>
+        <li>No free tier — paid-only product starting at $20/month</li>
+        <li>Pro+ at $60/month is 3x GitHub Copilot's base price for equivalent usage levels</li>
+        <li>Cloud agents and Canvases are new features — stability and reliability still maturing</li>
+        <li>Cursor Automations and Security Review limited to Teams/Enterprise tiers</li>
+        <li>Migration from VS Code requires reconfiguring extensions and keybindings</li>
       </ul>
     </div>
   </div>
@@ -233,7 +214,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     </a>
     <a class="also-card" href="/tools/amazon-q-developer.html">
       <div class="also-card-name">Amazon Q Developer</div>
-      <div class="also-card-desc">AWS-native AI coding assistant for cloud and infrastructure development</div>
+      <div class="also-card-desc">AWS-integrated AI coding, cloud development</div>
     </a>
     <a class="also-card" href="/tools/bolt-new.html">
       <div class="also-card-name">Bolt.new</div>
