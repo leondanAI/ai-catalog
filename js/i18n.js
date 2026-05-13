@@ -14,10 +14,9 @@ const I18N = (() => {
   const T = {
     en: {
       // nav
-      'nav.home':         'Find a Tool',
-      'nav.directory':    'AI Catalog',
+      'nav.home':         'Find AI',
+      'nav.directory':    'Best AI Tools',
       'nav.news':         'News',
-      'nav.tools':        'Toolbox',
       'nav.compare':      'Compare',
       'nav.newsletter':   'Newsletter',
       // hero
@@ -188,9 +187,8 @@ const I18N = (() => {
 
     ru: {
       'nav.home':         'Найти ИИ',
-      'nav.directory':    'AI Каталог',
+      'nav.directory':    'Лучшие AI-инструменты',
       'nav.news':         'Новости',
-      'nav.tools':        'Toolbox',
       'nav.compare':      'Сравнение',
       'nav.newsletter':   'Рассылка',
       'hero.badge':            '✨ Бесплатно · Без регистрации',
@@ -340,9 +338,8 @@ const I18N = (() => {
 
     es: {
       'nav.home':         'Buscar IA',
-      'nav.directory':    'AI Catálogo',
+      'nav.directory':    'Mejores herramientas IA',
       'nav.news':         'Noticias',
-      'nav.tools':        'Toolbox',
       'nav.compare':      'Comparar',
       'nav.newsletter':   'Newsletter',
       'hero.tag':              'Más de 100 herramientas de IA evaluadas',
@@ -491,9 +488,8 @@ const I18N = (() => {
 
     fr: {
       'nav.home':         'Trouver IA',
-      'nav.directory':    'AI Catalogue',
+      'nav.directory':    'Meilleurs outils IA',
       'nav.news':         'Actualités',
-      'nav.tools':        'Toolbox',
       'nav.compare':      'Comparer',
       'nav.newsletter':   'Newsletter',
       'hero.tag':              'Plus de 100 outils IA évalués',
@@ -639,9 +635,8 @@ const I18N = (() => {
 
     de: {
       'nav.home':         'KI finden',
-      'nav.directory':    'AI Katalog',
+      'nav.directory':    'Beste KI-Tools',
       'nav.news':         'Neuigkeiten',
-      'nav.tools':        'Toolbox',
       'nav.compare':      'Vergleichen',
       'nav.newsletter':   'Newsletter',
       'hero.tag':              'Über 100 bewertete KI-Tools',
@@ -790,9 +785,8 @@ const I18N = (() => {
 
     pt: {
       'nav.home':         'Buscar IA',
-      'nav.directory':    'AI Catálogo',
+      'nav.directory':    'Melhores ferramentas IA',
       'nav.news':         'Notícias',
-      'nav.tools':        'Toolbox',
       'nav.compare':      'Comparar',
       'nav.newsletter':   'Newsletter',
       'hero.tag':              'Mais de 100 ferramentas de IA avaliadas',
@@ -940,7 +934,6 @@ const I18N = (() => {
       'nav.home':         'Home',
       'nav.directory':    'AI Directory',
       'nav.news':         'Notizie',
-      'nav.tools':        'Strumenti',
       'nav.compare':      'Confronta',
       'nav.newsletter':   'Newsletter',
       'hero.tag':         'Oltre 5000 strumenti · 100+ recensiti',
@@ -1033,7 +1026,6 @@ const I18N = (() => {
       'nav.home':         '首页',
       'nav.directory':    'AI 目录',
       'nav.news':         '新闻',
-      'nav.tools':        '工具',
       'nav.compare':      '对比',
       'nav.newsletter':   '订阅',
       'hero.tag':         '共 5000+ 个 AI 工具 · 100+ 已评测',
@@ -1126,7 +1118,6 @@ const I18N = (() => {
       'nav.home':         'ホーム',
       'nav.directory':    'AI ディレクトリ',
       'nav.news':         'ニュース',
-      'nav.tools':        'ツール',
       'nav.compare':      '比較',
       'nav.newsletter':   'ニュースレター',
       'hero.tag':         '5000以上のAIツール · 100+をレビュー済み',
@@ -1219,7 +1210,6 @@ const I18N = (() => {
       'nav.home':         '홈',
       'nav.directory':    'AI 디렉토리',
       'nav.news':         '뉴스',
-      'nav.tools':        '도구',
       'nav.compare':      '비교',
       'nav.newsletter':   '뉴스레터',
       'hero.tag':         '5000개 이상의 AI 도구 · 100+ 검토됨',
@@ -1312,7 +1302,6 @@ const I18N = (() => {
       'nav.home':         'الرئيسية',
       'nav.directory':    'AI الدليل',
       'nav.news':         'الأخبار',
-      'nav.tools':        'الأدوات',
       'nav.compare':      'مقارنة',
       'nav.newsletter':   'النشرة',
       'hero.tag':         'أكثر من 5000 أداة · 100+ تمت مراجعتها',
@@ -1405,7 +1394,6 @@ const I18N = (() => {
       'nav.home':         'होम',
       'nav.directory':    'AI डायरेक्टरी',
       'nav.news':         'समाचार',
-      'nav.tools':        'टूल्स',
       'nav.compare':      'तुलना',
       'nav.newsletter':   'न्यूज़लेटर',
       'hero.tag':         '5000+ AI टूल्स कुल · 100+ समीक्षित',
@@ -1498,7 +1486,6 @@ const I18N = (() => {
       'nav.home':         'Ana Sayfa',
       'nav.directory':    'AI Dizin',
       'nav.news':         'Haberler',
-      'nav.tools':        'Araçlar',
       'nav.compare':      'Karşılaştır',
       'nav.newsletter':   'Bülten',
       'hero.tag':         '5000\'den fazla araç · 100+ incelendi',
@@ -1589,9 +1576,8 @@ const I18N = (() => {
 
     pl: {
       'nav.home':         'Strona główna',
-      'nav.directory':    'AI Katalog',
+      'nav.directory':    'Najlepsze narzędzia AI',
       'nav.news':         'Aktualności',
-      'nav.tools':        'Narzędzia',
       'nav.compare':      'Porównaj',
       'nav.newsletter':   'Newsletter',
       'hero.tag':         'Ponad 5000 narzędzi · 100+ zrecenzowanych',
@@ -1684,7 +1670,6 @@ const I18N = (() => {
       'nav.home':         'Home',
       'nav.directory':    'AI Directory',
       'nav.news':         'Nieuws',
-      'nav.tools':        'Tools',
       'nav.compare':      'Vergelijken',
       'nav.newsletter':   'Nieuwsbrief',
       'hero.tag':         'Meer dan 5000 tools · 100+ beoordeeld',
@@ -1777,7 +1762,6 @@ const I18N = (() => {
       'nav.home':         'Trang chủ',
       'nav.directory':    'AI Danh mục',
       'nav.news':         'Tin tức',
-      'nav.tools':        'Công cụ',
       'nav.compare':      'So sánh',
       'nav.newsletter':   'Bản tin',
       'hero.tag':         'Hơn 5000 công cụ · 100+ đã đánh giá',
@@ -1870,7 +1854,6 @@ const I18N = (() => {
       'nav.home':         'Beranda',
       'nav.directory':    'AI Direktori',
       'nav.news':         'Berita',
-      'nav.tools':        'Alat',
       'nav.compare':      'Bandingkan',
       'nav.newsletter':   'Newsletter',
       'hero.tag':         'Lebih dari 5000 alat · 100+ diulas',
@@ -1963,7 +1946,6 @@ const I18N = (() => {
       'nav.home':         'หน้าแรก',
       'nav.directory':    'AI ไดเรกทอรี',
       'nav.news':         'ข่าวสาร',
-      'nav.tools':        'เครื่องมือ',
       'nav.compare':      'เปรียบเทียบ',
       'nav.newsletter':   'จดหมายข่าว',
       'hero.tag':         'รวม 5000+ เครื่องมือ · 100+ ที่ตรวจสอบแล้ว',
@@ -2053,10 +2035,9 @@ const I18N = (() => {
     },
 
     ua: {
-      'nav.home':         'Знайти інструмент',
-      'nav.directory':    'Каталог ШІ',
+      'nav.home':         'Знайти ШІ',
+      'nav.directory':    'Кращі AI-інструменти',
       'nav.news':         'Новини',
-      'nav.tools':        'Інструменти',
       'nav.compare':      'Порівняння',
       'nav.newsletter':   'Розсилка',
       'hero.tag':              '100+ перевірених ШІ-інструментів',
@@ -2203,10 +2184,9 @@ const I18N = (() => {
     },
 
     he: {
-      'nav.home':         'מצא כלי',
-      'nav.directory':    'קטלוג AI',
+      'nav.home':         'מצא AI',
+      'nav.directory':    'כלי AI הטובים ביותר',
       'nav.news':         'חדשות',
-      'nav.tools':        'ארגז כלים',
       'nav.compare':      'השוואה',
       'nav.newsletter':   'ניוזלטר',
       'hero.badge':            '✨ חינם · ללא הרשמה',
@@ -2358,7 +2338,6 @@ const I18N = (() => {
       'nav.home':         'Acasă',
       'nav.directory':    'AI Director',
       'nav.news':         'Știri',
-      'nav.tools':        'Instrumente',
       'nav.compare':      'Compară',
       'nav.newsletter':   'Buletin',
       'hero.tag':         'Peste 5000 instrumente · 100+ recenzate',
