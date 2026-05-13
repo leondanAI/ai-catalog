@@ -168,7 +168,7 @@ TOOL_COMPARE = {
     'slidesgo':                 ('slidesgo-vs-gamma',               'Gamma'),
     # Business & Investment
     'tradingview':              ('tradingview-vs-fiscal-ai',        'Fiscal.ai'),
-    'finchat':                ('fiscal-ai-vs-koyfin',             'Koyfin'),
+    'fiscal-ai':              ('fiscal-ai-vs-koyfin',             'Koyfin'),
     'koyfin':                   ('koyfin-vs-tradingview',           'TradingView'),
 }
 

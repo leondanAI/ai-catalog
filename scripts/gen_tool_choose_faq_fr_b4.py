@@ -1,0 +1,359 @@
+#!/usr/bin/env python3
+"""Generate SQL for French (lang=fr) translations. Batch 4/4 (comparisons 91-117)."""
+
+import json, sys
+
+DATA_FR = {
+"gamma-vs-prezi": {
+  "a": "Gamma", "b": "Prezi",
+  "choose_a": ["✅ Vous voulez générer une présentation à partir d'un prompt IA en quelques minutes","✅ Présentation linéaire moderne avec un beau design sans connaissances PowerPoint","✅ Les présentations Gamma fonctionnent comme des liens web interactifs avec médias intégrés","✅ Entrée de gamme moins chère : le plan gratuit Gamma est plus généreux que Prezi"],
+  "choose_b": ["✅ Vous voulez des présentations non-linéaires avec zoom qui semblent plus dynamiques que des slides classiques","✅ L'interface zoomable de Prezi est unique et reste en mémoire du public","✅ Vous présentez en direct et voulez naviguer vers n'importe quelle partie spontanément","✅ Vous voulez l'outil standard pour le storytelling non-linéaire en présentation"],
+  "faq": [{"q":"Gamma vs Prezi — lequel est le meilleur ?","a":"Gamma est meilleur pour des présentations générées rapidement par IA avec un design moderne. Prezi est unique avec son approche canvas zoomable qui illustre les connexions visuellement. Gamma pour la rapidité ; Prezi pour le storytelling non-linéaire."},{"q":"Prezi est-il gratuit ?","a":"Prezi a un plan gratuit avec 5 présentations. Premium à partir de 7 $/mois. Gamma a un plan gratuit avec 400 crédits IA ; Plus à partir de 10 $/mois."},{"q":"Gamma peut-il créer des présentations en français ?","a":"Oui. Gamma comprend les prompts en français et crée des présentations en français. Saisissez votre prompt en français et Gamma génère des slides avec le contenu en français."},{"q":"Prezi pour l'enseignement — est-il efficace ?","a":"Prezi est populaire dans l'enseignement car il permet de montrer des connexions entre concepts de manière visuelle. Le plan Education offre des tarifs réduits. Pour les cours et conférences, l'approche non-linéaire de Prezi peut renforcer la compréhension."}]
+},
+"beautiful-ai-vs-pitch": {
+  "a": "Beautiful.ai", "b": "Pitch",
+  "choose_a": ["✅ Vous voulez des présentations qui s'adaptent automatiquement au contenu sans compétences en design","✅ Les Smart Slides s'ajustent automatiquement quand vous ajoutez ou modifiez du contenu","✅ Équipes créant beaucoup de présentations ayant besoin d'un design de marque cohérent","✅ Moins de temps sur le formatage et plus de temps sur le contenu"],
+  "choose_b": ["✅ Vous créez des pitch decks pour des investisseurs et des présentations commerciales avec collaboration","✅ Pitch Analytics : voyez qui a ouvert votre deck et combien de temps sur chaque slide","✅ Templates plus sophistiqués spécialement conçus pour les startups et les pitchs business","✅ Fonctionnalités de collaboration plus avancées : édition en direct, commentaires, historique des versions"],
+  "faq": [{"q":"Beautiful.ai vs Pitch — lequel est le meilleur pour les startups ?","a":"Pitch est plus populaire pour les pitch decks d'investisseurs : meilleurs templates pour le fundraising et collaboration plus forte. Beautiful.ai est bon pour les présentations d'entreprise régulières où la cohérence est importante. Pour les pitchs investisseurs → Pitch ; pour les présentations régulières → Beautiful.ai."},{"q":"Beautiful.ai est-il gratuit ?","a":"Beautiful.ai n'a pas de plan gratuit permanent. Pro à partir de 12 $/mois (annuel). Pitch a un plan gratuit jusqu'à 3 membres ; Pro à partir de 8 $/membre/mois."},{"q":"Beautiful.ai peut-il utiliser les polices et couleurs de marque ?","a":"Oui. Beautiful.ai prend en charge le branding : couleurs, polices et logos personnalisés. Vous pouvez créer des templates de marque que toute l'équipe utilise pour des présentations cohérentes. C'est l'un des principaux avantages pour les équipes marketing."},{"q":"Pitch vs PowerPoint — lequel est le meilleur ?","a":"Pitch a des templates plus modernes et une meilleure collaboration en ligne que PowerPoint. PowerPoint est plus universel et utilisable hors ligne. Pour les présentations d'équipe modernes → Pitch ; pour la compatibilité maximale et l'utilisation hors ligne → PowerPoint."}]
+},
+"slidesgo-vs-gamma": {
+  "a": "Slidesgo", "b": "Gamma",
+  "choose_a": ["✅ Vous voulez télécharger des templates PowerPoint ou Google Slides professionnels gratuitement","✅ Bibliothèque massive avec des milliers de templates thématiques pour toutes occasions","✅ Vous travaillez dans PowerPoint ou Google Slides et cherchez seulement des templates de qualité","✅ Slidesgo AI crée des présentations personnalisées directement dans Google Slides ou PowerPoint"],
+  "choose_b": ["✅ Vous voulez générer une présentation entière à partir d'un prompt IA","✅ Gamma génère aussi le contenu pas seulement le design — création IA complète","✅ Format web : les decks Gamma sont des liens web interactifs, pas des fichiers téléchargeables","✅ Vous voulez sortir de l'écosystème PowerPoint/Google Slides"],
+  "faq": [{"q":"Qu'est-ce que Slidesgo ?","a":"Slidesgo est une plateforme avec des templates de présentation gratuits et payants pour PowerPoint et Google Slides. Slidesgo AI peut générer des présentations à partir de descriptions et les ouvrir directement dans Google Slides ou PowerPoint."},{"q":"Slidesgo est-il gratuit ?","a":"Slidesgo a de nombreux templates gratuits. Premium à partir de 8,25 $/mois pour tous les templates sans restrictions. Gamma a un plan gratuit avec 400 crédits IA ; Plus à partir de 10 $/mois."},{"q":"Slidesgo AI vs Gamma — lequel est le meilleur ?","a":"Gamma est meilleur si vous n'avez pas de contenu et démarrez de zéro. Slidesgo AI est meilleur si vous savez déjà ce que vous voulez présenter et voulez un beau template dans Google Slides ou PowerPoint. Gamma est un outil de génération ; Slidesgo est basé sur les templates."},{"q":"Slidesgo pour Google Slides — comment ça fonctionne ?","a":"Les templates Slidesgo peuvent être ouverts directement dans Google Slides. Vous cliquez sur 'Use as Google Slides theme' et le template s'ouvre dans votre compte Google Slides. Slidesgo AI génère directement dans Google Slides sans téléchargement intermédiaire."}]
+},
+"tradingview-vs-fiscal-ai": {
+  "a": "TradingView", "b": "Finchat",
+  "choose_a": ["✅ Vous êtes trader technique et avez besoin de graphiques avancés, d'indicateurs et de Pine Script","✅ Communauté massive avec des milliers d'idées de trading et de scripts partagés","✅ Vous tradez activement et avez besoin de données en temps réel et d'intégration broker directe","✅ Large couverture d'actifs : actions, crypto, forex, futures et indices mondiaux"],
+  "choose_b": ["✅ Vous voulez une analyse financière IA : poser des questions sur les rapports d'entreprise et données financières","✅ Finchat analyse les 10-Ks, les earnings calls et les données financières avec des questions en langage naturel","✅ Vous êtes investisseur fondamental cherchant une compréhension approfondie des entreprises plutôt que des graphiques","✅ Due diligence rapide sans analyser manuellement des centaines de pages de rapports annuels"],
+  "faq": [{"q":"TradingView vs Finchat — quelle est la différence ?","a":"TradingView est pour l'analyse technique : graphiques, indicateurs, idées de trading. Finchat est pour l'analyse IA fondamentale : posez des questions sur les rapports d'entreprise. TradingView pour les traders ; Finchat pour les investisseurs long terme."},{"q":"TradingView est-il gratuit ?","a":"TradingView a un plan gratuit avec 3 indicateurs et un délai des données. Essential à partir de 14,95 $/mois, Essential+ à partir de 29,95 $. Finchat a un plan gratuit ; Pro à partir de 30 $/mois."},{"q":"Qu'est-ce que Pine Script ?","a":"Pine Script est le langage de programmation propriétaire de TradingView pour créer des indicateurs et systèmes de trading personnalisés. Vous pouvez écrire et backtester vos propres indicateurs techniques. La communauté partage des milliers d'indicateurs Pine Script gratuitement."},{"q":"Finchat pour les actions françaises — est-il efficace ?","a":"Finchat couvre les marchés internationaux incluant les actions françaises (CAC40). La profondeur de l'analyse IA peut être moindre pour les petites capitalisations françaises que pour les grandes entreprises américaines où plus de documentation est disponible."}]
+},
+"koyfin-vs-tradingview": {
+  "a": "Koyfin", "b": "TradingView",
+  "choose_a": ["✅ Vous avez besoin de données fondamentales style Bloomberg et de macro-dashboards à une fraction du prix","✅ Koyfin est plus fort pour l'analyse fondamentale : données financières, métriques de croissance, comparaisons de valorisation","✅ Vous gérez un portefeuille d'investissement et avez besoin d'outils de screening et d'analyse complets","✅ Alternative Bloomberg abordable pour les investisseurs professionnels et analystes"],
+  "choose_b": ["✅ Vous êtes trader technique ayant besoin des meilleurs graphiques et indicateurs techniques","✅ Communauté de trading sociale massive avec des idées, analyses et commentaires partagés","✅ Intégration broker directe pour trader directement depuis TradingView","✅ Plan gratuit avec de bonnes fonctionnalités suffisant pour les débutants"],
+  "faq": [{"q":"Koyfin vs Bloomberg — quelle est la différence ?","a":"Bloomberg Terminal coûte environ 25 000 $/an et est le standard professionnel dans l'industrie financière. Koyfin offre des données fondamentales et des macro-dashboards similaires à partir de 59 $/mois. Pour les investisseurs professionnels sans budget Bloomberg, Koyfin est une excellente alternative."},{"q":"Koyfin est-il gratuit ?","a":"Koyfin a un plan gratuit avec des fonctionnalités limitées. Plus à partir de 59 $/mois, Pro à partir de 199 $/mois. TradingView a un plan gratuit ; Essential à partir de 14,95 $/mois."},{"q":"Koyfin pour le screening d'actions — est-il bon ?","a":"Oui. Koyfin dispose d'un puissant screener d'actions avec des centaines de filtres fondamentaux et techniques. Vous pouvez filtrer les actions par PER, taux de croissance, dividende, région géographique et bien d'autres critères."},{"q":"TradingView pour les investisseurs long terme — est-il adapté ?","a":"TradingView se concentre sur l'analyse technique et est principalement conçu pour les traders. Pour les investisseurs fondamentaux long terme, Koyfin ou Finchat sont mieux adaptés. TradingView peut être utilisé en complément pour l'analyse graphique."}]
+},
+"fiscal-ai-vs-koyfin": {
+  "a": "Finchat", "b": "Koyfin",
+  "choose_a": ["✅ Vous voulez poser des questions IA sur les rapports d'entreprise, les earnings calls et les données financières","✅ L'IA de Finchat analyse les dépôts SEC et la documentation d'entreprise en langage naturel","✅ Due diligence rapide par conversation plutôt qu'une analyse manuelle de centaines de pages","✅ Vous voulez des réponses à des questions spécifiques sur une entreprise en langage naturel"],
+  "choose_b": ["✅ Vous avez besoin de données fondamentales complètes, de screening et de dashboards pour de nombreuses entreprises","✅ Koyfin est plus fort pour l'analyse de portefeuille et la création de macro-dashboards","✅ Meilleure couverture des actions internationales et marchés non-américains","✅ Vous comparez de nombreuses entreprises simultanément dans des tableaux de screener structurés"],
+  "faq": [{"q":"Qu'est-ce que Finchat ?","a":"Finchat est un outil d'analyse financière IA qui vous permet de poser des questions sur les rapports d'entreprise, les earnings calls et les données financières en langage naturel. Il analyse les 10-Ks, 10-Qs et les transcriptions d'earnings de milliers d'entreprises."},{"q":"Finchat vs Koyfin — pour qui ?","a":"Finchat est meilleur pour l'analyse approfondie d'une entreprise par conversation : 'Qu'a dit le CFO sur les marges au T3 ?' Koyfin est meilleur pour le screening large et la comparaison de nombreuses entreprises en tableau. Les deux se complètent bien pour les investisseurs fondamentaux."},{"q":"Finchat est-il gratuit ?","a":"Finchat a un plan gratuit avec des requêtes limitées. Pro à partir de 30 $/mois. Koyfin a un plan gratuit ; Plus à partir de 59 $/mois."},{"q":"Finchat peut-il analyser des entreprises françaises ?","a":"Finchat a des données pour les entreprises internationales incluant les actions du CAC40. La profondeur peut être moindre pour les petites entreprises françaises. Pour les grands groupes français (LVMH, TotalEnergies, Sanofi), de bonnes données et analyses sont disponibles."}]
+},
+"tickeron-vs-tradingview": {
+  "a": "Tickeron", "b": "TradingView",
+  "choose_a": ["✅ Vous voulez des signaux de trading IA et une reconnaissance de patterns automatiques","✅ Les AI Robots de Tickeron génèrent des signaux d'achat et de vente automatiques","✅ Vous cherchez une approche IA basée sur des règles plutôt qu'une analyse technique manuelle","✅ Débutants préférant des guidances IA pour les décisions de trading sans analyser eux-mêmes"],
+  "choose_b": ["✅ Vous êtes trader expérimenté qui analyse lui-même et a besoin d'outils graphiques avancés","✅ Personnalisation illimitée : Pine Script pour vos propres indicateurs et stratégies","✅ Plus grande communauté de trading mondiale pour des idées, stratégies et scripts partagés","✅ Large intégration broker pour le trading direct depuis la plateforme TradingView"],
+  "faq": [{"q":"Qu'est-ce que Tickeron ?","a":"Tickeron est une plateforme de trading IA qui reconnaît automatiquement les patterns de marché, génère des signaux et propose des AI Robots pour le trading automatisé. Elle combine l'analyse technique avec l'IA pour identifier les signaux d'achat et de vente."},{"q":"Tickeron vs TradingView — lequel est meilleur pour les débutants ?","a":"Tickeron est plus accessible pour les débutants souhaitant des signaux IA sans connaissances approfondies en graphiques. TradingView a une courbe d'apprentissage plus importante pour l'analyse technique. Mais TradingView est gratuit et facile à utiliser pour la lecture basique de graphiques."},{"q":"Les signaux Tickeron sont-ils fiables ?","a":"Les signaux de trading IA n'ont pas de précision garantie. Tickeron montre les performances historiques de ses patterns. Comme tous les outils de trading, Tickeron doit être utilisé comme un outil parmi d'autres, pas comme seule base de décision."},{"q":"Combien coûte Tickeron ?","a":"Tickeron commence à partir de 90 $/mois pour les fonctionnalités de base. Les plans supérieurs pour plus d'AI Robots et de signaux. TradingView a un plan gratuit ; Essential à partir de 14,95 $/mois."}]
+},
+"uptrends-ai-vs-koyfin": {
+  "a": "Uptrends AI", "b": "Koyfin",
+  "choose_a": ["✅ Vous voulez une analyse de tendance IA et une reconnaissance automatique de patterns de marché","✅ Uptrends AI identifie automatiquement les tendances émergentes sur les actions et marchés","✅ Vous cherchez des signaux IA sans avoir à construire vous-même des connaissances en analyse technique","✅ Alertes automatiques quand Uptrends AI détecte des retournements ou confirmations potentiels"],
+  "choose_b": ["✅ Vous avez besoin de données fondamentales complètes, de comparaisons de valorisation et de screening de portefeuille","✅ Couverture de données style Bloomberg à une fraction du prix","✅ Vous gérez un portefeuille d'investissement avec des macro-dashboards structurés","✅ Koyfin est plus mature avec une base de données plus profonde pour les investisseurs professionnels"],
+  "faq": [{"q":"Qu'est-ce que Uptrends AI ?","a":"Uptrends AI est un outil d'investissement IA qui analyse les tendances de marché et identifie les signaux de mouvements de prix émergents. Il utilise le machine learning pour reconnaître des patterns dans les données de marché."},{"q":"Uptrends AI vs Koyfin — lequel est le meilleur ?","a":"Koyfin est plus mature et reconnu pour l'analyse fondamentale et la gestion de portefeuille. Uptrends AI est plus spécialisé dans l'analyse de tendances IA et les signaux. Pour les investisseurs fondamentaux → Koyfin ; pour les signaux de tendance → Uptrends AI."},{"q":"Uptrends AI couvre-t-il les cryptomonnaies ?","a":"Uptrends AI couvre différentes classes d'actifs. Vérifiez la plateforme actuelle pour la couverture exacte des actifs supportés."},{"q":"Koyfin pour les actions européennes — est-il bon ?","a":"Koyfin couvre les marchés internationaux incluant les bourses européennes (Euronext Paris, Frankfurt). Pour les composantes du CAC40 et du DAX, de bonnes données fondamentales sont disponibles. La couverture peut être moins profonde pour les petites capitalisations européennes."}]
+},
+"amazon-q-developer-vs-github-copilot": {
+  "a": "Amazon Q Developer", "b": "GitHub Copilot",
+  "choose_a": ["✅ Vous développez dans l'environnement AWS et voulez un codage IA avec intégration profonde des services AWS","✅ Amazon Q a une connaissance spécifique d'AWS : CloudFormation, Lambda, EC2, S3 — meilleur que Copilot pour AWS","✅ Démarrage gratuit : Amazon Q Developer Free Tier pour les développeurs individuels","✅ Scans de sécurité automatiques et remédiation de code pour les projets AWS"],
+  "choose_b": ["✅ Vous ne travaillez pas exclusivement sur AWS et avez besoin d'un assistant de codage IA universel","✅ GitHub Copilot est plus profondément intégré dans VS Code, JetBrains et d'autres IDEs","✅ Plus grande communauté de développeurs et plus d'intégrations dans les workflows CI/CD","✅ Vous utilisez GitHub pour vos dépôts et voulez une intégration Copilot transparente"],
+  "faq": [{"q":"Amazon Q Developer vs GitHub Copilot — lequel est le meilleur ?","a":"Pour les développeurs AWS, Amazon Q Developer est supérieur : il connaît profondément les services AWS, CloudFormation et les bonnes pratiques. Pour le développement général, GitHub Copilot est plus largement utilisable. Équipes AWS → Amazon Q ; développement général → Copilot."},{"q":"Amazon Q Developer est-il gratuit ?","a":"Amazon Q Developer a un plan gratuit avec 50 conversations et 1 000 recommandations de code/mois. Pro à partir de 19 $/utilisateur/mois. GitHub Copilot Individual à partir de 10 $/mois ; Business à partir de 19 $/utilisateur/mois."},{"q":"Que peut faire Amazon Q Developer ?","a":"Amazon Q Developer peut compléter du code, déboguer des erreurs, expliquer du code, générer une infrastructure AWS (CloudFormation, CDK), scanner les failles de sécurité et les corriger, et vous aider avec les bonnes pratiques AWS."},{"q":"GitHub Copilot et la conformité RGPD ?","a":"GitHub Copilot Business et Enterprise ont des paramètres de confidentialité avancés : les extraits de code ne sont pas utilisés pour l'entraînement et pas de partage de code avec des tiers. Pour la conformité RGPD, la version Enterprise avec des contrôles de confidentialité spécifiques est recommandée."}]
+},
+"continue-dev-vs-github-copilot": {
+  "a": "Continue.dev", "b": "GitHub Copilot",
+  "choose_a": ["✅ Vous voulez un outil de codage IA open-source sans coûts d'abonnement et avec un choix libre de modèles","✅ Continue.dev supporte les modèles locaux (Ollama), Claude, GPT-4 et d'autres — vous choisissez","✅ Confidentialité : votre code reste local si vous utilisez des modèles locaux comme Codestral ou DeepSeek","✅ Extension VS Code et JetBrains qui fonctionne comme Copilot mais plus flexible et gratuite"],
+  "choose_b": ["✅ Vous voulez l'assistant de codage IA le plus mature et le mieux intégré","✅ GitHub Copilot a l'intégration IDE la plus profonde et les meilleures performances stables","✅ Fonctionnalités Enterprise : politiques de code, audit et contrôles admin pour les équipes de développeurs","✅ Vous voulez utiliser Copilot Chat, Copilot Workspace et d'autres fonctionnalités GitHub natives"],
+  "faq": [{"q":"Qu'est-ce que Continue.dev ?","a":"Continue.dev est un assistant de codage IA open-source pour VS Code et JetBrains. Il fonctionne comme GitHub Copilot mais vous choisissez le modèle — OpenAI, Anthropic, modèles locaux Ollama ou d'autres fournisseurs. L'outil lui-même est gratuit."},{"q":"Continue.dev est-il vraiment gratuit ?","a":"Continue.dev est gratuit et open-source. Vous payez uniquement pour le modèle IA utilisé — APIs OpenAI, Anthropic ou rien si vous utilisez des modèles locaux comme Ollama. Pour les équipes souhaitant réduire les coûts Copilot élevés, c'est attractif."},{"q":"Continue.dev avec des modèles locaux — quelle est la qualité ?","a":"Continue.dev avec des modèles locaux comme DeepSeek Coder ou Codestral via Ollama est bon pour la complétion de code et les explications simples. Pour la génération de code complexe, les modèles cloud (Claude, GPT-4) sont encore supérieurs. Mais pour la confidentialité et les économies, c'est excellent."},{"q":"GitHub Copilot vs Continue.dev — lequel l'emporte ?","a":"Copilot est plus mature avec une meilleure intégration IDE et des performances plus consistantes. Continue.dev est plus flexible, gratuit et plus respectueux de la confidentialité. Pour des performances maximales → Copilot ; pour l'open-source et la confidentialité → Continue.dev."}]
+},
+"opencode-vs-claude-code": {
+  "a": "OpenCode", "b": "Claude Code",
+  "choose_a": ["✅ Vous voulez un outil IA terminal open-source qui fonctionne avec différents modèles","✅ OpenCode supporte OpenAI, Anthropic, des modèles locaux — pas lié à un seul écosystème","✅ Gratuit et open-source — pas d'abonnement requis pour l'outil lui-même","✅ Vous voulez une expérience similaire à Claude Code sans être exclusivement lié à Anthropic"],
+  "choose_b": ["✅ Vous voulez l'agent de codage IA le plus puissant avec l'intégration Claude d'Anthropic","✅ Claude Code est spécialement conçu pour les refactorisations multi-fichiers complexes et les tâches agentiques","✅ Meilleures performances pour les grandes bases de code et les tâches de développement complexes","✅ Développé directement par Anthropic avec le dernier modèle Claude et une intégration optimisée"],
+  "faq": [{"q":"Qu'est-ce que OpenCode ?","a":"OpenCode est un assistant de codage IA terminal open-source similaire à Claude Code ou Aider. Il supporte plusieurs modèles (OpenAI, Anthropic, Ollama) et travaille directement dans le terminal pour des tâches de codage agentiques."},{"q":"OpenCode vs Claude Code — lequel est le meilleur ?","a":"Claude Code est plus puissant pour les tâches complexes car optimisé par Anthropic avec le meilleur accès aux modèles Claude. OpenCode est plus flexible et gratuit — idéal pour tester différents modèles ou réduire les coûts."},{"q":"Claude Code est-il gratuit ?","a":"Claude Code CLI est gratuit comme outil. Vous payez pour l'utilisation de l'API Claude basée sur les tokens traités. Pour une utilisation intensive, un plan Claude Max (100 $/mois) inclut une utilisation API plus importante."},{"q":"OpenCode pour les modèles locaux — est-ce possible ?","a":"Oui. OpenCode supporte les modèles locaux via Ollama. Cela permet une assistance au codage entièrement privée sans envoi dans le cloud. La qualité dépend du modèle local — pour les meilleurs résultats, de grands modèles (70B+) sont recommandés."}]
+},
+"zed-vs-cursor": {
+  "a": "Zed", "b": "Cursor",
+  "choose_a": ["✅ Vous priorisez la vitesse : Zed est écrit en Rust et reste rapide même sur de grands projets","✅ Collaboration multiplayer native : plusieurs développeurs dans le même éditeur en temps réel","✅ Fonctionnalités IA avec intégration Claude pour la compréhension et la génération de code","✅ Éditeur plus simple et épuré pour les développeurs qui préfèrent le minimalisme et les performances"],
+  "choose_b": ["✅ Vous voulez l'éditeur de code IA avec les capacités agentiques les plus profondes","✅ Cursor Composer génère et modifie plusieurs fichiers simultanément pour des fonctionnalités complexes","✅ Compatible VS Code : toutes vos extensions et paramètres fonctionnent directement","✅ L'éditeur de code IA le plus utilisé avec la communauté la plus active et le plus de ressources"],
+  "faq": [{"q":"Zed vs Cursor — lequel est le meilleur ?","a":"Cursor est plus mature pour le codage IA : meilleures fonctionnalités agentiques, édition multi-fichiers et meilleure intégration chat. Zed est plus rapide et a une collaboration multiplayer native unique. Pour le codage IA → Cursor ; pour les performances et la collaboration → Zed."},{"q":"Zed est-il gratuit ?","a":"Zed est gratuit et open-source. Les fonctionnalités IA dans Zed utilisent Claude et peuvent entraîner des coûts API. Cursor a un plan gratuit avec des requêtes limitées ; Pro à partir de 20 $/mois."},{"q":"Zed peut-il utiliser des extensions VS Code ?","a":"Non. Zed n'est pas un fork de VS Code et n'utilise pas les extensions VS Code. Zed a son propre système d'extensions qui croît mais est encore bien plus petit que l'écosystème VS Code."},{"q":"Zed est-il optimisé pour macOS ?","a":"Zed a été développé à l'origine pour macOS et y est le mieux optimisé. Il utilise les APIs natives macOS pour des performances maximales. Le support Linux est disponible ; le support Windows est en développement."}]
+},
+"comfyui-vs-stable-diffusion": {
+  "a": "ComfyUI", "b": "Stable Diffusion (Automatic1111)",
+  "choose_a": ["✅ Vous voulez le contrôle le plus granulaire sur le pipeline de génération d'images avec des workflows visuels","✅ ComfyUI utilise une interface de flux de nœuds pour des workflows personnalisés très avancés","✅ Plus efficace en mémoire et plus rapide que Automatic1111 pour les utilisateurs avancés","✅ Meilleur pour les workflows complexes : ControlNet, IP-Adapter, AnimateDiff"],
+  "choose_b": ["✅ Vous voulez l'interface la plus facile à utiliser pour Stable Diffusion avec une grande communauté","✅ Automatic1111 (A1111) est l'interface SD la plus utilisée avec le plus de tutoriels disponibles","✅ Plus facile à prendre en main pour les débutants de Stable Diffusion","✅ Bibliothèque d'extensions plus grande et mieux documentée pour A1111"],
+  "faq": [{"q":"ComfyUI vs Automatic1111 — lequel choisir ?","a":"ComfyUI est pour les utilisateurs avancés voulant un contrôle maximal via des workflows en nœuds. Automatic1111 est plus facile pour les débutants et la communauté est plus grande. Débutants → Automatic1111 ; utilisateurs avancés voulant des workflows complexes → ComfyUI."},{"q":"ComfyUI est-il gratuit ?","a":"Oui. ComfyUI est entièrement gratuit et open-source. Vous avez besoin d'un GPU compatible et d'un modèle Stable Diffusion. Automatic1111 est aussi gratuit et open-source."},{"q":"ComfyUI peut-il fonctionner sans GPU ?","a":"ComfyUI peut fonctionner sur CPU mais très lentement. Pour une utilisation pratique, un GPU NVIDIA avec 6+ Go VRAM est recommandé. Des services cloud comme Google Colab permettent d'utiliser ComfyUI sans GPU local."},{"q":"Quelle est la différence entre ComfyUI et Stable Diffusion ?","a":"Stable Diffusion est le modèle IA. ComfyUI et Automatic1111 sont des interfaces pour utiliser ce modèle. ComfyUI utilise une approche de nœuds visuels ; Automatic1111 utilise une interface web traditionnelle."}]
+},
+"krea-ai-vs-midjourney": {
+  "a": "Krea AI", "b": "Midjourney",
+  "choose_a": ["✅ Vous voulez une génération d'images IA en temps réel qui s'affiche pendant que vous dessinez","✅ Krea AI propose une génération en temps réel unique : voyez l'image IA évoluer en direct","✅ Excellent pour l'idéation créative rapide et l'exploration de concepts visuels","✅ Krea propose aussi la vidéo IA et l'amélioration d'images en plus de la génération"],
+  "choose_b": ["✅ Vous voulez la meilleure qualité artistique et cohérence esthétique pour l'art créatif","✅ Midjourney est le standard de l'industrie pour l'art IA de haute qualité","✅ Communauté massive avec des prompts partagés et de l'inspiration créative","✅ Meilleur pour les portraits, paysages et illustrations artistiques stylisées de haute qualité"],
+  "faq": [{"q":"Krea AI vs Midjourney — quelle est la différence ?","a":"Krea AI se distingue par sa génération en temps réel et ses fonctionnalités d'idéation créative. Midjourney est le standard pour l'art IA de haute qualité avec une communauté massive. Pour l'exploration créative en temps réel → Krea ; pour la qualité artistique finale → Midjourney."},{"q":"Krea AI est-il gratuit ?","a":"Krea AI a un plan gratuit avec des crédits limités. Les plans payants à partir de 10 $/mois. Midjourney à partir de 10 $/mois sans plan gratuit permanent."},{"q":"Krea AI peut-il améliorer des images existantes ?","a":"Oui. Krea AI dispose d'outils d'upscaling et d'amélioration d'images qui augmentent la résolution et améliorent la qualité des images existantes. C'est une fonctionnalité utile pour améliorer des images générées ou des photos."},{"q":"Krea AI Real-Time — comment ça fonctionne ?","a":"Krea AI Real-Time montre la génération IA en direct pendant que vous dessinez ou modifiez votre prompt. L'image se met à jour en quelques secondes à chaque modification. C'est révolutionnaire pour l'idéation créative rapide."}]
+},
+"nano-banana-vs-leonardo-ai": {
+  "a": "Nano Banana", "b": "Leonardo AI",
+  "choose_a": ["✅ Vous avez besoin d'un outil de génération d'images axé sur des cas d'usage spécifiques et la rapidité","✅ Nano Banana propose une génération d'images optimisée pour certains cas d'usage créatifs","✅ Interface simple et accessible pour des générations rapides","✅ Alternative moins connue à explorer si vous cherchez des styles différents"],
+  "choose_b": ["✅ Vous avez besoin d'une plateforme complète avec génération d'images, actifs de jeu et fine-tuning","✅ Leonardo AI est populaire dans le développement de jeux pour ses actifs cohérents","✅ Plan gratuit généreux avec 150 tokens par jour — parfait pour commencer","✅ Fine-tuning disponible : entraînez des modèles personnalisés sur votre style ou personnages"],
+  "faq": [{"q":"Nano Banana vs Leonardo AI — lequel est le meilleur ?","a":"Leonardo AI est plus établi avec plus de fonctionnalités, une communauté plus grande et un plan gratuit généreux. Nano Banana est une alternative plus récente. Pour une plateforme éprouvée → Leonardo AI."},{"q":"Nano Banana est-il gratuit ?","a":"Vérifiez le site actuel de Nano Banana pour les tarifs à jour. Leonardo AI a un plan gratuit avec 150 tokens par jour ; payants à partir de 12 $/mois."},{"q":"Leonardo AI est-il bon pour les illustrations de jeux ?","a":"Oui. Leonardo AI est particulièrement apprécié pour les actifs de jeux : personnages cohérents, textures, icônes et environnements. Le fine-tuning permet de maintenir un style visuel cohérent sur plusieurs générations."},{"q":"Nano Banana pour quels types d'images ?","a":"Nano Banana se spécialise dans certains types de génération créative. Visitez leur site pour voir leurs cas d'usage et exemples actuels afin de déterminer si cela correspond à vos besoins."}]
+},
+"chatgpt-images-vs-adobe-firefly": {
+  "a": "ChatGPT Images (DALL-E 3)", "b": "Adobe Firefly",
+  "choose_a": ["✅ Vous êtes déjà abonné à ChatGPT Plus et voulez générer des images directement dans le chat","✅ DALL-E 3 suit parfaitement les instructions textuelles détaillées pour une précision maximale","✅ Intégration dans le workflow de chat : générez des images dans le contexte d'une conversation","✅ Accessible immédiatement sans outil supplémentaire si vous avez ChatGPT Plus"],
+  "choose_b": ["✅ Vous travaillez dans l'écosystème Adobe et voulez la génération IA intégrée dans Photoshop","✅ Adobe Firefly est entraîné sur du contenu sous licence — sûr commercialement sans problèmes de droits","✅ Generative Fill dans Photoshop étend les images et supprime les objets avec l'IA","✅ Idéal pour les professionnels créatifs ayant déjà un abonnement Creative Cloud"],
+  "faq": [{"q":"DALL-E 3 vs Adobe Firefly — lequel est le meilleur ?","a":"DALL-E 3 suit mieux les instructions textuelles précises. Firefly est meilleur pour l'intégration professionnelle dans Photoshop et la sécurité commerciale. Pour une génération dans ChatGPT → DALL-E 3 ; pour les professionnels Adobe → Firefly."},{"q":"ChatGPT Images est-il inclus dans ChatGPT gratuit ?","a":"La génération d'images dans ChatGPT est disponible dans le plan gratuit avec des limites. ChatGPT Plus (20 $/mois) offre plus de générations et une priorité d'accès. Adobe Firefly est inclus dans Creative Cloud."},{"q":"Adobe Firefly peut-il modifier des photos existantes ?","a":"Oui. Via Generative Fill dans Photoshop, Firefly peut étendre, supprimer ou remplacer des éléments dans des photos existantes. C'est l'une des fonctionnalités les plus puissantes pour l'édition photo professionnelle."},{"q":"DALL-E 3 est-il sûr pour un usage commercial ?","a":"DALL-E 3 via ChatGPT permet l'usage commercial du contenu généré selon les conditions d'OpenAI. Adobe Firefly offre des garanties d'indemnisation commerciale plus explicites car il est spécifiquement entraîné sur du contenu sous licence."}]
+},
+"claude-design-vs-figma-ai": {
+  "a": "Claude (design)", "b": "Figma AI",
+  "choose_a": ["✅ Vous voulez utiliser Claude pour générer du code de composants React, CSS et HTML directement","✅ Claude peut générer des designs complets en code à partir de descriptions détaillées","✅ Meilleur pour les développeurs créant des interfaces programmatiquement plutôt que visuellement","✅ Claude peut aussi raisonner sur les décisions de design UX et donner des recommandations"],
+  "choose_b": ["✅ Vous êtes designer professionnel ayant besoin d'IA directement dans votre outil de travail Figma","✅ Figma AI génère des layouts et composants dans l'environnement de design visuel","✅ Meilleur pour la collaboration d'équipe sur des designs UX/UI avec un workflow visuel","✅ Figma reste le standard de l'industrie pour le design UX/UI professionnel"],
+  "faq": [{"q":"Claude vs Figma AI pour le design — quelle est la différence ?","a":"Claude génère du code de design (React, CSS) à partir de descriptions. Figma AI génère des composants visuels directement dans Figma. Pour les développeurs créant des interfaces en code → Claude ; pour les designers travaillant visuellement → Figma AI."},{"q":"Claude peut-il générer des maquettes complètes ?","a":"Claude peut générer du HTML/CSS/React pour des maquettes fonctionnelles mais pas des fichiers Figma. Pour des maquettes visuelles interactives, Figma, Uizard ou v0 sont mieux adaptés."},{"q":"Figma AI est-il inclus dans Figma ?","a":"Oui. Les fonctionnalités IA de Figma sont intégrées dans l'application. Certaines fonctionnalités IA avancées peuvent nécessiter un plan payant. Figma a un plan gratuit ; Professional à partir de 15 $/éditeur/mois."},{"q":"Claude peut-il aider avec les décisions de design UX ?","a":"Oui. Claude est excellent pour raisonner sur les décisions UX : architecture de navigation, hiérarchie de l'information, meilleures pratiques d'accessibilité. Il peut être un précieux consultant UX même s'il ne génère pas de fichiers Figma."}]
+},
+"google-stitch-vs-figma-ai": {
+  "a": "Google Stitch", "b": "Figma AI",
+  "choose_a": ["✅ Vous voulez générer des designs d'interface à partir de descriptions ou de screenshots avec l'IA de Google","✅ Google Stitch génère des maquettes et prototypes d'applications directement depuis des prompts","✅ Intégration avec l'écosystème Google pour les équipes Android et Material Design","✅ Génération rapide de prototypes pour tester des idées d'interface sans compétences en design"],
+  "choose_b": ["✅ Vous êtes designer professionnel ayant besoin des outils les plus avancés pour le design UX/UI","✅ Figma est le standard de l'industrie avec le plus grand écosystème de plugins et de ressources","✅ Meilleure collaboration pour les grandes équipes de design avec des workflows professionnels","✅ Figma AI est intégré dans votre outil de travail quotidien — pas de changement de contexte"],
+  "faq": [{"q":"Google Stitch vs Figma AI — quelle est la différence ?","a":"Google Stitch est un outil de prototypage rapide de Google pour générer des maquettes avec IA. Figma AI est IA intégrée dans le standard de l'industrie pour le design professionnel. Pour des prototypes rapides → Stitch ; pour le design professionnel → Figma."},{"q":"Google Stitch est-il disponible pour tout le monde ?","a":"Google Stitch est en accès limité / preview. Vérifiez la disponibilité actuelle sur le site de Google Labs. Figma est largement disponible avec un plan gratuit."},{"q":"Google Stitch génère-t-il du code ?","a":"Google Stitch se concentre sur la génération visuelle de maquettes. Pour la génération de code à partir de designs, des outils comme Figma vers code, v0 ou les fonctionnalités de développement Figma sont plus adaptés."},{"q":"Figma AI peut-il remplacer les designers ?","a":"Non. Figma AI aide les designers à être plus productifs — génère du contenu de remplissage, suggère des layouts. Mais la stratégie, la créativité, la recherche utilisateur et le jugement de design restent humains. C'est un outil d'augmentation, pas de remplacement."}]
+},
+"recraft-vs-canva-ai": {
+  "a": "Recraft AI", "b": "Canva AI",
+  "choose_a": ["✅ Vous avez besoin de générer des illustrations vectorielles, des icônes et des actifs SVG avec IA","✅ Recraft excelle dans la génération de styles visuels cohérents pour des marques entières","✅ Meilleur pour les designers créant des systèmes d'illustration et des actifs de marque originaux","✅ Plan gratuit généreux avec des crédits mensuels pour commencer"],
+  "choose_b": ["✅ Vous avez besoin d'un outil polyvalent pour créer toutes sortes de visuels marketing","✅ Canva AI génère des images, textes, présentations et tous types de contenus marketing","✅ Interface beaucoup plus simple et bibliothèque de templates massive pour les non-designers","✅ Plan gratuit Canva très généreux avec des milliers de templates disponibles"],
+  "faq": [{"q":"Recraft vs Canva AI — lequel est le meilleur ?","a":"Recraft est spécialisé dans les illustrations vectorielles et les actifs de marque originaux. Canva AI est polyvalent pour tout le contenu marketing. Pour des illustrations de marque uniques → Recraft ; pour le contenu marketing général → Canva."},{"q":"Recraft peut-il générer des SVG ?","a":"Oui. La génération de SVG est la fonctionnalité phare de Recraft. C'est unique parmi les générateurs d'images IA. Vous obtenez des fichiers vectoriels scalables directement utilisables dans vos projets de design."},{"q":"Canva AI peut-il remplacer un designer graphique ?","a":"Canva AI peut aider les non-designers à créer du contenu marketing décent rapidement. Mais pour une identité de marque forte, des designs complexes et un travail créatif avancé, un designer professionnel reste nécessaire."},{"q":"Recraft AI est-il adapté aux logos ?","a":"Recraft est excellent pour créer des concepts de logos car il génère des styles cohérents. Pour des logos vectoriels finaux utilisables dans tous les formats, la sortie SVG de Recraft est directement utilisable ou éditable dans Illustrator."}]
+},
+"remove-bg-vs-canva-ai": {
+  "a": "Remove.bg", "b": "Canva AI",
+  "choose_a": ["✅ Vous avez besoin de supprimer l'arrière-plan d'images rapidement et avec la meilleure précision","✅ Remove.bg est le spécialiste de la suppression d'arrière-plan — résultats plus précis que Canva","✅ API Remove.bg pour intégrer la suppression d'arrière-plan dans vos applications","✅ Traitement par lots d'images en une seule opération"],
+  "choose_b": ["✅ Vous avez besoin d'un outil polyvalent qui supprime les arrière-plans ET crée du contenu marketing","✅ Canva a une fonction de suppression d'arrière-plan intégrée — suffisante pour la plupart des cas","✅ Interface tout-en-un : supprimez l'arrière-plan puis composez votre design sans changer d'outil","✅ Plan gratuit Canva très généreux pour commencer sans frais"],
+  "faq": [{"q":"Remove.bg vs Canva — lequel est le meilleur pour supprimer des arrière-plans ?","a":"Remove.bg est plus précis pour les sujets complexes (cheveux fins, transparences). Canva est suffisant pour la plupart des cas courants. Pour une précision maximale → Remove.bg ; pour un workflow intégré → Canva."},{"q":"Remove.bg est-il gratuit ?","a":"Remove.bg permet quelques prévisualisations gratuites. Les téléchargements en haute résolution sont payants : environ 0,20 $ par image ou abonnement à partir de 9 $/mois. Canva a un outil de suppression d'arrière-plan dans son plan gratuit (avec limites)."},{"q":"Remove.bg fonctionne-t-il pour les animaux ?","a":"Oui. Remove.bg fonctionne bien pour les humains, animaux, produits et la plupart des sujets. La précision peut varier pour les sujets avec des bords très complexes ou des couleurs similaires à l'arrière-plan."},{"q":"Canva peut-il supprimer l'arrière-plan gratuitement ?","a":"Canva a la suppression d'arrière-plan dans son plan gratuit avec des limites. Canva Pro (15 $/mois) offre une suppression illimitée. Pour une utilisation intensive, Remove.bg ou un abonnement Canva Pro sont plus adaptés."}]
+},
+"seedance-vs-runway": {
+  "a": "Seedance 2.0", "b": "Runway",
+  "choose_a": ["✅ Vous voulez de la génération vidéo IA avec une qualité et une cohérence des personnages exceptionnelles","✅ Seedance 2.0 est particulièrement apprécié pour la cohérence des personnages dans les vidéos","✅ Alternative compétitive à Runway avec potentiellement de meilleures performances pour certains cas","✅ Interface accessible pour générer des vidéos IA de haute qualité"],
+  "choose_b": ["✅ Vous avez besoin de la plateforme de vidéo IA la plus établie et complète","✅ Runway Gen-3 est le standard de l'industrie pour la production vidéo IA professionnelle","✅ Suite complète : génération, édition, inpainting, motion brush et contrôle caméra","✅ Meilleure intégration dans les flux de travail de production professionnels existants"],
+  "faq": [{"q":"Seedance 2.0 vs Runway — lequel est le meilleur ?","a":"Runway est plus établi avec plus de fonctionnalités d'édition avancées. Seedance 2.0 est apprécié pour la cohérence des personnages. Essayez les deux avec leurs plans gratuits ou d'essai pour voir lequel convient le mieux à vos besoins."},{"q":"Seedance 2.0 est-il gratuit ?","a":"Vérifiez les tarifs actuels de Seedance sur leur site. Runway a un plan gratuit avec des crédits limités ; Standard à partir de 15 $/mois."},{"q":"Runway peut-il générer des vidéos longues ?","a":"Runway génère des vidéos jusqu'à 10 secondes par génération avec Gen-3. Pour des vidéos plus longues, vous chaînez plusieurs générations. D'autres outils comme Google Veo 3 permettent des vidéos plus longues en une seule génération."},{"q":"Quelle est la meilleure alternative à Runway ?","a":"Les meilleures alternatives à Runway incluent Kling AI (meilleur rapport qualité-prix), Luma Dream Machine (réalisme), Pika (créativité) et Seedance (cohérence personnages). Chacun a ses forces — testez plusieurs selon votre cas d'usage."}]
+},
+"whisper-vs-otter-ai": {
+  "a": "Whisper", "b": "Otter.ai",
+  "choose_a": ["✅ Vous avez besoin de transcription audio haute qualité open-source à intégrer dans vos applications","✅ Whisper d'OpenAI est gratuit et peut être exécuté localement pour une confidentialité totale","✅ Excellente précision de transcription dans de nombreuses langues dont le français","✅ API Whisper disponible via OpenAI pour intégrer dans vos produits et workflows"],
+  "choose_b": ["✅ Vous avez besoin de transcription en temps réel pendant vos réunions avec résumés automatiques","✅ Otter.ai s'intègre avec Zoom, Teams et Google Meet pour des notes en temps réel","✅ Interface complète avec organisation des transcriptions, recherche et partage d'équipe","✅ Application mobile Otter pour transcrire des conversations en personne"],
+  "faq": [{"q":"Whisper vs Otter.ai — quelle est la différence ?","a":"Whisper est un modèle de transcription open-source à intégrer dans vos propres outils. Otter.ai est un service complet de notes de réunion avec interface. Pour des développeurs intégrant la transcription → Whisper ; pour des notes de réunion prêtes à l'emploi → Otter.ai."},{"q":"Whisper est-il gratuit ?","a":"Le modèle Whisper est open-source et gratuit à utiliser localement. L'API Whisper via OpenAI est payante (environ 0,006 $/minute). Otter.ai a un plan gratuit avec 300 minutes/mois."},{"q":"Whisper transcrit-il bien le français ?","a":"Oui. Whisper est excellent pour le français — l'un des meilleurs modèles de transcription open-source pour les langues européennes. Il gère bien les accents régionaux et le français courant."},{"q":"Otter.ai fonctionne-t-il en français ?","a":"Otter.ai prend en charge la transcription en français. La qualité pour le français est bonne mais peut être légèrement inférieure à l'anglais. Pour des réunions en français, Otter.ai reste un outil efficace."}]
+},
+"adcreative-ai-vs-canva-ai": {
+  "a": "AdCreative.ai", "b": "Canva AI",
+  "choose_a": ["✅ Vous avez besoin de générer des créatifs publicitaires optimisés pour la performance","✅ AdCreative.ai génère des bannières et visuels pour Facebook, Instagram, Google Ads optimisés IA","✅ Score de performance IA : prédit quels créatifs performeront le mieux avant de publier","✅ Meilleur pour les équipes marketing et agences gérant des campagnes publicitaires à grande échelle"],
+  "choose_b": ["✅ Vous avez besoin d'un outil polyvalent pour toutes sortes de contenus visuels au-delà de la pub","✅ Canva est bien plus abordable et a un plan gratuit généreux","✅ Interface plus simple pour les non-designers avec une courbe d'apprentissage minimale","✅ Canva AI génère aussi des images, des textes et des présentations — pas seulement des pubs"],
+  "faq": [{"q":"AdCreative.ai vs Canva — lequel est le meilleur pour les publicités ?","a":"AdCreative.ai est spécialisé dans les créatifs publicitaires avec scoring de performance IA. Canva est polyvalent mais moins optimisé pour la performance publicitaire. Pour les campagnes publicitaires à grande échelle → AdCreative.ai ; pour du contenu marketing général → Canva."},{"q":"AdCreative.ai est-il cher ?","a":"AdCreative.ai commence à partir de 29 $/mois pour un usage basique. Les plans agences sont plus élevés. Canva est gratuit ; Pro à partir de 15 $/mois."},{"q":"AdCreative.ai génère-t-il des publicités en français ?","a":"Oui. AdCreative.ai peut générer des créatifs en français. Vous spécifiez la langue et le texte cible en français, et l'outil génère des visuels adaptés."},{"q":"Le score de performance d'AdCreative.ai est-il fiable ?","a":"Le score de performance est basé sur des données historiques de campagnes publicitaires. C'est une indication utile mais pas une garantie. Les performances réelles dépendent de votre audience cible, de votre offre et de nombreux autres facteurs."}]
+},
+"akkio-vs-julius-ai": {
+  "a": "Akkio", "b": "Julius AI",
+  "choose_a": ["✅ Vous avez besoin d'une plateforme no-code pour créer des modèles de machine learning sans coder","✅ Akkio prédit des résultats business : churn clients, conversion leads, prévisions de ventes","✅ Meilleur pour les équipes métier voulant des insights prédictifs sans data scientists","✅ Akkio connecte directement avec des CRM, Google Sheets et des sources de données business"],
+  "choose_b": ["✅ Vous avez besoin d'analyser des données en posant des questions en langage naturel","✅ Julius AI explore des CSV et bases de données et génère des visualisations automatiquement","✅ Meilleur pour l'analyse exploratoire de données et la création de graphiques sans code","✅ Interface conversationnelle simple pour toute personne voulant comprendre ses données"],
+  "faq": [{"q":"Akkio vs Julius AI — quelle est la différence ?","a":"Akkio crée des modèles prédictifs ML no-code. Julius AI répond à des questions sur vos données. Akkio pour des prédictions automatisées ; Julius AI pour l'exploration et la visualisation de données ad hoc."},{"q":"Akkio est-il gratuit ?","a":"Akkio a un plan gratuit avec des limites. Les plans payants à partir de 49 $/mois. Julius AI a un plan gratuit ; Pro à partir de 28 $/mois."},{"q":"Akkio peut-il prédire le churn clients ?","a":"Oui. La prédiction de churn est l'un des cas d'usage principaux d'Akkio. Vous importez vos données clients historiques et Akkio crée un modèle qui identifie les clients à risque de churn, sans connaissance en machine learning requise."},{"q":"Julius AI peut-il analyser des données en français ?","a":"Oui. Julius AI comprend les questions en français et peut analyser des données avec des colonnes et valeurs en français. Les graphiques générés reflètent vos données telles qu'elles sont."}]
+},
+"autogpt-vs-manus": {
+  "a": "AutoGPT", "b": "Manus",
+  "choose_a": ["✅ Vous voulez explorer les agents IA autonomes open-source et les personnaliser","✅ AutoGPT est l'un des premiers frameworks d'agents IA — bien documenté et open-source","✅ Vous êtes développeur voulant construire et personnaliser des agents IA autonomes","✅ AutoGPT peut être auto-hébergé pour une confidentialité et un contrôle total"],
+  "choose_b": ["✅ Vous voulez un agent IA autonome commercial prêt à l'emploi pour déléguer de vraies tâches","✅ Manus effectue des tâches réelles : recherche web, code, préparation de documents de manière autonome","✅ Expérience plus polie et fiable pour des tâches business réelles sans configuration technique","✅ Manus est plus accessible aux non-techniciens voulant déléguer des tâches à un agent"],
+  "faq": [{"q":"AutoGPT vs Manus — quelle est la différence ?","a":"AutoGPT est un framework open-source pour construire des agents IA — plus technique. Manus est un agent IA commercial prêt à l'emploi — plus accessible. Développeurs voulant personnaliser des agents → AutoGPT ; utilisateurs voulant déléguer des tâches → Manus."},{"q":"AutoGPT est-il toujours pertinent ?","a":"AutoGPT a été pionnier dans les agents IA mais l'espace a beaucoup évolué. Des alternatives plus récentes comme LangChain, CrewAI et AutoGen sont souvent préférées par les développeurs. Pour les utilisateurs finaux, des agents commerciaux comme Manus sont plus pratiques."},{"q":"Manus AI est-il disponible en France ?","a":"Manus est accessible globalement. L'interface est principalement en anglais. Pour l'utiliser avec des contenus en français, il comprend le français mais les résultats peuvent être variables selon les tâches."},{"q":"AutoGPT est-il gratuit ?","a":"AutoGPT est open-source et gratuit. Vous payez pour les APIs IA utilisées (OpenAI, Anthropic). Manus a un modèle d'accès par invitation avec une tarification en évolution."}]
+},
+"coursera-coach-vs-khanmigo": {
+  "a": "Coursera Coach", "b": "Khanmigo",
+  "choose_a": ["✅ Vous prenez des cours sur Coursera et voulez un assistant IA intégré pour vous aider","✅ Coursera Coach aide à comprendre le contenu des cours, répond aux questions et résume les leçons","✅ Meilleur pour les apprenants adultes faisant de la formation professionnelle","✅ Accès à des milliers de cours de grandes universités et entreprises mondiales"],
+  "choose_b": ["✅ Vous avez besoin d'un tuteur IA socratique qui guide vers la compréhension dans les matières scolaires","✅ Khanmigo couvre toutes les matières académiques : maths, sciences, histoire, littérature","✅ Développé par Khan Academy avec une pédagogie éprouvée axée sur l'apprentissage profond","✅ Meilleur pour les élèves du collège et du lycée faisant leurs devoirs"],
+  "faq": [{"q":"Coursera Coach vs Khanmigo — lequel est le meilleur ?","a":"Coursera Coach est meilleur pour l'apprentissage professionnel et les cours universitaires en ligne. Khanmigo est meilleur pour l'aide aux devoirs scolaires avec une pédagogie socratique. Formation professionnelle → Coursera Coach ; aide aux devoirs scolaires → Khanmigo."},{"q":"Coursera Coach est-il disponible pour tous les cours ?","a":"Coursera Coach est disponible dans de nombreux cours sur Coursera. La disponibilité peut varier selon les cours. Consultez votre cours spécifique pour voir si Coach est intégré."},{"q":"Khanmigo est-il disponible en français ?","a":"Khanmigo est principalement disponible en anglais. Khan Academy a du contenu en français mais Khanmigo lui-même est limité pour le français. Pour une aide aux devoirs en français, des alternatives comme Claude ou ChatGPT peuvent être utilisés directement."},{"q":"Coursera est-il gratuit avec Coursera Coach ?","a":"Coursera a des cours gratuits avec audit, mais les fonctionnalités complètes dont Coursera Coach nécessitent souvent un abonnement payant ou l'achat du cours. Coursera Plus à partir de 59 $/mois donne accès à la plupart des cours et fonctionnalités."}]
+},
+"socratic-vs-khanmigo": {
+  "a": "Socratic by Google", "b": "Khanmigo",
+  "choose_a": ["✅ Vous avez besoin d'une application mobile gratuite pour l'aide aux devoirs — photographiez et obtenez des explications","✅ Socratic identifie le sujet de la question automatiquement et fournit des explications visuelles","✅ Gratuit et développé par Google — aucun abonnement requis","✅ Meilleur pour les lycéens cherchant de l'aide rapide sur mobile"],
+  "choose_b": ["✅ Vous avez besoin d'un tuteur IA interactif qui engage une conversation pédagogique","✅ Khanmigo guide vers la compréhension au lieu de donner directement les réponses","✅ Couvre toutes les matières académiques avec un alignement sur les programmes scolaires","✅ Pédagogie de Khan Academy : socratique, guidée et axée sur l'apprentissage profond"],
+  "faq": [{"q":"Socratic vs Khanmigo — lequel est le meilleur ?","a":"Socratic est meilleur pour une aide rapide et gratuite sur mobile via photo. Khanmigo est meilleur pour un apprentissage profond guidé par un tuteur IA interactif. Aide rapide sur mobile → Socratic ; apprentissage profond → Khanmigo."},{"q":"Socratic est-il gratuit ?","a":"Oui. Socratic est entièrement gratuit. Khanmigo coûte 4 $/mois."},{"q":"Socratic fonctionne-t-il en français ?","a":"Socratic fonctionne pour les matières en français. Vous pouvez photographier des exercices en français et obtenir des explications. La qualité peut varier selon les matières et la complexité des questions."},{"q":"Khanmigo donne-t-il directement les réponses ?","a":"Non, c'est son approche distinctive. Khanmigo guide l'élève vers la compréhension en posant des questions socratiques. Il ne donne pas directement les réponses pour encourager la réflexion et la compréhension réelle."}]
+},
+}
+
+COMPARISONS = [
+    {'slug': 'chatgpt-vs-claude',                    'a': 'chatgpt',                'b': 'claude'},
+    {'slug': 'gemini-vs-chatgpt',                    'a': 'gemini',                 'b': 'chatgpt'},
+    {'slug': 'deepseek-vs-chatgpt',                  'a': 'deepseek',               'b': 'chatgpt'},
+    {'slug': 'microsoft-copilot-vs-chatgpt',         'a': 'microsoft-copilot',      'b': 'chatgpt'},
+    {'slug': 'meta-ai-vs-chatgpt',                   'a': 'meta-ai',                'b': 'chatgpt'},
+    {'slug': 'grok-vs-chatgpt',                      'a': 'grok',                   'b': 'chatgpt'},
+    {'slug': 'mistral-le-chat-vs-chatgpt',           'a': 'mistral-le-chat',        'b': 'chatgpt'},
+    {'slug': 'character-ai-vs-chatgpt',              'a': 'character-ai',           'b': 'chatgpt'},
+    {'slug': 'copilot-studio-vs-manus',              'a': 'copilot-studio',         'b': 'manus'},
+    {'slug': 'n8n-vs-copilot-studio',                'a': 'n8n',                    'b': 'copilot-studio'},
+    {'slug': 'make-vs-copilot-studio',               'a': 'make',                   'b': 'copilot-studio'},
+    {'slug': 'lindy-vs-copilot-studio',              'a': 'lindy',                  'b': 'copilot-studio'},
+    {'slug': 'relevance-ai-vs-copilot-studio',       'a': 'relevance-ai',           'b': 'copilot-studio'},
+    {'slug': 'devin-vs-copilot-studio',              'a': 'devin',                  'b': 'copilot-studio'},
+    {'slug': 'make-vs-n8n',                          'a': 'make',                   'b': 'n8n'},
+    {'slug': 'cursor-vs-copilot',                    'a': 'cursor',                 'b': 'github-copilot'},
+    {'slug': 'windsurf-vs-cursor',                   'a': 'windsurf',               'b': 'cursor'},
+    {'slug': 'claude-code-vs-github-copilot',        'a': 'claude-code',            'b': 'github-copilot'},
+    {'slug': 'replit-vs-github-copilot',             'a': 'replit',                 'b': 'github-copilot'},
+    {'slug': 'bolt-new-vs-cursor',                   'a': 'bolt-new',               'b': 'cursor'},
+    {'slug': 'v0-by-vercel-vs-cursor',               'a': 'v0-by-vercel',           'b': 'cursor'},
+    {'slug': 'cline-vs-github-copilot',              'a': 'cline',                  'b': 'github-copilot'},
+    {'slug': 'aider-vs-github-copilot',              'a': 'aider',                  'b': 'github-copilot'},
+    {'slug': 'windsurf-vs-github-copilot',           'a': 'windsurf',               'b': 'github-copilot'},
+    {'slug': 'deepl-vs-grammarly',                   'a': 'deepl',                  'b': 'grammarly'},
+    {'slug': 'quillbot-vs-grammarly',                'a': 'quillbot',               'b': 'grammarly'},
+    {'slug': 'jasper-vs-writesonic',                 'a': 'jasper',                 'b': 'writesonic'},
+    {'slug': 'writesonic-vs-grammarly',              'a': 'writesonic',             'b': 'grammarly'},
+    {'slug': 'hemingway-editor-vs-grammarly',        'a': 'hemingway-editor',       'b': 'grammarly'},
+    {'slug': 'semrush-vs-copy-ai',                   'a': 'semrush',                'b': 'copy-ai'},
+    {'slug': 'surferseo-vs-semrush',                 'a': 'surferseo',              'b': 'semrush'},
+    {'slug': 'frase-vs-semrush',                     'a': 'frase',                  'b': 'semrush'},
+    {'slug': 'clearscope-vs-surferseo',              'a': 'clearscope',             'b': 'surferseo'},
+    {'slug': 'copy-ai-vs-jasper',                    'a': 'copy-ai',                'b': 'jasper'},
+    {'slug': 'midjourney-vs-flux',                   'a': 'midjourney',             'b': 'flux'},
+    {'slug': 'midjourney-vs-stable-diffusion',       'a': 'midjourney',             'b': 'stable-diffusion'},
+    {'slug': 'ideogram-vs-midjourney',               'a': 'ideogram',               'b': 'midjourney'},
+    {'slug': 'adobe-firefly-vs-midjourney',          'a': 'adobe-firefly',          'b': 'midjourney'},
+    {'slug': 'recraft-ai-vs-midjourney',             'a': 'recraft-ai',             'b': 'midjourney'},
+    {'slug': 'flux-vs-stable-diffusion',             'a': 'flux',                   'b': 'stable-diffusion'},
+    {'slug': 'leonardo-ai-vs-midjourney',            'a': 'leonardo-ai',            'b': 'midjourney'},
+    {'slug': 'kling-vs-runway',                      'a': 'kling-ai',               'b': 'runway'},
+    {'slug': 'capcut-vs-kling-ai',                   'a': 'capcut',                 'b': 'kling-ai'},
+    {'slug': 'runway-vs-capcut',                     'a': 'runway',                 'b': 'capcut'},
+    {'slug': 'heygen-vs-synthesia',                  'a': 'heygen',                 'b': 'synthesia'},
+    {'slug': 'pika-vs-kling-ai',                     'a': 'pika',                   'b': 'kling-ai'},
+    {'slug': 'luma-ai-vs-runway',                    'a': 'luma-ai',                'b': 'runway'},
+    {'slug': 'google-veo-3-vs-runway',               'a': 'google-veo-3',           'b': 'runway'},
+    {'slug': 'canva-ai-vs-figma-ai',                 'a': 'canva-ai',               'b': 'figma-ai'},
+    {'slug': 'figma-ai-vs-canva-ai',                 'a': 'figma-ai',               'b': 'canva-ai'},
+    {'slug': 'framer-ai-vs-canva-ai',                'a': 'framer-ai',              'b': 'canva-ai'},
+    {'slug': 'looka-vs-canva-ai',                    'a': 'looka',                  'b': 'canva-ai'},
+    {'slug': 'uizard-vs-figma-ai',                   'a': 'uizard',                 'b': 'figma-ai'},
+    {'slug': 'uxpilot-vs-figma-ai',                  'a': 'uxpilot',                'b': 'figma-ai'},
+    {'slug': 'relume-vs-framer-ai',                  'a': 'relume',                 'b': 'framer-ai'},
+    {'slug': 'whimsical-ai-vs-figma-ai',             'a': 'whimsical-ai',           'b': 'figma-ai'},
+    {'slug': 'suno-vs-udio',                         'a': 'suno',                   'b': 'udio'},
+    {'slug': 'speechify-vs-elevenlabs',              'a': 'speechify',              'b': 'elevenlabs'},
+    {'slug': 'elevenlabs-vs-murf-ai',                'a': 'elevenlabs',             'b': 'murf-ai'},
+    {'slug': 'elevenlabs-vs-playht',                 'a': 'elevenlabs',             'b': 'playht'},
+    {'slug': 'descript-vs-adobe-podcast',            'a': 'descript',               'b': 'adobe-podcast'},
+    {'slug': 'suno-vs-elevenlabs',                   'a': 'suno',                   'b': 'elevenlabs'},
+    {'slug': 'notion-ai-vs-zapier-ai',               'a': 'notion-ai',              'b': 'zapier-ai'},
+    {'slug': 'gamma-vs-notion-ai',                   'a': 'gamma',                  'b': 'notion-ai'},
+    {'slug': 'otter-ai-vs-fireflies-ai',             'a': 'otter-ai',               'b': 'fireflies-ai'},
+    {'slug': 'motion-vs-reclaim-ai',                 'a': 'motion',                 'b': 'reclaim-ai'},
+    {'slug': 'zapier-ai-vs-make',                    'a': 'zapier-ai',              'b': 'make'},
+    {'slug': 'perplexity-vs-notebooklm',             'a': 'perplexity',             'b': 'notebooklm'},
+    {'slug': 'elicit-vs-consensus',                  'a': 'elicit',                 'b': 'consensus'},
+    {'slug': 'consensus-vs-perplexity',              'a': 'consensus',              'b': 'perplexity'},
+    {'slug': 'notebooklm-vs-humata',                 'a': 'notebooklm',             'b': 'humata'},
+    {'slug': 'scite-vs-semantic-scholar',            'a': 'scite',                  'b': 'semantic-scholar'},
+    {'slug': 'looker-studio-vs-tableau-ai',          'a': 'looker-studio',          'b': 'tableau-ai'},
+    {'slug': 'julius-ai-vs-looker-studio',           'a': 'julius-ai',              'b': 'looker-studio'},
+    {'slug': 'hex-vs-looker-studio',                 'a': 'hex',                    'b': 'looker-studio'},
+    {'slug': 'rows-vs-hex',                          'a': 'rows',                   'b': 'hex'},
+    {'slug': 'retool-ai-vs-looker-studio',           'a': 'retool-ai',              'b': 'looker-studio'},
+    {'slug': 'bubble-vs-webflow',                    'a': 'bubble',                 'b': 'webflow'},
+    {'slug': 'lovable-vs-bubble',                    'a': 'lovable',                'b': 'bubble'},
+    {'slug': 'flutterflow-vs-bubble',                'a': 'flutterflow',            'b': 'bubble'},
+    {'slug': 'glide-vs-bubble',                      'a': 'glide',                  'b': 'bubble'},
+    {'slug': 'softr-vs-bubble',                      'a': 'softr',                  'b': 'bubble'},
+    {'slug': 'webflow-vs-framer-ai',                 'a': 'webflow',                'b': 'framer-ai'},
+    {'slug': 'photomath-vs-duolingo-max',            'a': 'photomath',              'b': 'duolingo-max'},
+    {'slug': 'khanmigo-vs-photomath',                'a': 'khanmigo',               'b': 'photomath'},
+    {'slug': 'duolingo-max-vs-khanmigo',             'a': 'duolingo-max',           'b': 'khanmigo'},
+    {'slug': 'youlearn-vs-notebooklm',               'a': 'youlearn',               'b': 'notebooklm'},
+    {'slug': 'synthesis-vs-khanmigo',                'a': 'synthesis',              'b': 'khanmigo'},
+    {'slug': 'gamma-vs-beautiful-ai',                'a': 'gamma',                  'b': 'beautiful-ai'},
+    {'slug': 'gamma-vs-pitch',                       'a': 'gamma',                  'b': 'pitch'},
+    {'slug': 'gamma-vs-prezi',                       'a': 'gamma',                  'b': 'prezi'},
+    {'slug': 'beautiful-ai-vs-pitch',                'a': 'beautiful-ai',           'b': 'pitch'},
+    {'slug': 'slidesgo-vs-gamma',                    'a': 'slidesgo',               'b': 'gamma'},
+    {'slug': 'tradingview-vs-fiscal-ai',             'a': 'tradingview',            'b': 'fiscal-ai'},
+    {'slug': 'koyfin-vs-tradingview',                'a': 'koyfin',                 'b': 'tradingview'},
+    {'slug': 'fiscal-ai-vs-koyfin',                  'a': 'fiscal-ai',              'b': 'koyfin'},
+    {'slug': 'tickeron-vs-tradingview',              'a': 'tickeron',               'b': 'tradingview'},
+    {'slug': 'uptrends-ai-vs-koyfin',               'a': 'uptrends-ai',            'b': 'koyfin'},
+    {'slug': 'amazon-q-developer-vs-github-copilot', 'a': 'amazon-q-developer',    'b': 'github-copilot'},
+    {'slug': 'continue-dev-vs-github-copilot',       'a': 'continue-dev',           'b': 'github-copilot'},
+    {'slug': 'opencode-vs-claude-code',              'a': 'opencode',               'b': 'claude-code'},
+    {'slug': 'zed-vs-cursor',                        'a': 'zed',                    'b': 'cursor'},
+    {'slug': 'comfyui-vs-stable-diffusion',          'a': 'comfyui',                'b': 'stable-diffusion'},
+    {'slug': 'krea-ai-vs-midjourney',                'a': 'krea-ai',                'b': 'midjourney'},
+    {'slug': 'nano-banana-vs-leonardo-ai',           'a': 'nano-banana',            'b': 'leonardo-ai'},
+    {'slug': 'chatgpt-images-vs-adobe-firefly',      'a': 'chatgpt-images',         'b': 'adobe-firefly'},
+    {'slug': 'claude-design-vs-figma-ai',            'a': 'claude-design',          'b': 'figma-ai'},
+    {'slug': 'google-stitch-vs-figma-ai',            'a': 'google-stitch',          'b': 'figma-ai'},
+    {'slug': 'recraft-vs-canva-ai',                  'a': 'recraft-ai',             'b': 'canva-ai'},
+    {'slug': 'remove-bg-vs-canva-ai',                'a': 'remove-bg',              'b': 'canva-ai'},
+    {'slug': 'seedance-vs-runway',                   'a': 'seedance-2-0',           'b': 'runway'},
+    {'slug': 'whisper-vs-otter-ai',                  'a': 'whisper',                'b': 'otter-ai'},
+    {'slug': 'adcreative-ai-vs-canva-ai',            'a': 'adcreative-ai',          'b': 'canva-ai'},
+    {'slug': 'akkio-vs-julius-ai',                   'a': 'akkio',                  'b': 'julius-ai'},
+    {'slug': 'autogpt-vs-manus',                     'a': 'autogpt',                'b': 'manus'},
+    {'slug': 'coursera-coach-vs-khanmigo',           'a': 'coursera-coach',         'b': 'khanmigo'},
+    {'slug': 'socratic-vs-khanmigo',                 'a': 'socratic-by-google',     'b': 'khanmigo'},
+]
+
+# ── Build tool_slug → {choose_if, faq} ──────────────────────────────────────
+tool_data = {}
+for comp in COMPARISONS:
+    slug_a = comp['a']
+    slug_b = comp['b']
+    key    = comp['slug']
+    if key not in DATA_FR:
+        continue
+    d = DATA_FR[key]
+    if slug_a not in tool_data:
+        tool_data[slug_a] = {'choose_if': d['choose_a'], 'faq': d['faq']}
+    if slug_b not in tool_data:
+        tool_data[slug_b] = {'choose_if': d['choose_b'], 'faq': d['faq']}
+
+# ── Generate SQL for tools table ─────────────────────────────────────────────
+lines = []
+lines.append("-- French choose_if + faq UPDATE — generated by gen_tool_choose_faq_fr_b4.py (batch 4/4)")
+lines.append("BEGIN;")
+for i, (tool_slug, td) in enumerate(sorted(tool_data.items()), start=1):
+    ci_json = json.dumps(td['choose_if'], ensure_ascii=False)
+    fq_json = json.dumps(td['faq'],       ensure_ascii=False)
+    tag_ci  = f't{i}ci'
+    tag_fq  = f't{i}fq'
+    lines.append(
+        f"UPDATE tools SET"
+        f" choose_if = ${tag_ci}${ci_json}${tag_ci}$::JSONB,"
+        f" faq = ${tag_fq}${fq_json}${tag_fq}$::JSONB"
+        f" WHERE slug = '{tool_slug}' AND lang = 'fr';"
+    )
+lines.append("COMMIT;")
+sql = "\n".join(lines)
+out_path = __file__.replace('.py', '.sql')
+with open(out_path, 'w', encoding='utf-8') as f:
+    f.write(sql)
+print(f"-- Tools SQL written to {out_path}", file=sys.stderr)
+
+# ── Generate SQL for comparisons table ───────────────────────────────────────
+comp_lines = []
+comp_lines.append("-- French choose_a + choose_b + faq INSERT for comparisons table (batch 4/4)")
+comp_lines.append("BEGIN;")
+for i, comp in enumerate(COMPARISONS, start=1):
+    key = comp['slug']
+    if key not in DATA_FR:
+        continue
+    d = DATA_FR[key]
+    ca_json  = json.dumps(d['choose_a'], ensure_ascii=False)
+    cb_json  = json.dumps(d['choose_b'], ensure_ascii=False)
+    faq_json = json.dumps(d['faq'],      ensure_ascii=False)
+    tag_a = f'c{i}a'; tag_b = f'c{i}b'; tag_f = f'c{i}f'
+    comp_lines.append(
+        f"INSERT INTO comparisons "
+        f"(slug,lang,tool_a,tool_b,tool_a_slug,tool_b_slug,tool_a_url,tool_b_url,"
+        f"title,meta_desc,intro,table_data,best_a,best_b,verdict_a,verdict_b,choose_a,choose_b,faq)"
+        f" SELECT slug,'fr',tool_a,tool_b,tool_a_slug,tool_b_slug,tool_a_url,tool_b_url,"
+        f"title,meta_desc,intro,table_data,best_a,best_b,verdict_a,verdict_b,"
+        f"${tag_a}${ca_json}${tag_a}$::JSONB,"
+        f"${tag_b}${cb_json}${tag_b}$::JSONB,"
+        f"${tag_f}${faq_json}${tag_f}$::JSONB"
+        f" FROM comparisons WHERE slug='{key}' AND lang='en'"
+        f" ON CONFLICT (slug,lang) DO UPDATE SET"
+        f" choose_a=EXCLUDED.choose_a, choose_b=EXCLUDED.choose_b, faq=EXCLUDED.faq;"
+    )
+comp_lines.append("COMMIT;")
+comp_sql = "\n".join(comp_lines)
+comp_out = __file__.replace('.py', '_comparisons.sql')
+with open(comp_out, 'w', encoding='utf-8') as f:
+    f.write(comp_sql)
+print(f"-- Comparisons SQL written to {comp_out}", file=sys.stderr)
+print(f"Batch 4/4 done: {len(DATA_FR)} comparisons, {len(tool_data)} tools")

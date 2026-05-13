@@ -414,12 +414,12 @@ def comparison_table_html(a, b, lang):
     return (
         f'<div class="compare-wrap fade-up"><table class="compare-table"><thead><tr><th></th>'
         f'<td><div class="tool-col-head">'
-        f'<div class="tool-col-avatar" style="background:#7c6af722"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain={esc(dom_a)}" width="30" height="30" style="border-radius:6px" alt=""></div>'
+        f'<div class="tool-col-avatar" style="background:#7c6af722"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain={esc(dom_a)}" width="30" height="30" style="border-radius:6px" alt="{esc(a.get("name",""))} logo"></div>'
         f'<div class="tool-col-name">{esc(a.get("name") or "")}</div>'
         f'<div class="tool-col-bestfor"><strong>{L["bf"]}:</strong> {esc(a.get("best_for") or "—")}</div>'
         f'</div></td>'
         f'<td><div class="tool-col-head">'
-        f'<div class="tool-col-avatar" style="background:#7c6af722"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain={esc(dom_b)}" width="30" height="30" style="border-radius:6px" alt=""></div>'
+        f'<div class="tool-col-avatar" style="background:#7c6af722"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain={esc(dom_b)}" width="30" height="30" style="border-radius:6px" alt="{esc(b.get("name",""))} logo"></div>'
         f'<div class="tool-col-name">{esc(b.get("name") or "")}</div>'
         f'<div class="tool-col-bestfor"><strong>{L["bf"]}:</strong> {esc(b.get("best_for") or "—")}</div>'
         f'</div></td></tr></thead><tbody>{rows_html_with_rating}</tbody></table></div>'
@@ -498,16 +498,18 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
         return None
 
     dir_attr    = ' dir="rtl"' if rtl else ''
+    html_lang   = 'uk' if lang == 'ua' else lang
     base        = '' if lang == 'en' else f'/{lang}'
     L           = LABELS.get(lang, LABELS['en'])
     M           = META_TEMPLATES.get(lang, META_TEMPLATES['en'])
     title       = M['title'].format(a=a['name'], b=b['name'])
-    description = M['desc'].format(a=a['name'], b=b['name'])
+    _desc_raw   = M['desc'].format(a=a['name'], b=b['name'])
+    description = _desc_raw[:157] + '...' if len(_desc_raw) > 160 else _desc_raw
 
     hreflang_tags = '\n'.join(
         [f'<link rel="alternate" hreflang="x-default" href="{BASE_URL}/compare/{cmp["slug"]}.html">',
          f'<link rel="alternate" hreflang="en" href="{BASE_URL}/compare/{cmp["slug"]}.html">'] +
-        [f'<link rel="alternate" hreflang="{lc}" href="{BASE_URL}/{lc}/compare/{cmp["slug"]}.html">' for lc in LANGUAGES]
+        [f'<link rel="alternate" hreflang="{"uk" if lc == "ua" else lc}" href="{BASE_URL}/{lc}/compare/{cmp["slug"]}.html">' for lc in LANGUAGES]
     )
     table_html     = comparison_table_html(a, b, lang)
     schema         = schema_org_jsonld(a, b, canonical_url, lang)
@@ -517,7 +519,7 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
     verdict_faq    = build_verdict_faq_html(comp_row, a['name'], b['name'], lang, L)
 
     return f'''<!DOCTYPE html>
-<html lang="{lang}"{dir_attr}>
+<html lang="{html_lang}"{dir_attr}>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">

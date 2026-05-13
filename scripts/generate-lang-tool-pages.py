@@ -243,6 +243,7 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
     nav        = L['nav']
     cats       = L['cats']
     dir_attr   = ' dir="rtl"' if lang in RTL_LANGS else ''
+    html_lang  = 'uk' if lang == 'ua' else lang
     arrow      = '←' if lang in RTL_LANGS else '→'
     date_locale = L['date_locale']
 
@@ -257,11 +258,35 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
         else:
             raw_desc = truncated.rsplit(' ', 1)[0].rstrip('.,;:') + '...'
     _seo = SEO_OVERRIDES.get(lang, {}).get(slug, {})
-    meta_desc  = _seo.get('meta') or f'{name} 2026 — {raw_desc}'
+    _meta_raw  = _seo.get('meta') or f'{name} 2026 — {raw_desc}'
+    meta_desc  = _meta_raw[:157] + '...' if len(_meta_raw) > 160 else _meta_raw
     page_title = _seo.get('title') or TITLE_TEMPLATES.get(lang, lambda n: f'{n} 2026 | AItoolFit')(name)
 
     pros_html = '\n'.join(f'        <li>{esc(p)}</li>' for p in pros)
     cons_html = '\n'.join(f'        <li>{esc(p)}</li>' for p in cons)
+
+    CHOOSE_IF_TITLE = {
+        'en': 'Choose {name} if…',
+        'ru': 'Выберите {name} если…',
+        'es': 'Elige {name} si…',
+        'de': '{name} wählen wenn…',
+        'ua': 'Оберіть {name} якщо…',
+        'he': 'בחרו ב-{name} אם…',
+        'fr': 'Choisir {name} si…',
+        'pt': 'Escolha {name} se…',
+    }
+    FAQ_TITLE = {
+        'en': 'Frequently Asked Questions',
+        'ru': 'Частые вопросы',
+        'es': 'Preguntas frecuentes',
+        'de': 'Häufig gestellte Fragen',
+        'ua': 'Часті запитання',
+        'he': 'שאלות נפוצות',
+        'fr': 'Questions fréquemment posées',
+        'pt': 'Perguntas frequentes',
+    }
+    choose_if_label = CHOOSE_IF_TITLE.get(lang, CHOOSE_IF_TITLE['en']).format(name=esc(name))
+    faq_label = FAQ_TITLE.get(lang, FAQ_TITLE['en'])
 
     if choose_if:
         ci_items = '\n'.join(
@@ -271,7 +296,7 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
         )
         choose_if_html = (
             f'<div style="margin-top:2rem">'
-            f'<h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose {esc(name)} if…</h2>'
+            f'<h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">{choose_if_label}</h2>'
             f'<div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem">'
             f'<ul style="list-style:none;padding:0;margin:0">{ci_items}</ul>'
             f'</div></div>'
@@ -291,7 +316,7 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
             )
         faq_html = (
             f'<div style="margin-top:2rem">'
-            f'<h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2>'
+            f'<h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">{faq_label}</h2>'
             f'<div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage">'
             f'{faq_rows}</div></div>'
         )
@@ -430,8 +455,34 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
         'slidesgo':                 ('slidesgo-vs-gamma',               'Gamma'),
         # Business & Investment
         'tradingview':              ('tradingview-vs-fiscal-ai',        'Fiscal.ai'),
-        'finchat':                ('fiscal-ai-vs-koyfin',             'Koyfin'),
+        'fiscal-ai':                ('fiscal-ai-vs-koyfin',             'Koyfin'),
         'koyfin':                   ('koyfin-vs-tradingview',           'TradingView'),
+        'tickeron':                 ('tickeron-vs-tradingview',         'TradingView'),
+        'uptrends-ai':              ('uptrends-ai-vs-koyfin',           'Koyfin'),
+        # Dev tools (batch 4)
+        'amazon-q-developer':       ('amazon-q-developer-vs-github-copilot', 'GitHub Copilot'),
+        'continue-dev':             ('continue-dev-vs-github-copilot',  'GitHub Copilot'),
+        'opencode':                 ('opencode-vs-claude-code',          'Claude Code'),
+        'zed':                      ('zed-vs-cursor',                   'Cursor'),
+        # Image generation (batch 4)
+        'comfyui':                  ('comfyui-vs-stable-diffusion',     'Stable Diffusion'),
+        'krea-ai':                  ('krea-ai-vs-midjourney',           'Midjourney'),
+        'nano-banana':              ('nano-banana-vs-leonardo-ai',      'Leonardo AI'),
+        'chatgpt-images':           ('chatgpt-images-vs-adobe-firefly', 'Adobe Firefly'),
+        'claude-design':            ('claude-design-vs-figma-ai',       'Figma AI'),
+        'google-stitch':            ('google-stitch-vs-figma-ai',       'Figma AI'),
+        'remove-bg':                ('remove-bg-vs-canva-ai',           'Canva AI'),
+        'adcreative-ai':            ('adcreative-ai-vs-canva-ai',       'Canva AI'),
+        # Video (batch 4)
+        'seedance-2-0':             ('seedance-vs-runway',              'Runway'),
+        # Audio (batch 4)
+        'whisper':                  ('whisper-vs-otter-ai',             'Otter.ai'),
+        # Data & Agents (batch 4)
+        'akkio':                    ('akkio-vs-julius-ai',              'Julius AI'),
+        'autogpt':                  ('autogpt-vs-manus',                'Manus'),
+        # Education (batch 4)
+        'coursera-coach':           ('coursera-coach-vs-khanmigo',      'Khanmigo'),
+        'socratic-by-google':       ('socratic-vs-khanmigo',            'Khanmigo'),
     }
     COMPARE_LABELS = {
         'ru': ('📊 Как сравнивается {}?', 'Все сравнения'),
@@ -476,11 +527,11 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
     hreflang_block = '\n'.join(
         [f'<link rel="alternate" hreflang="x-default" href="{BASE_URL}/tools/{esc(slug)}.html">',
          f'<link rel="alternate" hreflang="en" href="{BASE_URL}/tools/{esc(slug)}.html">'] +
-        [f'<link rel="alternate" hreflang="{l}" href="{BASE_URL}/{l}/tools/{esc(slug)}.html">' for l in ACTIVE_NON_EN_LANGS]
+        [f'<link rel="alternate" hreflang="{"uk" if l == "ua" else l}" href="{BASE_URL}/{l}/tools/{esc(slug)}.html">' for l in ACTIVE_NON_EN_LANGS]
     )
 
     return f'''<!DOCTYPE html>
-<html lang="{lang}"{dir_attr}>
+<html lang="{html_lang}"{dir_attr}>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">

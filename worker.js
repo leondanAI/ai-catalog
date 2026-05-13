@@ -80,7 +80,7 @@ SELECTION: Return 1-3 tools with these slots:
 - "BEST FREE": genuinely free permanent tier (not trial)
 - "BEST PREMIUM": best paid option
 
-FREE CONSTRAINT: If user asks for free/бесплатно/gratis — ONLY include tools with a real permanent free tier. If unsure, exclude the tool. Set meets_free_constraint: false if a tool doesn't meet it.
+FREE CONSTRAINT: If user asks for free/бесплатно/бесплатный/бесплатная/безкоштовно/безкоштовний/gratis/kostenlos/gratuit/gratuito/grátis/חינם/בחינם/no subscription/no credit card — ONLY include tools with a real permanent free tier usable for the stated task. If unsure whether a free tier exists, EXCLUDE the tool. Semrush, Ahrefs, Jasper, Midjourney, Synthesia are PAID-ONLY — never recommend them for free queries.
 
 OUTPUT FORMAT (return exactly this structure — ALL text fields in the user's language):
 {"tools":[{"slot":"BEST OVERALL","name":"Tool Name","url":"https://homepage.com","best_for":"5-8 words in user language","why_it_fits":"3-4 sentences in user language","pricing":"free tier / from $X/mo","pros":["specific verifiable fact in user language","specific verifiable fact in user language","specific verifiable fact in user language"],"cons":["real limitation in user language","real limitation in user language","real limitation in user language"]}]}
@@ -162,6 +162,13 @@ export default {
     const useV2 = url.searchParams.get('v') === '2';
     const activePrompt = useV2 ? SYSTEM_PROMPT_V2 : SYSTEM_PROMPT;
 
+    // Detect free constraint in any supported language
+    const FREE_KEYWORDS = /\bfree\b|бесплатн|безкоштовн|gratis|kostenlos|gratuit|gratuito|grátis|חינם|no subscription|no credit card/i;
+    const wantsFree = FREE_KEYWORDS.test(task);
+    const taskContent = wantsFree
+      ? `Task: ${task}\n\n[SYSTEM NOTE: User explicitly requested FREE tools only. You MUST only recommend tools with a real permanent free tier. Do NOT recommend Semrush, Ahrefs, Jasper, Midjourney, Synthesia, or any tool that requires payment to use for this task.]`
+      : `Task: ${task}`;
+
     // Call Anthropic
     const anthropicRes = await fetch(ANTHROPIC_URL, {
       method: 'POST',
@@ -172,11 +179,11 @@ export default {
       },
       body: JSON.stringify({
         model: 'claude-haiku-4-5-20251001',
-        max_tokens: 1500,
+        max_tokens: 900,
         system: [
           { type: 'text', text: activePrompt, cache_control: { type: 'ephemeral' } }
         ],
-        messages: [{ role: 'user', content: `Task: ${task}` }]
+        messages: [{ role: 'user', content: taskContent }]
       })
     });
 
@@ -197,8 +204,29 @@ export default {
 
     // Log prompt + recommendations to Supabase (fire and forget)
     try {
-      const alt0 = result.alternatives?.[0] || {};
-      const alt1 = result.alternatives?.[1] || {};
+      let primary_tool = null, primary_url = null;
+      let alt1_tool = null, alt1_url = null;
+      let alt2_tool = null, alt2_url = null;
+
+      if (useV2 && Array.isArray(result.tools)) {
+        const t = result.tools;
+        primary_tool = t[0]?.name || null;
+        primary_url  = t[0]?.url  || null;
+        alt1_tool    = t[1]?.name || null;
+        alt1_url     = t[1]?.url  || null;
+        alt2_tool    = t[2]?.name || null;
+        alt2_url     = t[2]?.url  || null;
+      } else {
+        const alt0 = result.alternatives?.[0] || {};
+        const alt1 = result.alternatives?.[1] || {};
+        primary_tool = result.primary?.name || null;
+        primary_url  = result.primary?.url  || null;
+        alt1_tool    = alt0.name || null;
+        alt1_url     = alt0.url  || null;
+        alt2_tool    = alt1.name || null;
+        alt2_url     = alt1.url  || null;
+      }
+
       await fetch(`${env.SUPABASE_URL}/rest/v1/tool_finder_logs`, {
         method: 'POST',
         headers: {
@@ -206,15 +234,7 @@ export default {
           'apikey': env.SUPABASE_KEY,
           'Authorization': `Bearer ${env.SUPABASE_KEY}`
         },
-        body: JSON.stringify({
-          prompt:       task,
-          primary_tool: result.primary?.name || null,
-          primary_url:  result.primary?.url  || null,
-          alt1_tool:    alt0.name || null,
-          alt1_url:     alt0.url  || null,
-          alt2_tool:    alt1.name || null,
-          alt2_url:     alt1.url  || null
-        })
+        body: JSON.stringify({ prompt: task, primary_tool, primary_url, alt1_tool, alt1_url, alt2_tool, alt2_url })
       });
     } catch (_) {}
 

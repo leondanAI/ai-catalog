@@ -1,0 +1,377 @@
+#!/usr/bin/env python3
+"""Generate SQL for French (lang=fr) translations. Batch 2/4 (comparisons 31-60)."""
+
+import json, sys
+
+DATA_FR = {
+"surferseo-vs-semrush": {
+  "a": "Surfer SEO", "b": "SEMrush",
+  "choose_a": ["✅ Vous vous concentrez sur l'optimisation du contenu et voulez des recommandations basées sur les données SERP","✅ L'éditeur de contenu Surfer analyse les pages en tête de classement et guide votre rédaction en temps réel","✅ Surfer est plus abordable pour les rédacteurs et blogueurs individuels axés sur le référencement de contenu","✅ L'intégration Surfer avec Jasper et d'autres outils IA rationalise la rédaction SEO"],
+  "choose_b": ["✅ Vous avez besoin d'une suite SEO complète : recherche de mots-clés, backlinks, audits techniques et PPC","✅ SEMrush couvre tous les aspects du SEO, pas seulement l'optimisation du contenu","✅ Meilleur pour les agences gérant plusieurs clients avec différents besoins SEO","✅ Analyse concurrentielle plus profonde et intelligence du marché au-delà du contenu"],
+  "faq": [{"q":"Surfer SEO vs SEMrush — lequel est le meilleur pour le référencement de contenu ?","a":"Surfer SEO est spécialisé dans l'optimisation du contenu et donne des conseils précis sur le nombre de mots, la densité de mots-clés et la structure basés sur les pages en tête de classement. SEMrush est une suite complète. Pour la rédaction SEO, Surfer ; pour le SEO complet, SEMrush."},{"q":"Combien coûte Surfer SEO ?","a":"Surfer SEO à partir de 99 $/mois (Essential). SEMrush à partir de 139,95 $/mois. Les deux offrent des essais. Surfer est moins cher mais avec un périmètre plus étroit."},{"q":"Surfer SEO vaut-il le coup pour un blog ?","a":"Oui, si vous publiez régulièrement et voulez maximiser les classements. L'éditeur de contenu guide votre rédaction vers les pages en tête de classement. Pour les blogs publiant 4+ articles par mois avec un objectif SEO, l'investissement se justifie."},{"q":"Surfer SEO fonctionne-t-il pour le contenu en français ?","a":"Oui. Surfer SEO prend en charge le français et analyse les SERPs français. Les recommandations sont basées sur ce qui est classé pour votre terme cible sur Google.fr, ce qui en fait un outil efficace pour le SEO en français."}]
+},
+"frase-vs-semrush": {
+  "a": "Frase", "b": "SEMrush",
+  "choose_a": ["✅ Vous voulez un outil qui combine la recherche de contenu, le briefing et la rédaction IA en un seul endroit","✅ Frase génère automatiquement des briefs de contenu basés sur les pages en tête de classement","✅ Plus abordable pour les créateurs de contenu et les petites agences axées sur le référencement de contenu","✅ L'IA de Frase rédige des ébauches basées sur les données SERP, accélérant la production de contenu"],
+  "choose_b": ["✅ Vous avez besoin d'une suite SEO complète avec recherche de mots-clés, analyse de backlinks et audits techniques","✅ SEMrush fournit des données PPC, une intelligence concurrentielle et un suivi des classements","✅ Meilleur pour les agences et les équipes SEO gérant plusieurs sites et clients","✅ Données plus approfondies pour des stratégies SEO complètes au-delà de la seule création de contenu"],
+  "faq": [{"q":"Frase vs SEMrush — quelle est la différence ?","a":"Frase se spécialise dans la recherche et la rédaction de contenu : il crée des briefs et aide à rédiger des articles SEO. SEMrush est une suite SEO complète. Si vous produisez du contenu SEO, Frase ; si vous gérez du SEO complet, SEMrush."},{"q":"Frase est-il gratuit ?","a":"Frase a un plan Solo à 15 $/mois, Basic à 45 $/mois. SEMrush à partir de 139,95 $/mois. Frase est bien moins cher pour la création de contenu."},{"q":"Frase vs Surfer SEO — lequel est le meilleur ?","a":"Les deux optimisent le contenu basé sur les données SERP. Frase est meilleur pour les briefs de contenu et la recherche initiale. Surfer est meilleur pour l'optimisation en temps réel pendant la rédaction. Beaucoup d'équipes utilisent les deux en séquence."},{"q":"Frase génère-t-il du contenu IA ?","a":"Oui. Frase dispose d'un outil de rédaction IA qui génère des ébauches basées sur les données SERP. Il est conçu pour la rédaction SEO, avec des suggestions intégrées de mots-clés et de structure basées sur ce qui se classe."}]
+},
+"clearscope-vs-surferseo": {
+  "a": "Clearscope", "b": "Surfer SEO",
+  "choose_a": ["✅ Vous voulez l'outil d'optimisation de contenu le plus précis avec un scoring détaillé des termes","✅ Les rapports Clearscope sont très clairs et actionnables — idéals pour les rédacteurs non techniques","✅ Meilleure intégration Google Docs et WordPress pour une optimisation transparente","✅ Adapté aux grandes équipes éditoriales avec des flux de travail collaboratifs"],
+  "choose_b": ["✅ Vous voulez un outil d'optimisation de contenu avec davantage de fonctionnalités à un prix inférieur","✅ Surfer inclut un outil d'audit, un outil de recherche de mots-clés et un constructeur de liens internes","✅ L'intégration Surfer avec les outils IA comme Jasper permet une rédaction assistée par IA","✅ Plus adapté aux blogueurs et petites équipes avec un budget limité"],
+  "faq": [{"q":"Clearscope vs Surfer SEO — lequel est le meilleur ?","a":"Clearscope est plus simple et avec de meilleurs rapports pour les rédacteurs. Surfer a plus de fonctionnalités à un prix inférieur. Pour des équipes éditoriales avec rédacteurs non techniques, Clearscope ; pour des équipes SEO techniques avec besoin de plus d'outils, Surfer."},{"q":"Clearscope est-il cher ?","a":"Clearscope commence à 189 $/mois (Essentials). Surfer SEO à partir de 99 $/mois. Clearscope est nettement plus cher mais apprécié par les grandes équipes de contenu."},{"q":"Clearscope est-il adapté au contenu en français ?","a":"Oui. Clearscope prend en charge plusieurs langues dont le français. Les recommandations sont basées sur l'analyse des pages en tête de classement pour votre requête cible en France."},{"q":"Peut-on utiliser Clearscope sans SEMrush ou Ahrefs ?","a":"Oui. Clearscope se concentre sur l'optimisation du contenu. Pour la recherche de mots-clés initiale, vous pouvez utiliser Google Search Console gratuitement ou des outils moins chers comme Ubersuggest. Clearscope optimise le contenu ; d'autres outils trouvent les mots-clés."}]
+},
+"copy-ai-vs-jasper": {
+  "a": "Copy.ai", "b": "Jasper",
+  "choose_a": ["✅ Vous avez besoin de génération de textes marketing rapide à un prix abordable","✅ Le plan gratuit de Copy.ai est généreux et suffisant pour une utilisation de base","✅ Interface plus simple — moins de courbe d'apprentissage que Jasper pour les débutants","✅ Copy.ai est meilleur pour les textes courts : titres d'emails, publicités, descriptions de produits"],
+  "choose_b": ["✅ Vous êtes une équipe marketing produisant du contenu long format à grande échelle","✅ Jasper Brand Voice maintient une voix de marque cohérente dans tous les contenus","✅ Meilleure intégration avec Surfer SEO pour du contenu optimisé pour le référencement","✅ Jasper dispose de fonctionnalités de collaboration plus avancées pour les grandes équipes"],
+  "faq": [{"q":"Copy.ai ou Jasper — lequel choisir ?","a":"Copy.ai est meilleur pour les textes courts et les solopreneurs avec un budget limité. Jasper est meilleur pour les équipes marketing produisant du contenu long format avec une voix de marque. Débutants et petits budgets → Copy.ai ; équipes marketing avancées → Jasper."},{"q":"Copy.ai est-il gratuit ?","a":"Copy.ai a un plan gratuit avec des limites. Les plans payants à partir de 49 $/mois. Jasper à partir de 49 $/mois (Creator) sans plan gratuit permanent."},{"q":"Copy.ai vs ChatGPT — lequel est le meilleur pour le marketing ?","a":"Copy.ai a des modèles marketing prêts à l'emploi qui guident la rédaction. ChatGPT est plus flexible mais nécessite plus de prompts. Pour du contenu marketing structuré, Copy.ai ; pour une utilisation flexible générale, ChatGPT."},{"q":"Jasper peut-il écrire en français ?","a":"Oui. Jasper prend en charge le français parmi ses 30+ langues. La qualité est meilleure en anglais, mais le français est bien supporté. Vérifiez toujours le contenu généré pour un français naturel et précis."}]
+},
+"midjourney-vs-flux": {
+  "a": "Midjourney", "b": "Flux",
+  "choose_a": ["✅ Vous voulez la meilleure qualité artistique et esthétique cohérente pour la création visuelle","✅ Midjourney est le standard de l'industrie pour l'art IA de haute qualité utilisé par des professionnels","✅ Communauté Discord massive avec des prompts partagés, des tutoriels et de l'inspiration","✅ Meilleur pour les portraits, les paysages et les illustrations artistiques stylisées"],
+  "choose_b": ["✅ Vous avez besoin d'un modèle open-source que vous pouvez exécuter localement ou via API","✅ Flux est gratuit via Replicate, Fal.ai et d'autres fournisseurs — pas d'abonnement mensuel obligatoire","✅ Flux est souvent considéré comme supérieur à Midjourney pour le rendu de texte dans les images","✅ Plus de flexibilité : pouvez l'affiner et l'intégrer dans vos propres applications"],
+  "faq": [{"q":"Midjourney vs Flux — lequel est le meilleur ?","a":"Midjourney est meilleur pour la cohérence artistique et la qualité globale. Flux est meilleur pour le rendu de texte, le contenu photographique et comme modèle open-source. Midjourney pour l'art ; Flux pour les applications et le contrôle technique."},{"q":"Flux est-il gratuit ?","a":"Les modèles Flux sont open-source. Vous pouvez les utiliser via des fournisseurs cloud (Replicate, Fal.ai) en payant par image, ou les exécuter localement gratuitement avec du matériel compatible. Midjourney à partir de 10 $/mois."},{"q":"Flux peut-il générer du texte lisible dans les images ?","a":"Oui. Le rendu de texte dans les images est l'une des forces de Flux par rapport à Midjourney. Pour des images contenant des panneaux, des logos ou du texte lisible, Flux performe nettement mieux."},{"q":"Midjourney est-il le meilleur générateur d'images IA ?","a":"Midjourney est souvent considéré comme le meilleur pour la qualité artistique et l'esthétique. Mais Flux, DALL-E 3, Stable Diffusion et Ideogram ont tous des forces différentes. Midjourney n'offre pas d'API directe et ne peut pas être utilisé localement."}]
+},
+"midjourney-vs-stable-diffusion": {
+  "a": "Midjourney", "b": "Stable Diffusion",
+  "choose_a": ["✅ Vous voulez les meilleures images sans configuration technique ni matériel spécialisé","✅ Midjourney produit des résultats de haute qualité cohérents avec des prompts simples","✅ Facile à utiliser via Discord ou l'interface web — pas de compétences techniques requises","✅ Meilleur pour l'art conceptuel, les illustrations et les visuels de haute qualité"],
+  "choose_b": ["✅ Vous voulez un contrôle total et de la confidentialité en exécutant le modèle localement","✅ Stable Diffusion est entièrement open-source — gratuit à exécuter sur votre propre matériel","✅ Capacités d'affinage : entraînez le modèle sur vos propres images et styles","✅ Pas d'abonnement mensuel si vous disposez du matériel ; idéal pour une utilisation professionnelle intensive"],
+  "faq": [{"q":"Midjourney vs Stable Diffusion — lequel choisir ?","a":"Midjourney est plus facile et produit de meilleurs résultats immédiats. Stable Diffusion est gratuit, personnalisable et s'exécute localement. Pour une qualité sans friction, Midjourney ; pour le contrôle et la confidentialité, Stable Diffusion."},{"q":"Stable Diffusion est-il vraiment gratuit ?","a":"Le modèle Stable Diffusion est gratuit et open-source. Vous avez besoin d'un GPU compatible (NVIDIA 8 Go VRAM minimum). Les services cloud comme DreamStudio facturent à l'image. Midjourney à partir de 10 $/mois."},{"q":"Stable Diffusion nécessite-t-il un GPU puissant ?","a":"Pour de bonnes performances, vous avez besoin d'un GPU NVIDIA avec au moins 8 Go VRAM. Avec SDXL, 12 Go VRAM sont recommandés. Vous pouvez aussi utiliser des services cloud sans GPU local."},{"q":"Quelle est la différence entre Midjourney et DALL-E ?","a":"Midjourney produit généralement un art plus stylisé et de haute qualité. DALL-E 3 (via ChatGPT) est meilleur pour suivre des instructions textuelles précises et créer du contenu pour les entreprises. Stable Diffusion offre la flexibilité open-source."}]
+},
+"ideogram-vs-midjourney": {
+  "a": "Ideogram", "b": "Midjourney",
+  "choose_a": ["✅ Vous avez besoin de générer des images avec du texte lisible intégré — logos, affiches, cartes","✅ Ideogram excelle dans le rendu de texte là où Midjourney a traditionnellement du mal","✅ Plan gratuit généreux d'Ideogram — pas d'abonnement requis pour commencer","✅ Idéal pour les designers créant des visuels de marque, des affiches et du contenu de réseaux sociaux"],
+  "choose_b": ["✅ Vous voulez la meilleure qualité artistique et cohérence esthétique pour l'art créatif","✅ Midjourney est le standard de l'industrie pour l'art IA de haute qualité parmi les professionnels","✅ Communauté plus grande avec des tutoriels, des prompts et de l'inspiration disponibles","✅ Meilleur pour les portraits, les paysages et les illustrations artistiques stylisées"],
+  "faq": [{"q":"Ideogram vs Midjourney — lequel est le meilleur pour le rendu de texte ?","a":"Ideogram est nettement meilleur pour intégrer du texte lisible dans les images. C'est l'une de ses fonctionnalités phares. Midjourney a du mal à rendre du texte précis. Pour les designs avec du texte, Ideogram est clairement supérieur."},{"q":"Ideogram est-il gratuit ?","a":"Ideogram a un plan gratuit généreux avec des crédits quotidiens. Les plans payants à partir de 8 $/mois pour plus de générations. Midjourney à partir de 10 $/mois sans plan gratuit permanent."},{"q":"Ideogram est-il bon pour les logos ?","a":"Ideogram est idéal pour les concepts de logos car il peut rendre du texte lisible dans les designs. Mais pour des logos professionnels finaux, vous aurez besoin d'un logiciel vectoriel comme Illustrator pour la mise à l'échelle. Ideogram est excellent pour la conceptualisation."},{"q":"Ideogram vs DALL-E 3 — lequel est le meilleur ?","a":"Les deux gèrent bien le rendu de texte mieux que Midjourney. DALL-E 3 est accessible via ChatGPT. Ideogram a son propre plan gratuit. Pour les affiches et le design avec texte, les deux sont bons ; testez les deux pour votre style."}]
+},
+"adobe-firefly-vs-midjourney": {
+  "a": "Adobe Firefly", "b": "Midjourney",
+  "choose_a": ["✅ Vous travaillez dans l'écosystème Adobe et voulez de la génération d'images IA intégrée dans Photoshop, Illustrator","✅ Adobe Firefly est entraîné sur du contenu sous licence — sûr commercialement sans problèmes de droits d'auteur","✅ Génération de remplissage dans Photoshop (Generative Fill) — étend les images et supprime les objets avec l'IA","✅ Idéal pour les professionnels créatifs ayant déjà un abonnement Creative Cloud"],
+  "choose_b": ["✅ Vous voulez la meilleure qualité artistique pour la création d'art créatif autonome","✅ Midjourney produit des résultats esthétiquement supérieurs pour l'art conceptuel","✅ Communauté massive avec des prompts partagés, des tutoriels et de l'inspiration créative","✅ Plus flexible pour l'art stylisé, les portraits et les illustrations fantaisistes"],
+  "faq": [{"q":"Adobe Firefly vs Midjourney — lequel est le meilleur ?","a":"Firefly est meilleur pour les professionnels dans l'écosystème Adobe et pour le contenu commercial sûr. Midjourney est meilleur pour la qualité artistique pure. Si vous utilisez Photoshop ou Illustrator, Firefly ; pour l'art créatif, Midjourney."},{"q":"Adobe Firefly est-il gratuit ?","a":"Firefly est inclus dans Creative Cloud. Il y a des crédits généreux mensuels. Les crédits supplémentaires s'achètent séparément. Midjourney à partir de 10 $/mois."},{"q":"Adobe Firefly est-il sûr pour un usage commercial ?","a":"Oui. Adobe Firefly est entraîné sur du contenu Adobe Stock et sous licence, conçu explicitement pour un usage commercial. Adobe offre des garanties d'indemnisation commerciale pour le contenu généré avec Firefly."},{"q":"Adobe Firefly peut-il remplacer un designer graphique ?","a":"Firefly automatise certaines tâches créatives répétitives comme le remplissage de fonds, la retouche et la génération de variantes. Il ne remplace pas un designer pour la stratégie, le concept et le travail créatif complexe. C'est un outil de productivité, pas un remplacement."}]
+},
+"recraft-ai-vs-midjourney": {
+  "a": "Recraft AI", "b": "Midjourney",
+  "choose_a": ["✅ Vous avez besoin d'images vectorielles et d'icônes générées par IA — Recraft excelle là où Midjourney ne propose que des rasters","✅ Recraft est conçu pour les designers : génère des SVG, des icônes et des illustrations de marque cohérentes","✅ Plan gratuit généreux avec des crédits mensuels pour commencer sans frais","✅ Meilleur pour créer du contenu de marque cohérent avec des palettes de couleurs et des styles constants"],
+  "choose_b": ["✅ Vous voulez la meilleure qualité artistique et une esthétique cohérente pour l'art créatif","✅ Midjourney est le standard de l'industrie pour la création artistique IA de haute qualité","✅ Communauté massive et tutoriels disponibles — plus facile à apprendre avec les ressources de la communauté","✅ Meilleur pour les portraits, paysages et œuvres d'art stylisées de haute qualité"],
+  "faq": [{"q":"Recraft AI vs Midjourney — quelle est la différence ?","a":"Recraft est spécialisé dans les visuels de design : icônes, illustrations vectorielles et actifs de marque. Midjourney est pour l'art créatif de haute qualité. Pour les designers ayant besoin d'actifs cohérents, Recraft ; pour les artistes créatifs, Midjourney."},{"q":"Recraft peut-il générer des SVG ?","a":"Oui. La génération de SVG est l'une des fonctionnalités phares de Recraft, unique parmi les générateurs d'images IA. Vous pouvez générer des icônes et des illustrations vectorielles directement utilisables dans des projets de design."},{"q":"Recraft AI est-il gratuit ?","a":"Recraft a un plan gratuit avec des crédits mensuels. Les plans payants à partir de 12 $/mois. Midjourney à partir de 10 $/mois sans plan gratuit permanent."},{"q":"Recraft vs Canva pour la création de visuels de marque ?","a":"Recraft génère de nouvelles illustrations et icônes avec l'IA. Canva est meilleur pour composer des designs avec des templates et des actifs existants. Pour créer de nouvelles illustrations de marque, Recraft ; pour composer des designs marketing, Canva."}]
+},
+"flux-vs-stable-diffusion": {
+  "a": "Flux", "b": "Stable Diffusion",
+  "choose_a": ["✅ Vous voulez un modèle open-source de dernière génération avec une meilleure qualité que Stable Diffusion XL","✅ Flux est meilleur pour le rendu de texte et le réalisme photographique que Stable Diffusion","✅ Plus facile à utiliser via des API cloud (Replicate, Fal.ai) sans configuration complexe","✅ Flux.1 Schnell est très rapide — génération quasi instantanée pour les cas d'usage production"],
+  "choose_b": ["✅ Vous voulez l'écosystème le plus mature avec des milliers de modèles affinés et d'extensions","✅ Stable Diffusion via AUTOMATIC1111 ou ComfyUI offre le contrôle créatif le plus profond","✅ Large bibliothèque de LoRAs, embeddings et modèles de la communauté Civitai","✅ Mieux établi pour les cas d'usage spécialisés : anime, photographie, art de personnages"],
+  "faq": [{"q":"Flux vs Stable Diffusion — lequel est le meilleur ?","a":"Flux (par Black Forest Labs) est plus récent et produit de meilleures images dans de nombreux cas, notamment pour le réalisme et le rendu de texte. Stable Diffusion a un écosystème plus mature. Pour la qualité, Flux ; pour la personnalisation et les LoRAs, Stable Diffusion."},{"q":"Flux est-il open-source ?","a":"Flux.1 Schnell est entièrement open-source. Flux.1 Dev a une licence non commerciale. Flux.1 Pro est commercial. Stable Diffusion est entièrement open-source pour toutes les utilisations."},{"q":"Peut-on utiliser Flux localement ?","a":"Oui. Flux peut être exécuté localement via ComfyUI ou d'autres interfaces. Vous aurez besoin d'un GPU puissant (16+ Go VRAM pour de bonnes performances). Ou utilisez-le via des API cloud."},{"q":"Flux vs DALL-E 3 — quelle est la différence ?","a":"Flux est open-source et peut être exécuté localement ou via API. DALL-E 3 est le modèle fermé d'OpenAI accessible via ChatGPT et l'API OpenAI. Flux offre plus de flexibilité ; DALL-E 3 est plus facile via ChatGPT."}]
+},
+"leonardo-ai-vs-midjourney": {
+  "a": "Leonardo AI", "b": "Midjourney",
+  "choose_a": ["✅ Vous avez besoin d'une plateforme complète avec génération d'images, d'éléments de jeu et de design de personnages","✅ Leonardo AI est populaire dans le développement de jeux pour ses actifs cohérents et ses modèles de personnages","✅ Plan gratuit généreux avec 150 tokens par jour — parfait pour commencer sans frais","✅ Fine-tuning disponible : entraînez des modèles personnalisés sur votre propre style ou personnages"],
+  "choose_b": ["✅ Vous voulez la meilleure qualité artistique et cohérence esthétique tout en un","✅ Midjourney est le standard de l'industrie pour l'art IA de haute qualité parmi les professionnels créatifs","✅ Communauté plus grande avec des partages de prompts et de l'inspiration créative","✅ Meilleur pour l'art conceptuel de haute qualité, les portraits et les paysages stylisés"],
+  "faq": [{"q":"Leonardo AI vs Midjourney — lequel est le meilleur ?","a":"Midjourney est généralement meilleur pour la qualité artistique globale. Leonardo AI est meilleur pour les actifs de jeux, les personnages cohérents et les fonctionnalités de fine-tuning. Pour l'art créatif, Midjourney ; pour les actifs de jeux et le fine-tuning, Leonardo."},{"q":"Leonardo AI est-il gratuit ?","a":"Leonardo AI a un plan gratuit avec 150 tokens par jour. Les plans payants à partir de 12 $/mois. Midjourney à partir de 10 $/mois sans plan gratuit permanent."},{"q":"Leonardo AI est-il bon pour les illustrations de livres ?","a":"Oui. Leonardo AI est excellent pour les illustrations cohérentes de personnages, important pour les livres illustrés. Le fine-tuning vous permet de maintenir un style visuel cohérent sur plusieurs images."},{"q":"Leonardo AI peut-il animer des images ?","a":"Leonardo AI se concentre sur la génération d'images. Pour l'animation IA, utilisez des outils comme Runway, Kling ou Pika. Leonardo génère des images fixes de haute qualité, pas de vidéos."}]
+},
+"kling-vs-runway": {
+  "a": "Kling AI", "b": "Runway",
+  "choose_a": ["✅ Vous voulez une vidéo IA de haute qualité à un prix beaucoup plus bas que Runway","✅ Kling 2.0 produit des mouvements vidéo réalistes et des personnages cohérents","✅ Plans plus généreux : Kling offre plus de secondes de vidéo pour le même budget","✅ Idéal pour les créateurs de contenu voulant une vidéo IA de haute qualité sans le coût de Runway"],
+  "choose_b": ["✅ Vous voulez la plateforme de vidéo IA la plus établie avec les meilleures fonctionnalités","✅ Runway Gen-3 Alpha est le standard de l'industrie pour la production vidéo IA professionnelle","✅ Fonctionnalités avancées : édition vidéo, inpainting, motion brush et contrôle précis","✅ Meilleure intégration dans les flux de travail de production vidéo professionnels"],
+  "faq": [{"q":"Kling AI vs Runway — lequel est le meilleur ?","a":"Kling AI offre une meilleure valeur et une qualité comparable à Runway Gen-3. Runway est plus établi avec plus de fonctionnalités avancées. Pour le rapport qualité-prix, Kling ; pour la production professionnelle avec un contrôle avancé, Runway."},{"q":"Combien coûte Kling AI ?","a":"Kling AI à partir de 8 $/mois (Standard). Runway à partir de 15 $/mois (Standard). Kling est bien moins cher pour des capacités similaires."},{"q":"Kling AI peut-il générer des vidéos longues ?","a":"Kling génère des vidéos jusqu'à 3 minutes (avec le plan Pro). Pour des vidéos plus longues, vous générez des segments et les assemblez. Runway est similaire en termes de longueur maximale par génération."},{"q":"Kling AI est-il disponible en France ?","a":"Oui. Kling AI est accessible globalement via son site web. Les paiements sont disponibles via des méthodes de paiement internationales standard. Certaines fonctionnalités peuvent avoir des délais de déploiement régional."}]
+},
+"capcut-vs-kling-ai": {
+  "a": "CapCut", "b": "Kling AI",
+  "choose_a": ["✅ Vous avez besoin d'un éditeur vidéo complet avec des fonctionnalités IA pour TikTok, Instagram et YouTube","✅ CapCut est gratuit avec des outils puissants : suppression de fond, sous-titres auto, effets IA","✅ Facile à utiliser sur mobile et bureau — aucune expertise en montage vidéo requise","✅ Intégration TikTok : CapCut est fait par ByteDance, la même société que TikTok"],
+  "choose_b": ["✅ Vous avez besoin de générer de nouvelles vidéos IA à partir de zéro à partir de prompts texte ou image","✅ Kling génère du mouvement et des scènes vidéo réalistes sans footage source","✅ Meilleur pour la génération créative de vidéo : publicités, scènes cinématographiques, contenu de marque","✅ Kling crée du contenu vidéo inexistant ; CapCut édite du footage existant"],
+  "faq": [{"q":"CapCut vs Kling AI — quelle est la différence ?","a":"CapCut est un éditeur vidéo avec des fonctionnalités IA. Kling AI est un générateur de vidéo IA de texte/image vers vidéo. CapCut pour éditer votre footage existant ; Kling pour créer de nouvelles vidéos depuis zéro avec l'IA."},{"q":"CapCut est-il gratuit ?","a":"CapCut est gratuit avec des fonctionnalités premium. CapCut Pro à partir de 9,99 $/mois. Kling AI à partir de 8 $/mois pour la génération de vidéo."},{"q":"CapCut est-il disponible en France ?","a":"Oui. CapCut est disponible en France sur mobile (iOS/Android) et bureau. Notez que CapCut est développé par ByteDance (la société TikTok), ce qui soulève des questions de confidentialité similaires à TikTok."},{"q":"CapCut peut-il générer des vidéos IA ?","a":"CapCut a des fonctionnalités de génération IA limitées (avatars IA, effets de style vidéo). Pour la génération complète de texte/image vers vidéo, des outils dédiés comme Kling, Runway ou Pika sont beaucoup plus puissants."}]
+},
+"runway-vs-capcut": {
+  "a": "Runway", "b": "CapCut",
+  "choose_a": ["✅ Vous avez besoin de la meilleure génération vidéo IA pour une production créative professionnelle","✅ Runway Gen-3 Alpha est le standard pour la génération de vidéo IA de haute qualité","✅ Fonctionnalités avancées : motion brush, inpainting, extension vidéo, contrôle caméra","✅ Meilleur pour les professionnels de la vidéo créant du contenu publicitaire ou cinématographique"],
+  "choose_b": ["✅ Vous avez besoin d'un éditeur vidéo complet et gratuit pour le contenu de réseaux sociaux","✅ CapCut est parfait pour les créateurs de contenu TikTok, Instagram et YouTube","✅ Interface plus simple sans courbe d'apprentissage — édition accessible à tous","✅ CapCut est gratuit avec de puissants outils d'édition : sous-titres auto, effets, transitions"],
+  "faq": [{"q":"Runway vs CapCut — lequel choisir ?","a":"Runway pour la génération vidéo IA professionnelle à partir de texte ou d'images. CapCut pour éditer du footage existant pour les réseaux sociaux. Ce sont des outils très différents : Runway crée ; CapCut édite."},{"q":"Runway est-il gratuit ?","a":"Runway a un plan gratuit avec des crédits limités. Standard à partir de 15 $/mois. CapCut est gratuit ; Pro à partir de 9,99 $/mois."},{"q":"Runway Gen-3 vs Sora — lequel est le meilleur ?","a":"Sora d'OpenAI peut générer des vidéos plus longues et plus cohérentes, mais l'accès est limité. Runway Gen-3 est largement disponible et très performant pour la production professionnelle. Les deux sont au sommet de la génération vidéo IA."},{"q":"Runway peut-il éditer mes vidéos existantes ?","a":"Oui. Runway dispose de fonctionnalités d'édition vidéo IA : suppression et remplacement d'objets, extension de scènes, changement de style. C'est une suite complète de vidéo IA, pas seulement un générateur."}]
+},
+"heygen-vs-synthesia": {
+  "a": "HeyGen", "b": "Synthesia",
+  "choose_a": ["✅ Vous voulez créer des vidéos d'avatar IA réalistes avec des fonctionnalités de clonage vocal","✅ HeyGen permet de cloner votre propre voix et apparence pour des vidéos personnalisées","✅ Traduction vidéo avec synchronisation labiale — idéale pour localiser les vidéos dans plusieurs langues","✅ Plus abordable pour les solopreneurs et petites équipes avec un budget créatif limité"],
+  "choose_b": ["✅ Vous avez besoin d'une plateforme de formation et de communication d'entreprise à grande échelle","✅ Synthesia est la référence pour les vidéos de formation eLearning en entreprise","✅ Meilleure intégration avec les LMS (Learning Management Systems) d'entreprise","✅ Plus de 125 avatars IA et de nombreuses langues pour le contenu de formation mondial"],
+  "faq": [{"q":"HeyGen vs Synthesia — lequel est le meilleur ?","a":"HeyGen est meilleur pour le clonage vocal, la traduction vidéo et la valeur globale. Synthesia est meilleur pour la formation d'entreprise et les intégrations LMS. Créateurs et petites équipes → HeyGen ; formation d'entreprise → Synthesia."},{"q":"Combien coûte HeyGen ?","a":"HeyGen à partir de 29 $/mois (Creator). Synthesia à partir de 29 $/mois (Starter). Les prix sont similaires, mais HeyGen offre souvent plus de fonctionnalités au même prix."},{"q":"HeyGen peut-il traduire des vidéos en français ?","a":"Oui. HeyGen traduit les vidéos dans de nombreuses langues dont le français, avec synchronisation labiale. Vous téléchargez votre vidéo en anglais et HeyGen crée une version française avec votre avatar qui parle français."},{"q":"Les avatars IA de Synthesia sont-ils réalistes ?","a":"Les avatars Synthesia sont parmi les plus réalistes disponibles commercialement. Ils sont convaincants pour la formation et la communication d'entreprise. Pour une qualité de type deepfake, HeyGen a l'avantage avec le clonage d'avatar personnalisé."}]
+},
+"pika-vs-kling-ai": {
+  "a": "Pika", "b": "Kling AI",
+  "choose_a": ["✅ Vous voulez créer rapidement des vidéos courtes créatives avec des effets uniques","✅ Pika est populaire pour ses effets créatifs : pikaffects, morphing et animations expressives","✅ Interface simple et accessible — parfait pour les créateurs de contenu sans expertise technique","✅ Pika est pionnier dans certaines fonctionnalités comme le son IA et les effets cinématographiques"],
+  "choose_b": ["✅ Vous avez besoin d'une vidéo IA de haute qualité avec des mouvements et personnages réalistes","✅ Kling 2.0 produit une qualité vidéo généralement supérieure à Pika","✅ Meilleures performances pour des scènes longues et des mouvements physiquement cohérents","✅ Plans Kling plus généreux en durée et résolution vidéo pour le même prix"],
+  "faq": [{"q":"Pika vs Kling AI — lequel est le meilleur ?","a":"Kling est généralement supérieur en qualité vidéo et cohérence physique. Pika est excellent pour les effets créatifs et la créativité expressive. Pour une qualité réaliste, Kling ; pour des effets créatifs et du fun, Pika."},{"q":"Pika est-il gratuit ?","a":"Pika a un plan gratuit avec des crédits limités. Les plans payants à partir de 8 $/mois. Kling AI à partir de 8 $/mois également."},{"q":"Pika peut-il générer du son dans les vidéos ?","a":"Oui. Pika a introduit la génération de son IA synchronisé avec la vidéo. C'est une fonctionnalité innovante qui rend les vidéos plus immersives sans avoir besoin d'outils audio séparés."},{"q":"Quelle est la durée maximale des vidéos dans Pika ?","a":"Pika génère généralement des vidéos de 3 à 10 secondes par génération. Pour des vidéos plus longues, vous générez des segments et les assemblez dans un éditeur vidéo. La durée maximale varie selon le plan."}]
+},
+"luma-ai-vs-runway": {
+  "a": "Luma AI", "b": "Runway",
+  "choose_a": ["✅ Vous avez besoin de captures 3D photoréalistes et de scènes 3D à partir de vidéos","✅ Luma AI (Dream Machine) produit des vidéos très réalistes et cohérentes","✅ Luma AI est populaire pour la haute qualité et le réalisme des mouvements de caméra","✅ Certaines fonctionnalités Luma sont gratuites ou moins chères que Runway"],
+  "choose_b": ["✅ Vous avez besoin d'une suite complète de vidéo IA avec des fonctionnalités d'édition avancées","✅ Runway est le standard de l'industrie pour la production vidéo IA professionnelle","✅ Fonctionnalités uniques : motion brush, inpainting, extension vidéo, changement de style","✅ Meilleure intégration dans les flux de travail de production vidéo professionnels"],
+  "faq": [{"q":"Luma AI vs Runway — lequel est le meilleur ?","a":"Luma AI (Dream Machine) est très apprécié pour le réalisme et la qualité de mouvement. Runway a plus de fonctionnalités avancées pour l'édition et le contrôle professionnel. Pour la qualité brute, Luma est souvent cité ; pour le contrôle professionnel, Runway."},{"q":"Luma AI est-il gratuit ?","a":"Luma AI a un plan gratuit avec des générations limitées. Les plans payants à partir de 29,99 $/mois. Runway à partir de 15 $/mois."},{"q":"Qu'est-ce que Luma AI NeRF ?","a":"Luma AI a commencé avec la technologie NeRF (Neural Radiance Fields) pour créer des scènes 3D photoréalistes à partir de vidéos tournées avec un smartphone. Dream Machine est leur produit de génération vidéo text-to-video."},{"q":"Luma Dream Machine vs Runway Gen-3 — lequel choisir ?","a":"Les deux sont parmi les meilleurs générateurs vidéo IA. Dream Machine est apprécié pour le réalisme des mouvements. Runway Gen-3 est souvent préféré en production professionnelle. Essayez les deux avec leurs plans gratuits pour voir lequel convient à votre style."}]
+},
+"google-veo-3-vs-runway": {
+  "a": "Google Veo 3", "b": "Runway",
+  "choose_a": ["✅ Vous voulez la génération vidéo IA la plus avancée avec son synchronisé — une première dans l'industrie","✅ Veo 3 génère des vidéos avec audio ambiant, effets sonores et dialogues synchronisés","✅ Qualité vidéo exceptionnelle grâce aux investissements massifs de Google dans la recherche IA","✅ Accès via Google AI Ultra (249,99 $/mois) ou les produits Google destinés aux créateurs"],
+  "choose_b": ["✅ Vous avez besoin d'un accès immédiat et largement disponible à la génération vidéo IA professionnelle","✅ Runway Gen-3 est accessible maintenant avec des plans abordables à partir de 15 $/mois","✅ Suite complète avec édition vidéo IA, pas seulement génération","✅ Runway est établi dans les flux de travail de production professionnels depuis plus longtemps"],
+  "faq": [{"q":"Google Veo 3 vs Runway — lequel est le meilleur ?","a":"Veo 3 est techniquement impressionnant avec sa génération sonore unique. Mais Runway est plus accessible et établi. Pour la pointe technologique, Veo 3 ; pour l'accès pratique maintenant, Runway."},{"q":"Quand Google Veo 3 sera-t-il disponible ?","a":"Veo 3 est accessible via Google AI Ultra (249,99 $/mois) et certains produits Google. La disponibilité s'élargit progressivement. Runway est disponible immédiatement à partir de 15 $/mois."},{"q":"Veo 3 génère-t-il aussi du son ?","a":"Oui. C'est la fonctionnalité révolutionnaire de Veo 3 : il génère des vidéos avec audio synchronisé, incluant son ambiant, effets sonores et même des dialogues. Aucun autre outil de génération vidéo grand public ne fait cela aussi bien."},{"q":"Veo 3 vs Sora — lequel est le meilleur ?","a":"Les deux sont en haut de gamme. Veo 3 a l'avantage de la génération sonore. Sora peut produire des vidéos très longues et cohérentes. Les deux nécessitent des abonnements premium. Runway reste l'option la plus pratique pour la plupart des créateurs."}]
+},
+"canva-ai-vs-figma-ai": {
+  "a": "Canva AI", "b": "Figma AI",
+  "choose_a": ["✅ Vous avez besoin d'un outil de design accessible pour les non-designers avec des modèles et une IA intégrée","✅ Canva Magic Studio génère des designs, images, textes et présente des suggestions automatiques","✅ Idéal pour les équipes marketing, les PME et les créateurs de contenu sans expertise en design","✅ Bibliothèque massive de modèles, éléments et médias prêts à l'emploi"],
+  "choose_b": ["✅ Vous êtes designer professionnel et avez besoin d'IA intégrée dans un outil de design UX/UI","✅ Figma AI aide à la conception d'interfaces, prototypes et systems de design","✅ Meilleur pour les équipes de produit collaborant sur des projets de design UX/UI","✅ Fonctionnalités IA dans Figma incluent la génération de contenu et l'assistance à la conception"],
+  "faq": [{"q":"Canva AI vs Figma AI — lequel choisir ?","a":"Canva AI est pour les non-designers créant du contenu marketing. Figma AI est pour les designers UX/UI professionnels. Si vous créez des publications pour les réseaux sociaux, des présentations ou des visuels marketing, Canva ; si vous concevez des interfaces d'application, Figma."},{"q":"Canva est-il gratuit ?","a":"Canva a un plan gratuit généreux. Canva Pro à partir de 15 $/mois avec des fonctionnalités IA avancées. Figma a un plan gratuit ; Professional à partir de 15 $/éditeur/mois."},{"q":"Canva peut-il remplacer Figma ?","a":"Non. Canva est pour le design graphique et marketing. Figma est pour le design UX/UI et les prototypes d'applications. Ce sont des outils pour des cas d'utilisation différents. Certaines équipes utilisent les deux."},{"q":"Canva AI peut-il générer des images ?","a":"Oui. Canva Magic Media génère des images à partir de descriptions textuelles. Les images sont intégrées directement dans vos designs Canva. Pour la génération d'images pure, Midjourney et Flux produisent des résultats de meilleure qualité."}]
+},
+"figma-ai-vs-canva-ai": {
+  "a": "Figma AI", "b": "Canva AI",
+  "choose_a": ["✅ Vous êtes designer UX/UI professionnel ayant besoin d'IA dans votre flux de travail de conception","✅ Figma AI génère des designs d'interface, suggère des layouts et aide avec les systems de design","✅ Meilleur pour la collaboration d'équipe sur des projets de design de produit complexes","✅ Figma est le standard de l'industrie pour le design UX/UI — l'IA est une extension naturelle"],
+  "choose_b": ["✅ Vous êtes non-designer ayant besoin de créer du contenu visuel marketing rapidement","✅ Canva AI est bien plus facile à prendre en main pour la création de designs marketing","✅ Meilleur pour les présentations, publications de réseaux sociaux, flyers et visuels de marque","✅ Bibliothèque massive de modèles pour tous types de contenus marketing"],
+  "faq": [{"q":"Figma AI vs Canva AI — quelle est la différence ?","a":"Figma AI est pour le design UX/UI professionnel. Canva AI est pour le design graphique accessible aux non-designers. Si vous concevez des applications, Figma ; si vous créez du contenu marketing, Canva."},{"q":"Figma est-il gratuit ?","a":"Figma a un plan gratuit avec des limites (3 projets). Professional à partir de 15 $/éditeur/mois. Canva est gratuit ; Pro à partir de 15 $/mois."},{"q":"Figma AI peut-il générer des maquettes complètes ?","a":"Figma AI peut suggérer des layouts, générer du contenu fictif et aider à la conception. Mais pour générer une application complète à partir d'une description, des outils spécialisés comme v0 ou Uizard sont plus adaptés."},{"q":"Les designers peuvent-ils utiliser Canva et Figma ensemble ?","a":"Oui. Certains designers utilisent Figma pour la conception UX/UI de produit et Canva pour les actifs marketing. Les deux s'intègrent dans des flux de travail complémentaires."}]
+},
+"framer-ai-vs-canva-ai": {
+  "a": "Framer AI", "b": "Canva AI",
+  "choose_a": ["✅ Vous avez besoin de créer un site web professionnel avec IA sans coder","✅ Framer AI génère des sites web complets à partir d'une description — prêts à publier","✅ Sites web Framer sont performants, réactifs et techniquement supérieurs aux sites Canva","✅ Meilleur pour les landing pages, portfolios et sites marketing avec des interactions avancées"],
+  "choose_b": ["✅ Vous avez besoin de créer divers contenus marketing : publications sociales, présentations, flyers","✅ Canva AI est meilleur pour la création de contenu multi-format, pas seulement des sites web","✅ Interface beaucoup plus facile pour les non-designers sans courbe d'apprentissage","✅ Plan gratuit Canva plus généreux pour commencer sans frais"],
+  "faq": [{"q":"Framer AI vs Canva AI — lequel est le meilleur pour les sites web ?","a":"Framer AI est clairement supérieur pour créer des sites web professionnels. Canva Website Builder existe mais est limité. Pour des sites web de haute qualité, Framer ; pour le contenu marketing multiformat, Canva."},{"q":"Framer est-il gratuit ?","a":"Framer a un plan gratuit avec un sous-domaine Framer. Les plans payants à partir de 15 $/mois pour un domaine personnalisé. Canva est gratuit ; Pro à partir de 15 $/mois."},{"q":"Framer AI vs Webflow — quelle est la différence ?","a":"Framer est plus rapide à démarrer avec l'IA. Webflow offre plus de contrôle et de flexibilité pour des sites complexes. Framer pour un démarrage rapide avec de beaux designs ; Webflow pour des projets web avancés."},{"q":"Framer peut-il remplacer un développeur web ?","a":"Framer peut créer des sites marketing professionnels sans développeur. Mais pour des fonctionnalités personnalisées complexes (bases de données, authentification, logique métier), un développeur reste nécessaire."}]
+},
+"looka-vs-canva-ai": {
+  "a": "Looka", "b": "Canva AI",
+  "choose_a": ["✅ Vous avez besoin d'un logo professionnel et d'une identité de marque complète générés par IA","✅ Looka se spécialise dans la création de logos et génère des systèmes de marque complets (couleurs, typographie, cartes de visite)","✅ Fichiers vectoriels haute résolution inclus pour une utilisation professionnelle sur tous supports","✅ Meilleur pour les entrepreneurs créant leur marque depuis zéro"],
+  "choose_b": ["✅ Vous avez besoin d'un outil polyvalent pour créer du contenu marketing au-delà du seul logo","✅ Canva AI gère les publications sociales, présentations, flyers et tous les visuels marketing","✅ Plan gratuit Canva avec des milliers de modèles disponibles sans frais initiaux","✅ Canva peut aussi créer des logos, mais avec plus de contrôle manuel sur le design"],
+  "faq": [{"q":"Looka vs Canva — lequel est le meilleur pour un logo ?","a":"Looka est spécialisé dans les logos et produit des résultats plus professionnels pour la création de marque. Canva a plus de modèles mais moins de spécialisation. Pour un logo professionnel avec une identité de marque complète, Looka ; pour tout le reste, Canva."},{"q":"Looka est-il cher ?","a":"Looka propose un paiement unique : logo seul à 65 $, pack de marque à 80 $. Il y a aussi un abonnement à 96 $/an. Canva est gratuit avec Pro à 15 $/mois."},{"q":"Looka génère-t-il des fichiers vectoriels ?","a":"Oui. Looka fournit des fichiers SVG et EPS pour une utilisation professionnelle. Cela permet de redimensionner votre logo à n'importe quelle taille sans perte de qualité, essentiel pour l'impression et les grands formats."},{"q":"Peut-on créer son logo gratuitement avec Looka ?","a":"Vous pouvez prévisualiser des logos gratuitement avec Looka. Pour télécharger les fichiers haute résolution, vous devez payer. Pour un logo gratuit, Canva a des options, mais la qualité et l'originalité sont inférieures."}]
+},
+"uizard-vs-figma-ai": {
+  "a": "Uizard", "b": "Figma AI",
+  "choose_a": ["✅ Vous avez besoin de créer rapidement des maquettes et prototypes sans compétences en design","✅ Uizard génère des maquettes d'applications à partir de screenshots ou de descriptions textuelles","✅ Parfait pour les product managers et fondateurs voulant visualiser leurs idées sans designer","✅ Interface plus simple que Figma — prise en main en minutes, pas en heures"],
+  "choose_b": ["✅ Vous êtes designer professionnel nécessitant les outils de conception les plus avancés","✅ Figma AI offre plus de puissance et de flexibilité pour les projets de design complexes","✅ Meilleure collaboration pour les grandes équipes de design avec des flux de travail avancés","✅ Figma est le standard de l'industrie — meilleures intégrations et écosystème de plugins"],
+  "faq": [{"q":"Uizard vs Figma — lequel est le meilleur pour un non-designer ?","a":"Uizard est clairement plus accessible pour les non-designers : générez des maquettes en minutes à partir de descriptions. Figma est puissant mais a une courbe d'apprentissage importante. Pour les PM et fondateurs sans compétences en design, Uizard."},{"q":"Uizard est-il gratuit ?","a":"Uizard a un plan gratuit avec 3 projets. Pro à partir de 12 $/mois. Figma a un plan gratuit ; Professional à partir de 15 $/éditeur/mois."},{"q":"Uizard peut-il convertir des screenshots en maquettes ?","a":"Oui. C'est l'une des fonctionnalités phares d'Uizard : téléchargez un screenshot de n'importe quelle app et Uizard le convertit en maquette modifiable. C'est très utile pour recréer des interfaces existantes ou s'inspirer de designs."},{"q":"Uizard vs Mockup.io vs Balsamiq — quelle est la différence ?","a":"Uizard génère des maquettes avec IA à partir de descriptions ou screenshots. Balsamiq est pour les wireframes basse fidélité rapides. Les deux sont plus accessibles que Figma pour les non-designers. Uizard est plus moderne avec l'IA intégrée."}]
+},
+"uxpilot-vs-figma-ai": {
+  "a": "UXpilot", "b": "Figma AI",
+  "choose_a": ["✅ Vous avez besoin d'un assistant IA spécialisé dans les meilleures pratiques UX et la recherche utilisateur","✅ UXpilot aide à créer des wireframes, des user flows et des personas basés sur les principes UX","✅ Génère des frames Figma directement — la sortie est utilisable immédiatement dans votre flux de travail Figma","✅ Meilleur pour les débutants en UX apprenant les bonnes pratiques de conception"],
+  "choose_b": ["✅ Vous êtes un designer Figma expérimenté ayant besoin d'IA intégrée dans votre outil de travail","✅ Figma AI est directement dans Figma — pas d'outil supplémentaire dans votre flux de travail","✅ Meilleure intégration pour les équipes déjà dans l'écosystème Figma","✅ Figma AI couvre un plus large éventail d'assistances à la conception"],
+  "faq": [{"q":"Qu'est-ce que UXpilot ?","a":"UXpilot est un outil IA spécialisé dans la conception UX. Il génère des wireframes, user flows, personas et suggestions de conception basés sur les meilleures pratiques UX. Il peut exporter directement vers Figma."},{"q":"UXpilot est-il gratuit ?","a":"UXpilot a un plan gratuit avec des limites. Les plans payants à partir de 19 $/mois. Figma a un plan gratuit ; Professional à partir de 15 $/éditeur/mois."},{"q":"UXpilot peut-il générer des wireframes complets ?","a":"Oui. UXpilot génère des wireframes à partir de descriptions de fonctionnalités ou de types d'applications. La sortie peut être importée dans Figma pour une édition ultérieure. C'est un bon point de départ pour les projets UX."},{"q":"UXpilot vs Uizard — quelle est la différence ?","a":"Les deux créent des maquettes avec IA. UXpilot se concentre davantage sur les principes UX et les flux utilisateurs. Uizard est plus axé sur la conversion de screenshots et la génération rapide de prototypes. Les deux exportent vers Figma."}]
+},
+"relume-vs-framer-ai": {
+  "a": "Relume", "b": "Framer AI",
+  "choose_a": ["✅ Vous avez besoin de concevoir des sites web et générer du code React/Tailwind exportable","✅ Relume génère des sitemaps, wireframes et composants web exportables pour les développeurs","✅ Meilleur pour les agences web et développeurs qui veulent accélérer la conception de sites","✅ Bibliothèque de composants Relume intégrable dans Webflow, Figma et projets de code"],
+  "choose_b": ["✅ Vous voulez publier un site web professionnel immédiatement sans développement","✅ Framer AI génère et héberge le site complet — pas besoin de développeur pour publier","✅ Meilleur pour les landing pages, portfolios et sites marketing prêts à l'emploi","✅ Framer est une solution complète : design + hébergement + publication en un"],
+  "faq": [{"q":"Relume vs Framer — lequel est le meilleur pour les agences web ?","a":"Relume est meilleur pour les agences qui livrent du code et des designs à leurs clients. Framer est meilleur pour lancer rapidement des sites web sans développement. Agences livrant du code → Relume ; lancement rapide de sites → Framer."},{"q":"Relume est-il gratuit ?","a":"Relume a un plan gratuit limité. Les plans payants à partir de 38 $/mois. Framer a un plan gratuit ; payants à partir de 15 $/mois."},{"q":"Relume génère-t-il du code ?","a":"Oui. Relume génère des composants React et Tailwind CSS que les développeurs peuvent utiliser. C'est une grande différence avec Framer qui est une solution no-code complète. Relume s'adresse aux développeurs et designers qui codent."},{"q":"Relume s'intègre-t-il avec Webflow ?","a":"Oui. Relume s'intègre directement avec Webflow — vous pouvez exporter vos composants Relume dans Webflow. C'est populaire chez les agences qui construisent des sites Webflow pour leurs clients."}]
+},
+"whimsical-ai-vs-figma-ai": {
+  "a": "Whimsical AI", "b": "Figma AI",
+  "choose_a": ["✅ Vous avez besoin de créer rapidement des mindmaps, flowcharts et wireframes sans complexité de design","✅ Whimsical AI génère des diagrammes et flowcharts à partir de descriptions textuelles en secondes","✅ Plus simple et plus rapide que Figma pour la visualisation d'idées et le brainstorming","✅ Meilleur pour la collaboration en équipe sur des idées et processus, pas des designs finaux"],
+  "choose_b": ["✅ Vous êtes designer UX/UI professionnel ayant besoin d'un outil de conception avancé","✅ Figma AI est dans votre outil de travail quotidien — pas de changement de contexte","✅ Meilleur pour les designs finaux : interfaces, prototypes cliquables et systems de design","✅ Figma est le standard de l'industrie avec le meilleur écosystème de plugins"],
+  "faq": [{"q":"Whimsical vs Figma — lequel choisir ?","a":"Whimsical est pour le brainstorming rapide, les flowcharts et les wireframes simples. Figma est pour les designs d'interface professionnels et les prototypes. Ce sont des outils complémentaires : utilisez Whimsical pour les idées, Figma pour l'exécution."},{"q":"Whimsical est-il gratuit ?","a":"Whimsical a un plan gratuit avec 4 boards. Pro à partir de 10 $/mois. Figma a un plan gratuit ; Professional à partir de 15 $/éditeur/mois."},{"q":"Whimsical AI peut-il générer des flowcharts automatiquement ?","a":"Oui. Whimsical AI génère des flowcharts et des mind maps à partir de descriptions textuelles. C'est une fonctionnalité très pratique pour les équipes voulant documenter rapidement des processus ou explorer des idées."},{"q":"Whimsical vs Miro — lequel est le meilleur ?","a":"Whimsical est plus structuré et simple pour les flowcharts et wireframes. Miro est plus polyvalent pour les tableaux blancs collaboratifs et les ateliers. Whimsical pour les diagrammes structurés ; Miro pour les sessions de collaboration créatives."}]
+},
+"suno-vs-udio": {
+  "a": "Suno", "b": "Udio",
+  "choose_a": ["✅ Vous voulez générer des chansons complètes avec paroles à partir d'une simple description","✅ Suno est considéré comme l'un des meilleurs pour des chansons finies de haute qualité","✅ Interface simple — décrivez le style, le mood et les paroles ; Suno fait le reste","✅ Plan gratuit généreux avec 50 chansons par jour pour l'exploration créative"],
+  "choose_b": ["✅ Vous voulez une diversité musicale plus large et plus d'expérimentation de genres","✅ Udio peut produire une musique plus diverse et expérimentale que Suno","✅ Meilleur pour créer des chansons dans des genres très spécifiques et des sous-genres musicaux","✅ Udio permet plus de contrôle sur les éléments musicaux individuels"],
+  "faq": [{"q":"Suno vs Udio — lequel est le meilleur ?","a":"Les deux sont excellents pour la génération musicale IA. Suno est souvent cité pour une meilleure qualité globale et des chansons finies. Udio est apprécié pour sa diversité et son expérimentation musicale. Essayez les deux avec leurs plans gratuits."},{"q":"Suno est-il gratuit ?","a":"Suno a un plan gratuit avec 50 chansons par jour. Pro à partir de 10 $/mois pour des générations supplémentaires et une utilisation commerciale. Udio a aussi un plan gratuit."},{"q":"La musique générée par Suno peut-elle être utilisée commercialement ?","a":"Avec un plan payant Suno, vous obtenez des droits commerciaux sur la musique générée. Le plan gratuit est pour un usage personnel uniquement. Vérifiez les conditions d'utilisation actuelles car elles évoluent."},{"q":"Suno peut-il générer de la musique en français ?","a":"Oui. Suno comprend les instructions en français et peut générer des chansons avec des paroles françaises. Décrivez simplement le style et le mood en français et Suno générera une chanson correspondante."}]
+},
+"speechify-vs-elevenlabs": {
+  "a": "Speechify", "b": "ElevenLabs",
+  "choose_a": ["✅ Vous avez besoin d'un outil de text-to-speech pour lire des articles, PDFs et e-books à haute voix","✅ Speechify est conçu pour la consommation de contenu : écoutez n'importe quel texte en déplacement","✅ Excellent pour les personnes dyslexiques ou celles qui apprennent mieux par l'écoute","✅ Extension Chrome intégrée pour lire du contenu web directement dans votre navigateur"],
+  "choose_b": ["✅ Vous avez besoin d'une voix IA de la plus haute qualité pour du contenu professionnel : podcasts, voix off, audiobooks","✅ ElevenLabs produit les voix IA les plus réalistes et naturelles disponibles","✅ Clonage vocal : reproduisez votre propre voix ou créez des voix personnalisées","✅ API ElevenLabs pour intégrer des voix haute qualité dans vos applications"],
+  "faq": [{"q":"Speechify vs ElevenLabs — lequel est le meilleur ?","a":"Speechify est pour la consommation de contenu personnel — lire des textes plus vite. ElevenLabs est pour la production de voix IA professionnelle. Écouter des articles en courant → Speechify ; créer des voix off professionnelles → ElevenLabs."},{"q":"Speechify est-il gratuit ?","a":"Speechify a un plan gratuit limité. Premium à partir de 139 $/an. ElevenLabs a un plan gratuit avec 10 000 caractères/mois ; les plans payants à partir de 5 $/mois."},{"q":"ElevenLabs peut-il cloner ma voix en français ?","a":"Oui. ElevenLabs clone les voix dans de nombreuses langues dont le français. Vous téléchargez des échantillons audio de votre voix et ElevenLabs crée un clone que vous pouvez utiliser pour générer du contenu audio."},{"q":"Speechify vs Natural Reader — quelle est la différence ?","a":"Les deux sont des lecteurs text-to-speech. Speechify est plus populaire avec une meilleure application mobile. Natural Reader a un plan gratuit plus généreux. Speechify est plus facile à utiliser ; Natural Reader est meilleur marché pour une utilisation de bureau."}]
+},
+"elevenlabs-vs-murf-ai": {
+  "a": "ElevenLabs", "b": "Murf AI",
+  "choose_a": ["✅ Vous avez besoin des voix IA les plus réalistes disponibles pour des productions professionnelles","✅ ElevenLabs est le leader du marché pour la qualité des voix et le clonage vocal","✅ API robuste pour intégrer des voix haute qualité dans vos applications et produits","✅ Large bibliothèque de voix dans de nombreuses langues dont le français"],
+  "choose_b": ["✅ Vous avez besoin d'un outil de voix off orienté studio avec des fonctionnalités de synchronisation vidéo","✅ Murf AI inclut un éditeur vidéo intégré pour synchroniser voix off et diapositives","✅ Interface plus conviviale pour créer des présentations et formations avec voix off","✅ Meilleur pour les équipes L&D et les créateurs de contenu de formation"],
+  "faq": [{"q":"ElevenLabs vs Murf — lequel est le meilleur pour la voix off ?","a":"ElevenLabs produit des voix plus réalistes mais est plus technique. Murf est plus accessible avec des fonctionnalités de studio intégrées. Pour une qualité maximale → ElevenLabs ; pour une création facile de présentations → Murf."},{"q":"Murf AI est-il gratuit ?","a":"Murf AI a un plan gratuit avec 10 minutes de voix. Pro à partir de 29 $/mois. ElevenLabs a un plan gratuit avec 10 000 caractères/mois ; payants à partir de 5 $/mois."},{"q":"ElevenLabs et Murf prennent-ils en charge le français ?","a":"Oui. Les deux prennent en charge le français. ElevenLabs a généralement de meilleures voix françaises avec plus de naturel. Murf a des voix françaises de qualité professionnelle pour les présentations."},{"q":"Peut-on utiliser ElevenLabs pour des podcasts ?","a":"Oui. ElevenLabs est populaire pour les podcasts IA. Vous pouvez générer des épisodes entiers avec des voix réalistes. Pour des podcasts avec une voix humaine clonée, ElevenLabs offre une qualité supérieure."}]
+},
+"elevenlabs-vs-playht": {
+  "a": "ElevenLabs", "b": "Play.ht",
+  "choose_a": ["✅ Vous avez besoin des voix IA les plus naturelles et réalistes avec clonage vocal avancé","✅ ElevenLabs est la référence pour la qualité des voix — sons les plus humains disponibles","✅ API puissante avec contrôle fin sur la prosodie, le débit et les émotions","✅ Meilleur choix pour les créateurs de contenu premium et les productions professionnelles"],
+  "choose_b": ["✅ Vous avez besoin d'un outil TTS avec plus de voix et de langues à un prix compétitif","✅ Play.ht dispose d'une bibliothèque de plus de 900 voix dans 142 langues","✅ Meilleur pour les besoins TTS à grande échelle avec une tarification favorable","✅ Play.ht Agent est une solution pour créer des agents vocaux IA pour le support client"],
+  "faq": [{"q":"ElevenLabs vs Play.ht — lequel est le meilleur ?","a":"ElevenLabs est généralement supérieur en qualité de voix et en naturalité. Play.ht a plus de voix et est souvent moins cher pour les grands volumes. Pour la meilleure qualité → ElevenLabs ; pour plus de choix et de volume → Play.ht."},{"q":"Play.ht est-il gratuit ?","a":"Play.ht a un plan gratuit avec 12 500 mots/mois. Pro à partir de 39 $/mois. ElevenLabs gratuit avec 10 000 caractères/mois ; payants à partir de 5 $/mois."},{"q":"Play.ht prend-il en charge le français ?","a":"Oui. Play.ht prend en charge le français parmi ses 142 langues. La qualité des voix françaises est bonne pour un usage professionnel."},{"q":"ElevenLabs vs Play.ht pour les podcasts ?","a":"ElevenLabs produit des voix plus naturelles, idéales pour les podcasts. Play.ht est meilleur pour les projets TTS à grande échelle ou si vous avez besoin d'une grande variété de voix. Pour les podcasts premium, ElevenLabs."}]
+},
+}
+
+COMPARISONS = [
+    {'slug': 'chatgpt-vs-claude',                    'a': 'chatgpt',                'b': 'claude'},
+    {'slug': 'gemini-vs-chatgpt',                    'a': 'gemini',                 'b': 'chatgpt'},
+    {'slug': 'deepseek-vs-chatgpt',                  'a': 'deepseek',               'b': 'chatgpt'},
+    {'slug': 'microsoft-copilot-vs-chatgpt',         'a': 'microsoft-copilot',      'b': 'chatgpt'},
+    {'slug': 'meta-ai-vs-chatgpt',                   'a': 'meta-ai',                'b': 'chatgpt'},
+    {'slug': 'grok-vs-chatgpt',                      'a': 'grok',                   'b': 'chatgpt'},
+    {'slug': 'mistral-le-chat-vs-chatgpt',           'a': 'mistral-le-chat',        'b': 'chatgpt'},
+    {'slug': 'character-ai-vs-chatgpt',              'a': 'character-ai',           'b': 'chatgpt'},
+    {'slug': 'copilot-studio-vs-manus',              'a': 'copilot-studio',         'b': 'manus'},
+    {'slug': 'n8n-vs-copilot-studio',                'a': 'n8n',                    'b': 'copilot-studio'},
+    {'slug': 'make-vs-copilot-studio',               'a': 'make',                   'b': 'copilot-studio'},
+    {'slug': 'lindy-vs-copilot-studio',              'a': 'lindy',                  'b': 'copilot-studio'},
+    {'slug': 'relevance-ai-vs-copilot-studio',       'a': 'relevance-ai',           'b': 'copilot-studio'},
+    {'slug': 'devin-vs-copilot-studio',              'a': 'devin',                  'b': 'copilot-studio'},
+    {'slug': 'make-vs-n8n',                          'a': 'make',                   'b': 'n8n'},
+    {'slug': 'cursor-vs-copilot',                    'a': 'cursor',                 'b': 'github-copilot'},
+    {'slug': 'windsurf-vs-cursor',                   'a': 'windsurf',               'b': 'cursor'},
+    {'slug': 'claude-code-vs-github-copilot',        'a': 'claude-code',            'b': 'github-copilot'},
+    {'slug': 'replit-vs-github-copilot',             'a': 'replit',                 'b': 'github-copilot'},
+    {'slug': 'bolt-new-vs-cursor',                   'a': 'bolt-new',               'b': 'cursor'},
+    {'slug': 'v0-by-vercel-vs-cursor',               'a': 'v0-by-vercel',           'b': 'cursor'},
+    {'slug': 'cline-vs-github-copilot',              'a': 'cline',                  'b': 'github-copilot'},
+    {'slug': 'aider-vs-github-copilot',              'a': 'aider',                  'b': 'github-copilot'},
+    {'slug': 'windsurf-vs-github-copilot',           'a': 'windsurf',               'b': 'github-copilot'},
+    {'slug': 'deepl-vs-grammarly',                   'a': 'deepl',                  'b': 'grammarly'},
+    {'slug': 'quillbot-vs-grammarly',                'a': 'quillbot',               'b': 'grammarly'},
+    {'slug': 'jasper-vs-writesonic',                 'a': 'jasper',                 'b': 'writesonic'},
+    {'slug': 'writesonic-vs-grammarly',              'a': 'writesonic',             'b': 'grammarly'},
+    {'slug': 'hemingway-editor-vs-grammarly',        'a': 'hemingway-editor',       'b': 'grammarly'},
+    {'slug': 'semrush-vs-copy-ai',                   'a': 'semrush',                'b': 'copy-ai'},
+    {'slug': 'surferseo-vs-semrush',                 'a': 'surferseo',              'b': 'semrush'},
+    {'slug': 'frase-vs-semrush',                     'a': 'frase',                  'b': 'semrush'},
+    {'slug': 'clearscope-vs-surferseo',              'a': 'clearscope',             'b': 'surferseo'},
+    {'slug': 'copy-ai-vs-jasper',                    'a': 'copy-ai',                'b': 'jasper'},
+    {'slug': 'midjourney-vs-flux',                   'a': 'midjourney',             'b': 'flux'},
+    {'slug': 'midjourney-vs-stable-diffusion',       'a': 'midjourney',             'b': 'stable-diffusion'},
+    {'slug': 'ideogram-vs-midjourney',               'a': 'ideogram',               'b': 'midjourney'},
+    {'slug': 'adobe-firefly-vs-midjourney',          'a': 'adobe-firefly',          'b': 'midjourney'},
+    {'slug': 'recraft-ai-vs-midjourney',             'a': 'recraft-ai',             'b': 'midjourney'},
+    {'slug': 'flux-vs-stable-diffusion',             'a': 'flux',                   'b': 'stable-diffusion'},
+    {'slug': 'leonardo-ai-vs-midjourney',            'a': 'leonardo-ai',            'b': 'midjourney'},
+    {'slug': 'kling-vs-runway',                      'a': 'kling-ai',               'b': 'runway'},
+    {'slug': 'capcut-vs-kling-ai',                   'a': 'capcut',                 'b': 'kling-ai'},
+    {'slug': 'runway-vs-capcut',                     'a': 'runway',                 'b': 'capcut'},
+    {'slug': 'heygen-vs-synthesia',                  'a': 'heygen',                 'b': 'synthesia'},
+    {'slug': 'pika-vs-kling-ai',                     'a': 'pika',                   'b': 'kling-ai'},
+    {'slug': 'luma-ai-vs-runway',                    'a': 'luma-ai',                'b': 'runway'},
+    {'slug': 'google-veo-3-vs-runway',               'a': 'google-veo-3',           'b': 'runway'},
+    {'slug': 'canva-ai-vs-figma-ai',                 'a': 'canva-ai',               'b': 'figma-ai'},
+    {'slug': 'figma-ai-vs-canva-ai',                 'a': 'figma-ai',               'b': 'canva-ai'},
+    {'slug': 'framer-ai-vs-canva-ai',                'a': 'framer-ai',              'b': 'canva-ai'},
+    {'slug': 'looka-vs-canva-ai',                    'a': 'looka',                  'b': 'canva-ai'},
+    {'slug': 'uizard-vs-figma-ai',                   'a': 'uizard',                 'b': 'figma-ai'},
+    {'slug': 'uxpilot-vs-figma-ai',                  'a': 'uxpilot',                'b': 'figma-ai'},
+    {'slug': 'relume-vs-framer-ai',                  'a': 'relume',                 'b': 'framer-ai'},
+    {'slug': 'whimsical-ai-vs-figma-ai',             'a': 'whimsical-ai',           'b': 'figma-ai'},
+    {'slug': 'suno-vs-udio',                         'a': 'suno',                   'b': 'udio'},
+    {'slug': 'speechify-vs-elevenlabs',              'a': 'speechify',              'b': 'elevenlabs'},
+    {'slug': 'elevenlabs-vs-murf-ai',                'a': 'elevenlabs',             'b': 'murf-ai'},
+    {'slug': 'elevenlabs-vs-playht',                 'a': 'elevenlabs',             'b': 'playht'},
+    {'slug': 'descript-vs-adobe-podcast',            'a': 'descript',               'b': 'adobe-podcast'},
+    {'slug': 'suno-vs-elevenlabs',                   'a': 'suno',                   'b': 'elevenlabs'},
+    {'slug': 'notion-ai-vs-zapier-ai',               'a': 'notion-ai',              'b': 'zapier-ai'},
+    {'slug': 'gamma-vs-notion-ai',                   'a': 'gamma',                  'b': 'notion-ai'},
+    {'slug': 'otter-ai-vs-fireflies-ai',             'a': 'otter-ai',               'b': 'fireflies-ai'},
+    {'slug': 'motion-vs-reclaim-ai',                 'a': 'motion',                 'b': 'reclaim-ai'},
+    {'slug': 'zapier-ai-vs-make',                    'a': 'zapier-ai',              'b': 'make'},
+    {'slug': 'perplexity-vs-notebooklm',             'a': 'perplexity',             'b': 'notebooklm'},
+    {'slug': 'elicit-vs-consensus',                  'a': 'elicit',                 'b': 'consensus'},
+    {'slug': 'consensus-vs-perplexity',              'a': 'consensus',              'b': 'perplexity'},
+    {'slug': 'notebooklm-vs-humata',                 'a': 'notebooklm',             'b': 'humata'},
+    {'slug': 'scite-vs-semantic-scholar',            'a': 'scite',                  'b': 'semantic-scholar'},
+    {'slug': 'looker-studio-vs-tableau-ai',          'a': 'looker-studio',          'b': 'tableau-ai'},
+    {'slug': 'julius-ai-vs-looker-studio',           'a': 'julius-ai',              'b': 'looker-studio'},
+    {'slug': 'hex-vs-looker-studio',                 'a': 'hex',                    'b': 'looker-studio'},
+    {'slug': 'rows-vs-hex',                          'a': 'rows',                   'b': 'hex'},
+    {'slug': 'retool-ai-vs-looker-studio',           'a': 'retool-ai',              'b': 'looker-studio'},
+    {'slug': 'bubble-vs-webflow',                    'a': 'bubble',                 'b': 'webflow'},
+    {'slug': 'lovable-vs-bubble',                    'a': 'lovable',                'b': 'bubble'},
+    {'slug': 'flutterflow-vs-bubble',                'a': 'flutterflow',            'b': 'bubble'},
+    {'slug': 'glide-vs-bubble',                      'a': 'glide',                  'b': 'bubble'},
+    {'slug': 'softr-vs-bubble',                      'a': 'softr',                  'b': 'bubble'},
+    {'slug': 'webflow-vs-framer-ai',                 'a': 'webflow',                'b': 'framer-ai'},
+    {'slug': 'photomath-vs-duolingo-max',            'a': 'photomath',              'b': 'duolingo-max'},
+    {'slug': 'khanmigo-vs-photomath',                'a': 'khanmigo',               'b': 'photomath'},
+    {'slug': 'duolingo-max-vs-khanmigo',             'a': 'duolingo-max',           'b': 'khanmigo'},
+    {'slug': 'youlearn-vs-notebooklm',               'a': 'youlearn',               'b': 'notebooklm'},
+    {'slug': 'synthesis-vs-khanmigo',                'a': 'synthesis',              'b': 'khanmigo'},
+    {'slug': 'gamma-vs-beautiful-ai',                'a': 'gamma',                  'b': 'beautiful-ai'},
+    {'slug': 'gamma-vs-pitch',                       'a': 'gamma',                  'b': 'pitch'},
+    {'slug': 'gamma-vs-prezi',                       'a': 'gamma',                  'b': 'prezi'},
+    {'slug': 'beautiful-ai-vs-pitch',                'a': 'beautiful-ai',           'b': 'pitch'},
+    {'slug': 'slidesgo-vs-gamma',                    'a': 'slidesgo',               'b': 'gamma'},
+    {'slug': 'tradingview-vs-fiscal-ai',             'a': 'tradingview',            'b': 'fiscal-ai'},
+    {'slug': 'koyfin-vs-tradingview',                'a': 'koyfin',                 'b': 'tradingview'},
+    {'slug': 'fiscal-ai-vs-koyfin',                  'a': 'fiscal-ai',              'b': 'koyfin'},
+    {'slug': 'tickeron-vs-tradingview',              'a': 'tickeron',               'b': 'tradingview'},
+    {'slug': 'uptrends-ai-vs-koyfin',               'a': 'uptrends-ai',            'b': 'koyfin'},
+    {'slug': 'amazon-q-developer-vs-github-copilot', 'a': 'amazon-q-developer',    'b': 'github-copilot'},
+    {'slug': 'continue-dev-vs-github-copilot',       'a': 'continue-dev',           'b': 'github-copilot'},
+    {'slug': 'opencode-vs-claude-code',              'a': 'opencode',               'b': 'claude-code'},
+    {'slug': 'zed-vs-cursor',                        'a': 'zed',                    'b': 'cursor'},
+    {'slug': 'comfyui-vs-stable-diffusion',          'a': 'comfyui',                'b': 'stable-diffusion'},
+    {'slug': 'krea-ai-vs-midjourney',                'a': 'krea-ai',                'b': 'midjourney'},
+    {'slug': 'nano-banana-vs-leonardo-ai',           'a': 'nano-banana',            'b': 'leonardo-ai'},
+    {'slug': 'chatgpt-images-vs-adobe-firefly',      'a': 'chatgpt-images',         'b': 'adobe-firefly'},
+    {'slug': 'claude-design-vs-figma-ai',            'a': 'claude-design',          'b': 'figma-ai'},
+    {'slug': 'google-stitch-vs-figma-ai',            'a': 'google-stitch',          'b': 'figma-ai'},
+    {'slug': 'recraft-vs-canva-ai',                  'a': 'recraft-ai',             'b': 'canva-ai'},
+    {'slug': 'remove-bg-vs-canva-ai',                'a': 'remove-bg',              'b': 'canva-ai'},
+    {'slug': 'seedance-vs-runway',                   'a': 'seedance-2-0',           'b': 'runway'},
+    {'slug': 'whisper-vs-otter-ai',                  'a': 'whisper',                'b': 'otter-ai'},
+    {'slug': 'adcreative-ai-vs-canva-ai',            'a': 'adcreative-ai',          'b': 'canva-ai'},
+    {'slug': 'akkio-vs-julius-ai',                   'a': 'akkio',                  'b': 'julius-ai'},
+    {'slug': 'autogpt-vs-manus',                     'a': 'autogpt',                'b': 'manus'},
+    {'slug': 'coursera-coach-vs-khanmigo',           'a': 'coursera-coach',         'b': 'khanmigo'},
+    {'slug': 'socratic-vs-khanmigo',                 'a': 'socratic-by-google',     'b': 'khanmigo'},
+]
+
+# ── Build tool_slug → {choose_if, faq} ──────────────────────────────────────
+tool_data = {}
+for comp in COMPARISONS:
+    slug_a = comp['a']
+    slug_b = comp['b']
+    key    = comp['slug']
+    if key not in DATA_FR:
+        continue
+    d = DATA_FR[key]
+    if slug_a not in tool_data:
+        tool_data[slug_a] = {'choose_if': d['choose_a'], 'faq': d['faq']}
+    if slug_b not in tool_data:
+        tool_data[slug_b] = {'choose_if': d['choose_b'], 'faq': d['faq']}
+
+# ── Generate SQL for tools table ─────────────────────────────────────────────
+lines = []
+lines.append("-- French choose_if + faq UPDATE — generated by gen_tool_choose_faq_fr_b2.py (batch 2/4)")
+lines.append("BEGIN;")
+for i, (tool_slug, td) in enumerate(sorted(tool_data.items()), start=1):
+    ci_json = json.dumps(td['choose_if'], ensure_ascii=False)
+    fq_json = json.dumps(td['faq'],       ensure_ascii=False)
+    tag_ci  = f't{i}ci'
+    tag_fq  = f't{i}fq'
+    lines.append(
+        f"UPDATE tools SET"
+        f" choose_if = ${tag_ci}${ci_json}${tag_ci}$::JSONB,"
+        f" faq = ${tag_fq}${fq_json}${tag_fq}$::JSONB"
+        f" WHERE slug = '{tool_slug}' AND lang = 'fr';"
+    )
+lines.append("COMMIT;")
+sql = "\n".join(lines)
+out_path = __file__.replace('.py', '.sql')
+with open(out_path, 'w', encoding='utf-8') as f:
+    f.write(sql)
+print(f"-- Tools SQL written to {out_path}", file=sys.stderr)
+
+# ── Generate SQL for comparisons table ───────────────────────────────────────
+comp_lines = []
+comp_lines.append("-- French choose_a + choose_b + faq INSERT for comparisons table (batch 2/4)")
+comp_lines.append("BEGIN;")
+for i, comp in enumerate(COMPARISONS, start=1):
+    key = comp['slug']
+    if key not in DATA_FR:
+        continue
+    d = DATA_FR[key]
+    ca_json  = json.dumps(d['choose_a'], ensure_ascii=False)
+    cb_json  = json.dumps(d['choose_b'], ensure_ascii=False)
+    faq_json = json.dumps(d['faq'],      ensure_ascii=False)
+    tag_a = f'c{i}a'; tag_b = f'c{i}b'; tag_f = f'c{i}f'
+    comp_lines.append(
+        f"INSERT INTO comparisons "
+        f"(slug,lang,tool_a,tool_b,tool_a_slug,tool_b_slug,tool_a_url,tool_b_url,"
+        f"title,meta_desc,intro,table_data,best_a,best_b,verdict_a,verdict_b,choose_a,choose_b,faq)"
+        f" SELECT slug,'fr',tool_a,tool_b,tool_a_slug,tool_b_slug,tool_a_url,tool_b_url,"
+        f"title,meta_desc,intro,table_data,best_a,best_b,verdict_a,verdict_b,"
+        f"${tag_a}${ca_json}${tag_a}$::JSONB,"
+        f"${tag_b}${cb_json}${tag_b}$::JSONB,"
+        f"${tag_f}${faq_json}${tag_f}$::JSONB"
+        f" FROM comparisons WHERE slug='{key}' AND lang='en'"
+        f" ON CONFLICT (slug,lang) DO UPDATE SET"
+        f" choose_a=EXCLUDED.choose_a, choose_b=EXCLUDED.choose_b, faq=EXCLUDED.faq;"
+    )
+comp_lines.append("COMMIT;")
+comp_sql = "\n".join(comp_lines)
+comp_out = __file__.replace('.py', '_comparisons.sql')
+with open(comp_out, 'w', encoding='utf-8') as f:
+    f.write(comp_sql)
+print(f"-- Comparisons SQL written to {comp_out}", file=sys.stderr)
+print(f"Batch 2/4 done: {len(DATA_FR)} comparisons, {len(tool_data)} tools")
