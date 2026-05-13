@@ -625,7 +625,7 @@ const I18N = (() => {
       'cat.nocode':        'Constructeurs No-Code',
       'cat.education':     'Éducation',
       'cat.presentations': 'Présentations',
-      'footer.desc':     'Votre moteur de recherche d'outils IA. Mis à jour quotidiennement.',
+      'footer.desc':     "Votre moteur de recherche d'outils IA. Mis à jour quotidiennement.",
       'footer.nav':      'Navigation',
       'footer.cats':     'Catégories',
       'footer.madeWith': 'Fait avec ♥ par Leondan & Claude · Mis à jour quotidiennement',
