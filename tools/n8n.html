@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "n8n", "description": "n8n is an open-source workflow automation platform that allows self-hosting for zero cost with unlimited executions — the primary reason engineering and privacy-conscious teams choose it over Make or ", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://n8n.io", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "n8n", "description": "n8n is an open-source workflow automation platform that allows developers and technical teams to connect applications, APIs, and data sources through a visual node editor. Unlike many no-code automati", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://n8n.io", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -164,7 +164,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
         <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
-      <div class="tool-best-for"><strong>Best for:</strong> Workflow automation, AI pipelines</div>
+      <div class="tool-best-for"><strong>Best for:</strong> AI workflow automation, self-hosted, node editor, human-in-the-loop</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -174,26 +174,27 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About n8n</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">n8n is an open-source workflow automation platform that allows self-hosting for zero cost with unlimited executions — the primary reason engineering and privacy-conscious teams choose it over Make or Zapier. The visual editor connects 400+ services and supports complex logic: branching, loops, error handling, and custom JavaScript/Python nodes.</p><p style="margin-top:1rem">In April 2026, n8n removed all active workflow limits across all cloud plans — now only execution counts matter. Cloud pricing: Starter (24 EUR/month, 2,500 executions), Pro (60 EUR/month, 10,000 executions), Business (800 EUR/month, 40,000 executions with SSO). Self-hosted Community Edition remains completely free with unlimited executions and workflows. Native AI nodes were added: Claude, Gemini, and vector store integrations are now first-class citizens in the editor.</p><p style="margin-top:1rem">The self-hosted option is n8n biggest differentiator. Teams can run it on a $5/month VPS with full control over their data, no per-execution fees, and unlimited scale. The tradeoff is infrastructure responsibility.</p><p style="margin-top:1rem">The AI node library grew substantially in 2025–2026: LangChain-style chains, RAG pipelines, and multi-model routing can all be built visually. This positions n8n as a serious option for teams building AI-powered internal tools.</p><p style="margin-top:1rem">Limitations: the learning curve is steeper than Make or Zapier. Self-hosting requires DevOps comfort. The UI, while improving, is less polished than competitors.</p><p style="margin-top:1rem">Best for engineering teams and technical operators who want maximum flexibility, data privacy, and zero per-execution costs — and are comfortable running their own infrastructure.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">n8n is an open-source workflow automation platform that allows developers and technical teams to connect applications, APIs, and data sources through a visual node editor. Unlike many no-code automation tools, n8n is self-hostable, giving organizations full data control and no vendor dependency. It is used by engineering teams, DevOps practitioners, and technical operations teams for internal automation, data pipelines, and AI agent workflows.</p><p style="margin-top:1rem">n8n v2.0, a major release in late 2025 and early 2026, introduced several architectural and UX improvements. Task Runners provide isolated execution environments for individual workflow tasks, improving stability and preventing one failing step from corrupting the state of others running in parallel. This is particularly important for long-running or multi-branch AI agent workflows.</p><p style="margin-top:1rem">The Save vs. Publish paradigm changes how workflow changes reach production: edits to a workflow are saved locally but do not go live until the user explicitly publishes. This mirrors software deployment practices and prevents accidental changes from immediately affecting running automations — a long-requested feature from teams using n8n in production environments.</p><p style="margin-top:1rem">Visual version diff shows exactly what changed between workflow versions with a change count badge, making it easier to review modifications before publishing or to identify when a regression was introduced. Loading performance improved 30–80% on large workflow instances, addressing a common complaint from teams with hundreds of complex workflows.</p><p style="margin-top:1rem">Multiple external secrets provider connections allow credentials from Vault, AWS Secrets Manager, and other providers to be connected simultaneously. Chat node Actions add human-in-the-loop checkpoints: a workflow can pause and send a message to a human approver, who can approve, reject, or modify the next step before execution continues. SAP Business AI Platform integration was announced for enterprise use cases.</p><p style="margin-top:1rem">Self-hosted n8n is free. Cloud plans start at $20/month. n8n is best for developers and technical teams that need flexible, self-hosted workflow automation with AI agent capabilities and no vendor lock-in.</p></div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Self-hosted Community Edition: free, unlimited workflows and executions</li>
-        <li>April 2026: removed active workflow limits on all cloud plans</li>
-        <li>Native Claude, Gemini, and vector store AI nodes built in</li>
-        <li>Cloud Pro at 60 EUR/mo — cheaper than competitors for heavy use</li>
+        <li>Self-hosted option is free with full feature access — no vendor lock-in</li>
+        <li>Task Runners: isolated execution per workflow task for stability in complex pipelines</li>
+        <li>Save vs. Publish separation prevents accidental changes from reaching production</li>
+        <li>Visual version diff with change count badges for safe workflow review before publish</li>
+        <li>Chat node Actions: pause workflows for human-in-the-loop approvals mid-execution</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Self-hosting requires DevOps knowledge and infrastructure management</li>
-        <li>Steeper learning curve than Make or Zapier for non-technical users</li>
-        <li>UI less polished than commercial alternatives</li>
-        <li>Official support only on paid cloud plans</li>
+        <li>Requires self-hosting setup and infrastructure maintenance for the free tier</li>
+        <li>Steeper learning curve than no-code tools like Zapier or Make for non-technical users</li>
+        <li>Cloud plan starts at $20/mo — adds cost for teams that prefer managed hosting</li>
+        <li>Large workflow libraries still require careful organization — no built-in folder hierarchy</li>
       </ul>
     </div>
   </div>

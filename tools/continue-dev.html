@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Continue.dev", "description": "Continue.dev is an open-source (MIT) IDE extension for VS Code and JetBrains that brings AI autocomplete, inline edits, chat, and agent mode to any developer at no cost to the tool itself.  \n  It is m", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://continue.dev", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Continue", "description": "Continue is an open-source AI coding tool that underwent a major product pivot in 2026. It shifted from its original identity as an IDE autocomplete and chat extension to a CLI-first platform focused ", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://continue.dev", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -147,24 +147,24 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <span class="breadcrumb-sep">›</span>
     <a href="/directory.html?cat=code">AI for Development</a>
     <span class="breadcrumb-sep">›</span>
-    <span>Continue.dev</span>
+    <span>Continue</span>
   </nav>
 
   <div class="tool-hero">
     <div class="tool-hero-avatar" style="background:#fff;overflow:hidden;padding:6px">
-      <img src="https://www.google.com/s2/favicons?domain=continue.dev&sz=128" alt="Continue.dev logo" width="60" height="60" style="width:100%;height:100%;object-fit:contain;border-radius:10px">
+      <img src="https://www.google.com/s2/favicons?domain=continue.dev&sz=128" alt="Continue logo" width="60" height="60" style="width:100%;height:100%;object-fit:contain;border-radius:10px">
     </div>
     <div class="tool-hero-info">
       <div class="tool-hero-top">
-        <h1 class="tool-hero-name">Continue.dev</h1>
-        <a class="btn-visit" href="https://continue.dev" target="_blank" rel="noopener">Visit Continue.dev →</a>
+        <h1 class="tool-hero-name">Continue</h1>
+        <a class="btn-visit" href="https://continue.dev" target="_blank" rel="noopener">Visit Continue →</a>
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">💻 AI for Development</span>
         <span class="tool-meta-chip badge-free">Free</span>
         <span class="tool-meta-chip">👥 500K+</span>
       </div>
-      <div class="tool-best-for"><strong>Best for:</strong> Privacy-first development with any LLM</div>
+      <div class="tool-best-for"><strong>Best for:</strong> AI coding agents, CI/CD automation, PR review, open-source CLI</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -173,52 +173,33 @@ textarea.form-input { resize: vertical; min-height: 90px; }
   </div>
 
   <div class="tool-desc-block">
-    <h2>About Continue.dev</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Continue.dev is an open-source (MIT) IDE extension for VS Code and JetBrains that brings AI autocomplete, inline edits, chat, and agent mode to any developer at no cost to the tool itself.  
-  It is model-agnostic: configure it to use any LLM via API (Anthropic, OpenAI, Gemini, AWS Bedrock) or run local models for free through Ollama. Code is never sent to Continue's servers unless you explicitly opt 
-  into the Hub team features.                                                                                                                                                                                         
-                                                                                                                                                                                                                      
-  Continue 1.0 introduced the Hub — a platform for sharing rules, agents, and model routing configurations across teams. The paid Hub tier adds Mission Control with metrics that track workflow runs, PR output, and 
-  automation trends across the organization. Agent mode handles multi-file refactoring and large-scale code modifications with any configured model.                                                                  
-   
-  Key capabilities include real-time autocomplete, inline edits triggered from comments, a chat interface with codebase context, and highly customizable rules and prompts via YAML config files. The extension is    
-  actively maintained with frequent releases and a large open-source contributor community.                                                                                                                           
-   
-  Pricing: The VS Code and JetBrains extension is completely free with your own API keys. Hub Team plan costs approximately $10 per month for shared private agents, team analytics, and access controls. Hub Company 
-  and Enterprise plans add SSO, on-premise deployment, and compliance features at custom pricing. LLM API costs are separate and paid directly to your provider.                                                      
-   
-  Limitations: Setup requires technical knowledge for configuration, API key management, and YAML editing. There is no built-in model subscription — LLM costs are managed separately. The UX is less polished than   
-  commercial tools like Cursor or Copilot. Hub team features are relatively early-stage.                                                                                                                              
-   
-  Best suited for developers and teams who want maximum privacy, model flexibility, and zero vendor lock-in — especially those with existing LLM infrastructure or a preference for running local models.</p></div>
+    <h2>About Continue</h2>
+    <div class="tool-desc"><p style="margin-top:1rem">Continue is an open-source AI coding tool that underwent a major product pivot in 2026. It shifted from its original identity as an IDE autocomplete and chat extension to a CLI-first platform focused on asynchronous AI agents designed for CI/CD pipelines and automated pull request review. The project remains fully free and open-source under an Apache 2.0 license.</p><p style="margin-top:1rem">The Checks system is the centerpiece of the 2026 pivot. Teams define review policies in plain Markdown files using natural language — for example, specifying that all PRs must include test coverage for new functions, follow a particular naming convention, or avoid certain anti-patterns. AI agents automatically run these checks against every incoming pull request, providing automated feedback without requiring human review for routine compliance issues.</p><p style="margin-top:1rem">Headless mode allows Continue agents to run in cloud CI/CD environments with no user interface. This enables integration with GitHub Actions, GitLab CI, and other pipeline tools, so review agents execute automatically on every code push or PR open event. TUI mode provides an interactive terminal interface for users who prefer a keyboard-driven workflow, while Shell mode allows agents to execute arbitrary terminal commands as part of their task execution.</p><p style="margin-top:1rem">URL context is a practical convenience feature: developers can paste any URL directly into the chat interface, and Continue fetches and incorporates the page content as context for the current task. This is useful for referencing documentation, issue trackers, or third-party API references without copying and pasting content manually.</p><p style="margin-top:1rem">Devstral support adds tool-calling capabilities through the Mistral Devstral model, enabling agents to invoke external tools and APIs as part of automated workflows. Continue supports all major LLM providers and local models via Ollama, preserving its model-agnostic design philosophy.</p><p style="margin-top:1rem">Continue is best for engineering teams that want to automate code review and CI/CD quality checks with natural language policies, and for developers who prefer an open-source, model-agnostic alternative to proprietary coding agents.</p></div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Completely free to use with your own API keys — no vendor lock-in</li>
-        <li>Works with any LLM: OpenAI, Anthropic, Gemini, Ollama local models, AWS Bedrock</li>
-        <li>Code never sent to Continue servers — full  
-  data privacy by default</li>
-        <li>Highly customizable rules, prompts, and agents via YAML config files</li>
-        <li>Active open-source community with frequent releases</li>
+        <li>Fully free and open-source — no paid tier, no usage limits, Apache 2.0 license</li>
+        <li>Checks system: AI agents enforce team review policies written in plain Markdown on every PR</li>
+        <li>Headless mode integrates agents directly into GitHub Actions and other CI/CD pipelines</li>
+        <li>Model-agnostic: supports all major LLM providers plus local models via Ollama</li>
+        <li>URL context: paste any URL into chat to include page content as agent context</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Setup requires technical knowledge — YAML config and API key management</li>
-        <li>No built-in model subscription — you manage LLM costs separately</li>
-        <li>Less polished UX than commercial tools like Cursor or
-   Copilot</li>
-        <li>Hub team features are early-stage compared to competitors</li>
-        <li>No dedicated coding-optimized model — relies on general-purpose LLMs</li>
+        <li>CLI and terminal-focused interface — not suitable for non-technical users</li>
+        <li>Requires team setup of Markdown review policy files before automated checks work</li>
+        <li>Community support only — no enterprise SLA or dedicated support channel</li>
+        <li>Devstral tool-calling and headless mode are relatively new — documentation still maturing</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Continue.dev if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want to use any LLM — Claude, GPT-4, local Ollama models — without being locked into one provider</span></li>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Continue if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want to use any LLM — Claude, GPT-4, local Ollama models — without being locked into one provider</span></li>
 <li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You prioritize privacy and want to run local models so code never leaves your machine</span></li>
 <li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want open-source AI coding assistance you can self-host and fully control</span></li>
 <li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You build custom AI workflows and want an extensible, hackable coding assistant</span></li></ul></div></div>
@@ -252,7 +233,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
         <input class="form-input" type="text" id="authorName" placeholder="Your name" maxlength="60">
         <input class="form-input" type="email" id="authorEmail" placeholder="Email (not published)" maxlength="120">
       </div>
-      <textarea class="form-input" id="commentText" placeholder="Share your experience with Continue.dev…" style="margin-bottom:10px"></textarea>
+      <textarea class="form-input" id="commentText" placeholder="Share your experience with Continue…" style="margin-bottom:10px"></textarea>
       <p class="form-note">Reviews are published after moderation. We don&#39;t share your email.</p>
       <button class="btn-submit" onclick="submitComment()">Submit Review</button>
       <div id="formMsg" style="margin-top:10px;font-size:13px;display:none"></div>
