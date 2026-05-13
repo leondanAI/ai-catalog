@@ -141,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-free">Безкоштовно</span>
         
       </div>
-      <div class="tool-best-for"><strong>Підходить для:</strong> Локальне створення зображень на основі ШІ та тонке налаштування</div>
+      <div class="tool-best-for"><strong>Підходить для:</strong> Кастомна генерація зображень з моделлю з відкритим кодом</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -150,17 +150,16 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Stable Diffusion</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Stable Diffusion — це засновна open-source модель text-to-image, випущена Stability AI, та технологія, яка забезпечує більшість екосистеми генерації зображень з відкритим кодом. На відміну від проприєтарних сервісів, ваги моделі Stable Diffusion вільно доступні для завантаження, тонкого налаштування та запуску локально на споживацькому обладнанні.</p><p style="margin-top:1rem">Поточний випуск — Stable Diffusion 3.5. SD 3.5 Large має 8,1 мільярда параметрів і використовує архітектуру MM-DiT з трьома текстовими кодувальниками для поліпшеного розуміння промптів. SD 3.5 Medium (2,5B параметрів) запускається на графічних процесорах споживачів. Обидва доступні під вільною Community License для некомерційного використання; комерційне використання вимагає платної ліцензії від Stability AI.</p><p style="margin-top:1rem">Stability AI сама піддалася майже колапсу на початку 2024 року — масові скорочення та криза фінансування. Компанія здійснила чудову трансформацію під новим керівництвом, із Sean Parker як Executive Chairman та James Cameron у складі ради. Усі боргові зобов'язання були стерті до грудня 2024, і компанія повідомила про зростання доходів у тисячі відсотків.</p><p style="margin-top:1rem">Модель запускається локально через інтерфейси на кшталт ComfyUI або Automatic1111, або через API Stability AI (платне, на основі кредитів). Тонкі настроєння спільноти та моделі LoRA налічують тисячі на платформах на кшталт Civitai та Hugging Face, охоплюючи кожний можливий стиль.</p><p style="margin-top:1rem">Обмеження: якість вихідних даних більше не лідує в галузі — Flux та Midjourney V7 виробляють кращі результати. Локальний запуск вимагає потужного графічного процесора (рекомендується 8GB+ VRAM). Комерційне використання ваг вимагає окремої угоди про ліцензування.</p><p style="margin-top:1rem">Найкраще підходить для розробників та дослідників, які хочуть мати повний контроль — локальне виконання, тонке налаштування, користувацькі конвеєри та відсутність комісій за зображення.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Stable Diffusion та його екосистема (AUTOMATIC1111, ComfyUI, моделі Civitai) представляють найгнучкішу опцію на ринку. При локальному запуску немає обмежень використання, цензури або вартості за зображення. Спільнота створила тисячі спеціалізованих моделей безкоштовно. З ControlNet можна контролювати композицію з міліметровою точністю. Крива навчання висока, але творчий контроль непереверершений.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Переваги</div><ul class="pc-list">        <li>Вільні ваги моделі — запуск локально без вартості за зображення</li>
-        <li>SD 3.5 Large: 8,1B параметрів, архітектура MM-DiT, сильна відповідність промптам</li>
-        <li>Тисячі тонких настроєнь спільноти та LoRA на Civitai та Hugging Face</li>
-        <li>Трансформація Stability AI завершена — компанія фінансово стабільна станом на 2025</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Недоліки</div><ul class="pc-list">        <li>Якість вихідних даних позаду Flux та Midjourney V7</li>
-        <li>Вимагає 8GB+ VRAM для локального використання; налаштування займає час</li>
-        <li>Комерційне використання ваг вимагає платної ліцензії від Stability AI</li>
-        <li>Немає керованого сервісу — self-hosting означає, що ви несете відповідальність за обслуговування</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Переваги</div><ul class="pc-list">        <li>100% безкоштовно та з відкритим кодом</li>
+        <li>Без обмежень використання та цензури</li>
+        <li>Тисячі спільнотних моделей</li>
+        <li>Повний контроль з ControlNet</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Недоліки</div><ul class="pc-list">        <li>Потребує потужного GPU для локального використання</li>
+        <li>Дуже висока крива навчання</li>
+        <li>Непослідовні результати без правильного налаштування</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://stability.ai" target="_blank" rel="noopener">Перейти на Stable Diffusion →</a>
@@ -177,11 +176,11 @@ textarea.form-input{resize:vertical;min-height:90px}
     </a>
     <a class="also-card" href="/ua/tools/comfyui.html">
       <div class="also-card-name">ComfyUI</div>
-      <div class="also-card-desc">Advanced pipelines, game studios, custom models</div>
+      <div class="also-card-desc">open-source AI image generation, node workflows, local GPU, 4K video</div>
     </a>
     <a class="also-card" href="/ua/tools/flux.html">
-      <div class="also-card-name">Flux</div>
-      <div class="also-card-desc">High-quality open-source image generation</div>
+      <div class="also-card-name">FLUX</div>
+      <div class="also-card-desc">AI image generation, sub-second speed, text rendering, multi-reference</div>
     </a>
 </div>
   <div class="comments-section">

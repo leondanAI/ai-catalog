@@ -141,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-free">חינמי</span>
         
       </div>
-      <div class="tool-best-for"><strong>הכי מתאים ל:</strong> יצירת תמונות AI מקומית וכיוונון עדין</div>
+      <div class="tool-best-for"><strong>הכי מתאים ל:</strong> יצירת תמונות מותאמת אישית עם מודל קוד פתוח</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -150,17 +150,16 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>אודות Stable Diffusion</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Stable Diffusion היא משפחת המודלים הבסיסית בקוד פתוח text-to-image שפורסמה על ידי Stability AI, והטכנולוגיה המניעה את רוב אקוסיסטם יצירת התמונות AI בקוד פתוח. בניגוד לשירותים קנייניים, משקלי המודל של Stable Diffusion זמינים בחינם להורדה, כיוונון עדין והרצה מקומית בחומרה צרכנית.</p><p style="margin-top:1rem">הגרסה הנוכחית היא Stable Diffusion 3.5. SD 3.5 Large כולל 8.1 מיליארד פרמטרים ומשתמש בארכיטקטורת MM-DiT עם שלושה מקודדי טקסט לשם הבנה משופרת של הנושא. SD 3.5 Medium (2.5B פרמטרים) רץ על GPU צרכניים. שניהם זמינים תחת Community License חינמי לשימוש לא-מסחרי; השימוש המסחרי דורש רישיון בתשלום מ-Stability AI.</p><p style="margin-top:1rem">Stability AI עצמה עברה כמעט קריסה בתחילת 2024 — פיטורים המוניים וומשבר מימון. החברה ביצעה התאוששות יוצאת דופן תחת הנהגה חדשה, עם Sean Parker כיו״ר בפועל וJames Cameron בהצטרפות לדירקטוריון. כל החוב נמחק עד דצמבר 2024 והחברה דיווחה על גדילה בתלוש תלת-ספרתי.</p><p style="margin-top:1rem">המודל רץ באופן מקומי דרך ממשקים כמו ComfyUI או Automatic1111, או דרך Stability AI API (בתשלום, מבוסס אשראי). כיווני עדין וLoRA של הקהילה מסתכמים באלפים בפלטפורמות כמו Civitai וHugging Face, המכסים כל סגנון אפשרי.</p><p style="margin-top:1rem">מגבלות: איכות גולמית כבר לא מובילה את השדה — Flux וMidjourney V7 מייצרים פלט טוב יותר. הרצה מקומית דורשת GPU מסוגל (8GB+ VRAM מומלץ). השימוש המסחרי במשקלים דורש הסכם רישיון נפרד.</p><p style="margin-top:1rem">מובן ביותר למפתחים וחוקרים שרוצים שליטה מלאה — ביצוע מקומי, כיוונון עדין, צינורות מותאמים, וללא עלויות לתמונה.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Stable Diffusion ומערכת האקולוגית שלו (AUTOMATIC1111, ComfyUI, מודלים מ-Civitai) מייצגים את האפשרות הגמישה ביותר בשוק. בהרצה מקומית, אין מגבלות שימוש, צנזורה או עלויות לתמונה. הקהילה יצרה אלפי מודלים מיוחדים הזמינים בחינם. עם ControlNet, ניתן לשלוט בקומפוזיציה בדיוק של מילימטרים. עקומת הלמידה גבוהה, אך השליטה היצירתית ללא תחרות.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">יתרונות</div><ul class="pc-list">        <li>משקלי מודל חינמיים — הרץ באופן מקומי ללא עלות לתמונה</li>
-        <li>SD 3.5 Large: 8.1B פרמטרים, ארכיטקטורת MM-DiT, מילוי הנושא חזק</li>
-        <li>אלפי כיווני עדין וLoRAs של הקהילה ב-Civitai וב-Hugging Face</li>
-        <li>סיום Stability AI הושלם — החברה יציבה מבחינה פיננסית נכון ל-2025</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">חסרונות</div><ul class="pc-list">        <li>איכות הפלט נמוכה מ-Flux ומ-Midjourney V7</li>
-        <li>דורש 8GB+ VRAM לשימוש מקומי; ההגדרה לוקחת זמן</li>
-        <li>השימוש המסחרי במשקלים דורש רישיון בתשלום מ-Stability AI</li>
-        <li>אין שירות מנוהל — self-hosting פירושו שאתה אחראי לתחזוקה</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">יתרונות</div><ul class="pc-list">        <li>100% חינמי וקוד פתוח</li>
+        <li>ללא מגבלות שימוש או צנזורה</li>
+        <li>אלפי מודלים מהקהילה</li>
+        <li>שליטה מלאה עם ControlNet</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">חסרונות</div><ul class="pc-list">        <li>דורש GPU חזק להרצה מקומית</li>
+        <li>עקומת למידה גבוהה מאוד</li>
+        <li>תוצאות לא עקביות ללא הגדרה מתאימה</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://stability.ai" target="_blank" rel="noopener">בקר ב Stable Diffusion ←</a>
@@ -177,11 +176,11 @@ textarea.form-input{resize:vertical;min-height:90px}
     </a>
     <a class="also-card" href="/he/tools/comfyui.html">
       <div class="also-card-name">ComfyUI</div>
-      <div class="also-card-desc">Advanced pipelines, game studios, custom models</div>
+      <div class="also-card-desc">open-source AI image generation, node workflows, local GPU, 4K video</div>
     </a>
     <a class="also-card" href="/he/tools/flux.html">
-      <div class="also-card-name">Flux</div>
-      <div class="also-card-desc">High-quality open-source image generation</div>
+      <div class="also-card-name">FLUX</div>
+      <div class="also-card-desc">AI image generation, sub-second speed, text rendering, multi-reference</div>
     </a>
 </div>
   <div class="comments-section">

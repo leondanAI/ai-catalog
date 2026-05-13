@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","fr");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ComfyUI","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://www.comfy.org"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ComfyUI","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://comfyui.org"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -129,19 +129,19 @@ textarea.form-input{resize:vertical;min-height:90px}
   </nav>
   <div class="tool-hero">
     <div class="tool-hero-avatar">
-      <img src="https://www.google.com/s2/favicons?domain=comfy.org&sz=128" alt="ComfyUI" width="60" height="60" style="width:100%;height:100%;object-fit:contain;border-radius:10px">
+      <img src="https://www.google.com/s2/favicons?domain=comfyui.org&sz=128" alt="ComfyUI" width="60" height="60" style="width:100%;height:100%;object-fit:contain;border-radius:10px">
     </div>
     <div class="tool-hero-info">
       <div class="tool-hero-top">
         <h1 class="tool-hero-name">ComfyUI</h1>
-        <a class="btn-visit" href="https://www.comfy.org" target="_blank" rel="noopener">Visiter ComfyUI →</a>
+        <a class="btn-visit" href="https://comfyui.org" target="_blank" rel="noopener">Visiter ComfyUI →</a>
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">🎨 Génération d'images</span>
         <span class="tool-meta-chip badge-free">Free</span>
         
       </div>
-      <div class="tool-best-for"><strong>Idéal pour:</strong> Pipelines avancés, studios de jeux, modèles personnalisés</div>
+      <div class="tool-best-for"><strong>Idéal pour:</strong> Workflows avancés de génération d'images par nœuds</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -150,17 +150,19 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>À propos ComfyUI</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">ComfyUI est l'interface open-source la plus puissante et la plus flexible pour exécuter des flux de travail de génération d'images (et de vidéos) par IA, basée sur une architecture en graphe de nœuds où chaque étape du pipeline de diffusion — chargement du modèle, échantillonnage, conditionnement, suréchantillonnage, compositing — est un nœud visible et modifiable sur un canevas infini. Utilisé par des studios de jeux professionnels, des maisons VFX et de sérieux artistes IA, il représente le niveau de contrôle le plus profond disponible dans n'importe quel outil de génération d'images.</p><p style="margin-top:1rem">Le système de flux de travail basé sur les nœuds signifie que vous pouvez construire exactement le pipeline dont vous avez besoin : enchaîner plusieurs modèles, ajouter ControlNet pour le contrôle de la pose ou de la profondeur, exécuter des passes de raffinement img2img, appliquer des adaptateurs de style LoRA, composer plusieurs générations et automatiser l'ensemble du processus en une seule exécution. Plarium et d'autres grands studios de jeux utilisent ComfyUI comme outil de production central pour générer des assets de jeux, des concepts de personnages et des décors à grande échelle. La communauté a publié des milliers de modèles de flux de travail couvrant tous les cas d'utilisation imaginables.</p><p style="margin-top:1rem">ComfyUI est gratuit pour toujours et fonctionne localement sur votre matériel. L'extension ComfyUI Manager facilite l'installation de nœuds personnalisés et de fichiers de modèles. La principale limitation est la courbe d'apprentissage — le canevas de nœuds est intimidant pour les débutants et nécessite une compréhension des concepts de diffusion pour être utilisé efficacement. Pour les utilisateurs qui ont besoin d'une interface plus simple pour Stable Diffusion, Automatic1111 est un meilleur point de départ. ComfyUI est le bon outil lorsque vous avez besoin de pipelines de génération d'images automatisés, reproductibles et de qualité production.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">ComfyUI représente l'option pour les utilisateurs avancés souhaitant un contrôle total sur le processus de génération d'images. Son interface basée sur des nœuds permet de connecter visuellement modèles, samplers, ControlNet, LoRAs et tout composant du pipeline. L'outil choisi par les artistes techniques, chercheurs IA et développeurs nécessitant reproductibilité et contrôle granulaire. La communauté a créé des milliers de workflows personnalisés disponibles gratuitement.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Avantages</div><ul class="pc-list">        <li>Constructeur de pipeline de diffusion le plus puissant — tous les flux de travail sont possibles sur le canevas de nœuds</li>
-        <li>Utilisé par Plarium, des studios de jeux et des équipes VFX pour la création d'assets de qualité production</li>
-        <li>Prend en charge l'image, la vidéo, la 3D et l'audio dans un seul outil — gratuit pour toujours</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Inconvénients</div><ul class="pc-list">        <li>Courbe d'apprentissage la plus abrupte de tous les outils d'image — ne convient pas aux débutants</li>
-        <li>Nécessite une configuration GPU locale ou une instance cloud payante pour des performances optimales</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Avantages</div><ul class="pc-list">        <li>Contrôle total via les nœuds</li>
+        <li>Compatible avec tous les modèles SD</li>
+        <li>Reproductibilité des résultats</li>
+        <li>Des milliers de workflows communautaires</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Inconvénients</div><ul class="pc-list">        <li>Courbe d'apprentissage très élevée</li>
+        <li>Nécessite un GPU puissant</li>
+        <li>Pas d'interface conviviale pour les débutants</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
-    <a class="btn-visit" href="https://www.comfy.org" target="_blank" rel="noopener">Visiter ComfyUI →</a>
+    <a class="btn-visit" href="https://comfyui.org" target="_blank" rel="noopener">Visiter ComfyUI →</a>
   </div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choisir ComfyUI si…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Vous voulez le contrôle le plus granulaire sur le pipeline de génération d'images avec des workflows visuels</span></li>
 <li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ ComfyUI utilise une interface de flux de nœuds pour des workflows personnalisés très avancés</span></li>
@@ -173,12 +175,12 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="also-card-desc">Image generation, character consistency, prompt accuracy</div>
     </a>
     <a class="also-card" href="/fr/tools/flux.html">
-      <div class="also-card-name">Flux</div>
-      <div class="also-card-desc">High-quality open-source image generation</div>
+      <div class="also-card-name">FLUX</div>
+      <div class="also-card-desc">AI image generation, sub-second speed, text rendering, multi-reference</div>
     </a>
     <a class="also-card" href="/fr/tools/ideogram.html">
       <div class="also-card-name">Ideogram</div>
-      <div class="also-card-desc">Images with text: posters, logos, book covers</div>
+      <div class="also-card-desc">AI image generation, text-in-image, face swap, canvas editing</div>
     </a>
 </div>
   <div class="comments-section">
