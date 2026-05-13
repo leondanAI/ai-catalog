@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "ComfyUI", "description": "ComfyUI is the most powerful and flexible open-source interface for running AI image (and video) generation workflows, based on a node-graph architecture where every step of the diffusion pipeline — m", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://www.comfy.org", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "ComfyUI", "description": "ComfyUI is a free, open-source node-based interface for running AI image and video generation models locally. Users build workflows by connecting nodes — each node performs one operation such as loadi", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://comfyui.org", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -152,19 +152,19 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-hero">
     <div class="tool-hero-avatar" style="background:#fff;overflow:hidden;padding:6px">
-      <img src="https://www.google.com/s2/favicons?domain=comfy.org&sz=128" alt="ComfyUI logo" width="60" height="60" style="width:100%;height:100%;object-fit:contain;border-radius:10px">
+      <img src="https://www.google.com/s2/favicons?domain=comfyui.org&sz=128" alt="ComfyUI logo" width="60" height="60" style="width:100%;height:100%;object-fit:contain;border-radius:10px">
     </div>
     <div class="tool-hero-info">
       <div class="tool-hero-top">
         <h1 class="tool-hero-name">ComfyUI</h1>
-        <a class="btn-visit" href="https://www.comfy.org" target="_blank" rel="noopener">Visit ComfyUI →</a>
+        <a class="btn-visit" href="https://comfyui.org" target="_blank" rel="noopener">Visit ComfyUI →</a>
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">🎨 Image Generation</span>
         <span class="tool-meta-chip badge-free">Free</span>
         
       </div>
-      <div class="tool-best-for"><strong>Best for:</strong> Advanced pipelines, game studios, custom models</div>
+      <div class="tool-best-for"><strong>Best for:</strong> open-source AI image generation, node workflows, local GPU, 4K video</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -174,23 +174,27 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About ComfyUI</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">ComfyUI is the most powerful and flexible open-source interface for running AI image (and video) generation workflows, based on a node-graph architecture where every step of the diffusion pipeline — model loading, sampling, conditioning, upscaling, compositing — is a visible, editable node on an infinite canvas. Used by professional game studios, VFX houses, and serious AI artists, it represents the deepest level of control available in any image generation tool.</p><p style="margin-top:1rem">The node-based workflow system means you can build exactly the pipeline you need: chain multiple models together, add ControlNet for pose or depth control, run img2img refinement passes, apply LoRA style adapters, composite multiple generations, and automate the entire process with a single run. Plarium and other major game studios use ComfyUI as a core production tool for generating game assets, character concepts, and environmental art at scale. The community has published thousands of workflow templates covering every use case imaginable.</p><p style="margin-top:1rem">ComfyUI is free forever and runs locally on your hardware. The ComfyUI Manager extension makes installing custom nodes and model files straightforward. The primary limitation is the learning curve — the node canvas is intimidating for beginners and requires understanding of diffusion concepts to use effectively. For users who need a simpler interface over Stable Diffusion, Automatic1111 is a better starting point. ComfyUI is the right tool when you need production-grade, repeatable, automated image generation pipelines.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">ComfyUI is a free, open-source node-based interface for running AI image and video generation models locally. Users build workflows by connecting nodes — each node performs one operation such as loading a model, applying a sampler, or encoding a prompt — giving precise control over every step of the generation process. It is the primary interface for users who run Stable Diffusion and other open-weight models on their own hardware.</p><p style="margin-top:1rem">App View, a major UX addition, provides a simplified interface that hides the node graph and presents a clean form-based UI for users who do not need to modify the underlying workflow. Node View remains fully available for advanced users. This dual-mode approach makes ComfyUI accessible to beginners without removing any capability from experienced users.</p><p style="margin-top:1rem">NVFP4 quantization, introduced for NVIDIA RTX 50 Series GPUs, enables generation to run 2.5 times faster while reducing VRAM consumption by approximately 60%. This means users with RTX 50 Series cards can run larger models that previously required more expensive hardware, or run existing models at substantially higher speeds.</p><p style="margin-top:1rem">Official AMD ROCm support landed for the Windows Desktop app, making ComfyUI fully supported on AMD GPUs on Windows for the first time without requiring manual workarounds. New nodes for Veo 3, Veo 3 Lite, and Kling 3.0 were added, along with 4K output support for ByteDance, Veo, and Kling video generation pipelines. RTX Video Super Resolution enables real-time 4K upscaling of generated video on supported NVIDIA hardware.</p><p style="margin-top:1rem">Python 3.13 compatibility was added, keeping ComfyUI current with the latest Python release and ensuring compatibility with newer packages in the Python ecosystem.</p><p style="margin-top:1rem">ComfyUI is best for advanced users, researchers, and developers who want full control over AI image and video generation workflows, run models locally on their own hardware, and need support for the latest open-weight and third-party models.</p></div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Most powerful diffusion pipeline builder — any workflow is possible on the node canvas</li>
-        <li>Used by Plarium, game studios and VFX teams for production-grade asset creation</li>
-        <li>Supports image, video, 3D and audio in one tool — free forever</li>
+        <li>Completely free and open-source — no subscription, no credit limits, no vendor dependency</li>
+        <li>App View: beginner-friendly form UI without removing the full node graph for advanced users</li>
+        <li>NVFP4 quantization: 2.5x faster generation and 60% less VRAM on RTX 50 Series GPUs</li>
+        <li>Official AMD ROCm support on Windows — no manual workarounds required</li>
+        <li>Veo 3, Kling 3.0 nodes and 4K video support via ByteDance/Veo/Kling pipelines</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Steepest learning curve of any image tool — not suitable for beginners</li>
-        <li>Requires local GPU setup or paid cloud instance for full performance</li>
+        <li>Node-based interface has a steep learning curve for users new to workflow-based generation</li>
+        <li>Requires local GPU hardware — not suitable for users without a capable graphics card</li>
+        <li>Community-maintained custom nodes vary in quality and may conflict with each other</li>
+        <li>No cloud option — all computation is local; high-end hardware needed for large models</li>
       </ul>
     </div>
   </div>

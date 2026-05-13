@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Stable Diffusion", "description": "Stable Diffusion is the foundational open-source text-to-image model family released by Stability AI, and the technology that powers most of the open-source AI image generation ecosystem. Unlike propr", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://stability.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Stable Diffusion", "description": "Stable Diffusion is Stability AI's open-source image generation model series, widely used for local inference, fine-tuning, and commercial deployment. Unlike closed-source models, Stable Diffusion wei", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://stability.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -164,7 +164,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
         <span class="tool-meta-chip badge-free">Free</span>
         
       </div>
-      <div class="tool-best-for"><strong>Best for:</strong> Local AI image generation and fine-tuning</div>
+      <div class="tool-best-for"><strong>Best for:</strong> Open-source image generation, local inference, video AI, audio generation</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -174,26 +174,27 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Stable Diffusion</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Stable Diffusion is the foundational open-source text-to-image model family released by Stability AI, and the technology that powers most of the open-source AI image generation ecosystem. Unlike proprietary services, Stable Diffusion's model weights are freely available to download, fine-tune, and run locally on consumer hardware.</p><p style="margin-top:1rem">The current release is Stable Diffusion 3.5. SD 3.5 Large has 8.1 billion parameters and uses the MM-DiT architecture with three text encoders for improved prompt understanding. SD 3.5 Medium (2.5B parameters) runs on consumer GPUs. Both are available under a free Community License for non-commercial use; commercial use requires a paid license from Stability AI.</p><p style="margin-top:1rem">Stability AI itself had a near-collapse in early 2024 — mass layoffs and a funding crisis. The company staged a remarkable turnaround under new leadership, with Sean Parker as Executive Chairman and James Cameron joining the board. All debt was erased by December 2024 and the company reported triple-digit revenue growth.</p><p style="margin-top:1rem">The model runs locally via interfaces like ComfyUI or Automatic1111, or via the Stability AI API (paid, credit-based). Community fine-tunes and LoRA models number in the thousands on platforms like Civitai and Hugging Face, covering every conceivable style.</p><p style="margin-top:1rem">Limitations: raw quality no longer leads the field — Flux and Midjourney V7 produce better output. Running locally requires a capable GPU (8GB+ VRAM recommended). Commercial use of the weights requires a separate license agreement.</p><p style="margin-top:1rem">Best for developers and researchers who want full control — local execution, fine-tuning, custom pipelines, and no per-image fees.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Stable Diffusion is Stability AI's open-source image generation model series, widely used for local inference, fine-tuning, and commercial deployment. Unlike closed-source models, Stable Diffusion weights are publicly released and can be run on consumer hardware, making it the foundation of a large ecosystem of third-party tools, community fine-tunes, and commercial applications built on top of the base models.</p><p style="margin-top:1rem">Stability AI underwent a significant corporate recovery in early 2026. The company's debt was fully erased, resolving the financial instability that had threatened operations through 2024 and 2025. A strategic partnership with Electronic Arts (EA) was signed in February 2026, providing both capital and a high-profile commercial deployment context for Stability AI's models. James Cameron joined as an advisor, adding industry credibility to the company's video generation push.</p><p style="margin-top:1rem">SD3.5 performance has been improved through optimizations for NVIDIA TensorRT with FP8 quantization. This combination delivers faster inference speeds and significantly lower VRAM requirements on RTX-series GPUs, making SD3.5 more practical on mid-range consumer hardware than earlier large models. AMD support expanded through ONNX-optimized model variants designed for Radeon GPUs and Ryzen AI accelerators, broadening the addressable hardware base beyond NVIDIA.</p><p style="margin-top:1rem">SV4D 2.0 (Stable Video 4D 2.0) is a new video generation model release focused on higher-quality outputs for real-world scenes — improving coherence, motion quality, and subject consistency compared to the original SV4D release. Stable Audio Open Small, a compact audio generation model, was open-sourced in partnership with Arm and is optimized for efficient inference on Arm-based hardware.</p><p style="margin-top:1rem">All Stable Diffusion models remain free and open-source. The Stability AI platform offers a freemium API for hosted inference without local setup. Stable Diffusion is best for developers, researchers, and creative professionals who need open-source image and video generation they can run locally, fine-tune, or deploy commercially without per-image fees.</p></div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Free model weights — run locally with zero per-image cost</li>
-        <li>SD 3.5 Large: 8.1B params, MM-DiT architecture, strong prompt adherence</li>
-        <li>Thousands of community fine-tunes and LoRAs on Civitai and Hugging Face</li>
-        <li>Stability AI turnaround complete — company financially stable as of 2025</li>
+        <li>Fully open-source — weights freely available for local use, fine-tuning, and commercial deployment</li>
+        <li>SD3.5 optimized for NVIDIA TensorRT/FP8: faster inference and lower VRAM on RTX GPUs</li>
+        <li>AMD ONNX-optimized variants for Radeon and Ryzen AI — not NVIDIA-exclusive</li>
+        <li>SV4D 2.0 delivers higher-quality real-world video output over original SV4D</li>
+        <li>Stable Audio Open Small open-sourced with Arm — audio generation available on edge hardware</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Raw output quality behind Flux and Midjourney V7</li>
-        <li>Requires 8GB+ VRAM for local use; setup takes time</li>
-        <li>Commercial use of weights requires paid license from Stability AI</li>
-        <li>No managed service — self-hosting means you own the maintenance</li>
+        <li>Local setup requires technical knowledge — not suitable for non-technical users</li>
+        <li>Best results on SD3.5 still require a capable GPU; CPU-only inference is slow</li>
+        <li>Open-source ecosystem is fragmented — many forks, versions, and UIs with inconsistent quality</li>
+        <li>Stability AI corporate instability history — partnership sustainability remains to be proven</li>
       </ul>
     </div>
   </div>
@@ -212,7 +213,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     </a>
     <a class="also-card" href="/tools/comfyui.html">
       <div class="also-card-name">ComfyUI</div>
-      <div class="also-card-desc">Advanced pipelines, game studios, custom models</div>
+      <div class="also-card-desc">open-source AI image generation, node workflows, local GPU, 4K video</div>
     </a>
     <a class="also-card" href="/tools/flux.html">
       <div class="also-card-name">FLUX</div>
