@@ -36,7 +36,7 @@ def get_urls(slugs=None):
                 f'{prefix}/directory.html',
                 f'{prefix}/compare.html',
                 f'{prefix}/news.html',
-                f'{prefix}/tools.html',
+                f'{prefix}/newsletter.html',
             ]
 
         # AI tool pages only (skip toolbox utilities)
