@@ -141,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-free">Free</span>
         <span class="tool-meta-chip">👥 500K+</span>
       </div>
-      <div class="tool-best-for"><strong>Idéal pour:</strong> Assistant de code IA open source pour l'IDE</div>
+      <div class="tool-best-for"><strong>Idéal pour:</strong> Agents de code IA, automatisation CI/CD, revue de PR, CLI open source</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -150,16 +150,18 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>À propos Continue</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Continue.dev permet aux développeurs d'utiliser des modèles comme Claude, GPT-4, Llama ou des modèles locaux via Ollama directement dans leur IDE, avec des fonctions d'autocomplétion, chat et édition de code. Étant open source et hautement configurable, c'est l'option privilégiée pour les équipes avec des exigences de confidentialité ou souhaitant un contrôle total sur le modèle utilisé.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Continue est un outil de codage IA open source qui a opéré un pivot majeur en 2026. Il est passé de son identité originale d'extension d'autocomplétion et de chat pour IDE à une plateforme CLI-first centrée sur des agents IA asynchrones conçus pour les pipelines CI/CD et la revue automatisée de pull requests. Le projet reste entièrement gratuit et open source sous licence Apache 2.0.</p><p style="margin-top:1rem">Le système Checks est la pièce maîtresse du pivot 2026. Les équipes définissent des politiques de revue dans des fichiers Markdown en langage naturel — par exemple, spécifier que toutes les PR doivent inclure une couverture de tests pour les nouvelles fonctions, suivre une convention de nommage particulière, ou éviter certains anti-patterns. Les agents IA exécutent automatiquement ces vérifications sur chaque pull request entrante, fournissant un retour automatisé sans nécessiter de revue humaine pour les problèmes de conformité courants.</p><p style="margin-top:1rem">Le mode headless permet aux agents Continue de s'exécuter dans des environnements CI/CD cloud sans interface utilisateur. Cela permet l'intégration avec GitHub Actions, GitLab CI et d'autres outils de pipeline, de sorte que les agents de revue s'exécutent automatiquement à chaque push de code ou ouverture de PR. Le mode TUI fournit une interface terminal interactive pour les utilisateurs préférant un flux de travail piloté au clavier, tandis que le mode Shell permet aux agents d'exécuter des commandes terminal arbitraires dans le cadre de leur exécution.</p><p style="margin-top:1rem">Le contexte URL est une fonctionnalité pratique : les développeurs peuvent coller n'importe quelle URL directement dans l'interface de chat, et Continue récupère et incorpore le contenu de la page comme contexte pour la tâche en cours. C'est utile pour référencer de la documentation, des trackers d'issues ou des références d'API tierces sans copier-coller manuellement.</p><p style="margin-top:1rem">Le support Devstral ajoute des capacités d'appel d'outils via le modèle Mistral Devstral, permettant aux agents d'invoquer des outils et API externes dans le cadre de workflows automatisés. Continue prend en charge tous les principaux fournisseurs de LLM et les modèles locaux via Ollama, préservant sa philosophie de conception agnostique aux modèles.</p><p style="margin-top:1rem">Continue convient particulièrement aux équipes d'ingénierie souhaitant automatiser la revue de code et les contrôles qualité CI/CD avec des politiques en langage naturel, et aux développeurs préférant une alternative open source agnostique aux agents de codage propriétaires.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Avantages</div><ul class="pc-list">        <li>Open source et gratuit</li>
-        <li>Supporte tout modèle — local ou cloud</li>
-        <li>Haute confidentialité — peut fonctionner hors ligne</li>
-        <li>Hautement configurable</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Inconvénients</div><ul class="pc-list">        <li>Nécessite une configuration initiale</li>
-        <li>Moins soigné que GitHub Copilot</li>
-        <li>Support communautaire, pas corporate</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Avantages</div><ul class="pc-list">        <li>Entièrement gratuit et open source — pas de niveau payant, pas de limites d'usage, licence Apache 2.0</li>
+        <li>Système Checks : les agents IA appliquent les politiques de revue d'équipe en Markdown sur chaque PR</li>
+        <li>Mode headless intègre les agents directement dans GitHub Actions et autres pipelines CI/CD</li>
+        <li>Agnostique aux modèles : supporte tous les grands fournisseurs LLM et les modèles locaux via Ollama</li>
+        <li>Contexte URL : collez n'importe quelle URL dans le chat pour inclure le contenu comme contexte agent</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Inconvénients</div><ul class="pc-list">        <li>Interface CLI et terminal — inadaptée aux utilisateurs non techniques</li>
+        <li>Nécessite la mise en place de fichiers de politique de revue Markdown par l'équipe avant que les vérifications fonctionnent</li>
+        <li>Support communautaire uniquement — pas de SLA entreprise ni de canal de support dédié</li>
+        <li>L'appel d'outils Devstral et le mode headless sont relativement nouveaux — documentation encore en cours de maturation</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://continue.dev" target="_blank" rel="noopener">Visiter Continue →</a>

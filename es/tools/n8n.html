@@ -141,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
-      <div class="tool-best-for"><strong>Ideal para:</strong> Automatización de flujos de trabajo con IA y código abierto</div>
+      <div class="tool-best-for"><strong>Ideal para:</strong> Automatización de flujos de trabajo IA, self-hosted, editor de nodos, human-in-the-loop</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -150,16 +150,18 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Acerca de n8n</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">n8n combina la flexibilidad de la automatización visual (similar a Zapier o Make) con la potencia del código cuando se necesita. Al ser de código abierto, puede instalarse en tu propio servidor para total control y privacidad de datos. Incluye nodos de IA para integrar modelos de lenguaje como GPT o Claude directamente en los flujos de trabajo. Es especialmente popular entre equipos técnicos que necesitan automatizaciones complejas con lógica personalizada.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">n8n es una plataforma de automatización de flujos de trabajo open-source que permite a desarrolladores y equipos técnicos conectar aplicaciones, APIs y fuentes de datos a través de un editor visual de nodos. A diferencia de muchas herramientas de automatización sin código, n8n es auto-hospedable, lo que da a las organizaciones control total de los datos y ninguna dependencia de proveedor. Es utilizado por equipos de ingeniería, profesionales de DevOps y equipos de operaciones técnicas para automatización interna, pipelines de datos y flujos de trabajo de agentes IA.</p><p style="margin-top:1rem">n8n v2.0, una versión principal a finales de 2025 y principios de 2026, introdujo varias mejoras arquitectónicas y de UX. Los Task Runners proporcionan entornos de ejecución aislados para tareas individuales de flujo de trabajo, mejorando la estabilidad y evitando que un paso fallido corrompa el estado de otros que se ejecutan en paralelo. Esto es particularmente importante para flujos de trabajo de agentes IA de larga duración o con múltiples ramas.</p><p style="margin-top:1rem">El paradigma Guardar vs. Publicar cambia cómo los cambios de flujo de trabajo llegan a producción: las ediciones a un flujo de trabajo se guardan localmente pero no entran en funcionamiento hasta que el usuario publique explícitamente. Esto refleja las prácticas de implementación de software y evita que los cambios accidentales afecten inmediatamente a las automatizaciones en ejecución, una función muy solicitada por equipos que usan n8n en entornos de producción.</p><p style="margin-top:1rem">La diferencia visual de versiones muestra exactamente qué cambió entre versiones del flujo de trabajo con un distintivo de conteo de cambios, lo que facilita revisar modificaciones antes de publicar o identificar cuándo se introdujo una regresión. El rendimiento de carga mejoró un 30-80% en instancias de flujo de trabajo grandes, abordando una queja común de equipos con cientos de flujos de trabajo complejos.</p><p style="margin-top:1rem">Las múltiples conexiones de proveedores de secretos externos permiten conectar credenciales de Vault, AWS Secrets Manager y otros proveedores simultáneamente. Las Acciones del nodo Chat añaden puntos de control human-in-the-loop: un flujo de trabajo puede pausarse y enviar un mensaje a un aprobador humano, quien puede aprobar, rechazar o modificar el siguiente paso antes de que continúe la ejecución. Se anunció la integración de SAP Business AI Platform para casos de uso empresarial.</p><p style="margin-top:1rem">El n8n auto-hospedado es gratuito. Los planes en la nube comienzan en $20/mes. n8n es ideal para desarrolladores y equipos técnicos que necesitan automatización de flujos de trabajo flexible y auto-hospedada con capacidades de agentes IA y sin dependencia de proveedor.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Ventajas</div><ul class="pc-list">        <li>Código abierto — self-hosting disponible</li>
-        <li>Integración nativa con IA — GPT y Claude</li>
-        <li>Más de 400 integraciones</li>
-        <li>Permite código personalizado</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Desventajas</div><ul class="pc-list">        <li>Curva de aprendizaje mayor que Zapier</li>
-        <li>Requiere servidor para self-hosting</li>
-        <li>Documentación principalmente en inglés</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Ventajas</div><ul class="pc-list">        <li>La opción auto-hospedada es gratuita con acceso completo a funciones — sin dependencia de proveedor</li>
+        <li>Task Runners: ejecución aislada por tarea de flujo de trabajo para estabilidad en pipelines complejos</li>
+        <li>Separación Guardar vs. Publicar evita que los cambios accidentales lleguen a producción</li>
+        <li>Diferencia visual de versiones con distintivos de conteo de cambios para revisión segura de flujos de trabajo antes de publicar</li>
+        <li>Acciones del nodo Chat: pausa flujos de trabajo para aprobaciones human-in-the-loop durante la ejecución</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Desventajas</div><ul class="pc-list">        <li>Requiere configuración de auto-hospedaje y mantenimiento de infraestructura para el nivel gratuito</li>
+        <li>Curva de aprendizaje más pronunciada que herramientas sin código como Zapier o Make para usuarios no técnicos</li>
+        <li>El plan en la nube comienza en $20/mes — añade coste para equipos que prefieren hospedaje gestionado</li>
+        <li>Las grandes bibliotecas de flujos de trabajo aún requieren una organización cuidadosa — sin jerarquía de carpetas integrada</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://n8n.io" target="_blank" rel="noopener">Visitar n8n →</a>

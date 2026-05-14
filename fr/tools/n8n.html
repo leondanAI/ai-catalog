@@ -141,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
-      <div class="tool-best-for"><strong>Idéal pour:</strong> Automatisation de workflows avec IA et open source</div>
+      <div class="tool-best-for"><strong>Idéal pour:</strong> Automatisation de workflows IA, self-hosted, éditeur de nœuds, validation humaine</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -150,16 +150,18 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>À propos n8n</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">n8n combine la flexibilité de l'automatisation visuelle (similaire à Zapier ou Make) avec la puissance du code quand nécessaire. Étant open source, il peut être installé sur son propre serveur pour un contrôle total et la confidentialité des données. Inclut des nœuds IA pour intégrer des modèles de langage comme GPT ou Claude directement dans les workflows. Particulièrement populaire parmi les équipes techniques nécessitant des automatisations complexes.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">n8n est une plateforme d'automatisation de workflows open source qui permet aux développeurs et équipes techniques de connecter des applications, APIs et sources de données via un éditeur de nœuds visuel. Contrairement à de nombreux outils d'automatisation no-code, n8n est auto-hébergeable, donnant aux organisations un contrôle total des données et aucune dépendance fournisseur. Il est utilisé par les équipes d'ingénierie, les praticiens DevOps et les équipes d'opérations techniques pour l'automatisation interne, les pipelines de données et les workflows d'agents IA.</p><p style="margin-top:1rem">n8n v2.0, une version majeure fin 2025 et début 2026, a introduit plusieurs améliorations architecturales et UX. Les Task Runners fournissent des environnements d'exécution isolés pour les tâches de workflow individuelles, améliorant la stabilité et empêchant qu'une étape défaillante corrompe l'état des autres s'exécutant en parallèle. C'est particulièrement important pour les workflows d'agents IA de longue durée ou à branches multiples.</p><p style="margin-top:1rem">Le paradigme Enregistrer vs. Publier change la façon dont les modifications de workflow atteignent la production : les modifications d'un workflow sont enregistrées localement mais ne sont pas mises en ligne tant que l'utilisateur ne publie pas explicitement. Cela reflète les pratiques de déploiement logiciel et empêche les modifications accidentelles d'affecter immédiatement les automatisations en cours d'exécution.</p><p style="margin-top:1rem">Le diff visuel de versions montre exactement ce qui a changé entre les versions de workflow avec un badge de comptage de changements, facilitant la révision des modifications avant de publier ou l'identification quand une régression a été introduite. Les performances de chargement ont amélioré de 30 à 80 % sur les grandes instances de workflow.</p><p style="margin-top:1rem">Les connexions multiples de fournisseurs de secrets externes permettent de connecter simultanément des credentials de Vault, AWS Secrets Manager et d'autres fournisseurs. Les actions de nœud Chat ajoutent des points de contrôle humains en boucle : un workflow peut se mettre en pause et envoyer un message à un approbateur humain, qui peut approuver, rejeter ou modifier l'étape suivante avant que l'exécution continue.</p><p style="margin-top:1rem">Le n8n auto-hébergé est gratuit. Les plans cloud commencent à 20 $/mois. n8n convient particulièrement aux développeurs et équipes techniques qui ont besoin d'une automatisation de workflow flexible, auto-hébergeable, avec des capacités d'agents IA et sans verrouillage fournisseur.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Avantages</div><ul class="pc-list">        <li>Open source — self-hosting disponible</li>
-        <li>Intégration IA native — GPT et Claude</li>
-        <li>Plus de 400 intégrations</li>
-        <li>Permet du code personnalisé</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Inconvénients</div><ul class="pc-list">        <li>Courbe d'apprentissage plus grande que Zapier</li>
-        <li>Nécessite un serveur pour le self-hosting</li>
-        <li>Documentation principalement en anglais</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Avantages</div><ul class="pc-list">        <li>L'option auto-hébergée est gratuite avec accès complet aux fonctionnalités — pas de verrouillage fournisseur</li>
+        <li>Task Runners : exécution isolée par tâche de workflow pour la stabilité dans les pipelines complexes</li>
+        <li>La séparation Enregistrer vs. Publier empêche les modifications accidentelles d'atteindre la production</li>
+        <li>Diff visuel de versions avec badges de comptage de changements pour une révision sécurisée avant publication</li>
+        <li>Actions de nœud Chat : mettez les workflows en pause pour des approbations humaines en milieu d'exécution</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Inconvénients</div><ul class="pc-list">        <li>Nécessite une configuration d'auto-hébergement et une maintenance d'infrastructure pour le niveau gratuit</li>
+        <li>Courbe d'apprentissage plus raide que les outils no-code comme Zapier ou Make pour les utilisateurs non techniques</li>
+        <li>Le plan cloud commence à 20 $/mois — ajoute un coût pour les équipes préférant l'hébergement géré</li>
+        <li>Les grandes bibliothèques de workflows nécessitent encore une organisation soigneuse — pas de hiérarchie de dossiers intégrée</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://n8n.io" target="_blank" rel="noopener">Visiter n8n →</a>
