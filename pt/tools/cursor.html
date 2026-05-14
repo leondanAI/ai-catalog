@@ -102,6 +102,8 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/pt/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Diretório</a>
       <a href="/pt/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Comparar</a>
       <a href="/pt/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Notícias</a>
+      <a href="/pt/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Ferramentas</a>
+      <a href="/pt/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
       <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇧🇷 PT <span style="opacity:.5;font-size:10px">▾</span></button>
@@ -114,6 +116,8 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/pt/directory.html"  class="nav-link" data-i18n="nav.directory">Diretório</a>
     <a href="/pt/compare.html"    class="nav-link" data-i18n="nav.compare">Comparar</a>
     <a href="/pt/news.html"       class="nav-link" data-i18n="nav.news">Notícias</a>
+    <a href="/pt/tools.html"      class="nav-link" data-i18n="nav.tools">Ferramentas</a>
+    <a href="/pt/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
 <div class="tool-page">
@@ -137,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-paid">Paid</span>
         <span class="tool-meta-chip">👥 1M+</span>
       </div>
-      <div class="tool-best-for"><strong>Ideal para:</strong> Desenvolvimento de software assistido por IA em um editor nativo</div>
+      <div class="tool-best-for"><strong>Ideal para:</strong> Codificação IA, multi-repositório, agentes em nuvem, revisão de segurança</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -146,16 +150,19 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Sobre Cursor</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">O Cursor vai além do autocompletar: você descreve as mudanças em linguagem natural e o editor as aplica diretamente no código. Com o modo Composer, é possível criar arquivos inteiros ou refatorar múltiplos arquivos simultaneamente. Suporta os principais modelos de IA (GPT-4, Claude, etc.) e se tornou a ferramenta favorita de muitos desenvolvedores. Compatível com extensões do VS Code.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Cursor é um editor de código orientado a IA construído sobre o VS Code, projetado para tornar a assistência de IA a interface principal para o desenvolvimento de software, em vez de um plugin adicionado por cima. Cursor 3, o principal lançamento atual, representa uma expansão arquitetural substancial de um editor de arquivo único para uma plataforma de desenvolvimento completa.</p><p style="margin-top:1rem">A peça central do Cursor 3 é o workspace multi-repositório unificado: os desenvolvedores podem abrir e navegar em vários repositórios simultaneamente, com o agente de IA mantendo contexto em todos eles. Os agentes em nuvem executam em paralelo em máquinas virtuais dedicadas, cada um capaz de executar tarefas de longa duração de forma autônoma enquanto registra seu trabalho via vídeo e logs para revisão.</p><p style="margin-top:1rem">Canvases é uma nova camada de saída visual: os agentes podem produzir resumos de revisão de PR, diagramas de arquitetura, painéis de testes e outros artefatos visuais estruturados diretamente dentro do workspace do Cursor. As Cursor Automations permitem acionar tarefas a partir de mensagens do Slack, temporizadores agendados ou eventos específicos da base de código.</p><p style="margin-top:1rem">A Security Review, disponível nos níveis Times e Enterprise, é um scanner de vulnerabilidades sempre ativo que executa continuamente em segundo plano e exibe problemas de segurança à medida que o código é escrito. O Composer 2 é um modelo desenvolvido internamente pela equipe do Cursor, otimizado para tarefas de edição de código.</p><p style="margin-top:1rem">O preço usa um modelo de créditos de uso: Pro a $20/mês cobre o uso padrão, Pro+ a $60/mês fornece limites de uso 3x para usuários intensivos. Não há nível gratuito.</p><p style="margin-top:1rem">Cursor é a melhor escolha para desenvolvedores profissionais e equipes de engenharia que desejam IA profundamente integrada em todo o fluxo de trabalho de desenvolvimento.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Vantagens</div><ul class="pc-list">        <li>IA integrada nativamente ao editor</li>
-        <li>Modo Composer para mudanças em múltiplos arquivos</li>
-        <li>Compatível com extensões do VS Code</li>
-        <li>Suporta múltiplos modelos de IA</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Desvantagens</div><ul class="pc-list">        <li>Versão gratuita com limites de uso</li>
-        <li>Pode sugerir código incorreto sem contexto suficiente</li>
-        <li>Requer boa descrição do problema</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Vantagens</div><ul class="pc-list">        <li>Workspace multi-repositório unificado — a IA mantém contexto em vários repositórios simultaneamente</li>
+        <li>Agentes em nuvem executando em paralelo em VMs dedicadas com gravação de vídeo/logs para revisão assíncrona</li>
+        <li>Recurso Canvases: agentes produzem saídas visuais — revisões de PR, painéis, diagramas de arquitetura</li>
+        <li>Cursor Automations: acione agentes pelo Slack, temporizadores ou eventos da base de código</li>
+        <li>Security Review sempre ativa (Times/Enterprise) — varredura contínua de vulnerabilidades enquanto escreve</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Desvantagens</div><ul class="pc-list">        <li>Sem nível gratuito — produto pago desde o primeiro dia a partir de $20/mês</li>
+        <li>Pro+ a $60/mês é 3x o preço base do GitHub Copilot para níveis de uso equivalentes</li>
+        <li>Agentes em nuvem e Canvases são recursos novos — estabilidade e confiabilidade ainda amadurecendo</li>
+        <li>Cursor Automations e Security Review limitadas aos níveis Times/Enterprise</li>
+        <li>A migração do VS Code requer reconfiguração de extensões e atalhos de teclado</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://cursor.com" target="_blank" rel="noopener">Visitar Cursor →</a>
@@ -203,7 +210,7 @@ textarea.form-input{resize:vertical;min-height:90px}
   <div class="footer-inner">
     <div>
       <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>aitoolfit</div>
-      <p class="footer-desc">Seu buscador de ferramentas IA. Atualizado diariamente.</p>
+      <p class="footer-desc">O melhor diretório de ferramentas de IA. 100+ serviços, notícias e utilitários gratuitos.</p>
     </div>
     <div>
       <div class="footer-col-title">Navegação</div>

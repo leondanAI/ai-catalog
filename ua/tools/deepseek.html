@@ -102,6 +102,8 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/ua/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Каталог</a>
       <a href="/ua/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Порівняння</a>
       <a href="/ua/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Новини</a>
+      <a href="/ua/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Інструменти</a>
+      <a href="/ua/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Розсилка</a>
     </nav>
     <div class="lang-picker">
       <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇺🇦 UA <span style="opacity:.5;font-size:10px">▾</span></button>
@@ -114,6 +116,8 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/ua/directory.html"  class="nav-link" data-i18n="nav.directory">Каталог</a>
     <a href="/ua/compare.html"    class="nav-link" data-i18n="nav.compare">Порівняння</a>
     <a href="/ua/news.html"       class="nav-link" data-i18n="nav.news">Новини</a>
+    <a href="/ua/tools.html"      class="nav-link" data-i18n="nav.tools">Інструменти</a>
+    <a href="/ua/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Розсилка</a>
   </nav>
 </header>
 <div class="tool-page">
@@ -137,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-free">Безкоштовно</span>
         <span class="tool-meta-chip">👥 96M+</span>
       </div>
-      <div class="tool-best-for"><strong>Підходить для:</strong> Розширене мислення і технічні завдання з моделлю з відкритим кодом</div>
+      <div class="tool-best-for"><strong>Підходить для:</strong> Open-source міркування, довгий контекст, дешевий API</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -146,16 +150,19 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Про сервіс DeepSeek</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">DeepSeek R1 та його варіанти здивували AI-спільноту, пропонуючи продуктивність, порівнянну з GPT-4o та Claude 3.5, але безкоштовно та з відкритим кодом. Особливо сильний у математиці, науці та програмуванні. Як open source може запускатися локально або розгортатися на власній інфраструктурі. API значно дешевше ніж у конкурентів.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">DeepSeek — китайська ШІ-лабораторія, яка здобула репутацію за випуск open-source моделей граничної якості за надзвичайно низькою вартістю. DeepSeek V4 Preview, випущений 24 квітня 2026 року, поставляється у двох варіантах: V4-Pro з 1,6 трильйона загальних параметрів (49 мільярдів активних) та V4-Flash з 284 мільярдами параметрів (13 мільярдів активних). Обидва підтримують вікно контексту в 1 мільйон токенів.</p><p style="margin-top:1rem">Архітектурна інновація V4 — система гібридної уваги, що поєднує Стиснену розріджену увагу (CSA) та Ієрархічну агрегацію контексту (HCA). При контексті в 1 мільйон токенів V4-Pro використовує лише 27% FLOPs, необхідних DeepSeek V3.2 — драматичне покращення ефективності.</p><p style="margin-top:1rem">Три режими зусиль міркування — легкий, стандартний та глибокий — дозволяють користувачам вибирати між швидкістю відповіді та глибиною міркування. Легкий режим швидкий та підходить для простих завдань; глибокий режим активує розширений ланцюг думок для складних багатоетапних проблем.</p><p style="margin-top:1rem">Ціноутворення агресивне: V4-Flash коштує $0,14 за мільйон вхідних токенів та $0,28 за мільйон вихідних токенів. V4-Pro коштує $0,145 за мільйон вхідних токенів та $3,48 за мільйон вихідних токенів. Обидві моделі є open-source та можуть бути розгорнуті на власних потужностях.</p><p style="margin-top:1rem">Веб-чат інтерфейс на chat.deepseek.com безкоштовний без необхідності облікового запису для базового доступу. Основним обмеженням порівняно з ChatGPT або Claude є екосистема: без голосового режиму, без генерації зображень, без нативних інтеграцій додатків.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Переваги</div><ul class="pc-list">        <li>Відкритий код і безкоштовно</li>
-        <li>Відмінний у математиці та кодуванні</li>
-        <li>Дуже дешевий API</li>
-        <li>Може запускатися локально</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Недоліки</div><ul class="pc-list">        <li>Проблеми з конфіденційністю — дані на китайських серверах</li>
-        <li>Менш відполірований інтерфейс ніж у ChatGPT</li>
-        <li>Рідші оновлення</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Переваги</div><ul class="pc-list">        <li>V4-Pro: 1,6 трлн параметрів, 49 млрд активних, контекст 1M токенів — гранична продуктивність за цінами open-source</li>
+        <li>Гібридна увага (CSA + HCA) — V4-Pro використовує лише 27% FLOPs vs V3.2 при контексті 1M токенів</li>
+        <li>Три режими зусиль міркування (легкий/стандартний/глибокий) — налаштовуйте швидкість vs глибину</li>
+        <li>API V4-Flash за $0,14/$0,28 за мільйон токенів — серед найдешевших моделей граничної якості</li>
+        <li>Повністю open-source — може бути розгорнутий на власних потужностях для конфіденційності даних</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Недоліки</div><ul class="pc-list">        <li>Без голосового режиму, генерації зображень або споживчих інтеграцій додатків</li>
+        <li>Веб-інтерфейс менш відполірований, ніж ChatGPT або Claude — продукт, орієнтований на розробника</li>
+        <li>Проблеми конфіденційності даних для користувачів, які не можуть розгорнути на власних потужностях (китайська компанія)</li>
+        <li>Вихід V4-Pro за $3,48/M токенів дорогий для навантажень з великим обсягом виходів</li>
+        <li>Екосистема та підтримка плагінів значно менша, ніж у OpenAI або Anthropic</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://chat.deepseek.com" target="_blank" rel="noopener">Перейти на DeepSeek →</a>
@@ -203,7 +210,7 @@ textarea.form-input{resize:vertical;min-height:90px}
   <div class="footer-inner">
     <div>
       <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>aitoolfit</div>
-      <p class="footer-desc">Ваш пошуковик AI-інструментів. Оновлюється щодня.</p>
+      <p class="footer-desc">Найкращий каталог ШІ-інструментів. 100+ сервісів, новини та безкоштовні утиліти.</p>
     </div>
     <div>
       <div class="footer-col-title">Навігація</div>

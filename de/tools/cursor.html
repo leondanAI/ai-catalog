@@ -102,6 +102,8 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/de/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Verzeichnis</a>
       <a href="/de/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Vergleichen</a>
       <a href="/de/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Neuigkeiten</a>
+      <a href="/de/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Werkzeuge</a>
+      <a href="/de/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
       <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇩🇪 DE <span style="opacity:.5;font-size:10px">▾</span></button>
@@ -114,6 +116,8 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/de/directory.html"  class="nav-link" data-i18n="nav.directory">Verzeichnis</a>
     <a href="/de/compare.html"    class="nav-link" data-i18n="nav.compare">Vergleichen</a>
     <a href="/de/news.html"       class="nav-link" data-i18n="nav.news">Neuigkeiten</a>
+    <a href="/de/tools.html"      class="nav-link" data-i18n="nav.tools">Werkzeuge</a>
+    <a href="/de/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
 <div class="tool-page">
@@ -137,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-paid">Kostenpflichtig</span>
         <span class="tool-meta-chip">👥 1M+</span>
       </div>
-      <div class="tool-best-for"><strong>Ideal für:</strong> KI-unterstützte Softwareentwicklung in einem nativen Editor</div>
+      <div class="tool-best-for"><strong>Ideal für:</strong> KI-Coding, Multi-Repo, Cloud-Agenten, Security-Review</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -146,16 +150,19 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Über Cursor</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Cursor geht über Autovervollständigung hinaus: Man beschreibt Änderungen in natürlicher Sprache und der Editor wendet sie direkt im Code an. Mit dem Composer-Modus können ganze Dateien erstellt oder mehrere Dateien gleichzeitig refaktoriert werden. Unterstützt führende KI-Modelle (GPT-4, Claude usw.) und hat sich zum bevorzugten Tool vieler Entwickler für schnellere Entwicklung etabliert. Kompatibel mit VS-Code-Erweiterungen.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Cursor ist ein KI-first Code-Editor auf Basis von VS Code, der darauf ausgelegt ist, KI-Unterstützung zur primären Schnittstelle für die Softwareentwicklung zu machen, anstatt als Plugin obendrauf geschichtet zu sein. Cursor 3, das aktuelle Haupt-Release, stellt eine substantielle architektonische Erweiterung von einem Einzeldatei-Editor zu einer vollständigen Entwicklungsplattform dar.</p><p style="margin-top:1rem">Das Herzstück von Cursor 3 ist der einheitliche Multi-Repo-Workspace: Entwickler können mehrere Repositories gleichzeitig öffnen und navigieren, wobei der KI-Agent über alle von ihnen hinweg Kontext behält. Cloud-Agenten laufen parallel auf dedizierten virtuellen Maschinen, die jeweils in der Lage sind, langfristige Aufgaben autonom auszuführen, während sie ihre Arbeit per Video und Logs für die Überprüfung aufzeichnen.</p><p style="margin-top:1rem">Canvases ist eine neue visuelle Ausgabeschicht: Agenten können PR-Review-Zusammenfassungen, Architekturdiagramme, Test-Dashboards und andere strukturierte visuelle Artefakte direkt im Cursor-Workspace produzieren. Cursor Automations ermöglicht es, Aufgaben aus Slack-Nachrichten, geplanten Timern oder spezifischen Codebase-Ereignissen auszulösen.</p><p style="margin-top:1rem">Security Review, verfügbar in Teams- und Enterprise-Stufen, ist ein immer aktiver Schwachstellen-Scanner, der kontinuierlich im Hintergrund läuft und Sicherheitsprobleme aufzeigt, während Code geschrieben wird. Composer 2 ist ein intern von Cursor entwickeltes Modell, optimiert für Code-Bearbeitungsaufgaben.</p><p style="margin-top:1rem">Das Pricing verwendet ein Usage-Credit-Modell: Pro für $20/Monat deckt die Standardnutzung ab, Pro+ für $60/Monat bietet 3-fache Nutzungslimits für Intensivnutzer. Es gibt keine kostenlose Stufe.</p><p style="margin-top:1rem">Cursor ist die beste Wahl für professionelle Entwickler und Engineering-Teams, die KI tief in den gesamten Entwicklungs-Workflow integriert haben möchten.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Vorteile</div><ul class="pc-list">        <li>KI nativ in den Editor integriert</li>
-        <li>Composer-Modus für Multi-Datei-Änderungen</li>
-        <li>Kompatibel mit VS-Code-Erweiterungen</li>
-        <li>Unterstützt mehrere KI-Modelle</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Nachteile</div><ul class="pc-list">        <li>Kostenlose Version mit Nutzungslimits</li>
-        <li>Kann ohne ausreichend Kontext falschen Code vorschlagen</li>
-        <li>Erfordert gute Problembeschreibung</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Vorteile</div><ul class="pc-list">        <li>Einheitlicher Multi-Repo-Workspace — KI behält Kontext über mehrere Repositories gleichzeitig</li>
+        <li>Cloud-Agenten laufen parallel auf dedizierten VMs mit Video-/Log-Aufzeichnung für asynchrone Überprüfung</li>
+        <li>Canvases-Feature: Agenten produzieren visuelle Ausgaben — PR-Reviews, Dashboards, Architekturdiagramme</li>
+        <li>Cursor Automations: Agenten aus Slack, Timern oder Codebase-Ereignissen auslösen</li>
+        <li>Immer aktive Security Review (Teams/Enterprise) — kontinuierliche Schwachstellen-Scans beim Schreiben</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Nachteile</div><ul class="pc-list">        <li>Keine kostenlose Stufe — kostenpflichtiges Produkt ab $20/Monat</li>
+        <li>Pro+ bei $60/Monat ist 3x der Basispreis von GitHub Copilot für gleichwertige Nutzungslevel</li>
+        <li>Cloud-Agenten und Canvases sind neue Features — Stabilität und Zuverlässigkeit noch reifend</li>
+        <li>Cursor Automations und Security Review auf Teams/Enterprise-Stufen beschränkt</li>
+        <li>Migration von VS Code erfordert Neukonfiguration von Extensions und Tastenkombinationen</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://cursor.com" target="_blank" rel="noopener">Besuchen Cursor →</a>
@@ -203,7 +210,7 @@ textarea.form-input{resize:vertical;min-height:90px}
   <div class="footer-inner">
     <div>
       <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>aitoolfit</div>
-      <p class="footer-desc">Dein KI-Tool-Finder. Täglich aktualisiert.</p>
+      <p class="footer-desc">Das beste KI-Tool-Verzeichnis. 100+ Dienste, Nachrichten und kostenlose Hilfsprogramme.</p>
     </div>
     <div>
       <div class="footer-col-title">Navigation</div>

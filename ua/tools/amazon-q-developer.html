@@ -102,6 +102,8 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/ua/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Каталог</a>
       <a href="/ua/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Порівняння</a>
       <a href="/ua/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Новини</a>
+      <a href="/ua/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Інструменти</a>
+      <a href="/ua/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Розсилка</a>
     </nav>
     <div class="lang-picker">
       <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇺🇦 UA <span style="opacity:.5;font-size:10px">▾</span></button>
@@ -114,6 +116,8 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/ua/directory.html"  class="nav-link" data-i18n="nav.directory">Каталог</a>
     <a href="/ua/compare.html"    class="nav-link" data-i18n="nav.compare">Порівняння</a>
     <a href="/ua/news.html"       class="nav-link" data-i18n="nav.news">Новини</a>
+    <a href="/ua/tools.html"      class="nav-link" data-i18n="nav.tools">Інструменти</a>
+    <a href="/ua/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Розсилка</a>
   </nav>
 </header>
 <div class="tool-page">
@@ -137,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-freemium">Freemium</span>
         <span class="tool-meta-chip">👥 1M+</span>
       </div>
-      <div class="tool-best-for"><strong>Підходить для:</strong> Розробники в екосистемі AWS</div>
+      <div class="tool-best-for"><strong>Підходить для:</strong> ШІ-кодування з інтеграцією AWS, хмарна розробка</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -146,16 +150,18 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Amazon Q Developer</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Amazon Q Developer розроблений для команд, що інтенсивно працюють з AWS. Надає контекстні підказки коду, може генерувати повні Lambda-функції та автоматично аналізує код на вразливості. Примітка: Amazon переводить користувачів на Kiro як наступника цього інструменту.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Amazon Q Developer — це ШІ-асистент для кодування від AWS, глибоко інтегрований в екосистему Amazon Web Services. Допомагає розробникам писати, налагоджувати та трансформувати код у IDE, консолі AWS, порталі документації та комунікаційних інструментах, таких як Slack і Teams.</p><p style="margin-top:1rem">Починаючи з травня 2026 року, Amazon Q Developer переживає значну трансформацію. Плагін для IDE виводиться з обігу та замінюється Kiro — новим агентним IDE, доступним на kiro.dev. Реєстрація нових плагінів для IDE заблокована з 15 травня 2026 року, а повна підтримка плагіна IDE завершується 30 квітня 2027 року. Всі інші поверхні — консоль AWS, документація, мобільний додаток та інтеграції Slack/Teams — продовжують працювати в нормальному режимі.</p><p style="margin-top:1rem">Kiro, IDE-наступник, впроваджує два ключові концепти. Специфікації перетворюють вимоги природною мовою на повні плани реалізації та робочий код, усуваючи розрив між специфікаціями продукту та програмним забезпеченням, готовим до виробництва. Хуки — це автоматизації, керовані подіями, що запускаються при діях розробника, таких як збереження файлу або git commit, і виконують такі завдання, як генерація тестів, оновлення документації або сканування безпеки автоматично.</p><p style="margin-top:1rem">Примітна виняткова можливість Kiro — доступ до Claude Opus 4.7, найпотужнішої моделі Anthropic на момент запуску. Ця модель недоступна через інші канали AWS, що робить Kiro єдиним способом отримати до неї доступ у нативному робочому процесі AWS.</p><p style="margin-top:1rem">Безкоштовний рівень Amazon Q Developer охоплює окремих розробників із щедрою безкоштовною квотою для завершення коду та чат-взаємодій. Платні рівні масштабуються для команд і підприємств із додатковим скануванням безпеки, функціями трансформації та гарантіями SLA.</p><p style="margin-top:1rem">Найкраще підходить для команд розробників, орієнтованих на AWS, які хочуть глибокої хмарної інтеграції, та для ранніх користувачів, готових мігрувати до нового робочого процесу Kiro до завершення підтримки плагіна IDE у квітні 2027 року.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Переваги</div><ul class="pc-list">        <li>Нативна інтеграція з AWS</li>
-        <li>Автоматичний аналіз безпеки</li>
-        <li>Генерація Lambda-коду</li>
-        <li>Безкоштовно в AWS Free Tier</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Недоліки</div><ul class="pc-list">        <li>Обмежений поза екосистемою AWS</li>
-        <li>Міграція до Kiro в процесі</li>
-        <li>Менш універсальний за GitHub Copilot</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Переваги</div><ul class="pc-list">        <li>Глибока інтеграція з AWS — підтримуються консоль, документація, Slack, Teams і мобільний додаток</li>
+        <li>Kiro впроваджує специфікації: від природної мови до повної реалізації автоматично</li>
+        <li>Хуки автоматизують повторювані завдання при збереженні файлів і подіях git commit</li>
+        <li>Ексклюзивний доступ до Claude Opus 4.7 через IDE Kiro</li>
+        <li>Щедрий безкоштовний рівень для окремих розробників із завершенням коду та чатом</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Недоліки</div><ul class="pc-list">        <li>Плагін для IDE виводиться з обігу — нові реєстрації заблоковано з 15 травня 2026, підтримка завершується у квітні 2027</li>
+        <li>Потрібна міграція до Kiro — існуючі робочі процеси плагіна IDE потребуватимуть доопрацювання</li>
+        <li>Менш корисний поза екосистемою AWS порівняно з GitHub Copilot або Cursor</li>
+        <li>Kiro новий і неперевірений — ризики впровадження для команд на початку 2026 року</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://aws.amazon.com/q/developer/" target="_blank" rel="noopener">Перейти на Amazon Q Developer →</a>
@@ -203,7 +209,7 @@ textarea.form-input{resize:vertical;min-height:90px}
   <div class="footer-inner">
     <div>
       <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>aitoolfit</div>
-      <p class="footer-desc">Ваш пошуковик AI-інструментів. Оновлюється щодня.</p>
+      <p class="footer-desc">Найкращий каталог ШІ-інструментів. 100+ сервісів, новини та безкоштовні утиліти.</p>
     </div>
     <div>
       <div class="footer-col-title">Навігація</div>

@@ -102,6 +102,8 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/de/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Verzeichnis</a>
       <a href="/de/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Vergleichen</a>
       <a href="/de/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Neuigkeiten</a>
+      <a href="/de/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Werkzeuge</a>
+      <a href="/de/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
       <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇩🇪 DE <span style="opacity:.5;font-size:10px">▾</span></button>
@@ -114,6 +116,8 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/de/directory.html"  class="nav-link" data-i18n="nav.directory">Verzeichnis</a>
     <a href="/de/compare.html"    class="nav-link" data-i18n="nav.compare">Vergleichen</a>
     <a href="/de/news.html"       class="nav-link" data-i18n="nav.news">Neuigkeiten</a>
+    <a href="/de/tools.html"      class="nav-link" data-i18n="nav.tools">Werkzeuge</a>
+    <a href="/de/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
 <div class="tool-page">
@@ -137,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
-      <div class="tool-best-for"><strong>Ideal für:</strong> Anspruchsvolles Schreiben, Dokumentenanalyse und sicherer Code</div>
+      <div class="tool-best-for"><strong>Ideal für:</strong> Schreiben, Coding, Analyse, lange Dokumente</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -146,16 +150,19 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Über Claude</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Claude zeichnet sich durch die Fähigkeit aus, lange Gespräche mit hoher Kohärenz zu führen, umfangreiche Dokumente zu analysieren und Text zu produzieren, der authentisch und differenziert wirkt. Mit Claude 4 Opus greifen Nutzer auf Anthropics fortschrittlichstes Modell zu, geeignet für komplexes Denken, Codierung und Analyse. Besonders geschätzt in professionellen und akademischen Umgebungen.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Claude ist Anthropics KI-Assistent, der 2026 für das stärkste Instruction-Following und die beste Reasoning-Qualität unter den großen KI-Assistenten anerkannt ist. Die neueste Version, Claude Opus 4.7, verbessert die Coding-Genauigkeit und bringt höher auflösende Vision-Verarbeitung — die Fähigkeit, detaillierte Bilder, Diagramme und Dokumente mit größerer Präzision zu analysieren — während die API-Preise unverändert bei $5 pro Million Eingabe-Tokens und $25 pro Million Ausgabe-Tokens bleiben.</p><p style="margin-top:1rem">Eine wichtige Quality-of-Life-Verbesserung 2026 ist die Verdopplung der Rate Limits über alle bezahlten Stufen hinweg: Pro-, Max-, Team- und Enterprise-Nutzer können jetzt doppelt so viele Nachrichten pro Stunde senden, und die Drosselungen zu Stoßzeiten wurden vollständig entfernt.</p><p style="margin-top:1rem">Claude Design, ein neues Produkt aus Anthropic Labs, erweitert Claudes Fähigkeiten auf visuelle Ausgaben — Nutzer können Präsentationsfolien, Design-Mockups und interaktive Prototypen direkt durch Konversation mit Claude Opus 4.7 generieren. Es ist für Pro-Plan-Abonnenten und darüber hinaus ohne zusätzliche Kosten verfügbar.</p><p style="margin-top:1rem">Die Claude Code Desktop-App wurde mit paralleler Aufgabenausführung, einer Session-Sidebar zur Verwaltung mehrerer Projekte, integriertem SSH-Support für Remote-Entwicklung und einem eingebetteten Terminal neu gestaltet. Claude Platform ist jetzt auch auf AWS verfügbar.</p><p style="margin-top:1rem">Die Preise reichen von Free (begrenzte tägliche Nachrichten) bis Pro für $20/Monat, Max für $100/Monat und Max für $200/Monat.</p><p style="margin-top:1rem">Claude ist die beste Wahl für Nutzer, die präzise, zuverlässige Antworten auf komplexe Anweisungen benötigen — technisches Schreiben, Dokumentenanalyse, Code-Review und Long-Context-Reasoning.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Vorteile</div><ul class="pc-list">        <li>Hohe Kohärenz in langen Gesprächen</li>
-        <li>Analyse umfangreicher Dokumente</li>
-        <li>Fokus auf Sicherheit und Ethik</li>
-        <li>Claude 4 Opus für komplexe Aufgaben</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Nachteile</div><ul class="pc-list">        <li>Keine native Websuche in einigen Tarifen</li>
-        <li>Weniger Drittanbieter-Integrationen als ChatGPT</li>
-        <li>Pro-Tarif ist teurer</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Vorteile</div><ul class="pc-list">        <li>Claude Opus 4.7 — bestes Instruction-Following und Long-Context-Reasoning unter den großen Assistenten</li>
+        <li>Rate Limits für Pro/Max/Team/Enterprise verdoppelt; Stoßzeiten-Drosselungen entfernt</li>
+        <li>Claude Design für Pro+-Abonnenten inklusive — Folien, Mockups und Prototypen per Konversation</li>
+        <li>Claude Code Desktop-App mit parallelen Aufgaben, Session-Sidebar, SSH-Support und integriertem Terminal</li>
+        <li>API-Preise unverändert: $5/$25 pro Million Eingabe-/Ausgabe-Tokens — vorhersehbare Kosten</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Nachteile</div><ul class="pc-list">        <li>Free-Stufe hat strenge tägliche Nachrichtenlimits — nicht praktisch für intensive tägliche Nutzung</li>
+        <li>Keine native Bildgenerierung (setzt auf Claude Design für visuelle Ausgaben)</li>
+        <li>Max-Stufen bei $100-$200/Monat sind teuer im Vergleich zu ChatGPT Plus für $20/Monat</li>
+        <li>Weniger Consumer-Funktionsbreite als ChatGPT — kein integriertes Video, Musik oder Tabellenkalkulationstools</li>
+        <li>Claude Design noch in Labs-Vorschau — nicht vollständig für alle Nutzer freigegeben</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://claude.ai" target="_blank" rel="noopener">Besuchen Claude →</a>
@@ -203,7 +210,7 @@ textarea.form-input{resize:vertical;min-height:90px}
   <div class="footer-inner">
     <div>
       <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>aitoolfit</div>
-      <p class="footer-desc">Dein KI-Tool-Finder. Täglich aktualisiert.</p>
+      <p class="footer-desc">Das beste KI-Tool-Verzeichnis. 100+ Dienste, Nachrichten und kostenlose Hilfsprogramme.</p>
     </div>
     <div>
       <div class="footer-col-title">Navigation</div>

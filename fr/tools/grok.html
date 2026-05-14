@@ -102,6 +102,8 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/fr/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Répertoire</a>
       <a href="/fr/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Comparer</a>
       <a href="/fr/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Actualités</a>
+      <a href="/fr/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Outils</a>
+      <a href="/fr/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
       <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇫🇷 FR <span style="opacity:.5;font-size:10px">▾</span></button>
@@ -114,6 +116,8 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/fr/directory.html"  class="nav-link" data-i18n="nav.directory">Répertoire</a>
     <a href="/fr/compare.html"    class="nav-link" data-i18n="nav.compare">Comparer</a>
     <a href="/fr/news.html"       class="nav-link" data-i18n="nav.news">Actualités</a>
+    <a href="/fr/tools.html"      class="nav-link" data-i18n="nav.tools">Outils</a>
+    <a href="/fr/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
 <div class="tool-page">
@@ -137,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
-      <div class="tool-best-for"><strong>Idéal pour:</strong> Recherche et analyse en temps réel avec intégration X (Twitter)</div>
+      <div class="tool-best-for"><strong>Idéal pour:</strong> Données X en temps réel, clonage vocal, raisonnement</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -146,16 +150,19 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>À propos Grok</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Développé par xAI (Elon Musk), Grok dispose d'un accès exclusif au flux de données de X (anciennement Twitter), ce qui lui permet de répondre aux questions sur les tendances actuelles et les actualités en temps réel. Avec Grok 3, le modèle a considérablement amélioré son raisonnement mathématique et scientifique. Inclut le mode Think pour les problèmes complexes et DeepSearch pour la recherche web approfondie.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Grok est l'assistant IA de xAI, étroitement intégré à X (anciennement Twitter) et disponible en tant que produit autonome sur grok.com. Grok 4.3, la version actuelle, est une mise à niveau substantielle : il prend en charge une fenêtre de contexte de 1 million de tokens, accepte la vidéo native comme entrée pour l'analyse et inclut un raisonnement étape par étape intégré sans avoir besoin de basculer vers un mode de raisonnement séparé.</p><p style="margin-top:1rem">L'API est tarifée à 1,25 $ par million de tokens d'entrée, positionnant Grok 4.3 comme une option compétitive pour les développeurs ayant besoin d'accès aux données sociales en temps réel aux côtés d'un raisonnement général solide. Les sorties structurées sont prises en charge.</p><p style="margin-top:1rem">Trois nouvelles API significatives étendent les cas d'utilisation de Grok au-delà du chat. L'API Custom Voices permet aux développeurs de cloner une voix à partir de quelques secondes d'audio et de l'utiliser pour la synthèse vocale. L'API Speech-to-Text, désormais disponible en général, ajoute des horodatages au niveau des mots et la diarisation des locuteurs. Le Mode Qualité pour la génération d'images produit des résultats de plus haute fidélité.</p><p style="margin-top:1rem">Grok reste gratuit sur X avec des limites quotidiennes. SuperGrok, l'abonnement autonome à 30 $/mois, débloque des limites d'utilisation plus élevées, l'accès à l'API et toutes les fonctionnalités avancées.</p><p style="margin-top:1rem">Le principal différenciateur reste son intégration des données X en temps réel — Grok peut afficher des publications en direct, des sujets tendance et des informations de dernière minute auxquelles aucun autre assistant IA majeur n'a accès. La contrepartie est un écosystème d'intégration tiers plus petit que ChatGPT ou Claude.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Avantages</div><ul class="pc-list">        <li>Accès en temps réel à X/Twitter</li>
-        <li>Mode Think pour le raisonnement avancé</li>
-        <li>DeepSearch pour la recherche web</li>
-        <li>Restrictions de contenu moins strictes</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Inconvénients</div><ul class="pc-list">        <li>Nécessite un abonnement X Premium</li>
-        <li>Moins précis que GPT-5.5 pour les tâches techniques</li>
-        <li>Intégration limitée hors de X</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Avantages</div><ul class="pc-list">        <li>Grok 4.3 — contexte de 1M tokens, entrée vidéo native, raisonnement intégré</li>
+        <li>Accès aux données X (Twitter) en temps réel — unique parmi tous les principaux assistants IA</li>
+        <li>API Custom Voices : clonez une voix à partir de quelques secondes d'audio</li>
+        <li>API Speech-to-Text GA avec horodatages au niveau des mots et diarisation des locuteurs</li>
+        <li>API à 1,25 $/M tokens d'entrée — tarification compétitive avec support des sorties structurées</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Inconvénients</div><ul class="pc-list">        <li>Étroitement lié à l'écosystème X/Twitter — moins utile sans contexte X</li>
+        <li>SuperGrok à 30 $/mois offre moins d'utilisation que Claude Pro ou ChatGPT Plus à des prix similaires</li>
+        <li>Écosystème d'intégration tiers plus petit que ChatGPT ou Claude</li>
+        <li>La qualité et la cohérence sur les tâches de raisonnement complexes sont inférieures à Claude Opus 4.7</li>
+        <li>Custom Voices et Mode Qualité uniquement pour API/SuperGrok — pas disponibles en niveau gratuit</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://grok.com" target="_blank" rel="noopener">Visiter Grok →</a>
@@ -203,7 +210,7 @@ textarea.form-input{resize:vertical;min-height:90px}
   <div class="footer-inner">
     <div>
       <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>aitoolfit</div>
-      <p class="footer-desc">Votre moteur de recherche d'outils IA. Mis à jour quotidiennement.</p>
+      <p class="footer-desc">Le meilleur répertoire d'outils IA. 100+ services, actualités et utilitaires gratuits.</p>
     </div>
     <div>
       <div class="footer-col-title">Navigation</div>

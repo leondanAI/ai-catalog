@@ -102,6 +102,8 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/ua/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Каталог</a>
       <a href="/ua/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Порівняння</a>
       <a href="/ua/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Новини</a>
+      <a href="/ua/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Інструменти</a>
+      <a href="/ua/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Розсилка</a>
     </nav>
     <div class="lang-picker">
       <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇺🇦 UA <span style="opacity:.5;font-size:10px">▾</span></button>
@@ -114,6 +116,8 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/ua/directory.html"  class="nav-link" data-i18n="nav.directory">Каталог</a>
     <a href="/ua/compare.html"    class="nav-link" data-i18n="nav.compare">Порівняння</a>
     <a href="/ua/news.html"       class="nav-link" data-i18n="nav.news">Новини</a>
+    <a href="/ua/tools.html"      class="nav-link" data-i18n="nav.tools">Інструменти</a>
+    <a href="/ua/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Розсилка</a>
   </nav>
 </header>
 <div class="tool-page">
@@ -137,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-paid">Платно</span>
         <span class="tool-meta-chip">👥 1M+</span>
       </div>
-      <div class="tool-best-for"><strong>Підходить для:</strong> Розробка ПЗ з підтримкою AI у нативному редакторі</div>
+      <div class="tool-best-for"><strong>Підходить для:</strong> ШІ-кодування, мульти-репозиторій, хмарні агенти, перевірка безпеки</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -146,16 +150,19 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Cursor</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Cursor виходить за межі автодоповнення: можна описати зміни природною мовою і редактор застосує їх безпосередньо в коді. У режимі Composer можна створювати цілі файли або рефакторити кілька файлів одночасно. Підтримує провідні AI-моделі (GPT-4, Claude тощо) і став улюбленим інструментом багатьох розробників для прискорення розробки. Сумісний з розширеннями VS Code.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Cursor — це редактор коду, орієнтований на ШІ, побудований на VS Code, розроблений для того, щоб зробити ШІ-допомогу основним інтерфейсом для розробки програмного забезпечення, а не плагіном, нашарованим поверх. Cursor 3, поточний основний випуск, представляє суттєве архітектурне розширення від однофайлового редактора до повноцінної платформи розробки.</p><p style="margin-top:1rem">Центральним елементом Cursor 3 є уніфікований мульти-репозиторій workspace: розробники можуть відкривати та переміщатися по кількох репозиторіях одночасно, при цьому ШІ-агент зберігає контекст по всіх них. Хмарні агенти працюють паралельно на виділених віртуальних машинах, кожен здатний виконувати тривалі завдання автономно, записуючи свою роботу за допомогою відео та журналів для перевірки.</p><p style="margin-top:1rem">Canvases — новий шар візуального виводу: агенти можуть виробляти зведення перегляду PR, діаграми архітектури, панелі тестів та інші структуровані візуальні артефакти безпосередньо у workspace Cursor. Cursor Automations дозволяє запускати завдання з повідомлень Slack, запланованих таймерів або конкретних подій кодової бази.</p><p style="margin-top:1rem">Security Review, доступна в рівнях Teams та Enterprise, — це завжди активний сканер вразливостей, що працює безперервно у фоновому режимі та показує проблеми безпеки під час написання коду.</p><p style="margin-top:1rem">Ціноутворення використовує модель кредитів використання: Pro за $20/місяць охоплює стандартне використання, Pro+ за $60/місяць надає 3-кратні ліміти для інтенсивних користувачів. Безкоштовного рівня немає — Cursor є платним продуктом з першого дня.</p><p style="margin-top:1rem">Cursor — найкращий вибір для професійних розробників та інженерних команд, які хочуть глибоко інтегрований ШІ у весь робочий процес розробки — написання, перевірка, тестування та розгортання.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Переваги</div><ul class="pc-list">        <li>AI нативно інтегрований в редактор</li>
-        <li>Режим Composer для змін у кількох файлах</li>
-        <li>Сумісний з розширеннями VS Code</li>
-        <li>Підтримує кілька AI-моделей</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Недоліки</div><ul class="pc-list">        <li>Безкоштовна версія з обмеженнями використання</li>
-        <li>Може пропонувати хибний код без достатнього контексту</li>
-        <li>Потрібен хороший опис проблеми</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Переваги</div><ul class="pc-list">        <li>Уніфікований мульти-репозиторій workspace — ШІ зберігає контекст по кількох репозиторіях одночасно</li>
+        <li>Хмарні агенти, що працюють паралельно на виділених VM з відео/журналами для асинхронної перевірки</li>
+        <li>Функція Canvases: агенти виробляють візуальні результати — огляди PR, панелі, діаграми архітектури</li>
+        <li>Cursor Automations: запускайте агентів з Slack, таймерів або подій кодової бази</li>
+        <li>Постійна Security Review (Teams/Enterprise) — безперервне сканування вразливостей під час написання коду</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Недоліки</div><ul class="pc-list">        <li>Без безкоштовного рівня — платний продукт з першого дня, починаючи з $20/місяць</li>
+        <li>Pro+ за $60/місяць — у 3 рази більше базової ціни GitHub Copilot для еквівалентних рівнів використання</li>
+        <li>Хмарні агенти та Canvases — нові функції, стабільність та надійність ще формуються</li>
+        <li>Cursor Automations та Security Review обмежені рівнями Teams/Enterprise</li>
+        <li>Міграція з VS Code вимагає перелаштування розширень та комбінацій клавіш</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://cursor.com" target="_blank" rel="noopener">Перейти на Cursor →</a>
@@ -203,7 +210,7 @@ textarea.form-input{resize:vertical;min-height:90px}
   <div class="footer-inner">
     <div>
       <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>aitoolfit</div>
-      <p class="footer-desc">Ваш пошуковик AI-інструментів. Оновлюється щодня.</p>
+      <p class="footer-desc">Найкращий каталог ШІ-інструментів. 100+ сервісів, новини та безкоштовні утиліти.</p>
     </div>
     <div>
       <div class="footer-col-title">Навігація</div>

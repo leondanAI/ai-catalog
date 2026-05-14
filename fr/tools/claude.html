@@ -102,6 +102,8 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/fr/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Répertoire</a>
       <a href="/fr/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Comparer</a>
       <a href="/fr/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Actualités</a>
+      <a href="/fr/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Outils</a>
+      <a href="/fr/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
       <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇫🇷 FR <span style="opacity:.5;font-size:10px">▾</span></button>
@@ -114,6 +116,8 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/fr/directory.html"  class="nav-link" data-i18n="nav.directory">Répertoire</a>
     <a href="/fr/compare.html"    class="nav-link" data-i18n="nav.compare">Comparer</a>
     <a href="/fr/news.html"       class="nav-link" data-i18n="nav.news">Actualités</a>
+    <a href="/fr/tools.html"      class="nav-link" data-i18n="nav.tools">Outils</a>
+    <a href="/fr/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
 <div class="tool-page">
@@ -137,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
-      <div class="tool-best-for"><strong>Idéal pour:</strong> Rédaction avancée, analyse de documents et code sécurisé</div>
+      <div class="tool-best-for"><strong>Idéal pour:</strong> Rédaction, codage, analyse, documents longs</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -146,16 +150,19 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>À propos Claude</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Claude se distingue par sa capacité à maintenir des conversations longues avec une grande cohérence, analyser des documents volumineux et produire un texte qui semble authentique et nuancé. Avec Claude 4 Opus, les utilisateurs accèdent au modèle le plus avancé d'Anthropic, capable de tâches complexes de raisonnement, codage et analyse. Particulièrement apprécié dans les environnements professionnels et académiques.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Claude est l'assistant IA d'Anthropic, reconnu en 2026 pour le meilleur suivi des instructions et la meilleure qualité de raisonnement parmi les principaux assistants IA. La dernière version, Claude Opus 4.7, améliore la précision du codage et apporte un traitement visuel haute résolution — la capacité d'analyser des images détaillées, des diagrammes et des documents avec une plus grande précision — tout en maintenant les tarifs API inchangés à 5 $ par million de tokens d'entrée et 25 $ par million de tokens de sortie.</p><p style="margin-top:1rem">Une amélioration majeure de la qualité de vie en 2026 est le doublement des limites de débit pour tous les niveaux payants : les utilisateurs Pro, Max, Team et Enterprise peuvent désormais envoyer deux fois plus de messages par heure, et les réductions de débit aux heures de pointe ont été entièrement supprimées.</p><p style="margin-top:1rem">Claude Design, un nouveau produit d'Anthropic Labs, étend les capacités de Claude aux sorties visuelles — les utilisateurs peuvent générer des diapositives de présentation, des maquettes de design et des prototypes interactifs directement par conversation avec Claude Opus 4.7. Disponible pour les abonnés au plan Pro et au-delà sans coût supplémentaire.</p><p style="margin-top:1rem">L'application de bureau Claude Code a été redessinée avec l'exécution de tâches en parallèle, une barre latérale de sessions pour gérer plusieurs projets, le support SSH intégré pour le développement à distance et un terminal intégré. Claude Platform est désormais également disponible sur AWS.</p><p style="margin-top:1rem">Les tarifs vont de Gratuit (messages quotidiens limités) à Pro à 20 $/mois, Max à 100 $/mois et Max à 200 $/mois.</p><p style="margin-top:1rem">Claude est le meilleur choix pour les utilisateurs ayant besoin de réponses précises et fiables à des instructions complexes — rédaction technique, analyse de documents, révision de code et raisonnement à contexte long.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Avantages</div><ul class="pc-list">        <li>Grande cohérence dans les longues conversations</li>
-        <li>Analyse de documents volumineux</li>
-        <li>Accent sur la sécurité et l'éthique</li>
-        <li>Claude 4 Opus pour les tâches complexes</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Inconvénients</div><ul class="pc-list">        <li>Pas de recherche web native dans certains abonnements</li>
-        <li>Moins d'intégrations tierces que ChatGPT</li>
-        <li>L'abonnement Pro est plus cher</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Avantages</div><ul class="pc-list">        <li>Claude Opus 4.7 — meilleur suivi des instructions et raisonnement à contexte long parmi les principaux assistants</li>
+        <li>Limites de débit doublées pour Pro/Max/Team/Enterprise ; réductions aux heures de pointe supprimées</li>
+        <li>Claude Design inclus pour les abonnés Pro+ — générez diapositives, maquettes et prototypes par conversation</li>
+        <li>Application de bureau Claude Code avec tâches parallèles, barre latérale de sessions, support SSH et terminal intégré</li>
+        <li>Tarifs API inchangés : 5 $/25 $ par million de tokens d'entrée/sortie — coûts prévisibles</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Inconvénients</div><ul class="pc-list">        <li>Le niveau gratuit a des limites strictes de messages quotidiens — peu pratique pour une utilisation intensive</li>
+        <li>Pas de génération d'images native (repose sur Claude Design pour les sorties visuelles)</li>
+        <li>Les niveaux Max à 100-200 $/mois sont coûteux par rapport à ChatGPT Plus à 20 $/mois</li>
+        <li>Moins de fonctionnalités grand public que ChatGPT — pas de vidéo, musique ou outils de tableur intégrés</li>
+        <li>Claude Design encore en aperçu Labs — pas entièrement disponible pour tous les utilisateurs</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://claude.ai" target="_blank" rel="noopener">Visiter Claude →</a>
@@ -203,7 +210,7 @@ textarea.form-input{resize:vertical;min-height:90px}
   <div class="footer-inner">
     <div>
       <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>aitoolfit</div>
-      <p class="footer-desc">Votre moteur de recherche d'outils IA. Mis à jour quotidiennement.</p>
+      <p class="footer-desc">Le meilleur répertoire d'outils IA. 100+ services, actualités et utilitaires gratuits.</p>
     </div>
     <div>
       <div class="footer-col-title">Navigation</div>

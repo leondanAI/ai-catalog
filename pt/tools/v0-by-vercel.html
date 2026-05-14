@@ -102,6 +102,8 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/pt/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Diretório</a>
       <a href="/pt/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Comparar</a>
       <a href="/pt/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Notícias</a>
+      <a href="/pt/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Ferramentas</a>
+      <a href="/pt/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
       <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇧🇷 PT <span style="opacity:.5;font-size:10px">▾</span></button>
@@ -114,6 +116,8 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/pt/directory.html"  class="nav-link" data-i18n="nav.directory">Diretório</a>
     <a href="/pt/compare.html"    class="nav-link" data-i18n="nav.compare">Comparar</a>
     <a href="/pt/news.html"       class="nav-link" data-i18n="nav.news">Notícias</a>
+    <a href="/pt/tools.html"      class="nav-link" data-i18n="nav.tools">Ferramentas</a>
+    <a href="/pt/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
 <div class="tool-page">
@@ -137,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-freemium">Freemium</span>
         <span class="tool-meta-chip">👥 6M+</span>
       </div>
-      <div class="tool-best-for"><strong>Ideal para:</strong> Geração rápida de componentes de UI com React</div>
+      <div class="tool-best-for"><strong>Ideal para:</strong> Desenvolvimento full-stack com IA, geração de UI, implantação</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -146,16 +150,18 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Sobre V0 by Vercel</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">O v0 é voltado para desenvolvedores frontend e designers que querem criar protótipos de interfaces rapidamente. O modelo gera código React pronto para copiar, usando Shadcn/UI e Tailwind CSS. Você pode descrever o componente em linguagem natural, ver uma prévia em tempo real e iterar com novas instruções. Integra-se diretamente ao ecossistema Vercel para implantações rápidas.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">V0 é a plataforma de desenvolvimento de IA da Vercel, originalmente lançada como geradora de componentes de UI e agora evoluída para um ambiente de desenvolvimento full-stack completo. No início de 2026, o V0 migrou de v0.dev para v0.app, refletindo seu escopo ampliado além dos componentes individuais.</p><p style="margin-top:1rem">A atualização de fevereiro de 2026 foi transformadora. O V0 ganhou integração Git que permite criar um novo branch por sessão de chat e abrir pull requests diretamente contra o branch principal de qualquer repositório conectado — transformando conversas com IA em alterações de código rastreáveis em projetos existentes. O editor foi reconstruído com uma interface estilo VS Code com navegação em árvore de arquivos, realce de sintaxe e edição de múltiplos arquivos.</p><p style="margin-top:1rem">A conectividade de banco de dados foi expandida para incluir fontes de dados Snowflake e AWS ao lado do suporte existente ao Vercel Postgres. O recurso de sandbox de produção permite importar qualquer repositório do GitHub e executá-lo como um ambiente ao vivo e editável.</p><p style="margin-top:1rem">Fluxos de trabalho agentivos agora são implantáveis na infraestrutura da Vercel, permitindo que pipelines de automação geradas pelo V0 funcionem como funções serverless ou edge workers.</p><p style="margin-top:1rem">O preço mudou de um modelo mensal baseado em créditos para cobrança por tokens, onde o custo escala com a complexidade de cada geração. Prompts simples custam menos; mudanças arquiteturais em múltiplos arquivos custam mais. Um nível gratuito com tokens limitados permanece disponível.</p><p style="margin-top:1rem">Ideal para desenvolvedores frontend e full-stack que desejam ir de uma ideia a um aplicativo implantado com boilerplate mínimo, e para equipes que querem alterações de código assistidas por IA rastreadas em seu fluxo Git existente.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Vantagens</div><ul class="pc-list">        <li>Gerador de código React funcional</li>
-        <li>Prévia em tempo real</li>
-        <li>Integração com Vercel</li>
-        <li>Usa Shadcn/UI e Tailwind</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Desvantagens</div><ul class="pc-list">        <li>Limitado a componentes React/Next.js</li>
-        <li>Créditos gratuitos limitados</li>
-        <li>Revisão manual do código necessária</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Vantagens</div><ul class="pc-list">        <li>Integração Git: cria branches por chat e abre PRs contra main — se encaixa nos fluxos existentes</li>
+        <li>Editor estilo VS Code com árvore de arquivos e edição de múltiplos arquivos — não apenas fragmentos de componentes</li>
+        <li>O sandbox de produção importa qualquer repositório do GitHub como ambiente ao vivo e editável</li>
+        <li>Implanta fluxos agentivos na infraestrutura Vercel como funções serverless ou edge</li>
+        <li>Conectividade com Snowflake, AWS e Vercel Postgres integrada</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Desvantagens</div><ul class="pc-list">        <li>O preço por tokens torna o custo imprevisível para gerações complexas de múltiplos arquivos</li>
+        <li>O domínio mudou de v0.dev para v0.app — favoritos e links existentes precisam ser atualizados</li>
+        <li>Ainda principalmente orientado ao ecossistema Vercel — menos útil ao implantar em AWS ou outros hosts</li>
+        <li>Curva de aprendizado para os novos recursos de fluxo agentivo em comparação à UI original simples</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://v0.app" target="_blank" rel="noopener">Visitar V0 by Vercel →</a>
@@ -203,7 +209,7 @@ textarea.form-input{resize:vertical;min-height:90px}
   <div class="footer-inner">
     <div>
       <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>aitoolfit</div>
-      <p class="footer-desc">Seu buscador de ferramentas IA. Atualizado diariamente.</p>
+      <p class="footer-desc">O melhor diretório de ferramentas de IA. 100+ serviços, notícias e utilitários gratuitos.</p>
     </div>
     <div>
       <div class="footer-col-title">Navegação</div>

@@ -102,6 +102,8 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/ua/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Каталог</a>
       <a href="/ua/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Порівняння</a>
       <a href="/ua/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Новини</a>
+      <a href="/ua/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Інструменти</a>
+      <a href="/ua/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Розсилка</a>
     </nav>
     <div class="lang-picker">
       <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇺🇦 UA <span style="opacity:.5;font-size:10px">▾</span></button>
@@ -114,6 +116,8 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/ua/directory.html"  class="nav-link" data-i18n="nav.directory">Каталог</a>
     <a href="/ua/compare.html"    class="nav-link" data-i18n="nav.compare">Порівняння</a>
     <a href="/ua/news.html"       class="nav-link" data-i18n="nav.news">Новини</a>
+    <a href="/ua/tools.html"      class="nav-link" data-i18n="nav.tools">Інструменти</a>
+    <a href="/ua/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Розсилка</a>
   </nav>
 </header>
 <div class="tool-page">
@@ -137,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-freemium">Freemium</span>
         <span class="tool-meta-chip">👥 6M+</span>
       </div>
-      <div class="tool-best-for"><strong>Підходить для:</strong> Швидка генерація UI-компонентів на React</div>
+      <div class="tool-best-for"><strong>Підходить для:</strong> Full-stack розробка з ШІ, генерація UI, розгортання</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -146,16 +150,18 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Про сервіс V0 by Vercel</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">v0 орієнтований на фронтенд-розробників і дизайнерів, які хочуть швидко прототипувати інтерфейси. Модель генерує готовий для копіювання React-код з використанням Shadcn/UI і Tailwind CSS. Можна описати компонент природною мовою, побачити превʼю в реальному часі та ітерувати з новими інструкціями. Інтегрується безпосередньо з екосистемою Vercel для швидких деплойментів.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">V0 — це платформа розробки ШІ від Vercel, спочатку запущена як генератор UI-компонентів, а тепер еволюціонувала до повноцінного середовища full-stack розробки. На початку 2026 року V0 перейшов з v0.dev на v0.app, відображаючи розширений охоплення за межі окремих компонентів.</p><p style="margin-top:1rem">Оновлення лютого 2026 року було трансформаційним. V0 отримав інтеграцію з Git, яка дозволяє створювати нову гілку за кожну чат-сесію та відкривати pull requests безпосередньо проти головної гілки будь-якого підключеного репозиторію — перетворюючи розмови зі ШІ на відстежувані зміни коду в існуючих проєктах. Редактор був перебудований до інтерфейсу у стилі VS Code з навігацією по дереву файлів, підсвічуванням синтаксису та редагуванням кількох файлів.</p><p style="margin-top:1rem">Підключення до баз даних розширилося до включення джерел даних Snowflake та AWS поряд із наявною підтримкою Vercel Postgres. Функція виробничого пісочниці дозволяє імпортувати будь-який репозиторій GitHub і запускати його як живе, редаговане середовище.</p><p style="margin-top:1rem">Агентні робочі процеси тепер можна розгортати на інфраструктурі Vercel, дозволяючи конвеєрам автоматизації, згенерованим V0, працювати як безсерверні функції або крайові воркери.</p><p style="margin-top:1rem">Ціноутворення змінилося з щомісячної моделі на основі кредитів на виставлення рахунків за токени, де вартість масштабується зі складністю кожної генерації. Простіші промпти коштують менше; архітектурні зміни кількох файлів коштують більше. Безкоштовний рівень з обмеженими токенами залишається доступним.</p><p style="margin-top:1rem">Найкраще підходить для frontend і full-stack розробників, які хочуть перейти від ідеї до розгорнутого додатку з мінімальним boilerplate, та для команд, що хочуть змінювати код з допомогою ШІ в рамках наявного Git-процесу.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Переваги</div><ul class="pc-list">        <li>Функціональний генератор React-коду</li>
-        <li>Превʼю в реальному часі</li>
-        <li>Інтеграція з Vercel</li>
-        <li>Використовує Shadcn/UI і Tailwind</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Недоліки</div><ul class="pc-list">        <li>Обмежено компонентами React/Next.js</li>
-        <li>Обмежені безкоштовні кредити</li>
-        <li>Потрібна ручна перевірка коду</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Переваги</div><ul class="pc-list">        <li>Інтеграція Git: створює гілки за чатом і відкриває PRs проти main — вписується в існуючі процеси</li>
+        <li>Редактор у стилі VS Code з деревом файлів і редагуванням кількох файлів — не лише фрагменти компонентів</li>
+        <li>Виробнича пісочниця імпортує будь-який репозиторій GitHub як живе, редаговане середовище</li>
+        <li>Розгортає агентні процеси на інфраструктурі Vercel як безсерверні або крайові функції</li>
+        <li>Підключення до Snowflake, AWS та Vercel Postgres вбудовано</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Недоліки</div><ul class="pc-list">        <li>Ціноутворення за токенами робить вартість непередбачуваною для складних генерацій кількох файлів</li>
+        <li>Домен змінився з v0.dev на v0.app — існуючі закладки та посилання потрібно оновити</li>
+        <li>Досі переважно орієнтований на екосистему Vercel — менш корисний при розгортанні на AWS або інших хостах</li>
+        <li>Крива навчання для нових агентних функцій порівняно з оригінальним простим UI</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://v0.app" target="_blank" rel="noopener">Перейти на V0 by Vercel →</a>
@@ -203,7 +209,7 @@ textarea.form-input{resize:vertical;min-height:90px}
   <div class="footer-inner">
     <div>
       <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>aitoolfit</div>
-      <p class="footer-desc">Ваш пошуковик AI-інструментів. Оновлюється щодня.</p>
+      <p class="footer-desc">Найкращий каталог ШІ-інструментів. 100+ сервісів, новини та безкоштовні утиліти.</p>
     </div>
     <div>
       <div class="footer-col-title">Навігація</div>

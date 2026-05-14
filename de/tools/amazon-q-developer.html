@@ -102,6 +102,8 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/de/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Verzeichnis</a>
       <a href="/de/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Vergleichen</a>
       <a href="/de/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Neuigkeiten</a>
+      <a href="/de/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Werkzeuge</a>
+      <a href="/de/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
       <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇩🇪 DE <span style="opacity:.5;font-size:10px">▾</span></button>
@@ -114,6 +116,8 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/de/directory.html"  class="nav-link" data-i18n="nav.directory">Verzeichnis</a>
     <a href="/de/compare.html"    class="nav-link" data-i18n="nav.compare">Vergleichen</a>
     <a href="/de/news.html"       class="nav-link" data-i18n="nav.news">Neuigkeiten</a>
+    <a href="/de/tools.html"      class="nav-link" data-i18n="nav.tools">Werkzeuge</a>
+    <a href="/de/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
 <div class="tool-page">
@@ -137,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-freemium">Freemium</span>
         <span class="tool-meta-chip">👥 1M+</span>
       </div>
-      <div class="tool-best-for"><strong>Ideal für:</strong> Entwickler im AWS-Ökosystem</div>
+      <div class="tool-best-for"><strong>Ideal für:</strong> AWS-integriertes KI-Coding, Cloud-Entwicklung</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -146,16 +150,18 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Über Amazon Q Developer</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Amazon Q Developer wurde für Teams entwickelt, die intensiv mit AWS arbeiten. Er liefert kontextbezogene Code-Vorschläge, kann vollständige Lambda-Funktionen generieren und analysiert Code automatisch auf Sicherheitslücken. Hinweis: Amazon migriert Nutzer zu Kiro als Nachfolger dieses Tools.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Amazon Q Developer ist Amazons KI-gestützter Coding-Assistent, der tief in das AWS-Ökosystem integriert ist. Er hilft Entwicklern, Code in ihrer IDE, der AWS-Konsole, dem Dokumentationsportal und Kommunikationstools wie Slack und Teams zu schreiben, zu debuggen und zu transformieren.</p><p style="margin-top:1rem">Ab Mai 2026 durchläuft Amazon Q Developer einen bedeutenden Wandel. Das IDE-Plugin wird eingestellt und durch Kiro ersetzt — eine neue agentische IDE, verfügbar unter kiro.dev. Neue IDE-Plugin-Registrierungen werden ab dem 15. Mai 2026 gesperrt, und der vollständige IDE-Plugin-Support endet am 30. April 2027. Alle anderen Oberflächen — AWS-Konsole, Dokumentation, mobile App sowie Slack/Teams-Integrationen — laufen weiterhin normal und sind von dieser Änderung nicht betroffen.</p><p style="margin-top:1rem">Kiro, die Nachfolge-IDE, führt zwei Schlüsselkonzepte ein. Spezifikationen wandeln Anforderungen in natürlicher Sprache in vollständige Implementierungspläne und funktionierenden Code um, und überbrücken so die Lücke zwischen Produktspezifikationen und produktionsreifer Software. Hooks sind ereignisgesteuerte Automatisierungen, die bei Entwickleraktionen wie Dateispeichern oder Git-Commits ausgelöst werden und Aufgaben wie Testgenerierung, Dokumentationsupdates oder Sicherheitsscans automatisch ausführen.</p><p style="margin-top:1rem">Eine bemerkenswerte Fähigkeit, die exklusiv für Kiro ist, ist der Zugriff auf Claude Opus 4.7, Anthropics leistungsstärkstes Modell zum Zeitpunkt des Launches. Dieses Modell ist über keine anderen AWS-Kanäle verfügbar, was Kiro zum einzigen Weg macht, um darauf innerhalb eines AWS-nativen Workflows zuzugreifen.</p><p style="margin-top:1rem">Die kostenlose Stufe von Amazon Q Developer deckt einzelne Entwickler mit einem großzügigen kostenlosen Kontingent für Code-Vervollständigungen und Chat-Interaktionen ab. Bezahlte Stufen skalieren für Teams und Unternehmen mit zusätzlichen Sicherheitsscans, Transformationsfunktionen und SLA-Garantien.</p><p style="margin-top:1rem">Am besten geeignet für AWS-orientierte Entwicklungsteams, die eine tiefe Cloud-Integration wünschen, und für Frühanwender, die bereit sind, vor dem IDE-Plugin-Sunset im April 2027 zum neuen Kiro-Spezifikations-Workflow zu migrieren.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Vorteile</div><ul class="pc-list">        <li>Native AWS-Integration</li>
-        <li>Automatische Sicherheitsanalyse</li>
-        <li>Lambda-Code-Generierung</li>
-        <li>Kostenlos im AWS Free Tier</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Nachteile</div><ul class="pc-list">        <li>Eingeschränkt außerhalb von AWS</li>
-        <li>Migration zu Kiro im Gange</li>
-        <li>Weniger vielseitig als GitHub Copilot</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Vorteile</div><ul class="pc-list">        <li>Tiefe AWS-Integration — Konsole, Dokumentation, Slack, Teams und mobile App werden unterstützt</li>
+        <li>Kiro führt Spezifikationen ein: von natürlicher Sprache zur vollständigen Implementierung automatisch</li>
+        <li>Hooks automatisieren repetitive Aufgaben bei Dateispeichern und Git-Commit-Ereignissen</li>
+        <li>Exklusiver Zugriff auf Claude Opus 4.7 über die Kiro-IDE</li>
+        <li>Großzügige kostenlose Stufe für einzelne Entwickler mit Code-Vervollständigungen und Chat</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Nachteile</div><ul class="pc-list">        <li>IDE-Plugin wird eingestellt — neue Registrierungen gesperrt ab 15. Mai 2026, Support endet April 2027</li>
+        <li>Migration zu Kiro erforderlich — bestehende IDE-Plugin-Workflows müssen überarbeitet werden</li>
+        <li>Weniger nützlich außerhalb des AWS-Ökosystems als GitHub Copilot oder Cursor</li>
+        <li>Kiro ist neu und unerpropbt — Adoptionsrisiken für Teams Anfang 2026</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://aws.amazon.com/q/developer/" target="_blank" rel="noopener">Besuchen Amazon Q Developer →</a>
@@ -203,7 +209,7 @@ textarea.form-input{resize:vertical;min-height:90px}
   <div class="footer-inner">
     <div>
       <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>aitoolfit</div>
-      <p class="footer-desc">Dein KI-Tool-Finder. Täglich aktualisiert.</p>
+      <p class="footer-desc">Das beste KI-Tool-Verzeichnis. 100+ Dienste, Nachrichten und kostenlose Hilfsprogramme.</p>
     </div>
     <div>
       <div class="footer-col-title">Navigation</div>

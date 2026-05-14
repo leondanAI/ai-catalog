@@ -102,6 +102,8 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/es/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Directorio</a>
       <a href="/es/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Comparar</a>
       <a href="/es/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Noticias</a>
+      <a href="/es/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Herramientas</a>
+      <a href="/es/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Boletín</a>
     </nav>
     <div class="lang-picker">
       <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇪🇸 ES <span style="opacity:.5;font-size:10px">▾</span></button>
@@ -114,6 +116,8 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/es/directory.html"  class="nav-link" data-i18n="nav.directory">Directorio</a>
     <a href="/es/compare.html"    class="nav-link" data-i18n="nav.compare">Comparar</a>
     <a href="/es/news.html"       class="nav-link" data-i18n="nav.news">Noticias</a>
+    <a href="/es/tools.html"      class="nav-link" data-i18n="nav.tools">Herramientas</a>
+    <a href="/es/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Boletín</a>
   </nav>
 </header>
 <div class="tool-page">
@@ -137,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-free">Gratis</span>
         <span class="tool-meta-chip">👥 96M+</span>
       </div>
-      <div class="tool-best-for"><strong>Ideal para:</strong> Razonamiento avanzado y tareas técnicas con modelo de código abierto</div>
+      <div class="tool-best-for"><strong>Ideal para:</strong> Razonamiento open-source, contexto largo, API de bajo costo</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -146,16 +150,19 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Acerca de DeepSeek</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">DeepSeek R1 y sus variantes han sorprendido a la comunidad de IA por ofrecer rendimiento comparable a modelos como GPT-4o y Claude 3.5, pero de forma gratuita y con código abierto. Es especialmente fuerte en matemáticas, ciencias y programación. Al ser open source, puede ejecutarse localmente o desplegarse en infraestructura propia, lo que lo hace atractivo para empresas con requisitos de privacidad. La versión API es significativamente más barata que sus competidores.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">DeepSeek es un laboratorio de IA chino que ha construido una reputación por lanzar modelos open-source de calidad frontera a un costo notablemente bajo. DeepSeek V4 Preview, lanzado el 24 de abril de 2026, viene en dos variantes: V4-Pro con 1,6 billones de parámetros totales (49.000 millones activos) y V4-Flash con 284.000 millones de parámetros (13.000 millones activos). Ambos soportan una ventana de contexto de 1 millón de tokens.</p><p style="margin-top:1rem">La innovación arquitectónica de V4 es el sistema de Atención Híbrida, que combina Atención Dispersa Comprimida (CSA) y Agregación de Contexto Jerárquica (HCA). En un contexto de 1 millón de tokens, V4-Pro usa solo el 27% de los FLOPs requeridos por DeepSeek V3.2 — una mejora de eficiencia dramática que hace las tareas de contexto largo económicamente viables a escala.</p><p style="margin-top:1rem">Tres modos de esfuerzo de razonamiento — ligero, estándar y profundo — permiten a los usuarios equilibrar la velocidad de respuesta con la profundidad del razonamiento. El modo ligero es rápido y adecuado para tareas sencillas; el modo profundo activa un razonamiento extendido de cadena de pensamiento para problemas complejos de múltiples pasos.</p><p style="margin-top:1rem">El pricing es agresivo: V4-Flash cuesta $0,14 por millón de tokens de entrada y $0,28 por millón de tokens de salida. V4-Pro cuesta $0,145 por millón de tokens de entrada y $3,48 por millón de tokens de salida. Ambos modelos son open-source y pueden ser auto-alojados, haciendo de DeepSeek la opción más rentable para equipos que ejecutan inferencia de alto volumen o necesitan despliegue local para privacidad de datos.</p><p style="margin-top:1rem">La interfaz de chat web en chat.deepseek.com es gratuita sin necesidad de cuenta para acceso básico. La principal limitación comparada con ChatGPT o Claude es el ecosistema: sin modo de voz, sin generación de imágenes, sin integraciones nativas de apps. DeepSeek es primero una herramienta de desarrolladores e investigadores.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Ventajas</div><ul class="pc-list">        <li>Código abierto y gratuito</li>
-        <li>Excelente en matemáticas y codificación</li>
-        <li>API muy económica</li>
-        <li>Puede ejecutarse localmente</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Desventajas</div><ul class="pc-list">        <li>Preocupaciones de privacidad — datos en servidores chinos</li>
-        <li>Interfaz menos pulida que ChatGPT</li>
-        <li>Actualizaciones menos frecuentes</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Ventajas</div><ul class="pc-list">        <li>V4-Pro: 1,6B de parámetros, 49B activos, contexto de 1M tokens — rendimiento de frontera a precios open-source</li>
+        <li>Atención Híbrida (CSA + HCA) — V4-Pro usa solo el 27% de FLOPs vs V3.2 en contexto de 1M tokens</li>
+        <li>Tres modos de esfuerzo de razonamiento (ligero/estándar/profundo) — ajusta velocidad vs profundidad por solicitud</li>
+        <li>API V4-Flash a $0,14/$0,28 por millón de tokens — entre los modelos de calidad frontera más económicos</li>
+        <li>Completamente open-source — auto-alojable para privacidad de datos y despliegue local</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Desventajas</div><ul class="pc-list">        <li>Sin modo de voz, generación de imágenes o integraciones de apps de consumidor</li>
+        <li>Interfaz web menos pulida que ChatGPT o Claude — producto orientado al desarrollador</li>
+        <li>Preocupaciones de privacidad de datos para usuarios que no pueden auto-alojar (empresa china)</li>
+        <li>La salida de V4-Pro a $3,48/M de tokens es cara para cargas de trabajo de salida de alto volumen</li>
+        <li>Ecosistema y soporte de plugins significativamente más pequeño que OpenAI o Anthropic</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://chat.deepseek.com" target="_blank" rel="noopener">Visitar DeepSeek →</a>
@@ -203,7 +210,7 @@ textarea.form-input{resize:vertical;min-height:90px}
   <div class="footer-inner">
     <div>
       <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>aitoolfit</div>
-      <p class="footer-desc">Tu buscador de herramientas IA. Actualizado cada día.</p>
+      <p class="footer-desc">El mejor catálogo de herramientas IA. 100+ servicios, noticias y utilidades gratuitas.</p>
     </div>
     <div>
       <div class="footer-col-title">Navegación</div>

@@ -102,6 +102,8 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/ua/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Каталог</a>
       <a href="/ua/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Порівняння</a>
       <a href="/ua/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Новини</a>
+      <a href="/ua/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Інструменти</a>
+      <a href="/ua/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Розсилка</a>
     </nav>
     <div class="lang-picker">
       <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇺🇦 UA <span style="opacity:.5;font-size:10px">▾</span></button>
@@ -114,6 +116,8 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/ua/directory.html"  class="nav-link" data-i18n="nav.directory">Каталог</a>
     <a href="/ua/compare.html"    class="nav-link" data-i18n="nav.compare">Порівняння</a>
     <a href="/ua/news.html"       class="nav-link" data-i18n="nav.news">Новини</a>
+    <a href="/ua/tools.html"      class="nav-link" data-i18n="nav.tools">Інструменти</a>
+    <a href="/ua/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Розсилка</a>
   </nav>
 </header>
 <div class="tool-page">
@@ -137,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
-      <div class="tool-best-for"><strong>Підходить для:</strong> Складне написання текстів, аналіз документів і безпечний код</div>
+      <div class="tool-best-for"><strong>Підходить для:</strong> Письмо, кодування, аналіз, довгі документи</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -146,16 +150,19 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Claude</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Claude вирізняється здатністю підтримувати довгі розмови з високою зв'язністю, аналізувати великі документи та створювати текст, що звучить автентично і нюансовано. З Claude 4 Opus користувачі отримують доступ до найсучаснішої моделі Anthropic для складних завдань міркування, кодування та аналізу. Особливо цінується в професійних та академічних середовищах.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Claude — ШІ-асистент від Anthropic, визнаний у 2026 році за найкраще дотримання інструкцій та якість міркувань серед провідних ШІ-асистентів. Остання версія, Claude Opus 4.7, покращує точність кодування та забезпечує обробку зображень вищої роздільної здатності — здатність аналізувати детальні зображення, діаграми та документи з більшою точністю — при незмінних цінах API у $5 за мільйон вхідних токенів та $25 за мільйон вихідних токенів.</p><p style="margin-top:1rem">Важливим покращенням якості роботи у 2026 році є подвоєння лімітів запитів для всіх платних рівнів: користувачі Pro, Max, Team та Enterprise тепер можуть надсилати вдвічі більше повідомлень на годину, а скорочення рейту в години пік було повністю видалено.</p><p style="margin-top:1rem">Claude Design, новий продукт від Anthropic Labs, розширює можливості Claude на візуальні результати — користувачі можуть генерувати слайди презентацій, дизайн-макети та інтерактивні прототипи безпосередньо через розмову з Claude Opus 4.7. Доступний для підписників плану Pro та вище без додаткової оплати.</p><p style="margin-top:1rem">Настільний додаток Claude Code був переосмислений із паралельним виконанням завдань, бічною панеллю сесій для керування кількома проєктами, вбудованою підтримкою SSH для віддаленої розробки та вбудованим терміналом. Claude Platform тепер також доступна на AWS.</p><p style="margin-top:1rem">Ціни варіюються від Безкоштовного (обмежені щоденні повідомлення) до Pro за $20/місяць, Max за $100/місяць та Max за $200/місяць.</p><p style="margin-top:1rem">Claude — найкращий вибір для користувачів, яким потрібні точні, надійні відповіді на складні інструкції — технічне письмо, аналіз документів, перевірка коду та міркування з довгим контекстом.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Переваги</div><ul class="pc-list">        <li>Висока зв'язність у довгих розмовах</li>
-        <li>Аналіз великих документів</li>
-        <li>Акцент на безпеку та етику</li>
-        <li>Claude 4 Opus для складних завдань</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Недоліки</div><ul class="pc-list">        <li>Немає нативного пошуку в мережі в деяких тарифах</li>
-        <li>Менше сторонніх інтеграцій ніж у ChatGPT</li>
-        <li>Тариф Pro дорожчий</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Переваги</div><ul class="pc-list">        <li>Claude Opus 4.7 — найкраще дотримання інструкцій та міркування з довгим контекстом серед провідних асистентів</li>
+        <li>Ліміти запитів подвоєні для Pro/Max/Team/Enterprise; скорочення в години пік видалено</li>
+        <li>Claude Design включено для підписників Pro+ — генеруйте слайди, макети та прототипи через розмову</li>
+        <li>Настільний додаток Claude Code з паралельними завданнями, бічною панеллю сесій, підтримкою SSH та вбудованим терміналом</li>
+        <li>Ціни API незмінні: $5/$25 за мільйон вхідних/вихідних токенів — передбачувані витрати</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Недоліки</div><ul class="pc-list">        <li>Безкоштовний рівень має суворі денні ліміти повідомлень — непрактичний для інтенсивного щоденного використання</li>
+        <li>Без нативної генерації зображень (покладається на Claude Design для візуальних результатів)</li>
+        <li>Рівні Max за $100-$200/місяць дорогі порівняно з ChatGPT Plus за $20/місяць</li>
+        <li>Менша широта споживчих функцій, ніж у ChatGPT — без вбудованого відео, музики або інструментів для електронних таблиць</li>
+        <li>Claude Design ще в превью Labs — не повністю випущений для всіх користувачів</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://claude.ai" target="_blank" rel="noopener">Перейти на Claude →</a>
@@ -203,7 +210,7 @@ textarea.form-input{resize:vertical;min-height:90px}
   <div class="footer-inner">
     <div>
       <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>aitoolfit</div>
-      <p class="footer-desc">Ваш пошуковик AI-інструментів. Оновлюється щодня.</p>
+      <p class="footer-desc">Найкращий каталог ШІ-інструментів. 100+ сервісів, новини та безкоштовні утиліти.</p>
     </div>
     <div>
       <div class="footer-col-title">Навігація</div>
