@@ -141,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-freemium">Freemium</span>
         <span class="tool-meta-chip">👥 500K+</span>
       </div>
-      <div class="tool-best-for"><strong>Ideal para:</strong> Desarrollo colaborativo en tiempo real con editor ultrarrápido</div>
+      <div class="tool-best-for"><strong>Ideal para:</strong> Editor de código IA con agentes paralelos y velocidad Rust</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -150,16 +150,18 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Acerca de Zed</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Zed es un editor moderno que prioriza la velocidad: al estar escrito en Rust, ofrece un rendimiento significativamente superior a VS Code en archivos grandes y proyectos complejos. Su función de colaboración en tiempo real permite que varios desarrolladores editen el mismo archivo simultáneamente, como Google Docs pero para código. Integra modelos de IA para autocompletado y asistencia, con soporte nativo para macOS y Linux.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Zed es un editor de código construido íntegramente en Rust, diseñado para rendimiento y baja latencia. La versión 1.0, lanzada el 29 de abril de 2026, marca un hito de cinco años de desarrollo y la primera versión estable apta para equipos en producción. El editor es rápido por diseño: Rust elimina la sobrecarga que ralentiza los editores basados en Electron como VS Code y Cursor bajo carga pesada.</p><p style="margin-top:1rem">La función estrella de Zed 1.0 son los Agentes Paralelos: los usuarios pueden ejecutar múltiples agentes de IA simultáneamente, cada uno trabajando en una parte diferente del código de forma independiente. Un agente puede refactorizar un módulo mientras otro escribe tests y un tercero gestiona la documentación, todo al mismo tiempo. Esto supone una ganancia de productividad significativa respecto a los flujos de trabajo con agente único.</p><p style="margin-top:1rem">En enero de 2026, Zed co-creó el Protocolo de Cliente de Agente (ACP) junto a JetBrains, estableciendo un estándar cross-editor para la comunicación de agentes de IA con entornos de desarrollo. Los agentes creados para Zed también pueden ejecutarse en los IDEs de JetBrains y viceversa, reduciendo el bloqueo del proveedor.</p><p style="margin-top:1rem">El soporte de modelos en Zed 1.0 incluye GPT-5.5, DeepSeek V4 y MiMo V2.5, dando a los desarrolladores acceso a modelos frontier directamente en el editor sin configurar claves API separadas. Las nuevas funciones de interfaz incluyen vista de gráfico Git y diffs divididos para mejorar las revisiones de código.</p><p style="margin-top:1rem">Zed es gratuito para desarrolladores individuales. El plan Business añade aplicación de políticas de IA a nivel organizacional, facturación centralizada y controles de gobernanza de IA.</p><p style="margin-top:1rem">Zed es ideal para desarrolladores que quieren un editor rápido y eficiente con capacidad seria de agentes de IA en paralelo, y para equipos que necesitan gobernanza de IA centralizada sin adoptar herramientas empresariales complejas.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Ventajas</div><ul class="pc-list">        <li>Rendimiento excepcional — escrito en Rust</li>
-        <li>Colaboración en tiempo real</li>
-        <li>IA integrada</li>
-        <li>Interfaz limpia y minimalista</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Desventajas</div><ul class="pc-list">        <li>Solo disponible en macOS y Linux</li>
-        <li>Ecosistema de extensiones limitado</li>
-        <li>Curva de aprendizaje para usuarios de VS Code</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Ventajas</div><ul class="pc-list">        <li>Construido en Rust — significativamente más rápido y ligero que editores basados en Electron como VS Code</li>
+        <li>Agentes Paralelos: ejecuta múltiples agentes de IA simultáneamente en distintas secciones del código</li>
+        <li>Protocolo ACP con JetBrains — agentes compatibles entre editores sin bloqueo de proveedor</li>
+        <li>Soporta GPT-5.5, DeepSeek V4, MiMo V2.5 — acceso a modelos frontier integrado</li>
+        <li>Gratuito para individuos; plan Business añade políticas de IA y facturación centralizada</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Desventajas</div><ul class="pc-list">        <li>Versión 1.0 — ecosistema de extensiones más pequeño que VS Code o JetBrains</li>
+        <li>Funciones de gobernanza del plan Business requieren suscripción de pago — precio no anunciado públicamente</li>
+        <li>La arquitectura nativa en Rust hace que algunas extensiones de VS Code no sean compatibles</li>
+        <li>La función de agentes paralelos es nueva — la coordinación multi-agente compleja puede generar conflictos</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://zed.dev" target="_blank" rel="noopener">Visitar Zed →</a>

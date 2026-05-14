@@ -141,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-freemium">Freemium</span>
         <span class="tool-meta-chip">👥 500K+</span>
       </div>
-      <div class="tool-best-for"><strong>הכי מתאים ל:</strong> פיתוח שיתופי בזמן אמת עם עורך מהיר במיוחד</div>
+      <div class="tool-best-for"><strong>הכי מתאים ל:</strong> עורך קוד AI עם סוכנים מקבילים ומהירות Rust</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -150,16 +150,18 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>אודות Zed</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Zed הוא עורך מודרני המעמיד את המהירות בראש סדר העדיפויות: נכתב ב-Rust, מציע ביצועים גבוהים משמעותית מ-VS Code בקבצים גדולים ופרויקטים מורכבים. שיתוף הפעולה בזמן אמת מאפשר למפתחים מרובים לערוך את אותו הקובץ בו-זמנית, כמו Google Docs אבל לקוד. משלב מודלי AI להשלמה אוטומטית, עם תמיכה נטיבית ב-macOS ו-Linux.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Zed הוא עורך קוד שנכתב לחלוטין ב-Rust, מתוכנן לביצועים וזמן תגובה נמוך. גרסה 1.0, שיצאה ב-29 באפריל 2026, מסמנת אבן דרך של חמש שנות פיתוח והגרסה היציבה הראשונה המתאימה לצוותי ייצור. העורך מהיר בעיצובו: Rust מבטל את העומס שמאט עורכים מבוססי Electron כמו VS Code ו-Cursor תחת עומס כבד.</p><p style="margin-top:1rem">התכונה המובילה של Zed 1.0 היא Parallel Agents: משתמשים יכולים להריץ מספר סוכני AI בו-זמנית, כשכל אחד עובד באופן עצמאי על חלק אחר של ה-codebase. סוכן אחד יכול לבצע refactor למודול בזמן שסוכן אחר כותב טסטים ושלישי מטפל בתיעוד — הכל בו-זמנית. זהו שיפור פרודוקטיביות משמעותי לעומת workflows עם סוכן יחיד.</p><p style="margin-top:1rem">בינואר 2026, Zed יצר יחד עם JetBrains את ה-Agent Client Protocol (ACP), וקבע סטנדרט בין-עורכים לתקשורת סוכני AI עם סביבות פיתוח. סוכנים שנבנו עבור Zed יכולים לרוץ גם ב-IDEs של JetBrains ולהפך, מה שמפחית תלות בספק.</p><p style="margin-top:1rem">תמיכת המודלים ב-Zed 1.0 כוללת GPT-5.5, DeepSeek V4 ו-MiMo V2.5, ומעניקה למפתחים גישה למודלי frontier ישירות בעורך. תצוגת גרף Git ו-split diffs הם תכונות ממשק חדשות לשיפור תהליכי סקירת קוד.</p><p style="margin-top:1rem">Zed חינמי למפתחים בודדים. תוכנית Business מוסיפה אכיפת מדיניות AI ברמה ארגונית, חיוב מרכזי ובקרות ניהול AI.</p><p style="margin-top:1rem">Zed מתאים למפתחים הרוצים עורך מהיר ויעיל עם יכולת סוכנים מקבילים רצינית, ולצוותים הזקוקים לניהול AI מרכזי ללא כלי ארגוני כבד.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">יתרונות</div><ul class="pc-list">        <li>ביצועים יוצאי דופן — נכתב ב-Rust</li>
-        <li>שיתוף פעולה בזמן אמת</li>
-        <li>AI משולב</li>
-        <li>ממשק נקי ומינימליסטי</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">חסרונות</div><ul class="pc-list">        <li>זמין רק ל-macOS ו-Linux</li>
-        <li>מערכת אקולוגית מוגבלת של הרחבות</li>
-        <li>עקומת למידה למשתמשי VS Code</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">יתרונות</div><ul class="pc-list">        <li>נכתב ב-Rust — מהיר ורזה משמעותית מעורכים מבוססי Electron כמו VS Code</li>
+        <li>Parallel Agents: מספר סוכני AI בו-זמנית בחלקים שונים של ה-codebase</li>
+        <li>Agent Client Protocol (ACP) עם JetBrains — סוכנים תואמים בין עורכים ללא תלות בספק</li>
+        <li>תומך ב-GPT-5.5, DeepSeek V4, MiMo V2.5 — גישה מובנית למודלי frontier</li>
+        <li>חינמי ליחידים; תוכנית Business מוסיפה מדיניות AI וחיוב מרכזי</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">חסרונות</div><ul class="pc-list">        <li>גרסה 1.0 — מערכת אקולוגית של הרחבות קטנה יותר מ-VS Code או JetBrains</li>
+        <li>תכונות ניהול תוכנית Business דורשות מנוי בתשלום — מחיר לא פורסם</li>
+        <li>הארכיטקטורה הנטיבית של Rust אומרת שחלק מהרחבות VS Code אינן תואמות</li>
+        <li>תכונת סוכנים מקבילים חדשה — תיאום מורכב של מרובי-סוכנים עלול ליצור קונפליקטים</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://zed.dev" target="_blank" rel="noopener">בקר ב Zed ←</a>
