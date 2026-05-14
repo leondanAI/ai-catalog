@@ -141,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
-      <div class="tool-best-for"><strong>Ideal para:</strong> Geração de imagens fotorrealistas em alta resolução</div>
+      <div class="tool-best-for"><strong>Ideal para:</strong> Geração de imagens IA, velocidade sub-segundo, renderização de texto, multi-referência</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -150,16 +150,18 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Sobre FLUX</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">FLUX.1 foi aclamado pela comunidade de IA como um dos melhores modelos de geração de imagens disponíveis. Nas versões dev e schnell é de código aberto, enquanto pro oferece a máxima qualidade. Destaca-se por gerar imagens com texto correto, anatomia precisa e composições complexas. Amplamente usado como base para modelos personalizados com fine-tuning e em plataformas de geração de imagens profissionais.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">FLUX é uma família de modelos de geração de imagens IA desenvolvida pela Black Forest Labs — a equipa por trás da pesquisa original do Stable Diffusion. Os modelos são conhecidos pela alta qualidade visual, renderização precisa de texto e uma abordagem de licenciamento permissiva que suporta uso comercial. O FLUX é utilizado em publicidade profissional, produção de moda e indústrias criativas em todo o mundo.</p><p style="margin-top:1rem">A suite FLUX.2, lançada em 15 de janeiro de 2026, introduziu quatro variantes: Pro, Flex, Dev e Klein. Klein é o modelo principal voltado para o consumidor e alcança geração de imagens sub-segundo em hardware de consumo padrão — um salto significativo de velocidade em relação à geração anterior. Ao mesmo tempo, a qualidade de saída e o teto de resolução aumentaram, com suporte para imagens de até 4 megapixels.</p><p style="margin-top:1rem">A multi-referência é uma nova capacidade fundamental no FLUX.2: os utilizadores podem fornecer dezenas de imagens de referência numa única solicitação de geração, e o modelo sintetiza variações que são consistentes com todas as referências fornecidas simultaneamente. Isso é particularmente útil para campanhas publicitárias consistentes com a marca e catálogos de moda onde a coerência visual num grande lote de imagens é necessária.</p><p style="margin-top:1rem">A renderização de texto foi substancialmente melhorada no FLUX.2. O modelo pode renderizar com precisão o texto especificado em imagens geradas — rótulos de produtos, sinalização, texto de marca e maquetas de interface — com maior precisão do que seu predecessor e a maioria dos modelos concorrentes. Isso acelerou a adoção em pipelines de produção publicitária e de marketing.</p><p style="margin-top:1rem">Os modelos FLUX estão disponíveis via API em api.bfl.ml para desenvolvedores que desejam integrar a geração nas suas próprias aplicações. Os modelos também são suportados nativamente no ComfyUI para uso de fluxo de trabalho local e podem ser implementados através do Replicate para acesso API baseado na nuvem. A Black Forest Labs oferece um nível freemium com gerações gratuitas limitadas e planos pagos para maior volume e acesso prioritário.</p><p style="margin-top:1rem">O FLUX é mais adequado para designers, fotógrafos, anunciantes e desenvolvedores que precisam de geração de imagens rápida e de alta resolução com renderização precisa de texto e a flexibilidade de executar localmente ou via API.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Vantagens</div><ul class="pc-list">        <li>Qualidade fotorrealista excepcional</li>
-        <li>Versão open source disponível</li>
-        <li>Excelente geração de texto nas imagens</li>
-        <li>Base para modelos personalizados</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Desvantagens</div><ul class="pc-list">        <li>Requer hardware poderoso para uso local</li>
-        <li>A versão Pro é paga</li>
-        <li>Curva de aprendizado para fine-tuning</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Vantagens</div><ul class="pc-list">        <li>FLUX.2 [Klein]: geração sub-segundo em hardware de consumo — o modelo Flux mais rápido lançado até hoje</li>
+        <li>Resolução de saída até 4 megapixels sem uma etapa de escalonamento separada</li>
+        <li>Multi-referência: dezenas de imagens de referência numa geração para variações consistentes</li>
+        <li>Renderização de texto aprimorada — rótulos de produtos, sinalização e texto de marca precisos nas imagens</li>
+        <li>Disponível via API (api.bfl.ml), ComfyUI e Replicate — implementação local e na nuvem flexível</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Desvantagens</div><ul class="pc-list">        <li>O nível gratuito é limitado — o uso profissional de alto volume requer um plano API pago</li>
+        <li>As variantes FLUX.2 Pro e Flex são apenas via API, sem interface web voltada para o consumidor da Black Forest Labs</li>
+        <li>A qualidade da funcionalidade multi-referência pode degradar-se com imagens de referência muito diferentes ou contraditórias</li>
+        <li>Menos amigável para iniciantes do que ferramentas baseadas na web como Midjourney — configuração de API necessária para acesso completo</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://blackforestlabs.ai" target="_blank" rel="noopener">Visitar FLUX →</a>
