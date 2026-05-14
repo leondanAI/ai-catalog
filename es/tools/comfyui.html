@@ -141,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-free">Gratis</span>
         
       </div>
-      <div class="tool-best-for"><strong>Ideal para:</strong> Flujos de trabajo avanzados de generación de imágenes con nodos</div>
+      <div class="tool-best-for"><strong>Ideal para:</strong> Generación de imágenes con IA de código abierto, flujos de trabajo en nodos, GPU local, vídeo 4K</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -150,16 +150,18 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Acerca de ComfyUI</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">ComfyUI representa la opción para usuarios avanzados que quieren control total sobre el proceso de generación de imágenes. Su interfaz basada en nodos permite conectar modelos, samplers, ControlNet, LoRAs y cualquier componente del pipeline de forma visual. Es la herramienta elegida por artistas técnicos, investigadores de IA y desarrolladores que necesitan reproducibilidad y control granular. La comunidad ha creado miles de workflows personalizados disponibles gratuitamente.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">ComfyUI es una interfaz de código abierto y gratuita basada en nodos para ejecutar modelos de generación de imágenes y vídeo con IA de forma local. Los usuarios construyen flujos de trabajo conectando nodos — cada nodo realiza una operación como cargar un modelo, aplicar un sampler o codificar un prompt — dando control preciso sobre cada paso del proceso de generación. Es la interfaz principal para usuarios que ejecutan Stable Diffusion y otros modelos de código abierto en su propio hardware.</p><p style="margin-top:1rem">App View, una importante adición de UX, proporciona una interfaz simplificada que oculta el grafo de nodos y presenta una IU limpia basada en formularios para usuarios que no necesitan modificar el flujo de trabajo subyacente. La vista de nodos sigue disponible completamente para usuarios avanzados. Este enfoque de doble modo hace que ComfyUI sea accesible para principiantes sin eliminar ninguna capacidad para los usuarios experimentados.</p><p style="margin-top:1rem">La cuantización NVFP4, introducida para las GPUs NVIDIA RTX 50 Series, permite que la generación sea 2,5 veces más rápida mientras reduce el consumo de VRAM en aproximadamente un 60%. Esto significa que los usuarios con tarjetas RTX 50 Series pueden ejecutar modelos más grandes que antes requerían hardware más costoso, o ejecutar modelos existentes a velocidades sustancialmente más altas.</p><p style="margin-top:1rem">El soporte oficial para AMD ROCm llegó a la aplicación de escritorio para Windows, haciendo que ComfyUI sea totalmente compatible con GPUs AMD en Windows por primera vez sin requerir soluciones manuales. Se añadieron nuevos nodos para Veo 3, Veo 3 Lite y Kling 3.0, junto con soporte de salida 4K para los pipelines de generación de vídeo de ByteDance, Veo y Kling. RTX Video Super Resolution permite el escalado en tiempo real a 4K del vídeo generado en hardware NVIDIA compatible.</p><p style="margin-top:1rem">Se añadió compatibilidad con Python 3.13, manteniendo ComfyUI actualizado con la última versión de Python. ComfyUI es ideal para usuarios avanzados, investigadores y desarrolladores que quieren control total sobre los flujos de trabajo de generación de imágenes y vídeo con IA, ejecutar modelos localmente en su propio hardware y necesitan soporte para los últimos modelos de código abierto y de terceros.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Ventajas</div><ul class="pc-list">        <li>Control total mediante nodos</li>
-        <li>Compatible con todos los modelos SD</li>
-        <li>Reproducibilidad de resultados</li>
-        <li>Miles de workflows comunitarios</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Desventajas</div><ul class="pc-list">        <li>Curva de aprendizaje muy alta</li>
-        <li>Requiere GPU potente</li>
-        <li>Sin interfaz amigable para principiantes</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Ventajas</div><ul class="pc-list">        <li>Completamente gratuito y de código abierto — sin suscripción, sin límites de crédito, sin dependencia de proveedor</li>
+        <li>App View: IU de formulario para principiantes sin eliminar el grafo de nodos completo para usuarios avanzados</li>
+        <li>Cuantización NVFP4: generación 2,5x más rápida y 60% menos VRAM en GPUs RTX 50 Series</li>
+        <li>Soporte oficial AMD ROCm en Windows — sin soluciones manuales necesarias</li>
+        <li>Nodos de Veo 3 y Kling 3.0 y soporte de vídeo 4K mediante pipelines ByteDance/Veo/Kling</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Desventajas</div><ul class="pc-list">        <li>La interfaz basada en nodos tiene una curva de aprendizaje pronunciada para usuarios nuevos en la generación basada en flujos de trabajo</li>
+        <li>Requiere hardware GPU local — no es adecuado para usuarios sin una tarjeta gráfica capaz</li>
+        <li>Los nodos personalizados mantenidos por la comunidad varían en calidad y pueden entrar en conflicto entre sí</li>
+        <li>Sin opción en la nube — toda la computación es local; se necesita hardware de alta gama para modelos grandes</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://comfyui.org" target="_blank" rel="noopener">Visitar ComfyUI →</a>

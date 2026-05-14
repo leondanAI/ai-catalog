@@ -141,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-free">Free</span>
         
       </div>
-      <div class="tool-best-for"><strong>Ideal para:</strong> Geração de imagens personalizada com modelo de código aberto</div>
+      <div class="tool-best-for"><strong>Ideal para:</strong> Geração de imagens de código aberto, inferência local, vídeo com IA, geração de áudio</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -150,16 +150,18 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Sobre Stable Diffusion</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Stable Diffusion e seu ecossistema (AUTOMATIC1111, ComfyUI, modelos do Civitai) representam a opção mais flexível do mercado. Ao executar localmente, não há limites de uso, censura ou custos por imagem. A comunidade criou milhares de modelos especializados disponíveis gratuitamente. Com ControlNet, é possível controlar a composição com precisão milimétrica. A curva de aprendizado é alta, mas o controle criativo é inigualável.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Stable Diffusion é a série de modelos de geração de imagens de código aberto da Stability AI, amplamente usada para inferência local, ajuste fino e implantação comercial. Ao contrário dos modelos de código fechado, os pesos do Stable Diffusion são disponibilizados publicamente e podem ser executados em hardware de consumidor, tornando-o a base de um grande ecossistema de ferramentas de terceiros, ajustes finos da comunidade e aplicações comerciais construídas sobre os modelos base.</p><p style="margin-top:1rem">A Stability AI passou por uma recuperação corporativa significativa no início de 2026. A dívida da empresa foi totalmente eliminada, resolvendo a instabilidade financeira que ameaçou as operações durante 2024 e 2025. Uma parceria estratégica com a Electronic Arts (EA) foi assinada em fevereiro de 2026, fornecendo tanto capital quanto um contexto de implantação comercial de alto perfil para os modelos da Stability AI. James Cameron se juntou como consultor, adicionando credibilidade da indústria ao esforço de geração de vídeo da empresa.</p><p style="margin-top:1rem">O desempenho do SD3.5 foi melhorado através de otimizações para NVIDIA TensorRT com quantização FP8. Essa combinação oferece velocidades de inferência mais rápidas e requisitos de VRAM significativamente menores em GPUs da série RTX, tornando o SD3.5 mais prático em hardware de consumidor de médio porte do que os modelos grandes anteriores. O suporte à AMD foi expandido através de variantes de modelo otimizadas com ONNX projetadas para GPUs Radeon e aceleradores Ryzen AI, ampliando a base de hardware endereçável além da NVIDIA.</p><p style="margin-top:1rem">O SV4D 2.0 (Stable Video 4D 2.0) é um novo lançamento de modelo de geração de vídeo focado em saídas de maior qualidade para cenas do mundo real — melhorando a coerência, a qualidade do movimento e a consistência do sujeito em comparação com o lançamento original do SV4D. O Stable Audio Open Small, um modelo compacto de geração de áudio, foi disponibilizado como código aberto em parceria com a Arm e é otimizado para inferência eficiente em hardware baseado em Arm.</p><p style="margin-top:1rem">Todos os modelos Stable Diffusion permanecem gratuitos e de código aberto. A plataforma Stability AI oferece uma API freemium para inferência hospedada sem configuração local. O Stable Diffusion é ideal para desenvolvedores, pesquisadores e profissionais criativos que precisam de geração de imagens e vídeos de código aberto que podem executar localmente, ajustar ou implantar comercialmente sem taxas por imagem.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Vantagens</div><ul class="pc-list">        <li>100% gratuito e open source</li>
-        <li>Sem limites de uso ou censura</li>
-        <li>Milhares de modelos da comunidade</li>
-        <li>Controle total com ControlNet</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Desvantagens</div><ul class="pc-list">        <li>Requer GPU potente para uso local</li>
-        <li>Curva de aprendizado muito alta</li>
-        <li>Resultados inconsistentes sem configuração adequada</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Vantagens</div><ul class="pc-list">        <li>Totalmente de código aberto — pesos disponíveis gratuitamente para uso local, ajuste fino e implantação comercial</li>
+        <li>SD3.5 otimizado para NVIDIA TensorRT/FP8: inferência mais rápida e menor VRAM em GPUs RTX</li>
+        <li>Variantes ONNX otimizadas para AMD para Radeon e Ryzen AI — não exclusivo para NVIDIA</li>
+        <li>SV4D 2.0 oferece saída de vídeo de maior qualidade para cenas do mundo real em relação ao SV4D original</li>
+        <li>Stable Audio Open Small disponibilizado como código aberto com Arm — geração de áudio disponível em hardware de borda</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Desvantagens</div><ul class="pc-list">        <li>A configuração local requer conhecimento técnico — não adequada para usuários não técnicos</li>
+        <li>Os melhores resultados no SD3.5 ainda requerem uma GPU capaz; a inferência apenas com CPU é lenta</li>
+        <li>O ecossistema de código aberto é fragmentado — muitos forks, versões e interfaces com qualidade inconsistente</li>
+        <li>Histórico de instabilidade corporativa da Stability AI — a sustentabilidade da parceria ainda precisa ser comprovada</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://stability.ai" target="_blank" rel="noopener">Visitar Stable Diffusion →</a>
