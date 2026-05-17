@@ -141,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-freemium">Freemium</span>
         <span class="tool-meta-chip">👥 1M+</span>
       </div>
-      <div class="tool-best-for"><strong>Ideal para:</strong> Codificação IA, multi-repositório, agentes em nuvem, revisão de segurança</div>
+      <div class="tool-best-for"><strong>Ideal para:</strong> IDE com IA, desenvolvimento agêntico, multi-repo, revisão de PR, agentes paralelos</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -150,19 +150,18 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Sobre Cursor</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Cursor é um editor de código orientado a IA construído sobre o VS Code, projetado para tornar a assistência de IA a interface principal para o desenvolvimento de software, em vez de um plugin adicionado por cima. Cursor 3, o principal lançamento atual, representa uma expansão arquitetural substancial de um editor de arquivo único para uma plataforma de desenvolvimento completa.</p><p style="margin-top:1rem">A peça central do Cursor 3 é o workspace multi-repositório unificado: os desenvolvedores podem abrir e navegar em vários repositórios simultaneamente, com o agente de IA mantendo contexto em todos eles. Os agentes em nuvem executam em paralelo em máquinas virtuais dedicadas, cada um capaz de executar tarefas de longa duração de forma autônoma enquanto registra seu trabalho via vídeo e logs para revisão.</p><p style="margin-top:1rem">Canvases é uma nova camada de saída visual: os agentes podem produzir resumos de revisão de PR, diagramas de arquitetura, painéis de testes e outros artefatos visuais estruturados diretamente dentro do workspace do Cursor. As Cursor Automations permitem acionar tarefas a partir de mensagens do Slack, temporizadores agendados ou eventos específicos da base de código.</p><p style="margin-top:1rem">A Security Review, disponível nos níveis Times e Enterprise, é um scanner de vulnerabilidades sempre ativo que executa continuamente em segundo plano e exibe problemas de segurança à medida que o código é escrito. O Composer 2 é um modelo desenvolvido internamente pela equipe do Cursor, otimizado para tarefas de edição de código.</p><p style="margin-top:1rem">O preço usa um modelo de créditos de uso: Pro a $20/mês cobre o uso padrão, Pro+ a $60/mês fornece limites de uso 3x para usuários intensivos. Não há nível gratuito.</p><p style="margin-top:1rem">Cursor é a melhor escolha para desenvolvedores profissionais e equipes de engenharia que desejam IA profundamente integrada em todo o fluxo de trabalho de desenvolvimento.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Cursor é um IDE de IA baseado no VS Code que evoluiu de um assistente de código para um ambiente de desenvolvimento agêntico completo. É o IDE nativo de IA mais adotado em 2026, com mais de 500K desenvolvedores.</p><p style="margin-top:1rem">Cursor 3.4, lançado em maio de 2026, introduziu ambientes de desenvolvimento agênticos — uma mudança arquitetural significativa onde os agentes do Cursor podem provisionar e gerenciar seus próprios ambientes. Um agente pode iniciar um ambiente definido por Dockerfile, clonar e trabalhar em múltiplos repositórios simultaneamente e executar tarefas em paralelo. O suporte multi-repo é essencial para equipes com microsserviços.</p><p style="margin-top:1rem">Cursor 3.3 adicionou revisão de pull requests diretamente no editor. Os desenvolvedores podem abrir um PR, visualizar diffs e receber comentários de revisão gerados por IA sem sair do Cursor.</p><p style="margin-top:1rem">BugBot passa para faturamento por uso em junho de 2026. Planos Cursor: Hobby (gratuito), Pro ($20/mês), Business ($40/usuário/mês).</p><p style="margin-top:1rem">Cursor é ideal para desenvolvedores profissionais e equipes de engenharia que precisam de um assistente de codificação com IA capaz de executar ciclos de desenvolvimento completos de forma autônoma.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Vantagens</div><ul class="pc-list">        <li>Workspace multi-repositório unificado — a IA mantém contexto em vários repositórios simultaneamente</li>
-        <li>Agentes em nuvem executando em paralelo em VMs dedicadas com gravação de vídeo/logs para revisão assíncrona</li>
-        <li>Recurso Canvases: agentes produzem saídas visuais — revisões de PR, painéis, diagramas de arquitetura</li>
-        <li>Cursor Automations: acione agentes pelo Slack, temporizadores ou eventos da base de código</li>
-        <li>Security Review sempre ativa (Times/Enterprise) — varredura contínua de vulnerabilidades enquanto escreve</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Desvantagens</div><ul class="pc-list">        <li>Sem nível gratuito — produto pago desde o primeiro dia a partir de $20/mês</li>
-        <li>Pro+ a $60/mês é 3x o preço base do GitHub Copilot para níveis de uso equivalentes</li>
-        <li>Agentes em nuvem e Canvases são recursos novos — estabilidade e confiabilidade ainda amadurecendo</li>
-        <li>Cursor Automations e Security Review limitadas aos níveis Times/Enterprise</li>
-        <li>A migração do VS Code requer reconfiguração de extensões e atalhos de teclado</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Vantagens</div><ul class="pc-list">        <li>Ambientes agênticos: agentes provisionam Dockerfiles e gerenciam espaços de trabalho multi-repo</li>
+        <li>Execução paralela de agentes — múltiplos agentes trabalhando simultaneamente em tarefas diferentes</li>
+        <li>Revisão de PR no editor — ciclo completo de escrita à revisão sem trocar de ferramenta</li>
+        <li>Suporte multi-repo para microsserviços e refatorações cross-repo</li>
+        <li>Plano Hobby gratuito; Pro a $20/mês — ponto de entrada acessível</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Desvantagens</div><ul class="pc-list">        <li>BugBot passa para faturamento por uso em junho de 2026 — custos imprevisíveis para usuários intensivos</li>
+        <li>Funções agênticas do 3.4 são novas — tarefas multi-repo complexas podem exigir supervisão humana</li>
+        <li>Consome muitos recursos: agentes paralelos aumentam a demanda de memória e CPU</li>
+        <li>Plano Business a $40/usuário/mês se acumula rapidamente para equipes grandes</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://cursor.com" target="_blank" rel="noopener">Visitar Cursor →</a>

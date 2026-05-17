@@ -141,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-freemium">Freemium</span>
         <span class="tool-meta-chip">👥 1M+</span>
       </div>
-      <div class="tool-best-for"><strong>Ideal para:</strong> Codificación IA, multi-repositorio, agentes en la nube, revisión de seguridad</div>
+      <div class="tool-best-for"><strong>Ideal para:</strong> IDE de IA, codificación agéntica, multi-repo, revisión de PR, agentes paralelos</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -150,19 +150,18 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Acerca de Cursor</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Cursor es un editor de código orientado a IA construido sobre VS Code, diseñado para hacer de la asistencia IA la interfaz principal para el desarrollo de software en lugar de un plugin añadido encima. Cursor 3, la versión principal actual, representa una expansión arquitectónica sustancial más allá de un editor de archivo único hacia una plataforma de desarrollo completa.</p><p style="margin-top:1rem">El elemento central de Cursor 3 es el espacio de trabajo multi-repositorio unificado: los desarrolladores pueden abrir y navegar múltiples repositorios simultáneamente, con el agente IA manteniendo contexto a través de todos ellos. Los agentes en la nube se ejecutan en paralelo en máquinas virtuales dedicadas, cada uno capaz de ejecutar tareas de larga duración de forma autónoma mientras graba su trabajo mediante video y registros para revisión. Esto convierte a Cursor 3 en la primera herramienta de codificación mainstream donde puedes delegar un lote de tareas paralelas a agentes y volver a resultados revisados y registrados.</p><p style="margin-top:1rem">Canvases es una nueva capa de salida visual: los agentes pueden producir resúmenes de revisión de PR, diagramas de arquitectura, paneles de pruebas y otros artefactos visuales estructurados directamente dentro del espacio de trabajo de Cursor. Las Automatizaciones de Cursor permiten activar tareas desde mensajes de Slack, temporizadores programados o eventos específicos del código base.</p><p style="margin-top:1rem">La Revisión de Seguridad, disponible en los niveles Teams y Enterprise, es un escáner de vulnerabilidades siempre activo que se ejecuta continuamente en segundo plano y muestra problemas de seguridad a medida que se escribe el código. Composer 2 es un modelo desarrollado internamente por el equipo de Cursor, optimizado específicamente para tareas de edición de código.</p><p style="margin-top:1rem">El pricing usa un modelo de créditos de uso: Pro a $20/mes cubre el uso estándar, Pro+ a $60/mes proporciona límites de uso 3x para usuarios intensivos. No hay nivel gratuito — Cursor es un producto de pago desde el primer día.</p><p style="margin-top:1rem">Cursor es la mejor elección para desarrolladores profesionales y equipos de ingeniería que quieren IA profundamente integrada en el flujo de trabajo de desarrollo completo — escritura, revisión, pruebas y despliegue.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Cursor es un IDE de IA basado en VS Code que ha evolucionado de un asistente de código a un entorno de desarrollo agéntico completo. Es el IDE nativo de IA más adoptado en 2026, con más de 500K desarrolladores que lo usan para escribir, refactorizar y revisar código con asistencia de IA.</p><p style="margin-top:1rem">Cursor 3.4, lanzado en mayo de 2026, introdujo entornos de desarrollo agénticos: un cambio arquitectónico importante donde los agentes de Cursor pueden ahora aprovisionar y gestionar sus propios entornos. Esto significa que un agente puede levantar un entorno definido por Dockerfile, clonar y trabajar en múltiples repositorios simultáneamente, y ejecutar tareas en paralelo con múltiples agentes. El soporte multi-repo es una capacidad clave para equipos en microservicios o monorepos.</p><p style="margin-top:1rem">Cursor 3.3 añadió la revisión de pull requests directamente dentro del editor. Los desarrolladores pueden abrir un PR, ver los diffs y recibir comentarios de revisión generados por IA sin salir de Cursor ni cambiar a GitHub. Esto cierra el ciclo completo — escribir, probar, hacer commit y revisar — dentro de una sola herramienta.</p><p style="margin-top:1rem">BugBot, la función de detección automática de bugs de Cursor que opera en commits y PRs, pasa a facturación por uso en junio de 2026. Antes incluida en los planes, se facturará por escaneo después de la transición. Los planes principales de Cursor: Hobby (gratis), Pro ($20/mes), Business ($40/usuario/mes).</p><p style="margin-top:1rem">Cursor es ideal para desarrolladores profesionales y equipos de ingeniería que quieren un asistente de codificación con IA capaz de ejecutar ciclos de desarrollo completos de forma autónoma.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Ventajas</div><ul class="pc-list">        <li>Espacio de trabajo multi-repositorio unificado — la IA mantiene contexto en múltiples repositorios simultáneamente</li>
-        <li>Agentes en la nube ejecutándose en paralelo en VMs dedicadas con grabación de video/registros para revisión asíncrona</li>
-        <li>Canvases: los agentes producen resultados visuales — revisiones de PR, paneles, diagramas de arquitectura</li>
-        <li>Automatizaciones de Cursor: activa agentes desde Slack, temporizadores o eventos del código base</li>
-        <li>Revisión de Seguridad siempre activa (Teams/Enterprise) — escaneo continuo de vulnerabilidades mientras escribes</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Desventajas</div><ul class="pc-list">        <li>Sin nivel gratuito — producto de pago desde el primer día empezando en $20/mes</li>
-        <li>Pro+ a $60/mes es 3x el precio base de GitHub Copilot para niveles de uso equivalentes</li>
-        <li>Los agentes en la nube y Canvases son funciones nuevas — estabilidad y fiabilidad aún madurando</li>
-        <li>Las Automatizaciones de Cursor y la Revisión de Seguridad están limitadas a los niveles Teams/Enterprise</li>
-        <li>La migración desde VS Code requiere reconfigurar extensiones y atajos de teclado</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Ventajas</div><ul class="pc-list">        <li>Entornos agénticos: los agentes aprovisionan Dockerfiles y gestionan espacios de trabajo multi-repo</li>
+        <li>Ejecución de agentes en paralelo — múltiples agentes trabajando simultáneamente en diferentes tareas</li>
+        <li>Revisión de PR dentro del editor — ciclo completo de escritura a revisión sin cambiar de herramienta</li>
+        <li>Soporte multi-repo para microservicios y refactorizaciones cross-repo</li>
+        <li>Plan Hobby gratuito; Pro a $20/mes — punto de entrada accesible para desarrolladores individuales</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Desventajas</div><ul class="pc-list">        <li>BugBot pasa a facturación por uso en junio de 2026 — costes impredecibles para usuarios con muchos escaneos</li>
+        <li>Las funciones agénticas de 3.4 son nuevas — las tareas multi-repo complejas pueden requerir supervisión humana</li>
+        <li>Uso intensivo de recursos: los agentes paralelos aumentan la demanda de memoria y CPU</li>
+        <li>El plan Business a $40/usuario/mes se acumula rápidamente para equipos grandes</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://cursor.com" target="_blank" rel="noopener">Visitar Cursor →</a>

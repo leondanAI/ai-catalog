@@ -141,7 +141,7 @@ textarea.form-input{resize:vertical;min-height:90px}
         <span class="tool-meta-chip badge-freemium">Freemium</span>
         <span class="tool-meta-chip">👥 1M+</span>
       </div>
-      <div class="tool-best-for"><strong>Ideal für:</strong> KI-Coding, Multi-Repo, Cloud-Agenten, Security-Review</div>
+      <div class="tool-best-for"><strong>Ideal für:</strong> KI-IDE, agentische Entwicklung, Multi-Repo, PR-Review, parallele Agenten</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -150,19 +150,18 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Über Cursor</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Cursor ist ein KI-first Code-Editor auf Basis von VS Code, der darauf ausgelegt ist, KI-Unterstützung zur primären Schnittstelle für die Softwareentwicklung zu machen, anstatt als Plugin obendrauf geschichtet zu sein. Cursor 3, das aktuelle Haupt-Release, stellt eine substantielle architektonische Erweiterung von einem Einzeldatei-Editor zu einer vollständigen Entwicklungsplattform dar.</p><p style="margin-top:1rem">Das Herzstück von Cursor 3 ist der einheitliche Multi-Repo-Workspace: Entwickler können mehrere Repositories gleichzeitig öffnen und navigieren, wobei der KI-Agent über alle von ihnen hinweg Kontext behält. Cloud-Agenten laufen parallel auf dedizierten virtuellen Maschinen, die jeweils in der Lage sind, langfristige Aufgaben autonom auszuführen, während sie ihre Arbeit per Video und Logs für die Überprüfung aufzeichnen.</p><p style="margin-top:1rem">Canvases ist eine neue visuelle Ausgabeschicht: Agenten können PR-Review-Zusammenfassungen, Architekturdiagramme, Test-Dashboards und andere strukturierte visuelle Artefakte direkt im Cursor-Workspace produzieren. Cursor Automations ermöglicht es, Aufgaben aus Slack-Nachrichten, geplanten Timern oder spezifischen Codebase-Ereignissen auszulösen.</p><p style="margin-top:1rem">Security Review, verfügbar in Teams- und Enterprise-Stufen, ist ein immer aktiver Schwachstellen-Scanner, der kontinuierlich im Hintergrund läuft und Sicherheitsprobleme aufzeigt, während Code geschrieben wird. Composer 2 ist ein intern von Cursor entwickeltes Modell, optimiert für Code-Bearbeitungsaufgaben.</p><p style="margin-top:1rem">Das Pricing verwendet ein Usage-Credit-Modell: Pro für $20/Monat deckt die Standardnutzung ab, Pro+ für $60/Monat bietet 3-fache Nutzungslimits für Intensivnutzer. Es gibt keine kostenlose Stufe.</p><p style="margin-top:1rem">Cursor ist die beste Wahl für professionelle Entwickler und Engineering-Teams, die KI tief in den gesamten Entwicklungs-Workflow integriert haben möchten.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Cursor ist eine VS Code-basierte KI-IDE, die sich von einem KI-gestützten Code-Editor zu einer vollständigen agentischen Entwicklungsumgebung entwickelt hat. Sie ist die am weitesten verbreitete KI-native IDE im Jahr 2026, mit über 500K Entwicklern.</p><p style="margin-top:1rem">Cursor 3.4, veröffentlicht im Mai 2026, führte agentische Entwicklungsumgebungen ein — eine bedeutende Architekturänderung, bei der Cursor-Agenten ihre eigenen Entwicklungsumgebungen provisionieren und verwalten können. Ein Agent kann eine Dockerfile-definierte Umgebung starten, mehrere Repositories gleichzeitig klonen und bearbeiten und Aufgaben parallel mit mehreren Agenten ausführen. Multi-Repo-Unterstützung ist entscheidend für Teams mit Microservices oder Monorepo-Architekturen.</p><p style="margin-top:1rem">Cursor 3.3 fügte die Pull-Request-Überprüfung direkt im Editor hinzu. Entwickler können einen PR öffnen, Diffs anzeigen und KI-generierte Review-Kommentare erhalten, ohne Cursor zu verlassen oder zu GitHub zu wechseln. Dies schließt den vollständigen Entwicklungszyklus — Schreiben, Testen, Committen und Reviewen — in einem einzigen Tool.</p><p style="margin-top:1rem">BugBot, Cursors automatisierte Bug-Erkennungsfunktion, wechselt im Juni 2026 zur nutzungsbasierten Abrechnung. Cursor-Pläne: Hobby (kostenlos), Pro ($20/Monat), Business ($40/Nutzer/Monat).</p><p style="margin-top:1rem">Cursor eignet sich am besten für professionelle Entwickler und Engineering-Teams, die einen KI-Assistenten benötigen, der vollständige Entwicklungszyklen autonom ausführen kann.</p></div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Vorteile</div><ul class="pc-list">        <li>Einheitlicher Multi-Repo-Workspace — KI behält Kontext über mehrere Repositories gleichzeitig</li>
-        <li>Cloud-Agenten laufen parallel auf dedizierten VMs mit Video-/Log-Aufzeichnung für asynchrone Überprüfung</li>
-        <li>Canvases-Feature: Agenten produzieren visuelle Ausgaben — PR-Reviews, Dashboards, Architekturdiagramme</li>
-        <li>Cursor Automations: Agenten aus Slack, Timern oder Codebase-Ereignissen auslösen</li>
-        <li>Immer aktive Security Review (Teams/Enterprise) — kontinuierliche Schwachstellen-Scans beim Schreiben</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Nachteile</div><ul class="pc-list">        <li>Keine kostenlose Stufe — kostenpflichtiges Produkt ab $20/Monat</li>
-        <li>Pro+ bei $60/Monat ist 3x der Basispreis von GitHub Copilot für gleichwertige Nutzungslevel</li>
-        <li>Cloud-Agenten und Canvases sind neue Features — Stabilität und Zuverlässigkeit noch reifend</li>
-        <li>Cursor Automations und Security Review auf Teams/Enterprise-Stufen beschränkt</li>
-        <li>Migration von VS Code erfordert Neukonfiguration von Extensions und Tastenkombinationen</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Vorteile</div><ul class="pc-list">        <li>Agentische Umgebungen: Agenten provisionieren Dockerfiles und verwalten Multi-Repo-Workspaces</li>
+        <li>Parallele Agentenausführung — mehrere Agenten arbeiten gleichzeitig an verschiedenen Aufgaben</li>
+        <li>PR-Review im Editor — vollständiger Zyklus vom Schreiben bis zum Review ohne Toolvechsel</li>
+        <li>Multi-Repo-Unterstützung für Microservices und repo-übergreifende Refactorings</li>
+        <li>Hobby-Plan kostenlos; Pro für $20/Monat — zugänglicher Einstiegspunkt</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Nachteile</div><ul class="pc-list">        <li>BugBot wechselt ab Juni 2026 zur nutzungsbasierten Abrechnung — unvorhersehbare Kosten bei intensiver Nutzung</li>
+        <li>Agentische Funktionen in 3.4 sind neu — komplexe Multi-Repo-Aufgaben können menschliche Steuerung erfordern</li>
+        <li>Ressourcenintensiv: parallele Agenten erhöhen Speicher- und CPU-Bedarf</li>
+        <li>Business-Plan bei $40/Nutzer/Monat summiert sich schnell für größere Teams</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://cursor.com" target="_blank" rel="noopener">Besuchen Cursor →</a>
