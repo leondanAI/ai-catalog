@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Luma AI", "description": "Luma AI is an AI video generation platform known for the Dream Machine product and its underlying Ray model series. The platform is accessible through a web app with a free tier and paid plans for hig", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://lumalabs.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Luma AI", "description": "Luma AI is a San Francisco-based AI lab known for Dream Machine — its text-to-video and image-to-video generation model — and for pioneering NeRF (neural radiance field) 3D capture technology. The Dre", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://lumalabs.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -116,9 +116,11 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>aitoolfit</a>
     <nav class="nav-links">
       <a href="/"               class="nav-link" data-nav="index.html"      data-i18n="nav.home">Find AI</a>
-      <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">Best AI Tools</a>
+      <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
       <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇬🇧 EN <span style="opacity:.5;font-size:10px" id="langArrow">▾</span></button>
@@ -128,9 +130,11 @@ textarea.form-input { resize: vertical; min-height: 90px; }
   </div>
   <nav class="mobile-menu" id="mobileMenu">
     <a href="/"               class="nav-link" data-i18n="nav.home">Find AI</a>
-    <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">Best AI Tools</a>
+    <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
 
@@ -160,7 +164,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
         <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
-      <div class="tool-best-for"><strong>Best for:</strong> AI video generation, keyframe editing, 1080p quality</div>
+      <div class="tool-best-for"><strong>Best for:</strong> AI video generation, native 1080p, character consistency, real-time rendering</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -170,27 +174,27 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Luma AI</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Luma AI is an AI video generation platform known for the Dream Machine product and its underlying Ray model series. The platform is accessible through a web app with a free tier and paid plans for higher-volume usage, and its models are also licensed to other platforms via API.</p><p style="margin-top:1rem">Ray3, the current generation model released in 2026, is a substantial leap over its predecessor. Native 1080p output is now the default resolution — no separate upscaling pass required. Generation speed is four times faster than Ray2, and the cost per generation has dropped by three times, making high-volume creative work meaningfully more affordable for professional users.</p><p style="margin-top:1rem">Ray3 Modify is an editing mode that allows users to alter existing video clips rather than generating from scratch. Keyframe controls let creators specify exactly what should appear at the start, middle, and end of a clip, while character reference controls maintain subject identity and appearance across edits and generations. Start and End Frame control gives precise authority over what a video begins and ends with — useful for transitional shots and seamless loops.</p><p style="margin-top:1rem">Modify with Instructions extends editing to natural language: users describe the changes they want across a clip in plain text, and the model applies them directionally. This lowers the skill floor for video editing while giving experienced users a faster iteration path than frame-by-frame control.</p><p style="margin-top:1rem">Enterprise Zero-Retention is a data privacy option for business customers that ensures uploaded content and generated outputs are not stored by Luma AI's infrastructure after the session ends.</p><p style="margin-top:1rem">Luma AI is best for video creators, agencies, and developers who want high-fidelity 1080p video generation with editing capabilities, and for enterprises that require data privacy guarantees on AI-generated content.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Luma AI is a San Francisco-based AI lab known for Dream Machine — its text-to-video and image-to-video generation model — and for pioneering NeRF (neural radiance field) 3D capture technology. The Dream Machine interface on lumalabs.ai serves millions of creators for AI video generation, while the Luma API provides enterprise and developer access.</p><p style="margin-top:1rem">Ray3.14, launched May 2026, is the most technically significant Luma model release since the original Ray2. Native 1080p output means the model generates video at full HD resolution without upscaling — the output is natively sharp rather than interpolated from a lower resolution. Generation speed is 4x faster than Ray2, bringing Luma from one of the slower premium models to competitive generation times. Cost per generated video second is reduced by 3x, making Luma significantly more accessible for developers building video applications on the API.</p><p style="margin-top:1rem">Character Seeds is a new consistency feature that assigns a persistent identity to a character across multiple video generations. Once a seed is created from a reference image or generation, subsequent clips using the same seed will maintain consistent appearance — same face, hair, body proportions, and style — even across different prompts, scenes, and camera angles. This solves one of the core limitations of AI video generation for narrative content, where character consistency across shots has historically been unreliable.</p><p style="margin-top:1rem">Modify with Instructions allows users to take an existing generated video and apply text-guided modifications without regenerating from scratch. Instead of re-prompting entirely, users can describe what they want to change — &quot;make the background sunset instead of daytime&quot; or &quot;have the character turn left&quot; — and the model applies the edit while preserving the rest of the clip. This reduces the iterative generation cycles needed to reach a final result.</p><p style="margin-top:1rem">Luma offers 30 free generations per month with no watermark. Paid plans start at $29.99/month for higher resolution, longer clips, and priority queue access. Luma AI is best for creators and developers who need high-quality, consistent AI video at scale, especially for narrative content requiring repeatable character appearances.</p></div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Ray3 delivers native 1080p at 4x faster generation and 3x lower cost vs Ray2</li>
-        <li>Ray3 Modify: keyframe and character reference controls for precise clip editing</li>
-        <li>Start/End Frame control for seamless transitions and loops</li>
-        <li>Modify with Instructions: natural language directed changes across full clips</li>
-        <li>Enterprise Zero-Retention option for data privacy on sensitive projects</li>
+        <li>Ray3.14: native 1080p output — no upscaling artifacts, genuinely sharp full-HD video</li>
+        <li>4x faster generation than Ray2 — competitive speed alongside top-tier quality</li>
+        <li>3x lower cost per second — makes API-based video apps significantly more economical</li>
+        <li>Character Seeds: persistent character identity across multiple clips for narrative consistency</li>
+        <li>Modify with Instructions: text-guided post-generation edits without full regeneration</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Free tier limits clip length and monthly generation volume</li>
-        <li>High-quality 1080p generations consume credits quickly on paid plans</li>
-        <li>Character reference consistency can break on complex scenes or rapid motion</li>
-        <li>Fewer built-in collaboration features than dedicated video production platforms</li>
+        <li>Free tier limited to 30 generations/month — insufficient for production workloads</li>
+        <li>Character Seeds require a reference image or prior generation — not zero-shot</li>
+        <li>Weaker on highly stylized or animated content vs Kling or Pika for certain aesthetics</li>
+        <li>Paid plans start at $29.99/mo — cost scales with generation volume on API</li>
       </ul>
     </div>
   </div>
@@ -213,7 +217,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     </a>
     <a class="also-card" href="/tools/heygen.html">
       <div class="also-card-name">HeyGen</div>
-      <div class="also-card-desc">AI avatar videos, 4K upscaling, brand-consistent content</div>
+      <div class="also-card-desc">AI avatars, studio-quality video, video dubbing, credit-based plans</div>
     </a>
   </div>
 

@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Kling AI", "description": "Kling AI is a video generation platform developed by Kuaishou Technology, focused on producing high-fidelity video from text and image prompts. Since its initial launch, Kling has rapidly iterated on ", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://klingai.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.0", "reviewCount": 1, "bestRating": "5", "worstRating": "1"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Kling AI", "description": "Kling AI is the AI video generation platform from Kuaishou, the Chinese short-video giant. It has grown to over 60M users and is recognized as the leading AI video generation platform for long-form, p", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://klingai.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.0", "reviewCount": 1, "bestRating": "5", "worstRating": "1"}}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -116,9 +116,11 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>aitoolfit</a>
     <nav class="nav-links">
       <a href="/"               class="nav-link" data-nav="index.html"      data-i18n="nav.home">Find AI</a>
-      <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">Best AI Tools</a>
+      <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
       <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇬🇧 EN <span style="opacity:.5;font-size:10px" id="langArrow">▾</span></button>
@@ -128,9 +130,11 @@ textarea.form-input { resize: vertical; min-height: 90px; }
   </div>
   <nav class="mobile-menu" id="mobileMenu">
     <a href="/"               class="nav-link" data-i18n="nav.home">Find AI</a>
-    <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">Best AI Tools</a>
+    <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
 
@@ -160,7 +164,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
         <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
-      <div class="tool-best-for"><strong>Best for:</strong> AI video generation, 4K 60fps, multi-shot storyboarding</div>
+      <div class="tool-best-for"><strong>Best for:</strong> Long AI video, 1080p/60fps, physics accuracy, enterprise video production</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -170,27 +174,27 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Kling AI</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Kling AI is a video generation platform developed by Kuaishou Technology, focused on producing high-fidelity video from text and image prompts. Since its initial launch, Kling has rapidly iterated on quality and capability, reaching the top of ELO-based video generation benchmarks as of April 2026.</p><p style="margin-top:1rem">Kling 3.0, launched on February 4, 2026, is the first video generation model to produce native 4K resolution at 60 frames per second without relying on post-processing upscaling. The underlying architecture — called Omni One — is a unified multimodal system that handles video, audio, and image generation within a single model, rather than using separate specialized models stitched together.</p><p style="margin-top:1rem">Physics-accurate motion is a headline capability: objects, fluids, and characters move according to physically plausible dynamics rather than the blurry or inconsistent motion that plagued earlier AI video models. Multi-shot storyboarding allows users to chain up to six connected shots in a single generation session, maintaining character and scene consistency across cuts — a critical feature for narrative video production.</p><p style="margin-top:1rem">Motion Brush lets users apply the movement pattern from a reference video clip to a new scene, giving creators directional control over how subjects and backgrounds move without needing to describe motion in text. Character consistency is improved across frames, addressing one of the most common complaints about AI video generators: characters changing appearance between shots.</p><p style="margin-top:1rem">Multilingual audio generation is built into the model, supporting voiceover and ambient audio in multiple languages as part of a single generation request. Kling AI offers a freemium model with free daily credits for short generations, and paid plans for higher resolution, longer clips, and priority queue access.</p><p style="margin-top:1rem">Best for video creators, marketers, and studios who need cinematic-quality AI video with physical realism, multi-shot continuity, and integrated audio.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Kling AI is the AI video generation platform from Kuaishou, the Chinese short-video giant. It has grown to over 60M users and is recognized as the leading AI video generation platform for long-form, physics-accurate output in 2026. Kling AI is the benchmark for realistic motion, extended clip length, and overall generation quality across the AI video category.</p><p style="margin-top:1rem">Kling v3.5, released May 2026, delivers 1080p/60fps native output — the combination of full HD resolution at 60 frames per second that is required for smooth, professional-quality video that can be used in broadcast, advertising, and high-end social content without additional processing. On the Pro tier, video length now extends up to 2 minutes per generation. This is the longest single-generation clip length available from any major AI video platform, enabling the creation of short film segments, product demonstrations, and extended narrative scenes in a single pass.</p><p style="margin-top:1rem">Motion physics accuracy is the defining technical strength of Kling v3.5. Fluid dynamics, cloth simulation, secondary motion (hair, loose clothing, foliage), and object interaction under gravity all render with greater realism than previous versions. This separates Kling from competitors on content categories where physical accuracy matters: liquid pours, explosions, athletic motion, and natural environment elements.</p><p style="margin-top:1rem">Kuaishou is evaluating a spin-off of Kling AI as an independent company, with reports placing the potential valuation at approximately $20 billion. This would be one of the largest AI video company valuations globally and reflects the commercial momentum Kling has built as the dominant platform for high-quality AI video generation. A spin-off would likely enable Kling to raise capital independently and operate with more strategic flexibility outside Kuaishou's social media core business.</p><p style="margin-top:1rem">Kling AI offers a free tier with 166 monthly credits. Paid plans include Standard and Pro tiers with higher generation limits, longer clips, and priority processing. Kling AI is best for professional video creators, agencies, and enterprises that need the highest-quality AI video output with realistic physics and extended clip durations.</p></div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Native 4K at 60fps — no upscaling required, first model to achieve this natively</li>
-        <li>Omni One unified architecture handles video, audio, and images in a single model</li>
-        <li>Physics-accurate motion for realistic dynamics of objects, fluids, and characters</li>
-        <li>Multi-shot storyboarding: up to 6 connected shots with consistent characters and scenes</li>
-        <li>Motion Brush: apply reference video movement to any new scene for directional control</li>
+        <li>Kling v3.5: native 1080p/60fps — broadcast-ready quality without post-processing</li>
+        <li>Pro tier: up to 2 minutes per generation — longest single clip of any major AI video platform</li>
+        <li>Best motion physics accuracy: fluid dynamics, cloth simulation, gravity-based object interaction</li>
+        <li>60M+ users — proven reliability at scale for professional and enterprise workloads</li>
+        <li>Free tier includes 166 monthly credits — meaningful amount for regular testing</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Free tier limited to short clips with watermarks — paid plan required for full resolution</li>
-        <li>Generation times for 4K 60fps clips can be significant even on paid tiers</li>
-        <li>Less Western-facing support documentation and community compared to Runway or Sora</li>
-        <li>Multilingual audio quality varies by language — best results in Chinese and English</li>
+        <li>Pro features require paid subscription — free tier generation limits fill quickly at 1080p</li>
+        <li>Chinese infrastructure (Kuaishou) — data handling considerations for enterprise compliance</li>
+        <li>Potential spin-off at $20B valuation introduces uncertainty about pricing and ownership</li>
+        <li>Occasional prompt adherence issues on complex multi-character, multi-element scenes</li>
       </ul>
     </div>
   </div>
@@ -213,7 +217,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     </a>
     <a class="also-card" href="/tools/heygen.html">
       <div class="also-card-name">HeyGen</div>
-      <div class="also-card-desc">AI avatar videos, 4K upscaling, brand-consistent content</div>
+      <div class="also-card-desc">AI avatars, studio-quality video, video dubbing, credit-based plans</div>
     </a>
   </div>
 

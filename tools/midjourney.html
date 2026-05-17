@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Midjourney", "description": "Midjourney is one of the leading AI image generation platforms, known for producing highly artistic and stylistically coherent images through a prompt-based interface. It runs primarily through a web ", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://midjourney.com", "offers": {"@type": "Offer", "price": "", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": 3, "bestRating": "5", "worstRating": "1"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Midjourney", "description": "Midjourney is the leading AI image generation platform, used by over 20M creators, designers, and artists globally. It has set the quality benchmark for photorealistic and artistic AI image generation", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://midjourney.com", "offers": {"@type": "Offer", "price": "", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": 3, "bestRating": "5", "worstRating": "1"}}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -116,9 +116,11 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>aitoolfit</a>
     <nav class="nav-links">
       <a href="/"               class="nav-link" data-nav="index.html"      data-i18n="nav.home">Find AI</a>
-      <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">Best AI Tools</a>
+      <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
       <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇬🇧 EN <span style="opacity:.5;font-size:10px" id="langArrow">▾</span></button>
@@ -128,9 +130,11 @@ textarea.form-input { resize: vertical; min-height: 90px; }
   </div>
   <nav class="mobile-menu" id="mobileMenu">
     <a href="/"               class="nav-link" data-i18n="nav.home">Find AI</a>
-    <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">Best AI Tools</a>
+    <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
 
@@ -160,7 +164,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
         <span class="tool-meta-chip badge-paid">from $10/mo</span>
         
       </div>
-      <div class="tool-best-for"><strong>Best for:</strong> AI image generation, artistic styles, text rendering</div>
+      <div class="tool-best-for"><strong>Best for:</strong> AI art, photorealism, 2K rendering, public profiles, social discovery</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -170,27 +174,27 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Midjourney</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Midjourney is one of the leading AI image generation platforms, known for producing highly artistic and stylistically coherent images through a prompt-based interface. It runs primarily through a web app and Discord bot, with no local installation required.</p><p style="margin-top:1rem">V8 Alpha launched on March 17, 2026, and V8.1 followed on April 30, 2026. The most significant upgrade is native 2K (HD) resolution output without requiring an additional upscaling step — previously, high-resolution images required a separate post-processing pass. Generation speed is approximately five times faster than V7, making iteration and exploration significantly more practical for professional workflows.</p><p style="margin-top:1rem">Text rendering is dramatically improved in V8.1. Users can specify text to appear in an image by placing it in quotes within the prompt, and the model renders it with a high degree of accuracy. This opens up use cases in poster design, mock-ups, and branded imagery that were previously unreliable with AI image generators.</p><p style="margin-top:1rem">Niji 7, Midjourney's specialized model for anime and illustrative styles, launched on January 9, 2026, with major coherency improvements — characters maintain consistent proportions and style across compositions better than previous versions.</p><p style="margin-top:1rem">Social features added in 2026 include custom username, bio, and banner on user profiles, a following system, and an Explore feed for browsing the community's generations. Pricing is unchanged from previous tiers: Basic at $10/month, Standard at $30/month, Pro at $60/month, and Mega at $120/month. There is no free tier — all plans require a paid subscription.</p><p style="margin-top:1rem">Best for designers, illustrators, and creative professionals who need high-quality artistic images at speed, and for anyone who wants accurate text rendered within AI-generated visuals.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Midjourney is the leading AI image generation platform, used by over 20M creators, designers, and artists globally. It has set the quality benchmark for photorealistic and artistic AI image generation since its launch, and remains the industry standard for professional creative use with a consistently advancing model series.</p><p style="margin-top:1rem">Midjourney V8.1, released April-May 2026, introduces native 2K rendering — images are generated at 2048-pixel resolution natively, not upscaled from a lower base. Generation speed is 3 to 4 times faster than V7, making high-quality image creation significantly more practical for iterative creative workflows where dozens of variations are generated before a final selection. Raw mode is a new prompt interpretation setting that reduces the model's creative embellishment: with Raw mode enabled, Midjourney interprets prompts more literally and with less stylistic injection, giving users who want precise control more predictable output from detailed technical prompts.</p><p style="margin-top:1rem">Public profiles with subscriptions is a new social feature that allows Midjourney users to make their generated images publicly accessible on a profile page. Users can follow other creators and subscribe to their profiles to see new creations in a social feed. This moves Midjourney from a pure generation utility toward a creative social platform where discovery, inspiration, and community engagement happen alongside generation.</p><p style="margin-top:1rem">Midjourney TV is a new feature that streams a real-time feed of newly generated images from across the platform on a television-style continuous broadcast. It serves as a discovery mechanism showing what the Midjourney community is creating in real time, providing both inspiration and a sense of the platform's creative breadth.</p><p style="margin-top:1rem">Midjourney V8.2 has been announced as the next release, indicating that the V8 generation will continue iterating beyond V8.1 with further quality and speed improvements.</p><p style="margin-top:1rem">Midjourney plans start at $10/month (Basic), $30/month (Standard), $60/month (Pro), and $120/month (Mega). There is no free tier. Midjourney is best for professional designers, artists, and creative agencies who need the highest-quality AI image generation with advanced prompt control and a platform built around creative community.</p></div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>V8.1 delivers native 2K resolution output without a separate upscaling step</li>
-        <li>~5x faster generation vs V7 — practical for rapid iteration and professional workflows</li>
-        <li>Dramatically improved text rendering — specify quoted text directly in prompts</li>
-        <li>Niji 7 model for anime and illustrative styles with improved character coherency</li>
-        <li>Social features: custom profiles, following system, and Explore feed</li>
+        <li>V8.1: native 2K rendering — genuinely sharp output without upscaling artifacts</li>
+        <li>3-4x faster generation vs V7 — practical for iterative creative workflows at scale</li>
+        <li>Raw mode: literal prompt interpretation for precise technical control</li>
+        <li>Public profiles and social feed: creative discovery and community built into the platform</li>
+        <li>Midjourney TV: real-time stream of community generations for inspiration and discovery</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>No free tier — all plans start at $10/month (Basic)</li>
-        <li>Primarily Discord and web-based — no native desktop app or local processing</li>
-        <li>Less controllable than Stable Diffusion for users who need fine-grained parameter control</li>
-        <li>Mega plan at $120/month is expensive compared to competitors with similar output quality</li>
+        <li>No free tier — starts at $10/month with no trial generation option</li>
+        <li>Web interface still Discord-adjacent in UX compared to fully independent platforms</li>
+        <li>Mega plan at $120/month required for high-volume commercial production workloads</li>
+        <li>V8.2 announced but not yet released — users on V8.1 waiting on next quality improvements</li>
       </ul>
     </div>
   </div>

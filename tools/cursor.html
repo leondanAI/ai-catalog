@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Cursor", "description": "Cursor is an AI-first code editor built on VS Code, designed to make AI assistance the primary interface for software development rather than a plugin layered on top. Cursor 3, the current major relea", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://cursor.com", "offers": {"@type": "Offer", "price": "", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": 3, "bestRating": "5", "worstRating": "1"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Cursor", "description": "Cursor is a VS Code-based AI IDE that has evolved from an AI-assisted code editor into a full agentic development environment. It is the most widely adopted AI-native IDE in 2026, with over 500K devel", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://cursor.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": 3, "bestRating": "5", "worstRating": "1"}}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -116,9 +116,11 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>aitoolfit</a>
     <nav class="nav-links">
       <a href="/"               class="nav-link" data-nav="index.html"      data-i18n="nav.home">Find AI</a>
-      <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">Best AI Tools</a>
+      <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
       <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇬🇧 EN <span style="opacity:.5;font-size:10px" id="langArrow">▾</span></button>
@@ -128,9 +130,11 @@ textarea.form-input { resize: vertical; min-height: 90px; }
   </div>
   <nav class="mobile-menu" id="mobileMenu">
     <a href="/"               class="nav-link" data-i18n="nav.home">Find AI</a>
-    <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">Best AI Tools</a>
+    <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
 
@@ -157,10 +161,10 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">💻 AI for Development</span>
-        <span class="tool-meta-chip badge-paid">Paid</span>
+        <span class="tool-meta-chip badge-freemium">Freemium</span>
         <span class="tool-meta-chip">👥 1M+</span>
       </div>
-      <div class="tool-best-for"><strong>Best for:</strong> AI coding, multi-repo, cloud agents, security review</div>
+      <div class="tool-best-for"><strong>Best for:</strong> AI IDE, agentic coding, multi-repo, PR review, parallel agents</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -170,28 +174,27 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Cursor</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Cursor is an AI-first code editor built on VS Code, designed to make AI assistance the primary interface for software development rather than a plugin layered on top. Cursor 3, the current major release, represents a substantial architectural expansion beyond a single-file editor into a full development platform.</p><p style="margin-top:1rem">The centerpiece of Cursor 3 is the unified multi-repo workspace: developers can open and navigate multiple repositories simultaneously, with the AI agent maintaining context across all of them. Cloud agents run in parallel on dedicated virtual machines, each capable of executing long-running tasks autonomously while recording their work via video and logs for review. This makes Cursor 3 the first mainstream coding tool where you can delegate a batch of parallel implementation tasks to agents and come back to reviewed, logged results.</p><p style="margin-top:1rem">Canvases is a new visual output layer: agents can produce PR review summaries, architecture diagrams, test dashboards, and other structured visual artifacts directly inside the Cursor workspace. Cursor Automations allows tasks to be triggered from Slack messages, scheduled timers, or specific codebase events — moving Cursor toward a CI/CD-adjacent automation role in addition to its editing function.</p><p style="margin-top:1rem">Security Review, available in Teams and Enterprise tiers, is an always-on vulnerability scanner that runs continuously in the background and surfaces security issues as code is written, rather than as a separate audit step. Composer 2 is an in-house model developed by the Cursor team, optimized specifically for code editing tasks.</p><p style="margin-top:1rem">Pricing uses a usage-credit model: Pro at $20/month covers standard usage, Pro+ at $60/month provides 3x usage limits for heavy users. There is no free tier — Cursor is a paid product from day one.</p><p style="margin-top:1rem">Cursor is the best choice for professional developers and engineering teams who want AI deeply integrated into the full development workflow — writing, reviewing, testing, and deploying — rather than as a suggestion engine.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Cursor is a VS Code-based AI IDE that has evolved from an AI-assisted code editor into a full agentic development environment. It is the most widely adopted AI-native IDE in 2026, with over 500K developers using it to write, refactor, and review code with AI assistance deeply integrated at every step.</p><p style="margin-top:1rem">Cursor 3.4, released in May 2026, introduced agentic dev environments — a major architectural shift where Cursor agents can now provision and manage their own development environments. This means an agent can spin up a Dockerfile-defined environment, clone and work across multiple repositories simultaneously, and execute tasks in parallel using multiple agents running side by side. Multi-repo support is a significant capability addition for teams working on microservices or monorepo architectures where code changes must span several codebases at once.</p><p style="margin-top:1rem">Cursor 3.3 added pull request review directly inside the editor. Developers can open a PR, view diffs, and receive AI-generated review comments without leaving Cursor or switching to GitHub. This closes the full development loop — write, test, commit, and review — inside a single tool.</p><p style="margin-top:1rem">BugBot, Cursor's automated bug detection feature that runs on commits and PRs, transitions to usage-based billing in June 2026. Previously included in plans, it will be billed per scan after the transition, which may affect teams that rely heavily on automated bug scanning. Cursor's core plans remain Hobby (free), Pro ($20/month), and Business ($40/user/month).</p><p style="margin-top:1rem">Cursor is best for professional developers and engineering teams who want an AI coding assistant that can execute full development cycles autonomously — not just complete lines of code, but write features, manage environments, and review changes end-to-end.</p></div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Multi-repo unified workspace — AI maintains context across multiple repositories simultaneously</li>
-        <li>Cloud agents run in parallel on dedicated VMs with video/log recording for async review</li>
-        <li>Canvases feature: agents produce visual outputs — PR reviews, dashboards, architecture diagrams</li>
-        <li>Cursor Automations: trigger agents from Slack, timers, or codebase events</li>
-        <li>Always-on Security Review (Teams/Enterprise) — continuous vulnerability scanning as you write</li>
+        <li>Agentic dev environments: agents provision Dockerfiles and manage multi-repo workspaces</li>
+        <li>Parallel agent execution — run multiple coding agents simultaneously on different tasks</li>
+        <li>PR review inside the editor — full write-to-review loop without switching tools</li>
+        <li>Multi-repo support for microservices and cross-repo refactors</li>
+        <li>Hobby plan free; Pro at $20/mo — accessible entry point for individual developers</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>No free tier — paid-only product starting at $20/month</li>
-        <li>Pro+ at $60/month is 3x GitHub Copilot's base price for equivalent usage levels</li>
-        <li>Cloud agents and Canvases are new features — stability and reliability still maturing</li>
-        <li>Cursor Automations and Security Review limited to Teams/Enterprise tiers</li>
-        <li>Migration from VS Code requires reconfiguring extensions and keybindings</li>
+        <li>BugBot moving to usage-based billing June 2026 — cost unpredictable for heavy scan users</li>
+        <li>Agentic env features in 3.4 are new — complex multi-repo tasks may still require human steering</li>
+        <li>Resource-intensive: parallel agents increase memory and CPU demands on local machines</li>
+        <li>Business plan at $40/user/mo adds up quickly for larger engineering teams</li>
       </ul>
     </div>
   </div>
@@ -200,7 +203,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 <li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You work on complex codebases that require multi-file context and architecture decisions</span></li>
 <li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need version control, custom extensions, and the full VS Code ecosystem</span></li>
 <li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want the AI to understand your entire project, not just a prompt</span></li></ul></div></div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Cursor?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Cursor is an AI-first code editor built on a VS Code fork. It puts AI assistance at the center of the development workflow — not as a plugin, but as the primary interface. Cursor 3 adds multi-repo workspaces, cloud agents running in parallel on dedicated VMs, and always-on security review for Teams/Enterprise users.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">How much does Cursor cost?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Cursor has no free tier — it is a paid product from day one. Pro is $20/month with standard usage. Pro+ is $60/month with 3x usage limits for heavy users. Teams and Enterprise plans are available with additional security and admin features.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Cursor better than GitHub Copilot?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Cursor generally provides more powerful AI assistance — its codebase-aware context and multi-file agent mode are more capable than Copilot's inline suggestions. Copilot has broader IDE support and deeper GitHub integration. Most developers who switch to Cursor don't go back, but Copilot remains the choice for teams needing IDE flexibility or enterprise GitHub workflows.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Does Cursor use Claude or GPT-4?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Cursor supports multiple AI models — Claude, GPT-4o, Gemini, and Cursor's own Composer 2 model optimized for code editing. Pro users can choose which model to use for each task. Claude is generally recommended for complex multi-file work and architecture decisions.</span></div></div></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Cursor?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Cursor is an AI-native IDE based on VS Code. It gives AI full context of your codebase and can edit multiple files, run terminal commands, and complete tasks end-to-end as an agent.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">How much does Cursor cost?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Cursor has a free Hobby plan with limited AI requests. The Pro plan is $20/month with 500 fast requests and unlimited slow requests. Business is $40/user/month with SSO and team features.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Cursor safe to use with my codebase?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Cursor offers a Privacy Mode that disables code storage on their servers. Enterprise plans include additional data controls and SOC 2 compliance.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What models does Cursor use?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Cursor uses Claude Opus 4.7, GPT-4o, and its own fine-tuned models for autocomplete. You can switch models per request in settings.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
   <div class="also-grid">

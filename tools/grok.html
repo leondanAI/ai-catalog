@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Grok", "description": "Grok is xAI's AI assistant, tightly integrated with X (formerly Twitter) and available as a standalone product at grok.com. Grok 4.3, the current release, is a substantial upgrade: it supports a 1 mil", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://grok.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Grok", "description": "Grok is xAI's AI assistant platform, offering a flagship large language model with unique real-time integration with X (Twitter) data and a growing set of developer and enterprise capabilities. It is ", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://grok.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -116,9 +116,11 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>aitoolfit</a>
     <nav class="nav-links">
       <a href="/"               class="nav-link" data-nav="index.html"      data-i18n="nav.home">Find AI</a>
-      <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">Best AI Tools</a>
+      <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
       <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇬🇧 EN <span style="opacity:.5;font-size:10px" id="langArrow">▾</span></button>
@@ -128,9 +130,11 @@ textarea.form-input { resize: vertical; min-height: 90px; }
   </div>
   <nav class="mobile-menu" id="mobileMenu">
     <a href="/"               class="nav-link" data-i18n="nav.home">Find AI</a>
-    <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">Best AI Tools</a>
+    <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
 
@@ -160,7 +164,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
         <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
-      <div class="tool-best-for"><strong>Best for:</strong> Real-time X data, voice cloning, reasoning</div>
+      <div class="tool-best-for"><strong>Best for:</strong> AI assistant, real-time X/Twitter data, code generation, TTS/STT API, Grok Build</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -170,28 +174,27 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Grok</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Grok is xAI's AI assistant, tightly integrated with X (formerly Twitter) and available as a standalone product at grok.com. Grok 4.3, the current release, is a substantial upgrade: it supports a 1 million token context window, accepts native video as input for analysis, and includes built-in step-by-step reasoning without needing to switch to a separate reasoning mode.</p><p style="margin-top:1rem">The API is priced at $1.25 per million input tokens, positioning Grok 4.3 as a competitive option for developers who need real-time social data access alongside strong general reasoning. Structured outputs are supported, making it straightforward to integrate into applications that require consistent JSON or typed responses.</p><p style="margin-top:1rem">Three significant new APIs expand Grok's use cases beyond chat. The Custom Voices API allows developers to clone a voice from just seconds of audio and use it for speech synthesis. The Speech-to-Text API, now generally available, adds word-level timestamps and speaker diarization — useful for transcription, meeting notes, and podcast processing. Quality Mode for image generation produces higher-fidelity outputs for use cases that require detailed visuals.</p><p style="margin-top:1rem">Grok remains free to use on X with daily limits. SuperGrok, the standalone subscription at $30/month, unlocks higher usage limits, API access, and all advanced features including Custom Voices and Quality Mode.</p><p style="margin-top:1rem">The tool's primary differentiator remains its real-time X data integration — Grok can surface live posts, trending topics, and breaking information that no other major AI assistant has access to. This makes it uniquely valuable for social media monitoring, trend analysis, and real-time research. The tradeoff is a smaller third-party integration ecosystem compared to ChatGPT or Claude.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Grok is xAI's AI assistant platform, offering a flagship large language model with unique real-time integration with X (Twitter) data and a growing set of developer and enterprise capabilities. It is available at grok.com and through the X platform for X Premium subscribers.</p><p style="margin-top:1rem">Grok 4.3 beta operates at a 1 trillion parameter scale, making it one of the largest models available to consumers. The defining characteristic that sets Grok apart from all other major AI assistants is its live access to X (Twitter) data — Grok can query and synthesize real-time posts, trending topics, and social sentiment from across the X platform. No other major AI assistant has equivalent live social media integration built in. This makes Grok uniquely valuable for understanding breaking news, viral trends, market sentiment from social media, and real-time public opinion.</p><p style="margin-top:1rem">Grok Build, currently in beta, is xAI's agentic code generation product. Grok Build takes a natural language description of an application or feature and generates a full implementation — similar in concept to Cursor's agentic features or Kiro's Specs, but running on the Grok model stack. Grok Build is positioned for rapid prototyping and full application scaffolding, and is integrated into the grok.com interface rather than requiring a separate IDE.</p><p style="margin-top:1rem">TTS (text-to-speech) and STT (speech-to-text) APIs are now available through xAI's developer API, enabling developers to build voice-enabled applications on the Grok infrastructure. This expands xAI's developer platform beyond pure language model access into multimodal API services. The TTS API produces natural-sounding voice output; the STT API enables real-time or batch audio transcription.</p><p style="margin-top:1rem">Grok is free for basic access on X with an X account. SuperGrok subscription plans offer expanded capabilities: SuperGrok Heavy at $300/month provides the highest usage limits, 428K token context window, and access to the full 1T-parameter model. Grok is best for users who need real-time social data intelligence, rapid prototyping through Grok Build, and a less content-restricted AI environment than Claude or ChatGPT.</p></div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Grok 4.3 — 1M token context, native video input, built-in reasoning</li>
-        <li>Real-time X (Twitter) data access — unique among all major AI assistants</li>
-        <li>Custom Voices API: clone a voice from seconds of audio</li>
-        <li>Speech-to-Text API GA with word-level timestamps and speaker diarization</li>
-        <li>API at $1.25/M input tokens — competitive pricing with structured output support</li>
+        <li>Unique real-time X/Twitter data integration — unmatched for trending topics and social sentiment</li>
+        <li>Grok Build beta: agentic code generation from natural language for rapid prototyping</li>
+        <li>TTS and STT APIs: voice-enabled application building on the Grok model stack</li>
+        <li>1 trillion parameter scale — one of the largest models available to consumers</li>
+        <li>Less restrictive content policy than OpenAI or Anthropic models</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Tightly coupled to X/Twitter ecosystem — less useful without X context</li>
-        <li>SuperGrok at $30/month offers less usage than Claude Pro or ChatGPT Plus at similar price points</li>
-        <li>Smaller third-party integration ecosystem than ChatGPT or Claude</li>
-        <li>Quality and consistency on complex reasoning tasks trails Claude Opus 4.7</li>
-        <li>Custom Voices and Quality Mode image generation are API/SuperGrok features only — not on free tier</li>
+        <li>SuperGrok Heavy at $300/mo — most expensive consumer AI subscription available</li>
+        <li>Grok Build is in beta — reliability and output quality on complex applications still maturing</li>
+        <li>Quality inconsistent vs Claude and GPT-4 class models on complex reasoning benchmarks</li>
+        <li>Tightly coupled to the X/Twitter ecosystem — less useful without X account and context</li>
       </ul>
     </div>
   </div>

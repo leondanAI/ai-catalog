@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Figma AI", "description": "Figma AI refers to the suite of AI capabilities built directly into Figma's design platform, used by over 5 million active design professionals. The flagship AI feature is Figma Make — introduced in 2", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://figma.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Figma AI", "description": "Figma AI is the AI capability layer built into Figma, the industry-standard design tool used by 5M+ designers and product teams. Figma AI handles layout generation, component suggestions, auto-naming,", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://figma.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -116,9 +116,11 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>aitoolfit</a>
     <nav class="nav-links">
       <a href="/"               class="nav-link" data-nav="index.html"      data-i18n="nav.home">Find AI</a>
-      <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">Best AI Tools</a>
+      <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
       <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇬🇧 EN <span style="opacity:.5;font-size:10px" id="langArrow">▾</span></button>
@@ -128,9 +130,11 @@ textarea.form-input { resize: vertical; min-height: 90px; }
   </div>
   <nav class="mobile-menu" id="mobileMenu">
     <a href="/"               class="nav-link" data-i18n="nav.home">Find AI</a>
-    <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">Best AI Tools</a>
+    <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
 
@@ -160,7 +164,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
         <span class="tool-meta-chip badge-freemium">Freemium</span>
         <span class="tool-meta-chip">👥 5M+</span>
       </div>
-      <div class="tool-best-for"><strong>Best for:</strong> AI-assisted UI/UX design and interactive prototyping inside Figma</div>
+      <div class="tool-best-for"><strong>Best for:</strong> UI/UX design, AI agents on canvas, image tools, voice input, text on path</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -170,27 +174,27 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Figma AI</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Figma AI refers to the suite of AI capabilities built directly into Figma's design platform, used by over 5 million active design professionals. The flagship AI feature is Figma Make — introduced in 2026 — which allows designers to describe a UI in natural language and receive a functional interactive prototype, complete with database connectivity via Supabase integration. This moves Figma from a static design tool toward an AI-native product development environment.</p><p style="margin-top:1rem">Figma acquired Diagram (makers of the Magician AI plugin) and folded those capabilities into native Figma AI, including AI image generation and editing directly on the canvas, AI-powered layer renaming, intelligent component suggestions, and AI search across design assets. Code generation translates Figma designs into production-ready React, HTML, or CSS.</p><p style="margin-top:1rem">Key capabilities include Figma Make (text to interactive prototype), AI image generation and editing, auto-layout suggestions, smart component matching, AI layer renaming, codebase-aware generation, and Supabase database connectivity for data-driven prototypes.</p><p style="margin-top:1rem">Pricing: Starter plan is free with limited monthly AI credits. Professional at $15 per user per month (annual) includes 500 AI credits per month. Organization at $55 per user per month includes 2,000 credits. Enterprise at $90 per user per month includes 4,250 credits. Additional AI credit packs and pay-as-you-go credits at $0.03 per credit are available from Q2 2026.</p><p style="margin-top:1rem">Limitations: AI credits are consumed across all AI features and can run out quickly for teams doing heavy generative work. Figma Make outputs require developer review before production use. The platform is web-only, which can be slow on large complex files.</p><p style="margin-top:1rem">Best suited for UI/UX designers and product teams who want AI assistance embedded in their existing Figma workflow, particularly for rapid prototyping and design-to-code output.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Figma AI is the AI capability layer built into Figma, the industry-standard design tool used by 5M+ designers and product teams. Figma AI handles layout generation, component suggestions, auto-naming, and design assistance, while the underlying Figma platform provides the collaborative canvas, component system, and design-to-code handoff tools that product teams depend on.</p><p style="margin-top:1rem">The Figma MCP (Model Context Protocol) server is the most significant AI addition in 2026. It exposes Figma's canvas to external AI agents: tools like Cursor, Claude, or custom agents can now directly create, edit, and manipulate Figma designs through the MCP interface. This means a developer can instruct an AI agent in their IDE to generate a UI component, and the agent will create it directly in Figma without any copy-paste or manual re-creation. AI agents can design on the Figma canvas as a first-class capability, not just an add-on.</p><p style="margin-top:1rem">AI Image Tools are now built directly into Figma as native features, removing the need for Photoshop or third-party image editors for common tasks. Vectorize converts raster images into editable vector shapes. Remove Background isolates subjects from images with one click. Erase removes objects or regions from images non-destructively. Expand extends the boundaries of an image using AI inpainting to fill new areas. All four tools work inside the Figma canvas on embedded images without exporting to an external editor.</p><p style="margin-top:1rem">Voice input allows designers to issue natural-language commands to Figma AI using their microphone — describing what they want to create or modify rather than navigating menus. Text on path, a long-requested typographic feature, is now available: text can be set to follow any curved path or shape outline, enabling logotype treatments and circular text layouts that previously required workarounds.</p><p style="margin-top:1rem">Figma plans start at free (3 projects), $12/editor/month (Professional), and $45/editor/month (Organization). AI features are included in paid plans. Figma AI is best for product designers and design-engineering teams that want AI directly in their workflow and the ability to connect AI agents to their design system.</p></div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Figma Make generates functional interactive prototypes from text prompts</li>
-        <li>Native AI image generation and editing directly on the Figma canvas</li>
-        <li>Code generation outputs production-ready React, HTML, and CSS</li>
-        <li>AI layer renaming and component suggestions improve workflow speed</li>
-        <li>Acquired Diagram (Magician plugin) — capabilities now native, no plugin needed</li>
+        <li>MCP server: AI agents (Cursor, Claude, custom) can design directly on the Figma canvas</li>
+        <li>Built-in AI Image Tools: Vectorize, Remove Background, Erase, Expand — no Photoshop needed</li>
+        <li>Voice input for natural-language design commands inside the canvas</li>
+        <li>Text on path for curved typographic layouts — no workarounds required</li>
+        <li>Industry standard: 5M+ designers; AI features integrate into existing design system workflows</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>AI credits consumed across all features — 500/month on Professional runs out on heavy use</li>
-        <li>Additional credits cost $0.03 each — can add up for generative-heavy teams</li>
-        <li>Figma Make outputs require developer review before production deployment</li>
-        <li>Web-only platform can be slow on large complex design files</li>
+        <li>Full AI features require paid plans from $12/editor/month</li>
+        <li>MCP server integration requires technical setup — not plug-and-play for non-developers</li>
+        <li>AI Image Tools quality competitive but not always on par with dedicated Photoshop AI</li>
+        <li>Organization plan at $45/editor/mo is expensive for large design teams</li>
       </ul>
     </div>
   </div>
@@ -199,13 +203,13 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 <li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Your team uses Figma for design handoff to developers — AI features are built in</span></li>
 <li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want AI to help with component generation, auto-layout, and design system work</span></li>
 <li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need precise design control with variables, constraints, and developer inspect</span></li></ul></div></div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Figma AI?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Figma AI is the suite of AI features built into the Figma design platform. It includes Make Designs (generate UI layouts from text prompts), first draft generation, AI rename for layers and components, and AI-powered prototyping. Figma AI is built for professional UI/UX designers, not general content creation.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What AI features does Figma have?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Figma AI (launched 2024) includes AI-generated layers and designs from text prompts, AI rename for layers, first draft generation, and prototype generation. It's built into Figma and available to all paid plan users.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can Canva replace Figma?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">No. Canva and Figma serve different purposes. Canva is for creating marketing content and presentations. Figma is for designing UI/UX interfaces and product prototypes. Designers use Figma; content creators use Canva.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Which is better for beginners — Canva or Figma?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Canva is significantly easier for beginners — it's designed for non-designers with drag-and-drop simplicity. Figma has a steeper learning curve and is designed for professional designers. For quick graphics, start with Canva.</span></div></div></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Canva AI free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Canva offers a free plan with limited AI features. Canva Pro ($15/month) unlocks Magic Media image generation, Magic Write, background remover, and other AI tools. Many AI features require a Pro subscription.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What AI features does Figma have?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Figma AI (launched 2024) includes AI-generated layers and designs from text prompts, AI rename for layers, first draft generation, and prototype generation. It's built into Figma and available to all paid plan users.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can Canva replace Figma?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">No. Canva and Figma serve different purposes. Canva is for creating marketing content and presentations. Figma is for designing UI/UX interfaces and product prototypes. Designers use Figma; content creators use Canva.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Which is better for beginners — Canva or Figma?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Canva is significantly easier for beginners — it's designed for non-designers with drag-and-drop simplicity. Figma has a steeper learning curve and is designed for professional designers. For quick graphics, start with Canva.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
   <div class="also-grid">
     <a class="also-card" href="/tools/adobe-firefly.html">
       <div class="also-card-name">Adobe Firefly</div>
-      <div class="also-card-desc">AI image and video generation, Creative Cloud integration, brand-safe content</div>
+      <div class="also-card-desc">AI creative agent, Creative Cloud orchestration, image generation, sound generation</div>
     </a>
     <a class="also-card" href="/tools/canva-ai.html">
       <div class="also-card-name">Canva AI</div>

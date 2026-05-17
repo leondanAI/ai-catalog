@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Adobe Firefly", "description": "Adobe Firefly is Adobe's family of generative AI models integrated across Creative Cloud applications including Photoshop, Premiere Pro, Lightroom, Illustrator, and Express. It is positioned as the br", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://firefly.adobe.com", "offers": {"@type": "Offer", "price": "", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Adobe Firefly", "description": "Adobe Firefly is Adobe's generative AI platform, built into Creative Cloud and trained exclusively on licensed and owned content for commercial safety. It is used by 5M+ creative professionals for AI ", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://firefly.adobe.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -116,9 +116,11 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>aitoolfit</a>
     <nav class="nav-links">
       <a href="/"               class="nav-link" data-nav="index.html"      data-i18n="nav.home">Find AI</a>
-      <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">Best AI Tools</a>
+      <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
       <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇬🇧 EN <span style="opacity:.5;font-size:10px" id="langArrow">▾</span></button>
@@ -128,9 +130,11 @@ textarea.form-input { resize: vertical; min-height: 90px; }
   </div>
   <nav class="mobile-menu" id="mobileMenu">
     <a href="/"               class="nav-link" data-i18n="nav.home">Find AI</a>
-    <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">Best AI Tools</a>
+    <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
 
@@ -157,10 +161,10 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">🖌️ Design &amp; UI/UX</span>
-        <span class="tool-meta-chip badge-paid">Paid</span>
+        <span class="tool-meta-chip badge-freemium">Freemium</span>
         <span class="tool-meta-chip">👥 10M+</span>
       </div>
-      <div class="tool-best-for"><strong>Best for:</strong> AI image and video generation, Creative Cloud integration, brand-safe content</div>
+      <div class="tool-best-for"><strong>Best for:</strong> AI creative agent, Creative Cloud orchestration, image generation, sound generation</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -170,27 +174,27 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Adobe Firefly</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Adobe Firefly is Adobe's family of generative AI models integrated across Creative Cloud applications including Photoshop, Premiere Pro, Lightroom, Illustrator, and Express. It is positioned as the brand-safe, commercially licensed AI generation layer for professional creative work — all models are trained on licensed content and Adobe Stock, avoiding the copyright ambiguity of models trained on scraped web data.</p><p style="margin-top:1rem">The Firefly AI Assistant, launched in public beta on April 27, 2026, is the most significant capability expansion to date. It introduces conversational, multi-step agentic workflows: users describe a creative task in natural language and the assistant executes a sequence of operations across multiple Creative Cloud apps without manual switching. A single prompt can trigger asset generation in Firefly, compositing in Photoshop, color grading in Lightroom, and assembly in Premiere.</p><p style="margin-top:1rem">Precision Flow, currently in beta, changes how generation results are presented. A single prompt generates a range of results on a visual spectrum, and users navigate between them using a slider rather than regenerating repeatedly. This makes it faster to explore the design space and land on the output that fits.</p><p style="margin-top:1rem">Credit limits have been removed entirely for all paid Creative Cloud subscribers, enabling unlimited AI generation without metering. The model roster has expanded to over 30 models, adding Kling 3.0, Veo 3.1, Runway Gen-4.5, and ElevenLabs Multilingual v2 alongside Adobe's proprietary models.</p><p style="margin-top:1rem">Custom Models, now in public beta, allow users to fine-tune Firefly on their own image libraries, creating a generation model that reflects a specific visual brand or art direction.</p><p style="margin-top:1rem">Adobe Firefly is best for professional designers and creative teams already in the Adobe ecosystem who need commercially safe AI generation integrated into their existing production workflows.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Adobe Firefly is Adobe's generative AI platform, built into Creative Cloud and trained exclusively on licensed and owned content for commercial safety. It is used by 5M+ creative professionals for AI image generation, Generative Fill in Photoshop, vector recoloring in Illustrator, and scene composition across the Adobe application suite.</p><p style="margin-top:1rem">Adobe Creative Agent, launched April 2026, is the most significant advancement in Firefly's capabilities. Rather than requiring users to navigate individual AI features in separate Creative Cloud applications, Creative Agent accepts a single natural language prompt and orchestrates a workflow across multiple CC applications autonomously. A single instruction like &quot;create a product campaign with a summer theme&quot; can trigger image generation in Firefly, layout composition in Photoshop, color grading in Lightroom, and motion graphics in Premiere — with Creative Agent managing the handoffs between applications and assembling the output. This is a shift from AI features inside applications to an AI agent that operates across the entire Creative Cloud application suite.</p><p style="margin-top:1rem">Custom Models, in beta, allows organizations to fine-tune Firefly image generation models on their own brand assets, style guides, and visual identity. Once trained on proprietary brand images, the custom model generates new content that automatically aligns with brand guidelines without requiring detailed style prompting for each generation. This is directly valuable for marketing teams and agencies managing consistent visual identity across large content volumes.</p><p style="margin-top:1rem">Sound generation is a new Firefly capability that extends the platform beyond visual content. Users can generate sound effects, ambient audio, and short music segments from text descriptions. This adds a native audio creation layer to Firefly that reduces dependence on stock audio libraries for video and motion graphics workflows.</p><p style="margin-top:1rem">Adobe Creative Cloud plans include Firefly credits: Creative Cloud All Apps at $54.99/month includes 1000 Firefly credits/month. Firefly standalone plans start at $4.99/month. Firefly is best for creative professionals and agencies already in the Adobe ecosystem who want AI-orchestrated workflows across all Creative Cloud applications with guaranteed commercial content safety.</p></div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Firefly AI Assistant: conversational agentic workflows across Photoshop, Premiere, Lightroom</li>
-        <li>Unlimited AI generation for all paid subscribers — no credit limits</li>
-        <li>Precision Flow: explore a range of results with a slider instead of repeated regeneration</li>
-        <li>30+ models including Kling 3.0, Veo 3.1, Runway Gen-4.5, ElevenLabs Multilingual v2</li>
-        <li>Commercially licensed training data — brand-safe for professional and enterprise use</li>
+        <li>Creative Agent: single prompt orchestrates AI workflows across Photoshop, Premiere, Lightroom, Illustrator</li>
+        <li>Custom Models beta: fine-tune on brand assets for on-brand generation without style prompting</li>
+        <li>Sound generation: text-to-audio for sound effects, ambient audio, and short music in Firefly</li>
+        <li>Trained exclusively on licensed content — commercially safe with full Adobe indemnification</li>
+        <li>Deepest AI integration of any creative suite — Generative Fill, vector recolor, scene composition</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Requires an active Adobe Creative Cloud subscription — no standalone free product</li>
-        <li>Agentic workflows and Precision Flow are still in beta — expect rough edges</li>
-        <li>Custom Models require a library of owned images and fine-tuning time to set up</li>
-        <li>Full value is only realized by users deeply embedded in the Adobe app ecosystem</li>
+        <li>Creative Agent is new — complex multi-application orchestration may require manual cleanup</li>
+        <li>Custom Models in beta — not yet generally available; waitlist and enterprise requirements</li>
+        <li>Full feature access requires Adobe Creative Cloud All Apps at $54.99/mo — significant cost</li>
+        <li>Less creative range than Midjourney or Flux for artistic, non-commercial image styles</li>
       </ul>
     </div>
   </div>
@@ -213,7 +217,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     </a>
     <a class="also-card" href="/tools/figma-ai.html">
       <div class="also-card-name">Figma AI</div>
-      <div class="also-card-desc">AI-assisted UI/UX design and interactive prototyping inside Figma</div>
+      <div class="also-card-desc">UI/UX design, AI agents on canvas, image tools, voice input, text on path</div>
     </a>
   </div>
 

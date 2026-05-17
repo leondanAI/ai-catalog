@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Pika", "description": "Pika is an AI video generation platform focused on expressive, physics-grounded video creation with a suite of features that extend beyond simple text-to-video generation. It has grown into a multi-pr", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://pika.art", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Pika", "description": "Pika is an AI video generation platform known for its approachable interface, creative effects (Pikaffects), and broad accessibility through a generous free tier. Since its initial launch, Pika has gr", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://pika.art", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -116,9 +116,11 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>aitoolfit</a>
     <nav class="nav-links">
       <a href="/"               class="nav-link" data-nav="index.html"      data-i18n="nav.home">Find AI</a>
-      <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">Best AI Tools</a>
+      <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
       <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇬🇧 EN <span style="opacity:.5;font-size:10px" id="langArrow">▾</span></button>
@@ -128,9 +130,11 @@ textarea.form-input { resize: vertical; min-height: 90px; }
   </div>
   <nav class="mobile-menu" id="mobileMenu">
     <a href="/"               class="nav-link" data-i18n="nav.home">Find AI</a>
-    <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">Best AI Tools</a>
+    <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
 
@@ -160,7 +164,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
         <span class="tool-meta-chip badge-freemium">Freemium</span>
         <span class="tool-meta-chip">👥 1M+</span>
       </div>
-      <div class="tool-best-for"><strong>Best for:</strong> AI video generation, physics-aware motion, lip-sync, digital twin</div>
+      <div class="tool-best-for"><strong>Best for:</strong> Short video clips, flicker-free output, character consistency, AI social video</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -170,28 +174,27 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Pika</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Pika is an AI video generation platform focused on expressive, physics-grounded video creation with a suite of features that extend beyond simple text-to-video generation. It has grown into a multi-product platform covering video generation, lip-sync, live video AI, and personalized digital twins — all accessible from a single account.</p><p style="margin-top:1rem">Pika 2.5 introduces physics-aware generation as a core capability. The model simulates real-world physical properties — object weight, squish and deformation, and liquid flow dynamics — producing video where motion behaves according to physical laws rather than learned statistical patterns alone. A falling object decelerates correctly, a ball compresses on impact, and water flows with realistic surface tension. This level of physical plausibility distinguishes Pika 2.5 from most competing video generators.</p><p style="margin-top:1rem">Integrated sound effects are automatically matched to the action in a generated video. Pika analyzes the visual content and adds contextually appropriate audio — footsteps, impacts, ambient sound, and environmental audio — without requiring separate audio production or manual sync. This accelerates production for social media content, advertisements, and short-form video where audio and visual must be tightly aligned.</p><p style="margin-top:1rem">Pikaformance is a talking-face lip-sync tool: users supply a portrait and an audio track, and Pika generates a realistic lip-synced video of the face speaking the provided audio. PikaStream 1.0 takes this further — it is a real-time system that gives AI agents a face and voice for live video calls, enabling AI-powered presenters or customer service avatars to participate in live video interactions.</p><p style="margin-top:1rem">Pika AI Selves creates a personalized AI digital twin from a user's face, voice, and memory. The twin can represent the user in interactions, generate personalized video messages, and maintain a consistent identity across sessions. Pricing spans four tiers: Free at 80 credits per month, Standard at $8/month, Pro at $28/month, and Fancy at $76/month on annual billing.</p><p style="margin-top:1rem">Pika is best for content creators, marketers, and developers who need physics-realistic video with integrated audio, and for anyone exploring AI-driven live video, lip-sync, or personalized digital identity.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Pika is an AI video generation platform known for its approachable interface, creative effects (Pikaffects), and broad accessibility through a generous free tier. Since its initial launch, Pika has grown to 2M+ users and is used primarily for short-form social video, creative experiments, and entertainment content.</p><p style="margin-top:1rem">Pika 2.5, launched May 2026, addresses the two most common quality complaints with previous Pika versions. Flicker-free output eliminates temporal inconsistency in generated video — the frame-to-frame flickering artifacts that make AI-generated video look unnatural and limit its use in professional contexts. Stable characters across scenes means characters now maintain consistent appearance, proportions, and style throughout a clip and across sequential generations, making Pika viable for multi-shot narrative sequences.</p><p style="margin-top:1rem">PikaStream 1.0 is a fundamentally new capability that moves Pika beyond pre-generated video. PikaStream enables real-time AI video chat: users can have live video conversations with AI agents that appear as generated video characters, rendered in real time. The AI agent maintains a consistent visual persona and responds to conversation dynamically. This positions Pika in the emerging real-time AI interaction space alongside text and voice AI agents but with a video-native interface.</p><p style="margin-top:1rem">The AI social video app direction represents Pika's platform ambition. Rather than remaining purely a generation tool, Pika is building toward a platform where users create, share, and interact with AI-generated video content socially — combining content creation tools with a social feed and real-time AI interaction through PikaStream. This differentiates Pika's long-term roadmap from pure generation competitors like Runway or Kling.</p><p style="margin-top:1rem">Pika offers 80 free monthly credits for new users on the free tier. Paid plans provide higher resolution, longer clips, and priority generation. Pika is best for social content creators, entertainers, and creative experimenters who want accessible AI video with real-time interaction capabilities.</p></div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Physics-aware generation: weight, squish, liquid flow — motion follows real physical laws</li>
-        <li>Integrated sound effects auto-matched to video action — no separate audio production needed</li>
-        <li>Pikaformance lip-sync: realistic talking-face video from portrait + audio input</li>
-        <li>PikaStream 1.0: real-time AI face and voice for live video calls and AI agent interactions</li>
-        <li>Pika AI Selves: personalized digital twin with face, voice, and persistent memory</li>
+        <li>Pika 2.5: flicker-free output — professional-quality temporal consistency in generated video</li>
+        <li>Stable characters across scenes: consistent appearance across multi-shot sequences</li>
+        <li>PikaStream 1.0: real-time AI video chat with live generated character agents</li>
+        <li>AI social video app direction: creation + sharing + real-time AI in one platform</li>
+        <li>80 free monthly credits — one of the most generous free tiers in AI video</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Free tier limited to 80 credits/month — quickly exhausted in active production use</li>
-        <li>Physics simulation quality varies with complex multi-object scenes</li>
-        <li>PikaStream and AI Selves are new features — edge cases and stability still maturing</li>
-        <li>Fancy plan at $76/month (annual) is expensive compared to single-purpose video tools</li>
-        <li>Less suitable for long-form or cinematic video compared to Kling AI or Sora</li>
+        <li>Maximum clip length still limited compared to Kling AI (which supports up to 2 minutes)</li>
+        <li>PikaStream 1.0 is new — reliability and latency on complex real-time video rendering varies</li>
+        <li>Social app direction is ambitious but unproven — execution risk on platform build-out</li>
+        <li>Character consistency improvements in 2.5 still not on par with Kling v3.5 for complex scenes</li>
       </ul>
     </div>
   </div>
@@ -214,7 +217,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     </a>
     <a class="also-card" href="/tools/heygen.html">
       <div class="also-card-name">HeyGen</div>
-      <div class="also-card-desc">AI avatar videos, 4K upscaling, brand-consistent content</div>
+      <div class="also-card-desc">AI avatars, studio-quality video, video dubbing, credit-based plans</div>
     </a>
   </div>
 
