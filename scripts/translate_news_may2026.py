@@ -32,6 +32,7 @@ MISSING_SLUGS = [
     'suno-series-d-5-billion-valuation',
     'google-io-2026-gemini-announcement',
     'anthropic-claude-design-launch',
+    'adobe-creative-agent-cc-orchestration',
 ]
 
 CAT_LABELS = {
