@@ -132,9 +132,9 @@ COMPARISONS = [
     {'slug': 'beautiful-ai-vs-pitch',                'a': 'beautiful-ai',           'b': 'pitch',                 'cat': 'presentations','label': 'Beautiful.ai vs Pitch'},
     {'slug': 'slidesgo-vs-gamma',                    'a': 'slidesgo',               'b': 'gamma',                 'cat': 'presentations','label': 'Slidesgo vs Gamma'},
     # ── Business & Investment (leader: TradingView, #2: Fiscal.ai) ───────────
-    {'slug': 'tradingview-vs-fiscal-ai',             'a': 'tradingview',            'b': 'finchat',               'cat': 'business',      'label': 'TradingView vs Fiscal.ai'},
+    {'slug': 'tradingview-vs-fiscal-ai',             'a': 'tradingview',            'b': 'fiscal-ai',               'cat': 'business',      'label': 'TradingView vs Fiscal.ai'},
     {'slug': 'koyfin-vs-tradingview',                'a': 'koyfin',                 'b': 'tradingview',           'cat': 'business',      'label': 'Koyfin vs TradingView'},
-    {'slug': 'fiscal-ai-vs-koyfin',                  'a': 'finchat',                'b': 'koyfin',                'cat': 'business',      'label': 'Fiscal.ai vs Koyfin'},
+    {'slug': 'fiscal-ai-vs-koyfin',                  'a': 'fiscal-ai',                'b': 'koyfin',                'cat': 'business',      'label': 'Fiscal.ai vs Koyfin'},
     {'slug': 'tickeron-vs-tradingview',              'a': 'tickeron',               'b': 'tradingview',           'cat': 'business',      'label': 'Tickeron vs TradingView'},
     {'slug': 'uptrends-ai-vs-koyfin',               'a': 'uptrends-ai',            'b': 'koyfin',                'cat': 'business',      'label': 'Uptrends.ai vs Koyfin'},
     # ── Code (new) ────────────────────────────────────────────────────────────
