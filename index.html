@@ -331,7 +331,7 @@ function renderNewsGrid(articles) {
     const color = n.cat_color || n.catColor || '#7c6af7';
     const label = n.cat_label || n.catLabel || n.category || '';
     const date  = n.date || '';
-    const url   = n.slug ? `news-article.html?slug=${n.slug}&lang=${lang}` : (n.url || '#');
+    const url   = n.url || (n.slug ? `/news/${n.slug}.html` : '#');
     return `
     <a class="news-card fade-up" href="${url}">
       <div class="news-meta">
