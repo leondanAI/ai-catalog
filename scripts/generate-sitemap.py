@@ -73,6 +73,12 @@ compare_slugs = sorted(
     if f.endswith('.html') and not f.startswith('_')
 )
 
+news_dir = os.path.join(ROOT_DIR, 'news')
+news_slugs = sorted(
+    f[:-5] for f in os.listdir(news_dir)
+    if f.endswith('.html') and not f.startswith('_')
+) if os.path.isdir(news_dir) else []
+
 # ── EN main pages ─────────────────────────────────────────────────────────────
 entries.append(url(f'{BASE_URL}/',                 TODAY, 'daily',   1.0))
 entries.append(url(f'{BASE_URL}/directory.html',   TODAY, 'daily',   1.0))
@@ -92,6 +98,10 @@ for slug in tool_slugs:
 # ── EN compare pages ──────────────────────────────────────────────────────────
 for slug in compare_slugs:
     entries.append(url(f'{BASE_URL}/compare/{slug}.html', TODAY, 'weekly', 0.8))
+
+# ── EN individual news article pages ─────────────────────────────────────────
+for slug in news_slugs:
+    entries.append(url(f'{BASE_URL}/news/{slug}.html', TODAY, 'monthly', 0.75))
 
 # ── Active language versions ──────────────────────────────────────────────────
 for lang in LANGS_ACTIVE:

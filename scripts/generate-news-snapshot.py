@@ -55,7 +55,7 @@ def generate_news_js(articles):
         cat = a.get('category', 'tools')
         meta = CAT_META.get(cat, {'label': cat.title(), 'color': '#888'})
         slug = a.get('slug', '')
-        url = f"news-article.html?slug={slug}" if slug else f"news-article.html?id={a['id']}"
+        url = f"/news/{slug}.html" if slug else f"news-article.html?id={a['id']}"
         title_js = a['title'].replace("'", "\\'").replace('—', '—')
         summary_js = a['summary'].replace("'", "\\'").replace('—', '—')
         date_fmt = format_date(a['date'])
@@ -87,7 +87,7 @@ def generate_seo_html(articles):
         cat = a.get('category', 'tools')
         meta = CAT_META.get(cat, {'label': cat.title(), 'color': '#888'})
         slug = a.get('slug', '')
-        url = f"/news-article.html?slug={slug}&amp;lang=en" if slug else f"/news-article.html?id={a['id']}&amp;lang=en"
+        url = f"/news/{slug}.html" if slug else f"/news-article.html?id={a['id']}"
         date_fmt = format_date(a['date'])
         color = meta['color']
 
