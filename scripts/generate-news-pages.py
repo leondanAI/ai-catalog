@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 """
-Generate static news article pages from Supabase.
-Each article gets its own /news/[slug].html — fully static, Google-indexable.
+Generate static news article pages from Supabase for all active languages.
+EN  → /news/[slug].html
+ES  → /es/news/[slug].html
+... etc.
 
 Run: python3 scripts/generate-news-pages.py
-Also run generate-news-snapshot.py after this to update news.html SEO block with new URLs.
+Then: python3 scripts/generate-news-snapshot.py
+Then: python3 scripts/generate-sitemap.py
 """
 
 import urllib.request, json, os, html as htmlmod, re
@@ -13,8 +16,16 @@ from datetime import datetime
 SB_URL   = 'https://lbjdwkvkkndvofysyssy.supabase.co'
 SB_KEY   = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG'
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-NEWS_DIR = os.path.join(ROOT_DIR, 'news')
 SITE_URL = 'https://aitoolfit.ai'
+
+ACTIVE_LANGS = ['en', 'es', 'de', 'ru', 'ua', 'he', 'fr', 'pt']
+RTL_LANGS    = {'he'}
+
+LANG_LABELS = {
+    'en': 'English', 'es': 'Español', 'de': 'Deutsch',
+    'ru': 'Русский', 'ua': 'Українська', 'he': 'עברית',
+    'fr': 'Français', 'pt': 'Português',
+}
 
 CAT_COLORS = {
     'tools':      '#2dd4a0',
@@ -32,9 +43,9 @@ def sb_get(path):
     with urllib.request.urlopen(req) as r:
         return json.loads(r.read())
 
-def fetch_news():
+def fetch_news(lang):
     fields = 'id,slug,title,summary,body,date,source,category,cat_label,cat_color,image_url'
-    return sb_get(f'news?lang=eq.en&published=eq.true&order=date.desc&limit=100&select={fields}')
+    return sb_get(f'news?lang=eq.{lang}&published=eq.true&order=date.desc&limit=100&select={fields}')
 
 def format_date(date_str):
     if not date_str:
@@ -44,11 +55,8 @@ def format_date(date_str):
         return dt.strftime('%b %d, %Y').replace(' 0', ' ')
     return date_str
 
-def strip_html(text):
-    return re.sub(r'<[^>]+>', '', text or '')
-
 def truncate_meta(text, max_len=155):
-    text = strip_html(text)
+    text = re.sub(r'<[^>]+>', '', text or '')
     if len(text) <= max_len:
         return text
     return text[:max_len - 1].rsplit(' ', 1)[0] + '…'
@@ -56,7 +64,15 @@ def truncate_meta(text, max_len=155):
 def esc(s):
     return htmlmod.escape(str(s or ''), quote=True)
 
-def generate_page(article, all_articles):
+def page_url(lang, slug):
+    if lang == 'en':
+        return f'{SITE_URL}/news/{slug}.html'
+    return f'{SITE_URL}/{lang}/news/{slug}.html'
+
+def nav_prefix(lang):
+    return f'/{lang}' if lang != 'en' else ''
+
+def generate_page(article, lang, all_articles_for_lang, all_slugs_by_lang):
     slug      = article['slug']
     title     = article.get('title', '')
     summary   = article.get('summary', '')
@@ -69,18 +85,30 @@ def generate_page(article, all_articles):
     image_url = article.get('image_url', '')
 
     meta_desc = truncate_meta(summary)
-    canonical = f'{SITE_URL}/news/{slug}.html'
+    canonical = page_url(lang, slug)
+    base      = nav_prefix(lang)
+    is_rtl    = lang in RTL_LANGS
+    dir_attr  = ' dir="rtl"' if is_rtl else ''
 
-    # Related: same category, different slug, up to 2
-    related = [a for a in all_articles if a['slug'] != slug and a.get('category') == category][:2]
+    # hreflang links — only for languages that have this slug
+    hreflang_lines = []
+    for l in ACTIVE_LANGS:
+        if slug in all_slugs_by_lang.get(l, set()):
+            hreflang_lines.append(f'<link rel="alternate" hreflang="{l}" href="{page_url(l, slug)}">')
+    hreflang_lines.append(f'<link rel="alternate" hreflang="x-default" href="{page_url("en", slug)}">')
+    hreflang_html = '\n'.join(hreflang_lines)
+
+    # Related articles: same category, different slug, up to 2
+    related = [a for a in all_articles_for_lang if a['slug'] != slug and a.get('category') == category][:2]
     related_html = ''
     if related:
         cards = ''
         for r in related:
             rc = r.get('cat_color') or CAT_COLORS.get(r.get('category', 'tools'), '#7c6af7')
             rl = r.get('cat_label') or r.get('category', '').title()
+            r_url = page_url(lang, r['slug'])
             cards += f'''
-      <a class="related-card" href="/news/{r["slug"]}.html">
+      <a class="related-card" href="{r_url}">
         <div class="related-cat" style="color:{rc}">{esc(rl)}</div>
         <div class="related-name">{esc(r.get("title",""))}</div>
         <div class="related-date">{esc(format_date(r.get("date","")))}</div>
@@ -103,20 +131,20 @@ def generate_page(article, all_articles):
         "headline": title,
         "description": meta_desc,
         "datePublished": article.get('date', ''),
+        "inLanguage": lang,
         "publisher": {"@type": "Organization", "name": "AItoolFit", "url": SITE_URL},
         "mainEntityOfPage": canonical
     }, ensure_ascii=False)
 
     return f'''<!DOCTYPE html>
-<html lang="en">
+<html lang="{lang}"{dir_attr}>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{esc(title)} — AItoolFit</title>
 <meta name="description" content="{esc(meta_desc)}">
 <link rel="canonical" href="{canonical}">
-<link rel="alternate" hreflang="x-default" href="{canonical}">
-<link rel="alternate" hreflang="en" href="{canonical}">
+{hreflang_html}
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/favicon-192.png">
@@ -166,10 +194,10 @@ def generate_page(article, all_articles):
   <div class="header-inner">
     <a href="/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>AItoolFit</a>
     <nav class="nav-links">
-      <a href="/" class="nav-link" data-i18n="nav.home">Find AI</a>
-      <a href="/directory.html" class="nav-link" data-i18n="nav.directory">Best AI Tools</a>
-      <a href="/compare.html" class="nav-link" data-i18n="nav.compare">Compare</a>
-      <a href="/news.html" class="nav-link active" data-i18n="nav.news">News</a>
+      <a href="{base}/" class="nav-link" data-i18n="nav.home">Find AI</a>
+      <a href="{base}/directory.html" class="nav-link" data-i18n="nav.directory">Best AI Tools</a>
+      <a href="{base}/compare.html" class="nav-link" data-i18n="nav.compare">Compare</a>
+      <a href="{base}/news.html" class="nav-link active" data-i18n="nav.news">News</a>
     </nav>
     <div class="lang-picker">
       <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">&#127468;&#127463; EN <span style="opacity:.5;font-size:10px">&#9660;</span></button>
@@ -178,18 +206,18 @@ def generate_page(article, all_articles):
     <button class="btn-hamburger" onclick="toggleMenu()">&#9776;</button>
   </div>
   <nav class="mobile-menu" id="mobileMenu">
-    <a href="/" class="nav-link" data-i18n="nav.home">Find AI</a>
-    <a href="/directory.html" class="nav-link" data-i18n="nav.directory">Best AI Tools</a>
-    <a href="/compare.html" class="nav-link" data-i18n="nav.compare">Compare</a>
-    <a href="/news.html" class="nav-link" data-i18n="nav.news">News</a>
+    <a href="{base}/" class="nav-link" data-i18n="nav.home">Find AI</a>
+    <a href="{base}/directory.html" class="nav-link" data-i18n="nav.directory">Best AI Tools</a>
+    <a href="{base}/compare.html" class="nav-link" data-i18n="nav.compare">Compare</a>
+    <a href="{base}/news.html" class="nav-link" data-i18n="nav.news">News</a>
   </nav>
 </header>
 
 <div class="article-wrap">
   <nav class="breadcrumb">
-    <a href="/">Home</a> <span>&#8250;</span>
-    <a href="/news.html">News</a> <span>&#8250;</span>
-    <a href="/news.html">{esc(cat_label)}</a> <span>&#8250;</span>
+    <a href="{base}/">Home</a> <span>&#8250;</span>
+    <a href="{base}/news.html">News</a> <span>&#8250;</span>
+    <a href="{base}/news.html">{esc(cat_label)}</a> <span>&#8250;</span>
     <span>{esc(title_short)}</span>
   </nav>{image_html}
   <h1 class="article-title">{esc(title)}</h1>
@@ -211,21 +239,21 @@ def generate_page(article, all_articles):
     <div>
       <div class="footer-col-title">PRODUCT</div>
       <div class="footer-col-links">
-        <a href="/">Find AI</a>
-        <a href="/directory.html">Best AI Tools</a>
-        <a href="/compare.html">Compare</a>
-        <a href="/news.html">News</a>
-        <a href="/newsletter.html">Newsletter</a>
+        <a href="{base}/">Find AI</a>
+        <a href="{base}/directory.html">Best AI Tools</a>
+        <a href="{base}/compare.html">Compare</a>
+        <a href="{base}/news.html">News</a>
+        <a href="{base}/newsletter.html">Newsletter</a>
       </div>
     </div>
     <div>
       <div class="footer-col-title">NEWS CATEGORIES</div>
       <div class="footer-col-links">
-        <a href="/news.html#models">Models</a>
-        <a href="/news.html#tools">Tools</a>
-        <a href="/news.html#business">Business</a>
-        <a href="/news.html#research">Research</a>
-        <a href="/news.html#regulation">Regulation</a>
+        <a href="{base}/news.html#models">Models</a>
+        <a href="{base}/news.html#tools">Tools</a>
+        <a href="{base}/news.html#business">Business</a>
+        <a href="{base}/news.html#research">Research</a>
+        <a href="{base}/news.html#regulation">Regulation</a>
       </div>
     </div>
     <div>
@@ -247,45 +275,66 @@ def generate_page(article, all_articles):
   </div>
   <div class="footer-bottom" style="flex-direction:column;gap:6px;align-items:flex-start">
     <div style="display:flex;justify-content:space-between;width:100%;flex-wrap:wrap;gap:8px">
-      <div style="display:flex;gap:16px;font-size:12px"><a href="/privacy.html" style="color:var(--text3)">Privacy</a><a href="/terms.html" style="color:var(--text3)">Terms</a><a href="/contact.html" style="color:var(--text3)">Contact</a></div>
+      <div style="display:flex;gap:16px;font-size:12px"><a href="{base}/privacy.html" style="color:var(--text3)">Privacy</a><a href="{base}/terms.html" style="color:var(--text3)">Terms</a><a href="{base}/contact.html" style="color:var(--text3)">Contact</a></div>
       <span style="font-size:12px;color:var(--text3)">&copy; 2026 AItoolFit.ai</span>
     </div>
     <span style="font-size:11px;color:var(--text3);opacity:0.6">Made with &hearts; by Leondan &amp; Claude</span>
   </div>
 </footer>
 
+<script>localStorage.setItem("lang","{lang}");</script>
 <script src="/js/i18n.js"></script>
 <script src="/js/main.js"></script>
 </body>
 </html>'''
 
 def main():
-    os.makedirs(NEWS_DIR, exist_ok=True)
-    print('Fetching news from Supabase...')
-    articles = fetch_news()
-    print(f'  {len(articles)} articles found')
+    print('Fetching news from Supabase for all languages...')
 
-    count = 0
+    # Fetch all languages first to build slug sets for hreflang
+    all_articles = {}
+    for lang in ACTIVE_LANGS:
+        articles = fetch_news(lang)
+        all_articles[lang] = articles
+        print(f'  {lang}: {len(articles)} articles')
+
+    # Build slug sets per language for hreflang
+    all_slugs_by_lang = {lang: {a['slug'] for a in arts} for lang, arts in all_articles.items()}
+
+    total = 0
     skipped = 0
-    for article in articles:
-        slug = article.get('slug', '')
-        if not slug:
-            skipped += 1
-            continue
-        if not article.get('body'):
-            print(f'  SKIP (no body): {slug}')
-            skipped += 1
-            continue
 
-        html = generate_page(article, articles)
-        path = os.path.join(NEWS_DIR, f'{slug}.html')
-        with open(path, 'w', encoding='utf-8') as f:
-            f.write(html)
-        count += 1
-        print(f'  ✓ news/{slug}.html')
+    for lang in ACTIVE_LANGS:
+        articles = all_articles[lang]
 
-    print(f'\nDone — {count} pages generated, {skipped} skipped (no slug or no body).')
-    print('Next: run python3 scripts/generate-news-snapshot.py to update news.html links.')
+        # Determine output directory
+        if lang == 'en':
+            news_dir = os.path.join(ROOT_DIR, 'news')
+        else:
+            news_dir = os.path.join(ROOT_DIR, lang, 'news')
+        os.makedirs(news_dir, exist_ok=True)
+
+        lang_count = 0
+        for article in articles:
+            slug = article.get('slug', '')
+            if not slug:
+                skipped += 1
+                continue
+            if not article.get('body'):
+                skipped += 1
+                continue
+
+            html = generate_page(article, lang, articles, all_slugs_by_lang)
+            path = os.path.join(news_dir, f'{slug}.html')
+            with open(path, 'w', encoding='utf-8') as f:
+                f.write(html)
+            lang_count += 1
+            total += 1
+
+        print(f'  ✓ {lang}: {lang_count} pages → {"news/" if lang == "en" else lang+"/news/"}')
+
+    print(f'\nDone — {total} pages generated, {skipped} skipped (no slug or no body).')
+    print('Next: python3 scripts/generate-news-snapshot.py && python3 scripts/generate-sitemap.py')
 
 if __name__ == '__main__':
     main()

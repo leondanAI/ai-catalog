@@ -109,8 +109,11 @@ for lang in LANGS_ACTIVE:
     entries.append(url(f'{BASE_URL}/{lang}/directory.html',   TODAY, 'daily',   0.9))
     entries.append(url(f'{BASE_URL}/{lang}/compare.html',     TODAY, 'weekly',  0.9))
     entries.append(url(f'{BASE_URL}/{lang}/news.html',        TODAY, 'daily',   0.6))
-    add_if_exists(entries, f'{lang}/news-article.html',
-                  f'{BASE_URL}/{lang}/news-article.html', TODAY, 'daily', 0.6)
+    lang_news_dir = os.path.join(ROOT_DIR, lang, 'news')
+    if os.path.isdir(lang_news_dir):
+        for f in sorted(os.listdir(lang_news_dir)):
+            if f.endswith('.html') and not f.startswith('_'):
+                entries.append(url(f'{BASE_URL}/{lang}/news/{f[:-5]}.html', TODAY, 'monthly', 0.65))
     entries.append(url(f'{BASE_URL}/{lang}/tools.html',       TODAY, 'weekly',  0.4))
     entries.append(url(f'{BASE_URL}/{lang}/newsletter.html',  TODAY, 'monthly', 0.3))
     add_if_exists(entries, f'{lang}/privacy.html',
