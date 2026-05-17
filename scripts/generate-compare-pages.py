@@ -565,11 +565,9 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
     <a href="{base}/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>aitoolfit</a>
     <nav class="nav-links">
       <a href="{base}/"                class="nav-link" data-i18n="nav.home">Find AI</a>
-      <a href="{base}/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
+      <a href="{base}/directory.html"  class="nav-link" data-i18n="nav.directory">Best AI Tools</a>
       <a href="{base}/compare.html"    class="nav-link active" data-i18n="nav.compare">Compare</a>
       <a href="{base}/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-      <a href="{base}/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
-      <a href="{base}/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
       <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">{flag} {label} <span style="opacity:.5;font-size:10px" id="langArrow">▾</span></button>
@@ -579,11 +577,9 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
   </div>
   <nav class="mobile-menu" id="mobileMenu">
     <a href="{base}/"                class="nav-link" data-i18n="nav.home">Find AI</a>
-    <a href="{base}/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
+    <a href="{base}/directory.html"  class="nav-link" data-i18n="nav.directory">Best AI Tools</a>
     <a href="{base}/compare.html"    class="nav-link active" data-i18n="nav.compare">Compare</a>
     <a href="{base}/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="{base}/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
-    <a href="{base}/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
 
