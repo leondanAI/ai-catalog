@@ -142,6 +142,7 @@ COMPARISONS = [
     {'slug': 'continue-dev-vs-github-copilot',      'a': 'continue-dev',           'b': 'github-copilot',        'cat': 'code',          'label': 'Continue.dev vs GitHub Copilot'},
     {'slug': 'opencode-vs-claude-code',             'a': 'opencode',               'b': 'claude-code',           'cat': 'code',          'label': 'OpenCode vs Claude Code'},
     {'slug': 'zed-vs-cursor',                       'a': 'zed',                    'b': 'cursor',                'cat': 'code',          'label': 'Zed vs Cursor'},
+    {'slug': 'kiro-vs-cursor',                      'a': 'kiro',                   'b': 'cursor',                'cat': 'code',          'label': 'Kiro vs Cursor'},
     # ── Image (new) ───────────────────────────────────────────────────────────
     {'slug': 'comfyui-vs-stable-diffusion',         'a': 'comfyui',                'b': 'stable-diffusion',      'cat': 'image',         'label': 'ComfyUI vs Stable Diffusion'},
     {'slug': 'krea-ai-vs-midjourney',               'a': 'krea-ai',                'b': 'midjourney',            'cat': 'image',         'label': 'Krea AI vs Midjourney'},
