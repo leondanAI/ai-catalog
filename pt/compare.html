@@ -108,7 +108,7 @@
 <link rel="alternate" hreflang="es" href="https://aitoolfit.ai/es/compare.html">
 <link rel="alternate" hreflang="ru" href="https://aitoolfit.ai/ru/compare.html">
 <link rel="alternate" hreflang="de" href="https://aitoolfit.ai/de/compare.html">
-<link rel="alternate" hreflang="uk" href="https://aitoolfit.ai/ua/compare.html">
+<link rel="alternate" hreflang="ua" href="https://aitoolfit.ai/ua/compare.html">
 <link rel="alternate" hreflang="he" href="https://aitoolfit.ai/he/compare.html">
 <link rel="alternate" hreflang="fr" href="https://aitoolfit.ai/fr/compare.html">
 <link rel="alternate" hreflang="pt" href="https://aitoolfit.ai/pt/compare.html">
@@ -120,7 +120,7 @@
     <a href="/pt/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>AItoolFit</a>
     <nav class="nav-links">
       <a href="/pt/"               class="nav-link" data-nav="index.html"      data-i18n="nav.home">Buscar IA</a>
-      <a href="/pt/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">Mejores herramientas IA</a>
+      <a href="/pt/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">Melhores ferramentas IA</a>
       <a href="/pt/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Comparar</a>
       <a href="/pt/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Notícias</a>
     </nav>
@@ -132,7 +132,7 @@
   </div>
   <nav class="mobile-menu" id="mobileMenu">
     <a href="/pt/"               class="nav-link" data-i18n="nav.home">Buscar IA</a>
-    <a href="/pt/directory.html"  class="nav-link" data-i18n="nav.directory">Mejores herramientas IA</a>
+    <a href="/pt/directory.html"  class="nav-link" data-i18n="nav.directory">Melhores ferramentas IA</a>
     <a href="/pt/compare.html"    class="nav-link" data-i18n="nav.compare">Comparar</a>
     <a href="/pt/news.html"       class="nav-link" data-i18n="nav.news">Notícias</a>
   </nav>
@@ -191,11 +191,11 @@
     <div>
       <div class="footer-col-title">PRODUTO</div>
       <div class="footer-col-links">
-        <a href="/pt/">Buscar ferramenta</a>
-        <a href="/pt/directory.html">Catálogo IA</a>
+        <a href="/pt/">Find AI</a>
+        <a href="/pt/directory.html">Best AI Tools</a>
         <a href="/pt/compare.html">Comparar</a>
         <a href="/pt/news.html">Notícias</a>
-        <a href="/pt/directory.html">Ferramentas</a>
+        <a href="/pt/newsletter.html">Newsletter</a>
       </div>
     </div>
     <div>
@@ -314,7 +314,7 @@ function initAC(inputId, dropId, wrapId, onChange) {
       matches.forEach(t2 => {
         const idx = visibleOptions.length;
         const domain = getDomain(t2.url);
-        html += `<div class="ac-option" data-idx="${idx}" data-name="${t2.name}"><img src="https://www.google.com/s2/favicons?sz=32&domain=${domain}" alt="" onerror="this.style.display='none'">${t2.name}</div>`;
+        html += `<div class="ac-option" data-idx="${idx}" data-name="${t2.name}"><img src="https://www.google.com/s2/favicons?sz=32&domain=${domain}" alt="${t2.name} logo" onerror="this.style.display='none'">${t2.name}</div>`;
         visibleOptions.push(t2.name);
       });
     });
@@ -438,12 +438,12 @@ async function updateCompare() {
     <table class="compare-table">
       <thead><tr><th></th>
         <td style="text-align:center"><div class="tool-col-head">
-          <div class="tool-col-avatar" style="background:${a.catColor}22;color:${a.catColor}"><img src="https://www.google.com/s2/favicons?sz=64&domain=${getDomain(a.url)}" width="30" height="30" style="border-radius:6px" onerror="this.style.display='none';this.insertAdjacentText('afterend','${a.name[0]}')"></div>
+          <div class="tool-col-avatar" style="background:${a.catColor}22;color:${a.catColor}"><img src="https://www.google.com/s2/favicons?sz=64&domain=${getDomain(a.url)}" alt="${a.name} logo" width="30" height="30" style="border-radius:6px" onerror="this.style.display='none';this.insertAdjacentText('afterend','${a.name[0]}')"></div>
           <div class="tool-col-name">${a.name}</div>
           <div class="tool-col-bestfor"><strong>${t('compare.bestFor')}:</strong> ${esc(infoA.dbTool.best_for||a.bestFor||'—')}</div>
         </div></td>
         <td style="text-align:center"><div class="tool-col-head">
-          <div class="tool-col-avatar" style="background:${b.catColor}22;color:${b.catColor}"><img src="https://www.google.com/s2/favicons?sz=64&domain=${getDomain(b.url)}" width="30" height="30" style="border-radius:6px" onerror="this.style.display='none';this.insertAdjacentText('afterend','${b.name[0]}')"></div>
+          <div class="tool-col-avatar" style="background:${b.catColor}22;color:${b.catColor}"><img src="https://www.google.com/s2/favicons?sz=64&domain=${getDomain(b.url)}" alt="${b.name} logo" width="30" height="30" style="border-radius:6px" onerror="this.style.display='none';this.insertAdjacentText('afterend','${b.name[0]}')"></div>
           <div class="tool-col-name">${b.name}</div>
           <div class="tool-col-bestfor"><strong>${t('compare.bestFor')}:</strong> ${esc(infoB.dbTool.best_for||b.bestFor||'—')}</div>
         </div></td>

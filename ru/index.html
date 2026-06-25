@@ -108,7 +108,7 @@
 <link rel="alternate" hreflang="es" href="https://aitoolfit.ai/es/">
 <link rel="alternate" hreflang="ru" href="https://aitoolfit.ai/ru/">
 <link rel="alternate" hreflang="de" href="https://aitoolfit.ai/de/">
-<link rel="alternate" hreflang="uk" href="https://aitoolfit.ai/ua/">
+<link rel="alternate" hreflang="ua" href="https://aitoolfit.ai/ua/">
 <link rel="alternate" hreflang="he" href="https://aitoolfit.ai/he/">
 <link rel="alternate" hreflang="fr" href="https://aitoolfit.ai/fr/">
 <link rel="alternate" hreflang="pt" href="https://aitoolfit.ai/pt/">
@@ -204,7 +204,7 @@
   <section class="section">
     <div class="section-head">
       <h2 class="section-title" data-i18n="section.categories">По категориям</h2>
-      <a href="/ru/directory.html" class="section-more" data-i18n="section.fullCatalog">Весь каталог →</a>
+      <a href="/ru/directory.html" class="section-more" data-i18n="section.fullCatalog">Лучшие AI-инструменты →</a>
     </div>
     <div class="grid-cats" id="catsGrid"></div>
   </section>
@@ -233,11 +233,11 @@
     <div>
       <div class="footer-col-title">ПРОДУКТ</div>
       <div class="footer-col-links">
-        <a href="/ru/">Найти инструмент</a>
-        <a href="/ru/directory.html">Каталог ИИ</a>
+        <a href="/ru/">Find AI</a>
+        <a href="/ru/directory.html">Best AI Tools</a>
         <a href="/ru/compare.html">Сравнение</a>
         <a href="/ru/news.html">Новости</a>
-        <a href="/ru/directory.html">Инструменты</a>
+        <a href="/ru/newsletter.html">Newsletter</a>
       </div>
     </div>
     <!-- Categories -->
@@ -292,12 +292,12 @@
 <script src="/js/main.js"></script>
 <script>
 const TRENDING_ITEMS = [
-  { name:'Claude',            badge:'🆕 Opus 4.8 — 96.7% USAMO, 1000 параллельных агентов', type:'update' },
-  { name:'ChatGPT',           badge:'🔥 GPT-5.5 Instant — −52% галлюцинаций', type:'update' },
-  { name:'Suno',              badge:'💰 $5B Series D — AI-музыка вышла в массы', type:'growth' },
-  { name:'Devin',             badge:'↓ $500 → $20/мес — AI-агенты для всех', type:'growth' },
-  { name:'Amazon Q Developer',badge:'⚠️ Устарел → заменён на Kiro', type:'update' },
-  { name:'Krea AI',           badge:'🆕 Krea 2 — новая базовая модель изображений', type:'update' },
+  { name:'Claude',            badge:'🆕 Opus 4.8 — 96.7% USAMO, 1000 parallel agents', type:'update' },
+  { name:'ChatGPT',           badge:'🔥 GPT-5.5 Instant — −52% hallucinations', type:'update' },
+  { name:'Google Gemini',     badge:'🆕 Gemini 3.5 Flash — flagship at Flash speed', type:'update' },
+  { name:'Devin',             badge:'↓ $500 → $20/mo — AI agents for everyone', type:'growth' },
+  { name:'Amazon Q Developer',badge:'⚠️ Deprecated → replaced by Kiro', type:'update' },
+  { name:'Cursor',            badge:'🧠 Composer 2.5 — Opus-level at 14× lower cost', type:'update' },
 ];
 
 function renderTrending() {
@@ -314,7 +314,7 @@ function renderTrending() {
     const badgeClass = h.type === 'update' ? 'update-badge' : 'growth-badge';
     return `<a class="tool-card fade-up" href="${href}" style="border-color:${color}22">
       <div class="tool-card-top">
-        <div class="tool-avatar" style="background:${color}22;color:${color}"><img src="https://www.google.com/s2/favicons?sz=64&domain=${domain}" width="28" height="28" style="border-radius:6px" onerror="this.style.display='none';this.parentNode.textContent='${h.name[0]}'"></div>
+        <div class="tool-avatar" style="background:${color}22;color:${color}"><img src="https://www.google.com/s2/favicons?sz=64&domain=${domain}" alt="${h.name} logo" width="28" height="28" style="border-radius:6px" onerror="this.style.display='none';this.parentNode.textContent='${h.name[0]}'"></div>
         <div><div class="tool-name">${h.name}</div><span class="badge badge-${badgeText}">${badgeText}</span></div>
       </div>
       <span class="${badgeClass}">${h.badge}</span>
@@ -435,7 +435,7 @@ function tf3ResolveSlug(aiName) {
 function tf3Avatar(name, url) {
   const domain = url ? url.replace(/https?:\/\//,'').split('/')[0] : '';
   return domain
-    ? `<img src="https://www.google.com/s2/favicons?sz=64&domain=${domain}" width="26" height="26" style="border-radius:6px;display:block" onerror="this.outerHTML='<span style=font-weight:700;font-size:14px>${tfEsc(name[0])}</span>'">`
+    ? `<img src="https://www.google.com/s2/favicons?sz=64&domain=${domain}" alt="${tfEsc(name)} logo" width="26" height="26" style="border-radius:6px;display:block" onerror="this.outerHTML='<span style=font-weight:700;font-size:14px>${tfEsc(name[0])}</span>'">`
     : `<span style="font-weight:700;font-size:14px">${tfEsc(name[0])}</span>`;
 }
 function tf3Stars(avg) {

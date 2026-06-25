@@ -108,7 +108,7 @@
 <link rel="alternate" hreflang="es" href="https://aitoolfit.ai/es/">
 <link rel="alternate" hreflang="ru" href="https://aitoolfit.ai/ru/">
 <link rel="alternate" hreflang="de" href="https://aitoolfit.ai/de/">
-<link rel="alternate" hreflang="uk" href="https://aitoolfit.ai/ua/">
+<link rel="alternate" hreflang="ua" href="https://aitoolfit.ai/ua/">
 <link rel="alternate" hreflang="he" href="https://aitoolfit.ai/he/">
 <link rel="alternate" hreflang="fr" href="https://aitoolfit.ai/fr/">
 <link rel="alternate" hreflang="pt" href="https://aitoolfit.ai/pt/">
@@ -313,7 +313,7 @@ function renderTrending() {
     const badgeClass = h.type === 'update' ? 'update-badge' : 'growth-badge';
     return `<a class="tool-card fade-up" href="${href}" style="border-color:${color}22">
       <div class="tool-card-top">
-        <div class="tool-avatar" style="background:${color}22;color:${color}"><img src="https://www.google.com/s2/favicons?sz=64&domain=${domain}" width="28" height="28" style="border-radius:6px" onerror="this.style.display='none';this.parentNode.textContent='${h.name[0]}'"></div>
+        <div class="tool-avatar" style="background:${color}22;color:${color}"><img src="https://www.google.com/s2/favicons?sz=64&domain=${domain}" alt="${h.name} logo" width="28" height="28" style="border-radius:6px" onerror="this.style.display='none';this.parentNode.textContent='${h.name[0]}'"></div>
         <div><div class="tool-name">${h.name}</div><span class="badge badge-${badgeText}">${badgeText}</span></div>
       </div>
       <span class="${badgeClass}">${h.badge}</span>
@@ -434,7 +434,7 @@ function tf3ResolveSlug(aiName) {
 function tf3Avatar(name, url) {
   const domain = url ? url.replace(/https?:\/\//,'').split('/')[0] : '';
   return domain
-    ? `<img src="https://www.google.com/s2/favicons?sz=64&domain=${domain}" width="26" height="26" style="border-radius:6px;display:block" onerror="this.outerHTML='<span style=font-weight:700;font-size:14px>${tfEsc(name[0])}</span>'">`
+    ? `<img src="https://www.google.com/s2/favicons?sz=64&domain=${domain}" alt="${tfEsc(name)} logo" width="26" height="26" style="border-radius:6px;display:block" onerror="this.outerHTML='<span style=font-weight:700;font-size:14px>${tfEsc(name[0])}</span>'">`
     : `<span style="font-weight:700;font-size:14px">${tfEsc(name[0])}</span>`;
 }
 function tf3Stars(avg) {

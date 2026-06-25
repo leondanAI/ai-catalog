@@ -108,7 +108,7 @@
 <link rel="alternate" hreflang="es" href="https://aitoolfit.ai/es/">
 <link rel="alternate" hreflang="ru" href="https://aitoolfit.ai/ru/">
 <link rel="alternate" hreflang="de" href="https://aitoolfit.ai/de/">
-<link rel="alternate" hreflang="uk" href="https://aitoolfit.ai/ua/">
+<link rel="alternate" hreflang="ua" href="https://aitoolfit.ai/ua/">
 <link rel="alternate" hreflang="he" href="https://aitoolfit.ai/he/">
 <link rel="alternate" hreflang="fr" href="https://aitoolfit.ai/fr/">
 <link rel="alternate" hreflang="pt" href="https://aitoolfit.ai/pt/">
@@ -119,7 +119,7 @@
   <div class="header-inner">
     <a href="/he/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>AItoolFit</a>
     <nav class="nav-links">
-      <a href="/he/"               class="nav-link" data-nav="index.html"      data-i18n="nav.home">מצא כלי</a>
+      <a href="/he/"               class="nav-link" data-nav="index.html"      data-i18n="nav.home">מצא AI</a>
       <a href="/he/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">כלי AI הטובים ביותר</a>
       <a href="/he/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">השוואה</a>
       <a href="/he/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">חדשות</a>
@@ -131,7 +131,7 @@
     <button class="btn-hamburger" onclick="toggleMenu()">&#9776;</button>
   </div>
   <nav class="mobile-menu" id="mobileMenu">
-    <a href="/he/"               class="nav-link" data-i18n="nav.home">מצא כלי</a>
+    <a href="/he/"               class="nav-link" data-i18n="nav.home">מצא AI</a>
     <a href="/he/directory.html"  class="nav-link" data-i18n="nav.directory">כלי AI הטובים ביותר</a>
     <a href="/he/compare.html"    class="nav-link" data-i18n="nav.compare">השוואה</a>
     <a href="/he/news.html"       class="nav-link" data-i18n="nav.news">חדשות</a>
@@ -204,7 +204,7 @@
   <section class="section">
     <div class="section-head">
       <h2 class="section-title" data-i18n="section.categories">עיין לפי קטגוריה</h2>
-      <a href="/he/directory.html" class="section-more" data-i18n="section.fullCatalog">קטלוג מלא ←</a>
+      <a href="/he/directory.html" class="section-more" data-i18n="section.fullCatalog">כלי AI הטובים ביותר ←</a>
     </div>
     <div class="grid-cats" id="catsGrid"></div>
   </section>
@@ -233,11 +233,11 @@
     <div>
       <div class="footer-col-title">מוצר</div>
       <div class="footer-col-links">
-        <a href="/he/">מצא כלי</a>
-        <a href="/he/directory.html">כלי AI הטובים ביותר</a>
+        <a href="/he/">Find AI</a>
+        <a href="/he/directory.html">Best AI Tools</a>
         <a href="/he/compare.html">השוואה</a>
         <a href="/he/news.html">חדשות</a>
-        <a href="/he/directory.html">ארגז כלים</a>
+        <a href="/he/newsletter.html">Newsletter</a>
       </div>
     </div>
     <!-- Categories -->
@@ -292,12 +292,12 @@
 <script src="/js/main.js"></script>
 <script>
 const TRENDING_ITEMS = [
-  { name:'Claude',            badge:'🆕 Opus 4.8 — 96.7% USAMO, ‎1000 סוכנים במקביל', type:'update' },
-  { name:'ChatGPT',           badge:'🔥 GPT-5.5 Instant — ‎−52% הזיות', type:'update' },
-  { name:'Suno',              badge:'💰 $5B Series D — מוזיקת AI הפכה למיינסטרים', type:'growth' },
-  { name:'Devin',             badge:'↓ $500 → $20/חודש — סוכני AI לכולם', type:'growth' },
-  { name:'Amazon Q Developer',badge:'⚠️ הוצא משימוש → מוחלף על ידי Kiro', type:'update' },
-  { name:'Krea AI',           badge:'🆕 Krea 2 — מודל תמונות בסיסי חדש', type:'update' },
+  { name:'Claude',            badge:'🆕 Opus 4.8 — 96.7% USAMO, 1000 parallel agents', type:'update' },
+  { name:'ChatGPT',           badge:'🔥 GPT-5.5 Instant — −52% hallucinations', type:'update' },
+  { name:'Google Gemini',     badge:'🆕 Gemini 3.5 Flash — flagship at Flash speed', type:'update' },
+  { name:'Devin',             badge:'↓ $500 → $20/mo — AI agents for everyone', type:'growth' },
+  { name:'Amazon Q Developer',badge:'⚠️ Deprecated → replaced by Kiro', type:'update' },
+  { name:'Cursor',            badge:'🧠 Composer 2.5 — Opus-level at 14× lower cost', type:'update' },
 ];
 
 function renderTrending() {
@@ -314,7 +314,7 @@ function renderTrending() {
     const badgeClass = h.type === 'update' ? 'update-badge' : 'growth-badge';
     return `<a class="tool-card fade-up" href="${href}" style="border-color:${color}22">
       <div class="tool-card-top">
-        <div class="tool-avatar" style="background:${color}22;color:${color}"><img src="https://www.google.com/s2/favicons?sz=64&domain=${domain}" width="28" height="28" style="border-radius:6px" onerror="this.style.display='none';this.parentNode.textContent='${h.name[0]}'"></div>
+        <div class="tool-avatar" style="background:${color}22;color:${color}"><img src="https://www.google.com/s2/favicons?sz=64&domain=${domain}" alt="${h.name} logo" width="28" height="28" style="border-radius:6px" onerror="this.style.display='none';this.parentNode.textContent='${h.name[0]}'"></div>
         <div><div class="tool-name">${h.name}</div><span class="badge badge-${badgeText}">${badgeText}</span></div>
       </div>
       <span class="${badgeClass}">${h.badge}</span>
@@ -435,7 +435,7 @@ function tf3ResolveSlug(aiName) {
 function tf3Avatar(name, url) {
   const domain = url ? url.replace(/https?:\/\//,'').split('/')[0] : '';
   return domain
-    ? `<img src="https://www.google.com/s2/favicons?sz=64&domain=${domain}" width="26" height="26" style="border-radius:6px;display:block" onerror="this.outerHTML='<span style=font-weight:700;font-size:14px>${tfEsc(name[0])}</span>'">`
+    ? `<img src="https://www.google.com/s2/favicons?sz=64&domain=${domain}" alt="${tfEsc(name)} logo" width="26" height="26" style="border-radius:6px;display:block" onerror="this.outerHTML='<span style=font-weight:700;font-size:14px>${tfEsc(name[0])}</span>'">`
     : `<span style="font-weight:700;font-size:14px">${tfEsc(name[0])}</span>`;
 }
 function tf3Stars(avg) {
