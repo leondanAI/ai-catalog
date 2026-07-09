@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","ru");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ComfyUI","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://comfyui.org"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ComfyUI","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://comfyui.org","dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/ru/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Каталог</a>
       <a href="/ru/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Сравнение</a>
       <a href="/ru/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Новости</a>
-      <a href="/ru/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">Инструменты</a>
+      <a href="/ru/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Инструменты</a>
       <a href="/ru/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Рассылка</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/ru/directory.html"  class="nav-link" data-i18n="nav.directory">Каталог</a>
     <a href="/ru/compare.html"    class="nav-link" data-i18n="nav.compare">Сравнение</a>
     <a href="/ru/news.html"       class="nav-link" data-i18n="nav.news">Новости</a>
-    <a href="/ru/directory.html"      class="nav-link" data-i18n="nav.tools">Инструменты</a>
+    <a href="/ru/tools.html"      class="nav-link" data-i18n="nav.tools">Инструменты</a>
     <a href="/ru/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Рассылка</a>
   </nav>
 </header>
@@ -138,7 +138,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">🎨 Генерация изображений</span>
-        <span class="tool-meta-chip badge-free">Бесплатно</span>
+        <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
       <div class="tool-best-for"><strong>Подходит для:</strong> Open-source AI-генерация изображений, нодовые воркфлоу, локальный GPU, видео 4K</div>
@@ -150,26 +150,29 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>О сервисе ComfyUI</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">ComfyUI — бесплатный open-source нодовый интерфейс для локального запуска AI-моделей генерации изображений и видео. Пользователи строят воркфлоу, соединяя ноды — каждый выполняет одну операцию — что даёт точный контроль над каждым шагом генерации. Это основной интерфейс для пользователей, запускающих Stable Diffusion и другие open-weight модели на собственном железе.</p><p style="margin-top:1rem">App View — крупное UX-дополнение, предоставляющее упрощённый интерфейс с формами без отображения нодового графа для новичков. Node View по-прежнему полностью доступен. Двухрежимный подход делает ComfyUI доступным для начинающих без урезания возможностей опытных пользователей.</p><p style="margin-top:1rem">Квантизация NVFP4, введённая для NVIDIA RTX 50 Series GPU, обеспечивает генерацию в 2.5 раза быстрее при снижении потребления VRAM примерно на 60%. Пользователи с картами RTX 50 Series могут запускать более крупные модели или существующие — на значительно большей скорости.</p><p style="margin-top:1rem">Официальная поддержка AMD ROCm появилась в приложении Windows Desktop, делая ComfyUI полностью поддерживаемым на AMD GPU в Windows впервые без ручных обходных решений. Добавлены новые ноды для Veo 3, Veo 3 Lite и Kling 3.0, поддержка вывода 4K и RTX Video Super Resolution для апскейлинга видео в реальном времени до 4K.</p><p style="margin-top:1rem">Добавлена совместимость с Python 3.13, обеспечивая актуальность ComfyUI с последним релизом Python.</p><p style="margin-top:1rem">ComfyUI лучший выбор для опытных пользователей, исследователей и разработчиков, которым нужен полный контроль над воркфлоу AI-генерации, локальный запуск на собственном железе и поддержка последних open-weight и сторонних моделей.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">ComfyUI - это интерфейс генерации на основе графа. Вместо одного поля для промпта вы соединяете узлы (загрузчики, сэмплеры, кондиционирование, апскейлеры и т.д.) в наглядный workflow, который можно изучать, переиспользовать и делиться им. Именно эта прозрачность сделала ComfyUI основным инструментом для тех, кому нужен точный контроль над процессом генерации.</p><p style="margin-top:1rem">Актуальная версия - v0.27.0, вышла 30 июня 2026 года. Она добавляет поддержку int8-квантованных моделей для видеокарт поколения Turing и новее, с переработанной обработкой LoRA и памяти, а также новые узлы: Seed, Advanced Krea 2 Model Merging, Bounding Box Canvas, ConditioningMultiply и узел JSON-промпта Ideogram, плюс поддержку Google Nano Banana 2 Lite. Это продолжение насыщенного 2026 года: в июне вышло крупное обновление Comfy Desktop с управлением несколькими экземплярами, снапшотами и общим хранилищем моделей, а также добавлена поддержка видеомоделей Krea2 и LTX2, официальная поддержка AMD ROCm на Windows и прирост производительности NVFP4 на GPU.</p><p style="margin-top:1rem">Помимо статичных изображений ComfyUI теперь работает с видеогенерацией через модели вроде Krea2 и LTX2, так что это уже не только инструмент для картинок. Можно связывать несколько моделей, смешивать стандартные и пользовательские узлы, обрабатывать пакетами и экспортировать целые workflow в переиспользуемый JSON.</p><p style="margin-top:1rem">Цены состоят из двух частей. Самостоятельно размещаемое ПО полностью бесплатное и открытое. Официальный управляемый сервис Comfy Cloud, вышедший из беты и перешедший на единую кредитную модель в конце 2025 года, а в марте 2026 получивший бесплатный тариф, предлагает: Free (400 кредитов/мес, без карты), Standard за $20/мес (4200 кредитов), Creator за $35/мес (7400 кредитов, с импортом LoRA), Pro за $100/мес (21100 кредитов) и индивидуальный Enterprise.</p><p style="margin-top:1rem">Главное ограничение - порог входа. Граф узлов мощный, но пугает новичков, а локальный запуск означает, что вы сами управляете GPU-железом, файлами моделей и зависимостями. Comfy Cloud снимает эти заботы, но привязывает использование к кредитному бюджету.</p><p style="margin-top:1rem">Выбирайте ComfyUI, если вам нужен глубокий воспроизводимый контроль над генерацией, вы комфортно чувствуете себя в техническом интерфейсе или хотите начать бесплатно локально и при желании перейти в облако.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Обновлено: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Преимущества</div><ul class="pc-list">        <li>Полностью бесплатен и open-source — нет подписки, лимитов кредитов или зависимости от вендора</li>
-        <li>App View: удобный для начинающих интерфейс без убирания полного нодового графа</li>
-        <li>Квантизация NVFP4: генерация в 2.5x быстрее и 60% меньше VRAM на RTX 50 Series GPU</li>
-        <li>Официальная поддержка AMD ROCm в Windows — не нужны ручные обходные решения</li>
-        <li>Ноды Veo 3, Kling 3.0 и поддержка 4K-видео через ByteDance/Veo/Kling пайплайны</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Недостатки</div><ul class="pc-list">        <li>Нодовый интерфейс имеет крутую кривую обучения для новичков в воркфлоу-генерации</li>
-        <li>Требует локального GPU — не подходит для пользователей без мощной видеокарты</li>
-        <li>Кастомные ноды от сообщества варьируются по качеству и могут конфликтовать друг с другом</li>
-        <li>Нет облачного варианта — все вычисления локальны; мощное железо требуется для больших моделей</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Преимущества</div><ul class="pc-list">        <li>Бесплатный и полностью открытый при самостоятельном размещении, без платного барьера в основном приложении</li>
+        <li>Граф узлов дает точный воспроизводимый контроль, а workflow можно передавать в виде JSON</li>
+        <li>Теперь поддерживает и изображения, и видео (Krea2, LTX2), а не только статичные картинки</li>
+        <li>v0.27.0 добавляет int8-квантованные модели и улучшенную работу с LoRA и памятью для экономного использования GPU</li>
+        <li>Опциональный Comfy Cloud с бесплатным тарифом на 400 кредитов снимает необходимость локальной настройки</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Недостатки</div><ul class="pc-list">        <li>Крутая кривая обучения: интерфейс узлов неинтуитивен для новичков</li>
+        <li>Самостоятельное размещение требует мощной видеокарты и ручного управления моделями и зависимостями</li>
+        <li>Использование Comfy Cloud считается по кредитам, которые могут закончиться при больших нагрузках</li>
+        <li>Качество работы сильно зависит от пользовательских узлов сообщества, надежность которых разнится</li>
+        <li>Преимущества int8-квантования доступны только на GPU поколения Turing и новее</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://comfyui.org" target="_blank" rel="noopener">Перейти на ComfyUI →</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Выберите ComfyUI если…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Хотите максимальный контроль над пайплайном генерации через визуальные нодовые потоки</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Создаёте кастомные рабочие процессы: ControlNet + LoRA + Upscaler в одной схеме</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Нужна эффективная работа с памятью — ComfyUI лучше управляет VRAM</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Строите автоматизированные пайплайны генерации изображений через API</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Выберите ComfyUI если…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вам нужен детальный воспроизводимый контроль над пайплайнами генерации</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вы комфортно работаете с техническим интерфейсом на узлах</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вам нужны и генерация изображений, и видео в одном инструменте</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вы предпочитаете бесплатный локальный запуск, но допускаете переход в облако</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вы хотите строить и передавать переиспользуемые workflow в JSON</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Частые вопросы</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">ComfyUI vs Automatic1111 — в чём разница?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">ComfyUI — нодовый редактор для создания кастомных пайплайнов генерации. Automatic1111 (WebUI) — традиционный веб-интерфейс для Stable Diffusion. ComfyUI мощнее для сложных рабочих процессов, Automatic1111 проще для начинающих.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">ComfyUI быстрее Automatic1111?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Как правило — да. ComfyUI более эффективно управляет памятью GPU и может быть значительно быстрее для сложных задач. Для простой генерации разница небольшая.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">ComfyUI сложно освоить?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Да. Нодовый интерфейс требует понимания пайплайна SD: сэмплеры, энкодеры, декодеры, VAE. Для начинающих Automatic1111 или Invoke AI более дружественны. Но ComfyUI стоит изучить для продвинутых рабочих процессов.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Работает ли ComfyUI с FLUX?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Да. ComfyUI отлично работает с FLUX.1 [schnell] и [dev]. Многие сложные FLUX-рабочие процессы (LoRA, ControlNet) созданы именно в ComfyUI.</span></div></div></div></div>
   <div class="section-title-sm">Также рассмотрите</div>
   <div class="also-grid">    <a class="also-card" href="/ru/tools/chatgpt-images.html">
@@ -216,7 +219,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/ru/directory.html">Каталог</a>
         <a href="/ru/news.html">Новости</a>
-        <a href="/ru/directory.html">Инструменты</a>
+        <a href="/ru/tools.html">Инструменты</a>
         <a href="/ru/compare.html">Сравнение</a>
         <a href="/ru/newsletter.html">Рассылка</a>
       </div>

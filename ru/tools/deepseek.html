@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","ru");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"DeepSeek","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://chat.deepseek.com","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.2","reviewCount":4,"bestRating":"5","worstRating":"1"}}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"DeepSeek","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://chat.deepseek.com","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.2","reviewCount":4,"bestRating":"5","worstRating":"1"},"dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/ru/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Каталог</a>
       <a href="/ru/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Сравнение</a>
       <a href="/ru/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Новости</a>
-      <a href="/ru/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">Инструменты</a>
+      <a href="/ru/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Инструменты</a>
       <a href="/ru/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Рассылка</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/ru/directory.html"  class="nav-link" data-i18n="nav.directory">Каталог</a>
     <a href="/ru/compare.html"    class="nav-link" data-i18n="nav.compare">Сравнение</a>
     <a href="/ru/news.html"       class="nav-link" data-i18n="nav.news">Новости</a>
-    <a href="/ru/directory.html"      class="nav-link" data-i18n="nav.tools">Инструменты</a>
+    <a href="/ru/tools.html"      class="nav-link" data-i18n="nav.tools">Инструменты</a>
     <a href="/ru/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Рассылка</a>
   </nav>
 </header>
@@ -138,7 +138,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">💬 ИИ-чат и ассистенты</span>
-        <span class="tool-meta-chip badge-free">Бесплатно</span>
+        <span class="tool-meta-chip badge-freemium">Freemium</span>
         <span class="tool-meta-chip">👥 96M+</span>
       </div>
       <div class="tool-best-for"><strong>Подходит для:</strong> Open-source рассуждения, длинный контекст, дешёвый API</div>
@@ -150,27 +150,29 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>О сервисе DeepSeek</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">DeepSeek — китайская AI-лаборатория, завоевавшая репутацию за выпуск open-source моделей фронтирного качества по исключительно низкой стоимости. DeepSeek V4 Preview, выпущенный 24 апреля 2026 года, доступен в двух вариантах: V4-Pro с 1,6 триллиона суммарных параметров (49 миллиардов активных) и V4-Flash с 284 миллиардами параметров (13 миллиардов активных). Оба поддерживают контекстное окно в 1 миллион токенов, позволяя анализировать целые кодовые базы, юридические документы или тексты длиной с книгу за одну сессию.</p><p style="margin-top:1rem">Архитектурная инновация V4 — система Hybrid Attention, объединяющая Compressed Sparse Attention (CSA) и Hierarchical Context Aggregation (HCA). При контексте в 1 миллион токенов V4-Pro использует лишь 27% FLOPs, необходимых DeepSeek V3.2 — резкое улучшение эффективности, делающее задачи с длинным контекстом экономически доступными в масштабе.</p><p style="margin-top:1rem">Три режима усилия рассуждений — light, standard и deep — позволяют выбирать между скоростью ответа и глубиной рассуждений. Light-режим быстрый и подходит для простых задач; deep-режим задействует расширенную цепочку мыслей для сложных многошаговых проблем. Эта гибкость ценна для разработчиков, создающих приложения со смешанными нагрузками.</p><p style="margin-top:1rem">Ценообразование агрессивное: V4-Flash стоит $0,14 за миллион токенов на входе и $0,28 за миллион на выходе. V4-Pro — $0,145 за миллион токенов на входе и $3,48 за миллион на выходе. Оба варианта open-source и могут быть развёрнуты локально, что делает DeepSeek наиболее экономичным вариантом для команд, запускающих высокообъёмный инференс или нуждающихся в on-premises деплое.</p><p style="margin-top:1rem">Веб-интерфейс DeepSeek на chat.deepseek.com бесплатен без необходимости регистрации для базового доступа. Основное ограничение по сравнению с ChatGPT или Claude — экосистема: нет голосового режима, генерации изображений, нативных интеграций с приложениями. DeepSeek — инструмент для разработчиков и исследователей в первую очередь.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">DeepSeek - разговорный AI-ассистент от одноимённой китайской лаборатории. С ним можно бесплатно общаться на chat.deepseek.com или встраивать его через API с помегабайтной оплатой за токены. Он справляется с обычным чатом, программированием, рассуждениями и работой с длинными документами.</p><p style="margin-top:1rem">Актуальное поколение - DeepSeek-V4, превью которого вышло 24 апреля 2026 года и заменило прежнее семейство V3/R1. Модель доступна в двух вариантах: V4-Pro (1,6 трлн параметров всего, 49 млрд активных), нацеленный на конкуренцию с ведущими закрытыми моделями, и более дешёвый вариант по умолчанию V4-Flash (284 млрд всего, 13 млрд активных). Старые названия моделей deepseek-chat и deepseek-reasoner выводятся из эксплуатации 24 июля 2026 года.</p><p style="margin-top:1rem">Среди ключевых возможностей - новый механизм разреженного внимания DeepSeek Sparse Attention (DSA) с потокенным сжатием для повышения эффективности, стандартное контекстное окно на 1 млн токенов с выводом до 384K токенов, а также агентные оптимизации, включая интеграцию с инструментами вроде Claude Code.</p><p style="margin-top:1rem">По ценам: веб-чат бесплатен. API платный, за 1 млн токенов: V4-Flash - $0,14 на входе при промахе кэша ($0,0028 при попадании) и $0,28 на выходе; V4-Pro - $0,435 на входе при промахе кэша ($0,003625 при попадании) и $0,87 на выходе. Старые названия соответствуют режимам V4-Flash без рассуждений и с рассуждениями.</p><p style="margin-top:1rem">Ограничения: API - это платный сервис с оплатой по счётчику, а не бесплатный доступ; упоминания сторонних источников о бесплатном гранте токенов для новых аккаунтов не подтверждены в официальной документации; как сервис из Китая он может вызывать вопросы о резидентности данных и комплаенсе у части организаций.</p><p style="margin-top:1rem">DeepSeek подойдёт разработчикам, которым нужен сильный и недорогой API, и обычным пользователям, которым нужен способный бесплатный веб-ассистент без подписки.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Обновлено: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Преимущества</div><ul class="pc-list">        <li>V4-Pro: 1,6T параметров, 49B активных, контекст 1M токенов — фронтирная производительность по open-source ценам</li>
-        <li>Hybrid Attention (CSA + HCA) — V4-Pro использует лишь 27% FLOPs vs V3.2 при контексте 1M токенов</li>
-        <li>Три режима рассуждений (light/standard/deep) — настрой скорость vs глубину для каждого запроса</li>
-        <li>API V4-Flash за $0,14/$0,28 за миллион токенов — среди дешевейших моделей фронтирного качества</li>
-        <li>Полностью open-source — возможна локальная установка для конфиденциальности данных</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Недостатки</div><ul class="pc-list">        <li>Нет голосового режима, генерации изображений или интеграций с потребительскими приложениями</li>
-        <li>Веб-интерфейс менее полирован, чем ChatGPT или Claude — продукт для разработчиков</li>
-        <li>Проблемы конфиденциальности данных для тех, кто не может развернуть локально (китайская компания)</li>
-        <li>V4-Pro: $3,48/M токенов на выходе — дорого для высокообъёмных задач</li>
-        <li>Экосистема и поддержка плагинов значительно меньше, чем у OpenAI или Anthropic</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Преимущества</div><ul class="pc-list">        <li>Бесплатный полнофункциональный веб-чат на chat.deepseek.com без подписки</li>
+        <li>Очень низкие цены API, особенно V4-Flash - $0,14/$0,28 за 1 млн токенов</li>
+        <li>Большое контекстное окно на 1 млн токенов с выводом до 384K токенов</li>
+        <li>Два тарифа позволяют выбирать между ценой и мощностью (V4-Flash и V4-Pro)</li>
+        <li>Агентные оптимизации, включая интеграцию с инструментами вроде Claude Code</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Недостатки</div><ul class="pc-list">        <li>API платный и с оплатой по счётчику, а не бесплатный доступ</li>
+        <li>Слухи о бесплатном гранте токенов для новых аккаунтов не подтверждены в официальной документации</li>
+        <li>Старые названия deepseek-chat/deepseek-reasoner выводятся 24.07.2026, требуя миграции</li>
+        <li>Хостинг в Китае может вызывать вопросы о резидентности данных и комплаенсе</li>
+        <li>V4-Pro заметно дороже, чем базовый Flash</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://chat.deepseek.com" target="_blank" rel="noopener">Перейти на DeepSeek →</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Выберите DeepSeek если…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Нужен лучший бесплатный ИИ для рассуждений и математики — DeepSeek R1 конкурирует с o1 по нулевой цене</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Разработчик, которому нужен очень дешёвый доступ к API — API DeepSeek в 20-40 раз дешевле GPT-4</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Работаете над кодом и техническими задачами, где полезно цепочное рассуждение</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Не нужны генерация изображений или голос, и хотите максимальную ценность рассуждений бесплатно</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Выберите DeepSeek если…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вам нужен способный AI-чат бесплатно через веб</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вам нужен недорогой API для программирования или больших объёмов задач</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вы работаете с очень длинными документами и вам нужен контекст на 1 млн токенов</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вы строите агентные сценарии с инструментами вроде Claude Code</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вы хотите выбирать между дешёвым быстрым и более мощным премиум-тарифом</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Частые вопросы</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">DeepSeek лучше ChatGPT?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">DeepSeek R1 соответствует или превосходит GPT-o1 по бенчмаркам рассуждений и математики — за долю стоимости. Для чистого текстового рассуждения и кода DeepSeek конкурентоспособен с лучшими моделями. У ChatGPT больше функций (изображения, голос, плагины) и лучшая экосистема.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">DeepSeek безопасен для использования?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">DeepSeek — китайская компания. Некоторые организации опасаются конфиденциальности данных по китайскому законодательству. Веса модели открыты и могут запускаться локально. Государственные органы США и некоторые компании ограничили его использование.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">DeepSeek бесплатный?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Да. DeepSeek на chat.deepseek.com бесплатен без ограничений использования через веб-интерфейс. API также очень дёшев — около $0.14 за миллион входных токенов для DeepSeek V3, против $2.50 для GPT-4o mini.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Что такое DeepSeek R1?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">DeepSeek R1 — модель рассуждений DeepSeek, выпущенная в январе 2025 года. Использует цепочное рассуждение, аналогичное OpenAI o1, и достигла сопоставимых бенчмарков. Она потрясла индустрию ИИ, показав производительность фронтирных моделей при значительно меньших затратах.</span></div></div></div></div>
   <div class="section-title-sm">Также рассмотрите</div>
   <div class="also-grid">    <a class="also-card" href="/ru/tools/character-ai.html">
@@ -217,7 +219,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/ru/directory.html">Каталог</a>
         <a href="/ru/news.html">Новости</a>
-        <a href="/ru/directory.html">Инструменты</a>
+        <a href="/ru/tools.html">Инструменты</a>
         <a href="/ru/compare.html">Сравнение</a>
         <a href="/ru/newsletter.html">Рассылка</a>
       </div>

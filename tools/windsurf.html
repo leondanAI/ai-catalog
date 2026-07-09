@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Windsurf", "description": "Windsurf is a VS Code-based AI code editor developed by Codeium, acquired by Cognition AI (makers of Devin) in December 2025 for approximately $250 million. Its flagship feature is Cascade —\n   an age", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://codeium.com/windsurf", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Windsurf", "description": "Devin Desktop is an AI-native code editor that grew out of Codeium and Windsurf. It combines an autocomplete engine (Tab), inline edits, and an autonomous coding agent inside a familiar VS Code-style ", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://codeium.com/windsurf", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,55 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Windsurf</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Windsurf is a VS Code-based AI code editor developed by Codeium, acquired by Cognition AI (makers of Devin) in December 2025 for approximately $250 million. Its flagship feature is Cascade —
-   an agentic AI flow that autonomously plans, writes, and debugs code across multiple files with full awareness of the entire codebase. Context is maintained through Codemaps, a semantic index that keeps the agent
-   oriented even in very large projects.                                                                                                                                                                              
-                                                                                                                                                                                                                      
-  Windsurf's proprietary SWE-1.5 model, available on paid plans, is specifically optimized for software engineering tasks. The March 2026 pricing overhaul moved from a credit-based to a quota-based system with 
-  daily quota refreshes on Pro. The editor is fully VS Code-compatible, supporting the same extensions and keyboard shortcuts, making it a low-friction switch from VS Code or Cursor.                                
-   
-  Key capabilities include Cascade agent mode for multi-step autonomous coding, real-time tab autocomplete, inline edits, a chat interface with codebase context, and support for all major programming languages.    
-  Teams plans add SSO, admin controls, and organization-level privacy settings.                                                                                                                                       
-   
-  Pricing: Free tier includes basic completions with limited daily AI interactions. Pro costs $20 per month (raised from $15 in March 2026) with unlimited Cascade sessions, premium models including Claude Sonnet   
-  and GPT-4o, and daily quota refreshes. Max costs $200 per month with expanded quotas and priority access. Teams is $40 per user per month. Annual Pro billing reduces the effective cost to approximately $12 per   
-  month.
-                                                                                                                                                                                                                      
-  Limitations: The March 2026 pricing overhaul raised costs and disrupted existing users. The acquisition by Cognition AI creates uncertainty about long-term product direction. Heavy users can hit daily quota 
-  limits on Pro. The extension marketplace is smaller than VS Code or Cursor.                                                                                                                                         
-   
-  Best suited for developers wanting a capable agentic code editor with a proprietary coding-optimized model at a competitive price, particularly as a Cursor alternative with strong semantic codebase awareness.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Devin Desktop is an AI-native code editor that grew out of Codeium and Windsurf. It combines an autocomplete engine (Tab), inline edits, and an autonomous coding agent inside a familiar VS Code-style workspace.</p><p style="margin-top:1rem">The product changed a lot in 2026. Cognition acquired Codeium/Windsurf for roughly $250M and rebranded the IDE to Devin Desktop on June 2, 2026. Both windsurf.com and codeium.com now redirect to devin.ai. The original Cascade agent reached end-of-life on July 1, 2026 and was replaced by Devin Local as the default agent, and new users start in agent mode by default.</p><p style="margin-top:1rem">On the model side, SWE-1.6 is the current free proprietary model. Paid tiers also open up access to OpenAI, Anthropic Claude and Google Gemini models, plus Devin cloud agents and Devin Review, which handle longer background tasks and automated code review.</p><p style="margin-top:1rem">Pricing was reworked on March 19, 2026: the old credit system was retired in favor of daily and weekly quotas. Free is $0/mo with a light quota, unlimited Tab completions and inline edits, and limited model access. Pro is $20/mo (up from $15) with full model access, free SWE-1.6 and cloud agents. A new Max tier is $200/mo with much higher quotas. Teams costs $80/mo base plus $40/mo per developer seat, and Enterprise is custom. Annual billing saves roughly 17-20%, and students get about 50% off Pro.</p><p style="margin-top:1rem">The main caveats are churn and lock-in: the rapid rebrand, the retirement of Cascade, and the shift to quotas mean workflows and limits have moved more than once in a single year. Heavy agent use can burn through quotas quickly, and much of the value now sits behind the Devin ecosystem.</p><p style="margin-top:1rem">It suits developers who want an agent-first editor with strong autocomplete and are comfortable inside the Cognition/Devin ecosystem. Anyone tied to older Windsurf/Cascade branding or the credit model should be aware those are gone.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Cascade agent mode highly capable for multi-step autonomous coding tasks</li>
-        <li>Proprietary SWE-1.5 model optimized specifically for software engineering</li>
-        <li>Codebase-wide semantic awareness via       
-  Codemaps keeps agent oriented in large projects</li>
-        <li>Clean VS Code-compatible interface — low-friction switch from VS Code or Cursor</li>
-        <li>Annual Pro billing reduces cost to ~$12/month</li>
+        <li>Fast, high-quality Tab autocomplete and inline edits that stay unlimited even on the free plan</li>
+        <li>Agent-first workflow with Devin Local plus cloud agents and Devin Review on paid tiers</li>
+        <li>Pro gives access to multiple frontier models (OpenAI, Claude, Gemini) alongside the free SWE-1.6</li>
+        <li>Familiar VS Code-style interface that is easy to adopt for existing developers</li>
+        <li>Free tier is genuinely usable for light, everyday coding</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>March 2026 pricing overhaul raised prices and changed billing structure</li>
-        <li>Acquisition by Cognition AI creates uncertainty about product direction</li>
-        <li>Heavy users can hit daily quota limits even on
-   Pro plan</li>
-        <li>Extension marketplace smaller than VS Code or Cursor</li>
-        <li>Free tier heavily restricted after March 2026 pricing changes</li>
+        <li>Heavy rebranding and churn: Windsurf is now Devin Desktop and Cascade was retired on July 1, 2026</li>
+        <li>The March 2026 switch from credits to daily/weekly quotas can throttle intensive agent sessions</li>
+        <li>Pro price rose from $15 to $20, and the most capable quotas sit behind the $200/mo Max tier</li>
+        <li>Old links (windsurf.com, codeium.com) and the Codeium/Windsurf branding are legacy and just redirect to devin.ai</li>
+        <li>Growing dependence on the Devin ecosystem increases vendor lock-in</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Windsurf if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want Cascade — Windsurf's AI agent that understands your codebase and executes complex tasks</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want a VS Code fork with deep AI integration and a generous free plan</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're interested in trying a strong Cursor alternative with a growing reputation</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want an AI IDE that feels purpose-built rather than adapted from an existing editor</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Windsurf if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want an agent-first editor and are fine living inside the Cognition/Devin ecosystem</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You rely heavily on autocomplete and inline edits and want them unlimited for free</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need access to Claude, OpenAI and Gemini models from one paid plan</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want cloud agents and automated code review bundled starting at Pro</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You are a student or annual subscriber looking to cut the Pro cost</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Windsurf?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Windsurf is an AI-powered IDE by Codeium, built as a fork of VS Code. Its flagship feature is Cascade, an AI agent that can plan and execute complex coding tasks with awareness of your entire codebase. It's positioned as a direct competitor to Cursor.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Windsurf free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Windsurf has a free plan with limited AI requests. Pro is $15/month for more AI usage. The free plan is more generous than Cursor's free tier, making it attractive for developers evaluating AI IDEs.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Windsurf better than Cursor?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Both are strong AI IDEs and the gap between them is narrowing. Cursor has more features, a larger community, and more model options. Windsurf's Cascade agent and generous free plan are advantages. Many developers try both — the best choice often comes down to personal workflow preference.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Cascade in Windsurf?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Cascade is Windsurf's AI agent feature — it can understand your full codebase context, plan multi-step coding tasks, and execute changes across multiple files. Similar to Cursor's Composer, it allows for autonomous coding sessions where the AI makes coordinated changes across a project.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -276,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

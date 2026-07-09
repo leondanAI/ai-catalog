@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","pt");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Stable Diffusion","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://stability.ai"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Stable Diffusion","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://stability.ai","dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/pt/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Diretório</a>
       <a href="/pt/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Comparar</a>
       <a href="/pt/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Notícias</a>
-      <a href="/pt/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">Ferramentas</a>
+      <a href="/pt/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Ferramentas</a>
       <a href="/pt/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/pt/directory.html"  class="nav-link" data-i18n="nav.directory">Diretório</a>
     <a href="/pt/compare.html"    class="nav-link" data-i18n="nav.compare">Comparar</a>
     <a href="/pt/news.html"       class="nav-link" data-i18n="nav.news">Notícias</a>
-    <a href="/pt/directory.html"      class="nav-link" data-i18n="nav.tools">Ferramentas</a>
+    <a href="/pt/tools.html"      class="nav-link" data-i18n="nav.tools">Ferramentas</a>
     <a href="/pt/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -138,7 +138,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">🎨 Geração de imagens</span>
-        <span class="tool-meta-chip badge-free">Free</span>
+        <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
       <div class="tool-best-for"><strong>Ideal para:</strong> Geração de imagens de código aberto, inferência local, vídeo com IA, geração de áudio</div>
@@ -150,26 +150,29 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Sobre Stable Diffusion</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Stable Diffusion é a série de modelos de geração de imagens de código aberto da Stability AI, amplamente usada para inferência local, ajuste fino e implantação comercial. Ao contrário dos modelos de código fechado, os pesos do Stable Diffusion são disponibilizados publicamente e podem ser executados em hardware de consumidor, tornando-o a base de um grande ecossistema de ferramentas de terceiros, ajustes finos da comunidade e aplicações comerciais construídas sobre os modelos base.</p><p style="margin-top:1rem">A Stability AI passou por uma recuperação corporativa significativa no início de 2026. A dívida da empresa foi totalmente eliminada, resolvendo a instabilidade financeira que ameaçou as operações durante 2024 e 2025. Uma parceria estratégica com a Electronic Arts (EA) foi assinada em fevereiro de 2026, fornecendo tanto capital quanto um contexto de implantação comercial de alto perfil para os modelos da Stability AI. James Cameron se juntou como consultor, adicionando credibilidade da indústria ao esforço de geração de vídeo da empresa.</p><p style="margin-top:1rem">O desempenho do SD3.5 foi melhorado através de otimizações para NVIDIA TensorRT com quantização FP8. Essa combinação oferece velocidades de inferência mais rápidas e requisitos de VRAM significativamente menores em GPUs da série RTX, tornando o SD3.5 mais prático em hardware de consumidor de médio porte do que os modelos grandes anteriores. O suporte à AMD foi expandido através de variantes de modelo otimizadas com ONNX projetadas para GPUs Radeon e aceleradores Ryzen AI, ampliando a base de hardware endereçável além da NVIDIA.</p><p style="margin-top:1rem">O SV4D 2.0 (Stable Video 4D 2.0) é um novo lançamento de modelo de geração de vídeo focado em saídas de maior qualidade para cenas do mundo real — melhorando a coerência, a qualidade do movimento e a consistência do sujeito em comparação com o lançamento original do SV4D. O Stable Audio Open Small, um modelo compacto de geração de áudio, foi disponibilizado como código aberto em parceria com a Arm e é otimizado para inferência eficiente em hardware baseado em Arm.</p><p style="margin-top:1rem">Todos os modelos Stable Diffusion permanecem gratuitos e de código aberto. A plataforma Stability AI oferece uma API freemium para inferência hospedada sem configuração local. O Stable Diffusion é ideal para desenvolvedores, pesquisadores e profissionais criativos que precisam de geração de imagens e vídeos de código aberto que podem executar localmente, ajustar ou implantar comercialmente sem taxas por imagem.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">O Stable Diffusion é uma família de modelos de geração de imagens com pesos abertos da Stability AI. Ao contrário dos serviços fechados, você pode baixar os pesos e executá-los no seu próprio hardware — por isso o modelo se tornou a base de um enorme ecossistema de fine-tunes, LoRAs, ControlNets e interfaces locais.</p><p style="margin-top:1rem">A versão atual é o Stable Diffusion 3.5, disponível em três variantes: Large com 8,1 bilhões de parâmetros, Large Turbo para geração rápida em poucos passos e Medium com 2,5 bilhões para máquinas mais modestas. Em número de instalações, o SD 3.5 é o modelo de imagem aberto mais difundido, mas já não lidera em qualidade entre os pesos abertos: desde 2026 essa posição pertence ao FLUX.2 da Black Forest Labs.</p><p style="margin-top:1rem">Entre os recursos estão a geração a partir de texto, melhor aderência ao prompt e tipografia em relação ao SDXL, além de um amplo conjunto de ferramentas de controle e edição graças à comunidade. A mesma linha inclui SDXL Turbo, Stable Audio e Stable Fast 3D.</p><p style="margin-top:1rem">Quanto a preços, auto-hospedar os pesos abertos é gratuito sob a Stability AI Community License para pessoas e organizações com menos de 1 milhão de dólares de faturamento anual. Acima desse limite, é exigida uma Enterprise License com preço sob medida. Há também o caminho hospedado pela Developer Platform API (platform.stability.ai) com cobrança por crédito: 1 crédito equivale a cerca de 0,01 dólar, o Stable Image Ultra custa cerca de 0,08 dólar por imagem e o Stable Image Core cerca de 0,03, com pacotes de créditos em torno de 10 dólares por 1.000. Terceiros também mencionam um plano de assinatura de cerca de 20 dólares por mês.</p><p style="margin-top:1rem">As limitações são práticas. Os modelos maiores exigem uma GPU capaz, bons resultados geralmente pedem trabalho de prompt e pós-processamento, e a licença atrelada ao faturamento significa que empresas grandes não podem tratá-lo como simplesmente gratuito. No topo, a qualidade agora fica atrás do FLUX.2.</p><p style="margin-top:1rem">O Stable Diffusion é a escolha certa se você quer controle local, um pipeline aberto que possa ajustar e nenhum custo por imagem em pequena escala — e aceita trocar o pico absoluto de qualidade por abertura e flexibilidade.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Atualizado: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Vantagens</div><ul class="pc-list">        <li>Totalmente de código aberto — pesos disponíveis gratuitamente para uso local, ajuste fino e implantação comercial</li>
-        <li>SD3.5 otimizado para NVIDIA TensorRT/FP8: inferência mais rápida e menor VRAM em GPUs RTX</li>
-        <li>Variantes ONNX otimizadas para AMD para Radeon e Ryzen AI — não exclusivo para NVIDIA</li>
-        <li>SV4D 2.0 oferece saída de vídeo de maior qualidade para cenas do mundo real em relação ao SV4D original</li>
-        <li>Stable Audio Open Small disponibilizado como código aberto com Arm — geração de áudio disponível em hardware de borda</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Desvantagens</div><ul class="pc-list">        <li>A configuração local requer conhecimento técnico — não adequada para usuários não técnicos</li>
-        <li>Os melhores resultados no SD3.5 ainda requerem uma GPU capaz; a inferência apenas com CPU é lenta</li>
-        <li>O ecossistema de código aberto é fragmentado — muitos forks, versões e interfaces com qualidade inconsistente</li>
-        <li>Histórico de instabilidade corporativa da Stability AI — a sustentabilidade da parceria ainda precisa ser comprovada</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Vantagens</div><ul class="pc-list">        <li>Pesos abertos que você pode baixar e executar localmente com controle total do pipeline</li>
+        <li>Auto-hospedagem gratuita sob a Community License para pessoas e organizações abaixo de 1 milhão de faturamento</li>
+        <li>Três variantes do SD 3.5 (Large, Large Turbo, Medium) para se adequar ao seu hardware</li>
+        <li>Enorme ecossistema de fine-tunes, LoRAs, ControlNets e interfaces locais</li>
+        <li>API hospedada opcional com preço por imagem transparente se você não quiser executá-lo por conta própria</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Desvantagens</div><ul class="pc-list">        <li>Já não lidera em qualidade entre os pesos abertos — o FLUX.2 está à frente desde 2026</li>
+        <li>Os modelos maiores exigem uma GPU potente para rodar bem em casa</li>
+        <li>A auto-hospedagem gratuita é atrelada ao faturamento; acima de 1 milhão é preciso uma Enterprise License paga</li>
+        <li>Bons resultados geralmente exigem ajuste de prompts e pós-processamento</li>
+        <li>O custo da API hospedada se acumula em volume (cerca de 0,08 por imagem no Ultra, 0,03 no Core)</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://stability.ai" target="_blank" rel="noopener">Visitar Stable Diffusion →</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Escolha Stable Diffusion se…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Você quer a interface mais fácil de usar para Stable Diffusion com uma grande comunidade</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Automatic1111 (A1111) é a interface SD mais utilizada com mais tutoriais disponíveis</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Mais fácil de começar para iniciantes no Stable Diffusion</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Biblioteca de extensões maior e melhor documentada para A1111</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Escolha Stable Diffusion se…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Você quer executar um modelo de imagem localmente com controle total</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Você precisa de uma base aberta para ajustar com LoRAs ou ControlNets</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Seu faturamento é inferior a 1 milhão e você busca custo zero por imagem</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Você prefere abertura e flexibilidade a extrair o máximo absoluto de qualidade</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Você quer manter a opção de uma API hospedada paga sem ficar preso a um fornecedor</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Perguntas frequentes</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">ComfyUI vs Automatic1111 — qual escolher?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">ComfyUI é para usuários avançados que querem controle máximo via workflows em nós. Automatic1111 é mais fácil para iniciantes e a comunidade é maior. Iniciantes → Automatic1111; usuários avançados com workflows complexos → ComfyUI.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">ComfyUI é gratuito?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Sim. ComfyUI é totalmente gratuito e open-source. Você precisa de uma GPU compatível e um modelo Stable Diffusion. Automatic1111 também é gratuito e open-source.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">ComfyUI pode funcionar sem GPU?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">ComfyUI pode funcionar em CPU mas muito lentamente. Para uso prático, uma GPU NVIDIA com 6+ GB VRAM é recomendada. Serviços em nuvem como Google Colab permitem usar o ComfyUI sem GPU local.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Qual é a diferença entre ComfyUI e Stable Diffusion?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Stable Diffusion é o modelo de IA. ComfyUI e Automatic1111 são interfaces para usar esse modelo. ComfyUI usa uma abordagem de nós visuais; Automatic1111 usa uma interface web tradicional.</span></div></div></div></div>
   <div class="section-title-sm">Considere também</div>
   <div class="also-grid">    <a class="also-card" href="/pt/tools/chatgpt-images.html">
@@ -216,7 +219,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/pt/directory.html">Diretório</a>
         <a href="/pt/news.html">Notícias</a>
-        <a href="/pt/directory.html">Ferramentas</a>
+        <a href="/pt/tools.html">Ferramentas</a>
         <a href="/pt/compare.html">Comparar</a>
         <a href="/pt/newsletter.html">Newsletter</a>
       </div>

@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","fr");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"FLUX","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://blackforestlabs.ai"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"FLUX","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://blackforestlabs.ai","dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/fr/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Répertoire</a>
       <a href="/fr/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Comparer</a>
       <a href="/fr/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Actualités</a>
-      <a href="/fr/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">Outils</a>
+      <a href="/fr/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Outils</a>
       <a href="/fr/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/fr/directory.html"  class="nav-link" data-i18n="nav.directory">Répertoire</a>
     <a href="/fr/compare.html"    class="nav-link" data-i18n="nav.compare">Comparer</a>
     <a href="/fr/news.html"       class="nav-link" data-i18n="nav.news">Actualités</a>
-    <a href="/fr/directory.html"      class="nav-link" data-i18n="nav.tools">Outils</a>
+    <a href="/fr/tools.html"      class="nav-link" data-i18n="nav.tools">Outils</a>
     <a href="/fr/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -150,24 +150,29 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>À propos FLUX</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">FLUX.1 a été acclamé par la communauté IA comme l'un des meilleurs modèles de génération d'images disponibles. Dans ses versions dev et schnell il est open source, tandis que pro offre la qualité maximale. Il se distingue par la génération d'images avec du texte correct, une anatomie précise et des compositions complexes. Largement utilisé comme base pour des modèles personnalisés (fine-tuning) et sur des plateformes de génération d'images professionnelles.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Flux est une famille de modèles de génération et d'édition d'images développée par Black Forest Labs. Elle couvre plusieurs variantes adaptées à différents besoins, des modèles de la plus haute qualité via API aux versions à poids ouverts que l'on peut exécuter soi-même.</p><p style="margin-top:1rem">La génération actuelle est FLUX.2, lancée fin 2025, qui a remplacé l'ancienne gamme FLUX.1. La gamme comprend désormais FLUX.2 [pro], [flex], [max], [dev] et, depuis janvier 2026, le modèle compact [klein] (en tailles 4B et 9B). Klein sait générer et éditer, fonctionne sur des GPU grand public avec environ 13 Go de VRAM et offre une inférence en moins d'une seconde; les optimisations FP8 de NVIDIA et ComfyUI réduisent l'usage de VRAM d'environ 40%.</p><p style="margin-top:1rem">Côté capacités, FLUX.2 prend en charge l'entrée multi-références (jusqu'à environ 10 images) pour la cohérence des personnages et des styles, une sortie photoréaliste jusqu'à 4 mégapixels, une fenêtre de contexte d'environ 32k tokens et un rendu de texte solide atteignant près de 92% de précision sur des mises en page complexes.</p><p style="margin-top:1rem">La tarification est à l'usage et facturée au mégapixel, sans abonnements ni sièges. FLUX.2 [pro] coûte 0,03 $ pour le premier mégapixel puis 0,015 $ par MP supplémentaire (images de référence 0,015 $/MP); [max] tourne autour de 0,07 $ le premier MP puis ~0,03 $/MP; [klein] environ 0,014 $ le premier MP puis ~0,001 $/MP. Les anciens tarifs FLUX.1 [pro] se situaient autour de 0,04-0,06 $/MP.</p><p style="margin-top:1rem">L'option gratuite se trouve du côté des poids ouverts. FLUX.1 [schnell] est sous licence Apache 2.0 et convient à un usage commercial; FLUX.1 [dev] est non commercial; FLUX.2 [dev] et [klein] sont livrés avec des poids ouverts. L'auto-hébergement commercial au-delà de certains volumes nécessite une licence Open Weights payante (Builder jusqu'à 10K images/mois, Platform/Professional jusqu'à 100K, Enterprise sur mesure).</p><p style="margin-top:1rem">Flux convient aux développeurs et studios qui recherchent soit le meilleur photoréalisme possible via API, soit un modèle auto-hébergeable qu'ils peuvent affiner et contrôler, et que la facturation au mégapixel ou la gestion de licences ne rebute pas.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Mis à jour: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Avantages</div><ul class="pc-list">        <li>Qualité photoréaliste exceptionnelle</li>
-        <li>Version open source disponible</li>
-        <li>Excellente génération de texte dans les images</li>
-        <li>Base pour les modèles personnalisés</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Inconvénients</div><ul class="pc-list">        <li>Nécessite du matériel puissant pour une utilisation locale</li>
-        <li>La version Pro est payante</li>
-        <li>Courbe d'apprentissage pour le fine-tuning</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Avantages</div><ul class="pc-list">        <li>FLUX.2 offre une sortie photoréaliste jusqu'à 4MP avec un rendu de texte solide (~92% de précision sur des mises en page complexes)</li>
+        <li>La prise en charge multi-références (jusqu'à ~10 images) maintient la cohérence des personnages et des styles</li>
+        <li>FLUX.2 [klein] fonctionne sur des GPU grand public (~13 Go de VRAM) avec une inférence en moins d'une seconde</li>
+        <li>La facturation au mégapixel évite abonnements et sièges; vous ne payez que ce que vous générez</li>
+        <li>Les variantes à poids ouverts (schnell, dev, klein) permettent l'auto-hébergement et l'affinage</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Inconvénients</div><ul class="pc-list">        <li>Les modèles haut de gamme FLUX.2 [pro] et [max] sont fermés, uniquement via API et non gratuits</li>
+        <li>La facturation au mégapixel augmente avec la résolution et peut devenir coûteuse à 4MP</li>
+        <li>Les poids ouverts comportent des restrictions de licence; FLUX.1 [dev] est non commercial</li>
+        <li>L'auto-hébergement commercial au-delà des seuils de volume exige une licence Open Weights payante</li>
+        <li>La multiplicité des variantes (pro/flex/max/dev/klein) complique le choix du bon niveau</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://blackforestlabs.ai" target="_blank" rel="noopener">Visiter FLUX →</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choisir FLUX si…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Vous avez besoin d'un modèle open-source que vous pouvez exécuter localement ou via API</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Flux est gratuit via Replicate, Fal.ai et d'autres fournisseurs — pas d'abonnement mensuel obligatoire</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Flux est souvent considéré comme supérieur à Midjourney pour le rendu de texte dans les images</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Plus de flexibilité : pouvez l'affiner et l'intégrer dans vos propres applications</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choisir FLUX si…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Vous avez besoin d'un photoréalisme au-delà de Midjourney jusqu'à 4MP via API</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Vous voulez des personnages ou des styles cohérents à partir de plusieurs références</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Vous devez auto-héberger sur du matériel grand public avec FLUX.2 [klein]</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Vous exigez un rendu de texte fiable au sein des images générées</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Vous préférez la facturation au mégapixel à un abonnement mensuel</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Questions fréquemment posées</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Midjourney vs Flux — lequel est le meilleur ?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Midjourney est meilleur pour la cohérence artistique et la qualité globale. Flux est meilleur pour le rendu de texte, le contenu photographique et comme modèle open-source. Midjourney pour l'art ; Flux pour les applications et le contrôle technique.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Flux est-il gratuit ?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Les modèles Flux sont open-source. Vous pouvez les utiliser via des fournisseurs cloud (Replicate, Fal.ai) en payant par image, ou les exécuter localement gratuitement avec du matériel compatible. Midjourney à partir de 10 $/mois.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Flux peut-il générer du texte lisible dans les images ?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Oui. Le rendu de texte dans les images est l'une des forces de Flux par rapport à Midjourney. Pour des images contenant des panneaux, des logos ou du texte lisible, Flux performe nettement mieux.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Midjourney est-il le meilleur générateur d'images IA ?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Midjourney est souvent considéré comme le meilleur pour la qualité artistique et l'esthétique. Mais Flux, DALL-E 3, Stable Diffusion et Ideogram ont tous des forces différentes. Midjourney n'offre pas d'API directe et ne peut pas être utilisé localement.</span></div></div></div></div>
   <div class="section-title-sm">Considérez aussi</div>
   <div class="also-grid">    <a class="also-card" href="/fr/tools/chatgpt-images.html">
@@ -214,7 +219,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/fr/directory.html">Répertoire</a>
         <a href="/fr/news.html">Actualités</a>
-        <a href="/fr/directory.html">Outils</a>
+        <a href="/fr/tools.html">Outils</a>
         <a href="/fr/compare.html">Comparer</a>
         <a href="/fr/newsletter.html">Newsletter</a>
       </div>

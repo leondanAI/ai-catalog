@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","ua");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Stable Diffusion","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://stability.ai"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Stable Diffusion","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://stability.ai","dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/ua/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Каталог</a>
       <a href="/ua/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Порівняння</a>
       <a href="/ua/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Новини</a>
-      <a href="/ua/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">Інструменти</a>
+      <a href="/ua/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Інструменти</a>
       <a href="/ua/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Розсилка</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/ua/directory.html"  class="nav-link" data-i18n="nav.directory">Каталог</a>
     <a href="/ua/compare.html"    class="nav-link" data-i18n="nav.compare">Порівняння</a>
     <a href="/ua/news.html"       class="nav-link" data-i18n="nav.news">Новини</a>
-    <a href="/ua/directory.html"      class="nav-link" data-i18n="nav.tools">Інструменти</a>
+    <a href="/ua/tools.html"      class="nav-link" data-i18n="nav.tools">Інструменти</a>
     <a href="/ua/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Розсилка</a>
   </nav>
 </header>
@@ -138,7 +138,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">🎨 Генерація зображень</span>
-        <span class="tool-meta-chip badge-free">Безкоштовно</span>
+        <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
       <div class="tool-best-for"><strong>Підходить для:</strong> Генерація зображень з відкритим кодом, локальний інференс, відео AI, генерація аудіо</div>
@@ -150,26 +150,29 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Stable Diffusion</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Stable Diffusion — це серія моделей генерації зображень з відкритим кодом від Stability AI, що широко використовується для локального інференсу, дообробки та комерційного розгортання. На відміну від закритих моделей, ваги Stable Diffusion є публічно доступними та можуть запускатися на споживчому обладнанні, що робить їх фундаментом великої екосистеми сторонніх інструментів, дообробок від спільноти та комерційних застосунків.</p><p style="margin-top:1rem">Stability AI пройшла значне корпоративне відновлення на початку 2026 року. Борги компанії були повністю погашені, що вирішило фінансову нестабільність, яка загрожувала діяльності протягом 2024-2025 років. У лютому 2026 укладено стратегічне партнерство з Electronic Arts (EA), яке забезпечило і капітал, і престижний комерційний контекст для моделей Stability AI. Джеймс Кемерон приєднався як радник, що додало галузевий авторитет.</p><p style="margin-top:1rem">Продуктивність SD3.5 покращена завдяки оптимізаціям для NVIDIA TensorRT з квантизацією FP8. Ця комбінація забезпечує швидший інференс та значно нижчі вимоги до відеопам''яті на GPU серії RTX, роблячи SD3.5 більш практичним на середньому споживчому обладнанні. Підтримка AMD розширена через оптимізовані ONNX-варіанти моделей для GPU Radeon та прискорювачів Ryzen AI, розширюючи сумісну апаратну базу за межі NVIDIA.</p><p style="margin-top:1rem">SV4D 2.0 (Stable Video 4D 2.0) — нова версія моделі генерації відео, орієнтована на вищу якість для реальних сцен — з кращою зв''язністю, якістю руху та узгодженістю об''єктів порівняно з оригінальним SV4D. Stable Audio Open Small, компактна модель генерації аудіо, відкрита у партнерстві з Arm та оптимізована для ефективного інференсу на апаратному забезпеченні на базі Arm.</p><p style="margin-top:1rem">Всі моделі Stable Diffusion залишаються безкоштовними та з відкритим кодом. Платформа Stability AI пропонує freemium API для хмарного інференсу без локального налаштування. Stable Diffusion найкраще підходить для розробників, дослідників і творчих фахівців, яким потрібна генерація зображень та відео з відкритим кодом для локального запуску, дообробки або комерційного розгортання без поплатної оплати.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Stable Diffusion — це сімейство моделей генерації зображень із відкритими вагами від Stability AI. На відміну від закритих сервісів, ваги можна завантажити й запускати на власному залізі — саме тому модель стала основою для величезної екосистеми донавчань, LoRA, ControlNet і локальних інтерфейсів.</p><p style="margin-top:1rem">Поточний реліз — Stable Diffusion 3.5, він виходить у трьох варіантах: Large на 8,1 млрд параметрів, Large Turbo для швидкої генерації за кілька кроків і Medium на 2,5 млрд для слабших машин. За кількістю встановлень SD 3.5 — найпоширеніша відкрита модель зображень, але за якістю серед відкритих ваг вона вже не лідер: із 2026 року першість тримає FLUX.2 від Black Forest Labs.</p><p style="margin-top:1rem">Можливості охоплюють генерацію за текстом, покращене порівняно з SDXL слідування промпту й роботу з типографікою, а також широкий набір інструментів керування й редагування завдяки спільноті. До тієї ж лінійки входять SDXL Turbo, Stable Audio і Stable Fast 3D.</p><p style="margin-top:1rem">Щодо ціни: самостійне розгортання відкритих ваг безкоштовне за Stability AI Community License для приватних осіб і організацій із виручкою до $1 млн на рік. Вище цього порогу потрібна Enterprise License з індивідуальною ціною. Є й хмарний шлях через Developer Platform API (platform.stability.ai) з оплатою за кредити: 1 кредит — приблизно $0,01, Stable Image Ultra коштує близько $0,08 за зображення, Stable Image Core — близько $0,03, пакети кредитів — близько $10 за 1000. Сторонні джерела також згадують тариф-підписку приблизно $20 на місяць.</p><p style="margin-top:1rem">Основні обмеження — практичні. Великі моделі потребують потужної відеокарти, хороші результати зазвичай вимагають підбору промпту й постобробки, а ліцензія з прив'язкою до виручки означає, що для великих компаній модель уже не «просто безкоштовна». За якістю на верхньому рівні SD 3.5 тепер поступається FLUX.2.</p><p style="margin-top:1rem">Stable Diffusion варто обрати, якщо вам потрібен локальний контроль, відкритий пайплайн для донавчання й відсутність оплати за кожне зображення на невеликих обсягах — і ви готові проміняти абсолютний пік якості на відкритість і гнучкість.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Оновлено: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Переваги</div><ul class="pc-list">        <li>Повністю відкритий код — ваги вільно доступні для локального використання, дообробки та комерційного розгортання</li>
-        <li>SD3.5 оптимізовано для NVIDIA TensorRT/FP8: швидший інференс і менше VRAM на RTX GPU</li>
-        <li>ONNX-оптимізовані варіанти для AMD Radeon та Ryzen AI — не тільки для NVIDIA</li>
-        <li>SV4D 2.0 забезпечує вищу якість відео реального світу порівняно з оригінальним SV4D</li>
-        <li>Stable Audio Open Small відкрита з Arm — генерація аудіо доступна на граничному обладнанні</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Недоліки</div><ul class="pc-list">        <li>Локальне налаштування вимагає технічних знань — не підходить для нетехнічних користувачів</li>
-        <li>Найкращі результати на SD3.5 все ще вимагають потужного GPU; інференс лише на CPU повільний</li>
-        <li>Екосистема з відкритим кодом фрагментована — багато форків, версій та UI з непостійною якістю</li>
-        <li>Корпоративна нестабільність Stability AI в минулому — стійкість партнерства ще потребує доведення</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Переваги</div><ul class="pc-list">        <li>Відкриті ваги, які можна завантажити й запускати локально з повним контролем над пайплайном</li>
+        <li>Безкоштовне самостійне розгортання за Community License при виручці до $1 млн</li>
+        <li>Три варіанти SD 3.5 (Large, Large Turbo, Medium) під різне залізо</li>
+        <li>Величезна екосистема донавчань, LoRA, ControlNet і локальних інтерфейсів</li>
+        <li>Опціональний хмарний API з прозорою ціною за зображення, якщо не хочеться тримати модель самому</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Недоліки</div><ul class="pc-list">        <li>Уже не лідер за якістю серед відкритих ваг — із 2026 року попереду FLUX.2</li>
+        <li>Великі моделі потребують потужної відеокарти для комфортної роботи вдома</li>
+        <li>Безкоштовне розгортання прив'язане до виручки; при обороті понад $1 млн потрібна платна Enterprise License</li>
+        <li>Хороші результати зазвичай вимагають підбору промпту й постобробки</li>
+        <li>Хмарний API помітно дорожчає на обсягах (близько $0,08 за зображення в Ultra, $0,03 у Core)</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://stability.ai" target="_blank" rel="noopener">Перейти на Stable Diffusion →</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Оберіть Stable Diffusion якщо…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Ви новачок у Stable Diffusion і хочете зрозумілий web-інтерфейс без вивчення нодів</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Automatic1111 має величезну спільноту і найбільше туторіалів і розширень</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Класичний UI зі вкладками для txt2img, img2img, Extras і PNG-Info зручніший для деяких</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Більше готових пресетів і простіший старт для базової генерації зображень</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Оберіть Stable Diffusion якщо…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вам потрібно запускати модель зображень локально з повним контролем</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Потрібна відкрита основа для донавчання через LoRA чи ControlNet</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Ваша виручка менша за $1 млн і ви хочете нульову ціну за зображення</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Відкритість і гнучкість важливіші за вичавлювання абсолютного максимуму якості</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Хочеться мати запасний варіант платного хмарного API без прив'язки до вендора</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Часті запитання</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">ComfyUI vs Automatic1111 — що обрати?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">ComfyUI потужніший і ефективніший для просунутих воркфлоу. Automatic1111 простіший для початківців з більшим числом туторіалів. Для складних пайплайнів і продуктивності — ComfyUI; для простого старту — Automatic1111.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">ComfyUI безкоштовний?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Обидва безкоштовні і відкриті. Вам потрібна відеокарта (NVIDIA рекомендована) або можна запускати хмарно. ComfyUI і Automatic1111 запускаються локально безкоштовно.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">ComfyUI складний у освоєнні?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">ComfyUI має крутіший поріг входу через node-based інтерфейс. Але є готові воркфлоу для завантаження. Автоматизація складних пайплайнів набагато потужніша після освоєння. Більшість просунутих користувачів перейшли на ComfyUI.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Stable Diffusion потребує потужного ПК?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Stable Diffusion SDXL рекомендує 8+ ГБ VRAM. SD 1.5 працює на 4+ ГБ VRAM. Процесор підтримується але дуже повільний. Хмарні варіанти (RunPod, Google Colab) дозволяють запускати без потужного ПК.</span></div></div></div></div>
   <div class="section-title-sm">Також розгляньте</div>
   <div class="also-grid">    <a class="also-card" href="/ua/tools/chatgpt-images.html">
@@ -216,7 +219,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/ua/directory.html">Каталог</a>
         <a href="/ua/news.html">Новини</a>
-        <a href="/ua/directory.html">Інструменти</a>
+        <a href="/ua/tools.html">Інструменти</a>
         <a href="/ua/compare.html">Порівняння</a>
         <a href="/ua/newsletter.html">Розсилка</a>
       </div>

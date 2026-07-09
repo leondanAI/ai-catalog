@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "ElevenLabs", "description": "ElevenLabs is the leading AI voice platform, specializing in text-to-speech, voice cloning, real-time transcription, and voice agent infrastructure. It serves 5M+ users including content creators, dev", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://elevenlabs.io", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": 3, "bestRating": "5", "worstRating": "1"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "ElevenLabs", "description": "ElevenLabs is a voice-focused AI company best known for realistic text-to-speech and voice cloning. Beyond TTS it now spans audiobooks, music generation and voice agents, making it one of the more com", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://elevenlabs.io", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": 3, "bestRating": "5", "worstRating": "1"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About ElevenLabs</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">ElevenLabs is the leading AI voice platform, specializing in text-to-speech, voice cloning, real-time transcription, and voice agent infrastructure. It serves 5M+ users including content creators, developers, publishers, and enterprises building voice-driven applications and automations. ElevenLabs is valued at $11B and is the benchmark for natural-sounding AI voice in 2026.</p><p style="margin-top:1rem">SDK v2.46, released May 2026, is a developer-facing update that expands the platform's voice agent and transcription capabilities. Conversation Tags allow developers to label and categorize voice agent conversations with structured metadata at the SDK level — enabling analytics, segmentation, and quality monitoring across large volumes of agent interactions without building separate logging infrastructure.</p><p style="margin-top:1rem">Scribe Realtime, ElevenLabs' real-time transcription service, gains keyterms support in v2.46. Keyterms are domain-specific words, names, or phrases that the transcription model should recognize with higher accuracy — useful for medical, legal, or technical contexts where standard transcription models frequently mis-transcribe specialized vocabulary. Developers pass a keyterms list at session initialization, and Scribe Realtime prioritizes correct recognition of those terms throughout the session.</p><p style="margin-top:1rem">GPT-5.5 and Qwen 3 are now available as language model options for Voice Agents — ElevenLabs' platform for building conversational voice agents. Previously limited to Claude and GPT-4 class models, the addition of GPT-5.5 brings OpenAI's most capable current model into voice agent workflows. Qwen 3, the open-source model from Alibaba, provides a cost-effective alternative for teams building high-volume or budget-constrained voice agent deployments.</p><p style="margin-top:1rem">Batch Calling is a new capability for automated outbound voice campaigns. Developers can define a call list, a voice agent configuration, and a schedule, and ElevenLabs will execute outbound voice calls to the entire list automatically — with each call handled by the configured AI voice agent. This enables automated appointment reminders, survey collection, sales outreach, and notification campaigns at scale without human agents.</p><p style="margin-top:1rem">ElevenLabs offers a free tier (10,000 characters/month). Paid plans start at $5/month (Starter) through $99/month (Scale) and custom enterprise pricing. Developers pay separately for API usage beyond plan limits. ElevenLabs is best for developers and companies building voice-native applications, automated voice agents, and high-quality TTS for content production.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">ElevenLabs is a voice-focused AI company best known for realistic text-to-speech and voice cloning. Beyond TTS it now spans audiobooks, music generation and voice agents, making it one of the more complete audio stacks available to developers and creators.</p><p style="margin-top:1rem">The current model is Eleven v3, which hit general availability in February 2026. Compared with the older Multilingual v2, v3 substantially expanded language coverage and added the Eleven v3 Conversational model built for voice agents, which can clone a voice from just a few seconds of audio. Around the same time the company launched ElevenMusic with a Music Marketplace for creator monetization, and ElevenReader, an audiobook product at $11/mo positioned against Audible.</p><p style="margin-top:1rem">Core capabilities include high-quality multilingual TTS, instant and professional voice cloning, real-time conversational agents, music generation and an API with its own subscription tiers for production use.</p><p style="margin-top:1rem">Pricing runs from Free ($0/mo, 10k credits, roughly 10 minutes of TTS, no commercial rights and required attribution) up through Starter ($6/mo, commercial rights and instant cloning), Creator ($22/mo, professional cloning and 192kbps, often promoted at $11 for the first month), Pro ($99/mo), Scale ($299/mo, 3 seats), Business ($990/mo, 10 seats) and custom Enterprise. Annual billing gives two months free.</p><p style="margin-top:1rem">The main limitations are credit-based usage that can run out quickly on higher-volume work, no commercial rights or required attribution on the free plan, and costs that climb fast once you need many hours of audio or several seats. Voice cloning also raises consent and misuse concerns you have to manage yourself.</p><p style="margin-top:1rem">ElevenLabs suits creators, studios and developers who need natural-sounding voices in many languages, teams building voice agents, and anyone producing audiobooks or narration at scale. The company reached roughly $500M ARR by April 2026 and raised a $500M Series D at an $11B valuation, with a secondary sale in July 2026 reportedly targeting around $22B.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>SDK v2.46: Conversation Tags for analytics and quality monitoring across agent interactions</li>
-        <li>Scribe Realtime with keyterms: domain-specific transcription accuracy for technical vocabulary</li>
-        <li>GPT-5.5 and Qwen 3 in Voice Agents — broader model choice for different cost-quality tradeoffs</li>
-        <li>Batch Calling: automated outbound voice campaigns with AI agents at scale</li>
-        <li>Most realistic AI voice cloning available — 29 languages with natural prosody and inflection</li>
+        <li>Eleven v3 delivers highly natural, expressive speech across a wide and recently expanded set of languages</li>
+        <li>Voice cloning ranges from instant (a few seconds of audio) to studio-grade professional cloning</li>
+        <li>Conversational v3 model enables real-time voice agents, not just prerecorded TTS</li>
+        <li>Broad product suite: TTS, music (ElevenMusic + Marketplace) and audiobooks (ElevenReader) under one roof</li>
+        <li>Solid API with dedicated subscription tiers for developers</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Free tier limited to 10,000 characters/month — not sufficient for production use</li>
-        <li>Batch Calling and advanced agent features require Scale plan or enterprise agreement</li>
-        <li>Voice cloning of real people without consent raises significant ethical and legal concerns</li>
-        <li>API cost scales quickly with high character volumes — enterprise pricing needed for large deployments</li>
+        <li>Credit-based pricing can be consumed quickly, so heavy audio work gets expensive fast</li>
+        <li>Free plan has no commercial rights and requires attribution</li>
+        <li>Higher seat counts and long-form audio push you into the pricier Scale/Business tiers</li>
+        <li>Realistic voice cloning carries consent and misuse risks the user must manage</li>
+        <li>The $11 Creator promo is first-month only, then reverts to $22/mo</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose ElevenLabs if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need the most natural-sounding AI voices and highest quality voice cloning</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You create audio content (podcasts, audiobooks, voiceovers) where quality is paramount</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want to clone a specific voice from a short audio sample</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need a large selection of diverse voices across many languages and accents</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose ElevenLabs if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need natural multilingual TTS or narration for content at scale</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to build real-time voice agents with the Conversational v3 model</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need instant or professional voice cloning</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You are producing audiobooks or music and want it in one platform</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You are a developer who wants a mature voice API</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is ElevenLabs better than Murf?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">ElevenLabs produces higher quality, more natural-sounding voices and has superior voice cloning. Murf is better for e-learning and presentation voiceovers with its integrated video sync and team features. Choose ElevenLabs for quality; Murf for e-learning workflows.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can ElevenLabs clone my voice?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. ElevenLabs can clone your voice from as little as 1 minute of clean audio. Professional voice cloning (Instant Voice Clone) is available on the Starter plan ($5/month). High-quality cloning (Professional Voice Clone) requires the Creator plan ($22/month).</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">How much does Murf AI cost?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Murf offers a free plan with 10 minutes of voice generation. Creator plan is $29/month (2 hours/month), Business is $99/month (8 hours/month), and Enterprise is custom.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What languages does ElevenLabs support?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">ElevenLabs supports 32+ languages including English, Spanish, French, German, Hindi, Arabic, Chinese, Japanese, and more. Voice quality varies by language — English and major European languages have the most natural output.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

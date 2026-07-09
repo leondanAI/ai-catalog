@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Runway", "description": "Runway is an AI creative platform built around video generation, with a suite of production tools spanning video-to-video editing, image generation, audio generation, and multi-modal workflows. It is ", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://runwayml.com", "offers": {"@type": "Offer", "price": "", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.0", "reviewCount": 3, "bestRating": "5", "worstRating": "1"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Runway", "description": "Runway is a web-based generative media platform built around text-to-video and image-to-video, but it has grown well beyond a simple editor. Today it also handles image generation and native audio, an", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://runwayml.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.0", "reviewCount": 3, "bestRating": "5", "worstRating": "1"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -161,7 +161,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">🎬 Video Generation</span>
-        <span class="tool-meta-chip badge-paid">Paid</span>
+        <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
       <div class="tool-best-for"><strong>Best for:</strong> AI video generation, temporal consistency, API access, creative workflows</div>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Runway</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Runway is an AI creative platform built around video generation, with a suite of production tools spanning video-to-video editing, image generation, audio generation, and multi-modal workflows. It is used by filmmakers, studios, advertisers, and creative technologists who need cinematic-quality AI video for professional production. Runway's Gen series of models has become a benchmark for video generation quality across the industry.</p><p style="margin-top:1rem">Gen-4.5 was released in January 2026 and ported to NVIDIA's Vera Rubin NVL72 platform — one of NVIDIA's highest-performance AI inference systems. The NVL72 deployment enables the faster inference speeds and higher throughput that were required to make Gen-4.5 available via API. API access opened in February 2026, allowing developers and studios to integrate Gen-4.5 directly into their own production pipelines and applications.</p><p style="margin-top:1rem">Gen-4.5's key technical advances are temporal consistency and action control. Temporal consistency refers to how well a video model maintains coherent appearance, lighting, and physics across frames — a persistent weakness of earlier generations of video models. Gen-4.5 is rated best-in-class on this dimension as of early 2026. Action control allows users to direct specific movements and interactions within a generated scene with greater precision than prompt-only generation.</p><p style="margin-top:1rem">March 2026 saw a cluster of product and ecosystem launches: Runway Characters (March 9) enables consistent character identities across multiple generated clips; Runway Labs (March 11) is a research preview and early-access environment for experimental features; Runway Builders (March 31) is a community and tooling layer for developers building on the Runway API; and Runway Fund (March 31) is an investment program supporting creative AI startups.</p><p style="margin-top:1rem">Workflow audio nodes, video upscaling nodes, and publishable workflow apps were also added, enabling users to build complete production pipelines within the platform and share them as usable apps. Runway plans are paid-only, starting at $15/month for Standard. Runway is best for professional video creators and studios that need best-in-class temporal consistency and API-accessible video generation for integration into custom production workflows.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Runway is a web-based generative media platform built around text-to-video and image-to-video, but it has grown well beyond a simple editor. Today it also handles image generation and native audio, and it hosts a range of third-party models alongside its own.</p><p style="margin-top:1rem">The current flagship is Gen-4.5, announced on December 1, 2025. It sits at the top of the Gen-4 family, which also includes Gen-4 and the faster Gen-4 Turbo. Compared with earlier Gen-4 models, Gen-4.5 improves motion quality, prompt adherence, and physical and temporal realism, and the family added native audio generation alongside video. At launch it took the No. 1 spot on the Artificial Analysis Video Arena leaderboard.</p><p style="margin-top:1rem">Beyond its own models, Runway lets you work with external ones such as Veo 3.1, Nano Banana Pro, Kling 3.0, Seedance 2.0, and Gemini, so you can compare outputs without leaving the platform. That makes it useful for character consistency across shots, image-driven video, and mixed image, video, and audio workflows.</p><p style="margin-top:1rem">Pricing is credit-based. The Free plan costs nothing and gives 125 one-time credits with watermarked output and limited models (no Gen-4 Video, Gen-4.5, or Veo). Standard is $12/mo billed annually ($15 monthly) with 625 credits a month. Pro is $28/mo annually ($35 monthly) with 2,250 credits. Max is $76/mo annually ($95 monthly) with 9,500 credits and one-month rollover; it replaced the discontinued Unlimited plan. Enterprise pricing is custom.</p><p style="margin-top:1rem">The main limitation is the credit system: generation consumes credits, so heavy use gets expensive, and the free tier is more of a trial than a working plan. The new Max plan is purely credit-based and, unlike the old Unlimited plan, does not include Explore Mode.</p><p style="margin-top:1rem">Runway suits creators, editors, and studios who want a single place to generate and compare AI video across multiple models, and who are comfortable paying per credit for higher-quality output.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Gen-4.5: best-in-class temporal consistency and action control for AI video generation</li>
-        <li>API access (from February 2026) for direct integration into custom production pipelines</li>
-        <li>Runway Characters: consistent character identity across multiple generated clips</li>
-        <li>Workflow audio nodes, video upscaling nodes, and publishable workflow apps</li>
-        <li>Runway Fund and Builders ecosystem for developers building on the Runway API</li>
+        <li>Gen-4.5 flagship ranked No. 1 on the Artificial Analysis Video Arena leaderboard at launch</li>
+        <li>One platform for image, video, and native audio generation</li>
+        <li>Hosts third-party models (Veo 3.1, Nano Banana Pro, Kling 3.0, Seedance 2.0, Gemini) for side-by-side comparison</li>
+        <li>Clear paid tiers starting at $12/mo billed annually</li>
+        <li>Free plan lets you try the interface before paying</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Paid-only — no free tier for ongoing production use</li>
-        <li>API access and Gen-4.5 consume credits quickly at high generation volumes</li>
-        <li>Gen-4.5 API launched February 2026 — third-party integration tooling still maturing</li>
-        <li>Less beginner-friendly than consumer-facing tools like Pika or CapCut AI</li>
+        <li>Credit-based pricing means heavy generation adds up quickly</li>
+        <li>Free plan is limited: watermarks and no Gen-4 Video, Gen-4.5, or Veo</li>
+        <li>New Max plan drops Explore Mode that the old Unlimited plan effectively offered</li>
+        <li>Best models are locked behind paid tiers</li>
+        <li>Credit costs make it hard to predict monthly spend for high-volume work</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Runway if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need the highest benchmark quality — Gen-4.5 is #1 on text-to-video leaderboards</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want access to multiple models (Veo 3.1, Kling, Seedance, FLUX) in one subscription</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Character and environment consistency across multi-shot sequences is critical</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're a professional video creator who needs the best available output</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Runway if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want the current Gen-4.5 flagship for higher-quality AI video</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need to compare several video models in one place</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You work across image, video, and audio in a single project</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You are fine paying per credit for premium output</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want native audio generated alongside video</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Kling AI better than Runway in 2026?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">It depends on your priority. Runway Gen-4.5 leads on benchmark quality and offers a multi-model subscription. Kling 3.0 offers better value — more free credits, native 4K, and lower paid pricing. For professionals, Runway. For value, Kling.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can I use Kling AI for free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. Kling AI offers 66 free credits daily — the most generous free tier among quality AI video generators. Runway's free trial gives 125 one-time credits that don't renew.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Runway Gen-4.5?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Runway Gen-4.5 is Runway's latest video model, ranking #1 on text-to-video quality leaderboards as of 2025. It's available on all paid Runway plans and one subscription also includes Veo 3.1, Kling 3.0, Seedance, and FLUX.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Does Kling AI support 4K?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. Kling 3.0 (February 2026) supports native 4K output with a storyboard tool for per-shot camera control and built-in lip-synced audio generation.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

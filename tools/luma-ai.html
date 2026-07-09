@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Luma AI", "description": "Luma AI is a San Francisco-based AI lab known for Dream Machine — its text-to-video and image-to-video generation model — and for pioneering NeRF (neural radiance field) 3D capture technology. The Dre", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://lumalabs.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Luma AI", "description": "Luma AI is a generative media platform built around text-to-video, image-to-video and 3D generation. It started as the Dream Machine web and mobile app and has since grown into a broader creative tool", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://lumalabs.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,37 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Luma AI</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Luma AI is a San Francisco-based AI lab known for Dream Machine — its text-to-video and image-to-video generation model — and for pioneering NeRF (neural radiance field) 3D capture technology. The Dream Machine interface on lumalabs.ai serves millions of creators for AI video generation, while the Luma API provides enterprise and developer access.</p><p style="margin-top:1rem">Ray3.14, launched May 2026, is the most technically significant Luma model release since the original Ray2. Native 1080p output means the model generates video at full HD resolution without upscaling — the output is natively sharp rather than interpolated from a lower resolution. Generation speed is 4x faster than Ray2, bringing Luma from one of the slower premium models to competitive generation times. Cost per generated video second is reduced by 3x, making Luma significantly more accessible for developers building video applications on the API.</p><p style="margin-top:1rem">Character Seeds is a new consistency feature that assigns a persistent identity to a character across multiple video generations. Once a seed is created from a reference image or generation, subsequent clips using the same seed will maintain consistent appearance — same face, hair, body proportions, and style — even across different prompts, scenes, and camera angles. This solves one of the core limitations of AI video generation for narrative content, where character consistency across shots has historically been unreliable.</p><p style="margin-top:1rem">Modify with Instructions allows users to take an existing generated video and apply text-guided modifications without regenerating from scratch. Instead of re-prompting entirely, users can describe what they want to change — &quot;make the background sunset instead of daytime&quot; or &quot;have the character turn left&quot; — and the model applies the edit while preserving the rest of the clip. This reduces the iterative generation cycles needed to reach a final result.</p><p style="margin-top:1rem">Luma offers 30 free generations per month with no watermark. Paid plans start at $29.99/month for higher resolution, longer clips, and priority queue access. Luma AI is best for creators and developers who need high-quality, consistent AI video at scale, especially for narrative content requiring repeatable character appearances.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Luma AI is a generative media platform built around text-to-video, image-to-video and 3D generation. It started as the Dream Machine web and mobile app and has since grown into a broader creative toolkit.</p><p style="margin-top:1rem">The current model is Ray 3.14, released on January 26, 2026. It supersedes the older Ray2 and Ray3 generations: Ray 3.14 renders native 1080p, runs roughly 4x faster, and costs about 3x less at 720p than the base Ray3. Realism claims tied to Ray2 are now two generations out of date.</p><p style="margin-top:1rem">In March 2026 Luma launched Luma Agents, an agentic platform that runs several models under one credit pool. Alongside Luma's own Ray 3.14 and Uni-1, it can call partner models including Veo 3.1, Kling 3.0, Seedance, Nano Banana and ElevenLabs audio, so you can mix models within one project instead of subscribing to each separately.</p><p style="margin-top:1rem">Pricing has two coexisting ladders. Luma Agents individual plans are Plus at $30/mo ($25/mo billed yearly, 10,000 credits), Pro at $90/mo ($75/mo yearly, 40,000 credits) and Ultra at $300/mo ($250/mo yearly, 150,000 credits), with Team and Enterprise via sales. The classic Dream Machine web plans still exist: Lite $9.99, Plus $29.99 and Unlimited $94.99 per month, with higher iOS pricing. A free tier remains with limited monthly credits, watermarks and non-commercial use, and top-up packs start at $4 for 1,200 credits valid 12 months.</p><p style="margin-top:1rem">Limitations are worth noting. Everything runs on credits, so heavy use gets expensive fast; the two parallel pricing systems and mobile-versus-web price gaps are confusing; the free tier is watermarked and non-commercial; and partner models routed through Agents can behave inconsistently.</p><p style="margin-top:1rem">Luma AI suits creators, marketers and studios who want short cinematic clips, want to compare several video models in one place, or need fast 1080p output without stitching together multiple separate subscriptions.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Ray3.14: native 1080p output — no upscaling artifacts, genuinely sharp full-HD video</li>
-        <li>4x faster generation than Ray2 — competitive speed alongside top-tier quality</li>
-        <li>3x lower cost per second — makes API-based video apps significantly more economical</li>
-        <li>Character Seeds: persistent character identity across multiple clips for narrative consistency</li>
-        <li>Modify with Instructions: text-guided post-generation edits without full regeneration</li>
+        <li>Ray 3.14 delivers native 1080p and is roughly 4x faster and 3x cheaper at 720p than base Ray3</li>
+        <li>Luma Agents pools multiple models (Ray 3.14, Uni-1, Veo 3.1, Kling 3.0, Seedance, Nano Banana, ElevenLabs) under one credit balance</li>
+        <li>Genuine free tier plus low-entry classic Lite plan at $9.99/mo</li>
+        <li>Handles text-to-video, image-to-video and 3D in one platform</li>
+        <li>Top-up credit packs from $4 stay valid for 12 months</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Free tier limited to 30 generations/month — insufficient for production workloads</li>
-        <li>Character Seeds require a reference image or prior generation — not zero-shot</li>
-        <li>Weaker on highly stylized or animated content vs Kling or Pika for certain aesthetics</li>
-        <li>Paid plans start at $29.99/mo — cost scales with generation volume on API</li>
+        <li>Two parallel pricing ladders (Agents and Dream Machine) make plans confusing to compare</li>
+        <li>Credit-based billing gets expensive quickly for heavy or high-resolution work</li>
+        <li>Free tier is watermarked and non-commercial only</li>
+        <li>iOS plans cost noticeably more than the equivalent web plans</li>
+        <li>Partner models routed through Agents can produce inconsistent results</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Luma AI if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want a generous free tier for AI video generation — Dream Machine offers free daily credits</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need smooth, physics-accurate motion and fluid camera movements in generated video</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You create image-to-video animations and want high-quality results at low cost</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're experimenting with AI video and want to try it without a paid commitment</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Luma AI if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want the latest Ray 3.14 with native 1080p and faster, cheaper renders</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to compare Veo, Kling, Seedance and other models in one credit pool</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need short cinematic video from text or images</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to start free or on the $9.99 classic Lite plan before committing</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Luma Dream Machine?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Dream Machine is Luma AI's text-to-video and image-to-video generator. It's known for producing smooth, physically realistic motion. The free tier allows daily video generation. Luma AI also makes Genie (3D generation) and builds AI infrastructure for other products.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Luma AI free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Luma Dream Machine has a free plan with a limited number of video generations per month. Standard plan is $29.99/month for more generations and faster processing. Pro is $99.99/month for high-volume use.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Dream Machine better than Sora?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Sora (OpenAI) and Dream Machine target different strengths. Sora produces longer, more complex videos with stronger story coherence. Dream Machine produces excellent short clips with smooth motion at a lower cost and with a free tier. Runway Gen-4.5 is generally considered the current quality leader.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Runway used for professionally?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Runway is used by filmmakers, VFX artists, and video editors for AI video generation, background removal, video inpainting, rotoscoping, and motion tracking. Studios like Universal and Paramount have used Runway tools in productions. It's the professional-grade choice in AI video.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +258,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

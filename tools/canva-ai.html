@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Canva AI", "description": "Canva AI is the AI-powered design layer embedded throughout the Canva platform, which has over 200 million users worldwide. The AI features span image generation, writing assistance, video editing, co", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://canva.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Canva AI", "description": "Canva AI is the AI layer inside Canva, the browser-based design platform used for social posts, presentations, documents, and marketing assets. Rather than a single feature, it is now a conversational", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://canva.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Canva AI</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Canva AI is the AI-powered design layer embedded throughout the Canva platform, which has over 200 million users worldwide. The AI features span image generation, writing assistance, video editing, code generation, and now full agentic design workflows — all accessible within the same visual editor that non-designers have used for years.</p><p style="margin-top:1rem">Canva AI 2.0, launched at Canva Create 2026, is a foundational upgrade. Agentic editing allows users to describe design changes conversationally and have the platform execute multi-step operations automatically — resizing, recoloring, rearranging, and reformatting without manual interaction with individual elements. Voice prompts extend this to spoken instructions, removing the need to type for users who prefer verbal direction.</p><p style="margin-top:1rem">Brand Intelligence automates brand consistency at the organizational level: users supply a company website URL and Canva automatically extracts fonts, color palettes, and visual style. These are applied consistently across all generated and edited designs, reducing the manual effort of brand compliance checking.</p><p style="margin-top:1rem">Memory Library is a cross-project style memory system. Design choices, preferred layouts, and brand elements made in one project are remembered and applied intelligently to future projects — creating continuity across a user's entire design history rather than starting fresh each time.</p><p style="margin-top:1rem">Canva Code 2.0 generates full interactive web experiences from a single prompt, including navigation, animations, and functional elements — not just static mockups. Connectors integrate Canva directly with Slack, Gmail, Google Drive, Notion, Zoom, HubSpot, Linear, and Atlassian tools. Canva Offline mode enables design work without an internet connection, and the Cavalry animation tool is now free for all users.</p><p style="margin-top:1rem">Canva AI is best for marketers, small business owners, educators, and non-designers who need polished, brand-consistent visual content quickly, and for teams that want design and communication tools in a single platform.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Canva AI is the AI layer inside Canva, the browser-based design platform used for social posts, presentations, documents, and marketing assets. Rather than a single feature, it is now a conversational assistant that sits on top of the whole editor.</p><p style="margin-top:1rem">The April 2026 &quot;Canva AI 2.0&quot; update reframed it around a chat-style assistant you can drive with text or voice. It runs on the Canva Design Model, a design-specific foundation model, and returns editable designs in roughly 8-12 seconds. Image generation now uses OpenAI's gpt-image-2, and the new Magic Layers feature splits an AI-generated poster back into separate, editable layers.</p><p style="margin-top:1rem">Magic Studio bundles the rest: Magic Design for templates, Dream Lab for image generation with style transfer, Magic Write for copy, Canva Sheets and Magic Charts for data-to-visualization plus Magic Insights, and Magic Switch, which now does AI-driven layout redesign rather than simple resizing. The assistant also keeps persistent memory and stays aware of your brand assets.</p><p style="margin-top:1rem">Pricing stays freemium. The free tier is $0 and includes a limited pool of Magic Studio/AI credits. Canva Pro is about $15/month or ~$120/year for a single user, with unlimited Magic Design and around 500 Dream Lab generations per month. Canva Business (formerly Teams) runs about $20/user/month or ~$200/user/year with no seat minimum, and Enterprise is custom-priced.</p><p style="margin-top:1rem">The limits are worth knowing. AI credits on the free plan run out quickly, generation quality still varies and often needs manual cleanup, and the conversational assistant is best for common formats rather than highly bespoke design work. A few sources still list Pro at $18/month, likely older or regional pricing.</p><p style="margin-top:1rem">It suits solo creators, small marketing teams, social media managers, and non-designers who want good-looking, on-brand assets fast without learning a professional design tool.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Agentic editing and voice prompts execute multi-step design changes conversationally</li>
-        <li>Brand Intelligence auto-extracts fonts, colors, and style from a company website URL</li>
-        <li>Memory Library maintains cross-project style consistency without manual setup</li>
-        <li>Canva Code 2.0 generates full interactive web experiences from a single prompt</li>
-        <li>Connectors with Slack, Gmail, Notion, Zoom, HubSpot, Linear, Atlassian, and more</li>
+        <li>Conversational assistant returns fully editable designs from a text or voice prompt in about 8-12 seconds</li>
+        <li>Broad Magic Studio toolkit in one place: Magic Design, Dream Lab, Magic Write, Canva Sheets, Magic Charts</li>
+        <li>Magic Layers keeps AI-generated posters editable instead of flattening them into a single image</li>
+        <li>Brand-aware workflows and persistent memory keep output consistent across projects</li>
+        <li>Generous free tier plus predictable Pro pricing at ~$15/month or ~$120/year</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Agentic features are new — complex multi-step instructions may produce inconsistent results</li>
-        <li>Heavy reliance on Canva ecosystem limits portability of designs to other tools</li>
-        <li>Free tier restricts access to premium templates, brand kits, and some AI features</li>
-        <li>Canva Code 2.0 web experiences are not a substitute for custom-built production websites</li>
+        <li>Free-plan AI credits are limited and run out fast under regular use</li>
+        <li>Image and layout quality still varies and often needs manual touch-up</li>
+        <li>Best for common formats; struggles with highly custom or precision design work</li>
+        <li>Heavier AI features (unlimited Magic Design, ~500 Dream Lab generations) require a paid plan</li>
+        <li>Deep reliance on Canva's ecosystem makes exporting to other pro tools less clean</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Canva AI if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're a marketer, social media manager, or content creator — not a designer</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need quick social posts, presentations, and marketing materials with AI assistance</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want Magic Media, Magic Write, and 100+ AI tools in one platform</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Your team includes non-designers who need to create branded content independently</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Canva AI if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to generate on-brand designs by describing them instead of building from scratch</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You are a solo creator or small team that needs social, presentation, and marketing assets quickly</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want image generation, copywriting, and data charts inside one editor</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">A ~$15/month Pro plan fits your budget better than a full professional design suite</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You value editable AI output (Magic Layers) over one-shot flattened images</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Canva AI free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Canva offers a free plan with limited AI features. Canva Pro ($15/month) unlocks Magic Media image generation, Magic Write, background remover, and other AI tools. Many AI features require a Pro subscription.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What AI features does Figma have?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Figma AI (launched 2024) includes AI-generated layers and designs from text prompts, AI rename for layers, first draft generation, and prototype generation. It's built into Figma and available to all paid plan users.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can Canva replace Figma?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">No. Canva and Figma serve different purposes. Canva is for creating marketing content and presentations. Figma is for designing UI/UX interfaces and product prototypes. Designers use Figma; content creators use Canva.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Which is better for beginners — Canva or Figma?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Canva is significantly easier for beginners — it's designed for non-designers with drag-and-drop simplicity. Figma has a steeper learning curve and is designed for professional designers. For quick graphics, start with Canva.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

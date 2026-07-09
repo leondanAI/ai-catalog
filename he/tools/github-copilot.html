@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","he");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"GitHub Copilot","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://github.com/features/copilot","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.3","reviewCount":3,"bestRating":"5","worstRating":"1"}}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"GitHub Copilot","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://github.com/features/copilot","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.3","reviewCount":3,"bestRating":"5","worstRating":"1"},"dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/he/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">ספריה</a>
       <a href="/he/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">השוואה</a>
       <a href="/he/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">חדשות</a>
-      <a href="/he/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">כלים</a>
+      <a href="/he/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">כלים</a>
       <a href="/he/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">ניוזלטר</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/he/directory.html"  class="nav-link" data-i18n="nav.directory">ספריה</a>
     <a href="/he/compare.html"    class="nav-link" data-i18n="nav.compare">השוואה</a>
     <a href="/he/news.html"       class="nav-link" data-i18n="nav.news">חדשות</a>
-    <a href="/he/directory.html"      class="nav-link" data-i18n="nav.tools">כלים</a>
+    <a href="/he/tools.html"      class="nav-link" data-i18n="nav.tools">כלים</a>
     <a href="/he/newsletter.html" class="nav-link" data-i18n="nav.newsletter">ניוזלטר</a>
   </nav>
 </header>
@@ -150,27 +150,29 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>אודות GitHub Copilot</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">GitHub Copilot הוא עוזר קוד AI של Microsoft, משולב עמוקות ב-Visual Studio Code, Visual Studio ו-GitHub. זהו כלי קוד AI הנפוץ ביותר בסביבות ארגוניות, הנהנה מאינטגרציה הדוקה עם מאגרי GitHub, Actions, Issues ותכונות ניהול פרויקטים שאף כלי צד שלישי אינו יכול לשכפל.</p><p style="margin-top:1rem">מ-1 ביוני 2026, מודל התמחור משתנה מתוכניות חודשיות קבועות לחיוב לפי שימוש. תוכנית Max חדשה ברמה גבוהה מוצגת לצד רמות Individual ו-Business הקיימות, עבור משתמשים הכבדים שעוברים את מגבלות השימוש הסטנדרטיות.</p><p style="margin-top:1rem">סוכני ענן ניתנים כעת להפעלה ישירות מ-VS Code ו-Visual Studio ללא מעבר לממשק האינטרנט של GitHub. ניתן להנחות סוכנים מ-GitHub Issues ולוחות פרויקט. זמן האתחול של הסוכן השתפר ב-20%. Debugger Agent מאמת תיקונים מוצעים מול התנהגות זמן ריצה אמיתית ולא ניתוח קוד סטטי.</p><p style="margin-top:1rem">הוראות מותאמות אישית וקבצי prompt מאפשרים למשתמשים לשמור הקשר לשימוש חוזר — תקני קוד, העדפות אדריכליות, כללים ספציפיים לפרויקט — ולהחיל אותם באופן עקבי על פני סשני Copilot.</p><p style="margin-top:1rem">ה-CLI של Copilot תומך כעת בפקודת /fork ופקודות slash באמצע הקלדה. מדדי סקירת קוד הורחבו לכלול פירוט של הערות הסקירה לפי סוג: בעיות אבטחה, סיכון באגים, סגנון.</p><p style="margin-top:1rem">GitHub Copilot מתאים למפתחים בודדים וצוותי הנדסה המשתמשים כבר ב-GitHub ורוצים סיוע AI המשולב עמוקות ב-workflows הקיימים שלהם.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">GitHub Copilot התחיל ככלי השלמה אוטומטית בתוך העורך, אך המוצר הנוכחי של 2026 הוא פלטפורמת קידוד רב-מודלית מלאה. הוא חי בתוך העורך, בטרמינל וב-GitHub עצמו, ומטפל בהשלמת קוד, צ'אט, מצב סוכן שעורך על פני מספר קבצים, סוכני ענן שעובדים על משימות באופן אסינכרוני וסקירת קוד אוטומטית.</p><p style="margin-top:1rem">השינוי המשמעותי האחרון הגיע ב-1 ביוני 2026, כאשר Copilot עבר מיחידות בקשה פרימיום לקרדיטים לפי צריכה (GitHub AI Credits), מערכת מבוססת טוקנים. כל תוכנית כוללת כעת מכסת קרדיטים חודשית, עם חיוב לפי שימוש מעבר למכסה ותקרות תקציב והוצאה חדשות למנהלים. הנפילה האוטומטית הקודמת למודלים זולים יותר בוטלה, וסקירת קוד צורכת עכשיו גם דקות של GitHub Actions.</p><p style="margin-top:1rem">היכולות המרכזיות היום הן מצב סוכן, סוכני ענן, צ'אט, סקירת קוד, ממשק שורת פקודה והאפשרות לבחור את מודל החזית הרצוי, כולל Claude, GPT-5 ואחרים. השלמות קוד והצעות Next Edit נשארות כלולות ואינן צורכות קרדיטים.</p><p style="margin-top:1rem">מבחינת תמחור, יחידים יכולים לבחור Free ב-0 דולר לחודש (כ-2,000 השלמות, צ'אט וסוכן מוגבלים, בחירת מודל אוטומטית), Pro ב-10 דולר לחודש (השלמות ללא הגבלה, בחירת מודל, סוכני ענן, מכסת קרדיטים חודשית), Pro+ ב-39 דולר לחודש (מודלי חזית פרימיום כולל Opus ומכסה גבוהה יותר) או Max ב-100 דולר לחודש (המכסה הגבוהה ביותר וגישה בעדיפות למודלים חדשים). סטודנטים מאומתים מקבלים גישה ברמת Pro בחינם. ארגונים בוחרים Business ב-19 דולר למשתמש לחודש (כולל 19 דולר קרדיטים חודשיים) או Enterprise ב-39 דולר למשתמש לחודש (כולל 39 דולר קרדיטים, אינדוקס של בסיס הקוד וצ'אט ב-GitHub.com). קרדיטים בונוס במבצע פועלים מיוני עד אוגוסט 2026: Business בתוספת 30 דולר לחודש, Enterprise בתוספת 70 דולר לחודש.</p><p style="margin-top:1rem">המגבלה העיקרית היא צפי העלויות: חיוב לפי שימוש אומר ששימוש כבד בסוכן, בצ'אט או במודלי חזית עלול לדחוף אתכם לחריגה, וסקירת קוד ששורפת דקות Actions מוסיפה מד שני שצריך לעקוב אחריו. תקציבים ותקרות עוזרים, אך צוותים צריכים לנטר את הצריכה.</p><p style="margin-top:1rem">Copilot מתאים היטב אם אתם כבר עובדים ב-GitHub וב-VS Code, רוצים עוזר סוכני ולא סתם השלמה אוטומטית, ומעריכים את היכולת לבחור את המודל הבסיסי. השכבה החינמית היא דרך בסיכון נמוך להתנסות, בעוד ש-Pro+ ו-Max מתאימים למשתמשים כבדים של מודלי פרימיום.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">עודכן: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">יתרונות</div><ul class="pc-list">        <li>סוכני ענן מ-VS Code/Visual Studio, מונחים מ-Issues ולוחות פרויקט</li>
-        <li>Debugger Agent מאמת תיקונים מול התנהגות זמן ריצה אמיתית — לא רק ניתוח סטטי</li>
-        <li>הוראות מותאמות אישית וקבצי prompt שומרים הקשר לשימוש חוזר לתגובות עקביות</li>
-        <li>מדדי סקירת קוד לפי סוג הערה: אבטחה, סיכון באגים, סגנון</li>
-        <li>אינטגרציית GitHub העמוקה ביותר — שום כלי צד שלישי לא מגיע לגישה נטיבית ל-repos/Actions/Issues</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">חסרונות</div><ul class="pc-list">        <li>חיוב לפי שימוש מיוני 2026 — עלויות עלולות להיות בלתי צפויות למשתמשים כבדים</li>
-        <li>מחירי תוכנית Max לא הוכרזו פומבית — קוני ארגונים לא יכולים לתכנן תקציב ללא פנייה</li>
-        <li>פחות מסוגל לגנרציית אפליקציות full-stack לעומת Bolt.new, Lovable או Replit</li>
-        <li>הוראות מותאמות וקבצי prompt דורשים השקעת הגדרה ראשונית לכל פרויקט</li>
-        <li>פקודות slash של CLI Copilot חדשות — תיעוד וכיסוי מקרי קצה עדיין מבשילים</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">יתרונות</div><ul class="pc-list">        <li>סוכני באמת: מצב סוכן, סוכני ענן, צ'אט, סקירת קוד וממשק שורת פקודה, לא רק השלמה אוטומטית</li>
+        <li>מאפשר לבחור את מודל החזית לפי משימה, כולל Claude, GPT-5 ואחרים</li>
+        <li>שכבה חינמית אמיתית בתוספת גישה ברמת Pro בחינם לסטודנטים מאומתים</li>
+        <li>אינטגרציה עמוקה עם GitHub, VS Code וכל המערכת האקולוגית של GitHub</li>
+        <li>השלמות קוד והצעות Next Edit נשארות כלולות ולעולם אינן צורכות קרדיטים</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">חסרונות</div><ul class="pc-list">        <li>חיוב מבוסס קרדיטים לפי שימוש מקשה על חיזוי העלות החודשית למשתמשים כבדים</li>
+        <li>הנפילה האוטומטית למודלים זולים יותר בוטלה, מה שהסיר כרית עלות</li>
+        <li>סקירת קוד צורכת עכשיו גם דקות GitHub Actions, מד שני למעקב</li>
+        <li>מודלי חזית פרימיום ומכסות גבוהות נעולים מאחורי המסלולים היקרים Pro+ ו-Max</li>
+        <li>השכבה החינמית מוגבלת לכ-2,000 השלמות עם צ'אט וסוכן מצומצמים</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://github.com/features/copilot" target="_blank" rel="noopener">בקר ב GitHub Copilot ←</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">בחרו ב-GitHub Copilot אם…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ אתם לא עובדים ב-AWS ורוצים עוזר AI אוניברסלי לכתיבת קוד</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ GitHub Copilot משתלב עמוק ב-VS Code, JetBrains ו-IDEs נוספות</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ הקהילה הגדולה ביותר של מפתחים ואינטגרציות CI/CD</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ אתם עובדים עם GitHub ורוצים אינטגרציה חלקה</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">בחרו ב-GitHub Copilot אם…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם כבר בונים ב-GitHub ורוצים את העוזר משולב בתהליך העבודה הזה</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם רוצים כלי סוכני, לא רק השלמה אוטומטית שורה אחר שורה</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם רוצים לבחור את מודל החזית הבסיסי למשימות שונות</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם סטודנטים מאומתים ורוצים תכונות ברמת Pro ללא עלות</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם צריכים תקציבים ותקרות הוצאה למנהלים כדי לשלוט בהוצאת ה-AI של הצוות</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">שאלות נפוצות</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Amazon Q Developer לעומת GitHub Copilot?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">לפיתוח AWS – Amazon Q עדיף. לפיתוח כללי – GitHub Copilot רחב יותר. צוותי AWS – Amazon Q; פיתוח כללי – Copilot.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Amazon Q Developer חינמי?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Amazon Q מציע Free Tier עם 50 שיחות ו-1,000 המלצות/חודש; Pro ב-$19/משתמש/חודש. GitHub Copilot Individual ב-$10/חודש.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">מה יכול Amazon Q Developer?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Amazon Q מסייע בהשלמת קוד, debugging, הסבר קוד, יצירת Infrastructure as Code, סריקות אבטחה ו-Best Practices ל-AWS.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">GitHub Copilot לישראל – פרטיות נתונים?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Copilot Business ו-Enterprise מציעים הגדרות פרטיות מורחבות. עבור קוד חסוי ורגיש, מומלץ להפעיל 'Do not match' ו-Org settings.</span></div></div></div></div>
   <div class="section-title-sm">שקול גם</div>
   <div class="also-grid">    <a class="also-card" href="/he/tools/aider.html">
@@ -217,7 +219,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/he/directory.html">ספריה</a>
         <a href="/he/news.html">חדשות</a>
-        <a href="/he/directory.html">כלים</a>
+        <a href="/he/tools.html">כלים</a>
         <a href="/he/compare.html">השוואה</a>
         <a href="/he/newsletter.html">ניוזלטר</a>
       </div>

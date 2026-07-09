@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","he");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Make","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://make.com"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Make","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://make.com","dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/he/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">ספריה</a>
       <a href="/he/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">השוואה</a>
       <a href="/he/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">חדשות</a>
-      <a href="/he/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">כלים</a>
+      <a href="/he/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">כלים</a>
       <a href="/he/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">ניוזלטר</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/he/directory.html"  class="nav-link" data-i18n="nav.directory">ספריה</a>
     <a href="/he/compare.html"    class="nav-link" data-i18n="nav.compare">השוואה</a>
     <a href="/he/news.html"       class="nav-link" data-i18n="nav.news">חדשות</a>
-    <a href="/he/directory.html"      class="nav-link" data-i18n="nav.tools">כלים</a>
+    <a href="/he/tools.html"      class="nav-link" data-i18n="nav.tools">כלים</a>
     <a href="/he/newsletter.html" class="nav-link" data-i18n="nav.newsletter">ניוזלטר</a>
   </nav>
 </header>
@@ -150,25 +150,29 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>אודות Make</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Make (לשעבר Integromat) היא פלטפורמת אוטומציה של זרימות עבודה חזותית המחברת למעלה מ-1,000 אפליקציות דרך קנבס Drag-and-Drop. כל אוטומציה — הנקראת תרחיש — מוצגת כתרשים זרימה חזותי המראה בדיוק כיצד נתונים זורמים בין אפליקציות, עם לוגיקה מותנית, לולאות, טיפול בשגיאות והמרת נתונים.</p><p style="margin-top:1rem">באוגוסט 2025, Make עברה ממודל מבוסס פעולות למערכת מבוססת קרדיט. תוכניות נוכחיות: Free (1,000 קרדיטים/חודש, 2 תרחישים פעילים), Core ($9/month, 10,000 קרדיטים, תרחישים בלתי מוגבלים), Pro ($16/month), Teams ($29/month). קרדיטים נוספים ניתן לרכוש בעלות פרמיה של 25% על שיעור התוכנית הבסיסית. מודולי AI מקוריים בלחיצה אחת עבור OpenAI, Claude, ו-Anthropic זמינים כעת ישירות בבנאי התרחיש.</p><p style="margin-top:1rem">Make נמצאת בין Zapier (פשוט יותר, יקר יותר) ל-n8n (חזק יותר, דורש הגדרה טכנית). ממשק הקנבס הוא ההבדל החזק ביותר שלה — אתה יכול לראות את כל האוטומציה באופן חזותי, מה שהופך את ניפוי הבאגים והשיתוף פעולה לקל משמעותית יותר מפלטפורמות מתחרות.</p><p style="margin-top:1rem">הפלטפורמה מטפלת היטב בזרימות עבודה רב-שלביות מורכבות: נתיבים מסתעפים, צבירת נתונים, הרצות מתוזמנות, webhooks, וחזרה על מערכים. צוותים של Enterprise משתמשים בה לעיבוד מסמכים, ניתוב leads, וסנכרון נתונים בין-פלטפורמות.</p><p style="margin-top:1rem">מגבלות: מודל הקרדיט שהוצג ב-2025 הפך את העלויות לפחות צפויות למשתמשים קיימים שהיו רגילים לספור פעולות. תרחישים בעלי נפח גבוה מאוד עדיין דורשים תוכנית Teams או גבוהה יותר כדי להימנע מעלויות נוספות.</p><p style="margin-top:1rem">הטוב ביותר עבור צוותי שיווק, מנהלי תפעול, ומפתחים שצריכים אוטומציה גמישה על פני אפליקציות רבות ללא כתיבת קוד — ורוצים יותר כוח מ-Zapier במחיר נמוך יותר.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">‏Make (לשעבר Integromat) היא פלטפורמת אוטומציה חזותית שבה מחברים אפליקציות ושירותים על גבי לוח גרירה ושחרור ובונים תהליכי עבודה, הקרויים תרחישים, ללא כתיבת קוד. כל תרחיש הוא שרשרת של מודולים המעבירים נתונים מאפליקציה אחת לבאה, עם הסתעפויות, מסננים, איטרטורים וטיפול בשגיאות.</p><p style="margin-top:1rem">‏Make כבר אינה משתמשת במספרי גרסה מסורתיים אלא מתפתחת ברציפות. את המצב הנוכחי מגדירים שני שינויים גדולים. ראשית, ב-27 באוגוסט 2025 יחידת החיוב עברה מפעולות לקרדיטים (המרה של 1:1), והזיזה את Make לכיוון תמחור מבוסס שימוש שבו צעד של בינה מלאכותית או קוד עשוי לעלות יותר מקרדיט אחד. שנית, היכולת Make AI Agents הפכה לזמינה באופן כללי, ומאפשרת לבנות סוכנים אוטונומיים ישירות בתוך התרחישים, בגיבוי ספריית AI Agents Library ויותר מ-350 אינטגרציות ייעודיות לבינה מלאכותית.</p><p style="margin-top:1rem">מבחינת יכולות, Make מפרסמת כעת יותר מ-3,000 אינטגרציות, טריגרים בזמן אמת ומתוזמנים, וובהוקים, מודולי HTTP/API, מאגרי נתונים ומשתנים מותאמים לשימוש חוזר. בתוכניות בתשלום אפשר לחבר מפתחות API עצמיים של OpenAI, Anthropic או Gemini עבור צעדי הבינה המלאכותית.</p><p style="margin-top:1rem">התמחור מדורג. תוכנית Free עולה 0$ לחודש עם 1,000 קרדיטים, מקסימום 2 תרחישים פעילים ומרווח תזמון מינימלי של 15 דקות. תוכנית Core עולה 9$ לחודש בחיוב שנתי (10,000 קרדיטים, תרחישים ללא הגבלה, מרווח של דקה). תוכנית Pro עולה 16$ לחודש שנתי, ומוסיפה ביצוע בעדיפות ומשתנים מותאמים. תוכנית Teams עולה 29$ לחודש שנתי עם תפקידי ריבוי משתמשים. תוכנית Enterprise מתומחרת בהתאמה אישית. חיוב חודשי יקר בכ-15-20% (בערך 10.59$ ל-Core, 18.82$ ל-Pro, 34.12$ ל-Teams), וחבילות קרדיטים (20k/40k/80k+) מרחיבות את המכסות.</p><p style="margin-top:1rem">המגבלות העיקריות מעשיות. מודל הקרדיטים מקשה על תחזית ההוצאות בתרחישים עתירי בינה מלאכותית, מגבלת 2 התרחישים ומרווח 15 הדקות בתוכנית החינמית צרים לעבודה אמיתית, והמודל החזותי עדיין דורש למידה כאשר התרחישים גדלים עם ראוטרים מקוננים ומטפלי שגיאות.</p><p style="margin-top:1rem">‏Make מתאימה למי שרוצה כלי אוטומציה חזותי ועוצמתי ללא קוד, וכעת רוצה לשלב סוכני בינה מלאכותית בתוך האוטומציות במקום לחבר שירותים נפרדים ידנית.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">עודכן: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">יתרונות</div><ul class="pc-list">        <li>קנבס חזותי הופך אוטומציות מורכבות לקלות לניפוי באגים</li>
-        <li>מודל קרדיט מאוגוסט 2025 משווה עלות עם השימוש בפועל</li>
-        <li>מודולי AI מקוריים עבור OpenAI, Claude, Anthropic מובנים</li>
-        <li>תרחישים בלתי מוגבלים בתוכניות בתשלום החל מ-$9/month</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">חסרונות</div><ul class="pc-list">        <li>מודל קרדיט פחות צפוי מהמודל הישן של פעולות</li>
-        <li>עקומת למידה תלולה יותר מ-Zapier למתחילים</li>
-        <li>שכבה חינמית מוגבלת ל-2 תרחישים פעילים בלבד</li>
-        <li>תרחישים בעלי נפח גבוה דורשים תוכנית Teams או גבוהה יותר</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">יתרונות</div><ul class="pc-list">        <li>העורך החזותי בגרירה ושחרור הופך אוטומציות מורכבות מרובות שלבים לנגישות ללא קוד</li>
+        <li>קישוריות רחבה מאוד: יותר מ-3,000 אינטגרציות בתוספת 350 אפליקציות ייעודיות לבינה מלאכותית</li>
+        <li>‏Make AI Agents המובנים מאפשרים לבנות סוכנים אוטונומיים בתוך התרחישים, עם ספרייה משותפת</li>
+        <li>תמיכה בחיבור מפתחות עצמיים של OpenAI, Anthropic ו-Gemini בתוכניות בתשלום</li>
+        <li>עלות כניסה נמוכה באמת: Core עולה 9$ לחודש שנתי עם תרחישים ללא הגבלה</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">חסרונות</div><ul class="pc-list">        <li>החיוב מבוסס הקרדיטים מקשה על חיזוי ההוצאות בתרחישים עתירי בינה מלאכותית וקוד, מכיוון שחלק מהצעדים עולים יותר מקרדיט אחד</li>
+        <li>התוכנית החינמית מוגבלת ל-2 תרחישים פעילים ולמרווח מינימלי של 15 דקות</li>
+        <li>החיוב החודשי יקר בכ-15-20% ממחירי החיוב השנתי המפורסמים</li>
+        <li>תרחישים מורכבים עם ראוטרים, איטרטורים ומטפלי שגיאות הופכים לקשים לתחזוקה</li>
+        <li>שימוש כבד מחייב לרוב רכישת חבילות קרדיטים נוספות מעבר לתוכנית הבסיס</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://make.com" target="_blank" rel="noopener">בקר ב Make ←</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">בחרו ב-Make אם…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ אתם צריכים אוטומציות מורכבות עם תנאים, לולאות ועיבוד נתונים</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Make זול יותר – מציע יותר ערך בפחות כסף לעומת Zapier</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ ממשק ויזואלי ברור שמציג את זרימת הנתונים בזמן אמת</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ מתאים לצוותים טכניים שרוצים שליטה מלאה על האוטומציה</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">בחרו ב-Make אם…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם רוצים להפוך עבודה בין אפליקציות רבות לאוטומטית ללא כתיבת קוד</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם צריכים לבנות סוכני בינה מלאכותית ישירות בתוך תהליכי העבודה</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם רוצים להשתמש במפתחות API עצמיים של OpenAI, Anthropic או Gemini</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם מוכנים להתחייב לחיוב שנתי כדי לקבל את המחיר הנמוך ביותר</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">הצרכים שלכם חורגים ממגבלת 2 התרחישים של התוכנית החינמית</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">שאלות נפוצות</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Zapier לעומת Make – מה עדיף?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Zapier פשוט יותר ומציע יותר אינטגרציות. Make זול יותר ועוצמתי יותר לתרחישים מורכבים. לפשטות – Zapier; לחיסכון וגמישות – Make.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">האם Zapier AI חינמי?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Zapier מציע תוכנית חינמית עם 100 משימות לחודש. Starter ב-$19.99/חודש. Make מציע תוכנית חינמית עם 1,000 פעולות; Core ב-$9/חודש.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Make לעומת n8n – מה עדיף?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Make קל יותר לשימוש. n8n מתאים יותר לצוותים טכניים שרוצים self-hosting ושליטה מלאה. n8n חינמי ב-self-hosting; Make מציע תוכנית ענן נוחה.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Zapier AI מה זה בדיוק?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Zapier AI הוא שכבת AI על גבי Zapier שמאפשרת בניית אוטומציות בשפה טבעית, הפעלת Chatbots וקבלת החלטות חכמות בתוך זרימות עבודה אוטומטיות.</span></div></div></div></div>
   <div class="section-title-sm">שקול גם</div>
   <div class="also-grid">    <a class="also-card" href="/he/tools/autogpt.html">
@@ -215,7 +219,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/he/directory.html">ספריה</a>
         <a href="/he/news.html">חדשות</a>
-        <a href="/he/directory.html">כלים</a>
+        <a href="/he/tools.html">כלים</a>
         <a href="/he/compare.html">השוואה</a>
         <a href="/he/newsletter.html">ניוזלטר</a>
       </div>

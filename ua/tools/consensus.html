@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","ua");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Consensus","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://consensus.app"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Consensus","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://consensus.app","dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/ua/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Каталог</a>
       <a href="/ua/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Порівняння</a>
       <a href="/ua/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Новини</a>
-      <a href="/ua/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">Інструменти</a>
+      <a href="/ua/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Інструменти</a>
       <a href="/ua/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Розсилка</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/ua/directory.html"  class="nav-link" data-i18n="nav.directory">Каталог</a>
     <a href="/ua/compare.html"    class="nav-link" data-i18n="nav.compare">Порівняння</a>
     <a href="/ua/news.html"       class="nav-link" data-i18n="nav.news">Новини</a>
-    <a href="/ua/directory.html"      class="nav-link" data-i18n="nav.tools">Інструменти</a>
+    <a href="/ua/tools.html"      class="nav-link" data-i18n="nav.tools">Інструменти</a>
     <a href="/ua/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Розсилка</a>
   </nav>
 </header>
@@ -150,23 +150,29 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Consensus</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Consensus — пошук по наукових статтях, що показує науковий консенсус з відсотками. Задайте питання — дізнайтесь, що кажуть дослідження.</p><p style="margin-top:1rem">Аналіз 100+ статей одночасно. Безкоштовний базовий пошук без реєстрації.</p><p style="margin-top:1rem">Тільки рецензовані дослідження. Показник консенсусу може вводити в оману на спірних темах.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Consensus — інструмент пошуку по академічній та науковій літературі. Ви ставите запитання звичайною мовою, а сервіс знаходить релевантні рецензовані статті, стисло викладає їхні висновки й дає прямі посилання на джерела, щоб ви могли все перевірити самі. Корпус оцінюється більш ніж у 220 мільйонів статей.</p><p style="margin-top:1rem">Продукт суттєво змінився з моменту запуску. Спершу він будувався навколо &quot;лічильника консенсусу&quot;, що показував частку досліджень, згодних із твердженням. Ця функція залишилася, але вже не є головною. Версія 2026 року (без номера) вибудувана навколо Deep Search і дослідницького агента.</p><p style="margin-top:1rem">Deep Search розбиває запитання на підзапитання, виконує до ~20 цільових пошуків і синтезує дані приблизно з 50 статей, а в режимі широкого охоплення аналізує до ~1000. Дослідницький агент розв'язує багатокрокові завдання, медичний режим обмежує джерела клінічними настановами й провідними медичними журналами, а покращений MCP дає змогу користуватися Consensus просто в ChatGPT, Codex, Claude і Claude Code.</p><p style="margin-top:1rem">Модель оплати — freemium. Безкоштовно ($0): базовий Quick Search, стислі виклади анотацій, обмежені Pro-повідомлення та близько 3 Deep Search на місяць. Student — $9/міс за верифікації .edu/.ac і знижкою до ~40% за річної оплати. Pro — $10/міс: безлімітний Pro-пошук, більше Deep Search, Study Snapshots і повний експорт (~33% знижка за рік). Старший тариф Deep, за повідомленнями, коштує $45 за користувача на місяць — близько 200 Deep Search на місяць і безлімітні знімки.</p><p style="margin-top:1rem">Обмеження варто врахувати. На безкоштовному тарифі Deep Search сильно урізаний, тож активні користувачі швидко впруться в платну стіну. Охоплення залежить від того, що проіндексовано, частина записів доступна лише на рівні анотацій, а будь-який ШІ-переказ може згладжувати нюанси — для важливих рішень усе одно читайте першоджерела. Врахуйте також, що на goconsensus.com є ніяк не пов'язаний продукт для sales-демо з такою ж назвою за $600-$1250/міс — це не цей інструмент.</p><p style="margin-top:1rem">Сервіс підійде дослідникам, студентам, лікарям і аналітикам, яким потрібні обґрунтовані відповіді з посиланнями на літературу та хто готовий перевіряти оригінали, а не довіряти переказу на слово.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Оновлено: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Переваги</div><ul class="pc-list">        <li>Унікальний показник консенсусу у відсотках</li>
-        <li>Аналіз 100+ статей 
-  одночасно</li>
-        <li>Безкоштовний базовий пошук</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Недоліки</div><ul class="pc-list">        <li>Тільки рецензовані статті</li>
-        <li>Консенсус може вводити в оману на спірних темах</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Переваги</div><ul class="pc-list">        <li>Відповіді спираються на рецензовані статті з прямими посиланнями — твердження можна перевірити</li>
+        <li>Deep Search розбиває запитання й синтезує дані з десятків статей (до ~1000 у широкому режимі)</li>
+        <li>Дуже великий корпус — понад 220 млн статей</li>
+        <li>Медичний режим звужує пошук до клінічних настанов і провідних журналів</li>
+        <li>Інтеграція через MCP дає змогу працювати з ChatGPT, Claude, Codex і Claude Code</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Недоліки</div><ul class="pc-list">        <li>На безкоштовному тарифі Deep Search обмежений приблизно 3 запитами на місяць</li>
+        <li>Старший тариф Deep за $45 на місяць дорогуватий для приватних користувачів</li>
+        <li>ШІ-перекази можуть втрачати нюанси; для відповідальних завдань треба читати першоджерела</li>
+        <li>Охоплення обмежене проіндексованою літературою, частина записів — лише анотації</li>
+        <li>Збіг назви з непов'язаним sales-інструментом на goconsensus.com заплутує</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://consensus.app" target="_blank" rel="noopener">Перейти на Consensus →</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Оберіть Consensus якщо…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Вам потрібні прості відповіді «так/ні/суперечливо» на основі наукового консенсусу</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Consensus наочно показує скільки досліджень підтримують або спростовують твердження</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Простіший і доступніший ніж Elicit для студентів і нефахових дослідників</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Consensus Meter — унікальна візуалізація наукового консенсусу одразу</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Оберіть Consensus якщо…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вам потрібні обґрунтовані відповіді з посиланнями на наукову літературу</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Ви ведете багатокрокові дослідження чи огляди й хочете їх частково автоматизувати</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Ви працюєте в медицині й хочете відповіді лише за настановами й топ-журналами</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Ви хочете запитувати наукову літературу просто з ChatGPT чи Claude</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Ви студент або науковець і вам підходять тарифи $9-$10 на місяць</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Часті запитання</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Elicit vs Consensus — яка різниця?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Elicit — потужний інструмент для автоматизації систематичних оглядів і витягування даних. Consensus — простіший пошук наукового консенсусу з візуальним індикатором. Elicit для глибоких досліджень; Consensus для швидких перевірок тверджень.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Elicit безкоштовний?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Elicit має безкоштовний план з обмеженнями. Plus від $12/міс. Consensus безкоштовний з базовими функціями; Premium від $9,99/міс.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Elicit замінює PubMed?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Ні. PubMed — вичерпна база даних медичної літератури. Elicit використовує Semantic Scholar і інші бази як джерела. Для повного покриття медичної літератури PubMed незамінний; Elicit прискорює аналіз знайдених статей.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Consensus для медичних рішень — надійний?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Consensus допомагає зрозуміти загальні наукові тенденції але не замінює медичні консультації. Для клінічних рішень консультуйтесь з фахівцями і первинними джерелами.</span></div></div></div></div>
   <div class="section-title-sm">Також розгляньте</div>
   <div class="also-grid">    <a class="also-card" href="/ua/tools/elicit.html">
@@ -213,7 +219,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/ua/directory.html">Каталог</a>
         <a href="/ua/news.html">Новини</a>
-        <a href="/ua/directory.html">Інструменти</a>
+        <a href="/ua/tools.html">Інструменти</a>
         <a href="/ua/compare.html">Порівняння</a>
         <a href="/ua/newsletter.html">Розсилка</a>
       </div>

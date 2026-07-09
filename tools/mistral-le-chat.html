@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Mistral Le Chat", "description": "Mistral Le Chat is the consumer AI assistant from Mistral AI, the leading European AI lab based in Paris. It is built on Mistral's own open-weight models and is positioned as the European alternative ", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://chat.mistral.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Mistral Le Chat", "description": "Vibe is the consumer-facing AI assistant from French lab Mistral. It started life as Le Chat and, on June 5, 2026, was rebranded to Vibe; the URL, your login, and all existing plans and conversations ", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://chat.mistral.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,32 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Mistral Le Chat</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Mistral Le Chat is the consumer AI assistant from Mistral AI, the leading European AI lab based in Paris. It is built on Mistral's own open-weight models and is positioned as the European alternative to ChatGPT and Gemini, with a strong emphasis on privacy, GDPR compliance, and multilingual capability.</p><p style="margin-top:1rem">The current model stack (as of late 2025 – 2026) includes Mistral Large 3 for advanced reasoning, Ministral 3 for fast responses, Devstral 2 for coding, and Devstral Small 2 for lightweight tasks. Le Chat selects the appropriate model based on context. Mistral models are especially strong in European languages — French, German, Spanish, Italian, and Portuguese — due to European training data emphasis.</p><p style="margin-top:1rem">The free tier includes access to the latest models, web search, image generation, document uploads, and canvas (an artifact-style editor). Free usage is limited to approximately 25 messages per day on mid-tier models. The Pro tier at $14.99/month provides roughly 6x the daily message limit (~150/day), priority access, and API discounts. A Student plan is available at $7.04/month.</p><p style="margin-top:1rem">Enterprise plans (Team/Enterprise) are available for businesses requiring data residency in Europe, on-premises deployment, or strict GDPR compliance — making Mistral a serious option for European companies with regulatory requirements.</p><p style="margin-top:1rem">Limitations: Mistral has a smaller plugin and integration ecosystem compared to ChatGPT or Gemini. Brand recognition is low outside Europe, and the third-party tooling ecosystem is still developing.</p><p style="margin-top:1rem">Best for European users, multilingual use cases, and organizations requiring EU data residency or GDPR-compliant AI.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Vibe is the consumer-facing AI assistant from French lab Mistral. It started life as Le Chat and, on June 5, 2026, was rebranded to Vibe; the URL, your login, and all existing plans and conversations carried over, so nothing was lost in the switch.</p><p style="margin-top:1rem">The current version runs on Mistral Medium 3.5, a 128B-parameter model with a 256k-token context window, released in public preview with open weights under a modified MIT license. This is a clear shift from the earlier framing as a fast multilingual chatbot toward a more agent-oriented product.</p><p style="margin-top:1rem">Vibe is now built around three modes. Vibe Chat is the classic turn-based conversation, essentially the old Le Chat. Vibe Work is an agent mode with persistent memory that executes multi-step workflows across connected tools, asking for your approval before it takes sensitive actions. Vibe Code provides remote coding agents that run asynchronously in the cloud and let you move a session from your local machine to the cloud.</p><p style="margin-top:1rem">Pricing has a free tier at $0/mo with limited features and models. Pro is $14.99/mo, Team is $24.99 per user/mo (billed monthly, with a $50/mo minimum and 30GB of storage per user), and Enterprise is custom-priced with private deployments and custom models, UI and tools. Verified students get an Education plan at $5.99/mo, valid for up to 12 months. You can pay in USD or EUR.</p><p style="margin-top:1rem">Worth knowing: the Vibe consumer subscription is billed separately from Mistral's developer API, so a Pro or Team plan does not include API credits. Medium 3.5 is also still in public preview, which means some rough edges are expected.</p><p style="margin-top:1rem">Vibe suits people who want a European-built assistant with open weights, and teams that want agentic workflows and cloud coding agents rather than a plain chatbot. If you only need occasional Q&amp;A, the free tier may be enough.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Best-in-class multilingual support — particularly strong in European languages</li>
-        <li>Built on open-weight models (Mistral Large 3) — transparency and reproducibility</li>
-        <li>Free tier includes web search, image generation, and canvas with no signup friction</li>
-        <li>GDPR-compliant with EU data residency options for enterprise users</li>
+        <li>Powered by Mistral Medium 3.5 with a large 256k-token context window and open weights under a modified MIT license</li>
+        <li>Three distinct modes cover conversation, tool-connected agent workflows, and asynchronous cloud coding in one product</li>
+        <li>Vibe Work asks for approval before sensitive actions, keeping a human in the loop for agent tasks</li>
+        <li>The June 2026 rebrand kept URLs, logins, plans and past conversations intact, so existing users were not disrupted</li>
+        <li>Genuinely usable free tier plus a low-cost $5.99/mo student plan</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Smaller plugin and integration ecosystem compared to ChatGPT or Gemini</li>
-        <li>Brand recognition lower outside Europe — community and third-party tooling still developing</li>
+        <li>The 'Le Chat' name is retired, which can cause confusion for users looking for the old brand</li>
+        <li>Mistral Medium 3.5 is only in public preview, so expect occasional instability</li>
+        <li>The consumer subscription is billed separately from the developer API, so plans include no API credits</li>
+        <li>Team billing carries a $50/mo minimum, making it less attractive for very small teams</li>
+        <li>Cloud coding agents and persistent-memory agent workflows add complexity beyond a simple chat assistant</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Mistral Le Chat if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're privacy-conscious and prefer a European AI company subject to GDPR, not US data law</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want extremely fast responses — Le Chat uses Mistral's flash models for near-instant output</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need free access to a capable AI without usage limits on the free tier</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You use AI for professional tasks in Europe where data sovereignty matters to your organization</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Mistral Le Chat if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want a European-built assistant with open-weight models</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need agent workflows that run across connected tools with approval steps</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want asynchronous cloud coding agents alongside chat</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You are a verified student who can use the $5.99/mo plan</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want a large 256k context window for long documents</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Mistral Le Chat?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Le Chat is Mistral AI's conversational AI assistant, available at mistral.ai. It's powered by Mistral's own frontier models — Mistral Large, Mistral Small, and Pixtral. Mistral is a French AI company emphasizing European data sovereignty and open-weight model development.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Mistral better than ChatGPT?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Mistral Large is competitive with GPT-4o on many benchmarks. Le Chat is notably faster than ChatGPT. ChatGPT has more features (DALL-E images, voice, code interpreter) and a larger ecosystem. For pure text reasoning at speed, Le Chat is a strong alternative.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Le Chat free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Le Chat has a free plan with access to capable Mistral models. Le Chat Pro is €14.99/month for Mistral Large, image generation, and extended context. The free plan is generous for everyday AI tasks.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Are Mistral models open source?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Mistral releases some models as open weights (Mistral 7B, Mixtral 8x7B, Mistral Small) that anyone can download and run locally. Their frontier models (Mistral Large) are commercial-only through their API and Le Chat. The open models have a strong developer community.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -253,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

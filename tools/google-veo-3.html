@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Google Veo", "description": "Google Veo is Google DeepMind's flagship AI video generation model, designed for cinematic-quality video with native audio synthesis. It is available through multiple access points — Google Vids (cons", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://deepmind.google/technologies/veo/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Google Veo", "description": "Google Veo is Google's generative video model. You describe a scene in text or feed it a still image, and it produces short cinematic clips, now with matching audio baked in rather than added afterwar", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://deepmind.google/technologies/veo/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Google Veo</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Google Veo is Google DeepMind's flagship AI video generation model, designed for cinematic-quality video with native audio synthesis. It is available through multiple access points — Google Vids (consumer), Vertex AI (enterprise), and the Google AI Studio — making it one of the most widely distributed professional video generation systems available.</p><p style="margin-top:1rem">Veo 3.1, launched January 2026, introduced richer native audio generation, meaning the model produces synchronized sound directly alongside video without requiring a separate audio pipeline. Cinematic style understanding improved substantially in this release: the model interprets and replicates direction terms like rack focus, push-in, and Dutch angle with higher accuracy. Image-to-video capability was also upgraded, producing smoother motion and better coherence when animating a still image.</p><p style="margin-top:1rem">Veo 3.1 Lite, released April 4, 2026 on Vertex AI, is a cost-optimized variant intended for enterprises running high-volume generation workloads. Alongside the Lite model, Google launched a standalone Veo upscaling service that takes existing video — AI-generated or otherwise — and upscales it to 1080p or 4K without requiring a full regeneration.</p><p style="margin-top:1rem">In April 2026, Google extended free Veo 3.1 video generation to all Google account holders through Google Vids, dramatically lowering the access barrier. The Google Vids platform simultaneously gained Lyria 3 custom AI music generation and directable AI avatars, enabling creators to build fully produced video segments with synchronized music and presenter avatars inside a single tool.</p><p style="margin-top:1rem">Output capabilities include native vertical video for portrait-mode social platforms, upscaling to 1080p and 4K, and native audio. Pricing is freemium: free access through Google Vids for basic use, with Vertex AI pricing applying for enterprise API usage of standard and Lite models.</p><p style="margin-top:1rem">Veo is best for content creators, filmmakers, and enterprises that need cinematic AI video with native audio, flexible delivery through both consumer and enterprise channels, and tight integration with the broader Google AI ecosystem.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Google Veo is Google's generative video model. You describe a scene in text or feed it a still image, and it produces short cinematic clips, now with matching audio baked in rather than added afterwards.</p><p style="margin-top:1rem">The current version is Veo 3.1, which replaced Veo 3 around the end of March 2026. The update added a cheaper Veo 3.1 Lite tier alongside the Fast and Standard variants, and improved the synchronized audio so clips can include spoken dialogue with lip-sync, sound effects and ambient background. In April 2026 Google made Veo 3.1 free for every personal Google account through Flow and Vids, which is the single biggest change for casual users.</p><p style="margin-top:1rem">On capability, Veo 3.1 handles both text-to-video and image-to-video, produces clips up to 8 seconds, and generates audio in the same pass. It is available inside Google Flow (the dedicated video tool) and Google Vids, and through the Vertex AI and Gemini APIs for developers.</p><p style="margin-top:1rem">Pricing has a genuine free path: any personal Google account gets Veo 3.1 in Flow (roughly 50 daily AI credits, about 12 clips a day) and in Vids (around 10 clips a month), capped at 8-second clips. Paid subscriptions run about $7.99/mo for Google AI Plus, $19.99/mo for AI Pro and $249.99/mo for AI Ultra. On the API, Veo 3.1 Fast is about $0.15 per second and Standard about $0.40 per second, audio included.</p><p style="margin-top:1rem">The main limitations are the short 8-second clip length, daily and monthly caps on the free tier, and the fact that top quality and volume still sit behind paid plans. Output quality and prompt adherence also vary from generation to generation.</p><p style="margin-top:1rem">Veo 3.1 suits creators, marketers and hobbyists who want quick, audio-complete video clips without buying anything up front, and teams who can move to Pro/Ultra or the API when they need more throughput.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Native audio synthesis — synchronized sound generated alongside video without a separate pipeline</li>
-        <li>Free access via Google Vids for all Google account holders — lowest barrier of any major model</li>
-        <li>Veo 3.1 Lite on Vertex AI offers cost-effective high-volume API access for enterprises</li>
-        <li>Standalone 4K upscaling service for existing video — no full regeneration required</li>
-        <li>Native vertical output and Lyria 3 custom AI music inside Google Vids</li>
+        <li>Genuinely free for all personal Google accounts via Flow and Vids, no card required</li>
+        <li>Generates synchronized audio (dialogue with lip-sync, effects, ambient) in one pass</li>
+        <li>Supports both text-to-video and image-to-video</li>
+        <li>Tiered Lite/Fast/Standard variants let you trade cost against quality</li>
+        <li>Per-second API pricing makes cost predictable for developers</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Enterprise Vertex AI pricing adds up quickly for large-scale production workloads</li>
-        <li>Free tier through Google Vids has generation limits and fewer controls than API access</li>
-        <li>Cinematic features require familiarity with film direction terminology to use effectively</li>
-        <li>Less third-party integrations compared to Runway or Kling AI</li>
+        <li>Clips are capped at 8 seconds</li>
+        <li>Free tier has daily (Flow) and monthly (Vids) generation limits</li>
+        <li>Highest quality and volume require paid Pro/Ultra plans</li>
+        <li>Ultra subscription is expensive at about $249.99/mo</li>
+        <li>Quality and prompt accuracy can vary between generations</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Google Veo if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want the highest quality AI video with native audio generation (dialogue, sound effects, music)</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're in the Google ecosystem and want access through Google AI Ultra or Gemini</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need cinematic realism with synchronized audio in a single generation step</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want the latest frontier video model — Veo 3 leads quality benchmarks in 2025</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Google Veo if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to try high-quality AI video without paying</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need clips that come with matching audio, not silent footage</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You already work inside Google Flow or Google Vids</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You are a developer who wants per-second API billing</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Short 8-second clips fit your use case</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Google Veo 3?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Google Veo 3 is Google's latest AI video generation model, released at Google I/O 2025. It generates high-quality video with synchronized native audio — dialogue, ambient sound, and music — from text prompts. It's available through Google AI Ultra subscription and the VideoFX tool.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">How much does Google Veo 3 cost?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Veo 3 is available through Google AI Ultra ($249.99/month) which also includes the latest Gemini models and Google Workspace AI. Access through VideoFX (labs.google/fx) has been offered in limited preview. API pricing for developers is separate.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Runway Gen-4.5 better than Veo 3?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Veo 3 leads on overall realism and native audio generation. Runway Gen-4.5 ranks #1 on third-party text-to-video leaderboards for visual quality and character consistency. For production workflows, Runway's full feature set (editing tools, multi-model access) has advantages over Veo 3 as a standalone generator.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can Runway generate audio with video?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Runway can generate video and has some audio features, but native synchronized audio generation is not its primary strength. Google Veo 3's simultaneous audio-visual generation (dialogue, sound effects, music) is more advanced as of 2025.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

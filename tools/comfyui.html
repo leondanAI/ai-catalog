@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "ComfyUI", "description": "ComfyUI is a free, open-source node-based interface for running AI image and video generation models locally. Users build workflows by connecting nodes — each node performs one operation such as loadi", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://comfyui.org", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "ComfyUI", "description": "ComfyUI is a graph-based interface for running diffusion models. Instead of a single prompt box, you wire together nodes (loaders, samplers, conditioning, upscalers and so on) into a workflow you can ", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://comfyui.org", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -161,7 +161,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">🎨 Image Generation</span>
-        <span class="tool-meta-chip badge-free">Free</span>
+        <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
       <div class="tool-best-for"><strong>Best for:</strong> open-source AI image generation, node workflows, local GPU, 4K video</div>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About ComfyUI</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">ComfyUI is a free, open-source node-based interface for running AI image and video generation models locally. Users build workflows by connecting nodes — each node performs one operation such as loading a model, applying a sampler, or encoding a prompt — giving precise control over every step of the generation process. It is the primary interface for users who run Stable Diffusion and other open-weight models on their own hardware.</p><p style="margin-top:1rem">App View, a major UX addition, provides a simplified interface that hides the node graph and presents a clean form-based UI for users who do not need to modify the underlying workflow. Node View remains fully available for advanced users. This dual-mode approach makes ComfyUI accessible to beginners without removing any capability from experienced users.</p><p style="margin-top:1rem">NVFP4 quantization, introduced for NVIDIA RTX 50 Series GPUs, enables generation to run 2.5 times faster while reducing VRAM consumption by approximately 60%. This means users with RTX 50 Series cards can run larger models that previously required more expensive hardware, or run existing models at substantially higher speeds.</p><p style="margin-top:1rem">Official AMD ROCm support landed for the Windows Desktop app, making ComfyUI fully supported on AMD GPUs on Windows for the first time without requiring manual workarounds. New nodes for Veo 3, Veo 3 Lite, and Kling 3.0 were added, along with 4K output support for ByteDance, Veo, and Kling video generation pipelines. RTX Video Super Resolution enables real-time 4K upscaling of generated video on supported NVIDIA hardware.</p><p style="margin-top:1rem">Python 3.13 compatibility was added, keeping ComfyUI current with the latest Python release and ensuring compatibility with newer packages in the Python ecosystem.</p><p style="margin-top:1rem">ComfyUI is best for advanced users, researchers, and developers who want full control over AI image and video generation workflows, run models locally on their own hardware, and need support for the latest open-weight and third-party models.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">ComfyUI is a graph-based interface for running diffusion models. Instead of a single prompt box, you wire together nodes (loaders, samplers, conditioning, upscalers and so on) into a workflow you can inspect, reuse and share. That transparency is the reason it became the go-to tool for people who want precise control over how an image or video is generated.</p><p style="margin-top:1rem">The current version is v0.27.0, released on June 30, 2026. It adds int8 quantized model support for Turing-generation GPUs and newer, with reworked LoRA and memory handling, plus new nodes including Seed, Advanced Krea 2 Model Merging, Bounding Box Canvas, ConditioningMultiply and an Ideogram JSON prompt node, and support for Google's Nano Banana 2 Lite. It builds on a busy 2026: a full Comfy Desktop overhaul in June brought multi-instance management, snapshots and shared model storage, and the project added Krea2 and LTX2 video models, official AMD ROCm support on Windows, and NVFP4 GPU performance upgrades.</p><p style="margin-top:1rem">Beyond still images, ComfyUI now drives video generation through models like Krea2 and LTX2, so it is no longer just an image tool. You can chain multiple models, mix custom and community nodes, batch-process, and export whole workflows as reusable JSON.</p><p style="margin-top:1rem">Pricing has two sides. The self-hosted software is completely free and open-source. The official Comfy Cloud managed service, which left beta and moved to a unified credit model in late 2025 before adding a free tier in March 2026, has a Free plan (400 credits/month, no card required), Standard at $20/month (4,200 credits), Creator at $35/month (7,400 credits, with LoRA import), Pro at $100/month (21,100 credits) and a custom Enterprise tier.</p><p style="margin-top:1rem">The main limitation is the learning curve. The node graph is powerful but intimidating for beginners, and running locally means managing GPU hardware, model files and dependencies yourself. Comfy Cloud removes the setup burden but ties usage to a credit budget.</p><p style="margin-top:1rem">Choose ComfyUI if you want deep, reproducible control over generation, are comfortable with a technical interface, or want the option to start free locally and move to a managed cloud later.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Completely free and open-source — no subscription, no credit limits, no vendor dependency</li>
-        <li>App View: beginner-friendly form UI without removing the full node graph for advanced users</li>
-        <li>NVFP4 quantization: 2.5x faster generation and 60% less VRAM on RTX 50 Series GPUs</li>
-        <li>Official AMD ROCm support on Windows — no manual workarounds required</li>
-        <li>Veo 3, Kling 3.0 nodes and 4K video support via ByteDance/Veo/Kling pipelines</li>
+        <li>Free and fully open-source when self-hosted, with no feature paywall on the core app</li>
+        <li>Node graph gives precise, reproducible control and workflows are shareable as JSON</li>
+        <li>Now covers both image and video models (Krea2, LTX2), not just still images</li>
+        <li>v0.27.0 adds int8 quantized models and better LoRA/memory handling for efficient GPU use</li>
+        <li>Optional Comfy Cloud, including a free 400-credit tier, removes local setup for those who want it</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Node-based interface has a steep learning curve for users new to workflow-based generation</li>
-        <li>Requires local GPU hardware — not suitable for users without a capable graphics card</li>
-        <li>Community-maintained custom nodes vary in quality and may conflict with each other</li>
-        <li>No cloud option — all computation is local; high-end hardware needed for large models</li>
+        <li>Steep learning curve; the node interface is unintuitive for newcomers</li>
+        <li>Self-hosting requires capable GPU hardware plus manual model and dependency management</li>
+        <li>Comfy Cloud usage is metered by credits, which can run out on heavy workloads</li>
+        <li>Quality of experience depends heavily on community custom nodes that vary in reliability</li>
+        <li>int8 quantization benefits are limited to Turing-generation GPUs and newer</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose ComfyUI if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want a node-based visual workflow builder for complex Stable Diffusion pipelines</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You combine multiple models, ControlNets, LoRAs, and upscalers in visual graph workflows</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're a technical user who wants maximum control over every step of image generation</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You build automated generation pipelines for game assets, product mockups, or batch content</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose ComfyUI if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want granular, reproducible control over generation pipelines</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You are comfortable with a technical, node-based interface</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need both image and video generation in one tool</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You prefer a free self-hosted setup but may want managed cloud later</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to build and share reusable JSON workflows</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is ComfyUI?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">ComfyUI is a node-based GUI for Stable Diffusion image generation. Instead of simple form inputs, you build visual workflows by connecting nodes — model loaders, samplers, ControlNets, upscalers — into custom pipelines. It gives maximum control over every generation parameter.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is ComfyUI better than Automatic1111?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">ComfyUI is more powerful and faster but has a steeper learning curve. Automatic1111 (A1111) is more beginner-friendly with a familiar form-based interface. Most advanced users prefer ComfyUI for its flexibility and speed. Many use A1111 to learn and then switch to ComfyUI.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Stable Diffusion free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. Stable Diffusion model weights are free to download and run locally. ComfyUI is also free and open-source. You need a compatible GPU (Nvidia preferred, 8GB+ VRAM recommended) to run them locally.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Do I need ComfyUI to use Stable Diffusion?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">No. Stable Diffusion runs through multiple frontends: Automatic1111, ComfyUI, Fooocus, InvokeAI. ComfyUI is one option — it's the best for complex workflows but not required for basic generation. Fooocus is the simplest option; A1111 is the most documented.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

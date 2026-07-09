@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","ru");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"V0 by Vercel","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://v0.app"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"V0 by Vercel","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://v0.app","dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/ru/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Каталог</a>
       <a href="/ru/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Сравнение</a>
       <a href="/ru/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Новости</a>
-      <a href="/ru/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">Инструменты</a>
+      <a href="/ru/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Инструменты</a>
       <a href="/ru/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Рассылка</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/ru/directory.html"  class="nav-link" data-i18n="nav.directory">Каталог</a>
     <a href="/ru/compare.html"    class="nav-link" data-i18n="nav.compare">Сравнение</a>
     <a href="/ru/news.html"       class="nav-link" data-i18n="nav.news">Новости</a>
-    <a href="/ru/directory.html"      class="nav-link" data-i18n="nav.tools">Инструменты</a>
+    <a href="/ru/tools.html"      class="nav-link" data-i18n="nav.tools">Инструменты</a>
     <a href="/ru/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Рассылка</a>
   </nav>
 </header>
@@ -150,26 +150,29 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>О сервисе V0 by Vercel</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">V0 — AI-платформа для разработки от Vercel, запущенная как генератор UI-компонентов и выросшая в полноценное full-stack окружение. С начала 2026 года V0 переехал с v0.dev на v0.app, что отражает расширение возможностей далеко за пределы отдельных компонентов.</p><p style="margin-top:1rem">Обновление февраля 2026 года стало трансформационным. V0 получил Git-интеграцию: для каждой чат-сессии создаётся новая ветка, и можно открывать pull request прямо в основную ветку любого подключённого репозитория — AI-разговоры превращаются в отслеживаемые изменения кода в существующих проектах. Редактор переработан в стиле VS Code: навигация по файловому дереву, подсветка синтаксиса, редактирование нескольких файлов.</p><p style="margin-top:1rem">Подключение к базам данных расширено: к Vercel Postgres добавились Snowflake и источники данных AWS. Production Sandbox позволяет импортировать любой GitHub-репозиторий и запускать его как живое, редактируемое окружение — не просто генерировать новые проекты, но изменять и деплоить реальный production-код.</p><p style="margin-top:1rem">Агентные воркфлоу теперь деплоятся на инфраструктуре Vercel как serverless-функции или edge workers. Это превращает V0 из инструмента генерации в платформу для запуска AI-управляемой бизнес-логики в масштабе.</p><p style="margin-top:1rem">Ценообразование изменилось с кредитной помесячной модели на токенный биллинг: стоимость масштабируется со сложностью генерации. Простые промпты стоят меньше, многофайловые архитектурные изменения — больше. Бесплатный тариф с ограниченным количеством токенов сохраняется.</p><p style="margin-top:1rem">Лучший выбор для frontend и full-stack разработчиков, которые хотят от идеи до задеплоенного приложения с минимальным boilerplate, и для команд, которым нужны AI-изменения кода в существующем Git-воркфлоу.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">v0 от Vercel — это ИИ-агент для создания веб-приложений. Вы описываете задачу обычным языком (можно приложить скриншоты или референсы), а сервис выдаёт работающий код, который тут же можно посмотреть, отредактировать и опубликовать. Разработчик — компания Vercel, создатель Next.js и одноимённой хостинг-платформы.</p><p style="margin-top:1rem">Актуальная версия — «новый v0», вышедший после февраля 2026 года; обновление серьёзно изменило продукт. Раньше это был в основном генератор UI-компонентов, а теперь — полноценная агентная платформа для full-stack разработки: можно импортировать репозитории с GitHub и работать с ветками и pull request'ами, пользоваться редактором в стиле VS Code, запускать приложения в песочнице, подключать базы данных и сервисы (Snowflake, AWS), раскладывать работу по проектам и папкам и вносить визуальные правки через Design Mode.</p><p style="margin-top:1rem">Внутри ассистент работает на семействе моделей v0 Mini, Pro, Max и Max Fast; API-модель называется vercel/v0-1.0-md. С 31 марта 2026 года биллинг перешёл с фиксированного числа сообщений или кредитов на потокенный учёт: входные и выходные токены пересчитываются в кредиты.</p><p style="margin-top:1rem">Бесплатный тариф стоит $0 в месяц и включает примерно $5 кредитов (около 7 сообщений в день). Платные планы: Team — $30 за пользователя в месяц, Business — $100 за пользователя в месяц, а также Enterprise по индивидуальной цене. Старый план Premium за $20 в месяц ещё работает для прежних пользователей, но новую регистрацию на него закрыли. Купленные кредиты сгорают через год после покупки.</p><p style="margin-top:1rem">Главный минус — непредсказуемость расходов: при потокенном учёте заранее сложно понять, сколько обойдётся сессия, а тяжёлая full-stack работа быстро расходует кредиты. Семи сообщений в день на бесплатном тарифе хватит, чтобы попробовать, но не чтобы что-то серьёзно строить, и вся платформа заметно завязана на экосистему Vercel и Next.js.</p><p style="margin-top:1rem">v0 хорошо подойдёт разработчикам и продуктовым командам, уже работающим на Vercel, которым нужно быстро пройти путь от запроса до развёрнутого full-stack приложения, а также дизайнерам и основателям, которым важно прототипировать реально работающий продукт, а не статичные макеты.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Обновлено: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Преимущества</div><ul class="pc-list">        <li>Git-интеграция: создаёт ветку на каждый чат и открывает PR в main — вписывается в существующие воркфлоу</li>
-        <li>Редактор в стиле VS Code с файловым деревом и редактированием нескольких файлов</li>
-        <li>Production Sandbox импортирует любой GitHub-репо как живое, редактируемое окружение</li>
-        <li>Деплой агентных воркфлоу на инфраструктуре Vercel как serverless или edge functions</li>
-        <li>Подключение к Snowflake, AWS и Vercel Postgres — встроено</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Недостатки</div><ul class="pc-list">        <li>Токенный биллинг делает стоимость непредсказуемой для сложных многофайловых генераций</li>
-        <li>Домен изменился с v0.dev на v0.app — существующие закладки и ссылки нужно обновить</li>
-        <li>По-прежнему ориентирован на экосистему Vercel — менее полезен при деплое на AWS</li>
-        <li>Кривая обучения для новых агентных функций по сравнению с оригинальным простым UI</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Преимущества</div><ul class="pc-list">        <li>Full-stack охват: импорт из Git, ветки и PR, песочница для запуска, коннекторы к базам данных, а не только отдельные UI-компоненты</li>
+        <li>Тесная интеграция с Vercel и Next.js — быстрый путь от запроса до развёрнутого приложения</li>
+        <li>Редактор в стиле VS Code прямо в браузере плюс Design Mode: правки и в коде, и в визуале в одном месте</li>
+        <li>Реально бесплатный вход ($5 кредитов в месяц) — можно попробовать без привязки карты</li>
+        <li>Несколько уровней моделей (Mini/Pro/Max/Max Fast) позволяют выбирать между скоростью, качеством и ценой</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Недостатки</div><ul class="pc-list">        <li>Потокенный биллинг с 31 марта 2026 года делает стоимость сессии труднопредсказуемой</li>
+        <li>Бесплатный тариф ограничен примерно 7 сообщениями в день — мало для настоящих проектов</li>
+        <li>Купленные кредиты сгорают через год</li>
+        <li>Сильная привязка к стеку Vercel/Next.js — неудобно, если вы разворачиваете приложение в другом месте</li>
+        <li>Старый план Premium за $20 закрыт для новых пользователей, так что минимальный платный шаг теперь Team за $30 с пользователя в месяц</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://v0.app" target="_blank" rel="noopener">Перейти на V0 by Vercel →</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Выберите V0 by Vercel если…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Создаёте React/Next.js UI-компоненты из текстовых описаний без написания кода</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Фронтенд-разработчик или дизайнер, которому нужен быстрый способ создания прототипов интерфейсов</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Деплоите на Vercel и хотите мгновенную интеграцию с платформой</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Хотите получить готовый, стилизованный код компонента за секунды</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Выберите V0 by Vercel если…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вы уже разрабатываете и хостите на Vercel и Next.js</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Нужно пройти путь от текстового запроса до развёрнутого full-stack приложения, а не только до UI-фрагментов</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Нужна интеграция с Git с настоящими ветками и pull request'ами внутри ИИ-конструктора</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Хотите прототипировать работающий продукт вместе с базой данных, а не статичные макеты</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вас устраивает оплата по факту потребления токенов</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Частые вопросы</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Что такое V0 by Vercel?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">V0 — AI-генератор UI от Vercel. Опишите интерфейс текстом — получите готовый React и Tailwind CSS код, который деплоится прямо на Vercel.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Сколько стоит V0?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Бесплатный тариф с ограниченными кредитами. Premium — $20/месяц. Командные планы для совместных проектов.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Умеет ли V0 создавать полноценные приложения?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">V0 фокусируется на генерации фронтенда. Для полноценных приложений интегрируется с платформой Vercel, поддерживает API-роуты и подключение баз данных.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Какие фреймворки поддерживает V0?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">V0 генерирует React с Tailwind CSS и компонентами shadcn/ui. Совместим с Next.js и нативно деплоится на Vercel.</span></div></div></div></div>
   <div class="section-title-sm">Также рассмотрите</div>
   <div class="also-grid">    <a class="also-card" href="/ru/tools/aider.html">
@@ -216,7 +219,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/ru/directory.html">Каталог</a>
         <a href="/ru/news.html">Новости</a>
-        <a href="/ru/directory.html">Инструменты</a>
+        <a href="/ru/tools.html">Инструменты</a>
         <a href="/ru/compare.html">Сравнение</a>
         <a href="/ru/newsletter.html">Рассылка</a>
       </div>

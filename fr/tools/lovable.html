@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","fr");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Lovable","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://lovable.dev"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Lovable","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://lovable.dev","dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/fr/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Répertoire</a>
       <a href="/fr/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Comparer</a>
       <a href="/fr/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Actualités</a>
-      <a href="/fr/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">Outils</a>
+      <a href="/fr/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Outils</a>
       <a href="/fr/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/fr/directory.html"  class="nav-link" data-i18n="nav.directory">Répertoire</a>
     <a href="/fr/compare.html"    class="nav-link" data-i18n="nav.compare">Comparer</a>
     <a href="/fr/news.html"       class="nav-link" data-i18n="nav.news">Actualités</a>
-    <a href="/fr/directory.html"      class="nav-link" data-i18n="nav.tools">Outils</a>
+    <a href="/fr/tools.html"      class="nav-link" data-i18n="nav.tools">Outils</a>
     <a href="/fr/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -138,7 +138,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">🏗️ Sans Code</span>
-        <span class="tool-meta-chip badge-paid">Paid</span>
+        <span class="tool-meta-chip badge-freemium">Freemium</span>
         <span class="tool-meta-chip">👥 500K+</span>
       </div>
       <div class="tool-best-for"><strong>Idéal pour:</strong> Constructeur d'apps IA, sans code, tests visuels, saisie vocale</div>
@@ -150,26 +150,29 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>À propos Lovable</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Lovable est un constructeur d'applications propulsé par IA qui génère des applications web full-stack à partir de descriptions en langage naturel. Il se positionne entre un outil no-code et un environnement de développement traditionnel : les utilisateurs décrivent ce qu'ils veulent, et Lovable écrit et déploie l'application. Aucune expérience en programmation requise.</p><p style="margin-top:1rem">Le Plan Mode, introduit en février 2026, change le fonctionnement de la génération : au lieu d'écrire immédiatement du code, Lovable montre d'abord un plan complet de ce qu'il compte construire. L'utilisateur révise et approuve le plan avant que le code soit généré, réduisant les itérations gaspillées quand l'IA mal interprète un prompt ambigu.</p><p style="margin-top:1rem">La File de Prompts permet aux utilisateurs de mettre en file d'attente jusqu'à 50 prompts séquentiels qui s'exécutent les uns après les autres sans intervention manuelle. Au lieu d'attendre la fin de chaque changement avant de taper l'instruction suivante, les utilisateurs peuvent précharger une session complète d'améliorations incrémentielles.</p><p style="margin-top:1rem">Le Browser Testing ajoute un navigateur virtuel qui teste automatiquement l'application générée pour les bugs visuels et les échecs d'interaction, vérifiant que les boutons fonctionnent, que les mises en page s'affichent correctement et que les formulaires se soumettent sans erreur.</p><p style="margin-top:1rem">Le Voice Mode permet de décrire les modifications verbalement. L'app mobile iOS et Android, lancée en avril 2026, apporte l'expérience Lovable complète sur mobile avec des notifications push pour les fins de build.</p><p style="margin-top:1rem">La tarification commence à 25 $/mois. Lovable convient le mieux aux fondateurs, designers et utilisateurs non techniques qui veulent lancer rapidement une application web fonctionnelle sans écrire de code.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Lovable permet de décrire une application avec des mots ordinaires et de la faire construire pour vous, y compris l'interface, la logique et un backend géré. Elle s'adresse aux fondateurs, aux profils produit et aux développeurs qui veulent passer de l'idée à une application déployable sans tout écrire à la main.</p><p style="margin-top:1rem">Le produit est passé à un modèle entièrement agentique et basé sur des crédits, plutôt qu'à un cycle de versions numérotées. Le mode Agent (aussi appelé Build) est désormais celui par défaut et fonctionne de façon autonome : il lit votre code, cherche sur le web, débogue, génère des images et valide son propre résultat. Le mode Plan est arrivé en février 2026 pour prévisualiser les changements prévus avant d'écrire du code, une extension de la bêta d'Agent Mode a suivi en juin 2026, et les sous-agents IA (Researcher, Reviewer, Synthesizer) ont été lancés en mai 2026 pour travailler en parallèle.</p><p style="margin-top:1rem">Côté capacités, le backend s'appelle maintenant Lovable Cloud, une couche gérée bâtie sur Supabase en coulisses, tandis que Lovable AI gère les fonctions d'IA dans l'application. Vous obtenez base de données, authentification et hébergement sans câbler les services vous-même, ainsi que l'édition de code et des domaines personnalisés sur les offres payantes.</p><p style="margin-top:1rem">La tarification repose sur des crédits, à la fois pour construire et pour faire tourner les applications. L'offre Free est à 0 $/mois avec 5 crédits de build par jour (environ 30 par mois), 20 crédits Cloud mensuels et des crédits d'IA limités. Pro est à 25 $/mois (environ 21 $/mois en facturation annuelle, 250 $/an) pour 100 crédits mensuels, projets privés, édition de code et domaines personnalisés, avec une montée en gamme vers des paliers de crédits bien plus élevés. Business est à 50 $/mois avec la même base de 100 crédits, plus SSO, exclusion de l'entraînement sur les données, limites de crédits par utilisateur et projets restreints. Enterprise est sur devis, avec journaux d'audit et SLA, à partir d'environ 500 $+/mois selon les informations, avec engagement annuel.</p><p style="margin-top:1rem">La principale limite est le modèle de crédits lui-même : comme ils couvrent la construction, l'exécution de l'application déployée et l'IA intégrée, les coûts sont difficiles à prévoir sur des projets actifs, et l'offre gratuite s'épuise vite. La génération autonome est rapide mais nécessite une relecture, et une personnalisation poussée finit par vous amener à éditer du code.</p><p style="margin-top:1rem">Choisissez Lovable si vous voulez qu'un agent IA fasse l'essentiel de la construction et que vous êtes à l'aise pour le piloter, et prévoyez un budget pour la consommation de crédits si votre application dépasse le prototype.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Mis à jour: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Avantages</div><ul class="pc-list">        <li>Plan Mode : l'IA montre le plan de construction complet pour approbation avant d'écrire du code</li>
-        <li>File de Prompts : empile jusqu'à 50 prompts séquentiels pour des sessions de génération ininterrompues</li>
-        <li>Browser Testing : navigateur virtuel teste les apps automatiquement pour les bugs visuels et d'interaction</li>
-        <li>Voice Mode — décrire les modifications verbalement au lieu de taper</li>
-        <li>App mobile iOS et Android avec notifications push pour les fins de build</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Inconvénients</div><ul class="pc-list">        <li>Pas de niveau gratuit — uniquement payant à partir de 25 $/mois</li>
-        <li>Les apps générées peuvent nécessiter une révision par un développeur pour la sécurité et les performances en production</li>
-        <li>Moins adapté pour la logique backend complexe comparé aux agents de code dédiés comme Devin</li>
-        <li>Le partage de composants entre projets nécessite une configuration manuelle de bibliothèques partagées</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Avantages</div><ul class="pc-list">        <li>Le mode Agent/Build construit de bout en bout de façon autonome, avec recherche web, débogage et auto-validation</li>
+        <li>Le mode Plan permet de prévisualiser les changements prévus avant toute génération de code</li>
+        <li>Le backend géré Lovable Cloud couvre base de données, authentification et hébergement sans câblage manuel</li>
+        <li>Les offres payantes débloquent une vraie édition de code, des projets privés et des domaines personnalisés</li>
+        <li>Les sous-agents IA mènent recherche et relecture en parallèle pour itérer plus vite</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Inconvénients</div><ul class="pc-list">        <li>Les crédits unifiés couvrent build, exécution et IA, donc les coûts sont difficiles à anticiper</li>
+        <li>L'offre gratuite est serrée, avec 5 crédits de build par jour vite épuisés</li>
+        <li>Le résultat autonome exige toujours une relecture humaine et parfois des reprises</li>
+        <li>La personnalisation poussée finit par vous obliger à éditer le code sous-jacent</li>
+        <li>Les fonctions Enterprise et les paliers de crédits élevés deviennent vite coûteux</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://lovable.dev" target="_blank" rel="noopener">Visiter Lovable →</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choisir Lovable si…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Vous voulez générer une application web complète à partir d'une description en quelques minutes</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Lovable utilise l'IA pour créer des applications React complètes déployées instantanément</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Meilleur pour les fondateurs techniques voulant un MVP rapide basé sur du code réel</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Le code généré par Lovable est exportable et modifiable — pas de vendor lock-in</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choisir Lovable si…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Vous voulez qu'un agent IA fasse l'essentiel de la construction pendant que vous pilotez</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Vous avez besoin d'un backend géré sans câbler Supabase vous-même</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Vous prototypez et privilégiez un passage rapide de l'idée à l'application</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Vous pouvez budgétiser un usage basé sur les crédits pour des projets actifs</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Vous voulez prévisualiser les changements avec le mode Plan avant d'écrire du code</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Questions fréquemment posées</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Lovable vs Bubble — lequel est le meilleur ?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Lovable génère du code React réel avec IA — meilleur pour les fondateurs un peu techniques. Bubble est no-code éprouvé — meilleur pour les non-techniques construisant des applications complexes. Code réel avec IA → Lovable ; no-code mature → Bubble.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Lovable est-il gratuit ?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Lovable a un plan gratuit avec des crédits limités. Pro à partir de 25 $/mois. Bubble a un plan gratuit ; Personal à partir de 32 $/mois.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Le code Lovable est-il de bonne qualité ?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Le code React généré par Lovable est généralement propre et fonctionnel. Il peut nécessiter des ajustements pour une production à grande échelle. L'avantage est qu'il est exportable et modifiable par des développeurs contrairement à Bubble.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Lovable vs Bolt.new — quelle est la différence ?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Les deux génèrent des applications avec IA mais ont des approches légèrement différentes. Lovable est plus orienté vers des applications complètes avec une logique métier. Bolt.new est légèrement plus rapide pour des prototypes. Les deux sont d'excellentes options.</span></div></div></div></div>
   <div class="section-title-sm">Considérez aussi</div>
   <div class="also-grid">    <a class="also-card" href="/fr/tools/bubble.html">
@@ -216,7 +219,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/fr/directory.html">Répertoire</a>
         <a href="/fr/news.html">Actualités</a>
-        <a href="/fr/directory.html">Outils</a>
+        <a href="/fr/tools.html">Outils</a>
         <a href="/fr/compare.html">Comparer</a>
         <a href="/fr/newsletter.html">Newsletter</a>
       </div>

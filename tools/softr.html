@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Softr", "description": "Softr is a no-code app builder specialized for creating client portals, member directories, internal dashboards, and data-driven websites using Airtable, Google Sheets, or HubSpot as the backend datab", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://softr.io", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Softr", "description": "Softr is a no-code platform for building web applications, client portals, internal tools and simple business software without writing code. You describe what you need or assemble it from prebuilt blo", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://softr.io", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Softr</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Softr is a no-code app builder specialized for creating client portals, member directories, internal dashboards, and data-driven websites using Airtable, Google Sheets, or HubSpot as the backend database. Its focus on portals — gated, login-required web apps that present external data to specific users — differentiates it from general-purpose no-code tools.</p><p style="margin-top:1rem">The typical Softr use case is a client portal where customers can log in and see their project status, invoices, or service data from an Airtable or Google Sheets database that the agency manages in the background. This requires no code — the Softr interface allows dragging portal components, setting up login/authentication, and defining which records are visible to which users based on email matching.</p><p style="margin-top:1rem">Key capabilities include Airtable and Google Sheets native integration, user authentication and membership, data filtering by logged-in user, payment gating via Stripe and PayPal, portal and directory templates, drag-and-drop page builder, custom domains, and form submissions back to the data source.</p><p style="margin-top:1rem">Pricing: Free plan provides limited blocks and no custom domain. Business at $269 per month (annual billing) is the main paid tier for professional use — it provides custom domains, unlimited records, all authentication features, and team management. Enterprise pricing is custom.</p><p style="margin-top:1rem">Limitations: Softr is specialized — it excels at portals and data-presentation apps but lacks the flexibility of Bubble for complex multi-step logic. The Business plan price jump from free to $269/month is steep with no intermediate option for small teams. The platform is best when Airtable or Google Sheets is already the data source.</p><p style="margin-top:1rem">Best suited for agencies, consultants, and SaaS companies that need to give clients gated access to their own data — typically companies already managing client data in Airtable.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Softr is a no-code platform for building web applications, client portals, internal tools and simple business software without writing code. You describe what you need or assemble it from prebuilt blocks, and Softr handles the hosting, user accounts and permissions.</p><p style="margin-top:1rem">On March 31, 2026 Softr relaunched as an AI-native platform. The headline change is the AI Co-Builder, which turns a plain-language description into a working app complete with a database, user interface, access rules and basic business logic. Earlier in 2026 the platform added multi-model AI support (Claude, GPT and Gemini), and in June 2026 it introduced AI-driven web scraping and search. Global Search across apps arrived in December 2025.</p><p style="margin-top:1rem">A notable capability is that each Softr app can now act as its own Model Context Protocol (MCP) server. That means assistants like Claude and ChatGPT can connect over OAuth and read or act on your app's data directly. Softr also has its own built-in Softr Databases with tiered record limits, so you are no longer tied to Airtable or Google Sheets, though those connections still work.</p><p style="margin-top:1rem">Pricing is subscription-based with monthly AI credits bundled into every plan. The Free tier is $0/mo (10 app users, 5 AI credits, roughly 1,000-5,000 records). Basic is $49/mo billed annually ($59 monthly) with 20 users and 10 credits. Professional is $139/mo annually ($167 monthly) for 100 users (add-on packs of 10 at $10/mo up to 250) and 50 credits. Business is $269/mo annually ($323 monthly) for 500 users and 100 credits. Enterprise is custom with SSO, advanced security and dedicated support. Extra AI credits run $10-$500/mo for 100-5,000 credits.</p><p style="margin-top:1rem">The trade-offs are real. AI credits are consumed by generation and AI features, so heavy use pushes you into add-ons or higher tiers quickly. Deep custom design and complex logic still hit the ceiling of a no-code tool, and pricing climbs steeply as your user count grows.</p><p style="margin-top:1rem">Softr fits non-technical teams and small businesses that want to ship a portal or internal tool fast, and anyone curious about connecting their app data to AI assistants via MCP without building a backend.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Best no-code tool for client portals and gated member sites</li>
-        <li>Native Airtable and Google Sheets integration — works with data you already manage</li>
-        <li>User-specific data filtering shows each user only their own records</li>
-        <li>Payment gating via Stripe/PayPal for membership and access control</li>
-        <li>Pre-built portal and directory templates accelerate common use case setup</li>
+        <li>AI Co-Builder generates a complete app - database, UI, permissions and logic - from a text prompt</li>
+        <li>Each app can act as an MCP server, letting Claude or ChatGPT connect over OAuth</li>
+        <li>Multi-model AI support means you can pick Claude, GPT or Gemini</li>
+        <li>Built-in Softr Databases remove the hard dependency on Airtable or Google Sheets</li>
+        <li>Genuinely usable free tier for testing and small projects</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Business plan at $269/mo annual is a large price jump from the free tier</li>
-        <li>Specialized for portals — limited flexibility for complex custom app logic</li>
-        <li>Best when Airtable or Google Sheets is already the data source</li>
-        <li>Less capable than Bubble for multi-step workflows and complex logic</li>
+        <li>AI credits are limited per plan and heavy generation quickly needs paid add-ons</li>
+        <li>Pricing scales steeply once you pass a few hundred users</li>
+        <li>Still a no-code tool, so deeply custom design and complex logic hit limits</li>
+        <li>Record limits on lower tiers can constrain data-heavy apps</li>
+        <li>The very recent AI relaunch means some features are still maturing</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Softr if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want to turn Airtable or Google Sheets data into a client portal, directory, or membership site</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're non-technical and need a working web app from your existing spreadsheet data quickly</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You build internal tools, job boards, directories, or client-facing portals from structured data</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want the fastest path from Airtable base to a published, password-protected web app</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Softr if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to build a client portal or internal tool without code</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want AI to generate the first working version of your app</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to connect app data to Claude or ChatGPT via MCP</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You prefer built-in databases over wiring up Airtable or Sheets</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need to launch fast and iterate rather than build a custom backend</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Softr?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Softr is a no-code platform that turns Airtable or Google Sheets data into web apps — client portals, directories, marketplaces, internal tools, and membership sites. It's the fastest way to publish a web-facing app from data you already have in a spreadsheet or Airtable base.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Softr free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Softr has a free plan for one app with limited users and Softr branding. Starter is $49/month, Professional is $139/month, and Business is $269/month for more apps, users, and custom domains.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can Softr build a marketplace?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. Softr can build two-sided marketplaces with Airtable as the backend — listings, user profiles, search filters, and contact forms. For complex marketplace features like in-app payments, booking systems, or real-time messaging, Bubble offers more capability.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is the difference between Softr and Webflow?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Softr connects to Airtable/Sheets and is focused on data-driven apps (portals, directories). Webflow is a professional website and CMS builder focused on design control and content management. Softr is for data apps; Webflow is for designed websites and content sites.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Claude Design", "description": "Claude Design is a purpose-built AI design tool from Anthropic, launched on April 17, 2026 as a research preview under Anthropic Labs. It is a distinct product from general Claude — powered by Claude ", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://www.anthropic.com/claude/design", "offers": {"@type": "Offer", "price": "", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Claude Design", "description": "Claude Design is a design-focused assistant from Anthropic Labs. Rather than being a standalone product, it is a feature bundled into paid Claude subscriptions, aimed at turning existing project mater", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://www.anthropic.com/claude/design", "offers": {"@type": "Offer", "price": "", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,37 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Claude Design</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Claude Design is a purpose-built AI design tool from Anthropic, launched on April 17, 2026 as a research preview under Anthropic Labs. It is a distinct product from general Claude — powered by Claude Opus 4.7 and specifically trained to generate polished visual output including presentations, one-pagers, slide decks, prototypes, and visual reports from natural language prompts.</p><p style="margin-top:1rem">On first run, Claude Design analyzes your codebase or design files to build a design system — extracting your brand colors, typography, and component patterns. Subsequent designs automatically conform to this system, producing consistent branded output without manual configuration. Exports are available as PDF, shareable URL, PPTX, or directly to Canva for further editing.</p><p style="margin-top:1rem">Key capabilities include conversational design iteration (ask for changes in plain language), presentation generation, interactive prototype creation, one-pager and report design, and automatic brand system detection. The tool understands design intent rather than requiring precise specifications — describe what you need and it produces a complete visual.</p><p style="margin-top:1rem">Pricing: Claude Design is included with Claude Pro at $20 per month, Claude Max at $100 and $200 per month, Team plans, and Enterprise. It is not available on the Free tier. There is no standalone pricing — access requires an active Claude subscription.</p><p style="margin-top:1rem">Limitations: As a research preview launched in April 2026, Claude Design is still maturing. Output quality can vary on complex multi-page layouts. It is not a replacement for professional design tools like Figma for UI/UX work — it excels at presentation and document design rather than interactive product design.</p><p style="margin-top:1rem">Best suited for professionals who need polished presentations, reports, and one-pagers quickly without opening a design tool — particularly those already using Claude Pro for other work.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Claude Design is a design-focused assistant from Anthropic Labs. Rather than being a standalone product, it is a feature bundled into paid Claude subscriptions, aimed at turning existing project material into polished, consistent design output.</p><p style="margin-top:1rem">It launched on April 17, 2026 as a research preview and runs on the Claude Opus 4.7 vision model. Note that while the broader Claude line moved to Opus 4.8 in mid-2026, there is no official confirmation that Claude Design itself has been upgraded past 4.7.</p><p style="margin-top:1rem">The core idea is that Claude Design can read a team's codebase and design files and use them to auto-build a reusable design system. From there it exports finished work to Canva, PDF, PPTX or standalone HTML, and can hand off directly to Claude Code for implementation.</p><p style="margin-top:1rem">There is no standalone price. Access is included with paid Claude plans and metered against each plan's usage limits: Pro at $20/mo ($17/mo billed annually), Max 5x at $100/mo, Max 20x at $200/mo, Team Standard at $25/seat/mo ($20 annual), Team Premium at $125/seat/mo ($100 annual), and Enterprise on custom pricing. The Free $0 plan does not include Claude Design.</p><p style="margin-top:1rem">Usage is tracked separately and counts against your subscription limits, and users report fairly restrictive weekly caps; you can purchase extra usage beyond those limits. Being a research preview, behavior and availability may change.</p><p style="margin-top:1rem">It suits product teams and designers already on a paid Claude plan who want to generate a consistent design system from existing code and files, and who value a smooth handoff into Claude Code.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Generates complete visual designs from conversational prompts — no design skills needed</li>
-        <li>Automatically detects and applies your brand system (colors, typography, components)</li>
-        <li>Exports to PDF, URL, PPTX, or directly to Canva</li>
-        <li>Powered by Claude Opus 4.7 — understands design intent from natural language</li>
-        <li>Included with Claude Pro ($20/mo) — no separate subscription needed</li>
+        <li>Reads your existing codebase and design files to auto-build a reusable design system</li>
+        <li>Exports to several practical formats: Canva, PDF, PPTX and standalone HTML</li>
+        <li>Direct handoff to Claude Code for turning designs into implementation</li>
+        <li>Runs on the capable Claude Opus 4.7 vision model</li>
+        <li>Included with paid Claude plans, so no separate design-tool subscription is needed</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Research preview as of April 2026 — still maturing with variable output quality</li>
-        <li>Not available on Claude Free tier</li>
-        <li>Not a replacement for Figma or professional UI/UX design tools</li>
-        <li>No standalone pricing — requires active Claude subscription</li>
+        <li>Requires a paid Claude subscription; not available on the Free $0 tier</li>
+        <li>Still a research preview, so features and availability can change without notice</li>
+        <li>Usage is metered against plan limits, with users reporting restrictive weekly caps</li>
+        <li>Heavy use may require buying extra usage on top of your plan</li>
+        <li>Officially still on Opus 4.7 rather than the newer 4.8 used elsewhere in the Claude line</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Claude Design if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want to generate visual designs, presentations, and prototypes through natural conversation</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're not a trained designer and want AI to create visual output from written descriptions</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want Claude's reasoning capabilities applied to visual design and layout generation</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You create presentations and mockups as part of a broader Claude-powered workflow</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Claude Design if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You already pay for a Claude plan (Pro, Max, Team or Enterprise)</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to generate a design system straight from your code and design files</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You value exporting to Canva, PDF, PPTX or HTML and handing off to Claude Code</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You are comfortable using an evolving research-preview feature</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Claude Design?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Claude Design is Anthropic's AI design tool integrated into Claude. It generates UI mockups, presentations, landing pages, and visual prototypes through conversation — no design software required.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">How much does Claude Design cost?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Claude Design is included in Claude Pro ($20/month), Max ($100/month), Team, and Enterprise subscriptions at no additional cost. It is part of Anthropic Labs early access.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can Claude Design export to Figma or code?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Claude Design can generate HTML/CSS code for designs. Direct Figma export is not available as of May 2026, but generated code can be imported into any design or development workflow.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What types of designs can Claude Design create?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Claude Design creates UI mockups, landing pages, presentation slides, data dashboards, and marketing materials. It can extract brand styles from existing assets and apply them consistently.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +258,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

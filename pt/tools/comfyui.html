@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","pt");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ComfyUI","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://comfyui.org"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ComfyUI","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://comfyui.org","dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/pt/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Diretório</a>
       <a href="/pt/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Comparar</a>
       <a href="/pt/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Notícias</a>
-      <a href="/pt/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">Ferramentas</a>
+      <a href="/pt/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Ferramentas</a>
       <a href="/pt/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/pt/directory.html"  class="nav-link" data-i18n="nav.directory">Diretório</a>
     <a href="/pt/compare.html"    class="nav-link" data-i18n="nav.compare">Comparar</a>
     <a href="/pt/news.html"       class="nav-link" data-i18n="nav.news">Notícias</a>
-    <a href="/pt/directory.html"      class="nav-link" data-i18n="nav.tools">Ferramentas</a>
+    <a href="/pt/tools.html"      class="nav-link" data-i18n="nav.tools">Ferramentas</a>
     <a href="/pt/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -138,7 +138,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">🎨 Geração de imagens</span>
-        <span class="tool-meta-chip badge-free">Free</span>
+        <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
       <div class="tool-best-for"><strong>Ideal para:</strong> Geração de imagens com IA de código aberto, fluxos de trabalho em nós, GPU local, vídeo em 4K</div>
@@ -150,26 +150,29 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Sobre ComfyUI</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">ComfyUI é uma interface gratuita e de código aberto baseada em nós para executar modelos de geração de imagens e vídeos com IA localmente. Os usuários constroem fluxos de trabalho conectando nós — cada nó executa uma operação como carregar um modelo, aplicar um amostrador ou codificar um prompt — dando controle preciso sobre cada etapa do processo de geração. É a principal interface para usuários que executam Stable Diffusion e outros modelos de peso aberto em seu próprio hardware.</p><p style="margin-top:1rem">A Visão de App, uma grande adição de UX, fornece uma interface simplificada que oculta o grafo de nós e apresenta uma interface limpa baseada em formulários para usuários que não precisam modificar o fluxo de trabalho subjacente. A Visão de Nós permanece totalmente disponível para usuários avançados. Essa abordagem de modo duplo torna o ComfyUI acessível para iniciantes sem remover nenhuma capacidade de usuários experientes.</p><p style="margin-top:1rem">A quantização NVFP4, introduzida para GPUs NVIDIA RTX 50 Series, permite que a geração seja executada 2,5 vezes mais rápida enquanto reduz o consumo de VRAM em aproximadamente 60%. Isso significa que usuários com placas RTX 50 Series podem executar modelos maiores que anteriormente exigiam hardware mais caro, ou executar modelos existentes em velocidades substancialmente mais altas.</p><p style="margin-top:1rem">O suporte oficial AMD ROCm chegou para o aplicativo Windows Desktop, tornando o ComfyUI totalmente suportado em GPUs AMD no Windows pela primeira vez sem exigir soluções alternativas manuais. Novos nós para Veo 3, Veo 3 Lite e Kling 3.0 foram adicionados, junto com suporte de saída 4K para pipelines de geração de vídeo ByteDance, Veo e Kling. O RTX Video Super Resolution permite upscaling 4K em tempo real de vídeo gerado em hardware NVIDIA suportado.</p><p style="margin-top:1rem">A compatibilidade com Python 3.13 foi adicionada, mantendo o ComfyUI atualizado com a versão mais recente do Python e garantindo compatibilidade com pacotes mais novos no ecossistema Python.</p><p style="margin-top:1rem">O ComfyUI é ideal para usuários avançados, pesquisadores e desenvolvedores que desejam controle total sobre fluxos de trabalho de geração de imagens e vídeos com IA, executam modelos localmente em seu próprio hardware e precisam de suporte para os modelos de peso aberto e de terceiros mais recentes.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">O ComfyUI é uma interface de geração baseada em grafo. Em vez de uma única caixa de prompt, você conecta nós (carregadores, samplers, condicionamento, upscalers e assim por diante) em um fluxo de trabalho que pode inspecionar, reutilizar e compartilhar. Essa transparência é o motivo de o ComfyUI ter se tornado a ferramenta preferida de quem quer controle preciso sobre como uma imagem ou vídeo é gerado.</p><p style="margin-top:1rem">A versão atual é a v0.27.0, lançada em 30 de junho de 2026. Ela adiciona suporte a modelos quantizados em int8 em GPUs da geração Turing e mais recentes, com tratamento reformulado de LoRA e memória, além de novos nós como Seed, Advanced Krea 2 Model Merging, Bounding Box Canvas, ConditioningMultiply e um nó de prompt JSON do Ideogram, mais suporte ao Nano Banana 2 Lite do Google. É a continuação de um 2026 movimentado: em junho veio uma reformulação completa do Comfy Desktop com gerenciamento de múltiplas instâncias, snapshots e armazenamento compartilhado de modelos, e o projeto adicionou os modelos de vídeo Krea2 e LTX2, suporte oficial ao AMD ROCm no Windows e ganhos de desempenho NVFP4 na GPU.</p><p style="margin-top:1rem">Além de imagens estáticas, o ComfyUI agora impulsiona a geração de vídeo por meio de modelos como Krea2 e LTX2, portanto já não é apenas uma ferramenta de imagem. É possível encadear vários modelos, combinar nós próprios e da comunidade, processar em lote e exportar fluxos inteiros como JSON reutilizável.</p><p style="margin-top:1rem">O preço tem dois lados. O software auto-hospedado é totalmente gratuito e de código aberto. O serviço gerenciado oficial Comfy Cloud, que saiu do beta e passou a um modelo unificado de créditos no fim de 2025 antes de adicionar um plano gratuito em março de 2026, oferece: Free (400 créditos/mês, sem cartão), Standard a US$ 20/mês (4.200 créditos), Creator a US$ 35/mês (7.400 créditos, com importação de LoRA), Pro a US$ 100/mês (21.100 créditos) e um plano Enterprise sob medida.</p><p style="margin-top:1rem">A principal limitação é a curva de aprendizado. O grafo de nós é poderoso, mas intimidante para iniciantes, e rodar localmente significa gerenciar por conta própria o hardware de GPU, os arquivos de modelos e as dependências. O Comfy Cloud elimina esse peso de configuração, mas atrela o uso a um orçamento de créditos.</p><p style="margin-top:1rem">Escolha o ComfyUI se quiser controle profundo e reproduzível da geração, estiver à vontade com uma interface técnica ou quiser começar de graça localmente e migrar depois para a nuvem gerenciada.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Atualizado: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Vantagens</div><ul class="pc-list">        <li>Completamente gratuito e de código aberto — sem assinatura, sem limites de crédito, sem dependência de fornecedor</li>
-        <li>Visão de App: interface de formulário amigável para iniciantes sem remover o grafo de nós completo para usuários avançados</li>
-        <li>Quantização NVFP4: geração 2,5x mais rápida e 60% menos VRAM em GPUs RTX 50 Series</li>
-        <li>Suporte oficial AMD ROCm no Windows — sem soluções alternativas manuais necessárias</li>
-        <li>Nós para Veo 3, Kling 3.0 e suporte a vídeo 4K via pipelines ByteDance/Veo/Kling</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Desvantagens</div><ul class="pc-list">        <li>A interface baseada em nós tem uma curva de aprendizado acentuada para usuários novos na geração baseada em fluxo de trabalho</li>
-        <li>Requer hardware GPU local — não adequado para usuários sem uma placa gráfica capaz</li>
-        <li>Nós personalizados mantidos pela comunidade variam em qualidade e podem conflitar entre si</li>
-        <li>Sem opção de nuvem — toda computação é local; hardware de alto nível necessário para modelos grandes</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Vantagens</div><ul class="pc-list">        <li>Gratuito e totalmente de código aberto quando auto-hospedado, sem paywall no aplicativo principal</li>
+        <li>O grafo de nós dá controle preciso e reproduzível, e os fluxos são compartilháveis como JSON</li>
+        <li>Agora cobre modelos de imagem e de vídeo (Krea2, LTX2), não só imagens estáticas</li>
+        <li>A v0.27.0 adiciona modelos quantizados em int8 e melhor tratamento de LoRA e memória para uso eficiente da GPU</li>
+        <li>Comfy Cloud opcional, com plano gratuito de 400 créditos, elimina a configuração local para quem preferir</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Desvantagens</div><ul class="pc-list">        <li>Curva de aprendizado acentuada; a interface de nós é pouco intuitiva para novatos</li>
+        <li>A auto-hospedagem exige GPU capaz e gerenciamento manual de modelos e dependências</li>
+        <li>O uso do Comfy Cloud é medido por créditos, que podem acabar em cargas de trabalho pesadas</li>
+        <li>A qualidade da experiência depende muito dos nós da comunidade, de confiabilidade variável</li>
+        <li>As vantagens da quantização int8 limitam-se a GPUs da geração Turing e mais recentes</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://comfyui.org" target="_blank" rel="noopener">Visitar ComfyUI →</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Escolha ComfyUI se…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Você quer o controle mais granular sobre o pipeline de geração de imagens com workflows visuais</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ ComfyUI usa uma interface de fluxo de nós para workflows personalizados muito avançados</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Mais eficiente em memória e mais rápido que Automatic1111 para usuários avançados</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Melhor para workflows complexos: ControlNet, IP-Adapter, AnimateDiff</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Escolha ComfyUI se…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Você quer controle granular e reproduzível dos pipelines de geração</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Você se sente à vontade com uma interface técnica baseada em nós</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Você precisa de geração de imagem e de vídeo em uma só ferramenta</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Você prefere uma instalação auto-hospedada gratuita, mas mantém a nuvem gerenciada como opção</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Você quer construir e compartilhar fluxos reutilizáveis em JSON</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Perguntas frequentes</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">ComfyUI vs Automatic1111 — qual escolher?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">ComfyUI é para usuários avançados que querem controle máximo via workflows em nós. Automatic1111 é mais fácil para iniciantes e a comunidade é maior. Iniciantes → Automatic1111; usuários avançados com workflows complexos → ComfyUI.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">ComfyUI é gratuito?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Sim. ComfyUI é totalmente gratuito e open-source. Você precisa de uma GPU compatível e um modelo Stable Diffusion. Automatic1111 também é gratuito e open-source.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">ComfyUI pode funcionar sem GPU?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">ComfyUI pode funcionar em CPU mas muito lentamente. Para uso prático, uma GPU NVIDIA com 6+ GB VRAM é recomendada. Serviços em nuvem como Google Colab permitem usar o ComfyUI sem GPU local.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Qual é a diferença entre ComfyUI e Stable Diffusion?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Stable Diffusion é o modelo de IA. ComfyUI e Automatic1111 são interfaces para usar esse modelo. ComfyUI usa uma abordagem de nós visuais; Automatic1111 usa uma interface web tradicional.</span></div></div></div></div>
   <div class="section-title-sm">Considere também</div>
   <div class="also-grid">    <a class="also-card" href="/pt/tools/chatgpt-images.html">
@@ -216,7 +219,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/pt/directory.html">Diretório</a>
         <a href="/pt/news.html">Notícias</a>
-        <a href="/pt/directory.html">Ferramentas</a>
+        <a href="/pt/tools.html">Ferramentas</a>
         <a href="/pt/compare.html">Comparar</a>
         <a href="/pt/newsletter.html">Newsletter</a>
       </div>

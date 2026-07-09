@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Notion AI", "description": "Notion AI is the AI layer built into Notion, the all-in-one workspace platform used by 30M+ teams for notes, wikis, databases, and project management. Notion AI handles writing assistance, summarizati", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://notion.so", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.0", "reviewCount": 3, "bestRating": "5", "worstRating": "1"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Notion AI", "description": "Notion AI is the artificial-intelligence layer inside Notion, the document and database workspace. It lives directly in your pages, so instead of switching to a separate chatbot you summon it where yo", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://notion.so", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.0", "reviewCount": 3, "bestRating": "5", "worstRating": "1"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Notion AI</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Notion AI is the AI layer built into Notion, the all-in-one workspace platform used by 30M+ teams for notes, wikis, databases, and project management. Notion AI handles writing assistance, summarization, translation, and Q&amp;A within the workspace, while the underlying Notion platform serves as the structured data layer that AI operates on.</p><p style="margin-top:1rem">Notion Developer Platform 3.5, announced May 13, 2026, is the most significant developer release in Notion's history. Workers runtime allows developers to write and deploy custom serverless JavaScript functions that run inside Notion — enabling custom automations, data transformations, and integrations without external hosting. This moves Notion from a passive workspace into a programmable platform where logic lives alongside content.</p><p style="margin-top:1rem">Database Sync adds two-way, bidirectional connections between Notion databases and external data sources including SQL databases and third-party APIs. Unlike Notion's previous one-way sync, changes made in Notion are now reflected in the external system and vice versa — enabling Notion to serve as a live operational interface rather than a static copy of external data.</p><p style="margin-top:1rem">Bidirectional Webhooks extend the event model in both directions: Notion can receive incoming webhooks from external services to trigger workflows, and send outgoing webhooks when Notion content changes. This enables Notion to act as a central automation hub that reacts to and drives events across a connected tool stack.</p><p style="margin-top:1rem">Plan Mode is a new AI agent capability inside Notion. Agents operating in Plan Mode can reason about multi-step tasks, create a plan, execute each step, and adapt when circumstances change — behaving autonomously rather than responding to single prompts. This positions Notion as a platform where AI agents can operate on structured knowledge bases, not just on unstructured text.</p><p style="margin-top:1rem">Notion AI is available as an add-on at $8 per user per month on top of standard Notion plans. Notion plans start at free (personal) and $8/user/month (Plus). Notion is best for teams that want their knowledge base, databases, and AI-driven workflows in a single platform.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Notion AI is the artificial-intelligence layer inside Notion, the document and database workspace. It lives directly in your pages, so instead of switching to a separate chatbot you summon it where your notes, wikis and project databases already are.</p><p style="margin-top:1rem">The current release is Notion 3.6, shipped on July 1, 2026. This version pushes the product well past simple text help. It introduces a model picker that lets you choose between Claude Opus 4.8, GPT-5.x, Gemini 3, Grok 4.3, GLM 5.2 or an Auto setting, adds orchestration of External Agents such as Claude and Cursor from shared boards, and lets agents generate interactive HTML blocks. It also reads and writes Microsoft Office files (PPTX, XLSX, DOCX) and Outlook, records AI Meeting Notes with speaker identification, runs Enterprise Search across connected apps, and offers a Research Mode.</p><p style="margin-top:1rem">Day to day the AI can draft and rewrite text, translate, summarize long pages, fill and query databases, answer questions across your whole workspace, and now run multi-step agent tasks. Custom Agents you build yourself are billed on a credit system at $10 per 1,000 monthly credits, and their activity can be tracked through audit logging.</p><p style="margin-top:1rem">Pricing has four tiers. Free is $0, Plus is $10 per seat per month billed annually (about $12 month-to-month), Business is $20 per seat per month billed annually (about $24 monthly) and is the cheapest plan with the full AI, and Enterprise is custom-priced. Since May 2025 Notion AI is no longer a separate paid add-on; it is bundled into Business and Enterprise.</p><p style="margin-top:1rem">The main catch is that the full AI now sits behind the Business plan. Free and Plus users only get a capped AI trial rather than ongoing access, so casual users who expected free AI on their existing workspace will hit a wall quickly. Custom Agent credits are an extra variable cost on top of the seat price.</p><p style="margin-top:1rem">Notion AI makes most sense for teams already running their knowledge base, docs and projects in Notion who want AI in the same place, and who are on or willing to move to the Business tier. Solo note-takers on the free plan will find the AI too limited to rely on.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Workers runtime: serverless JS functions run inside Notion — no external hosting needed</li>
-        <li>Database Sync with two-way external DB connections — Notion becomes a live operational interface</li>
-        <li>Bidirectional Webhooks: Notion can receive and send events across a connected tool stack</li>
-        <li>Plan Mode for AI agents: multi-step autonomous task execution inside Notion workflows</li>
-        <li>All-in-one: knowledge base + databases + AI + automation in a single workspace</li>
+        <li>Lives inside the same pages, wikis and databases you already work in, so there is no context switch</li>
+        <li>Model picker lets you pick Claude Opus 4.8, GPT-5.x, Gemini 3, Grok 4.3 or GLM 5.2, plus an Auto option, per task</li>
+        <li>Workspace-wide Enterprise Search, AI Meeting Notes with speaker identification and Research Mode go well beyond basic text tools</li>
+        <li>Reads and writes Microsoft Office files (PPTX, XLSX, DOCX) and Outlook, and can orchestrate external agents like Claude and Cursor</li>
+        <li>No longer a separate add-on: on Business and Enterprise the AI is bundled into the seat price</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Notion AI is an $8/user/mo add-on on top of base Notion subscription costs</li>
-        <li>Workers runtime and Database Sync are developer features — non-technical users won't benefit</li>
-        <li>AI quality not as strong as standalone Claude or GPT-4o for complex reasoning</li>
-        <li>Platform complexity grows significantly with Developer Platform 3.5 — steeper learning curve</li>
+        <li>Full AI requires the Business plan at $20/seat/mo; Free and Plus only get a capped trial, not ongoing access</li>
+        <li>Custom Agents cost extra on a credit system ($10 per 1,000 monthly credits), a variable spend on top of seats</li>
+        <li>The May 2025 shift from add-on to bundled means some users lost the ability to buy AI cheaply on a lower plan</li>
+        <li>Value depends on already living in Notion; the AI is far less useful if your work sits in other tools</li>
+        <li>Enterprise-grade features like audit logging for Custom Agents are gated to higher tiers</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Notion AI if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You live in Notion and want AI writing assistance, summarization, and Q&amp;A from your docs</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want to ask questions across your entire Notion workspace with AI</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You create written content — notes, docs, wikis — and want AI to improve, translate, or summarize</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're a Notion power user who wants AI that understands your existing knowledge base</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Notion AI if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Your team already keeps its docs, wikis and projects in Notion</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You are on or willing to move to the Business plan ($20/seat/mo) for full AI</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to switch models (Opus 4.8, GPT-5.x, Gemini 3, Grok, GLM) without leaving your notes</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need workspace-wide search, meeting notes or research inside one tool</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to build and audit Custom Agents against your own content</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Notion AI?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Notion AI is an AI assistant built directly into Notion. It can write, summarize, translate, and answer questions using your workspace content as context.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">How much does Notion AI cost?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Notion AI is an add-on at $10/member/month (billed annually) on top of any Notion plan, including the free plan. It is included in the Plus, Business, and Enterprise plans as of 2026.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Notion Developer Platform 3.5?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Notion Developer Platform 3.5 (May 2026) adds Workers runtime for serverless functions, Sync API for real-time external data, and Webhooks for event-driven automation — turning Notion into a programmable platform.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can Notion AI access the internet?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Notion AI can answer questions from your workspace content. For real-time web data, it uses connected integrations rather than direct internet browsing.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

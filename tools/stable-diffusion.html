@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Stable Diffusion", "description": "Stable Diffusion is Stability AI's open-source image generation model series, widely used for local inference, fine-tuning, and commercial deployment. Unlike closed-source models, Stable Diffusion wei", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://stability.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Stable Diffusion", "description": "Stable Diffusion is a family of open-weights image generation models from Stability AI. Unlike closed services, you can download the weights and run them on your own hardware, which is why it became t", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://stability.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -161,7 +161,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">🎨 Image Generation</span>
-        <span class="tool-meta-chip badge-free">Free</span>
+        <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
       <div class="tool-best-for"><strong>Best for:</strong> Open-source image generation, local inference, video AI, audio generation</div>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Stable Diffusion</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Stable Diffusion is Stability AI's open-source image generation model series, widely used for local inference, fine-tuning, and commercial deployment. Unlike closed-source models, Stable Diffusion weights are publicly released and can be run on consumer hardware, making it the foundation of a large ecosystem of third-party tools, community fine-tunes, and commercial applications built on top of the base models.</p><p style="margin-top:1rem">Stability AI underwent a significant corporate recovery in early 2026. The company's debt was fully erased, resolving the financial instability that had threatened operations through 2024 and 2025. A strategic partnership with Electronic Arts (EA) was signed in February 2026, providing both capital and a high-profile commercial deployment context for Stability AI's models. James Cameron joined as an advisor, adding industry credibility to the company's video generation push.</p><p style="margin-top:1rem">SD3.5 performance has been improved through optimizations for NVIDIA TensorRT with FP8 quantization. This combination delivers faster inference speeds and significantly lower VRAM requirements on RTX-series GPUs, making SD3.5 more practical on mid-range consumer hardware than earlier large models. AMD support expanded through ONNX-optimized model variants designed for Radeon GPUs and Ryzen AI accelerators, broadening the addressable hardware base beyond NVIDIA.</p><p style="margin-top:1rem">SV4D 2.0 (Stable Video 4D 2.0) is a new video generation model release focused on higher-quality outputs for real-world scenes — improving coherence, motion quality, and subject consistency compared to the original SV4D release. Stable Audio Open Small, a compact audio generation model, was open-sourced in partnership with Arm and is optimized for efficient inference on Arm-based hardware.</p><p style="margin-top:1rem">All Stable Diffusion models remain free and open-source. The Stability AI platform offers a freemium API for hosted inference without local setup. Stable Diffusion is best for developers, researchers, and creative professionals who need open-source image and video generation they can run locally, fine-tune, or deploy commercially without per-image fees.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Stable Diffusion is a family of open-weights image generation models from Stability AI. Unlike closed services, you can download the weights and run them on your own hardware, which is why it became the default base for a huge ecosystem of fine-tunes, LoRAs, ControlNets and local UIs.</p><p style="margin-top:1rem">The current release is Stable Diffusion 3.5, which ships in three variants: Large at 8.1B parameters, Large Turbo for fast few-step generation, and Medium at 2.5B for lighter machines. SD 3.5 is the most widely installed open image model by sheer install count, but it is no longer the quality leader among open weights — that position now belongs to Black Forest Labs' FLUX.2 as of 2026.</p><p style="margin-top:1rem">Capabilities cover text-to-image generation, prompt adherence and typography that improved over SDXL, and a broad toolchain for control and editing thanks to the open-model community. Related open models include SDXL Turbo, Stable Audio and Stable Fast 3D.</p><p style="margin-top:1rem">On pricing, self-hosting the open weights is free under the Stability AI Community License for individuals and organizations under $1M in annual revenue. Above that threshold an Enterprise License with custom pricing is required. Stability also offers a hosted route through the Developer Platform API (platform.stability.ai) with pay-per-credit billing: 1 credit is roughly $0.01, Stable Image Ultra runs about $0.08 per image and Stable Image Core about $0.03, with credit packs around $10 per 1,000 credits. A roughly $20/month membership tier has also been referenced by third parties.</p><p style="margin-top:1rem">The main limitations are practical. Running the larger models locally needs a capable GPU, results usually require prompt work and post-processing, and the revenue-gated license means larger companies cannot treat it as simply free. Quality at the top end now trails FLUX.2.</p><p style="margin-top:1rem">Stable Diffusion is the right choice if you want local control, an open pipeline you can fine-tune, and no per-image cost at small scale — and you are comfortable trading absolute peak quality for openness and flexibility.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Fully open-source — weights freely available for local use, fine-tuning, and commercial deployment</li>
-        <li>SD3.5 optimized for NVIDIA TensorRT/FP8: faster inference and lower VRAM on RTX GPUs</li>
-        <li>AMD ONNX-optimized variants for Radeon and Ryzen AI — not NVIDIA-exclusive</li>
-        <li>SV4D 2.0 delivers higher-quality real-world video output over original SV4D</li>
-        <li>Stable Audio Open Small open-sourced with Arm — audio generation available on edge hardware</li>
+        <li>Open weights you can download and run locally with full control over the pipeline</li>
+        <li>Free to self-host under the Community License for individuals and orgs under $1M revenue</li>
+        <li>Three SD 3.5 variants (Large, Large Turbo, Medium) let you match the model to your hardware</li>
+        <li>Enormous ecosystem of fine-tunes, LoRAs, ControlNets and local UIs built around it</li>
+        <li>Optional hosted API with transparent per-image pricing if you don't want to run it yourself</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Local setup requires technical knowledge — not suitable for non-technical users</li>
-        <li>Best results on SD3.5 still require a capable GPU; CPU-only inference is slow</li>
-        <li>Open-source ecosystem is fragmented — many forks, versions, and UIs with inconsistent quality</li>
-        <li>Stability AI corporate instability history — partnership sustainability remains to be proven</li>
+        <li>No longer the open-weights quality leader — FLUX.2 leads as of 2026</li>
+        <li>The larger models need a capable GPU to run smoothly at home</li>
+        <li>Free self-hosting is revenue-gated; orgs over $1M need a paid Enterprise License</li>
+        <li>Good results usually require prompt tuning and post-processing</li>
+        <li>Hosted API costs add up at volume (about $0.08/image for Ultra, $0.03 for Core)</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Stable Diffusion if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want completely free, unlimited image generation running locally on your own hardware</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need access to thousands of community fine-tuned models for specific styles</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want full control: ControlNet, LoRA, img2img, inpainting — the full generation pipeline</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You value privacy — images never leave your machine when running locally</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Stable Diffusion if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to run an image model locally with full control</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need an open base to fine-tune with LoRAs or ControlNets</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Your revenue is under $1M and you want zero per-image cost</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You prefer openness and flexibility over squeezing out the absolute top quality</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want the option of a paid hosted API without vendor lock-in</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is FLUX better than Stable Diffusion?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">FLUX.1 by Black Forest Labs produces significantly better image quality than SDXL — sharper, more photorealistic, with better text and hand rendering. However, Stable Diffusion has a massive ecosystem of community models, LoRAs, and tools built around it that FLUX doesn't yet match.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can I run FLUX locally?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. FLUX.1 Schnell (the fast version) and FLUX.1 Dev are available on Hugging Face and can be run locally. However, FLUX requires more VRAM than Stable Diffusion — ideally 24GB+ for full quality. Smaller quantized versions work on 8-12GB GPUs.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is FLUX.1?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">FLUX.1 is an image generation model by Black Forest Labs, founded by the original Stable Diffusion researchers. Released in August 2024, it comes in three versions: Schnell (fast, open weights), Dev (quality, open weights), and Pro (best quality, API only). It quickly became the benchmark leader for image quality.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Stable Diffusion free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. Stable Diffusion model weights are open-source and free to download and use locally. You need a compatible GPU (Nvidia recommended) and software like ComfyUI or Automatic1111 to run it. There are no usage fees for local generation.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Whisper", "description": "Whisper is OpenAI's open-source speech recognition model, released in September 2022 and updated to Whisper v3 Large in late 2023. It is trained on 680,000 hours of multilingual web audio and achieves", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://openai.com/research/whisper", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Whisper", "description": "Whisper is a family of open-source speech recognition models released by OpenAI. It transcribes spoken audio into text and can translate speech from many languages directly into English. The weights a", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://openai.com/research/whisper", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Whisper</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Whisper is OpenAI's open-source speech recognition model, released in September 2022 and updated to Whisper v3 Large in late 2023. It is trained on 680,000 hours of multilingual web audio and achieves state-of-the-art transcription accuracy across 99 languages, with particularly strong performance on non-English speech compared to competing commercial services.</p><p style="margin-top:1rem">Whisper is a developer-oriented tool — it ships as a Python package with no consumer-facing application. Developers run it locally on their own hardware (GPU recommended for speed), integrate it via OpenAI's API, or use it through third-party wrappers that add user interfaces. Many of the transcription tools in this catalog (Descript, Otter.ai) use Whisper or Whisper-derived models as their underlying transcription engine.</p><p style="margin-top:1rem">Key capabilities include speech-to-text transcription in 99 languages, automatic language detection, translation to English from any supported language, timestamp-level output (word and segment), and multiple model size variants from tiny (fastest) to large-v3 (most accurate). The large-v3 model achieves near-human accuracy on clean audio in major languages.</p><p style="margin-top:1rem">Pricing: The model itself is free and open-source (MIT license) — downloadable from GitHub and runnable on local hardware. OpenAI's hosted Whisper API costs $0.006 per minute of audio, making it one of the most affordable commercial transcription APIs. There is no subscription — pay only for what you use.</p><p style="margin-top:1rem">Limitations: Whisper has no consumer-facing interface — users need either technical knowledge to run it locally or use a third-party wrapper. Local inference requires significant RAM and benefits substantially from a GPU. The API is usage-based with no usage dashboard built into a consumer product.</p><p style="margin-top:1rem">Best suited for developers building transcription into applications, researchers who need high-accuracy multilingual transcription, and technically capable users comfortable running Python scripts or using the API.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Whisper is a family of open-source speech recognition models released by OpenAI. It transcribes spoken audio into text and can translate speech from many languages directly into English. The weights are published under the permissive MIT license, so you can download them and run them on your own hardware.</p><p style="margin-top:1rem">The current open release is large-v3-turbo, a distilled model introduced in October 2024. It keeps almost all of the accuracy of the full large-v3 model while running about 8x faster, which makes it far more practical for batch jobs and near-real-time use. The full large-v3 checkpoint is still available when you want the highest possible quality.</p><p style="margin-top:1rem">Alongside the open models, OpenAI now offers hosted transcription through its API. The classic endpoint is whisper-1, and it has since been joined by GPT-4o-based models: gpt-4o-transcribe and the cheaper gpt-4o-mini-transcribe, which add options like speaker diarization. According to reports, a streaming variant, gpt-realtime-whisper, arrived around May 2026 and returns transcript deltas live as you speak.</p><p style="margin-top:1rem">Pricing splits into two tracks. The open-source models are free: you pay only for your own compute. The hosted API is usage-based: whisper-1 and gpt-4o-transcribe are $0.006 per minute ($0.36/hr), gpt-4o-mini-transcribe is $0.003 per minute ($0.18/hr), and the live gpt-realtime-whisper runs about $0.017 per minute.</p><p style="margin-top:1rem">Accuracy varies a lot by language. Whisper was trained on around 99 languages, but the quality is strongest for high-resource languages like English and drops noticeably for less common ones. Running the larger models locally also needs a capable GPU, and the model can occasionally hallucinate text during long silences.</p><p style="margin-top:1rem">Whisper is a good fit if you want a free, self-hostable transcription engine, need broad multilingual coverage, or want a managed API without building your own pipeline. Choose the hosted GPT-4o models if you need diarization or live streaming out of the box.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>State-of-the-art transcription accuracy across 99 languages — free and open-source</li>
-        <li>API at $0.006/minute is among the most affordable commercial transcription services</li>
-        <li>Strong performance on non-English and heavily accented speech</li>
-        <li>Multiple model sizes — tiny for speed, large-v3 for maximum accuracy</li>
-        <li>MIT license — freely usable in commercial applications without royalties</li>
+        <li>Open-source under the MIT license, free to self-host with no usage fees</li>
+        <li>large-v3-turbo runs about 8x faster than large-v3 with only a small accuracy loss</li>
+        <li>Broad multilingual support, trained on roughly 99 languages, plus speech-to-English translation</li>
+        <li>Flexible deployment: run the open weights locally or use the hosted OpenAI API</li>
+        <li>Hosted GPT-4o models add speaker diarization and a live streaming option</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>No consumer-facing UI — developer tool requiring technical knowledge to use</li>
-        <li>Local inference requires GPU for reasonable speed on long audio</li>
-        <li>No built-in usage dashboard or account management</li>
-        <li>Large-v3 model slow on CPU — cloud API recommended for production use</li>
+        <li>Accuracy drops significantly for low-resource languages compared to English</li>
+        <li>The larger open models need a capable GPU for reasonable speed</li>
+        <li>Can hallucinate phantom text during long silences or noisy segments</li>
+        <li>Self-hosting requires technical setup; there is no official desktop app</li>
+        <li>Live and diarization features only come through the paid hosted API, not the open weights</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Whisper if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're a developer who wants free, open-source, local speech-to-text with no API costs</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need offline transcription — Whisper runs completely locally without internet</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You process sensitive audio that can't be sent to cloud services for privacy reasons</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want to integrate accurate transcription into your own applications via API</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Whisper if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want a free, self-hosted transcription engine you fully control</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need to transcribe or translate audio across many languages</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You prefer a managed API and are fine paying $0.006/min for whisper-1 or gpt-4o-transcribe</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need live streaming transcription or speaker diarization via the hosted GPT-4o models</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want maximum throughput and pick large-v3-turbo for its ~8x speed</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is OpenAI Whisper?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Whisper is OpenAI's open-source speech recognition model. Released in 2022, it transcribes audio in 100+ languages with high accuracy. It's a developer tool — not a consumer app — that runs locally or via API. Many transcription apps are built on top of Whisper.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Whisper free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Whisper is completely free and open-source. You can download and run it locally at no cost. OpenAI also offers Whisper via its API at $0.006 per minute. Consumer apps built on Whisper (like many transcription tools) typically charge their own subscription fees.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Otter.ai built on Whisper?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Otter.ai uses its own proprietary speech recognition technology, not Whisper. Many newer transcription tools use Whisper under the hood, but Otter.ai has built its own ASR (automatic speech recognition) system optimized for meetings and conversations.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Which is more accurate — Whisper or Otter.ai?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Whisper (especially the large model) is among the most accurate general-purpose speech recognition systems available. Otter.ai is optimized for meeting conversations and performs well for that specific use case. For general transcription of diverse audio, Whisper's accuracy is excellent. For live meeting intelligence with integrations, Otter.ai has practical advantages.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

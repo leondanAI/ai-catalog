@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Continue", "description": "Continue is an open-source AI coding tool that underwent a major product pivot in 2026. It shifted from its original identity as an IDE autocomplete and chat extension to a CLI-first platform focused ", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://continue.dev", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Continue", "description": "Continue.dev is an open-source AI coding assistant that runs inside VS Code and JetBrains IDEs, plus a CLI. Its main selling point was model-agnostic autonomy: you plugged in whatever model you wanted", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://continue.dev", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Continue</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Continue is an open-source AI coding tool that underwent a major product pivot in 2026. It shifted from its original identity as an IDE autocomplete and chat extension to a CLI-first platform focused on asynchronous AI agents designed for CI/CD pipelines and automated pull request review. The project remains fully free and open-source under an Apache 2.0 license.</p><p style="margin-top:1rem">The Checks system is the centerpiece of the 2026 pivot. Teams define review policies in plain Markdown files using natural language — for example, specifying that all PRs must include test coverage for new functions, follow a particular naming convention, or avoid certain anti-patterns. AI agents automatically run these checks against every incoming pull request, providing automated feedback without requiring human review for routine compliance issues.</p><p style="margin-top:1rem">Headless mode allows Continue agents to run in cloud CI/CD environments with no user interface. This enables integration with GitHub Actions, GitLab CI, and other pipeline tools, so review agents execute automatically on every code push or PR open event. TUI mode provides an interactive terminal interface for users who prefer a keyboard-driven workflow, while Shell mode allows agents to execute arbitrary terminal commands as part of their task execution.</p><p style="margin-top:1rem">URL context is a practical convenience feature: developers can paste any URL directly into the chat interface, and Continue fetches and incorporates the page content as context for the current task. This is useful for referencing documentation, issue trackers, or third-party API references without copying and pasting content manually.</p><p style="margin-top:1rem">Devstral support adds tool-calling capabilities through the Mistral Devstral model, enabling agents to invoke external tools and APIs as part of automated workflows. Continue supports all major LLM providers and local models via Ollama, preserving its model-agnostic design philosophy.</p><p style="margin-top:1rem">Continue is best for engineering teams that want to automate code review and CI/CD quality checks with natural language policies, and for developers who prefer an open-source, model-agnostic alternative to proprietary coding agents.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Continue.dev is an open-source AI coding assistant that runs inside VS Code and JetBrains IDEs, plus a CLI. Its main selling point was model-agnostic autonomy: you plugged in whatever model you wanted (OpenAI, Anthropic, local models via Ollama, and others) and got chat, inline autocomplete, and codebase-aware edits without being locked to one vendor.</p><p style="margin-top:1rem">The important context now is that Continue is effectively end-of-life as a standalone product. Around mid-June 2026, Cursor (Anysphere, the legal owner) acqui-hired the Continue team, and the homepage now simply states that Continue has been acquired by Cursor. The final release, v2.0.0 (with v2.0.0-vscode shipping around June 19, 2026), is the last one; the GitHub repository has been switched to read-only.</p><p style="margin-top:1rem">Capability-wise nothing has technically been removed from the released builds: you still get the same chat, autocomplete, context providers, and multi-model configuration. But there will be no further updates, bug fixes, or vendor support, and the team's ideas and effort are folding into Cursor's commercial stack going forward.</p><p style="margin-top:1rem">On pricing, the open-source IDE extensions and CLI remain free under Apache 2.0 - your only real cost was ever the model-provider API tokens (or $0 if you run local models). The former Continue Hub paid plans - Solo (free), Teams (~$20 per seat/month including $10 in model credits per seat), and Enterprise (custom, with SSO/BYO-keys/SLA) - are no longer purchasable. Recurring billing has been disabled and existing subscribers will not be re-charged.</p><p style="margin-top:1rem">The biggest limitation is the shutdown itself. Continue Hub cloud data is being deleted after July 15, 2026, so anyone with configs or assistants stored there needs to export before that deadline. An unmaintained, read-only codebase also means security and compatibility issues won't be addressed over time.</p><p style="margin-top:1rem">Who is it still for: people who want a genuinely free, local, open-source coding assistant and are comfortable self-managing an archived project. Anyone wanting an actively supported, forward-looking tool should look at Cursor or another maintained alternative.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Fully free and open-source — no paid tier, no usage limits, Apache 2.0 license</li>
-        <li>Checks system: AI agents enforce team review policies written in plain Markdown on every PR</li>
-        <li>Headless mode integrates agents directly into GitHub Actions and other CI/CD pipelines</li>
-        <li>Model-agnostic: supports all major LLM providers plus local models via Ollama</li>
-        <li>URL context: paste any URL into chat to include page content as agent context</li>
+        <li>Fully open source under Apache 2.0; the VS Code/JetBrains extensions and CLI remain free to use</li>
+        <li>Model-agnostic - connect any LLM including fully local models, so you can run at zero API cost and keep code on-device</li>
+        <li>The final v2.0.0 builds still include chat, inline autocomplete, and codebase-aware context providers</li>
+        <li>No forced vendor lock-in; the source code stays available even though the repo is archived</li>
+        <li>Existing subscribers won't be re-charged since recurring billing was disabled</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>CLI and terminal-focused interface — not suitable for non-technical users</li>
-        <li>Requires team setup of Markdown review policy files before automated checks work</li>
-        <li>Community support only — no enterprise SLA or dedicated support channel</li>
-        <li>Devstral tool-calling and headless mode are relatively new — documentation still maturing</li>
+        <li>Discontinued as a standalone product after the June 2026 Cursor acqui-hire; v2.0.0 is the final release</li>
+        <li>GitHub repo is now read-only - no further updates, bug fixes, or vendor support</li>
+        <li>Continue Hub cloud data is deleted after July 15, 2026, forcing an export deadline</li>
+        <li>Former paid Hub plans (Teams ~$20/seat/mo, Enterprise) can no longer be purchased</li>
+        <li>Unmaintained code will accumulate security and IDE-compatibility risks over time</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Continue if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want to use any LLM — Claude, GPT-4, local Ollama models — without being locked into one provider</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You prioritize privacy and want to run local models so code never leaves your machine</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want open-source AI coding assistance you can self-host and fully control</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You build custom AI workflows and want an extensible, hackable coding assistant</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Continue if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want a free, open-source coding assistant and are fine using an archived, unmaintained tool</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You prefer running fully local models with zero API spend and on-device code</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You already have Continue set up and just need it to keep working as-is</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need to export your Continue Hub data before the July 15, 2026 deletion</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You value the Apache 2.0 code as a base to self-host or fork</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Continue.dev?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Continue.dev is an open-source AI coding assistant that works as an IDE extension for VS Code and JetBrains. It lets you connect to any LLM — Claude, GPT-4, local Ollama models, or others — giving you AI code suggestions and chat without being locked into a single provider.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Continue.dev free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Continue.dev is free and open-source. You pay only for the AI model API you connect to it — Claude or GPT-4 API costs, or free if you use local models via Ollama. There's no Continue.dev subscription fee.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can Continue.dev use local models?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. This is one of Continue.dev's key features. Connect it to Ollama or LM Studio running local models (Llama, Mistral, Qwen, etc.) for completely private, offline coding assistance with no API costs.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Continue.dev better than Cursor?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Continue.dev and Cursor serve different needs. Continue.dev is a VS Code extension focused on LLM flexibility and privacy. Cursor is a full VS Code fork with deeper AI integration and more polished UX. Continue.dev wins for privacy and model choice; Cursor wins for overall AI coding experience.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

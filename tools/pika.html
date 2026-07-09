@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Pika", "description": "Pika is an AI video generation platform known for its approachable interface, creative effects (Pikaffects), and broad accessibility through a generous free tier. Since its initial launch, Pika has gr", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://pika.art", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Pika", "description": "Pika is a web-based AI tool that creates short video clips from a written prompt or a still image. It's aimed at creators who want quick motion graphics, social clips, and visual experiments without t", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://pika.art", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Pika</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Pika is an AI video generation platform known for its approachable interface, creative effects (Pikaffects), and broad accessibility through a generous free tier. Since its initial launch, Pika has grown to 2M+ users and is used primarily for short-form social video, creative experiments, and entertainment content.</p><p style="margin-top:1rem">Pika 2.5, launched May 2026, addresses the two most common quality complaints with previous Pika versions. Flicker-free output eliminates temporal inconsistency in generated video — the frame-to-frame flickering artifacts that make AI-generated video look unnatural and limit its use in professional contexts. Stable characters across scenes means characters now maintain consistent appearance, proportions, and style throughout a clip and across sequential generations, making Pika viable for multi-shot narrative sequences.</p><p style="margin-top:1rem">PikaStream 1.0 is a fundamentally new capability that moves Pika beyond pre-generated video. PikaStream enables real-time AI video chat: users can have live video conversations with AI agents that appear as generated video characters, rendered in real time. The AI agent maintains a consistent visual persona and responds to conversation dynamically. This positions Pika in the emerging real-time AI interaction space alongside text and voice AI agents but with a video-native interface.</p><p style="margin-top:1rem">The AI social video app direction represents Pika's platform ambition. Rather than remaining purely a generation tool, Pika is building toward a platform where users create, share, and interact with AI-generated video content socially — combining content creation tools with a social feed and real-time AI interaction through PikaStream. This differentiates Pika's long-term roadmap from pure generation competitors like Runway or Kling.</p><p style="margin-top:1rem">Pika offers 80 free monthly credits for new users on the free tier. Paid plans provide higher resolution, longer clips, and priority generation. Pika is best for social content creators, entertainers, and creative experimenters who want accessible AI video with real-time interaction capabilities.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Pika is a web-based AI tool that creates short video clips from a written prompt or a still image. It's aimed at creators who want quick motion graphics, social clips, and visual experiments without touching traditional video software.</p><p style="margin-top:1rem">The current flagship model is Pika 2.5, which rolled out on January 26, 2026. Compared to earlier versions it produces sharper footage, gives first-class control over camera moves, extends scenes to roughly 15 seconds natively (and up to about 25 seconds through Pikaframes), and now generates sound effects automatically, matched to what happens on screen.</p><p style="margin-top:1rem">Beyond generation, Pika is known for Pikaffects, its library of one-tap transformation effects (things like inflating, melting, or crushing objects). Camera direction, resolution options, and image-to-video and text-to-video modes round out the core toolset.</p><p style="margin-top:1rem">Pricing runs on a credit system. Free is $0 and gives 80 video credits a month, but is now limited to Pika 2.5 at 480p, image-to-video only, and no commercial use. Standard is $8/mo billed yearly (about $10 month-to-month) with 700 credits, all resolutions, every Pikaffect, no watermark, and commercial rights. Pro is $28/mo yearly (about $35 monthly) with 2,300 credits and faster generation, and Fancy is $76/mo yearly (about $95 monthly) with 6,000 credits and the fastest queue. Annual billing saves roughly 20%.</p><p style="margin-top:1rem">The main limitations are on the free plan: the 480p cap, the image-to-video-only restriction, and the fact that full Pikaffects and higher resolutions are paid features. Credits also deplete quickly if you iterate a lot, and clip lengths remain short by nature.</p><p style="margin-top:1rem">Pika suits social media creators, marketers, and hobbyists who want fast, playful AI video and are fine with short clips. Anyone needing text-to-video, HD output, commercial use, or the full effects library will need at least the Standard plan.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Pika 2.5: flicker-free output — professional-quality temporal consistency in generated video</li>
-        <li>Stable characters across scenes: consistent appearance across multi-shot sequences</li>
-        <li>PikaStream 1.0: real-time AI video chat with live generated character agents</li>
-        <li>AI social video app direction: creation + sharing + real-time AI in one platform</li>
-        <li>80 free monthly credits — one of the most generous free tiers in AI video</li>
+        <li>Pika 2.5 delivers noticeably sharper output with genuine camera-direction control</li>
+        <li>Automatic sound effects are matched to on-screen action, saving a separate audio step</li>
+        <li>Native scene extension reaches about 15 seconds, and up to ~25 seconds via Pikaframes</li>
+        <li>Pikaffects make eye-catching one-tap transformations easy for non-editors</li>
+        <li>Standard plan is inexpensive at $8/mo yearly and unlocks all resolutions and commercial use</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Maximum clip length still limited compared to Kling AI (which supports up to 2 minutes)</li>
-        <li>PikaStream 1.0 is new — reliability and latency on complex real-time video rendering varies</li>
-        <li>Social app direction is ambitious but unproven — execution risk on platform build-out</li>
-        <li>Character consistency improvements in 2.5 still not on par with Kling v3.5 for complex scenes</li>
+        <li>Free tier is capped at 480p and image-to-video only, with no commercial use</li>
+        <li>Full Pikaffects and higher resolutions are locked behind paid plans</li>
+        <li>Text-to-video is not available on the free plan</li>
+        <li>Credit-based system depletes fast when iterating on prompts</li>
+        <li>Clips remain short compared to traditional video production</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Pika if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You create short, stylized social media videos and want unique visual effects (Pikaffects)</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want to animate specific parts of an image while keeping others still</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need creative video transformations: explode, melt, crush — not realistic video generation</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You create fun, viral content where creative effects matter more than photorealism</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Pika if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want quick, playful AI video clips for social media</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You value automatic sound effects synced to the visuals</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need camera-direction control and scene extension</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">A low-cost Standard plan ($8/mo yearly) covers your HD and commercial needs</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You mainly work from images or want one-tap Pikaffects</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Pika AI?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Pika is an AI video generator known for creative effects and stylized output. Its Pikaffects features (explode, crush, melt, deflate) create dramatic visual transformations. Pika 2.2 (2025) added Scene Ingredients for compositing specific characters into scenes.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Pika free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Pika has a free plan with 150 credits on signup and 50 monthly credits. Standard is $8/month, Pro is $28/month, Unlimited is $98/month. The free credits reset monthly on the standard plans.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is the difference between Pika and Kling?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Pika specializes in creative effects and stylized short videos. Kling focuses on realistic, longer-form video with better physics simulation. Pika is better for creative social content; Kling is better for cinematic realism and professional video generation.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can Kling AI generate 4K video?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. Kling 3.0 (February 2026) supports native 4K output with per-shot storyboard control and built-in lip-synced audio generation. This makes it one of the highest resolution AI video generators available.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

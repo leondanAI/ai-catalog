@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Lovable", "description": "Lovable is an AI-powered app builder that generates full-stack web applications from natural language descriptions. It is positioned between a no-code tool and a traditional coding environment — users", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://lovable.dev", "offers": {"@type": "Offer", "price": "", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Lovable", "description": "Lovable lets you describe an app in everyday language and have it built for you, including the interface, logic, and a managed backend. It is aimed at founders, product people, and developers who want", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://lovable.dev", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -161,7 +161,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">🏗️ No-Code App Builders</span>
-        <span class="tool-meta-chip badge-paid">Paid</span>
+        <span class="tool-meta-chip badge-freemium">Freemium</span>
         <span class="tool-meta-chip">👥 500K+</span>
       </div>
       <div class="tool-best-for"><strong>Best for:</strong> AI app builder, no-code, visual bug testing, voice input</div>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Lovable</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Lovable is an AI-powered app builder that generates full-stack web applications from natural language descriptions. It is positioned between a no-code tool and a traditional coding environment — users describe what they want, and Lovable writes and deploys the application. No coding experience is required to start, but experienced developers can inspect and edit the generated code.</p><p style="margin-top:1rem">Plan Mode, introduced in February 2026, changes how generation works: instead of immediately writing code, Lovable first shows a complete plan of what it intends to build. The user reviews and approves the plan before any code is generated, reducing wasted iterations where the AI misinterprets an ambiguous prompt. This approval-before-execution model is particularly useful for complex apps with many interconnected components.</p><p style="margin-top:1rem">Prompt Queue allows users to line up to 50 sequential prompts that execute one after another without manual intervention. Instead of waiting for each change to complete before typing the next instruction, users can pre-load an entire session of incremental improvements and step away.</p><p style="margin-top:1rem">Browser Testing adds a virtual browser that automatically tests the generated application for visual bugs and interaction failures — checking that buttons work, layouts render correctly across screen sizes, and forms submit without errors. This automated QA step catches common issues before the user sees the output.</p><p style="margin-top:1rem">Cross-project component mentions allow shared UI libraries to be referenced across multiple Lovable projects, maintaining design consistency without duplicating work. Voice Mode lets users describe changes verbally instead of typing. The iOS and Android mobile app, launched April 2026, brings the full Lovable experience to mobile with push notifications for build completions.</p><p style="margin-top:1rem">Pricing starts at $25/month. Lovable is best for founders, designers, and non-technical users who want to ship a working web application quickly without writing code, and for developers who want to prototype ideas faster than traditional development allows.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Lovable lets you describe an app in everyday language and have it built for you, including the interface, logic, and a managed backend. It is aimed at founders, product people, and developers who want to go from idea to a deployable app without writing everything by hand.</p><p style="margin-top:1rem">The product has moved to a fully agentic, credit-based model rather than a versioned release cycle. Agent Mode (also called Build mode) is now the default and runs autonomously: it reads your codebase, searches the web, debugs, generates images, and validates its own output. Plan Mode arrived in February 2026 to let you preview intended changes before any code is written, an Agent Mode beta expansion landed in June 2026, and AI Subagents (Researcher, Reviewer, Synthesizer) shipped in May 2026 to run work in parallel.</p><p style="margin-top:1rem">On capabilities, the backend is now branded Lovable Cloud, a managed layer built on Supabase under the hood, with Lovable AI handling in-app AI features. You get database, auth, and hosting without wiring raw services yourself, plus code editing and custom domains on paid tiers.</p><p style="margin-top:1rem">Pricing is credit-based across both building and running apps. Free is $0/mo with 5 build credits per day (roughly 30/mo), 20 monthly Cloud credits, and limited in-app AI credits. Pro is $25/mo (about $21/mo billed annually, $250/yr) for 100 monthly credits, private projects, code editing, and custom domains, and scales up to much larger credit tiers. Business is $50/mo with the same 100-credit base plus SSO, data-training opt-out, per-user credit limits, and restricted projects. Enterprise is quote-based with audit logs and SLAs, reportedly around $500+/mo on annual commitment.</p><p style="margin-top:1rem">The main limitation is the credit model itself: because credits cover building, deployed-app runtime, and in-app AI, costs can be hard to predict on active projects, and the free tier runs out quickly. Autonomous generation is fast but still needs review, and heavy customization eventually pushes you into editing code.</p><p style="margin-top:1rem">Choose Lovable if you want an AI agent to do most of the building and you are comfortable steering it, and budget for credit consumption if your app is more than a prototype.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Plan Mode: AI shows full build plan for approval before writing any code</li>
-        <li>Prompt Queue stacks up to 50 sequential prompts for uninterrupted generation sessions</li>
-        <li>Browser Testing: virtual browser auto-tests apps for visual and interaction bugs</li>
-        <li>Voice Mode — describe changes by speaking instead of typing</li>
-        <li>Mobile app on iOS and Android with push notifications for build completions</li>
+        <li>Agent/Build mode builds autonomously end to end, including web search, debugging, and self-validation</li>
+        <li>Plan Mode lets you preview intended changes before any code is generated</li>
+        <li>Managed Lovable Cloud backend covers database, auth, and hosting without wiring raw services</li>
+        <li>Paid tiers unlock real code editing, private projects, and custom domains</li>
+        <li>AI Subagents run research and review work in parallel for faster iteration</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>No free tier — paid-only starting at $25/month</li>
-        <li>Generated apps may need developer review for production-grade security and performance</li>
-        <li>Less suitable for complex backend logic compared to dedicated coding agents like Devin</li>
-        <li>Cross-project component sharing requires manual setup of shared libraries</li>
+        <li>Unified credits cover building, runtime, and in-app AI, so costs are hard to predict</li>
+        <li>Free tier is tight at 5 build credits per day and runs out fast</li>
+        <li>Autonomous output still needs human review and can require rework</li>
+        <li>Deep customization eventually forces you into editing the underlying code</li>
+        <li>Enterprise features and higher credit tiers get expensive quickly</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Lovable if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want to describe an app in plain language and have AI generate working code instantly</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're a developer or technical founder who wants to ship MVPs dramatically faster</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want ownership of clean React code you can export and continue building</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need tight GitHub integration and want AI to iterate on your codebase</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Lovable if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want an AI agent to do most of the building while you steer</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need a managed backend without wiring Supabase yourself</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You are prototyping and want fast idea-to-app turnaround</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You can budget for credit-based usage on active projects</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to preview changes with Plan Mode before code is written</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Lovable?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Lovable (formerly GPT Engineer) is an AI app builder where you describe what you want and it generates a complete React/TypeScript web application. Unlike no-code tools, it produces actual code. Developers can edit the code directly or continue chatting with the AI to make changes.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Lovable free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Lovable has a free plan with 5 messages per day. Starter is $20/month for 100 messages, Launch is $50/month for 250 messages, Scale is $100/month for 500 messages. Messages are consumed when generating or modifying code.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Lovable better than Bubble for non-developers?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Bubble is generally better for non-developers who want to build without writing code. Lovable generates actual code which, while impressive, can require developer knowledge to debug and maintain. For non-technical founders, Bubble's visual editor is more accessible.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can Lovable build full-stack apps?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. Lovable can connect to Supabase for database and authentication, generating full-stack applications with a React frontend and PostgreSQL backend. It's popular for building SaaS prototypes and MVPs quickly.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

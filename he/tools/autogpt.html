@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","he");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"AutoGPT","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://agpt.co"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"AutoGPT","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://agpt.co","dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/he/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">ספריה</a>
       <a href="/he/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">השוואה</a>
       <a href="/he/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">חדשות</a>
-      <a href="/he/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">כלים</a>
+      <a href="/he/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">כלים</a>
       <a href="/he/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">ניוזלטר</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/he/directory.html"  class="nav-link" data-i18n="nav.directory">ספריה</a>
     <a href="/he/compare.html"    class="nav-link" data-i18n="nav.compare">השוואה</a>
     <a href="/he/news.html"       class="nav-link" data-i18n="nav.news">חדשות</a>
-    <a href="/he/directory.html"      class="nav-link" data-i18n="nav.tools">כלים</a>
+    <a href="/he/tools.html"      class="nav-link" data-i18n="nav.tools">כלים</a>
     <a href="/he/newsletter.html" class="nav-link" data-i18n="nav.newsletter">ניוזלטר</a>
   </nav>
 </header>
@@ -138,7 +138,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">🤖 סוכני AI</span>
-        <span class="tool-meta-chip badge-free">חינמי</span>
+        <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> משימות אוטונומיות, סוכני AI בקוד פתוח</div>
@@ -150,22 +150,28 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>אודות AutoGPT</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">AutoGPT הוא אחד מפרויקטי ה-AI הפופולריים ביותר בגיטהאב, עם למעלה מ-170,000 כוכבים — ואחד הפרויקטים שהגדירו את קטגוריית &quot;סוכני AI אוטונומיים&quot;. הרעיון פשוט ומהפכני: במקום לשוחח עם AI שאלה-תשובה, אתם נותנים ל-AutoGPT מטרה, והוא מפרק אותה לשלבים, מבצע כל שלב בעצמו, ומדווח על ההתקדמות — ללא התערבות אנושית בכל צעד.</p><p style="margin-top:1rem">AutoGPT מסוגל לגלוש באינטרנט לאיסוף מידע, לכתוב ולהריץ קוד, לנהל קבצים, לשלוח בקשות API ולתקשר עם שירותים חיצוניים. לדוגמה: תנו לו מטרה כמו &quot;חקור את המתחרים העיקריים בתחום X וצור דוח מפורט&quot; — והוא יחפש, יאסוף, יסכם ויפרמט את הדוח לבד. זה בדיוק מה שה-AI Agent אמור לעשות.</p><p style="margin-top:1rem">הפרויקט הוא קוד פתוח לחלוטין וניתן להרצה עצמית — אין עלות תוכנה, אם כי השימוש ב-API של OpenAI כרוך בעלות לפי שימוש. ה-Forge של AutoGPT מאפשר גם לבנות סוכני AI מותאמים אישית ולפרסם אותם בשוק. עבור מפתחים ואנשי טכנולוגיה שרוצים להבין ולהפעיל AI Agents בצורה המלאה ביותר — AutoGPT הוא נקודת ההתחלה הקלאסית.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">AutoGPT התחיל כאחד מסקריפטי הסוכנים האוטונומיים הראשונים לפי העיקרון &quot;תן מטרה ותן לו לרוץ&quot;. מאז הוא צמח ל-AutoGPT Platform: סביבה מלאה לתכנון, הרצה ושיתוף של סוכני AI, ולא רק כלי שורת פקודה.</p><p style="margin-top:1rem">הגרסה הנוכחית היא autogpt-platform-beta-v0.6.65, שפורסמה ב-25 ביוני 2026. סדרת v0.6.6x (מאי-יוני 2026) מתמקדת ב-AutoPilot/Copilot: פירוק אוטומטי של מטרות, פאנל הקשר של AutoPilot עם לשוניות shell ו-Files, חיפוש גלובלי דרך Cmd+K, גילוי אוטומטי של MCP, קישורים ציבוריים לשיתוף תוצאות צ'אט של הסוכן, וכן תזמון מובנה וטריגרים דרך webhooks.</p><p style="margin-top:1rem">מבחינת יכולות יש בונה סוכנים חזותי בגרירה ושחרור, שוק/חנות סוכנים לפרסום ולשימוש חוזר, ומעל 30 אינטגרציות ובהן Slack, Discord ו-Stripe. הרצות של סוכנים מחויבות במודל מבוסס קרדיטים, וניתן לארח עצמאית או להשתמש בענן המנוהל AutoGPT Cloud.</p><p style="margin-top:1rem">התמחור גמיש. ליבת הקוד הפתוח ברישיון MIT היא חינמית ($0) אם מביאים מפתחות LLM ומשאבי מחשוב משלכם, ללא הגבלת מושבים. הענן המנוהל מוסיף את Pro במחיר $50 לחודש ($42.50 לחודש בחיוב שנתי, $510 לשנה) ואת Max במחיר $320 לחודש ($272 לחודש בחיוב שנתי, $3,264 לשנה); מסלול Team בקרוב. בנוסף, ארנק תשלום-לפי-שימוש נפרד מודד הרצות של סוכנים בתעריף שאינו מפורסם.</p><p style="margin-top:1rem">יש מגבלות שכדאי לשים לב אליהן. הפלטפורמה עדיין רשמית בבטא, סוכנים אוטונומיים עלולים לצרוך קרדיטים או טוקנים של API באופן בלתי צפוי, ותעריף התשלום-לפי-שימוש להרצות אינו מפורסם מראש. אירוח עצמי חוסך את עלות המנוי אך מעביר אליכם את ההתקנה, מפתחות ה-LLM והתחזוקה.</p><p style="margin-top:1rem">AutoGPT מתאים למפתחים ולצוותים טכניים שרוצים לבנות סוכנים אוטונומיים רב-שלביים באופן חזותי, לפרסם או לעשות שימוש חוזר בסוכנים מחנות, ולבחור בין אירוח עצמי חינמי לענן מנוהל עם מנויים צפויים.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">עודכן: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">יתרונות</div><ul class="pc-list">        <li>קוד פתוח לחלוטין — ניתן להתקנה עצמית ללא עלות תוכנה</li>
-        <li>מבצע משימות מורכבות אוטומטית ללא התערבות אנושית בכל שלב</li>
-        <li>קהילת מפתחים ענקית עם 170,000+ כוכבים ב-GitHub</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">חסרונות</div><ul class="pc-list">        <li>דורש ידע טכני להתקנה ולהגדרה — לא מתאים למשתמשים לא-טכניים</li>
-        <li>עלויות API של OpenAI מצטברות עם שימוש אינטנסיבי</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">יתרונות</div><ul class="pc-list">        <li>ליבת אירוח עצמי חינמית ברישיון MIT ללא הגבלת מושבים כשמביאים מפתחות ומחשוב משלכם</li>
+        <li>בונה סוכנים חזותי בגרירה ושחרור בתוספת שוק לפרסום ולשימוש חוזר בסוכנים</li>
+        <li>AutoPilot/Copilot מטפל בפירוק מטרות, עם פאנל הקשר, חיפוש Cmd+K וגילוי אוטומטי של MCP</li>
+        <li>מעל 30 אינטגרציות (Slack, Discord, Stripe) בתוספת תזמון מובנה וטריגרים דרך webhooks</li>
+        <li>בחירה בין אירוח עצמי חינמי לענן המנוהל AutoGPT Cloud עם מסלולי Pro ו-Max ברורים</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">חסרונות</div><ul class="pc-list">        <li>הפלטפורמה עדיין רשמית בבטא (v0.6.65), כך שצפויים חספוסים ושינויים</li>
+        <li>ארנק התשלום-לפי-שימוש מחייב הרצות בתעריף שאינו מפורסם מראש</li>
+        <li>סוכנים אוטונומיים עלולים לצרוך קרדיטים או טוקנים של LLM באופן בלתי צפוי</li>
+        <li>מסלול Max יקר — $320 לחודש ($3,264 לשנה) לשימוש ענן כבד</li>
+        <li>אירוח עצמי מעביר אליכם את ההתקנה, מפתחות ה-LLM והתחזוקה</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://agpt.co" target="_blank" rel="noopener">בקר ב AutoGPT ←</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">בחרו ב-AutoGPT אם…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ אתם מפתחים שרוצים Agent framework פתוח לבניית AI Agents</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ AutoGPT Open Source לניסויים וניהול Agents בעצמכם</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ גמישות מלאה לקסטמיזציה ולשילוב מודלים שונים</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ קהילה גדולה ומשאבי Open Source</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">בחרו ב-AutoGPT אם…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם רוצים לבנות סוכנים אוטונומיים רב-שלביים עם בונה חזותי, ולא רק סקריפטים</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם מעדיפים ליבת קוד פתוח חינמית לאירוח עצמי עם מפתחות LLM משלכם</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם צריכים ענן מנוהל עם מנויי Pro או Max צפויים</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">חשובים לכם שוק סוכנים ואינטגרציות עם Slack, Discord ו-Stripe</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">שאלות נפוצות</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">AutoGPT לעומת Manus?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">AutoGPT Framework לפיתוח Agents. Manus מוצר מוכן לביצוע משימות. AutoGPT למפתחים; Manus לאנשי עסקים.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">AutoGPT חינמי?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">AutoGPT Open Source חינמי; Agentive (הפלטפורמה המנוהלת) בתשלום. Manus גישה מוגבלת/Waitlist.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Manus AI – מה הוא יכול לעשות?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Manus יכול לחפש אינטרנט, לנתח נתונים, לכתוב קוד, לייצר דוחות ולבצע משימות מורכבות אוטונומית. נחשב לאחד מה-AI Agents הגנרליים החזקים.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">AutoGPT לעומת LangChain?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">AutoGPT Framework שלם לבניית Agents. LangChain ספריה לבניית LLM Applications. AutoGPT לאוטומציה של Agents; LangChain לבניית אפליקציות LLM גנריות.</span></div></div></div></div>
   <div class="section-title-sm">שקול גם</div>
   <div class="also-grid">    <a class="also-card" href="/he/tools/devin.html">
@@ -212,7 +218,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/he/directory.html">ספריה</a>
         <a href="/he/news.html">חדשות</a>
-        <a href="/he/directory.html">כלים</a>
+        <a href="/he/tools.html">כלים</a>
         <a href="/he/compare.html">השוואה</a>
         <a href="/he/newsletter.html">ניוזלטר</a>
       </div>

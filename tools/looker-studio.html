@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Looker Studio", "description": "Looker Studio (formerly Google Data Studio) is Google's business intelligence and data visualization platform. The core product is free and connects to over 1,000 data sources through native connector", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://lookerstudio.google.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Looker Studio", "description": "Looker Studio (formerly Google Data Studio) is a web-based reporting and dashboarding platform that turns spreadsheets, databases, ad platforms and Google services into shareable, interactive visualiz", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://lookerstudio.google.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Looker Studio</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Looker Studio (formerly Google Data Studio) is Google's business intelligence and data visualization platform. The core product is free and connects to over 1,000 data sources through native connectors (Google Analytics, Google Ads, BigQuery, Sheets, Search Console) and community connectors (Salesforce, Facebook Ads, Shopify, and hundreds more). It is widely used for marketing analytics, performance dashboards, and business reporting.</p><p style="margin-top:1rem">Looker Studio Pro, introduced in 2023 and expanded in 2025-2026, adds the Gemini AI Formula Assistant — which generates Looker Studio formulas from plain language descriptions, significantly reducing the time required to build calculated fields and custom metrics. Pro also adds team workspace sharing with organizational controls, SLA-backed support, and scheduled email delivery of reports.</p><p style="margin-top:1rem">Key capabilities include drag-and-drop report building, 1,000+ native and community data source connectors, embedded reports for sharing externally, scheduled email delivery, Gemini AI Formula Assistant (Pro), team workspaces (Pro), and integration with the broader Google Analytics and Google Cloud ecosystem.</p><p style="margin-top:1rem">Pricing: The core Looker Studio product is completely free with full dashboard building capability and 1,000+ connectors. Looker Studio Pro costs $9 per user per month and adds Gemini AI Formula Assistant, team workspaces, organizational asset management, SLA support, and scheduled email report delivery.</p><p style="margin-top:1rem">Limitations: Looker Studio's free tier lacks features that competing BI tools include by default (team management, SLA support). The AI Formula Assistant is useful but limited in scope compared to natural language BI in tools like Hex or Databricks. For complex enterprise BI with advanced modeling, Google Looker (the enterprise product, separate from Looker Studio) is more capable.</p><p style="margin-top:1rem">Best suited for marketing teams, analysts, and organizations already in the Google ecosystem who want free or low-cost dashboards connecting Google Analytics, Ads, and BigQuery data.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Looker Studio (formerly Google Data Studio) is a web-based reporting and dashboarding platform that turns spreadsheets, databases, ad platforms and Google services into shareable, interactive visualizations. It runs entirely in the browser and needs only a Google account to start.</p><p style="margin-top:1rem">There is no version number to track; it ships as a continuously updated SaaS. The most significant recent change is the integration of Gemini AI, which brings Conversational Analytics (asking questions of your data in plain language), AI-suggested calculated fields, and the ability to export a report to Google Slides. A January 29, 2026 update added a 'Show reasoning' toggle that exposes the AI's step-by-step logic - which tables it queried, how it grouped and sorted - along with improvements to cross-data filtering.</p><p style="margin-top:1rem">Core capabilities include drag-and-drop chart building, blended data from multiple sources, calculated fields, filters and controls, scheduled report delivery on Pro, and connectors to over a thousand partner data sources on top of Google's own native ones.</p><p style="margin-top:1rem">Pricing is split into two tiers. The free tier costs nothing beyond a Google account and gives you unlimited reports and data sources plus core charting, filtering and sharing. Looker Studio Pro is $9 per user per Google Cloud project per month, billed annually with a 30-day trial, and adds organizational ownership, team workspaces, scheduled deliveries, the Gemini AI features, Slack and Google Chat integration, a mobile app and a 99.9% SLA.</p><p style="margin-top:1rem">The limitations are worth knowing up front. Most of the Gemini AI functionality is gated to Pro, so the free tier is largely a manual dashboarding tool. The Pro pricing is charged per Google Cloud project, which means agencies managing many client projects pay $9 per user for each one, and costs add up quickly. Large or heavily blended reports can also feel sluggish.</p><p style="margin-top:1rem">Looker Studio suits marketers, analysts and small teams already inside the Google ecosystem who want free, flexible dashboards, and organizations willing to pay for Pro to get governance, scheduling and the AI layer. It is a weaker fit for anyone needing enterprise-grade modeling, which lives in the separate, quote-based Looker product.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Core product is completely free — full dashboard building with 1,000+ connectors</li>
-        <li>Native Google ecosystem integration — Google Analytics, Ads, BigQuery, Sheets</li>
-        <li>Gemini AI Formula Assistant generates calculated fields from plain language (Pro)</li>
-        <li>Embeddable reports for sharing with clients and external stakeholders</li>
-        <li>Pro at $9/user/mo is among the lowest-cost BI upgrades available</li>
+        <li>Genuinely free tier with unlimited reports and data sources, only a Google account required</li>
+        <li>Over a thousand partner connectors plus deep native ties to BigQuery, Google Ads, Analytics and Sheets</li>
+        <li>Gemini AI adds natural-language Conversational Analytics and a 'Show reasoning' toggle for transparency</li>
+        <li>Pro tier brings real team governance: workspaces, scheduled delivery, mobile app and a 99.9% SLA</li>
+        <li>Browser-based with no installation and easy report sharing, similar to sharing a Google Doc</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Team management and SLA support locked behind Pro tier</li>
-        <li>AI capabilities limited to formula generation — not natural language BI querying</li>
-        <li>Complex enterprise modeling less capable than full Looker or Tableau</li>
-        <li>Community connector quality varies — some third-party connectors unreliable</li>
+        <li>Most Gemini AI features are locked behind paid Pro, so the free tier stays manual</li>
+        <li>Pro is billed per Google Cloud project, so agencies pay $9/user for every client project separately</li>
+        <li>Performance can degrade on large datasets or reports with heavily blended data</li>
+        <li>Advanced enterprise modeling requires the separate, quote-based Looker product, not this tool</li>
+        <li>Deepest value assumes you are already committed to the Google Cloud and Workspace ecosystem</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Looker Studio if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need free dashboards connected to Google Analytics, BigQuery, Sheets, or Ads data</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You create shareable reports for clients or teams without paying anything</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're a marketer or analyst building straightforward dashboards, not complex data apps</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want the simplest path from Google data to a visual dashboard</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Looker Studio if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want a free, capable dashboard tool tied to Google Ads, Analytics, Sheets or BigQuery</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You are happy working inside the Google ecosystem</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need natural-language Conversational Analytics and can justify the Pro tier</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Your team needs scheduled report delivery, shared workspaces and an SLA</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You prefer a browser-based tool with no software to install</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Hex?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Hex is a collaborative data platform combining SQL notebooks, Python, and no-code charts into a single workspace. Data teams use it to analyze data and build interactive data apps. Hex Magic (AI) writes SQL and Python from natural language, explains code, and auto-generates visualizations.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Looker Studio free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. Looker Studio (formerly Google Data Studio) is completely free. It connects to 800+ data sources including Google Analytics, BigQuery, Sheets, Ads, and many third-party connectors. There are no limits on dashboards, reports, or data volume.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is the difference between Looker Studio and Hex?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Looker Studio creates drag-and-drop visual dashboards — it's a reporting tool for business users. Hex is a data notebook and app builder for data teams who work in SQL and Python. Looker Studio is read-only visual reporting; Hex is interactive analysis and computation.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">How much does Hex cost?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Hex has a free plan for individuals with 2 published apps. Team plan is $24/user/month. Pro and Enterprise plans are available for larger organizations. The free plan is generous for individual analysts.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

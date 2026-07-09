@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","ua");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Whisper","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://openai.com/research/whisper"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Whisper","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://openai.com/research/whisper","dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/ua/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Каталог</a>
       <a href="/ua/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Порівняння</a>
       <a href="/ua/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Новини</a>
-      <a href="/ua/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">Інструменти</a>
+      <a href="/ua/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Інструменти</a>
       <a href="/ua/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Розсилка</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/ua/directory.html"  class="nav-link" data-i18n="nav.directory">Каталог</a>
     <a href="/ua/compare.html"    class="nav-link" data-i18n="nav.compare">Порівняння</a>
     <a href="/ua/news.html"       class="nav-link" data-i18n="nav.news">Новини</a>
-    <a href="/ua/directory.html"      class="nav-link" data-i18n="nav.tools">Інструменти</a>
+    <a href="/ua/tools.html"      class="nav-link" data-i18n="nav.tools">Інструменти</a>
     <a href="/ua/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Розсилка</a>
   </nav>
 </header>
@@ -150,23 +150,29 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Whisper</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Whisper — модель транскрибації аудіо від OpenAI. Повністю open-source, підтримує 100 мов з високою точністю.</p><p style="margin-top:1rem">Запускайте локально на власному обладнанні або використовуйте через API. Повна приватність даних.</p><p style="margin-top:1rem">Немає графічного інтерфейсу — потрібен технічний досвід. Пакетна обробка, не в реальному часі.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Whisper — це сімейство відкритих моделей розпізнавання мовлення, випущених OpenAI. Модель перетворює усне аудіо на текст і вміє перекладати мовлення з багатьох мов одразу англійською. Ваги опубліковані під вільною ліцензією MIT, тож їх можна завантажити й запускати на власному обладнанні.</p><p style="margin-top:1rem">Поточний відкритий реліз — large-v3-turbo, дистильована модель, представлена в жовтні 2024 року. Вона зберігає майже всю точність повної large-v3, але працює приблизно у 8 разів швидше, що робить її значно зручнішою для пакетної обробки та роботи, близької до реального часу. Повний чекпоінт large-v3 і далі доступний, коли потрібна максимальна якість.</p><p style="margin-top:1rem">Окрім відкритих моделей, OpenAI тепер пропонує транскрипцію через свій API. Класичний ендпоінт — whisper-1, до нього додалися моделі на основі GPT-4o: gpt-4o-transcribe і дешевша gpt-4o-mini-transcribe, які додають опції на кшталт розділення за мовцями (діаризації). За повідомленнями, приблизно в травні 2026 року з'явився потоковий варіант gpt-realtime-whisper, що віддає фрагменти транскрипту вживу в міру мовлення.</p><p style="margin-top:1rem">Ціни поділяються на дві частини. Відкриті моделі безкоштовні: ви платите лише за власні обчислення. Хостинговий API оплачується за фактом використання: whisper-1 і gpt-4o-transcribe коштують $0,006 за хвилину ($0,36/год), gpt-4o-mini-transcribe — $0,003 за хвилину ($0,18/год), а живий gpt-realtime-whisper — близько $0,017 за хвилину.</p><p style="margin-top:1rem">Точність суттєво залежить від мови. Whisper навчали приблизно на 99 мовах, але якість найвища для мов із великим обсягом даних, як-от англійська, і помітно падає для рідкісніших. Для локального запуску великих моделей потрібна потужна відеокарта, а під час довгих пауз модель іноді вигадує неіснуючий текст.</p><p style="margin-top:1rem">Whisper підійде, якщо вам потрібен безкоштовний рушій транскрипції для власного сервера, важлива широка мовна підтримка або потрібен готовий API без побудови власного конвеєра. Хостингові моделі GPT-4o варто обрати, якщо з коробки потрібні діаризація чи потокова розшифровка.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Оновлено: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Переваги</div><ul class="pc-list">        <li>Повністю безкоштовний та open-source</li>
-        <li>Підтримує 100 мов з високою точністю</li>
-        <li>Запуск   
-  локально або через API</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Недоліки</div><ul class="pc-list">        <li>Немає GUI — потрібен технічний досвід</li>
-        <li>Не в реальному часі — пакетна обробка</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Переваги</div><ul class="pc-list">        <li>Відкритий код під ліцензією MIT, безкоштовний self-hosting без плати за використання</li>
+        <li>large-v3-turbo працює приблизно у 8 разів швидше за large-v3 з незначною втратою точності</li>
+        <li>Широка багатомовність: навчання приблизно на 99 мовах плюс переклад мовлення англійською</li>
+        <li>Гнучке розгортання: локальний запуск відкритих ваг або хостинговий API OpenAI</li>
+        <li>Хостингові моделі GPT-4o додають діаризацію та потоковий режим вживу</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Недоліки</div><ul class="pc-list">        <li>Точність помітно падає для мов із малим обсягом даних порівняно з англійською</li>
+        <li>Великим відкритим моделям потрібна потужна відеокарта для прийнятної швидкості</li>
+        <li>Може вигадувати фантомний текст під час довгих пауз або на шумних відрізках</li>
+        <li>Self-hosting потребує технічного налаштування, офіційного десктопного застосунку немає</li>
+        <li>Живий режим і діаризація доступні лише через платний API, а не у відкритих вагах</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://openai.com/research/whisper" target="_blank" rel="noopener">Перейти на Whisper →</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Оберіть Whisper якщо…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Вам потрібна відкрита висококточна модель розпізнавання мовлення без підписки</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Whisper від OpenAI підтримує 100+ мов включно з українською на відмінному рівні</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Self-hosted для повної конфіденційності: ваш аудіо не залишає ваш сервер</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ API Whisper для розробників що будують продукти з транскрипцією у своїх застосунках</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Оберіть Whisper якщо…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вам потрібен безкоштовний рушій транскрипції на власному сервері, повністю під вашим контролем</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Треба транскрибувати або перекладати аудіо багатьма мовами</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Ви віддаєте перевагу готовому API і готові платити $0,006/хв за whisper-1 чи gpt-4o-transcribe</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Потрібна потокова розшифровка вживу або діаризація через хостингові моделі GPT-4o</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вам важлива максимальна швидкість, і ви обираєте large-v3-turbo за прискорення приблизно у 8 разів</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Часті запитання</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Whisper vs Otter.ai — для чого що?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Whisper — відкрита технологія для розробників і технічних команд що хочуть транскрипцію у власних продуктах. Otter.ai — готовий продукт для бізнес-команд що хочуть зручну транскрипцію нарад без розробки.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Whisper безкоштовний?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Модель Whisper відкрита і безкоштовна для локального запуску. OpenAI Whisper API — $0,006/хв. Otter.ai має безкоштовний план з 600 хв/міс; Pro від $17/міс.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Whisper підтримує українську?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Так. Whisper має відмінну підтримку української мови. Це одна з переваг Whisper — широке мовне охоплення з вищою точністю ніж більшість комерційних альтернатив для малопоширених мов.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Otter.ai для Zoom нарад?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Так. Otter.ai безпосередньо інтегрується з Zoom і автоматично транскрибує наради. OtterPilot приєднується до нарад як учасник і робить нотатки в реальному часі.</span></div></div></div></div>
   <div class="section-title-sm">Також розгляньте</div>
   <div class="also-grid">    <a class="also-card" href="/ua/tools/adobe-podcast.html">
@@ -213,7 +219,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/ua/directory.html">Каталог</a>
         <a href="/ua/news.html">Новини</a>
-        <a href="/ua/directory.html">Інструменти</a>
+        <a href="/ua/tools.html">Інструменти</a>
         <a href="/ua/compare.html">Порівняння</a>
         <a href="/ua/newsletter.html">Розсилка</a>
       </div>

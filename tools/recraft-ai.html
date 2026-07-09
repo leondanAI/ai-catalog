@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Recraft", "description": "Recraft is an AI image and design generation platform built for professional designers and creative teams. It focuses on producing consistent, brand-aligned visuals — including vector art, icons, illu", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://recraft.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Recraft", "description": "Recraft AI is an image-generation platform aimed at designers, marketers and product teams rather than casual users. It runs in a browser-based Studio where you write prompts, control style and export", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://recraft.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Recraft</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Recraft is an AI image and design generation platform built for professional designers and creative teams. It focuses on producing consistent, brand-aligned visuals — including vector art, icons, illustrations, and UI mockups — with fine-grained style control that distinguishes it from general-purpose image generators. Recraft ranked first on the FLUX benchmark for image generation quality in late 2025.</p><p style="margin-top:1rem">Recraft V4, released February 17, 2026, is a complete ground-up rebuild of the platform. The most significant new capability is Agentic Mode: users describe design goals through natural conversation, and the AI autonomously refines and iterates on the design across an infinite canvas. Instead of single-prompt generation, Agentic Mode operates as a design partner — asking clarifying questions, proposing variants, and executing multi-step design workflows in response to conversational direction.</p><p style="margin-top:1rem">MCP (Model Context Protocol) integration allows Recraft to be called directly from Claude, Cursor, and other MCP-compatible AI agents. This enables developers and designers working in those environments to generate images without switching tools — a significant workflow improvement for teams that use Claude or Cursor as their primary interface.</p><p style="margin-top:1rem">Video generation is available on Pro plans, supporting up to two parallel video generations simultaneously. The addition of video brings Recraft into broader multimedia production workflows, complementing its existing strengths in static image and vector asset creation.</p><p style="margin-top:1rem">Recraft raised a $30 million Series B round led by Accel in early 2026, reflecting strong enterprise adoption and investor confidence in the platform's trajectory. The free tier provides access to core image generation features with usage limits. Pro plans unlock video generation, higher resolution outputs, commercial licensing, and priority queue access.</p><p style="margin-top:1rem">Recraft is best for designers and creative teams who need consistent, brand-aligned image generation with agentic design capabilities, and for developers who want image generation integrated directly into their AI agent workflows via MCP.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Recraft AI is an image-generation platform aimed at designers, marketers and product teams rather than casual users. It runs in a browser-based Studio where you write prompts, control style and export results as raster or editable vector files.</p><p style="margin-top:1rem">The current flagship model is Recraft V4.1, introduced around June 2026 on top of Recraft V4 (February 2026). This was a significant shift: earlier versions were known mainly for SVG vectors and icons, while V4 and V4.1 push into photorealistic imagery, production-quality raster, mockups and so-called utility shots. An Exploration Mode generates several visual directions from a single prompt.</p><p style="margin-top:1rem">Beyond its own models, Recraft Studio integrates third-party image engines (GPT Image 2, Flux 1 Schnell, Qwen Image 2.0, Grok Imagine) and video models such as Kling, Sora and Veo, so you can compare outputs without switching tools.</p><p style="margin-top:1rem">Pricing is credit-based. The Free plan gives 30 credits per day, but generated images are public, owned by Recraft, and carry no commercial license. Basic is 1,000 credits/month at $10/month annually. Pro is credit-tiered from 2,000 credits ($16/mo annual) up to 16,000 credits ($128/mo annual), with Teams per-seat plans and custom Enterprise quotes. Actions cost differently: raster 1 credit, vector 2, upscale 20. Top-up packs of 200 to 1,600 credits never expire, and annual billing runs about 20% cheaper.</p><p style="margin-top:1rem">The main limitation is that the free tier is essentially a trial: no commercial rights, public gallery exposure, and Recraft ownership of your images. Serious use requires a paid plan, and heavy raster or upscaling work can burn credits quickly.</p><p style="margin-top:1rem">Recraft suits teams that need both clean vectors and realistic raster from one platform, and value consistent style control. It is less suited to hobbyists who just want free, unrestricted images.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Agentic Mode: conversational design refinement on infinite canvas — not just single-shot prompts</li>
-        <li>MCP integration — generate images directly from Claude, Cursor, and other AI agents</li>
-        <li>Pro plans support up to 2 parallel video generations alongside image generation</li>
-        <li>Strong vector art, icon, and illustration output — purpose-built for professional designers</li>
-        <li>$30M Series B led by Accel — well-funded with strong enterprise adoption momentum</li>
+        <li>Produces genuine editable SVG vectors alongside photorealistic raster, which few competitors do well</li>
+        <li>Recraft V4.1 broadened the tool well beyond icons into mockups, product shots and utility imagery</li>
+        <li>Studio bundles third-party image and video models (Flux, Qwen, GPT Image 2, Kling, Sora, Veo) in one place</li>
+        <li>Strong, consistent style controls that keep brand looks coherent across a set of assets</li>
+        <li>Top-up credit packs never expire, so occasional users are not forced into a subscription</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Video generation is Pro-only — free tier is image-focused with usage limits</li>
-        <li>Agentic Mode is a new paradigm — requires adjustment for users accustomed to single-prompt tools</li>
-        <li>MCP integration requires a compatible host environment (Claude, Cursor) — not standalone</li>
-        <li>Less suited for photorealistic photography-style images compared to FLUX or Midjourney</li>
+        <li>Free tier grants no commercial license and makes your images public and owned by Recraft</li>
+        <li>Credit-based pricing gets expensive fast for upscaling (20 credits) and high-volume raster work</li>
+        <li>Steeper learning curve than one-click generators; it is built for designers, not casual users</li>
+        <li>Commercial rights and privacy only unlock on paid plans starting at $10/month</li>
+        <li>Quality of integrated third-party models varies, and they consume credits like native generations</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Recraft if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need vector graphics, SVGs, and scalable design assets — Recraft specializes in vectors</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You create brand assets, icons, logos, and UI elements that need to scale without quality loss</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want consistent brand style across multiple generated images using style references</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need print-ready files or graphics that work at any size for professional design</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Recraft if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need both editable SVG vectors and photorealistic raster from a single tool</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want brand-consistent icons, mockups and product shots at scale</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You value trying multiple image and video models inside one Studio</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You are on a paid plan and require clear commercial licensing</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You produce assets regularly and can justify a credit subscription</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Recraft AI?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Recraft AI is an AI image generator specialized in vector graphics and brand-consistent design. Unlike most AI tools that produce raster images, Recraft can generate true SVG vector files, icon sets, and scalable brand assets. It's popular with designers who need production-ready design files.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can Recraft AI generate SVG files?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. This is Recraft's primary differentiator — it generates true SVG (scalable vector graphics) files that can be scaled to any size without quality loss. This makes it essential for logo design, icon creation, and any print or large-format design work.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Recraft AI free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Recraft AI has a free plan with 50 generation credits. Pro plan is $12/month for 1,000 credits. Enterprise plans are available for teams. The free plan is generous for light use.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is the difference between Recraft and Midjourney for design work?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Recraft is optimized for design assets — vectors, icons, consistent brand visuals. Midjourney is optimized for artistic image quality. Designers needing production files use Recraft; artists and creative professionals use Midjourney. Many designers use both for different purposes.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

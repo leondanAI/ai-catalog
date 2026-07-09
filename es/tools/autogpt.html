@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","es");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"AutoGPT","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://agpt.co"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"AutoGPT","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://agpt.co","dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/es/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Directorio</a>
       <a href="/es/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Comparar</a>
       <a href="/es/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Noticias</a>
-      <a href="/es/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">Herramientas</a>
+      <a href="/es/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Herramientas</a>
       <a href="/es/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Boletín</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/es/directory.html"  class="nav-link" data-i18n="nav.directory">Directorio</a>
     <a href="/es/compare.html"    class="nav-link" data-i18n="nav.compare">Comparar</a>
     <a href="/es/news.html"       class="nav-link" data-i18n="nav.news">Noticias</a>
-    <a href="/es/directory.html"      class="nav-link" data-i18n="nav.tools">Herramientas</a>
+    <a href="/es/tools.html"      class="nav-link" data-i18n="nav.tools">Herramientas</a>
     <a href="/es/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Boletín</a>
   </nav>
 </header>
@@ -138,7 +138,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">🤖 Agentes IA</span>
-        <span class="tool-meta-chip badge-free">Gratis</span>
+        <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
       <div class="tool-best-for"><strong>Ideal para:</strong> Tareas autónomas, agentes de IA de código abierto</div>
@@ -150,22 +150,28 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Acerca de AutoGPT</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">AutoGPT fue uno de los primeros agentes de IA completamente autónomos e impulsó el movimiento de 'IA agéntica' a principios de 2023. Dado un objetivo de alto nivel en lenguaje natural, divide la tarea de forma autónoma en subtareas, busca en la web, escribe y ejecuta código, lee y escribe archivos, e itera hasta completar el objetivo, todo sin intervención humana en cada paso.</p><p style="margin-top:1rem">El proyecto es completamente de código abierto con el código disponible en GitHub (más de 160.000 estrellas), lo que permite ejecutarlo de forma gratuita con tus propias claves de API. La arquitectura es modular: AutoGPT puede ampliarse con plugins personalizados para navegación web, acceso a bases de datos, generación de imágenes y más. La versión alojada en agpt.co ofrece una interfaz web para ejecutar agentes sin configuración local.</p><p style="margin-top:1rem">En la práctica, AutoGPT funciona mejor con tareas bien definidas y acotadas: resúmenes de investigación, generación de código para funciones específicas, borradores de contenido o pipelines de procesamiento de datos. Se vuelve poco fiable en tareas abiertas o de muy largo alcance, donde puede entrar en bucles, alucinar resultados intermedios o acumular errores a lo largo de muchos pasos. Requiere una clave de API de OpenAI con saldo y los costes pueden aumentar rápidamente en ejecuciones largas del agente. Para flujos de trabajo agénticos en producción, plataformas como n8n o Relevance AI ofrecen una ejecución más fiable con mejor manejo de errores.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">AutoGPT empezó como uno de los primeros scripts de agentes autónomos con la lógica de «dale un objetivo y déjalo trabajar». Desde entonces ha evolucionado hasta convertirse en AutoGPT Platform: un entorno completo para diseñar, ejecutar y compartir agentes de IA, y no solo una herramienta de línea de comandos.</p><p style="margin-top:1rem">La versión actual es autogpt-platform-beta-v0.6.65, publicada el 25 de junio de 2026. La serie v0.6.6x (mayo-junio de 2026) gira en torno a AutoPilot/Copilot: descomposición automática de objetivos, un panel de contexto de AutoPilot con pestañas de shell y Files, búsqueda global con Cmd+K, autodescubrimiento de MCP, enlaces públicos para compartir resultados del chat del agente y disparadores nativos por programación y webhooks.</p><p style="margin-top:1rem">En cuanto a capacidades, incluye un constructor visual de agentes de arrastrar y soltar, un marketplace/tienda de agentes para publicar y reutilizar, y más de 30 integraciones, entre ellas Slack, Discord y Stripe. Las ejecuciones de agentes se facturan mediante un sistema de créditos, y puedes autoalojar la plataforma o usar la nube gestionada AutoGPT Cloud.</p><p style="margin-top:1rem">Los precios son flexibles. El núcleo de código abierto con licencia MIT es gratuito ($0) si aportas tus propias claves de LLM y tu cómputo, sin límite de asientos. La nube gestionada añade el plan Pro por $50/mes ($42,50/mes con pago anual, $510/año) y Max por $320/mes ($272/mes con pago anual, $3.264/año); el plan Team llegará pronto. Además hay una cartera de créditos de pago por uso que mide las ejecuciones a una tarifa no publicada.</p><p style="margin-top:1rem">Hay limitaciones que conviene tener en cuenta. La plataforma sigue oficialmente en beta, los agentes autónomos pueden consumir créditos o tokens de API de forma impredecible y la tarifa de pago por uso no se publica de antemano. El autoalojamiento elimina el coste de suscripción, pero traslada la configuración, las claves de LLM y el mantenimiento a tu equipo.</p><p style="margin-top:1rem">AutoGPT encaja con desarrolladores y equipos técnicos que quieran construir agentes autónomos de varios pasos de forma visual, publicar o reutilizar agentes desde una tienda y elegir entre autoalojamiento gratuito y una nube gestionada con suscripciones predecibles.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Actualizado: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Ventajas</div><ul class="pc-list">        <li>Totalmente de código abierto: inspecciona, bifurca y modifica cada componente</li>
-        <li>Se ejecuta de forma completamente autónoma en objetivos de largo alcance con mínima intervención humana</li>
-        <li>Comunidad activa con plugins para navegación web, gestión de archivos y programación</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Desventajas</div><ul class="pc-list">        <li>Poco fiable en tareas complejas: los agentes pueden entrar en bucles o alucinar durante la ejecución</li>
-        <li>Requiere configuración técnica y una clave de API de OpenAI con saldo</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Ventajas</div><ul class="pc-list">        <li>Núcleo autoalojado gratuito con licencia MIT y sin límite de asientos si aportas tus claves y cómputo</li>
+        <li>Constructor visual de arrastrar y soltar más un marketplace para publicar y reutilizar agentes</li>
+        <li>AutoPilot/Copilot gestiona la descomposición de objetivos, con panel de contexto, búsqueda Cmd+K y autodescubrimiento de MCP</li>
+        <li>Más de 30 integraciones (Slack, Discord, Stripe) más programación y disparadores por webhook nativos</li>
+        <li>Opción de autoalojamiento gratuito o nube gestionada AutoGPT Cloud con planes Pro y Max claros</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Desventajas</div><ul class="pc-list">        <li>La plataforma sigue oficialmente en beta (v0.6.65), con posibles fallos y cambios</li>
+        <li>La cartera de pago por uso factura las ejecuciones a una tarifa que no se publica de antemano</li>
+        <li>Los agentes autónomos pueden consumir créditos o tokens de LLM de forma impredecible</li>
+        <li>El plan Max es caro: $320/mes ($3.264/año) para un uso intensivo en la nube</li>
+        <li>El autoalojamiento traslada la configuración, las claves de LLM y el mantenimiento a tu equipo</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://agpt.co" target="_blank" rel="noopener">Visitar AutoGPT →</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Elige AutoGPT si…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Quieres explorar agentes de IA autónomos open-source que puedes self-hospedar con control total</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Necesitas un agente de IA personalizable según tus necesidades específicas con acceso al código fuente</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Tienes conocimientos técnicos y quieres experimentar con arquitecturas de agentes IA en tu propio entorno</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Buscas contribuir al desarrollo de agentes IA open-source o construir sobre la base de AutoGPT</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Elige AutoGPT si…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Quieres crear agentes autónomos de varios pasos con un constructor visual, no solo scripts</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Prefieres un núcleo de código abierto autoalojable y gratuito con tus propias claves de LLM</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Necesitas una nube gestionada con suscripciones Pro o Max predecibles</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Valoras un marketplace de agentes junto con integraciones de Slack, Discord y Stripe</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Preguntas frecuentes</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">¿AutoGPT todavía es relevante en 2025?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">AutoGPT fue pionero en agentes IA autónomos en 2023. En 2025, Claude Code, Manus y otros agentes más maduros han igualado o superado sus capacidades con mejor experiencia de uso. AutoGPT sigue siendo relevante como proyecto open-source y plataforma de experimentación, pero no es la opción más práctica para producción.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">¿Manus es gratuito?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Manus tuvo acceso por invitación limitado en su lanzamiento. El acceso completo requiere suscripción de pago. AutoGPT es open-source y gratuito como herramienta, aunque requiere APIs de modelos de IA (OpenAI, Anthropic) que tienen su propio costo.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">¿Cuál es la diferencia entre AutoGPT y LangChain?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">AutoGPT es un agente de IA con objetivo fijo de completar tareas de forma autónoma. LangChain es un framework para desarrolladores para construir aplicaciones con LLMs y agentes. AutoGPT es para usuarios finales; LangChain es para desarrolladores que quieren construir sus propios sistemas de agentes.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">¿Los agentes IA son seguros?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Los agentes IA como AutoGPT y Manus pueden ejecutar código, navegar la web y realizar acciones. Esto requiere precaución — siempre revisar los permisos antes de dar acceso a datos sensibles o sistemas críticos. Para experimentación — entornos aislados; para producción — revisión humana de acciones críticas.</span></div></div></div></div>
   <div class="section-title-sm">También considera</div>
   <div class="also-grid">    <a class="also-card" href="/es/tools/devin.html">
@@ -212,7 +218,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/es/directory.html">Directorio</a>
         <a href="/es/news.html">Noticias</a>
-        <a href="/es/directory.html">Herramientas</a>
+        <a href="/es/tools.html">Herramientas</a>
         <a href="/es/compare.html">Comparar</a>
         <a href="/es/newsletter.html">Boletín</a>
       </div>

@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","he");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Whisper","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://openai.com/research/whisper"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Whisper","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://openai.com/research/whisper","dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/he/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">ספריה</a>
       <a href="/he/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">השוואה</a>
       <a href="/he/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">חדשות</a>
-      <a href="/he/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">כלים</a>
+      <a href="/he/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">כלים</a>
       <a href="/he/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">ניוזלטר</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/he/directory.html"  class="nav-link" data-i18n="nav.directory">ספריה</a>
     <a href="/he/compare.html"    class="nav-link" data-i18n="nav.compare">השוואה</a>
     <a href="/he/news.html"       class="nav-link" data-i18n="nav.news">חדשות</a>
-    <a href="/he/directory.html"      class="nav-link" data-i18n="nav.tools">כלים</a>
+    <a href="/he/tools.html"      class="nav-link" data-i18n="nav.tools">כלים</a>
     <a href="/he/newsletter.html" class="nav-link" data-i18n="nav.newsletter">ניוזלטר</a>
   </nav>
 </header>
@@ -150,22 +150,29 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>אודות Whisper</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Whisper הוא מודל תמלול אודיו בקוד פתוח של OpenAI — הנחשב לאחד הדגמים המדויקים ביותר ביצירת כתוביות ותמלול שיחות, תומך ב-100 שפות ומציג ביצועים מרשימים גם בהקלטות בעלות רעש רקע, מבטאים שונים ואיכות קול נמוכה.</p><p style="margin-top:1rem">Whisper אומן על 680,000 שעות של אודיו רב-לשוני ומרב-משימתי, מה שהופך אותו לגמיש ביותר: הוא יכול לתמלל, לתרגם ולזהות שפה אוטומטית בשיחה אחת. המודל זמין בחינם לחלוטין דרך GitHub ו-Hugging Face, וניתן להריצו מקומית ללא שליחת נתונים לענן — יתרון משמעותי לנתונים רגישים.</p><p style="margin-top:1rem">Whisper זמין גם כ-API דרך OpenAI במחיר 0.006 דולר לדקה — זול מאוד לתמלול בקנה מידה. עשרות ממשקי משתמש גרפיים כמו Whisper.cpp, FasterWhisper ו-Buzz מאפשרים שימוש ללא קוד. לחוקרים, למפתחים, לעיתונאים, ולכל מי שצריך תמלול מדויק בכמות גדולה — Whisper הוא הכלי החינמי הטוב ביותר שקיים.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Whisper הוא משפחה של מודלי זיהוי דיבור בקוד פתוח שפרסמה OpenAI. הוא ממיר אודיו מדובר לטקסט ויכול לתרגם דיבור משפות רבות ישירות לאנגלית. המשקלים מפורסמים תחת רישיון MIT המתירני, כך שאפשר להוריד אותם ולהריץ על החומרה שלך.</p><p style="margin-top:1rem">המהדורה הפתוחה הנוכחית היא large-v3-turbo, מודל מזוקק שהוצג באוקטובר 2024. הוא שומר כמעט על כל הדיוק של large-v3 המלא אך רץ מהר פי 8 בערך, מה שהופך אותו לפרקטי הרבה יותר לעבודות אצווה ולשימוש קרוב לזמן אמת. נקודת הבדיקה המלאה large-v3 עדיין זמינה כשרוצים את האיכות הגבוהה ביותר האפשרית.</p><p style="margin-top:1rem">לצד המודלים הפתוחים, OpenAI מציעה כעת גם תמלול מתארח דרך ה-API שלה. נקודת הקצה הקלאסית היא whisper-1, ואליה הצטרפו מודלים מבוססי GPT-4o: gpt-4o-transcribe והזול יותר gpt-4o-mini-transcribe, שמוסיפים אפשרויות כמו הפרדת דוברים (דיאריזציה). על פי דיווחים, גרסת סטרימינג בשם gpt-realtime-whisper הגיעה סביב מאי 2026 ומחזירה מקטעי תמלול בזמן אמת תוך כדי הדיבור.</p><p style="margin-top:1rem">התמחור מתחלק לשני מסלולים. המודלים בקוד פתוח חינמיים: משלמים רק על המחשוב שלך. ה-API המתארח מחויב לפי שימוש: whisper-1 ו-gpt-4o-transcribe עולים 0.006$ לדקה (0.36$ לשעה), gpt-4o-mini-transcribe עולה 0.003$ לדקה (0.18$ לשעה), וה-gpt-realtime-whisper החי עולה כ-0.017$ לדקה.</p><p style="margin-top:1rem">הדיוק משתנה מאוד לפי השפה. Whisper אומן על כ-99 שפות, אך האיכות הגבוהה ביותר היא בשפות עתירות משאבים כמו אנגלית ויורדת באופן ניכר בשפות נדירות יותר. הרצת המודלים הגדולים באופן מקומי דורשת גם כרטיס מסך חזק, והמודל עלול לפעמים להזות טקסט במהלך שתיקות ארוכות.</p><p style="margin-top:1rem">Whisper מתאים אם אתה רוצה מנוע תמלול חינמי לאירוח עצמי, זקוק לכיסוי רב-לשוני רחב, או מעדיף API מנוהל בלי לבנות צינור משלך. בחר במודלי GPT-4o המתארחים אם אתה צריך דיאריזציה או סטרימינג חי מהקופסה.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">עודכן: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">יתרונות</div><ul class="pc-list">        <li>קוד פתוח חינמי עם תמיכה ב-100 שפות</li>
-        <li>מדויק גם בהקלטות עם רעש רקע ומבטאים חזקים</li>
-        <li>API ב-0.006 דולר לדקה — זול מאוד בקנה מידה</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">חסרונות</div><ul class="pc-list">        <li>אין ממשק משתמש רשמי — דורש ידע טכני להתקנה</li>
-        <li>עיבוד לא בזמן אמת בגרסה הסטנדרטית</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">יתרונות</div><ul class="pc-list">        <li>קוד פתוח תחת רישיון MIT, חינמי לאירוח עצמי ללא דמי שימוש</li>
+        <li>large-v3-turbo רץ מהר פי 8 בערך מ-large-v3 עם ירידה קטנה בלבד בדיוק</li>
+        <li>תמיכה רב-לשונית רחבה, אומן על כ-99 שפות, בתוספת תרגום דיבור לאנגלית</li>
+        <li>פריסה גמישה: הרצת המשקלים הפתוחים מקומית או שימוש ב-API המתארח של OpenAI</li>
+        <li>מודלי GPT-4o המתארחים מוסיפים הפרדת דוברים ואפשרות סטרימינג חי</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">חסרונות</div><ul class="pc-list">        <li>הדיוק יורד משמעותית בשפות דלות משאבים בהשוואה לאנגלית</li>
+        <li>המודלים הפתוחים הגדולים דורשים כרטיס מסך חזק למהירות סבירה</li>
+        <li>עלול להזות טקסט רפאים במהלך שתיקות ארוכות או מקטעים רועשים</li>
+        <li>אירוח עצמי דורש הגדרה טכנית; אין אפליקציית שולחן עבודה רשמית</li>
+        <li>תכונות הסטרימינג החי והדיאריזציה זמינות רק דרך ה-API בתשלום, לא במשקלים הפתוחים</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://openai.com/research/whisper" target="_blank" rel="noopener">בקר ב Whisper ←</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">בחרו ב-Whisper אם…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ אתם מפתחים שרוצים תמלול מדויק מאוד ב-API חינמי ופתוח</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Whisper Open Source – ניתן להריץ מקומית ללא עלות</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ תמיכה בעברית ובעשרות שפות ברמה גבוהה</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ מתאים לאינטגרציה בפרויקטים ואפליקציות</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">בחרו ב-Whisper אם…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתה רוצה מנוע תמלול חינמי בהוסטינג עצמי בשליטה מלאה שלך</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתה צריך לתמלל או לתרגם אודיו בשפות רבות</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתה מעדיף API מנוהל ומוכן לשלם 0.006$ לדקה עבור whisper-1 או gpt-4o-transcribe</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתה זקוק לתמלול סטרימינג חי או להפרדת דוברים דרך מודלי GPT-4o המתארחים</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתה רוצה תפוקה מרבית ובוחר ב-large-v3-turbo בזכות המהירות הגבוהה פי 8 בערך</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">שאלות נפוצות</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Whisper לעומת Otter.ai?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Whisper Open Source API לפיתוחים. Otter.ai מוצר מוכן לשימוש לפגישות. Whisper למפתחים; Otter.ai לאנשי עסקים.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Whisper חינמי?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Whisper Open Source חינמי לחלוטין. OpenAI Whisper API ב-$0.006/דקה. Otter.ai מציע 300 דקות חינם; Pro ב-$16.99/חודש.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Whisper לעברית – כמה מדויק?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Whisper מדויק מאוד לעברית – אחד המודלים הטובים ביותר לתמלול עברי. Large V3 מציע דיוק מצוין לעברית.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Otter.ai לעברית?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Otter.ai בעיקרו לאנגלית. תמיכה בעברית מוגבלת. לתמלול עברי מדויק – Whisper API עם מודלים מקומיים עדיף.</span></div></div></div></div>
   <div class="section-title-sm">שקול גם</div>
   <div class="also-grid">    <a class="also-card" href="/he/tools/adobe-podcast.html">
@@ -212,7 +219,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/he/directory.html">ספריה</a>
         <a href="/he/news.html">חדשות</a>
-        <a href="/he/directory.html">כלים</a>
+        <a href="/he/tools.html">כלים</a>
         <a href="/he/compare.html">השוואה</a>
         <a href="/he/newsletter.html">ניוזלטר</a>
       </div>

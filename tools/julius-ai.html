@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Julius AI", "description": "Julius AI is a conversational data analysis tool that allows users to upload spreadsheets, CSVs, and connect databases, then analyze data by asking questions in plain English. It generates charts, sta", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://julius.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Julius AI", "description": "Julius AI is a data analysis platform where you talk to your data in plain language. You point it at a dataset or a database, ask questions, and it writes and runs the underlying code, returns charts ", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://julius.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,32 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Julius AI</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Julius AI is a conversational data analysis tool that allows users to upload spreadsheets, CSVs, and connect databases, then analyze data by asking questions in plain English. It generates charts, statistical summaries, and written data insights from natural language queries — making data analysis accessible to business users without SQL or Python knowledge.</p><p style="margin-top:1rem">The platform handles standard data analysis tasks conversationally: trend analysis, statistical summaries, correlation detection, chart generation, and data cleaning suggestions. It supports file uploads (CSV, Excel, JSON) and connects to Google Sheets, Dropbox, and OneDrive. Charts are interactive and exportable. Julius can also generate and run Python code for more complex analysis if needed.</p><p style="margin-top:1rem">Key capabilities include conversational data querying in plain English, chart and visualization generation, statistical analysis (regression, correlation, descriptive stats), data cleaning assistance, Python code generation and execution, and exports to CSV, PNG, and PDF.</p><p style="margin-top:1rem">Pricing: Free plan provides 15 messages per month — limited for regular use. Plus at $29 per month provides 250 messages per month and unlimited file uploads. Pro at $37 per month provides 500 messages per month, priority processing, and API access. Business at $375 per month provides 5,000 messages and team features.</p><p style="margin-top:1rem">Limitations: Message-based pricing limits heavy users — 500 messages/month on Pro is consumed quickly in iterative analysis sessions. The tool excels at exploratory analysis but is not designed for automated pipeline work or enterprise BI deployments. Complex statistical modeling requires prompting Python generation rather than native support.</p><p style="margin-top:1rem">Best suited for business analysts, researchers, and managers who regularly work with structured data and want to explore and summarize datasets without writing SQL or Python.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Julius AI is a data analysis platform where you talk to your data in plain language. You point it at a dataset or a database, ask questions, and it writes and runs the underlying code, returns charts and tables, and explains the results. It started as a CSV-and-charts chatbot, but it has grown well beyond that.</p><p style="margin-top:1rem">There is no traditional product version number anymore. Julius now describes itself as an 'AI-powered Data Agents' platform that runs current frontier models. The July 2026 pricing page lists access to GPT-5.5 and Claude Opus 4.8, with a comparison table also referencing Claude Sonnet 4.6 and Opus 4.7, plus an 'All Julius Models' option. The biggest recent change is billing: it moved from the old message-count quota (the '15 messages a month' free tier many 2025 write-ups mention) to a credit-based system.</p><p style="margin-top:1rem">Capability-wise it now handles far more than a single CSV. You get live database connectors for Postgres, BigQuery and Snowflake, export to slides, HTML and charts, custom agents, a Julius Slack agent, semantic schema learning so it understands your table structures, and scheduled runs for recurring reports.</p><p style="margin-top:1rem">Pricing is freemium with two billing modes. On yearly billing (default, marketed as 20% off and shown per month): Free $0; Plus $16/mo (24,000 credits/yr); Pro $37/mo (60,000 credits/yr, 32 GB RAM); Max $166/mo (300,000 credits/yr); Ultra $416/mo (840,000 credits/yr); Business $375/mo (720,000 credits/yr, up to 50 members, database connectors). Monthly billing runs higher: Plus $20/mo, Pro $45/mo, Business $450/mo, with Enterprise as custom Contact Us pricing. The free tier includes about 2,000 credits per month, 2 GB RAM, a Google Drive connector and needs no card; students and educators are reportedly offered 50% off via third-party sources.</p><p style="margin-top:1rem">The main limitation is the credit model itself: heavy or complex jobs burn credits quickly, and the free 2,000 credits and 2 GB RAM run out fast on real workloads. Database connectors are gated to Business and up, and results still need a human check because the agent can make analytical mistakes.</p><p style="margin-top:1rem">Julius suits analysts, founders, researchers and operations people who want to query data conversationally without writing SQL or Python, and who occasionally need to connect a real database or ship a report. If you only ever open a single spreadsheet once in a while, the free tier is enough; if you live in databases, budget for Business.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Upload CSV or connect database — get charts, forecasts and insights with no code</li>
-        <li>Learning Sub Agent adapts to your database schema over time for better accuracy</li>
-        <li>Explains every insight in plain language alongside the visualization</li>
-        <li>Free basic plan available — Pro from $20/mo for higher limits</li>
+        <li>Connects to live databases (Postgres, BigQuery, Snowflake), not just uploaded CSV files</li>
+        <li>Runs current frontier models including GPT-5.5 and Claude Opus 4.8</li>
+        <li>Exports finished work to slides, HTML and charts, and can schedule recurring report runs</li>
+        <li>Custom agents and a Slack agent extend it beyond one-off chats</li>
+        <li>Usable free tier with about 2,000 credits a month and no card required</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Less powerful than Hex or Python notebooks for complex multi-step data engineering</li>
-        <li>Best suited for business analysts — data scientists may find it too constrained</li>
+        <li>Credit-based billing is hard to predict, and complex analyses drain credits fast</li>
+        <li>Free tier's 2,000 credits and 2 GB RAM are quickly exhausted on real data</li>
+        <li>Database connectors are locked to the Business tier and above</li>
+        <li>Monthly billing costs noticeably more than the yearly plans</li>
+        <li>AI-generated analysis can be wrong and still needs manual verification</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Julius AI if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want to upload a CSV or connect data and ask questions in plain English to get answers instantly</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need on-demand data analysis without building and maintaining a dashboard</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're a business user who wants AI to do the analysis and explain findings for you</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need statistical analysis, forecasting, or data transformation through conversation</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Julius AI if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to query CSVs or databases in plain language instead of writing SQL</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need live connectors to Postgres, BigQuery or Snowflake</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to turn analysis into slides, charts or scheduled reports</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You prefer a tool that runs top-tier models like GPT-5.5 and Claude Opus 4.8</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to try serious data analysis free before paying</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Julius AI?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Julius AI is a conversational data analysis tool. You upload CSV files, connect databases, or link Google Sheets, then ask questions in plain language. Julius writes and runs the analysis, generates charts, and explains findings in plain English — no SQL or code needed.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Julius AI free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Julius AI has a free plan with limited messages per month. Pro plan is $28/month for unlimited messages and advanced features. It's designed for individuals and small teams who analyze data regularly.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is the difference between Julius AI and ChatGPT for data?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Julius AI is purpose-built for data analysis with persistent file uploads, code execution, and chart generation optimized for data tasks. ChatGPT with the data analysis tool (code interpreter) does similar things but is more general-purpose. Julius has a cleaner data-focused UX.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can Looker Studio analyze data with AI?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Looker Studio is a visualization and dashboard tool — it displays data but doesn't perform AI analysis or answer natural language questions. Google is adding AI features to Looker (the enterprise product), but Looker Studio itself is primarily a reporting tool without conversational AI.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -253,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Krea AI", "description": "Krea AI is a generative AI platform focused on image creation, editing, and visual workflow building. It has established a following among artists and designers who prioritize aesthetic quality and st", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://krea.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Krea AI", "description": "Krea AI started as a real-time image generation tool and has grown into a full creative platform that runs in the browser. It combines its own models with a large library of third-party ones, so you c", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://krea.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Krea AI</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Krea AI is a generative AI platform focused on image creation, editing, and visual workflow building. It has established a following among artists and designers who prioritize aesthetic quality and style fidelity over raw photorealism — Krea's models are tuned for visual coherence and artistic style transfer rather than documentary accuracy.</p><p style="margin-top:1rem">Krea 2, the foundation image model released May 12, 2026, was built from scratch rather than fine-tuned from an existing base model. The development focus was aesthetics and style transfer: the model is designed to understand and replicate visual styles from reference images with high accuracy, making it particularly effective for artists who want AI outputs that match a specific artistic direction without extensive prompt engineering.</p><p style="margin-top:1rem">Krea Edit, released March 9, 2026, is a region-based editing tool that allows targeted changes to specific areas of an image. Capabilities include region editing for isolated modifications, relighting to change the direction and quality of light sources in a scene, camera changes to simulate different focal lengths and perspectives, and image expansion to extend the composition beyond its original boundaries — all applied non-destructively.</p><p style="margin-top:1rem">A major interface redesign in March 2026 unified the navigation, introduced drag-and-drop asset management, and added a voice mode for hands-free prompt input. Krea Nodes allows users to build multi-step generation workflows by describing them in text — the system converts natural language descriptions of a workflow into a functional node graph.</p><p style="margin-top:1rem">Seedance 2.0 is available on all Krea paid plans, adding video generation capability alongside the platform's image-focused tools.</p><p style="margin-top:1rem">Krea AI is best for artists, designers, and creative technologists who prioritize aesthetic quality and style control in AI image generation, and for users who want to build custom generation pipelines through a visual node editor.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Krea AI started as a real-time image generation tool and has grown into a full creative platform that runs in the browser. It combines its own models with a large library of third-party ones, so you can move between styles and tasks without leaving the app.</p><p style="margin-top:1rem">The headline change is Krea 2, released in May 2026 as the company's first foundation image model built from scratch, a roughly 12B-parameter Diffusion Transformer. It was quickly followed in June by Krea 2 Turbo, which produces high-quality images in about two seconds. Krea also shipped open-weights versions of K2 Raw and K2 Turbo under a custom license.</p><p style="margin-top:1rem">On top of the base models, Krea 2 adds Generative Sliders for direct control over intensity, complexity, movement, and prompt creativity, LoRA training so you can teach it your own style or subject, a Moodboard Gallery, and a Krea 2 API. The wider suite now includes text- and image-to-video, 3D generation, 8K AI upscaling, and more than 64 integrated models.</p><p style="margin-top:1rem">Pricing is tiered. The free plan costs nothing and gives 100 compute units per day with no card required. Basic is $9/month ($5.40 on annual billing) with 5,000 units and a commercial license. Pro is $35/month ($21 annual) with 20,000 units, all video models, and 8x concurrency. Max is $70/month ($42 annual) with 60,000 units and unlimited concurrency. Business runs $200/month with 80,000 units, up to 50 seats, and SSO, and Enterprise is custom. Annual billing is about 40% off.</p><p style="margin-top:1rem">The main limits are practical. Everything is metered in compute units, so heavy use of video, 3D, or upscaling can burn through an allowance quickly, and the free daily cap is modest. The sheer number of models and controls also makes the interface busy for newcomers.</p><p style="margin-top:1rem">Krea fits people who want one place for image, video, 3D, and upscaling rather than separate tools, and who value fast iteration and fine-grained control. It is less suited to anyone who only needs occasional single images and would rather not think about a credit system.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Krea 2 foundation model built from scratch with focus on aesthetics and style transfer</li>
-        <li>Krea Edit: region editing, relighting, camera changes, and image expansion in one tool</li>
-        <li>Krea Nodes: build node-based generation workflows from a plain text description</li>
-        <li>Voice mode and redesigned unified interface for faster creative iteration</li>
-        <li>Seedance 2.0 video generation included on all paid plans</li>
+        <li>Krea 2, an in-house ~12B foundation model, plus Krea 2 Turbo for roughly 2-second high-quality images</li>
+        <li>One platform covers image, video, 3D generation, and 8K upscaling with 64+ integrated models</li>
+        <li>Generative Sliders and LoRA training give real control over style and output</li>
+        <li>Genuine free tier with 100 daily compute units and no card required</li>
+        <li>Open-weights K2 Raw and K2 Turbo releases and a Krea 2 API for builders</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Smaller user community and fewer learning resources than Midjourney or Adobe Firefly</li>
-        <li>Krea Nodes workflow builder has a learning curve for users unfamiliar with node graphs</li>
-        <li>Free tier limits resolution and generation volume for ongoing creative work</li>
-        <li>Less suited for photorealistic output — strengths are aesthetic and artistic styles</li>
+        <li>Everything is metered in compute units, and video, 3D, and upscaling drain them fast</li>
+        <li>Free daily allowance of 100 units is modest for serious work</li>
+        <li>The large model library and many controls make the interface busy for beginners</li>
+        <li>8x concurrency requires Pro and unlimited requires Max, so speed at scale gets expensive</li>
+        <li>SSO and larger seat counts are locked to the $200/month Business plan</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Krea AI if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want real-time AI image generation — see results as you type, not after a wait</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want an AI canvas for editing, enhancing, and upscaling existing images</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need video generation and image-to-video alongside image creation in one platform</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want live creative feedback where the image updates instantly as you adjust prompts</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Krea AI if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want image, video, 3D, and upscaling in a single tool</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need the newest Krea 2 model or ~2-second Turbo generations</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to train LoRAs on your own style or subject</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You value slider-based control over prompt-only generation</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to try a capable image model free before paying</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Krea AI?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Krea AI is an AI creative platform featuring real-time image generation (the image updates as you type), an AI canvas for editing and enhancing images, video generation, and AI training on your own images. Its real-time generation is its main differentiator — no waiting for results.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Krea AI free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Krea AI has a free plan with limited daily generations. Pro plan is $35/month and Max is $99/month for higher quality, more generations, and faster processing. The free tier allows you to try real-time generation.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Krea better than Midjourney?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">They serve different use cases. Krea's real-time generation is unique and great for interactive creative exploration. Midjourney produces higher quality final images for professional work. Krea is better for the ideation and exploration phase; Midjourney is better for the final output.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can Krea AI generate video?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. Krea AI has video generation capabilities — text-to-video and image-to-video. Quality is competitive with other mid-tier tools but generally below Runway or Kling for professional video production.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

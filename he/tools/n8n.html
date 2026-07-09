@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","he");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"n8n","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://n8n.io"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"n8n","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://n8n.io","dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/he/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">ספריה</a>
       <a href="/he/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">השוואה</a>
       <a href="/he/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">חדשות</a>
-      <a href="/he/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">כלים</a>
+      <a href="/he/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">כלים</a>
       <a href="/he/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">ניוזלטר</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/he/directory.html"  class="nav-link" data-i18n="nav.directory">ספריה</a>
     <a href="/he/compare.html"    class="nav-link" data-i18n="nav.compare">השוואה</a>
     <a href="/he/news.html"       class="nav-link" data-i18n="nav.news">חדשות</a>
-    <a href="/he/directory.html"      class="nav-link" data-i18n="nav.tools">כלים</a>
+    <a href="/he/tools.html"      class="nav-link" data-i18n="nav.tools">כלים</a>
     <a href="/he/newsletter.html" class="nav-link" data-i18n="nav.newsletter">ניוזלטר</a>
   </nav>
 </header>
@@ -150,26 +150,28 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>אודות n8n</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">n8n היא פלטפורמת אוטומציית זרימות עבודה בקוד פתוח המאפשרת למפתחים ולצוותים טכניים לחבר יישומים, APIs ומקורות נתונים דרך עורך nodes ויזואלי. בניגוד לכלי אוטומציה ללא קוד רבים, n8n ניתנת לאירוח עצמי, ומעניקה לארגונים שליטה מלאה בנתונים וללא תלות בספק. היא משמשת צוותי הנדסה, אנשי DevOps וצוותי תפעול טכניים לאוטומציה פנימית, צינורות נתונים וזרימות עבודה של סוכני AI.</p><p style="margin-top:1rem">n8n v2.0, גרסה מרכזית בסוף 2025 ותחילת 2026, הציגה מספר שיפורים ארכיטקטוניים וב-UX. Task Runners מספקים סביבות ביצוע מבודדות למשימות זרימת עבודה בודדות, ומשפרים יציבות ומונעים ממשימה כושלת אחת לפגום במצב של אחרות הרצות במקביל. זה חשוב במיוחד לזרימות עבודה ארוכות או רב-ענפיות של סוכני AI.</p><p style="margin-top:1rem">פרדיגמת Save מול Publish משנה את האופן שבו שינויים בזרימת עבודה מגיעים לייצור: עריכות לזרימת עבודה נשמרות מקומית אך אינן פועלות עד שהמשתמש מפרסם במפורש. זה משקף נוהלי פריסת תוכנה ומונע ממשינויים מקריים להשפיע מיד על אוטומציות הרצות — תכונה מבוקשת זמן רב מצוותים המשתמשים ב-n8n בסביבות ייצור.</p><p style="margin-top:1rem">Visual version diff מציג בדיוק מה השתנה בין גרסאות זרימות עבודה עם תג ספירת שינויים, מה שמקל על בדיקת שינויים לפני פרסום או לזיהוי מתי הוכנסה רגרסיה. ביצועי הטעינה השתפרו ב-30 עד 80 אחוז על מופעי זרימות עבודה גדולים, ומתייחסים לתלונה נפוצה מצוותים עם מאות זרימות עבודה מורכבות.</p><p style="margin-top:1rem">חיבורי ספק סודות חיצוניים מרובים מאפשרים חיבור בו-זמני של אישורים מ-Vault, AWS Secrets Manager וספקים אחרים. פעולות צומת צ'אט מוסיפות נקודות ביקורת עם אנוש בלולאה: זרימת עבודה יכולה להשהות ולשלוח הודעה למאשר אנושי, שיכול לאשר, לדחות או לשנות את השלב הבא לפני המשך הביצוע. שילוב SAP Business AI Platform הוכרז לתרחישי שימוש ארגוניים.</p><p style="margin-top:1rem">n8n באירוח עצמי הוא חינמי. תוכניות ענן מתחילות מ-$20 לחודש. n8n מתאים ביותר למפתחים ולצוותים טכניים הזקוקים לאוטומציית זרימות עבודה גמישה וניתנת לאירוח עצמי עם יכולות סוכן AI וללא נעילה לספק.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">n8n הוא כלי אוטומציה שמאפשר לחבר אפליקציות, מסדי נתונים וממשקי API דרך עורך חזותי, עם אפשרות לרדת לקוד כשצריך. הוא רץ באחסון עצמי או בענן.</p><p style="margin-top:1rem">המוצר עבר לקו הגרסאות 2.x: הבנייה היציבה הנוכחית היא n8n@2.29.8 (שוחררה ב-8 ביולי 2026), ו-2.30.x נמצאת בקדם-שחרור. השינוי הגדול של 2026 הוא ש-AI וסוכנים עברו לחזית. רכיב ה-AI Agent נבנה מחדש עם קריאת כלים מובנית עבור Claude, GPT-4o, Gemini, Mistral, Groq ומודלים תואמי OpenAI, ארבעה סוגי זיכרון (in-memory, Redis, Postgres, Motorhead) ומצב הרצה מסוג ReAct. הבנאי השטוח הוחלף בממשק Canvas המרחבי שהוצג בגרסה 1.30.</p><p style="margin-top:1rem">מעבר ל-AI, הגרסאות האחרונות מוסיפות ניסיונות חוזרים ברמת הרכיב עם השהיה מעריכית, יותר מ-35 אינטגרציות נייטיב חדשות (כולל רכיבים ייעודיים ל-Anthropic Claude, Google Gemini, Groq, Perplexity ו-ElevenLabs, בסך הכול מעל 500), בקרות ניהול מורחבות, גישה ל-API ציבורי ועוד אפשרויות אימות ארגוניות. תוכניות הענן כוללות כעת קרדיטי AI חודשיים: 2,300 ב-Starter ועד 13,700 ב-Pro.</p><p style="margin-top:1rem">התמחור מדורג באופן הוגן. מהדורת הקהילה באחסון עצמי חינמית ($0), עם הרצות בלתי מוגבלות וכל האינטגרציות, בתוספת תקופת ניסיון של 14 יום בענן. תוכניות ענן בתשלום: Starter ב-24 EUR לחודש, Pro ב-60 EUR לחודש, Business ב-800 EUR לחודש ו-Enterprise בהתאמה אישית; חיוב שנתי זול בכ-17% (כ-20, 50 ו-667 EUR). תוכנית לסטארטאפים מעניקה 50% הנחה על Business לחברות עם פחות מ-20 עובדים.</p><p style="margin-top:1rem">המגבלות כנות: n8n הוא fair-code תחת רישיון Sustainable Use, לא קוד פתוח מאושר OSI, ולכן מכירה חוזרת מסחרית מוגבלת. אחסון עצמי אומר שהתחזוקה עליכם, והקפיצה במחיר בין Pro ל-Business חדה.</p><p style="margin-top:1rem">הוא מתאים למפתחים ולצוותים טכניים שרוצים אוטומציה שאפשר לארח ולבקר בעצמם, ושיותר ויותר רוצים לבנות תהליכי סוכני AI בלי לחבר כלים נפרדים.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">עודכן: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">יתרונות</div><ul class="pc-list">        <li>אפשרות self-hosted חינמית עם גישה לתכונות מלאות — ללא נעילה לספק</li>
-        <li>Task Runners: ביצוע מבודד לכל משימת זרימת עבודה ליציבות בצינורות מורכבים</li>
-        <li>הפרדת Save מול Publish מונעת ממשינויים מקריים להגיע לייצור</li>
-        <li>Visual version diff עם תגי ספירת שינויים לבדיקת זרימת עבודה בטוחה לפני פרסום</li>
-        <li>פעולות צומת: השהה זרימות עבודה לאישורים עם אנוש בלולאה באמצע הביצוע</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">חסרונות</div><ul class="pc-list">        <li>דורש הגדרת self-hosting ותחזוקת תשתיות לרמה החינמית</li>
-        <li>עקומת למידה תלולה יותר מכלי ללא קוד כמו Zapier או Make למשתמשים לא טכניים</li>
-        <li>תוכנית ענן מתחילה מ-$20 לחודש — מוסיפה עלות לצוותים המעדיפים אירוח מנוהל</li>
-        <li>ספריות זרימות עבודה גדולות עדיין דורשות ארגון קפדני — אין היררכיית תיקיות מובנית</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">יתרונות</div><ul class="pc-list">        <li>מהדורת קהילה חינמית באחסון עצמי עם הרצות בלתי מוגבלות וכל 500+ האינטגרציות</li>
+        <li>רכיב AI Agent שנבנה מחדש תומך ב-Claude, GPT-4o, Gemini, Mistral ו-Groq עם ארבע אפשרויות זיכרון</li>
+        <li>ממשק Canvas החדש וניסיונות חוזרים ברמת הרכיב הופכים תהליכים מורכבים לניתנים לניהול</li>
+        <li>אפשר לארח בעצמך לשליטה מלאה בנתונים או להשתמש בענן מנוהל עם קרדיטי AI כלולים</li>
+        <li>עורך חזותי בתוספת קוד אופציונלי (JavaScript/Python) מתאים גם ללא-מתכנתים וגם למפתחים</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">חסרונות</div><ul class="pc-list">        <li>fair-code תחת רישיון Sustainable Use, לא קוד פתוח OSI אמיתי, ומכירה חוזרת מוגבלת</li>
+        <li>המחיר קופץ בחדות מ-Pro (60 EUR) ל-Business (800 EUR)</li>
+        <li>אחסון עצמי מעביר אליכם את התחזוקה, העדכונים וההתרחבות</li>
+        <li>קרדיטי ה-AI בתוכניות הענן מוגבלים ונגמרים בעומסי סוכנים כבדים</li>
+        <li>עקומת למידה תלולה יותר מכלי no-code טהורים כשהתהליכים מסתבכים</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://n8n.io" target="_blank" rel="noopener">בקר ב n8n ←</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">בחרו ב-n8n אם…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ אתם צריכים פלטפורמת אוטומציה פתוחה וגמישה ללא תלות במערכת-אקולוגית של Microsoft</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ n8n self-hosted מאפשר פרטיות מלאה של נתונים והתאמות ללא מגבלות</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ מפתחים וצוותים טכניים שצריכים גמישות מרבית וצמתי JavaScript</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ n8n Cloud מתחיל ב-24$/חודש — זול בהרבה מ-Copilot Studio לעסקים קטנים</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">בחרו ב-n8n אם…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם רוצים אוטומציה באחסון עצמי עם שליטה מלאה בנתונים ללא עלות רישיון</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם בונים תהליכי סוכני AI עם Claude, GPT-4o או Gemini וצריכים אפשרויות זיכרון</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם מפתחים שרוצים תהליכים חזותיים לצד היכולת לכתוב קוד אמיתי</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם צריכים 500+ אינטגרציות בלי תשלום לפי הרצה בתוכנית החינמית</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">שאלות נפוצות</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">n8n מול Zapier — מה עדיף?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">n8n זול וגמיש יותר במיוחד למפתחים ולפריסה self-hosted. Zapier פשוט יותר למשתמשים לא-טכניים ויש לו יותר אינטגרציות מוכנות. n8n לצוותים טכניים; Zapier למשתמשי עסקים.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">האם n8n בחינם?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">n8n Self-hosted חינמי לחלוטין ופתוח. n8n Cloud מ-24$/חודש. Microsoft Copilot Studio מ-200$/חודש.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">האם n8n קשה ללמידה?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">n8n פשוט יותר מכתיבת קוד אבל מורכב יותר מ-Zapier. נדרשת הבנה של בקשות HTTP ו-JSON. אנליסטים עסקיים טכניים לומדים תוך מספר שעות. יש תיעוד טוב וקהילה פעילה.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">n8n מול Make (Integromat) — מה לבחור?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">n8n ו-Make דומים ביכולות. n8n עדיף ל-self-hosted ולגמישות מרבית. ל-Make ממשק ויזואלי יפה יותר ויותר תבניות מוכנות. שניהם זולים מ-Zapier.</span></div></div></div></div>
   <div class="section-title-sm">שקול גם</div>
   <div class="also-grid">    <a class="also-card" href="/he/tools/autogpt.html">
@@ -216,7 +218,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/he/directory.html">ספריה</a>
         <a href="/he/news.html">חדשות</a>
-        <a href="/he/directory.html">כלים</a>
+        <a href="/he/tools.html">כלים</a>
         <a href="/he/compare.html">השוואה</a>
         <a href="/he/newsletter.html">ניוזלטר</a>
       </div>

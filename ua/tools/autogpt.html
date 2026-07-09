@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","ua");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"AutoGPT","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://agpt.co"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"AutoGPT","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://agpt.co","dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/ua/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Каталог</a>
       <a href="/ua/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Порівняння</a>
       <a href="/ua/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Новини</a>
-      <a href="/ua/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">Інструменти</a>
+      <a href="/ua/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Інструменти</a>
       <a href="/ua/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Розсилка</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/ua/directory.html"  class="nav-link" data-i18n="nav.directory">Каталог</a>
     <a href="/ua/compare.html"    class="nav-link" data-i18n="nav.compare">Порівняння</a>
     <a href="/ua/news.html"       class="nav-link" data-i18n="nav.news">Новини</a>
-    <a href="/ua/directory.html"      class="nav-link" data-i18n="nav.tools">Інструменти</a>
+    <a href="/ua/tools.html"      class="nav-link" data-i18n="nav.tools">Інструменти</a>
     <a href="/ua/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Розсилка</a>
   </nav>
 </header>
@@ -138,7 +138,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">🤖 ШІ-агенти</span>
-        <span class="tool-meta-chip badge-free">Безкоштовно</span>
+        <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
       <div class="tool-best-for"><strong>Підходить для:</strong> Автономні задачі, AI-агенти з відкритим кодом</div>
@@ -150,24 +150,28 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Про сервіс AutoGPT</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">AutoGPT — open-source автономний ШІ-агент. Задайте ціль — він самостійно розбиває її на кроки, шукає інформацію в інтернеті, пише код та виконує завдання.</p><p style="margin-top:1rem">Повністю відкритий код дозволяє перевіряти, модифікувати та форкати проєкт. Активна спільнота розробників постійно додає нові можливості.</p><p style="margin-top:1rem">Потребує технічної підготовки для запуску та налаштування. Результати можуть бути непередбачуваними для складних завдань — автономність поки не ідеальна.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">AutoGPT починався як один із перших скриптів автономних агентів за принципом «задай мету — і воно саме працює». Відтоді проєкт виріс у AutoGPT Platform — повноцінне середовище для проєктування, запуску та публікації ІІ-агентів, а не просто консольну утиліту.</p><p style="margin-top:1rem">Актуальний реліз — autogpt-platform-beta-v0.6.65 від 25 червня 2026 року. Лінійка v0.6.6x (травень-червень 2026) побудована навколо AutoPilot/Copilot: автоматична декомпозиція мети, контекстна панель AutoPilot із вкладками shell і Files, глобальний пошук через Cmd+K, автовиявлення MCP, публічні посилання на результати чату агента, а також вбудований розклад і тригери через вебхуки.</p><p style="margin-top:1rem">За можливостями: візуальний конструктор агентів із перетягуванням блоків, маркетплейс/магазин агентів для публікації та повторного використання, а також понад 30 інтеграцій, зокрема Slack, Discord і Stripe. Запуски агентів тарифікуються за кредитною моделлю, а розгорнути систему можна як самостійно, так і в керованій хмарі AutoGPT Cloud.</p><p style="margin-top:1rem">Ціни гнучкі. Ядро з відкритим кодом під ліцензією MIT безкоштовне ($0), якщо ви використовуєте власні ключі LLM та обчислювальні ресурси, без обмеження на кількість користувачів. Хмара додає тариф Pro за $50/міс ($42,50/міс при річній оплаті, $510/рік) і Max за $320/міс ($272/міс при річній оплаті, $3 264/рік); тариф Team скоро з'явиться. Окремий гаманець з оплатою за фактом тарифікує запуски агентів за неопублікованою ставкою.</p><p style="margin-top:1rem">Є й обмеження. Платформа офіційно в статусі бети, автономні агенти можуть непередбачувано витрачати кредити та токени API, а ставку за запуски за фактом заздалегідь не публікують. Самостійний хостинг прибирає плату за підписку, але перекладає на вас налаштування, ключі LLM та обслуговування.</p><p style="margin-top:1rem">AutoGPT підійде розробникам і технічним командам, яким потрібно візуально збирати багатокрокових автономних агентів, публікувати чи повторно використовувати їх із магазину та обирати між безкоштовним самохостингом і керованою хмарою зі зрозумілими підписками.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Оновлено: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Переваги</div><ul class="pc-list">        <li>Повністю open-source — перевіряйте та                       
-  модифікуйте</li>
-        <li>Автономне виконання складних завдань</li>
-        <li>Активна спільнота розробників</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Недоліки</div><ul class="pc-list">        <li>Потребує технічної підготовки для запуску</li>
-        <li>Результати непередбачувані для складних    
-  завдань</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Переваги</div><ul class="pc-list">        <li>Безкоштовне ядро з відкритим кодом (MIT) без обмеження на кількість користувачів за власних ключів і ресурсів</li>
+        <li>Візуальний конструктор агентів із перетягуванням плюс маркетплейс для публікації та повторного використання</li>
+        <li>AutoPilot/Copilot бере на себе декомпозицію мети: контекстна панель, пошук через Cmd+K, автовиявлення MCP</li>
+        <li>Понад 30 інтеграцій (Slack, Discord, Stripe) плюс вбудований розклад і вебхук-тригери</li>
+        <li>Вибір між безкоштовним самохостингом і хмарою AutoGPT Cloud зі зрозумілими тарифами Pro та Max</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Недоліки</div><ul class="pc-list">        <li>Платформа офіційно в стадії бети (v0.6.65) — можливі шорсткості та зміни</li>
+        <li>Гаманець з оплатою за фактом тарифікує запуски за ставкою, яку не публікують заздалегідь</li>
+        <li>Автономні агенти можуть непередбачувано витрачати кредити та токени LLM</li>
+        <li>Тариф Max дорогий — $320/міс ($3 264/рік) за активної роботи в хмарі</li>
+        <li>Самохостинг перекладає на вас налаштування, ключі LLM та обслуговування</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://agpt.co" target="_blank" rel="noopener">Перейти на AutoGPT →</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Оберіть AutoGPT якщо…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Ви дослідник або розробник що хоче вивчити відкриту агентну ШІ-архітектуру</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ AutoGPT відкритий і безкоштовний — можна розгортати і модифікувати для власних агентів</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Ви хочете будувати власних ШІ-агентів на базі відкритої кодової бази</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Для навчання і досліджень агентних ШІ-систем AutoGPT є пріоритетним посиланням</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Оберіть AutoGPT якщо…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вам потрібно збирати багатокрокових автономних агентів у візуальному конструкторі, а не в скриптах</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Ви віддаєте перевагу безкоштовному самохостинг-ядру з відкритим кодом і власними ключами LLM</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вам потрібна керована хмара зі зрозумілими підписками Pro або Max</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вам важливі магазин агентів та інтеграції зі Slack, Discord і Stripe</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Часті запитання</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">AutoGPT vs Manus — яка різниця?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">AutoGPT — відкритий дослідницький проєкт для побудови ШІ-агентів. Manus — готовий комерційний ШІ-агент для делегування завдань. AutoGPT для розробників і дослідників; Manus для кінцевих користувачів що хочуть делегувати роботу.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">AutoGPT ще активно розвивається?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">AutoGPT — один із перших відкритих ШІ-агентів. Екосистема навколо агентів стала більш зрілою з такими інструментами як CrewAI і AutoGen від Microsoft. Перевірте репозиторій AutoGPT для поточного статусу розробки.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Що таке Manus AI?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Manus — китайський ШІ-агент від Monica.im що може автономно виконувати завдання: пошук в інтернеті, написання коду, аналіз даних і підготовку документів. Позиціонується як ШІ-агент що завершує проєкти самостійно.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Чи безпечно довіряти завдання ШІ-агентам?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">ШІ-агенти можуть робити помилки і потребують перевірки. Починайте з низькоризикових завдань. Завжди перевіряйте вихідні дані для важливої роботи. Не надавайте агентам доступу до критичних систем без відповідних засобів безпеки.</span></div></div></div></div>
   <div class="section-title-sm">Також розгляньте</div>
   <div class="also-grid">    <a class="also-card" href="/ua/tools/devin.html">
@@ -214,7 +218,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/ua/directory.html">Каталог</a>
         <a href="/ua/news.html">Новини</a>
-        <a href="/ua/directory.html">Інструменти</a>
+        <a href="/ua/tools.html">Інструменти</a>
         <a href="/ua/compare.html">Порівняння</a>
         <a href="/ua/newsletter.html">Розсилка</a>
       </div>

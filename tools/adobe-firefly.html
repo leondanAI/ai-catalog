@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Adobe Firefly", "description": "Adobe Firefly is Adobe's generative AI platform, built into Creative Cloud and trained exclusively on licensed and owned content for commercial safety. It is used by 5M+ creative professionals for AI ", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://firefly.adobe.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Adobe Firefly", "description": "Adobe Firefly began as the AI generation engine inside Photoshop and Illustrator, but it has grown into a standalone creative studio on the web and in dedicated apps. It now spans image, video, and au", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://firefly.adobe.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Adobe Firefly</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Adobe Firefly is Adobe's generative AI platform, built into Creative Cloud and trained exclusively on licensed and owned content for commercial safety. It is used by 5M+ creative professionals for AI image generation, Generative Fill in Photoshop, vector recoloring in Illustrator, and scene composition across the Adobe application suite.</p><p style="margin-top:1rem">Adobe Creative Agent, launched April 2026, is the most significant advancement in Firefly's capabilities. Rather than requiring users to navigate individual AI features in separate Creative Cloud applications, Creative Agent accepts a single natural language prompt and orchestrates a workflow across multiple CC applications autonomously. A single instruction like &quot;create a product campaign with a summer theme&quot; can trigger image generation in Firefly, layout composition in Photoshop, color grading in Lightroom, and motion graphics in Premiere — with Creative Agent managing the handoffs between applications and assembling the output. This is a shift from AI features inside applications to an AI agent that operates across the entire Creative Cloud application suite.</p><p style="margin-top:1rem">Custom Models, in beta, allows organizations to fine-tune Firefly image generation models on their own brand assets, style guides, and visual identity. Once trained on proprietary brand images, the custom model generates new content that automatically aligns with brand guidelines without requiring detailed style prompting for each generation. This is directly valuable for marketing teams and agencies managing consistent visual identity across large content volumes.</p><p style="margin-top:1rem">Sound generation is a new Firefly capability that extends the platform beyond visual content. Users can generate sound effects, ambient audio, and short music segments from text descriptions. This adds a native audio creation layer to Firefly that reduces dependence on stock audio libraries for video and motion graphics workflows.</p><p style="margin-top:1rem">Adobe Creative Cloud plans include Firefly credits: Creative Cloud All Apps at $54.99/month includes 1000 Firefly credits/month. Firefly standalone plans start at $4.99/month. Firefly is best for creative professionals and agencies already in the Adobe ecosystem who want AI-orchestrated workflows across all Creative Cloud applications with guaranteed commercial content safety.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Adobe Firefly began as the AI generation engine inside Photoshop and Illustrator, but it has grown into a standalone creative studio on the web and in dedicated apps. It now spans image, video, and audio generation rather than just still images, and it keeps the commercial-safe positioning Adobe built its reputation on.</p><p style="margin-top:1rem">The headline change is Firefly Image Model 5, which reached general availability in March 2026. It generates natively at 4MP without a separate upscaling step, and Adobe reports improved photorealism and anatomy over earlier models. It also introduces Prompt to Edit, a conversational way to edit an existing image, plus custom style models, with Layered Image Editing still in private beta.</p><p style="margin-top:1rem">Beyond Adobe's own models, Firefly now acts as an aggregator: it hosts more than 30 third-party models, including Google Nano Banana 2, Veo 3.1, Runway Gen-4.5, and Kling 2.5 Turbo. That lets you switch between Adobe and partner engines for image, video, and audio work inside one interface.</p><p style="margin-top:1rem">Pricing runs across four tiers. Free is $0/month with 25 generative credits, where every generation consumes a credit. Firefly Standard is $9.99/month with 2,000 premium credits plus unlimited standard generations. Firefly Pro is $19.99/month with 4,000 premium credits, and Firefly Premium is $199.99/month with 50,000 premium credits. On paid plans credits are only spent on premium features like video, audio, and partner models; standard image tools such as Text to Image and Generative Fill are unlimited.</p><p style="margin-top:1rem">The main limitation is the credit economy. On the free tier a credit is burned by every single generation, so 25/month goes quickly, and heavier video or partner-model use eats premium credits fast even on paid plans. Some newer features, like Layered Image Editing, are still gated behind private beta.</p><p style="margin-top:1rem">Firefly suits designers and content teams who want commercially safe generation, and anyone already inside Adobe's ecosystem who wants image, video, and audio plus multiple partner models under one subscription.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Creative Agent: single prompt orchestrates AI workflows across Photoshop, Premiere, Lightroom, Illustrator</li>
-        <li>Custom Models beta: fine-tune on brand assets for on-brand generation without style prompting</li>
-        <li>Sound generation: text-to-audio for sound effects, ambient audio, and short music in Firefly</li>
-        <li>Trained exclusively on licensed content — commercially safe with full Adobe indemnification</li>
-        <li>Deepest AI integration of any creative suite — Generative Fill, vector recolor, scene composition</li>
+        <li>Firefly Image Model 5 (GA March 2026) generates natively at 4MP, no separate upscaling step needed</li>
+        <li>Aggregates 30+ partner models (Nano Banana 2, Veo 3.1, Runway Gen-4.5, Kling 2.5 Turbo) alongside Adobe's own</li>
+        <li>Now a single studio for image, video, and audio rather than an image-only tool</li>
+        <li>On paid plans, standard image features like Text to Image and Generative Fill are unlimited</li>
+        <li>Commercially safe generation and tight integration with the wider Adobe ecosystem</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Creative Agent is new — complex multi-application orchestration may require manual cleanup</li>
-        <li>Custom Models in beta — not yet generally available; waitlist and enterprise requirements</li>
-        <li>Full feature access requires Adobe Creative Cloud All Apps at $54.99/mo — significant cost</li>
-        <li>Less creative range than Midjourney or Flux for artistic, non-commercial image styles</li>
+        <li>Free tier is stingy: only 25 credits/month, and every generation costs one</li>
+        <li>Premium credits (video, audio, partner models) drain quickly, even on paid plans</li>
+        <li>Top Premium tier at $199.99/month is expensive for individuals</li>
+        <li>Layered Image Editing and some newer features are still limited to private beta</li>
+        <li>The multi-model, multi-media studio can feel complex compared to a simple image generator</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Adobe Firefly if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need commercially safe images — Firefly is trained on licensed Adobe Stock content, zero copyright risk</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You already use Adobe Creative Cloud (Photoshop, Illustrator) — Firefly is built in</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Your use case is product/brand visuals where legal clearance matters</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want video generation alongside images in one Adobe workflow</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Adobe Firefly if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need commercially safe images for client or brand work</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want image, video, and audio generation under one subscription</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You already live in Adobe's Creative Cloud ecosystem</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want access to multiple partner models without juggling separate tools</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need native 4MP output without a separate upscaling step</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Adobe Firefly copyright safe?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. Adobe Firefly is trained exclusively on Adobe Stock images, openly licensed content, and public domain works. Output is commercially safe to use without copyright concerns — unlike most other AI image generators.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Midjourney better quality than Adobe Firefly?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">For artistic and aesthetic quality, Midjourney generally produces more visually striking results. Firefly excels at photorealistic product images and brand-consistent visuals. The gap has narrowed significantly with Firefly 3 (2025).</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can Adobe Firefly generate videos?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. Adobe Firefly Video Model (launched 2024) generates short video clips from text prompts and is integrated into Adobe Premiere Pro. It focuses on commercially safe video assets for professional production.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Does Midjourney have a free plan?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">No. As of 2025, Midjourney no longer offers a free trial. The cheapest plan is Basic at $10/month for approximately 200 image generations per month.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","de");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Stable Diffusion","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://stability.ai"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Stable Diffusion","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://stability.ai","dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/de/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Verzeichnis</a>
       <a href="/de/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Vergleichen</a>
       <a href="/de/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Neuigkeiten</a>
-      <a href="/de/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">Werkzeuge</a>
+      <a href="/de/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Werkzeuge</a>
       <a href="/de/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/de/directory.html"  class="nav-link" data-i18n="nav.directory">Verzeichnis</a>
     <a href="/de/compare.html"    class="nav-link" data-i18n="nav.compare">Vergleichen</a>
     <a href="/de/news.html"       class="nav-link" data-i18n="nav.news">Neuigkeiten</a>
-    <a href="/de/directory.html"      class="nav-link" data-i18n="nav.tools">Werkzeuge</a>
+    <a href="/de/tools.html"      class="nav-link" data-i18n="nav.tools">Werkzeuge</a>
     <a href="/de/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -138,7 +138,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">🎨 Bildgenerierung</span>
-        <span class="tool-meta-chip badge-free">Kostenlos</span>
+        <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
       <div class="tool-best-for"><strong>Ideal für:</strong> Open-Source-Bildgenerierung, lokale Inferenz, Video-KI, Audio-Generierung</div>
@@ -150,26 +150,29 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Über Stable Diffusion</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Stable Diffusion ist Stability AIs Open-Source-Bildgenerierungsmodell-Reihe, die weitgehend für lokale Inferenz, Feinabstimmung und kommerzielle Bereitstellung genutzt wird. Im Gegensatz zu Closed-Source-Modellen sind die Stable-Diffusion-Gewichte öffentlich veröffentlicht und können auf Consumer-Hardware ausgeführt werden, was es zum Fundament eines großen Ökosystems von Drittanbieter-Tools, Community-Feinabstimmungen und kommerziellen Anwendungen macht.</p><p style="margin-top:1rem">Stability AI durchlief Anfang 2026 eine bedeutende Unternehmensrestrukturierung. Die Schulden des Unternehmens wurden vollständig getilgt, womit die finanzielle Instabilität beendet wurde, die den Betrieb 2024 und 2025 bedrohte. Eine strategische Partnerschaft mit Electronic Arts (EA) wurde im Februar 2026 unterzeichnet, die sowohl Kapital als auch einen hochkarätigen kommerziellen Einsatzkontext für Stability AIs Modelle bietet. James Cameron trat als Berater bei und verleiht dem Video-Generierungsvorstoß des Unternehmens Branchen-Glaubwürdigkeit.</p><p style="margin-top:1rem">SD3.5-Leistung wurde durch Optimierungen für NVIDIA TensorRT mit FP8-Quantisierung verbessert. Diese Kombination liefert schnellere Inferenzgeschwindigkeiten und deutlich geringere VRAM-Anforderungen auf RTX-Reihen-GPUs, was SD3.5 auf Mid-Range-Consumer-Hardware praktischer macht als frühere große Modelle. Die AMD-Unterstützung wurde durch ONNX-optimierte Modellvarianten für Radeon-GPUs und Ryzen-AI-Beschleuniger erweitert.</p><p style="margin-top:1rem">SV4D 2.0 (Stable Video 4D 2.0) ist eine neue Videogenerierungsmodell-Version, die sich auf höherwertige Ausgaben für reale Szenen konzentriert – mit verbesserter Kohärenz, Bewegungsqualität und Subjektkonsistenz im Vergleich zur ursprünglichen SV4D-Version. Stable Audio Open Small, ein kompaktes Audio-Generierungsmodell, wurde in Partnerschaft mit Arm als Open Source veröffentlicht und ist für effiziente Inferenz auf Arm-basierter Hardware optimiert.</p><p style="margin-top:1rem">Alle Stable-Diffusion-Modelle bleiben frei und Open Source. Die Stability-AI-Plattform bietet eine Freemium-API für gehostete Inferenz ohne lokales Setup. Stable Diffusion eignet sich am besten für Entwickler, Forscher und kreative Fachleute, die Open-Source-Bild- und Videogenerierung benötigen, die sie lokal ausführen, feinabstimmen oder kommerziell einsetzen können.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Stable Diffusion ist eine Familie von Bildgenerierungsmodellen mit offenen Gewichten von Stability AI. Anders als bei geschlossenen Diensten kann man die Gewichte herunterladen und auf eigener Hardware ausführen — deshalb wurde das Modell zur Basis eines riesigen Ökosystems aus Finetunes, LoRAs, ControlNets und lokalen Oberflächen.</p><p style="margin-top:1rem">Die aktuelle Version ist Stable Diffusion 3.5 und kommt in drei Varianten: Large mit 8,1 Mrd. Parametern, Large Turbo für schnelle Generierung in wenigen Schritten und Medium mit 2,5 Mrd. für schwächere Rechner. Nach Installationszahlen ist SD 3.5 das am weitesten verbreitete offene Bildmodell, führt bei der Qualität unter den offenen Gewichten aber nicht mehr — diese Position hält seit 2026 FLUX.2 von Black Forest Labs.</p><p style="margin-top:1rem">Zu den Fähigkeiten gehören Text-zu-Bild-Generierung, gegenüber SDXL verbesserte Prompt-Treue und Typografie sowie ein breites Werkzeugset zur Steuerung und Bearbeitung dank der Community. Zur selben Reihe zählen SDXL Turbo, Stable Audio und Stable Fast 3D.</p><p style="margin-top:1rem">Beim Preis: Das Selbsthosten der offenen Gewichte ist unter der Stability AI Community License für Einzelpersonen und Organisationen mit unter 1 Mio. US-Dollar Jahresumsatz kostenlos. Darüber ist eine Enterprise License mit individuellem Preis erforderlich. Es gibt auch den gehosteten Weg über die Developer Platform API (platform.stability.ai) mit Abrechnung pro Credit: 1 Credit entspricht etwa 0,01 US-Dollar, Stable Image Ultra kostet rund 0,08 US-Dollar pro Bild und Stable Image Core etwa 0,03, Credit-Pakete liegen bei rund 10 US-Dollar pro 1.000 Credits. Von Dritten wird zudem eine Mitgliedschaft von etwa 20 US-Dollar im Monat erwähnt.</p><p style="margin-top:1rem">Die wichtigsten Grenzen sind praktischer Natur. Die größeren Modelle brauchen eine leistungsfähige GPU, gute Ergebnisse erfordern meist Prompt-Arbeit und Nachbearbeitung, und die umsatzgebundene Lizenz bedeutet, dass größere Firmen es nicht einfach als kostenlos behandeln können. In der Spitze liegt die Qualität nun hinter FLUX.2.</p><p style="margin-top:1rem">Stable Diffusion ist die richtige Wahl, wenn man lokale Kontrolle, eine offene Pipeline zum Finetunen und keine Kosten pro Bild bei kleinem Umfang möchte — und bereit ist, die absolute Spitzenqualität gegen Offenheit und Flexibilität einzutauschen.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Aktualisiert: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Vorteile</div><ul class="pc-list">        <li>Vollständig Open Source — Gewichte frei verfügbar für lokale Nutzung, Feinabstimmung und kommerziellen Einsatz</li>
-        <li>SD3.5 optimiert für NVIDIA TensorRT/FP8: schnellere Inferenz und geringerer VRAM auf RTX-GPUs</li>
-        <li>AMD-ONNX-optimierte Varianten für Radeon und Ryzen AI — nicht nur NVIDIA</li>
-        <li>SV4D 2.0 liefert höherwertige reale Video-Ausgabe gegenüber dem originalen SV4D</li>
-        <li>Stable Audio Open Small mit Arm als Open Source veröffentlicht — Audio-Generierung auf Edge-Hardware</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Nachteile</div><ul class="pc-list">        <li>Lokales Setup erfordert technisches Wissen — nicht geeignet für nicht-technische Nutzer</li>
-        <li>Beste Ergebnisse auf SD3.5 erfordern noch immer eine leistungsfähige GPU; CPU-only-Inferenz ist langsam</li>
-        <li>Open-Source-Ökosystem ist fragmentiert — viele Forks, Versionen und UIs mit inkonsistenter Qualität</li>
-        <li>Stability-AI-Unternehmensinstabilitäts-Geschichte — Partnerschaftsnachhaltigkeit bleibt abzuwarten</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Vorteile</div><ul class="pc-list">        <li>Offene Gewichte, die man herunterladen und lokal mit voller Kontrolle über die Pipeline betreiben kann</li>
+        <li>Kostenloses Selbsthosten unter der Community License für Einzelpersonen und Organisationen unter 1 Mio. Umsatz</li>
+        <li>Drei SD-3.5-Varianten (Large, Large Turbo, Medium) passend zur eigenen Hardware</li>
+        <li>Riesiges Ökosystem aus Finetunes, LoRAs, ControlNets und lokalen Oberflächen</li>
+        <li>Optionale gehostete API mit transparentem Preis pro Bild, falls man nicht selbst hosten will</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Nachteile</div><ul class="pc-list">        <li>Nicht mehr Qualitätsführer unter den offenen Gewichten — FLUX.2 liegt seit 2026 vorn</li>
+        <li>Die größeren Modelle brauchen zu Hause eine leistungsstarke GPU</li>
+        <li>Kostenloses Selbsthosten ist umsatzgebunden; über 1 Mio. ist eine kostenpflichtige Enterprise License nötig</li>
+        <li>Gute Ergebnisse erfordern meist Prompt-Feinschliff und Nachbearbeitung</li>
+        <li>Die Kosten der gehosteten API summieren sich bei Volumen (etwa 0,08 pro Bild bei Ultra, 0,03 bei Core)</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://stability.ai" target="_blank" rel="noopener">Besuchen Stable Diffusion →</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Stable Diffusion wählen wenn…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Sie möchten einen einfacheren Einstieg in lokale KI-Bildgenerierung mit klassischer Formular-UI</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Automatic1111 hat den größten Extension-Marktplatz und umfassenden Community-Support</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Einfacher für Einsteiger: klassische Oberfläche statt komplexer Node-Graphen</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Umfangreichere Dokumentation und mehr Tutorials speziell für Anfänger</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Stable Diffusion wählen wenn…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Sie wollen ein Bildmodell lokal mit voller Kontrolle betreiben</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Sie brauchen eine offene Basis zum Finetunen mit LoRAs oder ControlNets</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Ihr Umsatz liegt unter 1 Mio. und Sie wollen keine Kosten pro Bild</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Ihnen sind Offenheit und Flexibilität wichtiger als das absolute Qualitätsmaximum</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Sie möchten die Option einer kostenpflichtigen gehosteten API ohne Anbieterbindung</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Häufig gestellte Fragen</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">ComfyUI vs Automatic1111: Was soll ich wählen?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Für Einsteiger — Automatic1111: einfachere Oberfläche, mehr Tutorials, leichter zu verstehen. Für Fortgeschrittene — ComfyUI: mächtiger, schneller, flexibler für komplexe Workflows. Viele Power-User beginnen mit A1111 und wechseln zu ComfyUI.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Ist ComfyUI kostenlos?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Ja. Beide sind Open-Source und kostenlos. Sie benötigen eigene Hardware (GPU mit mindestens 6-8 GB VRAM empfohlen) oder Cloud-Dienste. Die einzigen Kosten sind Strom und ggf. Cloud-Computing.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Was ist ein Node-Graph in ComfyUI?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">ComfyUI verwendet ein visuelles Node-basiertes System: Jeder Schritt der Bildgenerierung (Modell laden, Text encodieren, Sampling, Decoding) ist ein Node. Sie verbinden Nodes mit Kabeln um den Workflow zu definieren. Das gibt maximale Kontrolle über jeden Aspekt.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Kann ComfyUI Flux-Modelle nutzen?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Ja. ComfyUI hat exzellente Flux-Unterstützung und viele veröffentlichte Flux-Workflows. ComfyUI ist für Flux oft besser geeignet als Automatic1111 da es flexibler mit verschiedenen Modell-Architekturen umgeht.</span></div></div></div></div>
   <div class="section-title-sm">Auch erwägen</div>
   <div class="also-grid">    <a class="also-card" href="/de/tools/chatgpt-images.html">
@@ -216,7 +219,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/de/directory.html">Verzeichnis</a>
         <a href="/de/news.html">Neuigkeiten</a>
-        <a href="/de/directory.html">Werkzeuge</a>
+        <a href="/de/tools.html">Werkzeuge</a>
         <a href="/de/compare.html">Vergleichen</a>
         <a href="/de/newsletter.html">Newsletter</a>
       </div>

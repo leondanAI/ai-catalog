@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Reclaim.ai", "description": "Reclaim.ai is an AI calendar optimization tool that works within Google Calendar to automatically schedule focus time, recurring habits, personal tasks, and flexible meetings around fixed commitments.", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://reclaim.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Reclaim.ai", "description": "Reclaim.ai is a calendar automation tool that syncs with your Google or Outlook calendar and finds time for the things that usually fall through the cracks: focused work, recurring habits, one-on-ones", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://reclaim.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Reclaim.ai</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Reclaim.ai is an AI calendar optimization tool that works within Google Calendar to automatically schedule focus time, recurring habits, personal tasks, and flexible meetings around fixed commitments. Unlike Motion which builds a full daily schedule, Reclaim focuses on protecting and optimizing time within an existing calendar rather than replacing calendar management entirely.</p><p style="margin-top:1rem">The core use cases are: scheduling focused work blocks that move automatically around meetings, maintaining daily and weekly habits (exercise, learning, deep work) by automatically finding and protecting time for them, and scheduling 1:1 meetings within shared availability windows. Reclaim continuously adjusts scheduled blocks as meetings are added or changed, ensuring protected time is always current.</p><p style="margin-top:1rem">Key capabilities include automatic focus time scheduling, habit scheduling and protection, smart 1:1 meeting scheduling, task duration estimation, buffer time between meetings, team calendar analytics, and integrations with Slack (showing meeting status), Asana, Linear, Todoist, Jira, and Google Tasks.</p><p style="margin-top:1rem">Pricing: Free Lite plan provides basic focus time and habit scheduling for one user. Starter at $8 per user per month provides full features for individuals. Business at $12 per user per month adds team analytics, admin controls, and priority support. Enterprise pricing includes SSO and compliance features.</p><p style="margin-top:1rem">Limitations: Reclaim only integrates with Google Calendar — Outlook and Microsoft 365 users cannot use it. The AI scheduling is conservative — it protects time but does not rebuild schedules as aggressively as Motion. Task scheduling requires Reclaim's own task interface or integrated task tools (Asana, Jira) rather than arbitrary task lists.</p><p style="margin-top:1rem">Best suited for knowledge workers and teams on Google Calendar who want to protect focus time and maintain work habits without manually blocking calendar time every week.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Reclaim.ai is a calendar automation tool that syncs with your Google or Outlook calendar and finds time for the things that usually fall through the cracks: focused work, recurring habits, one-on-ones, and flexible tasks. Instead of manually blocking time, you tell Reclaim your priorities and it defends and reshuffles those blocks as your week changes.</p><p style="margin-top:1rem">The current version is Reclaim 2.0. In this release the company repositioned the product around AI Agents, adding a chat interface and MCP (Model Context Protocol) integrations, announced in a founders webinar. Paid plans now measure their entitlements in AI Agents per seat rather than isolated features.</p><p style="margin-top:1rem">Key capabilities include Smart Meetings and scheduling links, auto-scheduled tasks and habits, buffer and travel time, and calendar sync across Google and Outlook (Outlook support recently moved from beta to general availability). Recent additions include Team OOO Calendars, custom Slack out-of-office auto-replies, and improved Slack digests and conflict alerts.</p><p style="margin-top:1rem">Pricing is a freemium structure. The free Lite tier covers one user with 5 AI Agents, a one-week scheduling range, and limited integrations. Starter is $10/seat/month billed annually ($12 monthly) for up to 10 seats and 10 AI Agents. Business is $15/seat/month annually ($18 monthly) for up to 100 seats and 100 AI Agents. Enterprise is $22/seat/month, annual only, with 100+ seats, unlimited AI Agents, and SSO/SCIM.</p><p style="margin-top:1rem">Limitations are worth noting. The free tier is genuinely narrow, with a one-week horizon and few integrations, so most real workflows push you toward a paid seat. Advanced controls, SSO, and SCIM sit behind the higher tiers, and the recent AI Agents repositioning means the pricing model is still settling.</p><p style="margin-top:1rem">Reclaim fits individuals and teams who live inside Google or Outlook calendars and want scheduling to happen automatically. It is less suited to people who prefer manual control or who do not rely on a connected calendar as their system of record.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Automatically protects focus time and habits around meeting schedules</li>
-        <li>Smart 1:1 meeting scheduling finds optimal shared windows automatically</li>
-        <li>Integrates with Slack, Asana, Linear, Todoist, Jira — works with existing tools</li>
-        <li>Gentle AI approach — optimizes calendar without completely rebuilding it like Motion</li>
-        <li>Starter at $8/user/mo very affordable for individuals</li>
+        <li>Automatically schedules and reshuffles tasks, habits, and meetings so your calendar stays realistic as the week changes</li>
+        <li>Works across both Google and Outlook calendars, with Outlook now generally available rather than beta-only</li>
+        <li>Reclaim 2.0 adds a chat interface and MCP integrations, so scheduling can be driven conversationally and connected to other AI tools</li>
+        <li>Slack integration handles out-of-office auto-replies, digests, and conflict alerts, plus Team OOO Calendars for coordinating absences</li>
+        <li>Real free tier lets a single user try automated scheduling without paying</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Google Calendar only — no Microsoft Outlook or 365 support</li>
-        <li>Less aggressive schedule optimization than Motion — some users want more AI control</li>
-        <li>Task scheduling requires integrated task tool — no arbitrary task list support</li>
-        <li>Free tier limited — full feature set requires paid plan</li>
+        <li>The free Lite plan is limited to one user, a one-week scheduling range, and few integrations, so serious use requires a paid seat</li>
+        <li>Pricing is per seat and the AI Agents model is new, making it harder to predict costs as your usage grows</li>
+        <li>SSO and SCIM are gated to the Enterprise tier, which is annual-only</li>
+        <li>Relies entirely on a connected calendar, so it offers little value if you do not run your life through Google or Outlook</li>
+        <li>The 2.0 AI Agents repositioning is recent, so some workflows and entitlements are still stabilizing</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Reclaim.ai if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want to protect time blocks for habits, focus time, and personal priorities automatically</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need smart meeting scheduling that finds the best time for all attendees automatically</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want calendar syncing that prevents conflicts across personal and work calendars</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You prefer a lighter tool that optimizes your existing schedule without full AI control</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Reclaim.ai if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You run your schedule through Google or Outlook and want tasks and habits placed automatically</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want a scheduling assistant you can drive by chat and connect via MCP</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Your team needs shared OOO calendars and Slack-based availability signals</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You are willing to pay per seat for automated calendar defense</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to start free and upgrade as your scheduling needs grow</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Motion?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Motion is an AI calendar and task manager that automatically schedules all your tasks into your calendar based on priorities, deadlines, and available time. When meetings are added or tasks run long, Motion automatically rescheduled everything to keep you on track.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Motion worth the price?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Motion is $34/month (or $19/month billed annually) — expensive for a calendar app. Users who struggle with scheduling and prioritization often find it transformative. Those who are already disciplined schedulers may find the value harder to justify. Most offer a 7-day free trial.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Reclaim.ai?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Reclaim.ai is a smart calendar tool that automatically protects time for habits, tasks, and focus blocks in your Google Calendar. It also has intelligent meeting scheduling and calendar sync to prevent conflicts across multiple calendars.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Reclaim.ai free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Reclaim.ai has a free plan with basic features for one user. Starter is $8/user/month, Business is $12/user/month, and Enterprise is custom. It's significantly cheaper than Motion for teams.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

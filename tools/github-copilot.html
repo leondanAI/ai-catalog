@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "GitHub Copilot", "description": "GitHub Copilot is Microsoft's AI coding assistant, deeply integrated into Visual Studio Code, Visual Studio, and GitHub itself. It is the most widely deployed AI coding tool in enterprise settings, be", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://github.com/features/copilot", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.3", "reviewCount": 3, "bestRating": "5", "worstRating": "1"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "GitHub Copilot", "description": "GitHub Copilot started as an in-editor autocomplete tool, but the current 2026 product is a full multi-model coding platform. It lives inside your editor, in the terminal and on GitHub itself, handlin", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://github.com/features/copilot", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.3", "reviewCount": 3, "bestRating": "5", "worstRating": "1"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,36 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About GitHub Copilot</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">GitHub Copilot is Microsoft's AI coding assistant, deeply integrated into Visual Studio Code, Visual Studio, and GitHub itself. It is the most widely deployed AI coding tool in enterprise settings, benefiting from tight integration with GitHub repositories, Actions, Issues, and project management features that no third-party tool can replicate natively.</p><p style="margin-top:1rem">Effective June 1, 2026, GitHub Copilot's pricing model changes from fixed monthly plans to usage-based billing. A new Max high-tier plan is being introduced alongside the existing Individual and Business tiers, designed for power users who exceed standard usage limits. The shift to consumption-based pricing aligns costs with actual usage rather than fixed monthly allocations.</p><p style="margin-top:1rem">Cloud agents are now launchable directly from VS Code and Visual Studio without switching to the GitHub web interface. Agents can be steered from GitHub Issues and project boards — assign an issue to Copilot and it picks up the task autonomously. Agent startup time has improved by 20%, reducing the friction between assigning a task and seeing the agent begin work. A Debugger Agent validates proposed fixes against live runtime behavior rather than static code analysis, reducing the rate of fixes that pass tests but fail in production.</p><p style="margin-top:1rem">Custom instructions and prompt files allow users to save reusable context — coding standards, architectural preferences, project-specific rules — and apply them consistently across Copilot sessions. This eliminates the need to re-explain project conventions in every chat.</p><p style="margin-top:1rem">The Copilot CLI now supports a /fork command and mid-input slash commands, making it more flexible for terminal-based workflows. Code review metrics have been expanded to include a breakdown of review comments by type — security issues, bug risk, style — giving teams visibility into where Copilot review is adding the most value.</p><p style="margin-top:1rem">GitHub Copilot is best for individual developers and engineering teams already using GitHub, who want AI assistance deeply integrated into their existing repository management, CI/CD, and code review workflows.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">GitHub Copilot started as an in-editor autocomplete tool, but the current 2026 product is a full multi-model coding platform. It lives inside your editor, in the terminal and on GitHub itself, handling code completion, chat, an agent mode that edits across files, cloud agents that work on tasks asynchronously, and automated code review.</p><p style="margin-top:1rem">The biggest recent change came on June 1, 2026, when Copilot moved from premium request units to consumption-based GitHub AI Credits, a token-based system. Every plan now includes a monthly credit allowance, with pay-as-you-go overages and new admin budget and spending caps. The older automatic fallback to cheaper models was discontinued, and code review now also consumes GitHub Actions minutes.</p><p style="margin-top:1rem">The core capabilities today are agent mode, cloud agents, chat, code review, a CLI, and the ability to pick which frontier model you want, including Claude, GPT-5 and others. Code completions and Next Edit suggestions stay included and do not draw down your credit allowance.</p><p style="margin-top:1rem">On pricing, individuals can choose Free at 0 dollars a month (around 2,000 completions, limited chat and agent use, automatic model selection), Pro at 10 dollars a month (unlimited completions, model selection, cloud agents, a monthly credit allowance), Pro+ at 39 dollars a month (premium frontier models including Opus and a higher allowance), or Max at 100 dollars a month (the highest allowance and priority access to new models). Verified students get Pro-level access free. Organizations pick Business at 19 dollars per user a month (including 19 dollars of monthly AI Credits) or Enterprise at 39 dollars per user a month (including 39 dollars of credits, codebase indexing and GitHub.com chat). Promotional bonus credits run June through August 2026: Business plus 30 dollars a month, Enterprise plus 70 dollars a month.</p><p style="margin-top:1rem">The main limitation is cost predictability: usage-based billing means heavy agent, chat or frontier-model use can push you into overages, and code review burning Actions minutes adds a second meter to watch. Budgets and caps help, but teams need to monitor consumption.</p><p style="margin-top:1rem">Copilot is a strong fit if you already work in GitHub and VS Code, want an agentic assistant rather than plain autocomplete, and value being able to choose the underlying model. The free tier is a low-risk way to try it, while Pro+ and Max suit heavier users of premium models.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Cloud agents launch from VS Code/Visual Studio, steered from Issues and project boards</li>
-        <li>Debugger Agent validates fixes against live runtime behavior — not just static analysis</li>
-        <li>Custom instructions and prompt files save reusable context for consistent responses</li>
-        <li>Code review metrics broken down by comment type: security, bug risk, style</li>
-        <li>Deepest GitHub integration available — no third-party tool matches native repo/Actions/Issues access</li>
+        <li>Genuinely agentic: agent mode, cloud agents, chat, code review and a CLI, not just autocomplete</li>
+        <li>Lets you pick the frontier model, including Claude, GPT-5 and others, per task</li>
+        <li>Real free tier plus free Pro-level access for verified students</li>
+        <li>Deep integration with GitHub, VS Code and the wider GitHub ecosystem</li>
+        <li>Code completions and Next Edit suggestions stay included and never consume credits</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Usage-based billing from June 2026 — costs may be unpredictable for heavy users</li>
-        <li>Max plan pricing not publicly announced — enterprise buyers cannot budget without contact</li>
-        <li>Less capable for full-stack app generation compared to Bolt.new, Lovable, or Replit</li>
-        <li>Custom instructions and prompt files require upfront setup investment per project</li>
-        <li>Copilot CLI slash commands are new — documentation and edge case coverage still maturing</li>
+        <li>Usage-based AI Credits billing makes monthly cost harder to predict for heavy users</li>
+        <li>Automatic fallback to cheaper models was discontinued, removing a cost cushion</li>
+        <li>Code review now also burns GitHub Actions minutes, a second meter to track</li>
+        <li>Premium frontier models and higher allowances are gated behind the pricier Pro+ and Max tiers</li>
+        <li>Free tier is capped at roughly 2,000 completions with limited chat and agent access</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose GitHub Copilot if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You use VS Code, JetBrains, or Visual Studio and want inline AI suggestions as you type</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Your team is on GitHub — Copilot integrates with PRs, issues, and code review</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want the most widely supported AI coding assistant with the largest ecosystem</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need enterprise features: SSO, audit logs, policy controls</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose GitHub Copilot if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You already build on GitHub and want the assistant embedded in that workflow</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want an agentic coding tool, not just line-by-line autocomplete</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to choose the underlying frontier model for different tasks</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You are a verified student and want Pro-level features at no cost</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need admin budget and spending caps to control team AI spend</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Aider?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Aider is an open-source AI coding assistant that runs in the terminal. It connects to AI models (Claude, GPT-4, Gemini) and can edit multiple files simultaneously, automatically committing changes to git after each step.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Aider better than GitHub Copilot?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">They serve different workflows. Aider is better for autonomous multi-file refactoring from the command line. Copilot is better for real-time inline suggestions inside an IDE. Many developers use both.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Aider free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Aider itself is free and open-source. You pay for the AI model API you connect it to — Claude or GPT-4 API costs apply per token used.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Does GitHub Copilot work without GitHub?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">GitHub Copilot requires a GitHub account but works in VS Code, JetBrains, Neovim, and Visual Studio regardless of where your code is hosted. You don't need to push code to GitHub to use it.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -257,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Make", "description": "Make (formerly Integromat) is a visual workflow automation platform that connects over 1,000 apps through a drag-and-drop canvas. Each automation — called a scenario — displays as a visual flowchart s", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://make.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Make", "description": "Make (formerly Integromat) is a visual automation platform where you connect apps and services on a drag-and-drop canvas to build workflows, called scenarios, without writing code. Each scenario is a ", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://make.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,34 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Make</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Make (formerly Integromat) is a visual workflow automation platform that connects over 1,000 apps through a drag-and-drop canvas. Each automation — called a scenario — displays as a visual flowchart showing exactly how data flows between apps, with conditional logic, loops, error handling, and data transformation.</p><p style="margin-top:1rem">In August 2025, Make switched from an operations-based model to a credit-based system. Current plans: Free (1,000 credits/month, 2 active scenarios), Core ($9/month, 10,000 credits, unlimited scenarios), Pro ($16/month), Teams ($29/month). Extra credits can be purchased at a 25% premium over the base plan rate. Native one-click AI modules for OpenAI, Claude, and Anthropic are now available directly in the scenario builder.</p><p style="margin-top:1rem">Make sits between Zapier (simpler, more expensive) and n8n (more powerful, requires technical setup). The canvas interface is its strongest differentiator — you can see the entire automation visually, which makes debugging and collaboration significantly easier than competing platforms.</p><p style="margin-top:1rem">The platform handles complex multi-step workflows well: branching paths, data aggregation, scheduled runs, webhooks, and iterating over arrays. Enterprise teams use it for document processing, lead routing, and cross-platform data sync.</p><p style="margin-top:1rem">Limitations: the credit model introduced in 2025 made costs less predictable for existing users accustomed to counting operations. Very high-volume scenarios still require the Teams or higher plan to avoid overages.</p><p style="margin-top:1rem">Best for marketing teams, operations managers, and developers who need flexible automation across many apps without writing code — and want more power than Zapier at a lower price.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Make (formerly Integromat) is a visual automation platform where you connect apps and services on a drag-and-drop canvas to build workflows, called scenarios, without writing code. Each scenario is a chain of modules that pass data from one app to the next, with branching, filters, iterators and error handling.</p><p style="margin-top:1rem">Make no longer uses traditional version numbers; instead it evolves continuously. The two biggest recent shifts define its current state. First, on August 27, 2025 the billing unit changed from operations to credits (converted 1:1), moving Make toward usage-based pricing where an AI or code step can cost more than a single credit. Second, Make AI Agents became generally available, letting you build autonomous agents directly inside scenarios, backed by an AI Agents Library and 350+ AI-specific app integrations.</p><p style="margin-top:1rem">On the capability side, Make now advertises 3,000+ app integrations, real-time and scheduled triggers, webhooks, HTTP/API modules, data stores, and reusable custom variables. On paid plans you can bring your own OpenAI, Anthropic or Gemini API keys to power AI steps.</p><p style="margin-top:1rem">Pricing is tiered. Free is $0/mo with 1,000 credits, a cap of 2 active scenarios and a 15-minute minimum scheduling interval. Core is $9/mo on annual billing (10,000 credits, unlimited scenarios, 1-minute interval). Pro is $16/mo annual, adding priority execution and custom variables. Teams is $29/mo annual with multi-user roles. Enterprise is custom-priced. Monthly billing runs roughly 15-20% higher (about $10.59 Core, $18.82 Pro, $34.12 Teams), and credit packs (20k/40k/80k+) extend limits.</p><p style="margin-top:1rem">The main limitations are practical. Credit-based pricing makes AI-heavy scenarios harder to forecast, the free tier's 2-scenario cap and 15-minute interval are tight for real work, and the visual model still has a learning curve once scenarios grow complex with nested routers and error handlers.</p><p style="margin-top:1rem">Make suits people who want a powerful visual automation tool without code, and who now want to layer AI agents into those automations rather than glue together separate services.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Visual canvas makes complex automations easy to debug</li>
-        <li>Credit model from Aug 2025 aligns cost with actual usage</li>
-        <li>Native AI modules for OpenAI, Claude, Anthropic built-in</li>
-        <li>Unlimited scenarios on paid plans starting at $9/month</li>
+        <li>Visual drag-and-drop builder makes complex multi-step automations approachable without code</li>
+        <li>Very broad connectivity: 3,000+ app integrations plus 350+ AI-specific apps</li>
+        <li>Native Make AI Agents let you build autonomous agents inside scenarios, with a shared library</li>
+        <li>Bring-your-own-key support for OpenAI, Anthropic and Gemini on paid plans</li>
+        <li>Genuinely low entry cost: Core is $9/mo annual with unlimited scenarios</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Credit model less predictable than old operations model</li>
-        <li>Steeper learning curve than Zapier for beginners</li>
-        <li>Free tier limited to 2 active scenarios only</li>
-        <li>High-volume scenarios require Teams plan or higher</li>
+        <li>Credit-based billing makes AI- and code-heavy scenarios harder to predict, since some steps cost more than one credit</li>
+        <li>Free plan is limited to 2 active scenarios and a 15-minute minimum interval</li>
+        <li>Monthly billing costs roughly 15-20% more than the advertised annual prices</li>
+        <li>Complex scenarios with routers, iterators and error handlers get hard to maintain</li>
+        <li>Heavy usage often requires buying additional credit packs on top of the base plan</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Make if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want the most visual, beginner-friendly automation platform with a drag-and-drop interface</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need 1,500+ pre-built app connectors without writing code</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're a marketer or operations person building automations without developer help</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want reliable cloud hosting with built-in error handling and monitoring</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Make if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to automate work across many apps without writing code</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need to build AI agents directly inside your automation workflows</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to use your own OpenAI, Anthropic or Gemini API keys</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You are comfortable committing to annual billing for the lowest price</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Your automation needs go beyond the free plan's 2-scenario limit</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is the difference between Make and n8n?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Make is a cloud-based visual automation platform designed for non-technical users with 1,500+ connectors. n8n is an open-source automation tool that can be self-hosted, offering more technical flexibility and code control. Make is easier; n8n is more powerful for developers.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is n8n free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">n8n is free to self-host on your own server. The cloud version (n8n.cloud) starts at $24/month. Self-hosting requires technical knowledge to set up and maintain.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Make better than Zapier?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Make (formerly Integromat) generally offers more complex automation workflows at a lower price than Zapier. Make's visual scenario builder handles multi-step, conditional logic better. Zapier is simpler and has broader app support. For power users, Make wins on value.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can Make handle AI automations?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. Make has built-in OpenAI, Anthropic, and other AI modules. You can build automations that call AI models, process responses, and trigger actions. It's widely used for AI-powered content generation and classification workflows.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -255,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FLUX", "description": "FLUX is a family of AI image generation models developed by Black Forest Labs, the team behind the original Stable Diffusion research. The models are known for high visual quality, accurate text rende", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://blackforestlabs.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "FLUX", "description": "Flux is a family of image generation and editing models built by Black Forest Labs. It spans several variants aimed at different needs, from top-quality API models to open-weight versions you can run ", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://blackforestlabs.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About FLUX</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">FLUX is a family of AI image generation models developed by Black Forest Labs, the team behind the original Stable Diffusion research. The models are known for high visual quality, accurate text rendering, and a permissive licensing approach that supports commercial use. FLUX is used across professional advertising, fashion production, and creative industries globally.</p><p style="margin-top:1rem">The FLUX.2 suite, released January 15, 2026, introduced four variants: Pro, Flex, Dev, and Klein. Klein is the flagship consumer-facing model and achieves sub-second image generation on standard consumer hardware — a significant speed leap over the previous generation. At the same time, output quality and resolution ceiling have increased, with support for up to 4 megapixel images.</p><p style="margin-top:1rem">Multi-reference is a key new capability in FLUX.2: users can supply dozens of reference images in a single generation request, and the model synthesizes variations that are consistent with all supplied references simultaneously. This is particularly useful for brand-consistent advertising campaigns and fashion catalogs where visual coherence across a large batch of images is required.</p><p style="margin-top:1rem">Text rendering is substantially improved in FLUX.2. The model can accurately render specified text within generated images — product labels, signage, branded copy, and UI mockups — with higher accuracy than its predecessor and most competing models. This has accelerated adoption in advertising and marketing production pipelines.</p><p style="margin-top:1rem">FLUX models are available via API at api.bfl.ml for developers who want to integrate generation into their own applications. The models are also supported natively in ComfyUI for local workflow use and deployable through Replicate for cloud-based API access. Black Forest Labs offers a freemium tier with limited free generations and paid plans for higher volume and priority access.</p><p style="margin-top:1rem">FLUX is best for designers, photographers, advertisers, and developers who need fast, high-resolution image generation with accurate text rendering and the flexibility to run locally or via API.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Flux is a family of image generation and editing models built by Black Forest Labs. It spans several variants aimed at different needs, from top-quality API models to open-weight versions you can run yourself.</p><p style="margin-top:1rem">The current generation is FLUX.2, which launched in late 2025 and replaced the older FLUX.1 line. The lineup now includes FLUX.2 [pro], [flex], [max], [dev] and, since January 2026, the compact [klein] model (offered in 4B and 9B sizes). Klein handles both generation and editing, runs on consumer GPUs with around 13GB of VRAM, and delivers sub-second inference; NVIDIA and ComfyUI FP8 optimizations cut VRAM use by roughly 40%.</p><p style="margin-top:1rem">On capabilities, FLUX.2 supports multi-reference input (up to about 10 reference images) for character and style consistency, photorealistic output up to 4 megapixels, a context window of around 32k tokens, and strong text rendering that reaches roughly 92% accuracy on complex layouts.</p><p style="margin-top:1rem">Pricing is pay-as-you-go and billed per megapixel, with no subscriptions or seats. FLUX.2 [pro] costs $0.03 for the first megapixel then $0.015 per additional MP (reference images $0.015/MP); [max] is around $0.07 first MP then ~$0.03/MP; [klein] is about $0.014 first MP then ~$0.001/MP. Legacy FLUX.1 [pro] tiers ran roughly $0.04-0.06/MP.</p><p style="margin-top:1rem">The open-weight side is where the free option lives. FLUX.1 [schnell] is Apache 2.0 and fine for commercial use; FLUX.1 [dev] is non-commercial; FLUX.2 [dev] and [klein] ship with open weights. Commercial self-hosting above certain volumes requires a paid Open Weights license (Builder up to 10K img/mo, Platform/Professional up to 100K, Enterprise custom).</p><p style="margin-top:1rem">Flux suits developers and studios who want either the best possible photorealism through an API or a self-hostable model they can fine-tune and control, and who are comfortable with per-megapixel billing or license management.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>FLUX.2 [Klein]: sub-second generation on consumer hardware — fastest Flux model released</li>
-        <li>Up to 4 megapixel resolution output without requiring a separate upscaling step</li>
-        <li>Multi-reference: supply dozens of reference images in one generation for consistent variations</li>
-        <li>Improved text rendering — accurate product labels, signage, and branded copy in images</li>
-        <li>Available via API (api.bfl.ml), ComfyUI, and Replicate — flexible local and cloud deployment</li>
+        <li>FLUX.2 delivers photorealistic output up to 4MP with strong text rendering (~92% accuracy on complex layouts)</li>
+        <li>Multi-reference support (up to ~10 images) keeps characters and styles consistent across generations</li>
+        <li>FLUX.2 [klein] runs on consumer GPUs (~13GB VRAM) with sub-second inference</li>
+        <li>Per-megapixel pricing means no subscriptions or seats; you pay only for what you render</li>
+        <li>Open-weight variants (schnell, dev, klein) allow self-hosting and fine-tuning</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Free tier is limited — high-volume professional use requires a paid API plan</li>
-        <li>FLUX.2 Pro and Flex variants are API-only, with no consumer-facing web UI from Black Forest Labs</li>
-        <li>Multi-reference feature quality can degrade with conflicting or very dissimilar reference images</li>
-        <li>Less beginner-friendly than web-based tools like Midjourney — API setup required for full access</li>
+        <li>Top-quality FLUX.2 [pro] and [max] are closed and API-only, not free</li>
+        <li>Per-megapixel billing scales with resolution and can get expensive at 4MP</li>
+        <li>Open weights come with license restrictions; FLUX.1 [dev] is non-commercial</li>
+        <li>Commercial self-hosting above volume thresholds requires a paid Open Weights license</li>
+        <li>The variant lineup (pro/flex/max/dev/klein) can be confusing when picking the right tier</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose FLUX if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want the best current image quality — FLUX.1 leads on photorealism and prompt accuracy</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You use FLUX through commercial APIs (Replicate, fal.ai) and want premium results</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need precise text rendering within images — FLUX handles typography significantly better</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want natural-looking human hands, faces, and anatomy without common AI artifacts</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose FLUX if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need beyond-Midjourney photorealism at up to 4MP via API</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want consistent characters or styles across images using multiple references</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need to self-host on consumer hardware with FLUX.2 [klein]</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You require reliable text rendering inside generated images</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You prefer per-megapixel billing over a monthly subscription</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is FLUX better than Stable Diffusion?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">FLUX.1 by Black Forest Labs produces significantly better image quality than SDXL — sharper, more photorealistic, with better text and hand rendering. However, Stable Diffusion has a massive ecosystem of community models, LoRAs, and tools built around it that FLUX doesn't yet match.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can I run FLUX locally?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. FLUX.1 Schnell (the fast version) and FLUX.1 Dev are available on Hugging Face and can be run locally. However, FLUX requires more VRAM than Stable Diffusion — ideally 24GB+ for full quality. Smaller quantized versions work on 8-12GB GPUs.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is FLUX.1?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">FLUX.1 is an image generation model by Black Forest Labs, founded by the original Stable Diffusion researchers. Released in August 2024, it comes in three versions: Schnell (fast, open weights), Dev (quality, open weights), and Pro (best quality, API only). It quickly became the benchmark leader for image quality.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Stable Diffusion free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. Stable Diffusion model weights are open-source and free to download and use locally. You need a compatible GPU (Nvidia recommended) and software like ComfyUI or Automatic1111 to run it. There are no usage fees for local generation.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

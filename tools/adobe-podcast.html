@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Adobe Podcast", "description": "Adobe Podcast (podcast.adobe.com) is Adobe's AI-powered audio tool for content creators who record voice content — podcasters, YouTubers, educators, and remote workers — and need to clean up recording", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://podcast.adobe.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Adobe Podcast", "description": "Adobe Podcast is a web app for recording and cleaning up spoken-word audio without a traditional editing suite. Its best-known feature, Enhance Speech, strips background noise and room echo from voice", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://podcast.adobe.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Adobe Podcast</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Adobe Podcast (podcast.adobe.com) is Adobe's AI-powered audio tool for content creators who record voice content — podcasters, YouTubers, educators, and remote workers — and need to clean up recordings made in imperfect environments. The flagship feature is Enhance Speech, which uses AI to remove background noise, reverb, echo, and room tone from audio files, making a laptop microphone recording sound like a professional studio recording.</p><p style="margin-top:1rem">The platform has expanded from a single enhancement tool into a fuller podcast production workflow. Users can record directly in the browser with AI background removal applied in real-time, transcribe recordings, edit audio by editing the transcript text (cut/paste text to cut/paste audio), and generate chapters automatically. Adobe Podcast is part of Adobe's Creative Cloud ecosystem but available as a standalone web tool without a full Creative Cloud subscription.</p><p style="margin-top:1rem">Key capabilities include AI speech enhancement (background noise removal, reverb reduction), browser-based recording with live AI processing, transcript-based editing, automatic chapter generation, multi-track editing, and export to standard audio formats.</p><p style="margin-top:1rem">Pricing: Free plan provides 30 minutes of audio upload per month with a 500MB file size limit for enhancement. Premium at $9.99 per month or $99.99 per year removes limits, adds longer recordings, higher quality output, and team collaboration. Creative Cloud All Apps subscribers have Premium included.</p><p style="margin-top:1rem">Limitations: The 30 minutes per month limit on the free tier restricts regular podcast use. Enhancement quality is excellent for voice isolation but struggles with music or complex audio. Not a full digital audio workstation — editing capabilities are simpler than Audacity or Adobe Audition.</p><p style="margin-top:1rem">Best suited for podcasters, YouTubers, remote workers, and educators who need to quickly clean up voice recordings made in noisy or reverberant environments without professional recording setups.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Adobe Podcast is a web app for recording and cleaning up spoken-word audio without a traditional editing suite. Its best-known feature, Enhance Speech, strips background noise and room echo from voice recordings and makes them sound as if they were captured with a studio microphone.</p><p style="margin-top:1rem">The 2026 release, Enhance Speech v2, is a substantial rework. Instead of just removing noise, it performs advanced source separation: you can independently adjust or remove background noise, isolate the dialogue, and raise or lower background music with sliders, then download separate audio stems for speech, noise and music. A new Room Modeling option keeps the natural acoustic character of a space rather than flattening it, and the transformer-based inpainting model rebuilds missing phonemes.</p><p style="margin-top:1rem">The Studio side of the product now accepts multitrack audio and video uploads with automatic syncing, so podcast and interview recordings from several sources can be aligned and enhanced together.</p><p style="margin-top:1rem">Pricing is now freemium. The free plan costs nothing but is audio-only with no video, no bulk uploads, files capped at 30 minutes and 500 MB, a one-hour-per-day enhancement limit, and Studio downloads restricted to 30-minute projects, twice a day. Premium is $9.99/month or $99.99/year with a 30-day trial, adding video (MP4/MOV), batch uploads, adjustable speech/music/ambience strength, files up to 1 GB, up to four hours a day, unlimited Studio downloads, speaker-separated stems and Adobe Express Premium design tools.</p><p style="margin-top:1rem">The main limitation is that the features most people want at scale, video, long files and bulk processing, sit behind Premium, and the free daily caps are easy to hit in a real workflow.</p><p style="margin-top:1rem">It suits podcasters, interviewers, video creators and anyone who records voice in imperfect rooms and wants clean results fast; the free tier is fine for occasional short clips, while regular producers will need Premium.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Enhance Speech AI removes background noise and room reverb — makes laptop mics sound professional</li>
-        <li>Transcript-based editing lets you cut audio by editing text</li>
-        <li>Free tier available — 30 min/month sufficient for occasional use</li>
-        <li>Browser-based — no software installation required</li>
-        <li>Premium at $9.99/mo is affordable for regular podcasters</li>
+        <li>Enhance Speech v2 produces genuinely clean, studio-like voice from noisy or echoey recordings</li>
+        <li>Source separation lets you control speech, noise and music independently and export them as stems</li>
+        <li>Room Modeling preserves natural acoustics instead of over-flattening the sound</li>
+        <li>Runs entirely in the browser with no plugins or local processing</li>
+        <li>Premium adds video enhancement, batch uploads and 1 GB files at a modest $9.99/month</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Free tier limited to 30 minutes/month — insufficient for weekly podcasters</li>
-        <li>Not a full DAW — editing capabilities simpler than Audacity or Audition</li>
-        <li>Enhancement optimized for voice — struggles with music or complex mixed audio</li>
-        <li>Transcript-based editing less precise than waveform editing for fine cuts</li>
+        <li>No longer fully free: video, bulk uploads and strength control are Premium-only</li>
+        <li>Free tier limits are tight: 30-minute/500 MB files and one hour of enhancement per day</li>
+        <li>Studio downloads on the free plan are capped at two 30-minute projects daily</li>
+        <li>Heavy processing or aggressive settings can leave artefacts on difficult recordings</li>
+        <li>Requires an Adobe account and a stable connection since everything is cloud-based</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Adobe Podcast if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You specifically need AI audio enhancement — Enhance Speech removes background noise remarkably well</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You record in a noisy environment and need to sound like you're in a studio</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're a podcaster focused purely on audio quality, not video</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You already use Adobe Creative Cloud — Podcast integrates with Audition and Premiere</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Adobe Podcast if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You record voice, podcasts or interviews and want fast, clean results</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need to separate or rebalance speech, noise and music in a recording</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to enhance video, not just audio (Premium)</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You process files longer than 30 minutes or in bulk (Premium)</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You only occasionally clean up short clips and can live with the free limits</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Descript used for?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Descript is an audio and video editor where you edit by editing the text transcript. It's used for podcasts, video content, and screen recordings. Key features include automatic transcription, filler word removal, overdub (AI voice cloning), and screen recording.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Adobe Podcast free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Adobe Podcast (now integrated into Adobe Firefly and Adobe Express) offers the Enhance Speech feature free with a free Adobe account. Advanced features require an Adobe Creative Cloud subscription.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can Descript remove background noise?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Descript has Studio Sound, an AI feature that reduces background noise and improves audio quality. It's good but Adobe Podcast's Enhance Speech is generally considered more powerful for audio cleanup.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Does Descript have AI voice cloning?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. Descript's Overdub feature creates an AI voice clone from a recording of your voice. You can type new words and have them spoken in your voice — useful for correcting audio without re-recording.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

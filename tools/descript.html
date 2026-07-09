@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Descript", "description": "Descript is an AI-powered video and podcast editing platform that treats audio and video like a text document. Users edit media by editing a transcript — cutting words deletes the corresponding footag", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://descript.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Descript", "description": "Descript is an editor for podcasts and video that works off a transcript: you edit the words in a document and the audio and video follow. That approach makes cutting, rearranging, and cleaning up rec", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://descript.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Descript</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Descript is an AI-powered video and podcast editing platform that treats audio and video like a text document. Users edit media by editing a transcript — cutting words deletes the corresponding footage — and Underlord, Descript's built-in AI layer, handles complex production tasks automatically. It is used by podcasters, video creators, marketers, and production teams.</p><p style="margin-top:1rem">Underlord now runs on reasoning models, including selectable Gemini 3, enabling it to handle multi-step edit instructions that previously required manual execution. Users can describe complex sequences — cut all pauses over one second, remove filler words, add a chapter break before each topic shift — and Underlord executes them as a coordinated chain rather than a series of individual actions.</p><p style="margin-top:1rem">Video generation from text prompts is now available via integrated Veo 3.1 and Sora 2, allowing creators to generate B-roll or scene footage directly within Descript without switching to an external tool. Lip sync for dubbed and translated video was added alongside the generation features, improving realism for multilingual content.</p><p style="margin-top:1rem">Caption translation and dubbing expanded significantly: 39 additional languages are now supported for captions, and 6 new languages gained full dubbing support including voice synthesis. Descript also added 21 new stock voices for AI voiceover, bringing the total library to over 1,000.</p><p style="margin-top:1rem">MCP (Model Context Protocol) integration allows Claude, and other AI agents that support MCP, to control Descript via natural language prompts. This enables automated editing workflows where an external agent can issue editing commands, run exports, or manage projects programmatically.</p><p style="margin-top:1rem">Descript is best for video and podcast creators who want AI-assisted editing at the transcript level, and for teams producing multilingual or dubbed content who need integrated lip sync and voice synthesis.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Descript is an editor for podcasts and video that works off a transcript: you edit the words in a document and the audio and video follow. That approach makes cutting, rearranging, and cleaning up recordings much faster than dragging clips on a traditional timeline.</p><p style="margin-top:1rem">The product has shifted decisively toward AI. Its headline layer is now Underlord, a generative co-editor that drafts scripts, writes show notes, automatically surfaces viral and social clips, reorganizes scenes, and can generate and extend video on its own. Classic tools like filler-word removal, noise suppression, and timing fixes are still there but are now framed as part of this AI workflow. In 2026 Descript added an AI model picker (including Claude Sonnet 4.5) so you can control reasoning and style, parallel AI media-generation jobs, automatic avoidance of letterbox and crop bars, and a public token-based API open to all users.</p><p style="margin-top:1rem">On the editing side you get multitrack audio and video, screen recording, layered timelines, remote recording, transcription, and AI voices, plus overdub-style corrections and translation and dubbing features.</p><p style="margin-top:1rem">Pricing is freemium. There is a Free plan at $0, Hobbyist at $16/user/month billed annually ($24 monthly), Creator at $24/user/month annually ($35 monthly), Business at $50/user/month annually ($65 monthly), and a custom Enterprise tier. In September 2025 the billing model was rebuilt: the old transcription-hours allowance was replaced by monthly media minutes/hours plus metered AI credits, with top-ups available.</p><p style="margin-top:1rem">The main limitations are cost predictability and dependence on credits. Because AI generation and media time are metered, heavy AI users can burn through their allowance and need top-ups, and the plan structure is more complex than a flat subscription. It is also a fairly heavy app that expects reasonably capable hardware.</p><p style="margin-top:1rem">Descript suits podcasters, video creators, marketers, and teams who want to edit by editing text and lean on AI for drafting, clipping, and cleanup rather than hand-crafting every cut on a timeline.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Underlord on reasoning models handles multi-step complex edits as a single instruction</li>
-        <li>Veo 3.1 and Sora 2 integration for text-to-video B-roll without leaving the app</li>
-        <li>Dubbing with lip sync now covers 45 languages — one of the broadest ranges available</li>
-        <li>MCP integration: Claude and other agents can control Descript programmatically</li>
-        <li>21 new stock voices added; 1,000+ total for AI voiceover</li>
+        <li>Transcript-based editing makes cutting and rearranging spoken content genuinely fast</li>
+        <li>Underlord automates real chores: show notes, clip finding, filler-word and noise cleanup, scene reordering</li>
+        <li>2026 model picker (including Claude Sonnet 4.5) lets you tune AI reasoning and style</li>
+        <li>Combines audio, video, screen recording, transcription and AI voices in one app</li>
+        <li>Free tier plus a public API make it easy to try and to integrate</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Reasoning model edits can be slower than manual execution for simple, single-step tasks</li>
-        <li>Video generation credits are separate from core subscription and can add cost</li>
-        <li>Lip sync quality varies by language — best results on the 6 fully supported dubbing languages</li>
-        <li>MCP integration requires technical setup; not accessible to non-developer users</li>
+        <li>Metered AI credits and media minutes make monthly costs harder to predict</li>
+        <li>September 2025 billing overhaul added complexity versus a simple flat plan</li>
+        <li>Heavy AI generation users can exhaust allowances and need paid top-ups</li>
+        <li>AI-generated video and voices still need human review for accuracy and quality</li>
+        <li>Resource-heavy app that expects a reasonably powerful computer</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Descript if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You edit podcasts or videos by editing the transcript — the most intuitive editing workflow</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want to remove filler words (um, uh) with one click across your entire recording</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need screen recording, video editing, and podcast production in one tool</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You create YouTube content and need both video and audio editing in one place</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Descript if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You edit podcasts or video and want to cut by editing a transcript</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want AI to draft show notes, find clips, and clean up audio for you</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need audio, video, and screen recording in a single tool</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to pick the AI model behind your edits</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You will use the API to plug Descript into your own workflow</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Descript used for?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Descript is an audio and video editor where you edit by editing the text transcript. It's used for podcasts, video content, and screen recordings. Key features include automatic transcription, filler word removal, overdub (AI voice cloning), and screen recording.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Adobe Podcast free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Adobe Podcast (now integrated into Adobe Firefly and Adobe Express) offers the Enhance Speech feature free with a free Adobe account. Advanced features require an Adobe Creative Cloud subscription.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can Descript remove background noise?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Descript has Studio Sound, an AI feature that reduces background noise and improves audio quality. It's good but Adobe Podcast's Enhance Speech is generally considered more powerful for audio cleanup.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Does Descript have AI voice cloning?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. Descript's Overdub feature creates an AI voice clone from a recording of your voice. You can type new words and have them spoken in your voice — useful for correcting audio without re-recording.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

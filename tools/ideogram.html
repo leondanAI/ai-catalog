@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Ideogram", "description": "Ideogram is an AI image generation platform that has built a strong reputation for accurate text rendering within generated images — a capability most competing models struggle with. It is used by des", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://ideogram.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Ideogram", "description": "Ideogram is an AI image generator that has built its reputation on one hard problem most rivals still struggle with: putting legible, correctly spelled text into a picture. That makes it a go-to tool ", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://ideogram.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,37 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Ideogram</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Ideogram is an AI image generation platform that has built a strong reputation for accurate text rendering within generated images — a capability most competing models struggle with. It is used by designers, marketers, and content creators who need text-bearing visuals such as posters, product labels, social media graphics, and mock-ups.</p><p style="margin-top:1rem">Ideogram 3.0, released in 2026, is the most feature-complete version of the platform to date. Face Swap allows users to replace faces in generated or uploaded images with a specified reference face, enabling personalized imagery without a separate dedicated tool. Magic Fill and Magic Extend add canvas editing capabilities: Magic Fill removes unwanted objects and fills the area with contextually appropriate content, while Magic Extend expands the image canvas in any direction while maintaining visual consistency with the original.</p><p style="margin-top:1rem">Multi-image style reference supports up to three reference images in a single generation, allowing the model to blend stylistic elements from multiple sources. This is particularly useful for maintaining brand consistency across a series of images or iterating on a creative direction that draws from several inspirations simultaneously.</p><p style="margin-top:1rem">Hand rendering is noticeably improved in Ideogram 3.0, addressing one of the most persistent quality complaints about AI image generators. Long-text support has also improved — the model can render extended text strings within an image with lower error rates. Multilingual text rendering is confirmed reliable for Spanish, Italian, and French, expanding the platform's utility for non-English markets.</p><p style="margin-top:1rem">Pricing in 2026 is structured across four tiers: Free at 10 slow generations per day with no payment required, Basic at $8/month, Plus at $20/month, and Pro at $48/month. Higher tiers unlock faster generation speeds, priority queue access, and commercial use rights.</p><p style="margin-top:1rem">Ideogram is best for designers and marketers who need reliable text-in-image generation, canvas editing for post-production fixes, and style-consistent image creation from multiple references.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Ideogram is an AI image generator that has built its reputation on one hard problem most rivals still struggle with: putting legible, correctly spelled text into a picture. That makes it a go-to tool for logos, posters, mockups, social graphics and anything where words matter as much as the visuals.</p><p style="margin-top:1rem">The current version is Ideogram 4.0, released on June 3, 2026. It is the company's first open-weight foundation model, a 9.3B-parameter release under the Apache 2.0 license, and it topped the DesignArena open-weight leaderboard. It succeeds Ideogram 3.0 from March 2025 and is built around structured JSON prompting, tighter typography and layout control, and 2K-class resolutions.</p><p style="margin-top:1rem">Beyond text rendering, 4.0 adds capabilities the earlier entry lacked: native transparency (usable PNGs with no background), reliable in-image editing, style references to keep a consistent look, and API access for batch and programmatic work.</p><p style="margin-top:1rem">Pricing is freemium. The free plan costs $0 and gives roughly 10 slow credits per week with public generations and one concurrent job. Basic runs about $8/mo (around $7 billed annually) for ~400 priority credits. Plus is about $20/mo (roughly $15-16 annually) with ~1,000 credits and private images. Pro is about $60/mo (around $42-48 annually) with ~3,000-3,500 credits plus batch generation and API access. A Team plan is about $30/user/mo (around $20 annually) with ~1,500 credits per user, and Enterprise is custom. API usage is billed separately at roughly $0.03-$0.10 per image.</p><p style="margin-top:1rem">The limitations are worth knowing. The free tier is slow and makes your images public, credits run out faster than heavy users expect, and while text is excellent, photorealism and fine anatomy can lag behind some competitors. API costs add up at volume.</p><p style="margin-top:1rem">Choose Ideogram if your work centers on typography-heavy visuals, or if you want an open-weight model you can build on. If you mainly need photorealistic scenes with no text, a different generator may serve you better.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Best-in-class text rendering within images — accurate multi-word and multilingual text</li>
-        <li>Face Swap built in — no separate tool required for personalized imagery</li>
-        <li>Magic Fill and Magic Extend for non-destructive canvas editing and image expansion</li>
-        <li>Multi-image style reference (up to 3) for blended or brand-consistent generation</li>
-        <li>Generous free tier: 10 slow generations per day with no credit card required</li>
+        <li>Best-in-class rendering of legible, correctly spelled text inside images</li>
+        <li>Ideogram 4.0 is open-weight (Apache 2.0), so it can be self-hosted and built upon</li>
+        <li>Native transparency and reliable in-image editing simplify real design workflows</li>
+        <li>Structured JSON prompting gives fine control over typography and layout</li>
+        <li>Genuinely usable free tier plus API access for batch and programmatic work</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Slow generations on the free tier — paid plan required for practical production speed</li>
-        <li>Pro at $48/month is higher-priced than some competitors with similar output quality</li>
-        <li>Less suitable for photorealistic scenes compared to FLUX or Midjourney V8</li>
-        <li>Multilingual text reliability confirmed for 3 languages — other languages may still produce errors</li>
+        <li>Free tier is slow and forces your generations to be public</li>
+        <li>Priority credits deplete quickly for heavy or commercial use</li>
+        <li>Photorealism and fine anatomy trail some rival image models</li>
+        <li>API is billed separately and gets expensive at volume</li>
+        <li>Private images require a paid plan starting at the Plus tier</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Ideogram if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need text rendered accurately inside images — logos, posters, t-shirt designs, typography</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You create graphic design assets where legible text within the image is essential</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want a generous free tier — Ideogram offers free daily generations</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need prompt adherence that reliably produces what you describe, not artistic interpretation</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Ideogram if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need logos, posters or graphics with accurate in-image text</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want an open-weight model you can self-host or extend</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need transparent PNGs or reliable edits without leaving the tool</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want API access for batch or automated generation</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Ideogram AI?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Ideogram is an AI image generator specifically optimized for generating text within images. It excels at creating posters, logos, t-shirt designs, and any image where readable text is part of the visual. Ideogram 2.0 (2024) also added strong photorealism and design capabilities.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can Midjourney generate text in images?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Midjourney V6 added improved text generation, but it still struggles with accurate text rendering compared to Ideogram or DALL-E 3. For images where text accuracy is critical — signs, logos, product labels — Ideogram is the better choice.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Ideogram free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Ideogram has a free plan with 10 slow generations per day. Basic plan is $7/month, Plus is $16/month, Pro is $48/month. The free tier is generous for occasional use.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Midjourney better than DALL-E 3?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">For artistic quality and aesthetic appeal, most users rate Midjourney above DALL-E 3. DALL-E 3 is better for prompt accuracy and text generation. Midjourney V6 leads in photorealism and creative imagery; DALL-E 3 leads in following complex descriptions literally.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +258,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

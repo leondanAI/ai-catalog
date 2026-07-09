@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Coursera Coach", "description": "Coursera Coach is the AI-powered learning assistant integrated into Coursera's online learning platform. It is not a standalone product — access requires a Coursera Plus subscription ($399 per year or", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://coursera.org", "offers": {"@type": "Offer", "price": "", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Coursera Coach", "description": "Coursera Coach is the AI assistant embedded directly in Coursera's learning experience. Rather than being a separate chatbot, it sits alongside video lectures, readings, and assessments to answer ques", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://coursera.org", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -161,7 +161,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">🎓 Education &amp; Learning</span>
-        <span class="tool-meta-chip badge-paid">Paid</span>
+        <span class="tool-meta-chip badge-freemium">Freemium</span>
         <span class="tool-meta-chip">👥 148M+</span>
       </div>
       <div class="tool-best-for"><strong>Best for:</strong> AI learning coach for Coursera courses with personalized guidance</div>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Coursera Coach</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Coursera Coach is the AI-powered learning assistant integrated into Coursera's online learning platform. It is not a standalone product — access requires a Coursera Plus subscription ($399 per year or $59 per month). Coursera Plus provides unlimited access to 10,000+ courses and professional certificates from 300+ universities and companies, and Coach is embedded throughout this experience.</p><p style="margin-top:1rem">Coach functions as a contextual tutor within courses: it can explain difficult concepts in the current lecture, suggest practice problems, answer questions about course material, and recommend related courses based on learning progress and goals. It also supports assignment help — providing hints and explanations without giving direct answers, in line with academic integrity policies.</p><p style="margin-top:1rem">Key capabilities include personalized course recommendations based on learning goals and history, concept explanation within active courses, assignment assistance with hints and explanations, progress analysis, skill gap identification, and learning path suggestions across Coursera's catalog.</p><p style="margin-top:1rem">Pricing: Coursera Coach is included with Coursera Plus at $399 per year ($33.25/month effective) or $59 per month. Individual course purchases do not include Coach access. Enterprise and Teams plans have separate pricing.</p><p style="margin-top:1rem">Limitations: Coursera Coach is not available without a Coursera Plus subscription — it cannot be purchased separately. The AI is constrained to supporting Coursera's existing course catalog and cannot provide general tutoring outside course content. The $399/year cost is only justified if the learner is actively using multiple courses throughout the year.</p><p style="margin-top:1rem">Best suited for professionals pursuing multiple certificates or ongoing learning on Coursera who want AI-assisted guidance, and who find value in the broader Coursera Plus catalog beyond just the AI assistant.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Coursera Coach is the AI assistant embedded directly in Coursera's learning experience. Rather than being a separate chatbot, it sits alongside video lectures, readings, and assessments to answer questions, summarize material, and keep learners moving through a course.</p><p style="margin-top:1rem">As of July 2026, Coach is powered by Google Gemini and has grown well past its original role as a learner tutor. It now spans three distinct roles: helping people learn, guiding careers, and giving educators an interactive teaching and authoring partner. This is a meaningful shift from the earlier version, which mostly explained concepts and personalized the learning path.</p><p style="margin-top:1rem">On the learner side, the standout additions are &quot;Help me practice&quot; Socratic pre-assessment sessions that quiz you before graded work, and &quot;Role Play&quot; simulations where you can rehearse real scenarios like a salary negotiation or a technical screening. For instructors, Coach is integrated into Course Builder as an AI thought-partner for structuring and authoring content.</p><p style="margin-top:1rem">Coach is not sold on its own. It is bundled with Coursera Plus, which runs around $59/month (often discounted to roughly $35.40/month on promotion) or $399/year, and it is also included with select paid Professional Certificates. Free auditors get little to no access.</p><p style="margin-top:1rem">The main limitation is that Coach is locked to the Coursera ecosystem and its paid tiers, so you cannot use it as a general-purpose tutor outside the platform's own catalog. Feature availability also varies by course, and Coursera does not publish a version number for the underlying model.</p><p style="margin-top:1rem">It is a strong fit for people already committed to Coursera Plus or a paid certificate who want an in-context study aid, interview and negotiation practice, or career direction while they learn.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Integrated directly into Coursera courses — context-aware concept explanation</li>
-        <li>Personalized course recommendations across 10,000+ courses from top universities</li>
-        <li>Coursera Plus bundles 10,000+ courses — Coach is an addition to existing value</li>
-        <li>Assignment help with hints rather than answers — maintains academic integrity</li>
-        <li>148M+ registered learners — largest online learning platform globally</li>
+        <li>Powered by Google Gemini and embedded directly in the course, so help arrives in context without switching tools</li>
+        <li>Role Play simulations let you rehearse real situations like salary negotiations and technical screens</li>
+        <li>&quot;Help me practice&quot; Socratic sessions prepare you for assessments instead of just handing over answers</li>
+        <li>Adds genuine career guidance and educator authoring support, not only concept explanations</li>
+        <li>Included at no extra cost for Coursera Plus and select paid Professional Certificate subscribers</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Not available without Coursera Plus subscription ($399/yr) — not a standalone product</li>
-        <li>AI constrained to Coursera course content only</li>
-        <li>$399/year only justified with active multi-course use throughout the year</li>
-        <li>Less capable than dedicated AI tutors like Khanmigo for fundamental concept explanations</li>
+        <li>No standalone purchase; you must pay for Coursera Plus or a qualifying paid certificate to use it</li>
+        <li>Free auditors get limited or no access</li>
+        <li>Locked to Coursera's own catalog, so it will not tutor you on outside material</li>
+        <li>Feature availability varies from course to course</li>
+        <li>No public version number for the underlying model, making capabilities hard to track</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Coursera Coach if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're taking Coursera courses and want AI assistance within that course content</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're pursuing professional certificates (Google, Meta, IBM) and want course-specific help</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're an adult learner focused on career development and professional skill building</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want AI that understands the specific Coursera curriculum you're working through</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Coursera Coach if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You already subscribe to Coursera Plus or a paid Professional Certificate</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want an in-context tutor that answers questions right inside the course</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to rehearse interviews or salary negotiations with Role Play</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You are an educator looking for an AI partner inside Course Builder</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want career guidance alongside your coursework</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Coursera Coach?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Coursera Coach is Coursera's AI assistant that helps learners with course content, answers questions about material being studied, and provides guidance through Coursera's professional certificates and degree programs. It's built into the Coursera platform and understands the specific courses you're enrolled in.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Coursera Coach free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Coursera Coach is included with Coursera Plus ($59/month or $399/year) and Coursera professional certificate programs. It's not available on the free audit tier of most courses.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What subjects does Khanmigo cover?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Khanmigo covers all major academic subjects available on Khan Academy: math (from basic arithmetic to calculus), science, computing, history, economics, and test prep (SAT, AP). It's comprehensive for K-12 and early college-level subjects.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Which is better for professional development — Coursera Coach or Khanmigo?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Coursera Coach is better for professional development — it's built around industry-recognized certificates from Google, Meta, IBM, and others. Khanmigo is better for academic K-12 subjects. For adults learning career skills, Coursera Coach is the more relevant tool.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

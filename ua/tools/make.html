@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","ua");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Make","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://make.com"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Make","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://make.com","dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/ua/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Каталог</a>
       <a href="/ua/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Порівняння</a>
       <a href="/ua/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Новини</a>
-      <a href="/ua/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">Інструменти</a>
+      <a href="/ua/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Інструменти</a>
       <a href="/ua/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Розсилка</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/ua/directory.html"  class="nav-link" data-i18n="nav.directory">Каталог</a>
     <a href="/ua/compare.html"    class="nav-link" data-i18n="nav.compare">Порівняння</a>
     <a href="/ua/news.html"       class="nav-link" data-i18n="nav.news">Новини</a>
-    <a href="/ua/directory.html"      class="nav-link" data-i18n="nav.tools">Інструменти</a>
+    <a href="/ua/tools.html"      class="nav-link" data-i18n="nav.tools">Інструменти</a>
     <a href="/ua/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Розсилка</a>
   </nav>
 </header>
@@ -150,25 +150,29 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Make</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Make (раніше Integromat) — це платформа для автоматизації робочих процесів з візуальним інтерфейсом, яка з'єднує понад 1000 додатків через drag-and-drop canvas. Кожну автоматизацію — сценарій — можна переглянути як візуальну блок-схему, яка показує, як дані передаються між додатками, з умовною логікою, циклами, обробкою помилок і трансформацією даних.</p><p style="margin-top:1rem">У серпні 2025 Make перейшла з операційної моделі на кредитну систему. Поточні плани: Free (1000 кредитів/місяць, 2 активні сценарії), Core ($9/місяць, 10 000 кредитів, безліміт сценаріїв), Pro ($16/місяць), Teams ($29/місяць). Додаткові кредити можна придбати з надбавкою 25% над базовою ставкою плану. Вбудовані модулі ШІ з однією кліком для OpenAI, Claude та Anthropic тепер доступні прямо в конструкторі сценаріїв.</p><p style="margin-top:1rem">Make займає позицію між Zapier (простіша, дорожча) та n8n (потужніша, потребує технічної настройки). Інтерфейс canvas — його найсильніша відмінність: ви можете побачити всю автоматизацію візуально, що значно полегшує налагодження та співпрацю порівняно з конкуруючими платформами.</p><p style="margin-top:1rem">Платформа добре справляється зі складними багатоетапними робочими процесами: розгалужені шляхи, агрегування даних, запланували запуски, webhooks та ітерація по масивах. Корпоративні команди використовують її для обробки документів, маршрутизації лідів і синхронізації даних між платформами.</p><p style="margin-top:1rem">Обмеження: модель кредитів, введена в 2025, зробила витрати менш передбачуваними для існуючих користувачів, звикли рахувати операції. Сценарії з дуже великим обсягом все ще потребують плану Teams або вище, щоб уникнути переплати.</p><p style="margin-top:1rem">Бажаний для маркетингових команд, менеджерів операцій та розробників, які потребують гнучкої автоматизації на багатьох додатках без написання коду — і хочуть більшої потужності за меншою ціною, ніж Zapier.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Make (колишній Integromat) — це візуальна платформа автоматизації, де ви з'єднуєте застосунки та сервіси на полотні перетягуванням і будуєте робочі процеси, звані сценаріями, без написання коду. Кожен сценарій — це ланцюжок модулів, що передають дані від одного застосунку до наступного, з розгалуженнями, фільтрами, ітераторами та обробкою помилок.</p><p style="margin-top:1rem">Версій у звичному сенсі Make більше не має — продукт розвивається безперервно. Поточний стан визначають дві великі зміни. По-перше, 27 серпня 2025 одиниця оплати змінилася з операцій на кредити (перерахунок 1:1), зсунувши Make до оплати за використання, де крок зі ШІ або кодом може коштувати дорожче за один кредит. По-друге, функція Make AI Agents стала загальнодоступною: вона дозволяє будувати автономних агентів прямо всередині сценаріїв, а до неї додаються бібліотека AI Agents Library і понад 350 інтеграцій зі ШІ-застосунками.</p><p style="margin-top:1rem">Щодо можливостей Make тепер заявляє понад 3000 інтеграцій, тригери в реальному часі та за розкладом, вебхуки, модулі HTTP/API, сховища даних і повторно використовувані кастомні змінні. На платних планах можна підключати власні API-ключі OpenAI, Anthropic або Gemini для ШІ-кроків.</p><p style="margin-top:1rem">Тарифи розділені за рівнями. Free — $0/міс, 1000 кредитів, максимум 2 активні сценарії та мінімальний інтервал запуску 15 хвилин. Core — $9/міс при річній оплаті (10 000 кредитів, безліміт сценаріїв, інтервал 1 хвилина). Pro — $16/міс річних, з пріоритетним виконанням і кастомними змінними. Teams — $29/міс річних з командними ролями. Enterprise — за домовленістю. Помісячна оплата дорожча приблизно на 15-20% (близько $10,59 Core, $18,82 Pro, $34,12 Teams), а пакети кредитів (20k/40k/80k+) розширюють ліміти.</p><p style="margin-top:1rem">Основні обмеження практичні. Кредитна модель ускладнює прогноз витрат для сценаріїв з активним ШІ, ліміт у 2 сценарії та інтервал 15 хвилин на безкоштовному плані тісні для реальної роботи, а візуальна модель усе ж потребує засвоєння, коли сценарії обростають вкладеними роутерами й обробниками помилок.</p><p style="margin-top:1rem">Make підійде тим, кому потрібен потужний візуальний інструмент автоматизації без коду і хто тепер хоче вбудовувати ШІ-агентів прямо в автоматизації, а не зв'язувати окремі сервіси вручну.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Оновлено: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Переваги</div><ul class="pc-list">        <li>Візуальний canvas робить складні автоматизації легкими для налагодження</li>
-        <li>Модель кредитів з серпня 2025 узгоджує вартість з фактичним використанням</li>
-        <li>Вбудовані модулі ШІ для OpenAI, Claude, Anthropic</li>
-        <li>Безліміт сценаріїв у платних планах від $9/місяць</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Недоліки</div><ul class="pc-list">        <li>Модель кредитів менш передбачувана за старою операційну модель</li>
-        <li>Крутіша крива навчання для початківців порівняно з Zapier</li>
-        <li>Безплатний план обмежений 2 активними сценаріями</li>
-        <li>Сценарії з великим обсягом потребують плану Teams або вище</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Переваги</div><ul class="pc-list">        <li>Візуальний редактор перетягуванням робить складні багатокрокові автоматизації доступними без коду</li>
+        <li>Дуже широка сумісність: понад 3000 інтеграцій плюс 350 ШІ-застосунків</li>
+        <li>Вбудовані Make AI Agents дозволяють будувати автономних агентів усередині сценаріїв, зі спільною бібліотекою</li>
+        <li>Підтримка власних ключів OpenAI, Anthropic і Gemini на платних планах</li>
+        <li>Справді низький поріг входу: Core — $9/міс при річній оплаті з безлімітом сценаріїв</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Недоліки</div><ul class="pc-list">        <li>Кредитна модель ускладнює прогноз витрат для сценаріїв зі ШІ та кодом, адже частина кроків коштує дорожче за один кредит</li>
+        <li>Безкоштовний план обмежений 2 активними сценаріями та інтервалом 15 хвилин</li>
+        <li>Помісячна оплата приблизно на 15-20% дорожча за заявлені річні ціни</li>
+        <li>Складні сценарії з роутерами, ітераторами та обробниками помилок важко підтримувати</li>
+        <li>За інтенсивного використання часто доводиться докуповувати пакети кредитів понад базовий план</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://make.com" target="_blank" rel="noopener">Перейти на Make →</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Оберіть Make якщо…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Вам потрібна потужна автоматизація зі складною логікою, трансформаціями і розгалуженнями</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Make значно дешевший за Zapier при тих самих обсягах — до 10x економії</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Візуальний builder Make показує дані і дозволяє складні сценарії з ітераціями</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Більш гнучкий для розробників і технічних команд що потребують нестандартних рішень</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Оберіть Make якщо…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Ви хочете автоматизувати роботу між багатьма застосунками без коду</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вам потрібно будувати ШІ-агентів прямо всередині робочих процесів</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Ви хочете використовувати власні ключі OpenAI, Anthropic або Gemini</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Ви готові перейти на річну оплату заради мінімальної ціни</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Ваші завдання виходять за ліміт у 2 сценарії на безкоштовному плані</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Часті запитання</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Zapier vs Make — що краще?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Zapier простіший і має більше готових конекторів. Make потужніший і набагато дешевший для складних сценаріїв. Для нетехнічних команд — Zapier; для технічних команд з бюджетними обмеженнями — Make.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Zapier безкоштовний?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Zapier має безкоштовний план з 100 завдань/міс і однокроковими Zaps. Платні плани від $19,99/міс. Make безкоштовний до 1000 операцій/міс; платні від $9/міс.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Zapier AI що він вміє?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Zapier AI включає AI Actions (природньомовні кроки у Zap), AI Chatbot (побудова ботів без коду) і Zapier Canvas (візуальне планування автоматизацій з ШІ). Дозволяє додавати ШІ-логіку у традиційні автоматизації.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Make vs n8n — яка різниця?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Make hosted-сервіс з красивим інтерфейсом. n8n відкритий і безкоштовний при self-hosting. Make для команд що хочуть хмарне рішення; n8n для технічних команд з контролем над даними.</span></div></div></div></div>
   <div class="section-title-sm">Також розгляньте</div>
   <div class="also-grid">    <a class="also-card" href="/ua/tools/autogpt.html">
@@ -215,7 +219,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/ua/directory.html">Каталог</a>
         <a href="/ua/news.html">Новини</a>
-        <a href="/ua/directory.html">Інструменти</a>
+        <a href="/ua/tools.html">Інструменти</a>
         <a href="/ua/compare.html">Порівняння</a>
         <a href="/ua/newsletter.html">Розсилка</a>
       </div>

@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","he");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ComfyUI","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://comfyui.org"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ComfyUI","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://comfyui.org","dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/he/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">ספריה</a>
       <a href="/he/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">השוואה</a>
       <a href="/he/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">חדשות</a>
-      <a href="/he/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">כלים</a>
+      <a href="/he/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">כלים</a>
       <a href="/he/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">ניוזלטר</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/he/directory.html"  class="nav-link" data-i18n="nav.directory">ספריה</a>
     <a href="/he/compare.html"    class="nav-link" data-i18n="nav.compare">השוואה</a>
     <a href="/he/news.html"       class="nav-link" data-i18n="nav.news">חדשות</a>
-    <a href="/he/directory.html"      class="nav-link" data-i18n="nav.tools">כלים</a>
+    <a href="/he/tools.html"      class="nav-link" data-i18n="nav.tools">כלים</a>
     <a href="/he/newsletter.html" class="nav-link" data-i18n="nav.newsletter">ניוזלטר</a>
   </nav>
 </header>
@@ -138,7 +138,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">🎨 יצירת תמונות</span>
-        <span class="tool-meta-chip badge-free">חינמי</span>
+        <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
       <div class="tool-best-for"><strong>הכי מתאים ל:</strong> יצירת תמונות AI קוד-פתוח, תהליכי עבודה מבוססי צמתים, GPU מקומי, וידאו 4K</div>
@@ -150,26 +150,29 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>אודות ComfyUI</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">ComfyUI הוא ממשק מבוסס צמתים חינמי וקוד-פתוח להרצת מודלי יצירת תמונות ווידאו AI מקומית. משתמשים בונים תהליכי עבודה על ידי חיבור צמתים — כל צומת מבצע פעולה אחת כמו טעינת מודל, החלת מדגם, או קידוד פרומפט — ומעניק שליטה מדויקת על כל שלב בתהליך היצירה. הוא הממשק הראשי למשתמשים המריצים Stable Diffusion ומודלים אחרים עם משקל פתוח על החומרה שלהם.</p><p style="margin-top:1rem">App View, תוספת UX מרכזית, מספקת ממשק מפושט המסתיר את גרף הצמתים ומציג ממשק משתמש נקי מבוסס טפסים למשתמשים שאינם צריכים לשנות את תהליך העבודה הבסיסי. Node View נשאר זמין במלואו למשתמשים מתקדמים. גישה דו-מצבית זו הופכת את ComfyUI לנגיש למתחילים מבלי להסיר יכולות ממשתמשים מנוסים.</p><p style="margin-top:1rem">כימות NVFP4, שהוצג עבור מעבדי NVIDIA RTX 50 Series, מאפשר ליצירה לרוץ פי 2.5 מהר יותר תוך הפחתת צריכת VRAM בכ-60%. משמעות הדבר היא שמשתמשים עם כרטיסי RTX 50 Series יכולים להריץ מודלים גדולים יותר שבעבר דרשו חומרה יקרה יותר, או להריץ מודלים קיימים במהירויות גבוהות משמעותית.</p><p style="margin-top:1rem">תמיכת AMD ROCm הרשמית הגיעה לאפליקציית Windows Desktop, מה שהופך את ComfyUI לנתמך במלואו על מעבדי AMD ב-Windows בפעם הראשונה ללא עקיפות ידניות. צמתים חדשים עבור Veo 3, Veo 3 Lite ו-Kling 3.0 נוספו, יחד עם תמיכת פלט 4K לצינורות יצירת וידאו ByteDance, Veo ו-Kling. RTX Video Super Resolution מאפשר שדרוג 4K בזמן אמת של וידאו שנוצר על חומרת NVIDIA נתמכת.</p><p style="margin-top:1rem">Python 3.13 נוסף, שומר על ComfyUI עדכני עם גרסת Python האחרונה ומבטיח תאימות עם חבילות חדשות יותר באקוסיסטם Python. ComfyUI מתאים ביותר למשתמשים מתקדמים, חוקרים ומפתחים הרוצים שליטה מלאה על תהליכי עבודה לייצור תמונות ווידאו AI, המריצים מודלים מקומית ולא רוצים תלות בספק.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">ComfyUI הוא ממשק יצירה מבוסס גרף. במקום תיבת פרומפט אחת, מחברים צמתים (טוענים, סמפלרים, התניה, מגדילי רזולוציה וכן הלאה) לתהליך עבודה שאפשר לבחון, לעשות בו שימוש חוזר ולשתף. השקיפות הזו היא הסיבה שבגללה ComfyUI הפך לכלי המועדף על מי שרוצה שליטה מדויקת באופן שבו נוצרים תמונה או וידאו.</p><p style="margin-top:1rem">הגרסה הנוכחית היא v0.27.0, ששוחררה ב-30 ביוני 2026. היא מוסיפה תמיכה במודלים בקוונטיזציית int8 עבור כרטיסי מסך מדור Turing ואילך, עם טיפול משופר ב-LoRA ובזיכרון, וכן צמתים חדשים כמו Seed, Advanced Krea 2 Model Merging, Bounding Box Canvas, ConditioningMultiply וצומת פרומפט JSON של Ideogram, וגם תמיכה ב-Nano Banana 2 Lite של גוגל. זהו המשך לשנת 2026 עמוסה: ביוני יצא שדרוג מקיף של Comfy Desktop עם ניהול מופעים מרובים, תצלומי מצב ואחסון מודלים משותף, ונוספה תמיכה במודלי הווידאו Krea2 ו-LTX2, תמיכה רשמית ב-AMD ROCm ב-Windows ושיפורי ביצועים של NVFP4 ב-GPU.</p><p style="margin-top:1rem">מעבר לתמונות סטילס, ComfyUI מפעיל כעת גם יצירת וידאו דרך מודלים כמו Krea2 ו-LTX2, כך שזה כבר לא רק כלי לתמונות. אפשר לשרשר כמה מודלים, לשלב צמתים מותאמים אישית וצמתי קהילה, לעבד באצווה ולייצא תהליכי עבודה שלמים כ-JSON לשימוש חוזר.</p><p style="margin-top:1rem">לתמחור שני צדדים. התוכנה המתארחת עצמאית חינמית לחלוטין ובקוד פתוח. שירות הענן המנוהל הרשמי Comfy Cloud, שיצא מגרסת הבטא ועבר למודל קרדיטים מאוחד בסוף 2025 ולאחר מכן הוסיף מסלול חינמי במרץ 2026, מציע: Free (400 קרדיטים לחודש, ללא כרטיס), Standard בעלות 20$ לחודש (4,200 קרדיטים), Creator בעלות 35$ לחודש (7,400 קרדיטים, עם ייבוא LoRA), Pro בעלות 100$ לחודש (21,100 קרדיטים) ומסלול Enterprise בהתאמה אישית.</p><p style="margin-top:1rem">המגבלה העיקרית היא עקומת הלמידה. גרף הצמתים עוצמתי אך מרתיע למתחילים, והרצה מקומית פירושה שאתם מנהלים בעצמכם את חומרת ה-GPU, קבצי המודלים והתלויות. Comfy Cloud מסיר את נטל ההתקנה אך קושר את השימוש לתקציב קרדיטים.</p><p style="margin-top:1rem">בחרו ב-ComfyUI אם אתם רוצים שליטה עמוקה וניתנת לשחזור ביצירה, מרגישים בנוח עם ממשק טכני, או רוצים להתחיל בחינם באופן מקומי ולעבור מאוחר יותר לענן המנוהל.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">עודכן: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">יתרונות</div><ul class="pc-list">        <li>חינמי לחלוטין וקוד-פתוח — אין מנוי, אין מגבלות קרדיטים, אין תלות בספק</li>
-        <li>App View: ממשק טפסים ידידותי למתחילים מבלי להסיר את גרף הצמתים המלא למשתמשים מתקדמים</li>
-        <li>כימות NVFP4: יצירה מהירה פי 2.5 ו-60% פחות VRAM על מעבדי RTX 50 Series</li>
-        <li>תמיכת AMD ROCm הרשמית ב-Windows — לא נדרשות עקיפות ידניות</li>
-        <li>צמתי Veo 3, Kling 3.0 ותמיכת וידאו 4K דרך צינורות ByteDance, Veo ו-Kling</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">חסרונות</div><ul class="pc-list">        <li>ממשק מבוסס צמתים בעל עקומת למידה תלולה למשתמשים חדשים ביצירה מבוססת תהליכי עבודה</li>
-        <li>דורש חומרת GPU מקומית — לא מתאים למשתמשים ללא כרטיס גרפי מסוגל</li>
-        <li>צמתים מותאמים אישית מתוחזקים על ידי הקהילה משתנים באיכות ועלולים להתנגש</li>
-        <li>אין אפשרות ענן — כל החישוב מקומי; נדרשת חומרה ברמה גבוהה עבור מודלים גדולים</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">יתרונות</div><ul class="pc-list">        <li>חינמי ובקוד פתוח לחלוטין בהתקנה עצמאית, ללא חומת תשלום ביישום הליבה</li>
+        <li>גרף הצמתים מעניק שליטה מדויקת וניתנת לשחזור, ותהליכי העבודה ניתנים לשיתוף כ-JSON</li>
+        <li>כעת מכסה גם מודלי תמונה וגם מודלי וידאו (Krea2, LTX2), לא רק תמונות סטילס</li>
+        <li>גרסה v0.27.0 מוסיפה מודלים בקוונטיזציית int8 וטיפול משופר ב-LoRA ובזיכרון לשימוש יעיל ב-GPU</li>
+        <li>Comfy Cloud אופציונלי, כולל מסלול חינמי של 400 קרדיטים, מסיר את הצורך בהתקנה מקומית</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">חסרונות</div><ul class="pc-list">        <li>עקומת למידה תלולה; ממשק הצמתים אינו אינטואיטיבי למתחילים</li>
+        <li>התקנה עצמאית דורשת חומרת GPU חזקה וניהול ידני של מודלים ותלויות</li>
+        <li>השימוש ב-Comfy Cloud נמדד בקרדיטים שעלולים להיגמר בעומסי עבודה כבדים</li>
+        <li>איכות החוויה תלויה מאוד בצמתי הקהילה, שאמינותם משתנה</li>
+        <li>יתרונות קוונטיזציית int8 מוגבלים לכרטיסי GPU מדור Turing ואילך</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://comfyui.org" target="_blank" rel="noopener">בקר ב ComfyUI ←</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">בחרו ב-ComfyUI אם…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ אתם מפתחים ואמנים שרוצים Workflow ויזואלי ל-Node-based לייצור תמונות</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ ComfyUI מאפשר Workflows מורכבים עם שליטה מלאה בכל שלב</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ ביצועים טובים יותר ותמיכה עדכנית יותר במודלים כמו FLUX</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ מתאים לאוטומציה ול-batch processing של תמונות</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">בחרו ב-ComfyUI אם…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם רוצים שליטה מפורטת וניתנת לשחזור על צינורות היצירה</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם מרגישים בנוח עם ממשק טכני מבוסס צמתים</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם צריכים יצירת תמונות ווידאו בכלי אחד</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם מעדיפים התקנה עצמאית חינמית אך פתוחים למעבר לענן מנוהל</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם רוצים לבנות ולשתף תהליכי עבודה לשימוש חוזר בפורמט JSON</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">שאלות נפוצות</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">ComfyUI לעומת Auto1111 – מה עדיף?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">ComfyUI חזק יותר ל-Workflows מורכבים ומהיר יותר. Auto1111 פשוט יותר למתחילים. ComfyUI לאנשי מקצוע; Auto1111 להתחלה.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">ComfyUI חינמי?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">כן, ComfyUI ו-Auto1111 שניהם Open Source וחינמיים. דורשים GPU מתאים. שירותי ענן זמינים בעלות.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">FLUX לעומת Stable Diffusion?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">FLUX (מ-Black Forest Labs) מייצר תמונות איכותיות יותר ממודלי SD ישנים. ComfyUI תומך ב-FLUX. FLUX נחשב לאחד מהמודלים הפתוחים הטובים ביותר כיום.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">ComfyUI ל-macOS Apple Silicon?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">ComfyUI עובד על Apple Silicon (M1/M2/M3) עם MPS backend. ביצועים טובים בהשוואה ל-CPU. לביצועים מיטביים – GPU NVIDIA עדיין עדיף.</span></div></div></div></div>
   <div class="section-title-sm">שקול גם</div>
   <div class="also-grid">    <a class="also-card" href="/he/tools/chatgpt-images.html">
@@ -216,7 +219,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/he/directory.html">ספריה</a>
         <a href="/he/news.html">חדשות</a>
-        <a href="/he/directory.html">כלים</a>
+        <a href="/he/tools.html">כלים</a>
         <a href="/he/compare.html">השוואה</a>
         <a href="/he/newsletter.html">ניוזלטר</a>
       </div>

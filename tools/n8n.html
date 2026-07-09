@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "n8n", "description": "n8n is an open-source workflow automation platform that allows developers and technical teams to connect applications, APIs, and data sources through a visual node editor. Unlike many no-code automati", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://n8n.io", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "n8n", "description": "n8n is a workflow automation tool that lets you wire together apps, databases and APIs through a visual editor, with the option to drop into code when you need it. It runs self-hosted or in the cloud.", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://n8n.io", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,37 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About n8n</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">n8n is an open-source workflow automation platform that allows developers and technical teams to connect applications, APIs, and data sources through a visual node editor. Unlike many no-code automation tools, n8n is self-hostable, giving organizations full data control and no vendor dependency. It is used by engineering teams, DevOps practitioners, and technical operations teams for internal automation, data pipelines, and AI agent workflows.</p><p style="margin-top:1rem">n8n v2.0, a major release in late 2025 and early 2026, introduced several architectural and UX improvements. Task Runners provide isolated execution environments for individual workflow tasks, improving stability and preventing one failing step from corrupting the state of others running in parallel. This is particularly important for long-running or multi-branch AI agent workflows.</p><p style="margin-top:1rem">The Save vs. Publish paradigm changes how workflow changes reach production: edits to a workflow are saved locally but do not go live until the user explicitly publishes. This mirrors software deployment practices and prevents accidental changes from immediately affecting running automations — a long-requested feature from teams using n8n in production environments.</p><p style="margin-top:1rem">Visual version diff shows exactly what changed between workflow versions with a change count badge, making it easier to review modifications before publishing or to identify when a regression was introduced. Loading performance improved 30–80% on large workflow instances, addressing a common complaint from teams with hundreds of complex workflows.</p><p style="margin-top:1rem">Multiple external secrets provider connections allow credentials from Vault, AWS Secrets Manager, and other providers to be connected simultaneously. Chat node Actions add human-in-the-loop checkpoints: a workflow can pause and send a message to a human approver, who can approve, reject, or modify the next step before execution continues. SAP Business AI Platform integration was announced for enterprise use cases.</p><p style="margin-top:1rem">Self-hosted n8n is free. Cloud plans start at $20/month. n8n is best for developers and technical teams that need flexible, self-hosted workflow automation with AI agent capabilities and no vendor lock-in.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">n8n is a workflow automation tool that lets you wire together apps, databases and APIs through a visual editor, with the option to drop into code when you need it. It runs self-hosted or in the cloud.</p><p style="margin-top:1rem">The product has moved to the 2.x release line, with n8n@2.29.8 as the current stable build (released July 8, 2026) and 2.30.x in pre-release. The big 2026 change is that AI and agents are now front and center: the AI Agent node was rebuilt with structured tool calling for Claude, GPT-4o, Gemini, Mistral, Groq and OpenAI-compatible models, four memory backends (in-memory, Redis, Postgres, Motorhead) and a ReAct execution mode. The flat builder was replaced by a spatial Canvas UI introduced in v1.30.</p><p style="margin-top:1rem">Beyond AI, recent versions add per-node retry with exponential backoff, 35+ new native integrations (including dedicated Anthropic Claude, Google Gemini, Groq, Perplexity and ElevenLabs nodes for a total of 500+), expanded admin controls, public API access and more enterprise auth options. Cloud plans now bundle monthly AI credits: 2,300 on Starter, up to 13,700 on Pro.</p><p style="margin-top:1rem">Pricing is genuinely tiered. The self-hosted Community Edition is free ($0) with unlimited executions and every integration, plus a 14-day cloud trial. Paid cloud tiers run Starter at EUR 24/mo, Pro at EUR 60/mo, Business at EUR 800/mo and custom Enterprise; annual billing is roughly 17% cheaper (about EUR 20, 50 and 667 respectively). A start-up program offers 50% off Business for companies under 20 employees.</p><p style="margin-top:1rem">The main limitations are honest ones: n8n is fair-code under the Sustainable Use License, not OSI-approved open source, so commercial resale is restricted. Self-hosting means you own the maintenance, and the paid cloud pricing steps up sharply between Pro and Business.</p><p style="margin-top:1rem">It suits developers and technical teams who want automation they can host and audit themselves, and who increasingly want to build AI-agent workflows without stitching together separate tools.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Self-hosted option is free with full feature access — no vendor lock-in</li>
-        <li>Task Runners: isolated execution per workflow task for stability in complex pipelines</li>
-        <li>Save vs. Publish separation prevents accidental changes from reaching production</li>
-        <li>Visual version diff with change count badges for safe workflow review before publish</li>
-        <li>Chat node Actions: pause workflows for human-in-the-loop approvals mid-execution</li>
+        <li>Free self-hosted Community Edition with unlimited executions and all 500+ integrations</li>
+        <li>Rebuilt AI Agent node supports Claude, GPT-4o, Gemini, Mistral and Groq with four memory options</li>
+        <li>New spatial Canvas UI and per-node retry with exponential backoff make complex flows manageable</li>
+        <li>You can self-host for full data control or use managed cloud with bundled AI credits</li>
+        <li>Visual editor plus optional code (JavaScript/Python) fits both non-coders and developers</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Requires self-hosting setup and infrastructure maintenance for the free tier</li>
-        <li>Steeper learning curve than no-code tools like Zapier or Make for non-technical users</li>
-        <li>Cloud plan starts at $20/mo — adds cost for teams that prefer managed hosting</li>
-        <li>Large workflow libraries still require careful organization — no built-in folder hierarchy</li>
+        <li>Fair-code under the Sustainable Use License, not true OSI open source, so resale is restricted</li>
+        <li>Cloud pricing jumps steeply from Pro (EUR 60) to Business (EUR 800)</li>
+        <li>Self-hosting shifts maintenance, updates and scaling onto you</li>
+        <li>AI credits on cloud plans are capped and can run out on heavy agent workloads</li>
+        <li>Steeper learning curve than pure no-code tools once workflows get complex</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose n8n if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want full control — n8n is open-source and can be self-hosted for free</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're a developer comfortable with JavaScript who wants to write custom node logic</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need to keep data on your own infrastructure for privacy or compliance reasons</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're building complex AI workflows with LLM nodes and vector databases</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose n8n if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to self-host automation for full data control at zero license cost</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You are building AI-agent workflows with Claude, GPT-4o or Gemini and need memory options</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You are a developer who wants visual flows plus the escape hatch of real code</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need 500+ integrations without per-execution pricing on the free tier</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is the difference between Make and n8n?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Make is a cloud-based visual automation platform designed for non-technical users with 1,500+ connectors. n8n is an open-source automation tool that can be self-hosted, offering more technical flexibility and code control. Make is easier; n8n is more powerful for developers.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is n8n free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">n8n is free to self-host on your own server. The cloud version (n8n.cloud) starts at $24/month. Self-hosting requires technical knowledge to set up and maintain.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Make better than Zapier?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Make (formerly Integromat) generally offers more complex automation workflows at a lower price than Zapier. Make's visual scenario builder handles multi-step, conditional logic better. Zapier is simpler and has broader app support. For power users, Make wins on value.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can Make handle AI automations?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. Make has built-in OpenAI, Anthropic, and other AI modules. You can build automations that call AI models, process responses, and trigger actions. It's widely used for AI-powered content generation and classification workflows.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +258,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","ru");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Scite","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://scite.ai"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Scite","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://scite.ai","dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/ru/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Каталог</a>
       <a href="/ru/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Сравнение</a>
       <a href="/ru/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Новости</a>
-      <a href="/ru/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">Инструменты</a>
+      <a href="/ru/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Инструменты</a>
       <a href="/ru/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Рассылка</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/ru/directory.html"  class="nav-link" data-i18n="nav.directory">Каталог</a>
     <a href="/ru/compare.html"    class="nav-link" data-i18n="nav.compare">Сравнение</a>
     <a href="/ru/news.html"       class="nav-link" data-i18n="nav.news">Новости</a>
-    <a href="/ru/directory.html"      class="nav-link" data-i18n="nav.tools">Инструменты</a>
+    <a href="/ru/tools.html"      class="nav-link" data-i18n="nav.tools">Инструменты</a>
     <a href="/ru/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Рассылка</a>
   </nav>
 </header>
@@ -150,26 +150,29 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>О сервисе Scite</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Scite показывает не просто количество цитирований, а контекст: подтверждено, оспорено или упомянуто. 1.2 миллиарда проиндексированных цитат.                                           
-                                                                                                                                                                                           
-  ИИ-ассистент отвечает на вопросы с доказательствами из цитат. Вместо 500 цитирований — 300 подтвердили, 50 оспорили.                                                                     
-                                                                                                                                                                                           
-  Бесплатный план ограничен. Платный $20/мес.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Scite начинался как инструмент для того, чтобы увидеть, как цитировалась научная статья. Вместо простого счётчика цитирований его Smart Citations сообщают, поддерживает ли каждая ссылающаяся работа исходное утверждение, просто упоминает его или противоречит ему. Это помогает понять, насколько хорошо результат выдержал проверку временем.</p><p style="margin-top:1rem">Продукт обновляется непрерывно, без номеров версий. Самое заметное изменение произошло в феврале 2026 года - запуск интеграции Scite MCP (Model Context Protocol), позволяющей работать со Scite прямо внутри ChatGPT, Claude, Copilot, Cursor и Claude Code. Оттуда можно искать по более чем 250 миллионам статей, оценивать результаты через Smart Citations и подтягивать полнотекстовые PDF. В том же релизе сняли ограничения на количество чатов и сохранённых поисков, добавили в Ассистент новые AI-модели, отключив старые, и представили AI Report Summaries. В марте 2026 года появилась возможность вставлять DOI прямо в Ассистент, сохранять до пяти именованных наборов настроек, перетаскивать всплывающие окна с цитированиями, а охват MCP расширили на патенты, клинические испытания и гранты.</p><p style="margin-top:1rem">Сегодня основные возможности делятся на три части: база Smart Citations с браузерным расширением, AI-ассистент для поиска литературы и написания отчётов и слой MCP, открывающий всё это внешним AI-инструментам и кодинг-агентам.</p><p style="margin-top:1rem">Тарифы разбиты по уровням. Бесплатный уровень даёт значки Smart Citations, расширение и ограниченный доступ к Ассистенту, плюс 7-дневный пробный период Personal. Personal стоит 20 долларов за пользователя в месяц или 12 долларов при годовой оплате (около 144 долларов в год, скидка примерно 40%), для студентов действуют скидки порядка 30-50%. Тарифы Organization рассчитываются индивидуально и добавляют SSO, аналитику и поддержку, а уровень Developer для доступа к API и MCP работает по кредитной модели и тоже согласуется индивидуально.</p><p style="margin-top:1rem">Об ограничениях стоит знать заранее. Покрытие сильное в естественных науках, но слабее в ряде гуманитарных областей, классификация Smart Citations выполняется автоматически и иногда ошибается, а самые полезные функции Ассистента доступны только на платном тарифе. Цены Developer и Organization непрозрачны, пока не запросишь коммерческое предложение.</p><p style="margin-top:1rem">Scite подойдёт исследователям, аспирантам, библиотекарям и аналитикам доказательной базы, которым нужно проверять утверждения, а не просто считать ссылки. Сейчас он особенно интересен тем, кто уже работает внутри AI-ассистента или кодинг-агента и хочет иметь научный поиск прямо там через MCP.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Обновлено: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Преимущества</div><ul class="pc-list">        <li>Smart Citations: подтверждена, оспорена или упомянута</li>
-        <li>1.2B+ проиндексированных цитат</li>
-        <li>ИИ-ассистент с доказательствами</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Недостатки</div><ul class="pc-list">        <li>Полный доступ — $20/мес</li>
-        <li>Фокус на цитатах, не на поиске тем</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Преимущества</div><ul class="pc-list">        <li>Smart Citations показывают контекст: поддержка или опровержение, а не только число ссылок</li>
+        <li>MCP-интеграция приносит 250+ млн статей и полнотекстовые PDF в ChatGPT, Claude, Copilot, Cursor и Claude Code</li>
+        <li>Обновления 2026 сняли лимиты на чаты и сохранённые поиски и добавили AI Report Summaries</li>
+        <li>Годовой тариф Personal за 12 долларов разумен, есть ощутимые студенческие скидки</li>
+        <li>MCP теперь охватывает патенты, клинические испытания и гранты, а не только статьи</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Недостатки</div><ul class="pc-list">        <li>Автоматическая классификация Smart Citations иногда ошибается и требует проверки</li>
+        <li>Покрытие слабее за пределами естественных наук, особенно в части гуманитарных дисциплин</li>
+        <li>Большинство полезных функций Ассистента требуют платного тарифа Personal</li>
+        <li>Цены Organization и Developer только по индивидуальному запросу, без публичных цифр</li>
+        <li>Доступ к Ассистенту на бесплатном тарифе ограничен, что мешает серьёзной работе с литературой</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://scite.ai" target="_blank" rel="noopener">Перейти на Scite →</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Выберите Scite если…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Нужно знать, поддерживает ли или опровергает ли другая статья цитируемую вами работу</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Исследуете научную область и хотите понять консенсус по теме через цитирования</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Пишете диссертацию и нужна проверка достоверности источников с контекстом цитирования</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Хотите Smart Citations — видеть, как именно статья процитирована другими авторами</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Выберите Scite если…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вам нужно понять, поддерживают цитирующие работы вывод или оспаривают его</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вы уже используете Claude, ChatGPT, Cursor или Claude Code и хотите научный поиск через MCP</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Нужно искать в большом корпусе, включая патенты, испытания и гранты</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вы часто делаете обзоры литературы и хотите AI-сводки отчётов</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вы студент и можете воспользоваться скидкой на годовой тариф</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Частые вопросы</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Scite vs Semantic Scholar — в чём разница?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Scite уникален тем, что показывает, как статья процитирована — поддерживающие, опровергающие или нейтральные упоминания. Semantic Scholar — бесплатный ИИ-поисковик по научным работам с суммаризацией. Scite для оценки доказательной базы, Semantic Scholar для широкого поиска.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Scite бесплатный?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Scite предлагает ограниченный бесплатный план. Полный доступ к Smart Citations стоит $20/мес или $144/год. Semantic Scholar полностью бесплатен.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Semantic Scholar лучше Google Scholar?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Semantic Scholar добавляет ИИ-функции: суммаризация, связанные работы, граф влияния. Google Scholar охватывает больше источников, включая патенты и диссертации. Для академических работ — Semantic Scholar, для широкого поиска — Google Scholar.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Scite работает с PubMed?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Да. Scite индексирует биомедицинские исследования, совместимые с PubMed, и показывает Smart Citations для медицинских статей. Это особенно ценно для медицинских исследователей, проверяющих консенсус по клиническим данным.</span></div></div></div></div>
   <div class="section-title-sm">Также рассмотрите</div>
   <div class="also-grid">    <a class="also-card" href="/ru/tools/consensus.html">
@@ -216,7 +219,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/ru/directory.html">Каталог</a>
         <a href="/ru/news.html">Новости</a>
-        <a href="/ru/directory.html">Инструменты</a>
+        <a href="/ru/tools.html">Инструменты</a>
         <a href="/ru/compare.html">Сравнение</a>
         <a href="/ru/newsletter.html">Рассылка</a>
       </div>

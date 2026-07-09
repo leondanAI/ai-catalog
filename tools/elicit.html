@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Elicit", "description": "Elicit is an AI research assistant designed for systematic literature review — the process of comprehensively finding, evaluating, and extracting information from academic papers on a specific researc", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://elicit.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Elicit", "description": "Elicit is a research intelligence platform built for academics, evidence synthesis teams, and anyone doing serious literature work. It searches a corpus of more than 138 million papers and 545,000 cli", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://elicit.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Elicit</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Elicit is an AI research assistant designed for systematic literature review — the process of comprehensively finding, evaluating, and extracting information from academic papers on a specific research question. It is used by over 2 million researchers and has become a standard tool for academic and professional research workflows.</p><p style="margin-top:1rem">Elicit's core workflow is more structured than a search engine: users define a research question, Elicit finds relevant papers, and then allows users to extract specific columns of information from each paper (methodology, population, outcomes, limitations). This turns a literature review into a structured table rather than a pile of links — enabling rapid synthesis across dozens or hundreds of papers.</p><p style="margin-top:1rem">Key capabilities include semantic search across 100M+ papers, structured data extraction into tables, AI paper summaries, PDF upload and analysis, citation export (RIS, BibTeX), multiple evidence extraction columns (methodology, sample size, findings), automation for recurring reviews, and API for research workflow integration.</p><p style="margin-top:1rem">Pricing: Free plan provides 2 research reports per month and limited features. Plus at approximately $10 per month provides 15 reports per month and full data extraction. Pro at approximately $42 per month provides 50 reports per month, automation, and API access. Team plans at approximately $79 per month add collaboration features.</p><p style="margin-top:1rem">Limitations: Elicit's structured extraction is powerful for quantitative research but less useful for qualitative analysis where insights are contextual rather than extractable. Report limits on lower tiers constrain usage for high-volume researchers. The platform is best for empirical research — humanities and social science literature is less well-served.</p><p style="margin-top:1rem">Best suited for academic researchers, graduate students, and evidence-based professionals who need to conduct or update systematic literature reviews efficiently.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Elicit is a research intelligence platform built for academics, evidence synthesis teams, and anyone doing serious literature work. It searches a corpus of more than 138 million papers and 545,000 clinical trials, summarizes findings, lets you chat with papers, and pulls specific data points into structured tables.</p><p style="margin-top:1rem">The tool has changed significantly. What began as a paper-search and extraction assistant is now a broader platform. Research Agents launched in late 2025 to automate multi-step review workflows, and in March 2026 Elicit released a public API so teams can embed its search, extraction, and report generation into their own tools. The underlying language model was upgraded for more accurate, context-aware summaries and better citation handling.</p><p style="margin-top:1rem">The core paid offering centers on systematic literature review and data extraction: you can screen thousands of papers, define custom extraction columns, and generate structured reports with sources you can verify.</p><p style="margin-top:1rem">Pricing is tiered. The Free plan costs $0 and includes unlimited search, unlimited summaries, unlimited chat-with-papers, source viewing and Zotero import, with limited Research Agent and Report usage. Pro is $49/month (or $588/year) and covers standard agent, report, and systematic-review usage, screening up to 5,000 papers, 20 table columns, extraction from up to 135 sources, 10 alerts, and API access. Scale is $169/month (or $2,028/year) with 5x usage, figure extraction, live collaboration, up to 200 sources and admin controls. Enterprise is custom-priced with 40,000-paper screening, PRISMA-grade accuracy, SSO/SAML/2FA and unlimited API.</p><p style="margin-top:1rem">Limitations are worth noting: the tool is tuned for academic and clinical literature rather than general web research, serious extraction and screening volumes require a paid plan, and as with any AI summarizer, extracted claims and citations still need human verification.</p><p style="margin-top:1rem">Elicit is a strong fit for researchers, PhD students, systematic reviewers, and R&amp;D or clinical teams who need to move quickly through large bodies of evidence without losing the ability to trace every claim back to its source.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Structured data extraction turns paper lists into organized tables of findings</li>
-        <li>2M+ researchers have validated it as a standard systematic review tool</li>
-        <li>PDF upload enables analysis of papers not in the database</li>
-        <li>Automation for recurring research questions that need periodic literature updates</li>
-        <li>Pro API access enables integration into custom research workflows</li>
+        <li>Searches an unusually large corpus: 138M+ papers plus 545,000+ clinical trials</li>
+        <li>Structured data extraction into custom columns is genuinely useful for systematic reviews</li>
+        <li>Generous free tier with unlimited search, summaries and chat-with-papers</li>
+        <li>Research Agents and the March 2026 API allow automation and integration into external workflows</li>
+        <li>Every summary and extraction links back to sources you can verify</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Report limits on Free (2/mo) and Plus (15/mo) restrict high-volume researchers</li>
-        <li>Less useful for qualitative research where insights are contextual</li>
-        <li>Strong bias toward quantitative empirical research — humanities less well-served</li>
-        <li>Pro at $42/mo and Team at $79/mo expensive for academic budgets</li>
+        <li>Focused on academic and clinical literature, not general-purpose web research</li>
+        <li>Meaningful screening and extraction volumes are locked behind paid tiers</li>
+        <li>Pro caps at 5,000 papers and 135 sources; large reviews push you toward Scale or Enterprise</li>
+        <li>AI-generated summaries and citations still require manual checking</li>
+        <li>PRISMA-grade accuracy and 40,000-paper screening only on custom-priced Enterprise</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Elicit if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You conduct systematic literature reviews and need to extract structured data from many papers</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want to automate the screening and data extraction phase of academic research</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need tables summarizing specific fields (sample size, methodology, outcomes) across studies</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're a researcher doing meta-analysis who processes dozens to hundreds of papers</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Elicit if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You run systematic literature reviews and need to screen thousands of papers</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want structured data extraction into tables rather than just search results</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need verifiable citations tied to every summarized claim</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to embed academic search and extraction into your own tools via the API</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need coverage of clinical trials alongside published papers</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Elicit?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Elicit is an AI research assistant designed for systematic literature reviews. It searches academic databases, screens papers for relevance, and extracts structured data into tables — automating the most time-consuming parts of academic research. It's used by researchers, scientists, and evidence synthesis teams.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is the difference between Elicit and Consensus?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Elicit is built for systematic reviews — it extracts structured data from papers into tables for meta-analysis. Consensus is built for fast Q&amp;A — it synthesizes findings from papers into plain-language answers with a consensus meter. Elicit is for deep research workflows; Consensus is for quick evidence-based answers.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Elicit free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Elicit has a free plan with 5,000 credits per month (roughly 500 paper summaries). Elicit Plus is $12/month for 15,000 credits, and higher tiers are available for teams and institutions.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can Elicit replace a research assistant?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Elicit can handle the mechanical parts of systematic reviews: paper screening, data extraction, and summarization. It significantly reduces research assistant hours for literature reviews. However, expert judgment for quality assessment and interpretation of findings still requires human researchers.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

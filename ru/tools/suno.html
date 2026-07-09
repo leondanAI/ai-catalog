@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","ru");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Suno","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://suno.com","aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":1,"bestRating":"5","worstRating":"1"}}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Suno","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://suno.com","aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":1,"bestRating":"5","worstRating":"1"},"dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/ru/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Каталог</a>
       <a href="/ru/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Сравнение</a>
       <a href="/ru/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Новости</a>
-      <a href="/ru/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">Инструменты</a>
+      <a href="/ru/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Инструменты</a>
       <a href="/ru/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Рассылка</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/ru/directory.html"  class="nav-link" data-i18n="nav.directory">Каталог</a>
     <a href="/ru/compare.html"    class="nav-link" data-i18n="nav.compare">Сравнение</a>
     <a href="/ru/news.html"       class="nav-link" data-i18n="nav.news">Новости</a>
-    <a href="/ru/directory.html"      class="nav-link" data-i18n="nav.tools">Инструменты</a>
+    <a href="/ru/tools.html"      class="nav-link" data-i18n="nav.tools">Инструменты</a>
     <a href="/ru/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Рассылка</a>
   </nav>
 </header>
@@ -150,26 +150,29 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>О сервисе Suno</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Suno — платформа AI-генерации музыки, позволяющая создавать полноценные песни — с текстами, вокалом, мелодией и аранжировкой — из текстовых промптов. Она выросла в один из наиболее широко используемых AI-инструментов для музыки: 2 миллиона платных подписчиков и около 7 миллионов треков в день по состоянию на май 2026 года.</p><p style="margin-top:1rem">V5.5, выпущенный 25 марта 2026 года, — наиболее значимое обновление с момента запуска платформы. Клонирование голоса позволяет пользователям загружать записи своего голоса, который затем использует модель для пения в сгенерированных песнях — не синтетическим подобием, а настоящим голосом. Это кардинальное изменение для независимых музыкантов, которым нужна AI-музыка, звучащая как они.</p><p style="margin-top:1rem">Custom Models позволяют пользователям дообучать Suno на библиотеке собственных треков: до трёх кастомных моделей, минимум шесть треков с правами. Полученная модель отражает музыкальный стиль, тембр и композиционные тенденции обучающего материала — давая артистам персонализированный генеративный инструмент.</p><p style="margin-top:1rem">My Taste — облегчённая система персонализации, изучающая историю генераций и паттерны прослушивания пользователя для смещения будущих генераций в сторону предпочтительных стилей без явного дообучения.</p><p style="margin-top:1rem">Suno Studio — полноценный цифровой аудиорабочий стол (DAW), интегрированный прямо в платформу: разделение на стемы (вокал, барабаны, бас и другие элементы), инструменты Cover и Extend для ремикширования и расширения.</p><p style="margin-top:1rem">Лицензионная сделка с Warner Music Group (ноябрь 2025) ввела лицензированные модели на каталоге Warner и ежемесячные лимиты скачивания. Suno привлекает Series D при оценке в $5 млрд по состоянию на май 2026 года.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Suno — это инструмент text-to-music, который сочиняет, аранжирует и исполняет песню по короткому описанию или вашему тексту. Вы вводите запрос, выбираете стиль и примерно за минуту получаете готовые треки с вокалом и аккомпанементом.</p><p style="margin-top:1rem">Главная модель сейчас — v5.5, запущенная 26 марта 2026 года. В ней появились Voices — клонирование или переиспользование собственного вокала; Custom Models — донастройка v5.5 под ваш собственный каталог (до трёх на аккаунт, на Pro и Premier); и My Taste, которая изучает предпочитаемые вами жанры и настроения. Важно: v5 и v5.5 доступны только платно, поэтому бесплатный тариф по-прежнему работает на старой модели v4.5-all.</p><p style="margin-top:1rem">В повседневной работе инструмент закрывает весь цикл: генерация по запросу, собственная лирика, управление стилем и персонами, разделение на стемы на платных планах и загрузка аудио для продолжения или ремикса.</p><p style="margin-top:1rem">Оплата построена на кредитах: одна полная песня стоит 5 кредитов. Бесплатный план — $0/мес и 50 кредитов в день, то есть примерно 10 песен в день, только для личного некоммерческого использования, без разделения на стемы и с загрузкой до 8 минут. Pro — $10/мес (или $8/мес при годовой оплате, $64/год) за 2500 кредитов в месяц (около 500 песен), модель v5.5, коммерческие права, персоны, два типа стемов, загрузка до 30 минут и приоритетная очередь. Premier — $30/мес (или $24/мес при годовой оплате, $192/год) за 10 000 кредитов (около 2000 песен), v5.5, Suno Studio, коммерческое использование и три типа стемов.</p><p style="margin-top:1rem">Главное ограничение — новейшее качество закрыто: на бесплатном плане недоступны v5.5, разделение на стемы и коммерческие права, а дневной лимит меньше, чем кажется, если учесть 5 кредитов за песню.</p><p style="margin-top:1rem">Suno подойдёт любителям, которые экспериментируют с идеями, авторам контента, которым нужна очищенная по правам фоновая музыка, и музыкантам для быстрых демо и референсов — при готовности платить за актуальную модель и коммерческое использование.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Обновлено: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Преимущества</div><ul class="pc-list">        <li>Клонирование голоса из загруженного вокала — сгенерированные песни поют вашим голосом</li>
-        <li>Custom Models обучаются на ваших треках — до 3 моделей, минимум 6 треков</li>
-        <li>Suno Studio DAW с разделением на стемы, Cover и Extend встроены</li>
-        <li>My Taste учится на истории генераций без ручного дообучения</li>
-        <li>2 млн платных подписчиков и 7 млн треков/день — большое сообщество и проверенный масштаб</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Недостатки</div><ul class="pc-list">        <li>Лицензионная сделка с Warner Music вводит ежемесячные лимиты скачивания на коммерческом тарифе</li>
-        <li>Обучение Custom Model требует минимум 6 собственных треков — доступно не всем</li>
-        <li>Права на коммерческое использование варьируются по плану — проверяйте условия лицензии</li>
-        <li>Качество клонирования голоса зависит от качества и длины загруженного вокального семпла</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Преимущества</div><ul class="pc-list">        <li>Создаёт готовую песню с вокалом и инструментами по одному текстовому запросу примерно за минуту</li>
+        <li>v5.5 добавляет действительно новые функции: клонирование голоса, кастомные модели по вашему каталогу и рекомендации по вкусу</li>
+        <li>Полноценный бесплатный тариф для знакомства с продуктом, около 10 песен в день</li>
+        <li>Платные планы дают коммерческие права, разделение на стемы и загрузку более длинного аудио</li>
+        <li>Прозрачная система кредитов: полная песня всегда стоит 5 кредитов</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Недостатки</div><ul class="pc-list">        <li>Актуальные модели v5.5 (и v5) доступны только платно; бесплатный план застрял на старой v4.5-all</li>
+        <li>На бесплатном тарифе полностью недоступны стемы и коммерческое использование</li>
+        <li>Дневные бесплатные кредиты — это лишь около 10 песен, а не 50</li>
+        <li>Custom Models ограничены тремя на аккаунт и только на Pro и Premier</li>
+        <li>При активной или итеративной генерации кредиты расходуются быстро</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://suno.com" target="_blank" rel="noopener">Перейти на Suno →</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Выберите Suno если…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Хотите быстро генерировать законченные песни из текстового описания</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Вы casual-создатель, которому нужны полные песни с вокалом за секунды</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Нужен простой интерфейс — описываете песню, получаете песню</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Нужна наиболее широко используемая ИИ-музыкальная платформа с крупнейшим сообществом</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Выберите Suno если…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вы хотите превратить текстовую идею в готовую песню, не играя на инструменте</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вам нужна очищенная по правам фоновая музыка и вы на платном плане с коммерческими правами</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вы хотите клонировать или переиспользовать собственный вокал через Voices в v5.5</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вы делаете много треков и вам пригодятся 2500 или 10 000 кредитов в месяц</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вы готовы начать с бесплатного тарифа, чтобы протестировать до оплаты v5.5</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Частые вопросы</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Suno или Udio — что лучше?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Suno лучше для быстрой генерации полных песен — быстрее и удобнее. Udio в целом производит более высокое качество звука, но имеет ограничения на скачивание в некоторых регионах. Оба конкурентоспособны, Suno лидирует по удобству использования и размеру сообщества.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Suno бесплатный?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Suno предлагает бесплатный план с 50 кредитами в день (около 10 песен). Plan Pro — $8/мес, Premier — $24/мес для большего количества кредитов, прав на коммерческое использование и приоритетной генерации.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Можно ли продавать музыку, созданную в Suno?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Да, на платных планах. Suno Pro и Premier предоставляют права на коммерческое использование сгенерированной музыки. Бесплатный план не разрешает коммерческое использование. Всегда проверяйте актуальные условия, так как лицензирование ИИ-музыки продолжает развиваться.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Что такое Udio AI?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Udio — инструмент генерации ИИ-музыки, создающий песни из текстовых запросов. Запущен в 2024 году и известен особенно высоким качеством звука. Udio столкнулся с юридическими претензиями от крупных звукозаписывающих лейблов относительно обучающих данных.</span></div></div></div></div>
   <div class="section-title-sm">Также рассмотрите</div>
   <div class="also-grid">    <a class="also-card" href="/ru/tools/adobe-podcast.html">
@@ -216,7 +219,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/ru/directory.html">Каталог</a>
         <a href="/ru/news.html">Новости</a>
-        <a href="/ru/directory.html">Инструменты</a>
+        <a href="/ru/tools.html">Инструменты</a>
         <a href="/ru/compare.html">Сравнение</a>
         <a href="/ru/newsletter.html">Рассылка</a>
       </div>

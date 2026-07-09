@@ -192,7 +192,7 @@ def sb_get(path):
         return json.loads(r.read())
 
 def fetch_tools():
-    return sb_get('tools?lang=eq.en&order=name.asc&limit=200&select=slug,name,url,domain,category,badge,users,best_for,description,description_long,pros,cons,choose_if,faq')
+    return sb_get('tools?lang=eq.en&order=name.asc&limit=200&select=slug,name,url,domain,category,badge,users,best_for,description,description_long,pros,cons,choose_if,faq,last_updated')
 
 def fetch_translations(lang):
     rows = sb_get(f'tools?lang=eq.{lang}&select=slug,best_for,description,description_long,pros,cons,choose_if,faq&limit=500')
@@ -212,6 +212,7 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
     slug     = tool['slug']
     name     = tool['name']
     url      = tool['url']
+    last_updated = tool.get('last_updated') or ''
     domain   = tool['domain'] or ''
     category = tool['category']
     badge    = tool['badge']
@@ -519,6 +520,12 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
     r = ratings.get(slug)
     jsonld_rating = f',"aggregateRating":{{"@type":"AggregateRating","ratingValue":"{r["avg"]}","reviewCount":{r["count"]},"bestRating":"5","worstRating":"1"}}' if r else ''
 
+    # Freshness signal: dateModified in schema + a visible "Last updated" line (SEO)
+    _upd_iso = str(last_updated)[:10]
+    jsonld_date = f',"dateModified":"{_upd_iso}"' if _upd_iso else ''
+    _UPD_LABEL = {'en':'Last updated','ru':'Обновлено','es':'Actualizado','de':'Aktualisiert','ua':'Оновлено','he':'עודכן','fr':'Mis à jour','pt':'Atualizado'}
+    updated_line = f'<div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">{_UPD_LABEL.get(lang,"Last updated")}: {esc(_upd_iso)}</div>' if _upd_iso else ''
+
     desc_html = ''.join(
         f'<p style="margin-top:1rem">{esc(p.strip())}</p>'
         for p in desc.split('\n\n') if p.strip()
@@ -547,7 +554,7 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","{lang}");</script>
 <script type="application/ld+json">
-{{"@context":"https://schema.org","@type":"SoftwareApplication","name":"{esc(name)}","applicationCategory":"AIApplication","operatingSystem":"Web","url":"{esc(url)}"{jsonld_rating}}}
+{{"@context":"https://schema.org","@type":"SoftwareApplication","name":"{esc(name)}","applicationCategory":"AIApplication","operatingSystem":"Web","url":"{esc(url)}"{jsonld_rating}{jsonld_date}}}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -675,6 +682,7 @@ textarea.form-input{{resize:vertical;min-height:90px}}
   <div class="tool-desc-block">
     <h2>{ui['about']} {esc(name)}</h2>
     <div class="tool-desc">{desc_html}</div>
+    {updated_line}
   </div>
   <div class="pros-cons">
     <div class="pc-box pros"><div class="pc-title">{ui['pros']}</div><ul class="pc-list">{pros_html}</ul></div>

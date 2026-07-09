@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Scite", "description": "Scite is a research tool that analyzes over 1.6 billion citation relationships across academic literature to classify them as supporting, mentioning, or contrasting. Rather than just showing that Pape", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://scite.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Scite", "description": "Scite is a research tool that started as a way to see how a scientific paper has been cited. Instead of a raw citation count, its Smart Citations tell you whether each citing paper supports, mentions ", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://scite.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Scite</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Scite is a research tool that analyzes over 1.6 billion citation relationships across academic literature to classify them as supporting, mentioning, or contrasting. Rather than just showing that Paper B cites Paper A, Scite shows whether Paper B's citation of Paper A agrees with, simply mentions, or disputes Paper A's claims. This makes it possible to evaluate the strength and direction of scientific evidence quickly.</p><p style="margin-top:1rem">The Smart Citations technology processes the context around each citation in 214 million papers, extracting the statement and classifying the citation relationship. When you look up a paper in Scite, you see at a glance how many other papers support it versus how many contradict it — critical information for evaluating whether a finding has held up over time.</p><p style="margin-top:1rem">Key capabilities include smart citation analysis (supporting vs. contrasting vs. mentioning), natural language search across 214M+ papers, claim verification against the literature, citation search (find all papers citing a specific claim), integration with Zotero and Mendeley, custom dashboards, and PDF uploading for citation analysis.</p><p style="margin-top:1rem">Pricing: Free trial is available with limited features. Plans start from $7.99 per month (annual billing). Individual plans provide full smart citation access. The institutional pricing serves universities and research organizations at custom rates based on user count.</p><p style="margin-top:1rem">Limitations: Coverage is biased toward biomedical and natural sciences — social sciences and humanities have less complete coverage. The classification of citations as supporting or contrasting requires reading context and can occasionally miscategorize ambiguous citations. Database size (214M papers) is smaller than Semantic Scholar (220M) but the citation classification adds significant unique value.</p><p style="margin-top:1rem">Best suited for biomedical researchers, scientists, and evidence-based practitioners who need to quickly assess whether a specific scientific claim has been replicated or challenged in subsequent literature.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Scite is a research tool that started as a way to see how a scientific paper has been cited. Instead of a raw citation count, its Smart Citations tell you whether each citing paper supports, mentions or contradicts the original claim, which makes it easier to judge how well a finding has held up.</p><p style="margin-top:1rem">The product is continuously updated rather than versioned. The most significant recent change came in February 2026 with the launch of the Scite MCP (Model Context Protocol) integration, which lets Scite work inside ChatGPT, Claude, Copilot, Cursor and Claude Code. From those tools you can search over 250 million articles, evaluate results with Smart Citations and pull full-text PDFs. The same release removed data caps on chats and saved searches, added newer AI models to the Assistant while retiring older ones, and introduced AI Report Summaries. In March 2026 Scite added the ability to paste DOIs straight into the Assistant, save up to five named settings presets, drag citation popups around, and expanded MCP coverage to patents, clinical trials and grants.</p><p style="margin-top:1rem">The core capabilities now span three areas: the Smart Citation database and browser extension, an AI Assistant for literature search and report writing, and the MCP layer that exposes all of this to external AI tools and coding agents.</p><p style="margin-top:1rem">Pricing is tiered. The free tier gives you Smart Citation badges and the extension plus capped Assistant use, with a 7-day Personal trial. Personal costs $20 per user monthly or $12 per user on an annual plan (roughly $144 a year, about 40% off), with student discounts of around 30 to 50 percent. Organization plans are custom-quoted and add SSO, analytics and support, while the Developer tier for API and MCP access is credit-based and also custom.</p><p style="margin-top:1rem">The limitations are worth knowing. Coverage is strong in the sciences but thinner in some humanities fields, Smart Citation classifications are automated and occasionally wrong, and the useful Assistant features sit behind the paid tier. Developer and Organization pricing is opaque until you request a quote.</p><p style="margin-top:1rem">Scite fits researchers, graduate students, librarians and evidence-analysts who need to verify claims rather than just count citations, and it is particularly appealing now if you already work inside an AI assistant or coding agent and want scholarly search available there through MCP.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>1.6B+ citation relationships classified as supporting, mentioning, or contrasting</li>
-        <li>Instantly shows whether a paper's findings have been supported or refuted by subsequent research</li>
-        <li>Smart citation context extraction identifies the exact statement being cited</li>
-        <li>Integration with Zotero and Mendeley for existing reference management workflows</li>
-        <li>2M users with strong adoption in biomedical and scientific research</li>
+        <li>Smart Citations show support-versus-contradiction context, not just citation counts</li>
+        <li>MCP integration brings 250M+ articles and full-text PDFs into ChatGPT, Claude, Copilot, Cursor and Claude Code</li>
+        <li>2026 updates removed data caps on chats and saved searches and added AI Report Summaries</li>
+        <li>Annual Personal plan at $12/user is reasonable, with meaningful student discounts</li>
+        <li>MCP now reaches patents, clinical trials and grants, not only journal articles</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Coverage biased toward biomedical and natural sciences — limited humanities coverage</li>
-        <li>Citation classification can occasionally miscategorize ambiguous statements</li>
-        <li>Database (214M papers) smaller than Semantic Scholar, though citation data adds unique value</li>
-        <li>Pricing not publicly detailed beyond starting rate — requires sign-up to see full options</li>
+        <li>Automated Smart Citation classifications are sometimes inaccurate and need checking</li>
+        <li>Coverage is weaker outside the sciences, especially in parts of the humanities</li>
+        <li>Most useful Assistant capabilities require the paid Personal tier</li>
+        <li>Organization and Developer pricing is custom-quote only, with no public numbers</li>
+        <li>Free tier Assistant use is capped, limiting serious literature work</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Scite if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want to understand how a paper is cited — whether other studies support, contrast, or mention it</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're evaluating the reliability of a study and want to see contradicting or confirming evidence</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need citation context — not just citation counts, but what other papers actually say about this one</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're a researcher doing systematic reviews who needs evidence quality assessment</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Scite if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to know whether citing papers support or dispute a finding</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You already use Claude, ChatGPT, Cursor or Claude Code and want scholarly search via MCP</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need to search a large corpus including patents, trials and grants</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You do frequent literature reviews and want AI report summaries</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You are a student who can use the discounted annual plan</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Scite?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Scite is an academic research tool that shows how scientific papers have been cited — specifically whether citations are supporting, contrasting, or mentioning the original claim. This helps researchers evaluate the reliability and controversy around specific findings.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Semantic Scholar free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. Semantic Scholar is completely free and covers 200+ million academic papers across all fields. It's run by the Allen Institute for AI (a nonprofit) and provides open access to metadata, abstracts, and PDF links where available.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Scite free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Scite has a free plan with limited reference checks per month. Scite Pro is $20/month or $144/year for unlimited access. Institutional and group plans are available.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is the difference between Scite and Google Scholar?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Google Scholar shows how many times a paper was cited. Scite shows how it was cited — supporting, contrasting, or mentioning — giving context on whether subsequent research validated or challenged the original findings. Scite adds qualitative citation analysis that Google Scholar lacks.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

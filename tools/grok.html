@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Grok", "description": "Grok is xAI's AI assistant platform, offering a flagship large language model with unique real-time integration with X (Twitter) data and a growing set of developer and enterprise capabilities. It is ", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://grok.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Grok", "description": "Grok is the chat assistant built by xAI, Elon Musk's AI company. It lives both inside X (formerly Twitter) and as a standalone product at grok.com, and it is known for a looser, more opinionated conve", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://grok.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,37 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Grok</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Grok is xAI's AI assistant platform, offering a flagship large language model with unique real-time integration with X (Twitter) data and a growing set of developer and enterprise capabilities. It is available at grok.com and through the X platform for X Premium subscribers.</p><p style="margin-top:1rem">Grok 4.3 beta operates at a 1 trillion parameter scale, making it one of the largest models available to consumers. The defining characteristic that sets Grok apart from all other major AI assistants is its live access to X (Twitter) data — Grok can query and synthesize real-time posts, trending topics, and social sentiment from across the X platform. No other major AI assistant has equivalent live social media integration built in. This makes Grok uniquely valuable for understanding breaking news, viral trends, market sentiment from social media, and real-time public opinion.</p><p style="margin-top:1rem">Grok Build, currently in beta, is xAI's agentic code generation product. Grok Build takes a natural language description of an application or feature and generates a full implementation — similar in concept to Cursor's agentic features or Kiro's Specs, but running on the Grok model stack. Grok Build is positioned for rapid prototyping and full application scaffolding, and is integrated into the grok.com interface rather than requiring a separate IDE.</p><p style="margin-top:1rem">TTS (text-to-speech) and STT (speech-to-text) APIs are now available through xAI's developer API, enabling developers to build voice-enabled applications on the Grok infrastructure. This expands xAI's developer platform beyond pure language model access into multimodal API services. The TTS API produces natural-sounding voice output; the STT API enables real-time or batch audio transcription.</p><p style="margin-top:1rem">Grok is free for basic access on X with an X account. SuperGrok subscription plans offer expanded capabilities: SuperGrok Heavy at $300/month provides the highest usage limits, 428K token context window, and access to the full 1T-parameter model. Grok is best for users who need real-time social data intelligence, rapid prototyping through Grok Build, and a less content-restricted AI environment than Claude or ChatGPT.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Grok is the chat assistant built by xAI, Elon Musk's AI company. It lives both inside X (formerly Twitter) and as a standalone product at grok.com, and it is known for a looser, more opinionated conversational style than most rivals, plus tight access to real-time posts on X.</p><p style="margin-top:1rem">The flagship model is Grok 4.3 (Beta), which became the default in April 2026. It added native video input, pushed its knowledge cutoff to December 2025, and improved tool-calling. xAI has announced Grok 4.5 for public release on July 9, 2026, pitched as an &quot;Opus-class&quot; model built on a new 1.5-trillion-parameter V9 foundation and trained partly on Cursor coding data.</p><p style="margin-top:1rem">On capabilities, Grok handles text chat, image and video understanding, web and X search, and image/video generation through Grok Imagine. Developers can also reach the models through the xAI API.</p><p style="margin-top:1rem">Pricing spans a wide ladder. The free tier is $0 and now runs a lighter Grok 4 Mini, text only, capped at roughly 10 prompts every 2 hours. Paid options include X Premium at $8/mo, SuperGrok Lite at $10/mo, SuperGrok at $30/mo (or $300/yr, about 17% off), X Premium+ at $40/mo, and SuperGrok Heavy at $300/mo. The API (grok-4.3) costs $1.25 per million input tokens and $2.50 per million output tokens.</p><p style="margin-top:1rem">The main limitation is the free tier, which was tightened in March 2026: image and video generation were removed from it and it only runs Grok 4 Mini with a tight prompt cap. Getting the full flagship experience and Grok Imagine requires a paid plan.</p><p style="margin-top:1rem">Grok suits people already active on X who want an assistant wired into live posts, users who like a more candid tone, and developers who want a competitively priced API. Anyone who needs the newest model or heavy image/video generation should expect to pay.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Unique real-time X/Twitter data integration — unmatched for trending topics and social sentiment</li>
-        <li>Grok Build beta: agentic code generation from natural language for rapid prototyping</li>
-        <li>TTS and STT APIs: voice-enabled application building on the Grok model stack</li>
-        <li>1 trillion parameter scale — one of the largest models available to consumers</li>
-        <li>Less restrictive content policy than OpenAI or Anthropic models</li>
+        <li>Flagship Grok 4.3 (Beta) offers native video input and a December 2025 knowledge cutoff</li>
+        <li>Deep integration with X gives strong real-time, current-events awareness</li>
+        <li>Competitively priced API at $1.25/$2.50 per million input/output tokens</li>
+        <li>Wide range of plans from $8 to $300/mo to match different budgets and workloads</li>
+        <li>More candid, less filtered conversational style than many competitors</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>SuperGrok Heavy at $300/mo — most expensive consumer AI subscription available</li>
-        <li>Grok Build is in beta — reliability and output quality on complex applications still maturing</li>
-        <li>Quality inconsistent vs Claude and GPT-4 class models on complex reasoning benchmarks</li>
-        <li>Tightly coupled to the X/Twitter ecosystem — less useful without X account and context</li>
+        <li>Free tier was tightened in March 2026 to Grok 4 Mini only, text-only, ~10 prompts/2 hrs</li>
+        <li>Image and video generation (Grok Imagine) removed from the free tier</li>
+        <li>Flagship 4.3 is still labeled Beta, and 4.5 was only just announced for July 9, 2026</li>
+        <li>Best features are locked behind the multi-tier paid structure</li>
+        <li>Tone and looser guardrails can produce less predictable answers</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Grok if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're active on X (Twitter) and want AI that understands real-time social media context</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want current news and trending topics without a knowledge cutoff</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want uncensored, edgier AI responses — Grok has fewer content restrictions</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're already paying for X Premium and want AI included in your subscription</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Grok if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You are active on X and want an assistant tied to live posts</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You prefer a more candid, less filtered conversational style</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want a competitively priced API for building apps</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want early access to Grok 4.5 when it launches July 9, 2026</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Grok AI?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Grok is xAI's AI assistant built into X (Twitter). It has real-time access to X posts and trending topics, making it unique for social media intelligence. Grok 3 (2025) is a frontier model competitive with GPT-4o on reasoning benchmarks.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Grok free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Grok is included with X Premium ($8/month) and X Premium+ ($16/month). A standalone Grok app with more features is available for $30/month. There is no completely free version of Grok.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Grok 3 better than GPT-4?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Grok 3 is competitive with GPT-4o on reasoning and math benchmarks, and leads on some STEM tasks. For general-purpose use, coding, and ecosystem features, GPT-4o still has advantages. Grok's main differentiator is real-time X/Twitter access.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Does Grok generate images?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. Grok includes Aurora, an image generation model. Quality is competitive with DALL-E 3. Grok is more permissive with image content than other AI assistants.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +258,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

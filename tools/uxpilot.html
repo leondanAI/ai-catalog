@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "UXPilot", "description": "UXPilot is an AI-powered UX design tool that generates wireframes, UI screens, and complete screen flows from text prompts. It targets UX designers and product teams who want to accelerate the wirefra", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://uxpilot.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "UXPilot", "description": "UX Pilot is an AI-assisted product design tool aimed at UX/UI designers who want to move from idea to high-fidelity screens quickly. Instead of starting from a blank canvas, you describe what you need", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://uxpilot.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About UXPilot</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">UXPilot is an AI-powered UX design tool that generates wireframes, UI screens, and complete screen flows from text prompts. It targets UX designers and product teams who want to accelerate the wireframing phase without starting from a blank canvas. The Figma plugin integrates AI generation directly into existing Figma workflows.</p><p style="margin-top:1rem">The tool generates multiple screen variations from a single prompt, allowing designers to choose and iterate on the direction that fits best. Predictive heatmaps simulate where users are likely to look and click on a design — useful for validating layout decisions before user testing. Screen flow generation creates connected multi-screen prototypes from a feature description.</p><p style="margin-top:1rem">Key capabilities include text-to-wireframe generation, UI screen generation, screen flow creation, predictive heatmap analysis, Figma plugin for in-editor generation, and code export for handoff to developers.</p><p style="margin-top:1rem">Pricing: Free plan supports up to 7 screens at a time with limited AI generations. Paid plans start at $14 per month for increased screen generation capacity and additional features. Higher tiers around $22 per month add team collaboration and higher usage limits. Pricing tiers are simpler than most competitors.</p><p style="margin-top:1rem">Limitations: Free and basic paid plan feel limiting for serious professional use — the output quality and generation limits push users toward higher tiers quickly. Generated designs tend toward generic UI patterns and require customization to feel distinctive.</p><p style="margin-top:1rem">Best suited for UX designers who want to accelerate wireframing and quickly generate multiple screen directions for stakeholder review, particularly those who already work in Figma.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">UX Pilot is an AI-assisted product design tool aimed at UX/UI designers who want to move from idea to high-fidelity screens quickly. Instead of starting from a blank canvas, you describe what you need and the tool generates full interfaces you can refine.</p><p style="margin-top:1rem">There is no public model version number. Instead, UX Pilot offers three generation modes: Standard, Deep Design, and Max, which trade higher credit cost for more elaborate output. Through 2026 the product added the Nodey plugin for generating and editing components directly inside Figma, AI UX-research with attention-prediction, and design-to-code that converts an image into HTML. It now runs direct comparison pages against Anthropic's Claude Design (Claude Opus 4.7) and other AI design tools.</p><p style="margin-top:1rem">Key capabilities include text-to-UI generation, in-Figma editing via Nodey, attention heatmaps and UX-research feedback, and image-to-HTML export for handing work to developers.</p><p style="margin-top:1rem">Pricing is credit-based. The Free plan is $0 with 45 credits (recent reviews describe these as one-time, not monthly) covering up to about 7 screens. Standard is $14/month billed annually ($19 monthly) with 420 credits, roughly 70 screens. Pro is $22/month billed annually ($29 monthly) with 1,200 credits, around 200 screens, marked Popular. Teams is $31/user/month billed annually ($39 monthly) with 1,600 credits per user, about 266 screens. Enterprise is custom, with unlimited or custom credits and model fine-tuning.</p><p style="margin-top:1rem">The main limitation is the credit economy: credits do not roll over, and the richer Deep Design and Max modes burn roughly 12 to 18 credits per screen versus about 6 in Standard, so heavy or high-detail use consumes budget fast. The free tier's credits are one-time rather than a recurring allowance.</p><p style="margin-top:1rem">It suits designers and small teams who want fast AI-generated screens, Figma users who want generation inside their existing workflow, and anyone who needs quick design-to-HTML output. Teams with steady high-volume needs should model the credit burn before committing.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Generates wireframes and full UI screens from text prompts quickly</li>
-        <li>Predictive heatmaps validate layout decisions before user testing</li>
-        <li>Figma plugin integrates AI generation into existing design workflows</li>
-        <li>Screen flow generation creates connected multi-screen prototypes automatically</li>
-        <li>Code export enables direct developer handoff</li>
+        <li>Three generation modes (Standard, Deep Design, Max) let you trade credit cost for output detail</li>
+        <li>Nodey plugin generates and edits components directly inside Figma</li>
+        <li>Built-in AI UX-research and attention prediction, not just screen generation</li>
+        <li>Design-to-code exports images to HTML for developer handoff</li>
+        <li>Genuine free tier with 45 credits and paid plans starting at $14/month annually</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Free and entry paid tiers feel limited for regular professional use</li>
-        <li>Generated designs lean toward generic UI patterns — customization needed</li>
-        <li>Smaller tool and community than Figma AI or Uizard</li>
-        <li>Predictive heatmaps are simulations, not data from real user behavior</li>
+        <li>Credits do not roll over, so unused allowance is lost each cycle</li>
+        <li>Deep Design and Max modes consume roughly 12-18 credits per screen versus about 6 in Standard</li>
+        <li>Free plan's 45 credits are one-time, not a monthly allotment</li>
+        <li>No public model version number, making capabilities hard to benchmark precisely</li>
+        <li>Annual pricing is required to reach the lowest advertised monthly rates</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose UXPilot if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need AI-powered UX research tools — personas, user journeys, usability analysis</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want to generate research artifacts without hours of manual UX work</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're a UX researcher or product manager who needs research frameworks fast</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want AI to analyze designs and provide usability feedback without a research team</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose UXPilot if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to generate high-fidelity UI screens from text prompts fast</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You work in Figma and want AI generation inside it via Nodey</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need attention prediction and UX-research feedback alongside design</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want quick image-to-HTML export for developer handoff</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You can work within a credit budget that does not roll over</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is UXpilot?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">UXpilot is an AI tool for UX research and design. It generates user personas, user journey maps, research plans, usability heuristics, and design feedback from prompts. It's used by UX designers and product managers to produce research artifacts faster.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is the difference between UXpilot and Figma AI?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">UXpilot focuses on UX research artifacts — personas, journeys, usability analysis. Figma AI focuses on design creation — generating UI components and screen designs within Figma. UXpilot is for research; Figma AI is for design. Many UX professionals use both.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is UXpilot free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">UXpilot has a free plan with limited generations. Pro plan is $20/month for more AI generations and features. Enterprise plans are available for teams.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can AI do UX research?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">AI can significantly accelerate parts of UX research — generating personas from briefs, creating research plans, analyzing patterns in qualitative data, and producing design heuristics. However, AI cannot replace real user research: interviews, usability testing, and behavioral observation still require human researchers.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

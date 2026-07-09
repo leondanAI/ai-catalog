@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","ru");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Claude Design","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://www.anthropic.com/claude/design"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Claude Design","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://www.anthropic.com/claude/design","dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/ru/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Каталог</a>
       <a href="/ru/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Сравнение</a>
       <a href="/ru/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Новости</a>
-      <a href="/ru/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">Инструменты</a>
+      <a href="/ru/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Инструменты</a>
       <a href="/ru/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Рассылка</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/ru/directory.html"  class="nav-link" data-i18n="nav.directory">Каталог</a>
     <a href="/ru/compare.html"    class="nav-link" data-i18n="nav.compare">Сравнение</a>
     <a href="/ru/news.html"       class="nav-link" data-i18n="nav.news">Новости</a>
-    <a href="/ru/directory.html"      class="nav-link" data-i18n="nav.tools">Инструменты</a>
+    <a href="/ru/tools.html"      class="nav-link" data-i18n="nav.tools">Инструменты</a>
     <a href="/ru/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Рассылка</a>
   </nav>
 </header>
@@ -150,26 +150,28 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>О сервисе Claude Design</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Claude Design — это специализированный AI-инструмент для дизайна от Anthropic, запущенный 17 апреля 2026 года как исследовательский превью под брендом Anthropic Labs. Это отдельный продукт от обычного Claude — работает на Claude Opus 4.7 и специально обучен генерировать отполированный визуальный контент включая презентации, one-pager'ы, слайд-деки, прототипы и визуальные отчеты из запросов на естественном языке.</p><p style="margin-top:1rem">При первом запуске Claude Design анализирует вашу кодовую базу или файлы дизайна для построения системы дизайна — извлекая цвета брендирования, типографику и паттерны компонентов. Последующие дизайны автоматически соответствуют этой системе, производя консистентный брендированный выход без ручной конфигурации. Экспорт доступен в форматах PDF, общедоступного URL, PPTX или напрямую в Canva для дополнительного редактирования.</p><p style="margin-top:1rem">Ключевые возможности включают итерационный дизайн через диалог (запрашивайте изменения простым языком), генерацию презентаций, создание интерактивных прототипов, дизайн one-pager'ов и отчетов, а также автоматическое обнаружение системы брендирования. Инструмент понимает дизайн-интенцию, а не требует точные спецификации — опишите, что вам нужно, и он создает полный визуальный результат.</p><p style="margin-top:1rem">Цены: Claude Design включен в Claude Pro за $20 в месяц, Claude Max за $100 и $200 в месяц, Team-планы и Enterprise. Недоступен на Free-уровне. Нет отдельного ценообразования — доступ требует активную подписку Claude.</p><p style="margin-top:1rem">Ограничения: Как исследовательский превью, запущенный в апреле 2026 года, Claude Design все еще развивается. Качество вывода может варьироваться на сложных многостраничных макетах. Это не замена профессиональным инструментам дизайна как Figma для UI/UX работы — он превосходит в дизайне презентаций и документов, а не в интерактивном дизайне продуктов.</p><p style="margin-top:1rem">Оптимально подходит для профессионалов, которым нужны отполированные презентации, отчеты и one-pager'ы быстро, не открывая инструмент дизайна — особенно для тех, кто уже использует Claude Pro для других работ.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Claude Design — дизайн-ассистент от Anthropic Labs. Это не отдельный продукт, а функция, встроенная в платные подписки Claude, которая превращает уже существующие материалы проекта в аккуратный и单ый по стилю дизайн.</p><p style="margin-top:1rem">Он вышел 17 апреля 2026 года как исследовательское превью и работает на vision-модели Claude Opus 4.7. Стоит учитывать: хотя основная линейка Claude в середине 2026 года перешла на Opus 4.8, официального подтверждения того, что сам Claude Design обновили выше 4.7, нет.</p><p style="margin-top:1rem">Главная идея в том, что Claude Design может прочитать кодовую базу команды и файлы дизайна и на их основе автоматически построить переиспользуемую дизайн-систему. Готовую работу он экспортирует в Canva, PDF, PPTX или отдельный HTML, а также умеет передавать задачу напрямую в Claude Code для реализации.</p><p style="margin-top:1rem">Отдельной цены нет. Доступ входит в платные тарифы Claude и расходуется в рамках лимитов каждого плана: Pro — $20/мес ($17/мес при годовой оплате), Max 5x — $100/мес, Max 20x — $200/мес, Team Standard — $25 за место в месяц ($20 при годовой оплате), Team Premium — $125 за место в месяц ($100 при годовой оплате), Enterprise — по индивидуальной цене. Бесплатный план за $0 Claude Design не включает.</p><p style="margin-top:1rem">Расход учитывается отдельно и списывается из лимитов подписки, причём пользователи отмечают довольно жёсткие недельные ограничения; сверх лимитов можно докупить дополнительное использование. Поскольку это исследовательское превью, поведение и доступность могут меняться.</p><p style="margin-top:1rem">Подойдёт продуктовым командам и дизайнерам, у которых уже есть платный план Claude и которые хотят получить единую дизайн-систему из существующего кода и файлов, ценя удобную передачу задач в Claude Code.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Обновлено: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Преимущества</div><ul class="pc-list">        <li>Генерирует полные визуальные дизайны из разговорных запросов — не требуются навыки дизайна</li>
-        <li>Автоматически обнаруживает и применяет вашу систему брендирования (цвета, типографика, компоненты)</li>
-        <li>Экспорт в PDF, URL, PPTX или напрямую в Canva</li>
-        <li>Работает на Claude Opus 4.7 — понимает дизайн-интенцию из естественного языка</li>
-        <li>Включен в Claude Pro ($20/мес) — не требуется отдельная подписка</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Недостатки</div><ul class="pc-list">        <li>Исследовательский превью на апрель 2026 года — все еще развивается с переменным качеством вывода</li>
-        <li>Недоступен в Claude Free</li>
-        <li>Не замена Figma или профессиональным инструментам UI/UX дизайна</li>
-        <li>Нет отдельного ценообразования — требуется активная подписка Claude</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Преимущества</div><ul class="pc-list">        <li>Читает вашу кодовую базу и файлы дизайна и автоматически строит переиспользуемую дизайн-систему</li>
+        <li>Экспорт в несколько практичных форматов: Canva, PDF, PPTX и отдельный HTML</li>
+        <li>Прямая передача в Claude Code для превращения дизайна в код</li>
+        <li>Работает на сильной vision-модели Claude Opus 4.7</li>
+        <li>Входит в платные планы Claude — не нужна отдельная подписка на дизайн-инструмент</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Недостатки</div><ul class="pc-list">        <li>Требует платной подписки Claude; на бесплатном тарифе за $0 недоступен</li>
+        <li>Всё ещё исследовательское превью — функции и доступность могут меняться без предупреждения</li>
+        <li>Расход списывается из лимитов плана, пользователи сообщают о жёстких недельных ограничениях</li>
+        <li>При активной работе может понадобиться докупать дополнительное использование</li>
+        <li>Официально всё ещё на Opus 4.7, а не на более новой 4.8, которая используется в остальной линейке Claude</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://www.anthropic.com/claude/design" target="_blank" rel="noopener">Перейти на Claude Design →</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Выберите Claude Design если…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Хотите генерировать и итерировать UI-дизайны через диалог с Claude без открытия Figma</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Создаёте быстрые концепции интерфейсов из описания для обсуждения с командой</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Нужно быстрое прототипирование без глубоких навыков Figma</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Работаете с Claude и хотите визуальные результаты прямо в разговоре</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Выберите Claude Design если…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">У вас уже есть платный план Claude (Pro, Max, Team или Enterprise)</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вы хотите получить дизайн-систему прямо из своего кода и файлов дизайна</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вам важны экспорт в Canva, PDF, PPTX или HTML и передача задач в Claude Code</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вы готовы работать с развивающейся функцией в статусе превью</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Частые вопросы</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Что такое Claude Design?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Claude Design — AI-инструмент дизайна Anthropic, встроенный в Claude. Генерирует UI-макеты, презентации, лендинги и визуальные прототипы через диалог — без дизайнерского ПО.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Сколько стоит Claude Design?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Включён в Claude Pro ($20/месяц), Max ($100/месяц), Team и Enterprise без доплаты. Доступен как ранний доступ через Anthropic Labs.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Можно ли экспортировать в Figma или в код?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Claude Design генерирует HTML/CSS код дизайнов. Прямой экспорт в Figma недоступен по состоянию на май 2026, но сгенерированный код можно использовать в любом рабочем процессе.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Какие дизайны умеет создавать Claude Design?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">UI-макеты, лендинги, слайды презентаций, дашборды с данными и маркетинговые материалы. Может извлекать брендовый стиль из существующих материалов и применять его последовательно.</span></div></div></div></div>
   <div class="section-title-sm">Также рассмотрите</div>
   <div class="also-grid">    <a class="also-card" href="/ru/tools/adobe-firefly.html">
@@ -216,7 +218,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/ru/directory.html">Каталог</a>
         <a href="/ru/news.html">Новости</a>
-        <a href="/ru/directory.html">Инструменты</a>
+        <a href="/ru/tools.html">Инструменты</a>
         <a href="/ru/compare.html">Сравнение</a>
         <a href="/ru/newsletter.html">Рассылка</a>
       </div>

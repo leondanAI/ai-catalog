@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Claude Code", "description": "Claude Code is Anthropic's agentic coding tool available as a CLI, desktop app, and VS Code/JetBrains extension. It operates directly in your local development environment — reading the    \n  full cod", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://claude.ai/code", "offers": {"@type": "Offer", "price": "", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": 1, "bestRating": "5", "worstRating": "1"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Claude Code", "description": "Claude Code is Anthropic's agentic coding tool. It reads your codebase, edits files, runs commands and can carry a task from a plain-language request through to a working change, rather than just sugg", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://claude.ai/code", "offers": {"@type": "Offer", "price": "", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": 1, "bestRating": "5", "worstRating": "1"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,53 +174,37 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Claude Code</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Claude Code is Anthropic's agentic coding tool available as a CLI, desktop app, and VS Code/JetBrains extension. It operates directly in your local development environment — reading the    
-  full codebase, planning multi-file changes, writing and editing code, running tests, and committing to git — all from natural language instructions. Unlike sandbox-based tools, Claude Code runs in your actual    
-  filesystem with no artificial limitations.                                                                                                                                                                          
-                                                                                                                                                                                                                      
-  As of 2026, Claude Code supports multi-agent orchestration: a lead agent can spawn parallel Claude Code subagents to handle different parts of a complex task simultaneously. Computer use capabilities allow it to 
-  control browsers for automated testing workflows. The Model Context Protocol (MCP) enables integration with external tools and custom data sources.                                                                 
-   
-  Key capabilities include cross-repository awareness, autonomous git operations (commit, branch, PR creation), bash command execution, and iterative debugging. The desktop app adds a split-pane interface with a   
-  plan sidebar, making it easier to track long-running agentic tasks across large codebases.                                                                                                                          
-   
-  Pricing: Claude Code is included with Claude Pro at $20 per month. Claude Max plans at $100 and $200 per month provide significantly higher usage limits for heavy users. Team plans start at $100 per seat per     
-  month. Enterprise pricing is available on request. Direct API usage is billed at $3–$25 per million tokens depending on model.                                                                                      
-   
-  Limitations: Claude Code requires terminal familiarity and has a steeper learning curve than GUI-based tools. Heavy usage exceeds Pro plan limits quickly, and the Max plans are expensive. It has no built-in UI   
-  preview or design-to-code features.                                                                                                                                                                                 
-   
-  Best suited for professional developers handling complex multi-file refactoring, large-scale agentic workflows, and teams that need deep codebase-wide reasoning across large projects.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Claude Code is Anthropic's agentic coding tool. It reads your codebase, edits files, runs commands and can carry a task from a plain-language request through to a working change, rather than just suggesting completions in an editor.</p><p style="margin-top:1rem">The current release is CLI v2.1.x (v2.1.185-v2.1.193, late June 2026). Since May 28, 2026 the default model has been Claude Opus 4.8, Anthropic's strongest computer-use and browser-agent model, which runs at high effort by default (you can push it further with /effort xhigh). Fast mode now also runs on Opus 4.8 at $10/$50 per million tokens, roughly 3x cheaper than the models it replaced.</p><p style="margin-top:1rem">Beyond the terminal, Claude Code spans web and mobile. Recent additions include 'dynamic workflows' that orchestrate dozens to hundreds of subagents, expanded Auto mode (now on the Pro plan and on Bedrock, Google Cloud and Microsoft Foundry), computer use in the CLI, /ultrareview cloud bug-hunting, Artifacts (beta), scheduled cloud agents (Routines), native Windows support without Git Bash, /code-review and background subagents.</p><p style="margin-top:1rem">Pricing: the Free tier ($0) does not include Claude Code. It is bundled into Pro ($17/mo annual or $20/mo monthly), Max 5x (from $100/mo), Max 20x ($200/mo), Team Premium ($100/seat/mo annual, $125 monthly, 5-seat minimum) and Enterprise (seat plus API-rate usage from $20/seat). Team Standard is $20/seat/mo annual ($25 monthly). API access is priced separately at an intro $2/$10 per million tokens through Aug 31, 2026, then $3/$15; Opus 4.8 fast mode is $10/$50.</p><p style="margin-top:1rem">Limitations are worth knowing. There is no free way to use it, usage caps still apply even on paid plans (Anthropic doubled limits on May 6, 2026 and added pay-as-you-go overage with a spend cap), and API usage can get expensive on large agentic runs. High-effort agent runs can also be slow and consume tokens quickly.</p><p style="margin-top:1rem">It suits professional developers and teams who want an agent that actually edits and ships code, especially those already on a Claude Pro, Max or Team plan who want coding included without a separate API bill.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Best-in-class multi-file reasoning across large codebases</li>
-        <li>Native git integration — commit, branch, and open PRs from natural language</li>
-        <li>Multi-agent orchestration for parallel task execution</li>
-        <li>MCP protocol enables custom tool and data source integrations</li>
-        <li>Runs in your actual local environment with no sandboxing limitations</li>
+        <li>Full agentic workflow: reads, edits and runs code, not just autocomplete</li>
+        <li>Default Claude Opus 4.8 is a top-tier model for coding and computer use</li>
+        <li>Now bundled into Pro at $17-20/mo, a much lower entry point than Max-only</li>
+        <li>Runs across terminal, web and mobile with cloud agents and scheduled Routines</li>
+        <li>Fast mode on Opus 4.8 is roughly 3x cheaper than the models it replaced</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Requires terminal familiarity — steeper learning curve than GUI tools</li>
-        <li>Heavy usage quickly exceeds Pro plan limits</li>
-        <li>Max plans at $100–$200/month are expensive for individual developers</li>
-        <li>No  
-  built-in UI preview or design-to-code features</li>
-        <li>API billing can become unpredictable at scale</li>
+        <li>Not available on the Free tier at all</li>
+        <li>Usage caps apply even on paid plans; heavy use can hit limits</li>
+        <li>API pricing rises to $3/$15 per MTok after the Aug 31, 2026 intro window</li>
+        <li>High-effort agent runs can be slow and burn through tokens</li>
+        <li>Deep feature set (subagents, workflows, computer use) has a learning curve</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Claude Code if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need to refactor, debug, or build across an entire codebase — not just autocomplete</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You work in the terminal and want an autonomous agent that plans and executes multi-step tasks</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're doing complex architecture work where the AI needs deep project understanding</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want the most capable model (Claude 3.7) for hard engineering problems</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Claude Code if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want an agent that edits and ships real code, not just suggestions</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You already pay for Claude Pro, Max or Team and want coding included</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need cloud agents, scheduled Routines or multi-subagent workflows</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You work across terminal, web and mobile and want one consistent tool</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Claude Code?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Claude Code is Anthropic's official CLI tool for software engineering. It runs in your terminal, reads your codebase, and can write code, run commands, fix bugs, and complete multi-file tasks as an autonomous agent.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">How much does Claude Code cost?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Claude Code is included with Claude Pro ($20/month), Max ($100/month), Team, and Enterprise plans. Usage is metered by API tokens consumed during agentic tasks.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">How is Claude Code different from Cursor?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Claude Code runs in the terminal — it has no GUI. It is designed for developers who prefer CLI workflows and want deep control. Cursor is a full IDE with a visual interface built on VS Code.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What can Claude Code do autonomously?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Claude Code can read and edit files, run shell commands, execute tests, search the codebase, manage git, and complete multi-step engineering tasks end-to-end with minimal prompting.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -274,7 +258,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

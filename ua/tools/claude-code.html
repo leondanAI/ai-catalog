@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","ua");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://claude.ai/code","aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":1,"bestRating":"5","worstRating":"1"}}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://claude.ai/code","aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":1,"bestRating":"5","worstRating":"1"},"dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/ua/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Каталог</a>
       <a href="/ua/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Порівняння</a>
       <a href="/ua/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Новини</a>
-      <a href="/ua/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">Інструменти</a>
+      <a href="/ua/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Інструменти</a>
       <a href="/ua/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Розсилка</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/ua/directory.html"  class="nav-link" data-i18n="nav.directory">Каталог</a>
     <a href="/ua/compare.html"    class="nav-link" data-i18n="nav.compare">Порівняння</a>
     <a href="/ua/news.html"       class="nav-link" data-i18n="nav.news">Новини</a>
-    <a href="/ua/directory.html"      class="nav-link" data-i18n="nav.tools">Інструменти</a>
+    <a href="/ua/tools.html"      class="nav-link" data-i18n="nav.tools">Інструменти</a>
     <a href="/ua/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Розсилка</a>
   </nav>
 </header>
@@ -150,24 +150,28 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Про сервіс Claude Code</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Claude Code — CLI-агент від Anthropic, провідний ШІ-інструмент для розробки 2026. Повний цикл розробки в терміналі: код, тести, рефакторинг.</p><p style="margin-top:1rem">Найкращий у складних задачах з довгим контекстом — весь репозиторій у контексті. Нативний термінал — працює в будь-якому середовищі без IDE-плагінів.</p><p style="margin-top:1rem">Тільки платний — потрібні активні кредити Anthropic API. Потрібен досвід роботи з терміналом.</p><p style="margin-top:1rem">У 2026 в Claude Code додалися Background Agents — автономні агенти, що працюють у фоні, поки ви зайняті іншим, вікно контексту розширене до 1M токенів (Beta), а інструмент включений у тарифи Claude Pro та Max (для багатьох сценаріїв окремі API-кредити не потрібні). Лідирує у бенчмарку SWE-Bench Verified з результатом 80,8% на Opus 4.6.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Claude Code - це агентний інструмент розробки від Anthropic. Він читає ваш код, редагує файли, виконує команди і може довести задачу від запиту звичайною мовою до готової зміни, а не лише підказує автодоповнення в редакторі.</p><p style="margin-top:1rem">Поточна версія - CLI v2.1.x (v2.1.185-v2.1.193, кінець червня 2026). Від 28 травня 2026 моделлю за замовчуванням стала Claude Opus 4.8 - найсильніша модель Anthropic для computer use і роботи в браузері; за замовчуванням вона працює з високим рівнем зусиль (можна підняти через /effort xhigh). Швидкий режим тепер теж працює на Opus 4.8 за ціною $10/$50 за мільйон токенів - приблизно втричі дешевше за попередні моделі.</p><p style="margin-top:1rem">Окрім термінала, Claude Code доступний у вебі та на мобільних. Серед нещодавнього: 'динамічні воркфлоу', що оркеструють від десятків до сотень субагентів, розширений режим Auto (тепер на плані Pro, а також у Bedrock, Google Cloud і Microsoft Foundry), computer use у CLI, хмарний пошук багів /ultrareview, Artifacts (бета), заплановані хмарні агенти (Routines), нативна підтримка Windows без Git Bash, /code-review і фонові субагенти.</p><p style="margin-top:1rem">Ціни: безкоштовний тариф ($0) не включає Claude Code. Він входить у Pro ($17/міс за річної оплати або $20/міс помісячно), Max 5x (від $100/міс), Max 20x ($200/міс), Team Premium ($100 за місце/міс за річної оплати, $125 помісячно, мінімум 5 місць) та Enterprise (місце плюс використання за тарифами API від $20 за місце). Team Standard коштує $20 за місце/міс за річної оплати ($25 помісячно). Доступ через API оплачується окремо: вступна ціна $2/$10 за мільйон токенів до 31 серпня 2026, потім $3/$15; швидкий режим Opus 4.8 - $10/$50.</p><p style="margin-top:1rem">Про обмеження варто пам'ятати. Безкоштовно користуватися не можна, ліміти на обсяг діють навіть на платних планах (6 травня 2026 Anthropic подвоїла ліміти й додала оплату понад ліміт за фактом зі стелею витрат), а використання API може вийти дорогим на великих агентних прогонах. Прогони з високим зусиллям бувають повільними і швидко витрачають токени.</p><p style="margin-top:1rem">Підійде професійним розробникам і командам, яким потрібен агент, що реально редагує й викочує код, - особливо тим, хто вже на плані Pro, Max чи Team і хоче отримати програмування в комплекті без окремого рахунку за API.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Оновлено: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Переваги</div><ul class="pc-list">        <li>Найкращий у складних задачах — весь репозиторій у         
-  контексті</li>
-        <li>Нативний термінал — працює в будь-якому середовищі</li>
-        <li>Повний цикл: дизайн, код, тести, рефакторинг</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Недоліки</div><ul class="pc-list">        <li>Тільки платний — потрібні кредити API</li>
-        <li>Потрібен досвід     
-  роботи з терміналом</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Переваги</div><ul class="pc-list">        <li>Повний агентний цикл: читає, редагує й виконує код, а не лише автодоповнення</li>
+        <li>Модель за замовчуванням Claude Opus 4.8 - топова для коду й computer use</li>
+        <li>Тепер входить у Pro за $17-20/міс - значно нижчий поріг входу, ніж лише Max</li>
+        <li>Працює в терміналі, вебі та на мобільних, з хмарними агентами й запланованими Routines</li>
+        <li>Швидкий режим на Opus 4.8 приблизно втричі дешевший за попередні моделі</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Недоліки</div><ul class="pc-list">        <li>На безкоштовному тарифі недоступний узагалі</li>
+        <li>Ліміти діють навіть на платних планах; інтенсивна робота впирається в них</li>
+        <li>Ціна API зросте до $3/$15 за MTok після вступного періоду до 31 серпня 2026</li>
+        <li>Прогони з високим зусиллям бувають повільними і швидко витрачають токени</li>
+        <li>Багатий набір функцій (субагенти, воркфлоу, computer use) потребує часу на освоєння</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://claude.ai/code" target="_blank" rel="noopener">Перейти на Claude Code →</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Оберіть Claude Code якщо…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Вам потрібен найпотужніший ШІ-агент для кодування з глибокою інтеграцією Anthropic Claude</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Claude Code спеціально розроблений для складного багатофайлового рефакторингу і агентних завдань</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Найкраща продуктивність для великих кодових баз і складних завдань розробки</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Розроблений безпосередньо Anthropic з доступом до найновіших Claude-моделей</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Оберіть Claude Code якщо…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Потрібен агент, що редагує й викочує реальний код, а не дає підказки</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Ви вже платите за Claude Pro, Max чи Team і хочете програмування в комплекті</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Потрібні хмарні агенти, заплановані Routines або воркфлоу з багатьох субагентів</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Ви працюєте в терміналі, вебі та на мобільних і хочете один узгоджений інструмент</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Часті запитання</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Що таке Claude Code?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Claude Code — офіційний CLI-інструмент Anthropic для розробки програмного забезпечення. Працює в терміналі, читає кодову базу, пише код, виконує команди, виправляє баги та завершує багатофайлові завдання як автономний агент.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Скільки коштує Claude Code?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Включений у Claude Pro ($20/місяць), Max ($100/місяць), Team та Enterprise. Використання тарифікується за API-токенами, спожитими під час агентних завдань.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Чим Claude Code відрізняється від Cursor?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Claude Code працює в терміналі — без GUI. Для розробників, які надають перевагу CLI. Cursor — повноцінна IDE з візуальним інтерфейсом на базі VS Code.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Що Claude Code вміє робити автономно?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Читати та редагувати файли, виконувати команди оболонки, запускати тести, шукати по кодовій базі, керувати git та завершувати багатокрокові інженерні завдання з мінімальними підказками.</span></div></div></div></div>
   <div class="section-title-sm">Також розгляньте</div>
   <div class="also-grid">    <a class="also-card" href="/ua/tools/aider.html">
@@ -214,7 +218,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/ua/directory.html">Каталог</a>
         <a href="/ua/news.html">Новини</a>
-        <a href="/ua/directory.html">Інструменти</a>
+        <a href="/ua/tools.html">Інструменти</a>
         <a href="/ua/compare.html">Порівняння</a>
         <a href="/ua/newsletter.html">Розсилка</a>
       </div>

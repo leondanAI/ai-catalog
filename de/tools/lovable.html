@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","de");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Lovable","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://lovable.dev"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Lovable","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://lovable.dev","dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/de/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Verzeichnis</a>
       <a href="/de/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Vergleichen</a>
       <a href="/de/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Neuigkeiten</a>
-      <a href="/de/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">Werkzeuge</a>
+      <a href="/de/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Werkzeuge</a>
       <a href="/de/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/de/directory.html"  class="nav-link" data-i18n="nav.directory">Verzeichnis</a>
     <a href="/de/compare.html"    class="nav-link" data-i18n="nav.compare">Vergleichen</a>
     <a href="/de/news.html"       class="nav-link" data-i18n="nav.news">Neuigkeiten</a>
-    <a href="/de/directory.html"      class="nav-link" data-i18n="nav.tools">Werkzeuge</a>
+    <a href="/de/tools.html"      class="nav-link" data-i18n="nav.tools">Werkzeuge</a>
     <a href="/de/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -138,7 +138,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">🏗️ No-Code</span>
-        <span class="tool-meta-chip badge-paid">Kostenpflichtig</span>
+        <span class="tool-meta-chip badge-freemium">Freemium</span>
         <span class="tool-meta-chip">👥 500K+</span>
       </div>
       <div class="tool-best-for"><strong>Ideal für:</strong> KI-App-Builder, kein Code, visuelle Bug-Tests, Spracheingabe</div>
@@ -150,26 +150,29 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>Über Lovable</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Lovable ist ein KI-gestützter App-Builder, der Full-Stack-Webanwendungen aus Beschreibungen in natürlicher Sprache generiert. Es positioniert sich zwischen einem No-Code-Tool und einer traditionellen Entwicklungsumgebung: Nutzer beschreiben, was sie wollen, und Lovable schreibt und deployed die Anwendung. Keine Programmiererfahrung erforderlich.</p><p style="margin-top:1rem">Plan Mode, eingeführt im Februar 2026, ändert die Funktionsweise der Generierung: Anstatt sofort Code zu schreiben, zeigt Lovable zunächst einen vollständigen Plan, was es zu bauen beabsichtigt. Der Nutzer überprüft und genehmigt den Plan, bevor Code generiert wird, was verschwendete Iterationen reduziert, bei denen die KI einen mehrdeutigen Prompt falsch interpretiert.</p><p style="margin-top:1rem">Die Prompt-Warteschlange ermöglicht es Nutzern, bis zu 50 sequentielle Prompts einzureihen, die nacheinander ohne manuelle Eingriffe ausgeführt werden. Statt auf jede Änderung zu warten, können Nutzer eine komplette Sitzung inkrementeller Verbesserungen vorausladen.</p><p style="margin-top:1rem">Browser Testing fügt einen virtuellen Browser hinzu, der die generierte Anwendung automatisch auf visuelle Bugs und Interaktionsfehler testet — überprüft, dass Buttons funktionieren, Layouts korrekt gerendert werden und Formulare ohne Fehler absenden.</p><p style="margin-top:1rem">Voice Mode ermöglicht es, Änderungen verbal statt tippend zu beschreiben. Die iOS- und Android-Mobile-App, gestartet im April 2026, bringt das vollständige Lovable-Erlebnis aufs Handy mit Push-Benachrichtigungen für Build-Abschlüsse.</p><p style="margin-top:1rem">Die Preise beginnen bei $25/Monat. Lovable eignet sich am besten für Gründer, Designer und nicht-technische Nutzer, die schnell eine funktionierende Web-App ohne Code shippen wollen.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Mit Lovable beschreibst du eine App in Alltagssprache und lässt sie bauen, inklusive Oberfläche, Logik und einem verwalteten Backend. Die Plattform richtet sich an Gründer, Produktleute und Entwickler, die von der Idee zur deploybaren App kommen wollen, ohne alles von Hand zu schreiben.</p><p style="margin-top:1rem">Das Produkt ist auf ein vollständig agentisches, credit-basiertes Modell umgestiegen statt auf nummerierte Releases. Der Agent-Modus (auch Build-Modus genannt) ist jetzt Standard und läuft autonom: Er liest deinen Code, sucht im Web, debuggt, generiert Bilder und validiert sein eigenes Ergebnis. Im Februar 2026 kam der Plan-Modus, um geplante Änderungen vor dem Coden vorzuschauen, im Juni 2026 folgte eine Erweiterung der Agent-Mode-Beta, und im Mai 2026 erschienen KI-Subagenten (Researcher, Reviewer, Synthesizer) für paralleles Arbeiten.</p><p style="margin-top:1rem">Bei den Funktionen heißt das Backend jetzt Lovable Cloud, eine verwaltete Schicht, die unter der Haube auf Supabase aufbaut, während Lovable AI die KI-Funktionen in der App übernimmt. Du bekommst Datenbank, Authentifizierung und Hosting, ohne Dienste selbst zu verdrahten, plus Code-Bearbeitung und eigene Domains in den Bezahltarifen.</p><p style="margin-top:1rem">Die Preise sind credit-basiert, sowohl fürs Bauen als auch fürs Betreiben der Apps. Free kostet $0/Monat mit 5 Build-Credits pro Tag (etwa 30 pro Monat), 20 monatlichen Cloud-Credits und begrenzten In-App-KI-Credits. Pro kostet $25/Monat (etwa $21/Monat bei Jahreszahlung, $250/Jahr) für 100 monatliche Credits, private Projekte, Code-Bearbeitung und eigene Domains und skaliert bis zu deutlich größeren Credit-Stufen. Business kostet $50/Monat mit derselben 100-Credit-Basis plus SSO, Opt-out beim Datentraining, Credit-Limits pro Nutzer und eingeschränkten Projekten. Enterprise ist auf Anfrage mit Audit-Logs und SLAs, Berichten zufolge ab etwa $500+/Monat bei Jahresbindung.</p><p style="margin-top:1rem">Die größte Einschränkung ist das Credit-Modell selbst: Da Credits das Bauen, die Laufzeit der deployten App und die integrierte KI abdecken, sind die Kosten bei aktiven Projekten schwer vorhersehbar, und der Gratistarif ist schnell aufgebraucht. Die autonome Generierung ist schnell, braucht aber Kontrolle, und tiefe Anpassungen führen letztlich zum Editieren von Code.</p><p style="margin-top:1rem">Wähle Lovable, wenn ein KI-Agent den Großteil der Arbeit übernehmen soll und du dich beim Steuern wohlfühlst, und plane Budget für den Credit-Verbrauch ein, wenn deine App mehr als ein Prototyp ist.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Aktualisiert: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Vorteile</div><ul class="pc-list">        <li>Plan Mode: KI zeigt vollständigen Build-Plan zur Genehmigung vor dem Code-Schreiben</li>
-        <li>Prompt-Warteschlange stapelt bis zu 50 sequentielle Prompts für ununterbrochene Generierungssitzungen</li>
-        <li>Browser Testing: virtueller Browser testet Apps automatisch auf visuelle Fehler und Interaktionsprobleme</li>
-        <li>Voice Mode — Änderungen per Sprache beschreiben statt tippen</li>
-        <li>Mobile App für iOS und Android mit Push-Benachrichtigungen für Build-Abschlüsse</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Nachteile</div><ul class="pc-list">        <li>Kein kostenloser Tarif — nur kostenpflichtig ab $25/Monat</li>
-        <li>Generierte Apps benötigen möglicherweise Entwickler-Review für Produktions-Sicherheit und Performance</li>
-        <li>Weniger geeignet für komplexe Backend-Logik verglichen mit dedizierten Coding-Agenten wie Devin</li>
-        <li>Cross-Projekt-Komponentenfreigabe erfordert manuelle Einrichtung von Shared Libraries</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Vorteile</div><ul class="pc-list">        <li>Der Agent/Build-Modus baut autonom von Anfang bis Ende, inklusive Websuche, Debugging und Selbstvalidierung</li>
+        <li>Der Plan-Modus erlaubt eine Vorschau geplanter Änderungen vor der Code-Generierung</li>
+        <li>Das verwaltete Lovable-Cloud-Backend deckt Datenbank, Auth und Hosting ohne manuelles Verdrahten ab</li>
+        <li>Bezahltarife schalten echte Code-Bearbeitung, private Projekte und eigene Domains frei</li>
+        <li>KI-Subagenten erledigen Recherche und Review parallel für schnellere Iteration</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Nachteile</div><ul class="pc-list">        <li>Einheitliche Credits decken Bauen, Laufzeit und KI ab, weshalb Kosten schwer planbar sind</li>
+        <li>Der Gratistarif ist knapp und mit 5 Build-Credits pro Tag schnell erschöpft</li>
+        <li>Autonome Ergebnisse brauchen weiterhin menschliche Prüfung und manchmal Nacharbeit</li>
+        <li>Tiefe Anpassung zwingt dich früher oder später zum Editieren des Codes</li>
+        <li>Enterprise-Funktionen und hohe Credit-Stufen werden schnell teuer</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://lovable.dev" target="_blank" rel="noopener">Besuchen Lovable →</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Lovable wählen wenn…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Sie beschreiben Ihre App in natürlicher Sprache und Lovable generiert vollständigen React-Code</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Sie möchten echten exportierbaren Code — kein proprietäres No-Code-System das Sie einsperrt</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Entwickler die die Entwicklung beschleunigen wollen aber echten Code als Output bevorzugen</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Sie möchten KI-Unterstützung die wirklich programmiert nicht nur visuelle Bausteine verschiebt</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Lovable wählen wenn…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Du willst, dass ein KI-Agent den Großteil baut, während du steuerst</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Du brauchst ein verwaltetes Backend ohne Supabase selbst zu verdrahten</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Du prototypst und schätzt schnellen Weg von Idee zu App</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Du kannst Budget für credit-basierte Nutzung aktiver Projekte einplanen</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Du willst Änderungen im Plan-Modus vor dem Coden vorab sehen</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Häufig gestellte Fragen</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Was ist Lovable?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Lovable ist ein KI-App-Builder der vollständigen React-Code aus natürlichsprachigen Beschreibungen generiert. Sie beschreiben Ihre App, Lovable schreibt den Code, und Sie können ihn exportieren oder direkt deployen. Es kombiniert KI-Codierung mit No-Code-Einfachheit.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Lovable vs Bolt.new: Was ist besser?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Beide generieren echten Code aus natürlicher Sprache. Lovable hat ein stärkeres Design-System und UI-Generierung. Bolt.new von StackBlitz ist stärker für Entwickler die Code direkt bearbeiten möchten. Beide sind ausgezeichnet — testen Sie beide für Ihr spezifisches Projekt.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Ist Lovable kostenlos?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Lovable hat einen kostenlosen Plan mit begrenzten Nachrichten/Monat. Pro ab $20/Monat für mehr KI-Interaktionen und erweiterte Features. Bubble hat einen kostenlosen Plan; kostenpflichtige Pläne ab $29/Monat.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Kann Lovable eine Datenbank verbinden?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Ja. Lovable kann mit Supabase integriert werden für Backend-Daten und Authentifizierung. Das ermöglicht vollständige Web-Apps mit Datenbank-Funktionalität durch KI-generierten Code.</span></div></div></div></div>
   <div class="section-title-sm">Auch erwägen</div>
   <div class="also-grid">    <a class="also-card" href="/de/tools/bubble.html">
@@ -216,7 +219,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/de/directory.html">Verzeichnis</a>
         <a href="/de/news.html">Neuigkeiten</a>
-        <a href="/de/directory.html">Werkzeuge</a>
+        <a href="/de/tools.html">Werkzeuge</a>
         <a href="/de/compare.html">Vergleichen</a>
         <a href="/de/newsletter.html">Newsletter</a>
       </div>

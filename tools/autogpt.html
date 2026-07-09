@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "AutoGPT", "description": "AutoGPT was one of the first fully autonomous AI agents and sparked the \"agentic AI\" movement in early 2023. Given a high-level goal in plain English, it autonomously breaks the task into subtasks, se", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://agpt.co", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "AutoGPT", "description": "AutoGPT started as one of the first \"give it a goal and let it run\" autonomous agent scripts. It has since grown into the AutoGPT Platform: a full environment for designing, running, and sharing AI ag", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://agpt.co", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -161,7 +161,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">🤖 AI Agents &amp; Automation</span>
-        <span class="tool-meta-chip badge-free">Free</span>
+        <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
       <div class="tool-best-for"><strong>Best for:</strong> Autonomous tasks, open-source AI agents</div>
@@ -174,31 +174,37 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About AutoGPT</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">AutoGPT was one of the first fully autonomous AI agents and sparked the &quot;agentic AI&quot; movement in early 2023. Given a high-level goal in plain English, it autonomously breaks the task into subtasks, searches the web, writes and executes code, reads and writes files, and iterates until the goal is complete — all without human intervention at each step.</p><p style="margin-top:1rem">The project is fully open-source with the code available on GitHub (over 160,000 stars), making it free to run with your own API keys. The architecture is modular: AutoGPT can be extended with custom plugins for web browsing, database access, image generation, and more. The hosted version at agpt.co provides a web interface for running agents without local setup.</p><p style="margin-top:1rem">In practice, AutoGPT works best for well-defined, bounded tasks: research summaries, code generation for specific functions, content drafts, or data processing pipelines. It becomes unreliable on open-ended or very long-horizon tasks where it can loop, hallucinate intermediate results, or accumulate errors across many steps. It requires a funded OpenAI API key and the costs can add up quickly on long agent runs. For production agentic workflows, platforms like n8n or Relevance AI offer more reliable execution with better error handling.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">AutoGPT started as one of the first &quot;give it a goal and let it run&quot; autonomous agent scripts. It has since grown into the AutoGPT Platform: a full environment for designing, running, and sharing AI agents rather than a single command-line tool.</p><p style="margin-top:1rem">The current release is autogpt-platform-beta-v0.6.65, published on June 25, 2026. The recent v0.6.6x line (May-June 2026) centers on AutoPilot/Copilot: automatic goal decomposition, an AutoPilot context panel with shell and Files tabs, a global Cmd+K search, MCP auto-discovery, public link sharing of agent chat results, and native scheduling and webhook triggers.</p><p style="margin-top:1rem">Capability-wise you get a drag-and-drop Agent Builder, an agent marketplace/store to publish and reuse agents, and 30+ integrations including Slack, Discord, and Stripe. Agent runs are metered through credit-based execution billing, and you can self-host or use the managed AutoGPT Cloud.</p><p style="margin-top:1rem">Pricing is flexible. The self-hosted open-source core is MIT-licensed and free ($0) if you bring your own LLM API keys and compute, with no seat limits. Managed cloud adds Pro at $50/mo ($42.50/mo billed annually, $510/yr) and Max at $320/mo ($272/mo billed annually, $3,264/yr); a Team tier is coming soon. A separate pay-as-you-go credit wallet meters agent runs at an unpublished rate.</p><p style="margin-top:1rem">Limitations are worth noting. The platform is still officially beta, autonomous agents can burn credits or API tokens unpredictably, and the pay-as-you-go run pricing is not published up front. Self-hosting removes the subscription cost but shifts setup, LLM keys, and maintenance onto you.</p><p style="margin-top:1rem">AutoGPT suits developers and technical teams who want to build multi-step autonomous agents visually, publish or reuse agents from a store, and choose between free self-hosting and a managed cloud with predictable subscriptions.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Fully open-source — inspect, fork and modify every component</li>
-        <li>Runs fully autonomously on long-horizon goals with minimal human input</li>
-        <li>Active community with plugins for web browsing, file management, coding</li>
+        <li>Free, MIT-licensed self-hosted core with no seat limits when you bring your own keys and compute</li>
+        <li>Visual drag-and-drop Agent Builder plus an agent marketplace for publishing and reusing agents</li>
+        <li>AutoPilot/Copilot handles goal decomposition, with an context panel, Cmd+K search, and MCP auto-discovery</li>
+        <li>30+ integrations (Slack, Discord, Stripe) plus native scheduling and webhook triggers</li>
+        <li>Choice of free self-hosting or managed AutoGPT Cloud with clear Pro and Max subscription tiers</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Unreliable on complex tasks — agents can loop or hallucinate mid-execution</li>
-        <li>Requires technical setup and a funded OpenAI API key</li>
+        <li>Platform is still officially in beta (v0.6.65), so expect rough edges and changes</li>
+        <li>Pay-as-you-go credit wallet meters agent runs at a rate that is not published up front</li>
+        <li>Autonomous agents can consume credits or LLM API tokens unpredictably</li>
+        <li>Max tier is expensive at $320/mo ($3,264/yr) for heavier cloud usage</li>
+        <li>Self-hosting shifts setup, LLM keys, and maintenance burden onto you</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose AutoGPT if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want open-source autonomous AI you can self-host, modify, and fully control</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're a developer experimenting with autonomous agent architectures and want the original</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want to customize the agent workflow, memory systems, and tool integrations yourself</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're comfortable with technical setup and want maximum transparency into how the agent works</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose AutoGPT if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to build multi-step autonomous agents with a visual builder, not just scripts</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You prefer a free, self-hostable open-source core and will supply your own LLM keys</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want a managed cloud with predictable Pro or Max subscriptions</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You value an agent marketplace plus Slack, Discord, and Stripe integrations</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is AutoGPT?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">AutoGPT is one of the first open-source autonomous AI agent frameworks, released in 2023. It connects GPT-4 to tools (web search, file management, code execution) and runs in a loop to complete multi-step tasks. It's a framework for developers, not a polished consumer product.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is AutoGPT still relevant in 2026?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">AutoGPT pioneered the autonomous agent concept but has been surpassed by more capable agents like Manus, Devin, and Claude Code for practical use. It remains important as an open-source reference and for developers studying autonomous agent architectures.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What can Manus do that AutoGPT can't?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Manus is more capable at real-world task completion — it has better web browsing, more reliable tool use, and fewer failures on complex tasks. AutoGPT was groundbreaking but often struggled to complete tasks reliably. Manus represents the current generation of more capable autonomous agents.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is AutoGPT free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">AutoGPT is free and open-source. You pay for the API tokens used by the AI model (GPT-4 or other). Running it requires technical knowledge — setting up Python, API keys, and dependencies.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -252,7 +258,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

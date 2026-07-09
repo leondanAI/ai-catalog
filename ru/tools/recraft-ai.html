@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","ru");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Recraft","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://recraft.ai"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Recraft","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://recraft.ai","dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/ru/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">Каталог</a>
       <a href="/ru/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Сравнение</a>
       <a href="/ru/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Новости</a>
-      <a href="/ru/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">Инструменты</a>
+      <a href="/ru/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">Инструменты</a>
       <a href="/ru/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Рассылка</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/ru/directory.html"  class="nav-link" data-i18n="nav.directory">Каталог</a>
     <a href="/ru/compare.html"    class="nav-link" data-i18n="nav.compare">Сравнение</a>
     <a href="/ru/news.html"       class="nav-link" data-i18n="nav.news">Новости</a>
-    <a href="/ru/directory.html"      class="nav-link" data-i18n="nav.tools">Инструменты</a>
+    <a href="/ru/tools.html"      class="nav-link" data-i18n="nav.tools">Инструменты</a>
     <a href="/ru/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Рассылка</a>
   </nav>
 </header>
@@ -150,26 +150,29 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>О сервисе Recraft</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Recraft — платформа AI-генерации изображений и дизайна для профессиональных дизайнеров и творческих команд. Фокус — на производстве согласованных, брендово-выровненных визуалов: векторное искусство, иконки, иллюстрации и UI-мокапы — с тонким контролем стиля. Recraft занял первое место на бенчмарке FLUX по качеству генерации изображений в конце 2025 года.</p><p style="margin-top:1rem">Recraft V4, выпущенный 17 февраля 2026 года, — полный перестрой платформы с нуля. Наиболее значимая новая возможность — Agentic Mode: пользователь описывает цели дизайна через естественный диалог, AI автономно дорабатывает и итерирует дизайн на бесконечном холсте. Вместо генерации по одному промпту Agentic Mode работает как дизайн-партнёр: задаёт уточняющие вопросы, предлагает варианты и выполняет многошаговые дизайн-воркфлоу.</p><p style="margin-top:1rem">Интеграция MCP (Model Context Protocol) позволяет вызывать Recraft напрямую из Claude, Cursor и других MCP-совместимых AI-агентов — генерация изображений без переключения инструментов.</p><p style="margin-top:1rem">Генерация видео доступна на Pro-планах: одновременно до двух параллельных видеогенераций. Recraft привлёк $30 млн Series B под руководством Accel в начале 2026 года.</p><p style="margin-top:1rem">Лучший выбор для дизайнеров и творческих команд, которым нужна согласованная брендово-выровненная генерация с агентными возможностями, и для разработчиков, интегрирующих генерацию изображений в AI-агентные воркфлоу через MCP.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Recraft AI — это платформа генерации изображений, ориентированная на дизайнеров, маркетологов и продуктовые команды, а не на случайных пользователей. Работа идёт в браузерной Studio: вы пишете промпт, управляете стилем и экспортируете результат в растр или редактируемый вектор.</p><p style="margin-top:1rem">Актуальная флагманская модель — Recraft V4.1, представленная примерно в июне 2026 года поверх Recraft V4 (февраль 2026). Это был заметный сдвиг: ранние версии знали в основном по SVG-векторам и иконкам, а V4 и V4.1 вышли в область фотореализма, растра продакшн-качества, мокапов и так называемых utility-кадров. Режим Exploration Mode выдаёт сразу несколько визуальных направлений по одному промпту.</p><p style="margin-top:1rem">Помимо собственных моделей, Recraft Studio подключает сторонние движки изображений (GPT Image 2, Flux 1 Schnell, Qwen Image 2.0, Grok Imagine) и видеомодели — Kling, Sora, Veo, — так что сравнивать результаты можно, не выходя из сервиса.</p><p style="margin-top:1rem">Тарификация построена на кредитах. Бесплатный план даёт 30 кредитов в день, но созданные изображения публичны, принадлежат Recraft и не имеют коммерческой лицензии. Basic — 1000 кредитов в месяц за $10 при годовой оплате. Pro разбит по кредитам: от 2000 ($16/мес при годовой оплате) до 16 000 ($128/мес), есть посадочные тарифы Teams и индивидуальный Enterprise. Действия стоят по-разному: растр — 1 кредит, вектор — 2, апскейл — 20. Пакеты докупки от 200 до 1600 кредитов не сгорают, а годовая оплата примерно на 20% дешевле.</p><p style="margin-top:1rem">Главное ограничение — бесплатный уровень по сути пробный: нет коммерческих прав, изображения видны в общей галерее и принадлежат Recraft. Для серьёзной работы нужен платный план, а активный растр и апскейл быстро съедают кредиты.</p><p style="margin-top:1rem">Recraft подойдёт командам, которым нужны и чистые векторы, и реалистичный растр в одном месте, с предсказуемым контролем стиля. Любителям, которым просто нужны бесплатные картинки без ограничений, он подходит хуже.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Обновлено: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">Преимущества</div><ul class="pc-list">        <li>Agentic Mode: диалоговый дизайн на бесконечном холсте — не просто одиночные промпты</li>
-        <li>MCP-интеграция — генерируй изображения прямо из Claude, Cursor и других AI-агентов</li>
-        <li>Pro-планы поддерживают до 2 параллельных видеогенераций вместе с генерацией изображений</li>
-        <li>Качественный векторный арт, иконки и иллюстрации — создан для профессиональных дизайнеров</li>
-        <li>$30M Series B от Accel — хорошо финансирован, сильный корпоративный импульс</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">Недостатки</div><ul class="pc-list">        <li>Генерация видео только на Pro — бесплатный тариф ограничен изображениями с лимитами</li>
-        <li>Agentic Mode — новая парадигма, требует адаптации от привычных к одиночным промптам</li>
-        <li>MCP-интеграция требует совместимой среды (Claude, Cursor) — не работает автономно</li>
-        <li>Менее подходит для фотореалистичных изображений по сравнению с FLUX или Midjourney</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">Преимущества</div><ul class="pc-list">        <li>Делает настоящие редактируемые SVG-векторы вместе с фотореалистичным растром — редкость среди конкурентов</li>
+        <li>Recraft V4.1 расширил инструмент далеко за пределы иконок: мокапы, предметная и utility-съёмка</li>
+        <li>В Studio собраны сторонние модели изображений и видео (Flux, Qwen, GPT Image 2, Kling, Sora, Veo)</li>
+        <li>Сильный и стабильный контроль стиля держит единый бренд-вид по всей серии ассетов</li>
+        <li>Пакеты докупки кредитов не сгорают, поэтому нерегулярным пользователям не навязана подписка</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">Недостатки</div><ul class="pc-list">        <li>Бесплатный тариф не даёт коммерческой лицензии, а изображения публичны и принадлежат Recraft</li>
+        <li>Кредитная модель быстро дорожает на апскейле (20 кредитов) и объёмной растровой работе</li>
+        <li>Порог входа выше, чем у генераторов в один клик: инструмент сделан для дизайнеров</li>
+        <li>Коммерческие права и приватность открываются только на платных планах от $10/мес</li>
+        <li>Качество встроенных сторонних моделей неровное, а кредиты они тратят как собственные</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://recraft.ai" target="_blank" rel="noopener">Перейти на Recraft →</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Выберите Recraft если…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Создаёте векторную графику, иконки и брендинговые материалы с нативной SVG-генерацией</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Нужна точная типографика в изображениях — Recraft лидирует в рендеринге текста</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Работаете над брендингом и нужен согласованный визуальный стиль через брендовый набор</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Нужен бесплатный план с достаточным функционалом для регулярной работы</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Выберите Recraft если…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вам нужны и редактируемые SVG-векторы, и фотореалистичный растр в одном инструменте</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Нужны иконки, мокапы и предметные кадры в едином фирменном стиле и в объёме</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Хотите пробовать несколько моделей изображений и видео внутри одной Studio</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вы на платном плане и вам важна понятная коммерческая лицензия</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Вы делаете ассеты регулярно и подписка на кредиты окупается</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Частые вопросы</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Что такое Recraft AI?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Recraft AI — генератор изображений, специализирующийся на векторной графике, иконках и брендинге. Уникальная особенность — нативная генерация SVG и точный рендеринг текста. Recraft V3 занял первое место в рейтинге text-to-image на Hugging Face Spaces в конце 2024 года.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Recraft лучше Midjourney для брендинга?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Для брендинга — да. Recraft генерирует настоящие SVG-файлы, точно рендерит текст и поддерживает брендовые стили. Midjourney лучше для художественных иллюстраций и концепт-арта. Для логотипов и иконок Recraft выигрывает.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Recraft AI бесплатный?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Да. Recraft предлагает бесплатный план со 100 генерациями при регистрации. Pro — $20/мес с неограниченной генерацией и дополнительными функциями.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Recraft поддерживает векторную графику?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Да, это главное отличие Recraft. Он может генерировать настоящие SVG-файлы с путями — а не просто растровые изображения, похожие на векторную графику. Это крайне полезно для иконок, логотипов и масштабируемых брендинговых материалов.</span></div></div></div></div>
   <div class="section-title-sm">Также рассмотрите</div>
   <div class="also-grid">    <a class="also-card" href="/ru/tools/chatgpt-images.html">
@@ -216,7 +219,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/ru/directory.html">Каталог</a>
         <a href="/ru/news.html">Новости</a>
-        <a href="/ru/directory.html">Инструменты</a>
+        <a href="/ru/tools.html">Инструменты</a>
         <a href="/ru/compare.html">Сравнение</a>
         <a href="/ru/newsletter.html">Рассылка</a>
       </div>

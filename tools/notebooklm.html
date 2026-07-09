@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "NotebookLM", "description": "NotebookLM is Google's AI research and synthesis tool, designed for analyzing your own documents rather than searching the web. You upload sources — PDFs, Google Docs, YouTube links, audio files, EPUB", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://notebooklm.google.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "NotebookLM", "description": "NotebookLM is a research and note-taking tool from Google. You upload your own material — PDFs, documents, slides, web pages, notes — and it answers questions, summarizes, and builds study aids using ", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://notebooklm.google.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,32 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About NotebookLM</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">NotebookLM is Google's AI research and synthesis tool, designed for analyzing your own documents rather than searching the web. You upload sources — PDFs, Google Docs, YouTube links, audio files, EPUB books — and NotebookLM becomes an expert on that material, answering questions, generating summaries, and creating study aids grounded entirely in your uploaded content.</p><p style="margin-top:1rem">The Audio Overview feature generates a realistic two-host podcast discussion of your sources — one of the most distinctive AI output formats available. It was one of the first features to go viral and remains a core differentiator.</p><p style="margin-top:1rem">2026 updates are substantial. Cinematic Video Overviews, launched March 2026, generate fluid animated narrative videos from your sources — a significant upgrade over static slides with voiceover (currently available on Google AI Ultra plan). Slide editing now allows targeting individual slides with prompt-based instructions rather than regenerating the entire deck. EPUB file support added. NotebookLM integrated into Google Classroom for educators in higher education.</p><p style="margin-top:1rem">NotebookLM is free with standard limits. NotebookLM Plus, available through Google AI Pro at $19.99/month, unlocks higher usage thresholds, more sources per notebook, additional chat queries, expanded study tools, and Cinematic Video Overviews.</p><p style="margin-top:1rem">Best for students, researchers, lawyers, and analysts who need to synthesize and interrogate large bodies of their own documents rather than search the open web.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">NotebookLM is a research and note-taking tool from Google. You upload your own material — PDFs, documents, slides, web pages, notes — and it answers questions, summarizes, and builds study aids using only those sources, with citations back to the original text.</p><p style="margin-top:1rem">The big change came on June 8, 2026, when the &quot;NotebookLM 2.0&quot; upgrade rolled out globally. The product now runs on Gemini 3.5 (plus Google's &quot;Antigravity&quot; models) and has shifted from a static document Q&amp;A tool into a more agentic research assistant. Google reports roughly a 65% average win rate over the previous version, and higher scores on large-document analysis and source discovery.</p><p style="margin-top:1rem">Capabilities expanded considerably. Each notebook now gets a secure cloud computer that can write and execute code natively for data analysis, drawing on 100+ curated software skills. You can export to editable PDFs with charts and tables, PowerPoint, Excel, and CSV/JSON, and generate images. Video Overviews now sit alongside the familiar Audio Overviews and podcast-style summaries, and integrated web search lets you start a project from an idea rather than only from files you already have.</p><p style="margin-top:1rem">Pricing is tiered. There is a free Standard tier at $0, then Plus at $7.99/mo (Google AI Plus), Pro at $19.99/mo (Google AI Pro), and Ultra at $99.99/mo and $200/mo (Google AI Ultra). NotebookLM is sold only as part of a Google AI, Workspace, or Cloud plan — you cannot buy it on its own.</p><p style="margin-top:1rem">The main caveats: the most advanced features were initially gated to the AI Ultra and Workspace business tiers, so the free plan is more limited than the headline announcements suggest. And because answers are grounded in your uploaded sources, the tool is only as good as the material you give it.</p><p style="margin-top:1rem">It suits students, researchers, analysts, and knowledge workers who need reliable, cited answers over a defined body of documents rather than open-ended web chat.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Grounds all answers in your uploaded sources — no hallucinations from outside the material</li>
-        <li>Audio Overview generates a realistic podcast discussion of your documents automatically</li>
-        <li>Cinematic Video Overviews (March 2026) create animated narrative videos from your notes</li>
-        <li>Free tier genuinely capable — Plus ($19.99/mo via Google AI Pro) for higher limits</li>
+        <li>Answers are grounded in your own uploaded sources with inline citations, which reduces hallucination</li>
+        <li>June 2026 upgrade adds native code execution and data analysis via a per-notebook cloud computer</li>
+        <li>Exports to editable PDF, PowerPoint, Excel, CSV/JSON plus Audio and Video Overviews</li>
+        <li>Free Standard tier lets you try the core research workflow at no cost</li>
+        <li>Integrated web search means you can start a notebook from an idea, not just pre-loaded files</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Cinematic Video Overviews require Google AI Ultra plan — not available on standard Plus</li>
-        <li>Not designed for open-web research — use Perplexity if you need live source discovery</li>
+        <li>The most advanced features were initially limited to AI Ultra and Workspace business tiers</li>
+        <li>Cannot be bought standalone — you need a Google AI, Workspace, or Cloud plan</li>
+        <li>Answer quality depends entirely on the sources you upload</li>
+        <li>Pricing spans several tiers ($7.99 to $200/mo) that can be confusing to compare</li>
+        <li>Deep data-analysis and export features are overkill for simple note lookups</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose NotebookLM if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You research from multiple documents and want AI to synthesize across all of them at once</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want audio overviews — NotebookLM can generate podcast-style conversations about your docs</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're a student, researcher, or journalist doing deep work with source documents</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want Google's Gemini powering document Q&amp;A with strong citation and grounding</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose NotebookLM if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need cited answers grounded in a specific set of documents</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want audio or video overviews of dense material</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You already have or are willing to get a Google AI plan</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to run data analysis and export charts, slides, or spreadsheets from your sources</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You prefer a source-grounded tool over open-ended web chatbots</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is NotebookLM?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">NotebookLM is Google's AI research assistant powered by Gemini. You upload documents, PDFs, YouTube videos, or web pages and it creates a notebook where you can ask questions, get summaries, and generate audio overviews (podcast-style conversations about your content).</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is NotebookLM free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">NotebookLM is free for all Google account users at notebooklm.google.com. NotebookLM Plus (available through Google One AI Premium at $19.99/month or Google Workspace) offers higher limits on notebooks, sources, and audio generation.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Humata AI?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Humata is an AI document analysis tool focused on Q&amp;A with uploaded files — primarily PDFs. You upload a document and ask questions; Humata returns cited answers. It's simpler than NotebookLM but effective for quick document analysis.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can NotebookLM analyze YouTube videos?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. NotebookLM can use YouTube video URLs as sources — it processes the transcript and lets you ask questions about video content. This makes it useful for analyzing lectures, interviews, podcasts, and any content available as a YouTube video.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -253,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

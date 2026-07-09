@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Gamma", "description": "Gamma is an AI presentation and document creation platform that generates structured slides, documents, and web pages from text prompts. It is used by marketers, founders, educators, and consultants w", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://gamma.app", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Gamma", "description": "Gamma is a web-based tool that turns a short prompt or an outline into a finished presentation, document, or simple website. Instead of arranging slides by hand, you describe what you want and Gamma b", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://gamma.app", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Gamma</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Gamma is an AI presentation and document creation platform that generates structured slides, documents, and web pages from text prompts. It is used by marketers, founders, educators, and consultants who need professionally designed visual content without slide-by-slide manual formatting. Gamma handles layout, design, and image placement automatically from the initial prompt.</p><p style="margin-top:1rem">The Generate API reached general availability in January 2026, enabling programmatic content creation at scale. Developers and marketing platforms can now call the Gamma API to generate presentations, documents, or pages automatically — for example, generating a customized deck for each sales prospect or producing a report template for each client without human intervention per output.</p><p style="margin-top:1rem">Gamma Imagine, launched in March 2026, is a new standalone AI image generation product targeting marketing asset creation. It produces charts, infographics, social graphics, and promotional visuals directly within the Gamma platform. This positions Gamma as a direct competitor to Canva's AI image features, with a particular focus on data visualization and structured marketing graphics rather than freeform artistic generation.</p><p style="margin-top:1rem">A new Ultra tier was introduced alongside Gamma Imagine, offering higher generation limits, priority processing, and access to the image generation capabilities. The platform achieved SOC 2 Type II certification, making it suitable for enterprise teams with compliance requirements around data security and vendor trust.</p><p style="margin-top:1rem">Pricing in 2026: Free plan at 400 credits, Plus at $8/month annual, Pro at $15/month annual, and Ultra at custom or higher-tier pricing. The free tier is generous for individual users who need occasional decks.</p><p style="margin-top:1rem">Gamma is best for marketers, salespeople, and founders who need AI-generated presentations and marketing graphics quickly, and for development teams that want to automate presentation generation via API.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Gamma is a web-based tool that turns a short prompt or an outline into a finished presentation, document, or simple website. Instead of arranging slides by hand, you describe what you want and Gamma builds the structure, writing, and layout for you to refine.</p><p style="margin-top:1rem">The current version is Gamma 3.0. Its headline addition is Gamma Agent, a conversational AI that restyles and rewrites a deck from plain-language commands rather than manual editing. The release also adds several image models (Nano Banana Pro with in-image text and 4K HD output, Recraft V4, Gemini 3.1 Flash Image, and Flux 2), plus a new Gamma Imagine product for marketing assets, charts, and infographics.</p><p style="margin-top:1rem">On the capability side, the Claude and ChatGPT connectors were improved to handle deck naming, card counts, brand colors, and plan checks, and Gamma is now available as an app inside ChatGPT. The editor gained 6-column layouts and gradient card backgrounds, and the public API can now delete decks.</p><p style="margin-top:1rem">Pricing is split into Free, Plus, Pro, and Ultra individual plans, plus Team and Business. The Free plan now grants 400 one-time credits that never refresh, allows 10 cards per prompt, and keeps a Made with Gamma badge. Plus runs about $9/seat/month with roughly 1,000 monthly credits and watermark removal; Pro is about $18/seat/month with around 4,000 credits, custom branding, and API access; the newer Ultra tier is about $90/seat/month with roughly 20,000 credits and top-tier models. Team is about $20/seat/month (annual, two-seat minimum) and Business about $40/seat/month (annual, ten-seat minimum) with SSO and SOC 2.</p><p style="margin-top:1rem">Limitations are worth noting. Credits are consumed by AI generation, so heavy users can burn through an allowance quickly, and the Free plan's 400 credits do not renew. Exact monthly prices vary by a few dollars across sources, and fine visual control still lags behind traditional design tools.</p><p style="margin-top:1rem">Gamma suits people who need to produce decks, one-pagers, or landing pages fast and value speed over pixel-level control. It is a strong fit for founders, marketers, educators, and teams that want a consistent house style without a dedicated designer.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Generate API now GA — programmatic content creation at scale for any platform</li>
-        <li>Gamma Imagine: AI image generation for charts, infographics, and social graphics built in</li>
-        <li>SOC 2 Type II certified — suitable for enterprise teams with compliance requirements</li>
-        <li>Free tier includes 400 credits — sufficient for occasional individual use</li>
-        <li>Handles layout and design automatically — no slide-by-slide formatting required</li>
+        <li>Gamma Agent lets you restyle and rewrite an entire deck with plain-language commands instead of manual edits</li>
+        <li>Generates presentations, documents, and websites from a single prompt or outline</li>
+        <li>Wide choice of built-in image models, including Nano Banana Pro with 4K output and in-image text</li>
+        <li>Integrates with Claude and ChatGPT, and now runs as an app inside ChatGPT</li>
+        <li>Clear tier ladder from a usable Free plan up to Ultra, plus Team and Business options</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Ultra tier pricing not publicly disclosed — requires inquiry for enterprise plans</li>
-        <li>Gamma Imagine image quality is optimized for structured graphics, not artistic generation</li>
-        <li>API access requires developer setup — not self-serve for non-technical users</li>
-        <li>Free plan credits are consumed quickly when generating multiple full presentations</li>
+        <li>The Free plan's 400 credits are one-time and never refresh, so AI generation eventually stops without a paid plan</li>
+        <li>Credit-based usage means heavy generators can exhaust a monthly allowance quickly</li>
+        <li>Free output carries a Made with Gamma badge until you upgrade</li>
+        <li>Fine-grained visual and layout control is weaker than dedicated design software</li>
+        <li>Exact pricing varies by a few dollars across sources, making budgeting less precise</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Gamma if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want to generate a polished presentation from a text prompt in under 2 minutes</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You prefer card-based, web-native presentations that are shareable as links — no downloads needed</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want AI to write the content and design the slides simultaneously</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need to embed video, analytics on who viewed your deck, and interactive elements</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Gamma if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to turn a prompt or outline into a finished deck in minutes</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You would rather restyle a presentation by describing changes than by editing slides</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need presentations, documents, and simple sites from one tool</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You already work in Claude or ChatGPT and want Gamma connected</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want a free starting point before committing to a paid tier</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Gamma AI?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Gamma is an AI presentation tool that generates complete, designed presentations from a text prompt. Unlike traditional slide builders, Gamma creates card-based web presentations that are shared as links. It generates content, layout, and visuals simultaneously in seconds.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Gamma free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Gamma has a free plan with 400 AI credits (enough for several full presentations). Plus is $10/month and Pro is $20/month for unlimited AI generation, custom domains, and analytics on who views your decks.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can Beautiful.ai export to PowerPoint?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. Beautiful.ai can export presentations to PowerPoint format (.pptx). This makes it useful when you need to share files with people who expect traditional slide formats. Gamma's web-native format doesn't export to PowerPoint as cleanly.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Which is better for business presentations — Gamma or Beautiful.ai?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">For fast AI-generated presentations shared digitally, Gamma is faster and more modern. For traditional business presentations that may need PowerPoint export or a conventional slide-by-slide structure, Beautiful.ai gives more control. Both produce professional results.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

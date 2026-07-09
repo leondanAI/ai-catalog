@@ -23,7 +23,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","he");</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Mistral Le Chat","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://chat.mistral.ai"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Mistral Le Chat","applicationCategory":"AIApplication","operatingSystem":"Web","url":"https://chat.mistral.ai","dateModified":"2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <a href="/he/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">ספריה</a>
       <a href="/he/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">השוואה</a>
       <a href="/he/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">חדשות</a>
-      <a href="/he/directory.html"      class="nav-link" data-nav="directory.html" data-i18n="nav.tools">כלים</a>
+      <a href="/he/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">כלים</a>
       <a href="/he/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">ניוזלטר</a>
     </nav>
     <div class="lang-picker">
@@ -116,7 +116,7 @@ textarea.form-input{resize:vertical;min-height:90px}
     <a href="/he/directory.html"  class="nav-link" data-i18n="nav.directory">ספריה</a>
     <a href="/he/compare.html"    class="nav-link" data-i18n="nav.compare">השוואה</a>
     <a href="/he/news.html"       class="nav-link" data-i18n="nav.news">חדשות</a>
-    <a href="/he/directory.html"      class="nav-link" data-i18n="nav.tools">כלים</a>
+    <a href="/he/tools.html"      class="nav-link" data-i18n="nav.tools">כלים</a>
     <a href="/he/newsletter.html" class="nav-link" data-i18n="nav.newsletter">ניוזלטר</a>
   </nav>
 </header>
@@ -150,23 +150,29 @@ textarea.form-input{resize:vertical;min-height:90px}
   </div>
   <div class="tool-desc-block">
     <h2>אודות Mistral Le Chat</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Mistral Le Chat הוא עוזר ה-AI לצרכנים מ-Mistral AI, מעבדת ה-AI המובילה באירופה שבסיסה בפריז. הוא בנוי על המודלים הפתוחים של Mistral ומיקום כחלופה אירופאית ל-ChatGPT ו-Gemini, עם דגש חזק על פרטיות, תאימות GDPR ויכולת ריבוי-שפות.</p><p style="margin-top:1rem">מחסן המודלים הנוכחי (נכון ללאחר שנות 2025–2026) כולל Mistral Large 3 לחשיבה מתקדמת, Ministral 3 לתגובות מהירות, Devstral 2 לקידוד ו-Devstral Small 2 למשימות קלות. Le Chat בוחר את המודל המתאים על בסיס הקשר. מודלים של Mistral חזקים במיוחד בשפות אירופאיות — צרפתית, גרמנית, ספרדית, איטלקית ופורטוגזית — בגלל דגש על נתונים של הכשרה אירופאיים.</p><p style="margin-top:1rem">הרמה החינמית כוללת גישה למודלים העדכניים ביותר, חיפוש ברשת, ייצור תמונות, העלאות מסמכים וקנבס (עורך בסגנון artifact). שימוש חינמי מוגבל לכ-25 הודעות ביום על מודלים בשכבה הביניונית. הרמה Pro ב-$14.99/חודש מספקת בערך פי 6 את מגבלת ההודעות היומית (~150/יום), גישה בעדיפות והנחות API. תוכנית Student זמינה ב-$7.04/חודש.</p><p style="margin-top:1rem">תוכניות Enterprise (Team/Enterprise) זמינות לעסקים הדורשים תושבות נתונים באירופה, פריסה on-premises או תאימות GDPR קפדנית — מה שהופך את Mistral לאפשרות רצינית לחברות אירופאיות בעלות דרישות רגולטוריות.</p><p style="margin-top:1rem">מגבלות: ל-Mistral יש מערכת קטנה יותר של תוספות ואינטגרציות בהשוואה ל-ChatGPT או Gemini. הכרה של המותג נמוכה מחוץ לאירופה וקוסיסטם הכלים של צד שלישי עדיין בפיתוח.</p><p style="margin-top:1rem">מעולה עבור משתמשים אירופאיים, מקרי שימוש רב-לשוניים וארגונים הדורשים תושבות נתונים ב-EU או AI תואם GDPR.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Vibe הוא עוזר ה-AI הצרכני של מעבדת Mistral הצרפתית. הוא התחיל את דרכו בשם Le Chat, וב-5 ביוני 2026 שמו שונה ל-Vibe; כתובת ה-URL, ההתחברות וכל התוכניות והשיחות הקיימות עברו כמות שהן, כך שדבר לא אבד במעבר.</p><p style="margin-top:1rem">הגרסה הנוכחית פועלת על Mistral Medium 3.5, מודל בן 128 מיליארד פרמטרים עם חלון הקשר של 256k טוקנים, ששוחרר בתצוגה מקדימה ציבורית עם משקלים פתוחים תחת רישיון MIT מותאם. זהו מעבר ברור מהדימוי הקודם של צ'אטבוט מהיר ורב-לשוני לכיוון מוצר מוכוון-סוכנים יותר.</p><p style="margin-top:1rem">כיום Vibe בנוי סביב שלושה מצבים. Vibe Chat הוא השיחה הקלאסית לפי תורות, למעשה ה-Le Chat הישן. Vibe Work הוא מצב סוכן עם זיכרון מתמשך שמבצע תהליכי עבודה רב-שלביים בין כלים מחוברים ומבקש את אישורך לפני פעולות רגישות. Vibe Code מספק סוכני תכנות מרוחקים שרצים באופן אסינכרוני בענן ומאפשרים להעביר סשן מהמחשב המקומי אל הענן.</p><p style="margin-top:1rem">בתמחור יש שכבה חינמית ב-0$ לחודש עם תכונות ומודלים מוגבלים. Pro עולה 14.99$ לחודש, Team עולה 24.99$ למשתמש לחודש (חיוב חודשי, עם מינימום של 50$ לחודש ו-30GB אחסון למשתמש), ו-Enterprise בתמחור מותאם עם פריסות פרטיות ומודלים, ממשק וכלים מותאמים. סטודנטים מאומתים מקבלים תוכנית Education ב-5.99$ לחודש, בתוקף עד 12 חודשים. אפשר לשלם בדולרים או ביורו.</p><p style="margin-top:1rem">כדאי לדעת: מנוי Vibe הצרכני מחויב בנפרד מ-API למפתחים של Mistral, כך שתוכנית Pro או Team אינה כוללת קרדיטים ל-API. בנוסף, Medium 3.5 עדיין בתצוגה מקדימה ציבורית, ולכן צפויות פינות מחוספסות מדי פעם.</p><p style="margin-top:1rem">Vibe מתאים למי שרוצה עוזר תוצרת אירופה עם משקלים פתוחים, ולצוותים שרוצים תהליכי סוכן וסוכני תכנות בענן במקום צ'אטבוט פשוט. אם אתם צריכים רק שאלות ותשובות מזדמנות, ייתכן שהשכבה החינמית תספיק.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">עודכן: 2026-07-09</div>
   </div>
   <div class="pros-cons">
-    <div class="pc-box pros"><div class="pc-title">יתרונות</div><ul class="pc-list">        <li>תמיכה רב-לשונית מדרגה ראשונה — חזקה במיוחד בשפות אירופאיות</li>
-        <li>בנוי על מודלים פתוחים (Mistral Large 3) — שקיפות וניתנות לשחזור</li>
-        <li>הרמה החינמית כוללת חיפוש ברשת, ייצור תמונות וקנבס ללא חיכוך הרשמה</li>
-        <li>תואם GDPR עם אפשרויות תושבות נתונים בEU למשתמשי enterprise</li></ul></div>
-    <div class="pc-box cons"><div class="pc-title">חסרונות</div><ul class="pc-list">        <li>מערכת קטנה יותר של תוספות ואינטגרציות בהשוואה ל-ChatGPT או Gemini</li>
-        <li>הכרה של המותג נמוכה מחוץ לאירופה — הקהילה והכלים של צד שלישי עדיין בפיתוח</li></ul></div>
+    <div class="pc-box pros"><div class="pc-title">יתרונות</div><ul class="pc-list">        <li>מונע על ידי Mistral Medium 3.5 עם חלון הקשר גדול של 256k טוקנים ומשקלים פתוחים תחת רישיון MIT מותאם</li>
+        <li>שלושה מצבים נפרדים מכסים שיחה, תהליכי סוכן עם כלים מחוברים ותכנות אסינכרוני בענן במוצר אחד</li>
+        <li>Vibe Work מבקש אישור לפני פעולות רגישות ושומר אדם בתוך הלולאה</li>
+        <li>שינוי השם ביוני 2026 שמר על כתובות, התחברויות, תוכניות ושיחות קודמות, מבלי לשבש משתמשים קיימים</li>
+        <li>שכבה חינמית שימושית באמת ותוכנית סטודנט זולה ב-5.99$ לחודש</li></ul></div>
+    <div class="pc-box cons"><div class="pc-title">חסרונות</div><ul class="pc-list">        <li>השם Le Chat הוצא משימוש, מה שעלול לבלבל משתמשים שמחפשים את המותג הישן</li>
+        <li>Mistral Medium 3.5 נמצא רק בתצוגה מקדימה ציבורית, כך שצפויה חוסר יציבות מדי פעם</li>
+        <li>המנוי הצרכני מחויב בנפרד מה-API למפתחים, ולכן התוכניות אינן כוללות קרדיטים ל-API</li>
+        <li>לחיוב Team יש מינימום של 50$ לחודש, מה שהופך אותו לפחות אטרקטיבי לצוותים קטנים מאוד</li>
+        <li>סוכני תכנות בענן ותהליכים עם זיכרון מתמשך מוסיפים מורכבות מעבר לעוזר צ'אט פשוט</li></ul></div>
   </div>
   <div style="text-align:center;margin:1.5rem 0">
     <a class="btn-visit" href="https://chat.mistral.ai" target="_blank" rel="noopener">בקר ב Mistral Le Chat ←</a>
   </div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">בחרו ב-Mistral Le Chat אם…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ אתם צריכים מודל AI חזק עם עדיפות לפרטיות מחברה אירופאית</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Mistral Large 2 הוא אחד המודלים הפתוחים הטובים ביותר לקוד ולניתוח</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Mistral API זול מ-OpenAI — מושלם למפתחים ופתרונות B2B</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ עמידה ב-GDPR ללא שאלות על העברת נתונים לארה&quot;ב — חשוב לאיחוד האירופי</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">בחרו ב-Mistral Le Chat אם…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם רוצים עוזר תוצרת אירופה עם מודלים במשקלים פתוחים</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם צריכים תהליכי סוכן שרצים בין כלים מחוברים עם שלבי אישור</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם רוצים סוכני תכנות אסינכרוניים בענן לצד הצ'אט</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם סטודנטים מאומתים שיכולים להשתמש בתוכנית של 5.99$ לחודש</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">אתם רוצים חלון הקשר גדול של 256k למסמכים ארוכים</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">שאלות נפוצות</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Mistral Le Chat מול ChatGPT — מה ההבדל?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Mistral הוא חברה צרפתית עם מודלים פתוחים ופרטיות נתונים חזקה. ChatGPT מ-OpenAI (ארה&quot;ב) עם מערכת-אקולוגית גדולה יותר. לדרישות GDPR ואיחוד אירופי — Mistral; למערכת-אקולוגית מרבית — ChatGPT.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">האם Mistral Le Chat בחינם?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">כן, Le Chat חינמי. Mistral Pro עולה 14.99$/חודש. API — לפי טוקנים, זול מ-OpenAI. ChatGPT חינמי; Plus 20$/חודש.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">האם Mistral באמת פתוח?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">חלק ממודלי Mistral פתוחים (Mistral 7B, Mixtral, Mistral NeMo). Mistral Large הוא מודל מסחרי סגור. מודלים פתוחים ניתנים לפריסה מקומית דרך Ollama או HuggingFace.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Mistral לקוד — האם מתאים?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">כן. Mistral Large 2 ו-Codestral (מודל מיוחד לקוד) מציגים תוצאות מצוינות. Codestral נתמך ב-Continue.dev ועוד IDE. ליחס עלות/ביצועים בקוד — בחירה מצוינת.</span></div></div></div></div>
   <div class="section-title-sm">שקול גם</div>
   <div class="also-grid">    <a class="also-card" href="/he/tools/character-ai.html">
@@ -213,7 +219,7 @@ textarea.form-input{resize:vertical;min-height:90px}
       <div class="footer-col-links">
         <a href="/he/directory.html">ספריה</a>
         <a href="/he/news.html">חדשות</a>
-        <a href="/he/directory.html">כלים</a>
+        <a href="/he/tools.html">כלים</a>
         <a href="/he/compare.html">השוואה</a>
         <a href="/he/newsletter.html">ניוזלטר</a>
       </div>

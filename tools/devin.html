@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Devin", "description": "Devin is an autonomous AI software engineer built by Cognition AI, introduced in 2024 as the first AI agent capable of completing end-to-end software engineering tasks — including writing code, runnin", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://devin.ai", "offers": {"@type": "Offer", "price": "", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Devin", "description": "Devin is an autonomous coding agent built by Cognition. Rather than sitting inside your editor as a copilot, it works more like a remote engineer: you assign it a task, and it spins up its own cloud w", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://devin.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -161,7 +161,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">🤖 AI Agents &amp; Automation</span>
-        <span class="tool-meta-chip badge-paid">from $20/mo</span>
+        <span class="tool-meta-chip badge-freemium">Freemium</span>
         
       </div>
       <div class="tool-best-for"><strong>Best for:</strong> Autonomous AI software engineer, junior dev task automation</div>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Devin</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Devin is an autonomous AI software engineer built by Cognition AI, introduced in 2024 as the first AI agent capable of completing end-to-end software engineering tasks — including writing code, running tests, debugging, and deploying changes — without human guidance on each step.</p><p style="margin-top:1rem">Devin 2.0, launched in late 2025 and widely adopted through 2026, represents a major capability leap. On Cognition's internal ACU (Agent Compute Unit) benchmark, Devin 2.0 completes 83% more junior developer tasks per unit of compute compared to Devin 1.0. This translates to meaningfully more work completed per dollar spent, not just raw capability improvement.</p><p style="margin-top:1rem">The pricing restructure is the most dramatic change in Devin's history. The original plan cost $500 per month, limiting adoption to well-funded engineering teams. Devin 2.0 introduced a Core plan at $20 per month — a 96% price reduction — making autonomous AI engineering accessible to individual developers and small teams for the first time. The Team plan at $500 per month includes 250 ACUs with additional ACUs billed at $2 each. Enterprise pricing is custom for large organizations with compliance and SLA requirements.</p><p style="margin-top:1rem">Devin integrates with Windsurf's Kanban dashboard, allowing teams to manage AI agent tasks alongside human developer tasks in a unified project view. This positions Devin as a collaborative team member in project management tools rather than a standalone CLI-only tool.</p><p style="margin-top:1rem">Devin works best on well-defined tasks with clear acceptance criteria — bug fixes from GitHub issues, adding tests to existing code, implementing a specified API endpoint, or updating dependencies. It struggles with open-ended architectural decisions and tasks that require deep product context not captured in the codebase.</p><p style="margin-top:1rem">Best for engineering teams that want to offload routine junior-level tasks to an AI agent, and for individual developers who want an autonomous assistant at a consumer price point.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Devin is an autonomous coding agent built by Cognition. Rather than sitting inside your editor as a copilot, it works more like a remote engineer: you assign it a task, and it spins up its own cloud workspace with a shell, browser and code editor to plan the work, make changes across the repo, run tests and open a pull request.</p><p style="margin-top:1rem">The current version is Devin 2.2, released on February 24, 2026. It brought roughly 3x faster session startup, full desktop and computer-use testing, automated code review and a redesigned lifecycle UI. Under the hood Devin now runs the Devin Fusion architecture (announced June 2026), which pairs frontier models with cheaper 'sidekick' agents and claims frontier-level quality at about 35% lower cost than using Opus 4.8 alone. The latest addition is Devin Security Swarm (July 2026), which finds, validates and fixes vulnerabilities. There is no Devin 2.3 yet.</p><p style="margin-top:1rem">In practice Devin is best at well-scoped, parallelizable work: bug fixes, refactors, migrations, test writing, small features and codebase Q&amp;A. You can run several Devin sessions at once, and it integrates with Slack, GitHub and IDEs so you can hand off tasks and review the resulting PRs.</p><p style="margin-top:1rem">Pricing was restructured after the Windsurf acquisition into self-serve tiers. Free is $0 with a light agent quota, limited models and unlimited inline edits plus Tab completions. Pro is $20/month with larger quotas, access to OpenAI/Claude/Gemini models, free SWE-1.6 and open-source models, and cloud agents. Max is $200/month for power users, and Teams is $80/month base plus $40/month per developer seat with an admin dashboard and centralized billing. Enterprise is custom and still billed in ACUs (Agent Compute Units) with SSO and optional VPC.</p><p style="margin-top:1rem">The limitations are the usual autonomous-agent ones: it can burn through quota or credits on ambiguous tasks, sometimes goes down the wrong path and needs redirection, and large or messy codebases still require careful task scoping and human review before merging. Note that many third-party blogs still quote the older ACU-only pricing (Core $20 + $2.25/ACU, Team $500/mo), which the official billing docs indicate has been replaced for self-serve.</p><p style="margin-top:1rem">Devin suits teams that want to offload routine engineering work to a fleet of parallel agents and are comfortable reviewing PRs, as well as individual developers who want to try autonomous coding without paying up front thanks to the new free tier.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>96% price reduction — Core plan now $20/month, down from $500</li>
-        <li>Devin 2.0 completes 83% more junior dev tasks per ACU vs Devin 1.0</li>
-        <li>Fully autonomous: writes, tests, debugs, and deploys without step-by-step guidance</li>
-        <li>Windsurf Kanban integration — manage AI tasks alongside human dev tasks</li>
-        <li>Team plan ($500/mo) scales with 250 ACUs included and $2/ACU overages</li>
+        <li>Fully autonomous: plans, edits across files, runs tests and opens PRs from a single task description</li>
+        <li>Runs multiple sessions in parallel and integrates with Slack, GitHub and IDEs for easy hand-off</li>
+        <li>New $0 Free tier plus $20 Pro make it far more accessible than the old paid-only model</li>
+        <li>Devin Fusion claims frontier-level quality at roughly 35% lower cost than Opus 4.8 alone</li>
+        <li>Devin 2.2 adds desktop/computer-use testing and automated code review; Security Swarm handles vulnerabilities</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Still paid-only — no free tier even at the new lower price point</li>
-        <li>Struggles with open-ended architectural decisions and ambiguous requirements</li>
-        <li>Requires well-documented codebases and clear task specs for best results</li>
-        <li>ACU consumption on complex tasks can exceed the Core plan allocation quickly</li>
+        <li>Can consume quota or credits quickly on vague or open-ended tasks</li>
+        <li>Still needs human review and sometimes redirection when it takes a wrong approach</li>
+        <li>Enterprise ACU billing can get expensive and is harder to predict</li>
+        <li>Large, messy codebases require careful task scoping to get good results</li>
+        <li>Confusing pricing landscape: many third-party sources still cite the outdated ACU-only tiers</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Devin if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need an autonomous AI software engineer that can plan and execute entire coding projects</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want AI that runs in its own environment — browser, terminal, editor — to complete coding tasks</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You have well-defined engineering tasks: bug fixes, feature implementation, test writing</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're a team wanting to scale engineering output without hiring more developers</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Devin if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want an autonomous agent to handle bug fixes, refactors and migrations end-to-end</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need to run several coding tasks in parallel and review PRs afterward</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to try autonomous coding for free before committing to a paid plan</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">Your team already works through Slack and GitHub and wants agent hand-offs there</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You care about automated code review and built-in vulnerability fixing</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Devin AI?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Devin is an autonomous AI software engineer by Cognition AI. It runs in its own sandboxed environment with a browser, terminal, and code editor, and can complete multi-step engineering tasks — planning, implementing, testing, and debugging — with minimal human input.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">How much does Devin cost?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Devin is available as an enterprise product. Pricing is not publicly listed and requires contacting Cognition AI. A Teams version for smaller organizations was announced in 2025. It's designed for engineering teams, not individual developers.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Devin better than GitHub Copilot?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">They serve different purposes. Devin is an autonomous agent that completes entire tasks. Copilot is an assistant that helps developers as they write code. Devin replaces engineering effort on defined tasks; Copilot amplifies developer productivity. Both can be used together.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What can Copilot Studio build?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Copilot Studio can build customer service chatbots, HR assistants, IT helpdesk bots, internal knowledge bases with Q&amp;A, and automated workflows connected to Microsoft 365 data. It's designed for business use cases, not software engineering automation.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

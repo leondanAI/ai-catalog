@@ -261,7 +261,7 @@ def also_consider(tools, current):
     same = [t for t in tools if t['category'] == current['category'] and t['slug'] != current['slug']]
     return same[:3]
 
-def build_jsonld(name, desc, url, badge, slug, rating_data):
+def build_jsonld(name, desc, url, badge, slug, rating_data, last_updated=''):
     schema = {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
@@ -290,6 +290,8 @@ def build_jsonld(name, desc, url, badge, slug, rating_data):
             "bestRating": "5",
             "worstRating": "1"
         }
+    if last_updated:
+        schema["dateModified"] = str(last_updated)[:10]
     return json.dumps(schema, ensure_ascii=False)
 
 def render_page(tool, all_tools, rating_data=None):
@@ -303,6 +305,7 @@ def render_page(tool, all_tools, rating_data=None):
     best_for  = tool['best_for'] or ''
     desc      = tool.get('description_long') or tool.get('description') or ''
     short_desc = tool.get('description') or ''  # always short version for meta
+    last_updated = tool.get('last_updated') or ''
     _seo = SEO_OVERRIDES.get('en', {}).get(slug, {})
     page_title = _seo.get('title') or f'{name} Review 2026 — Pros, Cons & Alternatives | AItoolFit'
     meta_desc  = _seo.get('meta') or build_meta_desc(name, short_desc, badge, best_for)
@@ -413,7 +416,7 @@ def render_page(tool, all_tools, rating_data=None):
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{build_jsonld(name, desc, url, badge, slug, rating_data)}
+{build_jsonld(name, desc, url, badge, slug, rating_data, last_updated)}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -562,6 +565,7 @@ textarea.form-input {{ resize: vertical; min-height: 90px; }}
   <div class="tool-desc-block">
     <h2>About {esc(name)}</h2>
     <div class="tool-desc">{''.join(f'<p style="margin-top:1rem">{esc(p.strip())}</p>' for p in desc.split(chr(10)+chr(10)) if p.strip())}</div>
+    {f'<div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: {esc(str(last_updated)[:10])}</div>' if last_updated else ''}
   </div>
 
   <div class="pros-cons">

@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Remove.bg", "description": "Remove.bg is the industry-standard tool for AI-powered background removal, owned by Kaleido AI. It processes any photo in approximately 5 seconds with a single click — no manual selection, masking, or", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://remove.bg", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Remove.bg", "description": "Remove.bg is a specialized web service and API that isolates the subject of a photo and strips out the background in a single step. It is owned by Canva (through Kaleido) and is aimed at people who ne", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://remove.bg", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,37 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Remove.bg</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Remove.bg is the industry-standard tool for AI-powered background removal, owned by Kaleido AI. It processes any photo in approximately 5 seconds with a single click — no manual selection, masking, or design skills required. The service supports JPEG, PNG, WebP, and RAW formats up to 50MB, with output in transparent PNG.</p><p style="margin-top:1rem">The tool integrates across multiple surfaces: the web app at remove.bg, a desktop application for Windows, macOS, and Linux, mobile apps, a Figma plugin, a Photoshop plugin, Shopify and WooCommerce integrations, and a REST API for automated processing. The API supports bulk processing, making it practical for e-commerce operations removing backgrounds from thousands of product photos.</p><p style="margin-top:1rem">Key capabilities include automatic subject detection (people, products, animals, cars), high-resolution output, batch processing via API, transparent background PNG output, and integrations with major design tools and e-commerce platforms.</p><p style="margin-top:1rem">Pricing: Free plan provides limited low-resolution preview images and a small number of free full-resolution credits. Pay-as-you-go starts at approximately $3 for a small credit pack. The Lite subscription at approximately $8.10 per month provides 40 full-resolution credits per month. Pro Volume+ plans scale up to $80.10 per month for 500 credits. Enterprise plans with custom API volume are available for high-throughput operations. Prices are EUR-denominated and may vary slightly by region.</p><p style="margin-top:1rem">Limitations: Complex subjects with hair, fur, or transparent materials require manual touchup. Free credits are limited and the preview resolution is insufficient for professional use without purchasing. Credit costs add up quickly for high-volume e-commerce use.</p><p style="margin-top:1rem">Best suited for e-commerce sellers, product photographers, and marketing teams who need to quickly remove backgrounds from product images at scale.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Remove.bg is a specialized web service and API that isolates the subject of a photo and strips out the background in a single step. It is owned by Canva (through Kaleido) and is aimed at people who need clean cutouts for product shots, portraits, and marketing graphics without opening an image editor.</p><p style="margin-top:1rem">There is no public version numbering, and nothing fundamental has changed recently. The tool still runs the same proprietary AI engine and keeps the long-standing three-option structure: free previews, subscriptions, and pay-as-you-go credits. Ownership remains with Canva, and there has been no shift from free to paid or paid to free.</p><p style="margin-top:1rem">In practice you upload an image or paste a URL and get an automatic cutout in a few seconds. It handles hair, fur, and semi-transparent edges reasonably well, supports transparent PNG output, and offers a browser tool, desktop and mobile apps, an API, and integrations with tools like Photoshop and Canva.</p><p style="margin-top:1rem">Pricing is built around credits. A free account gives you low-resolution web previews up to 0.25 MP, one bonus high-resolution credit, and 50 API or app previews per month. Pay-as-you-go credits never expire and cost roughly $0.20 per image at standard rates, dropping at higher volumes. Subscriptions, whose credits roll over while active, run about $9/month for 40 credits, $39/month for 200 credits, up to a Volume+ tier around $80/month for roughly 500 credits, with enterprise pricing above about 100,000 images a year. All paid plans include a 14-day money-back guarantee.</p><p style="margin-top:1rem">The main limitation is that the free tier is genuinely a preview: downloads are capped at 0.25 MP, so any full-resolution result requires paid credits. Complex edges, busy backgrounds, and low-contrast subjects can still need manual touch-ups, and the per-image cost adds up for large batches.</p><p style="margin-top:1rem">Remove.bg suits e-commerce sellers, marketers, and designers who need fast, consistent cutouts at scale and are comfortable paying per image or by subscription for full-resolution output.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Industry-standard accuracy — processes any photo in 5 seconds automatically</li>
-        <li>API supports bulk processing for e-commerce and automated workflows</li>
-        <li>Integrates with Figma, Photoshop, Shopify, WooCommerce, and desktop apps</li>
-        <li>Handles people, products, animals, and cars with high accuracy</li>
-        <li>REST API makes it practical for high-volume product photography pipelines</li>
+        <li>Fast, fully automatic background removal that usually needs no manual selection</li>
+        <li>Handles hair, fur, and soft edges better than most one-click tools</li>
+        <li>Broad access: web app, desktop and mobile apps, API, plus Photoshop and Canva integrations</li>
+        <li>Pay-as-you-go credits never expire, and subscription credits roll over while active</li>
+        <li>All paid plans carry a 14-day money-back guarantee</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Complex subjects with hair, fur, or transparent materials may need manual touchup</li>
-        <li>Free tier provides only low-resolution previews — not usable for professional output</li>
-        <li>EUR-denominated credit costs add up quickly for high-volume use</li>
-        <li>Limited editing beyond background removal — just a focused single-function tool</li>
+        <li>The free web tool only outputs low-resolution previews up to 0.25 MP</li>
+        <li>Any full-resolution download requires paid credits</li>
+        <li>At roughly $0.20 per image, large batches get expensive quickly</li>
+        <li>Tricky edges, cluttered backgrounds, or low contrast can still need manual cleanup</li>
+        <li>Free API and app previews are capped at 50 per month</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Remove.bg if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need the fastest, most accurate AI background removal — Remove.bg is the specialist</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You process high volumes of images via API for e-commerce, product photography, or automation</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want batch background removal with the highest accuracy, especially for complex hair and edges</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need a dedicated API for integrating background removal into your own product or workflow</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Remove.bg if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need many clean product or portrait cutouts quickly</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want an API or integration to remove backgrounds inside your own workflow</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You are fine paying per image or by subscription for full-resolution output</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want reliable results on hair and soft edges without manual masking</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Remove.bg?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Remove.bg is an AI-powered background removal tool that automatically detects and removes image backgrounds in seconds. It's the leading specialist tool for this task, known for accurate edge detection especially around hair and complex objects. It also offers a developer API for bulk processing.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Remove.bg free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Remove.bg allows a limited number of free background removals per month at reduced resolution. The full-resolution version requires credits or a subscription. Subscriptions start at around $9/month for regular use. The API is priced per image.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Does Canva remove backgrounds for free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. Canva's background remover is included in Canva Pro ($15/month) and Canva for Teams. It's not available on the free plan. For users already paying for Canva Pro, this makes a separate Remove.bg subscription less necessary.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Which has better background removal quality?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Remove.bg is generally considered more accurate, especially for complex subjects like hair, fur, and transparent objects. Canva's background remover is convenient but may require manual touch-ups on complex images. For professional product photography, Remove.bg is the higher-quality choice.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +258,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

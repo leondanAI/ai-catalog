@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Suno", "description": "Suno is an AI music generation platform that allows users to create full songs — including lyrics, vocals, melody, and instrumentation — from text prompts. It has grown into one of the most widely use", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://suno.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": 1, "bestRating": "5", "worstRating": "1"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Suno", "description": "Suno is a text-to-music tool that writes, arranges and performs a song from a short description or your own lyrics. You type a prompt, pick a style, and it returns finished tracks with vocals and back", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://suno.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": 1, "bestRating": "5", "worstRating": "1"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Suno</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Suno is an AI music generation platform that allows users to create full songs — including lyrics, vocals, melody, and instrumentation — from text prompts. It has grown into one of the most widely used AI music tools, with 2 million paid subscribers and approximately 7 million tracks generated per day as of May 2026.</p><p style="margin-top:1rem">V5.5, released March 25, 2026, is the most significant update since the platform launched. Voice cloning allows users to upload recordings of their own vocals, which the model then uses to sing generated songs in their actual voice — not a synthetic approximation. This is a major shift for independent musicians who want AI-generated music that sounds like them.</p><p style="margin-top:1rem">Custom Models allow users to fine-tune Suno on a library of their own owned tracks. Each user can train up to three custom models, requiring a minimum of six tracks they own rights to. The resulting model reflects the musical style, timbre, and compositional tendencies of the training material — giving artists a personalized generative tool rather than a generic one.</p><p style="margin-top:1rem">My Taste is a lighter personalization system that learns from a user's generation history and listening patterns to bias future generations toward preferred styles without requiring explicit fine-tuning.</p><p style="margin-top:1rem">Suno Studio is a full digital audio workstation integrated directly into the platform. It includes stems separation — isolating vocals, drums, bass, and other elements from generated or uploaded tracks — and Cover and Extend tools for remixing and extending generated compositions.</p><p style="margin-top:1rem">A licensing deal with Warner Music Group, announced in November 2025, introduced licensed models trained on Warner's catalog and monthly download caps for the commercial subscription tier. Suno is raising a Series D at a reported $5 billion valuation as of May 2026, up from $2.45 billion in its previous round.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Suno is a text-to-music tool that writes, arranges and performs a song from a short description or your own lyrics. You type a prompt, pick a style, and it returns finished tracks with vocals and backing instrumentation in about a minute.</p><p style="margin-top:1rem">The headline model right now is v5.5, launched on March 26, 2026. It introduced Voices, which let you clone or reuse your own singing voice; Custom Models, which fine-tune v5.5 to your own back catalogue (up to three per account, on Pro and Premier); and My Taste, which learns the genres and moods you gravitate toward. Note that v5 and v5.5 are paid-only, so the free tier still runs on the older v4.5-all model.</p><p style="margin-top:1rem">Day to day, the tool covers the full loop: generation from a prompt, custom lyrics, style and persona control, stem separation on paid plans, and audio upload to extend or remix existing material.</p><p style="margin-top:1rem">Pricing runs on a credit system where one full song costs 5 credits. Free gives you $0/mo and 50 credits per day, which works out to roughly 10 songs a day, for personal, non-commercial use only, with no stem separation and 8-minute uploads. Pro is $10/mo (or $8/mo billed annually, $64/yr) for 2,500 credits a month (about 500 songs), the v5.5 model, commercial rights, personas, two stem types, 30-minute uploads and a priority queue. Premier is $30/mo (or $24/mo annually, $192/yr) for 10,000 credits (about 2,000 songs), v5.5, Suno Studio, commercial use and three stem types.</p><p style="margin-top:1rem">The main limitations are that the newest quality is gated: you cannot touch v5.5, stem separation or commercial rights on the free plan, and the daily free allowance is smaller than it first appears once you account for 5 credits per song.</p><p style="margin-top:1rem">Suno suits hobbyists experimenting with ideas, content creators who need cleared background music, and musicians who want fast demos or reference tracks, provided they are willing to pay for the current model and commercial use.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Voice cloning from uploaded vocals — generated songs sing in your actual voice</li>
-        <li>Custom Models fine-tuned on your own tracks — up to 3 models, 6+ tracks minimum</li>
-        <li>Suno Studio DAW with stems separation, Cover, and Extend tools built in</li>
-        <li>My Taste personalization learns from generation history without manual fine-tuning</li>
-        <li>2M paid subscribers and 7M tracks/day — large community and proven scale</li>
+        <li>Generates a complete song with vocals and instrumentation from a single text prompt in about a minute</li>
+        <li>v5.5 adds genuinely new tools: voice cloning, custom models trained on your own catalogue, and taste-based recommendations</li>
+        <li>Genuinely usable free tier for trying the product, with about 10 songs a day</li>
+        <li>Paid plans grant commercial rights, stem separation and longer audio uploads</li>
+        <li>Transparent credit system, so you always know a full song costs 5 credits</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Warner Music licensing deal introduces monthly download caps on commercial tier</li>
-        <li>Custom Model training requires minimum 6 owned tracks — not accessible to all users</li>
-        <li>Commercial use rights vary by plan — check license terms before monetizing output</li>
-        <li>Voice cloning quality depends on the quality and length of the uploaded vocal sample</li>
+        <li>The current v5.5 (and v5) model is paid-only; the free plan is stuck on the older v4.5-all</li>
+        <li>Free tier blocks stem separation and commercial use entirely</li>
+        <li>Daily free credits translate to only about 10 songs, not 50</li>
+        <li>Custom Models are limited to three per account and only on Pro and Premier</li>
+        <li>Credit costs add up quickly for heavy or iterative generation</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Suno if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want to generate complete songs quickly from a text description</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're a casual creator who wants full songs with vocals in seconds</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need a simple interface — describe the song, get the song</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want the most widely used AI music platform with the largest community</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Suno if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to turn a text idea into a finished song without playing an instrument</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need royalty-cleared background music and are on a paid plan for commercial rights</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to clone or reuse your own singing voice via v5.5 Voices</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You produce a lot of tracks and can use 2,500 or 10,000 credits a month</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You are fine starting on the free tier to test before paying for v5.5</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Suno or Udio better?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Suno is better for quickly generating complete songs — it's faster and more user-friendly. Udio generally produces higher sonic quality but has limitations on downloads in some regions. Both are competitive; Suno leads on ease of use and community size.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Suno free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Suno offers a free plan with 50 credits per day (about 10 songs). The Pro plan is $8/month and Premier is $24/month for more credits, commercial use rights, and priority generation.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can I sell music made with Suno?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes, on paid plans. Suno Pro and Premier grant commercial use rights to generated music. The free plan does not allow commercial use. Always check current terms as AI music licensing continues to evolve.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Udio AI?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Udio is an AI music generation tool that creates songs from text prompts. It launched in 2024 and is known for particularly high sonic quality. Udio has faced legal challenges from major record labels over training data.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

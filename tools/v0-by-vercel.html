@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "V0 by Vercel", "description": "V0 is Vercel's AI development platform, originally launched as a UI component generator and now evolved into a full-stack development environment. As of early 2026, V0 moved from v0.dev to v0.app, ref", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://v0.app", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "V0 by Vercel", "description": "v0 by Vercel is an AI agent for building web apps. You describe what you want in natural language (optionally attaching screenshots or Figma-style references), and it produces working code you can pre", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://v0.app", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,35 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About V0 by Vercel</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">V0 is Vercel's AI development platform, originally launched as a UI component generator and now evolved into a full-stack development environment. As of early 2026, V0 moved from v0.dev to v0.app, reflecting its expanded scope beyond single components.</p><p style="margin-top:1rem">The February 2026 update was transformational. V0 gained Git integration that allows users to create a new branch per chat session and open pull requests directly against the main branch of any connected repository — turning AI conversations into trackable code changes in existing projects. The editor was rebuilt to a VS Code-style interface with file tree navigation, syntax highlighting, and multi-file editing.</p><p style="margin-top:1rem">Database connectivity expanded to include Snowflake and AWS data sources alongside existing Vercel Postgres support. The production sandbox feature allows users to import any GitHub repository and run it as a live, editable environment — not just scaffold new projects, but modify and deploy real production code.</p><p style="margin-top:1rem">Agentic workflows are now deployable on Vercel's infrastructure, allowing V0-generated automation pipelines to run as serverless functions or edge workers. This extends V0 from a generation tool into a platform for running AI-driven backend logic at scale.</p><p style="margin-top:1rem">Pricing switched from a credit-based monthly model to token-based billing, where cost scales with the complexity of each generation. Simpler prompts cost less; multi-file architectural changes cost more. A free tier with limited tokens remains available.</p><p style="margin-top:1rem">Best for frontend and full-stack developers who want to go from idea to deployed application with minimal boilerplate, and for teams that want AI-assisted code changes tracked in their existing Git workflow.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">v0 by Vercel is an AI agent for building web apps. You describe what you want in natural language (optionally attaching screenshots or Figma-style references), and it produces working code you can preview, edit, and ship. It is developed by Vercel, the company behind Next.js and the Vercel hosting platform.</p><p style="margin-top:1rem">The current version is the post-February 2026 &quot;new v0&quot;, which changed the product substantially. What used to be mainly a UI-component generator is now a full-stack agentic development platform: you can import GitHub repositories and work with branches and pull requests, use a VS Code-style editor, run full-stack apps in a sandbox runtime, connect databases and services (Snowflake, AWS), organize work into Projects and Folders, and make visual edits through Design Mode.</p><p style="margin-top:1rem">Under the hood the assistant runs on a family of models exposed as v0 Mini, Pro, Max, and Max Fast, with an API model published as vercel/v0-1.0-md. As of March 31, 2026 billing switched from fixed message or credit counts to token-based metering, where input and output tokens are converted into credits.</p><p style="margin-top:1rem">Pricing has a free tier at $0/month that includes about $5 of monthly credits (roughly 7 messages a day). Paid plans are Team at $30 per user/month and Business at $100 per user/month, with a custom-priced Enterprise plan. The older Premium plan at $20/month still exists for legacy users but is closed to new sign-ups. Purchased credits expire one year after purchase.</p><p style="margin-top:1rem">The main limitation is cost predictability: token-based metering makes it harder to know in advance how much a session will cost, and heavy full-stack work can burn through credits quickly. The free tier's ~7 messages a day is enough to try it but not to build seriously, and the platform is tightly oriented toward the Vercel and Next.js ecosystem.</p><p style="margin-top:1rem">v0 is a good fit for developers and product teams already on Vercel who want to go from prompt to a deployed, full-stack app quickly, and for designers or founders who want to prototype real, working software rather than static mockups.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Git integration creates branches per chat and opens PRs against main — fits existing workflows</li>
-        <li>VS Code-style editor with file tree and multi-file editing — not just component snippets</li>
-        <li>Production sandbox imports any GitHub repo as a live, editable environment</li>
-        <li>Deploys agentic workflows on Vercel infrastructure as serverless or edge functions</li>
-        <li>Database connectivity to Snowflake, AWS, and Vercel Postgres built in</li>
+        <li>Full-stack scope now covers Git import, branches and PRs, a sandbox runtime, and database connectors, not just isolated UI components</li>
+        <li>Deep integration with Vercel and Next.js makes going from prompt to a deployed app fast</li>
+        <li>In-browser VS Code-style editor plus Design Mode lets you edit both code and visuals in one place</li>
+        <li>Genuinely free entry tier ($5/month in credits) to try the platform without a card</li>
+        <li>Multiple model tiers (Mini/Pro/Max/Max Fast) let you trade off speed, quality, and cost</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Token-based pricing makes cost unpredictable for complex multi-file generations</li>
-        <li>Domain changed from v0.dev to v0.app — existing bookmarks and links need updating</li>
-        <li>Still primarily Vercel-ecosystem oriented — less useful if deploying to AWS or other hosts</li>
-        <li>Learning curve for the new agentic workflow features compared to the original simple UI</li>
+        <li>Token-based billing since March 31, 2026 makes per-session cost hard to predict</li>
+        <li>Free tier is limited to roughly 7 messages a day, too little for real projects</li>
+        <li>Purchased credits expire after one year</li>
+        <li>Strongly tied to the Vercel/Next.js stack, which is limiting if you deploy elsewhere</li>
+        <li>The legacy $20 Premium plan is closed to new users, so the cheapest paid step up is now $30/user/month Team</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose V0 by Vercel if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want to generate React UI components and complete pages from text or image prompts</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're a frontend developer who wants to rapidly prototype UI without writing boilerplate</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want Tailwind CSS and shadcn/ui components generated instantly and deployable to Vercel</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need quick UI prototypes to share with designers or stakeholders for feedback</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose V0 by Vercel if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You already build and host on Vercel and Next.js</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to go from a text prompt to a deployed full-stack app, not just UI snippets</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need Git integration with real branches and pull requests inside an AI builder</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to prototype working software, database included, rather than static mockups</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You are comfortable with token-based, usage-metered pricing</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is V0 by Vercel?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">V0 is Vercel's AI-powered UI generator. You describe a UI in natural language and V0 generates production-ready React and Tailwind CSS code that deploys directly to Vercel.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">How much does V0 cost?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">V0 has a free tier with limited credits. The Premium plan is $20/month with more credits. Team plans are available for collaborative projects.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can V0 generate full-stack apps?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">V0 focuses on frontend UI generation. For full-stack apps including backend and database, it integrates with Vercel's platform and can scaffold API routes and database connections.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What frameworks does V0 support?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">V0 primarily generates React with Tailwind CSS and shadcn/ui components. Output is compatible with Next.js and deploys natively on Vercel.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -256,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

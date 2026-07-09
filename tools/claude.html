@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Claude", "description": "Claude is Anthropic's AI assistant, recognized in 2026 for the strongest instruction-following and reasoning quality among major AI assistants. The latest release, Claude Opus 4.7, improves coding acc", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://claude.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": 3, "bestRating": "5", "worstRating": "1"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Claude", "description": "Claude is a conversational AI assistant from Anthropic, used through the web app, mobile apps, and the API. It handles long-form writing, analysis, coding, document reading, and multi-step reasoning, ", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://claude.ai", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": 3, "bestRating": "5", "worstRating": "1"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -174,36 +174,37 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Claude</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Claude is Anthropic's AI assistant, recognized in 2026 for the strongest instruction-following and reasoning quality among major AI assistants. The latest release, Claude Opus 4.7, improves coding accuracy and brings higher-resolution vision processing — the ability to analyze detailed images, diagrams, and documents with greater precision — while keeping API pricing unchanged at $5 per million input tokens and $25 per million output tokens.</p><p style="margin-top:1rem">A major quality-of-life improvement in 2026 is the doubling of rate limits across all paid tiers: Pro, Max, Team, and Enterprise users can now send twice as many messages per hour, and peak-hour rate reductions have been removed entirely. This makes Claude dramatically more usable for professional workflows that previously hit frustrating pauses.</p><p style="margin-top:1rem">Claude Design, a new product from Anthropic Labs, extends Claude's capabilities into visual outputs — users can generate presentation slides, design mockups, and interactive prototypes directly through conversation with Claude Opus 4.7. It is available to Pro plan subscribers and above at no extra cost.</p><p style="margin-top:1rem">The Claude Code desktop app has been redesigned with parallel task execution, a session sidebar for managing multiple projects, integrated SSH support for remote development, and an embedded terminal. This makes it one of the most capable AI coding environments available, competing directly with Cursor. Claude Platform is now also available on AWS, expanding deployment options for enterprise customers.</p><p style="margin-top:1rem">Pricing runs from Free (limited daily messages) to Pro at $20/month, Max at $100/month, and Max at $200/month. The Max tiers offer substantially higher throughput and are designed for power users and development teams.</p><p style="margin-top:1rem">Claude is the best choice for users who need precise, reliable responses to complex instructions — technical writing, document analysis, code review, and long-context reasoning — without the usage unpredictability of credit-based systems.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Claude is a conversational AI assistant from Anthropic, used through the web app, mobile apps, and the API. It handles long-form writing, analysis, coding, document reading, and multi-step reasoning, with an emphasis on careful, steerable responses.</p><p style="margin-top:1rem">The lineup has moved well past the earlier Claude 3 / Sonnet era. The most capable widely released model is now Claude Fable 5, generally available since June 9, 2026. The current family also includes Claude Opus 4.8 for complex agentic coding and enterprise work, Claude Sonnet 5 (released June 30, 2026), and the lighter Claude Haiku 4.5. A separate Claude Mythos 5 exists but is invitation-only through Project Glasswing.</p><p style="margin-top:1rem">The biggest practical change is context: current models offer a 1M-token context window rather than the older 200K, so you can load large codebases, long documents, or entire transcripts in a single conversation. The models also cover multimodal input and tool use across the product.</p><p style="margin-top:1rem">Pricing is tiered. The Free plan is $0. Pro is $20/month, or $17/month billed annually ($200/year). Max ranges from $100/month (5x usage) up to $200/month (20x usage). Team offers a Standard seat at $25/month ($20 annual) and a Premium seat at $125/month ($100 annual), with a five-seat minimum. Enterprise is custom, starting around $20/seat plus usage. API list pricing per million tokens is $10/$50 for Fable 5, $5/$25 for Opus 4.8, $3/$15 for Sonnet 5 (with a $2/$10 intro rate through Aug 31, 2026), and $1/$5 for Haiku 4.5.</p><p style="margin-top:1rem">Limitations are worth noting. Free and even paid plans have usage caps that reset on a rolling basis, so heavy users can hit limits mid-session. The most capable models are the most expensive on the API, and the top-end Mythos 5 is not openly available. As with any LLM, outputs still need checking for factual accuracy.</p><p style="margin-top:1rem">Claude suits writers, developers, analysts, and teams who want strong reasoning, large-context handling, and a choice of models to balance cost against capability.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Claude Opus 4.7 — best instruction-following and long-context reasoning among major assistants</li>
-        <li>Rate limits doubled for Pro/Max/Team/Enterprise; peak-hour reductions removed</li>
-        <li>Claude Design included for Pro+ subscribers — generate slides, mockups, and prototypes via conversation</li>
-        <li>Claude Code desktop app with parallel tasks, session sidebar, SSH support, and integrated terminal</li>
-        <li>API pricing unchanged: $5/$25 per million input/output tokens — predictable costs</li>
+        <li>Current models offer a 1M-token context window, enough for large codebases and long documents</li>
+        <li>Clear model tiering (Fable 5, Opus 4.8, Sonnet 5, Haiku 4.5) lets you trade cost for capability</li>
+        <li>Strong at long-form writing, analysis, and agentic coding</li>
+        <li>Free tier plus a generous range of paid and API options</li>
+        <li>Consistent quality across web, mobile, and API access</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Free tier has strict daily message limits — not practical for heavy daily use</li>
-        <li>No native image generation (relies on Claude Design for visual outputs)</li>
-        <li>Max tiers at $100-$200/month are expensive compared to ChatGPT Plus at $20/month</li>
-        <li>Less consumer feature breadth than ChatGPT — no built-in video, music, or spreadsheet tools</li>
-        <li>Claude Design still in Labs preview — not fully released to all users</li>
+        <li>Usage caps apply even on paid plans and can interrupt heavy sessions</li>
+        <li>The most capable models carry the highest API cost ($10/$50 per MTok for Fable 5)</li>
+        <li>Top-end Claude Mythos 5 is invitation-only and not generally available</li>
+        <li>Outputs still require fact-checking like any LLM</li>
+        <li>Team plan requires a five-seat minimum, raising the entry cost for small groups</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Claude if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need the longest context window for analyzing large documents, codebases, or research papers</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Your tasks require precise, nuanced writing — Claude's prose quality is consistently rated higher</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You do agentic work: Claude 3.7 with extended thinking reasons more deeply on complex problems</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You prioritize safety and careful reasoning — Claude is more likely to say 'I don't know' accurately</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Claude if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need to work with very large documents or codebases in one context</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to pick a model that balances price against capability</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You do long-form writing, analysis, or agentic coding</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want to start free and scale to Pro, Max, Team, or API access</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Claude better than ChatGPT?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">It depends on the task. Claude generally produces better long-form writing and handles very long documents more accurately. ChatGPT has more features (image generation, voice, plugins) and a larger app ecosystem. On coding benchmarks, they are competitive — Claude 3.7 leads on many.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Which is free — ChatGPT or Claude?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Both have free plans. ChatGPT Free uses GPT-4o mini with limited GPT-4o access. Claude Free uses Claude 3.5 Haiku with limited Claude 3.5 Sonnet access. Both paid plans ($20/month) unlock the best models with higher usage limits.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can ChatGPT generate images?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. ChatGPT Plus and higher plans include DALL-E 3 image generation. Claude does not generate images — it's text and code only.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Which AI is better for coding — ChatGPT or Claude?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Both are excellent. Claude 3.7 Sonnet with extended thinking performs best on SWE-bench (real-world software engineering tasks) as of 2025. Claude Code (the agentic CLI) is specifically built for complex coding workflows. ChatGPT with code interpreter excels at data analysis and running code.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -257,7 +258,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>

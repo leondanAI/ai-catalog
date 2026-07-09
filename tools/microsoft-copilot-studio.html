@@ -26,7 +26,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Microsoft Copilot Studio", "description": "Microsoft Copilot Studio is an enterprise platform for building custom AI agents without writing code. It targets IT teams, business analysts, and citizen developers who need AI assistants embedded in", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://copilotstudio.microsoft.com", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "2.0", "reviewCount": 1, "bestRating": "5", "worstRating": "1"}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Microsoft Copilot Studio", "description": "Microsoft Copilot Studio is Microsoft's low-code environment for designing, testing and publishing AI agents. It sits inside the Power Platform and Microsoft 365 ecosystem, letting makers wire agents ", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://copilotstudio.microsoft.com", "offers": {"@type": "Offer", "price": "", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "2.0", "reviewCount": 1, "bestRating": "5", "worstRating": "1"}, "dateModified": "2026-07-09"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <a href="/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">AI Catalog</a>
       <a href="/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
-      <a href="/directory.html"      class="nav-link active" data-nav="directory.html" data-i18n="nav.tools">Toolbox</a>
+      <a href="/tools.html"      class="nav-link active" data-nav="tools.html" data-i18n="nav.tools">Toolbox</a>
       <a href="/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -133,7 +133,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
     <a href="/directory.html"  class="nav-link" data-i18n="nav.directory">AI Catalog</a>
     <a href="/compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="/news.html"       class="nav-link" data-i18n="nav.news">News</a>
-    <a href="/directory.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
+    <a href="/tools.html"      class="nav-link" data-i18n="nav.tools">Toolbox</a>
     <a href="/newsletter.html" class="nav-link" data-i18n="nav.newsletter">Newsletter</a>
   </nav>
 </header>
@@ -161,7 +161,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">🤖 AI Agents &amp; Automation</span>
-        <span class="tool-meta-chip badge-freemium">Freemium</span>
+        <span class="tool-meta-chip badge-paid">Free / from $200/mo</span>
         
       </div>
       <div class="tool-best-for"><strong>Best for:</strong> Enterprise agents, Microsoft ecosystem</div>
@@ -174,34 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About Microsoft Copilot Studio</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">Microsoft Copilot Studio is an enterprise platform for building custom AI agents without writing code. It targets IT teams, business analysts, and citizen developers who need AI assistants embedded into Microsoft 365 workflows — Teams, SharePoint, Outlook, and Dynamics 365.</p><p style="margin-top:1rem">In September 2025, Microsoft replaced per-message pricing with Copilot Credits — a unified currency across all Copilot products. Standard pricing is $200/month per pack of 25,000 Copilot Credits, with pay-as-you-go also available and volume discounts up to 20%. A major 2026 update added multi-model support: users can now choose between GPT-4o, Claude Sonnet 4.5, or Claude Opus 4.7 when building custom agents.</p><p style="margin-top:1rem">The platform uses a visual canvas for designing conversation flows with pre-built connectors to Microsoft services. Agents can be published to Teams channels, websites, or embedded in SharePoint. For complex enterprise scenarios, the platform supports multi-agent orchestration where specialized agents hand off tasks between each other.</p><p style="margin-top:1rem">Developer pushback in April 2026 noted that the credit system effectively delivered less value than the old model at similar price points. Microsoft acknowledged the concern without reversing the change.</p><p style="margin-top:1rem">Limitations: genuinely useful deployment requires an existing Microsoft 365 ecosystem. Outside of that, alternatives like Relevance AI or Lindy offer more flexibility at lower cost.</p><p style="margin-top:1rem">Best for enterprises already standardized on Microsoft 365 who need AI agents embedded directly in Teams and SharePoint without involving external platforms.</p></div>
+    <div class="tool-desc"><p style="margin-top:1rem">Microsoft Copilot Studio is Microsoft's low-code environment for designing, testing and publishing AI agents. It sits inside the Power Platform and Microsoft 365 ecosystem, letting makers wire agents to enterprise data, Teams, Dynamics 365 and third-party APIs without heavy custom code.</p><p style="margin-top:1rem">The current version is 2026 release wave 1, running on platform build 2026.6.2 (June 2026). This wave brought several substantial changes: computer-using agents reached general availability, and a new orchestration layer improves accuracy on evaluations by roughly 20% while cutting token consumption by about 50%. Real-time speech-to-speech voice agents were added for Dynamics 365 Contact Center, and multi-step workflows were redesigned so UI-driven agents run alongside API actions and approvals.</p><p style="margin-top:1rem">On the capability side, the platform now supports multi-agent orchestration, autonomous computer-using agents and a broader model choice. In the Prompt Tool you can select GPT-5.5 Reasoning (early release) or Anthropic Claude Opus 4.6 and Sonnet 4.5, offered as a paid experimental preview in the US.</p><p style="margin-top:1rem">Pricing runs entirely on Copilot Credits, which replaced the old per-message billing on September 1, 2025 (same quantity and rate). A prepaid capacity pack is $200 per pack per month for 25,000 Copilot Credits; pay-as-you-go is metered at $0.01 per credit with no upfront commitment but requires an Azure subscription. A one-year Copilot Credit Commit Units (CCCU) prepurchase can save up to 20%. Building agents is included at no extra cost with a Microsoft 365 Copilot license at $30 per user per month, billed annually.</p><p style="margin-top:1rem">The main limitation is that there is no free production tier. The free authoring or maker license costs $0 but only works if the tenant already holds a paid prepaid Copilot Credit pack, and the individual free trial license is time-limited and cannot publish agents. In practice, deploying anything requires payment.</p><p style="margin-top:1rem">Copilot Studio suits organizations already invested in Microsoft 365, Dynamics 365 or Azure that want governed, low-code agents connected to their existing data. It is a weaker fit for individuals or small teams wanting a genuinely free way to ship an agent to production.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-07-09</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Deep integration with Teams, SharePoint, Outlook, Dynamics 365</li>
-        <li>Multi-model support: GPT-4o, Claude Sonnet 4.5, Claude Opus 4.7</li>
-        <li>Visual no-code agent builder — no developer required</li>
-        <li>Enterprise-grade security, compliance, and SSO out of the box</li>
+        <li>General-availability computer-using agents and real-time voice agents for Dynamics 365 Contact Center</li>
+        <li>New orchestration layer improves eval accuracy about 20% while cutting token use around 50%</li>
+        <li>Model flexibility including GPT-5.5 Reasoning and Anthropic Claude Opus 4.6 / Sonnet 4.5 in the Prompt Tool</li>
+        <li>Deep, governed integration with Microsoft 365, Dynamics 365, Teams and external APIs</li>
+        <li>Included at no extra cost for anyone with a Microsoft 365 Copilot license</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Copilot Credits complex — $200/25k credits, less value than old model</li>
-        <li>April 2026 developer backlash over pricing value reduction</li>
-        <li>Only truly useful inside existing Microsoft 365 ecosystems</li>
-        <li>High cost for small teams outside enterprise volume discounts</li>
+        <li>No free production tier: publishing any agent requires payment</li>
+        <li>The free maker license still needs the tenant to hold a paid prepaid Copilot Credit pack</li>
+        <li>Trial license is time-limited and cannot publish agents</li>
+        <li>Pay-as-you-go metering requires an Azure subscription and can be hard to forecast</li>
+        <li>Claude and GPT-5.5 model options are a paid experimental preview limited to the US</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Microsoft Copilot Studio if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You're building custom AI chatbots for Microsoft Teams, SharePoint, or enterprise portals</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ Your organization runs on Microsoft 365 and needs AI within existing workflows</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want a no-code chatbot builder with Power Platform connectors and compliance</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You need enterprise governance, SSO, data residency, and audit logging</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose Microsoft Copilot Studio if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You already run Microsoft 365, Dynamics 365 or Azure and want governed agents on your own data</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You need computer-using or real-time voice agents in a supported Microsoft product</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You hold a Microsoft 365 Copilot license and want agent-building included</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You want low-code authoring with a choice of GPT-5.5 or Claude models</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">You can commit to Copilot Credits via prepaid packs, PAYG or a CCCU plan</span></li></ul></div></div>
   <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Microsoft Copilot Studio?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Copilot Studio is Microsoft's no-code platform for building custom AI chatbots and agents. It integrates with Microsoft 365, Teams, SharePoint, and Power Platform. Organizations use it to create HR bots, customer service agents, and internal knowledge assistants.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is Manus AI?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Manus is an autonomous AI agent developed in China that can complete complex tasks independently — browsing the web, writing code, managing files, and executing multi-step plans. Unlike chatbots, Manus takes actions rather than just answering questions.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is Copilot Studio free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Copilot Studio requires a Microsoft 365 subscription. It includes 25,000 generative AI messages per month per tenant on paid plans. Additional message packs are available. The pricing model is complex — contact Microsoft for enterprise pricing.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Can Manus replace human work?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Manus can automate many research, analysis, and task-execution workflows that previously required human effort. However, it works best for well-defined tasks with clear goals. Complex judgment calls, sensitive decisions, and creative work still benefit from human oversight.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
@@ -255,7 +259,7 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       <div class="footer-col-links">
         <a href="/directory.html">Directory</a>
         <a href="/news.html">News</a>
-        <a href="/directory.html">Free Tools</a>
+        <a href="/tools.html">Free Tools</a>
         <a href="/compare.html">Compare</a>
         <a href="/newsletter.html">Newsletter</a>
       </div>
