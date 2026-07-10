@@ -8,8 +8,8 @@ content without executing JavaScript. Only the ratings block stays dynamic.
 Usage:  python3 scripts/generate-compare-pages.py
 """
 
-import os, re, json, html as _html, hashlib
-import urllib.request, urllib.parse
+import os, re, json, html as _html, hashlib, socket, time
+import urllib.request, urllib.parse, urllib.error
 
 ROOT     = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 BASE_URL = 'https://aitoolfit.ai'
@@ -544,15 +544,22 @@ def sb_get(slug, lang):
     qs = urllib.parse.urlencode({
         'slug': f'eq.{slug}',
         'lang': f'eq.{lang}',
-        'select': 'slug,name,description,best_for,pros,cons,badge,url,domain,users',
+        'select': 'slug,name,description,best_for,pros,cons,badge,url,domain,users,rating',
     })
     req = urllib.request.Request(
         f'{SB_URL}/rest/v1/tools?{qs}',
         headers={'apikey': SB_ANON, 'Authorization': f'Bearer {SB_ANON}'}
     )
-    with urllib.request.urlopen(req, timeout=15) as resp:
-        rows = json.load(resp)
-    return rows[0] if rows else None
+    last_err = None
+    for attempt in range(4):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                rows = json.load(resp)
+            return rows[0] if rows else None
+        except (urllib.error.URLError, socket.timeout, TimeoutError) as e:
+            last_err = e
+            time.sleep(1.5 * (attempt + 1))
+    raise last_err
 
 def fetch_tool(slug, lang):
     """Fetch with EN fallback if requested lang has no row."""
@@ -721,6 +728,41 @@ def comparison_table_html(a, b, lang):
         f'</div></td></tr></thead><tbody>{rows_html_with_rating}</tbody></table></div>'
     )
 
+# Verified starting price (USD/month) for paid tools without a price in `users`.
+# Fill with real, checked prices only; unlisted paid tools omit offers rather
+# than guess. Keep in sync with generate-lang-tool-pages.py / generate-pages.py.
+PAID_PRICES = {
+    # 'beautiful-ai': '12',
+}
+
+def _sw_app_schema(t):
+    """SoftwareApplication node enriched with a verified offer + editorial review
+    so it satisfies Google's Software App rich-result requirements."""
+    node = {"@type": "SoftwareApplication", "name": t.get('name'), "url": t.get('url')}
+    badge = t.get('badge')
+    price = None
+    if badge in ('free', 'freemium'):
+        price = "0"
+    elif badge == 'paid':
+        m = re.search(r'\$([0-9]+(?:\.[0-9]{1,2})?)', t.get('users') or '')
+        if m:
+            price = m.group(1)
+        elif t.get('slug') in PAID_PRICES:
+            price = PAID_PRICES[t['slug']]
+    if price is not None:
+        node["offers"] = {"@type": "Offer", "price": price, "priceCurrency": "USD"}
+    try:
+        ed = float(t.get('rating')) if t.get('rating') not in (None, '') else 0.0
+    except (TypeError, ValueError):
+        ed = 0.0
+    if ed > 0:
+        node["review"] = {
+            "@type": "Review",
+            "author": {"@type": "Organization", "name": "AItoolFit"},
+            "reviewRating": {"@type": "Rating", "ratingValue": str(ed), "bestRating": "5", "worstRating": "1"},
+        }
+    return node
+
 def schema_org_jsonld(a, b, canonical_url, lang):
     M = META_TEMPLATES.get(lang, META_TEMPLATES['en'])
     schema = {
@@ -734,8 +776,8 @@ def schema_org_jsonld(a, b, canonical_url, lang):
         "author": {"@type": "Organization", "name": "AItoolFit"},
         "publisher": {"@type": "Organization", "name": "AItoolFit", "url": "https://aitoolfit.ai"},
         "about": [
-            {"@type": "SoftwareApplication", "name": a.get('name'), "url": a.get('url')},
-            {"@type": "SoftwareApplication", "name": b.get('name'), "url": b.get('url')},
+            _sw_app_schema(a),
+            _sw_app_schema(b),
         ],
     }
     return f'<script type="application/ld+json">{json.dumps(schema, ensure_ascii=False)}</script>'
