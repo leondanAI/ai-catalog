@@ -13,7 +13,7 @@ ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
 LANGUAGES = [
     ('es', 'es'),   ('ru', 'ru'),
-    ('de', 'de'),   ('ua', 'ua'),   ('he', 'he'),
+    ('de', 'de'),   ('ua', 'uk'),   ('he', 'he'),
     ('fr', 'fr'),   ('pt', 'pt'),
 ]
 
@@ -162,8 +162,10 @@ def translate_footer(html, lang):
     return html
 
 def generate_lang_page(html, lang, page, title, desc):
-    # Set html lang attribute
-    html = re.sub(r'<html[^>]*>', f'<html lang="{lang}">', html)
+    # Set html lang attribute — use valid ISO 639-1 code (ua dir → 'uk'); keep RTL for Hebrew
+    html_lang = 'uk' if lang == 'ua' else lang
+    dir_attr = ' dir="rtl"' if lang == 'he' else ''
+    html = re.sub(r'<html[^>]*>', f'<html lang="{html_lang}"{dir_attr}>', html)
 
     # Bake i18n translations into HTML — replace data-i18n element text with translated values
     # This prevents English flash and ensures crawlers see the correct language

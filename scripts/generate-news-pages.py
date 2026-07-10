@@ -89,12 +89,14 @@ def generate_page(article, lang, all_articles_for_lang, all_slugs_by_lang):
     base      = nav_prefix(lang)
     is_rtl    = lang in RTL_LANGS
     dir_attr  = ' dir="rtl"' if is_rtl else ''
+    html_lang = 'uk' if lang == 'ua' else lang  # valid ISO 639-1 code (path /ua/ stays unchanged)
 
     # hreflang links — only for languages that have this slug
     hreflang_lines = []
     for l in ACTIVE_LANGS:
         if slug in all_slugs_by_lang.get(l, set()):
-            hreflang_lines.append(f'<link rel="alternate" hreflang="{l}" href="{page_url(l, slug)}">')
+            hl = 'uk' if l == 'ua' else l  # valid ISO 639-1 code for Ukrainian
+            hreflang_lines.append(f'<link rel="alternate" hreflang="{hl}" href="{page_url(l, slug)}">')
     hreflang_lines.append(f'<link rel="alternate" hreflang="x-default" href="{page_url("en", slug)}">')
     hreflang_html = '\n'.join(hreflang_lines)
 
@@ -131,13 +133,13 @@ def generate_page(article, lang, all_articles_for_lang, all_slugs_by_lang):
         "headline": title,
         "description": meta_desc,
         "datePublished": article.get('date', ''),
-        "inLanguage": lang,
+        "inLanguage": html_lang,
         "publisher": {"@type": "Organization", "name": "AItoolFit", "url": SITE_URL},
         "mainEntityOfPage": canonical
     }, ensure_ascii=False)
 
     return f'''<!DOCTYPE html>
-<html lang="{lang}"{dir_attr}>
+<html lang="{html_lang}"{dir_attr}>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
