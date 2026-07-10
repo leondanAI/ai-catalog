@@ -1,0 +1,126 @@
+slug,name,rating,editorial_verdict
+chatgpt,ChatGPT,4.7,"The default general-purpose assistant — broadest capability and ecosystem, though heavy users hit caps and cost tiers."
+claude,Claude,4.7,"Frontier-tier for writing, coding and long documents with a 1M-token context; usage caps and top-model cost are the trade-offs."
+claude-code,Claude Code,4.6,One of the strongest agentic coding CLIs — plans and edits real codebases well; needs supervision on large changes.
+cursor,Cursor,4.6,"The leading AI-native IDE for day-to-day coding; agentic features are excellent, pricing can climb with heavy use."
+elevenlabs,ElevenLabs,4.6,The voice-AI leader for natural TTS and cloning; usage costs add up at scale.
+gemini,Gemini,4.5,Strong multimodal reasoning tied deep into Google's ecosystem; quality is excellent but consistency varies by surface.
+perplexity,Perplexity,4.5,"The best answer engine for cited, up-to-date research; less suited to open-ended creative work."
+github-copilot,GitHub Copilot,4.5,"Mature, multi-model, deeply integrated coding assistant; safe default for most developers."
+midjourney,Midjourney,4.5,Still the benchmark for image quality and style range; paid-only with a learning curve.
+google-veo-3,Google Veo,4.5,Top-tier text/image-to-video with strong coherence and audio; access and cost are the limits.
+semrush,Semrush,4.5,The industry-standard SEO/marketing suite; comprehensive but a real investment to learn and pay for.
+gamma,Gamma,4.5,"The leader for AI-generated decks, docs and sites; fast and polished, with light design control."
+canva-ai,Canva AI,4.5,"Fast, on-brand conversational design at huge scale; less suited to precision or custom work."
+notebooklm,NotebookLM,4.5,"Outstanding for grounded research over your own sources, with audio overviews; limited to what you feed it."
+tradingview,TradingView,4.5,"The de-facto charting standard for millions of traders; charting excels, AI is secondary."
+deepl,DeepL,4.5,The quality leader in machine translation for European languages; narrower scope than general assistants.
+v0-by-vercel,V0 by Vercel,4.4,Best-in-class for turning prompts into production-ready UI and full-stack scaffolds.
+chatgpt-images,ChatGPT Images 2.0,4.4,gpt-image-2 delivers strong prompt-following and editing inside ChatGPT; best value if you're already there.
+runway,Runway,4.4,"Deep, pro-grade multimodal video/image toolkit; powerful but priced for creators and studios."
+capcut,CapCut,4.4,The most accessible AI-assisted video editor at massive scale; watch the export/watermark tiers.
+whisper,Whisper,4.4,"Free, open, remarkably accurate speech-to-text; you host and integrate it yourself."
+suno,Suno,4.4,The most complete text-to-song generator; licensing and originality debates continue.
+grammarly,Grammarly,4.4,"Ubiquitous, dependable writing assistant; the generative features are catching up to rivals."
+notion-ai,Notion AI,4.4,Genuinely useful assistant woven into the Notion workspace; value scales with how much you live in Notion.
+zapier-ai,Zapier AI,4.4,"Connects 8,000+ apps with AI steps — the automation default; costs rise with task volume."
+n8n,n8n,4.4,"Powerful fair-code automation you can self-host; more technical than Zapier, more flexible too."
+webflow,Webflow,4.4,"Professional visual web development that's grown into an app platform; powerful, with a learning curve."
+aider,Aider,4.3,"Excellent open-source terminal pair programmer with clean git workflow; CLI-first, so a learning curve."
+replit,Replit,4.3,"Full-stack build-and-deploy in the browser with capable agents; great for prototyping, less for large teams."
+flux,FLUX,4.3,High-quality open image family favored by builders; needs some technical setup to shine.
+stable-diffusion,Stable Diffusion,4.3,"The foundational open-weights model — unmatched flexibility, but you assemble the workflow."
+ideogram,Ideogram,4.3,Best-in-class at rendering readable text in images; excellent for posters and logos.
+nano-banana,Nano Banana,4.3,Industry-leading AI image editing on Google's Gemini 3.5 model; editing-first rather than pure generation.
+recraft,Recraft,4.3,Rare native vector/SVG output alongside raster — a real edge for design work.
+synthesia,Synthesia,4.3,The enterprise standard for script-to-avatar training video; less suited to creative storytelling.
+make,Make,4.3,"Visual, affordable automation with real depth; the canvas has a learning curve."
+figma-ai,Figma AI,4.3,AI features inside the design-industry standard; most valuable to existing Figma teams.
+deepseek,DeepSeek,4.2,Remarkably capable and cheap open model; data-residency and hosting concerns matter for some teams.
+windsurf,Windsurf,4.2,Solid agentic IDE (now Devin Desktop); capable but still settling after the rebrand.
+cline,Cline,4.2,Powerful open-source VS Code agent that runs tasks autonomously; you supply your own model keys.
+bolt-new,Bolt.new,4.2,Fast prompt-to-app for full-stack web projects; best for greenfield MVPs.
+lovable,Lovable,4.2,Popular agentic no-code app builder with quick results; complex apps still need hand-tuning.
+recraft-ai,Recraft,4.2,Design-focused generator with strong brand-style controls and vector output.
+adobe-firefly,Adobe Firefly,4.2,Commercially safe generation integrated with Creative Cloud; a bit conservative on style.
+comfyui,ComfyUI,4.2,The most powerful node-based image pipeline for advanced users; steep for beginners.
+kling-ai,Kling AI,4.2,Impressive motion and realism from Kuaishou; queue times and credits can bite.
+heygen,HeyGen,4.2,Best-in-class avatar/spokesperson video for business and localization.
+descript,Descript,4.2,Transcript-based editing makes audio/video edits feel like a doc; a genuinely different workflow.
+surferseo,Surfer SEO,4.2,Solid content-optimization and SERP workflow; most valuable for content teams.
+quillbot,QuillBot,4.2,Great everyday paraphrasing and summarizing that's grown into a writing suite.
+fireflies-ai,Fireflies.ai,4.2,Reliable meeting recorder/transcriber with good search and summaries.
+bubble,Bubble,4.2,Mature no-code for real web/mobile apps; flexible but performance needs care at scale.
+framer-ai,Framer AI,4.2,Fast AI-first website building with great design output; less suited to complex apps.
+consensus,Consensus,4.2,"Fast, cited answers from 220M+ papers; a research aid, not a replacement for reading."
+elicit,Elicit,4.2,Strong systematic-review workflow across 138M+ papers; built for real researchers.
+semantic-scholar,Semantic Scholar,4.2,"Free, high-quality academic search from AI2; a dependable research staple."
+tableau-ai,Tableau AI,4.2,Enterprise-grade BI with a capable AI agent; powerful and priced for organizations.
+duolingo-max,Duolingo Max,4.2,AI roleplay and explanations add real value on top of the best-in-class language app.
+photomath,Photomath,4.2,"Fast, reliable step-by-step math help at huge scale; a study aid, not a tutor replacement."
+remove-bg,Remove.bg,4.2,"Instant, reliable background removal at massive scale; does one thing very well."
+grok,Grok,4.1,"Fast, current and well integrated with X, but tone and reliability are uneven versus rivals."
+microsoft-copilot,Microsoft Copilot,4.1,Convenient GPT-5-class assistant across Microsoft 365; power depends on which app you use it in.
+devin,Devin,4.1,Genuinely autonomous engineer for scoped tasks; improving fast but pricey and best supervised.
+zed,Zed,4.1,"Fast, polished native editor with growing AI features; ecosystem is younger than VS Code's."
+krea-ai,Krea AI,4.1,"Fun, fast real-time creative suite; great for iteration, less for final production polish."
+leonardo-ai,Leonardo AI,4.1,Well-rounded generation with game-asset strengths and an enterprise API.
+luma-ai,Luma AI,4.1,Strong generative video (Ray 3) with good motion; still maturing on control.
+speechify,Speechify,4.1,Polished TTS/reading tool across devices; premium voices sit behind a paywall.
+adobe-podcast,Adobe Podcast,4.1,Enhance Speech is genuinely magic for cleaning up audio; narrower than a full DAW.
+pitch,Pitch,4.1,"Agent-driven, collaborative deck workspace; strongest for teams already in Pitch."
+otter-ai,Otter.ai,4.1,Well-established meeting transcription now leaning into agents; accuracy is solid.
+motion,Motion,4.1,"Auto-scheduling plus tasks in one paid app; great for the over-committed, priced accordingly."
+retool-ai,Retool AI,4.1,Fast internal-tool building with AI assistance; developer-oriented.
+flutterflow,FlutterFlow,4.1,Visual Flutter builder with real app-store deploy; you still meet Flutter's ceiling eventually.
+scite,Scite,4.1,Smart Citations show how work is supported or disputed — a genuinely useful signal.
+looker-studio,Looker Studio,4.1,"Free, flexible BI dashboards in Google's stack; AI is lighter than paid rivals."
+hex,Hex,4.1,Collaborative data notebook with strong AI SQL/Python help; aimed at data teams.
+koyfin,Koyfin,4.1,A credible Bloomberg-alternative terminal for retail investors; depth over simplicity.
+khanmigo,Khanmigo,4.1,Thoughtful Socratic tutor from Khan Academy; guided learning over instant answers.
+mistral-le-chat,Mistral Le Chat,4.0,"Capable, privacy-minded EU alternative; smaller ecosystem and reach than the frontier leaders."
+continue-dev,Continue,4.0,Flexible open-source assistant for VS Code/JetBrains; setup-your-own-model flexibility over turnkey polish.
+pika,Pika,4.0,"Approachable, playful short-video generation; less consistent than the frontier models."
+murf-ai,Murf AI,4.0,Reliable studio voices for e-learning and explainers; less expressive than ElevenLabs.
+clearscope,Clearscope,4.0,"Clean, effective content optimization; premium pricing aimed at pros."
+jasper,Jasper,4.0,Enterprise marketing platform with brand controls; overkill and pricey for individuals.
+adcreative-ai,AdCreative.ai,4.0,"Fast, conversion-focused ad creative at scale; quality still needs a human eye."
+beautiful-ai,Beautiful.ai,4.0,Smart-slide automation keeps decks consistent; the removed free tier and price hurt casual users.
+reclaim-ai,Reclaim.ai,4.0,Smart calendar defragmentation for focus time; best inside Google Calendar.
+lindy,Lindy,4.0,Flexible AI-agent builder for business workflows; setup effort to get real value.
+manus,Manus,4.0,Ambitious autonomous agent (now Meta-owned); impressive but still unpredictable.
+glide,Glide,4.0,"Quick internal business apps from spreadsheets; great for simple, less for complex logic."
+relume,Relume,4.0,"Speeds site planning with AI sitemaps and wireframes; a starting point, not a finished site."
+uizard,Uizard,4.0,Turns sketches/screenshots into editable UI fast; great for early prototyping.
+julius-ai,Julius AI,4.0,Chat-with-your-data agent that's great for quick analysis; verify outputs on important work.
+coursera-coach,Coursera Coach,4.0,Handy Gemini-powered coach inside Coursera courses; value tied to the course you're taking.
+whimsical-ai,Whimsical AI,4.0,"Clean AI-assisted diagrams, mind maps and wireframes; focused rather than broad."
+amazon-q-developer,Amazon Q Developer,3.9,Handy AWS-centric coding assistant; strongest inside the AWS ecosystem.
+opencode,OpenCode,3.9,Open terminal agent supporting 75+ providers; flexible but rougher than commercial tools.
+seedance-2-0,Seedance 2.0,3.9,Capable free multimodal video from ByteDance; new and evolving.
+udio,Udio,3.9,High-fidelity AI music; full-track and licensing limitations temper it.
+frase,Frase,3.9,GEO-first SEO platform with a useful research-to-brief flow; mid-market focus.
+copy-ai,Copy.ai,3.9,Capable GTM/workflow platform; has drifted from simple copywriting toward agents.
+prezi,Prezi,3.9,Distinctive zooming presentations with AI generation; the format isn't for every audience.
+relevance-ai,Relevance AI,3.9,"No-code multi-agent teams for ops; capable, with a build-it-yourself mindset."
+microsoft-copilot-studio,Microsoft Copilot Studio,3.9,Enterprise low-code agent building tied to Microsoft; powerful but heavyweight and costly.
+softr,Softr,3.9,Friendly no-code for client portals and apps; ceiling arrives for advanced needs.
+uxpilot,UXPilot,3.9,Handy AI UI-screen generation and editing; younger and narrower than Figma.
+humata,Humata,3.9,Solid PDF question-answering for documents and papers; narrow by design.
+fiscal-ai,Fiscal.ai,3.9,Useful AI financial-research workspace (ex-FinChat); breadth still growing.
+synthesis,Synthesis,3.9,Adaptive math learning with a strong pedigree; narrow subject focus.
+looka,Looka,3.9,"Fast, affordable AI logo and brand-kit generation; templated by nature."
+claude-design,Claude Design,3.9,Promising research-preview design assistant from Anthropic; early and limited-access.
+meta-ai,Meta AI,3.8,"Ubiquitous inside WhatsApp/Instagram, but a shallower assistant than dedicated chat tools."
+kiro,Kiro,3.8,Interesting spec-driven agentic IDE from Amazon; early and still proving itself.
+writesonic,Writesonic,3.8,Broad AI-search-visibility and writing suite; jack-of-all-trades breadth over depth.
+hemingway-editor,Hemingway Editor,3.8,"Simple, effective readability editor; narrow by design and light on AI."
+slidesgo,Slidesgo,3.8,Handy template-driven deck generation for Slides/PowerPoint; more templates than intelligence.
+youlearn,YouLearn,3.8,"Turns your own materials into study tools; a helpful learner aid, still maturing."
+akkio,Akkio,3.8,Agentic analytics aimed at media/advertising; capable in its niche.
+character-ai,Character.AI,3.7,Leading roleplay/companion chat; strong engagement but limited utility and ongoing moderation questions.
+google-stitch,Google Stitch,3.6,Free Google Labs experiment for UI-from-text; promising but experimental and limited.
+autogpt,AutoGPT,3.6,"Pioneering open-source autonomous-agent platform; powerful in principle, still rough and fiddly in practice."
+uptrends-ai,Uptrends.ai,3.6,"AI stock trend/sector signals; treat outputs as one input, not advice."
+socratic-by-google,Socratic by Google,3.5,Free photo-based homework help; capable but effectively in maintenance mode.
+tickeron,Tickeron,3.4,Pattern-recognition trading signals; interesting but hype-prone — verify claims before relying on them.

@@ -6,6 +6,16 @@ Run: python3 scripts/generate-pages.py
 
 import urllib.request, json, os, re
 
+# Verified starting price (USD/month) for paid tools whose `users` field carries
+# no price. Fill with real, checked prices only; a paid tool left out simply
+# omits schema `offers` rather than assert a guessed price. Keep in sync with the
+# same map in generate-lang-tool-pages.py.
+# Needed: beautiful-ai, clearscope, copy-ai, frase, jasper, motion, surferseo,
+#         synthesis, tableau-ai, tickeron
+PAID_PRICES = {
+    # 'beautiful-ai': '12',
+}
+
 # Load SEO overrides — unified from all 3 source files
 def _load_seo_overrides():
     base = os.path.dirname(__file__)
@@ -261,7 +271,7 @@ def also_consider(tools, current):
     same = [t for t in tools if t['category'] == current['category'] and t['slug'] != current['slug']]
     return same[:3]
 
-def build_jsonld(name, desc, url, badge, slug, rating_data, last_updated=''):
+def build_jsonld(name, desc, url, badge, slug, rating_data, last_updated='', users='', editorial=None):
     schema = {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
@@ -270,17 +280,26 @@ def build_jsonld(name, desc, url, badge, slug, rating_data, last_updated=''):
         "applicationCategory": "AIApplication",
         "operatingSystem": "Web",
         "url": url,
-        "offers": {
-            "@type": "Offer",
-            "price": "0" if badge in ('free', 'freemium') else "",
-            "priceCurrency": "USD"
-        },
         "publisher": {
             "@type": "Organization",
             "name": "aitoolfit",
             "url": "https://aitoolfit.ai"
         }
     }
+    # Offer: free tier (0) for free/freemium; a verified price for paid (parsed
+    # from the maintained `users` string, else PAID_PRICES). Never assert an
+    # empty or guessed price — paid tools without one simply omit offers.
+    price = None
+    if badge in ('free', 'freemium'):
+        price = "0"
+    elif badge == 'paid':
+        m = re.search(r'\$([0-9]+(?:\.[0-9]{1,2})?)', users or '')
+        if m:
+            price = m.group(1)
+        elif slug in PAID_PRICES:
+            price = PAID_PRICES[slug]
+    if price is not None:
+        schema["offers"] = {"@type": "Offer", "price": price, "priceCurrency": "USD"}
     if rating_data and slug in rating_data:
         r = rating_data[slug]
         schema["aggregateRating"] = {
@@ -289,6 +308,17 @@ def build_jsonld(name, desc, url, badge, slug, rating_data, last_updated=''):
             "reviewCount": r['count'],
             "bestRating": "5",
             "worstRating": "1"
+        }
+    # Editorial review — AItoolFit's own assessment; only when a real score exists.
+    try:
+        ed = float(editorial) if editorial not in (None, '') else 0.0
+    except (TypeError, ValueError):
+        ed = 0.0
+    if ed > 0:
+        schema["review"] = {
+            "@type": "Review",
+            "author": {"@type": "Organization", "name": "AItoolFit"},
+            "reviewRating": {"@type": "Rating", "ratingValue": str(ed), "bestRating": "5", "worstRating": "1"}
         }
     if last_updated:
         schema["dateModified"] = str(last_updated)[:10]
@@ -418,7 +448,7 @@ def render_page(tool, all_tools, rating_data=None):
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{build_jsonld(name, desc, url, badge, slug, rating_data, last_updated)}
+{build_jsonld(name, desc, url, badge, slug, rating_data, last_updated, users, tool.get('rating'))}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">

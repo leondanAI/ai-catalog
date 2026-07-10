@@ -183,6 +183,15 @@ RTL_LANGS = {'he'}
 
 ACTIVE_NON_EN_LANGS = ['es', 'de', 'ru', 'ua', 'he', 'fr', 'pt']
 
+# Verified starting price (USD/month) for paid tools whose `users` field carries
+# no price. Fill with real, checked prices only — a paid tool left out of this map
+# simply omits schema `offers` rather than assert a guessed price.
+# Needed: beautiful-ai, clearscope, copy-ai, frase, jasper, motion, surferseo,
+#         synthesis, tableau-ai, tickeron
+PAID_PRICES = {
+    # 'beautiful-ai': '12',
+}
+
 def sb_get(path):
     req = urllib.request.Request(
         f'{SB_URL}/rest/v1/{path}',
@@ -192,7 +201,7 @@ def sb_get(path):
         return json.loads(r.read())
 
 def fetch_tools():
-    return sb_get('tools?lang=eq.en&order=name.asc&limit=200&select=slug,name,url,domain,category,badge,users,best_for,description,description_long,pros,cons,choose_if,faq,last_updated')
+    return sb_get('tools?lang=eq.en&order=name.asc&limit=200&select=slug,name,url,domain,category,badge,users,best_for,description,description_long,pros,cons,choose_if,faq,last_updated,rating')
 
 def fetch_translations(lang):
     rows = sb_get(f'tools?lang=eq.{lang}&select=slug,best_for,description,description_long,pros,cons,choose_if,faq&limit=500')
@@ -520,6 +529,34 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
     r = ratings.get(slug)
     jsonld_rating = f',"aggregateRating":{{"@type":"AggregateRating","ratingValue":"{r["avg"]}","reviewCount":{r["count"]},"bestRating":"5","worstRating":"1"}}' if r else ''
 
+    # Editorial review — AItoolFit's own assessment; emitted only when a real
+    # editorial score exists in tools.rating (never a fabricated value).
+    _ed = tool.get('rating')
+    try:
+        _ed = float(_ed) if _ed not in (None, '') else 0.0
+    except (TypeError, ValueError):
+        _ed = 0.0
+    jsonld_review = (
+        ',"review":{"@type":"Review","author":{"@type":"Organization","name":"AItoolFit"},'
+        f'"reviewRating":{{"@type":"Rating","ratingValue":"{_ed}","bestRating":"5","worstRating":"1"}}}}'
+    ) if _ed > 0 else ''
+
+    # Offer — free tier (price 0) for free/freemium; a verified starting price for
+    # paid tools (parsed from the maintained `users` string, else PAID_PRICES).
+    # Paid tools without a verified price omit offers rather than guess.
+    _price = None
+    if badge in ('free', 'freemium'):
+        _price = '0'
+    elif badge == 'paid':
+        _m = re.search(r'\$([0-9]+(?:\.[0-9]{1,2})?)', users or '')
+        if _m:
+            _price = _m.group(1)
+        elif slug in PAID_PRICES:
+            _price = PAID_PRICES[slug]
+    jsonld_offer = (
+        f',"offers":{{"@type":"Offer","price":"{_price}","priceCurrency":"USD"}}'
+    ) if _price is not None else ''
+
     # Freshness signal: dateModified in schema + a visible "Last updated" line (SEO)
     _upd_iso = str(last_updated)[:10]
     jsonld_date = f',"dateModified":"{_upd_iso}"' if _upd_iso else ''
@@ -560,7 +597,7 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","{lang}");</script>
 <script type="application/ld+json">
-{{"@context":"https://schema.org","@type":"SoftwareApplication","name":"{esc(name)}","applicationCategory":"AIApplication","operatingSystem":"Web","url":"{esc(url)}"{jsonld_rating}{jsonld_date}}}
+{{"@context":"https://schema.org","@type":"SoftwareApplication","name":"{esc(name)}","applicationCategory":"AIApplication","operatingSystem":"Web","url":"{esc(url)}"{jsonld_offer}{jsonld_rating}{jsonld_review}{jsonld_date}}}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
