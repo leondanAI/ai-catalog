@@ -549,7 +549,13 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
 <meta property="og:title" content="{esc(page_title)}">
 <meta property="og:description" content="{esc(meta_desc)}">
 <meta property="og:url" content="{BASE_URL}/{lang}/tools/{esc(slug)}.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AItoolFit">
 <meta property="og:image" content="{BASE_URL}/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{esc(page_title)}">
+<meta name="twitter:description" content="{esc(meta_desc)}">
+<meta name="twitter:image" content="{BASE_URL}/og-image.png">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script>localStorage.setItem("lang","{lang}");</script>

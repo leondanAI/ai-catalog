@@ -409,10 +409,12 @@ def render_page(tool, all_tools, rating_data=None):
 <meta property="og:description" content="{esc(meta_desc)}">
 <meta property="og:url" content="https://aitoolfit.ai/tools/{esc(slug)}.html">
 <meta property="og:image" content="https://aitoolfit.ai/og-image.png">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AItoolFit">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(page_title)}">
 <meta name="twitter:description" content="{esc(meta_desc)}">
+<meta name="twitter:image" content="https://aitoolfit.ai/og-image.png">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
