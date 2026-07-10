@@ -17,7 +17,7 @@ LANGUAGES = [
     ('fr', 'fr'),   ('pt', 'pt'),
 ]
 
-PAGES = ['index.html', 'directory.html', 'news.html', 'compare.html', 'tools.html', 'newsletter.html', 'news-article.html']
+PAGES = ['index.html', 'directory.html', 'news.html', 'compare.html', 'newsletter.html', 'news-article.html']
 
 # Key i18n strings per page (title_key, desc_key)
 PAGE_META_KEYS = {
@@ -575,7 +575,7 @@ def generate_toolbox_pages(code):
             html = html.replace(f'href="/{page}"', f'href="/{code}/{page}"')
         html = html.replace('href="/"', f'href="/{code}/"')
         # Fix "← All Tools" back link (relative) and translate label
-        html = html.replace('href="../tools.html"', f'href="/{code}/tools.html"')
+        html = html.replace('href="../tools.html"', f'href="/{code}/directory.html"')
         ALL_TOOLS_LABEL = {
             'ru': '← Все инструменты', 'es': '← Todos los instrumentos',
             'fr': '← Tous les outils', 'de': '← Alle Tools',

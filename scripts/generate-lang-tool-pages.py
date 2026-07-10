@@ -633,7 +633,6 @@ textarea.form-input{{resize:vertical;min-height:90px}}
       <a href="/{lang}/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">{nav['dir']}</a>
       <a href="/{lang}/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">{nav['compare']}</a>
       <a href="/{lang}/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">{nav['news']}</a>
-      <a href="/{lang}/tools.html"      class="nav-link" data-nav="tools.html" data-i18n="nav.tools">{nav['tools']}</a>
       <a href="/{lang}/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">{nav['nl']}</a>
     </nav>
     <div class="lang-picker">
@@ -647,7 +646,6 @@ textarea.form-input{{resize:vertical;min-height:90px}}
     <a href="/{lang}/directory.html"  class="nav-link" data-i18n="nav.directory">{nav['dir']}</a>
     <a href="/{lang}/compare.html"    class="nav-link" data-i18n="nav.compare">{nav['compare']}</a>
     <a href="/{lang}/news.html"       class="nav-link" data-i18n="nav.news">{nav['news']}</a>
-    <a href="/{lang}/tools.html"      class="nav-link" data-i18n="nav.tools">{nav['tools']}</a>
     <a href="/{lang}/newsletter.html" class="nav-link" data-i18n="nav.newsletter">{nav['nl']}</a>
   </nav>
 </header>
@@ -726,7 +724,6 @@ textarea.form-input{{resize:vertical;min-height:90px}}
       <div class="footer-col-links">
         <a href="/{lang}/directory.html">{nav['dir']}</a>
         <a href="/{lang}/news.html">{nav['news']}</a>
-        <a href="/{lang}/tools.html">{nav['tools']}</a>
         <a href="/{lang}/compare.html">{nav['compare']}</a>
         <a href="/{lang}/newsletter.html">{nav['nl']}</a>
       </div>

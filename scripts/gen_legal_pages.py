@@ -30,7 +30,6 @@ def make_page(lang, title, content):
       <a href="'''+base+'''/directory.html" class="nav-link">AI Catalog</a>
       <a href="'''+base+'''/compare.html" class="nav-link">Compare</a>
       <a href="'''+base+'''/news.html" class="nav-link">News</a>
-      <a href="'''+base+'''/tools.html" class="nav-link">Toolbox</a>
       <a href="'''+base+'''/newsletter.html" class="nav-link">Newsletter</a>
     </nav>
     <div class="lang-picker">
@@ -44,7 +43,6 @@ def make_page(lang, title, content):
     <a href="'''+base+'''/directory.html" class="nav-link">AI Catalog</a>
     <a href="'''+base+'''/compare.html" class="nav-link">Compare</a>
     <a href="'''+base+'''/news.html" class="nav-link">News</a>
-    <a href="'''+base+'''/tools.html" class="nav-link">Toolbox</a>
     <a href="'''+base+'''/newsletter.html" class="nav-link">Newsletter</a>
   </nav>
 </header>
