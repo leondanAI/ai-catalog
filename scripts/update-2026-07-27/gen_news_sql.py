@@ -1,0 +1,163 @@
+# Generates 01_news_july2026.sql — 6 verified July-2026 news items x 8 active langs.
+# Idempotent: DELETE by slug before INSERT so re-running in Supabase is safe.
+# Facts web-verified 2026-07-27 (sources noted per item). Run: python3 gen_news_sql.py
+import os
+
+COLOR = {'models':'#7c6af7','business':'#f5a623','regulation':'#f56565',
+         'industry':'#888','research':'#4aaef5','tools':'#2dd4a0'}
+CATLABEL = {
+ 'models':   {'en':'Models','ru':'Модели','ua':'Моделі','he':'מודלים','de':'Modelle','es':'Modelos','fr':'Modèles','pt':'Modelos'},
+ 'business': {'en':'Business','ru':'Бизнес','ua':'Бізнес','he':'עסקים','de':'Business','es':'Negocios','fr':'Business','pt':'Negócios'},
+ 'regulation':{'en':'Regulation','ru':'Регулирование','ua':'Регулювання','he':'רגולציה','de':'Regulierung','es':'Regulación','fr':'Réglementation','pt':'Regulamentação'},
+}
+LANGS = ['en','ru','ua','he','de','es','fr','pt']
+
+ITEMS = [
+ # ---------- 1. GPT-5.6 ----------
+ dict(slug='openai-gpt-5-6', category='models', source='OpenAI', date='2026-07-09',
+   t=dict(
+    en="OpenAI Launches GPT-5.6 — Sol, Terra and Luna Tiers, Plus a ChatGPT Work Agent",
+    ru="OpenAI выпустила GPT-5.6 — уровни Sol, Terra и Luna и агент ChatGPT Work",
+    ua="OpenAI випустила GPT-5.6 — рівні Sol, Terra та Luna і агент ChatGPT Work",
+    he="OpenAI משיקה את GPT-5.6 — הדרגות Sol, Terra ו-Luna וסוכן ChatGPT Work",
+    de="OpenAI bringt GPT-5.6 — die Stufen Sol, Terra und Luna sowie einen ChatGPT-Work-Agenten",
+    es="OpenAI lanza GPT-5.6 — niveles Sol, Terra y Luna, más un agente ChatGPT Work",
+    fr="OpenAI lance GPT-5.6 — les niveaux Sol, Terra et Luna, plus un agent ChatGPT Work",
+    pt="OpenAI lança o GPT-5.6 — níveis Sol, Terra e Luna, e um agente ChatGPT Work"),
+   s=dict(
+    en="On July 9 OpenAI publicly released its GPT-5.6 family in three tiers: Sol (the top model), Terra (mid-range) and Luna (fast and cheap). Sam Altman said Sol is about 54% more token-efficient on coding than the previous generation. Alongside the models OpenAI shipped ChatGPT Work — an agent built to carry out whole jobs rather than just answer questions — and GPT-Live, a full-duplex voice mode that listens and speaks at the same time.",
+    ru="9 июля OpenAI публично выпустила семейство GPT-5.6 в трёх уровнях: Sol (флагман), Terra (средний) и Luna (быстрый и дешёвый). Сэм Альтман заявил, что Sol примерно на 54% эффективнее по токенам в задачах кодинга, чем прошлое поколение. Вместе с моделями вышли ChatGPT Work — агент, который выполняет целые задачи, а не просто отвечает на вопросы, — и GPT-Live, полнодуплексный голосовой режим, слушающий и говорящий одновременно.",
+    ua="9 липня OpenAI публічно випустила сімейство GPT-5.6 у трьох рівнях: Sol (флагман), Terra (середній) та Luna (швидкий і дешевий). Сем Альтман заявив, що Sol приблизно на 54% ефективніший за токенами в задачах кодування, ніж попереднє покоління. Разом із моделями вийшли ChatGPT Work — агент, що виконує цілі завдання, а не просто відповідає на запитання, — і GPT-Live, повнодуплексний голосовий режим, який слухає й говорить одночасно.",
+    he="ב-9 ביולי OpenAI השיקה לציבור את משפחת GPT-5.6 בשלוש דרגות: Sol (הדגם המוביל), Terra (ביניים) ו-Luna (מהיר וזול). סם אלטמן אמר ש-Sol חסכוני בכ-54% יותר בטוקנים במשימות קוד לעומת הדור הקודם. לצד המודלים הושקו ChatGPT Work — סוכן שמבצע משימות שלמות במקום רק לענות על שאלות — ו-GPT-Live, מצב קול דו-כיווני שמקשיב ומדבר בו-זמנית.",
+    de="Am 9. Juli veröffentlichte OpenAI die GPT-5.6-Familie in drei Stufen: Sol (Spitzenmodell), Terra (Mittelklasse) und Luna (schnell und günstig). Sam Altman sagte, Sol sei bei Coding-Aufgaben rund 54% token-effizienter als die Vorgängergeneration. Neben den Modellen brachte OpenAI ChatGPT Work — einen Agenten, der ganze Aufgaben erledigt statt nur zu antworten — sowie GPT-Live, einen Voll-Duplex-Sprachmodus, der gleichzeitig zuhört und spricht.",
+    es="El 9 de julio OpenAI lanzó públicamente su familia GPT-5.6 en tres niveles: Sol (el modelo tope), Terra (gama media) y Luna (rápido y barato). Sam Altman afirmó que Sol es un 54% más eficiente en tokens al programar que la generación anterior. Junto con los modelos, OpenAI presentó ChatGPT Work — un agente diseñado para realizar trabajos completos en lugar de solo responder — y GPT-Live, un modo de voz full-duplex que escucha y habla a la vez.",
+    fr="Le 9 juillet, OpenAI a lancé publiquement sa famille GPT-5.6 en trois niveaux : Sol (le modèle haut de gamme), Terra (intermédiaire) et Luna (rapide et bon marché). Sam Altman a affirmé que Sol est environ 54% plus efficace en tokens pour le code que la génération précédente. Avec les modèles, OpenAI a lancé ChatGPT Work — un agent conçu pour accomplir des tâches entières plutôt que de simplement répondre — et GPT-Live, un mode vocal full-duplex qui écoute et parle en même temps.",
+    pt="Em 9 de julho, a OpenAI lançou publicamente a família GPT-5.6 em três níveis: Sol (o modelo de topo), Terra (intermediário) e Luna (rápido e barato). Sam Altman afirmou que o Sol é cerca de 54% mais eficiente em tokens na programação do que a geração anterior. Junto com os modelos, a OpenAI lançou o ChatGPT Work — um agente feito para executar trabalhos inteiros em vez de apenas responder — e o GPT-Live, um modo de voz full-duplex que ouve e fala ao mesmo tempo.")),
+
+ # ---------- 2. Claude Opus 5 ----------
+ dict(slug='claude-opus-5', category='models', source='Anthropic', date='2026-07-24',
+   t=dict(
+    en="Claude Opus 5 — Frontier Coding and Computer Use at Unchanged Opus Pricing",
+    ru="Claude Opus 5 — фронтир-кодинг и Computer Use по прежней цене Opus",
+    ua="Claude Opus 5 — фронтир-кодинг і Computer Use за незмінною ціною Opus",
+    he="Claude Opus 5 — קוד ברמת חזית ו-Computer Use במחיר Opus ללא שינוי",
+    de="Claude Opus 5 — Spitzen-Coding und Computer Use zum unveränderten Opus-Preis",
+    es="Claude Opus 5 — programación de frontera y Computer Use al mismo precio de Opus",
+    fr="Claude Opus 5 — code de pointe et Computer Use au prix Opus inchangé",
+    pt="Claude Opus 5 — programação de fronteira e Computer Use pelo mesmo preço do Opus"),
+   s=dict(
+    en="Anthropic released Claude Opus 5 on July 24. It brings frontier-class agentic coding and computer use while keeping Opus pricing unchanged at $5 per million input and $25 per million output tokens — half the price of Claude Fable 5. Opus 5 has a 1M-token context window, up to 128K output tokens, thinking on by default and a May 2026 knowledge cutoff. It is now the default on Claude Max and the strongest model on Claude Pro.",
+    ru="24 июля Anthropic выпустила Claude Opus 5. Модель приносит агентный кодинг и Computer Use фронтир-уровня, сохраняя прежнюю цену Opus: $5 за миллион входных и $25 за миллион выходных токенов — вдвое дешевле Claude Fable 5. У Opus 5 окно контекста в 1 млн токенов, до 128K токенов вывода, «мышление» включено по умолчанию и порог знаний — май 2026. Теперь это модель по умолчанию в Claude Max и самая мощная в Claude Pro.",
+    ua="24 липня Anthropic випустила Claude Opus 5. Модель дає агентний кодинг і Computer Use фронтир-рівня, зберігаючи попередню ціну Opus: $5 за мільйон вхідних і $25 за мільйон вихідних токенів — удвічі дешевше за Claude Fable 5. Opus 5 має вікно контексту 1 млн токенів, до 128K токенів виводу, «мислення» увімкнене за замовчуванням і поріг знань — травень 2026. Тепер це модель за замовчуванням у Claude Max і найпотужніша в Claude Pro.",
+    he="ב-24 ביולי Anthropic שחררה את Claude Opus 5. הדגם מביא קידוד סוכני ו-Computer Use ברמת חזית, תוך שמירה על מחיר Opus ללא שינוי: 5$ למיליון טוקני קלט ו-25$ למיליון טוקני פלט — מחצית ממחיר Claude Fable 5. ל-Opus 5 חלון הקשר של מיליון טוקנים, עד 128K טוקני פלט, חשיבה פעילה כברירת מחדל ונקודת ידע של מאי 2026. זהו כעת דגם ברירת המחדל ב-Claude Max והחזק ביותר ב-Claude Pro.",
+    de="Anthropic veröffentlichte Claude Opus 5 am 24. Juli. Es bietet agentisches Coding und Computer Use auf Spitzenniveau bei unverändertem Opus-Preis: 5 $ pro Million Eingabe- und 25 $ pro Million Ausgabe-Tokens — halb so teuer wie Claude Fable 5. Opus 5 hat ein Kontextfenster von 1 Mio. Tokens, bis zu 128K Ausgabe-Tokens, standardmäßig aktiviertes „Thinking“ und einen Wissensstand von Mai 2026. Es ist jetzt Standard bei Claude Max und das stärkste Modell bei Claude Pro.",
+    es="Anthropic lanzó Claude Opus 5 el 24 de julio. Ofrece programación agéntica y Computer Use de nivel frontera manteniendo el precio de Opus: 5 $ por millón de tokens de entrada y 25 $ por millón de salida — la mitad que Claude Fable 5. Opus 5 tiene una ventana de contexto de 1M de tokens, hasta 128K de salida, razonamiento activado por defecto y conocimiento hasta mayo de 2026. Ahora es el modelo por defecto en Claude Max y el más potente en Claude Pro.",
+    fr="Anthropic a lancé Claude Opus 5 le 24 juillet. Il apporte un codage agentique et Computer Use de niveau frontière tout en conservant le prix Opus : 5 $ par million de tokens en entrée et 25 $ en sortie — moitié moins cher que Claude Fable 5. Opus 5 dispose d'une fenêtre de contexte de 1 M de tokens, jusqu'à 128K en sortie, le raisonnement activé par défaut et des connaissances arrêtées en mai 2026. Il devient le modèle par défaut de Claude Max et le plus puissant de Claude Pro.",
+    pt="A Anthropic lançou o Claude Opus 5 em 24 de julho. Ele traz programação agêntica e Computer Use de nível de fronteira mantendo o preço do Opus: 5 $ por milhão de tokens de entrada e 25 $ por milhão de saída — metade do preço do Claude Fable 5. O Opus 5 tem janela de contexto de 1M de tokens, até 128K de saída, raciocínio ativado por padrão e conhecimento até maio de 2026. Agora é o padrão no Claude Max e o modelo mais forte no Claude Pro.")),
+
+ # ---------- 3. AMD x Anthropic ----------
+ dict(slug='amd-anthropic-partnership', category='business', source='AMD', date='2026-07-22',
+   t=dict(
+    en="AMD and Anthropic Sign Partnership to Deploy 2 GW of Instinct GPUs",
+    ru="AMD и Anthropic заключили партнёрство на 2 ГВт GPU Instinct",
+    ua="AMD і Anthropic уклали партнерство на 2 ГВт GPU Instinct",
+    he="AMD ו-Anthropic חתמו על שותפות לפריסת 2 ג'יגה-וואט של מעבדי Instinct",
+    de="AMD und Anthropic vereinbaren Partnerschaft über 2 GW Instinct-GPUs",
+    es="AMD y Anthropic firman una alianza para desplegar 2 GW de GPU Instinct",
+    fr="AMD et Anthropic signent un partenariat pour déployer 2 GW de GPU Instinct",
+    pt="AMD e Anthropic firmam parceria para implantar 2 GW de GPUs Instinct"),
+   s=dict(
+    en="On July 22, AMD and Anthropic announced a strategic partnership to deploy up to two gigawatts of AMD Instinct MI450-series GPUs, with the first gigawatt online in the first half of 2027. AMD intends to invest up to $5 billion in Anthropic, while Anthropic commits to buying tens of billions of dollars in AI server chips over the deal. The two also launched an engineering collaboration using Claude to optimize Instinct workloads and ROCm software — a direct challenge to Nvidia's grip on AI infrastructure.",
+    ru="22 июля AMD и Anthropic объявили о стратегическом партнёрстве: развернуть до двух гигаватт GPU AMD Instinct серии MI450, первый гигаватт — в первой половине 2027 года. AMD намерена инвестировать в Anthropic до $5 млрд, а Anthropic обязуется закупить у AMD серверные ИИ-чипы на десятки миллиардов долларов. Компании также запустили инженерное сотрудничество: Claude помогает оптимизировать нагрузки Instinct и ПО ROCm — прямой вызов доминированию Nvidia в ИИ-инфраструктуре.",
+    ua="22 липня AMD і Anthropic оголосили про стратегічне партнерство: розгорнути до двох гігаватів GPU AMD Instinct серії MI450, перший гігават — у першій половині 2027 року. AMD має намір інвестувати в Anthropic до $5 млрд, а Anthropic зобов'язується купити в AMD серверні ШІ-чипи на десятки мільярдів доларів. Компанії також запустили інженерну співпрацю: Claude допомагає оптимізувати навантаження Instinct і ПЗ ROCm — прямий виклик домінуванню Nvidia в ШІ-інфраструктурі.",
+    he="ב-22 ביולי AMD ו-Anthropic הכריזו על שותפות אסטרטגית לפריסת עד שני ג'יגה-וואט של מעבדי AMD Instinct מסדרת MI450, כשהג'יגה-וואט הראשון יעלה לאוויר במחצית הראשונה של 2027. AMD מתכוונת להשקיע ב-Anthropic עד 5 מיליארד דולר, ו-Anthropic מתחייבת לרכוש שבבי שרת ל-AI בעשרות מיליארדי דולרים לאורך העסקה. השתיים גם השיקו שיתוף פעולה הנדסי שבו Claude מסייע לייעל עומסי Instinct ותוכנת ROCm — אתגר ישיר לשליטת Nvidia בתשתית ה-AI.",
+    de="Am 22. Juli kündigten AMD und Anthropic eine strategische Partnerschaft an: bis zu zwei Gigawatt AMD-Instinct-GPUs der MI450-Serie, das erste Gigawatt in der ersten Jahreshälfte 2027. AMD will bis zu 5 Mrd. $ in Anthropic investieren, während Anthropic sich verpflichtet, über die Laufzeit KI-Serverchips im zweistelligen Milliardenbereich zu kaufen. Zudem starteten beide eine Engineering-Kooperation, bei der Claude Instinct-Workloads und die ROCm-Software optimiert — eine direkte Kampfansage an Nvidias Vormacht bei KI-Infrastruktur.",
+    es="El 22 de julio, AMD y Anthropic anunciaron una alianza estratégica para desplegar hasta dos gigavatios de GPU AMD Instinct de la serie MI450, con el primer gigavatio operativo en la primera mitad de 2027. AMD prevé invertir hasta 5.000 millones de dólares en Anthropic, mientras que Anthropic se compromete a comprar decenas de miles de millones en chips para servidores de IA. Ambas lanzaron además una colaboración de ingeniería en la que Claude optimiza las cargas de Instinct y el software ROCm — un desafío directo al dominio de Nvidia en infraestructura de IA.",
+    fr="Le 22 juillet, AMD et Anthropic ont annoncé un partenariat stratégique pour déployer jusqu'à deux gigawatts de GPU AMD Instinct série MI450, le premier gigawatt étant opérationnel au premier semestre 2027. AMD compte investir jusqu'à 5 milliards de dollars dans Anthropic, tandis qu'Anthropic s'engage à acheter des dizaines de milliards de dollars de puces serveur pour l'IA. Les deux ont aussi lancé une collaboration d'ingénierie où Claude optimise les charges Instinct et le logiciel ROCm — un défi direct à la domination de Nvidia sur l'infrastructure IA.",
+    pt="Em 22 de julho, AMD e Anthropic anunciaram uma parceria estratégica para implantar até dois gigawatts de GPUs AMD Instinct da série MI450, com o primeiro gigawatt em operação no primeiro semestre de 2027. A AMD pretende investir até 5 bilhões de dólares na Anthropic, enquanto a Anthropic se compromete a comprar dezenas de bilhões em chips de servidor para IA ao longo do acordo. As duas também iniciaram uma colaboração de engenharia em que o Claude otimiza as cargas do Instinct e o software ROCm — um desafio direto ao domínio da Nvidia na infraestrutura de IA.")),
+
+ # ---------- 4. EU / Google Android ----------
+ dict(slug='eu-google-android-ai-assistants', category='regulation', source='European Commission', date='2026-07-16',
+   t=dict(
+    en="EU Orders Google to Open Android to Rival AI Assistants",
+    ru="ЕС обязал Google открыть Android для конкурирующих ИИ-ассистентов",
+    ua="ЄС зобов'язав Google відкрити Android для конкурентних ШІ-асистентів",
+    he="האיחוד האירופי מורה ל-Google לפתוח את Android לעוזרי AI מתחרים",
+    de="EU verpflichtet Google, Android für konkurrierende KI-Assistenten zu öffnen",
+    es="La UE ordena a Google abrir Android a asistentes de IA rivales",
+    fr="L'UE ordonne à Google d'ouvrir Android aux assistants IA concurrents",
+    pt="UE ordena que o Google abra o Android a assistentes de IA rivais"),
+   s=dict(
+    en="On July 16, the European Commission issued two binding decisions under the Digital Markets Act requiring Google to give competing AI assistants equal access to Android. Google must open 11 system features to third-party AI — including on-device model access, background task execution and screen context on par with Gemini — with most changes due by August 2027. A second decision obliges Google to share anonymized search data with rival search engines and AI chatbots from January 2027. Google has strongly opposed the move, warning of security risks.",
+    ru="16 июля Еврокомиссия вынесла два обязательных решения по Закону о цифровых рынках (DMA), требуя от Google дать конкурирующим ИИ-ассистентам равный доступ к Android. Google должна открыть 11 системных функций сторонним ИИ — включая доступ к моделям на устройстве, фоновые задачи и контекст экрана наравне с Gemini — большинство изменений к августу 2027 года. Второе решение обязывает Google делиться анонимизированными поисковыми данными с конкурентами и ИИ-чат-ботами с января 2027 года. Google резко против, предупреждая о рисках безопасности.",
+    ua="16 липня Єврокомісія ухвалила два обов'язкові рішення за Законом про цифрові ринки (DMA), вимагаючи від Google надати конкурентним ШІ-асистентам рівний доступ до Android. Google має відкрити 11 системних функцій стороннім ШІ — зокрема доступ до моделей на пристрої, фонові завдання й контекст екрана нарівні з Gemini — більшість змін до серпня 2027 року. Друге рішення зобов'язує Google ділитися анонімізованими пошуковими даними з конкурентами та ШІ-чат-ботами з січня 2027 року. Google різко проти, попереджаючи про ризики безпеки.",
+    he="ב-16 ביולי הנציבות האירופית פרסמה שתי החלטות מחייבות במסגרת חוק השווקים הדיגיטליים (DMA), המחייבות את Google להעניק לעוזרי AI מתחרים גישה שווה ל-Android. על Google לפתוח 11 יכולות מערכת לצד שלישי — כולל גישה למודלים במכשיר, הרצת משימות ברקע והקשר מסך בשווה ל-Gemini — רוב השינויים עד אוגוסט 2027. החלטה שנייה מחייבת את Google לשתף נתוני חיפוש אנונימיים עם מנועי חיפוש וצ'אטבוטים מתחרים החל מינואר 2027. Google מתנגדת בתוקף ומזהירה מסיכוני אבטחה.",
+    de="Am 16. Juli erließ die Europäische Kommission zwei verbindliche Beschlüsse nach dem Digital Markets Act, die Google verpflichten, konkurrierenden KI-Assistenten gleichen Zugang zu Android zu gewähren. Google muss 11 Systemfunktionen für Dritt-KI öffnen — darunter On-Device-Modellzugriff, Hintergrundaufgaben und Bildschirmkontext gleichauf mit Gemini — die meisten Änderungen bis August 2027. Ein zweiter Beschluss verpflichtet Google, ab Januar 2027 anonymisierte Suchdaten mit rivalisierenden Suchmaschinen und KI-Chatbots zu teilen. Google wehrt sich vehement und warnt vor Sicherheitsrisiken.",
+    es="El 16 de julio, la Comisión Europea emitió dos decisiones vinculantes bajo la Ley de Mercados Digitales que obligan a Google a dar a los asistentes de IA rivales igual acceso a Android. Google debe abrir 11 funciones del sistema a la IA de terceros — incluido el acceso a modelos en el dispositivo, la ejecución de tareas en segundo plano y el contexto de pantalla a la par de Gemini — con la mayoría de los cambios para agosto de 2027. Una segunda decisión obliga a Google a compartir datos de búsqueda anonimizados con buscadores y chatbots rivales desde enero de 2027. Google se opone con firmeza y advierte de riesgos de seguridad.",
+    fr="Le 16 juillet, la Commission européenne a rendu deux décisions contraignantes au titre du Digital Markets Act obligeant Google à donner aux assistants IA concurrents un accès égal à Android. Google doit ouvrir 11 fonctionnalités système aux IA tierces — dont l'accès aux modèles sur l'appareil, l'exécution de tâches en arrière-plan et le contexte d'écran à parité avec Gemini — la plupart des changements d'ici août 2027. Une seconde décision oblige Google à partager des données de recherche anonymisées avec les moteurs et chatbots rivaux dès janvier 2027. Google s'y oppose fermement, invoquant des risques de sécurité.",
+    pt="Em 16 de julho, a Comissão Europeia emitiu duas decisões vinculativas ao abrigo do Digital Markets Act que obrigam o Google a dar a assistentes de IA rivais acesso igual ao Android. O Google deve abrir 11 funcionalidades do sistema a IA de terceiros — incluindo acesso a modelos no dispositivo, execução de tarefas em segundo plano e contexto de ecrã em pé de igualdade com o Gemini — com a maioria das mudanças até agosto de 2027. Uma segunda decisão obriga o Google a partilhar dados de pesquisa anonimizados com motores e chatbots rivais a partir de janeiro de 2027. O Google opõe-se com firmeza, alertando para riscos de segurança.")),
+
+ # ---------- 5. Kimi K3 ----------
+ dict(slug='moonshot-kimi-k3', category='models', source='Moonshot AI', date='2026-07-16',
+   t=dict(
+    en="Moonshot's Kimi K3 Tops Frontend Coding Arena — Largest Open Model Yet",
+    ru="Kimi K3 от Moonshot возглавил Frontend Code Arena — крупнейшая открытая модель",
+    ua="Kimi K3 від Moonshot очолив Frontend Code Arena — найбільша відкрита модель",
+    he="Kimi K3 של Moonshot מוביל ב-Frontend Code Arena — המודל הפתוח הגדול ביותר",
+    de="Moonshots Kimi K3 führt die Frontend-Coding-Arena an — bislang größtes offenes Modell",
+    es="Kimi K3 de Moonshot lidera la Frontend Code Arena — el mayor modelo abierto hasta ahora",
+    fr="Kimi K3 de Moonshot domine la Frontend Code Arena — le plus grand modèle ouvert à ce jour",
+    pt="Kimi K3 da Moonshot lidera a Frontend Code Arena — o maior modelo aberto até agora"),
+   s=dict(
+    en="On July 16, China's Moonshot AI released Kimi K3, a 2.8-trillion-parameter open-weight Mixture-of-Experts model with a 1M-token context window — the largest open-weight model ever shipped. Within hours it debuted at #1 on LMArena's Frontend Code Arena with a score of 1679, overtaking Claude Fable 5 on the benchmark that most directly measures production coding value. It signals that open models from China are now competing at the frontier despite US chip-export limits.",
+    ru="16 июля китайская Moonshot AI выпустила Kimi K3 — открытую MoE-модель на 2,8 трлн параметров с окном контекста в 1 млн токенов, крупнейшую открытую модель в истории. За считанные часы она дебютировала на 1-м месте LMArena Frontend Code Arena с баллом 1679, обойдя Claude Fable 5 в бенчмарке, наиболее точно отражающем ценность кодинга в продакшене. Это знак того, что открытые модели из Китая теперь конкурируют на фронтире вопреки ограничениям США на экспорт чипов.",
+    ua="16 липня китайська Moonshot AI випустила Kimi K3 — відкриту MoE-модель на 2,8 трлн параметрів із вікном контексту 1 млн токенів, найбільшу відкриту модель в історії. За лічені години вона дебютувала на 1-му місці LMArena Frontend Code Arena з балом 1679, обійшовши Claude Fable 5 у бенчмарку, що найточніше відображає цінність кодування в продакшені. Це сигнал, що відкриті моделі з Китаю тепер конкурують на фронтирі попри обмеження США на експорт чипів.",
+    he="ב-16 ביולי חברת Moonshot AI הסינית שחררה את Kimi K3 — מודל Mixture-of-Experts פתוח בן 2.8 טריליון פרמטרים עם חלון הקשר של מיליון טוקנים, המודל הפתוח הגדול ביותר שיצא אי פעם. תוך שעות הוא הגיע למקום ה-1 ב-Frontend Code Arena של LMArena עם ציון 1679, ועקף את Claude Fable 5 במדד שהכי משקף ערך קוד בפרודקשן. זה סימן שמודלים פתוחים מסין מתחרים כעת בחזית למרות מגבלות הייצוא האמריקאיות על שבבים.",
+    de="Am 16. Juli veröffentlichte das chinesische Unternehmen Moonshot AI Kimi K3 — ein offenes Mixture-of-Experts-Modell mit 2,8 Billionen Parametern und 1-Mio.-Token-Kontext, das bislang größte offene Modell überhaupt. Innerhalb von Stunden stieg es mit 1679 Punkten auf Platz 1 der Frontend Code Arena von LMArena und überholte Claude Fable 5 in dem Benchmark, der den Praxiswert von Coding am direktesten misst. Ein Signal, dass offene Modelle aus China trotz US-Chip-Exportgrenzen an der Spitze mitspielen.",
+    es="El 16 de julio, la china Moonshot AI lanzó Kimi K3, un modelo abierto Mixture-of-Experts de 2,8 billones de parámetros con ventana de contexto de 1M de tokens — el mayor modelo de pesos abiertos jamás publicado. En horas debutó en el puesto n.º 1 de la Frontend Code Arena de LMArena con 1679 puntos, superando a Claude Fable 5 en el benchmark que mejor mide el valor real de programar. Es señal de que los modelos abiertos de China ya compiten en la frontera pese a los límites de EE. UU. a la exportación de chips.",
+    fr="Le 16 juillet, la société chinoise Moonshot AI a publié Kimi K3, un modèle ouvert Mixture-of-Experts de 2 800 milliards de paramètres avec une fenêtre de contexte de 1 M de tokens — le plus grand modèle à poids ouverts jamais diffusé. En quelques heures, il a débuté à la 1re place de la Frontend Code Arena de LMArena avec un score de 1679, dépassant Claude Fable 5 sur le benchmark qui mesure le plus directement la valeur du code en production. Signe que les modèles ouverts chinois rivalisent désormais à la frontière malgré les limites américaines à l'export de puces.",
+    pt="Em 16 de julho, a chinesa Moonshot AI lançou o Kimi K3, um modelo aberto Mixture-of-Experts de 2,8 trilhões de parâmetros com janela de contexto de 1M de tokens — o maior modelo de pesos abertos já lançado. Em horas, estreou em 1.º lugar na Frontend Code Arena da LMArena com pontuação 1679, superando o Claude Fable 5 no benchmark que mede mais diretamente o valor da programação em produção. É um sinal de que os modelos abertos da China já competem na fronteira apesar dos limites dos EUA à exportação de chips.")),
+
+ # ---------- 6. Gemini 3.5 Pro delayed ----------
+ dict(slug='gemini-3-5-pro-delayed-rebuild', category='models', source='Bloomberg', date='2026-07-17',
+   t=dict(
+    en="Google Delays Gemini 3.5 Pro Again After Falling Short on Reliability",
+    ru="Google снова отложила Gemini 3.5 Pro из-за проблем с надёжностью",
+    ua="Google знову відклала Gemini 3.5 Pro через проблеми з надійністю",
+    he="Google דוחה שוב את Gemini 3.5 Pro לאחר כשל באמינות",
+    de="Google verschiebt Gemini 3.5 Pro erneut wegen Zuverlässigkeitsmängeln",
+    es="Google vuelve a retrasar Gemini 3.5 Pro por problemas de fiabilidad",
+    fr="Google reporte de nouveau Gemini 3.5 Pro faute de fiabilité suffisante",
+    pt="Google adia novamente o Gemini 3.5 Pro após falhar em confiabilidade"),
+   s=dict(
+    en="Google's Gemini 3.5 Pro — announced at I/O in May with a 2M-token context window and a Deep Think reasoning layer — slipped again in mid-July. After targeting a July 17 launch, Google reportedly delayed it when the model missed internal quality goals on hallucination rates and real-world reliability, with DeepMind said to have scrapped and rebuilt the base model. The faster Gemini 3.5 Flash remains Google's current stable model.",
+    ru="Gemini 3.5 Pro от Google — представленная на I/O в мае, с окном контекста 2 млн токенов и слоем рассуждений Deep Think — снова сдвинулась в середине июля. Ориентир на запуск 17 июля не сработал: по данным СМИ, релиз отложили, когда модель не достигла внутренних целей по галлюцинациям и реальной надёжности, а DeepMind, как сообщается, отказалась от базовой модели и пересобрала её. Более быстрая Gemini 3.5 Flash остаётся текущей стабильной моделью Google.",
+    ua="Gemini 3.5 Pro від Google — представлена на I/O у травні, з вікном контексту 2 млн токенів і шаром міркувань Deep Think — знову зсунулася в середині липня. Орієнтир на запуск 17 липня не спрацював: за даними ЗМІ, реліз відклали, коли модель не досягла внутрішніх цілей за галюцинаціями та реальною надійністю, а DeepMind, як повідомляють, відмовилася від базової моделі й пересобрала її. Швидша Gemini 3.5 Flash лишається поточною стабільною моделлю Google.",
+    he="Gemini 3.5 Pro של Google — שהוכרזה ב-I/O במאי עם חלון הקשר של 2 מיליון טוקנים ושכבת חשיבה Deep Think — נדחתה שוב באמצע יולי. לאחר יעד השקה ב-17 ביולי, לפי הדיווחים Google דחתה אותה כשהמודל לא עמד ביעדי איכות פנימיים בשיעורי הזיות ואמינות בעולם האמיתי, ו-DeepMind כביכול גנזה ובנתה מחדש את מודל הבסיס. הדגם המהיר Gemini 3.5 Flash נשאר המודל היציב הנוכחי של Google.",
+    de="Googles Gemini 3.5 Pro — im Mai auf der I/O mit 2-Mio.-Token-Kontext und einer Deep-Think-Reasoning-Schicht vorgestellt — verzögerte sich Mitte Juli erneut. Nach dem Ziel eines Starts am 17. Juli soll Google verschoben haben, als das Modell interne Qualitätsziele bei Halluzinationsraten und realer Zuverlässigkeit verfehlte; DeepMind soll das Basismodell verworfen und neu aufgebaut haben. Das schnellere Gemini 3.5 Flash bleibt Googles aktuelles stabiles Modell.",
+    es="El Gemini 3.5 Pro de Google — presentado en el I/O de mayo con ventana de contexto de 2M de tokens y una capa de razonamiento Deep Think — volvió a retrasarse a mediados de julio. Tras apuntar a un lanzamiento el 17 de julio, Google lo habría aplazado al no alcanzar el modelo sus objetivos internos de calidad en tasas de alucinación y fiabilidad real, y DeepMind habría desechado y reconstruido el modelo base. El más rápido Gemini 3.5 Flash sigue siendo el modelo estable actual de Google.",
+    fr="Le Gemini 3.5 Pro de Google — présenté à l'I/O en mai avec une fenêtre de contexte de 2 M de tokens et une couche de raisonnement Deep Think — a de nouveau glissé à la mi-juillet. Après avoir visé un lancement le 17 juillet, Google l'aurait reporté lorsque le modèle a manqué ses objectifs internes de qualité sur les taux d'hallucination et la fiabilité réelle, DeepMind ayant, dit-on, abandonné et reconstruit le modèle de base. Le plus rapide Gemini 3.5 Flash reste le modèle stable actuel de Google.",
+    pt="O Gemini 3.5 Pro do Google — anunciado no I/O em maio com janela de contexto de 2M de tokens e uma camada de raciocínio Deep Think — voltou a atrasar em meados de julho. Depois de mirar um lançamento em 17 de julho, o Google teria adiado quando o modelo não atingiu metas internas de qualidade em taxas de alucinação e confiabilidade real, e a DeepMind teria descartado e reconstruído o modelo base. O mais rápido Gemini 3.5 Flash continua a ser o modelo estável atual do Google.")),
+]
+
+def esc(s): return s.replace("'", "''")
+
+out=[]
+out.append("-- AItoolFit — News batch July 2026 (web-verified 2026-07-27)")
+out.append("-- 6 items x 8 active langs (en, ru, ua, he, de, es, fr, pt). Idempotent (DELETE by slug first).")
+out.append("-- After running this in Supabase: python3 scripts/generate-news-pages.py + snapshot + sitemap + indexnow (Claude does).\n")
+for it in ITEMS:
+    out.append(f"DELETE FROM news WHERE slug='{it['slug']}';")
+    out.append("INSERT INTO news (slug, lang, category, cat_label, cat_color, source, date, title, summary, published) VALUES")
+    rows=[]
+    for lang in LANGS:
+        rows.append("('{slug}', '{lang}', '{cat}', '{label}', '{color}', '{src}', '{date}', '{title}', '{summary}', true)".format(
+            slug=it['slug'], lang=lang, cat=it['category'], label=esc(CATLABEL[it['category']][lang]),
+            color=COLOR[it['category']], src=esc(it['source']), date=it['date'],
+            title=esc(it['t'][lang]), summary=esc(it['s'][lang])))
+    out.append(",\n".join(rows)+";\n")
+
+sql="\n".join(out)
+path=os.path.join(os.path.dirname(__file__),"01_news_july2026.sql")
+open(path,"w").write(sql)
+print("wrote",path,"—",len(ITEMS),"items x",len(LANGS),"langs =",len(ITEMS)*len(LANGS),"rows")
