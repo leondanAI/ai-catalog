@@ -29,10 +29,17 @@ The longer `description_long` (tool page body) still references old versions on 
 > Regen command (only needed after a real DB change):
 > `python3 scripts/generate-lang-tool-pages.py` (+ lang-pages/pages/snapshot/sitemap generators).
 
-## ⏭️ PHASE 2 — `description_long` (tool page bodies) still on old versions
-The card/short-desc pass is done; the long body text (rendered on `*/tools/<slug>.html`) still
-references older versions for the tools above (e.g. perplexity body still says "4.6", gemini body
-"2.5/3"). This is the deeper, per-tool phase — not started. Do when picking this up again.
+## ✅ PHASE 2 — `description_long` (tool page bodies) — DONE 2026-07-28
+Full body refresh completed and deployed. Per-tool web-verification (2026-07-27) → 14 bodies updated
+across 8 langs (Opus 4.8, GPT-5.6, Grok 4.5, Gemini 3.1 Flash Image, Sonnet 5, etc.); tools verified
+already-current were intentionally left (descript, uxpilot, claude-design, google-stitch, whisper).
+amazon-q-developer unpublished (AWS sunset) + new **Kiro** card added. Batch: `scripts/update-2026-07-27/`
+(files 04/05). Note: "PHASE 1/2" split was an artifact of this ledger — a tool update = all fields
+(description + description_long + compare), not two phases.
+
+## ⚠️ Small follow-up
+- Stale compare page `amazon-q-developer-vs-github-copilot` (8 langs) still exists — amazon-q is now
+  unpublished. Options: delete the comparison, or repurpose to `kiro-vs-github-copilot`.
 
 ## ⚠️ Not done (needs separate verification / deeper pass)
 - **Pricing** across all 127 tools — can't verify June-2026 prices from training; needs
