@@ -13,6 +13,8 @@ Nothing invented — every item has a real source.
 | 1 | `01_news_july2026.sql` | Inserts 6 news items × 8 active langs | 48 |
 | 2 | `02_tools_flagship_models.sql` | Updates short `description` for 3 flagship tools + stamps `last_updated` | 24 |
 | 3 | `03_news_bodies.sql` | Fills the HTML `body` for the 6 news (else article pages 404) — EN hand-written, 7 langs via haiku | 48 |
+| 4 | `04_tool_bodies.sql` | Tool `description_long` freshness: 10 version-token swaps (all langs) + 4 narrative rewrites (chatgpt/github-copilot/microsoft-copilot/perplexity, 8 langs) + amazon-q → unpublished | 43 |
+| 5 | `05_kiro.sql` | New Kiro tool card (8 langs) — AWS spec-driven IDE replacing Amazon Q | 8 |
 
 Both are **idempotent** — `01` DELETEs each slug before INSERT; `02` is UPDATE-by-key. Re-running is safe.
 Generators that produced them: `gen_news_sql.py`, `gen_tools_sql.py` (edit + re-run to tweak text).
