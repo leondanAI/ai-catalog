@@ -138,7 +138,7 @@ COMPARISONS = [
     {'slug': 'tickeron-vs-tradingview',              'a': 'tickeron',               'b': 'tradingview',           'cat': 'business',      'label': 'Tickeron vs TradingView'},
     {'slug': 'uptrends-ai-vs-koyfin',               'a': 'uptrends-ai',            'b': 'koyfin',                'cat': 'business',      'label': 'Uptrends.ai vs Koyfin'},
     # ── Code (new) ────────────────────────────────────────────────────────────
-    {'slug': 'amazon-q-developer-vs-github-copilot','a': 'amazon-q-developer',     'b': 'github-copilot',        'cat': 'code',          'label': 'Amazon Q Developer vs GitHub Copilot'},
+    {'slug': 'kiro-vs-github-copilot',              'a': 'kiro',                   'b': 'github-copilot',        'cat': 'code',          'label': 'Kiro vs GitHub Copilot'},
     {'slug': 'continue-dev-vs-github-copilot',      'a': 'continue-dev',           'b': 'github-copilot',        'cat': 'code',          'label': 'Continue.dev vs GitHub Copilot'},
     {'slug': 'opencode-vs-claude-code',             'a': 'opencode',               'b': 'claude-code',           'cat': 'code',          'label': 'OpenCode vs Claude Code'},
     {'slug': 'zed-vs-cursor',                       'a': 'zed',                    'b': 'cursor',                'cat': 'code',          'label': 'Zed vs Cursor'},
