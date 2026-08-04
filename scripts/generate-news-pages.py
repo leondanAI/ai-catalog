@@ -206,6 +206,11 @@ def generate_page(article, lang, all_articles_for_lang, all_slugs_by_lang):
     title_short = title[:50] + ('…' if len(title) > 50 else '')
     seo_title  = fit_title(title)
 
+    # og:image / twitter:image — без картинки ссылка в соцсетях и мессенджерах
+    # разворачивается голым текстом. У большинства новостей своего image_url нет,
+    # поэтому запасной вариант — общая картинка сайта.
+    og_image = image_url if image_url and image_url.startswith('http') else f'{SITE_URL}/og-image.png'
+
     schema = json.dumps({
         "@context": "https://schema.org",
         "@type": "NewsArticle",
@@ -234,9 +239,11 @@ def generate_page(article, lang, all_articles_for_lang, all_slugs_by_lang):
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(meta_desc)}">
 <meta property="og:site_name" content="AItoolFit">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="{og_image}">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(meta_desc)}">
+<meta name="twitter:image" content="{og_image}">
 <script type="application/ld+json">{schema}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>

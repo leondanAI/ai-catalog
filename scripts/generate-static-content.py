@@ -69,7 +69,26 @@ def slug(name):
 
 # ── Directory ─────────────────────────────────────────────────────────────────
 
-def render_tool_card(tool, color):
+LANGS = ['en', 'es', 'de', 'ru', 'ua', 'he', 'fr', 'pt']
+
+
+def parse_i18n():
+    """Переводы из js/i18n.js: {lang: {key: value}} — те же ключи, что использует фронт."""
+    with open(os.path.join(ROOT, 'js', 'i18n.js'), encoding='utf-8') as f:
+        content = f.read()
+    result, blocks = {}, list(re.finditer(r'\n    (\w{2,3}):\s*\{', content))
+    for i, m in enumerate(blocks):
+        lang = m.group(1)
+        end = blocks[i + 1].start() if i + 1 < len(blocks) else len(content)
+        pairs = re.findall(r"'([^']+)':\s*'((?:[^'\\]|\\.)*)'", content[m.end():end])
+        if lang not in result:
+            result[lang] = {k: v.replace("\\'", "'") for k, v in pairs}
+    return result
+
+
+def render_tool_card(tool, color, lang='en', tr=None):
+    tr     = tr or {}
+    base   = '' if lang == 'en' else f'/{lang}'
     c      = color
     domain = get_domain(tool.get('url', ''))
     name   = tool['name']
@@ -77,7 +96,11 @@ def render_tool_card(tool, color):
     badge  = tool.get('badge', 'freemium')
     users  = tool.get('users') or ''
     url    = tool.get('url', '#')
-    sl     = slug(name)
+    # slug из БД — авторитетный источник; slug(name) даёт расхождения
+    # (именно так появились ссылки на несуществующие /tools/playht.html и /tools/rows.html)
+    sl     = tool.get('slug') or slug(name)
+    lbl_review = tr.get('tool.review') or 'More info →'
+    lbl_open   = tr.get('tool.open') or 'Open →'
     is_price   = users and (users.startswith('Free') or users.startswith('from $'))
     badge_lbl  = users if (badge == 'paid' and is_price) else BADGE_LABELS.get(badge, badge.title())
     users_html = f'<span class="tool-users">👥 {esc(users)}</span>' if (users and not is_price) else ''
@@ -96,14 +119,15 @@ def render_tool_card(tool, color):
       <div class="tool-footer">
         <span class="tool-domain">{esc(domain)}</span>
         <div style="display:flex;align-items:center;gap:6px">
-          <a class="tool-review" href="/tools/{sl}.html">More info →</a>
-          <a class="tool-aff" href="{esc(url)}" target="_blank" rel="noopener sponsored">Open →</a>
+          <a class="tool-review" href="{base}/tools/{sl}.html">{esc(lbl_review)}</a>
+          <a class="tool-aff" href="{esc(url)}" target="_blank" rel="noopener sponsored">{esc(lbl_open)}</a>
         </div>
       </div>
     </div>'''
 
 
-def build_catalog_html(tools):
+def build_catalog_html(tools, lang='en', tr=None):
+    tr = tr or {}
     by_cat = {}
     for t in tools:
         cat = t.get('category', '')
@@ -114,7 +138,8 @@ def build_catalog_html(tools):
         cat_tools = by_cat.get(cat_id, [])
         if not cat_tools:
             continue
-        cards = ''.join(render_tool_card(t, cat_color) for t in cat_tools)
+        cat_label = tr.get(f'cat.{cat_id}') or cat_label   # локализованное название категории
+        cards = ''.join(render_tool_card(t, cat_color, lang, tr) for t in cat_tools)
         html += f'''<div class="cat-section" data-cat="{cat_id}">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:{cat_color}22;color:{cat_color}">{cat_icon}</div>
@@ -127,12 +152,16 @@ def build_catalog_html(tools):
     return html
 
 
-def inject_catalog(tools):
-    path = os.path.join(ROOT, 'directory.html')
+def inject_catalog(tools, lang='en', tr=None):
+    path = (os.path.join(ROOT, 'directory.html') if lang == 'en'
+            else os.path.join(ROOT, lang, 'directory.html'))
+    if not os.path.exists(path):
+        print(f'  ! {lang}/directory.html не найден — пропуск')
+        return
     with open(path, encoding='utf-8') as f:
         html = f.read()
 
-    static_html = build_catalog_html(tools)
+    static_html = build_catalog_html(tools, lang, tr)
     MARKER_START = '<!-- SEO:catalog:start -->'
     MARKER_END   = '<!-- SEO:catalog:end -->'
 
@@ -149,7 +178,7 @@ def inject_catalog(tools):
     )
     with open(path, 'w', encoding='utf-8') as f:
         f.write(html)
-    print(f'  ✓ directory.html — {len(tools)} tools pre-rendered')
+    print(f'  ✓ {lang}: directory.html — {len(tools)} tools pre-rendered')
 
 
 # ── News ──────────────────────────────────────────────────────────────────────
@@ -223,17 +252,25 @@ def inject_news(articles):
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
-    print('Fetching tools from Supabase…')
-    tools = fetch('tools?lang=eq.en&published=eq.true&order=name.asc&limit=200&select=slug,name,url,domain,category,badge,users,description')
-    print(f'  {len(tools)} tools')
+    # Языковые каталоги отдавались пустым каркасом: статика генерировалась только для EN,
+    # а generate-lang-pages.py вдобавок вычищает SEO-блок при копировании.
+    # Итог — 0 ссылок на tool-страницы в 7 языковых каталогах и 42 страницы-сироты
+    # на каждый язык. Теперь статика рендерится для всех языков.
+    translations = parse_i18n()
 
     print('Fetching English news from Supabase…')
     news = fetch('news?lang=eq.en&published=eq.true&order=date.desc&limit=100&select=slug,title,summary,category,cat_label,cat_color,date,source,image_url')
     print(f'  {len(news)} articles')
-
-    print('\nInjecting static HTML…')
-    inject_catalog(tools)
     inject_news(news)
+
+    print('\nInjecting catalog for every language…')
+    for lang in LANGS:
+        tools = fetch(f'tools?lang=eq.{lang}&published=eq.true&order=name.asc&limit=200'
+                      '&select=slug,name,url,domain,category,badge,users,description')
+        if not tools:
+            print(f'  ! {lang}: инструментов не найдено — пропуск')
+            continue
+        inject_catalog(tools, lang, translations.get(lang, {}))
 
     print('\nDone.')
 

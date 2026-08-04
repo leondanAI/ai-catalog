@@ -9,11 +9,20 @@ import subprocess, sys, time
 
 ROOT = __file__.replace('scripts/sync.py', '')
 
+# ВАЖЕН ПОРЯДОК. generate-lang-pages.py копирует английские страницы в /{lang}/
+# и вычищает содержимое блоков SEO:catalog и SEO:news (иначе на русской странице
+# оказался бы английский текст). Поэтому наполнять блоки нужно ПОСЛЕ него.
+# Раньше он стоял последним из наполняющих — и языковые directory.html и news.html
+# годами уезжали в продакшн пустыми каркасами: ноль статических ссылок на
+# tool-страницы и новости, 42 страницы-сироты на каждый язык.
 steps = [
-    ('Tool pages (102)',         ['python3', 'scripts/generate-pages.py']),
-    ('Static content (dir+news)',['python3', 'scripts/generate-static-content.py']),
-    ('Language pages (42)',      ['python3', 'scripts/generate-lang-pages.py']),
-    ('Sitemap',                  ['python3', 'scripts/generate-sitemap.py']),
+    ('Tool pages (EN)',            ['python3', 'scripts/generate-pages.py']),
+    ('Tool pages (7 langs)',       ['python3', 'scripts/generate-lang-tool-pages.py']),
+    ('Language pages (42)',        ['python3', 'scripts/generate-lang-pages.py']),
+    ('Static catalog (8 langs)',   ['python3', 'scripts/generate-static-content.py']),
+    ('News pages + snapshot',      ['python3', 'scripts/generate-news-pages.py']),
+    ('News SEO block (8 langs)',   ['python3', 'scripts/generate-news-snapshot.py']),
+    ('Sitemap',                    ['python3', 'scripts/generate-sitemap.py']),
 ]
 
 print('═' * 48)

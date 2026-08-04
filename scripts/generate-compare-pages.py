@@ -525,7 +525,47 @@ CATEGORY_DESCS = {
     },
 }
 
-def pick_cat_desc(slug, cat, lang, a_name, b_name):
+# Хвост описания: шаблоны CATEGORY_DESCS дают всего 57–83 символа, из-за чего
+# 926 compare-страниц имели meta description вдвое короче полезной длины —
+# половина сниппета в выдаче не использовалась. Дописываем best_for первого
+# инструмента: это и удлиняет описание, и делает его уникальным для страницы.
+DESC_TAIL = {
+    'en': ' {a} is best for {f}.',
+    'es': ' {a} destaca en: {f}.',
+    'de': ' {a} eignet sich für: {f}.',
+    'ru': ' {a} — для задач: {f}.',
+    'ua': ' {a} — для завдань: {f}.',
+    'he': ' {a} מתאים ל־{f}.',
+    'fr': ' {a} excelle pour : {f}.',
+    'pt': ' {a} se destaca em: {f}.',
+}
+DESC_TARGET = 158
+
+
+def _extend_desc(head, lang, a):
+    """Дотянуть описание до полезной длины фактом best_for, обрезав по слову."""
+    best_for = (a or {}).get('best_for') or ''
+    if not best_for or len(head) >= DESC_TARGET - 30:
+        return head
+    tmpl = DESC_TAIL.get(lang, DESC_TAIL['en'])
+    room = DESC_TARGET - len(head) - len(tmpl.format(a=a.get('name', ''), f=''))
+    if room < 20:
+        return head
+    f = best_for.rstrip(' .')
+    if len(f) > room:
+        cut = f[:room]
+        if ' ' in cut:
+            cut = cut.rsplit(' ', 1)[0]
+        f = cut.rstrip(' ,;–—-')
+        # не обрывать на предлоге/союзе: «…wireframes con.», «…видео и.»
+        while f and len(f.rsplit(' ', 1)[-1]) <= 3 and ' ' in f:
+            f = f.rsplit(' ', 1)[0].rstrip(' ,;–—-')
+        if len(f) < 15:
+            return head
+    return head + tmpl.format(a=a.get('name', ''), f=f[0].lower() + f[1:] if f else f)
+
+
+def pick_cat_desc(slug, cat, lang, a_name, b_name, a=None):
     """Pick a deterministic category-specific description. Falls back to generic."""
     lang_descs = CATEGORY_DESCS.get(lang, CATEGORY_DESCS.get('en', {}))
     templates = lang_descs.get(cat)
@@ -536,6 +576,7 @@ def pick_cat_desc(slug, cat, lang, a_name, b_name):
     else:
         idx = int(hashlib.md5(slug.encode()).hexdigest(), 16) % len(templates)
         raw = templates[idx].format(a=a_name, b=b_name)
+    raw = _extend_desc(raw, lang, a)
     return raw[:157] + '...' if len(raw) > 160 else raw
 
 # ── HTTP / data ───────────────────────────────────────────────────────────────
@@ -841,7 +882,7 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
     L           = LABELS.get(lang, LABELS['en'])
     M           = META_TEMPLATES.get(lang, META_TEMPLATES['en'])
     title       = M['title'].format(a=a['name'], b=b['name'])
-    description = pick_cat_desc(cmp['slug'], cmp.get('cat', ''), lang, a['name'], b['name'])
+    description = pick_cat_desc(cmp['slug'], cmp.get('cat', ''), lang, a['name'], b['name'], a)
 
     hreflang_tags = '\n'.join(
         [f'<link rel="alternate" hreflang="x-default" href="{BASE_URL}/compare/{cmp["slug"]}.html">',

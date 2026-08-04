@@ -59,6 +59,16 @@ def make_page(lang, page, title, desc, body):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{canonical}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{canonical}">
+<meta property="og:title" content="{title} — AItoolFit">
+<meta property="og:description" content="{desc}">
+<meta property="og:site_name" content="AItoolFit">
+<meta property="og:image" content="{SITE}/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{title} — AItoolFit">
+<meta name="twitter:description" content="{desc}">
+<meta name="twitter:image" content="{SITE}/og-image.png">
 {alts}
 <title>{title} — AItoolFit</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
