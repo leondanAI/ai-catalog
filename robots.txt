@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /directory.html?*
+Disallow: /news-article.html?*
+Disallow: /*/news-article.html?*
 
 Sitemap: https://aitoolfit.ai/sitemap.xml
