@@ -22,6 +22,11 @@ LANG_FLAGS  = {'en':'🇬🇧','ru':'🇷🇺','es':'🇪🇸','fr':'🇫🇷','
 LANG_LABELS = {'ua': 'UA'}
 LANG_RTL    = {'he'}
 
+# Слуги сравнений, для которых нет данных по инструментам — заполняется
+# предварительным проходом в main() и используется, чтобы не ставить ссылки
+# на страницы, которые не будут созданы.
+SKIP_SLUGS = set()
+
 COMPARISONS = [
     # ── Chat (leader: ChatGPT, #2: Claude) ───────────────────────────────────
     {'slug': 'chatgpt-vs-claude',                    'a': 'chatgpt',                'b': 'claude',                'cat': 'chat',     'label': 'ChatGPT vs Claude'},
@@ -844,10 +849,22 @@ def load_footer(lang, current_slug=None, current_cat=None):
     m = re.search(r'<footer\s+class="site-footer"[^>]*>.*?</footer>', txt, re.DOTALL)
     footer = m.group(0) if m else ''
 
+    # Футер берётся из compare.html, где ссылки относительные (href="news.html").
+    # На странице /compare/<slug>.html они резолвятся в /compare/news.html — 404.
+    # Это давало 464 битые ссылки на 116 английских страницах.
+    _base = '' if lang == 'en' else f'/{lang}'
+    footer = re.sub(r'href="(?!https?:|/|#|mailto:|tel:)([a-z0-9_-]+\.html)"',
+                    lambda mm: f'href="{_base}/{mm.group(1)}"', footer)
+
     # Replace QUICK COMPARE section with category-specific links
     if current_cat and current_slug:
         base = '' if lang == 'en' else f'/{lang}'
-        siblings = [c for c in COMPARISONS if c.get('cat') == current_cat and c['slug'] != current_slug]
+        # Только те сравнения, страницы которых реально создаются. Без фильтра
+        # в блок попадали rows-vs-hex и elevenlabs-vs-playht — у них нет данных
+        # по инструментам, страницы пропускаются, а ссылки на них оставались.
+        siblings = [c for c in COMPARISONS
+                    if c.get('cat') == current_cat and c['slug'] != current_slug
+                    and c['slug'] not in SKIP_SLUGS]
         if siblings:
             label = CAT_COMPARE_LABELS.get(lang, 'Compare in this category')
             links = '\n'.join(
@@ -1014,6 +1031,17 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
 def main():
     compare_dir = os.path.join(ROOT, 'compare')
     os.makedirs(compare_dir, exist_ok=True)
+
+    # Предварительный проход: какие сравнения вообще получится собрать.
+    # Нужен до генерации, потому что футер каждой страницы ссылается на соседние
+    # сравнения категории — без этой проверки туда попадали ссылки на страницы,
+    # которые потом пропускались, и получались 404.
+    print('Проверка доступности инструментов…')
+    for cmp in COMPARISONS:
+        if not fetch_tool(cmp['a'], 'en') or not fetch_tool(cmp['b'], 'en'):
+            SKIP_SLUGS.add(cmp['slug'])
+    if SKIP_SLUGS:
+        print(f'  нет данных по инструментам, страницы не создаются: {", ".join(sorted(SKIP_SLUGS))}')
 
     total = 0
     skipped = 0
