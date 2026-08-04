@@ -30,6 +30,25 @@ PAGE_META_KEYS = {
     'news-article.html':  (['news.title'],                 'news.sub'),
 }
 
+BRAND = ' | AItoolFit'
+
+# Явные SEO-заголовки. По умолчанию title собирался из ключей hero-слогана
+# ('hero.title1' + 'hero.title2'), из-за чего на языковых главных стояло
+# «В сети тысячи ИИ, Тебе нужен один» — рекламная фраза без поисковых слов.
+# Главная — самая важная страница сайта, ей нужен заголовок под запросы.
+PAGE_SEO_TITLES = {
+    'index.html': {
+        'es': 'Buscador de IA: la mejor herramienta para tu tarea',
+        'de': 'KI-Tool-Finder: das beste KI-Tool für jede Aufgabe',
+        'ru': 'Подбор ИИ: лучший инструмент под твою задачу',
+        'ua': 'Підбір ШІ: найкращий інструмент під твоє завдання',
+        'he': 'מאתר כלי AI: הכלי הטוב ביותר לכל משימה',
+        'fr': 'Trouver le meilleur outil IA pour chaque tâche',
+        'pt': 'Buscador de IA: a melhor ferramenta para a tarefa',
+    },
+}
+
+
 def parse_i18n():
     """Extract all translations from i18n.js as a dict: {lang: {key: value}}"""
     path = os.path.join(ROOT_DIR, 'js', 'i18n.js')
@@ -56,11 +75,15 @@ def get_meta(translations, lang, page):
     en = translations.get('en', {})
     title_keys, desc_key = PAGE_META_KEYS.get(page, (['hero.title1'], 'hero.sub'))
 
-    # Title — join keys, fall back to English
-    parts = []
-    for k in title_keys:
-        parts.append(t.get(k) or en.get(k, ''))
-    title = ' '.join(p for p in parts if p).strip() + ' | aitoolfit'
+    # Явный SEO-заголовок имеет приоритет над слоганом из i18n
+    explicit = PAGE_SEO_TITLES.get(page, {}).get(lang)
+    if explicit:
+        title = explicit + BRAND
+    else:
+        parts = []
+        for k in title_keys:
+            parts.append(t.get(k) or en.get(k, ''))
+        title = ' '.join(p for p in parts if p).strip() + BRAND
 
     # Description — fall back to English
     desc = t.get(desc_key) or en.get(desc_key, '')

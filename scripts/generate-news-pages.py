@@ -49,6 +49,45 @@ CAT_COLORS = {
     'regulation': '#f56565',
 }
 
+TITLE_LIMIT = 60          # Google обрезает примерно здесь
+BRAND       = ' — AItoolFit'
+
+
+def fit_title(title, limit=TITLE_LIMIT, brand=BRAND):
+    """Уложить заголовок новости в лимит выдачи, сохранив бренд.
+
+    Заголовки новостей в БД длинные (в среднем 93 символа, максимум 162) —
+    с брендом они гарантированно обрезались Google на полуслове.
+    Стратегия: сначала пробуем отрезать пояснительную часть после тире или
+    двоеточия (обычно это подзаголовок), затем — обрезка по границе слова.
+    """
+    base = (title or '').strip()
+    if len(base) + len(brand) <= limit:
+        return base + brand
+
+    # Отрезаем подзаголовок только если «голова» сама по себе достаточно
+    # информативна (заполняет хотя бы 60% строки выдачи). Иначе «Claude Opus 5»
+    # съело бы 25 символов из 60 — обрезанный полный заголовок полезнее.
+    min_head = int(limit * 0.6)
+    for sep in (' — ', ' – ', ' -- ', ': ', ' - ', ' | '):
+        if sep in base:
+            head = base.split(sep)[0].strip()
+            if min_head <= len(head) + len(brand) <= limit:
+                return head + brand
+
+    avail = limit - len(brand) - 1          # место под многоточие
+    if avail <= 0:
+        return base[:limit]
+    words, out = base.split(), ''
+    for w in words:
+        if len(out) + len(w) + 1 > avail:
+            break
+        out = (out + ' ' + w).strip()
+    if not out:                              # одно очень длинное слово
+        out = base[:avail]
+    return out + '…' + brand
+
+
 def sb_get(path):
     req = urllib.request.Request(
         f'{SB_URL}/rest/v1/{path}',
@@ -165,6 +204,7 @@ def generate_page(article, lang, all_articles_for_lang, all_slugs_by_lang):
         image_html = f'\n  <img src="{esc(image_url)}" style="width:100%;border-radius:10px;margin-bottom:1.5rem;max-height:400px;object-fit:cover" alt="{esc(title)}">'
 
     title_short = title[:50] + ('…' if len(title) > 50 else '')
+    seo_title  = fit_title(title)
 
     schema = json.dumps({
         "@context": "https://schema.org",
@@ -182,7 +222,7 @@ def generate_page(article, lang, all_articles_for_lang, all_slugs_by_lang):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{esc(title)} — AItoolFit</title>
+<title>{esc(seo_title)}</title>
 <meta name="description" content="{esc(meta_desc)}">
 <link rel="canonical" href="{canonical}">
 {hreflang_html}
