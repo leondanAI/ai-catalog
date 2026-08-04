@@ -29,6 +29,11 @@ PROMPT = """Translate this AI-industry news headline and summary into {language}
 
 Rules:
 - Keep every number, version, date, price and percentage exactly as in the original.
+- CRITICAL — scale words are false friends. English "billion" is 10^9. In German that is
+  "Milliarden" (NOT "Billion", which means 10^12); in Spanish "mil millones" (NOT "billón");
+  in French "milliards"; in Portuguese "bilhões"; in Russian/Ukrainian "миллиардов/мільярдів";
+  in Hebrew "מיליארד". Getting this wrong changes the fact by a factor of 1000.
+  Same for "trillion" → German "Billionen", Spanish "billones".
 - Do NOT translate product, company or model names (Claude Opus 4.7, GPT-5.5 Instant,
   Kling v3.5, Seedance 2.0, Figma, Notion, etc.) — leave them in Latin script.
 - Natural, factual news register. No hype, no added claims, nothing invented.
