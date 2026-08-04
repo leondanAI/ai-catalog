@@ -27,6 +27,20 @@ LANG_LABELS = {
     'fr': 'Français', 'pt': 'Português',
 }
 
+# Сколько «похожих статей» ставим на каждую страницу.
+# Раньше блок брал [:2] от начала списка категории — все статьи категории
+# ссылались на одни и те же две, поэтому среднее число входящих внутренних
+# ссылок на новостную страницу было 0.9, а 100% новостей имели ≤1 ссылки.
+# Теперь выбор идёт скользящим окном от позиции самой статьи, поэтому
+# входящие ссылки распределяются равномерно: ~RELATED_COUNT на каждую.
+RELATED_COUNT = 6
+
+RELATED_TITLE = {
+    'en': 'Related articles', 'es': 'Artículos relacionados', 'de': 'Ähnliche Artikel',
+    'ru': 'Похожие статьи',   'ua': 'Схожі статті',           'he': 'כתבות קשורות',
+    'fr': 'Articles liés',    'pt': 'Artigos relacionados',
+}
+
 CAT_COLORS = {
     'tools':      '#2dd4a0',
     'models':     '#7c6af7',
@@ -100,8 +114,33 @@ def generate_page(article, lang, all_articles_for_lang, all_slugs_by_lang):
     hreflang_lines.append(f'<link rel="alternate" hreflang="x-default" href="{page_url("en", slug)}">')
     hreflang_html = '\n'.join(hreflang_lines)
 
-    # Related articles: same category, different slug, up to 2
-    related = [a for a in all_articles_for_lang if a['slug'] != slug and a.get('category') == category][:2]
+    # Related articles: скользящее окно, чтобы входящие ссылки легли равномерно.
+    # Сначала — своя категория, начиная со следующей за собой позиции (по кругу).
+    # Если категория маленькая (research/regulation — 2–3 статьи), добираем из
+    # общего списка, тоже со сдвигом от собственной позиции.
+    same_cat = [a for a in all_articles_for_lang if a.get('category') == category]
+    others   = [a for a in all_articles_for_lang if a.get('category') != category]
+
+    def window(pool, start, count):
+        if not pool:
+            return []
+        return [pool[(start + 1 + i) % len(pool)] for i in range(min(count, len(pool)))]
+
+    try:
+        own_i = next(i for i, a in enumerate(same_cat) if a['slug'] == slug)
+    except StopIteration:
+        own_i = 0
+    related = [a for a in window(same_cat, own_i, RELATED_COUNT) if a['slug'] != slug]
+
+    if len(related) < RELATED_COUNT and others:
+        global_i = next((i for i, a in enumerate(all_articles_for_lang) if a['slug'] == slug), 0)
+        chosen = {a['slug'] for a in related}
+        for a in window(others, global_i % len(others), len(others)):
+            if len(related) >= RELATED_COUNT:
+                break
+            if a['slug'] != slug and a['slug'] not in chosen:
+                related.append(a)
+                chosen.add(a['slug'])
     related_html = ''
     if related:
         cards = ''
@@ -117,7 +156,7 @@ def generate_page(article, lang, all_articles_for_lang, all_slugs_by_lang):
       </a>'''
         related_html = f'''
     <hr class="article-divider">
-    <div class="related-title">Related articles</div>
+    <div class="related-title">{RELATED_TITLE.get(lang, RELATED_TITLE['en'])}</div>
     <div class="related-grid">{cards}
     </div>'''
 
