@@ -101,7 +101,8 @@ def main():
                     messages=[{'role': 'user', 'content': PROMPT.format(
                         language=LANG_NAME[lang], title=en['title'], summary=en['summary'])}],
                 )
-                txt = msg.content[0].text.strip()
+                # content[0] может быть ThinkingBlock — берём первый текстовый блок
+                txt = next(b.text for b in msg.content if getattr(b, 'type', '') == 'text').strip()
                 txt = re.sub(r'^```(?:json)?|```$', '', txt, flags=re.M).strip()
                 data = json.loads(txt)
                 stmts.append(

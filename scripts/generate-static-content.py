@@ -28,6 +28,11 @@ CATEGORIES = [
     ('nocode',        'No-Code App Builders',    '🏗️', '#457b9d'),
     ('education',     'Education & Learning',    '🎓', '#2a9d8f'),
     ('presentations', 'Presentations & Slides',  '🖥️', '#8338ec'),
+    # Категория отсутствовала в этом списке, из-за чего 5 опубликованных
+    # инструментов (Fiscal.ai, Koyfin, Tickeron, TradingView, Uptrends.ai)
+    # молча выпадали из статического каталога на всех 8 языках — 40 страниц
+    # без единой входящей ссылки. Иконка и цвет — как в js/data.js.
+    ('business-investment', 'Business & Investment', '💰', '#10b981'),
 ]
 CAT_MAP = {c[0]: c for c in CATEGORIES}
 

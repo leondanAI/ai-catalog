@@ -35,7 +35,7 @@ This positioning is the foundation of every product and content decision. When i
 ---
 
 ## Languages
-Site runs in 6 active languages. Every content update MUST be applied to ALL 6:
+Site runs in 8 active languages. Every content update MUST be applied to ALL 8:
 - 🇬🇧 EN — primary, always first
 - 🇪🇸 ES — Spanish
 - 🇩🇪 DE — German
@@ -123,7 +123,7 @@ Fields: id, lang, title, description, description_long
 ---
 
 ## DB Rules
-- Always update ALL 6 active languages: en, ru, es, de, ua, he
+- Always update ALL 8 active languages: en, ru, es, de, ua, he, fr, pt
 - Never write to `tool_translations` — it's legacy
 - `published = true` required for tool to appear in catalog
 - `approved = true` required for comment to appear
@@ -196,7 +196,7 @@ Future: generate static HTML pages in `/compare/` folder for SEO (Google needs t
 - AI Catalog → /directory.html
 - Compare → /compare.html
 - News → /news.html
-- Toolbox → /tools.html
+- ~~Toolbox → /tools.html~~ — страница удалена (2026-07), ссылок в навигации быть не должно
 - Newsletter → /newsletter.html
 
 Must be consistent across ALL pages and ALL language versions.
