@@ -49,6 +49,58 @@ PAGE_SEO_TITLES = {
 }
 
 
+# Та же история, что с заголовками: в meta description уходил hero-подзаголовок
+# из i18n (34–69 символов) — «Выберите два инструмента и сравните их». Это половина
+# сниппета и ноль поисковых слов. Явные описания на 140–160 символов.
+PAGE_SEO_DESCS = {
+    'index.html': {
+        'es': 'Describe tu tarea en una frase y recibe 3 herramientas de IA que encajan, con la explicación de por qué. Más de 100 servicios revisados. Gratis, sin registro.',
+        'de': 'Beschreibe deine Aufgabe in einem Satz und erhalte 3 passende KI-Tools — mit Begründung, warum sie passen. Über 100 geprüfte Dienste. Kostenlos, ohne Anmeldung.',
+        'ru': 'Опиши задачу одной фразой и получи 3 подходящих ИИ-инструмента с объяснением, почему они подходят. Более 100 проверенных сервисов. Бесплатно, без регистрации.',
+        'ua': 'Опиши завдання однією фразою і отримай 3 відповідні ШІ-інструменти з поясненням, чому саме вони. Понад 100 перевірених сервісів. Безкоштовно, без реєстрації.',
+        'he': 'תארו את המשימה במשפט אחד וקבלו 3 כלי AI שמתאימים בדיוק, עם הסבר למה דווקא הם. יותר מ-100 שירותים שנבדקו. חינם, בלי הרשמה.',
+        'fr': 'Décrivez votre tâche en une phrase et recevez 3 outils IA adaptés, avec l\'explication du pourquoi. Plus de 100 services testés. Gratuit, sans inscription.',
+        'pt': 'Descreva sua tarefa em uma frase e receba 3 ferramentas de IA que servem, com a explicação do porquê. Mais de 100 serviços testados. Grátis, sem cadastro.',
+    },
+    'directory.html': {
+        'es': 'Catálogo de más de 100 herramientas de IA en 15 categorías: chat, imagen, vídeo, código, voz y más. Filtra por precio y categoría, con reseñas actualizadas en 2026.',
+        'de': 'Katalog mit über 100 KI-Tools in 15 Kategorien: Chat, Bild, Video, Code, Sprache und mehr. Nach Preis und Kategorie filtern, mit aktuellen Bewertungen aus 2026.',
+        'ru': 'Каталог из 100+ ИИ-инструментов в 15 категориях: чат, изображения, видео, код, голос и другие. Фильтр по цене и категории, обзоры обновлены в 2026 году.',
+        'ua': 'Каталог зі 100+ ШІ-інструментів у 15 категоріях: чат, зображення, відео, код, голос та інші. Фільтр за ціною і категорією, огляди оновлені у 2026 році.',
+        'he': 'קטלוג של יותר מ-100 כלי AI ב-15 קטגוריות: צ\'אט, תמונה, וידאו, קוד, קול ועוד. סינון לפי מחיר וקטגוריה, עם סקירות מעודכנות ל-2026.',
+        'fr': 'Catalogue de plus de 100 outils IA en 15 catégories : chat, image, vidéo, code, voix et plus. Filtrez par prix et catégorie, avec des avis à jour en 2026.',
+        'pt': 'Catálogo com mais de 100 ferramentas de IA em 15 categorias: chat, imagem, vídeo, código, voz e outras. Filtre por preço e categoria, com avaliações de 2026.',
+    },
+    'compare.html': {
+        'es': 'Compara dos herramientas de IA lado a lado: precios, funciones, ventajas y límites reales. Más de 100 comparaciones actualizadas para decidir en minutos.',
+        'de': 'Zwei KI-Tools direkt vergleichen: Preise, Funktionen, echte Vor- und Nachteile. Über 100 aktuelle Vergleiche, damit die Entscheidung Minuten statt Stunden dauert.',
+        'ru': 'Сравнение двух ИИ-инструментов напрямую: цены, возможности, реальные плюсы и минусы. Более 100 актуальных сравнений, чтобы выбрать за минуты, а не за вечер.',
+        'ua': 'Порівняння двох ШІ-інструментів напряму: ціни, можливості, реальні переваги й недоліки. Понад 100 актуальних порівнянь, щоб обрати за хвилини, а не за вечір.',
+        'he': 'השוואה ישירה בין שני כלי AI: מחירים, יכולות, יתרונות וחסרונות אמיתיים. יותר מ-100 השוואות מעודכנות כדי להחליט תוך דקות ולא שעות.',
+        'fr': 'Comparez deux outils IA côte à côte : prix, fonctionnalités, vrais avantages et limites. Plus de 100 comparatifs à jour pour décider en quelques minutes.',
+        'pt': 'Compare duas ferramentas de IA lado a lado: preços, recursos, vantagens e limitações reais. Mais de 100 comparações atualizadas para decidir em minutos.',
+    },
+    'news.html': {
+        'es': 'Novedades de IA que importan: nuevos modelos, cambios de precios y lanzamientos de herramientas. Resumen corto, sin ruido de marketing, actualizado cada semana.',
+        'de': 'KI-News, die zählen: neue Modelle, Preisänderungen und Tool-Releases. Kurz zusammengefasst, ohne Marketing-Rauschen, jede Woche aktualisiert.',
+        'ru': 'Новости ИИ, которые важны: новые модели, изменения цен и релизы инструментов. Коротко и без маркетингового шума, обновляется каждую неделю.',
+        'ua': 'Новини ШІ, які мають значення: нові моделі, зміни цін і релізи інструментів. Стисло й без маркетингового шуму, оновлюється щотижня.',
+        'he': 'חדשות AI שבאמת חשובות: מודלים חדשים, שינויי מחירים והשקות כלים. בקצרה ובלי רעש שיווקי, מתעדכן מדי שבוע.',
+        'fr': 'L\'actualité IA qui compte : nouveaux modèles, changements de prix et sorties d\'outils. Résumé court, sans bruit marketing, mis à jour chaque semaine.',
+        'pt': 'Notícias de IA que importam: novos modelos, mudanças de preço e lançamentos de ferramentas. Resumo curto, sem ruído de marketing, atualizado toda semana.',
+    },
+    'newsletter.html': {
+        'es': 'Recibe cada semana una selección corta de nuevas herramientas de IA y cambios de precios que afectan tu trabajo. Sin spam, cancela cuando quieras.',
+        'de': 'Jede Woche eine kurze Auswahl neuer KI-Tools und Preisänderungen, die deine Arbeit betreffen. Kein Spam, jederzeit abbestellbar.',
+        'ru': 'Раз в неделю — короткая подборка новых ИИ-инструментов и изменений цен, которые касаются твоей работы. Без спама, отписаться можно в любой момент.',
+        'ua': 'Раз на тиждень — коротка добірка нових ШІ-інструментів і змін у цінах, що стосуються твоєї роботи. Без спаму, відписатися можна будь-коли.',
+        'he': 'פעם בשבוע — מבחר קצר של כלי AI חדשים ושינויי מחירים שנוגעים לעבודה שלכם. בלי ספאם, אפשר לבטל בכל רגע.',
+        'fr': 'Chaque semaine, une sélection courte de nouveaux outils IA et de changements de prix qui touchent votre travail. Sans spam, désinscription à tout moment.',
+        'pt': 'Toda semana, uma seleção curta de novas ferramentas de IA e mudanças de preço que afetam seu trabalho. Sem spam, cancele quando quiser.',
+    },
+}
+
+
 def parse_i18n():
     """Extract all translations from i18n.js as a dict: {lang: {key: value}}"""
     path = os.path.join(ROOT_DIR, 'js', 'i18n.js')
@@ -85,8 +137,9 @@ def get_meta(translations, lang, page):
             parts.append(t.get(k) or en.get(k, ''))
         title = ' '.join(p for p in parts if p).strip() + BRAND
 
-    # Description — fall back to English
-    desc = t.get(desc_key) or en.get(desc_key, '')
+    # Явное SEO-описание имеет приоритет над hero-подзаголовком из i18n
+    desc = (PAGE_SEO_DESCS.get(page, {}).get(lang)
+            or t.get(desc_key) or en.get(desc_key, ''))
 
     return title, desc
 
