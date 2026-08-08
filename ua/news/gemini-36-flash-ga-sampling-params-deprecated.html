@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gemini 3.6 Flash і 3.5 Flash-Lite отримали… — AItoolFit</title>
+<meta name="description" content="Google перевела gemini-3.6-flash і gemini-3.5-flash-lite у статус загальної доступності (general availability). 3.6 Flash пропонує кращу ефективність…">
+<link rel="canonical" href="https://aitoolfit.ai/ua/news/gemini-36-flash-ga-sampling-params-deprecated.html">
+<link rel="alternate" hreflang="en" href="https://aitoolfit.ai/news/gemini-36-flash-ga-sampling-params-deprecated.html">
+<link rel="alternate" hreflang="es" href="https://aitoolfit.ai/es/news/gemini-36-flash-ga-sampling-params-deprecated.html">
+<link rel="alternate" hreflang="de" href="https://aitoolfit.ai/de/news/gemini-36-flash-ga-sampling-params-deprecated.html">
+<link rel="alternate" hreflang="ru" href="https://aitoolfit.ai/ru/news/gemini-36-flash-ga-sampling-params-deprecated.html">
+<link rel="alternate" hreflang="uk" href="https://aitoolfit.ai/ua/news/gemini-36-flash-ga-sampling-params-deprecated.html">
+<link rel="alternate" hreflang="he" href="https://aitoolfit.ai/he/news/gemini-36-flash-ga-sampling-params-deprecated.html">
+<link rel="alternate" hreflang="fr" href="https://aitoolfit.ai/fr/news/gemini-36-flash-ga-sampling-params-deprecated.html">
+<link rel="alternate" hreflang="pt" href="https://aitoolfit.ai/pt/news/gemini-36-flash-ga-sampling-params-deprecated.html">
+<link rel="alternate" hreflang="x-default" href="https://aitoolfit.ai/news/gemini-36-flash-ga-sampling-params-deprecated.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/favicon-192.png">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://aitoolfit.ai/ua/news/gemini-36-flash-ga-sampling-params-deprecated.html">
+<meta property="og:title" content="Gemini 3.6 Flash і 3.5 Flash-Lite отримали статус GA — Google відмовляється від параметрів вибірки">
+<meta property="og:description" content="Google перевела gemini-3.6-flash і gemini-3.5-flash-lite у статус загальної доступності (general availability). 3.6 Flash пропонує кращу ефективність…">
+<meta property="og:site_name" content="AItoolFit">
+<meta property="og:image" content="https://aitoolfit.ai/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gemini 3.6 Flash і 3.5 Flash-Lite отримали статус GA — Google відмовляється від параметрів вибірки">
+<meta name="twitter:description" content="Google перевела gemini-3.6-flash і gemini-3.5-flash-lite у статус загальної доступності (general availability). 3.6 Flash пропонує кращу ефективність…">
+<meta name="twitter:image" content="https://aitoolfit.ai/og-image.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Gemini 3.6 Flash і 3.5 Flash-Lite отримали статус GA — Google відмовляється від параметрів вибірки", "description": "Google перевела gemini-3.6-flash і gemini-3.5-flash-lite у статус загальної доступності (general availability). 3.6 Flash пропонує кращу ефективність…", "datePublished": "2026-07-21", "inLanguage": "uk", "publisher": {"@type": "Organization", "name": "AItoolFit", "url": "https://aitoolfit.ai"}, "mainEntityOfPage": "https://aitoolfit.ai/ua/news/gemini-36-flash-ga-sampling-params-deprecated.html"}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<style>
+  .article-wrap{max-width:720px;margin:0 auto;padding:2rem 1.5rem 4rem}
+  .article-title{font-family:var(--font-display);font-size:clamp(22px,4vw,34px);font-weight:600;line-height:1.25;margin-bottom:1.25rem}
+  .article-meta{display:flex;align-items:center;gap:1rem;font-size:13px;color:var(--text3);margin-bottom:2rem;flex-wrap:wrap}
+  .article-meta-dot{opacity:.4}
+  .article-body{font-size:15.5px;line-height:1.75;color:var(--text2)}
+  .article-body p{margin-bottom:1.25rem}
+  .article-body h2{font-family:var(--font-display);font-size:20px;font-weight:600;color:var(--text);margin:2rem 0 .75rem}
+  .article-body h3{font-family:var(--font-display);font-size:16px;font-weight:500;color:var(--text);margin:1.5rem 0 .5rem}
+  .article-body strong{color:var(--text);font-weight:500}
+  .article-divider{border:none;border-top:1px solid var(--border);margin:2.5rem 0}
+  .related-title{font-family:var(--font-display);font-size:16px;font-weight:600;margin-bottom:1.25rem}
+  .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  .related-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;transition:border-color .15s,background .15s;display:block}
+  .related-card:hover{border-color:var(--border2);background:var(--bg3)}
+  .related-cat{font-size:11px;font-weight:500;margin-bottom:.5rem}
+  .related-name{font-family:var(--font-display);font-size:13px;font-weight:500;line-height:1.4;color:var(--text)}
+  .related-date{font-size:11px;color:var(--text3);margin-top:.5rem}
+  .breadcrumb{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text3);margin-bottom:2rem;flex-wrap:wrap}
+  .breadcrumb a{color:var(--text3);transition:color .15s}
+  .breadcrumb a:hover{color:var(--text)}
+  .news-tag{display:inline-flex;align-items:center;font-size:11px;font-weight:500;padding:2px 10px;border-radius:20px}
+  @media(max-width:600px){.related-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>AItoolFit</a>
+    <nav class="nav-links">
+      <a href="/ua/" class="nav-link" data-i18n="nav.home">Find AI</a>
+      <a href="/ua/directory.html" class="nav-link" data-i18n="nav.directory">Best AI Tools</a>
+      <a href="/ua/compare.html" class="nav-link" data-i18n="nav.compare">Compare</a>
+      <a href="/ua/news.html" class="nav-link active" data-i18n="nav.news">News</a>
+    </nav>
+    <div class="lang-picker">
+      <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">&#127468;&#127463; EN <span style="opacity:.5;font-size:10px">&#9660;</span></button>
+      <div class="lang-menu" id="langMenu"></div>
+    </div>
+    <button class="btn-hamburger" onclick="toggleMenu()">&#9776;</button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="/ua/" class="nav-link" data-i18n="nav.home">Find AI</a>
+    <a href="/ua/directory.html" class="nav-link" data-i18n="nav.directory">Best AI Tools</a>
+    <a href="/ua/compare.html" class="nav-link" data-i18n="nav.compare">Compare</a>
+    <a href="/ua/news.html" class="nav-link" data-i18n="nav.news">News</a>
+  </nav>
+</header>
+
+<div class="article-wrap">
+  <nav class="breadcrumb">
+    <a href="/ua/">Home</a> <span>&#8250;</span>
+    <a href="/ua/news.html">News</a> <span>&#8250;</span>
+    <a href="/ua/news.html">Моделі</a> <span>&#8250;</span>
+    <span>Gemini 3.6 Flash і 3.5 Flash-Lite отримали статус …</span>
+  </nav>
+  <h1 class="article-title">Gemini 3.6 Flash і 3.5 Flash-Lite отримали статус GA — Google відмовляється від параметрів вибірки</h1>
+  <div class="article-meta">
+    <span class="news-tag" style="background:#7c6af722;color:#7c6af7;border:1px solid #7c6af744">Моделі</span>
+    <span>Jul 21, 2026</span><span class="article-meta-dot">&middot;</span><span>Google</span>
+  </div>
+  <div class="article-body">
+    <p>Google перевела дві моделі у статус загальної доступності: <strong>gemini-3.6-flash</strong> і <strong>gemini-3.5-flash-lite</strong>. Тепер це стабільні кінцеві точки, а не попередні версії.</p>
+<h2>Що змінилося</h2>
+<p><strong>Gemini 3.6 Flash</strong> постачається з поліпшеною ефективністю токенів і кращим кодуванням та агентним плануванням за нижчою ціною порівняно з моделлю, яку вона замінює. Твердження про ефективність токенів важливіше, ніж може здатися: під час довгих агентних запусків рахунок визначається тим, скільки токенів модель витрачає на «мислення», а не ціною за мільйон токенів.</p>
+<p><strong>Gemini 3.5 Flash-Lite</strong> позиціонується як низьколатентний, економічний варіант для субагентів — модель, яку викликають тисячі разів усередині більшої системи, а не та, з якою спілкується користувач.</p>
+<h2>«Зламна» зміна</h2>
+<p>Разом із GA з'являється зміна, яка порушить наявний код: <strong>параметри вибірки temperature, top_p і top_k визнано застарілими для обох моделей</strong>. Код, який їх передає, потребує перевірки. Це справжня зміна підходу — ці три параметри були стандартом для генеративних API з самого початку, і їх видалення означає, що модель сама вирішує, як поводитися під час вибірки.</p>
+<h2>Чому це важливо</h2>
+<p>Відмова від контролю за вибіркою обмінює налаштування користувача на контроль постачальника. Для більшості застосунків стандартні значення й так були прийнятними, а менша кількість параметрів означає менше способів неправильно налаштувати розгортання. Для команд, які витратили реальні зусилля на налаштування temperature під конкретний випадок використання, ця робота тепер втрачає сенс.</p>
+<p>Помітно відсутньою в цьому релізі є Gemini 3.5 Pro, вихід якої вже кілька разів переносили попри очікувані терміни. Google випустила швидкий, дешевий рівень, а флагман залишила на потім.</p>
+<h2>Що з цим робити</h2>
+<p>Перевірте будь-який фрагмент коду, який встановлює temperature, top_p або top_k для цих двох моделей, і плануйте його видалення. Застарілий статус не означає негайне видалення, але це зобов'язання, а мовчазно ігноровані параметри гірші за помилки — результат змінюється, і ніщо не підказує, чому.</p>
+<p>Там, де детермінізм справді важливий, заміна має структурний, а не параметричний характер: обмежуйте формат виведення, перевіряйте отримані результати та повторюйте спробу у разі невдачі. Такий підхід переживає оновлення моделей так, як налаштоване значення temperature ніколи не могло.</p>
+<h2>Тенденція серед постачальників</h2>
+<p>Google тут не самотня. Індустрія поступово відмовляється від низькорівневих елементів керування на користь моделей, які самі керують своєю поведінкою під час інференсу, а моделі з міркуванням у будь-якому разі зробили більшість налаштувань вибірки безглуздими. Слід очікувати, що поверхня цих API продовжуватиме звужуватися.</p>
+  </div>
+    <hr class="article-divider">
+    <div class="related-title">Схожі статті</div>
+    <div class="related-grid">
+      <a class="related-card" href="https://aitoolfit.ai/ua/news/gemini-3-5-pro-delayed-rebuild.html">
+        <div class="related-cat" style="color:#7c6af7">Моделі</div>
+        <div class="related-name">Google знову відклала Gemini 3.5 Pro через проблеми з надійністю</div>
+        <div class="related-date">Jul 17, 2026</div>
+      </a>
+      <a class="related-card" href="https://aitoolfit.ai/ua/news/moonshot-kimi-k3.html">
+        <div class="related-cat" style="color:#7c6af7">Моделі</div>
+        <div class="related-name">Kimi K3 від Moonshot очолив Frontend Code Arena — найбільша відкрита модель</div>
+        <div class="related-date">Jul 16, 2026</div>
+      </a>
+      <a class="related-card" href="https://aitoolfit.ai/ua/news/openai-gpt-5-6.html">
+        <div class="related-cat" style="color:#7c6af7">Моделі</div>
+        <div class="related-name">OpenAI випустила GPT-5.6 — рівні Sol, Terra та Luna і агент ChatGPT Work</div>
+        <div class="related-date">Jul 9, 2026</div>
+      </a>
+      <a class="related-card" href="https://aitoolfit.ai/ua/news/gemini-3-5-flash-computer-use.html">
+        <div class="related-cat" style="color:#7c6af7">Моделі</div>
+        <div class="related-name">Gemini 3.5 Flash отримав Computer Use для ШІ-агентів</div>
+        <div class="related-date">Jun 24, 2026</div>
+      </a>
+      <a class="related-card" href="https://aitoolfit.ai/ua/news/claude-fable-5-public-release.html">
+        <div class="related-cat" style="color:#7c6af7">Моделі</div>
+        <div class="related-name">Claude Fable 5 — найпотужніша публічна модель Anthropic, безкоштовна до 22 червня</div>
+        <div class="related-date">Jun 9, 2026</div>
+      </a>
+      <a class="related-card" href="https://aitoolfit.ai/ua/news/claude-opus-48-dynamic-workflows.html">
+        <div class="related-cat" style="color:#7c6af7">Моделі</div>
+        <div class="related-name">Claude Opus 4.8 — стрибок на 27 пунктів з математики, Dynamic Workflows, дешевший Fast режим</div>
+        <div class="related-date">May 28, 2026</div>
+      </a>
+    </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner" style="grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px">
+    <div>
+      <div class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>AItoolFit</div>
+      <p class="footer-desc">Your AI tool finder.<br>Updated daily.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">PRODUCT</div>
+      <div class="footer-col-links">
+        <a href="/ua/">Find AI</a>
+        <a href="/ua/directory.html">Best AI Tools</a>
+        <a href="/ua/compare.html">Compare</a>
+        <a href="/ua/news.html">News</a>
+        <a href="/ua/newsletter.html">Newsletter</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">NEWS CATEGORIES</div>
+      <div class="footer-col-links">
+        <a href="/ua/news.html#models">Models</a>
+        <a href="/ua/news.html#tools">Tools</a>
+        <a href="/ua/news.html#business">Business</a>
+        <a href="/ua/news.html#research">Research</a>
+        <a href="/ua/news.html#regulation">Regulation</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">LANGUAGES</div>
+      <div class="footer-col-links">
+        <a href="/">&#127468;&#127463; English</a>
+        <a href="/es/">&#127466;&#127480; Espa&ntilde;ol</a>
+        <a href="/de/">&#127465;&#127466; Deutsch</a>
+        <a href="/ru/">&#127479;&#127482; &#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a>
+        <a href="/ua/">&#127482;&#127462; &#1059;&#1082;&#1088;&#1072;&#1111;&#1085;&#1089;&#1100;&#1082;&#1072;</a>
+        <a href="/he/">&#127470;&#127473; &#1506;&#1489;&#1512;&#1497;&#1514;</a>
+        <a href="/fr/">&#127467;&#127479; Fran&ccedil;ais</a>
+        <a href="/pt/">&#127463;&#127479; Portugu&ecirc;s</a>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;font-size:12px;color:rgba(255,255,255,0.45);padding:16px 1.5rem;margin-top:1.5rem;border-top:1px solid rgba(255,255,255,0.08)">
+    Built by humans, curated with AI. No paid placements &mdash; recommendations ranked by relevance and community reviews.
+  </div>
+  <div class="footer-bottom" style="flex-direction:column;gap:6px;align-items:flex-start">
+    <div style="display:flex;justify-content:space-between;width:100%;flex-wrap:wrap;gap:8px">
+      <div style="display:flex;gap:16px;font-size:12px"><a href="/ua/privacy.html" style="color:var(--text3)">Privacy</a><a href="/ua/terms.html" style="color:var(--text3)">Terms</a><a href="/ua/contact.html" style="color:var(--text3)">Contact</a></div>
+      <span style="font-size:12px;color:var(--text3)">&copy; 2026 AItoolFit.ai</span>
+    </div>
+    <span style="font-size:11px;color:var(--text3);opacity:0.6">Made with &hearts; by Leondan &amp; Claude</span>
+  </div>
+</footer>
+
+<script>localStorage.setItem("lang","ua");</script>
+<script src="/js/i18n.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
