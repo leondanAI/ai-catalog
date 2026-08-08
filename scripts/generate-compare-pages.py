@@ -590,7 +590,7 @@ def sb_get(slug, lang):
     qs = urllib.parse.urlencode({
         'slug': f'eq.{slug}',
         'lang': f'eq.{lang}',
-        'select': 'slug,name,description,best_for,pros,cons,badge,url,domain,users,rating',
+        'select': 'slug,name,description,best_for,pros,cons,badge,url,domain,users,rating,last_updated',
     })
     req = urllib.request.Request(
         f'{SB_URL}/rest/v1/tools?{qs}',
@@ -809,6 +809,13 @@ def _sw_app_schema(t):
         }
     return node
 
+def _max_updated(a, b):
+    """Свежайшая из дат обновления двух инструментов, YYYY-MM-DD или ''."""
+    dates = [str((t or {}).get('last_updated') or '')[:10] for t in (a, b)]
+    dates = [d for d in dates if len(d) == 10]
+    return max(dates) if dates else ''
+
+
 def schema_org_jsonld(a, b, canonical_url, lang):
     M = META_TEMPLATES.get(lang, META_TEMPLATES['en'])
     schema = {
@@ -819,6 +826,11 @@ def schema_org_jsonld(a, b, canonical_url, lang):
         "description": M['schema_desc'].format(a=a.get('name'), b=b.get('name')),
         "url": canonical_url,
         "datePublished": "2026-04-29",
+        # dateModified берём от данных, а не от даты прогона генератора: страница
+        # меняется тогда, когда обновились сведения об инструментах. Штамповать
+        # сегодняшнее число на 928 страниц при неизменном контенте — ложный сигнал,
+        # Google такие даты обесценивает. Без last_updated поле просто не выводим.
+        **({"dateModified": _max_updated(a, b)} if _max_updated(a, b) else {}),
         "author": {"@type": "Organization", "name": "AItoolFit"},
         "publisher": {"@type": "Organization", "name": "AItoolFit", "url": "https://aitoolfit.ai"},
         "about": [
