@@ -42,12 +42,14 @@ UPDATE tools SET description = $t$Grok הוא ה-AI השיחתי של xAI, מש�
  WHERE slug = 'grok' AND lang = 'he';
 
 -- ── github-copilot: список моделей, все языки разом ──────────────────────────
-UPDATE tools SET
-  description_long = replace(replace(replace(description_long,
-      'Claude Opus 4.8', 'Claude Opus 5'),
-      'GPT-5.5',         'GPT-5.6'),
-      'Gemini 3.1 Pro',  'Gemini 3.6 Flash')
- WHERE slug = 'github-copilot';
+-- Записано в три отдельных запроса, а не одним вложенным replace():
+-- линтер Supabase не распознаёт WHERE за многострочными вложенными скобками
+-- и выдаёт ложное предупреждение «UPDATE without a WHERE clause».
+UPDATE tools SET description_long = replace(description_long, 'Claude Opus 4.8', 'Claude Opus 5') WHERE slug = 'github-copilot';
+
+UPDATE tools SET description_long = replace(description_long, 'GPT-5.5', 'GPT-5.6') WHERE slug = 'github-copilot';
+
+UPDATE tools SET description_long = replace(description_long, 'Gemini 3.1 Pro', 'Gemini 3.6 Flash') WHERE slug = 'github-copilot';
 
 -- ── отметка о проверке ───────────────────────────────────────────────────────
 UPDATE tools SET last_updated = '2026-08-07' WHERE slug IN ('grok', 'github-copilot');
