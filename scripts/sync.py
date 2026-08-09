@@ -20,6 +20,10 @@ steps = [
     ('Tool pages (7 langs)',       ['python3', 'scripts/generate-lang-tool-pages.py']),
     ('Language pages (42)',        ['python3', 'scripts/generate-lang-pages.py']),
     ('Static catalog (8 langs)',   ['python3', 'scripts/generate-static-content.py']),
+    # Compare-страницы тянут данные инструментов (описания, best_for, last_updated
+    # для dateModified). Их не было в sync.py, поэтому после любого обновления
+    # каталога 928 страниц оставались со старыми данными до ручного прогона.
+    ('Compare pages (928)',        ['python3', 'scripts/generate-compare-pages.py']),
     ('News pages + snapshot',      ['python3', 'scripts/generate-news-pages.py']),
     ('News SEO block (8 langs)',   ['python3', 'scripts/generate-news-snapshot.py']),
     ('Sitemap',                    ['python3', 'scripts/generate-sitemap.py']),
