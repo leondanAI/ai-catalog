@@ -113,7 +113,7 @@ def render_tool_card(tool, color, lang='en', tr=None):
     <div class="tool-card fade-up" data-cat="{esc(tool.get('category',''))}" data-name="{esc(name.lower())}">
       <div class="tool-card-top">
         <div class="tool-avatar" style="background:{c}22;border-color:{c}44;">
-          <img class="tool-favicon" src="https://www.google.com/s2/favicons?sz=64&amp;domain={esc(domain)}" alt="" width="24" height="24">
+          <img class="tool-favicon" src="https://www.google.com/s2/favicons?sz=64&amp;domain={esc(domain)}" alt="{esc(name)} logo" width="24" height="24">
           <span class="tool-avatar-fallback" style="display:none;color:{c}">{esc(name[0])}</span>
         </div>
         <span class="tool-name">{esc(name)}</span>
