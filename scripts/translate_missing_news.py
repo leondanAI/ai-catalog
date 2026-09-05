@@ -151,7 +151,10 @@ def main():
                                          messages=[{'role': 'user', 'content': prompt}])
             txt = next(b.text for b in msg.content if getattr(b, 'type', '') == 'text').strip()
             txt = re.sub(r'^```(?:json)?|```$', '', txt, flags=re.M).strip()
-            data = json.loads(txt)
+            # strict=False разрешает сырые управляющие символы внутри строк JSON:
+            # модель иногда вставляет реальный перенос строки в body, и обычный
+            # json.loads на этом падает («Invalid control character at …»).
+            data = json.loads(txt, strict=False)
 
             if kind == 'MISSING':
                 label = CAT_LABEL.get(en['category'], {}).get(lang) or en['cat_label']
