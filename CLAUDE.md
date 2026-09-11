@@ -71,8 +71,17 @@ Site runs in 8 active languages. Every content update MUST be applied to ALL 8:
 | cons | TEXT[] | Array of disadvantages |
 | rating | numeric | Aggregate rating |
 | also_consider | TEXT[] | Related tool slugs |
+| choose_if | JSONB | Array of strings — "Choose X if…" block on the tool page |
+| faq | JSONB | Array of {q, a} — FAQ block on the tool page |
 | published | boolean | true = visible in catalog |
+| last_updated | date | Date the card's facts were last verified |
 | created_at | timestamp | |
+
+**`choose_if` and `faq` are translated per language and carry facts** — model
+versions, prices, competitor names. A content update that touches versions or
+pricing must update them too, not just `description` / `description_long` /
+`pros`. They are rendered into the static tool pages, so stale claims there are
+indexed like any other text.
 
 ### 2. news (PK: id)
 | Field | Type |
