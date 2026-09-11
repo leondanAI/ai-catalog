@@ -394,6 +394,7 @@ def main():
 
     total = 0
     skipped = 0
+    removed = 0          # осиротевшие страницы, удалённые после снятия с публикации
 
     for lang in ACTIVE_LANGS:
         articles = all_articles[lang]
@@ -422,9 +423,23 @@ def main():
             lang_count += 1
             total += 1
 
+        # Удалить страницы, которым больше ничего не соответствует в базе.
+        # Генератор только писал файлы и никогда их не убирал, поэтому снятая
+        # с публикации новость продолжала лежать на диске, отдаваться по своему
+        # URL и попадать в sitemap. Именно так восемь страниц про несуществующую
+        # версию Kling пережили снятие с публикации.
+        wanted = {f"{a.get('slug','')}.html" for a in articles
+                  if a.get('slug') and a.get('body')}
+        for fname in os.listdir(news_dir):
+            if fname.endswith('.html') and not fname.startswith('_') and fname not in wanted:
+                os.remove(os.path.join(news_dir, fname))
+                removed += 1
+                print(f'    − удалена осиротевшая страница: {lang}/{fname}')
+
         print(f'  ✓ {lang}: {lang_count} pages → {"news/" if lang == "en" else lang+"/news/"}')
 
-    print(f'\nDone — {total} pages generated, {skipped} skipped (no slug or no body).')
+    print(f'\nDone — {total} pages generated, {skipped} skipped (no slug or no body)'
+          f'{f", {removed} orphaned removed" if removed else ""}.')
     print('Next: python3 scripts/generate-news-snapshot.py && python3 scripts/generate-sitemap.py')
 
 if __name__ == '__main__':
