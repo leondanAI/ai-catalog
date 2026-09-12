@@ -4,7 +4,7 @@ Extract choose_if + faq from compare DATA and generate SQL for tools table.
 Priority: first appearance as tool_a; fallback to tool_b.
 """
 
-import json, sys, os
+import json, sys, os, re
 sys.path.insert(0, os.path.dirname(__file__))
 
 # ── COMPARISONS (slug → a_slug, b_slug) ─────────────────────────────────────
@@ -143,6 +143,32 @@ tool_data = {}  # slug → {'choose_if': [...], 'faq': [...]}
 
 comp_by_slug = {c['slug']: c for c in COMPARISONS}
 
+
+def _norm(s):
+    return re.sub(r'[^a-z0-9]', '', s.lower())
+
+
+def _mentions(slug, text):
+    """Назван ли этот инструмент в тексте вопроса."""
+    t = _norm(text)
+    if _norm(slug) in t:
+        return True
+    head = slug.split('-')[0]
+    return len(head) >= 5 and _norm(head) in t
+
+
+def _own_faq(faq, mine, other):
+    """FAQ сравнения содержит вопросы про оба инструмента.
+
+    Раньше весь блок клался обоим, и карточка отвечала на вопросы про
+    конкурента: на странице ChatGPT висели четыре вопроса про Character.AI.
+    Оставляем вопрос, если он называет свой инструмент или не называет
+    ни одного — вопросы только про чужой отбрасываем.
+    """
+    return [f for f in faq
+            if _mentions(mine, f['q']) or not _mentions(other, f['q'])]
+
+
 for cmp_slug, d in DATA.items():
     comp = comp_by_slug.get(cmp_slug)
     if not comp:
@@ -158,11 +184,13 @@ for cmp_slug, d in DATA.items():
 
     # tool_a: set if not already set (first wins)
     if a_slug not in tool_data:
-        tool_data[a_slug] = {'choose_if': choose_a, 'faq': faq}
+        tool_data[a_slug] = {'choose_if': choose_a,
+                             'faq': _own_faq(faq, a_slug, b_slug)}
 
     # tool_b: only fill if no entry yet
     if b_slug not in tool_data:
-        tool_data[b_slug] = {'choose_if': choose_b, 'faq': faq}
+        tool_data[b_slug] = {'choose_if': choose_b,
+                             'faq': _own_faq(faq, b_slug, a_slug)}
 
 print(f"Extracted data for {len(tool_data)} tools", file=sys.stderr)
 

@@ -54,7 +54,7 @@ UPDATE tools SET pros = pros || ARRAY[$t$Ein Guthaben deckt Sprache, Musik, Soun
 UPDATE tools SET pros = pros || ARRAY[$t$Un único saldo de créditos cubre voz, música, efectos, imágenes, vídeo y sincronización labial — sin suscripción aparte por proveedor$t$]
  WHERE slug = 'elevenlabs' AND lang = 'es' AND NOT (array_to_string(pros, ' ') LIKE '%Un único saldo de créditos cubre%');
 
-UPDATE tools SET pros = pros || ARRAY[$t$Un seul solde de crédits couvre voix, musique, effets, images, vidéo et synchronisation labiale — pas d''abonnement séparé par fournisseur$t$]
+UPDATE tools SET pros = pros || ARRAY[$t$Un seul solde de crédits couvre voix, musique, effets, images, vidéo et synchronisation labiale — pas d'abonnement séparé par fournisseur$t$]
  WHERE slug = 'elevenlabs' AND lang = 'fr' AND NOT (array_to_string(pros, ' ') LIKE '%Un seul solde de crédits couvre%');
 
 UPDATE tools SET pros = pros || ARRAY[$t$Um único saldo de créditos cobre voz, música, efeitos, imagens, vídeo e sincronização labial — sem assinatura separada por fornecedor$t$]
