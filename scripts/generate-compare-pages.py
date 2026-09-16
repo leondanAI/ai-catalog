@@ -156,7 +156,9 @@ COMPARISONS = [
     # ── Design (new) ──────────────────────────────────────────────────────────
     {'slug': 'claude-design-vs-figma-ai',           'a': 'claude-design',          'b': 'figma-ai',              'cat': 'design',        'label': 'Claude Design vs Figma AI'},
     {'slug': 'google-stitch-vs-figma-ai',           'a': 'google-stitch',          'b': 'figma-ai',              'cat': 'design',        'label': 'Google Stitch vs Figma AI'},
-    {'slug': 'recraft-vs-canva-ai',                 'a': 'recraft',                'b': 'canva-ai',              'cat': 'design',        'label': 'Recraft vs Canva AI'},
+    # slug страницы не трогаем — её адрес в индексе; сменился только инструмент:
+    # карточка recraft снята с публикации как дубль recraft-ai (2026-09-15).
+    {'slug': 'recraft-vs-canva-ai',                 'a': 'recraft-ai',             'b': 'canva-ai',              'cat': 'design',        'label': 'Recraft vs Canva AI'},
     {'slug': 'remove-bg-vs-canva-ai',               'a': 'remove-bg',              'b': 'canva-ai',              'cat': 'design',        'label': 'Remove.bg vs Canva AI'},
     # ── Video (new) ───────────────────────────────────────────────────────────
     {'slug': 'seedance-vs-runway',                  'a': 'seedance-2-0',           'b': 'runway',                'cat': 'video',         'label': 'Seedance vs Runway'},
@@ -1057,12 +1059,14 @@ def main():
 
     total = 0
     skipped = 0
+    written = {}   # каталог → множество созданных файлов, для уборки ниже
     for cmp in COMPARISONS:
         # English
         html = build_page(cmp, 'en', f'{BASE_URL}/compare/{cmp["slug"]}.html', '🇬🇧', 'EN')
         if html:
             with open(os.path.join(compare_dir, f'{cmp["slug"]}.html'), 'w', encoding='utf-8') as f:
                 f.write(html)
+            written.setdefault(compare_dir, set()).add(f'{cmp["slug"]}.html')
             total += 1
         else:
             skipped += 1
@@ -1078,11 +1082,34 @@ def main():
             if html:
                 with open(os.path.join(lang_dir, f'{cmp["slug"]}.html'), 'w', encoding='utf-8') as f:
                     f.write(html)
+                written.setdefault(lang_dir, set()).add(f'{cmp["slug"]}.html')
                 total += 1
             else:
                 skipped += 1
 
-    print(f'Generated {total} comparison pages ({len(COMPARISONS)} comparisons × {1+len(LANGUAGES)} languages){"" if not skipped else f" ({skipped} skipped)"}')
+    # Пропущенное сравнение раньше оставляло на диске страницу от прошлого
+    # прогона: она продолжала висеть в sitemap и ссылаться на снятый
+    # инструмент. Тот же класс, что уже чинили в новостях и карточках.
+    #
+    # Предохранитель: если в каталоге собралось меньше половины ожидаемого,
+    # это сбой прогона, а не снятые сравнения — тогда не трогаем ничего,
+    # иначе одна сетевая ошибка выметет весь каталог.
+    removed = 0
+    threshold = len(COMPARISONS) // 2
+    for d, keep in written.items():
+        if len(keep) < threshold:
+            print(f'  ! уборка пропущена для {os.path.relpath(d, ROOT)}: '
+                  f'собрано {len(keep)} из {len(COMPARISONS)}, похоже на сбой прогона')
+            continue
+        for fname in os.listdir(d):
+            if fname.endswith('.html') and not fname.startswith('_') and fname not in keep:
+                os.remove(os.path.join(d, fname))
+                removed += 1
+                print(f'  − удалена осиротевшая страница: {os.path.relpath(os.path.join(d, fname), ROOT)}')
+
+    print(f'Generated {total} comparison pages ({len(COMPARISONS)} comparisons × {1+len(LANGUAGES)} languages)'
+          f'{"" if not skipped else f" ({skipped} skipped)"}'
+          f'{"" if not removed else f", {removed} orphaned removed"}')
 
 if __name__ == '__main__':
     main()

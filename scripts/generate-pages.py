@@ -186,6 +186,29 @@ SB_URL  = 'https://lbjdwkvkkndvofysyssy.supabase.co'
 SB_ANON = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG'
 OUT_DIR = os.path.join(os.path.dirname(__file__), '..', 'tools')
 
+# Карточки, снятые с публикации как дубли: старый слаг → актуальный.
+# Их URL уже проиндексированы, поэтому страницу не удаляем, а превращаем
+# в переход с canonical на выжившую карточку.
+REDIRECTS = {
+    'recraft': 'recraft-ai',   # одно имя, один сайт, две карточки
+}
+
+
+def redirect_page(old, new, lang='en'):
+    prefix = '' if lang == 'en' else f'/{lang}'
+    target = f'https://aitoolfit.ai{prefix}/tools/{new}.html'
+    html_lang = 'uk' if lang == 'ua' else lang
+    rtl = ' dir="rtl"' if lang == 'he' else ''
+    return (
+        f'<!DOCTYPE html>\n<html lang="{html_lang}"{rtl}>\n<head>\n'
+        f'<meta charset="utf-8">\n'
+        f'<meta name="robots" content="noindex, follow">\n'
+        f'<link rel="canonical" href="{target}">\n'
+        f'<meta http-equiv="refresh" content="0; url={target}">\n'
+        f'<title>Moved — AItoolFit</title>\n</head>\n<body>\n'
+        f'<p>This page has moved to <a href="{target}">{target}</a>.</p>\n'
+        f'</body>\n</html>\n')
+
 CATEGORY_LABELS = {
     'chat':          'AI Chat & Assistants',
     'agents':        'AI Agents & Automation',
@@ -789,7 +812,27 @@ def main():
         generated.append(slug)
         print(f'  ✓ tools/{slug}.html')
 
-    print(f'\nDone — {len(generated)} pages generated.')
+    # Слаги, снятые с публикации как дубли. Их адреса уже в индексе, поэтому
+    # вместо 404 оставляем страницу с canonical и переходом на актуальную.
+    for old, new in REDIRECTS.items():
+        if new not in generated:
+            continue
+        with open(os.path.join(OUT_DIR, f'{old}.html'), 'w', encoding='utf-8') as f:
+            f.write(redirect_page(old, new))
+        print(f'  → tools/{old}.html — редирект на {new}')
+
+    # Страницы инструментов, снятых с публикации, раньше оставались на диске
+    # и в sitemap: генератор только писал файлы и никогда их не убирал.
+    # То же самое уже ловили в новостях — см. generate-news-pages.py.
+    wanted = {f'{s}.html' for s in generated} | {f'{o}.html' for o in REDIRECTS}
+    removed = 0
+    for fname in os.listdir(OUT_DIR):
+        if fname.endswith('.html') and not fname.startswith('_') and fname not in wanted:
+            os.remove(os.path.join(OUT_DIR, fname))
+            removed += 1
+            print(f'  − удалена осиротевшая страница: tools/{fname}')
+
+    print(f'\nDone — {len(generated)} pages generated, {removed} orphaned removed.')
 
 if __name__ == '__main__':
     main()

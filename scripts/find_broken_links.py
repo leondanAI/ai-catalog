@@ -6,6 +6,7 @@ from urllib.parse import urldefrag, unquote
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 SKIP_DIRS = {"node_modules", "Back-up", ".git", "audit", "media", "scripts"}
 HREF = re.compile(r'''(?:href|src)\s*=\s*["']([^"']+)["']''', re.I)
+SCRIPT_OR_STYLE = re.compile(r'<(script|style)\b[^>]*>.*?</\1>', re.I | re.S)
 
 html_files = []
 for dirpath, dirnames, filenames in os.walk(ROOT):
@@ -30,10 +31,17 @@ for src in html_files:
         html = open(src, encoding="utf-8", errors="ignore").read()
     except Exception:
         continue
+    # Внутри <script> и <style> лежит код, а не разметка: там href встречается
+    # в шаблонных строках вида `<a href="${a.url}">`, которые собираются уже
+    # в браузере. Без этой вырезки проверка выдавала 123 несуществующие
+    # «битые цели» с ${…} и переставала быть полезной.
+    html = SCRIPT_OR_STYLE.sub(' ', html)
     for raw in HREF.findall(html):
         link = raw.strip()
         if not link or link.startswith(("#", "mailto:", "tel:", "javascript:", "data:")):
             continue
+        if '${' in link or '{{' in link:
+            continue   # неразвёрнутый шаблон — не ссылка
         # external
         if re.match(r'^(https?:)?//', link):
             if not re.match(r'^https?://(www\.)?aitoolfit\.ai', link):

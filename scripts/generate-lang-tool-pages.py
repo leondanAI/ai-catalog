@@ -11,6 +11,29 @@ Usage:
 
 import urllib.request, json, os, sys, re
 
+# Карточки, снятые с публикации как дубли: старый слаг → актуальный.
+# Список продублирован в generate-pages.py — при правке менять оба файла.
+REDIRECTS = {
+    'recraft': 'recraft-ai',   # одно имя, один сайт, две карточки
+}
+
+
+def redirect_page(old, new, lang='en'):
+    """Страница-переход: адрес уже в индексе, поэтому не 404, а canonical."""
+    prefix = '' if lang == 'en' else f'/{lang}'
+    target = f'https://aitoolfit.ai{prefix}/tools/{new}.html'
+    html_lang = 'uk' if lang == 'ua' else lang
+    rtl = ' dir="rtl"' if lang == 'he' else ''
+    return (
+        f'<!DOCTYPE html>\n<html lang="{html_lang}"{rtl}>\n<head>\n'
+        f'<meta charset="utf-8">\n'
+        f'<meta name="robots" content="noindex, follow">\n'
+        f'<link rel="canonical" href="{target}">\n'
+        f'<meta http-equiv="refresh" content="0; url={target}">\n'
+        f'<title>Moved — AItoolFit</title>\n</head>\n<body>\n'
+        f'<p>This page has moved to <a href="{target}">{target}</a>.</p>\n'
+        f'</body>\n</html>\n')
+
 SB_URL  = 'https://lbjdwkvkkndvofysyssy.supabase.co'
 SB_ANON = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG'
 
@@ -871,7 +894,26 @@ def main():
             with open(os.path.join(out_dir, f'{tool["slug"]}.html'), 'w', encoding='utf-8') as f:
                 f.write(html)
 
-        print(f'  ✓ {len(tools)} pages → /{lang}/tools/')
+        # Дубли, снятые с публикации: адрес уже в индексе, поэтому вместо
+        # удаления оставляем переход на выжившую карточку. См. generate-pages.py.
+        slugs = {t['slug'] for t in tools}
+        for old, new in REDIRECTS.items():
+            if new not in slugs:
+                continue
+            with open(os.path.join(out_dir, f'{old}.html'), 'w', encoding='utf-8') as f:
+                f.write(redirect_page(old, new, lang))
+
+        # Снятый с публикации инструмент раньше продолжал жить страницей
+        # на каждом языке — генератор их не удалял. См. generate-pages.py.
+        wanted = {f'{t["slug"]}.html' for t in tools} | {f'{o}.html' for o in REDIRECTS}
+        removed = 0
+        for fname in os.listdir(out_dir):
+            if fname.endswith('.html') and not fname.startswith('_') and fname not in wanted:
+                os.remove(os.path.join(out_dir, fname))
+                removed += 1
+                print(f'  − удалена осиротевшая страница: {lang}/tools/{fname}')
+
+        print(f'  ✓ {len(tools)} pages → /{lang}/tools/, {removed} orphaned removed')
 
     print('\nDone.')
 
