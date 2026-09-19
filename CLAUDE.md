@@ -83,6 +83,17 @@ pricing must update them too, not just `description` / `description_long` /
 `pros`. They are rendered into the static tool pages, so stale claims there are
 indexed like any other text.
 
+**A tool's facts live in four places, not one.** When a version, name or price
+changes, check all of them:
+1. `tools` table — card fields above.
+2. `scripts/seo_missing_tools.json`, `seo_all_languages.json`, `seo_fr_pt.json` —
+   `<title>` and meta description per tool and language. The first file that has
+   the slug wins.
+3. `comparisons` table — `tool_a`/`tool_b` display names, `choose_a`/`choose_b`,
+   `faq` on every comparison that includes the tool.
+4. `COMPARISONS` list hardcoded in `scripts/generate-compare-pages.py` — which
+   slug each comparison page uses.
+
 ### 2. news (PK: id)
 | Field | Type |
 |---|---|

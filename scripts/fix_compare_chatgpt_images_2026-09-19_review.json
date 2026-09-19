@@ -1,0 +1,402 @@
+[
+ {
+  "lang": "de",
+  "field": "faq",
+  "before": [
+   {
+    "a": "ChatGPT Images nutzt DALL-E 3 (und neuerdings GPT-4o native Bildgenerierung) als Backend. Der Unterschied ist die Integration: In ChatGPT können Sie Bilder im Kontext des Gesprächs verfeinern und iterieren. DALL-E API direkt ist für Entwickler.",
+    "q": "ChatGPT Images vs DALL-E: Ist das dasselbe?"
+   },
+   {
+    "a": "Ja. Adobe trainiert Firefly ausschließlich mit Adobe Stock-Bildern, gemeinfreien Werken und lizenzierten Inhalten. Das macht es kommerziell sicher ohne Copyright-Risiken. Adobe bietet sogar eine Entschädigung falls es trotzdem zu IP-Problemen kommt.",
+    "q": "Ist Adobe Firefly kommerziell sicher?"
+   },
+   {
+    "a": "ChatGPT Images mit GPT-4o ist gut für schnelle Marketing-Konzepte und Ideenfindung. Für finale kommerzielle Produktion empfiehlt sich Adobe Firefly (IP-Sicherheit) oder Midjourney (höchste Qualität). ChatGPT für Entwürfe; spezialisierte Tools für Produktion.",
+    "q": "ChatGPT Images für Marketing-Visuals: Ist es gut?"
+   },
+   {
+    "a": "Midjourney übertrifft Firefly bei allgemeiner künstlerischer Qualität. Firefly gewinnt bei kommerzieller Sicherheit und Adobe-Integration. Für kreative Freiheit — Midjourney; für professionelle Workflows mit IP-Sicherheit — Firefly.",
+    "q": "Wie gut ist Firefly im Vergleich zu Midjourney?"
+   }
+  ],
+  "after": [
+   {
+    "q": "ChatGPT Images vs DALL-E: Ist das dasselbe?",
+    "a": "Nein, nicht mehr. ChatGPT Images nutzt seit September 2026 GPT Image 2.5 als Backend, in den Varianten Flare (schnell, für den Alltag) und Sunburst (für präzise Bearbeitungen) – DALL-E 2 und DALL-E 3 wurden bereits im Mai 2026 abgeschaltet. Der Unterschied bleibt die Integration: In ChatGPT können Sie Bilder im Kontext des Gesprächs verfeinern und iterieren. Über die API stehen Flare und Sunburst auch direkt für Entwickler bereit."
+   },
+   {
+    "q": "Ist Adobe Firefly kommerziell sicher?",
+    "a": "Ja. Adobe trainiert Firefly ausschließlich mit Adobe Stock-Bildern, gemeinfreien Werken und lizenzierten Inhalten. Das macht es kommerziell sicher ohne Copyright-Risiken. Adobe bietet sogar eine Entschädigung falls es trotzdem zu IP-Problemen kommt."
+   },
+   {
+    "q": "ChatGPT Images für Marketing-Visuals: Ist es gut?",
+    "a": "ChatGPT Images mit GPT Image 2.5 (Flare für schnelle Entwürfe, Sunburst für präzise Bearbeitung) ist gut für schnelle Marketing-Konzepte und Ideenfindung. Für finale kommerzielle Produktion empfiehlt sich Adobe Firefly (IP-Sicherheit) oder Midjourney (höchste Qualität). ChatGPT für Entwürfe; spezialisierte Tools für Produktion."
+   },
+   {
+    "q": "Wie gut ist Firefly im Vergleich zu Midjourney?",
+    "a": "Midjourney übertrifft Firefly bei allgemeiner künstlerischer Qualität. Firefly gewinnt bei kommerzieller Sicherheit und Adobe-Integration. Für kreative Freiheit — Midjourney; für professionelle Workflows mit IP-Sicherheit — Firefly."
+   }
+  ]
+ },
+ {
+  "lang": "en",
+  "field": "faq",
+  "before": [
+   {
+    "a": "ChatGPT Images 2.0 is OpenAI's integrated image generation capability in ChatGPT, powered by an improved DALL-E model. It generates highly accurate images from complex text descriptions and is notable for correctly rendering text, hands, and detailed scenes that earlier AI generators struggled with.",
+    "q": "What is ChatGPT Images 2.0?"
+   },
+   {
+    "a": "ChatGPT Images 2.0 leads on prompt accuracy and text rendering within images. Midjourney leads on aesthetic quality and artistic style. For photorealistic scenes with accurate details, ChatGPT Images is competitive. For artistic and creative imagery, Midjourney still leads most comparisons.",
+    "q": "Is ChatGPT Images better than Midjourney?"
+   },
+   {
+    "a": "Yes. Adobe Firefly is trained exclusively on Adobe Stock content, openly licensed works, and public domain material. Output is commercially safe for professional and client use — a major advantage over most AI image generators for commercial work.",
+    "q": "Is Adobe Firefly commercially safe?"
+   },
+   {
+    "a": "ChatGPT Images 2.0 is available to ChatGPT Plus ($20/month) and higher subscribers with usage limits. Free ChatGPT users have very limited access. Adobe Firefly has a free tier with limited credits and is included in Adobe Creative Cloud subscriptions.",
+    "q": "Is ChatGPT Images free?"
+   }
+  ],
+  "after": [
+   {
+    "q": "What is ChatGPT Images?",
+    "a": "ChatGPT Images is OpenAI's image generation capability, available inside ChatGPT and through the OpenAI API. The current line is GPT Image 2.5, shipped as two models — Flare, the fastest for everyday generation, and Sunburst, the most capable for precise editing. Its reasoning-first approach works through composition and constraints before rendering, which shows in details image models have historically struggled with: small text, icons, UI elements and dense layouts."
+   },
+   {
+    "q": "Is ChatGPT Images better than Midjourney?",
+    "a": "ChatGPT Images leads on prompt accuracy and on rendering small text, icons and dense layouts within images. Midjourney leads on aesthetic quality and artistic style. For photorealistic scenes with accurate details, ChatGPT Images is competitive. For artistic and creative imagery, Midjourney still leads most comparisons."
+   },
+   {
+    "q": "Is Adobe Firefly commercially safe?",
+    "a": "Yes. Adobe Firefly is trained exclusively on Adobe Stock content, openly licensed works, and public domain material. Output is commercially safe for professional and client use — a major advantage over most AI image generators for commercial work."
+   },
+   {
+    "q": "Is ChatGPT Images free?",
+    "a": "ChatGPT Images is available on the free ChatGPT tier with limited access, and on paid plans starting with Plus at $20/month. Adobe Firefly has a free tier with limited credits and is included in Adobe Creative Cloud subscriptions."
+   }
+  ]
+ },
+ {
+  "lang": "es",
+  "field": "choose_a",
+  "before": [
+   "✅ Quieres generar imágenes directamente dentro de tu conversación de ChatGPT sin cambiar de herramienta",
+   "✅ Usas ChatGPT Plus o Pro y tienes DALL-E 3 disponible sin costo adicional en tu suscripción",
+   "✅ Necesitas iterar imágenes conversacionalmente: 'hazla más oscura', 'añade una persona en el fondo' de forma natural",
+   "✅ Produces imágenes para uso personal, presentaciones o contenido donde la licencia comercial no es crítica"
+  ],
+  "after": [
+   "✅ Quieres generar imágenes directamente dentro de tu conversación de ChatGPT sin cambiar de herramienta",
+   "✅ Usas ChatGPT Plus o Pro y tienes ChatGPT Images disponible sin costo adicional en tu suscripción",
+   "✅ Necesitas iterar imágenes conversacionalmente: 'hazla más oscura', 'añade una persona en el fondo' de forma natural",
+   "✅ Produces imágenes para uso personal, presentaciones o contenido donde la licencia comercial no es crítica"
+  ]
+ },
+ {
+  "lang": "es",
+  "field": "faq",
+  "before": [
+   {
+    "a": "Midjourney V7 sigue siendo superior en calidad artística general. DALL-E 3 es mejor en seguir instrucciones específicas y texto dentro de imágenes. DALL-E 3 está integrado en ChatGPT lo que facilita iteración conversacional. Para arte — Midjourney; para instrucciones precisas en chat — DALL-E 3.",
+    "q": "¿DALL-E 3 o Midjourney para calidad?"
+   },
+   {
+    "a": "Sí. ChatGPT con DALL-E 3 puede editar imágenes existentes — seleccionar áreas para modificar, añadir o quitar elementos. Adobe Firefly (Generative Fill en Photoshop) es más potente para edición precisa de fotos. Para edición simple — ChatGPT; para edición profesional — Photoshop con Firefly.",
+    "q": "¿ChatGPT puede editar imágenes existentes?"
+   },
+   {
+    "a": "Según los términos de OpenAI, los usuarios de pago tienen derechos sobre las imágenes generadas. Sin embargo, hay debate legal sobre los derechos de autor de imágenes generadas por IA. Para uso comercial con garantías claras — Adobe Firefly (entrenado con contenido con licencia) es la opción más segura legalmente.",
+    "q": "¿Las imágenes de DALL-E 3 son libres de derechos?"
+   },
+   {
+    "a": "Sí. Adobe Firefly tiene una interfaz web (firefly.adobe.com) donde puedes generar imágenes desde texto sin necesitar Photoshop. Las funciones de Generative Fill e integración profunda sí requieren Photoshop. La web app tiene plan gratuito con créditos limitados.",
+    "q": "¿Adobe Firefly puede generar desde texto sin Photoshop?"
+   }
+  ],
+  "after": [
+   {
+    "q": "¿ChatGPT Images o Midjourney para calidad?",
+    "a": "Midjourney V7 sigue siendo superior en calidad artística general. ChatGPT Images es mejor en seguir instrucciones específicas y texto dentro de imágenes. ChatGPT Images está integrado en ChatGPT lo que facilita iteración conversacional. Para arte — Midjourney; para instrucciones precisas en chat — ChatGPT Images."
+   },
+   {
+    "q": "¿ChatGPT Images puede editar imágenes existentes?",
+    "a": "Sí. ChatGPT Images puede editar imágenes existentes con Sunburst, su modelo más capaz, que soporta inpainting y ajustes de calidad de bajo a máximo — seleccionar áreas para modificar, añadir o quitar elementos. Adobe Firefly (Generative Fill en Photoshop) es más potente para edición precisa de fotos. Para edición simple — ChatGPT Images; para edición profesional — Photoshop con Firefly."
+   },
+   {
+    "q": "¿Las imágenes de ChatGPT Images son libres de derechos?",
+    "a": "Según los términos de OpenAI, los usuarios de pago tienen derechos sobre las imágenes generadas. Sin embargo, hay debate legal sobre los derechos de autor de imágenes generadas por IA. Para uso comercial con garantías claras — Adobe Firefly (entrenado con contenido con licencia) es la opción más segura legalmente."
+   },
+   {
+    "q": "¿Adobe Firefly puede generar desde texto sin Photoshop?",
+    "a": "Sí. Adobe Firefly tiene una interfaz web (firefly.adobe.com) donde puedes generar imágenes desde texto sin necesitar Photoshop. Las funciones de Generative Fill e integración profunda sí requieren Photoshop. La web app tiene plan gratuito con créditos limitados."
+   }
+  ]
+ },
+ {
+  "lang": "fr",
+  "field": "choose_a",
+  "before": [
+   "✅ Vous êtes déjà abonné à ChatGPT Plus et voulez générer des images directement dans le chat",
+   "✅ DALL-E 3 suit parfaitement les instructions textuelles détaillées pour une précision maximale",
+   "✅ Intégration dans le workflow de chat : générez des images dans le contexte d'une conversation",
+   "✅ Accessible immédiatement sans outil supplémentaire si vous avez ChatGPT Plus"
+  ],
+  "after": [
+   "✅ Vous êtes déjà abonné à ChatGPT Plus et voulez générer des images directement dans le chat",
+   "✅ ChatGPT Images (GPT Image 2.5) suit avec précision les instructions textuelles détaillées grâce à son approche de raisonnement avant génération, pour une précision maximale",
+   "✅ Intégration dans le workflow de chat : générez des images dans le contexte d'une conversation",
+   "✅ Accessible immédiatement sans outil supplémentaire si vous avez ChatGPT Plus"
+  ]
+ },
+ {
+  "lang": "fr",
+  "field": "faq",
+  "before": [
+   {
+    "a": "DALL-E 3 suit mieux les instructions textuelles précises. Firefly est meilleur pour l'intégration professionnelle dans Photoshop et la sécurité commerciale. Pour une génération dans ChatGPT → DALL-E 3 ; pour les professionnels Adobe → Firefly.",
+    "q": "DALL-E 3 vs Adobe Firefly — lequel est le meilleur ?"
+   },
+   {
+    "a": "La génération d'images dans ChatGPT est disponible dans le plan gratuit avec des limites. ChatGPT Plus (20 $/mois) offre plus de générations et une priorité d'accès. Adobe Firefly est inclus dans Creative Cloud.",
+    "q": "ChatGPT Images est-il inclus dans ChatGPT gratuit ?"
+   },
+   {
+    "a": "Oui. Via Generative Fill dans Photoshop, Firefly peut étendre, supprimer ou remplacer des éléments dans des photos existantes. C'est l'une des fonctionnalités les plus puissantes pour l'édition photo professionnelle.",
+    "q": "Adobe Firefly peut-il modifier des photos existantes ?"
+   },
+   {
+    "a": "DALL-E 3 via ChatGPT permet l'usage commercial du contenu généré selon les conditions d'OpenAI. Adobe Firefly offre des garanties d'indemnisation commerciale plus explicites car il est spécifiquement entraîné sur du contenu sous licence.",
+    "q": "DALL-E 3 est-il sûr pour un usage commercial ?"
+   }
+  ],
+  "after": [
+   {
+    "q": "ChatGPT Images vs Adobe Firefly — lequel est le meilleur ?",
+    "a": "ChatGPT Images (GPT Image 2.5) suit mieux les instructions textuelles précises et gère bien le texte, les icônes et les mises en page denses grâce à son approche par raisonnement. Firefly est meilleur pour l'intégration professionnelle dans Photoshop et la sécurité commerciale. Pour une génération dans ChatGPT → ChatGPT Images ; pour les professionnels Adobe → Firefly."
+   },
+   {
+    "q": "ChatGPT Images est-il inclus dans ChatGPT gratuit ?",
+    "a": "La génération d'images dans ChatGPT est disponible dans le plan gratuit avec un accès limité. ChatGPT Plus (20 $/mois) offre plus de générations et un accès complet, dont le Thinking Mode. Adobe Firefly est inclus dans Creative Cloud."
+   },
+   {
+    "q": "Adobe Firefly peut-il modifier des photos existantes ?",
+    "a": "Oui. Via Generative Fill dans Photoshop, Firefly peut étendre, supprimer ou remplacer des éléments dans des photos existantes. C'est l'une des fonctionnalités les plus puissantes pour l'édition photo professionnelle."
+   },
+   {
+    "q": "ChatGPT Images est-il sûr pour un usage commercial ?",
+    "a": "ChatGPT Images, via ChatGPT ou l'API, permet l'usage commercial du contenu généré selon les conditions d'OpenAI. Adobe Firefly offre des garanties d'indemnisation commerciale plus explicites car il est spécifiquement entraîné sur du contenu sous licence."
+   }
+  ]
+ },
+ {
+  "lang": "he",
+  "field": "choose_a",
+  "before": [
+   "✅ אתם רוצים לייצר תמונות ישירות בתוך ChatGPT עם הקשר שיחה",
+   "✅ DALL-E 3 יוצר תמונות מתיאורים מורכבים עם הבנה מעולה",
+   "✅ עריכה בשיחה – שנו, הוסיפו ורענו בשפה טבעית",
+   "✅ כלול ב-ChatGPT Plus – ללא תוספת מחיר"
+  ],
+  "after": [
+   "✅ אתם רוצים לייצר תמונות ישירות בתוך ChatGPT עם הקשר שיחה",
+   "✅ GPT Image 2.5 יוצר תמונות מתיאורים מורכבים עם גישה מבוססת-חשיבה שמבינה טקסט קטן, אייקונים וממשקים",
+   "✅ עריכה בשיחה – שנו, הוסיפו ורענו בשפה טבעית",
+   "✅ זמין בטיר החינמי בגישה מוגבלת, וכלול במלואו במסלולי התשלום החל מ-Plus ב-20$ לחודש"
+  ]
+ },
+ {
+  "lang": "he",
+  "field": "faq",
+  "before": [
+   {
+    "a": "DALL-E 3 יצירתי ומבין תיאורים מורכבים. Firefly בטוח מסחרית ומשתלב עם Adobe. יצירה חופשית – DALL-E; עיצוב מקצועי – Firefly.",
+    "q": "ChatGPT Images לעומת Adobe Firefly?"
+   },
+   {
+    "a": "Firefly מציע 25 Credits חינמיים לחודש; Creative Cloud כולל Firefly Credits. ChatGPT Images כלול ב-ChatGPT Plus ($20/חודש).",
+    "q": "Adobe Firefly חינמי?"
+   },
+   {
+    "a": "כן. Adobe מאמנת Firefly רק על תוכן מורשה ומציעה ערבות מסחרית. זה יתרון גדול לעסקים שחוששים מבעיות זכויות יוצרים.",
+    "q": "Adobe Firefly – האם הוא בטוח לשימוש מסחרי?"
+   },
+   {
+    "a": "Midjourney עדיין מוביל באיכות אמנותית. DALL-E 3 מצוין בהבנת תיאורים מורכבים וב-Prompt Following. לאמנות – Midjourney; להוראות מדויקות – DALL-E 3.",
+    "q": "DALL-E 3 לעומת Midjourney – מה איכותי יותר?"
+   }
+  ],
+  "after": [
+   {
+    "a": "ChatGPT Images, מבוסס על GPT Image 2.5, יצירתי ומבין היטב תיאורים מורכבים בזכות הגישה מבוססת ההיגיון של המודל. Firefly בטוח מסחרית ומשתלב עם Adobe. יצירה חופשית – ChatGPT Images; עיצוב מקצועי – Firefly.",
+    "q": "ChatGPT Images לעומת Adobe Firefly?"
+   },
+   {
+    "a": "Firefly מציע 25 Credits חינמיים לחודש; Creative Cloud כולל Firefly Credits. ChatGPT Images כלול ב-ChatGPT Plus ($20/חודש).",
+    "q": "Adobe Firefly חינמי?"
+   },
+   {
+    "a": "כן. Adobe מאמנת Firefly רק על תוכן מורשה ומציעה ערבות מסחרית. זה יתרון גדול לעסקים שחוששים מבעיות זכויות יוצרים.",
+    "q": "Adobe Firefly – האם הוא בטוח לשימוש מסחרי?"
+   },
+   {
+    "a": "Midjourney עדיין מוביל באיכות אמנותית. ChatGPT Images, עם GPT Image 2.5, מצוין בהבנת תיאורים מורכבים וב-Prompt Following. לאמנות – Midjourney; להוראות מדויקות – ChatGPT Images.",
+    "q": "ChatGPT Images לעומת Midjourney – מה איכותי יותר?"
+   }
+  ]
+ },
+ {
+  "lang": "pt",
+  "field": "choose_a",
+  "before": [
+   "✅ Você já assina o ChatGPT Plus e quer gerar imagens diretamente no chat",
+   "✅ DALL-E 3 segue perfeitamente instruções textuais detalhadas para máxima precisão",
+   "✅ Integração no workflow de chat: gere imagens no contexto de uma conversa",
+   "✅ Acessível imediatamente sem ferramenta adicional se você tem ChatGPT Plus"
+  ],
+  "after": [
+   "✅ Você já assina o ChatGPT Plus e quer gerar imagens diretamente no chat",
+   "✅ O ChatGPT Images (modelo Sunburst) oferece edição de alta precisão, com inpainting e ajustes finos para seguir instruções detalhadas",
+   "✅ Integração no workflow de chat: gere imagens no contexto de uma conversa",
+   "✅ Acessível imediatamente sem ferramenta adicional se você tem ChatGPT Plus"
+  ]
+ },
+ {
+  "lang": "pt",
+  "field": "faq",
+  "before": [
+   {
+    "a": "DALL-E 3 segue melhor instruções textuais precisas. Firefly é melhor para integração profissional no Photoshop e segurança comercial. Para geração no ChatGPT → DALL-E 3; para profissionais Adobe → Firefly.",
+    "q": "DALL-E 3 vs Adobe Firefly — qual é o melhor?"
+   },
+   {
+    "a": "A geração de imagens no ChatGPT está disponível no plano gratuito com limites. ChatGPT Plus ($20/mês) oferece mais gerações e prioridade de acesso. Adobe Firefly está incluído no Creative Cloud.",
+    "q": "ChatGPT Images está incluído no plano gratuito?"
+   },
+   {
+    "a": "Sim. Via Generative Fill no Photoshop, Firefly pode expandir, remover ou substituir elementos em fotos existentes. É uma das funcionalidades mais poderosas para edição de fotos profissional.",
+    "q": "Adobe Firefly pode modificar fotos existentes?"
+   },
+   {
+    "a": "DALL-E 3 via ChatGPT permite uso comercial do conteúdo gerado conforme os termos da OpenAI. Adobe Firefly oferece garantias de indenização comercial mais explícitas pois é especificamente treinado em conteúdo licenciado.",
+    "q": "DALL-E 3 é seguro para uso comercial?"
+   }
+  ],
+  "after": [
+   {
+    "q": "ChatGPT Images vs Adobe Firefly — qual é o melhor?",
+    "a": "ChatGPT Images (GPT Image 2.5) segue melhor instruções textuais precisas, especialmente em textos pequenos, ícones e layouts densos. Firefly é melhor para integração profissional no Photoshop e segurança comercial. Para geração no ChatGPT → ChatGPT Images; para profissionais Adobe → Firefly."
+   },
+   {
+    "q": "ChatGPT Images está incluído no plano gratuito?",
+    "a": "A geração de imagens no ChatGPT está disponível no plano gratuito com acesso limitado. ChatGPT Plus ($20/mês) oferece mais gerações e prioridade de acesso. Adobe Firefly está incluído no Creative Cloud."
+   },
+   {
+    "q": "Adobe Firefly pode modificar fotos existentes?",
+    "a": "Sim. Via Generative Fill no Photoshop, Firefly pode expandir, remover ou substituir elementos em fotos existentes. É uma das funcionalidades mais poderosas para edição de fotos profissional."
+   },
+   {
+    "q": "ChatGPT Images é seguro para uso comercial?",
+    "a": "ChatGPT Images (GPT Image 2.5) permite uso comercial do conteúdo gerado conforme os termos da OpenAI. Adobe Firefly oferece garantias de indenização comercial mais explícitas pois é especificamente treinado em conteúdo licenciado."
+   }
+  ]
+ },
+ {
+  "lang": "ru",
+  "field": "faq",
+  "before": [
+   {
+    "a": "ChatGPT Images (powered by DALL-E 3/GPT-5.5) удобен для итеративной генерации в диалоге. Firefly безопаснее для коммерческого использования — обучен на лицензированном контенте. Для коммерческого контента — Firefly, для личного использования — ChatGPT Images.",
+    "q": "ChatGPT Images vs Adobe Firefly — что выбрать?"
+   },
+   {
+    "a": "По условиям OpenAI пользователи владеют созданным контентом. Однако Firefly имеет явную корпоративную защиту от претензий по авторским правам, поскольку обучен на лицензированных данных. Для критически важных коммерческих материалов Firefly безопаснее.",
+    "q": "Безопасно ли коммерчески использовать изображения ChatGPT?"
+   },
+   {
+    "a": "Да. ChatGPT поддерживает загрузку изображений и их редактирование по инструкциям. Photoshop с Firefly предлагает более профессиональное редактирование с Generative Fill и Generative Expand.",
+    "q": "ChatGPT может редактировать существующие изображения?"
+   },
+   {
+    "a": "Да. Firefly.adobe.com предлагает веб-интерфейс с бесплатным планом (25 генераций/мес). Полный функционал внутри Photoshop и Illustrator требует подписки Creative Cloud.",
+    "q": "Adobe Firefly доступен без Creative Cloud?"
+   }
+  ],
+  "after": [
+   {
+    "a": "ChatGPT Images (GPT Image 2.5) удобен для итеративной генерации в диалоге. Firefly безопаснее для коммерческого использования — обучен на лицензированном контенте. Для коммерческого контента — Firefly, для личного использования — ChatGPT Images.",
+    "q": "ChatGPT Images vs Adobe Firefly — что выбрать?"
+   },
+   {
+    "a": "По условиям OpenAI пользователи владеют созданным контентом. Однако Firefly имеет явную корпоративную защиту от претензий по авторским правам, поскольку обучен на лицензированных данных. Для критически важных коммерческих материалов Firefly безопаснее.",
+    "q": "Безопасно ли коммерчески использовать изображения ChatGPT?"
+   },
+   {
+    "a": "Да. ChatGPT Images поддерживает загрузку изображений и их редактирование по инструкциям — модель Sunburst предназначена именно для точного редактирования с инпейнтингом. Photoshop с Firefly предлагает более профессиональное редактирование с Generative Fill и Generative Expand.",
+    "q": "ChatGPT может редактировать существующие изображения?"
+   },
+   {
+    "a": "Да. Firefly.adobe.com предлагает веб-интерфейс с бесплатным планом (25 генераций/мес). Полный функционал внутри Photoshop и Illustrator требует подписки Creative Cloud.",
+    "q": "Adobe Firefly доступен без Creative Cloud?"
+   }
+  ]
+ },
+ {
+  "lang": "ua",
+  "field": "choose_a",
+  "before": [
+   "✅ Ви вже використовуєте ChatGPT і хочете генерувати зображення прямо в чаті",
+   "✅ DALL-E 3 відмінно слідує детальним текстовим описам і природній мові",
+   "✅ Включений у ChatGPT Plus ($20/міс) — не потрібна окрема підписка",
+   "✅ Найпростіший спосіб генерувати зображення для не-дизайнерів через розмовний інтерфейс"
+  ],
+  "after": [
+   "✅ Ви вже використовуєте ChatGPT і хочете генерувати зображення прямо в чаті",
+   "✅ ChatGPT Images (GPT Image 2.5) чудово слідує детальним текстовим описам і природній мові завдяки reasoning-first підходу",
+   "✅ Включений у ChatGPT Plus ($20/міс) — не потрібна окрема підписка",
+   "✅ Найпростіший спосіб генерувати зображення для не-дизайнерів через розмовний інтерфейс"
+  ]
+ },
+ {
+  "lang": "ua",
+  "field": "faq",
+  "before": [
+   {
+    "a": "ChatGPT Images (DALL-E 3) зручніший для загального використання і входить до Plus. Adobe Firefly кращий для комерційних проєктів завдяки чіткій ліцензії і інтеграції з Creative Cloud. Для повсякденного — ChatGPT; для комерційного — Firefly.",
+    "q": "ChatGPT Images vs Adobe Firefly — що обрати?"
+   },
+   {
+    "a": "Adobe Firefly має безкоштовний план з обмеженими кредитами. Також включений у Creative Cloud підписки. ChatGPT Images включений у ChatGPT Plus ($20/міс).",
+    "q": "Adobe Firefly безкоштовний?"
+   },
+   {
+    "a": "Так. За умовами OpenAI зображення згенеровані через API або ChatGPT можуть використовуватись комерційно. Adobe Firefly також явно комерційно безпечний завдяки навчанню на ліцензованих даних.",
+    "q": "DALL-E 3 можна використовувати комерційно?"
+   },
+   {
+    "a": "DALL-E 3 краще слідує текстовим промптам і інтегрований у ChatGPT. Midjourney виробляє більш художні і естетично привабливі зображення. DALL-E для точного виконання промптів; Midjourney для художньої якості.",
+    "q": "Яка різниця між DALL-E 3 і Midjourney?"
+   }
+  ],
+  "after": [
+   {
+    "q": "ChatGPT Images vs Adobe Firefly — що обрати?",
+    "a": "ChatGPT Images зручніший для загального використання і входить до Plus. Adobe Firefly кращий для комерційних проєктів завдяки чіткій ліцензії і інтеграції з Creative Cloud. Для повсякденного — ChatGPT; для комерційного — Firefly."
+   },
+   {
+    "q": "Adobe Firefly безкоштовний?",
+    "a": "Adobe Firefly має безкоштовний план з обмеженими кредитами. Також включений у Creative Cloud підписки. ChatGPT Images включений у ChatGPT Plus ($20/міс)."
+   },
+   {
+    "q": "ChatGPT Images можна використовувати комерційно?",
+    "a": "Так. За умовами OpenAI зображення згенеровані через API або ChatGPT можуть використовуватись комерційно. Adobe Firefly також явно комерційно безпечний завдяки навчанню на ліцензованих даних."
+   },
+   {
+    "q": "Яка різниця між ChatGPT Images і Midjourney?",
+    "a": "ChatGPT Images краще слідує текстовим промптам і інтегрований у ChatGPT. Midjourney виробляє більш художні і естетично привабливі зображення. ChatGPT Images для точного виконання промптів; Midjourney для художньої якості."
+   }
+  ]
+ }
+]
