@@ -135,7 +135,7 @@ function _getAnonId() {
 
 function _getLang() {
   const parts = window.location.pathname.split('/').filter(Boolean);
-  const langs = ['ru', 'de', 'es', 'he', 'ua'];
+  const langs = ['ru', 'de', 'es', 'he', 'ua', 'fr', 'pt'];
   return langs.includes(parts[0]) ? parts[0] : 'en';
 }
 
