@@ -1,0 +1,31 @@
+{
+  "name": "ChatGPT Images",
+  "best_for": "Image generation and precise editing inside ChatGPT, text and UI rendering",
+  "description": "OpenAI's image generation in ChatGPT and the API. The current line is GPT Image 2.5, released September 8, 2026, in two variants: Flare, the fastest for everyday generation, and Sunburst, the most capable for precise editing. Both cost $8 per million image input tokens and $30 per million output.",
+  "description_long": "ChatGPT Images is OpenAI's image generation, available inside ChatGPT and through the OpenAI API. The current generation is GPT Image 2.5, released on September 8, 2026, which succeeds GPT Image 2 from April. DALL·E 2 and DALL·E 3 were retired in May 2026.\n\nGPT Image 2.5 ships as two models. Flare (gpt-image-2.5-flare) is described by OpenAI as its fastest model for high-quality, everyday image generation. Sunburst (gpt-image-2.5-sunburst) is its most capable model for image generation and editing, intended for workflows where editing precision matters most. Sunburst supports image edits with inpainting and quality settings from low up to max. Both accept text and image inputs and return images.\n\nThe reasoning-first approach that arrived with GPT Image 2 is what sets this line apart: the model works through composition and constraints before rendering, which shows in the details image models have historically struggled with — small text, icons, UI elements and dense layouts. GPT Image 2 also introduced a Thinking Mode in ChatGPT for paid tiers, producing up to 8 coherent images per prompt with character continuity across the set.\n\nIn ChatGPT, image generation is available on the free tier with limited access and on paid plans starting with Plus at $20/month. Through the API, Flare and Sunburst are priced identically: $8 per million image input tokens ($2 cached), $30 per million image output tokens and $5 per million text input tokens. That undercuts the older models on output — GPT Image 1.5 costs $32 and GPT Image 1 costs $40 per million output tokens.\n\nThe limitations are practical rather than technical. The most capable variant is not the fastest, so every workflow involves a choice between Flare and Sunburst. Token-based API pricing makes the cost of a single image harder to predict than flat per-image pricing. And for purely artistic work, the stylistic range remains narrower than Midjourney's.\n\nChatGPT Images suits people who already work in ChatGPT and want images without switching tools, developers who want text and image generation from one API, and teams that edit existing images rather than regenerating them. Use Flare for fast drafts and volume, Sunburst when a precise edit matters more than speed.",
+  "pros": [
+    "Two variants at the same price: Flare for fast everyday generation, Sunburst for precise editing",
+    "Strong rendering of small text, UI elements and dense layouts, built on the reasoning-first approach of GPT Image 2",
+    "Image editing with inpainting through the API, with quality settings up to max on Sunburst",
+    "Cheaper than the models it replaces: $30 per million output tokens versus $32 for GPT Image 1.5 and $40 for GPT Image 1",
+    "Built into ChatGPT and available through the same OpenAI API as the text models"
+  ],
+  "cons": [
+    "Advanced image features in ChatGPT are reserved for paid plans; free users have limited access",
+    "The most capable variant, Sunburst, is not the fastest — every workflow means choosing between speed and precision",
+    "Token-based API pricing makes the cost of a single image harder to predict than flat per-image pricing",
+    "Stylistic range is still narrower than Midjourney for purely artistic work"
+  ],
+  "choose_if": [
+    "You want image generation inside your ChatGPT workflow without switching tools",
+    "You need accurate text, UI mockups or dense layouts in generated images",
+    "You edit existing images and want precise, targeted changes — Sunburst is built for this",
+    "You generate many drafts quickly and want the fastest option — use Flare"
+  ],
+  "faq": [
+    {"q": "What is ChatGPT Images?", "a": "ChatGPT Images is OpenAI's image generation inside ChatGPT and the OpenAI API. The current generation is GPT Image 2.5, released on September 8, 2026, in two variants: Flare and Sunburst."},
+    {"q": "What is the difference between GPT Image 2.5 Flare and Sunburst?", "a": "OpenAI describes Flare as its fastest model for high-quality, everyday image generation, and Sunburst as its most capable model for generation and editing, intended for workflows where editing precision matters most. Both are priced the same, so the choice is about speed versus precision, not cost."},
+    {"q": "How much does ChatGPT Images cost?", "a": "In ChatGPT, image generation is available on the free tier with limited access and on paid plans starting with Plus at $20/month. Through the API, both GPT Image 2.5 variants cost $8 per million image input tokens ($2 cached), $30 per million image output tokens and $5 per million text input tokens."},
+    {"q": "What happened to DALL-E 3?", "a": "DALL-E 2 and DALL-E 3 were retired in May 2026. They were replaced by GPT Image 2 in April 2026, which has since been succeeded by GPT Image 2.5."}
+  ]
+}
