@@ -1,0 +1,248 @@
+[
+  {
+    "slug": "relume",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "pricing": [
+      { "tier": "Build with Relume (AI website builder) — Free", "amount": "0", "period": "forever", "notes": "No card required. Limited AI usage shared across projects, standard AI model, unlimited websites, brief/sitemap/wireframe/design generation, style guide, unlimited collaboration, free hosting on a relume.live subdomain." },
+      { "tier": "Build with Relume — Pro", "amount": "from $14 USD", "period": "month", "notes": "Base Pro AI usage with upgrade option, premium AI model, premium AI images, priority access at peak times. Launch hosting on a custom domain is priced separately, starting at $12/project/month, 6,000+ monthly page views, unlimited forms/submissions." },
+      { "tier": "Site Builder (component library) — Free", "amount": "0", "period": "forever", "notes": "30 Webflow components + 30 React components." },
+      { "tier": "Site Builder — Starter", "amount": "from $18 USD", "period": "month", "notes": "1,000+ Webflow, 1,000+ React, 1,000+ Figma components." },
+      { "tier": "Site Builder — Pro", "amount": "from $40 USD", "period": "month", "notes": "1,000+ components across all platforms, up to 300 component storage." },
+      { "tier": "Site Builder — Team", "amount": "from $36 USD", "period": "month", "notes": "Per user, minimum 3 users. 1,000+ components across all platforms, unlimited private sharing." },
+      { "tier": "Site Builder — Enterprise", "amount": "custom", "period": "n/a", "notes": "White-glove onboarding, custom AI usage, volume pricing." }
+    ],
+    "free_tier": "Two free tiers. Build with Relume Free: free forever, no card, limited shared AI usage on the standard model, unlimited websites, brief/sitemap/wireframe/design generation, style guide, unlimited collaboration, free hosting on a relume.live subdomain. Site Builder Free: 30 Webflow + 30 React components.",
+    "repositioning": "Yes, major. Relume is no longer export-only. It now has a 'Publish' path (beta) that takes a project from brief to a live hosted site with custom domain and SSL handled by Relume, alongside the original 'Export' path. Export now targets React (Tailwind CSS + shadcn/ui) in addition to Webflow and Figma, and Relume ships a Library MCP for pulling components into AI tools. The company also moved its primary domain from relume.io to relume.ai (relume.io and library.relume.io both 301 to relume.ai).",
+    "card_errors": [
+      { "field": "url", "wrong_quote": "https://relume.io", "correct_value": "https://www.relume.ai — relume.io returns HTTP 301 Moved Permanently to www.relume.ai" },
+      { "field": "description", "wrong_quote": "Not a standalone builder — requires a separate Webflow or Figma subscription.", "correct_value": "Relume now has a Publish path (beta): 'Brief to live site in one flow, custom domain and SSL handled', plus free hosting on a relume.live subdomain on the free plan. Webflow/Figma are one option, not a requirement." },
+      { "field": "cons", "wrong_quote": "Not a standalone builder — requires separate Webflow or Figma subscriptions", "correct_value": "Same as above — no longer true since the Publish/hosting path launched." },
+      { "field": "cons", "wrong_quote": "Component library is Webflow/Figma-specific — no React or other framework output", "correct_value": "React export is supported: 'Coded with Tailwind CSS and shadcn/ui components'. Site Builder Free includes 30 React components; paid tiers include 1,000+ React components." },
+      { "field": "description_long", "wrong_quote": "Starter at approximately $32 per member per month", "correct_value": "Starter is listed as 'From $18/month' on relume.ai/pricing" },
+      { "field": "description_long", "wrong_quote": "Free plan includes 30 Workflow components", "correct_value": "Site Builder Free includes 30 Webflow components and 30 React components ('Workflow' also appears to be a typo for 'Webflow')" },
+      { "field": "description_long", "wrong_quote": "The component library contains over 1,000 pre-built Webflow and Figma components", "correct_value": "1,000+ components across Webflow, Figma AND React" },
+      { "field": "description_long", "wrong_quote": "Annual billing provides approximately 15% discount", "correct_value": "Not published on the current pricing page; prices are shown as 'From $X/month, cancel anytime'. Unverified." },
+      { "field": "description_long", "wrong_quote": "Pro at approximately $40 per member per month adds mobile variants, monthly library updates, and advanced collaboration", "correct_value": "Price is right ('From $40/month') but the published Pro differentiator is now '1,000+ components across all platforms, up to 300 component storage'. Mobile variants are not called out as the Pro differentiator on the current page." },
+      { "field": "description_long", "wrong_quote": "Relume does not include Webflow or Figma subscriptions — users need active accounts on those platforms separately", "correct_value": "Still true for the Export path, but misleading now that Publish hosts the site on Relume's own infrastructure." }
+    ],
+    "sources": [
+      { "url": "https://www.relume.ai/pricing", "accessed": "2026-09-20" },
+      { "url": "https://www.relume.ai/", "accessed": "2026-09-20" },
+      { "url": "https://www.relume.io/pricing (301 -> relume.ai)", "accessed": "2026-09-20" },
+      { "url": "https://library.relume.io/ (301 -> relume.ai)", "accessed": "2026-09-20" }
+    ],
+    "confidence": "high",
+    "notes": "Vendor publishes no version number; products are branded 'Publish' (beta) and 'Export'. Prices are all quoted as 'From $X/month', so the exact final price depends on configuration — record them as published, with the 'From' qualifier. Card is materially out of date: wrong domain, wrong Starter price, and the core positioning claim ('not a standalone builder') is now false."
+  },
+  {
+    "slug": "replit",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": "Agent 4",
+    "version_published": true,
+    "pricing": [
+      { "tier": "Core", "amount": "$20 USD", "period": "month (billed monthly)", "notes": "Includes $20 in credits toward most powerful models. Free Mode: up to 30 hours of chat, up to 60 projects." },
+      { "tier": "Core (annual)", "amount": "$18 USD", "period": "month, billed annually", "notes": "Approximately 10% discount vs monthly." },
+      { "tier": "Pro", "amount": "$100 USD", "period": "month (billed monthly)", "notes": "Includes $100 in credits, 10 parallel agents, premium support, expanded Free Mode usage, up to 15 collaborators, up to 50 viewers, 28-day database rollback." },
+      { "tier": "Pro (annual)", "amount": "$90 USD", "period": "month, billed annually", "notes": "Approximately 10% discount vs monthly." },
+      { "tier": "Enterprise", "amount": "custom", "period": "n/a", "notes": "Enterprise-grade security, custom seat limits, SSO/SAML, advanced privacy controls, single-tenant environments, static outbound IPs." }
+    ],
+    "free_tier": "replit.com/pricing no longer lists a $0 plan. 'Free Mode' is an Agent mode INSIDE the paid plans, not a free account tier: Core includes 'up to 30 hours of chat on Free Mode' and 'up to 60 projects on Free Mode'; Pro gets higher Free Mode limits. Free Mode usage limits reset every 5 hours and it always uses intelligent model routing (no manual model choice). What a non-paying signed-up account gets is not published on the pricing page.",
+    "repositioning": "Agent 4 (announced 11 March 2026) reframes Replit from 'AI coding agent' to a general creative agent: 'turning your ideas into apps, designs, slides, and more'. Design variants on an infinite canvas are a headline feature. Free Mode (18 Aug 2026) plus Intelligent Model Routing (26 Aug 2026) changed the economics — model choice is now automatic in Free Mode, manual only in Power/Max Mode.",
+    "card_errors": [
+      { "field": "description_long", "wrong_quote": "Core at $25/month (or $20/month annual) which includes $25 in monthly credits", "correct_value": "Core is $20/month monthly, $18/month billed annually, and includes $20 in credits" },
+      { "field": "description_long", "wrong_quote": "Pro at $100/month (or $95/month annual) which includes $100 in credits", "correct_value": "Pro is $100/month monthly, $90/month billed annually (not $95), includes $100 in credits" },
+      { "field": "description_long", "wrong_quote": "Pricing as of February 2026 runs across three tiers: Free with limited agent usage", "correct_value": "The pricing page (read 2026-09-20) lists Core, Pro and Enterprise. There is no $0 plan shown; 'Free Mode' is a mode inside paid plans. The 'as of February 2026' stamp is stale." },
+      { "field": "description", "wrong_quote": "Security Agent reviews full codebases in under an hour.", "correct_value": "UNVERIFIED. Replit's own 17 Aug 2026 post on black-box pen tests references a 'Security Agent' for code reviews but publishes no scan duration. The 'under an hour' figure is not in any primary source found." },
+      { "field": "description_long", "wrong_quote": "completing a security review in under an hour for typical projects", "correct_value": "UNVERIFIED — see above. What IS published: three scan levels — Level 1 free (dependency + static code analysis), Level 2 white-box scanning, Level 3 white-box + black-box." },
+      { "field": "description", "wrong_quote": "Named Google Cloud 2026 AI Tooling Partner of the Year.", "correct_value": "UNVERIFIED. No such post on replit.com/blog or docs.replit.com/updates. Do not repeat without a primary source." },
+      { "field": "pros", "wrong_quote": "Google Cloud 2026 AI Tooling Partner of the Year — strong cloud infrastructure backing", "correct_value": "UNVERIFIED — same as above." },
+      { "field": "description_long", "wrong_quote": "Mobile development support now scaffolds React Native and Expo projects with a working mobile app structure, dependencies, and configuration out of the box.", "correct_value": "UNVERIFIED. Not found in the Replit blog or the docs changelog." },
+      { "field": "pros", "wrong_quote": "Scaffolds React Native and Expo mobile projects with full working structure", "correct_value": "UNVERIFIED — same as above." },
+      { "field": "cons", "wrong_quote": "Free tier has significant limits on agent usage and compute time", "correct_value": "There is no free tier published on the pricing page; rewrite around Free Mode inside paid plans." },
+      { "field": "cons", "wrong_quote": "Collaboration limited to 15 users on Pro", "correct_value": "Correct as published: Pro allows up to 15 collaborators plus up to 50 viewers. Viewers are not mentioned in the card." }
+    ],
+    "sources": [
+      { "url": "https://replit.com/pricing", "accessed": "2026-09-20" },
+      { "url": "https://replit.com/blog/", "accessed": "2026-09-20" },
+      { "url": "https://replit.com/blog/introducing-agent-4-built-for-creativity", "accessed": "2026-09-20" },
+      { "url": "https://replit.com/blog/black-box-pen-tests", "accessed": "2026-09-20" },
+      { "url": "https://replit.com/blog/replit-introduces-free-mode", "accessed": "2026-09-20" },
+      { "url": "https://docs.replit.com/updates/", "accessed": "2026-09-20" }
+    ],
+    "confidence": "high",
+    "notes": "Agent 4 is still current as of 2026-09-20 — no Agent 5. Newer facts the card is missing entirely: Free Mode (18 Aug 2026), Intelligent Model Routing (26 Aug 2026), Databricks integration GA with native Lakebase support (10 Sep 2026), custom API connectors for Agent in beta for Pro/Enterprise + expanded audit logs (18 Sep 2026). Three of the card's most eye-catching claims (Google Cloud award, 'under an hour' security review, React Native/Expo scaffolding) could not be confirmed from any Replit-owned source and should be removed or rewritten."
+  },
+  {
+    "slug": "retool-ai",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "pricing": [
+      { "tier": "Free", "amount": "$0", "period": "n/a", "notes": "Up to 5 users. Unlimited web & mobile apps, 500 workflow runs/month, 5GB database capacity, 5GB file storage, 250 AI credits/month." },
+      { "tier": "Team — Builder seat", "amount": "$10 USD (annual) / $12 USD (monthly)", "period": "per builder per month", "notes": "Annual billing $10, monthly billing $12." },
+      { "tier": "Team — Internal user seat", "amount": "$5 USD (annual) / $7 USD (monthly)", "period": "per internal user per month", "notes": "Cheaper non-builder seat, not reflected in our card at all." },
+      { "tier": "Business — Builder seat", "amount": "$50 USD (annual) / $65 USD (monthly)", "period": "per builder per month", "notes": "Annual billing $50, monthly billing $65." },
+      { "tier": "Business — Internal user seat", "amount": "$15 USD (annual) / $18 USD (monthly)", "period": "per internal user per month", "notes": "" },
+      { "tier": "Enterprise", "amount": "custom", "period": "n/a", "notes": "Contact sales." },
+      { "tier": "Retool Agents (add-on)", "amount": "hourly, varies by model capability", "period": "per agent hour", "notes": "'Agents are billed separately' from AI credits. Free allocation of up to 20 agent hours/month across all tiers." }
+    ],
+    "free_tier": "$0 for up to 5 users: unlimited web & mobile apps, 500 workflow runs/month, 5GB database capacity, 5GB file storage, 250 AI credits/month, plus up to 20 agent hours/month. Self-hosted Free has the same structure as cloud Free.",
+    "repositioning": "Partial. Retool now leads with 'Retool Agents' as a first-class product — autonomous agents for customer support, data analysis and process automation, billed by the hour separately from AI credits — alongside AI-powered apps, workflow orchestration with audit logging, single-step RAG, and natural-language data interfaces. 'Retool AI' survives as a meta-description phrase rather than a distinct product name; the platform is organised as Agents / Workflows / Apps.",
+    "card_errors": [
+      { "field": "description", "wrong_quote": "Free 5 users; Team $10/user/mo; Business $50/user/mo", "correct_value": "$10 and $50 are the ANNUAL-billing Builder seat prices. Monthly billing is $12 and $65. There are also cheaper Internal user seats: Team $5/mo annual ($7 monthly), Business $15/mo annual ($18 monthly)." },
+      { "field": "description_long", "wrong_quote": "Team at $10 per user per month adds staging environments, custom domains, and expanded AI component usage.", "correct_value": "Price applies to Builder seats on annual billing only ($12 monthly). Feature list unverified against the current pricing page." },
+      { "field": "description_long", "wrong_quote": "Business at $50 per user per month adds SSO, custom branding, audit logs, and higher AI consumption limits.", "correct_value": "$50/builder/month on annual billing; $65/builder/month on monthly billing." },
+      { "field": "description_long", "wrong_quote": "Free plan supports up to 5 users with full app building capabilities.", "correct_value": "Free is metered, not unlimited: 5 users, unlimited web & mobile apps, but 500 workflow runs/month, 5GB database, 5GB file storage, 250 AI credits/month, up to 20 agent hours/month." },
+      { "field": "cons", "wrong_quote": "Business plan at $50/user/mo expensive for larger teams", "correct_value": "Understated — $65/builder/month on monthly billing. Also incomplete: internal (non-builder) users are cheaper at $15-$18/month, which materially changes the cost for larger teams." },
+      { "field": "description_long", "wrong_quote": "over 100 pre-built integrations", "correct_value": "UNVERIFIED against the current retool.com pages read for this audit. The figure may be understated; do not restate without checking retool.com/integrations." },
+      { "field": "users", "wrong_quote": "", "correct_value": "Empty in our card. Retool publishes no user count that was found; leaving it empty is correct." }
+    ],
+    "sources": [
+      { "url": "https://retool.com/pricing", "accessed": "2026-09-20" },
+      { "url": "https://retool.com/products/ai", "accessed": "2026-09-20" }
+    ],
+    "confidence": "high",
+    "notes": "No version number is published — correct answer is null. The biggest structural gap in our card is the builder-seat vs internal-user-seat split, which Retool's pricing page treats as the primary axis and our card does not mention at all. Agent-hour billing (20 free hours/month, hourly rates varying by model capability) is also newer and more specific than the card's vague 'consumption-based'."
+  },
+  {
+    "slug": "semantic-scholar",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "pricing": [
+      { "tier": "Web interface", "amount": "$0", "period": "n/a", "notes": "Free. No premium or paid tier published." },
+      { "tier": "Academic Graph API (S2AG)", "amount": "$0", "period": "n/a", "notes": "Free. Most endpoints public without authentication, rate-limited to 1000 requests/second SHARED among all unauthenticated users. Free API keys available; introductory authenticated rate limit is 1 request/second on all endpoints, with higher limits on request." }
+    ],
+    "free_tier": "Everything is free — web interface, all AI features (TLDR summaries, Semantic Reader, skimming highlights, definitions on demand), and the S2AG API. Funded by AI2 (Allen Institute for AI), a non-profit founded in 2014 by Paul Allen. No paid tiers exist.",
+    "repositioning": null,
+    "card_errors": [
+      { "field": "description", "wrong_quote": "214M+ papers", "correct_value": "The homepage states '238,166,280 papers from all fields of science' (read 2026-09-20). CONFLICT: the /about page says 'indexes over 200 million academic papers'. The homepage counter is the more specific and more current figure; the about page is a rounded floor, not a contradiction, but the two should be reconciled. Safest wording: '235M+' or cite the live homepage counter." },
+      { "field": "best_for", "wrong_quote": "AI-powered paper summaries across 214M+ papers", "correct_value": "Same — 238,166,280 per the homepage on 2026-09-20." },
+      { "field": "description_long", "wrong_quote": "It indexes over 214 million academic papers across all disciplines", "correct_value": "Same." },
+      { "field": "description_long", "wrong_quote": "natural language paper search across 214M+ papers", "correct_value": "Same." },
+      { "field": "pros", "wrong_quote": "214M+ papers across all academic disciplines", "correct_value": "Same." },
+      { "field": "description_long", "wrong_quote": "The free Research API enables researchers and developers to build applications", "correct_value": "Free, but the card omits the rate limits, which matter for anyone planning to build on it: 1000 req/s shared across ALL unauthenticated users, 1 req/s introductory limit with a free API key." },
+      { "field": "description_long", "wrong_quote": "citation velocity tracking (papers gaining rapid citations), and the concept graph", "correct_value": "UNVERIFIED on current vendor pages. Current vendor-listed features are: Semantic Reader (beta), TLDR summaries, Citation Cards, personalized in-line citations, skimming highlights (Goal/Method/Result, available on most English-language arXiv CS papers), definitions on demand, Hypothesis annotation integration, Scholar's Hub, S2AG API." }
+    ],
+    "sources": [
+      { "url": "https://www.semanticscholar.org/", "accessed": "2026-09-20" },
+      { "url": "https://www.semanticscholar.org/about", "accessed": "2026-09-20" },
+      { "url": "https://www.semanticscholar.org/product/api", "accessed": "2026-09-20" },
+      { "url": "https://www.semanticscholar.org/product/semantic-reader", "accessed": "2026-09-20" }
+    ],
+    "confidence": "high",
+    "notes": "The healthiest card in this batch. Alive, still free, still run by AI2, no shutdown or paywall notices anywhere. TLDR summaries confirmed still in production. The only real error is the paper count, which is understated by roughly 24 million. Note the internal vendor conflict between the homepage counter (238,166,280) and the /about page ('over 200 million') — reported rather than resolved. Since the counter is live and rises continuously, prefer a rounded '235M+' in the card over a precise figure that will go stale within weeks."
+  },
+  {
+    "slug": "slidesgo",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "pricing": [
+      { "tier": "Free", "amount": "$0", "period": "n/a", "notes": "3 AI-generated presentations/month, 3 template downloads/month, no access to the full library." },
+      { "tier": "Premium (monthly)", "amount": "ILS 16.99 (₪16.99)", "period": "month", "notes": "CURRENCY CAVEAT: the pricing page is geo-localized and was served to this audit in Israeli shekels. No USD figure could be retrieved. Do not convert — either re-read the page from a US IP or omit the price." },
+      { "tier": "Premium (annual)", "amount": "ILS 101.99 (₪101.99) billed yearly, shown as ₪8.50/month", "period": "year", "notes": "Page states 50% savings vs monthly. Same currency caveat." },
+      { "tier": "Teams", "amount": "custom / volume discount", "period": "n/a", "notes": "Discounts for groups of 3+ users, supports up to 1,000 users, custom pricing on request." }
+    ],
+    "free_tier": "3 AI-generated presentations per month and 3 template downloads per month, with no access to the full premium library. Premium adds 'unlimited' AI generations and downloads, capped at 150/month as an anti-abuse limit.",
+    "repositioning": null,
+    "card_errors": [
+      { "field": "description", "wrong_quote": "Free 12 templates/mo", "correct_value": "3 template downloads/month plus 3 AI-generated presentations/month" },
+      { "field": "description_long", "wrong_quote": "Free plan provides access to 12 template downloads per month and basic AI generation.", "correct_value": "3 template downloads/month and 3 AI presentations/month" },
+      { "field": "cons", "wrong_quote": "Free tier limited to 12 downloads/month", "correct_value": "3 downloads/month" },
+      { "field": "description", "wrong_quote": "15,000+ templates for Google Slides and PowerPoint", "correct_value": "30,000+ templates in the full library; 15,000+ of those are premium-exclusive. The card appears to have mistaken the premium-only subset for the whole library." },
+      { "field": "description_long", "wrong_quote": "providing over 15,000 professionally designed templates", "correct_value": "30,000+ templates" },
+      { "field": "pros", "wrong_quote": "15,000+ templates covering virtually every presentation use case", "correct_value": "30,000+ templates" },
+      { "field": "description", "wrong_quote": "Premium $3/mo", "correct_value": "UNVERIFIED / likely stale. The pricing page served ₪16.99/month (monthly) and ₪101.99/year (₪8.50/month equivalent). No USD price was obtainable. The '$3/mo' figure cannot be confirmed from a primary source in this audit." },
+      { "field": "description_long", "wrong_quote": "Premium at $3 per month (annual) provides unlimited downloads", "correct_value": "Same — unverified in USD. Also note 'unlimited' is capped at 150 AI generations and 150 downloads per month." },
+      { "field": "pros", "wrong_quote": "$3/month Premium is the most affordable paid AI presentation tool available", "correct_value": "Price unverified, and the superlative is not a vendor claim. Remove or requalify." },
+      { "field": "users", "wrong_quote": "20M+", "correct_value": "UNVERIFIED from any Slidesgo-owned page read in this audit." },
+      { "field": "description_long", "wrong_quote": "Canva integration for editing", "correct_value": "UNVERIFIED on the current pricing and AI Presentation Maker pages." },
+      { "field": "description_long", "wrong_quote": "automatic customization to brand colors, animated templates", "correct_value": "UNVERIFIED on the pages read. Currently published Premium features: unlimited AI generations and downloads (150/month cap), full 30,000+ library, Slidesclass lessons, early access to new AI features, team management, ad-free, no attribution required." }
+    ],
+    "sources": [
+      { "url": "https://slidesgo.com/pricing", "accessed": "2026-09-20" },
+      { "url": "https://slidesgo.com/premium", "accessed": "2026-09-20" },
+      { "url": "https://slidesgo.com/ai-presentations", "accessed": "2026-09-20" }
+    ],
+    "confidence": "medium",
+    "notes": "Alive and unchanged in positioning. Confidence is medium only because Slidesgo geo-localizes prices and every fetch in this audit was served Israeli shekels, so the USD figures in our card could not be checked against the source. The template-count and free-tier errors are certain and independent of currency. Slidesgo publishes no version number and does not disclose which model powers AI Presentation Maker. A 'custom image upload' feature is described on the vendor page as in active development, not yet shipped."
+  },
+  {
+    "slug": "synthesis",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "pricing": [
+      { "tier": "Individual Monthly (1 child)", "amount": "$45 USD regular, $35 USD sale", "period": "month", "notes": "7-day free trial." },
+      { "tier": "Individual Annual (1 child)", "amount": "$348 USD/year regular ($29/mo), $300 USD/year sale ($25/mo)", "period": "year", "notes": "Marked 'Most Popular'. 7-day free trial." },
+      { "tier": "Individual Lifetime (1 child)", "amount": "$999 USD", "period": "one-time", "notes": "" },
+      { "tier": "Family Monthly (up to 7 kids)", "amount": "$70 USD regular, $29 USD sale", "period": "month", "notes": "CONFLICT: the synthesis.com homepage showed the same sale price of $29/mo but a regular price of $44/mo, not $70/mo." },
+      { "tier": "Family Annual (up to 7 kids)", "amount": "$400 USD/year regular ($33.33/mo), $119 USD/year sale ($9.92/mo)", "period": "year", "notes": "Marked 'Most Popular'. CONFLICT: homepage showed the regular annual rate as $16.71/mo, the pricing page as $33.33/mo ($400/yr)." },
+      { "tier": "Family Lifetime", "amount": "$1,499 USD", "period": "one-time", "notes": "CONFLICT: pricing page states up to 10 children for Lifetime; the homepage states up to 7 for Family plans." },
+      { "tier": "Synthesis Teams (ages 8-14)", "amount": "not retrieved", "period": "n/a", "notes": "Second product, priced separately; pricing not captured in this audit." }
+    ],
+    "free_tier": "No free tier. 7-day free trial on Individual and Family subscription plans (not on Lifetime). Synthesis also offers free adaptive multiplication flashcards outside any subscription.",
+    "repositioning": "Partial. Synthesis is no longer a single product. It now ships Synthesis Tutor (AI math tutor, ages 5-11, K-5) AND Synthesis Teams (problem-solving, leadership and critical thinking through game-based learning, ages 8-14). It has also added Lifetime pricing ($999 / $1,499) and monthly billing, neither of which existed when our card was written.",
+    "card_errors": [
+      { "field": "description", "wrong_quote": "~$99–119/yr, covers up to 7 children", "correct_value": "Family Annual is $119/year on the current sale, $400/year at the published regular price. The $99 figure does not appear on any current vendor page. Individual Annual is $300/year on sale, $348/year regular." },
+      { "field": "description_long", "wrong_quote": "Synthesis costs approximately $99-119 per year (pricing has varied slightly). A single subscription covers up to 7 children", "correct_value": "There are now six published SKUs across two plan families and three billing modes. Only the Family plans cover up to 7 children; Individual plans cover 1 child." },
+      { "field": "cons", "wrong_quote": "Annual subscription required — no monthly payment option", "correct_value": "FLATLY WRONG. Monthly plans exist (Individual $45/mo regular, Family $70/mo regular) as do one-time Lifetime purchases ($999 / $1,499)." },
+      { "field": "cons", "wrong_quote": "K-5 only (ages 5-11) — no coverage beyond elementary school", "correct_value": "Synthesis Teams covers ages 8-14. Synthesis Tutor alone is ages 5-11." },
+      { "field": "description_long", "wrong_quote": "It focuses exclusively on K-5 mathematics (ages 5-11)", "correct_value": "Synthesis Tutor does; the company does not, since Synthesis Teams (ages 8-14) exists." },
+      { "field": "pros", "wrong_quote": "Developed for SpaceX/Tesla employees' children — exceptionally high starting bar", "correct_value": "Vendor's own account: Josh Dahn was asked by Elon Musk in 2014 to launch an experimental school at SpaceX; it was initially available only to SpaceX families before expanding globally. Tesla is NOT part of the vendor's stated origin story." },
+      { "field": "description_long", "wrong_quote": "originally created for children of SpaceX and Tesla employees", "correct_value": "Same — SpaceX only per the vendor's /about page." },
+      { "field": "description_long", "wrong_quote": "A free trial is available.", "correct_value": "Correct but vague — it is a 7-day free trial, and it does not apply to Lifetime purchases." },
+      { "field": "pros", "wrong_quote": "One subscription covers up to 7 children — excellent family value", "correct_value": "True only of the Family plans, not the Individual plans. The pricing page also lists Family Lifetime as up to 10 children, conflicting with the homepage's 7." },
+      { "field": "description_long", "wrong_quote": "multiplayer challenges where children can compete or collaborate with peers", "correct_value": "UNVERIFIED for Tutor. Game-based team play is the description of Synthesis Teams, a separate product." }
+    ],
+    "sources": [
+      { "url": "https://www.synthesis.com/", "accessed": "2026-09-20" },
+      { "url": "https://www.synthesis.com/pricing", "accessed": "2026-09-20" },
+      { "url": "https://www.synthesis.com/about", "accessed": "2026-09-20" }
+    ],
+    "confidence": "medium",
+    "notes": "Alive, no shutdown notices. Confidence is medium because the vendor's own homepage and pricing page disagree on the REGULAR (non-sale) Family prices ($44/mo vs $70/mo monthly; $16.71/mo vs $33.33/mo annual) and on the Lifetime child count (7 vs 10) — reported as a conflict rather than resolved. A banner reading 'HOLIDAY SALE: GET 20% OFF NOW' was live on 2026-09-20, which is out of season and suggests the 'sale' price is effectively the standing price and the 'regular' price is anchor pricing. If the card quotes a number, quote the sale price with the date read, or quote the range. No version number is published."
+  },
+  {
+    "slug": "tickeron",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "pricing": [
+      { "tier": "Daily Buy/Sell Signals", "amount": "$200 USD/year regular, $60 USD/year on sale ($5/month)", "period": "year", "notes": "70% off sale. Includes daily signals, ticker analytical pages, articles, videos, portfolios. Source: Tickeron's own Labor Day sale announcement on tickeron.com." },
+      { "tier": "AI Robots", "amount": "$1,080 USD/year regular, $540 USD/year on sale ($45/month)", "period": "year", "notes": "50% off sale. Includes Signal Agents, Virtual Agents, Brokerage Agents, and Machine Learning models at 60-minute intervals." },
+      { "tier": "AI Robots Unlimited", "amount": "$3,000 USD/year regular, $1,500 USD/year on sale ($125/month)", "period": "year", "notes": "50% off sale. Adds enhanced Machine Learning at 60-minute, 15-minute and 5-minute intervals." },
+      { "tier": "Free trial", "amount": "$0", "period": "14 days", "notes": "'Your card will not be charged until the end of the trial period.'" }
+    ],
+    "free_tier": "14-day free trial across the platform; card required, not charged until the trial ends. Tickeron's own landing pages also say 'Join Us Today for Free'. A permanently free member tier is claimed by third-party reviews but could NOT be confirmed on any Tickeron-owned page read in this audit.",
+    "repositioning": "Yes. Tickeron's published pricing is now organized around PRODUCTS sold annually (Daily Buy/Sell Signals, AI Robots, AI Robots Unlimited) rather than the persona-based monthly tiers our card lists. Trader/Investor/Expert survive as navigation personas, not as price tiers. The AI Robots line has also expanded into execution: Signal Agents, Virtual Agents and Brokerage Agents with broker integration, plus ML models at configurable 60/15/5-minute intervals. Tickeron additionally publishes a credit scheme — subscribing to and following one AI Robot yields a monthly $60 credit toward other products, two or more yields $120.",
+    "card_errors": [
+      { "field": "description", "wrong_quote": "Investor $60/mo; Swing $80/mo; Day $90/mo; Expert $250/mo. 50% off annual.", "correct_value": "Not found on any current Tickeron-owned page. Tickeron now publishes Daily Buy/Sell Signals $200/yr (sale $60/yr, $5/mo), AI Robots $1,080/yr (sale $540/yr, $45/mo), AI Robots Unlimited $3,000/yr (sale $1,500/yr, $125/mo)." },
+      { "field": "description_long", "wrong_quote": "Investor at $60 per month targets long-term investors. Swing at $80 per month targets swing traders. Day at $90 per month targets day traders with real-time signals. Expert at $250 per month provides all features plus expert-level tools.", "correct_value": "Same — this tier structure is not published on tickeron.com today. Note the coincidence that '$60' now refers to a YEARLY signals price, not a monthly investor tier; the card's figure may be a stale reading of an old page." },
+      { "field": "description_long", "wrong_quote": "Annual billing provides 50% discount across all plans.", "correct_value": "Discounts are promotional and vary by product — the Labor Day sale was 70% off Signals and 50% off both AI Robots tiers. Tickeron also advertised a New Year sale of 'up to 75% off'. There is no standing 50% annual discount; the products are priced annually to begin with." },
+      { "field": "badge", "wrong_quote": "paid", "correct_value": "A 14-day free trial is published; whether a permanently free member tier exists could not be confirmed from a Tickeron-owned page. 'paid' is defensible but the trial should be mentioned in the description." },
+      { "field": "description_long", "wrong_quote": "Pricing: Plans vary by trader type.", "correct_value": "Pricing now varies by PRODUCT (Signals vs AI Robots vs AI Robots Unlimited), not by trader type." },
+      { "field": "description_long", "wrong_quote": "Key capabilities include AI pattern recognition and trading signals, AI Robots for automated signal generation", "correct_value": "Understated: AI Robots now include Brokerage Agents with broker integration for automated execution, plus Signal Agents and Virtual Agents, with ML intervals of 60/15/5 minutes on the Unlimited tier." }
+    ],
+    "sources": [
+      { "url": "https://tickeron.com/", "accessed": "2026-09-20" },
+      { "url": "https://tickeron.com/trading-investing-101/tickeron-launches-labor-day-sale-with-up-to-50-off-on-aipowered-trading-tools/", "accessed": "2026-09-20" },
+      { "url": "https://lp.tickeron.com/ai-platform", "accessed": "2026-09-20" },
+      { "url": "https://tickeron.com/pricing/ (HTTP 404)", "accessed": "2026-09-20" },
+      { "url": "https://tickeron.com/subscription/ (HTTP 404)", "accessed": "2026-09-20" },
+      { "url": "https://tickeron.com/app/generalinfo/pricing (JS-rendered, no content served)", "accessed": "2026-09-20" }
+    ],
+    "confidence": "low",
+    "notes": "Product is alive and actively publishing. Confidence is LOW on pricing specifically: Tickeron's canonical membership page (tickeron.com/app/generalinfo/pricing) is client-rendered and served no readable content, /pricing/ and /subscription/ both 404, and browser automation to tickeron.com was blocked. The figures above come from Tickeron's own promotional article on tickeron.com — vendor-owned, so acceptable as primary, but they are SALE prices tied to a Labor Day promotion and may not reflect the standing rate. Recommendation: do not publish exact Tickeron prices in the card until someone can read the logged-in membership page; describe the product structure (Signals / AI Robots / AI Robots Unlimited, annual billing, 14-day trial) instead. What IS certain is that the card's four monthly persona tiers are no longer how Tickeron sells. Separately: this is a financial product and the card's existing hedging about probabilistic signals should be kept."
+  }
+]
