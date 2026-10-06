@@ -1,0 +1,236 @@
+[
+  {
+    "slug": "adcreative-ai",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      { "tier": "Starter", "amount": "$39", "period": "month", "notes": "10 Credits / Month, 1 brand, 1 user" },
+      { "tier": "Professional", "amount": "$249", "period": "month", "notes": "50 Credits / Month, up to 10 brands, 10 users" },
+      { "tier": "Ultimate", "amount": "$999", "period": "month", "notes": "100 Credits / Month, up to 25 brands, 20 users" },
+      { "tier": "Enterprise", "amount": "custom", "period": "custom", "notes": "Tailored credits, dedicated account management" },
+      { "tier": "Discounts", "amount": "25% off quarterly, 50% off yearly", "period": "quarterly / yearly", "notes": "Published on vendor site as billing-cycle discounts, not separate tiers" }
+    ],
+    "free_tier": "No permanently free plan. 7-day free trial, 'Cancel anytime'.",
+    "repositioning": "Acquired by Appier (Taiwan/Japan-listed AI marketing company), announced 2025-02-12 for USD 38.7M total (USD 27.3M base), expected close 2025-03-04. Product still runs under the AdCreative.ai brand and domain; vendor site now shows the Appier logo and describes Appier as having 'invested in and partnered with' AdCreative.ai. Appier is launching AdCreative.ai into APAC markets (Thailand, Vietnam). Product scope has widened from static ad creatives to video ads, product/fashion photoshoots, competitor analysis and a compliance checker.",
+    "card_errors": [
+      { "field": "description_long / pricing", "wrong_quote": "Ultimate at $599 per month provides priority support and enterprise features", "correct_value": "Ultimate is $999/month (100 credits/month, up to 25 brands, 20 users)" },
+      { "field": "description_long / pricing", "wrong_quote": "Starter at $39 per month provides 10 brand users and 500 downloads per month", "correct_value": "Starter $39/month = 10 credits/month, 1 brand, 1 user. AdCreative.ai no longer publishes a 'downloads per month' metric; the unit is credits." },
+      { "field": "description_long / pricing", "wrong_quote": "Professional at $249 per month provides unlimited downloads and advanced analytics", "correct_value": "Professional $249/month = 50 credits/month, 10 brands, 10 users. 'Unlimited Generations' is scoped within the monthly credit allocation, not unlimited downloads." },
+      { "field": "cons", "wrong_quote": "Starter plan 500 downloads/month limiting for agencies managing multiple clients", "correct_value": "Starter is 10 credits/month, 1 brand, 1 user — far more limiting than stated, and the 500-downloads figure does not exist." },
+      { "field": "cons / description_long", "wrong_quote": "Acquisition by Appier may lead to pricing or product direction changes", "correct_value": "Stale framing — the acquisition closed in March 2025 and pricing HAS since changed (Ultimate $599 -> $999, download quotas replaced by credits)." },
+      { "field": "description / description_long", "wrong_quote": "Acquired by Appier (Feb 2025)", "correct_value": "Correct as to date announced (2025-02-12), but note Appier itself is Taiwanese (Taipei HQ, listed in Tokyo) — the card calls it 'a Japanese AI marketing company'. AdCreative.ai is Paris-based." },
+      { "field": "description / description_long / pros", "wrong_quote": "2M+ users", "correct_value": "Unverified — no user count published on adcreative.ai or in Appier's press release/blog. Should be treated as unverified rather than stated as fact." },
+      { "field": "badge", "wrong_quote": "freemium", "correct_value": "paid — there is no free plan, only a 7-day trial." }
+    ],
+    "sources": [
+      { "url": "https://www.adcreative.ai/", "accessed": "2026-09-29" },
+      { "url": "https://www.adcreative.ai/#new-pricing-section", "accessed": "2026-09-29" },
+      { "url": "https://www.appier.com/en/press-media/appier-acquires-adcreative.ai-in-strategic-move", "accessed": "2026-09-29" },
+      { "url": "https://www.appier.com/en/blog/integrates-adcreative.ai-empowering-marketers-for-the-new-era-of-ai-marketing", "accessed": "2026-09-29" }
+    ],
+    "confidence": "high",
+    "notes": "adcreative.ai/pricing returns 404 — pricing now lives inline on the homepage under the #new-pricing-section anchor. Domain unchanged (adcreative.ai / www.adcreative.ai). No product version number is published. The '90% accuracy in performance prediction' claim on the vendor site is a vendor claim, not independently verified."
+  },
+  {
+    "slug": "cline",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": "4.1.21",
+    "version_published": true,
+    "domain_changed": false,
+    "pricing": [
+      { "tier": "Open Source", "amount": "$0", "period": "n/a", "notes": "VS Code extension, CLI, client-side architecture, MCP Marketplace, multi-root workspaces, community support. Users pay only for AI inference on a usage basis — bring your own API key or use Cline's provider." },
+      { "tier": "Enterprise", "amount": "custom", "period": "custom", "notes": "Contact sales. Adds team collaboration, JetBrains support, SSO, SLA, dedicated support. No public price." }
+    ],
+    "free_tier": "The extension itself is free and open source in full. No per-seat subscription between free and Enterprise. Inference is paid separately (BYOK or Cline's own provider); local models via Ollama cost nothing.",
+    "repositioning": "Cline has expanded well beyond a VS Code extension: there is now a CLI (npm i -g cline), an SDK (@cline/sdk), a native desktop app for macOS and Windows, and a JetBrains plugin. It also runs sub-agents and ships a model catalog of 6,400+ models across 200+ providers. The card still describes it purely as an editor extension.",
+    "card_errors": [
+      { "field": "description_long", "wrong_quote": "Cline reached v3.81 in May 2026 and receives daily updates.", "correct_value": "Current extension version is 4.1.21 (VS Code Marketplace / GitHub CHANGELOG, read 2026-09-29). The 3.x line is superseded." },
+      { "field": "description_long / pros", "wrong_quote": "With 59,000+ GitHub stars and 5 million installs", "correct_value": "69.5k GitHub stars; 5,479,213 VS Code Marketplace installs (2026-09-29)." },
+      { "field": "pros", "wrong_quote": "Most widely installed open-source coding agent — 59K stars and 5M installs", "correct_value": "69.5K stars, 5.48M installs" },
+      { "field": "description_long", "wrong_quote": "extension for VS Code, JetBrains, Cursor, Windsurf, Zed, and Neovim", "correct_value": "The README lists VS Code extension, JetBrains plugin, CLI and a native desktop app (macOS/Windows). Cursor/Windsurf/Zed/Neovim are not listed by the vendor as supported surfaces. Also note a conflict: cline.bot/pricing lists 'JetBrains support' as an Enterprise feature while the GitHub README presents the JetBrains plugin without that qualification." },
+      { "field": "description_long / cons", "wrong_quote": "You pay only for the LLM API calls you make to your chosen provider.", "correct_value": "Incomplete — cline.bot/pricing now also offers Cline's own inference provider as an alternative to BYOK. Missing: the CLI, SDK and desktop app, and the paid Enterprise tier." },
+      { "field": "description_long", "wrong_quote": "Unlike forked editors like Cursor or Windsurf, Cline runs inside your existing editor without requiring a migration.", "correct_value": "Still broadly true, but now incomplete — Cline also ships its own standalone desktop app." }
+    ],
+    "sources": [
+      { "url": "https://cline.bot/pricing", "accessed": "2026-09-29" },
+      { "url": "https://github.com/cline/cline", "accessed": "2026-09-29" },
+      { "url": "https://raw.githubusercontent.com/cline/cline/main/CHANGELOG.md", "accessed": "2026-09-29" },
+      { "url": "https://github.com/cline/cline/releases", "accessed": "2026-09-29" },
+      { "url": "https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev", "accessed": "2026-09-29" }
+    ],
+    "confidence": "high",
+    "notes": "Domain unchanged (cline.bot). Extension publisher is still saoudrizwan / saoudrizwan.claude-dev. GitHub Releases separately tags an SDK line (SDK v0.0.87, 2026-09-29) — do not confuse the SDK version with the extension version 4.1.21. The CHANGELOG does not carry dates per entry."
+  },
+  {
+    "slug": "fiscal-ai",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": true,
+    "pricing": [
+      { "tier": "Pro (Terminal)", "amount": "$49", "period": "month", "notes": "Vendor help-center wording: 'A Pro plan at $49/month or $39/month billed yearly'" },
+      { "tier": "Pro (Terminal), billed yearly", "amount": "$39", "period": "month, billed yearly", "notes": "" },
+      { "tier": "Max (Terminal)", "amount": "$99", "period": "month", "notes": "'a Max plan at $99/month or $79/month billed yearly'. Financial data exports are Max-only, for U.S., Canada, ADRs, UK and EU." },
+      { "tier": "Max (Terminal), billed yearly", "amount": "$79", "period": "month, billed yearly", "notes": "" },
+      { "tier": "API / MCP", "amount": "not published", "period": "annual only", "notes": "'API/MCP access is priced separately and is available on fiscal.ai/pricing'. Self-serve API/MCP subscriptions are annual only and non-refundable. No figure is published on the public pricing page." }
+    ],
+    "free_tier": "No free plan. Vendor FAQ: 'New users can access a 7-day trial after adding a credit card during signup. The trial converts to a paid subscription unless cancelled.'",
+    "repositioning": "Major. Fiscal.ai is no longer only a retail research terminal — /pricing now asks you to choose between three products: Terminal (research platform), MCP (financial data piped into AI tools such as Claude) and API (data feed for institutions and investing platforms). The site foregrounds institutional/infrastructure customers with testimonials from Perplexity, Kalshi and Aiera. Brokerage-account connections have also been added. Legal entity is Stratosphere Technology Inc.",
+    "card_errors": [
+      { "field": "description / description_long / pros", "wrong_quote": "Plus $24/mo; Pro $64/mo", "correct_value": "Pro $49/month or $39/month billed yearly; Max $99/month or $79/month billed yearly. There is no 'Plus' tier and no $64 tier." },
+      { "field": "description_long", "wrong_quote": "Free plan provides limited queries and basic data access.", "correct_value": "There is no free plan. Only a 7-day credit-card-required trial that auto-converts to paid." },
+      { "field": "description_long", "wrong_quote": "Plus at $24 per month provides expanded data access, unlimited AI queries, and full transcript search.", "correct_value": "Tier does not exist. Current entry tier is Pro at $49/month ($39/month billed yearly)." },
+      { "field": "description_long", "wrong_quote": "Pro at $64 per month provides advanced features, institutional-grade data, and higher export limits.", "correct_value": "Top self-serve terminal tier is Max at $99/month ($79/month billed yearly); financial data exports are a Max feature." },
+      { "field": "pros", "wrong_quote": "Plus at $24/mo is significantly cheaper than Bloomberg or FactSet alternatives", "correct_value": "Entry price is $49/month (or $39/month billed yearly)." },
+      { "field": "cons", "wrong_quote": "Pro at $64/mo required for advanced institutional-grade features", "correct_value": "Max at $99/month ($79/month yearly) is the advanced terminal tier; API/MCP is a separate annual, non-refundable subscription." },
+      { "field": "badge", "wrong_quote": "freemium", "correct_value": "paid — credit-card 7-day trial only, no free tier." },
+      { "field": "description_long", "wrong_quote": "data on 100K+ public companies", "correct_value": "Still accurate but should be stated as vendor does: '100,000+ public companies, ETFs, and funds globally. Segments & KPIs coverage is available for 2,500+ companies.'" },
+      { "field": "description_long", "wrong_quote": "Fiscal.ai covers public companies only — no private company data or alternative data sources.", "correct_value": "Coverage now explicitly includes ETFs and funds, and the product offers brokerage-account connections. The blanket 'public companies only' framing is stale." },
+      { "field": "description_long / best_for", "wrong_quote": "Best suited for retail investors, finance students, and professionals", "correct_value": "Incomplete — Fiscal.ai now markets an MCP connector and a Data Feed API to platforms and institutions (Perplexity, Kalshi, Aiera cited as customers)." },
+      { "field": "users", "wrong_quote": "350K+", "correct_value": "Unverified — no user count published by the vendor." }
+    ],
+    "sources": [
+      { "url": "https://fiscal.ai/pricing/", "accessed": "2026-09-29" },
+      { "url": "https://fiscal.ai/help/", "accessed": "2026-09-29" }
+    ],
+    "confidence": "high",
+    "notes": "Domain change is confirmed in the direction the card already states: finchat.io now serves the same Vercel-hosted infrastructure as fiscal.ai. fiscal.ai is behind a Vercel bot checkpoint and returns 403/429 to WebFetch and curl; figures above were read in a real browser session on 2026-09-29. Prices come from the vendor's own help-center FAQ 'How much does Fiscal.ai cost?' — the public /pricing page itself no longer lists any prices, it only offers a Terminal / MCP / API chooser with a '7 day free trial included upon signup'. No product version number is published."
+  },
+  {
+    "slug": "flutterflow",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      { "tier": "Free", "amount": "$0", "period": "month", "notes": "Visual Development Environment, 1,000+ prebuilt templates, build mobile/web/desktop apps. Up to 2 projects, 10 Lite credits. No code export, no GitHub integration." },
+      { "tier": "Basic", "amount": "$39", "period": "month", "notes": "Code Download and APK Download, unlimited projects, 100 Lite credits/month. No GitHub integration." },
+      { "tier": "Growth", "amount": "$80", "period": "month (1st seat)", "notes": "2nd seat $55/month. Adds GitHub Integration and real-time collaboration for 2 users, 200 Lite credits per seat/month." },
+      { "tier": "Business", "amount": "$150", "period": "month (1st seat)", "notes": "Seats 2-5 at $85/month each. Team collaboration for 5 users, 400 Lite credits per seat/month, extra branching and testing." },
+      { "tier": "Annual billing", "amount": "approx. 25% discount", "period": "year", "notes": "Discount stated on the pricing page; exact annual figures not captured." }
+    ],
+    "free_tier": "Free $0/month: full visual builder, 1,000+ templates, mobile/web/desktop, but capped at 2 projects and 10 Lite credits, with no code export and no GitHub integration.",
+    "repositioning": "FlutterFlow has moved hard into AI agents during 2026: GenUI (an AI agent composing components into interactive UI at runtime) shipped 2026-05-18; FlutterFlow MCP for building and editing FlutterFlow apps from AI coding agents shipped 2026-05-07; and on 2026-07-27 FlutterFlow added the ability to run Claude Code or Codex directly inside FlutterFlow Desktop (macOS), selecting the agent, model and reasoning level per message. An AI credit system ('Lite credits') now gates AI usage per tier. None of this is in the card.",
+    "card_errors": [
+      { "field": "description_long", "wrong_quote": "Free plan provides full building capability with FlutterFlow subdomain deployment (no code export).", "correct_value": "Free is now capped at 2 projects and 10 Lite credits per month; the card omits both caps." },
+      { "field": "description_long", "wrong_quote": "Basic at $39 per month adds code export and custom domain. Growth at $80 per month adds GitHub sync and team features.", "correct_value": "Basic $39/month adds Code Download and APK Download, unlimited projects and 100 Lite credits — the pricing page does not list custom domain as the Basic differentiator. Growth is $80/month for the 1st seat and $55/month for the 2nd." },
+      { "field": "description_long", "wrong_quote": "Business at $150 per month provides priority support and advanced team management.", "correct_value": "Business is $150/month for the 1st seat and $85/month for seats 2-5, up to 5 users, 400 Lite credits per seat." },
+      { "field": "description / cons", "wrong_quote": "August 2025 pricing restructure added new tiers.", "correct_value": "Stale and no longer informative — drop it. The current live structure is Free / Basic $39 / Growth $80 / Business $150 with per-seat pricing and a Lite credit system." },
+      { "field": "description_long", "wrong_quote": "FlutterFlow AI (powered by Claude) can build complete app screens from text prompts.", "correct_value": "Not supported by the vendor's own AI page, which names 'OpenAI or any API platform' and 'GPT, Stability, Dall-E'. Claude appears in a different context: since 2026-07-27 you can run Claude Code (or Codex) inside FlutterFlow Desktop. The card conflates the two." },
+      { "field": "description_long / pros", "wrong_quote": "FlutterFlow AI for natural language app generation", "correct_value": "Understates the 2026 feature set: Image to Component, Prompt to Component, Prompt to Page, AI Agent Builder for in-app agents, GenUI, FlutterFlow MCP, and Claude Code / Codex plugins in FlutterFlow Desktop." },
+      { "field": "users", "wrong_quote": "500K+", "correct_value": "Unverified — no user count found on flutterflow.io." },
+      { "field": "pros", "wrong_quote": "GitHub integration and project branching for production-grade app development", "correct_value": "True but should say GitHub integration starts at Growth ($80/month), not Basic." }
+    ],
+    "sources": [
+      { "url": "https://www.flutterflow.io/pricing", "accessed": "2026-09-29" },
+      { "url": "https://flutterflow.io/ai", "accessed": "2026-09-29" },
+      { "url": "https://flutterflow.io/changelog/native-ai-agent-claude-code-codex-plugins", "accessed": "2026-09-29" }
+    ],
+    "confidence": "high",
+    "notes": "Domain unchanged (flutterflow.io). FlutterFlow does not publish a product version number. Currency is USD. The GenUI (2026-05-18) and FlutterFlow MCP (2026-05-07) dates came from vendor changelog listings surfaced in search; only the 2026-07-27 Claude Code/Codex entry was read in full."
+  },
+  {
+    "slug": "hex",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      { "tier": "Community", "amount": "$0", "period": "n/a", "notes": "Hex agent trial, connect any data source, build with all cell types, small compute, up to 3 shared collections, up to 3 shared components, 7-day version history." },
+      { "tier": "Professional", "amount": "$36", "period": "per Editor / month", "notes": "Vendor wording: '$36 per Editor / month'" },
+      { "tier": "Team", "amount": "$75", "period": "per Editor / month", "notes": "Vendor wording: '$75 per Editor / month'. Free 14-day trial, no card required." },
+      { "tier": "Enterprise", "amount": "custom", "period": "custom", "notes": "Contact sales. Includes an 'Explorer seat add-on'." },
+      { "tier": "Compute add-on: A10G GPU", "amount": "$4.06", "period": "per hour", "notes": "Listed in the compute profiles table" },
+      { "tier": "Compute add-on: L4 GPU", "amount": "$2.93", "period": "per hour", "notes": "Listed in the compute profiles table" }
+    ],
+    "free_tier": "Community, free: Hex agent trial, any data source, all cell types, small compute, up to 3 shared collections, up to 3 shared components, 7-day version history.",
+    "repositioning": "Hex now leads with an AI agent ('Hex agent') rather than AI-assisted autocomplete — the free Community tier is described as including a 'Hex agent trial'. Seat naming has changed from any Creator/Viewer scheme to 'Editor' seats plus an Enterprise 'Explorer seat add-on'.",
+    "card_errors": [
+      { "field": "description / description_long / pros / cons", "wrong_quote": "Team Creator seats ~$149–199/user/mo", "correct_value": "Professional is $36 per Editor/month and Team is $75 per Editor/month. The $149–199 figure is roughly 2–5x the published price and the 'Creator' seat name no longer exists." },
+      { "field": "description_long", "wrong_quote": "Team plan Creator seats are priced at approximately $149-199 per user per month for data practitioners who build notebooks. Viewer seats for stakeholders who consume published apps are separately priced at lower rates.", "correct_value": "Published tiers: Community free, Professional $36 per Editor/month, Team $75 per Editor/month, Enterprise custom. The pricing page does not use 'Creator' or 'Viewer'; it uses 'Editor' seats and an Enterprise-only 'Explorer seat add-on'." },
+      { "field": "cons", "wrong_quote": "Creator seat pricing high — approximately $149–199/user/month", "correct_value": "$36–$75 per Editor/month. This con is no longer valid as written." },
+      { "field": "cons", "wrong_quote": "Pricing model separates Creator and Viewer seats — complex budget planning", "correct_value": "Seat model is Editor seats on Professional/Team; Explorer seats are an Enterprise add-on only." },
+      { "field": "cons", "wrong_quote": "Expensive compared to self-hosted Jupyter or Databricks notebooks", "correct_value": "Weak as written given $36/Editor/month entry pricing; should be re-evaluated." },
+      { "field": "description_long / pros", "wrong_quote": "GPU compute for ML workloads (pay-as-you-go)", "correct_value": "Accurate in direction, and now has exact published rates: A10G GPU $4.06/hr, L4 GPU $2.93/hr." },
+      { "field": "description_long", "wrong_quote": "Hex AI assists with SQL generation, Python code completion, chart configuration, and explaining complex queries.", "correct_value": "Understates current positioning — Hex now markets a 'Hex agent', trialable on the free Community plan." },
+      { "field": "cons", "wrong_quote": "Community free tier limited — not suitable for team collaboration", "correct_value": "Community does allow up to 3 shared collections and 3 shared components with 7-day version history; the claim is overstated." }
+    ],
+    "sources": [
+      { "url": "https://hex.tech/pricing/", "accessed": "2026-09-29" }
+    ],
+    "confidence": "high",
+    "notes": "Domain unchanged (hex.tech). No product version number published. Prices are USD, monthly only — no annual option is shown on the pricing page. `users` field on the card is empty, which is correct since Hex publishes no user count."
+  },
+  {
+    "slug": "humata",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      { "tier": "Free", "amount": "$0", "period": "month", "notes": "1 user. 'Basic features for up to 60 free pages of use'. Free tier is described as including GPT-5 support." },
+      { "tier": "Expert", "amount": "$9.99", "period": "month", "notes": "Up to 3 users. 500 free pages/month, then $0.02 per additional page." },
+      { "tier": "Team", "amount": "$49", "period": "per user / month", "notes": "Up to 10 users. 5,000 free pages/month, then $0.01 per additional page." },
+      { "tier": "Enterprise", "amount": "custom", "period": "per user / month", "notes": "Unlimited users, custom page allowance." }
+    ],
+    "free_tier": "Free, $0: basic features for up to 60 free pages per month, 1 user, GPT-5 support.",
+    "repositioning": "No major repositioning. Notable change: the Student tier has been removed from the live pricing table, and page allowances moved to an included-pages-plus-overage model rather than hard caps.",
+    "card_errors": [
+      { "field": "description / description_long / pros", "wrong_quote": "Student $1.99/mo", "correct_value": "The Student plan is no longer offered on the pricing page. (Vendor's own FAQ text still says 'We offer a range of plans including Free, Student, Expert, and Team options' — an internal contradiction on the vendor's page; the live pricing table has no Student plan.)" },
+      { "field": "pros", "wrong_quote": "Student plan at $1.99/mo is the most affordable AI document tool available", "correct_value": "Remove — tier discontinued." },
+      { "field": "description_long", "wrong_quote": "Student at $1.99 per month provides 200 pages per month — excellent value for students.", "correct_value": "Tier discontinued; not on the pricing page as of 2026-09-29." },
+      { "field": "description / description_long / pros", "wrong_quote": "Expert $9.99/mo ... provides 1,000 pages per month", "correct_value": "Expert $9.99/month includes 500 free pages/month plus $0.02 per additional page, for up to 3 users." },
+      { "field": "pros", "wrong_quote": "Expert plan at $9.99/mo provides 1,000 pages — sufficient for most individual needs", "correct_value": "500 included pages/month + $0.02/page overage, up to 3 users." },
+      { "field": "description / description_long", "wrong_quote": "Team $99/mo for unlimited pages", "correct_value": "Team is $49 per user/month, up to 10 users, 5,000 included pages/month + $0.01 per additional page. Not unlimited, and not $99." },
+      { "field": "description_long", "wrong_quote": "Team at $99 per month provides 10 team seats and unlimited pages.", "correct_value": "$49 per user/month for up to 10 users; 5,000 included pages/month with $0.01/page overage." },
+      { "field": "cons", "wrong_quote": "Team plan at $99/mo expensive for unlimited pages relative to competitors", "correct_value": "Price and inclusion both wrong — $49/user/month, 5,000 included pages + overage." },
+      { "field": "description_long", "wrong_quote": "Free plan provides 60 pages of document processing per month.", "correct_value": "Correct, and the vendor now also states the free tier includes GPT-5 support — the card never mentions which model backs Humata." }
+    ],
+    "sources": [
+      { "url": "https://www.humata.ai/pricing", "accessed": "2026-09-29" }
+    ],
+    "confidence": "high",
+    "notes": "Domain unchanged (humata.ai). No product version published; the vendor names a third-party model (GPT-5) as the backing model on the free tier. Overage pricing is new relative to the card, which describes hard page caps. `users` field is empty on the card, which is fine — Humata publishes no user count."
+  },
+  {
+    "slug": "khanmigo",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      { "tier": "For Teachers", "amount": "$0", "period": "n/a", "notes": "'Get started — it's free'. Lesson planning tied to the content library, on-demand summaries of student work, learning objectives/rubrics/exit tickets, chat history." },
+      { "tier": "For you (learners)", "amount": "$4", "period": "month", "notes": "Or $44/year, 'Save $4 w/ annual'. Sales tax not included." },
+      { "tier": "For families", "amount": "$4", "period": "month", "notes": "Or $44/year. Add children from a parent account, view children's interaction history, moderation alerts, college admissions coaching." },
+      { "tier": "Khanmigo District Tools", "amount": "Request pricing", "period": "custom", "notes": "Everything in Khanmigo for teachers plus student access, district/school data, co-teaching support, rostering and SSO via Clever SecureSync or ClassLink, dedicated CSM." }
+    ],
+    "free_tier": "Free for teachers, with no subscription. Some districts provide student access free via District Tools agreements.",
+    "repositioning": "No shutdown or repositioning. Product line has broadened: a separate 'Writing Coach' offering is flagged as New in the site navigation, and the site now separates learner, family and district offerings.",
+    "card_errors": [
+      { "field": "description_long", "wrong_quote": "Khan Academy's partnership with Anthropic and Microsoft subsidizes access.", "correct_value": "No Anthropic partnership is published by Khan Academy or Anthropic. Khan Academy's published AI partners are OpenAI (original Khanmigo model), Microsoft (free teacher access, powered by Azure OpenAI Service) and Google.org / Gemini (interactive diagrams and targeted practice). The Anthropic claim is unverified and should be removed." },
+      { "field": "description / description_long", "wrong_quote": "built on current GPT models", "correct_value": "The vendor's own pages still say 'Khanmigo uses GPT-4' (khanmigo.ai/learners, read 2026-09-29). Prefer naming the vendor relationship (OpenAI via Microsoft Azure OpenAI, plus Google Gemini for some features) over asserting a model generation the vendor does not claim." },
+      { "field": "description_long", "wrong_quote": "Students can access Khanmigo at $4 per month or $44 per year.", "correct_value": "Correct, but incomplete: the same $4/month or $44/year applies to a separate 'For families' plan, and prices exclude sales tax." },
+      { "field": "description_long", "wrong_quote": "Key capabilities include Socratic tutoring across all Khan Academy subjects, essay writing coaching and feedback, SAT prep assistance", "correct_value": "Missing the current lineup: Writing Coach is now a distinct product marked New, plus career coaching, college-admissions coaching, and a code reviewer for JS, HTML, Python and SQL with voice input/output." },
+      { "field": "cons", "wrong_quote": "Less capable outside of K-12 subjects and SAT prep", "correct_value": "Partially stale — Khanmigo now markets career coaching and coding feedback (JS, HTML, Python, SQL)." },
+      { "field": "description_long", "wrong_quote": "Khanmigo is free for teachers (no subscription required).", "correct_value": "Correct, but note a conflict between vendor pages on scope: khanmigo.ai states free teacher access in '44+ countries', while the Khan Academy blog announces 'Khanmigo for Teachers Now Available in 180+ Countries'. Report the conflict rather than picking one." }
+    ],
+    "sources": [
+      { "url": "https://www.khanmigo.ai/pricing", "accessed": "2026-09-29" },
+      { "url": "https://www.khanmigo.ai/learners", "accessed": "2026-09-29" },
+      { "url": "https://www.khanmigo.ai/", "accessed": "2026-09-29" },
+      { "url": "https://blog.khanacademy.org/teachers-in-44-countries-now-get-free-access-to-khanmigo-in-english-thanks-to-microsoft-support/", "accessed": "2026-09-29" },
+      { "url": "https://blog.khanacademy.org/new-ai-tools-bring-interactive-diagrams-and-targeted-practice-thanks-to-khan-academys-partnership-with-google-org/", "accessed": "2026-09-29" }
+    ],
+    "confidence": "high",
+    "notes": "Domain unchanged (khanmigo.ai). No product version published. Pricing is USD, $4/month or $44/year, sales tax excluded. The two Khan Academy blog URLs were surfaced via search and their titles/summaries read, but the article bodies were not fetched in full — the 44 vs 180+ country conflict is drawn from the khanmigo.ai page text plus the blog headline, so treat the country count as medium confidence."
+  }
+]

@@ -1,0 +1,387 @@
+[
+  {
+    "slug": "tradingview",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      { "tier": "Basic (Free)", "amount": "$0", "period": "forever", "notes": "USD. 1 chart per tab, 2 indicators per chart, 5K historical bars, 2 simultaneous chart connections, 3 price alerts, 0 technical alerts, 1 watchlist (30 symbols), 1 saved chart layout, web/desktop/mobile apps. No credit card needed." },
+      { "tier": "Essential", "amount": "$14.95 monthly / $12.95 billed annually", "period": "per month", "notes": "USD. Annual total $155.40 vs $179.40 at the regular monthly price (page's own wording). 2 charts per tab, 5 indicators per chart, 10K historical bars, 10 parallel chart connections, 20 price alerts, 20 technical alerts, 100 AI screener requests. 30-day free trial." },
+      { "tier": "Plus", "amount": "$34.95 monthly / $29.95 billed annually", "period": "per month", "notes": "USD. Annual total $359.40 vs $419.40 monthly. 4 charts per tab, 10 indicators per chart, 20 parallel chart connections, 100 price alerts, 100 technical alerts, 150 AI screener requests. 30-day free trial." },
+      { "tier": "Premium", "amount": "$69.95 monthly / $59.95 billed annually", "period": "per month", "notes": "USD. Annual total $719.40 vs $839.40 monthly. 8 charts per tab, 25 indicators per chart, 20K historical bars, 50 parallel chart connections, 400 price alerts, 400 technical alerts, 2 watchlist alerts, 250 AI screener requests. 30-day free trial." },
+      { "tier": "Ultimate", "amount": "$239.95 monthly / $199.95 billed annually", "period": "per month", "notes": "USD. Annual total $2,399.40 vs $2,879.40 monthly. 16 charts per tab, 50 indicators per chart, 40K historical bars, 200 parallel chart connections, 1,000 price alerts, 1,000 technical alerts, 15 watchlist alerts, 500 AI screener requests. 14-day free trial. Only plan available to professional users." },
+      { "tier": "Enterprise", "amount": "custom", "period": "n/a", "notes": "For 100+ subscriptions; contact sales." }
+    ],
+    "free_tier": "Basic, $0 forever, no credit card: 1 chart per tab, 2 indicators per chart, 5K historical bars, 2 simultaneous chart connections, 3 active price alerts, 1 watchlist of 30 symbols, 1 saved chart layout, web/desktop/mobile apps.",
+    "repositioning": "No repositioning. AI features are now explicitly metered per tier as 'AI screener requests' (100 / 150 / 250 / 500 per month on Essential / Plus / Premium / Ultimate).",
+    "card_errors": [
+      {
+        "field": "description",
+        "wrong_quote": "Essential $12.95/mo, Plus $29.95, Premium $59.95.",
+        "correct_value": "Those are the ANNUAL-billing prices. Regular monthly prices are Essential $14.95/mo, Plus $34.95/mo, Premium $69.95/mo, Ultimate $239.95/mo. The card presents annual-billing rates as if they were the monthly rates."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Essential at $12.95 per month provides more indicators, saved layouts, and alerts. Plus at $29.95 per month ... Premium at $59.95 per month ... Ultimate at $199.95 per month",
+        "correct_value": "Same issue: these are billed-annually rates. Monthly-billing rates are $14.95 / $34.95 / $69.95 / $239.95."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "TradingView raised prices in April 2026 across all tiers.",
+        "correct_value": "UNVERIFIED against a primary source. TradingView publishes no changelog or announcement for a price change; the April 2026 increase (~17-20%) is asserted only by third-party blogs. The current published prices are consistent with a raise having happened, but we cannot cite a vendor source for the date or the amount. Recommend dropping the date or attributing it loosely."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "AI summary (natural language analysis of a security's technical picture), AI screener (identifying stocks meeting AI-generated criteria), and GPT-powered natural language market analysis",
+        "correct_value": "Only 'AI screener requests' is named as a feature on the pricing/compare table (100/150/250/500 per tier). 'AI summary' and 'GPT-powered natural language market analysis' are not named on the pricing page; they may exist elsewhere but were not verified from a primary source."
+      },
+      {
+        "field": "cons",
+        "wrong_quote": "Ultimate plan at $199.95/mo expensive for retail traders",
+        "correct_value": "$239.95/mo at monthly billing, $199.95/mo billed annually. Note also that Ultimate is the only plan available to professional (non-retail) users."
+      },
+      {
+        "field": "users",
+        "wrong_quote": "100M+",
+        "correct_value": "Correct, but note a vendor-internal conflict: the main pricing page says 'the platform used by 100 million traders' while a TradingView referral URL (tradingview.com/pricing/?share_your_love=TradingView) is titled 'Join 120M+ users on TradingView!'. Keep 100M+ as the conservative published figure."
+      }
+    ],
+    "sources": [
+      { "url": "https://www.tradingview.com/pricing/", "accessed": "2026-09-29" }
+    ],
+    "confidence": "high",
+    "notes": "Product alive and unchanged in positioning. Vendor publishes no product version number. Domain unchanged (tradingview.com). The single substantive card error is presenting annual-billing prices as monthly. Free 'Basic' tier is more restrictive than the card implies (2 indicators per chart, 1 chart per tab, 3 alerts)."
+  },
+  {
+    "slug": "udio",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      { "tier": "Free", "amount": "$0", "period": "per month", "notes": "10 credits per day plus 100 credits per month, no rollovers. Up to 4 songs generated at the same time (2 simultaneous generations). Limit of 3 full-length (2:10) song generations per day." },
+      { "tier": "Standard", "amount": "$10 monthly / $8 billed annually ($96/yr)", "period": "per month", "notes": "USD (page offers USD / GBP / EUR switcher). 2400 credits per month, no rollovers. No daily 2-minute-song limit. Up to 6 songs at once (3 simultaneous generations). Voice Control, music/lyric editing, generate from uploaded audio, style reference, custom cover art. Free trial available; credit uplift and unlimited 2-min generation not included in free trials." },
+      { "tier": "Pro", "amount": "$30 monthly / $24 billed annually ($288/yr)", "period": "per month", "notes": "USD. 6000 credits per month, no rollovers. Up to 10 songs at once (5 simultaneous generations). All features of other plans." },
+      { "tier": "Credit top-ups", "amount": "100 credits $3.00 / 1000 credits $25.00", "period": "one-off", "notes": "Purchasable on any plan." },
+      { "tier": "Student discount", "amount": "not published on the pricing page", "period": "n/a", "notes": "Pricing page links to discounted student pricing without stating the amount." }
+    ],
+    "free_tier": "Free, $0: 10 credits/day + 100 credits/month (no rollovers), up to 4 songs generated simultaneously, max 3 full-length (2:10) generations per day. Free users get 32-second songs, extend, remix, styles and generated cover art — but NOT Udio's Voices library, saved Voices, audio upload, premium Artist Styles, style blending/reduction, music/lyric editing or custom cover art.",
+    "repositioning": "Yes, major. Following the Universal Music Group settlement/partnership announced 2025-10-29, downloading of audio, video and stems was disabled platform-wide. Udio's plan comparison table as of 2026-09-29 lists no download capability on any tier, including Pro. Udio is now effectively a streaming-only walled garden while a new UMG-licensed platform (artist voices, styles, catalog, remixing of real songs) is built.",
+    "card_errors": [
+      {
+        "field": "description / description_long / cons",
+        "wrong_quote": "full track downloads restricted to paid subscribers ... Downloads of complete generated tracks are restricted to paid subscribers (Standard and above).",
+        "correct_value": "WRONG. Downloads of audio, video and stems are disabled for ALL users, paid included. Udio's help centre: 'downloading of audio, video, and stems has been disabled'. The pricing comparison table lists no download feature on Free, Standard or Pro."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Following a copyright settlement with Universal Music Group and Warner Music Group in early 2026",
+        "correct_value": "Udio's own sources name Universal Music Group only, and date it 2025-10-29 (the help-centre article summarising the changes is dated 2026-02-17). CONFLICT: third-party trade press (webpronews, undetectr) also refers to a Warner settlement; Udio's own blog and help centre do not mention Warner. Do not state Warner from a primary source."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Standard at $10 per month provides 1,200 credits (approximately 120 tracks)",
+        "correct_value": "2400 credits per month (raised from 1200 as part of the UMG changes). $10/mo monthly billing or $8/mo billed annually ($96/yr)."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Pro at $30 per month provides 4,800 credits and priority generation",
+        "correct_value": "6000 credits per month (raised from 4800). $30/mo monthly or $24/mo billed annually ($288/yr). The pricing page does not mention 'priority generation'; it lists up to 10 simultaneous songs."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Free plan provides limited generations per month with playback within the platform only",
+        "correct_value": "Free is 10 credits/day + 100 credits/month, max 3 full-length (2:10) generations per day, up to 4 songs at once. Playback-only is now true of every tier, not just free."
+      },
+      {
+        "field": "pros",
+        "wrong_quote": "Standard at $10/mo is lower entry price than Suno Pro ($8/mo, similar credits)",
+        "correct_value": "Self-contradictory ($10 is not lower than $8) and the Suno figure was not verified in this audit. Remove or rewrite."
+      },
+      {
+        "field": "best_for",
+        "wrong_quote": "AI music creation with high sonic quality — note: download restrictions apply",
+        "correct_value": "Understates the situation: there are no downloads at all on any tier. 'Streaming-only — generated tracks cannot be exported' is accurate."
+      }
+    ],
+    "sources": [
+      { "url": "https://www.udio.com/pricing", "accessed": "2026-09-29" },
+      { "url": "https://help.udio.com/en/articles/12683565-changes-associated-with-the-universal-music-group-umg-partnership", "accessed": "2026-09-29" },
+      { "url": "https://help.udio.com/en/articles/10739134-credits-and-credit-limits", "accessed": "2026-09-29" },
+      { "url": "https://www.udio.com/blog/a-new-era", "accessed": "2026-09-29" }
+    ],
+    "confidence": "high",
+    "notes": "Vendor publishes no model/version number. Domain unchanged (udio.com; www.udio.com canonical). Udio granted a one-time 1,000 non-expiring credit bonus to subscribers and, after backlash, a 48-hour download window starting Monday 2025-11-03 for pre-settlement songs (reported by trade press, not by Udio's own site). Card badge 'freemium' is still correct. The download claim is the single most damaging error on this card — it currently tells users that paying unlocks downloads, which is false."
+  },
+  {
+    "slug": "uizard",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": "Autodesigner 2.0",
+    "version_published": true,
+    "domain_changed": false,
+    "pricing": [
+      { "tier": "Free", "amount": "$0", "period": "n/a", "notes": "USD. 3 AI generations per month, 2 projects, 10 templates, 400-component limit." },
+      { "tier": "Pro", "amount": "$12", "period": "per month, billed annually (page states ~40% saving vs monthly)", "notes": "USD. 500 AI generations per month, up to 100 projects, Autodesigner 2.0, developer handoff in React CSS." },
+      { "tier": "Business", "amount": "$39", "period": "per month, billed annually", "notes": "USD. 5,000 AI generations per month, unlimited projects, faster AI generation, custom brand kit." },
+      { "tier": "Enterprise", "amount": "custom", "period": "annual", "notes": "Unlimited AI generations, unlimited teams, design system setup, AI data SLA, white-glove onboarding." }
+    ],
+    "free_tier": "Free: 3 AI generations per month, 2 projects, 10 templates, 400-component limit.",
+    "repositioning": "No product repositioning. But the 'Uizard by Miro Labs' branding no longer appears on uizard.io — the site presents Uizard as a standalone product with no Miro mention anywhere on the homepage or pricing page as of 2026-09-29.",
+    "card_errors": [
+      {
+        "field": "description_long",
+        "wrong_quote": "Free plan supports 3 projects and 5 screens per project, with 3 AI generations per month and access to Autodesigner 1.5 only.",
+        "correct_value": "Free is 2 projects (not 3), 10 templates, 400-component limit, 3 AI generations/month. The pricing page does not state a 5-screens-per-project limit and does not say the free tier is restricted to Autodesigner 1.5 — that restriction is UNVERIFIED. The page only lists Autodesigner 2.0 as a Pro feature."
+      },
+      {
+        "field": "description / description_long",
+        "wrong_quote": "now operating as Uizard by Miro Labs",
+        "correct_value": "The acquisition is real (Miro acquired Uizard; Crunchbase records 2024-05-27, announced mid-June 2024) but 'Uizard by Miro Labs' is no longer used on uizard.io. The site carries no Miro branding at all. Recommend softening to 'acquired by Miro in 2024; still sold as a standalone product'."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Pro at $12 per user per month (annual) provides 500 AI generations per month, 100 projects, the full template library",
+        "correct_value": "Mostly right. The pricing page states $12/month billed annually with 500 AI generations/month, up to 100 projects, Autodesigner 2.0 and developer handoff in React CSS; it does not say 'per user'. Monthly-billing price is not published on the page (only the ~40% annual saving)."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Business at $39 per user per month provides 5,000 AI generations per month and unlimited projects.",
+        "correct_value": "$39/month billed annually; 5,000 AI generations/month, unlimited projects, faster AI generation, custom brand kit. 'Per user' is not stated."
+      },
+      {
+        "field": "users",
+        "wrong_quote": "300K+",
+        "correct_value": "UNVERIFIED. No user count is published on uizard.io."
+      }
+    ],
+    "sources": [
+      { "url": "https://uizard.io/pricing/", "accessed": "2026-09-29" },
+      { "url": "https://uizard.io/", "accessed": "2026-09-29" },
+      { "url": "https://uizard.io/autodesigner/", "accessed": "2026-09-29" },
+      { "url": "https://www.crunchbase.com/acquisition/mirohq-acquires-uizard-technologies--3f732879", "accessed": "2026-09-29" }
+    ],
+    "confidence": "high",
+    "notes": "Alive, actively sold, Autodesigner 2.0 still the headline AI feature (Screenshot Scanner, Wireframe Scanner, Design Assistant also still advertised). Domain unchanged (uizard.io). The acquisition date is a secondary-source fact — Crunchbase records 2024-05-27, press coverage mid-June 2024; the card's 'May 2024' is defensible but we found no Miro press release to cite."
+  },
+  {
+    "slug": "uptrends-ai",
+    "alive": false,
+    "shutdown_note": "No vendor shutdown announcement found, but the product is NOT publicly available as of 2026-09-29. https://uptrends.ai/, https://www.uptrends.ai/ and https://uptrends.ai/pricing all return HTTP 404 with a generic '404 — Page not found. The page you are looking for doesn't exist or has been moved.' https://app.uptrends.ai redirects to https://www.uptrends.ai/maintenance, which also 404s. DNS still resolves (Cloudflare nameservers seth/stephane.ns.cloudflare.com), so the domain is registered but nothing is served. Latest Internet Archive snapshot returning HTTP 200 is 2025-11-16 (archive.org's CDX API was itself offline during this audit, so the snapshot history could not be walked further).",
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [],
+    "free_tier": "Cannot be verified — no reachable pricing page.",
+    "repositioning": null,
+    "card_errors": [
+      {
+        "field": "whole card",
+        "wrong_quote": "AI-powered stock analysis platform providing trend detection, sector momentum, and AI market insights for retail investors. Free; Essentials $15/mo; Pro $49/mo.",
+        "correct_value": "The site is entirely unreachable (HTTP 404 across the domain). The card should not present this as a live, recommendable tool. Recommend published = false pending evidence the service returns."
+      },
+      {
+        "field": "description / description_long",
+        "wrong_quote": "Essentials at $15 per month provides full trend analysis, sector data, and more watchlist capacity. Pro at $49 per month provides advanced analytics",
+        "correct_value": "UNVERIFIED — no primary source reachable. Those figures appear only in third-party directories (futurepedia, aitools.fyi), which also describe the tiers differently (Essentials $15/mo = up to 10 alerts + unlimited company searches; Pro $49/mo = unlimited alerts; plus an Enterprise tier for programmatic raw-dataset access that our card omits)."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "AI trend detection for stocks and ETFs, sector rotation and momentum analysis, AI market condition summaries, watchlist management with AI alerts, stock screening by momentum and trend criteria, and a daily market briefing.",
+        "correct_value": "UNVERIFIED feature list. Third-party descriptions position Uptrends.ai as stock-market MEDIA/news intelligence — real-time news and sentiment monitoring with alerts across ~5,000 US stocks — not as a price/technical trend engine. Our card describes a price-action and sector-rotation product, which appears to be an invented framing."
+      },
+      {
+        "field": "url",
+        "wrong_quote": "https://uptrends.ai",
+        "correct_value": "Returns HTTP 404. Affiliate/Visit-through link is dead."
+      }
+    ],
+    "sources": [
+      { "url": "https://uptrends.ai/", "accessed": "2026-09-29" },
+      { "url": "https://www.uptrends.ai/", "accessed": "2026-09-29" },
+      { "url": "https://uptrends.ai/pricing", "accessed": "2026-09-29" },
+      { "url": "https://app.uptrends.ai", "accessed": "2026-09-29" },
+      { "url": "https://archive.org/wayback/available?url=uptrends.ai&timestamp=20260929", "accessed": "2026-09-29" }
+    ],
+    "confidence": "medium",
+    "notes": "The 404 is unambiguous and reproduced from four URLs, but no vendor announcement, acquisition notice or press coverage of a shutdown was found, so the cause and date are unknown — the site could in principle return. Careful not to confuse this with uptrends.com (Uptrends website-monitoring, a different, live company); several search results conflate them. Highest-priority action of this batch: unpublish or at minimum remove the dead Visit link."
+  },
+  {
+    "slug": "whimsical-ai",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      { "tier": "Free", "amount": "$0", "period": "per editor per month", "notes": "USD. 'For evaluating Whimsical'. 50 board objects and 50 doc blocks per month, watermarked exports, 7-day version history, unlimited boards/docs/teams/guests/workspace members, 10 AI credits." },
+      { "tier": "Pro", "amount": "$10 billed annually / $12 billed monthly", "period": "per editor per month", "notes": "USD. Annual is $120 per editor per year (page describes it as 2 months free; pricing page states annual saves 17%). Removes object/block limits, 90-day version history, watermark-free exports, expanded storage." },
+      { "tier": "Business", "amount": "$20 billed annually / $24 billed monthly", "period": "per editor per month", "notes": "USD. Annual is $240 per editor per year. Everything in Pro plus SAML SSO, SCIM provisioning, private teams, workspace controls, priority support. Invoicing (wire/ACH) available at 10+ editor seats." },
+      { "tier": "AI credit bundles", "amount": "$0.10 per credit — 250 for $25, 1,000 for $100, 10,000 for $1,000", "period": "one-off", "notes": "Purchasable on any plan, including paid plans. AI is metered separately from the subscription." },
+      { "tier": "Non-profit discount", "amount": "20% off", "period": "n/a", "notes": "Per vendor help centre." },
+      { "tier": "Education", "amount": "Pro-level features free for one year", "period": "n/a", "notes": "Educators and students, per vendor help centre." }
+    ],
+    "free_tier": "Free, $0 per editor: 50 board objects and 50 doc blocks per month, 10 AI credits, unlimited boards/docs/teams/guests, watermarked exports, 7-day version history.",
+    "repositioning": "Yes, commercially significant: Whimsical AI is now a metered credit currency, not a bundled subscription feature. All plans — including Pro and Business — start from a small AI credit allowance, and further credits are bought separately at $0.10 each. Our card implies AI generation is simply included.",
+    "card_errors": [
+      {
+        "field": "description / description_long / pros",
+        "wrong_quote": "Pro at $10 per editor per month provides unlimited private boards ... Pro at $10/editor/mo is very affordable",
+        "correct_value": "$10 per editor per month is the ANNUAL-billing rate ($120/editor/year). The monthly-billing rate is $12 per editor per month."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Org plan at $20 per editor per month adds admin controls and SSO.",
+        "correct_value": "The plan is called Business, not Org. $20/editor/month billed annually ($240/editor/year) or $24/editor/month billed monthly. It adds SAML SSO, SCIM provisioning, private teams, workspace controls and priority support."
+      },
+      {
+        "field": "description_long / cons",
+        "wrong_quote": "Free plan provides unlimited boards with a Whimsical watermark. ... Free plan watermark limits professional use without upgrading",
+        "correct_value": "Boards are unlimited in count, but the free plan caps CONTENT at 50 board objects and 50 doc blocks per month — a far tighter limit than the watermark. It also has only 7-day version history and 10 AI credits."
+      },
+      {
+        "field": "description_long / pros",
+        "wrong_quote": "Whimsical AI, added in 2023 and expanded through 2024-2025, generates flowcharts, mind maps, and wireframes from text descriptions.",
+        "correct_value": "The generation capability is real, but the card omits that AI is credit-metered on every plan (10 credits to start; extra credits $0.10 each, in bundles of 250/$25, 1,000/$100, 10,000/$1,000). CONFLICT between vendor pages: whimsical.com/pricing says '10 AI credits per member' while whimsical.com/learn/billing/pricing says all plans include '10 one-time credits' — it is not clear whether the allowance is monthly or one-off."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "With over 4 million users and 135,000+ monthly searches",
+        "correct_value": "UNVERIFIED. Neither figure is published by Whimsical. '135,000+ monthly searches' is an SEO keyword-volume metric and does not belong in a tool description at all."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "integration with Figma, Notion, and Confluence",
+        "correct_value": "UNVERIFIED from the pages read in this audit (pricing and billing help). Not contradicted, but not confirmed either."
+      },
+      {
+        "field": "users",
+        "wrong_quote": "4M+",
+        "correct_value": "UNVERIFIED — not published by the vendor."
+      }
+    ],
+    "sources": [
+      { "url": "https://whimsical.com/pricing", "accessed": "2026-09-29" },
+      { "url": "https://whimsical.com/learn/billing/pricing", "accessed": "2026-09-29" }
+    ],
+    "confidence": "high",
+    "notes": "Alive, domain unchanged (whimsical.com), no product version published. The two most consequential fixes are the plan name (Org -> Business), the annual-vs-monthly price split, and adding the AI credit metering — which changes the value story the card tells."
+  },
+  {
+    "slug": "youlearn",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      { "tier": "Pro", "amount": "₪65 billed monthly / ₪40 billed yearly", "period": "per month", "notes": "GEO-SERVED IN ISRAELI NEW SHEKELS (₪) from the audit location — NOT converted. Yearly billing is advertised as 'Save 40%'. Unlimited uploads/pastes/records, unlimited AI chats, unlimited quiz answers, unlimited exams, 12 podcasts/day, 30 AI videos/month, 5 lesson plans/day, 200K read-aloud characters/day, uploads up to 2000 pages / 300 MB per file." },
+      { "tier": "Max", "amount": "₪190 billed monthly / ₪140 billed yearly", "period": "per month", "notes": "ILS, geo-served. Everything in Pro plus extended premium chat limits, unlimited podcast generations, 60 AI videos/month, 50 lesson plans/day, unlimited read-aloud characters, uploads up to 5000 pages / 500 MB per file, priority support." },
+      { "tier": "Teams", "amount": "₪45 billed monthly / ₪30 billed yearly", "period": "per month per seat", "notes": "ILS, geo-served. Minimum 3 seats. Everything in Pro plus discounts that scale with team size, centralised team billing, member permissions, shared spaces. NOT PRESENT ON OUR CARD AT ALL." }
+    ],
+    "free_tier": "A free tier exists (the product is usable without paying) but it is NOT shown as a plan card on app.youlearn.ai/pricing, and its limits are not published there. Third-party write-ups describe ~3 uploads/day, 5 AI chats/day, 10 quiz answers/day, 2 practice exams/month, 5 voice chats/day and 100-page / 10 MB uploads — treat all of that as UNVERIFIED.",
+    "repositioning": "Broadened well beyond document Q&A: the plans now meter podcasts, AI videos, lesson plans, practice exams, voice mode and read-aloud characters. Our card describes it as 'fundamentally a document Q&A tool', which no longer matches the published feature set.",
+    "card_errors": [
+      {
+        "field": "description / description_long / pros",
+        "wrong_quote": "Pro $12/mo annual. ... Pro at $12 per month (annual, approximately $10 per month) provides unlimited uploads and queries.",
+        "correct_value": "Not verifiable in USD. The vendor pricing page is geo-served and showed Israeli shekels from this location: Pro ₪40/month billed yearly, ₪65/month billed monthly. Do not publish a USD figure we cannot source; either state the ILS figures with the geo caveat or drop the number."
+      },
+      {
+        "field": "description_long / cons",
+        "wrong_quote": "Max at $45 per month provides higher processing limits and priority support for heavy users. ... Max tier at $45/mo expensive for document Q&A use case",
+        "correct_value": "Max is ₪140/month billed yearly or ₪190/month billed monthly (geo-served ILS). The $45 figure is unsourced."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Pricing: Free plan provides limited uploads and queries per month.",
+        "correct_value": "The pricing page shows no free plan card and publishes no free-tier limits. Also, the plan lineup is Pro / Max / Teams — the card omits Teams (₪30/seat/month yearly, ₪45/seat/month monthly, minimum 3 seats) entirely."
+      },
+      {
+        "field": "description_long / cons",
+        "wrong_quote": "The Max tier at $45/month is expensive for what is fundamentally a document Q&A tool.",
+        "correct_value": "Stale framing. Published paid features now include podcast generation, AI video generation, lesson plans, practice exams, voice mode and read-aloud — not just document Q&A."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "concept map creation ... study session tracking",
+        "correct_value": "UNVERIFIED — neither appears on the pricing page or homepage. The vendor's own summary is 'Turns your learning materials into notes, interactive chats, quizzes, and more.'"
+      },
+      {
+        "field": "users",
+        "wrong_quote": "",
+        "correct_value": "The vendor now publishes 'Trusted by over 2 million learners' on the pricing page — worth adding as the users figure."
+      }
+    ],
+    "sources": [
+      { "url": "https://app.youlearn.ai/pricing", "accessed": "2026-09-29" },
+      { "url": "https://www.youlearn.ai/", "accessed": "2026-09-29" }
+    ],
+    "confidence": "medium",
+    "notes": "Alive and actively sold. Domain unchanged in substance but note that www.youlearn.ai/pricing 308-redirects to app.youlearn.ai/pricing — the marketing site and the app are split. No product version published. Confidence is medium only because the currency is geo-served and USD prices could not be observed from this location; the plan structure and feature limits are high-confidence."
+  },
+  {
+    "slug": "zed",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": "Zed 1.0 (released 2026-04-29)",
+    "version_published": true,
+    "domain_changed": false,
+    "pricing": [
+      { "tier": "Personal", "amount": "$0", "period": "free forever", "notes": "USD. 2,000 accepted edit predictions. Unlimited use with your own API keys or external agents." },
+      { "tier": "Pro", "amount": "$10", "period": "per month", "notes": "USD. Unlimited edit predictions, $5 in monthly tokens, usage-based billing beyond $5. 14-day free trial with $5 of GPT-5.6 Luna credits, no credit card required." },
+      { "tier": "Business", "amount": "$30", "period": "per seat per month", "notes": "USD. Org-wide AI model policies, data governance controls, unified spend visibility, unlimited edit predictions, role-based access controls. Order forms available at 25+ seats. Business seats do not bundle a fixed LLM credit allotment — usage is billed at standard rates for Zed-hosted models, or direct to your provider with external keys." }
+    ],
+    "free_tier": "Personal, $0 forever: 2,000 accepted edit predictions, plus unlimited use of the editor and agents when you bring your own API keys or external agents.",
+    "repositioning": "Yes, a significant new direction the card misses entirely: Delta, announced 2026-08-12 and in public beta since 2026-09-16, positioned as replacing pull requests — a multiplayer environment for coding with agents and reviewing what they build, backed by DeltaDB, running locally, in-browser via WebAssembly, and syncing with third-party agents such as Claude Code.",
+    "card_errors": [
+      {
+        "field": "description_long / pros",
+        "wrong_quote": "Model support in Zed 1.0 includes GPT-5.5, DeepSeek V4, and MiMo V2.5 ... Supports GPT-5.5, DeepSeek V4, MiMo V2.5 — broad frontier model access built in",
+        "correct_value": "WRONG. Zed's own model documentation lists Zed-hosted models as Anthropic (Claude Fable 5.1, Fable 5, Opus 5.5, Opus 5, Opus 4.5-4.8, Sonnet 5, Sonnet 4.5, Sonnet 4.6, Haiku 4.5), OpenAI (GPT-6 Astra, GPT-6 Sol, GPT-6 Luna, GPT-5.6 Sol/Terra/Luna, GPT-5.5 pro, GPT-5.5, GPT-5.4 pro, GPT-5.4, GPT-5.3-Codex, GPT-5.2, GPT-5.2-Codex, GPT-5 mini, GPT-5 nano) and Google (Gemini 3.1 Pro, Gemini 3.5 Flash, Gemini 3 Flash). Neither DeepSeek V4 nor MiMo V2.5 is listed. Prefer naming the vendors (Anthropic, OpenAI, Google) over pinning specific model versions that churn monthly."
+      },
+      {
+        "field": "description_long / cons",
+        "wrong_quote": "The Business plan adds organization-wide AI policy enforcement, centralized billing, and AI governance controls ... Business plan governance features require paid subscription — pricing not publicly listed",
+        "correct_value": "Business pricing IS publicly listed: $30 per seat per month, with order forms at 25+ seats. Note it bundles no fixed LLM credit allotment."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Zed is free for individual developers.",
+        "correct_value": "Incomplete. The free Personal plan caps Zed-hosted AI at 2,000 accepted edit predictions; unlimited use requires your own API keys or an external agent. There is also a paid Pro tier at $10/month (unlimited edit predictions, $5 monthly tokens, usage-based beyond that) that the card does not mention at all."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "In January 2026, Zed co-authored the Agent Client Protocol (ACP) with JetBrains",
+        "correct_value": "UNVERIFIED. ACP is real and central to Zed 1.0 (the 1.0 post names Claude Agent, Codex, OpenCode and Cursor as agents that run inside Zed via ACP), but the January 2026 date and JetBrains co-authorship were not confirmed against a Zed primary source in this audit. Recommend dropping the date and the co-author claim, or verifying separately."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Git graph view and split diffs are new interface features",
+        "correct_value": "UNVERIFIED against the 1.0 announcement, which highlights Git integration, SSH remoting, debugging, cross-platform parity (macOS/Linux/Windows for the first time) and parallel agents."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Version 1.0, released April 29, 2026, marks a five-year development milestone",
+        "correct_value": "CORRECT — confirmed by zed.dev/blog/zed-1-0, dated 2026-04-29, 'five years of work, more than a million lines of Rust'. Parallel Agents was announced separately at zed.dev/blog/parallel-agents on 2026-04-22."
+      },
+      {
+        "field": "users",
+        "wrong_quote": "500K+",
+        "correct_value": "UNVERIFIED. Zed's 1.0 post says 'hundreds of thousands of daily developers' — no precise figure is published."
+      }
+    ],
+    "sources": [
+      { "url": "https://zed.dev/pricing", "accessed": "2026-09-29" },
+      { "url": "https://zed.dev/docs/ai/models", "accessed": "2026-09-29" },
+      { "url": "https://zed.dev/blog", "accessed": "2026-09-29" },
+      { "url": "https://zed.dev/blog/zed-1-0", "accessed": "2026-09-29" },
+      { "url": "https://zed.dev/blog/introducing-delta", "accessed": "2026-09-29" }
+    ],
+    "confidence": "high",
+    "notes": "Alive, domain unchanged (zed.dev). Zed 1.0 and Parallel Agents are correctly reported on the card; the errors are the invented model list, the claim that Business pricing is unpublished, the missing Pro tier, and the absence of Delta. Recent blog cadence: 2026-09-16 'Replace PRs with Delta - Now in Public Beta', 2026-09-01 'Xanadu Was Waiting for Agents', 2026-08-12 'Introducing Delta', 2026-08-05 'Sandboxing'."
+  }
+]

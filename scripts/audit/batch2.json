@@ -1,0 +1,256 @@
+[
+  {
+    "slug": "kiro",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      { "tier": "Free", "amount": "$0", "period": "month", "notes": "50 credits; open weight models and Claude Sonnet 4.5; teams up to 500 users" },
+      { "tier": "Kiro Pro", "amount": "$20", "period": "month (per user)", "notes": "1,000 credits; premium models; add-on credits $0.04/credit" },
+      { "tier": "Kiro Pro+", "amount": "$40", "period": "month (per user)", "notes": "2,000 credits; add-on credits $0.04/credit" },
+      { "tier": "Kiro Pro Max", "amount": "$100", "period": "month (per user)", "notes": "5,000 credits; add-on credits $0.04/credit — this tier is MISSING from our card" },
+      { "tier": "Kiro Power", "amount": "$200", "period": "month (per user)", "notes": "10,000 credits; add-on credits $0.04/credit" },
+      { "tier": "Enterprise", "amount": "custom", "period": null, "notes": "centralized billing, SSO, usage analytics, enterprise security controls" }
+    ],
+    "free_tier": "Free $0/month with 50 credits; access to open weight models and Claude Sonnet 4.5.",
+    "repositioning": "Kiro is no longer just a VS Code-fork IDE. kiro.dev now states Kiro 'works as an agent in the IDE, with a CLI, in a web browser, from mobile app, and in Kiro Crew' (Kiro Web with cloud sandboxes, Kiro CLI 2.0, mobile app, Kiro Crew open-source workspace). Model support is no longer Claude-only: the site lists Claude, GPT variants, DeepSeek, Qwen and others plus an 'Auto' mode that picks a model per task. Blog posts Sep 2026 announce Claude Opus 5.5, Claude Fable 5.1 and GPT-5.6 in Kiro.",
+    "card_errors": [
+      { "field": "description_long", "wrong_quote": "launched in May 2026 as a VS Code fork", "correct_value": "Kiro launched in preview in July 2025 (AWS blog 'One year of Kiro: a look back, and a look ahead', 14 Jul 2026). The May 2026 launch date is wrong." },
+      { "field": "description_long", "wrong_quote": "The agent runs on Anthropic's Claude models (Sonnet at the core, with Opus available for harder reasoning)", "correct_value": "Kiro now supports Claude (Sonnet 5, Opus 5/5.5, Fable 5.1), GPT variants (GPT-5.6), DeepSeek, Qwen and open weight models, with an 'Auto' model-picker. Free tier is limited to open weight models plus Claude Sonnet 4.5." },
+      { "field": "description_long", "wrong_quote": "Pro at $20/month (1,000 credits), Pro+ at $40/month (2,000 credits), and Power at $200/month (10,000 credits)", "correct_value": "Tier list is incomplete — Kiro Pro Max at $100/month (5,000 credits) sits between Pro+ and Power. Full list: Free $0 / Pro $20 / Pro+ $40 / Pro Max $100 / Power $200 / Enterprise custom." },
+      { "field": "description", "wrong_quote": "a VS Code fork built around spec-driven development", "correct_value": "Still true of the IDE, but incomplete — Kiro is now IDE + CLI + Web + mobile + Kiro Crew." },
+      { "field": "description", "wrong_quote": "The agent runs on Anthropic's Claude.", "correct_value": "Multi-model (Claude, GPT, DeepSeek, Qwen, open weight) with Auto routing." },
+      { "field": "description_long", "wrong_quote": "Kiro effectively replaces AWS's earlier Amazon Q Developer, which is being wound down.", "correct_value": "NOT VERIFIED on a primary AWS/Kiro source during this audit. Treat as unverified rather than fact." },
+      { "field": "pros", "wrong_quote": "Runs frontier Claude models (Sonnet/Opus)", "correct_value": "Understates it — multi-provider model choice with Auto routing." }
+    ],
+    "sources": [
+      { "url": "https://kiro.dev/pricing/", "accessed": "2026-09-29" },
+      { "url": "https://kiro.dev/blog/", "accessed": "2026-09-29" },
+      { "url": "https://kiro.dev/", "accessed": "2026-09-29" }
+    ],
+    "confidence": "high",
+    "notes": "Vendor publishes no version number for the Kiro product itself (only Kiro CLI 2.0 for the CLI component) — current_version is null by design. Built and operated by AWS, confirmed on kiro.dev. Domain unchanged (kiro.dev). Our card's badge 'freemium' remains correct."
+  },
+  {
+    "slug": "koyfin",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      { "tier": "Free", "amount": "$0", "period": "month", "notes": "2Y financials & 1Y estimates; My Portfolios; advanced charting; market & macro dashboards; 2 watchlists & 2 screens; 2 custom dashboards; limited company snapshots and news" },
+      { "tier": "Plus", "amount": "$39", "period": "month", "notes": "annual option advertised at up to 30% savings" },
+      { "tier": "Premium", "amount": "$79", "period": "month", "notes": "annual option available. NOTE: tier is named 'Premium', not 'Pro'" },
+      { "tier": "Advisor Core", "amount": "$209", "period": "month", "notes": "client reporting, basic custodian integration" },
+      { "tier": "Advisor Pro", "amount": "$299", "period": "month", "notes": "customizable report pages, multiple custodian integrations" },
+      { "tier": "Teams", "amount": "custom", "period": null, "notes": "contact sales; custom onboarding, admin purchasing" }
+    ],
+    "free_tier": "Free $0/month: 2Y financials & 1Y estimates, My Portfolios, advanced charting, market & macro dashboards, 2 watchlists, 2 screens, 2 custom dashboards, limited snapshots and news.",
+    "repositioning": "Homepage headline is now 'A modern investment platform for advisors and investors' — the advisor/RIA segment is front and centre, with two dedicated Advisor tiers. Not an AI product at its core; the only AI element visible on the homepage is a 'Let AI tell you about Koyfin' widget that hands a prompt to ChatGPT/Claude/Gemini, i.e. external chatbots, not in-product AI.",
+    "card_errors": [
+      { "field": "description", "wrong_quote": "Free → $110/mo retail, $199/mo Advisor.", "correct_value": "Free $0 / Plus $39 / Premium $79 / Advisor Core $209 / Advisor Pro $299 per month. Neither $110 nor $199 exists." },
+      { "field": "description_long", "wrong_quote": "Pro at $79 per month provides the full platform", "correct_value": "The $79 tier is named 'Premium', not 'Pro'." },
+      { "field": "cons", "wrong_quote": "Pro plan at $110/mo expensive compared to free alternatives for casual investors", "correct_value": "No $110/mo plan exists. Highest retail tier is Premium $79/mo; advisor tiers are $209 and $299/mo." },
+      { "field": "description_long", "wrong_quote": "The platform covers 90,000+ global securities", "correct_value": "Koyfin's homepage now says 'over 100K global securities'." },
+      { "field": "description_long", "wrong_quote": "AI features added in 2025 include AI earnings call summaries, natural language financial queries, and AI-generated company summaries.", "correct_value": "UNVERIFIED on primary sources. Not found on koyfin.com homepage, pricing page or About page during this audit. Do not keep as fact without a Koyfin-published source." },
+      { "field": "description_long", "wrong_quote": "Plus at $39 per month provides expanded data access, custom dashboards, and AI features", "correct_value": "$39 Plus price is correct; the 'AI features' attribution is unverified." },
+      { "field": "description_long", "wrong_quote": "Where Bloomberg charges $24,000 per year per terminal", "correct_value": "Third-party figure, not published by Koyfin. Koyfin does run a 'Bloomberg alternative' comparison page but the $24,000 number was not verified from a primary source." },
+      { "field": "pros", "wrong_quote": "Mobile apps with full feature parity — research on the go", "correct_value": "UNVERIFIED — 'full feature parity' is not a claim Koyfin publishes." },
+      { "field": "users", "wrong_quote": "500K+", "correct_value": "Koyfin's About page does say 'half a million users', but dated 2023 — stale but not false." }
+    ],
+    "sources": [
+      { "url": "https://www.koyfin.com/pricing/", "accessed": "2026-09-29" },
+      { "url": "https://www.koyfin.com/", "accessed": "2026-09-29" },
+      { "url": "https://www.koyfin.com/about/", "accessed": "2026-09-29" }
+    ],
+    "confidence": "high",
+    "notes": "'5,900+ filter criteria' CONFIRMED verbatim on the homepage Equity Screener section. Domain unchanged (koyfin.com; canonical host www.koyfin.com). Pricing page did not indicate geo-served currency; all figures shown in USD. Worth questioning whether Koyfin belongs in an AI-tool catalog at all — no vendor-published AI feature set was found."
+  },
+  {
+    "slug": "leonardo-ai",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      { "tier": "FREE", "amount": "$0", "period": "month", "notes": "150 Fast Tokens/day, Token Bank 150, public creations, basic quality, 1 personal collection" },
+      { "tier": "ESSENTIAL", "amount": "$12", "period": "month, ex. tax", "notes": "8,500 Fast Tokens/mo, Token Bank 25,500, private creations, 10 personal AI models, 2 simultaneous generations" },
+      { "tier": "PREMIUM", "amount": "$30", "period": "month, ex. tax", "notes": "25,000 Fast Tokens/mo, Token Bank 75,000, 20 personal AI models, unlimited relaxed image generation on selected models" },
+      { "tier": "ULTIMATE", "amount": "$60", "period": "month, ex. tax", "notes": "60,000 Fast Tokens/mo, Token Bank 180,000, 50 personal AI models, unlimited relaxed image AND video generation on selected models" },
+      { "tier": "TEAM — STARTER", "amount": "$72", "period": "month ($24/seat), ex. tax", "notes": "75,000 shared tokens, 225,000 bank capacity, 25,000 fast tokens per seat" },
+      { "tier": "TEAM — GROWTH", "amount": "$144", "period": "month ($48/seat), ex. tax", "notes": "180,000 shared tokens, 540,000 bank capacity, 60,000 fast tokens per seat, train AI models with team tokens" },
+      { "tier": "TEAM — Custom", "amount": "custom", "period": null, "notes": "contact sales" },
+      { "tier": "API — Pay as you go", "amount": "not published", "period": "usage-based", "notes": "no commitments, automatic top-ups, up to 10 concurrent generations, API credit does not expire, includes remove.bg background removal APIs. No per-unit rate published on the page." },
+      { "tier": "API — Custom", "amount": "custom", "period": null, "notes": "contact sales; custom concurrency, model-based discounts" }
+    ],
+    "free_tier": "FREE $0/month: 150 Fast Tokens per day, Token Bank 150, creations are public, basic quality settings, 1 personal collection.",
+    "repositioning": "Homepage tagline is now 'THE CREATOR-FIRST GENERATIVE AI PLATFORM'. The developer API page is positioned as visual-first: 'Design media generation in a visual interface... then export the exact API code to production.' The name 'Creative Engine API' does NOT appear on leonardo.ai/api today.",
+    "card_errors": [
+      { "field": "users", "wrong_quote": "Free / from $10/mo", "correct_value": "Free / from $12/mo (ESSENTIAL $12/month ex. tax)." },
+      { "field": "description_long", "wrong_quote": "The Creative Engine API, launched April 14, 2026, is an enterprise-grade API that enables code extraction and replication of Leonardo's generation pipelines.", "correct_value": "The current leonardo.ai/api page never uses the name 'Creative Engine API'. What it does describe is visual design of media generation with export of production-ready API code — not 'code extraction and replication of generation pipelines'. The exact launch date could not be confirmed from a Leonardo-published source. Rewrite or drop." },
+      { "field": "description_long", "wrong_quote": "Leonardo underwent a full rebrand in April 2026, adopting the identity \"Yours to Create\" developed by agency Koto.", "correct_value": "'Yours to Create' does not appear on leonardo.ai today; the homepage tagline is 'THE CREATOR-FIRST GENERATIVE AI PLATFORM'. Unverified on primary sources." },
+      { "field": "description_long", "wrong_quote": "the release of the new Alchemy v4 pipeline and the Phoenix architecture", "correct_value": "'Alchemy v4' appears nowhere on leonardo.ai. The models Leonardo names on its own pricing page are Lucid Origin, Lucid Realism, Phoenix 1.0, Phoenix 0.9, Motion 1.0, Motion 2.0, Motion 2.0 Fast, Hailuo 2.3, Hailuo 2.3 Fast and Wan 2.6." },
+      { "field": "description_long", "wrong_quote": "Veo 3, Sora 2, Kling, and Seedance are now accessible directly through Leonardo's interface and API", "correct_value": "Not confirmed. The third-party models Leonardo itself names are Hailuo 2.3 / Hailuo 2.3 Fast and Wan 2.6. Veo, Sora, Kling and Seedance were not found on leonardo.ai during this audit." },
+      { "field": "description_long", "wrong_quote": "Sketch-to-image reached sub-second real-time update speeds, making it the fastest sketch-to-image implementation available as of May 2026.", "correct_value": "Unverified superlative; no vendor source. Remove." },
+      { "field": "pros", "wrong_quote": "Integrates Veo 3, Sora 2, Kling, and Seedance — multiple top models in one platform", "correct_value": "Replace with the models Leonardo actually lists (Lucid Origin, Lucid Realism, Phoenix, Motion 2.0, Hailuo 2.3, Wan 2.6)." },
+      { "field": "pros", "wrong_quote": "Sketch-to-image with sub-second real-time updates — best-in-class speed as of May 2026", "correct_value": "Unverified superlative; remove." },
+      { "field": "description_long", "wrong_quote": "(no mention of Canva)", "correct_value": "Leonardo.Ai operates under Canva ownership (acquired 2024). Third-party press ties both the rebrand and the API launch to 'under Canva ownership'. Ownership is not stated on leonardo.ai's own homepage/pricing/API pages, so treat the Canva relationship as reported-but-not-primary-confirmed here." },
+      { "field": "cons", "wrong_quote": "Free tier has limited daily token allocation", "correct_value": "Accurate — 150 Fast Tokens/day, Token Bank 150." }
+    ],
+    "sources": [
+      { "url": "https://leonardo.ai/pricing/", "accessed": "2026-09-29" },
+      { "url": "https://leonardo.ai/api/", "accessed": "2026-09-29" },
+      { "url": "https://leonardo.ai/", "accessed": "2026-09-29" }
+    ],
+    "confidence": "high for pricing and model names; low for the Creative Engine / rebrand / third-party-model claims (which appear unsupported)",
+    "notes": "Pricing page has a Pay Yearly / Pay Monthly toggle advertising 'Up to 20% off'; the displayed $12 / $30 / $60 figures did not change when Pay Monthly was selected, so they are recorded as the published monthly prices, all marked 'ex. tax'. No product version number is published — current_version null. Domain unchanged (leonardo.ai). leonardo.ai/pricing returns 403 to plain HTTP fetchers; it was read in a real browser."
+  },
+  {
+    "slug": "manus",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": "Manus 2.0",
+    "version_published": true,
+    "domain_changed": false,
+    "pricing": [
+      { "tier": "(unnamed tier 1)", "amount": "$20", "period": "month", "notes": "'Standard monthly usage' — 300 refresh credits every day, 4,000 credits/month, 20 concurrent tasks, 20 scheduled tasks" },
+      { "tier": "(unnamed tier 2)", "amount": "$40", "period": "month", "notes": "'Customizable monthly usage' — 8,000 credits/month (credit amount selectable via dropdown), 300 refresh credits daily" },
+      { "tier": "(unnamed tier 3)", "amount": "$200", "period": "month", "notes": "'Extended usage for productivity' — 40,000 credits/month, 300 refresh credits daily" },
+      { "tier": "Teams & Businesses", "amount": "custom", "period": null, "notes": "'Flexible plans for teams of all sizes — from startups to enterprise'" }
+    ],
+    "free_tier": "NOT LISTED on manus.im/pricing as of 2026-09-29 — the pricing page starts at $20/month. Separately, the Manus 2.0 announcement says the new Cue personal-agent app is 'free to use with an invite code' during early access.",
+    "repositioning": "Two major events. (1) OWNERSHIP: Manus published 'Manus Resumes Independent Operations' on 2026-09-01, stating 'Manus has formally resumed independent operations' and 'the founding team will continue to lead the company'; it references 'this transition' and 'a temporary interruption to access'. The Meta acquisition our card asserts is therefore no longer the current state. (2) PRODUCT: 'Introducing Manus 2.0' (2026-09-28) describes 'a new architecture, new products, and new capabilities' — the Cascade agent harness (23.2% fewer tokens, 28.2% less time, 32% cheaper vs the previous iteration), Cloud Computer (always-on servers), Automations (event-based triggers from email, calendar, Slack), Manus Studio (desktop workspace with Video Editor and Game Dev), and Cue (standalone personal agent app). Available across web, desktop and mobile.",
+    "card_errors": [
+      { "field": "description", "wrong_quote": "an autonomous AI agent acquired by Meta in late 2025", "correct_value": "Manus resumed independent operations on 2026-09-01 per its own blog; the founding team leads the company. The Meta acquisition is no longer the current ownership state." },
+      { "field": "description_long", "wrong_quote": "Manus was acquired by Meta in late 2025 and continues to operate as a standalone product", "correct_value": "Same — independent again as of 2026-09-01 (manus.im/blog/manus-resumes-independent-operations)." },
+      { "field": "cons", "wrong_quote": "Acquired by Meta — long-term product direction and data privacy policies may change", "correct_value": "Obsolete; Manus is independent again. If a risk note is wanted, the honest one is the disruption around the unwound deal (Manus's own post mentions users needing to back up and restore data after a temporary interruption)." },
+      { "field": "description", "wrong_quote": "Manus 1.6 Max completes complex tasks in under 4 minutes", "correct_value": "Current version is Manus 2.0, released 2026-09-28. The published performance claim is Cascade using 23.2% fewer tokens, 28.2% less time and 32% lower cost than the previous iteration — not 'under 4 minutes'." },
+      { "field": "description_long", "wrong_quote": "The average task completion time has dropped from approximately 15 minutes to under 4 minutes — a 4x speed improvement", "correct_value": "Not a claim Manus publishes for 2.0. Replace with the Cascade figures above." },
+      { "field": "pros", "wrong_quote": "Task completion time reduced from 15 minutes to under 4 minutes in Manus 1.6 Max", "correct_value": "Stale version and unverified figure." },
+      { "field": "users", "wrong_quote": "Free / from $20/mo", "correct_value": "From $20/mo is correct; no free tier is listed on the pricing page. Badge 'freemium' is questionable — consider 'paid'." },
+      { "field": "description_long", "wrong_quote": "New capabilities in 1.6 Max include Mobile App Development ... Design View is a new interactive image creation mode", "correct_value": "Superseded by the 2.0 feature set (Cascade, Cloud Computer, Automations, Manus Studio with Video Editor and Game Dev, Cue)." }
+    ],
+    "sources": [
+      { "url": "https://manus.im/pricing", "accessed": "2026-09-29" },
+      { "url": "https://manus.im/blog", "accessed": "2026-09-29" },
+      { "url": "https://manus.im/blog/introducing-manus-2-0", "accessed": "2026-09-29" },
+      { "url": "https://manus.im/blog/manus-resumes-independent-operations", "accessed": "2026-09-29" }
+    ],
+    "confidence": "high for version, pricing and independence; medium on the acquisition history detail",
+    "notes": "SOURCE CONFLICT on the Meta chapter. Manus's own post confirms independence resumed 2026-09-01 but never names Meta or gives the deal history. Third-party press (CNBC 2025-12-30) reports Meta acquired Manus/Butterfly Effect for over $2B closing 2025-12-30, and other third-party reporting says a Chinese regulator blocked it and Meta began unwinding it around June 2026. Only the independence itself is primary-sourced; the acquisition and unwind are third-party only. Pricing page tier NAMES are rendered as animated digits and no plan names were exposed in the accessible text — only the amounts and descriptions above. Domain unchanged (manus.im)."
+  },
+  {
+    "slug": "murf-ai",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": "Murf Falcon 2 (TTS model)",
+    "version_published": true,
+    "domain_changed": false,
+    "pricing": [
+      { "tier": "Studio — Free", "amount": "$0", "period": "month", "notes": "10 Projects, 10 minutes of Voice Generation, 1 Editor, 'Everything in Business Plan (No Downloads)', No Commercial Rights" },
+      { "tier": "Studio — Creator", "amount": "$19", "period": "month ($228 billed annually)", "notes": "100 Projects, 24 hrs/YEAR of Voice Generation, 1 Editor, all 200+ voices, unlimited downloads, Canva integration, commercial rights" },
+      { "tier": "Studio — Business", "amount": "$66", "period": "month ($792 billed annually)", "notes": "500 Projects, 96 hrs/YEAR of Voice Generation, 1 Editor, business license, Emphasis/Variability/Say It My Way, PowerPoint integration, Audio to Text, 48 hrs transcription" },
+      { "tier": "Studio — Enterprise", "amount": "custom", "period": null, "notes": "unlimited voice generation, custom editors, SSO, AI Translation, Custom Voice Clones (Add-on), Full Broadcasting Rights (Add-on)" },
+      { "tier": "API — Free Trial", "amount": "$0", "period": "month", "notes": "'$10 FREE, every month', 150+ voices in 35+ languages, 5 concurrent requests, no credit card required" },
+      { "tier": "API — Pay as you go", "amount": "usage-based", "period": null, "notes": "Text to Speech (Falcon, conversational, <100ms TTFA) $0.01/1000 characters; Text to Speech (studio-quality) $0.03/1000 characters; Voice Changer $0.10/minute; Translation $0.02/1000 characters. Purchased credit never expires; up to 5 concurrent requests" },
+      { "tier": "API — Enterprise", "amount": "custom", "period": null, "notes": "data residency, on-premise deployment, professional voice cloning, SLA, MSA" }
+    ],
+    "free_tier": "Studio Free: $0/month, 10 projects, 10 minutes of voice generation, 1 editor, no downloads, no commercial rights. API Free Trial: $10 of free credit every month.",
+    "repositioning": "MAJOR. Murf's homepage now leads with conversational AI voice agents and the TTS API, not voiceover production: 'Build production-ready conversational agents, power real-time conversations with the fastest TTS API, and create customizable AI voiceovers'. Site nav is Agents / Models / Creators / Enterprise. The product line is now four things — Murf Agents (inbound/outbound calling agents), the Murf API (Falcon 2 model), Studio (the classic voiceover editor), and Dub. Our card describes only Studio.",
+    "card_errors": [
+      { "field": "users", "wrong_quote": "1M+", "correct_value": "Murf's homepage now says 'trusted by 10 million+ developers, businesses, and creators'." },
+      { "field": "pros", "wrong_quote": "1M+ users with strong adoption in corporate training and marketing", "correct_value": "10 million+ per the vendor; also '300+ Forbes 2000 companies' (note: the pricing page says 'Fortune 2000' and the homepage says 'Forbes 2000' — Murf's own wording is inconsistent)." },
+      { "field": "cons", "wrong_quote": "Voice cloning locked behind Business plan at $66/month", "correct_value": "WRONG. On the current pricing page 'Custom Voice Clones' is an Enterprise ADD-ON; the Business plan's feature table does not include voice cloning. Professional Voice Cloning is also listed under API Enterprise." },
+      { "field": "description_long", "wrong_quote": "voice cloning (Business+)", "correct_value": "Enterprise add-on, not Business." },
+      { "field": "description_long", "wrong_quote": "Creator at $19 per month provides 2 hours per month", "correct_value": "Murf publishes it as '24 hrs/Year of Voice Generation' (an annual pool, not a monthly 2-hour cap). Business is '96 hrs/Year'." },
+      { "field": "cons", "wrong_quote": "Creator 2 hours/month requires careful management for active production", "correct_value": "Same — it is 24 hrs/year." },
+      { "field": "description_long", "wrong_quote": "Free plan provides 10 minutes of voice generation per month with watermarked audio", "correct_value": "10 minutes of voice generation is correct. 'Watermarked audio' is NOT what Murf publishes — the Free plan says 'No Downloads' and 'No Commercial Rights'." },
+      { "field": "description", "wrong_quote": "200+ voices in 35+ languages", "correct_value": "CONFLICT inside Murf's own pricing page: the Studio feature table says '200+' AI voices and '30+' Languages & Accents; the API tab says '150+ voices in 35+ languages and styles'. Do not state '200+ voices in 35+ languages' as one combined figure." },
+      { "field": "description_long", "wrong_quote": "over 200 AI voices across 35+ languages", "correct_value": "Same conflict — Studio: 200+ voices / 30+ languages & accents." },
+      { "field": "description_long", "wrong_quote": "Business at $66 per month provides 4 hours per month, voice cloning, priority support, and team collaboration", "correct_value": "Business is 96 hrs/year, priority support yes, voice cloning NO, and 'Share Projects' / 'Sharing & Collaboration' are Enterprise-only. Max editor seats on Business is 1." },
+      { "field": "description_long", "wrong_quote": "(no mention of Murf Agents, the API, Falcon, or Dub)", "correct_value": "Card is missing the whole current positioning: conversational voice agents, the Murf Falcon 2 TTS API with sub-100ms time-to-first-audio, and Dub." },
+      { "field": "cons", "wrong_quote": "Higher price than Play.ht for similar individual voiceover use cases", "correct_value": "Unverified comparative claim — no Play.ht pricing was checked in this audit." }
+    ],
+    "sources": [
+      { "url": "https://murf.ai/pricing", "accessed": "2026-09-29" },
+      { "url": "https://murf.ai/", "accessed": "2026-09-29" }
+    ],
+    "confidence": "high, with one gap",
+    "notes": "GAP: the pricing page's Billed Monthly / Billed Yearly toggle did not change the displayed figures — Creator showed '$19 / month' with '$228 Billed Annually' and Business '$66 / month' with '$792 Billed Annually' in both states. $19x12 = $228 and $66x12 = $792, so these are the ANNUAL-billing rates; the month-to-month-only rate could not be confirmed and should not be stated. Pricing is in USD; page did not indicate geo-serving. Company address listed as Salt Lake City, Utah. Domain unchanged (murf.ai)."
+  },
+  {
+    "slug": "opencode",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      { "tier": "OpenCode (the agent)", "amount": "$0", "period": null, "notes": "Open source, MIT licensed. 'Free models included or connect any model from any provider'. You can also log in with a GitHub Copilot account or a ChatGPT Plus/Pro account instead of paying per token." },
+      { "tier": "OpenCode Zen", "amount": "usage-based, per-request", "period": null, "notes": "Optional first-party AI gateway of curated/benchmarked models. 'You are charged per request and you can add credits to your account.' No per-model rate card was captured; the docs page lists model IDs and endpoints only." },
+      { "tier": "Enterprise", "amount": "not published", "period": null, "notes": "An 'Enterprise' item exists in the site nav; terms not captured in this audit." }
+    ],
+    "free_tier": "The agent itself is entirely free and MIT-licensed; you pay only your own LLM provider (or run local models). The site also advertises 'Free models included'.",
+    "repositioning": "Two changes. (1) VENDOR/REPO MOVED: the project is now published by Anomaly ('©2026 Anomaly') and the GitHub repo is anomalyco/opencode — the old sst/opencode path returns nothing. (2) NO LONGER TERMINAL-ONLY: 'OpenCode is an open source agent that helps you write code in your terminal, IDE, or desktop' — terminal interface, desktop app and IDE extension. There is also a first-party paid gateway (Zen), so 'free, no commercial layer' is now only half true.",
+    "card_errors": [
+      { "field": "description_long", "wrong_quote": "OpenCode is a Go-based terminal coding agent with a TUI (Terminal User Interface) built on the Bubble Tea framework", "correct_value": "The repo anomalyco/opencode is TypeScript (GitHub API, 2026-09-29). The Go / Bubble Tea description belongs to the older, superseded implementation." },
+      { "field": "cons", "wrong_quote": "Terminal-only — no GUI, IDE extension, or browser interface", "correct_value": "FLATLY WRONG. opencode.ai: 'Available as a terminal interface, desktop app, and IDE extension.'" },
+      { "field": "description_long", "wrong_quote": "OpenCode is terminal-only — there is no GUI, IDE extension, or browser interface.", "correct_value": "Same." },
+      { "field": "description_long", "wrong_quote": "you bring your own API keys to any of 75+ supported LLM providers, or run local models for free via Ollama", "correct_value": "'75+ LLM providers' CONFIRMED, but the site now words it as '75+ LLM providers through Models.dev, including local models'. It also supports logging in with a GitHub Copilot or ChatGPT Plus/Pro subscription instead of API keys." },
+      { "field": "description_long", "wrong_quote": "Pricing: OpenCode itself is completely free and open source. You pay only for the LLM API calls you make to your chosen provider.", "correct_value": "Still true for the agent, but incomplete — OpenCode Zen is a first-party paid AI gateway charged per request with prepaid credits." },
+      { "field": "users", "wrong_quote": "N/A", "correct_value": "Vendor publishes: 208K GitHub stars, 950 contributors, 13,000+ commits, 'used and trusted by over 16M developers every month' (GitHub API showed 210,744 stars on 2026-09-29)." },
+      { "field": "cons", "wrong_quote": "Smaller support ecosystem and documentation than established tools", "correct_value": "Hard to defend at 208K stars / 950 contributors / 16M monthly developers." },
+      { "field": "description_long", "wrong_quote": "Sessions persist across terminal disconnects via a client/server architecture backed by SQLite", "correct_value": "UNVERIFIED for the current TypeScript implementation. The site advertises multi-session ('start multiple agents in parallel on the same project') and share links, but the SQLite client/server detail was not confirmed." },
+      { "field": "description_long", "wrong_quote": "GitHub Actions integration allows mentioning /opencode in issue or PR comments", "correct_value": "UNVERIFIED in this audit — not stated on the homepage feature list. Confirm in docs before keeping." },
+      { "field": "description_long", "wrong_quote": "(no mention of who makes it)", "correct_value": "Made by Anomaly (anomalyco); the repo moved from sst/opencode to anomalyco/opencode." },
+      { "field": "description_long", "wrong_quote": "Supported providers include Anthropic, OpenAI, Google Gemini, AWS Bedrock, xAI Grok, DeepSeek, Mistral, and Groq.", "correct_value": "Site's own shorthand is 'including Claude, GPT, Gemini and more'; the full set is whatever Models.dev lists. Also note privacy stance: 'OpenCode does not store any of your code or context data.'" }
+    ],
+    "sources": [
+      { "url": "https://opencode.ai/", "accessed": "2026-09-29" },
+      { "url": "https://opencode.ai/docs/", "accessed": "2026-09-29" },
+      { "url": "https://opencode.ai/docs/zen/", "accessed": "2026-09-29" },
+      { "url": "https://api.github.com/repos/anomalyco/opencode", "accessed": "2026-09-29" }
+    ],
+    "confidence": "high",
+    "notes": "No product version number is published for OpenCode itself — current_version null. The install command is now 'curl -fsSL https://opencode.ai/v2/install | bash' (a /v2/ install path), which hints at a v2 line but is not a published version claim, so it is not recorded as one. Domain unchanged (opencode.ai). Badge 'free' is still defensible for the agent, but the card should mention the optional paid Zen gateway."
+  },
+  {
+    "slug": "relevance-ai",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      { "tier": "Free", "amount": "RETIRED", "period": null, "notes": "Docs state: 'The Free plan is retired for new signups and existing accounts.'" },
+      { "tier": "Pro", "amount": "$19 (annual billing) / $29 (monthly billing)", "period": "month", "notes": "2,500 Actions/month, $20 of Vendor Credits/month, unlimited agents, tools and integrations" },
+      { "tier": "Team", "amount": "$234 (annual billing) / $349 (monthly billing)", "period": "month", "notes": "7,000 Actions/month, $70 of Vendor Credits/month, plus calling agents, meeting agents and an analytics dashboard" },
+      { "tier": "Enterprise", "amount": "custom", "period": null, "notes": "Custom Actions and Vendor Credits; unlimited agents, tools, users, projects, workforces; 2,000+ integrations; calling & meeting agents; enterprise triggers; agent evaluations; A/B testing & analytics; SSO, RBAC & audit logs; dedicated account manager" }
+    ],
+    "free_tier": "NONE. Relevance AI's docs state the Free plan is retired for new signups AND for existing accounts.",
+    "repositioning": "Repositioned to enterprise 'AI Workforce'. relevanceai.com/pricing now displays ONLY the Enterprise tier with a 'Talk to sales' CTA and no prices at all — headline 'Pricing That Scales With Your AI Workforce', 'For companies looking to decouple growth from headcount via an AI Workforce.' Self-serve Pro/Team pricing survives only in the docs. The site also now lists Clay, Claude Managed Agents, OpenAI Codex, Gemini Enterprise, Microsoft Copilot Studio, Gumloop and Dust as named competitors. Legal entity: 'OnSearch Pty Ltd T/A Relevance AI'.",
+    "card_errors": [
+      { "field": "description_long", "wrong_quote": "Free (200 actions/month + 1,000 vendor credits on signup)", "correct_value": "The Free plan is retired for new signups and existing accounts (relevanceai.com/docs/get-started/pricing)." },
+      { "field": "badge", "wrong_quote": "freemium", "correct_value": "Should be 'paid' — there is no free plan." },
+      { "field": "users", "wrong_quote": "Free / from $19/mo", "correct_value": "From $19/mo on annual billing ($29/mo on monthly billing); no free tier." },
+      { "field": "description_long", "wrong_quote": "Pro ($19/seat/month), Team ($234/seat/month), Enterprise (custom)", "correct_value": "Docs publish these as plan prices, not per-seat: Pro $19/month annual or $29/month monthly; Team $234/month annual or $349/month monthly. Our card omits the monthly-billing prices entirely and adds a '/seat' the vendor does not state on this page." },
+      { "field": "pros", "wrong_quote": "Pro at $19/seat — affordable entry for professional teams", "correct_value": "$19/month on annual billing; $29/month if billed monthly; 'per seat' unconfirmed." },
+      { "field": "cons", "wrong_quote": "Team plan $234/seat — expensive for small teams", "correct_value": "$234/month annual ($349 monthly); 'per seat' unconfirmed." },
+      { "field": "description_long", "wrong_quote": "In September 2025, Relevance AI overhauled its pricing, splitting costs into two components: Actions (what agents do) and Vendor Credits (model costs, passed through without markup).", "correct_value": "The Actions + Vendor Credits model is still current and correctly described ('LLM and tool usage costs at wholesale, with no markup'), but plan allocations are now Pro 2,500 actions + $20 vendor credits, Team 7,000 actions + $70 vendor credits. The 'September 2025' dating is stale framing for a 2026 card." },
+      { "field": "pros", "wrong_quote": "Sep 2025: transparent Actions + Vendor Credits pricing model", "correct_value": "Drop the date; and note that the public pricing page is no longer transparent — it shows Enterprise 'Talk to sales' only." },
+      { "field": "description_long", "wrong_quote": "a tool library with 100+ pre-built agent capabilities", "correct_value": "The site now advertises '2,000+ Integrations' on the Enterprise tier. The '100+' figure was not found." },
+      { "field": "pros", "wrong_quote": "BYOK on paid plans eliminates vendor credit costs for power users", "correct_value": "UNVERIFIED in this audit — BYOK was not stated on the pricing page or the docs pricing page that was read." }
+    ],
+    "sources": [
+      { "url": "https://relevanceai.com/pricing", "accessed": "2026-09-29" },
+      { "url": "https://relevanceai.com/docs/get-started/pricing", "accessed": "2026-09-29" },
+      { "url": "https://relevanceai.com/docs", "accessed": "2026-09-29" }
+    ],
+    "confidence": "high, with one internal conflict noted",
+    "notes": "SOURCE CONFLICT within the vendor's own site: relevanceai.com/pricing shows Enterprise only with no numbers, while relevanceai.com/docs/get-started/pricing still publishes Pro and Team with exact prices. Both were read on 2026-09-29. Reporting both rather than picking one; the docs figures are the only published numbers. Domain unchanged (relevanceai.com), though docs moved from docs.relevanceai.com to relevanceai.com/docs (301)."
+  }
+]
