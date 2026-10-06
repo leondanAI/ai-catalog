@@ -53,11 +53,12 @@ VALUES
 
 -- 2 ─────────────────────────────────────────────────────────────────────────
 ('cognition-devin-price-cut', 'en', 'tools', 'Tools', '#2dd4a0', 'Cognition', 'September 28, 2026',
- 'Devin Gets 30 to 70 Percent Cheaper and Tops a Coding Benchmark the Same Week',
- $$Cognition announced on September 28 that Devin is now 30 to 40% cheaper in Fusion and Normal modes, 15 to 20% cheaper in Ultra and up to 70% cheaper in Devin Review. The company says Devin Fusion now ranks first on the FrontierCode 1.1 Extended benchmark, at an average cost of $0.60 per task.$$,
+ 'Devin Tasks Get 30 to 70 Percent Cheaper to Run, and It Tops a Coding Benchmark',
+ $$Cognition announced on September 28 that running Devin now costs 30 to 40% less in Fusion and Normal modes, 15 to 20% less in Ultra and up to 70% less in Devin Review. Subscription prices are unchanged; the saving is in usage per task. The company says Devin Fusion now ranks first on FrontierCode 1.1 Extended, at an average cost of $0.60 per task.$$,
  $$<p><strong>Cognition</strong> has cut the price of <strong>Devin</strong>, its autonomous coding agent, across every mode at once.</p>
 <h2>The cuts</h2>
 <p>By the company's own announcement, Devin is now <strong>30 to 40% cheaper in Fusion and Normal modes</strong>, <strong>15 to 20% cheaper in Ultra</strong>, and <strong>up to 70% cheaper in Devin Review</strong>, the mode that reviews pull requests. Cognition attributes the reduction to parallel execution and context caching rather than to a change in the underlying models.</p>
+<p>The published subscription prices have not changed. What dropped is how much usage each task consumes, so the saving shows up in how far a plan goes, not in the monthly bill itself.</p>
 <h2>Cheaper and better in the same week</h2>
 <p>Alongside the price change, Cognition says <strong>Devin Fusion now ranks first on FrontierCode 1.1 Extended</strong>, at an average cost of <strong>$0.60 per task</strong>. Fusion is the architecture the company introduced in June: a frontier model plans, a cheaper model executes, and work is routed between them mid-task.</p>
 <h2>Why this matters beyond Devin</h2>
