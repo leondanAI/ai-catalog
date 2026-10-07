@@ -1,0 +1,1078 @@
+[
+ {
+  "slug": "akkio",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Enterprise",
+    "amount": "custom",
+    "period": null,
+    "notes": "Pricing page: 'Custom pricing based on your unique needs'. Contact Sales / Book a meeting. No other tiers listed."
+   }
+  ],
+  "free_tier": "No free plan and no free trial on the official pricing page.",
+  "repositioning": "Homepage title is now 'The AI Workflow Automation Platform'. It is aimed at 'media agencies and data providers', and a banner says 'Akkio is bringing AI infrastructure to retail media networks'. The workflow stages are Strategize / Segment / Plan / Deploy / Measure. Tools are named 'Chat with Data, no-code modeling, and advanced reporting'.",
+  "card_errors": [
+   {
+    "field": "faq[0].a",
+    "wrong_quote": "Akkio is a no-code AI analytics platform designed for marketing agencies and business teams. It can build predictive models — churn prediction, lead scoring, forecasting — from CSV",
+    "correct_value": "Stale positioning. Akkio is now an AI workflow automation platform for media agencies and data providers (audience segmentation, media plan simulation, activation, measurement)."
+   },
+   {
+    "field": "faq[2].a",
+    "wrong_quote": "Akkio has a free trial. Paid plans start at around $49/month.",
+    "correct_value": "The official pricing page lists only Enterprise with custom pricing. No trial is mentioned and no public price is shown."
+   },
+   {
+    "field": "faq[1].a",
+    "wrong_quote": "Akkio focuses on building reusable predictive models and deploying them for ongoing business use.",
+    "correct_value": "Stale. The current product focuses on agency campaign workflows, not generic predictive models."
+   },
+   {
+    "field": "best_for",
+    "wrong_quote": "No-code AI analytics and predictive modeling for marketing agencies",
+    "correct_value": "AI workflow automation for media agencies and data providers (strategy, audience segmentation, media planning, activation, measurement)"
+   },
+   {
+    "field": "description_long / pros",
+    "wrong_quote": "an Audience Agent for segmentation, a Strategy Agent, Chat Explore and Chat Data Prep ... Generative Reports; Media Planning Agent",
+    "correct_value": "UNVERIFIED. These agent names do not appear on the current homepage, which uses 'Chat with Data', 'no-code modeling', 'advanced reporting' and 'Simulate multiple media plans'."
+   },
+   {
+    "field": "pros[3]",
+    "wrong_quote": "a cited $800M account win",
+    "correct_value": "The $800M account was won by Horizon Media ('Horizon Media strengthens its blu. platform with Akkio and wins an $800M account'), not by Akkio. The Havas partnership is confirmed on the homepage."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Third-party directories still list older self-serve tiers: a view-only Free plan, Basic at $49/user/month, Pro at $99/user/month, and a Build-On package from $999/month",
+    "correct_value": "Third-party data only. Recommend removing these figures from the card."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.akkio.com/pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.akkio.com/",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Pricing is high confidence: custom only. The agent product names in the card could not be confirmed on the homepage. Docs were not checked."
+ },
+ {
+  "slug": "chatgpt",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Model picker lists GPT-6.1 Sol, GPT-6 Astra, GPT-6 Sol, GPT-6 Luna, plus GPT-5.6 Sol, Sol Pro, Terra, Luna and GPT-5 Thinking Mini",
+  "version_published": true,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "0",
+    "period": "month",
+    "notes": "Unlimited text chats with GPT-5.6 Luna, subject to abuse limits; limited uploads, image creation, voice, deep research, Codex"
+   },
+   {
+    "tier": "Go",
+    "amount": null,
+    "period": "month",
+    "notes": "USD price not verified (page geo-served in ILS). Pricing page says the plan may include advertising"
+   },
+   {
+    "tier": "Plus",
+    "amount": null,
+    "period": "month",
+    "notes": "USD price not verified (page geo-served in ILS). Adds advanced reasoning with GPT-6, projects, scheduled tasks, custom GPTs, more Codex"
+   },
+   {
+    "tier": "Pro 100",
+    "amount": "$100",
+    "period": "month",
+    "notes": "Monthly only; no annual billing"
+   },
+   {
+    "tier": "Pro 200",
+    "amount": "$200",
+    "period": "month",
+    "notes": "Reopened for new subscriptions with a lower usage allowance than before"
+   },
+   {
+    "tier": "Pro 500",
+    "amount": "$500",
+    "period": "month",
+    "notes": "Only Pro tier with GPT-6 Astra Ultrafast"
+   }
+  ],
+  "free_tier": "Yes. Free plan at $0, ad-supported for US logged-in adults. GPT-6 Luna is in the desktop app only. The default chat model was not verified.",
+  "repositioning": "GPT-6 models launch first in 'ChatGPT Work' and Codex. Per MacRumors quoting OpenAI, 'GPT-6 Sol and Luna are not yet available in Chat mode'. Pro now has three price points.",
+  "card_errors": [
+   {
+    "field": "description",
+    "wrong_quote": "now running the GPT-5.6 family (Sol/Terra/Luna)",
+    "correct_value": "Sol and Luna are GPT-6 models (GPT-6 Sol, GPT-6 Luna, 2026-09-22). The flagship is GPT-6 Astra (2026-09-03). 'Terra' is unverified."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "As of July 2026 the default model is the GPT-5.6 family — Sol, Terra and Luna ... A newer GPT-5.6 family (Sol flagship, Terra balanced, Luna fast) has entered limited preview but is not yet generally available.",
+    "correct_value": "Stale and self-contradictory. As of 2026-10 the GPT-6 family (Astra, Sol, Luna) is released. On Plus it is in Work/Codex only; on Free/Go Luna is in the desktop app only."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "GPT-5.6 is preview-only, so you cannot rely on it for production yet.",
+    "correct_value": "Obsolete. Remove."
+   },
+   {
+    "field": "pros[0]",
+    "wrong_quote": "Default GPT-5.5 (Instant/Thinking)",
+    "correct_value": "Stale. GPT-6 family is current. The default Chat model was not verified."
+   },
+   {
+    "field": "cons[3]",
+    "wrong_quote": "GPT-5.6 (Sol/Terra/Luna) is limited preview only, not production-ready",
+    "correct_value": "Wrong. GPT-6 Sol and Luna are released (Work/Codex and API). Luna is on Free/Go in the desktop app."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Pro is now split into two options: $100/mo ... and $200/mo",
+    "correct_value": "There are three Pro plans: $100, $200 and $500/month (help.openai.com snippet)."
+   },
+   {
+    "field": "description_long / pros[3] / choose_if[2]",
+    "wrong_quote": "$200/mo with about 20x quotas plus Sora video and a 1M-token context window",
+    "correct_value": "UNVERIFIED. Could not confirm the Sora or 1M-context claims on primary pages. $200 is no longer the top tier ($500 Pro exists)."
+   },
+   {
+    "field": "description_long / cons[0] / choose_if[0]",
+    "wrong_quote": "Free is $0/mo and now shows ads to logged-in adult users in the US (since February 2026)",
+    "correct_value": "Ads cover both Free and Go tiers (OpenAI announcement, Jan 2026, per press). The 'February 2026' start date is unverified."
+   },
+   {
+    "field": "description_long / choose_if[3]",
+    "wrong_quote": "Business (Team) is $25/user/mo",
+    "correct_value": "Third-party data says $25 per user per month billed monthly, $20 billed annually. Not verified on openai.com."
+   },
+   {
+    "field": "pros[2]",
+    "wrong_quote": "up to $200/mo Pro",
+    "correct_value": "Pro now goes up to $500/mo."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://openai.com/chatgpt/pricing/ (HTTP 403, not readable)",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/ (HTTP 403; search snippet only)",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://help.openai.com/en/articles/9793128 (HTTP 403; search snippet only)",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://help.openai.com/en/articles/20001516-managing-usage-with-gpt-6-astra-in-work-and-codex (title only via search)",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.macrumors.com/2026/09/22/openai-gpt-6-sol-luna/ (secondary, quotes OpenAI)",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://chatgpt.com/ru-RU/pricing/",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "medium (Pro tiers and model list verified manually in a browser on 2026-10-06; Go and Plus USD prices not readable — the pricing page is geo-served in ILS)",
+  "notes": "Every openai.com, chatgpt.com and help.openai.com page returned 403 to WebFetch and curl. The Playwright MCP was unavailable (connection refused on :9222), so no primary page could be read in full. Model availability comes from search snippets of openai.com/help.openai.com plus MacRumors quoting OpenAI. Business pricing is third-party only. Re-verify prices and the default Chat model on openai.com/chatgpt/pricing in a browser before editing. | Manual check: Pro is three monthly tiers ($100/$200/$500); Pro 500 alone includes Astra Ultrafast. Go \"may include advertising\" per the pricing page; the Go help article says ads \"may\" be tested in the future. Do not state Go or Plus USD prices — not verifiable from this location."
+ },
+ {
+  "slug": "copy-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Chat",
+    "amount": "$29 (monthly billing) / $24 (annual billing, $288/yr)",
+    "period": "month",
+    "notes": "5 seats, unlimited words in chat, OpenAI/Anthropic/Gemini models"
+   },
+   {
+    "tier": "Growth",
+    "amount": "$1,000",
+    "period": "month, billed $12,000/yr",
+    "notes": "75 seats, 20K workflow credits/month"
+   },
+   {
+    "tier": "Expansion",
+    "amount": "$2,000",
+    "period": "month, billed $24,000/yr",
+    "notes": "150 seats, 45K workflow credits/month"
+   },
+   {
+    "tier": "Scale",
+    "amount": "$3,000",
+    "period": "month, billed $36,000/yr",
+    "notes": "200 seats, 75K workflow credits/month"
+   },
+   {
+    "tier": "Enterprise",
+    "amount": "custom",
+    "period": null,
+    "notes": "API access, 20+ integrations"
+   }
+  ],
+  "free_tier": "No free plan on the pricing page.",
+  "repositioning": "Site is branded around 'GTM AI'. The copy.ai site carries a Fullcast banner and the support email is copyaisupport@fullcast.com, which is consistent with Fullcast ownership. The October 2025 acquisition date was not verified on a primary page.",
+  "card_errors": [
+   {
+    "field": "faq[1].a",
+    "wrong_quote": "Copy.ai offers a free plan with 2,000 words per month and limited workflow runs. The Pro plan starts at $49/month for unlimited words and 200 workflow credits.",
+    "correct_value": "No free plan. Entry tier is Chat at $29/mo (monthly) or $24/mo billed annually ($288/yr). Next tier is Growth at $1,000/mo billed annually."
+   },
+   {
+    "field": "faq[2].a",
+    "wrong_quote": "Copy.ai focuses on marketing copy and workflow automation at a more accessible price ... Copy.ai is better for solo marketers",
+    "correct_value": "Stale. Copy.ai now targets GTM/sales/RevOps teams, and team plans start at $1,000/mo."
+   },
+   {
+    "field": "faq[0].a",
+    "wrong_quote": "Copy.ai is an AI writing platform for marketing content.",
+    "correct_value": "Now positioned as a GTM AI platform (chat plus workflows/agents for sales, marketing and RevOps)."
+   },
+   {
+    "field": "description_long / pros[4]",
+    "wrong_quote": "There are still some free standalone tools and templates on the site",
+    "correct_value": "UNVERIFIED in this pass."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "In October 2025 the company was acquired by Fullcast",
+    "correct_value": "Fullcast ownership is consistent with copy.ai (support email @fullcast.com, Fullcast banner). The October 2025 date is UNVERIFIED on a primary source."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.copy.ai/prices",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.copy.ai/",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.fullcast.com/",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Card body and pricing are accurate. Only the FAQ block is stale. The 'users: 17M+' figure is unverified."
+ },
+ {
+  "slug": "elicit",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Basic",
+    "amount": "$0",
+    "period": null,
+    "notes": "Unlimited search (138M+ papers), unlimited summaries, unlimited chat with papers, view sources, Zotero import, limited Research Agent and Reports usage"
+   },
+   {
+    "tier": "Pro",
+    "amount": "$49 per user",
+    "period": "month, billed annually ($588/yr), 'Save 35%'",
+    "notes": "Screen 5,000 papers, 20 columns, reports from up to 135 sources, API access. Monthly-billing price not captured."
+   },
+   {
+    "tier": "Scale",
+    "amount": "$169 per user",
+    "period": "month, billed annually ($2,028/yr), 'Save 39%'",
+    "notes": "5x usage vs Pro, figure extraction, 30 columns, up to 200 sources, collaboration and admin panel. Monthly-billing price not captured."
+   },
+   {
+    "tier": "Enterprise",
+    "amount": "custom",
+    "period": null,
+    "notes": "Screen 40,000 papers, 40 columns, unlimited API, SSO/SAML/2FA"
+   }
+  ],
+  "free_tier": "Yes: Basic $0 with unlimited search, summaries and chat with papers, and limited Research Agent/Reports usage.",
+  "repositioning": "Product is now centred on the 'Elicit Research Agent' (launched 2026-08-04) and 'Routines' (2026-09-30). The API plus an MCP server were announced 2026-07-15. On 2026-06-30 Elicit moved from workflow-based limits to a monthly usage pool. The homepage says 'Trusted by over 5 million researchers'.",
+  "card_errors": [
+   {
+    "field": "users",
+    "wrong_quote": "2M+",
+    "correct_value": "Homepage: 'TRUSTED BY OVER 5 MILLION RESEARCHERS'"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Pro is $49/month (or $588/year) ... Scale is $169/month (or $2,028/year)",
+    "correct_value": "$49 and $169 are per user per month billed annually ($588 / $2,028 per year). Monthly-billing prices were not captured."
+   },
+   {
+    "field": "faq[2].a",
+    "wrong_quote": "Elicit has a free plan with 5,000 credits per month (roughly 500 paper summaries). Elicit Plus is $12/month for 15,000 credits",
+    "correct_value": "Free Basic plan has unlimited search, summaries and chat, with limited agent/report usage. Paid plans are Pro $49 and Scale $169 per user per month billed annually (but see conflict note on a Plus $11 tier)."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "The underlying language model was upgraded for more accurate, context-aware summaries and better citation handling.",
+    "correct_value": "UNVERIFIABLE vague claim. No primary source found."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "10 alerts",
+    "correct_value": "UNVERIFIED. Not seen on the pricing page."
+   },
+   {
+    "field": "description",
+    "wrong_quote": "The current version adds Research Agents (late 2025) and a public Elicit API (March 2026).",
+    "correct_value": "Dates are correct (Research Agents blog 2025-12-09, API blog 2026-03-03) but stale. Newer: Elicit Research Agent (2026-08-04), API + MCP (2026-07-15), Routines (2026-09-30)."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://elicit.com/pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://elicit.com/",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://elicit.com/blog",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "CONFLICT: the static HTML of elicit.com/pricing (Framer) holds two plan sets. Set A: Basic Free / Pro $49 ($588/yr) / Scale $169 ($2,028/yr) / Enterprise. Set B: Basic Free / Plus $11 ($132/yr, Save 42%) / Pro $39 ($468/yr, Save 43%) / Scale $89 ($1,068/yr, Save 40%). There is an 'Industry' segment label, and set B may be a different audience segment (e.g. academia) or an A/B variant. WebFetch rendered set A. Both sets are annual-billing figures. Confirm in a browser which set is the default and what the monthly-billing prices are. The clinical trials count is 545,000 on the homepage and 'more than 500 thousand' in pricing set B."
+ },
+ {
+  "slug": "glide",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "GlideOS (new standalone product); the original platform is now called 'Glide Classic'",
+  "version_published": true,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "GlideOS Free",
+    "amount": "$0",
+    "period": "month",
+    "notes": "Limited credits, 2 team members, 10 projects, 0 published apps, 0 enabled workflows"
+   },
+   {
+    "tier": "GlideOS Basic",
+    "amount": "$25",
+    "period": "month",
+    "notes": "100 credits, 2 members, 2 published apps, 10 projects, 1 workflow. No annual option shown."
+   },
+   {
+    "tier": "GlideOS Plus",
+    "amount": "$50",
+    "period": "month",
+    "notes": "250 credits (selectable up to 10,000), 3 members, 5 published apps, 20 projects, 5 workflows, public apps"
+   },
+   {
+    "tier": "GlideOS Pro",
+    "amount": "$125",
+    "period": "month",
+    "notes": "500 credits with 5 members (+50 credits per member), unlimited published apps and workflows, premium integrations, MCP 'bring your own agent'"
+   },
+   {
+    "tier": "GlideOS Enterprise",
+    "amount": "custom",
+    "period": null,
+    "notes": "SSO, choose org's LLM provider, 30-day backups"
+   },
+   {
+    "tier": "Glide Classic Free",
+    "amount": "$0",
+    "period": null,
+    "notes": "1 editor, up to 25k rows, unlimited drafts"
+   },
+   {
+    "tier": "Glide Classic Explorer / Maker",
+    "amount": "not captured",
+    "period": null,
+    "notes": "Named in the Classic FAQ. Prices are JS-rendered and were not read."
+   },
+   {
+    "tier": "Glide Classic Business",
+    "amount": "from $199",
+    "period": "month, billed yearly",
+    "notes": "30 users included, extra users $5 (annual) / $6 (monthly), 5,000 updates, +$0.02 per update, up to 100k rows, 10 editors, Sheets/Airtable/Excel sync, 14-day free trial. Annual billing saves 20%."
+   },
+   {
+    "tier": "Glide Classic Enterprise",
+    "amount": "custom",
+    "period": null,
+    "notes": "SSO, SQL sources"
+   }
+  ],
+  "free_tier": "Yes on both products. GlideOS Free has limited credits and cannot publish apps. Classic Free has 1 editor and 25k rows.",
+  "repositioning": "Major. The pricing FAQ says: 'GlideOS is a standalone product, completely separate from the original Glide platform (Glide Classic). This means GlideOS has its own plans and pricing, and will require a separate subscription.' The homepage reads 'Turn spreadsheets into apps & agents' and pushes 'Bring your own agent'.",
+  "card_errors": [
+   {
+    "field": "description / description_long",
+    "wrong_quote": "In 2026 Glide rebranded its core product as GlideOS",
+    "correct_value": "Not a rebrand. GlideOS is a separate standalone product with its own subscription. The original platform continues as 'Glide Classic'."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Pricing was restructured on Nov 1, 2025 into five tiers. Free ... Explorer is $19/mo billed annually ($25 monthly) ... Maker is $49/mo annually ($60 monthly) ... Business is $199/mo annually ($249 monthly)",
+    "correct_value": "These are Glide Classic plans. Classic Business from $199/mo billed yearly is confirmed. Explorer/Maker prices and Business monthly price were not verified. GlideOS has different plans: Free $0, Basic $25, Plus $50, Pro $125/month, Enterprise custom."
+   },
+   {
+    "field": "description / pros[1] / choose_if[1]",
+    "wrong_quote": "Glide Agent (an AI app-building assistant) now in beta for new teams",
+    "correct_value": "UNVERIFIED. The current site talks about GlideOS and 'Bring your own agent' (MCP on Pro), not a 'Glide Agent' beta."
+   },
+   {
+    "field": "faq[2].a",
+    "wrong_quote": "Maker plan is $49/month, Team is $99/month.",
+    "correct_value": "There is no Team plan. GlideOS: Basic $25, Plus $50, Pro $125/month. Classic: Business from $199/mo billed yearly."
+   },
+   {
+    "field": "faq[0].a",
+    "wrong_quote": "turns Google Sheets, Excel, or Airtable data into mobile apps",
+    "correct_value": "Now positioned as an AI app development platform (GlideOS) for internal business apps from a spreadsheet, prompt or file. Spreadsheet sync is a Classic-plan feature."
+   },
+   {
+    "field": "cons[1]",
+    "wrong_quote": "Google Sheets needs Maker ($49/mo) and Airtable needs Business ($199/mo)",
+    "correct_value": "Partially unverified. The Classic comparison table shows Sheets/Airtable/Excel sync on Business. The Maker price was not verified."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.glideapps.com/pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.glideapps.com/classic/pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.glideapps.com/",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "GlideOS pricing is high confidence. Classic Explorer/Maker prices are JS-rendered and were not captured. The whole card needs rewriting around the GlideOS vs Classic split. Decide which product the card describes."
+ },
+ {
+  "slug": "jasper",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Pro",
+    "amount": "$69 (monthly billing) / $59 (annual billing)",
+    "period": "month per seat",
+    "notes": "Includes 1 seat; 7-day free trial"
+   },
+   {
+    "tier": "Business",
+    "amount": "custom",
+    "period": "12-month minimum",
+    "notes": "Contact sales"
+   }
+  ],
+  "free_tier": "No free plan. 7-day free trial of Pro.",
+  "repositioning": "Homepage: 'Put AI agents to work for marketing'. Jasper calls itself 'the agent workspace built for modern marketing teams' with '100+ specialized AI agents'. A GEO Agent exists: blog posts from Aug-Sep 2026 cover Semrush, Google Search Console and Webflow integrations for it.",
+  "card_errors": [
+   {
+    "field": "faq[0].a",
+    "wrong_quote": "starting at $49/month",
+    "correct_value": "Pro is $59/seat/month billed annually or $69 billed monthly."
+   },
+   {
+    "field": "description / description_long / pros[0]",
+    "wrong_quote": "its Studio taps third-party models like Claude Opus 4.8 and Google Gemini 3.5 Flash",
+    "correct_value": "UNVERIFIED. No model names on the pricing or home pages. Per audit rules, name vendors (Anthropic, Google, OpenAI) rather than third-party model versions."
+   },
+   {
+    "field": "description_long / cons[1]",
+    "wrong_quote": "In May 2026 Jasper retired the entry-level Creator plan ... the roughly $39-49 Creator plan was discontinued",
+    "correct_value": "UNVERIFIED date and price. The pricing page currently shows only Pro and Business, which is consistent with no Creator plan."
+   },
+   {
+    "field": "description / description_long",
+    "wrong_quote": "in June 2026 it added an end-to-end GEO agent",
+    "correct_value": "The GEO Agent is confirmed (blog, Aug-Sep 2026). The June 2026 launch date is UNVERIFIED."
+   },
+   {
+    "field": "faq[1].a",
+    "wrong_quote": "Copy.ai focuses on marketing copy and workflow automation at a more accessible price ... Copy.ai is better for solo marketers",
+    "correct_value": "Stale. Copy.ai team plans start at $1,000/mo. Its $29 Chat plan is cheaper than Jasper Pro, but Copy.ai is no longer solo-focused."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.jasper.ai/pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.jasper.ai/",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.jasper.ai/blog",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Pricing confirmed. The model-version claims should be removed or rewritten as vendor names. 'users: 70K+' is unverified."
+ },
+ {
+  "slug": "meta-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Muse Spark (Meta Superintelligence Labs, announced April 2026)",
+  "version_published": true,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "$0",
+    "period": null,
+    "notes": "Meta: the core experience of the apps and Meta AI 'has always been free, and that will not change'; 'Meta AI will remain free for everyday use' (translated from the FR newsroom article)."
+   },
+   {
+    "tier": "WhatsApp Plus / Instagram Plus / Facebook Plus (single-product)",
+    "amount": "EUR 2.49 / EUR 2.99 / EUR 2.99",
+    "period": "month",
+    "notes": "EUR prices from the FR newsroom article. Third parties report USD from $2.99."
+   },
+   {
+    "tier": "Meta One Core (consumer bundle)",
+    "amount": "EUR 6.99",
+    "period": "month",
+    "notes": "More Meta AI image/video generation (Muse models), Restyle, etc. Third parties report $7.99."
+   },
+   {
+    "tier": "Meta One Premium (consumer bundle)",
+    "amount": "EUR 20.99",
+    "period": "month",
+    "notes": "Highest consumer usage levels. Third parties report $19.99."
+   },
+   {
+    "tier": "Meta One Essential (creators/business)",
+    "amount": "from EUR 16.99",
+    "period": "month",
+    "notes": "Third parties report from $14.99."
+   },
+   {
+    "tier": "Meta One Advanced",
+    "amount": "from EUR 54.99",
+    "period": "month",
+    "notes": "USD not verified."
+   },
+   {
+    "tier": "Meta One Expert / Max",
+    "amount": "from EUR 169 / from EUR 549",
+    "period": "month",
+    "notes": "Third parties report Max from $499."
+   }
+  ],
+  "free_tier": "Yes. Meta AI stays free for everyday use; paid Meta One plans raise usage of compute-heavy AI features.",
+  "repositioning": "Meta One launched worldwide on 2026-09-15 with 50+ features and '15 million subscriptions and trials to date'. Consumer bundles are 'Core' and 'Premium'. Meta also launched 'Muse' (2026-09-08), a separate personal AI agent app (muse.ai and WhatsApp, US rollout) powered by Muse Spark.",
+  "card_errors": [
+   {
+    "field": "description_long / faq[1].a / pros[4]",
+    "wrong_quote": "Consumer plans are Meta One Plus at $7.99/month and Meta One Premium at $19.99/month",
+    "correct_value": "The consumer bundles are now 'Core' and 'Premium' (FR newsroom: Core EUR 6.99, Premium EUR 20.99 per month). 'Plus' is now the name of the single-app plans (Instagram/Facebook/WhatsApp Plus). USD $7.99/$19.99 appear only in third-party reports."
+   },
+   {
+    "field": "description_long / faq[1].a",
+    "wrong_quote": "business plans are Meta One Essential at $14.99/month and Meta One Advanced at $49.99/month",
+    "correct_value": "Business tiers are Essential (from EUR 16.99), Advanced (from EUR 54.99), Expert (from EUR 169) and Max (from EUR 549) per month. USD Advanced price not verified."
+   },
+   {
+    "field": "description_long / faq[1].a",
+    "wrong_quote": "Paid testing began in June 2026 in Singapore, Guatemala and Bolivia and is expanding globally",
+    "correct_value": "Stale. Meta One became available worldwide on 2026-09-15 (Meta newsroom)."
+   },
+   {
+    "field": "cons[2]",
+    "wrong_quote": "Subscriptions are still rolling out country by country, so paid tiers are not available everywhere yet",
+    "correct_value": "Wrong since 2026-09-15: 'Meta One plans are now available worldwide' (newsroom, translated)."
+   },
+   {
+    "field": "description_long / cons[1] / faq[1].a",
+    "wrong_quote": "ending Meta AI's fully-free status",
+    "correct_value": "Misleading. Meta states Meta AI remains free for everyday use. Subscriptions only add higher usage of compute-heavy features."
+   },
+   {
+    "field": "description_long / faq[3].a / pros[1]",
+    "wrong_quote": "In July 2026 Meta added Muse Image, its first in-house image-generation model",
+    "correct_value": "Reported by multiple outlets (Bloomberg Law, AdNews, YourStory). Not verified on a Meta primary page in this pass."
+   },
+   {
+    "field": "url",
+    "wrong_quote": "https://ai.meta.com",
+    "correct_value": "ai.meta.com is Meta's AI research site. The consumer assistant is at meta.ai (the Muse Spark newsroom post refers to 'the Meta AI app and meta.ai')."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs/",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://about.fb.com/news/2026/09/presentation-de-meta-one-un-service-dabonnement-offrant-davantage-de-fonctionnalites-et-dia-pour-creer-se-connecter-et-se-demarquer/",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://about.fb.com/news/2026/09/the-biggest-news-from-connect-2026/",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "The English Meta One newsroom article was not located. Prices come from the French edition dated 2026-09-15, in EUR, and were not converted. USD figures appear only in TechCrunch/TNW-type reports. The card should also mention Muse, the separate personal agent, and the Muse-on-glasses news from Connect 2026."
+ },
+ {
+  "slug": "notebooklm",
+  "alive": true,
+  "shutdown_note": "Not shut down. Renamed to 'Gemini Notebook' on 2026-07-16.",
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": true,
+  "pricing": [
+   {
+    "tier": "Free (Google account)",
+    "amount": "$0",
+    "period": "month",
+    "notes": "Gemini subscriptions page"
+   },
+   {
+    "tier": "Google AI Plus",
+    "amount": "$4.99",
+    "period": "month",
+    "notes": "As served on gemini.google/subscriptions/?hl=en from an Israel IP, displayed in USD. May be a regional price; the US price was not verified."
+   },
+   {
+    "tier": "Google AI Pro",
+    "amount": "$19.99",
+    "period": "month",
+    "notes": "Same page"
+   },
+   {
+    "tier": "Google AI Ultra",
+    "amount": "$99.99 (5x vs Pro) / $199.99 (20x vs Pro)",
+    "period": "month",
+    "notes": "Same page: 'Starting at: $99.99 / month'"
+   }
+  ],
+  "free_tier": "Yes. Usable free with a Google account. Higher limits come with Google AI Plus/Pro/Ultra or Workspace.",
+  "repositioning": "Renamed 'Gemini Notebook' (blog.google, 2026-07-16). The app moved from notebooklm.google.com to notebook.google.com (301 redirect verified) and marketing moved to notebook.google. Notebooks now sync with the Gemini app, and AI Mode in Search integration is announced as 'upcoming'. Google AI Premium was renamed Google AI Plus.",
+  "card_errors": [
+   {
+    "field": "name / url",
+    "wrong_quote": "NotebookLM / https://notebooklm.google.com",
+    "correct_value": "Gemini Notebook / https://notebook.google.com (app); marketing site https://notebook.google"
+   },
+   {
+    "field": "description / description_long",
+    "wrong_quote": "After the June 2026 \"NotebookLM 2.0\" upgrade it runs on Gemini 3.5 ... On June 8, 2026, ... the \"NotebookLM 2.0\" upgrade rolled out globally ... plus Google's \"Antigravity\" models",
+    "correct_value": "UNVERIFIED on a Google primary page (only third-party reports dated 2026-06-08). The blog.google rename post (2026-07-16) introduces the secure cloud computer and code execution and names no Gemini model version: available now for AI Ultra and Workspace AI Ultra/Expanded Access, rolling out to Pro on web 'over coming weeks'."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Google reports roughly a 65% average win rate over the previous version",
+    "correct_value": "UNVERIFIED. No primary source found."
+   },
+   {
+    "field": "description_long / cons[3]",
+    "wrong_quote": "Ultra at $99.99/mo and $200/mo",
+    "correct_value": "Ultra is $99.99/mo (5x) and $199.99/mo (20x) per gemini.google/subscriptions."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Plus at $7.99/mo (Google AI Plus)",
+    "correct_value": "CONFLICT. The page served to us shows Google AI Plus at $4.99/month (USD shown, Israel IP). The project CLAUDE.md lists $7.99 (presumably US). Verify from a US IP."
+   },
+   {
+    "field": "description_long / cons[1]",
+    "wrong_quote": "NotebookLM is sold only as part of a Google AI, Workspace, or Cloud plan — you cannot buy it on its own.",
+    "correct_value": "Contradicts the free tier: it is free with any Google account. It is true that no standalone paid NotebookLM SKU exists."
+   },
+   {
+    "field": "faq[1].a",
+    "wrong_quote": "NotebookLM Plus (available through Google One AI Premium at $19.99/month or Google Workspace)",
+    "correct_value": "Stale. Google AI Premium is now Google AI Plus. Higher Gemini Notebook limits come with Google AI Plus/Pro/Ultra. Product is now Gemini Notebook at notebook.google.com."
+   },
+   {
+    "field": "users",
+    "wrong_quote": "10M+",
+    "correct_value": "blog.google (2026-07-16): 'Over 30 million people and 600,000+ organizations'."
+   },
+   {
+    "field": "description_long / pros[1]",
+    "wrong_quote": "June 2026 upgrade adds native code execution",
+    "correct_value": "Google's primary announcement of code execution via a secure cloud computer is dated 2026-07-16 (rename post)."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://workspaceupdates.googleblog.com/2026/07/notebooklm-now-gemini-notebook.html",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://notebook.google/plans",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://notebooklm.google.com/ (301 -> https://notebook.google.com/)",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://gemini.google/subscriptions/?hl=en",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://one.google.com/about/google-ai-plans/ (geo-served in Hebrew, prices JS-rendered)",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "The rename and domain change are high confidence. Per-plan Notebook limits are not published as numbers ('large / larger / largest quota'). Plan prices may be geo-dependent; the one.google.com page was served in Hebrew without static prices. The slug may need a new display name, and SEO/compare data must be updated wherever 'NotebookLM' appears."
+ },
+ {
+  "slug": "quillbot",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "$0",
+    "period": null,
+    "notes": "UNVERIFIED (vendor pages blocked)"
+   },
+   {
+    "tier": "Premium",
+    "amount": "unverified",
+    "period": null,
+    "notes": "Third-party only: $19.95 monthly, semi-annual ~$13.31/mo, annual $99.95/yr (~$8.33/mo). Not primary."
+   }
+  ],
+  "free_tier": "Believed to exist (125-word paraphraser cap per card and third parties). Not verified on a primary page.",
+  "repositioning": "Not verified.",
+  "card_errors": [
+   {
+    "field": "faq[1].a vs description_long",
+    "wrong_quote": "QuillBot Premium is $4.17/month (annual) or $9.95/month",
+    "correct_value": "Contradicts the card's own description_long ('$19.95/month, $39.95/quarter or $99.95/year'). The FAQ figures are almost certainly stale. Third parties list $19.95 monthly and $99.95/yr. Not verified on quillbot.com."
+   },
+   {
+    "field": "description_long / pros[4]",
+    "wrong_quote": "$39.95/quarter",
+    "correct_value": "UNVERIFIED. Third-party sources describe a semi-annual option (~$13.31/mo), not quarterly."
+   },
+   {
+    "field": "description / description_long",
+    "wrong_quote": "AI Presentation Maker, a PDF toolkit, an AI Image Detector, a macOS app and a rebranded interface in 2026",
+    "correct_value": "UNVERIFIED (vendor site inaccessible)."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://quillbot.com/premium (HTTP 403 to WebFetch and curl)",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://quillbot.com/upgrade (HTTP 403)",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://help.quillbot.com/hc/en-us (HTTP 403)",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "low",
+  "notes": "All quillbot.com and help.quillbot.com pages returned 403. Playwright was unavailable and the Wayback Machine was rate-limited/blocked, so nothing on this card was verified against a primary source. At minimum the FAQ price contradiction must be resolved via a browser check of quillbot.com/premium."
+ },
+ {
+  "slug": "speechify",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Simba 3.2 (recommended English TTS model on the API); Simba 3.0 for 6 other languages",
+  "version_published": true,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Free (TTS reader)",
+    "amount": "$0",
+    "period": null,
+    "notes": "'Listen at speeds up to 1.5x', '10 robotic sounding voices', 'Text to speech features only'"
+   },
+   {
+    "tier": "Premium (TTS reader)",
+    "amount": "$29 (monthly billing) / $139 per year (yearly billing)",
+    "period": "month / year",
+    "notes": "Page JSON: priceMonthly $29, priceYearly $139. Schema.org offer shows 11.58 USD (=139/12). 1000+ voices, 60+ languages, up to 5x speed, Voice Typing, AI Podcasts, Voice AI Assistant."
+   },
+   {
+    "tier": "Studio Free",
+    "amount": "$0",
+    "period": null,
+    "notes": "600 Studio credits, no voice cloning, no commercial rights"
+   },
+   {
+    "tier": "Studio Starter",
+    "amount": "$19/month or $100/year",
+    "period": "month / year",
+    "notes": "86,400 credits/yr, voice cloning, commercial rights"
+   },
+   {
+    "tier": "Studio Creator",
+    "amount": "$49/month or $300/year",
+    "period": "month / year",
+    "notes": "345,600 credits/yr"
+   },
+   {
+    "tier": "API Free",
+    "amount": "$0",
+    "period": "month",
+    "notes": "500K characters/month"
+   },
+   {
+    "tier": "API Starter",
+    "amount": "$10",
+    "period": "month",
+    "notes": "1.9M characters; $10 per 1M"
+   },
+   {
+    "tier": "API Pro",
+    "amount": "$99",
+    "period": "month",
+    "notes": "13.5M characters; $8 per 1M"
+   },
+   {
+    "tier": "API Scale",
+    "amount": "$499",
+    "period": "month",
+    "notes": "78M characters; $6 per 1M"
+   }
+  ],
+  "free_tier": "Yes. Basic reader at up to 1.5x speed with 10 robotic voices. Separate free Studio (600 credits) and free API (500K chars/month).",
+  "repositioning": "The pricing page leads with 'Voice AI Assistant' and is launching 'Voice Typing Dictation'. A 'Speechify Work' ('Delegate Work to AI') product is in the nav. The API/developer side uses speechify.ai (docs.speechify.ai).",
+  "card_errors": [
+   {
+    "field": "description / description_long",
+    "wrong_quote": "SIMBA 3.0 reached general availability in March 2026",
+    "correct_value": "CONFLICT/UNVERIFIED. The Speechify API changelog (search snippets of docs.speechify.ai) shows 'New simba-3.0 streaming model' on 2026-05-09 and simba-3.0 as default on 2026-08-05. A March 2026 GA was not found."
+   },
+   {
+    "field": "description_long / pros[0]",
+    "wrong_quote": "SIMBA 3.2 streaming variant now sits at the top of the Voice Arena leaderboard / ranked #1 for streaming on Voice Arena",
+    "correct_value": "Speechify's own API page cites Voice Arena only for latency (123 ms, 2026-09-24). On Artificial Analysis Speech Arena Simba 3.2 scored 1,237 Elo, 'in the top five of 92', and the page says the result 'does not establish a guaranteed quality advantage'. A speechify.ai blog snippet claims '#1 on Artificial Analysis', so Speechify's own sources conflict."
+   },
+   {
+    "field": "faq[1].a",
+    "wrong_quote": "A Speechify AI Studio plan for content creation starts at $99/month.",
+    "correct_value": "Studio has a Free plan. Starter is $19/month or $100/year; Creator is $49/month or $300/year."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "API pricing around $6 per million characters",
+    "correct_value": "$6 per 1M only on the $499/month Scale plan. Starter is $10 per 1M ($10/mo) and Pro $8 per 1M ($99/mo). 500K chars/month free."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "licensed celebrity voices such as Snoop Dogg, MrBeast, and Gwyneth Paltrow",
+    "correct_value": "Partially verified: the pricing page schema mentions 'Premium Voices like Snoop Dogg'. MrBeast and Gwyneth Paltrow were not checked."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://speechify.com/pricing/",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://speechify.com/pricing-studio/",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://speechify.com/pricing-api/",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://speechify.com/api/",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://docs.speechify.ai/build/changelog/2026/7/8 (search snippet)",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://docs.speechify.ai/tts/changelog/2026/5/9 (search snippet)",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Consumer, Studio and API pricing were all read from page data. The model-ranking claims should be softened. 'users: 20M+' is unverified."
+ },
+ {
+  "slug": "webflow",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Site: Starter",
+    "amount": "$0",
+    "period": null,
+    "notes": "webflow.io domain, 2 static pages, limited CMS (50 items, 20 collections), 1 GB bandwidth, 50 form submissions, Webflow AI, MCP server"
+   },
+   {
+    "tier": "Site: Basic",
+    "amount": "$15 (billed yearly) / $25 (monthly)",
+    "period": "month",
+    "notes": "Custom domain, 300 static pages, 10 GB bandwidth"
+   },
+   {
+    "tier": "Site: Premium",
+    "amount": "$25 (billed yearly) / $39 (monthly)",
+    "period": "month",
+    "notes": "Webflow CMS (20,000 items, 40 collections), 50 GB+ bandwidth (paid bandwidth add-ons), code components, site search"
+   },
+   {
+    "tier": "Platform: Team",
+    "amount": "$2,500",
+    "period": "month",
+    "notes": "Annual contract required; Localize, AEO agents, publishing workflows, 100,000 AI credits/year"
+   },
+   {
+    "tier": "Platform: Enterprise",
+    "amount": "custom",
+    "period": null,
+    "notes": ""
+   },
+   {
+    "tier": "Ecommerce: Standard / Plus / Advanced",
+    "amount": "$29 / $74 / $212 (billed yearly); $42 / $84 / $235 (monthly)",
+    "period": "month",
+    "notes": "Standard: 500 ecommerce items"
+   },
+   {
+    "tier": "Workspace: Starter / Core / Growth",
+    "amount": "$0 / $19 / $49 (billed yearly); Core $28, Growth $60 (monthly)",
+    "period": "month",
+    "notes": "200 / 300 / 400 AI credits"
+   },
+   {
+    "tier": "Workspace: Freelancer / Agency",
+    "amount": "$16 / $35 (billed yearly); $24 / $42 (monthly)",
+    "period": "month",
+    "notes": ""
+   },
+   {
+    "tier": "Seats",
+    "amount": "Full $39 yearly / $45 monthly; Limited $15 yearly / $19 monthly; Free reviewer seats",
+    "period": "month per seat",
+    "notes": ""
+   },
+   {
+    "tier": "AI credits add-on",
+    "amount": "$20 (billed yearly) / $25 (monthly)",
+    "period": "month",
+    "notes": "2,000 credits/month"
+   },
+   {
+    "tier": "Add-ons",
+    "amount": "Analyze from $9/mo yearly; Optimize from $299/mo yearly; Localize Essential $9, Advanced $29/mo yearly",
+    "period": "month",
+    "notes": ""
+   }
+  ],
+  "free_tier": "Yes: Starter site plan (webflow.io subdomain, 2 static pages) plus a free Starter Workspace.",
+  "repositioning": "Homepage title: 'Webflow: The agentic web platform for modern businesses', with an AEO focus. This matches the card.",
+  "card_errors": [
+   {
+    "field": "faq[2].a",
+    "wrong_quote": "Webflow Core starts at $29/mo",
+    "correct_value": "Core is a Workspace plan at $19/mo billed yearly ($28 monthly). The cheapest custom-domain site plan is Basic at $15/mo billed yearly ($25 monthly)."
+   },
+   {
+    "field": "faq[2].a",
+    "wrong_quote": "Webflow charges per site traffic",
+    "correct_value": "Webflow charges per site plan plus Workspace plan/seats. Bandwidth is tiered and add-on usage costs $2 per unit over limits. 'Per site traffic' is an oversimplification."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "with a 2,000-credit add-on at $20/mo",
+    "correct_value": "$20/mo billed yearly, $25 billed monthly."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "E-commerce runs $29 to $212/mo",
+    "correct_value": "Correct only for yearly billing. Monthly billing is $42 to $235."
+   },
+   {
+    "field": "description / description_long / pros[1] / choose_if[2]",
+    "wrong_quote": "standalone AI Site Builder that generates a full multi-page site from a single prompt",
+    "correct_value": "UNVERIFIED in this pass. Not mentioned on the pricing page or in the homepage static text."
+   },
+   {
+    "field": "description_long / cons[2]",
+    "wrong_quote": "On May 13, 2026 Webflow overhauled its plans ... quota enforcement starting June 29, 2026",
+    "correct_value": "UNVERIFIED dates. The plan structure itself (Premium replacing CMS/Business, Basic 300 pages, Team plan) matches the current pricing page."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "native AI-generated React components",
+    "correct_value": "The pricing page lists 'Code components' on Premium. 'AI-generated React' is unverified."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://webflow.com/pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://webflow.com/",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "high",
+  "notes": "All prices were read from data-yearly-price / data-monthly-price attributes on the pricing page, in USD per site. The main card body is accurate. Fix the FAQ and the yearly/monthly qualifiers. 'users: 3.5M+' is unverified."
+ }
+]

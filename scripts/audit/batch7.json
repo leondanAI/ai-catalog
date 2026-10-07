@@ -1,0 +1,1026 @@
+[
+  {
+    "slug": "aider",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": "0.86.2 (PyPI aider-chat, uploaded 2026-02-12; latest GitHub release tag is v0.86.0, 2025-08-09)",
+    "version_published": true,
+    "domain_changed": false,
+    "pricing": [
+      {
+        "tier": "Open source",
+        "amount": "$0",
+        "period": "n/a",
+        "notes": "Apache-2.0 tool; user pays own LLM provider API costs (or $0 with local models)."
+      }
+    ],
+    "free_tier": "Entire tool is free and open source; LLM API costs are separate.",
+    "repositioning": "None. But development has slowed: last PyPI release 0.86.2 on 2026-02-12, last push to the GitHub repo 2026-05-22; HISTORY 'main branch' lists unreleased model additions (Claude 4.5/4.6, GPT-5.1-5.4 variants, Gemini 3 preview).",
+    "card_errors": [
+      {
+        "field": "description_long",
+        "wrong_quote": "The open-source community releases frequent updates.",
+        "correct_value": "No release since 0.86.2 (2026-02-12); last repo push 2026-05-22. Do not claim frequent updates."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Claude Sonnet, GPT-5.6, Gemini, DeepSeek, local Ollama models",
+        "correct_value": "GPT-5.6 is not in aider's documented model settings (HISTORY tops out at GPT-5.3/5.4 variants on main). Name vendors only: Anthropic, OpenAI, Google, DeepSeek, local models via Ollama, OpenRouter."
+      },
+      {
+        "field": "description",
+        "wrong_quote": "40,000+ GitHub stars and 5 million PyPI installs",
+        "correct_value": "Homepage shows 44K stars / 6.8M installs; GitHub API shows 49,395 stars. Understated, not wrong; update or drop."
+      },
+      {
+        "field": "description_long / cons",
+        "wrong_quote": "Aider is terminal-only — there is no GUI, IDE extension, or browser interface.",
+        "correct_value": "Aider has an experimental browser UI (aider --browser) and an IDE workflow via watch mode (comments in your editor). No official IDE extension."
+      },
+      {
+        "field": "description_long / cons",
+        "wrong_quote": "Setup requires installing via pip",
+        "correct_value": "Docs recommend aider-install, uv or pipx; plain pip is described as less safe."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://aider.chat/",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://pypi.org/pypi/aider-chat/json",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://api.github.com/repos/Aider-AI/aider",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://aider.chat/HISTORY.html",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://aider.chat/docs/usage/browser.html",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://aider.chat/docs/install.html",
+        "accessed": "2026-10-07"
+      }
+    ],
+    "confidence": "high",
+    "notes": "15B tokens/week figure confirmed on homepage. Users '5M+' field roughly consistent with 6.8M installs."
+  },
+  {
+    "slug": "character-ai",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": "Chat styles: PipSqueak 3 (default for new chats, announced 2026-09-28), ShortSqueak, DeepSqueak, LongSqueak (premium)",
+    "version_published": true,
+    "domain_changed": false,
+    "pricing": [
+      {
+        "tier": "Free",
+        "amount": "$0",
+        "period": "n/a",
+        "notes": "Unlimited messaging on PipSqueak 3 / ShortSqueak, with ads (blog 2026-09-28)."
+      },
+      {
+        "tier": "(c.ai) lite",
+        "amount": "$4.99/month or $2.49/week",
+        "period": "monthly or weekly",
+        "notes": "USD, 'pricing varies by region'. New 2026-09-28. Daily allowance of premium messages on DeepSqueak and LongSqueak, fewer ads, less restrictive slow mode, customization, extra memory pins."
+      },
+      {
+        "tier": "c.ai+",
+        "amount": "not confirmed on a primary page",
+        "period": "n/a",
+        "notes": "Blog says unlimited premium chats, zero ads, full memory features. $9.99/mo and $94.99/yr appear only on third-party sites; character.ai returned 403 to fetches."
+      }
+    ],
+    "free_tier": "Free plan with ads; unlimited chat on PipSqueak 3 and ShortSqueak.",
+    "repositioning": "New mid tier (c.ai) lite and new default model PipSqueak 3 (2026-09-28). Company messaging is now about 'entertainment and fandom' (blog 2026-09-18) and image models for characters (2026-09-16).",
+    "card_errors": [
+      {
+        "field": "description",
+        "wrong_quote": "now running on its DeepSqueak and PipSqueak models (DeepSqueak 2 in training as of April 2026)",
+        "correct_value": "As of 2026-09-28 the default is PipSqueak 3, with ShortSqueak free and DeepSqueak/LongSqueak premium. DeepSqueak 2 release not confirmed."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "There is no separate Pro tier on the official pricing page.",
+        "correct_value": "There is now a cheaper (c.ai) lite tier at $4.99/month or $2.49/week (USD, varies by region)."
+      },
+      {
+        "field": "cons",
+        "wrong_quote": "DeepSqueak 2 is still only in training, so the top model is not yet available",
+        "correct_value": "Stale (April 2026 claim). Remove or replace with current lineup."
+      },
+      {
+        "field": "description_long / cons",
+        "wrong_quote": "with age verification handled in-house and via Persona (facial recognition or ID as a fallback)",
+        "correct_value": "Sep 2026 safety post describes in-house age assurance and an in-house age estimation model; Persona not mentioned. Treat Persona as unverified."
+      },
+      {
+        "field": "description_long / pros / choose_if",
+        "wrong_quote": "c.ai+ (Plus) is $9.99/month or $94.99/year",
+        "correct_value": "Not confirmed on a primary source (character.ai blocked). Third-party only."
+      },
+      {
+        "field": "description_long / cons",
+        "wrong_quote": "uses a Charms virtual currency to gate swipe regenerations",
+        "correct_value": "Not found on any primary page read. Unverified."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Character.AI has content filters and age verification. ... The platform has added safety features following incidents in 2024.",
+        "correct_value": "Stale. Under-18 users lost open-ended chat in 2025 (confirmed by the Sep 3 2026 safety post); Parental Insights gives parents a weekly email."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://blog.character.ai/",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://blog.character.ai/new-styles-new-plan/",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://blog.character.ai/continuing-to-build-upon-our-safety-priorities/",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://blog.character.ai/pipsqueak2-and-more/",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://character.ai/ (HTTP 403)",
+        "accessed": "2026-10-07"
+      }
+    ],
+    "confidence": "medium",
+    "notes": "character.ai and support.character.ai return 403 to fetchers, so the c.ai+ price could not be read from a primary page. Blog confirms the April 2026 items (PipSqueak 2, Lorebook, Memory Visualization)."
+  },
+  {
+    "slug": "continue-dev",
+    "alive": false,
+    "shutdown_note": "Acquired by Cursor (Anysphere); homepage reads 'Continue has joined Cursor'. Announced mid-June 2026 (date not on the homepage). Homepage FAQ now says 'All user data has been deleted' and 'Recurring billing has been disabled'; unused paid credits are refunded.",
+    "current_version": "v2.0.0-vscode (2026-06-19, last stable). v2.1.0-vscode was tagged the same day but is marked Pre-release.",
+    "version_published": true,
+    "domain_changed": false,
+    "pricing": [
+      {
+        "tier": "Open source extensions + CLI",
+        "amount": "$0",
+        "period": "n/a",
+        "notes": "Apache-2.0. Hub paid plans discontinued; billing disabled."
+      }
+    ],
+    "free_tier": "Source code and docs remain available on GitHub under Apache 2.0.",
+    "repositioning": "End of life as a product. Sign-in flow retired (commit 2026-07-21); docs moved to docs.continue.dev.",
+    "card_errors": [
+      {
+        "field": "description_long / cons / faq",
+        "wrong_quote": "the GitHub repository has been switched to read-only",
+        "correct_value": "GitHub API shows archived=false; commits to main continued to 2026-07-21 (docs only). Say 'no longer actively developed', not read-only."
+      },
+      {
+        "field": "description_long / cons / choose_if",
+        "wrong_quote": "Continue Hub cloud data is being deleted after July 15, 2026, so anyone with configs or assistants stored there needs to export before that deadline",
+        "correct_value": "Deadline has passed. Homepage now says: 'All user data has been deleted in accordance with the privacy notice'. Remove the export advice."
+      },
+      {
+        "field": "choose_if",
+        "wrong_quote": "You need to export your Continue Hub data before the July 15, 2026 deletion",
+        "correct_value": "No longer possible; delete this item."
+      },
+      {
+        "field": "best_for",
+        "wrong_quote": "AI coding agents, CI/CD automation, PR review, open-source CLI",
+        "correct_value": "Describes the discontinued Hub product. Should reflect an archived, self-managed open-source IDE extension."
+      },
+      {
+        "field": "badge/published",
+        "wrong_quote": "free (published, recommended)",
+        "correct_value": "Product discontinued; consider published=false or a clear 'discontinued' framing everywhere."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://continue.dev/",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://api.github.com/repos/continuedev/continue",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://api.github.com/repos/continuedev/continue/releases?per_page=5",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://api.github.com/repos/continuedev/continue/commits?per_page=8",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://github.com/continuedev/continue/releases/tag/v2.1.0-vscode",
+        "accessed": "2026-10-07"
+      }
+    ],
+    "confidence": "high",
+    "notes": "FAQ answers were read from the homepage's JS bundle (accordion content). 36,132 GitHub stars. Users '500K+' unverified."
+  },
+  {
+    "slug": "duolingo-max",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      {
+        "tier": "Free / Super / Max / Family",
+        "amount": "not published on the web",
+        "period": "n/a",
+        "notes": "duolingo.com/max is JS-rendered with no price in the static HTML; Duolingo blog posts give no price. Card figures ($29.99/mo, $167.99/yr, Super $95.99/yr, Family $119.99/yr) are unverified."
+      }
+    ],
+    "free_tier": "Free Duolingo plan exists. Explain My Answer is free for all learners since 2026-01-01 (Spanish, French, German, Japanese, Portuguese, Italian, Korean).",
+    "repositioning": "Explain My Answer moved out of Max on 2026-01-01. Video Call reportedly being tested for Super subscribers (third-party only, unverified).",
+    "card_errors": [
+      {
+        "field": "description",
+        "wrong_quote": "Note: Video Call and Explain My Answer are now free for all Duolingo users.",
+        "correct_value": "Only Explain My Answer became free (blog, 2026-01-01). Video Call is not confirmed free. The card's own long text contradicts this sentence."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "now reported to run on OpenAI's GPT-5.6",
+        "correct_value": "Not confirmed by Duolingo. The only primary statement is GPT-4 at launch (blog, 2023-03-14). Say 'OpenAI models' with no version."
+      },
+      {
+        "field": "description / pros / faq",
+        "wrong_quote": "powered by current GPT models",
+        "correct_value": "Unverified; Duolingo publishes no current model. Use 'AI (originally OpenAI GPT-4)'."
+      },
+      {
+        "field": "description / description_long / cons",
+        "wrong_quote": "$29.99/mo or $168/yr ... Super is $95.99/year ... $167.99/year",
+        "correct_value": "Not verifiable from primary sources (prices shown only in-app or by region). Also internally inconsistent: description says $168/yr, long text says $167.99/year."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Video Call ... It has expanded to more languages, including Japanese, Korean and Chinese.",
+        "correct_value": "Duolingo's Max blog lists Video Call only for JA/KO/ZH and Video Call + Roleplay for ES/FR/DE/IT/PT, for English speakers. Consistent; keep."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://blog.duolingo.com/explain-my-answer-now-free",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://blog.duolingo.com/duolingo-max",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://www.duolingo.com/max (JS-only, no content)",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://blog.duolingo.com/hub/announcements",
+        "accessed": "2026-10-07"
+      }
+    ],
+    "confidence": "low",
+    "notes": "Pricing and model version can't be verified. The Playwright browser wasn't available (CDP port 9222 refused), so the JS pages couldn't be rendered."
+  },
+  {
+    "slug": "github-copilot",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      {
+        "tier": "Free",
+        "amount": "$0",
+        "period": "n/a",
+        "notes": "2,000 inline suggestions/month; 'Limited chat and agent usage'; CLI and agent mode supported; no code review or cloud agent."
+      },
+      {
+        "tier": "Student",
+        "amount": "$0",
+        "period": "n/a",
+        "notes": "Separate plan for verified students with an AI Credits allowance (docs). Verified teachers and maintainers of popular OSS projects may get Pro free."
+      },
+      {
+        "tier": "Pro",
+        "amount": "$10",
+        "period": "per month",
+        "notes": "USD. AI Credits: $10 base + $5 flex = $15/month (docs: 1,000 + 500 = 1,500 credits; 1 credit = $0.01). Unlimited inline suggestions; code review and cloud agent included."
+      },
+      {
+        "tier": "Pro+",
+        "amount": "$39",
+        "period": "per month",
+        "notes": "USD. $39 base + $31 flex = $70/month (3,900 + 3,100 credits). Adds delegation to third-party agents (Claude by Anthropic, OpenAI Codex; Preview)."
+      },
+      {
+        "tier": "Max",
+        "amount": "$100",
+        "period": "per month",
+        "notes": "USD. $100 base + $100 flex = $200/month (10,000 + 10,000 credits). 'Priority access to premium models'."
+      },
+      {
+        "tier": "Business",
+        "amount": "$19",
+        "period": "per user per month",
+        "notes": "USD. 1,900 AI credits per user per month; additional usage enabled by default."
+      },
+      {
+        "tier": "Enterprise",
+        "amount": "$39",
+        "period": "per user per month",
+        "notes": "USD. 3,900 AI credits per user per month; requires GitHub Enterprise Cloud."
+      }
+    ],
+    "free_tier": "Copilot Free: 2,000 inline suggestions/month, limited chat and agent usage, Copilot CLI, MCP integration. No code review or cloud agent.",
+    "repositioning": "New GitHub Copilot desktop app ('Direct agents from issue to merge'). Flex allotments on top of base credits. Paid plans can delegate to third-party coding agents.",
+    "card_errors": [
+      {
+        "field": "description_long",
+        "wrong_quote": "including Claude Sonnet 5, Claude Opus 5, GPT-5.6 and Gemini 3.6 Flash",
+        "correct_value": "Model list has moved on (now includes models from Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot/Kimi). Name vendors, not versions."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Free at 0 dollars a month (around 2,000 completions, limited chat and agent use, automatic model selection)",
+        "correct_value": "2,000 inline suggestions/month confirmed. 'Automatic model selection' is not confirmed: the plans page lists the same model set under Free."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Pro+ at 39 dollars a month (premium frontier models including Opus and a higher allowance)",
+        "correct_value": "Docs say Pro+ = 'Access to premium models', but the plans page lists the same models, Opus included, under every plan. Sources conflict. Pro+ credits: $70/month total ($39 base + $31 flex)."
+      },
+      {
+        "field": "description_long / pros / choose_if",
+        "wrong_quote": "Verified students get Pro-level access free",
+        "correct_value": "Students now have a separate 'Copilot Student' plan. Free Pro is for verified teachers and popular OSS maintainers."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Promotional bonus credits run June through August 2026: Business plus 30 dollars a month, Enterprise plus 70 dollars a month.",
+        "correct_value": "Promotion has expired; not on current pages. Remove."
+      },
+      {
+        "field": "description_long / cons",
+        "wrong_quote": "code review now also consumes GitHub Actions minutes",
+        "correct_value": "Not found on the plans or billing docs read. Unverified."
+      },
+      {
+        "field": "description_long / cons",
+        "wrong_quote": "The older automatic fallback to cheaper models was discontinued",
+        "correct_value": "Not stated on current docs; docs say that when credits run out you upgrade, set a budget at $0.01/credit, or wait for reset. Unverified as worded."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Pro at 10 dollars a month (unlimited completions, model selection, cloud agents, a monthly credit allowance)",
+        "correct_value": "Correct, but give the allowance: $15/month in AI Credits ($10 base + $5 flex)."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://github.com/features/copilot/plans",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://docs.github.com/en/copilot/get-started/plans",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://docs.github.com/en/copilot/concepts/billing-and-usage/individuals/billing",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/billing",
+        "accessed": "2026-10-07"
+      }
+    ],
+    "confidence": "high",
+    "notes": "The June 1 2026 start date for AI Credits wasn't on the pages read; the legacy request-based billing docs exist, so the switch is real. Code completions and next edit suggestions are 'not billed in AI credits', confirmed."
+  },
+  {
+    "slug": "ideogram",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": "Ideogram 4.5 (docs: 'the newest model'; release date not published). Ideogram 4.0 weights released 2026-06-03.",
+    "version_published": true,
+    "domain_changed": false,
+    "pricing": [
+      {
+        "tier": "Free",
+        "amount": "$0",
+        "period": "n/a",
+        "notes": "30 credits/week, only for accounts signed in with Google, Apple or Microsoft (email/password accounts get none). All generations public."
+      },
+      {
+        "tier": "Plus",
+        "amount": "$20 monthly / $15 per month billed annually ($180/yr)",
+        "period": "per month",
+        "notes": "USD. 2,400 priority credits/month, private generation, unlimited slow credits."
+      },
+      {
+        "tier": "Pro",
+        "amount": "$60 monthly / $42 per month billed annually ($504/yr)",
+        "period": "per month",
+        "notes": "USD. 7,500 priority credits/month, batch generation, quality export."
+      },
+      {
+        "tier": "Team",
+        "amount": "$30/user monthly / $20/user per month billed annually",
+        "period": "per user per month",
+        "notes": "Minimum 2 users; 3,600 credits per user/month."
+      },
+      {
+        "tier": "Enterprise",
+        "amount": "custom",
+        "period": "n/a",
+        "notes": "Post-paid, custom models, volume API discounts."
+      },
+      {
+        "tier": "Basic (legacy)",
+        "amount": "$8 monthly / $7 per month yearly",
+        "period": "per month",
+        "notes": "Legacy plan; 960 credits/month. Not on the main pricing page."
+      },
+      {
+        "tier": "API",
+        "amount": "not read",
+        "period": "per image",
+        "notes": "Pricing table loads by JS ('Loading current prices'); not verified."
+      }
+    ],
+    "free_tier": "30 credits per week with Google/Apple/Microsoft sign-in; images public.",
+    "repositioning": "Ideogram 4.5 now the newest model (adds up to 5 reference images); 4.0 weights on Hugging Face under a non-commercial license.",
+    "card_errors": [
+      {
+        "field": "description / description_long / pros / choose_if",
+        "wrong_quote": "a 9.3B-parameter release under the Apache 2.0 license",
+        "correct_value": "Hugging Face model card: license 'Ideogram 4 Non-Commercial' (commercial use not allowed), gated access. 9.3B params and the 2026-06-03 release are correct. Remove all Apache 2.0 claims."
+      },
+      {
+        "field": "description / description_long",
+        "wrong_quote": "The current flagship, Ideogram 4.0",
+        "correct_value": "Docs say Ideogram 4.5 is the newest model."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "The free plan costs $0 and gives roughly 10 slow credits per week with public generations and one concurrent job.",
+        "correct_value": "30 credits/week, only with Google/Apple/Microsoft sign-in; public. Concurrency not stated."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Basic runs about $8/mo (around $7 billed annually) for ~400 priority credits. Plus is about $20/mo (roughly $15-16 annually) with ~1,000 credits ... Pro is about $60/mo (around $42-48 annually) with ~3,000-3,500 credits ... Team plan is about $30/user/mo (around $20 annually) with ~1,500 credits per user",
+        "correct_value": "Basic is legacy ($8/$7, 960 credits). Plus $20/$15, 2,400 credits. Pro $60/$42, 7,500 credits. Team $30/$20 per user, 3,600 credits, min 2 users."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "API usage is billed separately at roughly $0.03-$0.10 per image",
+        "correct_value": "Unverified (API price table is JS-loaded)."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "it topped the DesignArena open-weight leaderboard",
+        "correct_value": "Not found on any primary page read. Unverified."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "4.0 adds ... reliable in-image editing, style references",
+        "correct_value": "Docs table: references/editing 'Up to 5' for 4.5, 'None' for 4.0. Transparency is a separate model in each version."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Ideogram 2.0 (2024) also added strong photorealism",
+        "correct_value": "Stale. Docs advise against 2.0/2a for new work; current models are 4.5, 4.0, 3.0."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Ideogram has a free plan with 10 slow generations per day. Basic plan is $7/month, Plus is $16/month, Pro is $48/month.",
+        "correct_value": "Free: 30 credits/week. Plus $15/mo annually ($20 monthly), Pro $42/mo annually ($60 monthly); Basic is legacy."
+      },
+      {
+        "field": "users",
+        "wrong_quote": "Free / from $15/mo",
+        "correct_value": "Pricing text sits in the users field; it should hold a user count. Cheapest current paid plan is Plus at $15/mo billed annually."
+      },
+      {
+        "field": "best_for",
+        "wrong_quote": "face swap",
+        "correct_value": "Not found on primary pages read. Unverified."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.ideogram.ai/plans-and-billing/available-plans",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://ideogram.ai/pricing/?pricing_tab=api",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://docs.ideogram.ai/create/models",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://huggingface.co/ideogram-ai/ideogram-4-fp8",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://huggingface.co/api/models?author=ideogram-ai",
+        "accessed": "2026-10-07"
+      }
+    ],
+    "confidence": "high",
+    "notes": "Docs plans page says 'Last verified October 1, 2026'. ideogram.ai root returns 403 to fetchers."
+  },
+  {
+    "slug": "make",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      {
+        "tier": "Free",
+        "amount": "$0",
+        "period": "n/a",
+        "notes": "USD. 1,000 credits/month, 2 active scenarios, 15-minute minimum interval."
+      },
+      {
+        "tier": "Core",
+        "amount": "$9/mo (one read: $9 monthly, $7.65/mo billed annually)",
+        "period": "per month",
+        "notes": "10,000 credits/month, unlimited active scenarios, 1-minute interval, Make API. Sources conflict on billing period; see notes."
+      },
+      {
+        "tier": "Pro",
+        "amount": "$16/mo (one read: $16 monthly, $13.60/mo billed annually)",
+        "period": "per month",
+        "notes": "Priority execution, custom variables, full-text execution log search."
+      },
+      {
+        "tier": "Teams",
+        "amount": "$29/mo (one read: $29 monthly, $24.65/mo billed annually)",
+        "period": "per month",
+        "notes": "Teams and team roles, shared scenario templates."
+      },
+      {
+        "tier": "Enterprise",
+        "amount": "custom",
+        "period": "n/a",
+        "notes": "Custom functions, 24/7 support, overage protection."
+      },
+      {
+        "tier": "Extra credits",
+        "amount": "fixed price per subscription",
+        "period": "n/a",
+        "notes": "Bundles of 1,000 or 10,000 credits."
+      }
+    ],
+    "free_tier": "1,000 credits/month, 2 active scenarios, 15-minute minimum interval.",
+    "repositioning": "No change since the card. Page labels 'Make AI Agents (beta)', with the Make AI provider on all plans or your own LLM key.",
+    "card_errors": [
+      {
+        "field": "description_long / pros / choose_if",
+        "wrong_quote": "Core is $9/mo on annual billing ... Pro is $16/mo annual ... Teams is $29/mo annual ... Monthly billing runs roughly 15-20% higher (about $10.59 Core, $18.82 Pro, $34.12 Teams)",
+        "correct_value": "One read of make.com/en/pricing: $9/$16/$29 are monthly prices and annual is 15% lower ($7.65/$13.60/$24.65). A second read saw one $9 value with an unknown toggle state. The $10.59/$18.82/$34.12 figures weren't found. Treat as conflict; check visually before editing."
+      },
+      {
+        "field": "description_long / description",
+        "wrong_quote": "Make AI Agents became generally available",
+        "correct_value": "Pricing page: 'Make AI Agents (beta)'."
+      },
+      {
+        "field": "description_long / pros / choose_if",
+        "wrong_quote": "On paid plans you can bring your own OpenAI, Anthropic or Gemini API keys",
+        "correct_value": "Pricing page: AI Agents use 'our AI Provider (all plans) or your own LLM key'. Not limited to paid plans; per-vendor list not confirmed."
+      },
+      {
+        "field": "description_long / pros",
+        "wrong_quote": "350+ AI-specific app integrations",
+        "correct_value": "Not found; AI Agents page cites 3000+ apps only. Unverified."
+      },
+      {
+        "field": "description_long / cons",
+        "wrong_quote": "credit packs (20k/40k/80k+) extend limits",
+        "correct_value": "Pricing page: extra credits in bundles of 1,000 or 10,000 at the subscription's fixed price."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Make is a cloud-based visual automation platform designed for non-technical users with 1,500+ connectors.",
+        "correct_value": "3,000+ apps."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "The cloud version (n8n.cloud) starts at $24/month.",
+        "correct_value": "n8n.io/pricing (served in EUR to this fetcher): Starter €24/month billed monthly, €20/month billed annually. Domain is n8n.io."
+      },
+      {
+        "field": "users",
+        "wrong_quote": "Free / from $9/mo",
+        "correct_value": "Pricing text sits in the users field."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.make.com/en/pricing",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://www.make.com/en/ai-agents",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://n8n.io/pricing/",
+        "accessed": "2026-10-07"
+      }
+    ],
+    "confidence": "medium",
+    "notes": "make.com blocks curl (Cloudflare 403); WebFetch got through twice with conflicting toggle readings. The Aug 27 2025 operations-to-credits rename wasn't re-verified."
+  },
+  {
+    "slug": "nano-banana",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      {
+        "tier": "Basic (nanobanana.io)",
+        "amount": "$9.9/mo billed yearly ($118.8/yr) during a '50% OFF' flash sale; list $19.9/mo ($238.8/yr)",
+        "period": "yearly",
+        "notes": "USD. 15,000 credits/year (~750 images). Monthly and one-time options exist; values not read."
+      },
+      {
+        "tier": "Pro (nanobanana.io)",
+        "amount": "$23.9/mo billed yearly ($286.8/yr); list $47.9/mo ($574.8/yr)",
+        "period": "yearly",
+        "notes": "36,000 credits/year, up to 5 seats, API access."
+      },
+      {
+        "tier": "Enterprise (nanobanana.io)",
+        "amount": "$63.9/mo billed yearly ($766.8/yr); list $127.9/mo ($1,534.8/yr)",
+        "period": "yearly",
+        "notes": "120,000 credits/year, up to 30 seats."
+      },
+      {
+        "tier": "Free",
+        "amount": "sign-in credits",
+        "period": "n/a",
+        "notes": "'Sign In to get free Credits!'; amount not stated."
+      }
+    ],
+    "free_tier": "Free credits on sign-in; amount not stated.",
+    "repositioning": "CRITICAL: nanobanana.io is not Google. Its own site text reads 'Nano Banana is an independent AI ... platform ... with no affiliation to other products.' It is a multi-model reseller (Seedream, GPT Image, Veo, Sora, Kling, Seedance, Qwen and others) that uses Google's model name. Google's real Nano Banana models are Nano Banana Pro (Gemini 3 Pro Image), Nano Banana 2 (Gemini 3.1 Flash Image) and Nano Banana 2 Lite (Gemini 3.1 Flash-Lite Image), offered via the Gemini app, Google AI Studio and the Gemini API.",
+    "card_errors": [
+      {
+        "field": "url",
+        "wrong_quote": "https://nanobanana.io",
+        "correct_value": "Third-party site with no Google affiliation. Point to Google (e.g. https://deepmind.google/models/gemini-image/ or the Gemini app), or unpublish."
+      },
+      {
+        "field": "description",
+        "wrong_quote": "AI image editor built on Google's Gemini 3.5 image model",
+        "correct_value": "Google lists no 'Gemini 3.5' image model. Nano Banana 2 = Gemini 3.1 Flash Image; Nano Banana Pro = Gemini 3 Pro Image."
+      },
+      {
+        "field": "description / description_long",
+        "wrong_quote": "Nano Banana is an AI-powered image generation and editing platform built on Google's Gemini 3.1 Flash Image model",
+        "correct_value": "True of Google's model, but the linked site is an independent reseller. The card mixes Google's model and a third-party product."
+      },
+      {
+        "field": "cons",
+        "wrong_quote": "Newer tool — smaller community and fewer tutorials than Midjourney or Flux",
+        "correct_value": "Unverified opinion; and the 'tool' identity is ambiguous (Google model vs. reseller)."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Nano Banana is an AI image generation platform specializing in character consistency and AI influencer creation.",
+        "correct_value": "Describes the reseller's marketing, not Google's model. Rewrite after the identity is decided."
+      },
+      {
+        "field": "users",
+        "wrong_quote": "Free / from $9/mo",
+        "correct_value": "Pricing text sits in the users field. The $9.9 is a flash-sale yearly price on the reseller."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://nanobanana.io/",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://nanobanana.io/pricing",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://deepmind.google/models/gemini-image/",
+        "accessed": "2026-10-07"
+      }
+    ],
+    "confidence": "high",
+    "notes": "Recommend an editorial decision: either repoint the card to Google's official Nano Banana (Gemini image models) or set published=false. Recommending an unaffiliated look-alike site breaks our accuracy rule."
+  },
+  {
+    "slug": "prezi",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      {
+        "tier": "all plans",
+        "amount": "not verified",
+        "period": "n/a",
+        "notes": "prezi.com/pricing redirects to /gts/pricing/, a JS-only app; no prices in the static HTML or preloaded JS. Card prices unverified."
+      },
+      {
+        "tier": "Swoop (separate product)",
+        "amount": "not verified",
+        "period": "n/a",
+        "notes": "swoop.it has a credits model ('5,000 credits / month' on paid, 'Purchased credits never expire'); price not read."
+      }
+    ],
+    "free_tier": "'Get started for free. No credit card required.' (homepage). Limits not verified.",
+    "repositioning": "Major. Homepage now pitches Prezi as 'the presentation platform built for what happens after you present': import from PowerPoint/Google Slides/Canva/PDF or describe a topic; live polls, quizzes, Q&A and word clouds via one QR code; afterwards flashcards, self-tests, podcast or narrated video from one link. AI deck generation is no longer the headline. Swoop (swoop.it, © Prezi Inc., 'Built by Prezi') is the separate AI deck agent, with Notion/Slack/Drive/Zoom connectors, PowerPoint/PDF export and an MCP/Claude connection.",
+    "card_errors": [
+      {
+        "field": "description / description_long",
+        "wrong_quote": "Prezi is a presentation tool now built around Prezi AI, which generates a fully designed deck from a single prompt",
+        "correct_value": "Prezi now leads with audience engagement and post-session learning; AI generation is one of 'two ways in'. AI deck generation as a product is Swoop."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "usually in under about eight seconds",
+        "correct_value": "Not found on primary pages read. Unverified."
+      },
+      {
+        "field": "description_long / pros",
+        "wrong_quote": "it recognizes over 2,000 brand logos",
+        "correct_value": "Not found on primary pages read. Unverified."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Swoop, released on March 31, 2026 ... Swoop also appears in the Grammarly and Superhuman Go Agent Store",
+        "correct_value": "Launch date and the Grammarly/Superhuman store listing not found on swoop.it or prezi.com. Unverified."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Standard runs about $7 per user per month, Plus about $15, Premium about $25, and Teams about $39 per user per month. Education plans start around $3-4",
+        "correct_value": "Unverified; pricing page is JS-only. The card itself says 'confirm on prezi.com', which is not acceptable card copy."
+      },
+      {
+        "field": "cons",
+        "wrong_quote": "Published pricing varies across third-party aggregators",
+        "correct_value": "Not a useful con for users; based on third-party sources. Remove."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "newer tools like Gamma have surpassed it ... below Gamma or Tome for design output",
+        "correct_value": "Opinion about competitors, not checked in this audit. Remove the competitor claims."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "It pivoted to Prezi Video ... and Prezi Design",
+        "correct_value": "Stale; current homepage focuses on interactive sessions and post-session learning."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://prezi.com/",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://prezi.com/pricing/ (redirects to /gts/pricing/, JS-only)",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://swoop.it/",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://prezi.com/features/brand-kit/",
+        "accessed": "2026-10-07"
+      }
+    ],
+    "confidence": "low",
+    "notes": "Can't verify pricing without a JS browser; Playwright was not reachable. The repositioning is confirmed from homepage text."
+  },
+  {
+    "slug": "softr",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      {
+        "tier": "Free",
+        "amount": "$0",
+        "period": "n/a",
+        "notes": "USD. 5 AI credits/mo, unlimited apps/databases/workflows/agents/forms, Softr API & MCP, up to 3 builders, 5 app users, 5K database records, 500 workflow actions/mo."
+      },
+      {
+        "tier": "Basic",
+        "amount": "$19/mo billed yearly ($228/yr) or $25 monthly",
+        "period": "per month",
+        "notes": "10 AI credits/mo, 1 builder included (+$5/mo each), Team 5 + Client 5 app users, 50K records, 2.5K workflow actions/mo, custom domain."
+      },
+      {
+        "tier": "Pro",
+        "amount": "$99/mo billed yearly ($1,188/yr) or $119 monthly",
+        "period": "per month",
+        "notes": "50 AI credits/mo, 2 builders (+$10/mo each), Team 10 + Client 50 app users, 500K records, 10K workflow actions/mo, branding removal, custom code."
+      },
+      {
+        "tier": "Business",
+        "amount": "$329/mo billed yearly ($3,948/yr) or $395 monthly",
+        "period": "per month",
+        "notes": "3 builders (+$20/mo each), Team 30 + Client 100 app users, 1M records, 25K workflow actions/mo, 2FA, PWA, push notifications."
+      },
+      {
+        "tier": "Enterprise",
+        "amount": "custom",
+        "period": "n/a",
+        "notes": "SSO (SAML/OpenID), SCIM, audit logs, SLAs."
+      }
+    ],
+    "free_tier": "5 AI credits/mo, up to 3 builders, 5 app users, 5K records, 500 workflow actions/month.",
+    "repositioning": "Now 'the first AI platform for business apps'. MCP Platform (2026-09-06) lets you build Softr apps from Claude, ChatGPT and other AI tools on all tiers without AI credits; Workflow MCP (2026-09-08), Vibe Code Block MCP (2026-09-07), Softr Agents (2026-08-26). 50% discount for non-profits and education.",
+    "card_errors": [
+      {
+        "field": "description_long",
+        "wrong_quote": "Basic is $49/mo billed annually ($59 monthly) with 20 users and 10 credits. Professional is $139/mo annually ($167 monthly) for 100 users ... and 50 credits. Business is $269/mo annually ($323 monthly) for 500 users and 100 credits.",
+        "correct_value": "Basic $19/mo yearly or $25 monthly; Pro (not 'Professional') $99/mo yearly or $119 monthly; Business $329/mo yearly or $395 monthly. App users: Basic 5+5, Pro 10+50, Business 30+100."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "The Free tier is $0/mo (10 app users, 5 AI credits, roughly 1,000-5,000 records)",
+        "correct_value": "Free: 5 app users, 5 AI credits, 5K records, up to 3 builders, 500 workflow actions/mo."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Starter is $49/month, Professional is $139/month, and Business is $269/month",
+        "correct_value": "No 'Starter' plan. Basic $19 / Pro $99 / Business $329 per month billed yearly."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Softr has a free plan for one app with limited users and Softr branding.",
+        "correct_value": "Free plan includes unlimited apps."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Softr is a no-code platform that turns Airtable or Google Sheets data into web apps",
+        "correct_value": "Outdated: Softr has its own Softr Databases and many data sources (Airtable, Notion, Sheets, Supabase, HubSpot, BigQuery and more)."
+      },
+      {
+        "field": "description_long / pros / choose_if",
+        "wrong_quote": "each Softr app can now act as its own Model Context Protocol (MCP) server",
+        "correct_value": "What's New (2026-09-06) describes building with Softr from Claude/ChatGPT via MCP; per-app MCP server wording not confirmed. Unverified as worded."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Extra AI credits run $10-$500/mo for 100-5,000 credits",
+        "correct_value": "Not found on the pricing page read. Unverified."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "On March 31, 2026 Softr relaunched as an AI-native platform",
+        "correct_value": "Not found in the What's New entries read (Aug-Sep 2026 only). AI Co-Builder exists (quoted in a testimonial). Date unverified."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.softr.io/pricing",
+        "accessed": "2026-10-07"
+      },
+      {
+        "url": "https://www.softr.io/whats-new",
+        "accessed": "2026-10-07"
+      }
+    ],
+    "confidence": "high",
+    "notes": "Prices come from the page's JSON-LD (P1M and P1Y values) and the visible yearly-default toggle ('2 months off'). Users field is empty on the card."
+  },
+  {
+    "slug": "v0-by-vercel",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      {
+        "tier": "Free",
+        "amount": "$0",
+        "period": "per month",
+        "notes": "USD. Deploy to Vercel, Design Mode, GitHub sync, 7 messages/day. New users get '$5 in one-time credits' that don't renew; existing Free users keep monthly credits."
+      },
+      {
+        "tier": "Plus",
+        "amount": "$30",
+        "period": "per user per month",
+        "notes": "Shown with $90 struck through. All models, $30 included monthly credits per user, $2 free daily credits on login, on-demand credits."
+      },
+      {
+        "tier": "Business",
+        "amount": "$100",
+        "period": "per user per month",
+        "notes": "Everything in Plus, $30 included monthly credits per user, $2 daily login credits, training opt-out by default."
+      },
+      {
+        "tier": "Enterprise",
+        "amount": "custom",
+        "period": "n/a",
+        "notes": "SAML SSO, RBAC, priority access, SLAs; data never used for training."
+      },
+      {
+        "tier": "Premium (legacy)",
+        "amount": "$20",
+        "period": "per month",
+        "notes": "Still referenced in the FAQ (cancel steps; Ultra users moved to Premium); not on the plan grid."
+      },
+      {
+        "tier": "Model token rates",
+        "amount": "Mini $0.20/$1.20; Pro $2/$10; Max $5/$25; Max Fast $10/$50",
+        "period": "per 1M input/output tokens",
+        "notes": "Cache write/read rates also listed."
+      }
+    ],
+    "free_tier": "$0: 7 messages/day, one-time $5 credits for new users, deploy to Vercel, Design Mode, GitHub sync.",
+    "repositioning": "Team plan renamed or replaced by 'Plus' ($30/user). Ultra plan sunset (users moved to Premium with $200 credit). Unused monthly credits on paid plans roll over for one month. iOS app and student program in nav.",
+    "card_errors": [
+      {
+        "field": "description_long / cons",
+        "wrong_quote": "Paid plans are Team at $30 per user/month",
+        "correct_value": "The $30/user/month plan is 'Plus'."
+      },
+      {
+        "field": "description_long / pros",
+        "wrong_quote": "a free tier at $0/month that includes about $5 of monthly credits",
+        "correct_value": "New users get $5 one-time credits that do not renew; only existing Free users keep monthly credits. 7 messages/day limit."
+      },
+      {
+        "field": "cons",
+        "wrong_quote": "the cheapest paid step up is now $30/user/month Team",
+        "correct_value": "Cheapest listed paid plan is Plus at $30/user/month."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "The older Premium plan at $20/month still exists for legacy users but is closed to new sign-ups.",
+        "correct_value": "Premium ($20) still exists per FAQ; 'closed to new sign-ups' is consistent with its absence from the grid but not stated. Low-confidence wording."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "with an API model published as vercel/v0-1.0-md. As of March 31, 2026 billing switched",
+        "correct_value": "Neither the API model ID nor the March 31 2026 date is on the pricing page. Unverified."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "connect databases and services (Snowflake, AWS)",
+        "correct_value": "Not checked on primary pages. Unverified."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "V0 is Vercel's AI-powered UI generator. You describe a UI ... React and Tailwind CSS code",
+        "correct_value": "Stale; v0 now builds full-stack apps (card's own description says so)."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "The Premium plan is $20/month with more credits. Team plans are available",
+        "correct_value": "Current plans: Free $0, Plus $30/user/mo, Business $100/user/mo, Enterprise custom. Premium is legacy."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "V0 focuses on frontend UI generation.",
+        "correct_value": "Stale; contradicts the full-stack positioning."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://v0.app/pricing",
+        "accessed": "2026-10-07"
+      }
+    ],
+    "confidence": "high",
+    "notes": "FAQ answers were read from the page's RSC payload. Model tiers Mini/Pro/Max/Max Fast confirmed. Purchased credits expire 'After one year', confirmed."
+  }
+]

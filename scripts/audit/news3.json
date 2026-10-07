@@ -1,0 +1,555 @@
+[
+  {
+    "slug": "apple-rebuilds-siri-google-gemini",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "Apple announced a completely reimagined Siri powered by Google's Gemini model running on Apple's Private Cloud Compute",
+        "correct_value": "Apple's own sources say Siri AI runs on Apple Foundation Models (AFM 3, five models: AFM 3 Core, Core Advanced, Cloud, ADM 3 Cloud (Image), Cloud Pro), 'custom-built in collaboration with Google'. The Jan 12, 2026 joint statement says the next generation of Apple Foundation Models 'will be based on Google's Gemini models and cloud technology'. Apple does not describe Siri as running 'Google's Gemini model'.",
+        "source_url": "https://machinelearning.apple.com/research/introducing-third-generation-of-apple-foundation-models"
+      },
+      {
+        "quote": "Apple has announced a ground-up rebuild of Siri (article dated 2026-04-16)",
+        "correct_value": "No Apple announcement on/around April 16, 2026. The partnership was announced in a joint Apple-Google statement on Jan 12, 2026; Apple unveiled Siri AI at WWDC on June 8, 2026; it shipped Sept 14, 2026. In April only Google Cloud's Thomas Kurian referenced it (Cloud Next, Apr 22).",
+        "source_url": "https://blog.google/company-news/inside-google/company-announcements/joint-statement-google-apple/"
+      },
+      {
+        "quote": "The new Siri is expected to roll out with iOS 20 later this year.",
+        "correct_value": "iOS 27 (released Sept 14, 2026). There is no iOS 20.",
+        "source_url": "https://www.apple.com/newsroom/2026/09/siri-ai-a-profoundly-more-capable-and-personal-assistant-is-here/"
+      },
+      {
+        "quote": "Apple-controlled servers",
+        "correct_value": "AFM 3 Cloud Pro runs on NVIDIA GPUs in Google Cloud, with Private Cloud Compute extended to them under the same privacy guarantees; not exclusively Apple-owned servers.",
+        "source_url": "https://machinelearning.apple.com/research/introducing-third-generation-of-apple-foundation-models"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://blog.google/company-news/inside-google/company-announcements/joint-statement-google-apple/",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://machinelearning.apple.com/research/introducing-third-generation-of-apple-foundation-models",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://www.apple.com/newsroom/2026/06/apple-introduces-siri-ai-a-profoundly-more-capable-and-personal-assistant/",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://www.apple.com/newsroom/2026/09/siri-ai-a-profoundly-more-capable-and-personal-assistant-is-here/",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://9to5mac.com/2026/06/11/siri-ai-is-powered-by-gemini-models-but-is-not-gemini-what-does-that-mean/",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://appleinsider.com/articles/26/06/08/apples-new-foundation-models-dont-contain-a-drop-of-gemini-as-we-said-they-wouldnt",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://thenextweb.com/news/apple-wwdc-2026-siri-ai-gemini-ios-27",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://9to5mac.com/2026/04/22/google-teases-gemini-powered-siri-upgrade-during-cloud-next-keynote/",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Sources conflict, primary sources do not. PRIMARY: (1) Joint Apple-Google statement, Jan 12, 2026: 'the next generation of Apple Foundation Models will be based on Google's Gemini models and cloud technology... Apple Intelligence will continue to run on Apple devices and Private Cloud Compute.' (2) Apple ML Research, June 8, 2026: AFM 3 is 'a family of five foundation models custom-built in collaboration with Google'; 'these models run exclusively on-device and on Private Cloud Compute'; AFM 3 Cloud Pro runs on NVIDIA GPUs in Google Cloud inside PCC. Training: pretraining scaled on cloud TPUs, SFT + multi-stage RL; the page does not mention distillation or Gemini outputs. (3) Apple Newsroom (June/Sept 2026): 'Apple Foundation Models, custom-built in collaboration with Google and its Gemini models'. SECONDARY CONFLICT: 9to5Mac/Computerworld/AppleInsider report the models were 'refined using outputs from Gemini frontier models' (distillation, i.e. Apple models trained with Gemini); TheNextWeb says Siri runs 'a custom Google Gemini model of ~1.2T parameters' with heaviest reasoning routed to Google Cloud. The ~1.2T figure and 'outputs from Gemini' wording were not found on Apple pages. Safest accurate phrasing: 'Siri AI runs on Apple's own Foundation Models, built in collaboration with Google and based on Gemini models, on-device and on Private Cloud Compute' — not 'runs Google's Gemini model'. 'Multi-step tasks on-device for the first time' not verified."
+  },
+  {
+    "slug": "anthropic-confirms-claude-mythos",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "Anthropic Confirms Claude Mythos (article dated 2026-04-13)",
+        "correct_value": "Announced April 7, 2026, as 'Claude Mythos Preview' together with Project Glasswing.",
+        "source_url": "https://www.anthropic.com/glasswing"
+      },
+      {
+        "quote": "approximately 50 partner organizations",
+        "correct_value": "12 named launch partners (AWS, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, Linux Foundation, Microsoft, NVIDIA, Palo Alto Networks) plus 'over 40 additional organizations'. Roughly 50 is a fair approximation, but the program is defensive cybersecurity only, not 'complex multi-step reasoning tasks'.",
+        "source_url": "https://www.anthropic.com/glasswing"
+      },
+      {
+        "quote": "Anthropic CEO Dario Amodei stated that Mythos's capabilities in certain domains — particularly autonomous action and persuasion — cross thresholds",
+        "correct_value": "No such Amodei statement found. Anthropic's stated reason: it needs to 'make progress in developing cybersecurity (and other) safeguards that detect and block the model's most dangerous outputs'.",
+        "source_url": "https://www.anthropic.com/glasswing"
+      },
+      {
+        "quote": "Anthropic has not published benchmark results for Mythos.",
+        "correct_value": "Anthropic published benchmarks with the announcement, e.g. SWE-bench Pro 77.8%, Terminal-Bench 2.0 82.0%, GPQA Diamond 94.6%, CyberGym 83.1% (vs Opus 4.6).",
+        "source_url": "https://www.anthropic.com/glasswing"
+      },
+      {
+        "quote": "a qualitative leap beyond what Claude Opus 4.7 can achieve",
+        "correct_value": "At announcement Mythos Preview was compared with Claude Opus 4.6; Opus 4.7 shipped later, on April 16, 2026.",
+        "source_url": "https://www.anthropic.com/glasswing"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.anthropic.com/glasswing",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://www.constellationr.com/insights/news/anthropic-launches-project-glasswing-claude-mythos-preview-ai-cybersecurity-push",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Real event. The partner quote about end-to-end penetration testing could not be verified. Glasswing also included up to $100M in usage credits and $4M in donations to open-source security organizations."
+  },
+  {
+    "slug": "eu-ai-act-full-enforcement",
+    "status": "fabricated",
+    "wrong_claims": [
+      {
+        "quote": "The EU AI Act entered full enforcement in March 2026",
+        "correct_value": "Nothing happened in March 2026. General application began on August 2, 2026. GPAI obligations have applied since August 2, 2025, and prohibitions since February 2, 2025.",
+        "source_url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+      },
+      {
+        "quote": "High-risk systems ... must complete formal conformity assessments, register in a central EU database (presented as already in force)",
+        "correct_value": "The Digital Omnibus (in force July 27, 2026) postponed high-risk obligations to December 2, 2027 (Annex III) and August 2, 2028 (Annex I products).",
+        "source_url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+      },
+      {
+        "quote": "For large foundation model providers, new GPAI obligations now apply",
+        "correct_value": "GPAI obligations were not new in 2026. They have applied since August 2, 2025.",
+        "source_url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "The central claim, 'full enforcement in March 2026', contradicts the European Commission's official timeline. The €35M or 7% fine ceiling is correct. 'OpenAI, Anthropic, Google and Mistral have all published compliance documentation' was not verified; those companies signed the GPAI Code of Practice in 2025. No matching Wired article was found. If kept, the article needs a full rewrite around August 2, 2026 and the Omnibus delay."
+  },
+  {
+    "slug": "anthropic-claude-design-launch",
+    "status": "verified",
+    "wrong_claims": [],
+    "sources": [
+      {
+        "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Confirmed: launched April 17, 2026 (the article is dated April 22) by Anthropic Labs, powered by Claude Opus 4.7, in research preview for Pro, Max, Team and Enterprise, using subscription limits. It builds a design system from the codebase and design files. Small nuance: it is 'included with your plan and uses your subscription limits', with optional extra usage, rather than strictly 'no additional cost'."
+  },
+  {
+    "slug": "microsoft-openai-partnership-restructure",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "Anthropic's annualized revenue grew from $9B at end-2024 to $30B by April 2026",
+        "correct_value": "The roughly $9B run-rate was at the end of 2025, not the end of 2024. Run-rate passed $30B in early April 2026.",
+        "source_url": "https://www.trendingtopics.eu/anthropic-overtakes-openai-in-revenue-hitting-30-billion-run-rate/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://blogs.microsoft.com/blog/2026/04/27/the-next-phase-of-the-microsoft-openai-partnership/",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://openai.com/index/next-phase-of-microsoft-partnership/",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://www.cnbc.com/2026/04/27/openai-microsoft-partnership-revenue-cap.html",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://www.directionsonmicrosoft.com/microsoft-openai-amend-their-agreement-again/",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Core facts confirmed by Microsoft's April 27, 2026 blog. Microsoft no longer pays OpenAI a revenue share. OpenAI's payments to Microsoft continue through 2030 at the same percentage, subject to a total cap (later reported as about $38B). OpenAI can serve products on any cloud, though Azure remains primary and gets products first. Microsoft's IP license runs through 2032 and is now non-exclusive. The AGI-linked terms were replaced: revenue share is now 'independent of OpenAI's technology progress'. The claim that Anthropic's revenue drove the renegotiation is the article's own speculation."
+  },
+  {
+    "slug": "mcp-anthropic-97m-installs",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "crossed 97 million installs in March 2026",
+        "correct_value": "'97M+ monthly SDK downloads across Python and TypeScript' — a monthly download count, not cumulative installs. Anthropic reported it on December 9, 2025.",
+        "source_url": "https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation"
+      },
+      {
+        "quote": "Anthropic's Model Context Protocol",
+        "correct_value": "Since December 9, 2025, MCP has been governed by the Linux Foundation's Agentic AI Foundation (co-founded by Anthropic, Block and OpenAI). It is no longer solely Anthropic's.",
+        "source_url": "https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "The 97M figure is real but mislabelled and misdated. No Anthropic blog post from April 30, 2026 with this figure was found. Secondary reports say monthly SDK downloads later grew further, toward half a billion (not primary). 'Every major AI provider ships MCP-compatible tooling' is broadly consistent with the adopters Anthropic lists (ChatGPT, Gemini, Copilot, Cursor, VS Code)."
+  },
+  {
+    "slug": "dalle-3-retired-gpt-image-2-replaces",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "OpenAI is providing a compatibility period for existing API customers through Q3 2026.",
+        "correct_value": "No such extension. dall-e-2 and dall-e-3 were announced as deprecated on November 14, 2025 and shut down on May 12, 2026. Recommended replacements: gpt-image-2, gpt-image-1 or gpt-image-1-mini.",
+        "source_url": "https://developers.openai.com/api/docs/deprecations"
+      },
+      {
+        "quote": "The new model is already available in the ChatGPT interface for Plus and Pro subscribers.",
+        "correct_value": "ChatGPT Images 2.0 (gpt-image-2) launched April 21, 2026. The base model is available to all ChatGPT users; thinking features are for Plus, Pro, Business and Enterprise.",
+        "source_url": "https://the-decoder.com/openais-chatgpt-images-2-0-thinks-before-it-generates-adding-reasoning-and-web-search-to-image-creation/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://developers.openai.com/api/docs/deprecations",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://neurohive.io/en/news/chatgpt-images-2-0-openai-launches-image-generation-model-with-reasoning-2k-resolution-and-multilingual-text/",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Confirmed: DALL-E 2 and 3 were shut down in the API on May 12, 2026, and gpt-image-2 is among the recommended replacements. gpt-image-2 offers 2K output, up to 8 images per prompt in thinking mode, and better non-Latin text. 'Replaced by gpt-image-2' slightly oversimplifies: OpenAI lists gpt-image-1 and gpt-image-1-mini as replacements too."
+  },
+  {
+    "slug": "cursor-34-agentic-dev-environments",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "BugBot ... transitions from included-in-plan to usage-based billing",
+        "correct_value": "Bugbot moved from per-seat billing to usage-based billing (announced May 11, 2026). For existing customers the change applies at their next renewal after June 8, 2026. Bugbot was a seat-based add-on, not 'included in plan'.",
+        "source_url": "https://cursor.com/help/account-and-billing/bugbot-usage-based-billing"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://cursor.com/changelog/05-13-26",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://cursor.com/changelog/05-07-26",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://cursor.com/blog/may-2026-bugbot-changes",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Confirmed: Cursor 3.4, May 13, 2026, with multi-repo environments for cloud agents and automations, Dockerfile environment config with build secrets and layer caching, and agent-led environment setup. Cursor 3.3 (May 7) added PR review. Nuances: the environments are configured by teams for cloud agents rather than agents 'provisioning their own', and parallel agents predate 3.4."
+  },
+  {
+    "slug": "luma-ray314-1080p-4x-faster",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "Luma AI released Ray3.14 (article dated 2026-05-10)",
+        "correct_value": "Ray3.14 was released January 26, 2026.",
+        "source_url": "https://lumalabs.ai/news/ray3_14"
+      },
+      {
+        "quote": "Generation speed is 4x faster than Ray2, and cost per generated second is 3x lower",
+        "correct_value": "'4x faster at 720p versus Ray3' and '3x cheaper at 720p versus Ray3'. The comparison is with Ray3, not Ray2.",
+        "source_url": "https://lumalabs.ai/news/ray3_14"
+      },
+      {
+        "quote": "Character Seeds ... maintain consistent appearance — same face, hair, body proportions",
+        "correct_value": "No 'Character Seeds' feature in Luma's announcement. Luma says 'References (Character) aren't supported in Ray3.14'.",
+        "source_url": "https://lumalabs.ai/news/ray3_14"
+      },
+      {
+        "quote": "Modify with Instructions allows text-guided post-generation edits",
+        "correct_value": "Not a Ray3.14 feature in Luma's announcement. Ray3.14 improves the existing Modify Video workflow: better consistency, up to 18 s.",
+        "source_url": "https://lumalabs.ai/news/ray3_14"
+      },
+      {
+        "quote": "productions that would have cost $1,000 in Ray2 credits now cost approximately $333",
+        "correct_value": "Derived from the wrong baseline. The 3x saving is versus Ray3, at 720p.",
+        "source_url": "https://lumalabs.ai/news/ray3_14"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://lumalabs.ai/news/ray3_14",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://www.businesswire.com/news/home/20260126744711/en",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Ray3.14 and native 1080p are real. However, two of the four headline features (Character Seeds, Modify with Instructions) are not in Luma's announcement, and one contradicts it (character references unsupported). The speed and cost baselines are wrong. Needs a substantial rewrite; consider escalating."
+  },
+  {
+    "slug": "adobe-creative-agent-cc-orchestration",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "Adobe launched Creative Agent, an AI orchestration layer",
+        "correct_value": "Adobe unveiled 'Firefly AI Assistant, powered by Adobe's creative agent' on April 15, 2026, 'available soon', with public beta 'in the coming weeks' (reported April 27). It runs inside the Firefly app across Photoshop, Premiere, Lightroom, Illustrator, Express and Firefly.",
+        "source_url": "https://news.adobe.com/news/downloads/pdfs/2026/04/04152026-adobeushersinanewera-3.pdf"
+      },
+      {
+        "quote": "Adobe added sound generation to Firefly",
+        "correct_value": "Not new in April 2026. Generate Sound Effects (beta) launched in Firefly on July 17, 2025. The April 2026 release added audio enhancements (Enhance Speech etc.) to the Firefly Video Editor.",
+        "source_url": "https://blog.adobe.com/en/publish/2025/07/17/firefly-adds-new-video-capabilities-industry-leading-ai-models-generate-sound-effects-feature"
+      },
+      {
+        "quote": "Custom Models is in beta with enterprise waitlist access",
+        "correct_value": "Firefly Custom Models (beta) is available to Creative Cloud Individual and CC Pro/ProPlus for Teams subscribers; Enterprise customers can buy custom models. It was not part of the April 15 announcement.",
+        "source_url": "https://helpx.adobe.com/firefly/web/custom-models/get-started-with-custom-models/custom-models-overview.html"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://news.adobe.com/news/downloads/pdfs/2026/04/04152026-adobeushersinanewera-3.pdf",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://letsdatascience.com/news/adobe-launches-firefly-ai-assistant-inside-creative-cloud-fbb1a5f0",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Real event, misnamed. The example workflow (Lightroom color grading, Premiere motion graphics) is illustrative, not from Adobe."
+  },
+  {
+    "slug": "musk-openai-lawsuit-dismissed",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "on May 19, 2026",
+        "correct_value": "The verdict came on Monday, May 18, 2026.",
+        "source_url": "https://www.npr.org/2026/05/18/nx-s1-5822366/musk-altman-openai-jury-verdict-claims-dismissed"
+      },
+      {
+        "quote": "A California federal jury unanimously dismissed all claims",
+        "correct_value": "A unanimous nine-member advisory jury found the claims time-barred; Judge Yvonne Gonzalez Rogers agreed and dismissed the case.",
+        "source_url": "https://www.npr.org/2026/05/18/nx-s1-5822366/musk-altman-openai-jury-verdict-claims-dismissed"
+      },
+      {
+        "quote": "may accelerate the company's planned corporate restructuring to a for-profit public benefit corporation",
+        "correct_value": "OpenAI's restructuring had already happened in 2025. Musk sought to unwind 'the company's 2025 restructuring'.",
+        "source_url": "https://www.npr.org/2026/05/18/nx-s1-5822366/musk-altman-openai-jury-verdict-claims-dismissed"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.npr.org/2026/05/18/nx-s1-5822366/musk-altman-openai-jury-verdict-claims-dismissed",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://www.cnbc.com/2026/05/18/musk-altman-openai-trial-verdict.html",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://techcrunch.com/2026/05/18/elon-musk-has-lost-his-lawsuit-against-sam-altman-and-openai/",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://www.cnbc.com/2026/01/17/musk-lawsuit-opena-microsoft.html",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Confirmed: verdict in under two hours, statute of limitations, Musk vows to appeal to the 9th Circuit ('calendar technicality'). '$150 billion' is roughly supported: NPR says up to $150B could have been disgorged, and Musk's team sought as much as $180B. In January 2026 CNBC reported Musk seeking up to $134B. 'Breach of contract and fraud' oversimplifies; the remaining claims were breach of charitable trust and unjust enrichment."
+  },
+  {
+    "slug": "claude-fable-5-public-release",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "Mythos 5 was temporarily taken offline due to a U.S. government export directive, though Fable 5 remained available to all users.",
+        "correct_value": "Both were suspended. On June 12, 2026 the US government applied export controls to Claude Fable 5 and Claude Mythos 5, and Anthropic suspended access to both models for all users. They were redeployed July 1, 2026 (controls lifted June 30).",
+        "source_url": "https://www.anthropic.com/news/redeploying-fable-5"
+      },
+      {
+        "quote": "available only to approved organizations for government-adjacent cybersecurity use cases",
+        "correct_value": "Mythos 5 is for Project Glasswing cybersecurity partners (cyber safeguards lifted), plus an incoming trusted-access program for select biomedical researchers. It was deployed in collaboration with the US government.",
+        "source_url": "https://www.anthropic.com/news/claude-fable-5-mythos-5"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://www.anthropic.com/news/redeploying-fable-5",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Confirmed: released June 9, 2026; Mythos-class; $10/$50 per 1M tokens; no extra cost on Pro/Max/Team/seat-based Enterprise through June 22; usage credits from June 23."
+  },
+  {
+    "slug": "openai-gpt-5-6",
+    "status": "verified",
+    "wrong_claims": [],
+    "sources": [
+      {
+        "url": "https://developers.openai.com/api/docs/changelog",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://developers.openai.com/api/docs/guides/latest-model?model=gpt-5.6",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://datanorth.ai/news/openai-releases-gpt-5-6-sol-terra-and-luna",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://itdaily.com/blogs/innovation/gpt-5-6-sol-terra-luna/",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Confirmed by the OpenAI API changelog: the GPT-5.6 family (Sol, Terra, Luna) launched July 9, 2026, after a limited preview that began June 26. ChatGPT Work and GPT-Live being announced alongside is corroborated only by secondary sources (itdaily); openai.com returned 403. The figure 'Sol is roughly 54% more token-efficient on coding', attributed to Sam Altman, was NOT found in any source; sources only say 'markedly fewer tokens than GPT-5.5'. Consider softening it."
+  },
+  {
+    "slug": "moonshot-kimi-k3",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "On July 16, 2026, China's Moonshot AI released Kimi K3, a 2.8-trillion-parameter open-weight ... model",
+        "correct_value": "K3 was announced and launched (API/app) on July 16. The open weights were only released on Hugging Face about July 26–27, 2026.",
+        "source_url": "https://thenextweb.com/news/moonshot-kimi-k3-largest-open-model"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://huggingface.co/moonshotai/Kimi-K3",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://thenextweb.com/news/moonshot-kimi-k3-largest-open-model",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://llmgateway.io/blog/kimi-k3-open-weights",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Confirmed by the HF model card: 2.8T-parameter MoE (896 experts, 16 active per token) with a 1,048,576-token context. Note the license is a custom 'Kimi K3 License' (secondary sources call it modified MIT). The #1 rank on LMArena Frontend Code Arena at 1679, ahead of Fable 5 at 1631, comes from secondary sources only; it was not checked on lmarena directly."
+  },
+  {
+    "slug": "gemini-robotics-er-2-public-preview",
+    "status": "verified",
+    "wrong_claims": [],
+    "sources": [
+      {
+        "url": "https://ai.google.dev/gemini-api/docs/changelog",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Confirmed by the Gemini API changelog, July 30, 2026: gemini-robotics-er-2-preview and gemini-robotics-er-2-streaming-preview, with features including 'multi-robot coordination'. gemini-robotics-er-1.6-preview shuts down August 31, 2026. The article's sentence 'shutdown of ER 1.6 on August 31 arriving on the same day as ER 2's preview' is garbled: the shutdown was announced on the same day, with about one month of overlap."
+  },
+  {
+    "slug": "cursor-ipad-workspace-start-plan",
+    "status": "verified",
+    "wrong_claims": [],
+    "sources": [
+      {
+        "url": "https://cursor.com/changelog/page/2",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Confirmed from the Cursor changelog: Cursor Start, July 28, 2026, ₹649/month for India with Grok and Composer models and iOS remote control. Cursor for iPad, July 29, on all paid plans with pinned sidebar chats and full PR review. Google Workspace plugins (Drive, Gmail, Calendar), August 3. The changelog says 'Grok', not specifically 'Grok 4.5'. The July 22 Router date was not checked."
+  },
+  {
+    "slug": "gemini-omni-flash-ga-transcribe",
+    "status": "verified",
+    "wrong_claims": [],
+    "sources": [
+      {
+        "url": "https://ai.google.dev/gemini-api/docs/changelog",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Confirmed by the Gemini API changelog. August 27, 2026: gemini-omni-1.1-flash GA with video extension, interpolation, and a resolution parameter supporting 360p/720p/1080p/4k; gemini-omni-flash-preview shuts down September 30, 2026. August 26: Gemini 3.5 Transcribe and Transcribe Live GA with 85+ languages (Live over WebSockets via the Live API). Diarization and word-level timestamps are reported in the August 26 entry."
+  },
+  {
+    "slug": "openai-gpt-6-astra-generally-available",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "now generally available on the OpenAI API ..., two days after its announcement as a limited preview for trusted partners",
+        "correct_value": "The OpenAI API changelog records 'Released GPT-6 Astra, our most capable model' on September 3, 2026, with no limited-preview wording and no separate GA entry. The two-step preview-then-GA timeline is not supported by the changelog (openai.com announcement was not readable, 403).",
+        "source_url": "https://developers.openai.com/api/docs/changelog"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://developers.openai.com/api/docs/changelog",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://developers.openai.com/api/docs/pricing",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://developers.openai.com/api/docs/guides/fast-mode",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Confirmed: $10/$50 per 1M tokens; 'Fast mode is not available with EU data residency for GPT-6 Astra' (also for GPT-6.1 Sol, GPT-6 Sol and GPT-6 Luna); GPT-5.6 Sol promo $4/$20 'at least through November 21, 2026'; Terra $2/$12; Luna $0.20/$1.20; 10% regional-processing uplift for models released on or after March 5, 2026. Since then: GPT-6 Sol and Luna (September 22) and GPT-6.1 Sol (September 29) have shipped, so 'Astra on top, 5.6 beneath' is now outdated."
+  },
+  {
+    "slug": "nyc-schools-generative-ai-ban",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "Two things it does not do: teachers may still use AI to build lesson plans, and high school students are unaffected.",
+        "correct_value": "High school is not unaffected. It is restricted to five approved AI pilot programs (Quill, Edia, Brisk Teaching, Playlab, Intel AI-Ready Schools) reaching about 50,000 students, roughly 17% of enrollment. Teachers may use AI for lesson planning, translation and communications, but not for grading, behavior monitoring, special-education planning or student mental-health support.",
+        "source_url": "https://www.chalkbeat.org/newyork/2026/09/02/what-to-know-about-nyc-public-schools-generative-ai-ban-screen-time-limits/"
+      },
+      {
+        "quote": "twice-yearly AI literacy classes for all public high school students",
+        "correct_value": "All high schoolers must complete two 45-minute AI literacy modules annually.",
+        "source_url": "https://www.chalkbeat.org/newyork/2026/09/02/what-to-know-about-nyc-public-schools-generative-ai-ban-screen-time-limits/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.chalkbeat.org/newyork/2026/09/02/what-to-know-about-nyc-public-schools-generative-ai-ban-screen-time-limits/",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://www.chalkbeat.org/newyork/2026/09/02/nyc-schools-to-set-ai-policy-ban-screen-time-limits/",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Confirmed (Chalkbeat, September 2, 2026): a one-school-year moratorium for pre-K/2-K through grade 8, which Mayor Zohran Mamdani called 'the broadest generative AI moratorium in the nation'. AI features are disabled in 38 existing citywide edtech contracts. The '~600,000 students / two thirds of enrolment' figure was not verified in the sources read. The policy also included screen-time limits, which the article omits. A primary nyc.gov page was not retrievable."
+  },
+  {
+    "slug": "perplexity-portable-computer-windows",
+    "status": "verified",
+    "wrong_claims": [],
+    "sources": [
+      {
+        "url": "https://blogs.nvidia.com/blog/local-ai-perplexity-windows-pcs/",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Confirmed by NVIDIA blog, September 14, 2026: Portable Computer on Windows needs a GeForce RTX or RTX PRO GPU with 24GB+ VRAM. The default model is Qwen 3.8 27B, post-trained for Perplexity Computer. Locally completed work 'doesn't consume Perplexity Computer credits'. NOT verified (Perplexity blog returned 403): Pro/Max-only access, Microsoft Store distribution, PPLX 27B, Nemotron 3.5 Lightning 30B, and the claim that harness, orchestrator and scheduler all run locally."
+  }
+]

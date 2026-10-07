@@ -1,0 +1,537 @@
+[
+  {
+    "slug": "stanford-ai-index-2026",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "The ranking aggregates performance across reasoning, coding, science and language benchmarks.",
+        "correct_value": "The ranking cited is the Arena (LMArena) Elo leaderboard as of March 2026: Anthropic 1,503, xAI 1,495, Google 1,494, OpenAI 1,481. It is not an aggregate across benchmark categories.",
+        "source_url": "https://technologyreview.com/2026/04/13/1135675/want-to-understand-the-current-state-of-ai-check-out-these-charts"
+      },
+      {
+        "quote": "AI tools reached 500 million regular users faster than the personal computer, the internet, or the smartphone",
+        "correct_value": "The report says generative AI reached 53% population adoption within three years, faster than the PC or the internet. No 500 million figure and no smartphone comparison appear in the report summary.",
+        "source_url": "https://hai.stanford.edu/ai-index/2026-ai-index-report"
+      },
+      {
+        "quote": "Investment in AI infrastructure reached $420 billion globally in 2025 — more than double the 2023 figure.",
+        "correct_value": "Not in the report summary. The report gives U.S. private AI investment of $285.9 billion in 2025, 23x China's $12.4 billion.",
+        "source_url": "https://hai.stanford.edu/ai-index/2026-ai-index-report"
+      },
+      {
+        "quote": "67% of knowledge workers report using AI tools at least weekly. AI-assisted code now accounts for an estimated 35% of all new code committed to public repositories.",
+        "correct_value": "Neither figure appears in the report's top takeaways. Its adoption figures are 88% organizational adoption and four in five university students using generative AI.",
+        "source_url": "https://hai.stanford.edu/ai-index/2026-ai-index-report"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://technologyreview.com/2026/04/13/1135675/want-to-understand-the-current-state-of-ai-check-out-these-charts",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "The report is real (published April 13, 2026; the article is dated April 15). The headline claim is correct: Anthropic leads the Arena ranking, trailed closely by xAI, Google and OpenAI. 'For the first time' could not be verified. The 'Key statistics' paragraph looks invented and should be replaced with real report figures."
+  },
+  {
+    "slug": "openai-25b-revenue-ipo-2026",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "The company completed a restructuring in early 2026 that converted it to a more conventional public benefit corporation",
+        "correct_value": "OpenAI adopted the PBC structure (OpenAI Group PBC) on October 28, 2025, not in early 2026.",
+        "source_url": "https://en.wikipedia.org/wiki/OpenAI"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.techloy.com/openai-hits-25-billion-in-annualized-revenue-while-anthropic-surges-to-19-billion/",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/OpenAI",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "The $25B annualized revenue (end of February 2026, per The Information) and Anthropic at $19B are confirmed, as early-March 2026 reporting. The article is dated April 13 and credits Bloomberg; the original reporting was The Information. These claims could not be confirmed: enterprise is about 40% of revenue; Goldman Sachs and Morgan Stanley are in talks; the IPO is 'potentially in late 2026'. For later context, OpenAI confidentially submitted a draft S-1 on June 8, 2026, with timing that could slip to 2027."
+  },
+  {
+    "slug": "zhipu-glm-51-744b-open-source",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "On standard evaluations including MMLU, HumanEval and MATH, GLM-5.1 matches or exceeds GPT-4-class performance across most categories... scoring above 85% on competitive programming benchmarks.",
+        "correct_value": "Zhipu's model card headlines SWE-Bench Pro 58.4 (state of the art at launch, ahead of GPT-5.4 and Claude Opus 4.6), Terminal-Bench 2.0 63.5, AIME 2026 95.3 and GPQA-Diamond 86.2. It makes no 'GPT-4-class' or 'above 85% competitive programming' claims.",
+        "source_url": "https://huggingface.co/zai-org/GLM-5.1"
+      },
+      {
+        "quote": "GLM-5.1's MIT license makes it the most freely available frontier-scale model to date.",
+        "correct_value": "Its predecessor GLM-5 (February 2026) was already released under MIT with the same 744B/40B architecture, so GLM-5.1 is not the first.",
+        "source_url": "https://huggingface.co/zai-org/GLM-5.1"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://huggingface.co/zai-org/GLM-5.1",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://rits.shanghai.nyu.edu/ai/glm-5-1-z-ais-open-weight-model-takes-1-on-swe-bench-pro",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Confirmed: open weights released April 7, 2026 under MIT on Hugging Face; 744B total / 40B active MoE (Hugging Face shows 754B including MTP layers); 200K context. The benchmark paragraph is generic and not sourced. Zhipu now brands itself Z.ai."
+  },
+  {
+    "slug": "openai-gpt-55-launch",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "GPT-5.5 ships with Codex, a dedicated agentic coding layer",
+        "correct_value": "Codex is OpenAI's existing coding agent product, which predates GPT-5.5. GPT-5.5 was made available inside Codex; it did not ship Codex.",
+        "source_url": "https://en.wikipedia.org/wiki/GPT-5.5"
+      },
+      {
+        "quote": "The model rolled out to ChatGPT Plus, Pro, Business and Enterprise users on April 24, and is accessible via the OpenAI API.",
+        "correct_value": "ChatGPT rollout was April 23, 2026. API access followed on April 24.",
+        "source_url": "https://en.wikipedia.org/wiki/GPT-5.5"
+      },
+      {
+        "quote": "GPT-5.5 and Codex are now available on Amazon Bedrock",
+        "correct_value": "Announced April 28, 2026 (after the article date) in limited preview, not general availability.",
+        "source_url": "https://dev.to/akaranjkar08/openai-on-amazon-bedrock-gpt-55-codex-managed-agents-guide-2026-1e5g"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/GPT-5.5",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://openai.com/index/introducing-gpt-5-5/",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "The launch is real (April 23, 2026), as are the Plus/Pro/Business/Enterprise tiers. openai.com returned 403 to the fetcher. The Bedrock claim comes from secondary sources (limited preview, April 28)."
+  },
+  {
+    "slug": "anthropic-mythos-restricted-release",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "Anthropic has built a new model internally codenamed Mythos",
+        "correct_value": "It is the public product name 'Claude Mythos Preview', announced April 7, 2026 with Project Glasswing. About 11 launch partners plus 40+ organizations got access.",
+        "source_url": "https://www.anthropic.com/glasswing"
+      },
+      {
+        "quote": "Within days, Microsoft, Google, and xAI agreed to give the US government early access to unreleased models for security evaluation through NIST",
+        "correct_value": "The agreements were with Commerce's Center for AI Standards and Innovation (CAISI, housed in NIST) and announced May 5, 2026. That is after this article's April 30 date, so 'within days' is anachronistic.",
+        "source_url": "https://news.bloomberglaw.com/federal-contracting/google-microsoft-to-give-us-agency-early-access-to-ai-models"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.anthropic.com/glasswing",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://techcrunch.com/2026/04/07/anthropic-mythos-ai-model-preview-security/",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://news.bloomberglaw.com/federal-contracting/google-microsoft-to-give-us-agency-early-access-to-ai-models",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Core facts are real: a restricted cyber-capable model, limited to vetted organizations, and no general release planned. The 'far ahead' quote attributed to Anthropic was not found verbatim. Anthropic's wording is that the model can 'surpass all but the most skilled humans' at finding and exploiting vulnerabilities. The line calling Mythos 'the first publicly acknowledged case of a major AI lab deliberately withholding a model' is doubtful: OpenAI's staged GPT-2 release in 2019 is an earlier case. No source was fetched for it, so it is left in notes, not in wrong_claims."
+  },
+  {
+    "slug": "openai-novo-nordisk-drug-discovery",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "date: 2026-05-02",
+        "correct_value": "Novo Nordisk announced the OpenAI partnership on April 14, 2026.",
+        "source_url": "https://www.biopharminternational.com/view/novo-nordisk-partners-with-openai-for-drug-discovery"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.biopharminternational.com/view/novo-nordisk-partners-with-openai-for-drug-discovery",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://nordiclifescience.org/novo-nordisk-partners-with-openai/",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Scope (R&D, manufacturing, supply chain, commercial) and the obesity/diabetes focus are confirmed. Two claims are unsourced: that 'Eli Lilly, Pfizer, and Roche have signed similar agreements' and that discovery could compress 'from years to months'. The 'clinical trial design' item is plausible but not specifically confirmed. Financial Times attribution was not checked (paywall)."
+  },
+  {
+    "slug": "amazon-q-developer-replaced-by-kiro",
+    "status": "verified",
+    "wrong_claims": [],
+    "sources": [
+      {
+        "url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-developer-ide-end-of-support.md",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://letsdatascience.com/news/amazon-q-developer-announces-end-of-support-timeline-97a57c03",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Confirmed: AWS announced on April 30, 2026 that Q Developer IDE plugins reach end of support April 30, 2027; new signups blocked from May 15, 2026; Kiro is the recommended replacement. Context the article omits: Kiro is not new (public preview July 2025). Q Developer in the AWS Console and Slack/Teams continues. Kiro hook triggers documented by Kiro are file events, prompt submit and agent stop; a 'git commit' trigger and 'Amazon Nova' models were not verified."
+  },
+  {
+    "slug": "notion-developer-platform-35",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "Database Sync adds two-way, bidirectional connections between Notion databases and external data sources... changes made in Notion are now reflected in the external system and vice versa",
+        "correct_value": "Database sync (beta) is one-way: Workers pull data from any API into Notion databases (e.g., Zendesk tickets, Salesforce data). Write-back is not described.",
+        "source_url": "https://www.notion.com/releases/2026-05-13"
+      },
+      {
+        "quote": "Plan Mode is a new AI agent capability",
+        "correct_value": "The 3.5 release notes have no 'Plan Mode'. The agent features shipped were the External Agents API (alpha), custom agent tools as Workers (beta), and the Notion Agent SDK (alpha).",
+        "source_url": "https://www.notion.com/releases/2026-05-13"
+      },
+      {
+        "quote": "Workers runtime allows developers to write and deploy custom serverless JavaScript functions",
+        "correct_value": "Workers are Notion's hosted runtime for custom code, deployed via the new Notion CLI and run in a sandbox. They are free in beta, with pricing on Notion credits from August 11, 2026. 'JavaScript' is not specified in the release notes summary.",
+        "source_url": "https://www.notion.com/releases/2026-05-13"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.notion.com/releases/2026-05-13",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "The release is real: '3.5: Notion Developer Platform', May 13, 2026. Workers and two-way webhooks (any app can trigger Notion) are confirmed. 'Plan Mode' appears to be invented, and the Database Sync description is wrong."
+  },
+  {
+    "slug": "pika-25-pikastream-ai-social-app",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "Pika released Pika 2.5 alongside PikaStream 1.0",
+        "correct_value": "PikaStream 1.0 was announced on its own on April 2, 2026 ('Introducing Real-Time Video Chat for Agents') and does not mention Pika 2.5. Pika 2.5 is a separate, earlier video model. The Pika blog has no joint release and no May 2026 post on this.",
+        "source_url": "https://pika.art/blog/introducing-real-time-video-chat"
+      },
+      {
+        "quote": "Flickering artifacts... are eliminated in 2.5",
+        "correct_value": "Pika's blog has no 'flicker-free' claim.",
+        "source_url": "https://pika.art/blog"
+      },
+      {
+        "quote": "Users can choose character styles, environments, and visual aesthetics",
+        "correct_value": "PikaStream 1.0 generates the user's personalized 'Pika AI Self' at 24 FPS, 480p, with about 1.5 s latency on one H100, joinable in Google Meet. Style or environment selection is not described.",
+        "source_url": "https://pika.art/blog/introducing-real-time-video-chat"
+      },
+      {
+        "quote": "PikaStream represents the first production-level implementation of real-time AI video conversation at consumer scale",
+        "correct_value": "Unsupported marketing claim; no source.",
+        "source_url": "https://pika.art/blog/introducing-real-time-video-chat"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://pika.art/blog/introducing-real-time-video-chat",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://pika.art/blog",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Both products exist, but the article's framing (a joint May 10 release, flicker elimination, a social video platform) has no primary source. Recommend a rewrite around PikaStream 1.0 (April 2, 2026)."
+  },
+  {
+    "slug": "google-io-2026-highlights",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "Ask YouTube (conversational video search, live for Premium users)",
+        "correct_value": "Rolling out on desktop as an initial experiment for English-language searches in the U.S. It is not tied to Premium.",
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/"
+      },
+      {
+        "quote": "Gmail Live and Docs Live (real-time AI collaboration)",
+        "correct_value": "These are voice features ('talk to your inbox', 'create docs and edit them with your voice') rolling out in summer to AI Pro/Ultra subscribers. They are not real-time collaboration tools.",
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/"
+      },
+      {
+        "quote": "Universal Cart (one shopping cart across Search, YouTube, Gmail, and Gemini)",
+        "correct_value": "Google says Universal Cart rolls out across Search and the Gemini app in summer 2026.",
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/"
+      },
+      {
+        "quote": "Google Antigravity 2.0 (agent-first dev platform with Kotlin support and one-click Cloud Run deploy)",
+        "correct_value": "Native Kotlin and one-click Cloud Run deploy were announced for Google AI Studio. Antigravity 2.0 is a standalone multi-agent desktop app with CLI/SDK.",
+        "source_url": "https://www.analyticsvidhya.com/blog/2026/05/google-antigravity-2-0/"
+      },
+      {
+        "quote": "Consumer designs from Warby Parker and Gentle Monster are confirmed for Fall 2026.",
+        "correct_value": "Partners are Gentle Monster, Warby Parker and Samsung. The first audio glasses arrive in fall 2026, while display glasses timing is separate.",
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://www.neowin.net/news/google-announces-gemini-35-flash-its-strongest-coding-model-yet/",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://androidcentral.com/phones/google-pixel/did-google-use-a-macbook-during-its-live-demo-at-google-i-o",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Confirmed: I/O May 19–20; Gemini 3.5 Flash is the default in the Gemini app and AI Mode at $1.50/$9.00 with Terminal-Bench 2.1 at 76.2% (beats 3.1 Pro; the 70.3% figure for 3.1 Pro was not checked). Also confirmed: Gemini Spark beta for U.S. AI Ultra subscribers 'next week', the new $100 AI Ultra plan with 20TB, and the iPhone 17 Pro/MacBook demo moment. Not verified: the 'OLED laptop screen' reviewer quote. Ultra '$250 replaced' is reported only by aggregators; Google's blog just says 'new $100 AI Ultra plan'."
+  },
+  {
+    "slug": "claude-opus-48-dynamic-workflows",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "just 41 days after Opus 4.7",
+        "correct_value": "Opus 4.7 was released April 16, 2026; April 16 to May 28 is 42 days.",
+        "source_url": "https://platform.claude.com/docs/en/models/opus-4-7/overview"
+      },
+      {
+        "quote": "USAMO 2026 math score jumps from 69.3% to 96.7%",
+        "correct_value": "Anthropic's Opus 4.8 announcement has no USAMO figure. The benchmarks referenced are Terminal-Bench 2.1, OSWorld-Verified, Finance Agent v2 and Online-Mind2Web.",
+        "source_url": "https://www.anthropic.com/news/claude-opus-4-8"
+      },
+      {
+        "quote": "spin up up to 1,000 parallel subagents",
+        "correct_value": "Anthropic says Dynamic Workflows can 'run hundreds of parallel subagents in a single session'. It is a research preview for Claude Code on Enterprise, Team and Max plans.",
+        "source_url": "https://www.anthropic.com/news/claude-opus-4-8"
+      },
+      {
+        "quote": "Claude Mythos Preview — the restricted-access cybersecurity model — will be available to approved organizations \"in the coming weeks.\"",
+        "correct_value": "Anthropic said it expects 'to bring Mythos-class models to all our customers in the coming weeks'. Mythos Preview was already used by a small number of organizations.",
+        "source_url": "https://www.anthropic.com/news/claude-opus-4-8"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.anthropic.com/news/claude-opus-4-8",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://platform.claude.com/docs/en/models/opus-4-7/overview",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://letsdatascience.com/news/anthropic-expands-mythos-access-to-150-organizations-35b1c896",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Confirmed: release May 28, 2026; $5/$25 unchanged; fast mode $10/$50 (3x cheaper than previous fast mode); 'about four times less likely' to let code flaws pass unremarked. The '10,000+ high/critical vulnerabilities by ~50 partners' figure matches the separate Glasswing expansion reporting. The 'strongest model on advanced mathematics' framing is unsupported because the USAMO numbers are."
+  },
+  {
+    "slug": "anthropic-965b-valuation-ipo-filing",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "up from $9 billion at end-2024",
+        "correct_value": "Anthropic's run-rate was about $9 billion at the end of 2025, not 2024.",
+        "source_url": "https://www.techloy.com/openai-hits-25-billion-in-annualized-revenue-while-anthropic-surges-to-19-billion/"
+      },
+      {
+        "quote": "Anthropic Files for IPO at $965 Billion",
+        "correct_value": "The $965B is the Series H post-money private valuation (closed around May 28–29, 2026). The June 1 confidential draft S-1 sets no IPO valuation.",
+        "source_url": "https://www.orrick.com/en/News/2026/05/Anthropic-Raises-65B-Series-H-at-965B-Post-Money-Valuation"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.orrick.com/en/News/2026/05/Anthropic-Raises-65B-Series-H-at-965B-Post-Money-Valuation",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://www.shacknews.com/article/149344/anthropic-65-billion-965-billion-post-money-valuation",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://futurumgroup.com/insights/anthropic-files-for-ipo-looking-to-beat-openai-to-the-punch/",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Confirmed: $65B Series H at $965B post-money, led by Altimeter, Dragoneer, Greenoaks and Sequoia; run-rate above $47B in May 2026; above OpenAI's $852B; confidential draft S-1 on June 1, 2026. Not verified: '$30 billion in April 2026', 'expects to exceed $50B by end of June', 'total raised over $100B'."
+  },
+  {
+    "slug": "claude-opus-5",
+    "status": "verified",
+    "wrong_claims": [],
+    "sources": [
+      {
+        "url": "https://www.anthropic.com/news/claude-opus-5",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://platform.claude.com/docs/en/models/opus-5/overview",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://platform.claude.com/docs/en/models/fable-5/overview",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "All confirmed: released July 24, 2026; $5/$25; half Fable 5's $10/$50; 1M context; 128K max output; May 2026 knowledge cutoff (newer than Fable 5's Jan 2026); default on Max and strongest on Pro. Wording nit: the docs list thinking as 'Adaptive' (default effort high), not 'extended thinking enabled by default'."
+  },
+  {
+    "slug": "gemini-3-5-pro-delayed-rebuild",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "announced at I/O in May 2026 with a 2-million-token context window and a Deep Think reasoning layer",
+        "correct_value": "At I/O Google said only that 3.5 Pro was 'already being used internally', with rollout 'next month'. No 2M context or Deep Think spec was announced. The article itself later says there is no confirmed context-window figure.",
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/"
+      },
+      {
+        "quote": "the more powerful Pro tier stays in limited preview",
+        "correct_value": "Google described 3.5 Pro as used internally; no public limited preview was announced.",
+        "source_url": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://letsdatascience.com/news/alphabet-delays-gemini-35-pro-stock-retreats-74e2f3d5",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "The delay is real: Bloomberg reported on July 16, 2026 that Gemini 3.5 Pro was months behind schedule, centred on coding performance. Only aggregator sites support the July 17 target, the hallucination/reliability reasons and the 'scrapped and rebuilt base model'; the Bloomberg original was not accessible. Treat those as unverified."
+  },
+  {
+    "slug": "deepseek-v4-flash-0731-price-rise-warning",
+    "status": "minor_errors",
+    "wrong_claims": [
+      {
+        "quote": "The pricing documentation carries an explicit warning: DeepSeek plans to raise API prices, with a significant increase expected.",
+        "correct_value": "The 'significant' price-rise warning came later, as a developer notice around August 6, 2026 (reported August 7). It was not part of the July 31 release documentation. The current pricing page only says prices 'may vary'.",
+        "source_url": "https://alternativeto.net/news/2026/8/deepseek-warns-developers-of-a-substantial-hike-to-its-api-prices/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://pureai.com/articles/2026/08/07/deepseek-releases-v4-flash-update-with-stronger-agent-scores-and-unchanged-pricing.aspx",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://alternativeto.net/news/2026/8/deepseek-warns-developers-of-a-substantial-hike-to-its-api-prices/",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://api-docs.deepseek.com/quick_start/pricing",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://appwrite.io/blog/post/openai-cuts-gpt-56-pricing-and-adds-fast-mode-to-the-api",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Confirmed: V4-Flash-0731 on July 31, 2026 at $0.14/$0.28 with $0.0028 cache hits; V4-Pro at $0.435/$0.87; 1M context; GPT-5.6 Luna cut to $0.20 on July 30. The V4-Pro cache-hit price ($0.003625) was not checked. DeepSeek has since raised prices: the current docs show peak/off-peak pricing, with Flash cache miss at $0.15–0.30. The article is now stale on price."
+  },
+  {
+    "slug": "openai-gpt-6-astra-launch",
+    "status": "verified",
+    "wrong_claims": [],
+    "sources": [
+      {
+        "url": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://developers.openai.com/api/docs/pricing",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://www.constellationr.com/insights/news/openai-launches-gpt-6-astra",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://appwrite.io/blog/post/openai-cuts-gpt-56-pricing-and-adds-fast-mode-to-the-api",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Confirmed: announced September 3, 2026; model ID gpt-6-astra; $10/$50; about 1.05M context; limited preview first (Trusted Access / Daybreak cyber programs), then paid ChatGPT tiers from September 4. Claude Fable 5 at $10/$50 is confirmed, as are Luna $0.20/$1.20 and Terra $2/$12. OpenAI's pricing page confirms a promotion ending November 21, 2026, but the Sol $4/$20 figure itself was not checked. Unverified: 'held back after a security incident in July 2026' (constellationr mentions only a Hugging Face attack). The article is now partly stale: the pricing page also lists newer gpt-6-luna."
+  },
+  {
+    "slug": "cursor-origin-code-hosting",
+    "status": "verified",
+    "wrong_claims": [],
+    "sources": [
+      {
+        "url": "https://cursor.com/changelog/page/2",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://cursor.com/changelog",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Confirmed by the Cursor changelog: Origin in early beta on August 17, 2026 (paid plans), with bidirectional GitHub sync, PRs, and Vercel/Depot/Buildkite; Cloud Agents 'Start from Scratch' saving to Origin repos on August 27; self-hosted machines (My Machines, team pools, Linux/Mac computer use) on September 2. The integration list is longer than the article says (also Namespace, Vercel, E2B)."
+  },
+  {
+    "slug": "cursor-projects-subagents",
+    "status": "verified",
+    "wrong_claims": [],
+    "sources": [
+      {
+        "url": "https://cursor.com/blog/projects",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://cursor.com/changelog",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "All central claims match the Cursor blog of September 10, 2026: coordinator agent, 'thousands of subagents', runs while the laptop is closed, context over months, shared synced files, subscriptions (Slack, schedule, PRs), beta to all users."
+  },
+  {
+    "slug": "eu-ai-act-enforcement-powers-live",
+    "status": "verified",
+    "wrong_claims": [],
+    "sources": [
+      {
+        "url": "https://artificialintelligenceact.eu/article/101/",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://artificialintelligenceact.eu/article/113/",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://artificialintelligenceact.eu/article/111/",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Confirmed: Art. 113 applies Chapter V (GPAI) from August 2, 2025, except Art. 101 (fines), which applies from August 2, 2026. Art. 101 fines are 3% or EUR 15M, whichever is higher, including for failing to supply information or give evaluation access. Art. 111(3) gives pre-August 2025 models until August 2, 2027. Not verified: 'Anthropic published its text watermarking approach in August' (not on the Anthropic newsroom listing)."
+  },
+  {
+    "slug": "ai-agents-papercut-campaign",
+    "status": "verified",
+    "wrong_claims": [],
+    "sources": [
+      {
+        "url": "https://www.greynoise.io/blog/ai-orchestrated-campaign-against-papercut-ng-mf",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "notes": "Matches the GreyNoise post of September 9, 2026: Russian-speaking actor; CVE-2026-81578 and CVE-2026-82078; 440 instances, 395 orgs, 48 countries; Codex harness plus a DeepSeek model; RCE under 4h and domain admin within 6h; 11 orgs in 26 seconds; 280/147/12; education 204. Minor: GreyNoise's next sectors are retail/commercial (38) and real estate (29); the article names professional services and hospitality."
+  }
+]

@@ -1,0 +1,1031 @@
+[
+ {
+  "slug": "adobe-podcast",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "$0",
+    "period": "n/a",
+    "notes": "Enhance Speech: files up to 30 min / 500 MB, 1 hour per day, audio only, no bulk, no strength adjustment; Studio downloads up to 30-min projects, 2 per day; no download of original recordings"
+   },
+   {
+    "tier": "Adobe Firefly Pro (includes Adobe Podcast Premium)",
+    "amount": "US$19.99",
+    "period": "per month (Firefly plans page, monthly)",
+    "notes": "The podcast.adobe.com/en/plans page now sells 'Adobe Firefly Pro plan with access to Adobe Podcast Premium': 4,000 generative credits/month, Enhance up to 4 h/day, files up to 1 GB, video, bulk upload, strength adjustment, unlimited Studio downloads, speaker-separated recordings. Free trial offered."
+   },
+   {
+    "tier": "Legacy Adobe Podcast Premium",
+    "amount": "$9.99",
+    "period": "per month",
+    "notes": "Per search snippet of Adobe help 'Adobe Podcast Premium plan change FAQ' (page itself returned 403): new checkouts go to Firefly Pro; existing Premium subscribers keep their plan. Standalone $9.99/$99.99 no longer shown on the plans page."
+   }
+  ],
+  "free_tier": "Yes — 30 min / 500 MB per file, 1 h enhancement per day, audio only; Studio 2 downloads/day of up to 30-min projects.",
+  "repositioning": "Paid tier folded into Adobe Firefly: Podcast Premium is now sold as part of Firefly Pro (US$19.99/mo) rather than a standalone $9.99 plan. March 2026 update added Premium-only source separation (speech/noise/music stems), remote recording and multitrack import.",
+  "card_errors": [
+   {
+    "field": "description",
+    "wrong_quote": "Free to start, with a $9.99/month Premium tier.",
+    "correct_value": "New purchases go through Adobe Firefly Pro (US$19.99/mo, includes Podcast Premium); $9.99 Premium is legacy for existing subscribers."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Premium is $9.99/month or $99.99/year with a 30-day trial",
+    "correct_value": "Plans page offers Firefly Pro with Podcast Premium; Firefly Pro US$19.99/mo. $99.99/yr and 30-day trial not shown on vendor pages read."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "adding ... speaker-separated stems and Adobe Express Premium design tools",
+    "correct_value": "Adobe Express Premium not mentioned on current plans page; unverified."
+   },
+   {
+    "field": "description / description_long",
+    "wrong_quote": "Enhance Speech v2 (2026)",
+    "correct_value": "Vendor's March 2026 'What's new' guide does not use a version number; 'Enhance Speech v2' community thread dates to late 2024. The source-separation features shipped March 2026 under the name 'Enhance Speech'. Do not attach 'v2 (2026)'."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "A new Room Modeling option ... and the transformer-based inpainting model rebuilds missing phonemes",
+    "correct_value": "Not found on podcast.adobe.com plans page or March 2026 guide — unverified."
+   },
+   {
+    "field": "pros",
+    "wrong_quote": "Premium adds video enhancement, batch uploads and 1 GB files at a modest $9.99/month",
+    "correct_value": "Now via Firefly Pro at US$19.99/mo for new buyers."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "Adobe Podcast (now integrated into Adobe Firefly and Adobe Express) ... Advanced features require an Adobe Creative Cloud subscription.",
+    "correct_value": "Advanced features require Adobe Firefly Pro (which includes Podcast Premium), not a Creative Cloud subscription per the plans page."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://podcast.adobe.com/en/plans",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.adobe.com/products/firefly/plans.html",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://podcast.adobe.com/en/guides/whats-new-in-adobe-podcast-march-2026",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://helpx.adobe.com/podcast/adobe-podcast-premium-plan-change-faq.html (403; content known only from search snippet)",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Firefly Pro price taken from adobe.com Firefly plans page (monthly US$19.99; Pro Plus/Premium carry a limited-time 30% promo ending Oct 21). Whether Firefly Standard ($9.99) includes Podcast Premium was not stated; plans page names Firefly Pro specifically."
+ },
+ {
+  "slug": "capcut",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "$0",
+    "period": "n/a",
+    "notes": "Vendor confirms free use ('Try online for free', 'No credit card required'); exact free limits not published on pages read."
+   },
+   {
+    "tier": "Standard",
+    "amount": "not published",
+    "period": "n/a",
+    "notes": "Help article: 'Newly Introduced Standard Plan' — 'a more budget-friendly option compared to Pro'; Standard does not work across both mobile and PC after membership restructure."
+   },
+   {
+    "tier": "Pro",
+    "amount": "not published",
+    "period": "n/a",
+    "notes": "Help: 'pricing for CapCut Pro can vary depending on your region, device, and available promotions'; upgraded Pro raised AI credits (550 to 1200) and cloud storage (100GB to 1TB). Prices only shown in-app."
+   },
+   {
+    "tier": "Teams",
+    "amount": "not published",
+    "period": "n/a",
+    "notes": "Not found on vendor pages read."
+   }
+  ],
+  "free_tier": "Exists; exact limits not published on vendor pages read.",
+  "repositioning": "capcut.com navigation now foregrounds third-party and ByteDance generative models: Seedream 5.0 (image), Seedance 1.0/1.5/2.0 and 'Dreamina Seedance 2.5' (video), Nano Banana Pro, 'Gemini Omni', plus Pippit and Dreamina as sister products.",
+  "card_errors": [
+   {
+    "field": "description_long",
+    "wrong_quote": "Standard (about $9.99/month, mainly mobile ...), Pro ($19.99/month or $179.99/year ...) and a Team plan starting around $24.99/month",
+    "correct_value": "Vendor publishes no fixed prices; says pricing varies by region/device/promotion and is shown in-app. Figures unverifiable."
+   },
+   {
+    "field": "cons",
+    "wrong_quote": "2025-26 price restructure pushed the top tier up to $19.99/mo or $179.99/yr, plus a ~$24.99/mo Team plan",
+    "correct_value": "Unverifiable from vendor; Team plan not found."
+   },
+   {
+    "field": "description / description_long / pros",
+    "wrong_quote": "OmniHuman avatars",
+    "correct_value": "OmniHuman appears on capcut.com only via Dreamina (dreamina.capcut.com) resources; not confirmed as a CapCut editor feature."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "a generative effect engine with 50,000+ effects",
+    "correct_value": "Not found on vendor pages read — unverified."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "A student discount of roughly 50% on Pro has been reported.",
+    "correct_value": "Not on vendor pages; third-party claim."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "CapCut Pro ($7.99/month) adds watermark removal",
+    "correct_value": "No vendor-published price; also contradicts card's own $19.99."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "CapCut has some AI generation features like Dream, but its primary strength is editing",
+    "correct_value": "Outdated: CapCut now exposes Seedance video models and an AI video generator directly."
+   },
+   {
+    "field": "users",
+    "wrong_quote": "800M+",
+    "correct_value": "Not verified on vendor pages read."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.capcut.com/",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.capcut.com/help/",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.capcut.com/help/how-much-does-capcut-pro-cost",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.capcut.com/help/new-capcut-subscription-pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.capcut.com/tools/seedream-5-0",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.capcut.com/pricing (404)",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Seedream vs Seedance: card is CORRECT that Seedream 5.0 is a text-to-image model (capcut.com/tools/seedream-5-0 calls it 'CapCut's AI Image generator'). Seedance (video) models are also listed in CapCut: Seedance 1.0, 1.5, 2.0 and 'Dreamina Seedance 2.5' on the homepage. Card omits Seedance entirely. 'AI Auto-Edit' name only confirmed via third-party sources."
+ },
+ {
+  "slug": "consensus",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "$0",
+    "period": "n/a",
+    "notes": "Exists; exact quotas not readable (pricing page JS-rendered, help center behind Cloudflare)."
+   },
+   {
+    "tier": "Pro",
+    "amount": "$20 / $144",
+    "period": "per month (monthly) / per year (billed annually, ~$12/mo)",
+    "notes": "From search snippet of help.consensus.app 'Subscription Plans' (page itself blocked). Includes 15 Deep Searches/month per snippet."
+   },
+   {
+    "tier": "Deep",
+    "amount": "$65 / $540",
+    "period": "per month (monthly) / per year (billed annually, ~$45/mo)",
+    "notes": "Same snippet: everything in Pro plus 200 Deep Searches/month."
+   },
+   {
+    "tier": "Student",
+    "amount": "not verified",
+    "period": "n/a",
+    "notes": "Not found in primary sources read."
+   },
+   {
+    "tier": "Team / Enterprise",
+    "amount": "not published",
+    "period": "n/a",
+    "notes": "Pricing page has 'Team and Enterprise' tab; prices not readable."
+   }
+  ],
+  "free_tier": "Yes; quotas not verified.",
+  "repositioning": "Recent blog (Sept-Oct 2026): Skills (ready-to-run research workflows, Oct 5), figures/tables pulled into answers (Sept 24), Research Gaps Matrix (Sept 22), AAAS partnership (Sept 21), 'Consensus Everywhere' — runs inside ChatGPT, Claude and Microsoft 365 Copilot (Sept 14). About page calls it 'an AI workspace for scientific research'.",
+  "card_errors": [
+   {
+    "field": "description_long / faq",
+    "wrong_quote": "Pro is $10/mo",
+    "correct_value": "Help-center snippet: Pro $20/month or $144/year (~$12/mo billed annually)."
+   },
+   {
+    "field": "description_long / faq / choose_if",
+    "wrong_quote": "Student is $9/mo with .edu/.ac verification",
+    "correct_value": "Not found in vendor sources — unverified."
+   },
+   {
+    "field": "description_long / cons / faq",
+    "wrong_quote": "A higher Deep tier is reported at $45/user/mo with around 200 Deep Searches a month",
+    "correct_value": "$45/mo is the annual-billing equivalent ($540/yr); monthly billing is $65."
+   },
+   {
+    "field": "description_long / faq",
+    "wrong_quote": "about 3 Deep Searches a month (Free)",
+    "correct_value": "Unverified."
+   },
+   {
+    "field": "users",
+    "wrong_quote": "1M+",
+    "correct_value": "Vendor claims '10+ million' researchers/students/clinicians (About page) and 'Over 5 million' (pricing page) — vendor pages conflict; both exceed 1M+."
+   },
+   {
+    "field": "description_long / pros",
+    "wrong_quote": "an improved MCP lets you use Consensus inside ChatGPT, Codex, Claude, and Claude Code",
+    "correct_value": "Vendor blog (Sept 14, 2026) names ChatGPT, Claude and Microsoft 365 Copilot; Codex/Claude Code unverified."
+   },
+   {
+    "field": "description / description_long",
+    "wrong_quote": "220M+ academic papers",
+    "correct_value": "Corpus size not stated on vendor pages read — unverified."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Research Agent ... Medical Mode",
+    "correct_value": "Not confirmed on vendor pages read — unverified."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://consensus.app/pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://consensus.app/home/about-us/",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://consensus.app/home/blog/",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://help.consensus.app/en/articles/10087865-subscription-plans (blocked; search snippet only)",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Pricing page renders client-side and help/docs are Cloudflare-protected; prices come from a search-engine snippet of the vendor's help article. Re-check pricing before publishing."
+ },
+ {
+  "slug": "devin",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Devin 2.2 (Feb 24, 2026) is the last numbered release found; product now also ships as Devin Desktop (June 2, 2026)",
+  "version_published": true,
+  "domain_changed": true,
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "$0",
+    "period": "n/a",
+    "notes": "'Light quota to code with agents', 'Limited model availability', unlimited inline edits and Tab completions"
+   },
+   {
+    "tier": "Pro",
+    "amount": "$20",
+    "period": "per month",
+    "notes": "Increased quotas, frontier models from OpenAI, Claude, Gemini and SpaceXAI plus leading open-source models"
+   },
+   {
+    "tier": "Max",
+    "amount": "$200",
+    "period": "per month",
+    "notes": "Significantly higher quotas than Pro"
+   },
+   {
+    "tier": "Teams",
+    "amount": "$80 base + $40 per developer seat",
+    "period": "per month",
+    "notes": "Up to 200 users"
+   },
+   {
+    "tier": "Enterprise",
+    "amount": "custom",
+    "period": "custom",
+    "notes": "Release notes still reference ACU consumption"
+   }
+  ],
+  "free_tier": "Yes — light agent quota, limited models, unlimited inline edits and Tab completions.",
+  "repositioning": "Devin Desktop launched June 2, 2026 as 'the next generation of Windsurf' (Devin Cloud, Agent Command Center, full IDE). SWE-2 own model (blog Sept 10, 2026; research preview in release notes Sept 21). Fusion expanded to Devin Desktop & CLI (Sept 11). Company blog moved cognition.ai -> cognition.com (301).",
+  "card_errors": [
+   {
+    "field": "description_long / pros",
+    "wrong_quote": "claims frontier-level quality at about 35% lower cost than using Opus 4.8 alone",
+    "correct_value": "Avoid third-party model versions; Cognition says Fusion is 'up to 39% more efficient compared to other model harnesses' and uses a cheaper sidekick model."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "free SWE-1.6 and open-source models",
+    "correct_value": "Pricing page names OpenAI, Claude, Gemini, SpaceXAI and open-source models; SWE-1.6 not mentioned. Cognition's newest own model is SWE-2."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "Devin is available as an enterprise product. Pricing is not publicly listed ... It's designed for engineering teams, not individual developers.",
+    "correct_value": "Public pricing: Free $0, Pro $20/mo, Max $200/mo, Teams $80/mo + $40/seat, Enterprise custom."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "What can Copilot Studio build?",
+    "correct_value": "Wrong-tool FAQ entry (about Microsoft Copilot Studio) — remove."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "There is no Devin 2.3 yet.",
+    "correct_value": "Unverifiable/time-sensitive; drop."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://devin.ai/pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://docs.devin.ai/release-notes/overview",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://cognition.com/blog",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://cognition.ai/blog/introducing-devin-2-2 (search result)",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Sept 28, 2026 cost cut (30-40% cheaper in Fusion and Normal, 15-20% in Ultra, up to 70% in Devin Review) — X post itself not read; reported by third parties. The pricing page read today still shows the same plan prices ($20/$200/$80+$40), so the cut reduces quota/usage consumption per task, not published subscription prices. Fusion/Normal/Ultra are not mentioned on the pricing page."
+ },
+ {
+  "slug": "gamma",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Gamma 3.0 (launched Sept 15, 2025); no later numbered release found",
+  "version_published": true,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "$0",
+    "period": "n/a",
+    "notes": "400 credits, no time limit, no card (help center)."
+   },
+   {
+    "tier": "Plus",
+    "amount": "not verified",
+    "period": "n/a",
+    "notes": "1,000 monthly credits; removes 'Made with Gamma' badge. Price page 403."
+   },
+   {
+    "tier": "Pro",
+    "amount": "not verified",
+    "period": "n/a",
+    "notes": "4,000 monthly credits, API access, up to 10 custom domains."
+   },
+   {
+    "tier": "Ultra",
+    "amount": "not verified",
+    "period": "n/a",
+    "notes": "20,000 monthly credits, API, up to 100 custom domains, Ultra image models."
+   },
+   {
+    "tier": "Business",
+    "amount": "$40",
+    "period": "per member per month, billed annually",
+    "notes": "6,000 monthly credits per member, SSO, SOC 2 docs, 100 custom domains, locked training opt-out. Seat minimum not stated in article."
+   },
+   {
+    "tier": "Enterprise",
+    "amount": "custom",
+    "period": "n/a",
+    "notes": "SCIM, audit logs, invoiced billing"
+   }
+  ],
+  "free_tier": "Yes — 400 credits (help center); 'never refresh' not explicitly confirmed in pages read.",
+  "repositioning": "Help article titled 'What options does Gamma offer for business?' now describes only Business (no separate Team plan found). Annual plans are a 28% discount vs monthly.",
+  "card_errors": [
+   {
+    "field": "description_long",
+    "wrong_quote": "Plus runs about $9/seat/month ... Pro is about $18/seat/month ... Ultra tier is about $90/seat/month",
+    "correct_value": "Pricing page returned 403; individual prices unverified. Help center says annual = 28% discount, so monthly/annual must be stated separately."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Team is about $20/seat/month (annual, two-seat minimum) and Business about $40/seat/month (annual, ten-seat minimum)",
+    "correct_value": "Business $40/member/month billed annually confirmed; no Team plan or seat minimums in current help article."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "Plus is $10/month and Pro is $20/month for unlimited AI generation, custom domains, and analytics",
+    "correct_value": "Plans are credit-metered (Plus 1,000, Pro 4,000 credits/month) — not unlimited."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Nano Banana Pro ..., Recraft V4, Gemini 3.1 Flash Image, and Flux 2 ... Gamma Imagine",
+    "correct_value": "Not verified on vendor pages; avoid third-party model versions."
+   },
+   {
+    "field": "users",
+    "wrong_quote": "70M+",
+    "correct_value": "Not verified."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://gamma.app/pricing (403)",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://help.gamma.app/en/articles/11594955-what-options-does-gamma-offer-for-business",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://help.gamma.app/en/articles/8077107-how-can-i-upgrade-my-gamma-subscription",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://help.gamma.app/en/articles/7834324-what-are-gamma-s-pricing-plans",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://developers.gamma.app/get-started/access-and-pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://gamma.app/ja/insights/introducing-gamma-3-0 (search result)",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Search-engine summaries conflict with help article: one claims Team $240/seat (2-seat min, 6,000 credits) and Business $480/seat (10-seat min, 10,000 credits); the help article read directly says Business $40/member/month billed annually with 6,000 credits/member. API access confirmed on Pro, Ultra, Teams and Business."
+ },
+ {
+  "slug": "heygen",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Avatar V (avatar model, blog datePublished 2026-04-08)",
+  "version_published": true,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "$0",
+    "period": "per month",
+    "notes": "3 videos/month up to 1 min each, up to 1080p, 30+ languages, 1 custom avatar, 500+ stock avatars"
+   },
+   {
+    "tier": "Creator",
+    "amount": "$29 / $24",
+    "period": "per month (monthly) / per month billed annually",
+    "notes": "600 credits/month, up to 30-min videos, 1080p, 175+ languages, voice cloning, watermark removal"
+   },
+   {
+    "tier": "Pro",
+    "amount": "$49",
+    "period": "per month",
+    "notes": "1,000 credits/month, up to 30-min videos, 4K, all advanced AI models; no annual price shown"
+   },
+   {
+    "tier": "Business",
+    "amount": "$149 + $20 per additional seat",
+    "period": "per month",
+    "notes": "1,500 credits/month, up to 60-min videos, 4K, 5+ custom avatars, SAML/SSO, LMS integrations"
+   },
+   {
+    "tier": "Enterprise",
+    "amount": "custom",
+    "period": "n/a",
+    "notes": "No max duration"
+   }
+  ],
+  "free_tier": "3 videos/month, max 1 minute each, 1080p, 30+ languages, 1 custom avatar.",
+  "repositioning": "Seedance 2.0 x HeyGen integration (blog Apr 7, 2026); HeyGen for Real Estate (Aug 11, 2026). Pricing page still references 'Avatar IV' in places.",
+  "card_errors": [
+   {
+    "field": "description / description_long / pros",
+    "wrong_quote": "Avatar V (May 2026) / released in May 2026",
+    "correct_value": "Avatar V announcement post datePublished 2026-04-08 (April 2026)."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Business is $149/mo plus $20 per extra seat, 1,500 credits, up to 60-minute videos, 5 digital twins",
+    "correct_value": "Correct, but pricing page says '5+ custom avatars'."
+   },
+   {
+    "field": "description_long / cons / pros",
+    "wrong_quote": "Avatar IV/V studio videos cost around 20 credits per minute ... lip-sync translation runs about 5 credits per minute ... (e.g. 300 credits for $15/mo) and API pricing (~$0.05/second for Avatar V)",
+    "correct_value": "Not on pricing page; API pricing page redirects to app login — unverified."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "HeyGen's Creator plan starts at $29/month (4 minutes of video). Business is $89/month (15 minutes).",
+    "correct_value": "Creator $29/mo ($24 annual) with 600 credits; Business $149/mo + $20/seat with 1,500 credits."
+   },
+   {
+    "field": "users",
+    "wrong_quote": "2M+",
+    "correct_value": "Not verified."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.heygen.com/pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.heygen.com/blog",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.heygen.com/blog/announcing-avatar-v",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Credits roll over one month on monthly plans per pricing page. WebFetch summary of the Avatar V post showed 'September 17th, 2026' but that date belongs to related-post widgets; JSON-LD datePublished is 2026-04-08."
+ },
+ {
+  "slug": "lovable",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "$0",
+    "period": "n/a",
+    "notes": "5 build credits/day (up to 30/month), 20 Cloud credits/month, 4 AI credits/month; workspace-private projects included"
+   },
+   {
+    "tier": "Pro",
+    "amount": "$25 / $250",
+    "period": "per month (monthly) / per year ($21/mo) at the 100-credit tier",
+    "notes": "Scales $25-$2,250/month for 100-10,000 credits; edit/download code, custom domains; top-ups $15 per 50 credits; plus 5 daily build credits and 20 Cloud credits/month"
+   },
+   {
+    "tier": "Business",
+    "amount": "$50 / $500",
+    "period": "per month (monthly) / per year ($42/mo) at the 100-credit tier",
+    "notes": "Scales $50-$4,300/month; SSO, role-based access, Lovable API, internal publish, excluded from training by default; top-ups $30 per 50 credits"
+   },
+   {
+    "tier": "Enterprise",
+    "amount": "custom",
+    "period": "n/a",
+    "notes": "SCIM, audit logs, publishing/sharing controls, EU inference"
+   }
+  ],
+  "free_tier": "5 build credits/day (max 30/month) + 20 Cloud credits + 4 in-app AI credits per month.",
+  "repositioning": "Since Aug 2026: builds run up to 10 hours per message and '/goal' mode (Aug 26/30); Plan revisions with diffs/version history (Aug 3/9); Anthropic Claude models usable without own API key (Sept 23).",
+  "card_errors": [
+   {
+    "field": "description_long",
+    "wrong_quote": "Business is $50/mo with the same 100-credit base plus SSO ...",
+    "correct_value": "Correct monthly; annual is $500/yr ($42/mo) — card omits."
+   },
+   {
+    "field": "description_long / pros",
+    "wrong_quote": "Pro ... for 100 monthly credits, private projects, code editing",
+    "correct_value": "Workspace-private projects are included on Free too."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Enterprise is quote-based ... reportedly around $500+/mo on annual commitment",
+    "correct_value": "Vendor says custom/volume-based; $500+ figure unverified."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "AI Subagents (Researcher, Reviewer, Synthesizer) shipped in May 2026",
+    "correct_value": "Vendor docs describe automatic, read-only subagents; the three role names and May date not confirmed."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Plan Mode arrived in February 2026 ... an Agent Mode beta expansion landed in June 2026",
+    "correct_value": "Dates not confirmed in vendor changelog read (which shows Plan Mode revisions in Aug 2026)."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "Lovable has a free plan with 5 messages per day. Starter is $20/month for 100 messages, Launch is $50/month for 250 messages, Scale is $100/month for 500 messages.",
+    "correct_value": "Free 5 credits/day (max 30/mo); Pro from $25/mo; Business from $50/mo; credits not messages."
+   },
+   {
+    "field": "users",
+    "wrong_quote": "500K+",
+    "correct_value": "Not verified."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://lovable.dev/pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://docs.lovable.dev/introduction/subscription-plans",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://docs.lovable.dev/introduction/plans-and-credits",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://docs.lovable.dev/changelog",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://docs.lovable.dev/features/subagents (search result)",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Credit expiry: monthly plan credits expire 2 months after issue; annual plan credits 1 month after annual period; top-ups 12 months."
+ },
+ {
+  "slug": "n8n",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "n8n@2.42.3 (stable/latest, 2026-10-05); 2.43.0 is beta/next (2026-10-06)",
+  "version_published": true,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Community Edition (self-hosted)",
+    "amount": "€0",
+    "period": "n/a",
+    "notes": "Free self-hosted GitHub version"
+   },
+   {
+    "tier": "Starter (cloud)",
+    "amount": "€20",
+    "period": "per month, billed annually",
+    "notes": "2,500 executions/month, 1,600 Assistant credits/month, 1 shared project, 5 concurrent executions. Monthly billing ~17% more (≈€24, derived from 'Save 17%', not shown verbatim)."
+   },
+   {
+    "tier": "Pro (cloud)",
+    "amount": "€50",
+    "period": "per month, billed annually",
+    "notes": "10,000 executions/month, up to 9,600 Assistant credits/month, 3 shared projects, up to 50 concurrent executions"
+   },
+   {
+    "tier": "Business",
+    "amount": "€667",
+    "period": "per month, billed annually",
+    "notes": "SELF-HOSTED ONLY (cloud on waitlist); 40,000 executions, SSO/LDAP, queue mode, Git version control"
+   },
+   {
+    "tier": "Enterprise",
+    "amount": "custom",
+    "period": "n/a",
+    "notes": "Self-hosted or n8n-hosted"
+   },
+   {
+    "tier": "Startup plan",
+    "amount": "50% off Business",
+    "period": "n/a",
+    "notes": "Companies under 20 employees"
+   }
+  ],
+  "free_tier": "No free cloud plan; free self-hosted Community Edition; free trial with Pro features, 1,000 executions, no card.",
+  "repositioning": "None major; 1.x line still receives patches (1.123.83 on 2026-09-30).",
+  "card_errors": [
+   {
+    "field": "description / description_long",
+    "wrong_quote": "n8n@2.29.8, July 2026 ... 2.30.x in pre-release",
+    "correct_value": "Current stable is n8n@2.42.3 (2026-10-05); beta 2.43.0."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Cloud plans now bundle monthly AI credits: 2,300 on Starter, up to 13,700 on Pro.",
+    "correct_value": "1,600 Assistant credits on Starter, up to 9,600 on Pro."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Paid cloud tiers run Starter at EUR 24/mo, Pro at EUR 60/mo, Business at EUR 800/mo",
+    "correct_value": "Business is self-hosted only, not a cloud tier; listed €667/mo billed annually. Starter/Pro listed at €20/€50 billed annually."
+   },
+   {
+    "field": "cons",
+    "wrong_quote": "Cloud pricing jumps steeply from Pro (EUR 60) to Business (EUR 800)",
+    "correct_value": "Business is not a cloud plan."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "a 14-day cloud trial",
+    "correct_value": "Trial length not stated on pricing page read; trial is 1,000 executions."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "The flat builder was replaced by a spatial Canvas UI introduced in v1.30 ... four memory backends (in-memory, Redis, Postgres, Motorhead) ... GPT-5.6",
+    "correct_value": "Not verified on vendor pages; avoid third-party model versions."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "The cloud version (n8n.cloud) starts at $24/month.",
+    "correct_value": "Starts at €20/month billed annually (EUR, not USD)."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "Is Make better than Zapier? / Can Make handle AI automations?",
+    "correct_value": "Wrong-tool FAQ entries (about Make/Zapier) — remove."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://n8n.io/pricing/",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://api.github.com/repos/n8n-io/n8n/releases",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://registry.npmjs.org/-/package/n8n/dist-tags",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "high",
+  "notes": "npm dist-tags: latest=stable=2.42.3; next=beta=rc=2.43.0."
+ },
+ {
+  "slug": "pitch",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "€0",
+    "period": "forever",
+    "notes": "1-5 members, 100 one-time AI credits, unlimited presentations, custom templates, 2 external guests"
+   },
+   {
+    "tier": "Plus",
+    "amount": "€10",
+    "period": "per month, paying yearly",
+    "notes": "1 seat, 500 AI credits/month, custom fonts, video uploads, PPTX export, 5 external guests"
+   },
+   {
+    "tier": "Team",
+    "amount": "€15",
+    "period": "per month, paying yearly",
+    "notes": "1-25 members, 500 AI credits/month shared, 3 teamspaces, 25 external guests"
+   },
+   {
+    "tier": "Business",
+    "amount": "€20",
+    "period": "per month, paying yearly",
+    "notes": "1-200 members, 750 AI credits/month, unlimited advanced links/teamspaces/guests"
+   },
+   {
+    "tier": "Enterprise",
+    "amount": "custom",
+    "period": "n/a",
+    "notes": "30+ seats, SAML SSO, dedicated success manager"
+   }
+  ],
+  "free_tier": "€0 forever, 1-5 members, 100 non-renewing AI credits, unlimited presentations.",
+  "repositioning": "Homepage headline 'Create slides that win.'; Pitch Agent promoted for on-brand slide generation.",
+  "card_errors": [
+   {
+    "field": "description_long",
+    "wrong_quote": "Plus is $15/month, or $13/month billed annually ... Team is $23 per seat/month ($19 annual) ... Business is $30 per seat/month ($25 annual)",
+    "correct_value": "Page geo-served in EUR: Plus €10, Team €15, Business €20 per month paying yearly; monthly-billing and USD prices not visible — USD figures unverifiable from this location."
+   },
+   {
+    "field": "description_long / cons",
+    "wrong_quote": "6,000 AI credits per year (Plus) / 9,000 AI credits per year (Business)",
+    "correct_value": "Vendor states 500/month (Plus), 500/month shared (Team), 750/month (Business) — equivalent totals but should be expressed monthly; Team credits omitted in card."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "holds a 4.4/5 rating on G2",
+    "correct_value": "Not on vendor pages read — unverified."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Pitch has repositioned itself as 'The AI presentation workspace'",
+    "correct_value": "Current homepage headline is 'Create slides that win.'"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://pitch.com/pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://pitch.com/",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Pricing geo-served in EUR; did not convert. Annual billing saves 17%. '4M+ teams' confirmed on homepage."
+ },
+ {
+  "slug": "socratic-by-google",
+  "alive": false,
+  "shutdown_note": "Standalone app discontinued. Google Play (org.socratic.android) and App Store (id1014164514) listings return 404 on 2026-10-06; socratic.org 302-redirects to https://lens.google/#homework. Exact removal date not confirmed by a Google primary source.",
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": true,
+  "pricing": [
+   {
+    "tier": "Google Lens homework help (successor)",
+    "amount": "$0",
+    "period": "n/a",
+    "notes": "Google Lens page: 'Get step-by-step homework help'"
+   }
+  ],
+  "free_tier": "n/a — discontinued; successor Google Lens is free.",
+  "repositioning": "Functionality lives in Google Lens homework help.",
+  "card_errors": [
+   {
+    "field": "description_long / cons",
+    "wrong_quote": "socratic.org (the old community Q&A site) has been read-only since 2018",
+    "correct_value": "socratic.org (all paths) now redirects to Google Lens homework page; the Q&A site is no longer reachable."
+   },
+   {
+    "field": "description / description_long / cons",
+    "wrong_quote": "removed from the App Store and Google Play around October 2024",
+    "correct_value": "Removal confirmed (listings 404) but the October 2024 date is not confirmed by a Google primary source."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "The last standalone build was roughly 1.3.0 on Android",
+    "correct_value": "Unverifiable."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "under Lens' camera in 'Homework' mode",
+    "correct_value": "Google's Lens page says 'step-by-step homework help'; a mode named 'Homework' not confirmed on page read."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "Socratic is Google's AI homework help app ... Available free on iOS and Android.",
+    "correct_value": "App discontinued; no longer available on iOS/Android."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "Yes. Socratic by Google is completely free ... It's available on iOS and Android.",
+    "correct_value": "No longer available; use Google Lens."
+   },
+   {
+    "field": "url",
+    "wrong_quote": "https://socratic.org",
+    "correct_value": "Redirects to https://lens.google/#homework (which 301s to https://search.google/ways-to-search/lens/)."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://socratic.org",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://search.google/ways-to-search/lens/",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://play.google.com/store/apps/details?id=org.socratic.android",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://apps.apple.com/us/app/socratic-by-google/id1014164514",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://support.google.com/socratic/answer/9413929",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Recommend published=false or keep strictly as historical; FAQ is stale and contradicts the card."
+ },
+ {
+  "slug": "uxpilot",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "$0",
+    "period": "forever",
+    "notes": "45 credits (~7 screens, no card); pricing strings include '(one time)' label"
+   },
+   {
+    "tier": "Standard",
+    "amount": "$144/year (=$12/mo)",
+    "period": "billed annually",
+    "notes": "'Yearly price: $144, you are saving 25%'. CONFLICT: same site's meta says 'paid plans start at $14/month', comparison pages say $14 billed annually, $19/month, and also '$7.49/month billed annually'. 420 credits, ~70 screens."
+   },
+   {
+    "tier": "Pro",
+    "amount": "$264/year (=$22/mo) / $29",
+    "period": "billed annually / monthly",
+    "notes": "'Yearly price: $264, you are saving 25%'; comparison copy: '$29/month with 750 credits'. Top-up packs, website cloner, 7-day Pro trial offered."
+   },
+   {
+    "tier": "Teams",
+    "amount": "$372/user/year (=$31/user/mo) / $39",
+    "period": "billed annually / monthly per user",
+    "notes": "'Yearly price: $372, you are saving 20%'; '900 credits/user' shared pool"
+   },
+   {
+    "tier": "Enterprise",
+    "amount": "custom",
+    "period": "n/a",
+    "notes": "Custom credits, SSO SAML/SCIM, custom AI model fine-tuning"
+   }
+  ],
+  "free_tier": "45 credits (~7 screens), likely one-time.",
+  "repositioning": "Vendor positions it as 'ideation to production' design tool with Figma export, code export, predictive heatmaps, design review, website cloner; claims 1M+ users.",
+  "card_errors": [
+   {
+    "field": "description_long / pros",
+    "wrong_quote": "Standard is $14/month billed annually ($19 monthly)",
+    "correct_value": "Pricing component shows $144/year (=$12/mo, 25% saving); site copy elsewhere says $14 and $7.49 — vendor is inconsistent."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Pro ... with 1,200 credits, around 200 screens",
+    "correct_value": "Vendor copy: Pro $29/month with 750 credits."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Teams ... with 1,600 credits per user, about 266 screens",
+    "correct_value": "Vendor pricing strings: '900 credits/user'."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "direct comparison pages against Anthropic's Claude Design (Claude Opus 4.7)",
+    "correct_value": "Avoid third-party model versions; just 'Anthropic's Claude Design'."
+   },
+   {
+    "field": "description_long / cons",
+    "wrong_quote": "Deep Design and Max modes burn roughly 12 to 18 credits per screen versus about 6 in Standard",
+    "correct_value": "Deep Design mode confirmed; 'Max' mode and per-screen credit costs not found on vendor page."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "UXpilot is an AI tool for UX research and design. It generates user personas, user journey maps, research plans ...",
+    "correct_value": "Vendor positions it primarily as AI UI/UX design (hi-fi UI, wireframes, prototypes, heatmaps, design review, Figma/code export)."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "UXpilot focuses on UX research artifacts ... UXpilot is for research; Figma AI is for design.",
+    "correct_value": "Wrong — UX Pilot is primarily a UI design generator."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "Pro plan is $20/month",
+    "correct_value": "Pro $29/month or $264/year."
+   },
+   {
+    "field": "users",
+    "wrong_quote": "600K+",
+    "correct_value": "Vendor claims 1M+ users as of 2026."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://uxpilot.ai/pricing",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Plan prices are rendered client-side; figures extracted from the page's embedded JSON/i18n strings. Vendor's own copy is internally inconsistent on Standard price; report conflict rather than pick."
+ }
+]

@@ -50,9 +50,17 @@ Hard rules:
 Return ONLY a JSON object with these keys, and nothing else:
 best_for, description, description_long, pros, cons, choose_if, faq,
 badge (one of free/freemium/paid, based on whether a real free plan exists),
-users (short display string such as "2M+", or null if the audit did not verify it),
+users (see below),
 dropped (array of short strings: claims you removed as unverified).
-Include choose_if and faq ONLY if they are present in the current card."""
+Include choose_if and faq ONLY if they are present in the current card.
+
+The users field has two meanings on this site. If the CURRENT value starts with
+"Free" or "from $", it is a price label shown on the badge and used as the
+structured-data price. Then return an updated label in exactly that format,
+using the lowest verified MONTHLY-billed USD price of a paid tier:
+"Free / from $X/mo" only if a real free plan exists, otherwise "from $X/mo".
+If no monthly USD price is verified, return null. Otherwise users is an
+audience size such as "2M+", or null if the audit did not verify one."""
 
 TR_RULES = """Translate these fields of an AI tool card from English into {lang}.
 
@@ -157,8 +165,14 @@ def main():
         meta = []
         if new_en.get('badge') and new_en['badge'] != en.get('badge'):
             meta.append(f"UPDATE tools SET badge = '{new_en['badge']}' WHERE slug = '{slug}';\n")
+        old_users = (en.get('users') or '').strip()
+        was_price = old_users.startswith('Free') or old_users.startswith('from $')
         if new_en.get('users'):
             meta.append(f"UPDATE tools SET users = {sqlq(new_en['users'])} WHERE slug = '{slug}';\n")
+        elif was_price:
+            # Устаревшая цена в этом поле видна на значке и уходит в разметку
+            # как Offer.price. Не подтверждена — лучше пусто, чем неправда.
+            meta.append(f"UPDATE tools SET users = NULL WHERE slug = '{slug}';\n")
         sql += meta
 
         ok = 0

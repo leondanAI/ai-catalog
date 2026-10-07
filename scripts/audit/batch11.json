@@ -1,0 +1,1105 @@
+[
+ {
+  "slug": "bolt-new",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "$0",
+    "period": "n/a",
+    "notes": "300K tokens daily limit, 1M tokens/month, public and private projects, 10MB upload, website hosting, up to 333k web requests, unlimited databases, Bolt branding on sites"
+   },
+   {
+    "tier": "Pro",
+    "amount": "$25 USD",
+    "period": "per month, billed monthly",
+    "notes": "No daily token limit, starts at 10M tokens/month, unused tokens roll over, 100MB upload, up to 1M web requests, no Bolt branding, custom domains, SEO, AI image editing. Yearly toggle exists ('Save up to 28% with yearly billing'); yearly per-month figure not in static HTML"
+   },
+   {
+    "tier": "Teams",
+    "amount": "$30 USD",
+    "period": "per member per month, billed monthly",
+    "notes": "All Pro features + centralized billing, team access management, admin controls, user provisioning, private NPM registries. Yearly discount up to 28% (exact figure not read)"
+   },
+   {
+    "tier": "Enterprise",
+    "amount": "Custom",
+    "period": "custom",
+    "notes": "SSO, audit logs, compliance support, dedicated account manager, 24/7 support"
+   }
+  ],
+  "free_tier": "Yes: $0 with 300K tokens/day and 1M tokens/month, hosting and unlimited databases, Bolt branding.",
+  "repositioning": "No major repositioning. Homepage says Bolt 'automatically routes to the right model for each task' and markets Bolt Cloud (hosting, databases, integrations). Bolt announced its first acquisition (Dokai) on 2026-09-29 per blog index.",
+  "card_errors": [
+   {
+    "field": "description",
+    "wrong_quote": "Now on Claude Opus 4.8 with adjustable reasoning",
+    "correct_value": "Unverified. Pricing page and homepage name no model; homepage says Bolt automatically routes to the right model per task. Remove the model claim or phrase as automatic model routing."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Claude Opus 4.8 is available as a model option with adjustable reasoning intensity",
+    "correct_value": "Unverified on primary pages; homepage describes automatic model routing."
+   },
+   {
+    "field": "description_long / pros",
+    "wrong_quote": "Build performance has improved by 40% ... approximately 1,000 times larger than the original",
+    "correct_value": "Not found on pages read this round; unverified."
+   },
+   {
+    "field": "faq[1]",
+    "wrong_quote": "Pro is $20/month with more tokens",
+    "correct_value": "Pro is $25/month billed monthly (10M tokens/month to start, rollover); Teams $30/member/month billed monthly; yearly billing saves up to 28%; free plan 1M tokens/month (300K/day)."
+   },
+   {
+    "field": "faq[2]",
+    "wrong_quote": "built-in hosting via StackBlitz",
+    "correct_value": "Hosting is part of Bolt Cloud (bolt.new); StackBlitz not mentioned on pages read."
+   },
+   {
+    "field": "faq[3]",
+    "wrong_quote": "It connects to Supabase for databases",
+    "correct_value": "Bolt Cloud now includes built-in unlimited databases; whether a Supabase integration remains was not verified. Conflicts with description_long, which says no Supabase needed."
+   },
+   {
+    "field": "users",
+    "wrong_quote": "1M+",
+    "correct_value": "Not published on pages read; unverified."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://bolt.new/pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://bolt.new/",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://bolt.new/blog",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "high for pricing, medium for features",
+  "notes": "Yearly prices are behind a JS toggle; only 'Save up to 28%' is stated. Static HTML also contains '$9 Lite plan' text inside what looks like a cancellation/retention flow; not a public tier and not reported as one."
+ },
+ {
+  "slug": "claude-design",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": true,
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "$0",
+    "period": "n/a",
+    "notes": "Claude Design NOT included (pricing table shows 'No' for 'Claude Design, Slides, Docs')"
+   },
+   {
+    "tier": "Pro",
+    "amount": "$20 USD / $17 USD",
+    "period": "$20 billed monthly; $17/month billed annually",
+    "notes": "Includes Claude Design"
+   },
+   {
+    "tier": "Max 5x",
+    "amount": "From $100 USD",
+    "period": "per month",
+    "notes": "Includes Claude Design"
+   },
+   {
+    "tier": "Max 20x",
+    "amount": "Page text read as 'From $100'",
+    "period": "per month",
+    "notes": "CONFLICT: card says $200; the fetched page returned 'From $100' for both Max tiers (likely a shared toggle label). Not resolved; verify manually"
+   },
+   {
+    "tier": "Team Standard seat",
+    "amount": "$25 USD / $20 USD",
+    "period": "$25 monthly; $20/seat/month billed annually",
+    "notes": ""
+   },
+   {
+    "tier": "Team Premium seat",
+    "amount": "$125 USD / $100 USD",
+    "period": "$125 monthly; $100/seat/month billed annually",
+    "notes": ""
+   },
+   {
+    "tier": "Enterprise",
+    "amount": "US$20/seat/month + usage at API rates",
+    "period": "billed annually",
+    "notes": "Pricing page: 'Seat price + usage at API rates US$20/seat/month, billed annually. Usage cost scales with model and task.' Not 'custom pricing'"
+   }
+  ],
+  "free_tier": "No. Claude Design is in paid plans only.",
+  "repositioning": "Product page (claude.com/product/design) now says 'Claude Design is included in all paid plans', names no model and does not use the 'research preview' label. Export now reads 'PPTX, PDF, or HTML, hand off to Claude Code, or send to' connectors: Adobe, Canva, Gamma, Lovable, Miro, Replit, Vercel, Wix. Admins must enable it in Organization settings.",
+  "card_errors": [
+   {
+    "field": "url",
+    "wrong_quote": "https://www.anthropic.com/claude/design",
+    "correct_value": "Returns 404. Product page is https://claude.com/product/design (claude.com/design redirects there 301)."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Enterprise on custom pricing",
+    "correct_value": "Enterprise: US$20/seat/month billed annually + usage at API rates."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Max 20x at $200/mo",
+    "correct_value": "Unresolved conflict: fetched pricing page text showed 'From $100' for Max 20x as well; verify manually."
+   },
+   {
+    "field": "description / description_long / pros",
+    "wrong_quote": "powered by the Claude Opus 4.7 vision model",
+    "correct_value": "True at launch (launch post, April 17 2026). Current product page names no model; present model unverified. Say 'launched on Claude Opus 4.7'."
+   },
+   {
+    "field": "cons",
+    "wrong_quote": "Officially still on Opus 4.7 rather than the newer Opus 5 used elsewhere in the Claude line",
+    "correct_value": "Unverifiable; no current model is stated on Anthropic pages. Remove."
+   },
+   {
+    "field": "description_long / cons",
+    "wrong_quote": "users report fairly restrictive weekly caps",
+    "correct_value": "Not a primary-source fact. Launch post only says it 'uses your subscription limits, with the option to continue beyond those limits by enabling extra usage'."
+   },
+   {
+    "field": "description / description_long",
+    "wrong_quote": "research-preview",
+    "correct_value": "Launched as research preview (launch post); current product page no longer carries the label. Status now unclear; do not claim either way without a fresh source."
+   },
+   {
+    "field": "description / pros",
+    "wrong_quote": "exports to Canva, PDF, PPTX or standalone HTML",
+    "correct_value": "Current page: export to PPTX, PDF or HTML, plus send to Adobe, Canva, Gamma, Lovable, Miro, Replit, Vercel, Wix; handoff to Claude Code."
+   },
+   {
+    "field": "faq[1]",
+    "wrong_quote": "It is part of Anthropic Labs early access",
+    "correct_value": "Launched by Anthropic Labs; product page says 'included in all paid plans'. 'early access' not stated."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://claude.com/pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://claude.com/product/design",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://www.anthropic.com/claude/design (404)",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "high for availability/export, medium for Max 20x price",
+  "notes": "Badge 'paid' is correct. users field 'from $20/mo' fine (Pro $20 monthly / $17 annual)."
+ },
+ {
+  "slug": "deepl",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "0",
+    "period": "n/a",
+    "notes": "50,000 characters/month, 1 file translation/month (up to 5 MB), 1 glossary with 5 entries per language pair"
+   },
+   {
+    "tier": "Individual",
+    "amount": "EUR 7.49",
+    "period": "per month, billed annually",
+    "notes": "300,000 characters/month, 3 files/month (up to 30 MB), full-page translation, 30 min DeepL Voice/month. Page served in EUR from this location; USD not shown"
+   },
+   {
+    "tier": "Team",
+    "amount": "EUR 24.99",
+    "period": "per user/month, billed annually",
+    "notes": "1,000,000 characters/user/month, 20 files/month, bulk file translation, 5 glossaries, SSO (50+ users), 30 min Voice"
+   },
+   {
+    "tier": "Business",
+    "amount": "EUR 49.99",
+    "period": "per user/month, billed annually",
+    "notes": "Unlimited characters, 100 files/month (up to 100 MB), unlimited glossaries, Write Pro included, translation memory"
+   },
+   {
+    "tier": "Enterprise",
+    "amount": "Custom",
+    "period": "custom",
+    "notes": "99.9% availability, dedicated account team"
+   },
+   {
+    "tier": "Monthly billing",
+    "amount": "not shown",
+    "period": "monthly",
+    "notes": "Page says 'Save 16% with annual billing'; monthly figures not shown in fetched content"
+   },
+   {
+    "tier": "API Free / API Pro",
+    "amount": "not verified",
+    "period": "",
+    "notes": "API pricing pages blocked or not rendered; card's 500,000 chars free and $5.49/mo + $25/M chars unverified"
+   }
+  ],
+  "free_tier": "Yes: 50,000 characters/month, 1 file/month up to 5 MB, 1 glossary.",
+  "repositioning": "Site says '100+ languages' and 'our specialized LLM'. DeepL Voice: Voice for Meetings, Voice for Conversations, API for Voice, 'Real-time voice-to-voice translation', 40+ languages; 30 min Voice included on paid plans.",
+  "card_errors": [
+   {
+    "field": "description / description_long",
+    "wrong_quote": "Pro plans start at $8.74/mo billed annually; Team is $28.74 ... Business is $57.49",
+    "correct_value": "Unverified in USD; page served EUR: Individual EUR 7.49, Team EUR 24.99/user, Business EUR 49.99/user per month billed annually. USD figures need check from a US location."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Write Pro is a +$7.49/user/mo add-on on lower tiers",
+    "correct_value": "Not found on pricing page read; unverified. Business includes Write Pro (verified)."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "The API has a free tier (500,000 chars/mo) and a Pro plan at $5.49/mo plus $25 per million characters",
+    "correct_value": "Unverified this round (API pricing not readable)."
+   },
+   {
+    "field": "description",
+    "wrong_quote": "real-time Voice-to-Voice mode added in April 2026",
+    "correct_value": "Voice-to-voice translation is listed on deepl.com/products/voice; release date not stated there. Date unverified."
+   },
+   {
+    "field": "faq[1]",
+    "wrong_quote": "text translation up to 5,000 characters per request and 3 document translations per month",
+    "correct_value": "Free: 50,000 characters/month and 1 file translation/month (up to 5 MB)."
+   },
+   {
+    "field": "faq[1]",
+    "wrong_quote": "DeepL Pro starts at $8.74/month for unlimited text translation",
+    "correct_value": "Individual is not unlimited: 300,000 characters/month (EUR 7.49/mo billed annually on EUR page). Unlimited only on Business."
+   },
+   {
+    "field": "faq[2]",
+    "wrong_quote": "Google Translate supports more languages (100+ vs DeepL's 31)",
+    "correct_value": "DeepL now states '100+ languages'."
+   },
+   {
+    "field": "faq[0]",
+    "wrong_quote": "improves English and German writing",
+    "correct_value": "Write language list not checked this round; likely stale. Unverified."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "DeepL says wins the large majority of blind quality comparisons",
+    "correct_value": "Not found on pages read; unverified."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.deepl.com/en/pro",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.deepl.com/en/translator",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.deepl.com/en/products/voice",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.deepl.com/en/pro-api",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "high for limits and EUR prices, low for USD and API prices",
+  "notes": "Geo-served EUR; did not convert. support.deepl.com returned 403."
+ },
+ {
+  "slug": "flux",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "FLUX 3 (FLUX 3 Image, FLUX 3 Video, FLUX 3 Action); FLUX.2 still offered",
+  "version_published": true,
+  "domain_changed": true,
+  "pricing": [
+   {
+    "tier": "FLUX 3 Image (API)",
+    "amount": "$0.041 / $0.048 / $0.100 / $0.607",
+    "period": "per image at 768sq / 1k / 2k / 4k",
+    "notes": "docs.bfl.ai pricing"
+   },
+   {
+    "tier": "FLUX 3 Video (API)",
+    "amount": "$0.17/s (hd) to $0.80/s (uhd); draft $0.06/s; continuation $0.41-$0.95/s",
+    "period": "per second",
+    "notes": "docs.bfl.ai pricing"
+   },
+   {
+    "tier": "FLUX.2 [klein] 4B / 9B",
+    "amount": "from $0.014 / from $0.015",
+    "period": "per image",
+    "notes": ""
+   },
+   {
+    "tier": "FLUX.2 [pro]",
+    "amount": "from $0.03",
+    "period": "per image",
+    "notes": "CONFLICT: bfl.ai/pricing calculator default showed '$0.048 / image' for [pro] at 768x768"
+   },
+   {
+    "tier": "FLUX.2 [flex]",
+    "amount": "from $0.05",
+    "period": "per image",
+    "notes": "CONFLICT: bfl.ai/pricing calculator default showed '$0.024 / image' for [flex]"
+   },
+   {
+    "tier": "FLUX.2 [max]",
+    "amount": "from $0.07",
+    "period": "per image",
+    "notes": ""
+   },
+   {
+    "tier": "FLUX.1 legacy",
+    "amount": "Pro $0.04, Pro Ultra $0.06, Pro Raw $0.06, Kontext Pro $0.04, Kontext Max $0.08, Fill Pro $0.05",
+    "period": "per image (1 credit = $0.01)",
+    "notes": ""
+   },
+   {
+    "tier": "Open Weights licenses",
+    "amount": "not stated on page",
+    "period": "annual",
+    "notes": "Builder (klein, 10K img/mo, 1 domain), Platform (klein 9B + FLUX.2 dev, 100K/mo), Professional (FLUX.2 dev, 100K/mo, 3 domains), Enterprise, Synthetic Data; all include fine-tuning/LoRA rights"
+   }
+  ],
+  "free_tier": "No free API tier stated ('Pay as you go', 'No subscriptions, no seat fees'). Free option is self-hosting open-weight models within license terms.",
+  "repositioning": "Major: FLUX 3 announced 2026-07-23 ('FLUX 3 - Real World Models'), a multimodal model family covering image, video with native audio (up to 20 s, per bfl.ai/models), and robotics (FLUX 3 Action, open-weights 7B, 2026-09-23). FLUX 3 Video Part 1 post 2026-08-04; FLUX Video Upscale 2K/4K 2026-08-20. BFL is no longer image-only.",
+  "card_errors": [
+   {
+    "field": "url",
+    "wrong_quote": "https://blackforestlabs.ai",
+    "correct_value": "Redirects 301 to https://bfl.ai/"
+   },
+   {
+    "field": "description / description_long",
+    "wrong_quote": "The current generation is FLUX.2",
+    "correct_value": "FLUX 3 announced 2026-07-23 (image, video with audio, action); FLUX.2 remains in the lineup."
+   },
+   {
+    "field": "best_for / description",
+    "wrong_quote": "text-to-image and image-editing model family",
+    "correct_value": "Now also video generation with native audio (FLUX 3 Video) and world/action models."
+   },
+   {
+    "field": "description_long / pros",
+    "wrong_quote": "Pricing is ... billed per megapixel ... [pro] costs $0.03 for the first megapixel then $0.015 per additional MP ... [klein] about $0.014 first MP then ~$0.001/MP",
+    "correct_value": "Docs list FLUX.2 prices 'from' per image (klein 4B $0.014, 9B $0.015, pro $0.03, flex $0.05, max $0.07); per-additional-MP rates not verified. Calculator shows different defaults (pro $0.048, flex $0.024)."
+   },
+   {
+    "field": "description_long / pros",
+    "wrong_quote": "~92% accuracy on complex layouts",
+    "correct_value": "Not found on pages read; unverified."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "around 13GB of VRAM ... cut VRAM use by roughly 40%",
+    "correct_value": "Not verified this round."
+   },
+   {
+    "field": "users",
+    "wrong_quote": "Free",
+    "correct_value": "Not a user count. No user figure published; API is paid pay-as-you-go."
+   },
+   {
+    "field": "choose_if[0]",
+    "wrong_quote": "beyond-Midjourney photorealism",
+    "correct_value": "Marketing comparison; not a verifiable fact."
+   },
+   {
+    "field": "faq[0], faq[2]",
+    "wrong_quote": "FLUX.1 ... comes in three versions: Schnell, Dev, and Pro",
+    "correct_value": "Stale: lineup now FLUX 3, FLUX.2 (max, pro, flex, dev, klein) and FLUX.1 legacy (Kontext, 1.1 Pro, Pro Ultra)."
+   },
+   {
+    "field": "faq[1]",
+    "wrong_quote": "FLUX requires more VRAM than Stable Diffusion — ideally 24GB+",
+    "correct_value": "Stale/unverified; FLUX.2 [klein] marketed as on-device (ASUS ProArt laptops, 2026-06-04)."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://bfl.ai/pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://bfl.ai/blog",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://bfl.ai/models",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://docs.bfl.ai/quick_start/pricing",
+    "accessed": "2026-10-07"
+   }
+  ],
+  "confidence": "high for FLUX 3 existence and docs prices, medium for availability",
+  "notes": "Third-party coverage at FLUX 3 launch said access was by application with GA later; docs now list FLUX 3 Image/Video API prices, so it appears available via API, but GA status not confirmed on a primary page. Open-weight FLUX 3 versions were reportedly promised later in 2026 (third-party only; unverified)."
+ },
+ {
+  "slug": "grammarly",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "$0 USD",
+    "period": "per month",
+    "notes": "Spelling/grammar corrections, tone detection, 100 AI prompts"
+   },
+   {
+    "tier": "Pro",
+    "amount": "$12 USD / $30 USD",
+    "period": "$12 per member/month billed annually; $30 billed monthly",
+    "notes": "2,000 AI prompts per member/month, sentence rewrites, tone adjustment, plagiarism and AI-text detection; 7-day free trial"
+   },
+   {
+    "tier": "Enterprise",
+    "amount": "Contact sales",
+    "period": "custom",
+    "notes": "Unlimited AI prompts, BYOK, SAML SSO, DLP; 'available through Superhuman Go'"
+   }
+  ],
+  "free_tier": "Yes: $0, core corrections, tone, 100 AI prompts.",
+  "repositioning": "Grammarly is 'now a part of the Superhuman Suite'; about page: 'In October, our company became Superhuman' and 'In 2025, we acquired Coda and Superhuman Mail'. Superhuman Go is an AI assistant/agent platform working across '1 million+ apps and websites', 'free to start and included in every Superhuman plan'.",
+  "card_errors": [
+   {
+    "field": "description_long",
+    "wrong_quote": "On November 5, 2025 the company that made Grammarly rebranded itself to Superhuman",
+    "correct_value": "Grammarly about page says 'In October, our company became Superhuman' (year not stated on page; context 2025). Conflict with card's November 5 date."
+   },
+   {
+    "field": "description_long / pros",
+    "wrong_quote": "Superhuman Go, a proactive AI assistant that can act across more than 100 connected apps",
+    "correct_value": "superhuman.com/go: works 'across 1 million+ apps and websites' via connectors and MCP."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "It supports mainly US, UK, Canadian and Australian English",
+    "correct_value": "grammarly.com/languages: writing help in 20+ languages; advanced suggestions in English, Spanish, French, German, Portuguese, Italian; translation into 19 languages."
+   },
+   {
+    "field": "cons",
+    "wrong_quote": "Primarily English only, with limited support for other languages",
+    "correct_value": "Advanced features in 6 languages, basic corrections in 20+; translation available."
+   },
+   {
+    "field": "faq[0]",
+    "wrong_quote": "Grammarly does not translate between languages — it only works on English writing",
+    "correct_value": "Grammarly offers translation ('Instantly translate your words into 19 different languages') and multilingual writing help."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "opened a closed developer beta of the Superhuman Agents SDK",
+    "correct_value": "Not found on pages read; unverified."
+   },
+   {
+    "field": "description_long / cons",
+    "wrong_quote": "the former standalone Business tier was folded into Pro",
+    "correct_value": "Plans page shows only Free, Pro, Enterprise (consistent), but the folding event was not confirmed by a primary statement."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.grammarly.com/plans",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.grammarly.com/pro",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.grammarly.com/about",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.grammarly.com/languages",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.superhuman.com/go",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.superhuman.com/",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Pricing in card ($12 annual / ~$30 monthly, 100 and 2,000 prompts, 7-day trial) is correct. '40M+' matches 'Trusted by over 40 million people'. Enterprise is now tied to Superhuman Go."
+ },
+ {
+  "slug": "lindy",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "$0",
+    "period": "7 days",
+    "notes": "'$50 in free credits', 7-day, 'No credit card required' — a trial, not an ongoing free plan"
+   },
+   {
+    "tier": "Team",
+    "amount": "from $29.99 USD",
+    "period": "per active user per month (monthly)",
+    "notes": "'Every active user in your workspace is billed, from $29.99 a month for 3,000 credits each.' Credit tiers: 3,000 $29.99; 4,000 $39.99; 5,000 $49.99; 6,000 $59.99; 8,000 $79.99; 15,000 $99.99; 20,000 $149.99; 35,000 $199.99; 45,000 $299.99; 70,000 $399.98; 105,000 $599.97; 175,000 $999.95; 350,000 $1,999.90; 700,000 $3,999.80; 1,750,000 $9,999.50. Shared team pool, model selection, computer use, 2-5 inboxes depending on plan. Top-up $10 per 1,000 credits"
+   },
+   {
+    "tier": "Enterprise",
+    "amount": "Custom",
+    "period": "custom",
+    "notes": "HIPAA & signed BAA, SSO, SCIM, audit logs, dedicated support"
+   }
+  ],
+  "free_tier": "No ongoing free plan; 7-day trial with $50 in credits, no card.",
+  "repositioning": "Major: Plus/Pro/Max consumer tiers are gone. Now Free trial / Team (per-user, credit-based) / Enterprise. Homepage: 'The AI Teammate That Lets You Do More'; 1,000+ integrations and MCP; iMessage, email, meeting notes, computer use.",
+  "card_errors": [
+   {
+    "field": "users",
+    "wrong_quote": "Free / from $49.99/mo",
+    "correct_value": "From $29.99 per user/month (3,000 credits); 7-day trial with $50 credits."
+   },
+   {
+    "field": "description",
+    "wrong_quote": "positions itself as a consumer 'AI executive assistant' ... plans from $49.99/mo",
+    "correct_value": "Now 'AI teammate' with per-user Team plan from $29.99/mo; no Plus/Pro/Max tiers."
+   },
+   {
+    "field": "description_long / pros / choose_if",
+    "wrong_quote": "Plus is $49.99/mo ... Pro is $99.99/mo ... Max is $199.99/mo",
+    "correct_value": "No such plans. Team from $29.99/user/mo for 3,000 credits, scaling by credit tier; Enterprise custom."
+   },
+   {
+    "field": "description_long / pros",
+    "wrong_quote": "more than 100 integrations",
+    "correct_value": "Homepage: '1,000+' tools plus MCP servers."
+   },
+   {
+    "field": "description_long / cons",
+    "wrong_quote": "overages are billed at roughly double the standard rate",
+    "correct_value": "'Top up anytime at $10 per 1,000 credits' (same rate as base $29.99/3,000)."
+   },
+   {
+    "field": "description_long / cons",
+    "wrong_quote": "per-tier credit numbers were dropped from the public page",
+    "correct_value": "Credit numbers are published per tier (3,000 to 1,750,000)."
+   },
+   {
+    "field": "description_long / pros",
+    "wrong_quote": "The Pro and Max tiers add model selection ... and computer use",
+    "correct_value": "Pricing page lists model selection and computer use under Team. (Homepage still says computer use is 'Pro tier and up' — conflicting primary text.)"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "pricing is now framed against the cost of a human assistant, cited at around $8,000 a month",
+    "correct_value": "Not on current pricing page; headline is 'The teammate that punches above its price.'"
+   },
+   {
+    "field": "badge",
+    "wrong_quote": "paid",
+    "correct_value": "Correct (paid with trial)."
+   },
+   {
+    "field": "faq[1]",
+    "wrong_quote": "Lindy has a free plan with 400 tasks per month. Paid plans start at $49.99/month for 5,000 tasks",
+    "correct_value": "No free plan; 7-day trial with $50 credits. Team from $29.99/user/mo for 3,000 credits ($49.99 buys 5,000 credits)."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.lindy.ai/pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.lindy.ai/",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "high",
+  "notes": "No annual pricing shown. Card needs full rewrite of pricing sections."
+ },
+ {
+  "slug": "midjourney",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "V8.2 released (launch post on midjourney.com/updates, ~July 2026); V8.1 became default replacing V7 (~June 2026). Whether V8.2 is now the default is not stated in text read.",
+  "version_published": true,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Basic",
+    "amount": "$10 / $96 per year ($8/mo)",
+    "period": "monthly / annual",
+    "notes": "3.3 hr/month (200 minutes) fast GPU, no Relax, SD video"
+   },
+   {
+    "tier": "Standard",
+    "amount": "$30 / $288 per year ($24/mo)",
+    "period": "monthly / annual",
+    "notes": "15 hr fast, unlimited Relax images"
+   },
+   {
+    "tier": "Pro",
+    "amount": "$60 / $576 per year ($48/mo)",
+    "period": "monthly / annual",
+    "notes": "30 hr fast, unlimited Relax images & SD video, Stealth Mode"
+   },
+   {
+    "tier": "Mega",
+    "amount": "$120 / $1,152 per year ($96/mo)",
+    "period": "monthly / annual",
+    "notes": "60 hr fast, Relax images & SD video, Stealth Mode"
+   },
+   {
+    "tier": "Extra GPU time",
+    "amount": "$4/hr",
+    "period": "one-off",
+    "notes": "All plans"
+   }
+  ],
+  "free_tier": "No free plan; 'All Midjourney plans are subscriptions'. No trial mentioned on plans doc.",
+  "repositioning": "V8 series launched in 2026 (alpha), V8.1 default, V8.2 image model and V8.2 edit model (in lightbox) released; native 2K HD mode. Midjourney announced acquisition of Co-Star and a 'Midjourney Medical' project on updates page (dates not captured).",
+  "card_errors": [
+   {
+    "field": "description",
+    "wrong_quote": "Top-quality AI art, now on V7",
+    "correct_value": "Default moved from V7 to V8.1; V8.2 since launched."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "its current V7 model",
+    "correct_value": "V8.1 / V8.2 (see current_version)."
+   },
+   {
+    "field": "cons",
+    "wrong_quote": "V8.2 announced but not yet released — users on V8.1 waiting",
+    "correct_value": "V8.2 image model has launched ('We are launching our V8.2 image model today'), plus V8.2 edit model."
+   },
+   {
+    "field": "pros",
+    "wrong_quote": "3-4x faster generation vs V7",
+    "correct_value": "Not stated. Midjourney says V8.1 SD images appear in ~4 s, 12 s in HD, and SD at full quality is 'as fast as V7 draft mode'; HD 3x faster/cheaper vs V8.0."
+   },
+   {
+    "field": "pros",
+    "wrong_quote": "Midjourney TV: real-time stream of community generations",
+    "correct_value": "Not found on pages read; unverified."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "each about 20% cheaper when paid annually",
+    "correct_value": "Correct (20% annual discount; $8/$24/$48/$96 per month)."
+   },
+   {
+    "field": "faq[1]",
+    "wrong_quote": "Basic at $10/month for approximately 200 image generations per month",
+    "correct_value": "Basic is 3.3 hr/month (200 minutes) of fast GPU time, not 200 images."
+   },
+   {
+    "field": "faq[0]",
+    "wrong_quote": "Firefly 3 (2025)",
+    "correct_value": "Adobe claim, not checked; unverified."
+   },
+   {
+    "field": "users",
+    "wrong_quote": "from $10/mo",
+    "correct_value": "OK ($10 monthly; $8/mo billed annually)."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans (via r.jina.ai reader; direct fetch 403)",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://www.midjourney.com/updates (via r.jina.ai reader; direct fetch 403)",
+    "accessed": "2026-10-07"
+   }
+  ],
+  "confidence": "high for pricing, medium for version/default status",
+  "notes": "Updates page text lacks dates; V8.2 launch dated ~July 2026 from image paths (content/images/2026/07). Pros already mention V8.1 while description says V7 — card is internally inconsistent."
+ },
+ {
+  "slug": "perplexity",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "all consumer and enterprise tiers",
+    "amount": "NOT VERIFIED",
+    "period": "",
+    "notes": "perplexity.ai (pro, max, hub/blog, changelog, help-center, enterprise/pricing, comet) returned HTTP 403 to every fetch method permitted; Playwright unavailable (connection refused). Card figures (Free, Pro $20/mo or $200/yr, Max $200/mo or $2,000/yr, Education ~$10, Enterprise Pro ~$40/seat, Enterprise Max ~$325/seat) remain unverified"
+   }
+  ],
+  "free_tier": "Unverified this round.",
+  "repositioning": "Caller-supplied, not verified by me: Portable Computer for Windows released 2026-09-14 (local agent, NVIDIA RTX GPU 24GB+ VRAM, Pro and Max). API docs changelog (docs.perplexity.ai) shows Sept 2026 additions of Claude Sonnet 5.5, GPT-6.1 Sol, Gemini 3.8 Flash; 'xhigh' preset switched to Claude Opus 5.5; GPT-5.x models retiring 2026-10-24 (API side, not necessarily consumer app).",
+  "card_errors": [
+   {
+    "field": "description / description_long / pros / choose_if",
+    "wrong_quote": "now running on Claude Opus 4.8 ... powered by Claude Opus 4.7 and Sonnet 4.6 ... Claude Opus 4.5/4.6",
+    "correct_value": "Card contradicts itself across fields (4.8 vs 4.7/4.6 vs 4.5/4.6). Unverified; API changelog indicates newer models (Anthropic, OpenAI, Google) in Sept 2026. Recommend naming vendors, not versions."
+   },
+   {
+    "field": "description_long / pros",
+    "wrong_quote": "multi-model access to the GPT-5.6 family, Claude Opus 5 ... (GPT-5, Claude, Gemini, o3-pro)",
+    "correct_value": "Unverified and internally inconsistent; API changelog says GPT-5.x retire Oct 24 2026. Name vendors only."
+   },
+   {
+    "field": "description_long / pros",
+    "wrong_quote": "93.9% on SimpleQA, 21.1% on Humanity's Last Exam",
+    "correct_value": "Unverified (blog blocked)."
+   },
+   {
+    "field": "description",
+    "wrong_quote": "Agentic control on Mac",
+    "correct_value": "Card omits Portable Computer for Windows (2026-09-14, per caller); Mac-only phrasing likely stale. Unverified by me."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "The Deep Research in Computer agentic assistant shipped on June 19, 2026",
+    "correct_value": "Unverified (blog blocked)."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.perplexity.ai/pro (403)",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://www.perplexity.ai/hub/blog (403)",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://www.perplexity.ai/changelog (403)",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://docs.perplexity.ai/changelog/changelog",
+    "accessed": "2026-10-07"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Primary consumer pages unreadable. Needs manual check of perplexity.ai/pro and the Portable Computer announcement. Do not update prices from this audit."
+ },
+ {
+  "slug": "runway",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Gen-4.5 (flagship video model per runway.com/research)",
+  "version_published": true,
+  "domain_changed": true,
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "$0",
+    "period": "n/a",
+    "notes": "'125 one-time credits', 'Free forever', 'A selection of generative creative models', 5GB storage. Watermark not stated (Standard says 'No watermarks')"
+   },
+   {
+    "tier": "Standard",
+    "amount": "$12 USD / $15 USD",
+    "period": "$12/mo billed annually; $15 monthly",
+    "notes": "625 credits/mo, no rollover, access to all AI video & image models, no watermarks, 4K upscaling, 20GB"
+   },
+   {
+    "tier": "Pro",
+    "amount": "$28 USD / $35 USD",
+    "period": "$28/mo billed annually; $35 monthly",
+    "notes": "2,250 credits/mo, 1 Brand Kit, 1 custom voice clone, Runway MCP, 100GB"
+   },
+   {
+    "tier": "Max",
+    "amount": "$76 USD / $95 USD",
+    "period": "$76/mo billed annually; $95 monthly",
+    "notes": "9,500 credits/mo, 1-month rollover, early access to new models, HDR/ProRes, 500GB"
+   },
+   {
+    "tier": "Team",
+    "amount": "not shown",
+    "period": "",
+    "notes": "Introduced 2026-08-31 (changelog: self-serve team plan with shared credits); price on 'Team & Enterprise' tab not captured"
+   },
+   {
+    "tier": "Enterprise",
+    "amount": "Custom",
+    "period": "custom",
+    "notes": "Contact sales"
+   }
+  ],
+  "free_tier": "Yes: 125 one-time credits, limited model selection.",
+  "repositioning": "Domain moved runwayml.com -> runway.com (308 permanent). Expanded into world models and agents: GWM Worlds 2 (2026-09-03), Solaris (2026-09-01), Runway Characters (2026-07-19), Adobe Premiere/After Effects plugins (2026-09-08), DaVinci Resolve plugin (2026-09-23), Runway MCP, Agent. Third-party models on pricing page: Aleph 2.0 (Runway), Seedance 2.0 Pro/Fast, Kling 3.0, Nano Banana Pro, Seed Audio 1.0, Lyria 3 Pro/Clip; changelog adds Gemini Omni Flash, Grok Imagine 1.5 Video, Ideogram 4.0/4.5, ElevenLabs V4, Seedance 2.5 draft.",
+  "card_errors": [
+   {
+    "field": "url",
+    "wrong_quote": "https://runwayml.com",
+    "correct_value": "https://runway.com (runwayml.com 308-redirects)"
+   },
+   {
+    "field": "description_long / pros / faq[1]",
+    "wrong_quote": "Veo 3.1",
+    "correct_value": "Veo is not listed on runway.com/pricing; unverified as currently offered."
+   },
+   {
+    "field": "faq[1]",
+    "wrong_quote": "one subscription also includes Veo 3.1, Kling 3.0, Seedance, and FLUX",
+    "correct_value": "Pricing lists Kling 3.0, Seedance 2.0, Nano Banana Pro, Aleph 2.0, Lyria 3; Veo and FLUX not listed."
+   },
+   {
+    "field": "description_long / cons",
+    "wrong_quote": "watermarked output and limited models (no Gen-4 Video, Gen-4.5, or Veo)",
+    "correct_value": "Pricing says only 'A selection of generative creative models'; watermark and exact exclusions not stated. Unverified."
+   },
+   {
+    "field": "description_long / cons",
+    "wrong_quote": "it replaced the discontinued Unlimited plan ... does not include Explore Mode",
+    "correct_value": "No Unlimited plan or Explore Mode on pricing page (consistent with discontinuation); fine but the history claim is unverified."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Enterprise pricing is custom",
+    "correct_value": "Correct; also add Team plan (launched 2026-08-31)."
+   },
+   {
+    "field": "faq[0]",
+    "wrong_quote": "Kling 3.0 offers better value — more free credits, native 4K, and lower paid pricing",
+    "correct_value": "Kling claims not checked; unverified."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://runway.com/pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://runway.com/changelog",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://runway.com/research",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "high for pricing, medium for model list",
+  "notes": "Card's Standard/Pro/Max prices and credits are correct. users field is empty."
+ },
+ {
+  "slug": "surferseo",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "AI Search Analytics",
+    "amount": "$82 / $98",
+    "period": "$82/mo billed yearly; $98 monthly",
+    "notes": "Standalone AI visibility tier: 50 AI prompts, daily refresh, no Content Editor docs"
+   },
+   {
+    "tier": "Discovery",
+    "amount": "$49 / $59",
+    "period": "$49/mo billed yearly; $59 monthly",
+    "notes": "Tracks 10 pages, 120 documents, Surfy & Humanizer"
+   },
+   {
+    "tier": "Standard",
+    "amount": "$99 / $119",
+    "period": "$99/mo billed yearly; $119 monthly",
+    "notes": "25 AI prompts (weekly refresh), 360 documents"
+   },
+   {
+    "tier": "Pro",
+    "amount": "$182 / $226",
+    "period": "$182/mo billed yearly; $226 monthly",
+    "notes": "50 AI prompts (daily refresh), 360 documents"
+   },
+   {
+    "tier": "Peace of Mind",
+    "amount": "$299 / $419",
+    "period": "$299/mo billed yearly; $419 monthly",
+    "notes": "100 AI prompts (daily), unlimited documents (fair use)"
+   },
+   {
+    "tier": "Enterprise",
+    "amount": "Custom",
+    "period": "custom",
+    "notes": "Contact sales"
+   }
+  ],
+  "free_tier": "No free plan confirmed; 'Start for Free' CTA, trial/plan nature and length not stated.",
+  "repositioning": "Consistent with card (GEO/AI visibility). New standalone 'AI Search Analytics' tier. Tracked engines: ChatGPT, Perplexity, Google AI Mode, Google AI Overviews, Gemini.",
+  "card_errors": [
+   {
+    "field": "description_long",
+    "wrong_quote": "Discovery at $49/mo, Standard at $99/mo, Pro at $182/mo, Peace of Mind at $299/mo (all billed yearly)",
+    "correct_value": "Correct, but add monthly prices ($59/$119/$226/$419) and the AI Search Analytics tier ($82 yearly / $98 monthly)."
+   },
+   {
+    "field": "faq[1]",
+    "wrong_quote": "The Essential plan at $99/month",
+    "correct_value": "No 'Essential' plan; $99/mo billed yearly is 'Standard' ($119 monthly)."
+   },
+   {
+    "field": "description / pros",
+    "wrong_quote": "ChatGPT, Perplexity, Google AI and Gemini",
+    "correct_value": "Correct; page also lists Google AI Mode and AI Overviews separately."
+   },
+   {
+    "field": "cons",
+    "wrong_quote": "All headline prices require annual billing to get the listed rate",
+    "correct_value": "Correct; monthly rates exist and are 20-40% higher."
+   },
+   {
+    "field": "users",
+    "wrong_quote": "150K+",
+    "correct_value": "Not verified on pricing page."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://surferseo.com/pricing/",
+    "accessed": "2026-10-07"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Card is mostly accurate; main fixes are the FAQ plan name and adding monthly figures."
+ },
+ {
+  "slug": "writesonic",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Starter",
+    "amount": "$79 / $99",
+    "period": "$79/mo billed annually; $99 monthly",
+    "notes": "Tracks ChatGPT, Gemini, Google AI Overviews; 50 prompts, 50 answers tracked daily; 15 AI articles/mo; 10 site audits; 1 user"
+   },
+   {
+    "tier": "Basic",
+    "amount": "$199 / $249",
+    "period": "$199/mo billed annually; $249 monthly",
+    "notes": "100 prompts, 300 answers/day, 25 articles/mo, 20 audits, 2 users"
+   },
+   {
+    "tier": "Growth",
+    "amount": "$399 / $499",
+    "period": "$399/mo billed annually; $499 monthly",
+    "notes": "Most popular; 200 prompts, 600 answers/day, sentiment analysis, Action Center trial (5 off-page + 5 on-page actions/mo), 50 articles/mo, 50 audits"
+   },
+   {
+    "tier": "Enterprise",
+    "amount": "Custom",
+    "period": "custom",
+    "notes": "'All 8 AI platforms' incl. Perplexity, Claude, Grok, Copilot; full Action Center and agents"
+   }
+  ],
+  "free_tier": "No ongoing free plan shown; free trial ('Start free. No credit card needed.'), length not stated.",
+  "repositioning": "Consistent with card (AI search visibility / GEO). Meta description: 'Track AI visibility across 8 AI platforms ... Self-serve from $99/mo.'",
+  "card_errors": [
+   {
+    "field": "description_long",
+    "wrong_quote": "the site is ambiguous about monthly versus annual rates, and at least one third-party source lists a different ladder (Lite $49, Standard $99, Professional $249, Advanced $499)",
+    "correct_value": "Site is explicit: monthly $99/$249/$499, annual $79/$199/$399 per month. Remove third-party ladder."
+   },
+   {
+    "field": "cons",
+    "wrong_quote": "Pricing page is ambiguous about monthly vs annual, and third-party sources list higher figures",
+    "correct_value": "Pricing is clear; entry $99 monthly or $79/mo billed annually."
+   },
+   {
+    "field": "cons",
+    "wrong_quote": "Entry paid plan (~$79/mo)",
+    "correct_value": "$79/mo billed annually; $99 billed monthly."
+   },
+   {
+    "field": "description_long / pros",
+    "wrong_quote": "a limited free tier for basic SEO and content tools",
+    "correct_value": "No ongoing free plan on pricing page; only a free trial."
+   },
+   {
+    "field": "description_long / pros",
+    "wrong_quote": "tracking ... ChatGPT, Perplexity, Gemini and Google AI Overviews",
+    "correct_value": "Self-serve plans track ChatGPT, Gemini, Google AI Overviews; Perplexity (and Claude, Grok, Copilot) only in Enterprise 'All 8 AI platforms'."
+   },
+   {
+    "field": "description_long / pros",
+    "wrong_quote": "AI Article Writer 6.0 ... rebuilt on a new in-house Writesonic model alongside integrated GPT-5 and Claude Sonnet 5",
+    "correct_value": "Pricing page says only 'AI Article Writer'; version and model claims unverified. Name vendors, not model versions."
+   },
+   {
+    "field": "description",
+    "wrong_quote": "Chatsonic runs the latest frontier models from OpenAI, Anthropic and Google",
+    "correct_value": "Chatsonic not mentioned on pricing page; unverified whether still offered."
+   },
+   {
+    "field": "description_long / pros",
+    "wrong_quote": "dedicated AI agents for SEO, content and LinkedIn",
+    "correct_value": "Pricing lists 'SEO & Content AI Agent' and agentic workflows (limited trial runs on self-serve; full on Enterprise); LinkedIn agent unverified."
+   },
+   {
+    "field": "faq[0]",
+    "wrong_quote": "It generates blog posts, ads, product descriptions ... It also generates AI images via Photosonic",
+    "correct_value": "Stale; product is now an AI search visibility platform. Photosonic unverified."
+   },
+   {
+    "field": "faq[1]",
+    "wrong_quote": "free trial with 25 credits. Individual plan starts at $16/month, Small Team at $45/month",
+    "correct_value": "Free trial, no card; Starter $79/mo annual or $99 monthly; Basic $199/$249; Growth $399/$499; Enterprise custom."
+   },
+   {
+    "field": "badge",
+    "wrong_quote": "freemium",
+    "correct_value": "Paid with free trial (no ongoing free plan found)."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://writesonic.com/pricing",
+    "accessed": "2026-10-07"
+   }
+  ],
+  "confidence": "high for pricing, medium for features",
+  "notes": "Monthly figures extracted from page JSON: Starter monthly '$99/mo' annual '$79/mo'; Basic '$249/mo'/'$199/mo'; Growth '$499/mo'/'$399/mo'. Annual savings pills ($240/$600/$1200 per year) match."
+ }
+]

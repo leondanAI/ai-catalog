@@ -1,0 +1,1191 @@
+[
+  {
+    "slug": "beautiful-ai",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      {
+        "tier": "Pro (individual, 1 user)",
+        "amount": "$14.50",
+        "period": "per month, billed annually",
+        "notes": "USD. Page shows only the annual price for Pro. 14-day free trial, credit card required, auto-charged unless cancelled."
+      },
+      {
+        "tier": "Single Presentation / monthly option",
+        "amount": "$45",
+        "period": "per month",
+        "notes": "Page: 'Everything in Pro plan (billed monthly)', 'For ad hoc projects', cancel anytime. This is effectively Pro billed monthly."
+      },
+      {
+        "tier": "Team (2-20 users)",
+        "amount": "$40 billed annually / $50 billed monthly",
+        "period": "per user per month",
+        "notes": "Page FAQ: '$40 per user per month billed annually, or $50 per user billed monthly'. The plan card itself says '/MO (INCLUDES 3 USERS)' and 'Fixed pricing for up to three users' - internal inconsistency on the page."
+      },
+      {
+        "tier": "Enterprise",
+        "amount": "Custom",
+        "period": "contact sales",
+        "notes": "SSO, SCIM, audit logs, dedicated onboarding."
+      },
+      {
+        "tier": "SMB plan",
+        "amount": "not published on vendor page",
+        "period": "flat rate",
+        "notes": "Pricing page only says 'Flat rates for smaller teams ... full access for every employee'. /smb returned 404. The $6,000/yr (SMB 50) and $12,000/yr (SMB 100) figures appear only in third-party sources."
+      },
+      {
+        "tier": "Education",
+        "amount": "$0 for one year",
+        "period": "1 year",
+        "notes": "'We offer a year free for students with valid .edu emails.'"
+      }
+    ],
+    "free_tier": "No permanent free plan. 14-day free trial of Pro or Team (credit card required). Students with .edu email get one year free.",
+    "repositioning": "March 18, 2026 press release: context-aware conversational AI workflow, localization in 15 languages, new API, ChatGPT app, mobile-friendly experience, $45M from General Catalyst. The release itself does not use the names '3.0' or 'Create with AI'.",
+    "card_errors": [
+      {
+        "field": "description_long",
+        "wrong_quote": "Pro at $12/user/month billed annually ($144/yr) or $50/month monthly",
+        "correct_value": "Pro is $14.50/month billed annually. No separate monthly Pro price is listed; the monthly option is $45/month ('Everything in Pro plan (billed monthly)')."
+      },
+      {
+        "field": "cons",
+        "wrong_quote": "Individual Pro pricing ($144/yr annually, or $50/mo monthly)",
+        "correct_value": "$14.50/mo billed annually ($174/yr); monthly option $45/mo."
+      },
+      {
+        "field": "description / description_long",
+        "wrong_quote": "Beautiful.ai 3.0 \"Create with AI\" (March 2026)",
+        "correct_value": "Unverified name. The vendor's March 18, 2026 press release describes a 'context-aware AI workflow' and does not use '3.0' or 'Create with AI'."
+      },
+      {
+        "field": "description_long / pros / choose_if",
+        "wrong_quote": "SMB 50 at $6,000/yr for up to 50 users, SMB 100 at $12,000/yr for up to 100 users",
+        "correct_value": "Not published on vendor pages read. Pricing page mentions an SMB flat-rate plan with no figures. Unverified."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Beautiful.ai offers a free plan with limited slides and features. The Pro plan starts at $12/month",
+        "correct_value": "No free plan, only a 14-day trial. Pro is $14.50/mo billed annually; Team $40/user/mo annually or $50 monthly."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Pitch is generally preferred for investor pitches due to its professional templates, viewer analytics",
+        "correct_value": "Opinion with no source. Beautiful.ai Team also has viewer and slide analytics. Unverifiable."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.beautiful.ai/pricing",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://www.beautiful.ai/blog/beautiful-ai-launches-context-aware-ai-workflow-and-secures-45m-investment-from-general-catalyst-to-accelerate-global-growth",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://www.beautiful.ai/smb",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "confidence": "high for pricing, medium for SMB/3.0",
+    "notes": "Pricing page also says 'Create presentations in 100+ languages' for Team, separate from the 15 UI localizations in the press release. Refunds: annual plans partial refund within 24h only; monthly non-refundable."
+  },
+  {
+    "slug": "claude-code",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": "2.1.291 (CLI, npm @anthropic-ai/claude-code latest and top of the official CHANGELOG.md on 2026-10-06)",
+    "version_published": true,
+    "domain_changed": false,
+    "pricing": [
+      {
+        "tier": "Free",
+        "amount": "$0",
+        "period": "-",
+        "notes": "Claude Code NOT included (comparison table: Claude Code - No)."
+      },
+      {
+        "tier": "Pro",
+        "amount": "$17/mo with annual billing ($200 billed up front) / $20 billed monthly",
+        "period": "per month",
+        "notes": "USD. Claude Code included."
+      },
+      {
+        "tier": "Max",
+        "amount": "From $100",
+        "period": "per month, billed monthly only",
+        "notes": "Two options: 5x or 20x Pro usage. The static page text shows only 'From $100'; the $200 price for Max 20x was not visible in the page text read."
+      },
+      {
+        "tier": "Team Standard seat",
+        "amount": "$20 billed annually / $25 billed monthly",
+        "period": "per seat per month",
+        "notes": "'For teams of 2 to 150'. Claude Code and Claude Cowork included."
+      },
+      {
+        "tier": "Team Premium seat",
+        "amount": "$100 billed annually / $125 billed monthly",
+        "period": "per seat per month",
+        "notes": "5x more usage than Standard seats. Seat types can be mixed."
+      },
+      {
+        "tier": "Enterprise",
+        "amount": "US$20/seat/month billed annually + usage at API rates",
+        "period": "annual",
+        "notes": "Claude Code included."
+      },
+      {
+        "tier": "API (pay as you go)",
+        "amount": "Opus 5.5 $4 input / $20 output per MTok; Sonnet 5.5 $2/$10; Haiku 4.5 $1/$5; Fable 5.1 $10/$50",
+        "period": "per million tokens",
+        "notes": "Fast mode for Opus 5.5: up to 2.5x faster at 2x standard pricing."
+      }
+    ],
+    "free_tier": "None for Claude Code. The Free Claude plan does not include it.",
+    "repositioning": "Default model changed: since CLI v2.1.280 'default' resolves to Opus 5.5 on Pro, Max, Team, Enterprise and the Anthropic API (before that: Sonnet 5 / Opus 5; Opus 4.8 only from v2.1.154 to before v2.1.219). Claude Code runs on terminal, VS Code, JetBrains, a desktop app and the web.",
+    "card_errors": [
+      {
+        "field": "description / description_long",
+        "wrong_quote": "now at CLI v2.1.x (June 2026) with Claude Opus 4.8 as the default model",
+        "correct_value": "CLI 2.1.291 (Oct 2026); default model is Opus 5.5 (since v2.1.280)."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "The current release is CLI v2.1.x (v2.1.185-v2.1.193, late June 2026). Since May 28, 2026 the default model has been Claude Opus 4.8",
+        "correct_value": "Current release 2.1.291. Opus 4.8 was the default only on the API, Max, Team Premium and Enterprise PAYG from v2.1.154 until v2.1.219. Current default is Opus 5.5."
+      },
+      {
+        "field": "description_long / pros",
+        "wrong_quote": "Fast mode now also runs on Opus 4.8 at $10/$50 per million tokens, roughly 3x cheaper than the models it replaced",
+        "correct_value": "Pricing page: fast mode for Opus 5.5 at 2x standard pricing (standard Opus 5.5 is $4/$20 per MTok). The '3x cheaper' claim is unverified."
+      },
+      {
+        "field": "description_long / cons",
+        "wrong_quote": "API access is priced separately at an intro $2/$10 per million tokens through Aug 31, 2026, then $3/$15",
+        "correct_value": "No intro window on the current pricing page. Current API prices: Opus 5.5 $4/$20, Sonnet 5.5 $2/$10, Haiku 4.5 $1/$5 per MTok."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Team Premium ($100/seat/mo annual, $125 monthly, 5-seat minimum)",
+        "correct_value": "Team is 'for teams of 2 to 150'. There is no 5-seat minimum on the pricing page."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Max 20x ($200/mo)",
+        "correct_value": "Page text read shows only 'From $100 per month' for Max. $200 for 20x was not visible. Low confidence, not contradicted."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Anthropic doubled limits on May 6, 2026",
+        "correct_value": "Unverified in sources read."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Usage is metered by API tokens consumed during agentic tasks.",
+        "correct_value": "On subscription plans Claude Code shares the plan's usage limits ('your work in the terminal and your chats draw from one pool'). Pay-as-you-go API credits are optional via a Console account."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Claude Code runs in the terminal — it has no GUI.",
+        "correct_value": "Claude Code also runs as VS Code and JetBrains extensions, a desktop app and on the web (claude.ai/code)."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Max ($100/month)",
+        "correct_value": "Max is 'From $100' per month (5x tier). Acceptable but incomplete."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://claude.com/pricing",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://registry.npmjs.org/@anthropic-ai/claude-code/latest",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://code.claude.com/docs/en/model-config.md",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://code.claude.com/docs/en/overview.md",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "confidence": "high",
+    "notes": "Microsoft Foundry default is Sonnet 4.5 per docs. Fable 5.1 is not the default on any plan. The whole card needs a rewrite around Opus 5.5."
+  },
+  {
+    "slug": "cursor",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": "3.23.23 (stable desktop build returned by Cursor's own update endpoint api2.cursor.sh on 2026-10-06; the public changelog no longer shows version numbers)",
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      {
+        "tier": "Hobby",
+        "amount": "$0",
+        "period": "-",
+        "notes": "No credit card required, limited Agent requests, access to Composer."
+      },
+      {
+        "tier": "Pro",
+        "amount": "$20",
+        "period": "per month",
+        "notes": "USD. Includes the 'Cursor Models' pool (Grok 4.7, Grok 4.6, Grok 4.5, Composer 2.5) and the 'Other Models' pool for third-party models at API price. Unlimited Tab, Bugbot, Cloud Agents."
+      },
+      {
+        "tier": "Pro Plus (Pro+)",
+        "amount": "$60",
+        "period": "per month",
+        "notes": "Recommended for daily agent users."
+      },
+      {
+        "tier": "Ultra",
+        "amount": "$200",
+        "period": "per month",
+        "notes": "Recommended for agent power users."
+      },
+      {
+        "tier": "Teams Standard seat",
+        "amount": "$40",
+        "period": "per user per month",
+        "notes": "SAML/OIDC SSO, team marketplace, Bugbot, privacy mode."
+      },
+      {
+        "tier": "Teams Premium seat",
+        "amount": "$120",
+        "period": "per user per month",
+        "notes": "5x the Standard Agent limits (from docs)."
+      },
+      {
+        "tier": "Enterprise",
+        "amount": "Custom",
+        "period": "-",
+        "notes": "Pooled usage, invoicing, SCIM."
+      },
+      {
+        "tier": "Start (India only)",
+        "amount": "INR 649 tax inclusive",
+        "period": "per month, billed monthly in INR",
+        "notes": "Cursor Models pool only; no Other Models pool, Bugbot, Auto or Automations."
+      }
+    ],
+    "free_tier": "Hobby: free, no card, limited Agent requests, Composer access.",
+    "repositioning": "Cursor was acquired by SpaceX; completed Aug 14, 2026 (cursor.com/blog/joining-spacex), following an April 21, 2026 SpaceXAI training partnership. Cursor's in-house model line is now Grok (Grok 4.6 Aug 12, 2026; Grok 4.7 Sep 21, 2026). Composer 2.5 is still in the Cursor Models pool. New products: Projects (beta, Sep 10, 2026), self-hosted machines (Sep 2), Rollouts and Security Review bots (Sep 23, Teams/Enterprise), Grok Bot.",
+    "card_errors": [
+      {
+        "field": "description",
+        "wrong_quote": "Cursor 3.4 with Composer 2.5",
+        "correct_value": "Stable build 3.23.23 (update endpoint). Flagship in-house model is now Grok 4.7; Composer 2.5 remains available."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "The current release is Cursor 3.10, shipped June 30, 2026. The headline change is Composer 2.5",
+        "correct_value": "Outdated. Stable build 3.23.23. Headline changes: SpaceX acquisition (Aug 14, 2026), Grok 4.6/4.7 models, Projects, self-hosted machines."
+      },
+      {
+        "field": "description",
+        "wrong_quote": "Composer 2.5 hits ~63% SWE-Bench at $0.50/task — near Claude Opus 4.8 quality",
+        "correct_value": "Unverified on vendor pages read."
+      },
+      {
+        "field": "description_long / faq",
+        "wrong_quote": "Billing is credit-based, with a credit pool roughly equal to the plan price, though Auto mode usage is unlimited on paid plans",
+        "correct_value": "Docs now describe two usage pools: 'Cursor Models' (Grok 4.7/4.6/4.5, Composer 2.5, with 'significantly more included usage') and 'Other Models' (third-party at API price). Unlimited Auto is not stated. Auto routing via Cursor Router is mentioned for Teams/Enterprise."
+      },
+      {
+        "field": "description_long / faq",
+        "wrong_quote": "Annual billing saves about 20 percent",
+        "correct_value": "A Monthly/Yearly toggle exists, but the yearly prices were not in the page text read. Unverified."
+      },
+      {
+        "field": "description_long / faq",
+        "wrong_quote": "Teams costs $40 per user per month",
+        "correct_value": "Teams now has two seat types: Standard $40/user/mo and Premium $120/user/mo."
+      },
+      {
+        "field": "pros / choose_if",
+        "wrong_quote": "Bugbot delivers automated code reviews in roughly 90 seconds",
+        "correct_value": "Unverified. Note that on individual plans Bugbot is 'on usage-based billing'."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Cursor's flagship model is Composer, its own in-house agentic model",
+        "correct_value": "In-house models are now Grok 4.7, Grok 4.6, Grok 4.5 and Composer 2.5. Third-party models from OpenAI, Anthropic and Google are also supported."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "positions as matching frontier models like Opus 4.8 and GPT-5.5 at roughly a tenth of the cost",
+        "correct_value": "Unverified."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://cursor.com/pricing",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://cursor.com/docs/models-and-pricing",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://cursor.com/changelog",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://cursor.com/blog",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://cursor.com/blog/joining-spacex",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://cursor.com/blog/grok-4-7",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://api2.cursor.sh/updates/api/update/darwin-arm64/cursor/0.0.0/stable",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "confidence": "high for pricing and acquisition, medium for version number",
+    "notes": "A full rewrite is needed. Use the vendor name 'SpaceX' and the 'Grok' model family. The '1M+' users figure was not checked. JSON-LD on the pricing page lists Pro 20 / Pro+ 60 / Ultra 200 / Teams 40 USD."
+  },
+  {
+    "slug": "fireflies-ai",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      {
+        "tier": "Free",
+        "amount": "$0",
+        "period": "forever",
+        "notes": "Unlimited transcription*, limited AI summaries, 400 mins of storage/team, 20 AI credits."
+      },
+      {
+        "tier": "Pro",
+        "amount": "$10 billed annually / $18 monthly",
+        "period": "per seat per month",
+        "notes": "8,000 mins of storage/seat, 20 AI credits, video recording, Voice Agents, AI Skills."
+      },
+      {
+        "tier": "Business",
+        "amount": "$19 billed annually / $29 monthly",
+        "period": "per seat per month",
+        "notes": "Unlimited storage, 30 AI credits. Marked MOST POPULAR."
+      },
+      {
+        "tier": "Enterprise",
+        "amount": "$39",
+        "period": "per seat per month, ANNUAL ONLY",
+        "notes": "Unlimited storage, 50 AI credits, SSO + SCIM, audit logs, HIPAA, private storage."
+      }
+    ],
+    "free_tier": "Free forever: unlimited transcription (asterisked), limited AI summaries, 400 mins storage per team, 20 AI credits.",
+    "repositioning": null,
+    "card_errors": [
+      {
+        "field": "faq",
+        "wrong_quote": "Fireflies.ai has a free plan with 800 minutes of storage per month",
+        "correct_value": "Pricing page: 400 mins of storage/team on Free."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Pro is $18/user/month for unlimited storage",
+        "correct_value": "Pro is $18 monthly or $10 billed annually per seat, with 8,000 mins storage/seat, not unlimited. Unlimited storage starts at Business."
+      },
+      {
+        "field": "description_long / cons",
+        "wrong_quote": "Add-on credit bundles run roughly $0.06 to $0.10 per credit",
+        "correct_value": "Not shown on the pricing page read. Unverified."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Creating your first Voice Agent grants a one-time 100-credit bonus valid for 14 days",
+        "correct_value": "Unverified in sources read."
+      },
+      {
+        "field": "users",
+        "wrong_quote": "20M+",
+        "correct_value": "Pricing page says 'USED ACROSS 1 MILLION+ COMPANIES'. A 20M user figure was not found."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "It integrates with 50+ tools",
+        "correct_value": "Not checked on vendor page. Unverified."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://fireflies.ai/pricing",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "confidence": "high for pricing",
+    "notes": "Card pricing figures (except the FAQ) match the live page. The 800-min knowledge-base conflict in the card was not re-checked. The live pricing page says 400 mins/team, so the card could just use that."
+  },
+  {
+    "slug": "google-veo-3",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": "Veo 3.1 (Lite / Fast / Quality-Standard variants)",
+    "version_published": true,
+    "domain_changed": true,
+    "pricing": [
+      {
+        "tier": "Gemini API - Veo 3.1 Standard",
+        "amount": "$0.40 (720p and 1080p) / $0.60 (4k)",
+        "period": "per second of video with audio",
+        "notes": "USD, paid tier only; free API tier 'Not available'. Model IDs are still '-preview'."
+      },
+      {
+        "tier": "Gemini API - Veo 3.1 Fast",
+        "amount": "$0.10 (720p) / $0.12 (1080p) / $0.30 (4k)",
+        "period": "per second",
+        "notes": "Paid tier only."
+      },
+      {
+        "tier": "Gemini API - Veo 3.1 Lite",
+        "amount": "$0.05 (720p) / $0.08 (1080p)",
+        "period": "per second",
+        "notes": "No 4k output."
+      },
+      {
+        "tier": "Google AI Plus / Pro / Ultra (consumer)",
+        "amount": "not captured",
+        "period": "monthly",
+        "notes": "one.google.com was geo-served in Hebrew (Israel) for both curl and WebFetch; prices are rendered dynamically and were not in the page text. Plan structure now shows Plus, Pro, Ultra 5x and Ultra 20x. Flow monthly credits per WebFetch: Plus 200, Pro 1,000, Ultra 10,000-25,000 (low confidence)."
+      }
+    ],
+    "free_tier": "Not confirmed. Flow help: 'All users can access Gemini Omni models'. A free Veo 3.1 allowance in Flow/Vids for every personal account was not found in the pages read.",
+    "repositioning": "Google now has Gemini Omni (Gemini API: 'Our next-generation video generation and editing model', gemini-omni-1.1-flash GA on paid API, about $0.10/s at 720p). Google AI plan pages list 'Google Omni Flash' as the Flow and Gemini app video model per tier. Veo 3.1 Lite/Fast/Quality remain in Flow. Omni Flash 1.1 adds 10s clips and video-to-video editing that Veo lacks. Old URL deepmind.google/technologies/veo/ redirects to deepmind.google/models/veo/.",
+    "card_errors": [
+      {
+        "field": "description_long",
+        "wrong_quote": "Veo 3.1, which replaced Veo 3 around the end of March 2026",
+        "correct_value": "Veo 3.1 predates this. DeepMind's Veo 3.1 benchmark notes are marked 'Last updated October 2025'."
+      },
+      {
+        "field": "description / description_long / pros / choose_if",
+        "wrong_quote": "Since April 2026 it is free for all personal Google accounts through Google Flow and Google Vids",
+        "correct_value": "Unverified in vendor pages read. Flow help states all users can access Gemini Omni models, not Veo specifically."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "roughly 50 daily AI credits, about 12 clips a day ... around 10 clips a month",
+        "correct_value": "Unverified."
+      },
+      {
+        "field": "description_long / pros",
+        "wrong_quote": "Veo 3.1 Fast is about $0.15 per second and Standard about $0.40 per second",
+        "correct_value": "Fast: $0.10 (720p) / $0.12 (1080p) / $0.30 (4k) per second. Standard: $0.40 (720p/1080p) / $0.60 (4k). Lite: $0.05/$0.08."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Paid subscriptions run about $7.99/mo for Google AI Plus, $19.99/mo for AI Pro and $249.99/mo for AI Ultra",
+        "correct_value": "Not verifiable (page geo-served in ILS/Hebrew, prices not in text). Ultra is now split into 'Ultra 5x' and 'Ultra 20x', so a single $249.99 Ultra figure is likely outdated."
+      },
+      {
+        "field": "url",
+        "wrong_quote": "https://deepmind.google/technologies/veo/",
+        "correct_value": "https://deepmind.google/models/veo/ (redirect target)"
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Google Veo 3 is Google's latest AI video generation model ... available through Google AI Ultra subscription and the VideoFX tool",
+        "correct_value": "Current Veo is 3.1, and Google's newest video model is Gemini Omni. Access is via Google Flow, the Gemini app, Vertex AI and the Gemini API. VideoFX is not current."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Veo 3 is available through Google AI Ultra ($249.99/month) ... Access through VideoFX (labs.google/fx) has been offered in limited preview",
+        "correct_value": "Outdated. Veo 3.1 is in Flow across AI plans and on the paid Gemini API."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://deepmind.google/models/veo/",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://ai.google.dev/gemini-api/docs/pricing.md.txt",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://support.google.com/flow/answer/16352836?hl=en",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://one.google.com/about/google-ai-plans/",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "confidence": "high for API pricing and versions, low for consumer plan prices and free tier",
+    "notes": "Consider whether the card should become 'Google Veo / Gemini Omni' or add a separate Gemini Omni card. Clips are still 4/6/8s for Veo 3.1 in Flow; Omni supports 10s."
+  },
+  {
+    "slug": "krea-ai",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": "Krea 2 (in-house image model; Krea 2 Turbo; open weights krea/Krea-2-Raw and krea/Krea-2-Turbo on Hugging Face, created 2026-06-18)",
+    "version_published": true,
+    "domain_changed": false,
+    "pricing": [
+      {
+        "tier": "Free",
+        "amount": "$0",
+        "period": "per month",
+        "notes": "100 compute units/day, no credit card, image concurrency 1, video concurrency 0, LoRA training up to 50 images, upscaling to 2K."
+      },
+      {
+        "tier": "Basic",
+        "amount": "CONFLICT: $9 monthly / $5 per month yearly (per WebFetch) vs absent",
+        "period": "per month",
+        "notes": "WebFetch of /pricing returned a Basic plan (5,000 units, $9/mo, $5/mo yearly). A direct HTML fetch minutes later had no Basic plan, and the page FAQ lists only Free, Pro, Max, Business, Enterprise. Possibly A/B or geo-dependent. Unresolved."
+      },
+      {
+        "tier": "Pro",
+        "amount": "$35 monthly / $21 per month billed yearly",
+        "period": "per month",
+        "notes": "20,000 units/month, image concurrency 8, video concurrency 4, all video models, commercial license. Marked 'Most popular'."
+      },
+      {
+        "tier": "Max",
+        "amount": "$105 monthly / $63 per month billed yearly",
+        "period": "per month",
+        "notes": "60,000 units/month (unit selector 40k/60k/80k/100k; price shown for 60k). Unlimited image concurrency, video concurrency 8, LoRA training up to 2,000 images, upscaling up to 22K."
+      },
+      {
+        "tier": "Business",
+        "amount": "$200 monthly / $160 per month billed yearly",
+        "period": "per month",
+        "notes": "80k units/month (selector 20k to 1.5M), up to 50 seats included, unlimited concurrency, custom roles, indemnification."
+      },
+      {
+        "tier": "Enterprise",
+        "amount": "Custom",
+        "period": "-",
+        "notes": "SAML SSO, custom compute, audit logs."
+      }
+    ],
+    "free_tier": "100 compute units per day, no credit card required.",
+    "repositioning": "Adds Krea Agent ('Brief the Agent once...'), App Builder and Nodes Agent. Krea 2 launched May 2026 (blog posts from May 12-15, 2026), Krea 2 Turbo on Jun 8, 2026, Generative Sliders on Jun 23, 2026, technical report on Jul 22, 2026.",
+    "card_errors": [
+      {
+        "field": "description_long",
+        "wrong_quote": "Max is $70/month ($42 annual) with 60,000 units",
+        "correct_value": "Max is $105/month or $63/month billed yearly for 60,000 units."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Basic is $9/month ($5.40 on annual billing) with 5,000 units",
+        "correct_value": "Conflicting sources. WebFetch showed $9 / $5 yearly, the direct page fetch had no Basic tier. The $5.40 figure does not match either."
+      },
+      {
+        "field": "description_long / cons",
+        "wrong_quote": "Business runs $200/month with 80,000 units, up to 50 seats, and SSO",
+        "correct_value": "Business $200/mo ($160/mo yearly) with 80k units and up to 50 seats. SAML SSO is Enterprise only ('Available in Enterprise plans')."
+      },
+      {
+        "field": "cons",
+        "wrong_quote": "SSO and larger seat counts are locked to the $200/month Business plan",
+        "correct_value": "SSO is Enterprise only."
+      },
+      {
+        "field": "cons",
+        "wrong_quote": "8x concurrency requires Pro and unlimited requires Max",
+        "correct_value": "Partly right. Pro has image concurrency 8 / video 4. Max has unlimited image / video 8. Business has unlimited both."
+      },
+      {
+        "field": "description / description_long / pros / choose_if",
+        "wrong_quote": "8K upscaling / 8K AI upscaling",
+        "correct_value": "Pricing page: paid upscaling up to 22K (Topaz Standard). Free tier up to 2K."
+      },
+      {
+        "field": "description_long / pros",
+        "wrong_quote": "more than 64 integrated models",
+        "correct_value": "Unverified on pages read."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "a roughly 12B-parameter Diffusion Transformer",
+        "correct_value": "Parameter count not confirmed in the vendor pages read (only third-party sources state 12.9B). Low confidence."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Pro plan is $35/month and Max is $99/month",
+        "correct_value": "Pro $35/mo ($21 yearly). Max $105/mo ($63 yearly)."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Its real-time generation is its main differentiator",
+        "correct_value": "Opinion. The product is now positioned around Krea 2, Krea Agent and multi-model generation. Real-time is still a feature."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.krea.ai/pricing",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://www.krea.ai/blog",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://www.krea.ai/blog/krea-2-technical-report",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://huggingface.co/api/models?author=krea&search=Krea-2",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "confidence": "high for Pro/Max/Business, low for Basic",
+    "notes": "The pricing page says 'Trusted by 40M subscribers'. The yearly toggle says 'Save 40% on yearly plans'."
+  },
+  {
+    "slug": "microsoft-copilot-studio",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      {
+        "tier": "Copilot Studio capacity pack (license)",
+        "amount": "$200.00",
+        "period": "per pack per month (25,000 Copilot Credits per pack, tenant-wide)",
+        "notes": "USD."
+      },
+      {
+        "tier": "Pay-as-you-go",
+        "amount": "metered per Copilot Credit (per-credit rate not shown on page read)",
+        "period": "billed at end of monthly period",
+        "notes": "Requires an Azure subscription linked to the environment. No upfront commitment."
+      },
+      {
+        "tier": "Pre-purchase plan (Copilot Credit Commit Units)",
+        "amount": "'Save up to 20%'",
+        "period": "one-year prepaid",
+        "notes": "Automatic PAYG coverage when prepaid credits run out. Azure subscription required."
+      },
+      {
+        "tier": "Microsoft 365 Copilot",
+        "amount": "$30.00",
+        "period": "per user per month, paid yearly",
+        "notes": "Includes Copilot Chat and the Standard harness in Copilot Studio for internal agents. Publishing to external channels requires the standalone Copilot Studio plan."
+      },
+      {
+        "tier": "Trial",
+        "amount": "free",
+        "period": "-",
+        "notes": "'Try Copilot Studio for free' / free trial. Free Azure account gives a $200 Azure credit."
+      }
+    ],
+    "free_tier": "No free production tier. Free trial and a $200 Azure credit with a free Azure account.",
+    "repositioning": "New 'GitHub Copilot harness' (production-ready preview June 2026) alongside the Standard harness, with usage-based billing in Copilot Credits (Aug 2026). Work IQ, Agent 365 governance, auto Entra Agent IDs (mandatory from July 2026). Model choice: Claude Sonnet 5 and GPT-5.5 Chat GA as primary models (June 2026). Claude Sonnet 4.5/4.6 and Claude Opus GA globally excl. GCC (March 2026). Mistral Medium 3.5 experimental (May 2026). Computer use GA (May 2026).",
+    "card_errors": [
+      {
+        "field": "description / description_long",
+        "wrong_quote": "2026 release wave 1 (platform build 2026.6.2)",
+        "correct_value": "No public version or build number found. Microsoft Learn 'What's new' lists monthly changes through September 2026."
+      },
+      {
+        "field": "description / pros",
+        "wrong_quote": "Anthropic Claude Opus 4.6 / Sonnet 4.5",
+        "correct_value": "Outdated. Claude Sonnet 5 and GPT-5.5 Chat are GA as primary models (June 2026). Claude Opus 4.6 / Sonnet 4.5 were Prompt builder options earlier."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Anthropic Claude Opus 4.8 and Sonnet 4.5, offered as a paid experimental preview in the US",
+        "correct_value": "Contradicts the card's own description (Opus 4.6). Docs: Claude models GA globally excluding GCC since March 2026. Opus 4.8 is not mentioned in the docs read."
+      },
+      {
+        "field": "cons",
+        "wrong_quote": "Claude and GPT-5.5 model options are a paid experimental preview limited to the US",
+        "correct_value": "Claude Sonnet 5 / GPT-5.5 Chat GA (June 2026). Claude models GA globally excl. GCC. GPT-5.5 Reasoning (Deep) is experimental."
+      },
+      {
+        "field": "description_long / pros",
+        "wrong_quote": "a new orchestration layer improves accuracy on evaluations by roughly 20% while cutting token consumption by about 50%",
+        "correct_value": "Unverified. Docs only say the GitHub Copilot harness uses 'an enhanced orchestration runtime for improved response quality and reasoning'."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Real-time speech-to-speech voice agents were added for Dynamics 365 Contact Center",
+        "correct_value": "Real-time voice agents shipped as Preview (April 2026). Deployment across voice and digital messaging added July 2026."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "pay-as-you-go is metered at $0.01 per credit",
+        "correct_value": "Per-credit PAYG rate not shown on the pricing page or docs read. Unverified."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Building agents is included at no extra cost with a Microsoft 365 Copilot license",
+        "correct_value": "Partly right. M365 Copilot includes the Standard harness for internal agents only. External channels and the GitHub Copilot harness need the standalone plan."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "It includes 25,000 generative AI messages per month per tenant on paid plans",
+        "correct_value": "Billing is in Copilot Credits: $200 per pack of 25,000 credits per month, or PAYG / pre-purchase. An Azure subscription is required for standalone agents."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Copilot Studio requires a Microsoft 365 subscription",
+        "correct_value": "The standalone plan requires an Azure subscription. The M365 Copilot route needs a qualifying M365 plan."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/pricing/copilot-studio",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "confidence": "high for pricing and features, medium for model details",
+    "notes": "Pricing URL redirects to microsoft.com/en-us/copilot/pricing/copilot-studio. Card best_for 'Free / from $200/mo' is misleading because there is no free production tier."
+  },
+  {
+    "slug": "otter-ai",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      {
+        "tier": "Basic",
+        "amount": "$0",
+        "period": "forever",
+        "notes": "300 monthly transcription minutes, 30 min per conversation, 3 lifetime file imports, AI Chat, Otter MCP server."
+      },
+      {
+        "tier": "Pro",
+        "amount": "$16.99 monthly / $8.33 billed annually",
+        "period": "per user per month",
+        "notes": "1,200 minutes, 90 mins/meeting, 10 imports/month, unlimited storage, Salesforce/HubSpot/Zapier. India-issued card promo: $8.49 monthly / $4.17 annual. Max 5 workspace members."
+      },
+      {
+        "tier": "Business",
+        "amount": "$30 monthly / $19.99 billed annually",
+        "period": "per user per month",
+        "notes": "Monthly promo $24 for first 3 months (20% off). Unlimited meetings and in-app recordings, 4 hours/meeting, unlimited imports, 3 concurrent meetings."
+      },
+      {
+        "tier": "Enterprise",
+        "amount": "Custom (schedule a demo)",
+        "period": "-",
+        "notes": "SSO, SCIM, domain capture, HIPAA add-on, API and webhooks, Otter Sales Notetaker, video replay for Zoom/Meet, AI Chat with Gmail, Google Drive, Notion, Jira."
+      },
+      {
+        "tier": "Student (Pro)",
+        "amount": "$6.67/mo billed $79.99 annually / $13.59 monthly",
+        "period": "-",
+        "notes": "20% off Pro with .edu email."
+      }
+    ],
+    "free_tier": "Basic free forever: 300 min/month, 30 min per conversation, 3 lifetime imports.",
+    "repositioning": "April 28, 2026 press release: Conversational Knowledge Engine, Meeting Agents, MCP client and server, rebuilt private-by-default AI Chat, Otter for Desktop (Mac and Windows) capturing conversations across any application.",
+    "card_errors": [
+      {
+        "field": "description_long",
+        "wrong_quote": "The big shift came in April 2026, when Otter announced the Otter Meeting Agent",
+        "correct_value": "The April 28, 2026 release announced the Conversational Knowledge Engine. It says Otter 'has transformed with Otter Meeting Agents' and gives no Meeting Agent launch date. Treat 'announced in April 2026' as unverified (it may predate this)."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "The company says it crossed $100M in annual recurring revenue",
+        "correct_value": "Not in the April 2026 release read. It cites '$1.5 billion in customer ROI' and a '$100B' market. Unverified."
+      },
+      {
+        "field": "description_long / pros",
+        "wrong_quote": "pull context from Gmail, Google Drive, Notion, and Salesforce",
+        "correct_value": "Pricing page: 'AI Chat with Gmail, Google Drive, Notion, Jira' is an Enterprise feature. The press release lists Gmail, Google Drive, Notion, Jira, Salesforce."
+      },
+      {
+        "field": "cons",
+        "wrong_quote": "The headline agent capabilities are gated to the pricier Business and Enterprise plans",
+        "correct_value": "Pricing page puts Otter Sales Notetaker and AI Chat with Gmail/Drive/Notion/Jira under Enterprise. Gating of Meeting/SDR agents is not specified. Partly unverified."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Pro is $16.99/month for 1,200 minutes",
+        "correct_value": "Correct monthly, but the annual price ($8.33/user/month) is omitted."
+      },
+      {
+        "field": "users",
+        "wrong_quote": "10M+",
+        "correct_value": "Not verified on the pages read."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://otter.ai/pricing",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://otter.ai/blog/otter-ai-evolves-from-ai-notetaker-to-create-100b-enterprise-conversational-knowledge-engine-market",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "confidence": "high for pricing",
+    "notes": "Core pricing in the card matches the live page."
+  },
+  {
+    "slug": "remove-bg",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": false,
+    "pricing": [
+      {
+        "tier": "Free",
+        "amount": "$0",
+        "period": "-",
+        "notes": "Preview images free on remove.bg (max 0.25 MP, e.g. 625x400). Previews cost 1/4 credit via apps and API. API docs: 'Your first 50 API calls per month are on us'."
+      },
+      {
+        "tier": "Subscription - Personal (40 credits)",
+        "amount": "$9 monthly / $8.10 per month billed yearly ($97.20/yr)",
+        "period": "per month",
+        "notes": "USD."
+      },
+      {
+        "tier": "Subscription - Professional",
+        "amount": "200 cr: $39 mo / $35.10 yr-mo; 500: $89 / $80.10; 1,200: $189 / $170.10; 2,800: $389 / $350.10; 5,000: $589 / $530.10",
+        "period": "per month (monthly vs billed yearly)",
+        "notes": "Subscription credits are valid only within the subscription month and do NOT carry over."
+      },
+      {
+        "tier": "Subscription - Business",
+        "amount": "7,500 cr: $789 / $710.10; 10,000: $989 / $890.10; 15,000: $1,389 / $1,250.10; 25,000: $2,150 / $1,935; 50,000: $3,950 / $3,555; 75,000: $5,450 / $4,905",
+        "period": "per month (monthly vs billed yearly)",
+        "notes": ""
+      },
+      {
+        "tier": "Pay-as-you-go",
+        "amount": "3 cr $3; 10 cr $9; 75 cr $49; 200 cr $99; 500 cr $199; 1,200 cr $399; 4,000 cr $999; 8,000 cr $1,699",
+        "period": "one-time",
+        "notes": "Per-image cost from about $1.00 (3-pack) down to about $0.21 (8,000-pack)."
+      }
+    ],
+    "free_tier": "Free low-res previews up to 0.25 MP on the website. Full resolution needs credits. API: first 50 calls/month free (previews cost 1/4 credit via apps/API per pricing FAQ).",
+    "repositioning": null,
+    "card_errors": [
+      {
+        "field": "description_long / pros",
+        "wrong_quote": "Subscriptions, whose credits roll over while active",
+        "correct_value": "Pricing FAQ: 'Subscription credits are only valid during the respective subscription month, so they cannot be collected or carried over.'"
+      },
+      {
+        "field": "pros",
+        "wrong_quote": "subscription credits roll over while active",
+        "correct_value": "They do not roll over."
+      },
+      {
+        "field": "description_long / cons",
+        "wrong_quote": "cost roughly $0.20 per image at standard rates",
+        "correct_value": "PAYG ranges from $1.00/image (3 credits for $3) to about $0.21/image (8,000 for $1,699). Small packs are far above $0.20."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "up to a Volume+ tier around $80/month for roughly 500 credits",
+        "correct_value": "500 credits is $89/month monthly or $80.10/month billed yearly, in the 'Professional' plan family. 'Volume+' name not found."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "with enterprise pricing above about 100,000 images a year",
+        "correct_value": "Not verified. Self-serve Business tiers go up to 75,000 credits/month."
+      },
+      {
+        "field": "description_long / pros",
+        "wrong_quote": "All paid plans include a 14-day money-back guarantee",
+        "correct_value": "Unverified. The help article URL returned HTTP 500 and the pricing FAQ does not mention it."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "one bonus high-resolution credit",
+        "correct_value": "Unverified on pages read."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Canva's background remover is included in Canva Pro ($15/month) and Canva for Teams",
+        "correct_value": "Not checked (Canva pricing is outside this card's vendor). Unverified."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.remove.bg/pricing",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://www.remove.bg/api",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://www.remove.bg/help/a/what-is-the-maximum-image-resolution-file-size",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://www.remove.bg/help/a/is-there-a-money-back-guarantee",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "confidence": "high",
+    "notes": "Footer: 'remove.bg, a Canva Austria GmbH brand'. Card 'Canva-owned' is OK. Apps: Windows/Mac/Linux, Photoshop extension, Android, Figma plugin. The card's $9/40 and $39/200 figures are correct monthly prices."
+  },
+  {
+    "slug": "suno",
+    "alive": true,
+    "shutdown_note": null,
+    "current_version": "v6 (Sep 9, 2026): v6 and v6-wild for Pro/Premier, v6-mini for free users",
+    "version_published": true,
+    "domain_changed": false,
+    "pricing": [
+      {
+        "tier": "Free",
+        "amount": "$0",
+        "period": "per month",
+        "notes": "v6-mini, 50 credits per day, standard features only, upload up to 8 min, shared queue (4 concurrent). 'No monthly song downloads', no commercial rights, no add-on credits, no stem separation. Pre-Sep-3-2026 free users: up to 7 lifetime trial downloads."
+      },
+      {
+        "tier": "Pro",
+        "amount": "$10 monthly / $8 per month billed annually",
+        "period": "per month",
+        "notes": "USD ex tax ('Saves $24 by billing yearly', so $96/yr). 2,500 credits/month, 20 song downloads/month, commercial use rights, 2 stem types, priority queue up to 10 songs, own voice, custom models, upload up to 30 min."
+      },
+      {
+        "tier": "Premier",
+        "amount": "$30 monthly / $24 per month billed annually",
+        "period": "per month",
+        "notes": "'Saves $72 by billing yearly', so $288/yr. 10,000 credits/month, 60 song downloads/month (no limit inside Suno Studio), Suno Studio with MIDI/effects/automation, 3 stem types."
+      }
+    ],
+    "free_tier": "50 credits/day on v6-mini, personal non-commercial use, no monthly downloads (limited lifetime trial downloads for older accounts), no stems.",
+    "repositioning": "v6 (Sep 9, 2026), described as 'developed with our industry partners, including Warner Music Group, BMG and Believe'. All prior models are being retired. New download limits from Sep 3, 2026 (Free trial downloads only, Pro 20/mo, Premier 60/mo) and new Terms of Service. Studio 2.0 (Aug 13, 2026), Speech (beta, Oct 1, 2026). Monthly subscription credits do not carry over. Bonus 50 credits/day after monthly credits run out.",
+    "card_errors": [
+      {
+        "field": "description / description_long",
+        "wrong_quote": "The current flagship model is v5.5 (released March 26, 2026) ... the free plan is limited to the older v4.5-all model",
+        "correct_value": "Current models are v6 / v6-wild (paid) and v6-mini (free), launched Sep 9, 2026. Prior models are being retired."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Pro is $10/mo (or $8/mo billed annually, $64/yr)",
+        "correct_value": "$8/mo billed annually is $96/yr ('Saves $24 by billing yearly')."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Premier is $30/mo (or $24/mo annually, $192/yr)",
+        "correct_value": "$24/mo billed annually is $288/yr ('Saves $72')."
+      },
+      {
+        "field": "description_long / pros / cons / choose_if",
+        "wrong_quote": "the v5.5 model / v5.5 Voices / paying for v5.5",
+        "correct_value": "Replace with v6. Voices and custom models remain ('Record, upload, and create with your own voice', 'Create custom models') on Pro and Premier."
+      },
+      {
+        "field": "cons",
+        "wrong_quote": "The current v5.5 (and v5) model is paid-only; the free plan is stuck on the older v4.5-all",
+        "correct_value": "Free plan now runs v6-mini. v6 and v6-wild are paid-only."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Free gives you $0/mo and 50 credits per day ... for personal, non-commercial use only, with no stem separation and 8-minute uploads",
+        "correct_value": "Correct, but omits the key change: free accounts have no monthly song downloads (trial downloads only) since Sep 3, 2026."
+      },
+      {
+        "field": "description_long / pros",
+        "wrong_quote": "Paid plans grant commercial rights",
+        "correct_value": "Still true, but downloads are now capped: Pro 20/month, Premier 60/month (Premier unlimited inside Suno Studio). Extra downloads can be purchased."
+      },
+      {
+        "field": "description_long / pros / cons",
+        "wrong_quote": "one full song costs 5 credits",
+        "correct_value": "Not stated on the pricing page read. Unverified."
+      },
+      {
+        "field": "cons",
+        "wrong_quote": "Custom Models are limited to three per account",
+        "correct_value": "Unverified. The pricing page only lists 'Create custom models' for Pro and Premier."
+      },
+      {
+        "field": "description_long / choose_if",
+        "wrong_quote": "content creators who need cleared background music / royalty-cleared background music",
+        "correct_value": "Licensing claim not supported by vendor wording. Suno says paid-plan downloads may be used commercially subject to its ToS. Legal context: on 2026-09-28 a US federal judge in Massachusetts denied Suno's motion to dismiss copyright and DMCA claims. Avoid 'royalty-cleared'."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "The Pro plan is $8/month and Premier is $24/month",
+        "correct_value": "These are annual-billing prices. Monthly: Pro $10, Premier $30."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Udio generally produces higher sonic quality but has limitations on downloads in some regions. ... Suno leads on ease of use and community size.",
+        "correct_value": "Opinion or third-party claims about Udio. Unverifiable from Suno's primary sources."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://suno.com/pricing",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://suno.com/blog",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://suno.com/blog/introducing-v6",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://suno.com/blog/suno-updates-tos",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "confidence": "high",
+    "notes": "Pricing page JSON: monthly_price_usd 0 / 10 / 30. Free users who joined on or after Sep 3, 2026 'may occasionally receive trial downloads' and can buy downloads. Purchased top-up credits do not expire but need an active subscription."
+  },
+  {
+    "slug": "windsurf",
+    "alive": true,
+    "shutdown_note": "Not shut down; renamed. Windsurf became Devin Desktop on June 2, 2026 (Cognition blog 'Introducing Devin Desktop', 06.02.26). Windsurf for JetBrains is still offered under the Windsurf name.",
+    "current_version": null,
+    "version_published": false,
+    "domain_changed": true,
+    "pricing": [
+      {
+        "tier": "Free",
+        "amount": "$0",
+        "period": "-",
+        "notes": "Light quota to code with agents, limited model availability, unlimited inline edits, unlimited Tab completions."
+      },
+      {
+        "tier": "Pro",
+        "amount": "$20",
+        "period": "per month",
+        "notes": "Increased quotas, frontier models from OpenAI, Claude, Gemini and SpaceXAI plus open-source models. 'Free use of SWE-2 - Free in Devin Desktop and CLI through October 16, 2026'. Devin Cloud cloud agents. Extra usage at API pricing. Up to 10 concurrent sessions."
+      },
+      {
+        "tier": "Max",
+        "amount": "$200",
+        "period": "per month",
+        "notes": "Significantly higher quotas."
+      },
+      {
+        "tier": "Teams",
+        "amount": "$80/month team plan + $40/month per full dev seat",
+        "period": "per month",
+        "notes": "Up to 200 users, centralized billing, admin analytics."
+      },
+      {
+        "tier": "Enterprise",
+        "amount": "Custom",
+        "period": "-",
+        "notes": "SAML/OIDC SSO, VPC deployment."
+      }
+    ],
+    "free_tier": "Light agent quota, limited models, unlimited Tab and inline edits.",
+    "repositioning": "Windsurf renamed Devin Desktop (June 2, 2026), centered on the Agent Command Center (Spaces, Kanban, multi-agent) with the IDE still available. SWE-2 model released Sep 10, 2026 (replaces SWE-1.6 as latest). Fusion harness (Sep 11, 2026). The product's agent picker lists Devin Local, Codex, Claude Agent, OpenCode and Cascade. windsurf.com and codeium.com/windsurf redirect to devin.ai/desktop. Cognition's site redirects cognition.ai to cognition.com.",
+    "card_errors": [
+      {
+        "field": "url",
+        "wrong_quote": "https://codeium.com/windsurf",
+        "correct_value": "https://devin.ai/desktop (codeium.com/windsurf and windsurf.com both redirect there)."
+      },
+      {
+        "field": "description / description_long",
+        "wrong_quote": "the new free in-house model SWE-1.6 / SWE-1.6 is the current free proprietary model",
+        "correct_value": "Latest model is SWE-2 (Sep 10, 2026). Pricing: 'Free use of SWE-2 - Free in Devin Desktop and CLI through October 16, 2026' on Pro (time-limited)."
+      },
+      {
+        "field": "description_long / cons",
+        "wrong_quote": "The original Cascade agent reached end-of-life on July 1, 2026 and was replaced by Devin Local",
+        "correct_value": "Conflict: the live devin.ai/desktop product UI still lists 'Cascade' among selectable agents alongside Devin Local, Codex, Claude Agent and OpenCode. EOL date unverified."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Both windsurf.com and codeium.com now redirect to devin.ai",
+        "correct_value": "Correct (redirect target is devin.ai/desktop)."
+      },
+      {
+        "field": "description_long",
+        "wrong_quote": "Cognition acquired Codeium/Windsurf for roughly $250M",
+        "correct_value": "Acquisition amount not on vendor pages read. Cognition blog (07.14.26) only says Cognition and Windsurf 'came together' a year earlier. Unverified."
+      },
+      {
+        "field": "description_long / choose_if",
+        "wrong_quote": "Annual billing saves roughly 17-20%, and students get about 50% off Pro",
+        "correct_value": "Not shown on devin.ai/pricing. Unverified."
+      },
+      {
+        "field": "description_long / pros",
+        "wrong_quote": "Paid tiers also open up access to OpenAI, Anthropic Claude and Google Gemini models",
+        "correct_value": "Also SpaceXAI and leading open-source models per the pricing page."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Windsurf is an AI-powered IDE by Codeium ... Its flagship feature is Cascade",
+        "correct_value": "Now Devin Desktop by Cognition. Flagship is the Agent Command Center with Devin Local / Devin Cloud agents."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Pro is $15/month for more AI usage",
+        "correct_value": "Pro is $20/month."
+      },
+      {
+        "field": "faq",
+        "wrong_quote": "Cascade is Windsurf's AI agent feature ... Similar to Cursor's Composer",
+        "correct_value": "Outdated framing. Cascade is one selectable agent among several. The default agent is Devin Local per the card (not independently confirmed)."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://devin.ai/pricing",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://devin.ai/desktop",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://windsurf.com",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://codeium.com/windsurf",
+        "accessed": "2026-10-06"
+      },
+      {
+        "url": "https://cognition.com/blog",
+        "accessed": "2026-10-06"
+      }
+    ],
+    "confidence": "high for pricing and rename, medium for Cascade status",
+    "notes": "Consider renaming the card to 'Devin Desktop (formerly Windsurf)' and changing the URL/domain. The devin.ai/desktop page claims '1M+ users' and '4000+ enterprise customers'."
+  }
+]

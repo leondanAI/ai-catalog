@@ -1,0 +1,394 @@
+[
+ {
+  "slug": "bubble",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {"tier": "Free", "amount": "$0", "period": "per month", "notes": "USD. 50K workload units/mo, development version only (no live deployment, no custom domain), API connector, 1 app editor, 6 hours server logs. 500 AI credits/mo (per Agent 2 post, 2026-10-06); free users must upgrade to Starter to buy more credits."},
+   {"tier": "Starter — Web only", "amount": "$29 billed annually / $32 billed monthly", "period": "per month", "notes": "USD. PRICE CHANGE announced 2026-10-06: from 2026-10-20 the web-only Starter becomes $32/mo annual, $39/mo monthly. 175K WU/mo, live deployment, custom domain, recurring workflows. 1,000 AI credits/mo."},
+   {"tier": "Starter — Mobile only", "amount": "$42 billed annually / $49 billed monthly", "period": "per month", "notes": "USD, per manual.bubble.io."},
+   {"tier": "Starter — Web + Mobile", "amount": "$59 billed annually / $69 billed monthly", "period": "per month", "notes": "USD. Shown as default on bubble.io/pricing."},
+   {"tier": "Growth — Web only / Mobile only / Web+Mobile", "amount": "$119 / $169 / $209 billed annually; $134 / $199 / $249 billed monthly", "period": "per month", "notes": "USD. 250K WU/mo, 2 app editors, premium version control, 10 custom branches. 2,000 AI credits/mo."},
+   {"tier": "Team — Web only / Mobile only / Web+Mobile", "amount": "$349 / $449 / $549 billed annually; $399 / $529 / $649 billed monthly", "period": "per month", "notes": "USD. 500K WU/mo, 5 app editors, sub apps, 25 custom branches. 4,000 AI credits/mo."},
+   {"tier": "Enterprise", "amount": "custom", "period": "n/a", "notes": "Contact sales; customizable workload and hosting location."}
+  ],
+  "free_tier": "Yes. $0, 50K WU/mo, 1 editor, development only (no live app, no custom domain), 500 AI credits/mo.",
+  "repositioning": "2026-10-06 (today): Bubble launched Agent 2 (AI agent inside the editor), Bubble MCP (beta, for Claude Code/Codex etc.; does not use plan AI credits) and an AI-credits allowance per plan (Free 500, Starter 1,000, Growth 2,000, Team 4,000, Agency 1,000). Existing apps get double credits through 2026-10-31. Same post announces web-only Starter price increase effective 2026-10-20.",
+  "card_errors": [
+   {"field": "description_long", "wrong_quote": "Web-only paid plans run Starter $29/mo, Growth $119/mo, and Team $349/mo (billed annually).", "correct_value": "Correct today, but web-only Starter rises to $32/mo annual ($39 monthly) on 2026-10-20 per bubble.io/blog/agent-2. Monthly-billing prices ($32/$134/$399 web; $49/$199/$529 mobile; $69/$249/$649 web+mobile) are not mentioned."},
+   {"field": "description_long", "wrong_quote": "AI-assisted app generation that scaffolds apps from prompts", "correct_value": "Now 'Agent 2' (AI agent with in-editor preview) plus Bubble MCP and metered AI credits per plan (launched 2026-10-06). Card does not mention AI credits."},
+   {"field": "faq", "wrong_quote": "Bubble Starter at $32/mo", "correct_value": "Ambiguous: $32 is the current web-only Starter MONTHLY price ($29 billed annually), and from 2026-10-20 becomes the annual price ($39 monthly). Web+Mobile Starter is $59 annual / $69 monthly. Webflow '$29/mo' claim not checked (other vendor)."},
+   {"field": "pros", "wrong_quote": "Free tier lets you build and prototype indefinitely before paying", "correct_value": "Still true, but free AI usage is now capped at 500 AI credits/mo with no option to buy more on Free."}
+  ],
+  "sources": [
+   {"url": "https://bubble.io/pricing", "accessed": "2026-10-06"},
+   {"url": "https://manual.bubble.io/account-and-marketplace/account-and-billing/pricing-plans", "accessed": "2026-10-06"},
+   {"url": "https://bubble.io/blog/agent-2/", "accessed": "2026-10-06"}
+  ],
+  "confidence": "high",
+  "notes": "bubble.io/pricing is JS-rendered; read via WebFetch (rendered values $59/$209/$549 = Web+Mobile annual, 'Save up to 20% annually'). Track-specific and monthly prices come from the Bubble manual. 'users 3M+' not verified."
+ },
+ {
+  "slug": "clearscope",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {"tier": "Essentials", "amount": "$129", "period": "per month", "notes": "USD. 50 tracked queries, 50 pages, 20 monthly topic explorations, 20 monthly drafts. Unlimited users and projects. 14-day free trial."},
+   {"tier": "Business", "amount": "$399", "period": "per month", "notes": "USD. 300 tracked queries, 300 pages, 50 monthly topic explorations, 20 monthly drafts, dedicated account manager. Unlimited users and projects."},
+   {"tier": "Enterprise", "amount": "custom", "period": "n/a", "notes": "Custom credits/agreements, crawler whitelisting, SSO. Unlimited users and projects."},
+   {"tier": "Add-ons", "amount": "pages ~$25-$15/mo; drafts ~$50-$20", "period": "per month", "notes": "Tiered by plan per pricing page (WebFetch summary; low confidence on exact add-on figures)."}
+  ],
+  "free_tier": "No free plan. 14-day free trial ('No contracts. No hidden costs. 14 day free trial.').",
+  "repositioning": "Already AEO-oriented in card. Current tagline: 'Get Discovered on Google, ChatGPT, and What's Next'. Feature now called 'Query Tracking' (launched blog post Jul 14) covering ChatGPT, Gemini and Claude. Plans are metered by tracked queries, pages, topic explorations and drafts.",
+  "card_errors": [
+   {"field": "description", "wrong_quote": "tagline \"Build for Google, ChatGPT & What's Next\"", "correct_value": "Homepage tagline: \"Get Discovered on Google, ChatGPT, and What's Next\". Pricing page: 'Simple, transparent pricing for SEO and AI search visibility.'"},
+   {"field": "description_long", "wrong_quote": "annual billing knocks off roughly 17%", "correct_value": "Not on pricing page. Only monthly prices shown; FAQ says yearly custom plans can be invoiced. No published annual discount."},
+   {"field": "description_long", "wrong_quote": "there is no free tier and no free trial", "correct_value": "There IS a 14-day free trial (no free tier)."},
+   {"field": "description_long", "wrong_quote": "AI Prompt Tracking ... tracked prompts", "correct_value": "Vendor calls it 'Query Tracking' / 'tracked queries' and tracks ChatGPT, Gemini and Claude (card names only ChatGPT and Gemini)."},
+   {"field": "description_long", "wrong_quote": "An \"Expand\" module reports on AI citations, AI Term Presence", "correct_value": "Unverified: 'Expand' and 'AI Term Presence' not found on homepage or pricing page."},
+   {"field": "pros", "wrong_quote": "Roughly 17% saving on annual billing", "correct_value": "No annual discount published."},
+   {"field": "cons", "wrong_quote": "No free tier and no free trial, so you must pay to evaluate it", "correct_value": "14-day free trial available."},
+   {"field": "faq", "wrong_quote": "Clearscope starts at $189/month for the Essentials plan", "correct_value": "Essentials is $129/month. SurferSEO '$99/month' not checked (other vendor)."},
+   {"field": "faq", "wrong_quote": "Clearscope focuses on content analysis and optimization rather than AI writing.", "correct_value": "Plans include monthly AI drafts (20/mo on Essentials and Business); homepage lists an 'AI drafting and editing workflow'."}
+  ],
+  "sources": [
+   {"url": "https://www.clearscope.io/pricing", "accessed": "2026-10-06"},
+   {"url": "https://www.clearscope.io/", "accessed": "2026-10-06"},
+   {"url": "https://www.clearscope.io/blog", "accessed": "2026-10-06"}
+  ],
+  "confidence": "high",
+  "notes": "Pricing page read via WebFetch twice; consistent. Card's 'not a full SEO suite: no rank tracking, backlinks or technical audits' is consistent with the page (none listed)."
+ },
+ {
+  "slug": "deepseek",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "DeepSeek-V4.1-Flash (API name deepseek-flash, released 2026-09-10) and DeepSeek-V4-Pro (GA 2026-08-13, model version DeepSeek-V4-Pro-0813)",
+  "version_published": true,
+  "domain_changed": false,
+  "pricing": [
+   {"tier": "Web/app chat", "amount": "not stated", "period": "n/a", "notes": "chat.deepseek.com returned 403 to fetch; homepage does not state price. Free status not re-verified from a primary page today."},
+   {"tier": "API deepseek-flash (V4.1-Flash)", "amount": "input cache hit $0.003 off-peak / $0.006 peak; input cache miss $0.15 off-peak / $0.30 peak; output $0.60 off-peak / $1.20 peak", "period": "per 1M tokens", "notes": "USD. 1M context, max output 384K. Thinking (default) and non-thinking modes. Vision supported. Concurrency limit 2500. Legacy names deepseek-v4-flash and deepseek-v4-flash-vision-exp still accepted, routed to V4.1-Flash."},
+   {"tier": "API deepseek-v4-pro", "amount": "input cache hit $0.022 off-peak / $0.044 peak; input cache miss $0.66 off-peak / $1.32 peak; output $1.98 off-peak / $3.96 peak", "period": "per 1M tokens", "notes": "USD. 1M context, max output 384K. No vision. Concurrency 500. Changelog: service continues after 2026-09-14 'with the billing method remaining unchanged'."},
+   {"tier": "Peak/off-peak rule", "amount": "off-peak = 50% of peak", "period": "n/a", "notes": "Peak 01:00-04:00 and 06:00-10:00 UTC Mon-Fri excluding Chinese public holidays; peak/off-peak pricing took effect 2026-08-16 16:00 UTC."}
+  ],
+  "free_tier": "Web/app chat historically free; not re-verified today (chat.deepseek.com blocked to fetcher). API is pay-as-you-go from topped-up or 'granted balance' (pricing page mentions granted balance but not how it is granted).",
+  "repositioning": "Rapid model churn since card: V4-Flash official 2026-07-31; peak/off-peak pricing 2026-08-16; V4-Pro GA 2026-08-13 (Responses API, Codex support, low/high/max thinking effort); V4-Flash-Vision-Exp 2026-08-21; V4.1-Flash 2026-09-10 (new architecture, native multimodal) with price cut; old V4-Flash retired. Docs now list agent integrations (Claude Code, Codex, OpenCode, DeepSeek Harness, etc.).",
+  "card_errors": [
+   {"field": "description", "wrong_quote": "now running on DeepSeek-V4 (released April 24, 2026)", "correct_value": "API now serves DeepSeek-V4.1-Flash (2026-09-10) and DeepSeek-V4-Pro GA (2026-08-13). April 24 was the V4 preview."},
+   {"field": "description_long", "wrong_quote": "V4-Flash costs $0.14 input on a cache miss ($0.0028 on a cache hit) and $0.28 output; V4-Pro costs $0.435 input on a cache miss ($0.003625 on a cache hit) and $0.87 output", "correct_value": "Peak/off-peak pricing. Flash: miss $0.15/$0.30, hit $0.003/$0.006, output $0.60/$1.20 (off-peak/peak). Pro: miss $0.66/$1.32, hit $0.022/$0.044, output $1.98/$3.96."},
+   {"field": "description_long", "wrong_quote": "the cheaper default V4-Flash (284 billion total, 13 billion active)", "correct_value": "V4-Flash retired; replaced by V4.1-Flash, described as a new architecture. Parameter counts for V4.1-Flash not stated on pages read. V4-Pro 1.6T/49B claim not re-verified."},
+   {"field": "description_long", "wrong_quote": "The legacy deepseek-chat and deepseek-reasoner model names are being deprecated on July 24, 2026.", "correct_value": "Past date; those names are no longer listed on the pricing page. Current API names: deepseek-flash and deepseek-v4-pro."},
+   {"field": "description_long", "wrong_quote": "The legacy names map to V4-Flash's non-thinking and thinking modes.", "correct_value": "Outdated; current legacy aliases are deepseek-v4-flash / deepseek-v4-flash-vision-exp, routed to V4.1-Flash."},
+   {"field": "pros", "wrong_quote": "Very low API pricing, especially V4-Flash at $0.14/$0.28 per 1M tokens", "correct_value": "deepseek-flash: $0.15-$0.30 input (miss), $0.60-$1.20 output per 1M depending on peak/off-peak."},
+   {"field": "cons", "wrong_quote": "Legacy deepseek-chat/deepseek-reasoner names deprecate on 2026-07-24, forcing migration", "correct_value": "Past event; remove or rewrite."},
+   {"field": "cons", "wrong_quote": "Rumored free token grant for new accounts is unconfirmed in official docs", "correct_value": "Pricing page mentions a 'granted balance' used before topped-up balance, but not how/when it is granted."},
+   {"field": "faq", "wrong_quote": "the default V4-Flash tier costs $0.14 per million input tokens on a cache miss (as low as $0.0028 on a cache hit) and $0.28 per million output tokens", "correct_value": "See pricing above (deepseek-flash, peak/off-peak)."},
+   {"field": "faq", "wrong_quote": "The legacy deepseek-reasoner model name is being deprecated on July 24, 2026 and maps to V4-Flash's thinking mode", "correct_value": "Reasoning is the default 'thinking' mode of deepseek-flash and deepseek-v4-pro, with low/high/max effort levels."}
+  ],
+  "sources": [
+   {"url": "https://api-docs.deepseek.com/quick_start/pricing", "accessed": "2026-10-06"},
+   {"url": "https://api-docs.deepseek.com/updates", "accessed": "2026-10-06"},
+   {"url": "https://www.deepseek.com/en", "accessed": "2026-10-06"}
+  ],
+  "confidence": "high",
+  "notes": "API facts high confidence (read raw HTML). Web chat free status and which model powers the web chat not confirmed today (chat.deepseek.com 403). Changelog 2026-08-13 says V4-Pro GA rolled out on APP, Web and API. 'users 96M+' not verified."
+ },
+ {
+  "slug": "framer-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Framer 3.0 (launched 2026-06-16)",
+  "version_published": true,
+  "domain_changed": false,
+  "pricing": [
+   {"tier": "Free", "amount": "$0", "period": "n/a", "notes": "USD. Pricing page: '500 AI credits to try' (FAQ: 'when your workspace has no active subscriptions, you receive 500 credits to try Agents'). Free Framer domain, 1 GB bandwidth, 10 CMS collections, 1,000 pages, 5 MB uploads, one free locale, up to 3 editors. No custom domain. 'Ideal for non-commercial use'. CONFLICT: 2026-06-16 blog says Free gets 500 credits DAILY that reset; current pricing page wording reads as a one-time trial allowance."},
+   {"tier": "Basic", "amount": "$10", "period": "per month", "notes": "USD. 1,000 AI credits/mo (selectable up to 15,000 credits/mo at higher prices), 2x credits first month, 50 GB bandwidth, 2 CMS collections, 1,000 CMS items, 30 pages, free custom domain, built-in SEO. Page shows a 'Yearly billing' toggle and says 'All prices are monthly and billed according to the billing cycle selected at checkout'; monthly-billing price not confirmed."},
+   {"tier": "Pro", "amount": "$30", "period": "per month", "notes": "USD. 3,000 credits/mo (selectable up to 100,000), 2x first month, 100 GB bandwidth, 10 CMS collections (then $40 per 10, max 40), 150 pages, staging, branching with previews, add-ons (advanced hosting, A/B testing). Same billing-period ambiguity as Basic."},
+   {"tier": "Enterprise", "amount": "custom", "period": "n/a", "notes": "Credits with volume discounts, custom limits, unlimited editors, SSO, SCIM, uptime guarantee, annual billing."},
+   {"tier": "Seats", "amount": "Additional editor $20/mo; Content editor $10/mo; viewers free", "period": "per month", "notes": "On Basic and Pro."}
+  ],
+  "free_tier": "Yes. $0, 500 AI credits (pricing page frames it as 'to try'; June blog says daily reset - conflict), 1 GB bandwidth, framer domain only, up to 3 editors, non-commercial.",
+  "repositioning": "None beyond what the card already covers (Framer 3.0 Agents + credits). Recent updates: Skills for the agent (2026-09-22), CMS List Field, Firewall (2026-10-01).",
+  "card_errors": [
+   {"field": "description_long", "wrong_quote": "Free ($0/mo, 500 daily credits that don't roll over", "correct_value": "Conflict: pricing page says '500 AI credits to try' for workspaces with no subscription; the 2026-06-16 blog said daily. Report both."},
+   {"field": "description_long", "wrong_quote": "Pro ($30/mo, 3,000 monthly credits, 100 GB bandwidth, 10 CMS collections, staging plus branching, unlimited editors)", "correct_value": "Pro does not include unlimited editors; additional editors are $20/editor/mo. Unlimited editors is Enterprise."},
+   {"field": "description_long", "wrong_quote": "You can pick advanced models in the editor, including Fable 5 (July 3, 2026) and Sonnet 5.", "correct_value": "framer.com/agents says: 'Choose GPT, Sonnet, Opus, or Fable depending on the task.' No version numbers or dates published there."},
+   {"field": "description_long", "wrong_quote": "turn a screenshot into a layout ... translate content into 100+ languages", "correct_value": "Unverified on framer.com/agents (lists building sites, migrating content, responsive fixes, components, SEO metadata, CMS, audits)."},
+   {"field": "description_long", "wrong_quote": "Workshop for component generation, ... AI Translate, Auto Rename, Wireframer, and a Claude & Codex beta", "correct_value": "Not verified on pages read; External Agents (drive Framer from Claude Code, Codex, Cursor, Terminal) are confirmed."},
+   {"field": "description_long", "wrong_quote": "Since the May 2026 update, extra editor seats cost $20/mo (down from $40)", "correct_value": "The seat cut was announced in the 2026-06-16 post 'AI credits, simpler plans, and lower prices', not May."},
+   {"field": "pros", "wrong_quote": "Advanced models like Fable 5 and Sonnet 5 are selectable in-editor", "correct_value": "Vendor lists GPT, Sonnet, Opus, Fable (no versions)."},
+   {"field": "pros", "wrong_quote": "Free plan is usable for real experimentation with 500 daily credits", "correct_value": "See free-credits conflict."},
+   {"field": "choose_if", "wrong_quote": "You want to try advanced models like Fable 5 or Sonnet 5 inside the editor", "correct_value": "Vendor names model families GPT, Sonnet, Opus, Fable without versions."},
+   {"field": "cons", "wrong_quote": "Free-plan credits reset daily and don't roll over", "correct_value": "See conflict; current pricing page does not say daily."},
+   {"field": "faq", "wrong_quote": "Framer has a free plan for one site with a framer.app subdomain. Mini plan is $5/month, Basic is $15/month, and Pro is $30/month", "correct_value": "No Mini plan. Free / Basic $10 / Pro $30 / Enterprise custom. Free uses a free Framer domain."},
+   {"field": "faq", "wrong_quote": "AI site generation is included in the free plan.", "correct_value": "Free plan gets 500 AI credits (to try Agents); AI use is metered by credits."}
+  ],
+  "sources": [
+   {"url": "https://www.framer.com/pricing", "accessed": "2026-10-06"},
+   {"url": "https://www.framer.com/blog/ai-credits-simpler-plans-and-lower-prices/", "accessed": "2026-10-06"},
+   {"url": "https://www.framer.com/agents/", "accessed": "2026-10-06"},
+   {"url": "https://www.framer.com/updates", "accessed": "2026-10-06"}
+  ],
+  "confidence": "medium",
+  "notes": "Static HTML of pricing page read directly. Whether $10/$30 are yearly or monthly rates is unclear: the toggle label is 'Yearly billing' and no separate monthly figure is shown in static HTML. 'Framer 3.0' date confirmed only via search snippet of framer.com/updates/framer-3 plus blog post date (June 16, 2026)."
+ },
+ {
+  "slug": "grok",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Grok 4.7 (API grok-4.7; announced 2026-09-21; 'most capable model we've built')",
+  "version_published": true,
+  "domain_changed": false,
+  "pricing": [
+   {"tier": "API grok-4.7", "amount": "$2.00 input / $0.50 cached input / $6.00 output (<200k prompt); $4.00 / $1.00 / $12.00 (>=200k)", "period": "per 1M tokens", "notes": "USD. 500k context, knowledge cutoff May 2026. Fast variant 2x price (1.5x long-context)."},
+   {"tier": "API grok-4.6 / grok-4.5", "amount": "$2.00 / $6.00 (<200k); $4.00 / $12.00 (>=200k); cached $0.50 (4.6) or $0.30 (4.5)", "period": "per 1M tokens", "notes": "500k context."},
+   {"tier": "API grok-4.3 / grok-4.20-0309-reasoning", "amount": "$1.25 input / $0.20 cached / $2.50 output (<200k); $2.50 / $0.40 / $5.00 (>=200k)", "period": "per 1M tokens", "notes": "1M context."},
+   {"tier": "API grok-build-0.1", "amount": "$1.00 / $0.20 / $2.00 (<200k); $2.00 / $0.40 / $4.00 (>=200k)", "period": "per 1M tokens", "notes": "256k context; coding model."},
+   {"tier": "Consumer plans (SuperGrok, SuperGrok Plus, SuperGrok Heavy)", "amount": "not verified", "period": "n/a", "notes": "x.ai/pricing, x.ai/grok and grok.com/plans returned 403 or JS-only. x.ai/news/grok-bot-more-plans confirms tier names SuperGrok, SuperGrok Plus, SuperGrok Heavy exist. A web-search summary (not primary) gave SuperGrok ~$30/mo and SuperGrok Plus ~$100/mo. 'SuperGrok Lite', X Premium/Premium+ prices not confirmed."}
+  ],
+  "free_tier": "Not verified from a primary source (consumer plan pages blocked). Grok Build: 'Try it in Grok Build for free' per Grok 4.7 announcement.",
+  "repositioning": "Vendor now styles itself 'SpaceXAI' on x.ai news and docs. New products: Grok Build (coding, grok-build-0.1 since May 2026), Grok Bot (AI teammates, included with SuperGrok tiers and Cursor plans). New consumer tier 'SuperGrok Plus'. Grok 4.6 (Aug 2026) and Grok 4.7 (Sep 2026) released; 4.7 also available in Cursor and via OpenRouter/Vercel/Cloudflare.",
+  "card_errors": [
+   {"field": "description", "wrong_quote": "The current flagship is Grok 4.5", "correct_value": "Grok 4.7 (2026-09-21) per docs.x.ai; Grok 4.6 came in between (Aug 2026)."},
+   {"field": "description_long", "wrong_quote": "The flagship model is Grok 4.5 (Beta), which became the default in April 2026. It improved tool-calling and has since been superseded by Grok 4.5", "correct_value": "Internally contradictory. Flagship is Grok 4.7 (500k context, May 2026 cutoff)."},
+   {"field": "description_long", "wrong_quote": "xAI has announced Grok 4.5 for public release on July 9, 2026, pitched as an \"Opus-class\" model built on a new 1.5-trillion-parameter V9 foundation and trained partly on Cursor coding data", "correct_value": "Stale and unverified; parameter count/'V9' not found on pages read. Remove."},
+   {"field": "description_long", "wrong_quote": "a February 2026 knowledge cutoff", "correct_value": "Not shown for grok-4.5 on docs.x.ai models page; Grok 4.7 cutoff is May 2026."},
+   {"field": "description_long", "wrong_quote": "The API (grok-4.3) costs $1.25 per million input tokens and $2.50 per million output tokens.", "correct_value": "Accurate for grok-4.3 (<200k) but it is not the flagship; grok-4.7 is $2.00/$6.00."},
+   {"field": "description_long", "wrong_quote": "X Premium at $8/mo, SuperGrok Lite at $10/mo, SuperGrok at $30/mo (or $300/yr, about 17% off), X Premium+ at $40/mo, and SuperGrok Heavy at $300/mo", "correct_value": "Unverified from primary sources today; ladder now also includes SuperGrok Plus (price unverified)."},
+   {"field": "description_long", "wrong_quote": "The free tier is $0 and now runs a lighter Grok 4 Mini, text only, capped at roughly 10 prompts every 2 hours", "correct_value": "Unverified (consumer plan pages blocked)."},
+   {"field": "pros", "wrong_quote": "Flagship Grok 4.5 offers a 500k-token context window and a February 2026 knowledge cutoff", "correct_value": "Flagship Grok 4.7: 500k context, May 2026 cutoff."},
+   {"field": "pros", "wrong_quote": "Competitively priced API at $1.25/$2.50 per million input/output tokens", "correct_value": "Only for grok-4.3/4.20; flagship grok-4.7 is $2/$6."},
+   {"field": "cons", "wrong_quote": "Flagship 4.3 is still labeled Beta, and 4.5 was only just announced for July 9, 2026", "correct_value": "Stale; 4.5, 4.6 and 4.7 are all listed in API docs."},
+   {"field": "choose_if", "wrong_quote": "You want early access to Grok 4.5 when it launches July 9, 2026", "correct_value": "Stale; remove."},
+   {"field": "faq", "wrong_quote": "The current flagship is Grok 4.5", "correct_value": "Grok 4.7."},
+   {"field": "faq", "wrong_quote": "Paid options include X Premium at $8/month, SuperGrok Lite at $10/month ... SuperGrok Heavy at $300/month", "correct_value": "Unverified; SuperGrok Plus tier exists and is missing."},
+   {"field": "faq", "wrong_quote": "The card doesn't provide a head-to-head benchmark comparison", "correct_value": "Not a factual error but meta-text leaking into a public FAQ answer; rewrite."}
+  ],
+  "sources": [
+   {"url": "https://docs.x.ai/docs/models", "accessed": "2026-10-06"},
+   {"url": "https://docs.x.ai/developers/release-notes", "accessed": "2026-10-06"},
+   {"url": "https://docs.x.ai/developers/grok-4-7", "accessed": "2026-10-06"},
+   {"url": "https://x.ai/news/grok-4-7", "accessed": "2026-10-06"},
+   {"url": "https://x.ai/news/grok-bot-more-plans", "accessed": "2026-10-06"},
+   {"url": "https://x.ai/pricing (403)", "accessed": "2026-10-06"},
+   {"url": "https://grok.com/plans (JS-only, empty)", "accessed": "2026-10-06"}
+  ],
+  "confidence": "medium",
+  "notes": "API/model facts high confidence. Consumer pricing and free tier LOW confidence: all consumer pricing pages blocked; Playwright unavailable (connection refused on :9222). Card has internal contradictions (4.5 superseded by 4.5; flagship 4.3 vs 4.5) - needs full rewrite."
+ },
+ {
+  "slug": "looka",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {"tier": "Basic Logo Package", "amount": "$20", "period": "one-time", "notes": "USD. One 1000x1000px PNG with colored background (low-res). From looka.com search snippets only."},
+   {"tier": "Premium Logo Package", "amount": "$65", "period": "one-time", "notes": "USD. High-res PNG, SVG, EPS, PDF, color variations, transparent backgrounds, full ownership. Search snippets only."},
+   {"tier": "Brand Kit Subscription", "amount": "$96", "period": "per year (billed annually)", "notes": "USD. 300+ branded templates. Search snippets only."},
+   {"tier": "Brand Kit Web Subscription", "amount": "$129", "period": "per year (billed annually)", "notes": "USD. Brand Kit + website builder with hosting. Search snippets only."}
+  ],
+  "free_tier": "Designing and previewing is free; downloading requires purchase (per looka.com/help snippets; not read directly).",
+  "repositioning": "Not determinable - site blocked.",
+  "card_errors": [
+   {"field": "faq", "wrong_quote": "you pay per logo ($65 for basic package)", "correct_value": "$65 is the Premium Logo Package; Basic is $20 (PNG only)."},
+   {"field": "description / description_long / pros / choose_if", "wrong_quote": "Its 2026 release adds faster, more accurate logo generation, animated logo videos, multilingual prompts, custom color palettes, a rebuilt text editor, and a native iOS app", "correct_value": "Unverified - looka.com and help.looka.com return 403; could not confirm any of these 2026 features."},
+   {"field": "faq", "wrong_quote": "download brand assets including vector files, color codes, and fonts", "correct_value": "Vector files only with Premium ($65) or Brand Kit; not for Basic ($20). Minor."}
+  ],
+  "sources": [
+   {"url": "https://looka.com/pricing/ (403)", "accessed": "2026-10-06"},
+   {"url": "https://looka.com/ (403)", "accessed": "2026-10-06"},
+   {"url": "https://help.looka.com/en/articles/485739-what-s-included-in-each-of-the-logo-only-packages (403)", "accessed": "2026-10-06"},
+   {"url": "https://help.looka.com/en/articles/4636515-what-is-the-brand-kit (403)", "accessed": "2026-10-06"}
+  ],
+  "confidence": "low",
+  "notes": "All looka.com and help.looka.com pages blocked (403) to curl and WebFetch; Playwright unavailable. Prices come from web-search snippets of looka.com/help.looka.com pages, which match the card's prices. Treat as unverified."
+ },
+ {
+  "slug": "mistral-le-chat",
+  "alive": true,
+  "shutdown_note": "Not shut down. 'Le Chat' brand retired: help.mistral.ai says 'As of August 12, 2026, Le Chat is now Vibe'. Same URL chat.mistral.ai, same login; account, plan, conversations carried over.",
+  "current_version": "Default model per vendor: Mistral Medium 3.5 (128B dense, 256k context, modified MIT open weights; announced 2026-05-22 as default in Le Chat). NOTE: Mistral Large 4 announced today 2026-10-06 (docs v26.10); whether it is now Vibe's default is not stated on pages read.",
+  "version_published": true,
+  "domain_changed": false,
+  "pricing": [
+   {"tier": "Free", "amount": "$0", "period": "n/a", "notes": "Limited messages, web searches and coding sessions; image generation; Mistral Studio access; $10/mo in API credits; 100+ connectors; up to 5 scheduled tasks."},
+   {"tier": "Pro", "amount": "$14.99", "period": "per month", "notes": "USD shown excl. taxes (USD/EUR selector on page). More messages, all-day coding in CLI/IDE/web, up to 15GB libraries, API credits included ($15/mo; one variant shows $30/mo - likely the Education toggle; unclear which)."},
+   {"tier": "Education (Pro for students)", "amount": "$5.99 (per WebFetch render)", "period": "per month", "notes": "Max 12 months, verified students at accredited higher institutions who have not used Vibe/Le Chat before. $5.99 figure not in static HTML (JS toggle), medium confidence."},
+   {"tier": "Team", "amount": "$24.99 per user", "period": "per month", "notes": "$50/mo minimum shown, up to 30GB storage per user, domain verification, data export."},
+   {"tier": "Enterprise", "amount": "custom", "period": "n/a", "notes": "Private deployments, custom models/agents/workflows, audit logs, SAML SSO, white label."}
+  ],
+  "free_tier": "Yes. $0 with limited messages/searches/coding sessions, image generation, $10/mo API credits, 100+ connectors.",
+  "repositioning": "Le Chat renamed Vibe (help article dates it 2026-08-12) with modes Vibe Work (productivity, former Le Chat), Vibe Code (CLI, VS Code extension, web) and Vibe Chat (classic turn-based). Plans now bundle monthly API credits. Mistral Large 4 announced 2026-10-06.",
+  "card_errors": [
+   {"field": "description", "wrong_quote": "rebranded from Le Chat to Vibe on June 5, 2026", "correct_value": "help.mistral.ai 'Le Chat is now Vibe': 'As of August 12, 2026'. Conflict with card date; vendor help article says Aug 12."},
+   {"field": "description_long", "wrong_quote": "on June 5, 2026, was rebranded to Vibe", "correct_value": "August 12, 2026 per help.mistral.ai."},
+   {"field": "description_long", "wrong_quote": "the Vibe consumer subscription is billed separately from Mistral's developer API, so a Pro or Team plan does not include API credits", "correct_value": "Pricing page: Free includes $10/mo API credits, Pro includes API credits ($15/mo; $30/mo shown for one variant). Team API credits not stated."},
+   {"field": "cons", "wrong_quote": "The consumer subscription is billed separately from the developer API, so plans include no API credits", "correct_value": "Free and Pro include monthly API credits."},
+   {"field": "description_long", "wrong_quote": "Team is $24.99 per user/mo (billed monthly, with a $50/mo minimum", "correct_value": "Page shows $24.99/user/mo and '$50 /mo'; 'billed monthly' not stated explicitly. Minor."},
+   {"field": "description_long", "wrong_quote": "Medium 3.5 is also still in public preview", "correct_value": "Announced as public preview (2026-05-22); current docs list it as v26.04 without a preview label (low confidence). Mistral Large 4 launched 2026-10-06."},
+   {"field": "faq", "wrong_quote": "It's powered by Mistral's own frontier models — Mistral Large, Mistral Small, and Pixtral.", "correct_value": "Default model Mistral Medium 3.5 (per 2026-05-22 post); product is now named Vibe."},
+   {"field": "faq", "wrong_quote": "Le Chat Pro is €14.99/month for Mistral Large, image generation, and extended context.", "correct_value": "Product is Vibe; Pro $14.99/mo (USD shown; EUR selectable) with more messages, coding, image generation, API credits."},
+   {"field": "faq", "wrong_quote": "Their frontier models (Mistral Large) are commercial-only through their API and Le Chat.", "correct_value": "Wrong: Mistral Large 3 is Apache 2.0 open-weight, Medium 3.5 is open-weight (modified MIT), Large 4 listed as open."},
+   {"field": "faq", "wrong_quote": "Mistral releases some models as open weights (Mistral 7B, Mixtral 8x7B, Mistral Small)", "correct_value": "Outdated examples; current open-weight line-up includes Large 3/4, Medium 3.5, Small 4, Ministral 3."}
+  ],
+  "sources": [
+   {"url": "https://mistral.ai/pricing", "accessed": "2026-10-06"},
+   {"url": "https://help.mistral.ai/en/articles/682992-le-chat-is-now-vibe", "accessed": "2026-10-06"},
+   {"url": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5/", "accessed": "2026-10-06"},
+   {"url": "https://docs.mistral.ai/getting-started/models/", "accessed": "2026-10-06"},
+   {"url": "https://mistral.ai/news/", "accessed": "2026-10-06"}
+  ],
+  "confidence": "medium",
+  "notes": "Rename date conflict: card says June 5, help article says Aug 12, 2026 - report, do not pick silently (vendor source is Aug 12). API-credit amounts per plan partly ambiguous due to JS toggle (Pro vs Education). Card name/slug still 'Mistral Le Chat'."
+ },
+ {
+  "slug": "photomath",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {"tier": "Free (Basic)", "amount": "$0", "period": "n/a", "notes": "USD. 'Core Photomath features with step-by-step solutions to symbolic math will always remain free of cost'; camera scan and calculator."},
+   {"tier": "Photomath Plus monthly", "amount": "$9.99", "period": "per month", "notes": "USD."},
+   {"tier": "Photomath Plus 6-month", "amount": "not published", "period": "per 6 months", "notes": "Help page mentions a discounted 6-month option, no price."},
+   {"tier": "Photomath Plus yearly", "amount": "$69.99", "period": "per year", "notes": "USD. 'Best value'; help page: 50% discount vs monthly."}
+  ],
+  "free_tier": "Yes. Step-by-step solutions to symbolic math free; Plus adds AI-powered animated tutorials, deeper explanations, contextual hints.",
+  "repositioning": "None found. Support at support.google.com/photomath.",
+  "card_errors": [
+   {"field": "description_long / pros / choose_if", "wrong_quote": "no ads and no time limit", "correct_value": "Unverified on pages read."},
+   {"field": "description_long", "wrong_quote": "a 7-day free trial", "correct_value": "Unverified; Plus help page does not mention a trial."},
+   {"field": "description_long / pros", "wrong_quote": "closer ties to Google Lens and the Gemini assistant / Backed by Google with cloud-based AI and Gemini integration", "correct_value": "Unverified: no Gemini or Google Lens mention on photomath.com or the Photomath help pages read."},
+   {"field": "description_long", "wrong_quote": "operates as a cloud-based Google product", "correct_value": "Unverified wording; Google hosting of help is confirmed, 'cloud-based' not."},
+   {"field": "description_long", "wrong_quote": "multiple solving methods for many problems", "correct_value": "Unverified."},
+   {"field": "faq", "wrong_quote": "adds animated video explanations, multiple solution methods, and access to a math expert", "correct_value": "Plus adds 'AI-powered animated tutorials, deeper explanations and contextual hints'. 'Math expert' and 'multiple solution methods' not listed."},
+   {"field": "faq", "wrong_quote": "Yes. Photomath can solve word problems", "correct_value": "Unverified; help overview covers 'arithmetic to calculus' and symbolic math; no word-problem claim found."}
+  ],
+  "sources": [
+   {"url": "https://photomath.com/", "accessed": "2026-10-06"},
+   {"url": "https://support.google.com/photomath/answer/14330572?hl=en", "accessed": "2026-10-06"},
+   {"url": "https://support.google.com/photomath/answer/14328660?hl=en", "accessed": "2026-10-06"}
+  ],
+  "confidence": "medium",
+  "notes": "Prices match card. 400+ animated tutorials confirmed (help page says available since Sept 2021). Card claims of 'ongoing expansion toward college-level topics' unverified; help says 'arithmetic to calculus'. Google ownership not stated explicitly on pages read but help lives on Google support."
+ },
+ {
+  "slug": "scite",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {"tier": "Basic", "amount": "$20", "period": "per month, billed yearly", "notes": "USD. 'Save $96' vs monthly (monthly price not shown). 7-day free trial. Full Assistant & Search, 250 MCP credits/mo, Smart Citation reports, Collections up to 1,000 papers, citation alerts & dashboards."},
+   {"tier": "Pro", "amount": "$50", "period": "per month, billed yearly", "notes": "USD. 'Save $120'. 7-day free trial. API access ('$60 API credit included, limited time only'), 2,500 MCP credits/mo, Collections up to 10,000 papers, patent/clinical trial/grant datasets. Marked 'Most popular'."},
+   {"tier": "Team", "amount": "$250", "period": "per month", "notes": "Includes 8 seats; $50/mo per additional seat. Private & shared Collections, team analytics, centralized billing, 2,500 MCP credits/mo/user."},
+   {"tier": "Enterprise", "amount": "custom", "period": "n/a", "notes": "Based on users and usage. Unlimited users with pooled usage, SSO/IP/domain/email access, Collections up to 50,000 papers, regulatory & safety datasets (FAERS, MAUDE, 510(k)), enhanced security."}
+  ],
+  "free_tier": "No free plan on pricing page; 7-day free trial (auto-enrolls into the selected plan). Scite MCP 'requires a paid plan or free trial'. Browser extension/citation badges listed under integrations; whether free not stated.",
+  "repositioning": "Pricing restructured into Basic/Pro/Team/Enterprise with MCP credits. Scite is 'part of Research Solutions'. Site stats: 1.6B+ citations, 300M+ scholarly sources, 2M+ users, 44+ publisher partners.",
+  "card_errors": [
+   {"field": "description_long", "wrong_quote": "Personal costs $20 per user monthly or $12 per user on an annual plan (roughly $144 a year, about 40% off)", "correct_value": "No 'Personal' plan. Basic $20/mo billed yearly (save $96); Pro $50/mo billed yearly (save $120); Team $250/mo incl. 8 seats; Enterprise custom."},
+   {"field": "description_long", "wrong_quote": "The free tier gives you Smart Citation badges and the extension plus capped Assistant use, with a 7-day Personal trial", "correct_value": "Pricing page shows no free tier, only a 7-day free trial."},
+   {"field": "description_long", "wrong_quote": "with student discounts of around 30 to 50 percent", "correct_value": "Pricing FAQ: discount codes for students/academics who recommend Scite to their institution; no percentage published."},
+   {"field": "description_long", "wrong_quote": "Organization plans are custom-quoted ... while the Developer tier for API and MCP access is credit-based and also custom", "correct_value": "No Organization or Developer tier; API access is in Pro ($60 API credit limited time) and Enterprise; MCP credits included per plan."},
+   {"field": "description / pros", "wrong_quote": "250M+ article library", "correct_value": "Pricing page says 300M+ scholarly sources and 1.6B+ citations."},
+   {"field": "description / pros", "wrong_quote": "ChatGPT, Claude, Copilot, Cursor and Claude Code", "correct_value": "scite.ai/mcp names ChatGPT, Claude, Copilot, Perplexity, VS Code and 'any MCP-compatible AI tool'. Cursor/Claude Code not named there (not wrong per se, but unverified)."},
+   {"field": "description_long", "wrong_quote": "launch of the Scite MCP ... in February 2026 ... In March 2026 Scite added the ability to paste DOIs ... five named settings presets", "correct_value": "Dates and these feature details unverified on pages read."},
+   {"field": "pros", "wrong_quote": "Annual Personal plan at $12/user is reasonable, with meaningful student discounts", "correct_value": "Cheapest is Basic $20/mo billed yearly."},
+   {"field": "pros / choose_if", "wrong_quote": "MCP now reaches patents, clinical trials and grants", "correct_value": "Patent, clinical trial & grant datasets are a Pro-plan feature."},
+   {"field": "cons", "wrong_quote": "Organization and Developer pricing is custom-quote only, with no public numbers", "correct_value": "Team has public pricing ($250/mo, 8 seats); only Enterprise is custom."},
+   {"field": "cons", "wrong_quote": "Free tier Assistant use is capped", "correct_value": "No free tier shown."},
+   {"field": "choose_if", "wrong_quote": "You are a student who can use the discounted annual plan", "correct_value": "Student discount only via institution-recommendation code; no published student plan."},
+   {"field": "faq", "wrong_quote": "Scite has a free plan with limited reference checks per month. Scite Pro is $20/month or $144/year for unlimited access.", "correct_value": "No free plan (7-day trial). Basic $20/mo billed yearly; Pro $50/mo billed yearly."}
+  ],
+  "sources": [
+   {"url": "https://scite.ai/pricing", "accessed": "2026-10-06"},
+   {"url": "https://scite.ai/mcp", "accessed": "2026-10-06"}
+  ],
+  "confidence": "high",
+  "notes": "Pricing read from raw HTML. Monthly-billing prices not shown; '$20/mo billed yearly, save $96' implies a higher monthly rate but it is not published on the page, so not stated. Badge 'freemium' is questionable: no free plan on pricing page."
+ },
+ {
+  "slug": "synthesia",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Synthesia 3.0 (vendor page synthesia.io/3); avatar engine Express-2. Release date not confirmed on pages read.",
+  "version_published": true,
+  "domain_changed": false,
+  "pricing": [
+   {"tier": "Basic (Free)", "amount": "$0", "period": "per month", "notes": "USD. 10 minutes of video creation or dubbing, 3 survey responses, 500 credits/mo, renewing monthly. 9 AI avatars. No personal avatars. Watermark. Share via link only."},
+   {"tier": "Starter", "amount": "$29 billed monthly / $18 per month billed yearly", "period": "per month", "notes": "USD. 1,250 credits/mo (monthly) or 15,000 credits/yr (yearly) on top of free allowance; video up to ~12 min, dubbing up to 16 min. Download, remove logo, AI Video Assistant, survey analytics, 3 guests, 125+ avatars, 3 personal avatars."},
+   {"tier": "Pro (formerly Creator)", "amount": "$89 billed monthly / $64 per month billed yearly", "period": "per month", "notes": "USD. 6,000 credits/mo (scalable: 12,000 $176, 24,000 $347, 36,000 $514, 48,000 $676 monthly; yearly 72,000/yr $64/mo up to 576,000/yr $486/mo). Video up to ~60 min, dubbing ~78 min. 5 personal avatars, 180+ avatars, branded video pages, interactive videos, 5 guests."},
+   {"tier": "Enterprise", "amount": "custom", "period": "n/a", "notes": "Custom credit volumes, unlimited video minutes, 240+ avatars, unlimited personal avatars, 1-click translation 140+ languages, SAML/SSO, SCORM, brand kits."},
+   {"tier": "Add-ons", "amount": "Roleplay learner seat $29/mo monthly or $25/mo yearly; Studio Express-1 avatar $1,000/yr", "period": "varies", "notes": "Studio avatar for annual plans only."}
+  ],
+  "free_tier": "Yes. Basic $0: 10 min video or dubbing/mo, 500 credits/mo, 3 survey responses, 9 avatars, watermark, no downloads, no personal avatars.",
+  "repositioning": "Moved to a credits system ('Credits are now the shared currency across all AI usage-based features'). 'Creator' plan renamed 'Pro'. Product now also sells surveys and roleplay/learner seats.",
+  "card_errors": [
+   {"field": "description_long", "wrong_quote": "The free Basic plan costs $0/mo and gives you 10 minutes of video per month, 9 AI avatars and 3 personal avatars", "correct_value": "Basic: 10 min video or dubbing, 500 credits, 9 avatars, NO personal avatars (3 personal avatars start at Starter)."},
+   {"field": "description_long", "wrong_quote": "Starter is $29/mo monthly or $18/mo billed annually (10 min/mo", "correct_value": "Prices correct; minutes now credit-based: 1,250 credits/mo ~12 min video (monthly) or 15,000 credits/yr (yearly)."},
+   {"field": "description_long", "wrong_quote": "Creator, the most popular plan, is $89/mo monthly or $64/mo annually (30 min/mo", "correct_value": "Plan is now named 'Pro'; 6,000 credits/mo ~60 min video, scalable credit tiers."},
+   {"field": "description_long", "wrong_quote": "Synthesia recently cut its prices, with Starter down roughly 38%", "correct_value": "Unverified on pricing page."},
+   {"field": "description_long", "wrong_quote": "180+ stock avatars on the Creator plan", "correct_value": "180+ on Pro (renamed)."},
+   {"field": "description_long", "wrong_quote": "Express-2 avatar engine (Expressive Model 4.0) ... diffusion-transformer model ... Veo 3 integration ... Express-Voice", "correct_value": "Express-2 full-body avatars and Video Agents confirmed via synthesia.io search snippets; 'Expressive Model 4.0', 'diffusion-transformer', 'Veo 3', 'Express-Voice' not verified."},
+   {"field": "description_long", "wrong_quote": "Personal avatars can now be created from a single image", "correct_value": "Unverified."},
+   {"field": "cons", "wrong_quote": "Monthly minute caps are tight (10 min on Free and Starter, 30 min on Creator)", "correct_value": "Credit-based: Free 10 min; Starter ~12 min; Pro ~60 min at base tier."},
+   {"field": "cons", "wrong_quote": "API access and interactive videos require the Creator plan or higher", "correct_value": "Interactive videos on Pro; WebFetch summary indicated limited API on Starter (low confidence). Plan is 'Pro', not Creator."},
+   {"field": "faq", "wrong_quote": "Synthesia offers a free plan with 3 minutes of video per month", "correct_value": "Free Basic includes 10 minutes of video or dubbing per month."},
+   {"field": "faq", "wrong_quote": "$89/month for Creator", "correct_value": "$89/month billed monthly for Pro ($64/mo billed yearly)."},
+   {"field": "faq", "wrong_quote": "HeyGen leads on video translation (lip-synced dubbing in 175+ languages)", "correct_value": "Not checked (other vendor)."}
+  ],
+  "sources": [
+   {"url": "https://www.synthesia.io/pricing", "accessed": "2026-10-06"},
+   {"url": "https://www.synthesia.io/3 (search snippet only)", "accessed": "2026-10-06"},
+   {"url": "https://www.synthesia.io/post/express-2-is-synthesias-next-chapter-for-full-body-expressive-ai-avatars (search snippet only)", "accessed": "2026-10-06"}
+  ],
+  "confidence": "high",
+  "notes": "Pricing read from raw HTML (both monthly and yearly blocks present). 'Save up to 4 months with yearly'. 'users 50K+' not verified."
+ },
+ {
+  "slug": "zapier-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {"tier": "Free", "amount": "$0", "period": "per month", "notes": "USD (19 currencies selectable). 100 tasks/mo, unlimited Zaps/Tables/Forms, two-step Zaps, Copilot (daily message limit), basic AI products access, 1 seat, 15-min polling."},
+   {"tier": "Professional", "amount": "from $19.99 billed yearly / from $29.99 billed monthly", "period": "per month", "notes": "USD. 750 tasks at entry, scales to 2M tasks. 'Pay yearly (Save 33%)'. Multi-step Zaps, unlimited premium apps, webhooks, AI fields, 1 seat, 2-min polling. Live chat from 2,000-task tier."},
+   {"tier": "Team", "amount": "from $69 billed yearly / from $103.50 billed monthly", "period": "per month", "notes": "USD. 25 users, 2,000 tasks at entry, shared Zaps/connections, SAML SSO, priority support, 1-min polling."},
+   {"tier": "Enterprise", "amount": "custom", "period": "n/a", "notes": "Unlimited users, annual task limits, observability, advanced admin."},
+   {"tier": "Agents add-on", "amount": "Free (400 activities/mo); Pro $33.33/mo billed annually ($400/yr, 1,500 activities/mo); Enterprise custom", "period": "per month", "notes": "Separate billing unit (activities)."},
+   {"tier": "Chatbots add-on", "amount": "Free (2 bots); Pro $13.33/mo billed annually ($160/yr, 5 bots); Advanced $66.67/mo billed annually ($800/yr, 20 bots); Custom", "period": "per month", "notes": "Free tier uses OpenAI GPT-3.5 per page."},
+   {"tier": "Zapier MCP", "amount": "included in every plan", "period": "n/a", "notes": "Each tool call uses two tasks from the plan's task quota."}
+  ],
+  "free_tier": "Yes. $0, 100 tasks/mo, two-step Zaps, unlimited Zaps/Tables/Forms, Copilot with daily limit.",
+  "repositioning": "Pricing page now: 'AI steps, code, and SDK now all follow the same task-based pricing model'. New Zapier SDK ('Install Zapier to your AI coding agent'). Branding 'AI orchestration platform'. App count 9,000+ everywhere.",
+  "card_errors": [
+   {"field": "best_for", "wrong_quote": "connecting 7,000+ apps", "correct_value": "9,000+ apps."},
+   {"field": "description / description_long / pros", "wrong_quote": "connects 8,000+ apps ... (Copilot reaches 9,000+)", "correct_value": "Zapier says 9,000+ apps for the platform itself."},
+   {"field": "description / description_long / pros", "wrong_quote": "Zapier MCP exposes 30,000+ actions", "correct_value": "zapier.com/mcp: '66,000+ triggers and actions' across 9,000+ apps; each MCP tool call = 2 tasks."},
+   {"field": "description_long", "wrong_quote": "with higher task tiers reported around $103.50/mo", "correct_value": "$103.50/mo is the Team entry price billed monthly ($69 billed yearly), not a higher task tier."},
+   {"field": "description_long", "wrong_quote": "Zapier Copilot (now in beta on every plan) ... the 2026 release added agent checkpoints and one-click undo", "correct_value": "Copilot (Beta) listed on all plans confirmed; 'checkpoints' and 'one-click undo' unverified on pages read."},
+   {"field": "faq", "wrong_quote": "connecting 7,000+ apps", "correct_value": "9,000+ apps (appears in two FAQ answers)."},
+   {"field": "faq", "wrong_quote": "Zapier has a free plan with 100 tasks/month and 5 Zaps. Starter is $29.99/month (750 tasks), Professional is $73.50/month (2K tasks), Team is $103.50/month, and Company is custom.", "correct_value": "Free: 100 tasks, UNLIMITED Zaps (two-step). No Starter or Company plan. Professional from $19.99/mo yearly or $29.99 monthly (750 tasks); Team from $69/mo yearly or $103.50 monthly; Enterprise custom."}
+  ],
+  "sources": [
+   {"url": "https://zapier.com/pricing", "accessed": "2026-10-06"},
+   {"url": "https://zapier.com/mcp", "accessed": "2026-10-06"}
+  ],
+  "confidence": "high",
+  "notes": "Core and add-on pricing read from raw HTML. Team monthly figure $103.50 from WebFetch render (static HTML showed 'Starting from $69'). 'users 2M+' not verified."
+ }
+]

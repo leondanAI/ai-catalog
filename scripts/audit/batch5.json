@@ -1,0 +1,1103 @@
+[
+ {
+  "slug": "adobe-firefly",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Firefly Image Model 5 (Adobe's own flagship image model; GA per Adobe blog 2026-03-19). No newer Adobe image model found on adobe.com as of 2026-10-06.",
+  "version_published": true,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "US$0",
+    "period": "n/a",
+    "notes": "Plans page: 'free daily generations across image, video, and audio' with models like Nano Banana and Luma Ray; 'Limits refresh every day'. No fixed credit number published."
+   },
+   {
+    "tier": "Firefly Standard",
+    "amount": "US$9.99",
+    "period": "per month",
+    "notes": "2,000 credits/month; unlimited standard image features; partner models. Page shows '/mo'; whether it is a monthly plan or annual commitment billed monthly not confirmed (page blocks direct HTML fetch)."
+   },
+   {
+    "tier": "Firefly Pro",
+    "amount": "US$19.99",
+    "period": "per month",
+    "notes": "4,000 credits/month; includes Adobe Express Premium and Photoshop web/mobile; unlimited standard generations."
+   },
+   {
+    "tier": "Firefly Pro Plus",
+    "amount": "US$49.99",
+    "period": "per month",
+    "notes": "NEW tier. 10,000 credits/month. Promo US$34.97/mo first year (30% off, ends Oct 21) with unlimited generations on image models (1K/2K) and select video models."
+   },
+   {
+    "tier": "Firefly Premium",
+    "amount": "US$199.99",
+    "period": "per month",
+    "notes": "50,000 credits/month. Promo US$139.91/mo first year (30% off, ends Oct 21) with unlimited Veo 3.1 Fast / Kling 3.0 / image models."
+   },
+   {
+    "tier": "Team plans",
+    "amount": null,
+    "period": "annual, billed monthly",
+    "notes": "Exists; amounts not captured."
+   }
+  ],
+  "free_tier": "Yes. Daily-refreshing free generations (not a fixed 25 credits/month). Exact daily limit not published on the plans page.",
+  "repositioning": "Firefly is now an all-in-one creative AI studio with an agent layer: Firefly AI Assistant / Adobe creative agent (announced April 2026, expanded June 2026). Partner models (Google, OpenAI, Black Forest Labs/FLUX, Runway, Kling, Luma, ElevenLabs, Topaz) sit alongside Adobe models.",
+  "card_errors": [
+   {
+    "field": "description_long",
+    "wrong_quote": "Pricing runs across four tiers.",
+    "correct_value": "Plans page now lists Free + Standard, Pro, Pro Plus (US$49.99/mo, 10,000 credits) and Premium, plus team plans."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Free is $0/month with 25 generative credits, where every generation consumes a credit.",
+    "correct_value": "Free = free daily generations, limits refresh every day; no '25 credits/month' figure on current plans page."
+   },
+   {
+    "field": "cons",
+    "wrong_quote": "Free tier is stingy: only 25 credits/month, and every generation costs one",
+    "correct_value": "Free tier is daily-refreshing generations; 25/month figure is stale."
+   },
+   {
+    "field": "description_long / cons",
+    "wrong_quote": "Layered Image Editing still in private beta",
+    "correct_value": "Unverified: not mentioned in the March 2026 Adobe blog or plans page; status unknown."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "The gap has narrowed significantly with Firefly 3 (2025).",
+    "correct_value": "Current Adobe image model is Firefly Image Model 5 (public beta Oct 2025, GA March 2026). Firefly Image 3 was 2024."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "Output is commercially safe to use without copyright concerns — unlike most other AI image generators.",
+    "correct_value": "Adobe's commercially-safe claim applies to Adobe's own Firefly models; Firefly now also hosts third-party partner models, so the blanket statement is overbroad. Wording should be scoped to Firefly models."
+   },
+   {
+    "field": "description_long / pros",
+    "wrong_quote": "hosts more than 30 third-party models, including Google Nano Banana 2, Veo 3.1, Runway Gen-4.5, and Kling 2.5 Turbo",
+    "correct_value": "'More than 30' and those names are from the March 2026 blog; current plans page names Kling 3.0, Veo 3.1 Fast, GPT Image, FLUX, Luma, Topaz, ElevenLabs. Prefer naming vendors rather than versions."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.adobe.com/products/firefly/plans.html",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://blog.adobe.com/en/publish/2026/03/19/adobe-firefly-expands-video-image-creation-with-new-ai-capabilities-custom-models",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://news.adobe.com/news/2026/04/adobe-new-creative-agent",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://blog.adobe.com/en/publish/2026/06/18/adobe-firefly-introduces-new-agentic-capabilities-and-an-upgraded-creative-ai-studio-built-for-the-way-you-work",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "adobe.com returns 403 to curl; plans page read via WebFetch summariser only, so billing-period wording (monthly vs annual commitment) is not fully confirmed. Promo prices end Oct 21 2026 — do not put promo prices in the card. Unlimited-generation promos are temporary."
+ },
+ {
+  "slug": "canva-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Canva AI 2.0 (announced at Canva Create 2026 as a research preview, GA 'rolling out over the coming weeks'). Built on the Canva Design Model.",
+  "version_published": true,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "$0",
+    "period": "n/a",
+    "notes": "Exists; AI limits not verifiable (canva.com blocked)."
+   },
+   {
+    "tier": "Canva Pro",
+    "amount": null,
+    "period": null,
+    "notes": "UNVERIFIED. canva.com returns 403 to all fetches. Conflict: card says ~$15/mo or ~$120/yr; a search-engine summary of canva.com said US$144/yr; a third-party site (costbench) says US$180/yr. Canva localises prices by region."
+   },
+   {
+    "tier": "Canva Business",
+    "amount": null,
+    "period": null,
+    "notes": "UNVERIFIED. Search snippet of canva.com suggests US$20/person/month or US$250/person/year; not read directly."
+   },
+   {
+    "tier": "Canva Enterprise",
+    "amount": "custom",
+    "period": null,
+    "notes": "Exists per canva.com search results."
+   }
+  ],
+  "free_tier": "Yes (free plan exists); AI credit limits not verified.",
+  "repositioning": "Canva AI 2.0 recasts Canva as a conversational, agentic 'Creative Operating System' with connectors, scheduling, web research, brand intelligence, Sheets AI and Canva Code 2.0. Magic Layers is also available inside ChatGPT and Gemini.",
+  "card_errors": [
+   {
+    "field": "description / description_long",
+    "wrong_quote": "with OpenAI's GPT Image handling image generation",
+    "correct_value": "Unverified and conflicting: Canva's help/newsroom (search snippets) say Dream Lab is powered by Leonardo.Ai (Phoenix) and Canva AI blends in-house models with OpenAI and Anthropic partnerships. Do not claim GPT Image is the image engine."
+   },
+   {
+    "field": "description / pros",
+    "wrong_quote": "returns a fully editable layout in about 8-12 seconds",
+    "correct_value": "Unverified on any Canva page reached; remove."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Canva Pro is about $15/month or ~$120/year",
+    "correct_value": "Unverified; sources conflict (US$120 vs US$144 vs US$180 per year). Needs manual check of canva.com/pricing from a browser."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "around 500 Dream Lab generations per month",
+    "correct_value": "Unverified."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "Canva Pro ($15/month) unlocks Magic Media image generation",
+    "correct_value": "Price unverified; image generator is now Dream Lab (Magic Media naming is older)."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "The April 2026 \"Canva AI 2.0\" update",
+    "correct_value": "Launched as a research preview at Canva Create 2026; month not confirmed from a page actually read."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.canva.com/pricing/ (403)",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.canva.com/pro/ (403)",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.canva.com/newsroom/news/canva-create-2026-ai/ (403; search snippet only)",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.canva.com/newsroom/news/magic-layers-ai-assistants/ (search snippet only)",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Every canva.com URL returned HTTP 403 (Cloudflare) to curl and WebFetch; Playwright was not available (no browser on port 9222). All Canva facts here come from search-engine snippets of canva.com pages, which are weaker than a direct read. Pricing must be checked manually."
+ },
+ {
+  "slug": "comfyui",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "v0.39.0 (GitHub release 2026-10-05). Weekly-ish cadence: v0.38.0 2026-09-29, v0.37.0 2026-09-21.",
+  "version_published": true,
+  "domain_changed": true,
+  "pricing": [
+   {
+    "tier": "Self-hosted ComfyUI",
+    "amount": "$0",
+    "period": "n/a",
+    "notes": "Open source (GPL-3.0), github.com/Comfy-Org/ComfyUI."
+   },
+   {
+    "tier": "Comfy Cloud Free",
+    "amount": "$0",
+    "period": "one-off",
+    "notes": "'5 free runs on real GPUs — no credit card required'. No model import, 30-min max runtime."
+   },
+   {
+    "tier": "Comfy Cloud Standard",
+    "amount": "$20",
+    "period": "per month (or $192/year, 20% off)",
+    "notes": "50,400 credits/year (~4,200/month); 30-min runtime."
+   },
+   {
+    "tier": "Comfy Cloud Creator",
+    "amount": "$35",
+    "period": "per month (or $336/year)",
+    "notes": "88,800 credits/year (~7,400/month); model import from CivitAI/Hugging Face."
+   },
+   {
+    "tier": "Comfy Cloud Pro",
+    "amount": "$100",
+    "period": "per month (or $960/year)",
+    "notes": "253,200 credits/year (~21,100/month); runtime up to 1 hr."
+   },
+   {
+    "tier": "Comfy Cloud Team",
+    "amount": "$700",
+    "period": "per month (or $7,560/year, 10% off)",
+    "notes": "NEW. 1,772,400 credits/year; up to 50 members, shared credit pool."
+   },
+   {
+    "tier": "Enterprise",
+    "amount": "custom",
+    "period": null,
+    "notes": ""
+   }
+  ],
+  "free_tier": "Self-hosted app is free. Comfy Cloud free tier = 5 free GPU runs, not 400 credits/month.",
+  "repositioning": "No fundamental change; Comfy Cloud has a new Team tier. Card URL points at a third-party site.",
+  "card_errors": [
+   {
+    "field": "url",
+    "wrong_quote": "https://comfyui.org",
+    "correct_value": "comfyui.org is a third-party tutorial site ('Your Ultimate Guide to ComfyUI Tutorials'). Official: https://www.comfy.org (and github.com/Comfy-Org/ComfyUI; old comfyanonymous/ComfyUI redirects there)."
+   },
+   {
+    "field": "description / description_long / pros",
+    "wrong_quote": "The current release, v0.27.0 (June 30, 2026)",
+    "correct_value": "Current release v0.39.0 (2026-10-05). Version will keep moving weekly — consider not stating a version number."
+   },
+   {
+    "field": "description_long / pros",
+    "wrong_quote": "Free plan (400 credits/month, no card required)",
+    "correct_value": "Comfy Cloud free = '5 free runs on real GPUs — no credit card required'."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Standard at $20/month (4,200 credits), Creator at $35/month (7,400 credits, with LoRA import), Pro at $100/month (21,100 credits) and a custom Enterprise tier",
+    "correct_value": "Monthly figures match (credits published per year: 50,400 / 88,800 / 253,200); missing Team tier $700/mo and the 20% annual discount. 'LoRA import' is described by vendor as model importing from CivitAI/Hugging Face."
+   },
+   {
+    "field": "cons",
+    "wrong_quote": "int8 quantization benefits are limited to Turing-generation GPUs and newer",
+    "correct_value": "Tied to v0.27.0 release notes; stale detail, drop."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "ComfyUI is a node-based GUI for Stable Diffusion image generation.",
+    "correct_value": "Now a node-based engine for many image, video, audio and 3D models (open and partner/API nodes), not just Stable Diffusion."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "moved to a unified credit model in late 2025 before adding a free tier in March 2026",
+    "correct_value": "Unverified dates."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://api.github.com/repos/Comfy-Org/ComfyUI/releases",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.comfy.org/cloud/pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://comfyui.org/",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Comfy Cloud page default view may show annual figures; monthly prices $20/$35/$100/$700 read from WebFetch summary. Release notes for v0.39.0 mention partner nodes for Anthropic, Ideogram, HeyGen, BFL FLUX, Grok."
+ },
+ {
+  "slug": "descript",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "$0",
+    "period": "n/a",
+    "notes": "60 media minutes/month, 100 AI credits (one-time), limited AI tools."
+   },
+   {
+    "tier": "Hobbyist",
+    "amount": "$16 per person/month billed annually; $24 monthly",
+    "period": "annual / monthly",
+    "notes": "10 media hours/month, 400 AI credits/month, 1080p watermark-free, Underlord access, custom voice clones. Annual is the default (aria-pressed) view."
+   },
+   {
+    "tier": "Creator",
+    "amount": "$24 per person/month billed annually; $35 monthly",
+    "period": "annual / monthly",
+    "notes": "30 media hours, 800 AI credits/month, 4K export, AI video generation, stock library, team up to 3."
+   },
+   {
+    "tier": "Business",
+    "amount": "$50 per person/month billed annually; $65 monthly",
+    "period": "annual / monthly",
+    "notes": "40 media hours, 1,500 AI credits/month, Brand Studio, translation/dubbing 30+ languages, custom avatars, priority support with SLA, team up to 5."
+   },
+   {
+    "tier": "Enterprise",
+    "amount": "custom",
+    "period": null,
+    "notes": "SOC 2 Type II, SSO/SCIM, dedicated CSM."
+   }
+  ],
+  "free_tier": "Yes: 60 media minutes/month and 100 one-time AI credits.",
+  "repositioning": "Pricing page now leads with Underlord AI co-editor, AI avatars, generate video, and 'API + MCP'. Pricing page says 'More than 6 million creators & teams'.",
+  "card_errors": [
+   {
+    "field": "description_long / pros / choose_if",
+    "wrong_quote": "an AI model picker (including Claude Sonnet 4.5)",
+    "correct_value": "Model picker exists (Descript blog), but now offers models from Anthropic, Google and OpenAI plus 'Auto'; naming Sonnet 4.5 is stale. Name vendors, not versions."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "a public token-based API open to all users",
+    "correct_value": "Descript API is described as beta, available to all users, with MCP support (search snippet of descript.com). Say 'API (beta) and MCP'."
+   },
+   {
+    "field": "users",
+    "wrong_quote": "(empty)",
+    "correct_value": "Pricing page: 'More than 6 million creators & teams use Descript'."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "overdub (AI voice cloning)",
+    "correct_value": "Feature is now presented as 'AI Speech' with custom voice clones; 'Overdub' name is legacy."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "Adobe Podcast's Enhance Speech is generally considered more powerful for audio cleanup",
+    "correct_value": "Unverifiable opinion; remove or rephrase."
+   },
+   {
+    "field": "description_long / cons",
+    "wrong_quote": "In September 2025 the billing model was rebuilt",
+    "correct_value": "Media minutes + AI credits model confirmed by Descript help centre; exact month (Sept 2025) not confirmed from a page read."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.descript.com/pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.descript.com/blog/article/underlord-got-a-model-picker-and-claude-sonnet-45",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://help.descript.com/hc/en-us/articles/27653385141517-Understanding-Your-Legacy-and-Sunset-Plan",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Prices confirmed from raw HTML: annual toggle pressed by default, $16/$24/$50 visible, $24/$35/$65 hidden (monthly). Card prices are correct."
+ },
+ {
+  "slug": "frase",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Starter",
+    "amount": "$39/mo billed yearly ($468/yr); $49 month-to-month",
+    "period": "annual / monthly",
+    "notes": "1 seat, 1 site, 10 articles + 50 audit pages/month, 25 AI generations, AI Visibility on ChatGPT and Google AI, 50 tracked prompts, Content Guard 10 pages. Holds at limit (no overage)."
+   },
+   {
+    "tier": "Professional",
+    "amount": "$103/mo billed yearly ($1,236/yr); $129 month-to-month",
+    "period": "annual / monthly",
+    "notes": "3 seats, 5 sites, 40 articles + 250 audit pages, adds Perplexity to AI Visibility, 200 prompts, Content Guard 75 pages. Extra seats $29/mo. Optional PAYG: $5/article, $0.50/audit page, $0.25/AI prompt."
+   },
+   {
+    "tier": "Scale",
+    "amount": "$239/mo billed yearly ($2,868/yr); $299 month-to-month",
+    "period": "annual / monthly",
+    "notes": "5 seats, up to 10 domains, 100 articles + 1,000 audit pages, adds Claude and Gemini to AI Visibility, 500 prompts, Content Guard 300 pages. PAYG $4/$0.40/$0.20."
+   },
+   {
+    "tier": "Enterprise",
+    "amount": "custom",
+    "period": null,
+    "notes": "'All named engines', white-label, client portal, SSO/SAML, SLA."
+   },
+   {
+    "tier": "FraseCMS add-on",
+    "amount": "Free (100k page views) / Basic $19/mo / Pro $99/mo",
+    "period": "monthly",
+    "notes": "Free tier included with any plan."
+   }
+  ],
+  "free_tier": "No permanent free plan. 7-day free trial, no credit card, Professional features, capped at 5 articles, 50 audit pages, 25 AI prompts, up to 3 seats.",
+  "repositioning": "Confirmed GEO + SEO agent platform ('Bring your own agent' via MCP server and CLI on every plan). Rebuild date not verified.",
+  "card_errors": [
+   {
+    "field": "description_long",
+    "wrong_quote": "an optional Frase Answers add-on",
+    "correct_value": "Frase Answers is 'a free conversational widget' included from Starter, not a paid add-on."
+   },
+   {
+    "field": "description / description_long / pros",
+    "wrong_quote": "AI Visibility tracking across up to eight AI surfaces (ChatGPT, Perplexity, Claude, Gemini, Google AI Overviews, Grok, Copilot and DeepSeek)",
+    "correct_value": "Pricing page names ChatGPT + Google AI (Starter), + Perplexity (Professional), + Claude + Gemini (Scale), 'All named engines' (Enterprise). Grok, Copilot, DeepSeek and the number eight are not on the pricing page — unverified."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Scale ... (5 seats, up to 10 domains, 100 articles/mo, 1,000 audit pages)",
+    "correct_value": "Correct. (Professional also correct.)"
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "Frase Solo plan is $15/month (1 user, 4 articles/month). Basic is $45/month (1 user, 30 articles). Team is $115/month (3 users, unlimited articles). A Frase Pro add-on ($35/month) adds unlimited AI writing.",
+    "correct_value": "Starter $49/mo monthly or $39/mo yearly; Professional $129/$103; Scale $299/$239; Enterprise custom."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "helps you create briefs and content that matches search intent",
+    "correct_value": "Outdated framing; product is now an agent that researches, drafts, optimises, publishes and monitors (SEO + GEO + AI Visibility)."
+   },
+   {
+    "field": "description / description_long",
+    "wrong_quote": "rebuilt from scratch in January 2026",
+    "correct_value": "Unverified (search budget exhausted before check)."
+   },
+   {
+    "field": "cons",
+    "wrong_quote": "Full eight-AI-platform coverage and white-label are reserved for custom-priced Enterprise",
+    "correct_value": "White-label is Enterprise-only (confirmed). 'Eight' platforms unverified; vendor says 'All named engines'."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.frase.io/pricing",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Pricing read from raw HTML (JSON-LD offers + visible text). Prices in USD. Yearly saves 20%."
+ },
+ {
+  "slug": "hemingway-editor",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Desktop app: 'Hemingway Editor 3' (Classic). Web Plus has no version number.",
+  "version_published": true,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Free online editor",
+    "amount": "$0",
+    "period": "n/a",
+    "notes": "Readability highlighting."
+   },
+   {
+    "tier": "Plus Individual 5K",
+    "amount": "US$8.33/month ($100 billed annually)",
+    "period": "annual",
+    "notes": "5,000 AI sentences/month; unlimited grammar fixes, document feedback, synonyms. Monthly-billing price not present in static HTML (toggle) — card's $10/month unverified."
+   },
+   {
+    "tier": "Plus Individual 10K",
+    "amount": "US$12.50/month ($150 billed annually)",
+    "period": "annual",
+    "notes": "10,000 AI sentences/month. Monthly price unverified."
+   },
+   {
+    "tier": "Plus Team 10K",
+    "amount": "US$12.50/user/month ($150 billed annually)",
+    "period": "annual",
+    "notes": "Up to 50 users; 10,000 AI sentences/user; multiple users on one bill, role-based admin controls. Priority support NOT included."
+   },
+   {
+    "tier": "Plus Enterprise",
+    "amount": "custom",
+    "period": null,
+    "notes": "Unlimited users, 20,000 AI sentences/user/month, optional SSO add-on, security assessments, priority email support."
+   },
+   {
+    "tier": "Hemingway Editor 3 (Classic desktop, Mac/PC)",
+    "amount": "$19.99",
+    "period": "one-time",
+    "notes": "Confirmed on hemingwayapp.com/desktop; 'Does not include new AI features'."
+   }
+  ],
+  "free_tier": "Yes: free online editor; Plus has a 2-week trial, no credit card, cancels automatically.",
+  "repositioning": "None beyond the card.",
+  "card_errors": [
+   {
+    "field": "description_long",
+    "wrong_quote": "Team 10K is $12.50 per user/month ($150/user/year) with 10,000 rewrites per user plus admin controls and priority support",
+    "correct_value": "Priority email support is Enterprise-only; Team 10K has multiple users on one bill + role-based admin controls."
+   },
+   {
+    "field": "pros",
+    "wrong_quote": "including a team plan with admin controls and priority support",
+    "correct_value": "Team plan has admin controls; priority support only on Enterprise."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "The Classic desktop app has historically been a one-time purchase of around $19.99, though that figure is reported by third parties rather than confirmed on the current official pricing pages.",
+    "correct_value": "Confirmed on official page hemingwayapp.com/desktop: Hemingway Editor 3, $19.99 one-time, Mac and Windows."
+   },
+   {
+    "field": "cons",
+    "wrong_quote": "Classic desktop pricing is not clearly confirmed on the current official pages",
+    "correct_value": "It is confirmed ($19.99). Remove this con."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Hemingway Editor Plus Individual 5K is $10/month",
+    "correct_value": "Monthly-billing price unverified (only annual $100/yr = $8.33/mo visible)."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "(missing)",
+    "correct_value": "Enterprise tier exists (custom, 20,000 AI sentences/user, SSO add-on)."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "There is no subscription — pay once and own it permanently.",
+    "correct_value": "Desktop Classic is one-time $19.99 but has no AI features; AI features need the Hemingway Editor Plus subscription."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "Hemingway Editor added AI writing features in 2023 powered by GPT-4. You can ask the AI to ... generate content",
+    "correct_value": "Unverified year/model; vendor does not name the model. AI features are in Hemingway Editor Plus (rewrites, grammar, tone/style, document feedback, synonyms, custom changes)."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://hemingwayapp.com/hemingway-editor-plus",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://hemingwayapp.com/desktop",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://hemingwayapp.com/",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "high",
+  "notes": "hemingwayapp.com/pricing returns 404; pricing lives on /hemingway-editor-plus. Page says 'Annual (save $200)' oddly — monthly prices not in static HTML."
+ },
+ {
+  "slug": "looker-studio",
+  "alive": true,
+  "shutdown_note": "Not shut down, but RENAMED: Google rebranded Looker Studio back to 'Data Studio' on 2026-04-16 (release notes). lookerstudio.google.com now 301-redirects to datastudio.google.com.",
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": true,
+  "pricing": [
+   {
+    "tier": "Data Studio (free)",
+    "amount": "$0",
+    "period": "n/a",
+    "notes": "'available at no charge for creators and report viewers'."
+   },
+   {
+    "tier": "Data Studio Pro (project subscription)",
+    "amount": "$9",
+    "period": "per user per project per month",
+    "notes": "Vendor: 'Pricing per user per month for Data Studio Pro varies depending on the length of the customer's subscription'. Can also be bought via Google Workspace Admin console (Feb 2026)."
+   }
+  ],
+  "free_tier": "Yes, free self-service reports. Conversational Analytics (new experience, preview) is 'now available to all Data Studio users' since 2026-04-16.",
+  "repositioning": "Renamed Data Studio (2026-04-16); home page is now also a portal for Data Cloud assets (BigQuery conversational agents, Colab data apps). Gemini in Looker renamed Gemini in Data Studio. Conversational Analytics no longer requires Gemini enablement or Pro.",
+  "card_errors": [
+   {
+    "field": "name",
+    "wrong_quote": "Looker Studio",
+    "correct_value": "Data Studio (renamed 2026-04-16; formerly Looker Studio, originally Google Data Studio)."
+   },
+   {
+    "field": "url",
+    "wrong_quote": "https://lookerstudio.google.com",
+    "correct_value": "https://datastudio.google.com (old URL redirects 301)."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Looker Studio (formerly Google Data Studio)",
+    "correct_value": "Data Studio (formerly Looker Studio)."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "A January 29, 2026 update added a 'Show reasoning' toggle",
+    "correct_value": "Release notes date Show reasoning to February 05, 2026."
+   },
+   {
+    "field": "description / description_long / cons",
+    "wrong_quote": "Most of the Gemini AI functionality is gated to Pro, so the free tier is largely a manual dashboarding tool.",
+    "correct_value": "Since 2026-04-16 the new Conversational Analytics (preview) is available to all Data Studio users; Gemini-assisted calculated fields / Slides remain tied to Gemini in Data Studio (Pro-associated). Rephrase."
+   },
+   {
+    "field": "description_long / pros",
+    "wrong_quote": "connectors to over a thousand partner data sources",
+    "correct_value": "Vendor: 'more than 1,400 data sources' and 'over 1,300 Community Connectors'."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Looker Studio Pro is $9 per user per Google Cloud project per month, billed annually with a 30-day trial",
+    "correct_value": "$9 per user per project per month confirmed; 'billed annually' and '30-day trial' not stated on the product page; vendor says price varies with subscription length."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "It connects to 800+ data sources ... There are no limits on dashboards, reports, or data volume.",
+    "correct_value": "1,400+ data sources; 'no limits on data volume' unverified; Pro is a paid tier, so 'completely free' should be 'free with optional paid Pro'."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "What is Hex? / How much does Hex cost?",
+    "correct_value": "Off-topic FAQ about a different tool (Hex) on this card; Hex pricing not verified here. Candidate for /fix-faq."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://cloud.google.com/data-studio?hl=en",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://docs.cloud.google.com/data-studio/release-notes?hl=en",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://docs.cloud.google.com/data-studio/welcome?hl=en",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Slug 'looker-studio' may need keeping for URLs, but name/url/SEO titles/comparisons should change to Data Studio. Docs page: 'In April 2026, the Looker Studio product name returned to its original name: Data Studio.'"
+ },
+ {
+  "slug": "motion",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Pro AI (Teams)",
+    "amount": "$19/seat/mo billed annually; $29/seat/mo monthly",
+    "period": "annual / monthly",
+    "notes": "7,500 AI credits/seat/month. From page JSON: monthly 29, annually 19."
+   },
+   {
+    "tier": "Pro AI (Individual)",
+    "amount": "$29/mo billed annually; $49/mo monthly",
+    "period": "annual / monthly",
+    "notes": "From page JSON individualAnnually 29 / individualMonthly 49."
+   },
+   {
+    "tier": "Business AI (Teams)",
+    "amount": "$29/seat/mo billed annually; $49/seat/mo monthly",
+    "period": "annual / monthly",
+    "notes": "15,000 AI credits/seat/month; capacity planning, dashboards, Gantt, time tracking, permissions, priority support."
+   },
+   {
+    "tier": "Business AI (Individual)",
+    "amount": "$39/mo billed annually; $69/mo monthly",
+    "period": "annual / monthly",
+    "notes": ""
+   }
+  ],
+  "free_tier": "No free plan. Free trial ('Start your free trial. Risk free. Cancel anytime.'); trial length not stated on pricing page.",
+  "repositioning": "Confirmed: page title 'The AI Powered SuperApp for Work'. Uses models from OpenAI, Anthropic and other labs.",
+  "card_errors": [
+   {
+    "field": "description_long",
+    "wrong_quote": "Pro AI is $19 per seat per month (about $12.73 billed annually, roughly 33% off)",
+    "correct_value": "$19/seat/mo IS the annual price; monthly is $29/seat (Teams). Individuals: $29 annual / $49 monthly."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Business AI is $29 per seat per month (about $19.43 billed annually)",
+    "correct_value": "$29/seat/mo is annual; monthly $49/seat (Teams). Individuals: $39 annual / $69 monthly."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "overage at $0.25 per 100 credits ... overage at $0.19 per 100 credits",
+    "correct_value": "Page lists '25 cents /100 credits' and '19 cents /100 credits' in the AI Credits row, but does not label them as overage (they equal the annual per-credit value in page JSON). Treat as unverified overage."
+   },
+   {
+    "field": "description_long / cons / faq",
+    "wrong_quote": "free trial commonly cited as 7 days",
+    "correct_value": "Trial length not stated on vendor pricing/home page; unverified."
+   },
+   {
+    "field": "description_long / pros / choose_if",
+    "wrong_quote": "pre-built AI agents Motion calls \"AI Employees\" for Sales, Support, Marketing, project management, HR, and Research",
+    "correct_value": "'AI Employee' does not appear on current homepage or pricing page; unverified/possibly dropped."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "Motion is $34/month (or $19/month billed annually)",
+    "correct_value": "Pro AI Teams $29 monthly / $19 annually per seat; Individual $49 / $29."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "Most offer a 7-day free trial.",
+    "correct_value": "Free trial exists; length unverified."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Project Workflows V2 ... plan roughly six months ahead",
+    "correct_value": "Unverified on pages read."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.usemotion.com/pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.usemotion.com/",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "high",
+  "notes": "motion.com is behind a Cloudflare challenge; usemotion.com is still the live canonical domain. Pricing taken from __ssr_data__ JSON on the pricing page."
+ },
+ {
+  "slug": "pika",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Pika 2.5 (Pika's own video model, listed as flagship). Release date not on pages read.",
+  "version_published": true,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "$0",
+    "period": "n/a",
+    "notes": "0 credits/month — credit packs only. All models, 2 video + 2 image/audio in parallel, no watermark, NO commercial license."
+   },
+   {
+    "tier": "Starter",
+    "amount": "$10/mo monthly; $8/mo annual (-20%)",
+    "period": "monthly / annual",
+    "notes": "900 credits/month; no commercial license."
+   },
+   {
+    "tier": "Creator",
+    "amount": "$35/mo monthly; $28/mo annual",
+    "period": "monthly / annual",
+    "notes": "3,150 credits/month; commercial license."
+   },
+   {
+    "tier": "Fancy",
+    "amount": "$95–$880/mo monthly; $76–$704/mo annual",
+    "period": "monthly / annual",
+    "notes": "8,550+ credits/month (slider); priority queue; early access from $440/mo."
+   },
+   {
+    "tier": "Enterprise",
+    "amount": "custom",
+    "period": null,
+    "notes": ""
+   },
+   {
+    "tier": "Credit packs",
+    "amount": "$25 (1,500) to $1,000 (66,000)",
+    "period": "one-time",
+    "notes": "60 credits per $1; top-ups roll over; only for Pika Create on pika.art."
+   }
+  ],
+  "free_tier": "Free account has 0 monthly credits; usage requires buying credit packs.",
+  "repositioning": "MAJOR: Pika is now a multi-model creation platform (video: Seedance 2.5, MiniMax H3, Wan 3.0, Google, Pika 2.5; image: GPT Image 2.5, Nano Banana, Seedream, Grok Imagine; audio: Pika Speech/Music/SFX, ElevenLabs, MiniMax Music) plus a developer API (dev.pika.art) and MCP. Plans renamed Standard/Pro -> Starter/Creator.",
+  "card_errors": [
+   {
+    "field": "description_long / cons",
+    "wrong_quote": "Free is $0 and gives 80 video credits a month, but is now limited to Pika 2.5 at 480p, image-to-video only, and no commercial use.",
+    "correct_value": "Free = 0 credits/month (packs only), all models, no watermark, no commercial license."
+   },
+   {
+    "field": "description_long / pros / choose_if",
+    "wrong_quote": "Standard is $8/mo billed yearly (about $10 month-to-month) with 700 credits, all resolutions, every Pikaffect, no watermark, and commercial rights.",
+    "correct_value": "Plan is now 'Starter': $10 monthly / $8 annual, 900 credits, NO commercial license."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Pro is $28/mo yearly (about $35 monthly) with 2,300 credits",
+    "correct_value": "Now 'Creator': $35 monthly / $28 annual, 3,150 credits, commercial license."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Fancy is $76/mo yearly (about $95 monthly) with 6,000 credits",
+    "correct_value": "Fancy $95–$880 monthly / $76–$704 annual, from 8,550 credits."
+   },
+   {
+    "field": "description / description_long / pros / choose_if",
+    "wrong_quote": "generates sound effects automatically, matched to what happens on screen",
+    "correct_value": "Vendor Pika 2.5 page: 'No — renders come back silent. Score a finished cut with Pika Soundtrack'."
+   },
+   {
+    "field": "description / description_long / pros",
+    "wrong_quote": "native scene extension to about 15 seconds ... (and up to about 25 seconds through Pikaframes)",
+    "correct_value": "Vendor: 5 s from prompt, 5 or 10 s from photo, Frames transitions 1–5 s each (10 s with exactly two frames). 720p or 1080p."
+   },
+   {
+    "field": "description",
+    "wrong_quote": "Pika 2.5 (released January 26, 2026)",
+    "correct_value": "Release date unverified."
+   },
+   {
+    "field": "cons",
+    "wrong_quote": "Text-to-video is not available on the free plan",
+    "correct_value": "Free plan includes all models but no monthly credits."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "Pika has a free plan with 150 credits on signup and 50 monthly credits. Standard is $8/month, Pro is $28/month, Unlimited is $98/month.",
+    "correct_value": "Free 0 credits (packs only); Starter $10/$8; Creator $35/$28; Fancy from $95/$76; no 'Unlimited' plan."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "Pika 2.2 (2025) added Scene Ingredients",
+    "correct_value": "Stale; current own model is Pika 2.5 and Pika hosts many third-party models."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://pika.art/pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://create.pika.art/apps/pika-2-5",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Card needs a full rewrite. Pikaffects not seen on the pricing page; current status unverified."
+ },
+ {
+  "slug": "semrush",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Semrush One (plan family name used on pricing page: 'Try Semrush One for free').",
+  "version_published": true,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "$0",
+    "period": "n/a",
+    "notes": "1 demo project, 10 reports per day across all vital tools, no credit card."
+   },
+   {
+    "tier": "SEO",
+    "amount": "$117.33/mo billed annually; $139 monthly",
+    "period": "annual / monthly",
+    "notes": "5 websites, 500 keywords tracked daily; basic keyword research; AI visibility features listed as not included."
+   },
+   {
+    "tier": "Starter (SEO + AI Search)",
+    "amount": "$165.17/mo billed annually; $199 monthly",
+    "period": "annual / monthly",
+    "notes": "5 websites, 500 keywords; MCP access; 50 prompts/day, 1 domain for AI brand performance, 300 AI visibility reports/day."
+   },
+   {
+    "tier": "Pro+ (SEO + AI Search)",
+    "amount": "$248.17/mo billed annually; $299 monthly",
+    "period": "annual / monthly",
+    "notes": "15 websites, 1,500 keywords, historical data, content optimisation; 100 prompts/day."
+   },
+   {
+    "tier": "Advanced (SEO + AI Search)",
+    "amount": "$455.67/mo billed annually; $549 monthly",
+    "period": "annual / monthly",
+    "notes": "40 websites, 5,000 keywords, share of voice, API; 200 prompts/day."
+   },
+   {
+    "tier": "Enterprise",
+    "amount": "custom",
+    "period": null,
+    "notes": ""
+   },
+   {
+    "tier": "Add-on: Additional users",
+    "amount": "from $45/mo",
+    "period": "monthly",
+    "notes": ""
+   }
+  ],
+  "free_tier": "Yes: free account, 10 reports/day, 1 demo project. 7-day free trial also offered.",
+  "repositioning": "Semrush is now owned by Adobe: acquisition completed 2026-04-28 (~US$1.9B, $12/share). Adobe launched 'Adobe Brand Visibility' combining Semrush with Adobe products.",
+  "card_errors": [
+   {
+    "field": "description_long",
+    "wrong_quote": "The classic SEO plans are still sold as Pro ($139.95/mo), Guru ($249.95/mo) and Business ($499.95/mo).",
+    "correct_value": "Not shown on the current pricing page (only SEO / Starter / Pro+ / Advanced / Enterprise); unverified/likely legacy."
+   },
+   {
+    "field": "description_long / cons",
+    "wrong_quote": "A limited free account (around 10 searches a day, first 10 results per report)",
+    "correct_value": "Vendor: '1 demo project, 10 reports per day across all vital tools'. 'First 10 results' not stated."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "generally considered worth the $139-449/month price",
+    "correct_value": "Current range $139–$549/month monthly ($117.33–$455.67 billed annually)."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "(missing)",
+    "correct_value": "Should mention Adobe ownership since 2026-04-28."
+   },
+   {
+    "field": "users",
+    "wrong_quote": "1.16M+",
+    "correct_value": "Unverified on pages read."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "expanded 2026 AI Visibility Index built on 126 million U.S. AI-search prompts",
+    "correct_value": "Unverified (AI Visibility Index exists in site nav; the 126M figure not checked)."
+   },
+   {
+    "field": "cons",
+    "wrong_quote": "The free trial requires a credit card",
+    "correct_value": "Plausible (pricing FAQ 'Am I charged when I enter my credit card?') but the answer text was not readable; unverified."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.semrush.com/pricing/seo-ai-search/",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://news.adobe.com/news/2026/04/adobe-completes-semrush-acquisition",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "high",
+  "notes": "semrush.com/prices/ redirects to /pricing/seo-ai-search/. Annual saves up to 17%. Adobe completion read from search snippet of news.adobe.com + semrush.com newsroom headline."
+ },
+ {
+  "slug": "tableau-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Tableau Desktop Free Edition",
+    "amount": "$0",
+    "period": "n/a",
+    "notes": "Local authoring of Excel/CSV/database files; no Tableau Agent."
+   },
+   {
+    "tier": "Tableau Cloud Standard",
+    "amount": "Creator $75, Explorer $42, Viewer $15 per user/month",
+    "period": "billed annually",
+    "notes": "Up to 3 sites, Pulse, Desktop + Prep Builder, Tableau MCP. No Tableau Agent in Cloud."
+   },
+   {
+    "tier": "Tableau Cloud Enterprise",
+    "amount": "Creator $115, Explorer $70, Viewer $35 per user/month",
+    "period": "billed annually",
+    "notes": "Adds Data Management, Advanced Management, eLearning, 10 sites. No Tableau Agent."
+   },
+   {
+    "tier": "Tableau Cloud+ Edition",
+    "amount": "contact sales",
+    "period": "annual contract",
+    "notes": "Adds Tableau Knowledge, Tableau Agent in Prep, Authoring, Catalog, Dashboards and Pulse, Premier Success, 50 sites."
+   },
+   {
+    "tier": "Tableau+ Bundle",
+    "amount": "contact sales",
+    "period": "annual contract",
+    "notes": "Cloud+ plus Tableau Next and Data 360."
+   },
+   {
+    "tier": "Tableau Next",
+    "amount": "from $40 per user/month",
+    "period": "billed annually",
+    "notes": "Includes Tableau Agent, Tableau Semantics, native Slack integration. Built on Agentforce 360 Platform."
+   },
+   {
+    "tier": "Tableau Server Standard / Enterprise",
+    "amount": "from $15 / from $35 per user/month",
+    "period": "billed annually",
+    "notes": "Server Standard lists 'Tableau Agent in Authoring and Prep'."
+   }
+  ],
+  "free_tier": "Tableau Desktop Free Edition exists (no AI). Free trial of Tableau Cloud offered; length and card requirement not stated on pages read.",
+  "repositioning": "Tableau is now marketed as 'agentic analytics'. AI on Tableau Cloud is sold via the new Cloud+ Edition (and Tableau+ Bundle). Tableau Next is standalone (from $40/user/mo) and built on Agentforce 360. Tableau Knowledge (governed knowledge graphs) is new.",
+  "card_errors": [
+   {
+    "field": "description / description_long / cons",
+    "wrong_quote": "delivered through the Tableau+ bundle",
+    "correct_value": "Tableau Agent in Cloud is in Tableau Cloud+ Edition and the Tableau+ Bundle; Tableau Next (from $40/user/mo) also includes Tableau Agent; Server Standard lists Tableau Agent in Authoring and Prep."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "reportedly lists around $115/user/mo for a Creator",
+    "correct_value": "Third-party figure; $115 is the Tableau Cloud Enterprise Creator price. Cloud+ and Tableau+ are contact-sales."
+   },
+   {
+    "field": "description_long / cons",
+    "wrong_quote": "Pricing is subscription-based with no permanent free tier",
+    "correct_value": "Tableau Desktop Free Edition exists (local, no AI)."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "there is a 14-day trial that does not require a credit card",
+    "correct_value": "Free trial offered; 14 days / no card not stated on pages read — unverified."
+   },
+   {
+    "field": "description_long / pros",
+    "wrong_quote": "Tableau Next (also referred to as Tableau Einstein)",
+    "correct_value": "Vendor uses 'Tableau Next' (agentic analytics layer on Agentforce 360 Platform); 'Tableau Einstein' naming is stale."
+   },
+   {
+    "field": "description_long / cons",
+    "wrong_quote": "Tableau Agent inside Dashboards entered Beta in February 2026 ... still in Beta",
+    "correct_value": "Vendor pricing now lists Tableau Agent in Dashboards as a Cloud+ feature and the product page headline is 'Tableau Agent, now in dashboards' with no beta label; beta status unverified/likely stale."
+   },
+   {
+    "field": "description_long / pros",
+    "wrong_quote": "As of October 2025 the AI features no longer burn separate Einstein Request credits",
+    "correct_value": "Unverified on pages read."
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "now generally available across Tableau Cloud Web Authoring, Tableau Prep and Tableau Catalog",
+    "correct_value": "Pricing lists Tableau Agent in Authoring, Prep, Catalog, Dashboards and Pulse (Cloud+)."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "Enterprise pricing varies.",
+    "correct_value": "Enterprise Edition: Creator $115, Explorer $70, Viewer $35 per user/month billed annually."
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "Tableau AI refers to Einstein AI features embedded in Tableau ... require Tableau+ or Tableau with Salesforce Einstein licensing",
+    "correct_value": "AI is now Tableau Agent / Tableau Next; available in Tableau Cloud+ Edition, Tableau+ Bundle, or Tableau Next."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.tableau.com/pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.tableau.com/pricing/cloud",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.tableau.com/products/tableau-agent",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://www.salesforce.com/analytics/pricing/",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "high",
+  "notes": "tableau.com returns 403 to browser UA but serves to 'curl/8.4.0' UA. Prices in USD; page also offers AUD/GBP/EUR/JPY/SEK. Salesforce page: 'Conversational analytics — now included in every edition' refers to Salesforce CRM editions (Tableau Next platform in Core/Advanced/Max Sales/Service/Industry Clouds)."
+ }
+]
