@@ -1,0 +1,74 @@
+[
+ {
+  "slug": "openai-dell-codex-enterprise",
+  "status": "minor_errors",
+  "wrong_claims": [
+   {
+    "quote": "this is OpenAI's first explicit on-premises enterprise distribution deal",
+    "correct_value": "Not stated by OpenAI or Dell. Delete.",
+    "source_url": "https://openai.com/index/dell-codex-enterprise-partnership/"
+   },
+   {
+    "quote": "Codex ... will run on Dell's enterprise hardware stack ... Codex operates within the organization's own environment rather than sending code to OpenAI's cloud",
+    "correct_value": "OpenAI says Codex will connect with the Dell AI Data Platform, which businesses use to store, organize and govern data on-premises, bringing Codex closer to internal codebases, documentation and business systems. Connecting Codex, ChatGPT Enterprise and other API-based solutions to the Dell AI Factory is still being explored. Neither company says code never leaves the network, and no availability date or pricing was given.",
+    "source_url": "https://openai.com/index/dell-codex-enterprise-partnership/"
+   },
+   {
+    "quote": "4 million+ weekly developer users in cloud deployments, primarily at startups and mid-market companies",
+    "correct_value": "OpenAI: 'More than 4 million developers now use Codex every week.' The startup/mid-market split is unsourced. Delete it.",
+    "source_url": "https://openai.com/index/dell-codex-enterprise-partnership/"
+   },
+   {
+    "quote": "targets the Fortune 500 segment — financial institutions, defense contractors, healthcare systems ... Dell's enterprise relationships give OpenAI a distribution channel into accounts that OpenAI's direct sales motion has struggled to reach",
+    "correct_value": "Unsourced commentary. Delete.",
+    "source_url": "https://openai.com/index/dell-codex-enterprise-partnership/"
+   },
+   {
+    "quote": "positions it against GitHub Copilot Enterprise, which already has strong on-premises enterprise reach via Microsoft's sales infrastructure",
+    "correct_value": "Unsourced commentary. Delete.",
+    "source_url": "https://openai.com/index/dell-codex-enterprise-partnership/"
+   }
+  ],
+  "sources": [
+   {"url": "https://openai.com/index/dell-codex-enterprise-partnership/", "accessed": "2026-10-11"},
+   {"url": "https://www.dell.com/en-us/blog/dell-technologies-world-a-bright-and-beautiful-road-ahead/", "accessed": "2026-10-11"}
+  ],
+  "notes": "Confirmed from OpenAI's post of May 18, 2026: the partnership, the Dell AI Data Platform connection, the AI Factory exploration (Codex, ChatGPT Enterprise, API-based solutions), 4M+ weekly Codex developers, and Codex expanding beyond coding (gathering context across tools, preparing reports, routing product feedback). Dell quote available: Ihab Tarazi, SVP and CTO, Infrastructure Solutions Group, says the Dell AI Factory with OpenAI Codex lets enterprises deploy AI where their data already lives, within their premises. Dell's recap describes the on-premises solution as being built."
+ },
+ {
+  "slug": "bytedance-70b-ai-capex",
+  "status": "minor_errors",
+  "wrong_claims": [
+   {
+    "quote": "ByteDance disclosed plans to spend up to $70 billion",
+    "correct_value": "ByteDance did not disclose anything. Bloomberg reported on May 27, 2026, citing people familiar with the matter, that ByteDance is weighing / discussing capital expenditure of as much as $70 billion this year on data centers and other AI infrastructure. The plan is not public.",
+    "source_url": "https://news.bloomberglaw.com/capital-markets/bytedance-weighs-capex-of-as-much-as-70-billion-in-ai-push"
+   },
+   {
+    "quote": "Google's parent Alphabet disclosed $75 billion in 2026 capex",
+    "correct_value": "Wrong. $75B was Alphabet's 2025 guidance. Alphabet's 2026 capex guidance was $175-185B in February 2026 and $180-190B after Q1 results in April 2026 (later raised to $195-205B in July).",
+    "source_url": "https://w.media/ai-infrastructure-demand-pushes-alphabets-2026-capex-guidance-to-us-205-billion/"
+   },
+   {
+    "quote": "would position ByteDance alongside Microsoft, Google, and Amazon ... put it directly in the same tier",
+    "correct_value": "With Alphabet guiding $180-190B for 2026, $70B is not the same tier. Say instead that $70B would be far above Chinese peers: Tencent spent about $12B and Alibaba about $19B last year (Bloomberg).",
+    "source_url": "https://news.bloomberglaw.com/capital-markets/bytedance-weighs-capex-of-as-much-as-70-billion-in-ai-push"
+   },
+   {
+    "quote": "without diluting shareholders or taking on debt",
+    "correct_value": "Unsourced. Bloomberg says only that the company would underwrite much of the spending with the roughly $50B profit it earned in 2025. Delete the rest.",
+    "source_url": "https://news.bloomberglaw.com/capital-markets/bytedance-weighs-capex-of-as-much-as-70-billion-in-ai-push"
+   },
+   {
+    "quote": "Related articles ... (links block inside the body)",
+    "correct_value": "Page-template leftover inside the article body. Remove it entirely.",
+    "source_url": ""
+   }
+  ],
+  "sources": [
+   {"url": "https://news.bloomberglaw.com/capital-markets/bytedance-weighs-capex-of-as-much-as-70-billion-in-ai-push", "accessed": "2026-10-11"},
+   {"url": "https://w.media/ai-infrastructure-demand-pushes-alphabets-2026-capex-guidance-to-us-205-billion/", "accessed": "2026-10-11"}
+  ],
+  "notes": "Confirmed by Bloomberg (May 27, 2026, people familiar): up to $70B in 2026 capex under discussion; about $25B spent last year; much of it funded from roughly $50B 2025 profit; Tencent about $12B and Alibaba about $19B last year. Other outlets report a lower approved budget (about 200B yuan), so the $70B is a figure under discussion, not a confirmed budget."
+ }
+]

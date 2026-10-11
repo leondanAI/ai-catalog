@@ -61,9 +61,12 @@ def connect():
 def tables_in(sql):
     # Сначала убрать строки: в текстах новостей бывает «update Linear…»,
     # и без этого слово после UPDATE принималось за таблицу.
-    body = re.sub(r'\$(\w*)\$.*?\$\1\$', "''", sql, flags=re.S)
+    # Комментарии — первыми: в них бывают апострофы и «$70B», и иначе они
+    # открывали мнимую строку, которая съедала весь файл (2026-10-11 копия
+    # не сделалась: «таблиц []»).
+    body = re.sub(r'(?m)^\s*--.*$', '', sql)
+    body = re.sub(r'\$(\w*)\$.*?\$\1\$', "''", body, flags=re.S)
     body = re.sub(r"'(?:[^']|'')*'", "''", body)
-    body = re.sub(r'(?m)^\s*--.*$', '', body)
     found = set(re.findall(r'\b(?:UPDATE|INSERT\s+INTO|DELETE\s+FROM)\s+([a-z_]+)', body, re.I))
     return {t.lower() for t in found}
 
@@ -115,6 +118,8 @@ def main():
     for f in files:
         sqls[f] = open(f, encoding='utf-8').read()
     tables = set().union(*(tables_in(s) for s in sqls.values()))
+    if not tables:
+        sys.exit('Не нашёл, какие таблицы меняют файлы, — без резервной копии не запускаю.')
     unsafe = tables - SAFE_TABLES
     if unsafe:
         sys.exit(f'Файлы меняют таблицы вне списка разрешённых: {sorted(unsafe)}. Остановлено.')
