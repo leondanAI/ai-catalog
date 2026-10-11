@@ -1,0 +1,34 @@
+[
+ {
+  "slug": "nano-banana",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Google's Nano Banana family of Gemini image models: Nano Banana 2.1 (gemini-nano-banana-2.1, an update to Nano Banana 2), Nano Banana 2 (Gemini 3.1 Flash Image), Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image), Nano Banana Pro (Gemini 3 Pro Image). The original Nano Banana (Gemini 2.5 Flash Image) was deprecated in the API and shut down on October 2, 2026 (that date has passed; today is 2026-10-11, write it in the past tense).",
+  "version_published": null,
+  "pricing": "Gemini app: Nano Banana 2 is free; Nano Banana 2.1 requires a Google AI plan (AI Plus, AI Pro or AI Ultra); paid plans get higher generation limits and can redo an image with Nano Banana Pro. No numeric limits are published. Gemini API (paid tier only, no free API tier for these models), per output image, standard rate: Nano Banana 2.1 about $0.034 (1K) / $0.050 (2K) / $0.113 (4K); Nano Banana 2 about $0.045 (0.5K) / $0.067 (1K) / $0.101 (2K) / $0.151 (4K); Nano Banana 2 Lite about $0.034 (1K); Nano Banana Pro about $0.134 (1K/2K) / $0.24 (4K). Batch is half price.",
+  "free_tier": "Yes in the Gemini app (Nano Banana 2). Not in the API.",
+  "repositioning": "EDITORIAL DECISION: the card must describe Google's official Nano Banana, not nanobanana.io. The current card describes nanobanana.io, an unaffiliated third-party site that borrows the name. Recommending a look-alike breaks the accuracy rule.",
+  "card_errors": [
+   {
+    "claim": "The entire current card (description, description_long, pros, cons, choose_if, faq) describes nanobanana.io, its credit plans and its multi-model routing.",
+    "correction": "Discard all of it. Rewrite the card from scratch about Google's Nano Banana image models using only the facts in current_version, pricing, free_tier and notes. Do not mention nanobanana.io except, at most, one sentence warning that unaffiliated sites use the name."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://deepmind.google/models/gemini-image/",
+    "accessed": "2026-10-11"
+   },
+   {
+    "url": "https://ai.google.dev/gemini-api/docs/pricing",
+    "accessed": "2026-10-11"
+   },
+   {
+    "url": "https://gemini.google/overview/image-generation/",
+    "accessed": "2026-10-11"
+   }
+  ],
+  "confidence": "high",
+  "notes": "DeepMind page: Nano Banana is 'State-of-the-art image generation and editing models, built on Gemini'. Nano Banana Pro: 'Create and edit images with studio-quality levels of precision and control'. Nano Banana 2: 'pro-level image generation and editing, at Flash speed'. Nano Banana 2 Lite: 'fastest, most efficient Gemini Image model'. Nano Banana 2.1 (API docs): improved visual quality, multi-turn character consistency, accurate text rendering, search-grounded generation, 1K/2K/4K output. Family capabilities: image + text input, conversational refinement in plain language, real-world knowledge from Gemini. Where: Gemini app ('Create images' in the tools menu), Google AI Studio, Gemini API. All generated images carry an invisible SynthID watermark and a visible watermark in the Gemini app. Limitations to state: no published numeric limits for free users; API has no free tier; visible watermark on app images; outputs are capped at 4K. Do not use future tense for the October 2, 2026 shutdown: it already happened."
+ }
+]
