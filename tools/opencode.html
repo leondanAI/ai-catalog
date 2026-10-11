@@ -28,7 +28,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "OpenCode", "description": "OpenCode is a Go-based terminal coding agent with a TUI (Terminal User Interface) built on the Bubble Tea framework. It is entirely open source (MIT license) and free to use — you bring your\n   own AP", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://opencode.ai", "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "review": {"@type": "Review", "author": {"@type": "Organization", "name": "AItoolFit"}, "reviewRating": {"@type": "Rating", "ratingValue": "3.9", "bestRating": "5", "worstRating": "1"}}}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "OpenCode", "description": "OpenCode is an open-source coding agent built by Anomaly, published under MIT license at github.com/anomalyco/opencode (the project was previously hosted at sst/opencode). The current implementation i", "applicationCategory": "AIApplication", "operatingSystem": "Web", "url": "https://opencode.ai", "publisher": {"@type": "Organization", "name": "aitoolfit", "url": "https://aitoolfit.ai"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "review": {"@type": "Review", "author": {"@type": "Organization", "name": "AItoolFit"}, "reviewRating": {"@type": "Rating", "ratingValue": "3.9", "bestRating": "5", "worstRating": "1"}}, "dateModified": "2026-09-29"}
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -161,10 +161,10 @@ textarea.form-input { resize: vertical; min-height: 90px; }
       </div>
       <div class="tool-hero-meta">
         <span class="tool-meta-chip">💻 AI for Development</span>
-        <span class="tool-meta-chip badge-free">Free</span>
-        <span class="tool-meta-chip">👥 N/A</span>
+        <span class="tool-meta-chip badge-freemium">Freemium</span>
+        <span class="tool-meta-chip">👥 16M+</span>
       </div>
-      <div class="tool-best-for"><strong>Best for:</strong> Terminal-native developers wanting a free provider-agnostic coding agent</div>
+      <div class="tool-best-for"><strong>Best for:</strong> Developers wanting a free, open-source, provider-agnostic coding agent available across terminal, desktop, and IDE</div>
     </div>
   </div>
   <div class="tool-action-bar">
@@ -174,55 +174,38 @@ textarea.form-input { resize: vertical; min-height: 90px; }
 
   <div class="tool-desc-block">
     <h2>About OpenCode</h2>
-    <div class="tool-desc"><p style="margin-top:1rem">OpenCode is a Go-based terminal coding agent with a TUI (Terminal User Interface) built on the Bubble Tea framework. It is entirely open source (MIT license) and free to use — you bring your
-   own API keys to any of 75+ supported LLM providers, or run local models for free via Ollama. Supported providers include Anthropic, OpenAI, Google Gemini, AWS Bedrock, xAI Grok, DeepSeek, Mistral, and Groq.     
-                                                                                                                                                                                                                      
-  The tool integrates LSP (Language Server Protocol) for real-time diagnostics and inline code intelligence, giving the agent the same contextual awareness as a full IDE without leaving the terminal. Sessions      
-  persist across terminal disconnects via a client/server architecture backed by SQLite, meaning long-running coding tasks survive network interruptions. GitHub Actions integration allows mentioning /opencode in   
-  issue or PR comments to trigger automated coding tasks in CI.
-                                                                                                                                                                                                                      
-  Key capabilities include multi-session support, vim-style keyboard navigation, a TUI with syntax highlighting, and the ability to work on any codebase in any language. The GitHub Actions integration is 
-  particularly useful for teams wanting CI-level coding automation without a paid service subscription.                                                                                                               
-   
-  Pricing: OpenCode itself is completely free and open source. You pay only for the LLM API calls you make to your chosen provider. Running entirely on local models via Ollama costs nothing beyond hardware.        
-                                                                                                                                                                                                                      
-  Limitations: OpenCode is terminal-only — there is no GUI, IDE extension, or browser interface. Setup requires technical knowledge including API key management and provider configuration. The UX is less polished 
-  than commercial tools, and result quality depends entirely on which LLM you configure.                                                                                                                              
-                                                         
-  Best suited for developers who work primarily in the terminal and want a free, highly configurable, provider-agnostic coding agent with no subscription cost.</p></div>
-    
+    <div class="tool-desc"><p style="margin-top:1rem">OpenCode is an open-source coding agent built by Anomaly, published under MIT license at github.com/anomalyco/opencode (the project was previously hosted at sst/opencode). The current implementation is written in TypeScript. Unlike earlier terminal-only tools in this space, OpenCode is available as a terminal interface, a desktop app, and an IDE extension.</p><p style="margin-top:1rem">The project has a large, active user base: the GitHub repo has drawn over 208,000 stars and 950+ contributors across 13,000+ commits, and Anomaly states OpenCode is used by over 16 million developers every month.</p><p style="margin-top:1rem">OpenCode connects to 75+ LLM providers through Models.dev, including Claude, GPT, Gemini, and more, as well as local models. Instead of managing API keys, you can also log in with a GitHub Copilot account or a ChatGPT Plus/Pro subscription. The tool supports running multiple agent sessions in parallel on the same project and generating shareable session links. It integrates LSP (Language Server Protocol) for real-time diagnostics and code intelligence. Anomaly states that OpenCode does not store any of your code or context data.</p><p style="margin-top:1rem">Pricing has two layers. The OpenCode agent itself is completely free and open source — you pay only for the LLM API calls you make to your chosen provider, or nothing if you run local models. Anomaly also offers OpenCode Zen, an optional first-party AI gateway of curated models billed per request against prepaid credits; no public per-model rate card was available at review time. A separate Enterprise tier is listed on the site but its terms are not published.</p><p style="margin-top:1rem">Limitations: no version number is currently published for the agent, so users cannot easily track release history. Some previously advertised details, such as a SQLite-backed client/server session persistence layer and a GitHub Actions '/opencode' comment trigger, could not be confirmed on the current site and are not included here. As with any agent, result quality depends heavily on which LLM you configure.</p><p style="margin-top:1rem">OpenCode suits developers who want a free, open-source, provider-agnostic coding agent that isn't locked into a single interface or vendor, with the option to pay only for a managed model gateway (Zen) if they'd rather not handle their own API keys.</p></div>
+    <div class="tool-updated" style="margin-top:12px;font-size:13px;color:var(--text3)">Last updated: 2026-09-29</div>
   </div>
 
   <div class="pros-cons">
     <div class="pc-box pros">
       <div class="pc-title">Advantages</div>
       <ul class="pc-list">
-        <li>Fully free and open source — no subscription cost beyond LLM API keys</li>
-        <li>Supports 75+ LLM providers including free local Ollama models</li>
-        <li>LSP integration for real-time code intelligence in the    
-  terminal</li>
-        <li>Sessions persist across disconnects via client/server SQLite architecture</li>
-        <li>GitHub Actions integration for CI-level coding automation</li>
+        <li>Fully open source (MIT licensed); the core agent is free to use beyond your own LLM costs</li>
+        <li>Supports 75+ LLM providers via Models.dev, including local models, GitHub Copilot, and ChatGPT Plus/Pro login</li>
+        <li>Available as a terminal interface, desktop app, and IDE extension, not limited to the command line</li>
+        <li>LSP integration for real-time code intelligence</li>
+        <li>Large, active community: 208K+ GitHub stars, 950+ contributors, and a vendor-claimed 16M+ monthly developers</li>
       </ul>
     </div>
     <div class="pc-box cons">
       <div class="pc-title">Disadvantages</div>
       <ul class="pc-list">
-        <li>Terminal-only — no GUI, IDE extension, or browser interface</li>
-        <li>Requires technical setup including API key management</li>
-        <li>Less polished UX than commercial tools like Cursor or Copilot</li>
-        <li>Smaller    
-  support ecosystem and documentation than established tools</li>
-        <li>Result quality depends entirely on the configured LLM provider</li>
+        <li>Optional OpenCode Zen gateway is usage-based per request with no published per-model rate card</li>
+        <li>Enterprise tier exists but pricing and terms are not publicly disclosed</li>
+        <li>No published version number for the current TypeScript implementation</li>
+        <li>Session persistence architecture (client/server, SQLite) advertised previously is unverified for the current build</li>
+        <li>Result quality depends entirely on the LLM provider you configure</li>
       </ul>
     </div>
   </div>
 
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose OpenCode if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want a free, open-source terminal coding agent with no subscription required</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want to connect to any AI provider — Anthropic, OpenAI, Gemini, local models — via one CLI</span></li>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Choose OpenCode if…</h2><div style="background:var(--bg2);border:1px solid rgba(124,106,247,0.25);border-radius:14px;padding:1.25rem"><ul style="list-style:none;padding:0;margin:0"><li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want a free, open-source coding agent with no subscription required for the base tool</span></li>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want to connect to any AI provider — Claude, GPT, Gemini, local models — across terminal, desktop, or IDE</span></li>
 <li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You prefer open-source tools you can audit, fork, and contribute to</span></li>
-<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You want a lightweight terminal agent without the Claude subscription cost</span></li></ul></div></div>
-  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is OpenCode?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">OpenCode is an open-source, terminal-based AI coding agent. It works similarly to Claude Code or Aider but supports multiple AI providers including Anthropic, OpenAI, Google, and local models via Ollama. It's free to use — you only pay for the API tokens consumed.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is OpenCode free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">OpenCode itself is free and open-source. You pay for whatever AI model API you connect it to. Using Anthropic Claude costs per token; using local models via Ollama is free with no API costs.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is the difference between OpenCode and Aider?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Both are open-source terminal coding agents with multi-model support. Aider has a longer track record, stronger git integration, and larger community. OpenCode is newer with a more modern TUI (terminal user interface). They're similar in capability — try both to see which workflow fits better.</span></div></div></div></div>
+<li style="display:flex;gap:6px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:8px"><span style="min-width:0;word-break:break-word">✅ You'd rather pay per request through a managed gateway (OpenCode Zen) than juggle your own API keys</span></li></ul></div></div>
+  <div style="margin-top:2rem"><h2 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:1rem">Frequently Asked Questions</h2><div style="border:1px solid var(--border);border-radius:14px;overflow:hidden" itemscope itemtype="https://schema.org/FAQPage"><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is OpenCode?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">OpenCode is an open-source AI coding agent built by Anomaly, available as a terminal interface, desktop app, and IDE extension. It supports 75+ LLM providers through Models.dev, including Claude, GPT, Gemini, and local models. The core agent is free — you bring your own API keys, or log in with a GitHub Copilot or ChatGPT Plus/Pro account.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">Is OpenCode free?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">The OpenCode agent itself is free and open source — you pay only for the LLM API calls you make to your chosen provider, or nothing with local models. Anomaly also offers OpenCode Zen, an optional paid gateway to curated models billed per request via prepaid credits, plus an Enterprise tier with unpublished pricing.</span></div></div><div style="background:var(--bg2);padding:1.25rem;border-bottom:1px solid var(--border)" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><div style="font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:0.5rem" itemprop="name">What is the difference between OpenCode and Aider?</div><div style="font-size:14px;color:var(--text2);line-height:1.65" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Aider is a terminal-focused coding agent with a longer track record and strong git integration. OpenCode is newer and now available as a terminal interface, desktop app, and IDE extension, with support for 75+ LLM providers via Models.dev. Both are open source — try both to see which workflow fits better.</span></div></div></div></div>
 
   <div class="section-title-sm">Also consider</div>
   <div class="also-grid">

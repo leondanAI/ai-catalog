@@ -50,7 +50,7 @@ Return ONLY a JSON object:
 
 def load_audit(only):
     items = []
-    for f in sorted(glob.glob(os.path.join(ROOT, 'audit', 'news*.json'))):
+    for f in sorted(glob.glob(os.path.join(ROOT, 'audit', 'news[0-9]*.json'))):
         items += json.load(open(f))
     if only:
         items = [a for a in items if a['slug'] in only]

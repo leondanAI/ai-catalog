@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anthropic lanza Agent Memory — memoria a largo… — AItoolFit</title>
-<meta name="description" content="Anthropic abrió una beta privada de Agent Memory, un servicio gestionado que extrae información clave de conversaciones de agentes y la muestra cuando es…">
+<title>Anthropic lanza Memory para agentes gestionados… — AItoolFit</title>
+<meta name="description" content="Anthropic presentó Memory, un servicio gestionado para los Claude Managed Agents que extrae información clave de las conversaciones de los agentes y la…">
 <link rel="canonical" href="https://aitoolfit.ai/es/news/anthropic-agent-memory-long-term-memory-claude.html">
 <link rel="alternate" hreflang="en" href="https://aitoolfit.ai/news/anthropic-agent-memory-long-term-memory-claude.html">
 <link rel="alternate" hreflang="es" href="https://aitoolfit.ai/es/news/anthropic-agent-memory-long-term-memory-claude.html">
@@ -20,15 +20,15 @@
 <link rel="apple-touch-icon" href="/favicon-192.png">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://aitoolfit.ai/es/news/anthropic-agent-memory-long-term-memory-claude.html">
-<meta property="og:title" content="Anthropic lanza Agent Memory — memoria a largo plazo para Claude">
-<meta property="og:description" content="Anthropic abrió una beta privada de Agent Memory, un servicio gestionado que extrae información clave de conversaciones de agentes y la muestra cuando es…">
+<meta property="og:title" content="Anthropic lanza Memory para agentes gestionados de Claude">
+<meta property="og:description" content="Anthropic presentó Memory, un servicio gestionado para los Claude Managed Agents que extrae información clave de las conversaciones de los agentes y la…">
 <meta property="og:site_name" content="AItoolFit">
 <meta property="og:image" content="https://aitoolfit.ai/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Anthropic lanza Agent Memory — memoria a largo plazo para Claude">
-<meta name="twitter:description" content="Anthropic abrió una beta privada de Agent Memory, un servicio gestionado que extrae información clave de conversaciones de agentes y la muestra cuando es…">
+<meta name="twitter:title" content="Anthropic lanza Memory para agentes gestionados de Claude">
+<meta name="twitter:description" content="Anthropic presentó Memory, un servicio gestionado para los Claude Managed Agents que extrae información clave de las conversaciones de los agentes y la…">
 <meta name="twitter:image" content="https://aitoolfit.ai/og-image.png">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Anthropic lanza Agent Memory — memoria a largo plazo para Claude", "description": "Anthropic abrió una beta privada de Agent Memory, un servicio gestionado que extrae información clave de conversaciones de agentes y la muestra cuando es…", "datePublished": "2026-04-18", "inLanguage": "es", "publisher": {"@type": "Organization", "name": "AItoolFit", "url": "https://aitoolfit.ai"}, "mainEntityOfPage": "https://aitoolfit.ai/es/news/anthropic-agent-memory-long-term-memory-claude.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Anthropic lanza Memory para agentes gestionados de Claude", "description": "Anthropic presentó Memory, un servicio gestionado para los Claude Managed Agents que extrae información clave de las conversaciones de los agentes y la…", "datePublished": "2026-04-18", "inLanguage": "es", "publisher": {"@type": "Organization", "name": "AItoolFit", "url": "https://aitoolfit.ai"}, "mainEntityOfPage": "https://aitoolfit.ai/es/news/anthropic-agent-memory-long-term-memory-claude.html"}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -90,28 +90,48 @@
     <a href="/es/">Home</a> <span>&#8250;</span>
     <a href="/es/news.html">News</a> <span>&#8250;</span>
     <a href="/es/news.html">Tools</a> <span>&#8250;</span>
-    <span>Anthropic lanza Agent Memory — memoria a largo pla…</span>
+    <span>Anthropic lanza Memory para agentes gestionados de…</span>
   </nav>
-  <h1 class="article-title">Anthropic lanza Agent Memory — memoria a largo plazo para Claude</h1>
+  <h1 class="article-title">Anthropic lanza Memory para agentes gestionados de Claude</h1>
   <div class="article-meta">
     <span class="news-tag" style="background:#2dd4a022;color:#2dd4a0;border:1px solid #2dd4a044">Tools</span>
     <span>Apr 18, 2026</span><span class="article-meta-dot">&middot;</span><span>Anthropic Blog</span>
   </div>
   <div class="article-body">
-    <p>Anthropic abrió una beta privada de <strong>Agent Memory</strong>, un servicio gestionado que da a los agentes de Claude una memoria persistente entre sesiones. Hasta ahora cada conversación empezaba de cero: todo lo que el agente aprendía sobre un código, un cliente o un flujo de trabajo desaparecía al terminar la sesión.</p>
-<h2>Qué cambió</h2>
-<p>Agent Memory extrae la información clave de las conversaciones y la vuelve a mostrar cuando resulta relevante, en lugar de repetir transcripciones enteras. El efecto práctico está en la ventana de contexto: el agente conserva lo importante sin arrastrar todo el historial, así el contexto se mantiene ligero y el coste por ejecución predecible.</p>
-<p>La memoria se construyó como una <strong>capa basada en sistema de archivos</strong>: las entradas se guardan como ficheros exportables, gestionables por API y con permisos delimitados. Cada cambio queda registrado, con traza de auditoría por sesión y por agente, para revertir, redactar o eliminar lo que el agente ha retenido.</p>
+    <p>Anthropic lanzó <strong>Memory</strong>, un servicio gestionado que dota a los agentes de Claude de una memoria persistente entre sesiones. Hasta ahora, cada conversación de un agente empezaba desde cero: todo lo que el agente aprendía sobre una base de código, un cliente o un flujo de trabajo desaparecía en cuanto terminaba la sesión.</p>
+<h2>Qué ha cambiado</h2>
+<p>Memory extrae la información clave de las conversaciones de los agentes y la vuelve a mostrar cuando resulta relevante, en lugar de reproducir transcripciones completas. El efecto práctico se nota en la ventana de contexto: el agente conserva lo importante sin arrastrar todo el historial, de modo que el contexto se mantiene compacto y el coste por ejecución resulta predecible.</p>
+<p>Memory está construido como una <strong>capa basada en sistema de archivos</strong>: las entradas se almacenan como archivos que se pueden exportar, gestionar a través de la API y delimitar mediante permisos. Cada cambio queda registrado, con un rastro de auditoría por sesión y por agente, de modo que los equipos pueden revertir, redactar o eliminar lo que un agente ha retenido.</p>
 <h2>Disponibilidad</h2>
-<p>El servicio empezó como beta privada y pasó a <strong>beta pública en la Claude Platform el 23 de abril de 2026</strong> para Claude Managed Agents. Entre los primeros usuarios citados por Anthropic están <strong>Netflix, Rakuten, Wisedocs y Ando</strong>.</p>
-<p>Junto al anuncio, Anthropic abrió un <strong>hackathon para desarrolladores de $100K</strong> centrado en Claude Opus 4.7.</p>
+<p>El servicio se lanzó en <strong>beta pública en Claude Platform el 23 de abril de 2026</strong>, para los Claude Managed Agents. Entre los primeros usuarios mencionados por Anthropic están <strong>Netflix, Rakuten, Wisedocs y Ando</strong>, que lo emplean para reducir el trabajo repetitivo de configuración y disminuir los errores en flujos de trabajo de larga duración.</p>
+<p>Junto con el anuncio, Anthropic abrió un <strong>hackathon para desarrolladores con 100.000 dólares</strong> en premios, construido en torno a Claude Opus 4.7, que ofrece 100.000 dólares en créditos de API y se desarrolla del 21 al 28 de abril.</p>
 <h2>Por qué importa</h2>
-<p>La memoria persistente es lo que separa un chatbot de un agente que mejora con el tiempo. Sin ella, cada mejora hay que meterla a mano en los prompts; con ella, el agente acumula conocimiento solo y el operador deja de reexplicar el mismo contexto.</p>
-<p>La traza de auditoría importa tanto como la memoria: lo que un agente recuerda sobre clientes o sistemas internos tiene que poder inspeccionarse y borrarse antes de que una empresa lo lleve a producción.</p>
+<p>La memoria persistente es lo que distingue a un chatbot de un agente que mejora en su trabajo con el tiempo. Sin ella, cada mejora hay que introducirla manualmente en los prompts; con ella, un agente acumula conocimiento por sí solo y el operador deja de tener que reexplicar el mismo contexto una y otra vez. Para los equipos que operan agentes en colas de soporte, revisión de código o procesamiento de documentos, esto elimina la mayor fuente de mantenimiento repetitivo de prompts.</p>
+<p>El rastro de auditoría importa tanto como la propia memoria: todo lo que un agente recuerda sobre clientes o sistemas internos debe poder inspeccionarse y eliminarse antes de que una empresa lo lleve a producción.</p>
   </div>
     <hr class="article-divider">
     <div class="related-title">Artículos relacionados</div>
     <div class="related-grid">
+      <a class="related-card" href="https://aitoolfit.ai/es/news/chatgpt-visual-ads-image-generation.html">
+        <div class="related-cat" style="color:#2dd4a0">Herramientas</div>
+        <div class="related-name">ChatGPT empezará a mostrar anuncios de imágenes junto a las fotos que genera</div>
+        <div class="related-date">Oct 5, 2026</div>
+      </a>
+      <a class="related-card" href="https://aitoolfit.ai/es/news/apple-macos-full-disk-access-ai-agents.html">
+        <div class="related-cat" style="color:#2dd4a0">Herramientas</div>
+        <div class="related-name">Apple endurecerá el Acceso Total al Disco en macOS por los riesgos de los agentes de IA</div>
+        <div class="related-date">Oct 2, 2026</div>
+      </a>
+      <a class="related-card" href="https://aitoolfit.ai/es/news/cognition-devin-price-cut.html">
+        <div class="related-cat" style="color:#2dd4a0">Herramientas</div>
+        <div class="related-name">Las tareas de Devin cuestan entre un 30 y un 70 por ciento menos, y lidera un benchmark de programación</div>
+        <div class="related-date">Sep 28, 2026</div>
+      </a>
+      <a class="related-card" href="https://aitoolfit.ai/es/news/kling-4-launch.html">
+        <div class="related-cat" style="color:#2dd4a0">Herramientas</div>
+        <div class="related-name">Anuncian Kling 4.0: clips de hasta 30 segundos y un nivel rápido en beta limitada</div>
+        <div class="related-date">Sep 27, 2026</div>
+      </a>
       <a class="related-card" href="https://aitoolfit.ai/es/news/kling-legacy-models-retirement.html">
         <div class="related-cat" style="color:#2dd4a0">Herramientas</div>
         <div class="related-name">Kling AI retira seis modelos de vídeo, cuatro modelos de imagen y la API de prueba virtual</div>
@@ -121,26 +141,6 @@
         <div class="related-cat" style="color:#2dd4a0">Herramientas</div>
         <div class="related-name">Perplexity lleva su agente a tu propia GPU: sin tokens, sin nube</div>
         <div class="related-date">Sep 14, 2026</div>
-      </a>
-      <a class="related-card" href="https://aitoolfit.ai/es/news/cursor-projects-subagents.html">
-        <div class="related-cat" style="color:#2dd4a0">Herramientas</div>
-        <div class="related-name">Cursor lanza Projects, un agente coordinador que delega en miles de subagentes</div>
-        <div class="related-date">Sep 10, 2026</div>
-      </a>
-      <a class="related-card" href="https://aitoolfit.ai/es/news/cursor-origin-code-hosting.html">
-        <div class="related-cat" style="color:#2dd4a0">Herramientas</div>
-        <div class="related-name">Cursor lanza su propio alojamiento de código — y agentes que arrancan sin repositorio</div>
-        <div class="related-date">Aug 17, 2026</div>
-      </a>
-      <a class="related-card" href="https://aitoolfit.ai/es/news/cursor-ipad-workspace-start-plan.html">
-        <div class="related-cat" style="color:#2dd4a0">Herramientas</div>
-        <div class="related-name">Cursor añade agentes para Google Workspace, una app para iPad y un plan económico para India</div>
-        <div class="related-date">Aug 3, 2026</div>
-      </a>
-      <a class="related-card" href="https://aitoolfit.ai/es/news/cursor-composer-25-kimi-k25.html">
-        <div class="related-cat" style="color:#2dd4a0">Herramientas</div>
-        <div class="related-name">Cursor Composer 2.5 funciona con Kimi K2.5 — iguala a Opus 4.7 a 14× menor coste</div>
-        <div class="related-date">May 18, 2026</div>
       </a>
     </div>
 </div>

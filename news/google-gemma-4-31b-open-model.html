@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Google Gemma 4 Released: 31B Open Model Ranks… — AItoolFit</title>
-<meta name="description" content="Google released Gemma 4 in four variants from 2.3B to 31B parameters. The 31B Dense model ranks #3 globally on Arena AI among open models, making it the…">
+<meta name="description" content="Google released Gemma 4 in four variants: E2B, E4B, a 26B A4B mixture-of-experts model, and a 31B Dense model. The 31B Dense model ranks #3 globally on…">
 <link rel="canonical" href="https://aitoolfit.ai/news/google-gemma-4-31b-open-model.html">
 <link rel="alternate" hreflang="en" href="https://aitoolfit.ai/news/google-gemma-4-31b-open-model.html">
 <link rel="alternate" hreflang="es" href="https://aitoolfit.ai/es/news/google-gemma-4-31b-open-model.html">
@@ -21,14 +21,14 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://aitoolfit.ai/news/google-gemma-4-31b-open-model.html">
 <meta property="og:title" content="Google Gemma 4 Released: 31B Open Model Ranks #3 Globally">
-<meta property="og:description" content="Google released Gemma 4 in four variants from 2.3B to 31B parameters. The 31B Dense model ranks #3 globally on Arena AI among open models, making it the…">
+<meta property="og:description" content="Google released Gemma 4 in four variants: E2B, E4B, a 26B A4B mixture-of-experts model, and a 31B Dense model. The 31B Dense model ranks #3 globally on…">
 <meta property="og:site_name" content="AItoolFit">
 <meta property="og:image" content="https://aitoolfit.ai/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Google Gemma 4 Released: 31B Open Model Ranks #3 Globally">
-<meta name="twitter:description" content="Google released Gemma 4 in four variants from 2.3B to 31B parameters. The 31B Dense model ranks #3 globally on Arena AI among open models, making it the…">
+<meta name="twitter:description" content="Google released Gemma 4 in four variants: E2B, E4B, a 26B A4B mixture-of-experts model, and a 31B Dense model. The 31B Dense model ranks #3 globally on…">
 <meta name="twitter:image" content="https://aitoolfit.ai/og-image.png">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Google Gemma 4 Released: 31B Open Model Ranks #3 Globally", "description": "Google released Gemma 4 in four variants from 2.3B to 31B parameters. The 31B Dense model ranks #3 globally on Arena AI among open models, making it the…", "datePublished": "2026-04-10", "inLanguage": "en", "publisher": {"@type": "Organization", "name": "AItoolFit", "url": "https://aitoolfit.ai"}, "mainEntityOfPage": "https://aitoolfit.ai/news/google-gemma-4-31b-open-model.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Google Gemma 4 Released: 31B Open Model Ranks #3 Globally", "description": "Google released Gemma 4 in four variants: E2B, E4B, a 26B A4B mixture-of-experts model, and a 31B Dense model. The 31B Dense model ranks #3 globally on…", "datePublished": "2026-04-10", "inLanguage": "en", "publisher": {"@type": "Organization", "name": "AItoolFit", "url": "https://aitoolfit.ai"}, "mainEntityOfPage": "https://aitoolfit.ai/news/google-gemma-4-31b-open-model.html"}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -98,14 +98,14 @@
     <span>Apr 10, 2026</span><span class="article-meta-dot">&middot;</span><span>Google Blog</span>
   </div>
   <div class="article-body">
-    <p>Google has released <strong>Gemma 4</strong>, the latest generation of its open-weight model family, in four variants ranging from <strong>2.3 billion to 31 billion parameters</strong>.</p>
+    <p>Google has released <strong>Gemma 4</strong>, the latest generation of its open-weight model family, in four variants: <strong>E2B (2.3 billion effective parameters), E4B (4.5 billion effective parameters), a 26B A4B mixture-of-experts model (3.8 billion active parameters), and a 31B Dense model</strong>.</p>
 <h2>Gemma 4 31B: #3 globally</h2>
 <p>The flagship <strong>Gemma 4 31B Dense model ranks third globally</strong> on the Arena AI leaderboard among open-weight models — behind only much larger models. This makes it the strongest open model Google has ever released and a serious competitor to Meta's Llama family.</p>
 <h2>Model variants</h2>
-<p>The four Gemma 4 variants — 2.3B, 7B, 14B and 31B — are designed to cover different deployment scenarios, from on-device mobile applications to cloud inference. All variants support a 128K token context window and are optimized for Google's TPU hardware as well as standard NVIDIA GPUs.</p>
+<p>The four Gemma 4 variants — E2B, E4B, 26B A4B, and 31B Dense — are designed to cover different deployment scenarios, from on-device mobile applications to cloud inference. The E2B and E4B models support a 128K token context window, while the 26B A4B and 31B models support a 256K token context window. All variants are optimized for Google's TPU hardware as well as standard NVIDIA GPUs.</p>
 <h3>Multimodal capabilities</h3>
-<p>For the first time in the Gemma series, the 14B and 31B variants include native vision capabilities, allowing them to process images alongside text. This brings Gemma closer to feature parity with closed multimodal models.</p>
-<p>All Gemma 4 weights are available on Hugging Face and Google AI Studio under a permissive open license allowing commercial use.</p>
+<p>Every Gemma 4 size takes image input, and the smaller E2B and E4B models also accept audio input. This brings Gemma closer to feature parity with closed multimodal models.</p>
+<p>All Gemma 4 weights are available on Hugging Face and Google AI Studio under the Apache 2.0 license, marking the first time Google has used this license for a Gemma release and allowing commercial use.</p>
   </div>
     <hr class="article-divider">
     <div class="related-title">Related articles</div>
@@ -115,30 +115,30 @@
         <div class="related-name">Zhipu AI Open-Sources GLM-5.1: 744B Parameter MoE Model</div>
         <div class="related-date">Apr 8, 2026</div>
       </a>
+      <a class="related-card" href="https://aitoolfit.ai/news/mistral-large-4-open-weights.html">
+        <div class="related-cat" style="color:#7c6af7">Models</div>
+        <div class="related-name">Mistral Large 4: a Trillion-Parameter Model With Open Weights at the End of October</div>
+        <div class="related-date">Oct 6, 2026</div>
+      </a>
+      <a class="related-card" href="https://aitoolfit.ai/news/openai-anthropic-cheaper-models-same-week.html">
+        <div class="related-cat" style="color:#7c6af7">Models</div>
+        <div class="related-name">A Week After Calling for a Slowdown, OpenAI and Anthropic Both Cut Prices</div>
+        <div class="related-date">Sep 22, 2026</div>
+      </a>
       <a class="related-card" href="https://aitoolfit.ai/news/gpt-image-25-cheaper-than-predecessors.html">
         <div class="related-cat" style="color:#7c6af7">Models</div>
-        <div class="related-name">OpenAI&#x27;s Newest Image Models Cost Less Than the Ones They Replace</div>
+        <div class="related-name">OpenAI&#x27;s Newest Image Models Match Predecessor&#x27;s Price, Stay Cheaper Than Older Generations</div>
         <div class="related-date">Sep 8, 2026</div>
       </a>
       <a class="related-card" href="https://aitoolfit.ai/news/openai-gpt-6-astra-generally-available.html">
         <div class="related-cat" style="color:#7c6af7">Models</div>
-        <div class="related-name">GPT-6 Astra Leaves Limited Preview — With One Caveat for EU Data Residency</div>
+        <div class="related-name">GPT-6 Astra Launches on OpenAI API — With One Caveat for EU Data Residency</div>
         <div class="related-date">Sep 5, 2026</div>
       </a>
       <a class="related-card" href="https://aitoolfit.ai/news/openai-gpt-6-astra-launch.html">
         <div class="related-cat" style="color:#7c6af7">Models</div>
         <div class="related-name">OpenAI Announces GPT-6 Astra — a New Flagship at $10 / $50 per Million Tokens</div>
         <div class="related-date">Sep 3, 2026</div>
-      </a>
-      <a class="related-card" href="https://aitoolfit.ai/news/gemini-38-flash-ga.html">
-        <div class="related-cat" style="color:#7c6af7">Models</div>
-        <div class="related-name">Gemini 3.8 Flash Reaches General Availability for Long-Horizon Agent Work</div>
-        <div class="related-date">Sep 2, 2026</div>
-      </a>
-      <a class="related-card" href="https://aitoolfit.ai/news/anthropic-fable-mythos-51.html">
-        <div class="related-cat" style="color:#7c6af7">Models</div>
-        <div class="related-name">Anthropic Ships Claude Fable 5.1 and Mythos 5.1 With Enterprise Frontier Safeguards</div>
-        <div class="related-date">Sep 1, 2026</div>
       </a>
     </div>
 </div>

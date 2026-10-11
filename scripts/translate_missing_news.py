@@ -54,7 +54,9 @@ RULES = """- Keep every number, version, date, price and percentage exactly as i
 - Do NOT translate product, company or model names (Claude Opus 5, GPT-5.6 Luna,
   Gemini 3.6 Flash, DeepSeek V4-Flash, Cursor, Figma…) — leave them in Latin script.
 - Natural, factual news register. No hype, no added claims, nothing invented.
-- The headline must read like a news headline in {language}, not a word-by-word calque."""
+- The headline must read like a news headline in {language}, not a word-by-word calque.
+- The answer is JSON: escape every double quote inside a value as \\" — including
+  Hebrew abbreviations such as ארה\\"ב — or use the language's own quotation marks."""
 
 PROMPT_SHORT = """Translate this AI-industry news headline and summary into {language}.
 

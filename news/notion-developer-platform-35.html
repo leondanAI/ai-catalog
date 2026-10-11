@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Notion Developer Platform 3.5 — Workers… — AItoolFit</title>
-<meta name="description" content="Notion released Developer Platform 3.5 on May 13, 2026. Workers runtime lets developers deploy serverless JavaScript logic inside Notion. Database Sync…">
+<meta name="description" content="Notion released Developer Platform 3.5 on May 13, 2026. Workers runtime lets developers deploy custom code inside a hosted, sandboxed Notion environment.…">
 <link rel="canonical" href="https://aitoolfit.ai/news/notion-developer-platform-35.html">
 <link rel="alternate" hreflang="en" href="https://aitoolfit.ai/news/notion-developer-platform-35.html">
 <link rel="alternate" hreflang="es" href="https://aitoolfit.ai/es/news/notion-developer-platform-35.html">
@@ -20,15 +20,15 @@
 <link rel="apple-touch-icon" href="/favicon-192.png">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://aitoolfit.ai/news/notion-developer-platform-35.html">
-<meta property="og:title" content="Notion Developer Platform 3.5 — Workers Runtime, Database Sync, Bidirectional Webhooks, and Agent Plan Mode">
-<meta property="og:description" content="Notion released Developer Platform 3.5 on May 13, 2026. Workers runtime lets developers deploy serverless JavaScript logic inside Notion. Database Sync…">
+<meta property="og:title" content="Notion Developer Platform 3.5 — Workers Runtime, One-Way Database Sync, Bidirectional Webhooks, and New Agent APIs">
+<meta property="og:description" content="Notion released Developer Platform 3.5 on May 13, 2026. Workers runtime lets developers deploy custom code inside a hosted, sandboxed Notion environment.…">
 <meta property="og:site_name" content="AItoolFit">
 <meta property="og:image" content="https://aitoolfit.ai/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Notion Developer Platform 3.5 — Workers Runtime, Database Sync, Bidirectional Webhooks, and Agent Plan Mode">
-<meta name="twitter:description" content="Notion released Developer Platform 3.5 on May 13, 2026. Workers runtime lets developers deploy serverless JavaScript logic inside Notion. Database Sync…">
+<meta name="twitter:title" content="Notion Developer Platform 3.5 — Workers Runtime, One-Way Database Sync, Bidirectional Webhooks, and New Agent APIs">
+<meta name="twitter:description" content="Notion released Developer Platform 3.5 on May 13, 2026. Workers runtime lets developers deploy custom code inside a hosted, sandboxed Notion environment.…">
 <meta name="twitter:image" content="https://aitoolfit.ai/og-image.png">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Notion Developer Platform 3.5 — Workers Runtime, Database Sync, Bidirectional Webhooks, and Agent Plan Mode", "description": "Notion released Developer Platform 3.5 on May 13, 2026. Workers runtime lets developers deploy serverless JavaScript logic inside Notion. Database Sync…", "datePublished": "2026-05-13", "inLanguage": "en", "publisher": {"@type": "Organization", "name": "AItoolFit", "url": "https://aitoolfit.ai"}, "mainEntityOfPage": "https://aitoolfit.ai/news/notion-developer-platform-35.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Notion Developer Platform 3.5 — Workers Runtime, One-Way Database Sync, Bidirectional Webhooks, and New Agent APIs", "description": "Notion released Developer Platform 3.5 on May 13, 2026. Workers runtime lets developers deploy custom code inside a hosted, sandboxed Notion environment.…", "datePublished": "2026-05-13", "inLanguage": "en", "publisher": {"@type": "Organization", "name": "AItoolFit", "url": "https://aitoolfit.ai"}, "mainEntityOfPage": "https://aitoolfit.ai/news/notion-developer-platform-35.html"}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -90,24 +90,24 @@
     <a href="/">Home</a> <span>&#8250;</span>
     <a href="/news.html">News</a> <span>&#8250;</span>
     <a href="/news.html">Tools</a> <span>&#8250;</span>
-    <span>Notion Developer Platform 3.5 — Workers Runtime, D…</span>
+    <span>Notion Developer Platform 3.5 — Workers Runtime, O…</span>
   </nav>
-  <h1 class="article-title">Notion Developer Platform 3.5 — Workers Runtime, Database Sync, Bidirectional Webhooks, and Agent Plan Mode</h1>
+  <h1 class="article-title">Notion Developer Platform 3.5 — Workers Runtime, One-Way Database Sync, Bidirectional Webhooks, and New Agent APIs</h1>
   <div class="article-meta">
     <span class="news-tag" style="background:#2dd4a022;color:#2dd4a0;border:1px solid #2dd4a044">Tools</span>
     <span>May 13, 2026</span><span class="article-meta-dot">&middot;</span><span>Notion Blog</span>
   </div>
   <div class="article-body">
     
-<p>Notion released <strong>Developer Platform 3.5</strong> on May 13, 2026 — the most significant developer-facing update in the company's history. The release introduces four new capabilities that transform Notion from a knowledge workspace into a programmable platform with agentic AI execution.</p>
+<p>Notion released <strong>Developer Platform 3.5</strong> on May 13, 2026 — the most significant developer-facing update in the company's history. The release introduces several new capabilities that transform Notion from a knowledge workspace into a programmable platform with agentic AI execution.</p>
 <h2>Workers runtime</h2>
-<p><strong>Workers runtime</strong> allows developers to write and deploy custom serverless JavaScript functions that run directly inside Notion. Logic — automations, data transformations, integrations — lives alongside content rather than in external services. A Notion database can now trigger a function, process the data, call an external API, and write results back — all within the Notion environment without routing through Zapier, Make, or custom backend infrastructure.</p>
+<p><strong>Workers runtime</strong> is Notion's hosted runtime for custom code, deployed via the new Notion CLI and run in a sandboxed environment inside Notion. Logic — automations, data transformations, integrations — lives alongside content rather than in external services. A Notion database can now trigger a function, process the data, call an external API, and write results back — all within the Notion environment without routing through Zapier, Make, or custom backend infrastructure. Workers are free during the beta, with pricing based on Notion credits beginning August 11, 2026.</p>
 <h2>Database Sync</h2>
-<p><strong>Database Sync</strong> adds two-way, bidirectional connections between Notion databases and external data sources including SQL databases and third-party APIs. Unlike Notion's previous one-way data imports, changes made in Notion are now reflected in the external system and vice versa. Notion becomes a live operational interface rather than a static copy of external data — enabling use cases like a Notion-based CRM that stays synchronized with Salesforce or a product database connected to a PostgreSQL backend.</p>
-<h2>Bidirectional Webhooks and Plan Mode</h2>
-<p><strong>Bidirectional Webhooks</strong> extend the event model in both directions: Notion can receive incoming webhooks from external services to trigger workflows and send outgoing webhooks when Notion content changes. <strong>Plan Mode</strong> is a new AI agent capability: agents reason about multi-step tasks, create a plan, execute each step, and adapt when circumstances change — behaving autonomously on structured Notion knowledge bases rather than responding to single prompts.</p>
+<p><strong>Database Sync</strong>, currently in beta, lets Workers pull data from external APIs into Notion databases — for example, importing Zendesk tickets or Salesforce records directly into Notion. The connection is one-way: external data flows into Notion, giving teams a live, continuously updated view of information that previously required manual import or one-off automation.</p>
+<h2>Bidirectional Webhooks and new agent APIs</h2>
+<p><strong>Bidirectional Webhooks</strong> extend the event model in both directions: Notion can receive incoming webhooks from external services to trigger workflows and send outgoing webhooks when Notion content changes. The release also introduces new agent capabilities: an <strong>External Agents API</strong> (alpha) for connecting outside agents to Notion, custom agent tools built as Workers (beta), and a <strong>Notion Agent SDK</strong> (alpha) for building agents that operate on structured Notion data.</p>
 <h2>Why it matters</h2>
-<p>Developer Platform 3.5 positions Notion as a platform where AI agents operate on structured, interconnected data rather than just on documents. For teams already using Notion as their operational hub, Workers and Database Sync unlock automation and integration capabilities that previously required dedicated engineering work. For AI builders, Plan Mode with bidirectional data access opens Notion databases as a substrate for autonomous agent workflows.</p>
+<p>Developer Platform 3.5 positions Notion as a platform where custom code and agents operate on structured, interconnected data rather than just on documents. For teams already using Notion as their operational hub, Workers and Database Sync unlock automation and integration capabilities that previously required dedicated engineering work. For AI builders, the new agent APIs and SDK open Notion databases as a substrate for building autonomous agent workflows.</p>
 
   </div>
     <hr class="article-divider">
@@ -120,12 +120,12 @@
       </a>
       <a class="related-card" href="https://aitoolfit.ai/news/pika-25-pikastream-ai-social-app.html">
         <div class="related-cat" style="color:#2dd4a0">Tools</div>
-        <div class="related-name">Pika 2.5 and PikaStream 1.0 — Flicker-Free Video, Stable Characters, Real-Time AI Video Chat</div>
+        <div class="related-name">PikaStream 1.0 Launches Real-Time AI Video Chat With Personalized AI Avatars</div>
         <div class="related-date">May 10, 2026</div>
       </a>
       <a class="related-card" href="https://aitoolfit.ai/news/figma-mcp-server-ai-agents-canvas.html">
         <div class="related-cat" style="color:#2dd4a0">Tools</div>
-        <div class="related-name">Figma MCP Server Lets AI Agents Design Directly on the Canvas — Plus Built-In AI Image Tools and Voice Input</div>
+        <div class="related-name">Figma&#x27;s MCP Server Now Lets AI Agents Write Directly to the Canvas</div>
         <div class="related-date">May 10, 2026</div>
       </a>
       <a class="related-card" href="https://aitoolfit.ai/news/anthropic-claude-design-launch.html">
@@ -135,12 +135,12 @@
       </a>
       <a class="related-card" href="https://aitoolfit.ai/news/adobe-creative-agent-cc-orchestration.html">
         <div class="related-cat" style="color:#2dd4a0">Tools</div>
-        <div class="related-name">Adobe Creative Agent Orchestrates AI Workflows Across All Creative Cloud Apps From a Single Prompt</div>
+        <div class="related-name">Adobe Unveils Firefly AI Assistant to Orchestrate Creative Cloud Workflows From a Single Prompt</div>
         <div class="related-date">Apr 20, 2026</div>
       </a>
       <a class="related-card" href="https://aitoolfit.ai/news/anthropic-agent-memory-long-term-memory-claude.html">
         <div class="related-cat" style="color:#2dd4a0">Tools</div>
-        <div class="related-name">Anthropic Launches Agent Memory — Long-Term Memory for Claude</div>
+        <div class="related-name">Anthropic Launches Memory for Claude Managed Agents</div>
         <div class="related-date">Apr 18, 2026</div>
       </a>
     </div>

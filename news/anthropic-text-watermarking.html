@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anthropic Explains How Text Watermarking Works… — AItoolFit</title>
-<meta name="description" content="Anthropic published an explanation on August 14, 2026 of how it implements text watermarking and what effect it has on Claude&#x27;s outputs. The post covers…">
+<title>Anthropic to Add SynthID-Based Watermarking to… — AItoolFit</title>
+<meta name="description" content="Anthropic announced on August 14, 2026 that it will apply text watermarking, built on Google DeepMind&#x27;s SynthID-Text, to future Claude models and roll it…">
 <link rel="canonical" href="https://aitoolfit.ai/news/anthropic-text-watermarking.html">
 <link rel="alternate" hreflang="en" href="https://aitoolfit.ai/news/anthropic-text-watermarking.html">
 <link rel="alternate" hreflang="es" href="https://aitoolfit.ai/es/news/anthropic-text-watermarking.html">
@@ -20,15 +20,15 @@
 <link rel="apple-touch-icon" href="/favicon-192.png">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://aitoolfit.ai/news/anthropic-text-watermarking.html">
-<meta property="og:title" content="Anthropic Explains How Text Watermarking Works in Claude Outputs">
-<meta property="og:description" content="Anthropic published an explanation on August 14, 2026 of how it implements text watermarking and what effect it has on Claude&#x27;s outputs. The post covers…">
+<meta property="og:title" content="Anthropic to Add SynthID-Based Watermarking to Claude for EU AI Act Compliance">
+<meta property="og:description" content="Anthropic announced on August 14, 2026 that it will apply text watermarking, built on Google DeepMind&#x27;s SynthID-Text, to future Claude models and roll it…">
 <meta property="og:site_name" content="AItoolFit">
 <meta property="og:image" content="https://aitoolfit.ai/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Anthropic Explains How Text Watermarking Works in Claude Outputs">
-<meta name="twitter:description" content="Anthropic published an explanation on August 14, 2026 of how it implements text watermarking and what effect it has on Claude&#x27;s outputs. The post covers…">
+<meta name="twitter:title" content="Anthropic to Add SynthID-Based Watermarking to Claude for EU AI Act Compliance">
+<meta name="twitter:description" content="Anthropic announced on August 14, 2026 that it will apply text watermarking, built on Google DeepMind&#x27;s SynthID-Text, to future Claude models and roll it…">
 <meta name="twitter:image" content="https://aitoolfit.ai/og-image.png">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Anthropic Explains How Text Watermarking Works in Claude Outputs", "description": "Anthropic published an explanation on August 14, 2026 of how it implements text watermarking and what effect it has on Claude's outputs. The post covers…", "datePublished": "2026-08-14", "inLanguage": "en", "publisher": {"@type": "Organization", "name": "AItoolFit", "url": "https://aitoolfit.ai"}, "mainEntityOfPage": "https://aitoolfit.ai/news/anthropic-text-watermarking.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Anthropic to Add SynthID-Based Watermarking to Claude for EU AI Act Compliance", "description": "Anthropic announced on August 14, 2026 that it will apply text watermarking, built on Google DeepMind's SynthID-Text, to future Claude models and roll it…", "datePublished": "2026-08-14", "inLanguage": "en", "publisher": {"@type": "Organization", "name": "AItoolFit", "url": "https://aitoolfit.ai"}, "mainEntityOfPage": "https://aitoolfit.ai/news/anthropic-text-watermarking.html"}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -90,28 +90,28 @@
     <a href="/">Home</a> <span>&#8250;</span>
     <a href="/news.html">News</a> <span>&#8250;</span>
     <a href="/news.html">Research</a> <span>&#8250;</span>
-    <span>Anthropic Explains How Text Watermarking Works in …</span>
+    <span>Anthropic to Add SynthID-Based Watermarking to Cla…</span>
   </nav>
-  <h1 class="article-title">Anthropic Explains How Text Watermarking Works in Claude Outputs</h1>
+  <h1 class="article-title">Anthropic to Add SynthID-Based Watermarking to Claude for EU AI Act Compliance</h1>
   <div class="article-meta">
     <span class="news-tag" style="background:#4aaef522;color:#4aaef5;border:1px solid #4aaef544">Research</span>
     <span>Aug 14, 2026</span><span class="article-meta-dot">&middot;</span><span>Anthropic</span>
   </div>
   <div class="article-body">
-    <p>Anthropic has published an explanation of <strong>text watermarking</strong> in Claude's outputs — how it is implemented and what effect it has on generated text.</p>
-<h2>What was published</h2>
-<p>An explanation, not a launch. The post addresses the mechanism and its consequences for output quality, which is the question anyone relying on Claude for production text actually cares about.</p>
+    <p>Anthropic has announced it will add <strong>text watermarking</strong> to Claude's outputs, built on Google DeepMind's SynthID-Text technology, in order to comply with the EU AI Act.</p>
+<h2>What was announced</h2>
+<p>The August 14, 2026 post describes a rollout: watermarking will be applied to future Claude models and extended to older models over the coming months. A detection API for checking whether text carries the watermark is already in private preview, available to regulators, law enforcement, and researchers.</p>
 <p>Watermarking embeds a statistical signal in generated text that survives normal use but can be detected by someone holding the key. The trade-off is always the same: a stronger signal is easier to detect and more likely to constrain word choice.</p>
-<h2>Why a vendor explains this</h2>
+<h2>Why a vendor announces this</h2>
 <p>Because the alternative is customers finding out another way. Anyone publishing at scale with an AI assistant has a reasonable interest in knowing whether the output carries a detectable marker, and a vendor that documents it plainly avoids the worse version of that conversation later.</p>
-<p>Regulatory pressure is the other half. Several jurisdictions have moved toward requiring AI-generated content to be identifiable, and provenance mechanisms shipped before a mandate arrive on the vendor's terms rather than a regulator's.</p>
+<p>Regulatory pressure is the other half. The EU AI Act has moved toward requiring AI-generated content to be identifiable, and provenance mechanisms shipped before a mandate arrive on the vendor's terms rather than a regulator's.</p>
 <h2>What it means in practice</h2>
 <p>For most work, nothing. Watermarking is designed not to degrade quality noticeably, and Anthropic's post is largely about demonstrating that.</p>
 <p>Where it does matter: if your business depends on AI-generated text being indistinguishable from human writing, that assumption now has a documented mechanism working against it. That is not a bug — detectability is the point — but it is worth knowing rather than discovering.</p>
 <h2>The broader direction</h2>
 <p>Provenance is becoming table stakes across the industry, from image credentials to text watermarking. The practical question for anyone building on these models is shifting from whether outputs can be identified to who holds the detection key and under what conditions they use it.</p>
 <h2>What to keep an eye on</h2>
-<p>Two open questions follow from this. First, whether detection stays in Anthropic's hands or is offered to third parties — a marker only the vendor can read has very different consequences from one any platform can check. Second, whether the other frontier labs document their own approaches; right now the industry has a patchwork of provenance schemes with no shared standard, and content moving between tools may pick up or lose signals along the way.</p>
+<p>Two open questions follow from this. First, whether detection access expands beyond the current private preview for regulators, law enforcement, and researchers to a wider set of third parties — a marker only a limited group can read has very different consequences from one any platform can check. Second, whether the other frontier labs document their own approaches; right now the industry has a patchwork of provenance schemes with no shared standard, and content moving between tools may pick up or lose signals along the way.</p>
   </div>
     <hr class="article-divider">
     <div class="related-title">Related articles</div>
@@ -128,7 +128,7 @@
       </a>
       <a class="related-card" href="https://aitoolfit.ai/news/pwc-top-companies-ai-economic-gains.html">
         <div class="related-cat" style="color:#4aaef5">Research</div>
-        <div class="related-name">PwC: Top 20% of Companies Capture 75% of AI Economic Gains</div>
+        <div class="related-name">PwC: Top 20% of Companies Capture 74% of AI Economic Gains</div>
         <div class="related-date">Apr 14, 2026</div>
       </a>
       <a class="related-card" href="https://aitoolfit.ai/news/ai-agents-papercut-campaign.html">

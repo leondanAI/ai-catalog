@@ -1,0 +1,207 @@
+[
+ {
+  "slug": "framer-ai",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "1M+",
+   "best_for": "AI-generated websites with designer-quality output and CMS",
+   "description": "Framer is an AI-first website builder, now at version 3.0 (June 2026), built around Framer Agents that co-edit your site directly on the canvas. AI work is metered through a credit system, and the tool runs from a free plan up to Enterprise.",
+   "description_long": "Framer is a browser-based website builder that pairs a visual design canvas with AI generation. Rather than only turning a text prompt into a landing page, it now lets you build, restyle, and wire up full responsive sites, publish them on Framer hosting, and manage content through a built-in CMS.\n\nThe current release, Framer 3.0 (June 16, 2026), was a major overhaul. It introduced Framer Agents for in-canvas AI co-editing through a new Agent tab, along with Branching, External Agents, a rebuilt Community, and a credit-based pricing model. The old Scale plan ($100/mo) was retired, leaving Free, Basic, Pro, and Enterprise tiers.\n\nAgents can generate pages, turn a screenshot into a layout, build code components, restructure CMS collections, and translate content into 100+ languages. Every agent action consumes AI credits. You can pick advanced models in the editor, including Fable 5 (July 3, 2026) and Sonnet 5. Other AI surfaces include Workshop for component generation, the Framer MCP plugin for bringing your own LLM, AI Translate, Auto Rename, Wireframer, and a Claude & Codex beta.\n\nPricing runs from Free ($0/mo, 500 daily credits that don't roll over, 1 GB bandwidth, a free Framer domain, up to 3 editors) to Basic ($10/mo, 1,000 monthly credits, 50 GB bandwidth, 2 CMS collections, custom domain, built-in SEO) and Pro ($30/mo, 3,000 monthly credits, 100 GB bandwidth, 10 CMS collections, staging plus branching, unlimited editors). Enterprise is custom-priced with volume-discount credits, SSO/SCIM, and an uptime guarantee.\n\nSince the May 2026 update, extra editor seats cost $20/mo (down from $40), a CMS-only Content Editor seat is $10/mo, and you can buy additional credit packs starting at 1,000 credits. The credit model means heavy AI use can add real cost on top of the base subscription.\n\nFramer fits designers, marketers, and small teams who want a polished, hosted site with AI assistance and don't need a fully custom code stack. If you generate a lot of AI content or want predictable flat-rate costs, budget for credit consumption before committing.",
+   "pros": [
+    "Framer Agents let you co-edit the site directly on the canvas instead of only generating from a text prompt",
+    "Combines a genuine visual design tool with AI generation, so you can hand-tune anything the AI produces",
+    "Built-in hosting, CMS, and SEO mean you can go from idea to a live custom-domain site in one place",
+    "Advanced models like Fable 5 and Sonnet 5 are selectable in-editor for higher-quality generation",
+    "Free plan is usable for real experimentation with 500 daily credits and up to 3 editors"
+   ],
+   "cons": [
+    "The AI-credit system meters every agent action, so heavy generation can cost more than the flat subscription suggests",
+    "Free-plan credits reset daily and don't roll over, which limits sustained AI work",
+    "CMS collection limits are tight on lower tiers (2 on Basic, 10 on Pro)",
+    "Extra editor and content-editor seats are billed separately on top of the plan",
+    "Deep customization still leans on Framer's own model rather than exporting to a standard code stack"
+   ],
+   "choose_if": [
+    "You want AI to co-edit a real design canvas, not just spit out a landing page",
+    "You need built-in hosting, CMS, and SEO in a single tool",
+    "You are a designer or small marketing team publishing polished sites fast",
+    "You are comfortable managing AI credit consumption as part of your budget",
+    "You want to try advanced models like Fable 5 or Sonnet 5 inside the editor"
+   ],
+   "faq": [
+    {
+     "a": "Framer AI is a website builder where you describe your site in text and AI generates a complete, styled website. You can then edit the design visually, add CMS content, and publish to a live URL with a custom domain. It bridges the gap between AI generation and professional web design.",
+     "q": "What is Framer AI?"
+    },
+    {
+     "a": "Canva has a basic website builder feature, but it's limited compared to dedicated website builders like Framer or Webflow. Canva websites lack advanced animations, CMS functionality, and design control. Canva is best for graphics; Framer is better for actual websites.",
+     "q": "Can Canva build a website?"
+    },
+    {
+     "a": "Framer has a free plan for one site with a framer.app subdomain. Mini plan is $5/month, Basic is $15/month, and Pro is $30/month — all with custom domain support. AI site generation is included in the free plan.",
+     "q": "Is Framer AI free?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": null,
+   "best_for": "AI-generated websites with designer-quality output and CMS",
+   "description": "Framer is an AI-first website builder, now at version 3.0 (launched June 16, 2026), built around Framer Agents that co-edit your site directly on the canvas. AI work is metered through a credit system, and the tool runs from a free plan up to Enterprise.",
+   "description_long": "Framer is a browser-based website builder that pairs a visual design canvas with AI generation. Rather than only turning a text prompt into a landing page, it lets you build, restyle, and wire up responsive sites, publish them on Framer hosting, and manage content through a built-in CMS.\n\nThe current release, Framer 3.0, launched June 16, 2026, as a major overhaul. It introduced Framer Agents for in-canvas AI co-editing through a new Agent tab, along with Branching, External Agents, a rebuilt Community, and a credit-based pricing model. The old Scale plan was retired, leaving Free, Basic, Pro, and Enterprise tiers.\n\nAccording to Framer's own Agents page, Agents can build sites, migrate content, fix responsive layout issues, build components, generate SEO metadata, manage CMS collections, and run site audits. Multiple model families are selectable in the editor, described by Framer as GPT, Sonnet, Opus, and Fable, without specific version numbers published. External Agents let you drive Framer from tools like Claude Code, Codex, Cursor, or a terminal.\n\nPricing starts with Free ($0): 500 AI credits to try Agents, 1 GB bandwidth, a free Framer domain, up to 3 editors, non-commercial use, 10 CMS collections, 1,000 pages, 5 MB uploads, and one free locale, with no custom domain. Framer's pricing page also lists Basic at $10 and Pro at $30, but the page includes a yearly-billing toggle and does not separately disclose a confirmed monthly-billing figure, so these amounts reflect the listed pricing-page price rather than a verified per-month charge. Basic includes 1,000 AI credits per billing period (selectable up to 15,000 at a higher price), 50 GB bandwidth, 2 CMS collections, 1,000 CMS items, 30 pages, a custom domain, and built-in SEO. Pro includes 3,000 credits (selectable up to 100,000), 100 GB bandwidth, 10 CMS collections (expandable at $40 per additional 10, up to 40), 150 pages, staging, branching with previews, and add-ons such as advanced hosting and A/B testing. Enterprise is custom-priced and billed annually, with volume-discount credits, unlimited editors, SSO/SCIM, and an uptime guarantee.\n\nOn Basic and Pro, an additional editor seat costs $20 per month and a CMS-only Content Editor seat costs $10 per month, with viewer access free; this seat pricing was introduced in Framer's June 16, 2026 pricing update. Because AI actions consume credits, heavy generation can add real cost on top of the base subscription, and CMS collection limits are notably tighter on Basic than on the free tier.\n\nFramer fits designers, marketers, and small teams who want a polished, hosted site with AI assistance and don't need a fully custom code stack. Anyone doing heavy AI generation should budget for credit consumption, and anyone comparing Basic or Pro costs should confirm the actual monthly charge at checkout, since the published figures may reflect annual billing.",
+   "pros": [
+    "Framer Agents let you co-edit the site directly on the canvas instead of only generating from a text prompt",
+    "Combines a genuine visual design tool with AI generation, so you can hand-tune anything the AI produces",
+    "Built-in hosting, CMS, and SEO mean you can go from idea to a live site in one place on paid tiers",
+    "Multiple model families (GPT, Sonnet, Opus, Fable) are selectable in-editor for different tasks",
+    "External Agents let you drive Framer from tools like Claude Code, Codex, Cursor, or a terminal"
+   ],
+   "cons": [
+    "The AI-credit system meters every agent action, so heavy generation can cost more than the base subscription suggests",
+    "The free plan's 500 AI credits are described as a trial allowance without a clearly confirmed reset schedule, and it's limited to non-commercial use with no custom domain",
+    "CMS collection limits are tight on Basic (2 collections before you need to upgrade)",
+    "Extra editor and content-editor seats are billed separately on top of the plan",
+    "Published Basic ($10) and Pro ($30) prices are shown next to a yearly-billing toggle, and the actual monthly charge isn't separately confirmed, so it should be checked at checkout"
+   ],
+   "choose_if": [
+    "You want AI to co-edit a real design canvas, not just spit out a landing page",
+    "You need built-in hosting, CMS, and SEO in a single tool",
+    "You are a designer or small marketing team publishing polished sites fast",
+    "You are comfortable managing AI credit consumption as part of your budget",
+    "You want to try multiple AI model families (GPT, Sonnet, Opus, Fable) inside the editor"
+   ],
+   "faq": [
+    {
+     "q": "What is Framer AI?",
+     "a": "Framer AI is a website builder where you describe your site in text and AI generates a complete, styled website. You can then edit the design visually, add CMS content, and publish to a live URL with a custom domain. It bridges the gap between AI generation and professional web design."
+    },
+    {
+     "q": "Can Canva build a website?",
+     "a": "Canva has a basic website builder feature, but it's limited compared to dedicated website builders like Framer or Webflow. Canva websites lack advanced animations, CMS functionality, and design control. Canva is best for graphics; Framer is better for actual websites."
+    },
+    {
+     "q": "Is Framer AI free?",
+     "a": "Framer has a free plan with 500 AI credits to try Agents, a free Framer domain, and non-commercial use limits. Paid tiers are Basic ($10) and Pro ($30) as listed on Framer's pricing page, plus a custom-priced Enterprise plan; the exact billing-cycle cost is confirmed at checkout. AI generation on every plan is metered by credits rather than unlimited."
+    }
+   ],
+   "badge_reason": null,
+   "dropped": [
+    "Free-plan credits described as resetting daily (vendor pricing page frames them as a one-time trial allowance; conflicts with an older blog post)",
+    "Specific model version names Fable 5 and Sonnet 5 (vendor only names model families GPT, Sonnet, Opus, Fable with no version numbers)",
+    "Screenshot-to-layout generation and translation into 100+ languages (not found on vendor's Agents page)",
+    "Workshop, AI Translate, Auto Rename, Wireframer, and a Claude & Codex beta as named features",
+    "Pro plan including unlimited editors (unlimited editors is an Enterprise feature)",
+    "A $5/month Mini plan (does not exist on current pricing page)",
+    "1M+ users figure (not verified in audit)",
+    "Confirmed monthly-billing price for Basic and Pro (billing period on these figures was not independently verified)"
+   ]
+  }
+ },
+ {
+  "slug": "google-stitch",
+  "before": {
+   "lang": "en",
+   "badge": "free",
+   "users": "",
+   "best_for": "Free AI UI design and prototyping from text prompts, with infinite canvas",
+   "description": "Google Stitch is a free Google Labs experiment for turning text or image prompts into UI designs and front-end code. It now runs on Gemini 3, upgraded from Gemini 2.5 at Google I/O 2026.",
+   "description_long": "Google Stitch is an AI design tool from Google Labs that generates user interface layouts, screens and front-end code from natural-language descriptions or reference images. It sits between quick idea sketching and a real design file, aiming to get you from prompt to editable UI fast.\n\nAs of July 2026 Stitch runs on Gemini 3, the model upgrade announced at Google I/O 2026. The move up from Gemini 2.5 improved context understanding, adherence to design systems and accessibility handling. The same release introduced Prototypes, which stitches several canvas screens into a working, interactive prototype with full user flows.\n\nEarlier in the year the Stitch 2.0 update (March 2026) added voice input, an AI-native canvas and a design agent, plus the ability to render an entire app flow across roughly five connected screens in a single generation. Together these make Stitch closer to a flow-level design tool rather than a single-screen generator.\n\nStitch is free. It is still a Google Labs experiment with no paid tiers as of July 2026. Access is metered through usage credits and generation limits, reported at around 550 generations a month (roughly 350 standard Flash plus about 200 Pro), with daily design credits that reset at midnight UTC and cannot be purchased.\n\nThe main limitations follow from its experimental status: the credit ceiling, the lack of any guaranteed SLA or paid support, and the fact that features can change without notice. Analysts speculate a paid plan around 10-15 dollars a month could arrive in Q4 2026, but nothing is confirmed.\n\nStitch suits designers, developers and founders who want to move from a prompt or screenshot to a coded UI quickly, especially those already comfortable in the Google ecosystem and happy to work within a free, experiment-grade tool.",
+   "pros": [
+    "Completely free with no paid tier required, so there is no cost barrier to trying it",
+    "Runs on Gemini 3 with better context understanding, design-system adherence and accessibility than the previous 2.5 version",
+    "Prototypes feature links multiple screens into an interactive prototype with real user flows",
+    "Generates an entire app flow across about five connected screens in a single pass",
+    "Voice input, AI-native canvas and a design agent make idea-to-UI iteration fast"
+   ],
+   "cons": [
+    "Metered by usage credits (around 550 generations a month) that cannot be topped up with money",
+    "Daily design credits reset at midnight UTC, which can interrupt longer work sessions",
+    "Still an experimental Google Labs project, so features and availability can change without warning",
+    "No paid tier means no guaranteed support, SLA or priority access",
+    "Any future pricing (analysts guess 10-15 dollars a month) is unconfirmed, making long-term planning uncertain"
+   ],
+   "choose_if": [
+    "You want to go from a text or image prompt to editable UI and front-end code for free",
+    "You need to prototype a multi-screen app flow, not just single screens",
+    "You are comfortable working inside an evolving Google Labs experiment",
+    "You already lean on the Google and Gemini ecosystem",
+    "You can live within monthly generation credits rather than paying for guaranteed capacity"
+   ],
+   "faq": [
+    {
+     "a": "Google Stitch is Google's AI UI design tool that generates app interfaces and prototypes from text prompts. It features an infinite canvas for design exploration and is available free. Stitch is designed to make UI prototyping accessible to developers and non-designers without Figma experience.",
+     "q": "What is Google Stitch?"
+    },
+    {
+     "a": "Yes. Google Stitch is currently free to use. It's available through Google Labs at labs.google. Being a Google Labs product, it may change pricing or availability as it develops.",
+     "q": "Is Google Stitch free?"
+    },
+    {
+     "a": "Google Stitch can export designs for use in other tools. Full Figma import compatibility may vary — check current export options in Stitch, as Google Labs products evolve quickly. The primary workflow is designing in Stitch and exporting assets or code.",
+     "q": "Can Google Stitch export to Figma?"
+    },
+    {
+     "a": "Both are designed for non-designers to create UI prototypes quickly. Google Stitch has the advantage of being free and Google-backed. Uizard is more established with more templates and a larger user community. Stitch's infinite canvas is unique for exploring many design variations simultaneously.",
+     "q": "Is Google Stitch better than Uizard?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "free",
+   "users": null,
+   "best_for": "Free AI UI design and prototyping from text, voice or image prompts, with infinite canvas",
+   "description": "Google Stitch is a Google Labs experiment that launched as a free tool for turning text, voice or image prompts into UI designs and front-end code. A May 2026 update added real-time canvas streaming, a conversational Stitch Agent, and new export options.",
+   "description_long": "Google Stitch is an AI design tool from Google Labs that generates user interface layouts, screens and front-end code from natural-language prompts or reference images. It sits between quick idea sketching and a finished design file, aiming to take you from a prompt to editable UI quickly.\n\nOn May 19, 2026, Google updated Stitch so that it streams designs to the canvas in real time and accepts input as voice, text, existing codebases or design files. The update also introduced Stitch Agent, which lets you steer and refine iterations conversationally, and added new export options to Google Antigravity, Netlify publishing and shareable links via Google AI Studio. Google says the update is available to global users.\n\nStitch's original 2025 launch centered on turning a prompt or image into a UI screen that could be pasted into Figma or exported as front-end code. Combined with the 2026 update, designers and developers can now move from a spoken or written idea through an editable canvas to shareable, exportable output without leaving the tool.\n\nStitch launched as a free Google Labs experiment with no paid tier. The May 2026 update announcement does not mention pricing, and the current site does not publish tier or usage-limit details, so any specific costs, credits or caps for the present version cannot be confirmed.\n\nThe main limitations follow from its experimental status: features, availability and the underlying model can change without notice, there is no confirmed usage limit or paid tier to fall back on for guaranteed capacity, and there is no published SLA or paid support.\n\nStitch suits designers, developers and founders who want to move from a prompt, voice note or screenshot to a coded UI quickly, especially those already working inside the Google ecosystem and comfortable with an evolving, experiment-grade tool.",
+   "pros": [
+    "Launched as a free Google Labs experiment with no paid tier required to try it",
+    "May 2026 update added real-time canvas streaming, voice input and a conversational Stitch Agent for refining designs",
+    "Accepts prompts as text, voice, existing codebases or design files, not just written prompts",
+    "Exports to Figma, front-end code, Google Antigravity, Netlify publishing and shareable Google AI Studio links",
+    "Infinite canvas supports exploring many design variations at once"
+   ],
+   "cons": [
+    "No pricing, tier or usage-limit information is published on the current site",
+    "Still an experimental Google Labs project, so features and availability can change without notice",
+    "No confirmed SLA or paid support given its free, experiment-grade status",
+    "Figma export reliability may vary as Google Labs products evolve quickly",
+    "No independently confirmed details on which AI model currently powers Stitch"
+   ],
+   "choose_if": [
+    "You want to go from a text, voice or image prompt to editable UI and front-end code",
+    "You want to iterate on designs using voice input and a conversational Stitch Agent",
+    "You are comfortable working inside an evolving Google Labs experiment with no confirmed pricing",
+    "You already work inside the Google ecosystem and want exports to Antigravity, Netlify or AI Studio",
+    "You can work without guaranteed usage limits or paid support"
+   ],
+   "faq": [
+    {
+     "q": "What is Google Stitch?",
+     "a": "Google Stitch is Google's AI UI design tool that generates app interfaces and prototypes from text, voice or image prompts. It features an infinite canvas for design exploration and launched as a free Google Labs experiment. Stitch is designed to make UI prototyping accessible to developers and non-designers without Figma experience."
+    },
+    {
+     "q": "Is Google Stitch free?",
+     "a": "Google Stitch launched as a free Google Labs experiment with no paid tier. It's available at stitch.withgoogle.com. As a Google Labs product, pricing and availability may change as it develops, and current tier details are not published on the site."
+    },
+    {
+     "q": "Can Google Stitch export to Figma?",
+     "a": "Yes. Google's 2025 launch described pasting designs into Figma and exporting front-end code. The May 2026 update added further export options, including Google Antigravity, Netlify publishing and shareable links via Google AI Studio."
+    },
+    {
+     "q": "Is Google Stitch better than Uizard?",
+     "a": "Both are designed for non-designers to create UI prototypes quickly. Google Stitch has the advantage of launching as a free, Google-backed Labs experiment. Uizard is more established with more templates and a larger user community. Stitch's infinite canvas is unique for exploring many design variations simultaneously."
+    }
+   ],
+   "dropped": [
+    "Claim that Stitch runs on Gemini 3 upgraded from Gemini 2.5 (unverified, no primary source names a model)",
+    "Claim that the Gemini 3 release introduced a 'Prototypes' feature (unverified)",
+    "Stitch 2.0 update details dated March 2026 (unverified, no primary post found)",
+    "Specific usage credit figures (~550 generations/month, Flash/Pro split, midnight UTC reset) (unverified)",
+    "Analyst speculation about a $10-15/month paid plan arriving Q4 2026 (third-party speculation)",
+    "Reference to labs.google as the product's home (incorrect; corrected to stitch.withgoogle.com)"
+   ]
+  }
+ }
+]

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cursor 3.4 lance des environnements de… — AItoolFit</title>
-<meta name="description" content="Cursor 3.4 introduit des environnements de développement agentiques : les agents provisionnent désormais des environnements définis par Dockerfile,…">
+<title>Cursor 3.4 ajoute des environnements… — AItoolFit</title>
+<meta name="description" content="Cursor 3.4, sorti le 13 mai 2026, ajoute des environnements de développement multi-dépôts pour les agents cloud et les automatisations, avec une…">
 <link rel="canonical" href="https://aitoolfit.ai/fr/news/cursor-34-agentic-dev-environments.html">
 <link rel="alternate" hreflang="en" href="https://aitoolfit.ai/news/cursor-34-agentic-dev-environments.html">
 <link rel="alternate" hreflang="es" href="https://aitoolfit.ai/es/news/cursor-34-agentic-dev-environments.html">
@@ -20,15 +20,15 @@
 <link rel="apple-touch-icon" href="/favicon-192.png">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://aitoolfit.ai/fr/news/cursor-34-agentic-dev-environments.html">
-<meta property="og:title" content="Cursor 3.4 lance des environnements de développement agentiques avec prise en charge multi-dépôts et agents en parallèle">
-<meta property="og:description" content="Cursor 3.4 introduit des environnements de développement agentiques : les agents provisionnent désormais des environnements définis par Dockerfile,…">
+<meta property="og:title" content="Cursor 3.4 ajoute des environnements multi-dépôts et une configuration basée sur Dockerfile pour les agents cloud">
+<meta property="og:description" content="Cursor 3.4, sorti le 13 mai 2026, ajoute des environnements de développement multi-dépôts pour les agents cloud et les automatisations, avec une…">
 <meta property="og:site_name" content="AItoolFit">
 <meta property="og:image" content="https://aitoolfit.ai/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Cursor 3.4 lance des environnements de développement agentiques avec prise en charge multi-dépôts et agents en parallèle">
-<meta name="twitter:description" content="Cursor 3.4 introduit des environnements de développement agentiques : les agents provisionnent désormais des environnements définis par Dockerfile,…">
+<meta name="twitter:title" content="Cursor 3.4 ajoute des environnements multi-dépôts et une configuration basée sur Dockerfile pour les agents cloud">
+<meta name="twitter:description" content="Cursor 3.4, sorti le 13 mai 2026, ajoute des environnements de développement multi-dépôts pour les agents cloud et les automatisations, avec une…">
 <meta name="twitter:image" content="https://aitoolfit.ai/og-image.png">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Cursor 3.4 lance des environnements de développement agentiques avec prise en charge multi-dépôts et agents en parallèle", "description": "Cursor 3.4 introduit des environnements de développement agentiques : les agents provisionnent désormais des environnements définis par Dockerfile,…", "datePublished": "2026-05-13", "inLanguage": "fr", "publisher": {"@type": "Organization", "name": "AItoolFit", "url": "https://aitoolfit.ai"}, "mainEntityOfPage": "https://aitoolfit.ai/fr/news/cursor-34-agentic-dev-environments.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Cursor 3.4 ajoute des environnements multi-dépôts et une configuration basée sur Dockerfile pour les agents cloud", "description": "Cursor 3.4, sorti le 13 mai 2026, ajoute des environnements de développement multi-dépôts pour les agents cloud et les automatisations, avec une…", "datePublished": "2026-05-13", "inLanguage": "fr", "publisher": {"@type": "Organization", "name": "AItoolFit", "url": "https://aitoolfit.ai"}, "mainEntityOfPage": "https://aitoolfit.ai/fr/news/cursor-34-agentic-dev-environments.html"}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WW59K11Y2Z");</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -90,47 +90,45 @@
     <a href="/fr/">Home</a> <span>&#8250;</span>
     <a href="/fr/news.html">News</a> <span>&#8250;</span>
     <a href="/fr/news.html">Outils</a> <span>&#8250;</span>
-    <span>Cursor 3.4 lance des environnements de développeme…</span>
+    <span>Cursor 3.4 ajoute des environnements multi-dépôts …</span>
   </nav>
-  <h1 class="article-title">Cursor 3.4 lance des environnements de développement agentiques avec prise en charge multi-dépôts et agents en parallèle</h1>
+  <h1 class="article-title">Cursor 3.4 ajoute des environnements multi-dépôts et une configuration basée sur Dockerfile pour les agents cloud</h1>
   <div class="article-meta">
     <span class="news-tag" style="background:#2dd4a022;color:#2dd4a0;border:1px solid #2dd4a044">Outils</span>
     <span>May 13, 2026</span><span class="article-meta-dot">&middot;</span><span>Cursor Blog</span>
   </div>
   <div class="article-body">
-    
-<p>Cursor released version 3.4, introducing <strong>agentic development environments</strong> — a major architectural shift that moves Cursor agents from code completion and editing into full environment management and multi-repository coordination.</p>
-<h2>Agentic dev environments</h2>
-<p>In Cursor 3.4, agents can now <strong>provision their own development environments</strong> from a Dockerfile definition. An agent given a task can spin up a containerized environment with the correct runtime, dependencies, and configuration — without requiring a pre-existing local setup. This enables agents to work in isolated, reproducible environments that match production specifications, reducing the "works on my machine" class of issues that emerge when agents modify codebases in developer-configured local environments.</p>
-<h2>Multi-repo and parallel agents</h2>
-<p><strong>Multi-repo support</strong> allows a single agent to work across multiple repositories simultaneously — critical for microservices architectures and monorepos where a feature change requires coordinated edits across several codebases. <strong>Parallel agent execution</strong> lets multiple agents run side by side on different tasks, managed from a single Cursor workspace. Teams can split a large implementation task into parallel workstreams and monitor progress centrally.</p>
-<h2>Cursor 3.3 recap and BugBot billing change</h2>
-<p>Cursor 3.3 had added <strong>PR review inside the editor</strong> — developers can open a pull request, view diffs, and receive AI-generated review comments without leaving Cursor or switching to GitHub. Starting <strong>June 2026</strong>, BugBot (Cursor's automated bug detection on commits and PRs) transitions from included-in-plan to usage-based billing. Teams that rely heavily on automated bug scanning should review the new pricing before June.</p>
-<h2>Why it matters</h2>
-<p>Cursor 3.4 closes the gap between AI-assisted coding and fully autonomous software development. The combination of environment provisioning, multi-repo support, and parallel execution means a Cursor agent can now handle tasks that previously required a human developer to orchestrate across tools, terminals, and repositories. For engineering teams, this unlocks agent-driven development cycles where humans define requirements and review outputs rather than executing each implementation step.</p>
-
+    <p>Cursor a publié la version 3.4 le 13 mai 2026, introduisant des <strong>environnements de développement multi-dépôts</strong> pour les agents cloud et les automatisations, ainsi qu'une configuration d'environnement basée sur Dockerfile.</p>
+<h2>Environnements de développement agentiques</h2>
+<p>Dans Cursor 3.4, les environnements de développement pour les agents cloud peuvent être configurés à partir d'un Dockerfile, avec prise en charge des secrets de build et de la mise en cache des couches. Les agents prennent ensuite en charge la configuration de l'environnement au sein de ces environnements conteneurisés — décrite par Cursor comme une configuration d'environnement pilotée par l'agent — permettant de travailler dans des environnements isolés et reproductibles conformes aux spécifications de production.</p>
+<h2>Environnements multi-dépôts</h2>
+<p>La <strong>prise en charge multi-dépôts</strong> permet aux agents cloud et aux automatisations de travailler sur plusieurs dépôts au sein d'un seul environnement — utile pour les architectures de microservices et les monorepos où une modification de fonctionnalité nécessite des changements coordonnés dans plusieurs bases de code. Cursor prend également en charge l'exécution de plusieurs agents en parallèle sur différentes tâches depuis un seul espace de travail, une fonctionnalité antérieure à la version 3.4.</p>
+<h2>Résumé de Cursor 3.3 et changement de facturation de Bugbot</h2>
+<p>Cursor 3.3, sorti le 7 mai 2026, avait ajouté la <strong>revue de PR directement dans l'éditeur</strong> — les développeurs peuvent ouvrir une pull request, consulter les diffs et recevoir des commentaires de revue générés par IA sans quitter Cursor ni passer par GitHub. Annoncé le 11 mai 2026, Bugbot (le système de détection automatisée de bugs de Cursor sur les commits et les PR) passe d'une facturation par siège à une facturation à l'usage. Pour les clients existants, ce changement prend effet dès leur prochain renouvellement après le 8 juin 2026. Les équipes qui s'appuient fortement sur l'analyse automatisée de bugs devraient examiner la nouvelle tarification avant cette date.</p>
+<h2>Pourquoi c'est important</h2>
+<p>Cursor 3.4 réduit l'écart entre le codage assisté par IA et des flux de développement logiciel plus autonomes. La combinaison de la configuration d'environnement basée sur Dockerfile et de la prise en charge multi-dépôts signifie que les agents cloud peuvent prendre en charge des tâches de configuration et de coordination qui nécessitaient auparavant une orchestration manuelle entre outils, terminaux et dépôts. Pour les équipes d'ingénierie, cela peut réduire la charge liée à la préparation des environnements pour les tâches pilotées par des agents.</p>
   </div>
     <hr class="article-divider">
     <div class="related-title">Articles liés</div>
     <div class="related-grid">
       <a class="related-card" href="https://aitoolfit.ai/fr/news/notion-developer-platform-35.html">
         <div class="related-cat" style="color:#2dd4a0">Outils</div>
-        <div class="related-name">Notion Developer Platform 3.5 — Runtime Workers, synchronisation de bases de données, webhooks bidirectionnels et mode Plan pour agents</div>
+        <div class="related-name">Notion Developer Platform 3.5 : runtime Workers, synchronisation unidirectionnelle des bases de données, webhooks bidirectionnels et nouvelles API pour agents</div>
         <div class="related-date">May 13, 2026</div>
       </a>
       <a class="related-card" href="https://aitoolfit.ai/fr/news/krea-ai-krea-2-foundation-model.html">
         <div class="related-cat" style="color:#2dd4a0">Outils</div>
-        <div class="related-name">Krea lance Krea 2 — nouveau modèle d&#x27;image fondamental conçu à partir de zéro</div>
+        <div class="related-name">Krea lance Krea 2, un nouveau modèle d&#x27;image fondamental conçu de zéro</div>
         <div class="related-date">May 12, 2026</div>
-      </a>
-      <a class="related-card" href="https://aitoolfit.ai/fr/news/figma-mcp-server-ai-agents-canvas.html">
-        <div class="related-cat" style="color:#2dd4a0">Outils</div>
-        <div class="related-name">Le serveur MCP de Figma permet aux agents IA de concevoir directement sur le canevas — avec en prime des outils d&#x27;image IA intégrés et une saisie vocale</div>
-        <div class="related-date">May 10, 2026</div>
       </a>
       <a class="related-card" href="https://aitoolfit.ai/fr/news/pika-25-pikastream-ai-social-app.html">
         <div class="related-cat" style="color:#2dd4a0">Outils</div>
-        <div class="related-name">Pika 2.5 et PikaStream 1.0 — vidéo sans scintillement, personnages stables, chat vidéo IA en temps réel</div>
+        <div class="related-name">PikaStream 1.0 lance un chat vidéo IA en temps réel avec des avatars IA personnalisés</div>
+        <div class="related-date">May 10, 2026</div>
+      </a>
+      <a class="related-card" href="https://aitoolfit.ai/fr/news/figma-mcp-server-ai-agents-canvas.html">
+        <div class="related-cat" style="color:#2dd4a0">Outils</div>
+        <div class="related-name">Le serveur MCP de Figma permet désormais aux agents IA d&#x27;écrire directement sur le canvas</div>
         <div class="related-date">May 10, 2026</div>
       </a>
       <a class="related-card" href="https://aitoolfit.ai/fr/news/anthropic-claude-design-launch.html">
@@ -140,7 +138,7 @@
       </a>
       <a class="related-card" href="https://aitoolfit.ai/fr/news/adobe-creative-agent-cc-orchestration.html">
         <div class="related-cat" style="color:#2dd4a0">Outils</div>
-        <div class="related-name">Adobe Creative Agent orchestre les workflows IA dans toutes les apps Creative Cloud depuis un seul prompt</div>
+        <div class="related-name">Adobe dévoile Firefly AI Assistant pour orchestrer les flux de travail de Creative Cloud à partir d&#x27;une seule consigne</div>
         <div class="related-date">Apr 20, 2026</div>
       </a>
     </div>
