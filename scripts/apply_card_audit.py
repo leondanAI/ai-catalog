@@ -14,7 +14,7 @@
 
     ANTHROPIC_API_KEY=... python3 scripts/apply_card_audit.py [--only slug,slug] [--dry-run]
 """
-import glob, json, os, re, sys, urllib.request
+import datetime, glob, json, os, re, sys, urllib.request
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from llm import ask, cost_report, REWRITE, TRANSLATE
@@ -171,6 +171,8 @@ def main():
             # Устаревшая цена в этом поле видна на значке и уходит в разметку
             # как Offer.price. Не подтверждена — лучше пусто, чем неправда.
             meta.append(f"UPDATE tools SET users = NULL WHERE slug = '{slug}';\n")
+        # Дата проверки фактов выводится на странице и в разметке.
+        meta.append(f"UPDATE tools SET last_updated = '{datetime.date.today()}' WHERE slug = '{slug}';\n")
         sql += meta
 
         ok = 0

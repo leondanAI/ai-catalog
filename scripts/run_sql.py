@@ -13,6 +13,7 @@ PGPASSWORD). Файл закрыт от git.
      остальные файлы не запускаются.
 
     python3 scripts/run_sql.py scripts/a.sql scripts/b.sql
+    python3 scripts/run_sql.py --set-password   # записать пароль в .env и проверить
     python3 scripts/run_sql.py --check          # только проверить подключение
     python3 scripts/run_sql.py --dry-run f.sql  # выполнить и откатить
 """
@@ -38,13 +39,31 @@ def load_env():
         sys.exit('В .env не вписан пароль базы (строка PGPASSWORD).')
 
 
+def set_password():
+    """Спросить пароль в терминале (символы не видны) и записать в .env."""
+    import getpass
+    path = os.path.join(ROOT, '.env')
+    pw = getpass.getpass('Вставь пароль базы и нажми Enter (символы не видны): ').strip()
+    if not pw:
+        sys.exit('Пусто — ничего не записал.')
+    lines = open(path, encoding='utf-8').read().splitlines()
+    lines = [l for l in lines if not l.startswith('PGPASSWORD=')] + [f'PGPASSWORD={pw}']
+    open(path, 'w', encoding='utf-8').write('\n'.join(lines) + '\n')
+    os.chmod(path, 0o600)
+    print('Записал в .env.')
+
+
 def connect():
     import psycopg2
     return psycopg2.connect(sslmode='require', connect_timeout=15)
 
 
 def tables_in(sql):
-    body = re.sub(r'(?m)^\s*--.*$', '', sql)
+    # Сначала убрать строки: в текстах новостей бывает «update Linear…»,
+    # и без этого слово после UPDATE принималось за таблицу.
+    body = re.sub(r'\$(\w*)\$.*?\$\1\$', "''", sql, flags=re.S)
+    body = re.sub(r"'(?:[^']|'')*'", "''", body)
+    body = re.sub(r'(?m)^\s*--.*$', '', body)
     found = set(re.findall(r'\b(?:UPDATE|INSERT\s+INTO|DELETE\s+FROM)\s+([a-z_]+)', body, re.I))
     return {t.lower() for t in found}
 
@@ -76,6 +95,9 @@ def main():
     args = sys.argv[1:]
     dry = '--dry-run' in args
     files = [a for a in args if not a.startswith('--')]
+    if '--set-password' in args:
+        set_password()
+        args.append('--check')
     load_env()
     conn = connect()
     conn.autocommit = False

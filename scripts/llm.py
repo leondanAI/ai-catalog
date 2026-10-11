@@ -14,6 +14,7 @@
 """
 import json
 import re
+import threading
 
 REWRITE = 'claude-sonnet-5'
 TRANSLATE = 'claude-sonnet-5'
@@ -26,16 +27,23 @@ PRICES = {
 }
 
 _usage = {}
+_lock = threading.Lock()
 
 
-def ask(client, model, system, user, max_tokens=8000, tries=3, think=None):
+def ask(client, model, system, user, max_tokens=None, tries=3, think=None):
     """Вызов с разбором JSON и учётом токенов.
 
     think=True оставляет размышления по умолчанию модели (переписывание),
     think=False явно их отключает (перевод). Повторы тоже учитываются.
+
+    Размышления расходуют тот же max_tokens, что и ответ. При 8000 длинная
+    карточка обрывалась посреди JSON (framer-ai, google-stitch, 2026-10-11),
+    поэтому с размышлениями лимит вдвое больше.
     """
     if think is None:
         think = True
+    if max_tokens is None:
+        max_tokens = 16000 if think else 8000
     extra = {} if think else {'thinking': {'type': 'disabled'}}
     if system:
         extra['system'] = system
@@ -43,17 +51,18 @@ def ask(client, model, system, user, max_tokens=8000, tries=3, think=None):
     for _ in range(tries):
         msg = client.messages.create(model=model, max_tokens=max_tokens,
                                      messages=[{'role': 'user', 'content': user}], **extra)
-        u = _usage.setdefault(model, {'in': 0, 'out': 0, 'calls': 0})
-        u['in'] += msg.usage.input_tokens
-        u['out'] += msg.usage.output_tokens
-        u['calls'] += 1
+        with _lock:   # скрипты вызывают ask() из нескольких потоков
+            u = _usage.setdefault(model, {'in': 0, 'out': 0, 'calls': 0})
+            u['in'] += msg.usage.input_tokens
+            u['out'] += msg.usage.output_tokens
+            u['calls'] += 1
         txt = next((b.text for b in msg.content if getattr(b, 'type', '') == 'text'), '').strip()
         txt = re.sub(r'^```(?:json)?\s*|\s*```$', '', txt)
         try:
             return json.loads(txt, strict=False)
         except Exception as e:
             last = e
-            print('   повтор разбора:', str(e)[:60])
+            print('   повтор разбора:', str(e)[:60], '| stop_reason:', msg.stop_reason)
     raise RuntimeError(f'модель не вернула корректный JSON: {last}')
 
 
