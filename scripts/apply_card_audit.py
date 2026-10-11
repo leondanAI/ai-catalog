@@ -179,7 +179,7 @@ def main():
                 if code not in cards:
                     continue
                 try:
-                    tr = ask(client, TRANSLATE, TR_RULES.format(lang=name),
+                    tr = ask(client, TRANSLATE, TR_RULES.format(lang=name), think=False,
                              json.dumps(payload, ensure_ascii=False))
                     sql += stmts_for(slug, code, tr, cards[code])
                     ok += 1

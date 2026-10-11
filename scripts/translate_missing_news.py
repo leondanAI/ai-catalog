@@ -149,10 +149,10 @@ def main():
         prompt = tmpl.format(language=LANG_NAME[lang], title=en['title'],
                              summary=en['summary'], body=en.get('body', ''))
         try:
-            # Перевод — Haiku 5.5 без размышлений (см. llm.py). ask() разбирает
+            # Перевод — без размышлений (см. llm.py). ask() разбирает
             # JSON с strict=False: модель иногда вставляет сырой перенос строки
             # в body, и обычный json.loads на этом падает.
-            data = ask(client, TRANSLATE, None, prompt)
+            data = ask(client, TRANSLATE, None, prompt, think=False)
 
             if kind == 'MISSING':
                 label = CAT_LABEL.get(en['category'], {}).get(lang) or en['cat_label']
