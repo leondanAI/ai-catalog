@@ -16,6 +16,9 @@
 """
 import glob, json, os, re, sys, urllib.request
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from llm import ask, cost_report, REWRITE, TRANSLATE
+
 U = 'https://lbjdwkvkkndvofysyssy.supabase.co'
 K = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG'
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -88,19 +91,6 @@ def sqlq(s):
     return f'${tag}${s}${tag}$'
 
 
-def ask(client, system, user, max_tokens=8000, tries=3):
-    for _ in range(tries):
-        msg = client.messages.create(model='claude-sonnet-5', max_tokens=max_tokens,
-                                     system=system, messages=[{'role': 'user', 'content': user}])
-        txt = next(b.text for b in msg.content if getattr(b, 'type', '') == 'text').strip()
-        txt = re.sub(r'^```(?:json)?\s*|\s*```$', '', txt)
-        try:
-            return json.loads(txt, strict=False)
-        except Exception as e:
-            print('   повтор разбора:', str(e)[:60])
-    raise RuntimeError('модель не вернула корректный JSON')
-
-
 def stmts_for(slug, lang, data, card):
     out = []
     for f in FIELDS:
@@ -119,13 +109,21 @@ def stmts_for(slug, lang, data, card):
 
 def main():
     only = None
+    out_name = 'tools_audit_2026-09-29.sql'
+    batches = None
     for a in sys.argv[1:]:
         if a.startswith('--only='):
             only = set(a.split('=', 1)[1].split(','))
+        elif a.startswith('--out='):
+            out_name = a.split('=', 1)[1]
+        elif a.startswith('--batches='):
+            batches = set(a.split('=', 1)[1].split(','))
     dry = '--dry-run' in sys.argv
 
     audit = []
     for f in sorted(glob.glob(os.path.join(ROOT, 'audit', 'batch*.json'))):
+        if batches and os.path.basename(f)[:-5] not in batches:
+            continue
         audit += json.load(open(f))
     if only:
         audit = [a for a in audit if a['slug'] in only]
@@ -152,7 +150,7 @@ def main():
             failed.append((slug, 'нет английской строки'))
             continue
         try:
-            new_en = ask(client, EN_RULES,
+            new_en = ask(client, REWRITE, EN_RULES,
                          'CURRENT CARD:\n' + json.dumps(en, ensure_ascii=False)
                          + '\n\nAUDIT FINDINGS:\n' + json.dumps(a, ensure_ascii=False))
         except Exception as e:
@@ -181,7 +179,7 @@ def main():
                 if code not in cards:
                     continue
                 try:
-                    tr = ask(client, TR_RULES.format(lang=name),
+                    tr = ask(client, TRANSLATE, TR_RULES.format(lang=name),
                              json.dumps(payload, ensure_ascii=False))
                     sql += stmts_for(slug, code, tr, cards[code])
                     ok += 1
@@ -205,14 +203,16 @@ def main():
         head += (f"\n-- {a['slug']}: {a.get('shutdown_note') or 'сайт недоступен'}\n"
                  f"UPDATE tools SET published = false WHERE slug = '{a['slug']}';\n")
 
-    path = os.path.join(ROOT, 'tools_audit_2026-09-29.sql')
+    path = os.path.join(ROOT, out_name)
     open(path, 'w').write(head + '\n' + '\n'.join(sql))
-    json.dump(review, open(os.path.join(ROOT, 'audit', 'applied_review.json'), 'w'),
+    json.dump(review, open(os.path.join(ROOT, 'audit', out_name.replace('.sql', '_review.json')), 'w'),
               ensure_ascii=False, indent=1)
     print(f'\nзаписано: {path}')
     print(f'операторов: {len(sql)} | карточек переписано: {len(review)} | снято: {len(dead)} | ошибок: {len(failed)}')
     for f in failed:
         print('  ', f)
+    print('\nрасход API:')
+    print(cost_report())
 
 
 if __name__ == '__main__':

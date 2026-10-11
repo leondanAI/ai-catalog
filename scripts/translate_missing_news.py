@@ -140,6 +140,8 @@ def main():
     if not os.environ.get('ANTHROPIC_API_KEY'):
         sys.exit('\nНе задан ANTHROPIC_API_KEY')
     client = anthropic.Anthropic()
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from llm import ask, cost_report, TRANSLATE
 
     stmts, done, failed = [], 0, []
     for en, lang, kind in plan:
@@ -147,14 +149,10 @@ def main():
         prompt = tmpl.format(language=LANG_NAME[lang], title=en['title'],
                              summary=en['summary'], body=en.get('body', ''))
         try:
-            msg = client.messages.create(model='claude-sonnet-5', max_tokens=8000,
-                                         messages=[{'role': 'user', 'content': prompt}])
-            txt = next(b.text for b in msg.content if getattr(b, 'type', '') == 'text').strip()
-            txt = re.sub(r'^```(?:json)?|```$', '', txt, flags=re.M).strip()
-            # strict=False разрешает сырые управляющие символы внутри строк JSON:
-            # модель иногда вставляет реальный перенос строки в body, и обычный
-            # json.loads на этом падает («Invalid control character at …»).
-            data = json.loads(txt, strict=False)
+            # Перевод — Haiku 5.5 без размышлений (см. llm.py). ask() разбирает
+            # JSON с strict=False: модель иногда вставляет сырой перенос строки
+            # в body, и обычный json.loads на этом падает.
+            data = ask(client, TRANSLATE, None, prompt)
 
             if kind == 'MISSING':
                 label = CAT_LABEL.get(en['category'], {}).get(lang) or en['cat_label']
@@ -189,6 +187,8 @@ def main():
     with open(out, 'w', encoding='utf-8') as f:
         f.write(header + '\n\n'.join(stmts) + '\n')
     print(f'\nГотово — {done} операций записано в {out}')
+    print('\nрасход API:')
+    print(cost_report())
     if failed:
         print(f'Не переведено: {len(failed)}')
         for s, l, e in failed:

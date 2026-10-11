@@ -1,0 +1,1194 @@
+[
+ {
+  "slug": "autogpt",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "autogpt-platform-beta-v0.8.2 (GitHub release, 2026-09-30)",
+  "version_published": true,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Self-host",
+    "amount": "$0",
+    "period": "n/a",
+    "notes": "Docker Compose, community support, no subscription. Platform code is Polyform Shield licensed (not MIT)."
+   },
+   {
+    "tier": "Pro",
+    "amount": "$50.00/mo monthly; $42.50/mo billed yearly",
+    "period": "per month",
+    "notes": "USD. Yearly toggle 'Save 15%'. 7-day free trial, card required. Otto chat, AI Experts, visual workflow builder, scheduled workflows. Workflow runs billed separately from credit wallet."
+   },
+   {
+    "tier": "Max",
+    "amount": "$320.00/mo monthly; $272.00/mo billed yearly",
+    "period": "per month",
+    "notes": "USD. 8.5x Pro usage, 5x file storage, early access, priority support."
+   },
+   {
+    "tier": "Team",
+    "amount": "Contact sales",
+    "period": "n/a",
+    "notes": "'Coming soon'."
+   },
+   {
+    "tier": "Credit wallet",
+    "amount": "not published",
+    "period": "pay-as-you-go",
+    "notes": "'workflow runs are pay-as-you-go via the credit wallet—the same on every plan'; per-Expert spending caps."
+   }
+  ],
+  "free_tier": "No free cloud plan. 7-day Pro trial (card required, eligible new accounts). Self-hosting is free.",
+  "repositioning": "Cloud product now marketed as an 'AI team': 'Meet your AI team. Introducing Experts.' Built around Otto chat (formerly AutoPilot/Copilot naming in our card) and AI Experts for research, content and operations. Release line moved from v0.6.x to v0.8.x.",
+  "card_errors": [
+   {
+    "field": "description",
+    "wrong_quote": "beta v0.6.65, June 25, 2026",
+    "correct_value": "Latest is autogpt-platform-beta-v0.8.2 (2026-09-30); v0.8.0 2026-09-19, v0.8.1 2026-09-24"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "The current release is autogpt-platform-beta-v0.6.65, published on June 25, 2026",
+    "correct_value": "v0.8.2, 2026-09-30"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "The self-hosted open-source core is MIT-licensed",
+    "correct_value": "README: autogpt_platform folder is Polyform Shield licensed (free for personal and internal business use, cannot be sold as a competing hosted service); only classic/ and the rest are MIT"
+   },
+   {
+    "field": "pros",
+    "wrong_quote": "Free, MIT-licensed self-hosted core",
+    "correct_value": "Platform is Polyform Shield; MIT applies only to classic AutoGPT"
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "The self-hosted open-source core of AutoGPT is MIT-licensed",
+    "correct_value": "Polyform Shield for the platform"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "30+ integrations including Slack, Discord, and Stripe",
+    "correct_value": "README says 45+ platforms (Gmail, GitHub, Slack, Discord, Notion, HubSpot, Linear, Jira, Salesforce, Stripe, ...)"
+   },
+   {
+    "field": "pros",
+    "wrong_quote": "30+ integrations (Slack, Discord, Stripe)",
+    "correct_value": "45+ per README"
+   },
+   {
+    "field": "pros",
+    "wrong_quote": "AutoPilot/Copilot handles goal decomposition",
+    "correct_value": "Feature is now branded Otto (Otto chat, workflow generation from prompt); AI Experts is the headline"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "centers on AutoPilot/Copilot",
+    "correct_value": "Now Otto + AI Experts"
+   },
+   {
+    "field": "cons",
+    "wrong_quote": "Platform is still officially in beta (v0.6.65)",
+    "correct_value": "Still tagged beta, but version is v0.8.2"
+   },
+   {
+    "field": "badge",
+    "wrong_quote": "freemium",
+    "correct_value": "Cloud has no free plan (7-day trial only); free only via self-hosting"
+   },
+   {
+    "field": "users",
+    "wrong_quote": "Free",
+    "correct_value": "Not a user count; no user figure published"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://agpt.co/pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://api.github.com/repos/Significant-Gravitas/AutoGPT/releases?per_page=5",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://github.com/Significant-Gravitas/AutoGPT",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Yearly prices read from data-yearly attributes in page HTML ($42.50 / $272.00 per month). Yearly totals ($510/$3,264) in the card are arithmetic, not printed on the page. Pay-as-you-go credit rate not published."
+ },
+ {
+  "slug": "claude",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Claude Fable 5.1 (flagship), Claude Opus 5.5, Claude Sonnet 5.5, Claude Haiku 4.5; Claude Mythos 5.1 limited availability (Project Glasswing)",
+  "version_published": true,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "$0",
+    "period": "n/a",
+    "notes": "Chat on web/desktop/mobile, web search, create files, run code, memory, app connections, artifacts."
+   },
+   {
+    "tier": "Pro",
+    "amount": "$20/mo monthly; $17/mo with annual subscription ($200 billed up front)",
+    "period": "per month",
+    "notes": "USD. Adds Claude Code, Claude Design/Slides/Docs, Claude Science, Projects, more models. Opus 5.5 and Sonnet 5.5 included; Fable 5.1 via 'Usage credits'."
+   },
+   {
+    "tier": "Max",
+    "amount": "From $100/mo",
+    "period": "per month",
+    "notes": "5x or 20x Pro usage. Page states 'From $100'; the 20x price ($200 per CLAUDE.md) was not visible in the fetched text. Fable 5.1 at '50% of weekly limits'."
+   },
+   {
+    "tier": "Team Standard seat",
+    "amount": "$25/seat/mo monthly; $20/seat/mo annual",
+    "period": "per month",
+    "notes": "'For teams of 2 to 150'."
+   },
+   {
+    "tier": "Team Premium seat",
+    "amount": "$125/seat/mo monthly; $100/seat/mo annual",
+    "period": "per month",
+    "notes": ""
+   },
+   {
+    "tier": "Enterprise",
+    "amount": "$20/seat/mo plus API-rate usage, billed annually",
+    "period": "per month",
+    "notes": "No seat minimum stated."
+   },
+   {
+    "tier": "API Fable 5.1 / Fable 5",
+    "amount": "$10 in / $50 out per MTok",
+    "period": "per MTok",
+    "notes": "Fable 5.1 cache hits $0.25 (0.025x)."
+   },
+   {
+    "tier": "API Opus 5.5",
+    "amount": "$4 in / $20 out per MTok",
+    "period": "per MTok",
+    "notes": "Cache hits $0.20 (0.05x). Fast mode $8/$40."
+   },
+   {
+    "tier": "API Opus 5 / 4.8 / 4.7 / 4.6 / 4.5",
+    "amount": "$5 / $25 per MTok",
+    "period": "per MTok",
+    "notes": ""
+   },
+   {
+    "tier": "API Sonnet 5.5",
+    "amount": "$2 / $10 per MTok",
+    "period": "per MTok",
+    "notes": ""
+   },
+   {
+    "tier": "API Sonnet 5",
+    "amount": "$2 / $10 per MTok",
+    "period": "per MTok",
+    "notes": "Intro price made permanent; scheduled Sept 1, 2026 increase to $3/$15 'will not occur'."
+   },
+   {
+    "tier": "API Sonnet 4.6 / 4.5",
+    "amount": "$3 / $15 per MTok",
+    "period": "per MTok",
+    "notes": ""
+   },
+   {
+    "tier": "API Haiku 4.5",
+    "amount": "$1 / $5 per MTok",
+    "period": "per MTok",
+    "notes": ""
+   },
+   {
+    "tier": "API Mythos 5.1 / Mythos 5",
+    "amount": "$10 / $50 per MTok",
+    "period": "per MTok",
+    "notes": "Invitation only via Project Glasswing."
+   }
+  ],
+  "free_tier": "Free plan $0: chat on web/desktop/mobile, web search, file creation, code execution, memory, connectors, artifacts; usage-capped.",
+  "repositioning": "No repositioning. Model lineup moved on: Fable 5.1, Opus 5.5 (cheaper than Opus 5 at $4/$20), Sonnet 5.5. Team minimum dropped to 2 seats.",
+  "card_errors": [
+   {
+    "field": "description",
+    "wrong_quote": "Now offers Opus 5 — frontier agentic coding and computer use at standard Opus pricing",
+    "correct_value": "Current Opus is Opus 5.5 at $4/$20 per MTok (below the $5/$25 of Opus 5)"
+   },
+   {
+    "field": "description",
+    "wrong_quote": "alongside the Mythos-class Fable 5",
+    "correct_value": "Flagship is Fable 5.1"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "The most capable widely released model is now Claude Fable 5, generally available since June 9, 2026",
+    "correct_value": "Fable 5.1 is the current flagship; the June 9 date was not verified"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Claude Opus 5 for complex agentic coding and enterprise work, Claude Sonnet 5 (released June 30, 2026)",
+    "correct_value": "Current: Opus 5.5 (2026-09-22) and Sonnet 5.5 (2026-09-28). The Sonnet 5 date was not verified"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "A separate Claude Mythos 5 exists but is invitation-only",
+    "correct_value": "Mythos 5.1 and Mythos 5 are both limited availability (Project Glasswing)"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Team offers a Standard seat at $25/month ($20 annual) and a Premium seat at $125/month ($100 annual), with a five-seat minimum",
+    "correct_value": "Prices correct; Team is 'For teams of 2 to 150' (2-seat minimum)"
+   },
+   {
+    "field": "cons",
+    "wrong_quote": "Team plan requires a five-seat minimum",
+    "correct_value": "2-seat minimum"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Enterprise is custom, starting around $20/seat plus usage",
+    "correct_value": "Listed price: $20/seat/month plus API-rate usage, billed annually"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "$5/$25 for Opus 5, $3/$15 for Sonnet 5 (with a $2/$10 intro rate through Aug 31, 2026)",
+    "correct_value": "Sonnet 5 is $2/$10 permanently (no increase to $3/$15). Add Opus 5.5 $4/$20, Sonnet 5.5 $2/$10, Fable 5.1 $10/$50"
+   },
+   {
+    "field": "pros",
+    "wrong_quote": "Clear model tiering (Fable 5, Opus 5, Sonnet 5, Haiku 4.5)",
+    "correct_value": "Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 4.5"
+   },
+   {
+    "field": "cons",
+    "wrong_quote": "Top-end Claude Mythos 5 is invitation-only",
+    "correct_value": "Mythos 5.1 / Mythos 5, both invitation-only"
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "Claude Opus 5 is built for complex agentic coding and computer use",
+    "correct_value": "Opus 5.5 is current"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "current models offer a 1M-token context window",
+    "correct_value": "API docs: 1M context for Claude 4.6 and later models; claude.com/pricing says 'Up to 1M varies by model'. Haiku 4.5 predates 4.6, so not all current models"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://claude.com/pricing",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://claude.com/pricing/max",
+    "accessed": "2026-10-06"
+   },
+   {
+    "url": "https://claude.com/pricing",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Max 20x price not printed in fetched text. Opus 5.5 / Sonnet 5.5 release dates come from the task brief, not from a page read here. | Manual check on claude.com/pricing: Free $0; Pro $17/mo billed annually ($200 up front) or $20 monthly; Max \"From $100\"; Enterprise $20/seat/month plus usage at API rates. A $200 Max tier is NOT printed — do not state it."
+ },
+ {
+  "slug": "coursera-coach",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Coursera Plus Monthly",
+    "amount": "$59",
+    "period": "per month",
+    "notes": "USD. 7-day free trial."
+   },
+   {
+    "tier": "Coursera Plus Annual",
+    "amount": "$399",
+    "period": "per year",
+    "notes": "USD. 14-day money-back guarantee. Page says about 40% saving vs monthly."
+   }
+  ],
+  "free_tier": "Not verified. Coursera Plus page does not mention Coach, and no primary page found stating Coach access for free auditors.",
+  "repositioning": "Coursera and Udemy closed their combination on 2026-05-11 ('now one company'; over 290 million learners combined). Project Helix (AI-native enterprise skills platform) announced 2026-09-09, broadly available H1 2027. On 2026-07-08 Role Play gained voice conversations with AI personas. Coursera About page lists an 'AI-powered personalized guide and features, like Role Play and Course Builder'.",
+  "card_errors": [
+   {
+    "field": "description",
+    "wrong_quote": "Google Gemini-powered AI assistant",
+    "correct_value": "Unverified. Coursera's own posts say Coach is 'powered by large language models' and name no vendor"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "As of July 2026, Coach is powered by Google Gemini",
+    "correct_value": "Unverified, no primary source"
+   },
+   {
+    "field": "pros",
+    "wrong_quote": "Powered by Google Gemini",
+    "correct_value": "Unverified"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "often discounted to roughly $35.40/month on promotion",
+    "correct_value": "Unverified, not on Coursera Plus page"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Free auditors get little to no access",
+    "correct_value": "Unverified"
+   },
+   {
+    "field": "cons",
+    "wrong_quote": "Free auditors get limited or no access",
+    "correct_value": "Unverified"
+   },
+   {
+    "field": "users",
+    "wrong_quote": "148M+",
+    "correct_value": "Unverified. Coursera states over 290 million learners across Coursera and Udemy combined (2026-05-11)"
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "It's not available on the free audit tier of most courses",
+    "correct_value": "Unverified"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.coursera.org/courseraplus",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://www.coursera.org/about",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://blog.coursera.org/coach-wins-newsweek-ai-impact-award/",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://blog.coursera.org/coursera-and-udemy-are-now-one-company-creating-the-worlds-most-comprehensive-skills-platform/",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://blog.coursera.org/accelerating-product-and-platform-innovations-across-coursera-and-udemy/",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://blog.coursera.org/announcing-project-helix/",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://blog.coursera.org/search/coach/feed/rss2/",
+    "accessed": "2026-10-07"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Plus pricing verified. No dedicated Coach product page found (coursera.org/coach and /about/coach return 404). 'Help me practice' and career-guidance features not confirmed on a primary page read here. Newsweek post (2025-06-23): 34M+ messages with 2.4M+ learners, 26 languages."
+ },
+ {
+  "slug": "figma-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Starter",
+    "amount": "Free",
+    "period": "n/a",
+    "notes": "150 AI credits/day, up to 500 AI credits/mo; unlimited drafts."
+   },
+   {
+    "tier": "Professional Full seat",
+    "amount": "$16/mo",
+    "period": "per month",
+    "notes": "USD. Page has a Monthly/Annual toggle; $16 is the server-rendered value and the billing period of that default could not be confirmed. +3,000 AI credits/mo."
+   },
+   {
+    "tier": "Professional Dev / Collab seat",
+    "amount": "$12/mo / $3/mo",
+    "period": "per month",
+    "notes": "+500 AI credits/mo each. Same toggle caveat."
+   },
+   {
+    "tier": "Organization Full / Dev / Collab",
+    "amount": "$55 / $25 / $5 per mo",
+    "period": "billed annually",
+    "notes": "Full +3,500 AI credits/mo; Dev/Collab +500."
+   },
+   {
+    "tier": "Enterprise Full / Dev / Collab",
+    "amount": "$90 / $35 / $5 per mo",
+    "period": "billed annually",
+    "notes": "Full +4,250 AI credits/mo; Dev/Collab +500."
+   },
+   {
+    "tier": "AI credit add-on",
+    "amount": "not published",
+    "period": "pay-as-you-go or subscription",
+    "notes": "'enable pay-as-you-go for flexibility and/or subscribe to save'."
+   }
+  ],
+  "free_tier": "Starter: 150 AI credits/day, up to 500/mo, unlimited drafts, UI kits and templates.",
+  "repositioning": "Pricing page lists the Figma agent (on-canvas chat to generate and remix designs), Figma Make (prompt to functional prototype or web app, Supabase backend, plan mode, Make on mobile), Figma MCP server, MCP connectors, and a new product Figma Weave ('AI workflows for imagery, video, audio, and more'). 'New AI add-ons are now available for all plans.'",
+  "card_errors": [
+   {
+    "field": "faq",
+    "wrong_quote": "It's built into Figma and available to all paid plan users",
+    "correct_value": "AI credits are also included on the free Starter plan (150/day, up to 500/mo)"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "generative actions costing roughly 20 credits each",
+    "correct_value": "Unverified, not on pricing page"
+   },
+   {
+    "field": "cons",
+    "wrong_quote": "Generative actions cost roughly 20 credits each",
+    "correct_value": "Unverified"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "The credit rules were most recently revised on 18 March 2026",
+    "correct_value": "Unverified"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "a separate credit-free AI agent is currently in beta",
+    "correct_value": "Unverified. Pricing page lists 'Figma agent' as a feature and does not say it is credit-free or beta"
+   },
+   {
+    "field": "pros",
+    "wrong_quote": "A credit-free AI agent is in beta",
+    "correct_value": "Unverified"
+   },
+   {
+    "field": "users",
+    "wrong_quote": "5M+",
+    "correct_value": "Unverified"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.figma.com/pricing/",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://help.figma.com/hc/en-us/articles/360040328273-Figma-plans-and-features",
+    "accessed": "2026-10-07"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Credit allotments verified exactly. Professional monthly vs annual amounts not separable: prices are filled in by JS placeholders, and the SSR text shows $16/$12/$3."
+ },
+ {
+  "slug": "google-stitch",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Stitch",
+    "amount": "not published",
+    "period": "n/a",
+    "notes": "No pricing information on any primary page read. Homepage is JS-only."
+   }
+  ],
+  "free_tier": "Unverified for 2026. The 2025 launch post called it a free Google Labs experiment; the May 2026 update post says nothing on price or limits.",
+  "repositioning": "May 19, 2026 Google post: Stitch now streams designs to the canvas in real time, accepts voice, text, existing codebases and design files, adds a Stitch Agent to steer iterations, and exports to Google Antigravity, Netlify publishing, and shareable links via Google AI Studio. 'available to global users starting today.'",
+  "card_errors": [
+   {
+    "field": "description",
+    "wrong_quote": "It now runs on Gemini 3, upgraded from Gemini 2.5 at Google I/O 2026",
+    "correct_value": "Unverified. The May 19, 2026 Stitch post names no model; Google's May 2026 recap mentions Gemini 3.5 but not Stitch"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "As of July 2026 Stitch runs on Gemini 3",
+    "correct_value": "Unverified"
+   },
+   {
+    "field": "pros",
+    "wrong_quote": "Runs on Gemini 3 with better context understanding, design-system adherence and accessibility than the previous 2.5 version",
+    "correct_value": "Unverified"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "The same release introduced Prototypes",
+    "correct_value": "Unverified. The May 2026 post lists real-time canvas, voice, Stitch Agent and exports, not 'Prototypes'"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Stitch 2.0 update (March 2026)",
+    "correct_value": "Unverified, no primary post found"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "around 550 generations a month (roughly 350 standard Flash plus about 200 Pro), with daily design credits that reset at midnight UTC",
+    "correct_value": "Unverified ('reported'), no primary source"
+   },
+   {
+    "field": "cons",
+    "wrong_quote": "Metered by usage credits (around 550 generations a month)",
+    "correct_value": "Unverified"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Analysts speculate a paid plan around 10-15 dollars a month could arrive in Q4 2026",
+    "correct_value": "Third-party speculation, remove"
+   },
+   {
+    "field": "cons",
+    "wrong_quote": "Any future pricing (analysts guess 10-15 dollars a month)",
+    "correct_value": "Third-party speculation, remove"
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "It's available through Google Labs at labs.google",
+    "correct_value": "Product lives at stitch.withgoogle.com"
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "Google Stitch can export designs for use in other tools. Full Figma import compatibility may vary",
+    "correct_value": "2025 launch post: 'paste to Figma and front-end code'. May 2026 post adds Antigravity, Netlify, AI Studio exports"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://stitch.withgoogle.com/",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://developers.googleblog.com/en/search/?query=stitch",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://blog.google/technology/google-labs/rss/",
+    "accessed": "2026-10-07"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Homepage is JS-rendered; Playwright was unavailable (connection refused). Most version and limit claims in the card trace to non-primary sources."
+ },
+ {
+  "slug": "julius-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "$0",
+    "period": null,
+    "notes": ""
+   },
+   {
+    "tier": "Plus",
+    "amount": "$16",
+    "period": "unlabelled",
+    "notes": ""
+   },
+   {
+    "tier": "Pro",
+    "amount": "$37",
+    "period": "unlabelled",
+    "notes": "card FAQ \"$28/month\" is wrong"
+   },
+   {
+    "tier": "Business",
+    "amount": "$166 / $375",
+    "period": "unlabelled",
+    "notes": "two Business figures on the page"
+   }
+  ],
+  "free_tier": "Not verified (site blocked).",
+  "repositioning": "Not verified.",
+  "card_errors": [
+   {
+    "field": "faq",
+    "wrong_quote": "Julius AI has a free plan with limited messages per month. Pro plan is $28/month for unlimited messages",
+    "correct_value": "Contradicts the card's own body (credit-based; Pro $37/mo yearly, $45/mo monthly). At least one is wrong; neither could be verified"
+   },
+   {
+    "field": "description",
+    "wrong_quote": "runs frontier models like GPT-5.5 and Claude Opus 4.8",
+    "correct_value": "Unverified. Anthropic has since released Opus 5 and Opus 5.5, so this list is likely stale"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "students and educators are reportedly offered 50% off via third-party sources",
+    "correct_value": "Third-party claim, remove or verify"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Plus $16/mo (24,000 credits/yr); Pro $37/mo ... Business $375/mo",
+    "correct_value": "Unverified (site blocked)"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://julius.ai/pricing",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://julius.ai/docs",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://docs.julius.ai",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://julius.ai/pricing",
+    "accessed": "2026-10-06"
+   }
+  ],
+  "confidence": "medium (pricing page read manually 2026-10-06; billing period of each figure not labelled in page text)",
+  "notes": "All Julius pages blocked by a Cloudflare challenge and Playwright was unavailable. Needs a manual browser check of julius.ai/pricing. The FAQ/body pricing contradiction is certain regardless. | Plans are Free, Plus, Pro, Business. Billing period of each price is not labelled — describe tiers, avoid asserting monthly vs annual."
+ },
+ {
+  "slug": "microsoft-copilot",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": "unclear: WebFetch got a 307 from copilot.microsoft.com to copilot.com (which serves 'Microsoft Copilot'); curl with a browser UA got 200 with no redirect. Enterprise app URL is changing from m365.cloud.microsoft to copilot.cloud.microsoft.",
+  "pricing": [
+   {
+    "tier": "all tiers",
+    "amount": "not verified",
+    "period": "n/a",
+    "notes": "microsoft.com pricing pages returned 'Your request has been blocked' (curl) or timed out (WebFetch). Learn docs confirm add-on structure but print no prices."
+   }
+  ],
+  "free_tier": "Not verified from a pricing page. Learn: Copilot Chat (Basic) is included at no extra cost with eligible Microsoft 365 work subscriptions (web-grounded).",
+  "repositioning": "Renamed: 'The Microsoft 365 Copilot app is now called Microsoft Copilot' and 'Microsoft 365 Copilot Chat app is now called Microsoft Copilot Chat'. License tiers on Learn: Copilot Chat (Basic), Microsoft 365 Copilot (Basic, standard access in Word/Excel/PowerPoint/OneNote without add-on), Microsoft 365 Copilot (Premium, add-on). New Copilot Cowork (usage-based billing). Microsoft 365 E7 includes Copilot. Model selector is Auto / Quick response / Think deeper with a real-time router; Sonnet 5 added to Word models menu as default for higher-reasoning tasks (2026-08-25); ChatGPT Images 2.0 in Cowork (2026-08-25).",
+  "card_errors": [
+   {
+    "field": "description",
+    "wrong_quote": "The consumer app defaults to GPT-5/GPT-5.5, Microsoft 365 Copilot runs GPT-5.4 Thinking",
+    "correct_value": "Unverified, and contradicts description_long (GPT-5.6 family). Microsoft Learn publishes no GPT version; selector is Auto/Quick response/Think deeper"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "GPT-5.6 became the default in the October-November 2025 rollout",
+    "correct_value": "Internally inconsistent with the next clause ('GPT-5.6 rolled out in July 2026') and unverified"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Anthropic's Claude models (Sonnet 4.5/4.6 and Opus) are now selectable",
+    "correct_value": "Release notes 2026-08-25: Sonnet 5 in Word models menu; Anthropic models only in applicable licensed experiences"
+   },
+   {
+    "field": "pros",
+    "wrong_quote": "Copilot Chat lets you switch between GPT-5.2 and Anthropic Claude models (Sonnet 4.5/4.6, Opus)",
+    "correct_value": "Stale or unverified; see Sonnet 5 above"
+   },
+   {
+    "field": "pros",
+    "wrong_quote": "Runs on the current GPT-5 family (GPT-5/GPT-5.5 consumer, GPT-5.4 Thinking in Microsoft 365)",
+    "correct_value": "Unverified"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "July 2026 also added AI-content watermarking",
+    "correct_value": "Not found in Microsoft 365 Copilot release notes; unverified"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Microsoft 365 Copilot add-on is $18.00/user/mo on an annual promo (down from $21) or $25.20 monthly; Business Standard with Copilot runs $23.50 yearly, Business Premium with Copilot $32.00 yearly",
+    "correct_value": "Unverified (pricing pages blocked)"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Copilot Studio for building custom agents is $200/mo",
+    "correct_value": "Unverified"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "existing subscriptions only work until August 1, 2026",
+    "correct_value": "Unverified. If correct, the date has passed and the sentence should be past tense"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Microsoft 365 Premium at $19.99/mo",
+    "correct_value": "Unverified (pricing page blocked)"
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "For organizations, the Microsoft 365 Copilot add-on runs around $18-25/user/month depending on the plan, with the enterprise add-on around $30/user/month",
+    "correct_value": "Unverified"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/release-notes",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-licensing",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/which-copilot-for-your-organization",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://copilot.microsoft.com/",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://copilot.com/",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://www.microsoft.com/en-us/microsoft-365/copilot/pricing",
+    "accessed": "2026-10-07"
+   }
+  ],
+  "confidence": "low",
+  "notes": "Every price unverified because microsoft.com blocked automated fetches. Model and naming facts come from Microsoft Learn (updated 2026-09-30 / 2026-10-01). The card's model paragraph contradicts itself and should be rewritten without GPT version numbers."
+ },
+ {
+  "slug": "notion-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Notion 3.7 (2026-09-15)",
+  "version_published": true,
+  "domain_changed": "no (notion.so 301 to www.notion.so; marketing/pricing on notion.com)",
+  "pricing": [
+   {
+    "tier": "Free",
+    "amount": "$0",
+    "period": "per member/month",
+    "notes": "Trial of Notion AI only."
+   },
+   {
+    "tier": "Plus",
+    "amount": "$10 billed yearly; $12 monthly",
+    "period": "per member/month",
+    "notes": "USD. Trial of Notion AI only. Monthly from embedded price data (plus_monthly_usd_202407 unit_amount 1200); yearly is the default toggle."
+   },
+   {
+    "tier": "Business",
+    "amount": "$20 billed yearly; $24 monthly",
+    "period": "per member/month",
+    "notes": "USD. Full Notion AI, Notion Agent, AI Meeting Notes, Enterprise Search. Monthly from price data business_monthly_usd_202505 unit_amount 2400."
+   },
+   {
+    "tier": "Enterprise",
+    "amount": "Custom",
+    "period": "n/a",
+    "notes": "Business AI plus zero data retention with LLM providers."
+   },
+   {
+    "tier": "Custom Agents credits",
+    "amount": "$10 per 1,000 monthly Notion credits",
+    "period": "per month",
+    "notes": "'Free to try, then $10 per 1,000 monthly Notion credits'."
+   }
+  ],
+  "free_tier": "Free: $0, 'Trial of Notion AI' ('Trial AI capabilities like generating docs, or autofilling databases'); no ongoing AI.",
+  "repositioning": "Notion 3.7 (2026-09-15): agent Skills and a skills library, Skills export to Claude Code/Codex/Cursor/Gemini/Grok, Custom Agents calling sub-agents, Notion Agents iOS app, redesigned model picker; models named include Opus 5, GPT-5.6 Sol, Kimi K3. 2026-09-09: workspace owners choose which models are available to Notion Agent vs Custom Agents.",
+  "card_errors": [
+   {
+    "field": "description",
+    "wrong_quote": "As of version 3.6 (July 2026)",
+    "correct_value": "Current release is Notion 3.7 (2026-09-15)"
+   },
+   {
+    "field": "description",
+    "wrong_quote": "multi-model picker (Claude Opus 4.8, GPT-5.x, Gemini 3, Grok 4.3, GLM 5.2)",
+    "correct_value": "3.7 release names Opus 5, GPT-5.6 Sol, Kimi K3. 3.6 named Opus 4.8, Grok 4.3, GLM 5.2; Gemini 3 not confirmed in either summary"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "The current release is Notion 3.6, shipped on July 1, 2026",
+    "correct_value": "3.6 shipped 2026-07-01 but 3.7 (2026-09-15) is current"
+   },
+   {
+    "field": "pros",
+    "wrong_quote": "Model picker lets you pick Claude Opus 4.8, GPT-5.x, Gemini 3, Grok 4.3 or GLM 5.2",
+    "correct_value": "Stale; see 3.7 models"
+   },
+   {
+    "field": "choose_if",
+    "wrong_quote": "You want to switch models (Opus 4.8, GPT-5.x, Gemini 3, Grok, GLM)",
+    "correct_value": "Stale; use generic wording or the 3.7 list"
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "Notion AI is an add-on at $10/member/month (billed annually) on top of any Notion plan, including the free plan. It is included in the Plus, Business, and Enterprise plans as of 2026.",
+    "correct_value": "No add-on; Free and Plus get only a trial; full AI is in Business ($20 yearly / $24 monthly) and Enterprise"
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "Notion Developer Platform 3.5 (May 2026) adds Workers runtime for serverless functions, Sync API ... Webhooks",
+    "correct_value": "Unverified. Releases page shows Workers credit tracking (2026-07-24) and Developer Portal (2026-08-19) but 3.5 itself was not confirmed"
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "For real-time web data, it uses connected integrations rather than direct internet browsing",
+    "correct_value": "Unverified, and likely outdated; not checked against a primary page"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.notion.com/pricing",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://www.notion.com/releases",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://www.notion.com/releases/2026-09-15",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://www.notion.com/releases/2026-07-01",
+    "accessed": "2026-10-07"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Card pricing body is correct. Version and models are stale, and the FAQ pricing answer is wrong."
+ },
+ {
+  "slug": "reclaim-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": null,
+  "version_published": false,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Lite",
+    "amount": "Free",
+    "period": "forever",
+    "notes": "1 user, 5 AI Agents, 1-week scheduling range, 1 Calendar Sync, 1 Scheduling Link, limited integrations (Google Tasks, Slack, Zoom, Google Meet)."
+   },
+   {
+    "tier": "Starter",
+    "amount": "$10/seat/mo billed yearly; $12/seat/mo monthly",
+    "period": "per seat/month",
+    "notes": "USD. Up to 10 seats, 10 AI Agents/seat, 8-week scheduling range. Attendee User (AU) packs: 3 AUs $8/mo yearly ($10 monthly)."
+   },
+   {
+    "tier": "Business",
+    "amount": "$15/seat/mo billed yearly; $18/seat/mo monthly",
+    "period": "per seat/month",
+    "notes": "Up to 100 seats, 100 AI Agents/seat, 12-week range. AU packs: 6 AUs $12/mo yearly ($15 monthly)."
+   },
+   {
+    "tier": "Enterprise",
+    "amount": "$22/seat/mo billed yearly",
+    "period": "per seat/month",
+    "notes": "'Unavailable on monthly plans'. 100+ seats, unlimited AI Agents, SSO & SCIM, 12-week range. AU packs: 10 AUs $18/mo."
+   }
+  ],
+  "free_tier": "Lite: free forever, 1 user, 5 AI Agents, 1-week scheduling range, 1 calendar sync, 1 scheduling link, limited integrations.",
+  "repositioning": "Pricing now built around per-seat 'AI Agents' (Focus Time, Habits, Buffer Time, Smart Meetings, Meeting Quality) and new paid 'Attendee Users' (AUs) for Smart Meetings of 3+ people. Page still shows an expired 'LAUNCH PROMO: AUs are 100% free through July 31st' and a 'Save 30% today-only' new-user offer.",
+  "card_errors": [
+   {
+    "field": "description",
+    "wrong_quote": "The current release, Reclaim 2.0, repositions the product around AI Agents, a chat interface, and MCP integrations",
+    "correct_value": "Unverified. Not in the official changelog (updates.reclaim.ai, latest entry 2026-06-04) or on the pricing page. 'AI Agents' as plan entitlements is confirmed"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "The current version is Reclaim 2.0 ... adding a chat interface and MCP (Model Context Protocol) integrations, announced in a founders webinar",
+    "correct_value": "Unverified"
+   },
+   {
+    "field": "pros",
+    "wrong_quote": "Reclaim 2.0 adds a chat interface and MCP integrations",
+    "correct_value": "Unverified"
+   },
+   {
+    "field": "choose_if",
+    "wrong_quote": "You want a scheduling assistant you can drive by chat and connect via MCP",
+    "correct_value": "Unverified"
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "Starter is $8/user/month, Business is $12/user/month, and Enterprise is custom",
+    "correct_value": "Starter $10 yearly / $12 monthly; Business $15 yearly / $18 monthly; Enterprise $22/seat/mo yearly only"
+   },
+   {
+    "field": "users",
+    "wrong_quote": "100K+",
+    "correct_value": "Unverified"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://reclaim.ai/pricing",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://updates.reclaim.ai/",
+    "accessed": "2026-10-07"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Card body pricing is correct; the FAQ is wrong. Changelog confirms Team OOO Calendars (2026-04-09), Custom Slack OOO auto-replies (2026-06-04), New & Improved Reclaim for Slack (2025-12-02), Outlook support (2025-05-21)."
+ },
+ {
+  "slug": "stable-diffusion",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Stable Diffusion 3.5 (Large, Large Turbo, Medium; API also lists SD 3.5 Flash)",
+  "version_published": true,
+  "domain_changed": false,
+  "pricing": [
+   {
+    "tier": "Self-host (Community License)",
+    "amount": "$0",
+    "period": "n/a",
+    "notes": "Individuals and organizations under $1M annual revenue. Covers SD 3.5 suite, SDXL Turbo, Stable Audio 3.0 and others."
+   },
+   {
+    "tier": "Enterprise License",
+    "amount": "Custom",
+    "period": "n/a",
+    "notes": "Required above $1M annual revenue."
+   },
+   {
+    "tier": "API credits",
+    "amount": "$1 per 100 credits",
+    "period": "pay-as-you-go",
+    "notes": "1 credit = $0.01. Free starter credits for new accounts."
+   },
+   {
+    "tier": "API per-image",
+    "amount": "Ultra 8 cr; SD3.5 Large 6.5; Large Turbo 4; Medium 3.5; Flash 2.5; Core 3; SDXL 1.0 from 0.9",
+    "period": "per generation",
+    "notes": "i.e. Ultra $0.08, Core $0.03. Stable Audio 3.0 26 cr; Stable Fast 3D 10 cr."
+   }
+  ],
+  "free_tier": "Free self-hosting under the Community License (<$1M revenue). The API gives new users some free credits.",
+  "repositioning": "No repositioning. Stable Audio is now version 3.0 (Community License and API).",
+  "card_errors": [
+   {
+    "field": "description_long",
+    "wrong_quote": "ships in three variants: Large at 8.1B parameters, Large Turbo ... and Medium at 2.5B",
+    "correct_value": "API also lists 'Stable Diffusion 3.5 Flash' (2.5 credits). Its open-weights status was not verified"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "A roughly $20/month membership tier has also been referenced by third parties",
+    "correct_value": "Third-party claim; no membership on primary pages read; remove"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "SD 3.5 is the most widely installed open image model by sheer install count, but ... that position now belongs to Black Forest Labs' FLUX.2",
+    "correct_value": "Unverifiable editorial claim, no primary source"
+   },
+   {
+    "field": "cons",
+    "wrong_quote": "No longer the open-weights quality leader — FLUX.2 leads as of 2026",
+    "correct_value": "Unverifiable editorial claim"
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "Stable Diffusion model weights are open-source and free to download and use locally ... There are no usage fees for local generation.",
+    "correct_value": "Weights are open but under the Stability AI Community License: free only below $1M annual revenue; Enterprise License above. Contradicts the card's own body"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "Related open models include SDXL Turbo, Stable Audio and Stable Fast 3D",
+    "correct_value": "Stable Audio is now 3.0"
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "FLUX.1 ... comes in three versions: Schnell (fast, open weights), Dev (quality, open weights), and Pro",
+    "correct_value": "Not verified against Black Forest Labs; the card body itself says FLUX.2 is current, so these FAQs are stale"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://stability.ai/license",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://platform.stability.ai/pricing",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://platform.stability.ai/assets/index-DtvkdpVO.js",
+    "accessed": "2026-10-07"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Credit costs read from the platform's JS bundle (IMAGE_SERVICES list) and the '$1 USD per 100 credits' docs text in the same bundle. Card figures for Ultra ($0.08) and Core ($0.03) are correct."
+ },
+ {
+  "slug": "whisper",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Open models: turbo (optimized large-v3) is the newest checkpoint; latest pip release v20250625 (2026 repo still active, last push 2026-08-31). Hosted: whisper-1 plus newer OpenAI transcription models",
+  "version_published": true,
+  "domain_changed": "unknown (openai.com/research/whisper returns 403 to automated fetchers)",
+  "pricing": [
+   {
+    "tier": "Open-source models",
+    "amount": "$0",
+    "period": "n/a",
+    "notes": "MIT license; you pay for your own compute."
+   },
+   {
+    "tier": "whisper-1 (API)",
+    "amount": "$0.006/min",
+    "period": "per minute",
+    "notes": ""
+   },
+   {
+    "tier": "gpt-4o-transcribe",
+    "amount": "$0.006/min",
+    "period": "per minute",
+    "notes": "Also $2.50 in / $10.00 out per 1M tokens."
+   },
+   {
+    "tier": "gpt-4o-mini-transcribe",
+    "amount": "$0.003/min",
+    "period": "per minute",
+    "notes": "Also $1.25 / $5.00 per 1M tokens."
+   },
+   {
+    "tier": "gpt-4o-transcribe-diarize",
+    "amount": "$0.006/min",
+    "period": "per minute",
+    "notes": "Speaker diarization."
+   },
+   {
+    "tier": "gpt-transcribe",
+    "amount": "$0.0045/min",
+    "period": "per minute",
+    "notes": "OpenAI's recommended model for recorded speech."
+   },
+   {
+    "tier": "gpt-realtime-whisper",
+    "amount": "$0.017/min",
+    "period": "per minute",
+    "notes": "Live transcription."
+   },
+   {
+    "tier": "gpt-live-transcribe",
+    "amount": "$0.017/min",
+    "period": "per minute",
+    "notes": "Recommended realtime transcription model."
+   },
+   {
+    "tier": "gpt-realtime-translate",
+    "amount": "$0.034/min",
+    "period": "per minute",
+    "notes": "Live translation."
+   }
+  ],
+  "free_tier": "Open weights are free under MIT. The hosted API is paid per minute.",
+  "repositioning": "OpenAI's hosted speech-to-text has moved past whisper-1: the docs now say to start with gpt-transcribe, use gpt-4o-transcribe-diarize for speakers, and use gpt-live-transcribe for realtime.",
+  "card_errors": [
+   {
+    "field": "description",
+    "wrong_quote": "The latest open checkpoint is large-v3-turbo, a distilled version",
+    "correct_value": "README calls turbo 'an optimized version of large-v3'; 'distilled' is not the vendor's word"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "a distilled model introduced in October 2024",
+    "correct_value": "Released in package v20240930 (GitHub release 2024-09-30)"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "gpt-4o-transcribe and the cheaper gpt-4o-mini-transcribe, which add options like speaker diarization",
+    "correct_value": "Diarization is a separate model, gpt-4o-transcribe-diarize ($0.006/min)"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "According to reports, a streaming variant, gpt-realtime-whisper, arrived around May 2026",
+    "correct_value": "Model exists on OpenAI pricing ($0.017/min); launch date unverified. OpenAI recommends gpt-live-transcribe for realtime"
+   },
+   {
+    "field": "description_long",
+    "wrong_quote": "whisper-1 and gpt-4o-transcribe are $0.006 per minute ... gpt-4o-mini-transcribe is $0.003",
+    "correct_value": "Correct, but missing gpt-transcribe ($0.0045/min, now recommended) and gpt-live-transcribe ($0.017/min)"
+   },
+   {
+    "field": "pros",
+    "wrong_quote": "plus speech-to-English translation",
+    "correct_value": "README: the turbo model 'is not trained for translation tasks'; use multilingual tiny-large models"
+   },
+   {
+    "field": "pros",
+    "wrong_quote": "Hosted GPT-4o models add speaker diarization",
+    "correct_value": "Only gpt-4o-transcribe-diarize"
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "it transcribes audio in 100+ languages",
+    "correct_value": "Inconsistent with the card body ('around 99 languages'); not checked against the tokenizer list"
+   },
+   {
+    "field": "faq",
+    "wrong_quote": "OpenAI also offers Whisper via its API at $0.006 per minute",
+    "correct_value": "Correct for whisper-1; cheaper gpt-4o-mini-transcribe ($0.003) and gpt-transcribe ($0.0045) exist"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://github.com/openai/whisper",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://raw.githubusercontent.com/openai/whisper/main/README.md",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://api.github.com/repos/openai/whisper/releases?per_page=3",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://developers.openai.com/api/docs/pricing",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://developers.openai.com/api/docs/guides/speech-to-text",
+    "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://openai.com/research/whisper",
+    "accessed": "2026-10-07"
+   }
+  ],
+  "confidence": "high",
+  "notes": "README speed table lists turbo at ~8x relative speed (809M params, ~6 GB VRAM). The Otter.ai claims in the FAQ were not verified."
+ }
+]

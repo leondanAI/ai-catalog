@@ -207,7 +207,7 @@
    }
   ],
   "confidence": "high for availability/export, medium for Max 20x price",
-  "notes": "Badge 'paid' is correct. users field 'from $20/mo' fine (Pro $20 monthly / $17 annual)."
+  "notes": "Badge 'paid' is correct. users field 'from $20/mo' fine (Pro $20 monthly / $17 annual). | Manual check: claude.com/pricing shows Max only as \"From $100\". Do not state $200."
  },
  {
   "slug": "deepl",
@@ -761,10 +761,28 @@
   "domain_changed": false,
   "pricing": [
    {
-    "tier": "all consumer and enterprise tiers",
-    "amount": "NOT VERIFIED",
-    "period": "",
-    "notes": "perplexity.ai (pro, max, hub/blog, changelog, help-center, enterprise/pricing, comet) returned HTTP 403 to every fetch method permitted; Playwright unavailable (connection refused). Card figures (Free, Pro $20/mo or $200/yr, Max $200/mo or $2,000/yr, Education ~$10, Enterprise Pro ~$40/seat, Enterprise Max ~$325/seat) remain unverified"
+    "tier": "Free",
+    "amount": "$0",
+    "period": "month",
+    "notes": ""
+   },
+   {
+    "tier": "Pro",
+    "amount": "$17",
+    "period": "month, billed annually",
+    "notes": "Monthly-billed price not shown on the page. 4,000 bonus Computer credits; limited-time +$40 credits on first upgrade"
+   },
+   {
+    "tier": "Max",
+    "amount": "$167",
+    "period": "month, billed annually",
+    "notes": "10,000 monthly credits, 35,000 bonus credits; limited-time +$450 credits on first upgrade"
+   },
+   {
+    "tier": "Enterprise",
+    "amount": null,
+    "period": null,
+    "notes": "listed, no price"
    }
   ],
   "free_tier": "Unverified this round.",
@@ -812,10 +830,14 @@
    {
     "url": "https://docs.perplexity.ai/changelog/changelog",
     "accessed": "2026-10-07"
+   },
+   {
+    "url": "https://www.perplexity.ai/pro",
+    "accessed": "2026-10-06"
    }
   ],
-  "confidence": "low",
-  "notes": "Primary consumer pages unreadable. Needs manual check of perplexity.ai/pro and the Portable Computer announcement. Do not update prices from this audit."
+  "confidence": "medium (pricing verified manually in a browser 2026-10-06)",
+  "notes": "Primary consumer pages unreadable. Needs manual check of perplexity.ai/pro and the Portable Computer announcement. Do not update prices from this audit. | Manual check: do not state a monthly-billed price; only annual-billing equivalents are published. Limited-time credit promos should not go into the card."
  },
  {
   "slug": "runway",
