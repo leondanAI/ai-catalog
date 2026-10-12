@@ -28,6 +28,8 @@ steps = [
     ('Compare pages (928)',        ['python3', 'scripts/generate-compare-pages.py']),
     ('News pages + snapshot',      ['python3', 'scripts/generate-news-pages.py']),
     ('News SEO block (8 langs)',   ['python3', 'scripts/generate-news-snapshot.py']),
+    # Ссылки с языковых версий на английскую (лента новостей так вела в EN 5 месяцев).
+    ('Language links check',       ['python3', 'scripts/check_lang_links.py']),
     ('Sitemap',                    ['python3', 'scripts/generate-sitemap.py']),
 ]
 

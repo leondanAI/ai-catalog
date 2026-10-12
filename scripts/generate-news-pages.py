@@ -294,7 +294,7 @@ def generate_page(article, lang, all_articles_for_lang, all_slugs_by_lang):
 
 <header class="site-header">
   <div class="header-inner">
-    <a href="/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>AItoolFit</a>
+    <a href="{base}/" class="logo"><svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="7" fill="#7c6af7"/><text x="13" y="18" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="14">AI</text></svg>AItoolFit</a>
     <nav class="nav-links">
       <a href="{base}/" class="nav-link" data-i18n="nav.home">Find AI</a>
       <a href="{base}/directory.html" class="nav-link" data-i18n="nav.directory">Best AI Tools</a>

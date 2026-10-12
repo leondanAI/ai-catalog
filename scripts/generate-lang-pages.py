@@ -167,6 +167,11 @@ def fix_nav_links(html, lang):
     # Absolute page links with query strings: href="/compare.html?..." → href="/ru/compare.html?..."
     for page in PAGES:
         html = re.sub(rf'href="/{page}\?', f'href="/{lang}/{page}?', html)
+    # Юридические страницы в подвале. Их делает gen_legal_pages.py на всех языках,
+    # но в PAGES их нет, и подвал вёл на английские версии — а оттуда же его
+    # берут страницы сравнений (113 на язык).
+    for page in ('privacy.html', 'terms.html', 'contact.html'):
+        html = re.sub(rf'href="/?{page}"', f'href="/{lang}/{page}"', html)
     # Static comparison subpages: href="/compare/chatgpt-vs-claude.html" → href="/ru/compare/chatgpt-vs-claude.html"
     html = re.sub(r'href="/compare/([^"]+\.html)"', f'href="/{lang}/compare/\\1"', html)
     # News article page: href="/news-article.html" → href="/ru/news-article.html"
