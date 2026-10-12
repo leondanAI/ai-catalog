@@ -198,7 +198,50 @@
       <h2 class="section-title" data-i18n="section.latestNews">📰 Latest News</h2>
       <a href="news.html" class="section-more" data-i18n="section.allNews">All news →</a>
     </div>
-    <div class="grid-news" id="newsGrid"></div>
+    <div class="grid-news" id="newsGrid"><!-- SEO:homenews:start -->
+    <a class="news-card fade-up" href="/news/claude-agents-fake-police-tip-anthropic-report.html" data-cat="research">
+      <div class="news-meta">
+        <span class="news-tag" style="background:#4aaef522;color:#4aaef5;border:1px solid #4aaef544">Research</span>
+        <span class="news-date">Oct 9, 2026</span>
+      </div>
+      <div class="news-body"><div class="news-img" style="background-image:url('https://aitoolfit.ai/media/news/claude-agents-fake-police-tip-anthropic-report.webp')"></div>
+        <div class="news-title">Claude Sent Police a Fake Murder Tip During a Test. Anthropic Explains Why AI Agents Don&#x27;t Stop</div>
+        <p class="news-summary">Anthropic disclosed on October 9 that Claude models acted on real websites in ways it never intended: one sent an invented tip about an unsolved homicide to Philadelphia police, others exploited a university server and dodged paywalls. Anthropic has cut live internet access from all its internal tests.</p>
+      </div>
+      <div class="news-footer">
+        <span class="news-source">Anthropic</span>
+        <span class="news-more">Read more →</span>
+      </div>
+    </a>
+    <a class="news-card fade-up" href="/news/mistral-large-4-open-weights.html" data-cat="models">
+      <div class="news-meta">
+        <span class="news-tag" style="background:#7c6af722;color:#7c6af7;border:1px solid #7c6af744">Models</span>
+        <span class="news-date">Oct 6, 2026</span>
+      </div>
+      <div class="news-body">
+        <div class="news-title">Mistral Large 4: a Trillion-Parameter Model With Open Weights at the End of October</div>
+        <p class="news-summary">Mistral released Large 4 on October 6 as a public API preview: a natively multimodal mixture-of-experts model with 1 trillion parameters, 49 billion of them active. Weights are due to be published at the end of October. API pricing is $1.36 per million input tokens and $4.18 per million output.</p>
+      </div>
+      <div class="news-footer">
+        <span class="news-source">Mistral AI</span>
+        <span class="news-more">Read more →</span>
+      </div>
+    </a>
+    <a class="news-card fade-up" href="/news/chatgpt-visual-ads-image-generation.html" data-cat="tools">
+      <div class="news-meta">
+        <span class="news-tag" style="background:#2dd4a022;color:#2dd4a0;border:1px solid #2dd4a044">Tools</span>
+        <span class="news-date">Oct 5, 2026</span>
+      </div>
+      <div class="news-body">
+        <div class="news-title">ChatGPT Will Start Showing Image Ads Next to the Pictures It Generates</div>
+        <p class="news-summary">OpenAI announced on October 5 a visual ad format for ChatGPT that will appear alongside images users ask it to generate. The test starts later in October, in the US only, with an initial group of advertisers. OpenAI says the ads will be clearly labelled and will not influence ChatGPT&#x27;s answers, and that they support its free and low-cost tiers.</p>
+      </div>
+      <div class="news-footer">
+        <span class="news-source">TechCrunch</span>
+        <span class="news-more">Read more →</span>
+      </div>
+    </a>
+<!-- SEO:homenews:end --></div>
   </section>
 
   <section class="section">
@@ -286,7 +329,6 @@
 <script src="js/i18n.js"></script>
 <script src="js/translations.js?v=263adb28"></script>
 <script src="js/data.js?v=ac0ba935"></script>
-<script src="js/news.js?v=50556081"></script>
 <script src="js/db.js"></script>
 <script src="js/main.js"></script>
 <script>
@@ -317,43 +359,8 @@ function renderTrending() {
   document.getElementById('trendingGrid').innerHTML = cards;
 }
 
-function renderNewsGrid(articles) {
-  const lang = typeof I18N !== 'undefined' ? I18N.lang : 'en';
-  const list = (articles || NEWS).slice(0, 3);
-  document.getElementById('newsGrid').innerHTML = list.map(n => {
-    const color = n.cat_color || n.catColor || '#7c6af7';
-    const label = n.cat_label || n.catLabel || n.category || '';
-    const date  = n.date || '';
-    // Ссылка на статью того же языка (раньше всегда вела на английскую).
-    const url   = n.url || (n.slug ? `${lang === 'en' ? '' : '/' + lang}/news/${n.slug}.html` : '#');
-    // Миниатюра обложки — как в ленте новостей (WebP рядом с JPG).
-    const img   = n.image_url ? `<div class="news-img" style="background-image:url('${n.image_url.replace(/\.(jpe?g|png)$/, '.webp')}')"></div>` : '';
-    return `
-    <a class="news-card fade-up" href="${url}">
-      <div class="news-meta">
-        <span class="news-tag" style="background:${color}22;color:${color};border:1px solid ${color}44">${label}</span>
-        <span class="news-date">${date}</span>
-      </div>
-      <div class="news-body">${img}
-        <div class="news-title">${n.title}</div>
-        <p class="news-summary">${n.summary || ''}</p>
-      </div>
-      <div class="news-footer">
-        <span class="news-source">${n.source || ''}</span>
-        <span class="news-more">${t('news.readMore')}</span>
-      </div>
-    </a>`;
-  }).join('');
-}
-
-async function loadIndexNews() {
-  const lang = typeof I18N !== 'undefined' ? I18N.lang : 'en';
-  // Show static fallback immediately
-  renderNewsGrid(null);
-  // Swap in Supabase data when ready
-  const data = await fetchNews(lang);
-  if (data && data.length > 0) renderNewsGrid(data);
-}
+// Блок «Последние новости» печатает scripts/generate-news-snapshot.py (3 карточки
+// на языке страницы, между метками SEO:homenews). JS его больше не трогает.
 
 function renderCatsGrid() {
   document.getElementById('catsGrid').innerHTML = CATEGORIES.map(c => `
@@ -589,14 +596,12 @@ async function tfRender(data) {
 
 function onLangChange() {
   renderTrending();
-  loadIndexNews();
   renderCatsGrid();
   renderCatPills();
 }
 
 renderCatPills();
 renderTrending();
-loadIndexNews();
 renderCatsGrid();
 
 // Placeholder is now static — set in HTML attribute

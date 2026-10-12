@@ -196,66 +196,6 @@ def format_date(date_str):
         return date_str or ''
 
 
-def render_news_card(article):
-    cat      = article.get('category', '')
-    color    = article.get('cat_color') or NEWS_CAT_COLORS.get(cat, '#7c6af7')
-    label    = article.get('cat_label') or cat.title()
-    title    = article.get('title', '')
-    summary  = article.get('summary', '')
-    source   = article.get('source', '')
-    date_str = format_date(article.get('date', ''))
-    sl       = article.get('slug', '')
-    img_url  = article.get('image_url')
-    img_html = f'<div class="news-img" style="background-image:url(\'{esc(img_url)}\')"></div>' if img_url else ''
-    return f'''
-    <a class="news-card fade-up" href="/news-article.html?slug={esc(sl)}&amp;lang=en">
-      {img_html}
-      <div class="news-meta">
-        <span class="news-tag" style="background:{color}22;color:{color};border:1px solid {color}44">{esc(label)}</span>
-        <span class="news-date">{esc(date_str)}</span>
-      </div>
-      <div class="news-title">{esc(title)}</div>
-      <p class="news-summary">{esc(summary)}</p>
-      <div class="news-footer">
-        <span class="news-source">{esc(source)}</span>
-        <span class="news-more">Read more →</span>
-      </div>
-    </a>'''
-
-
-def build_news_html(articles):
-    return ''.join(render_news_card(a) for a in articles)
-
-
-def inject_news(articles):
-    path = os.path.join(ROOT, 'news.html')
-    with open(path, encoding='utf-8') as f:
-        html = f.read()
-
-    static_html = build_news_html(articles)
-    MARKER_START = '<!-- SEO:news:start -->'
-    MARKER_END   = '<!-- SEO:news:end -->'
-
-    # First run: add markers if not present
-    if MARKER_START not in html:
-        html = html.replace(
-            '<div class="grid-news" id="newsGrid"></div>',
-            f'<div class="grid-news" id="newsGrid">{MARKER_START}{MARKER_END}</div>'
-        )
-
-    # Replace between markers (idempotent)
-    html = re.sub(
-        re.escape(MARKER_START) + r'.*?' + re.escape(MARKER_END),
-        MARKER_START + '\n' + static_html + '\n' + MARKER_END,
-        html, flags=re.DOTALL
-    )
-    with open(path, 'w', encoding='utf-8') as f:
-        f.write(html)
-    print(f'  ✓ news.html — {len(articles)} articles pre-rendered')
-
-
-# ── Main ──────────────────────────────────────────────────────────────────────
-
 def main():
     # Языковые каталоги отдавались пустым каркасом: статика генерировалась только для EN,
     # а generate-lang-pages.py вдобавок вычищает SEO-блок при копировании.
@@ -263,10 +203,9 @@ def main():
     # на каждый язык. Теперь статика рендерится для всех языков.
     translations = parse_i18n()
 
-    print('Fetching English news from Supabase…')
-    news = fetch('news?lang=eq.en&published=eq.true&order=date.desc&limit=100&select=slug,title,summary,category,cat_label,cat_color,date,source,image_url')
-    print(f'  {len(news)} articles')
-    inject_news(news)
+    # Ленты новостей печатает только generate-news-snapshot.py (все 8 языков,
+    # правильные ссылки). Здесь раньше был второй писатель той же метки
+    # SEO:news — с адресами news-article.html?slug=… и только на английском.
 
     print('\nInjecting catalog for every language…')
     for lang in LANGS:

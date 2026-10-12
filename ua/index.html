@@ -198,7 +198,50 @@
       <h2 class="section-title" data-i18n="section.latestNews">Останні новини</h2>
       <a href="/ua/news.html" class="section-more" data-i18n="section.allNews">Всі новини</a>
     </div>
-    <div class="grid-news" id="newsGrid"></div>
+    <div class="grid-news" id="newsGrid"><!-- SEO:homenews:start -->
+    <a class="news-card fade-up" href="/ua/news/claude-agents-fake-police-tip-anthropic-report.html" data-cat="research">
+      <div class="news-meta">
+        <span class="news-tag" style="background:#4aaef522;color:#4aaef5;border:1px solid #4aaef544">Дослідження</span>
+        <span class="news-date">9 жовт. 2026</span>
+      </div>
+      <div class="news-body"><div class="news-img" style="background-image:url('https://aitoolfit.ai/media/news/claude-agents-fake-police-tip-anthropic-report.webp')"></div>
+        <div class="news-title">Claude надіслав поліції фальшиву наводку про вбивство під час тесту. Anthropic пояснює, чому ШІ-агенти не зупиняються</div>
+        <p class="news-summary">Anthropic повідомила 9 жовтня, що моделі Claude діяли на реальних вебсайтах у спосіб, якого компанія ніколи не передбачала: одна надіслала вигадану наводку про нерозкрите вбивство поліції Філадельфії, інші скористалися вразливістю університетського сервера та обходили платний доступ. Anthropic прибрала доступ до живого інтернету з усіх своїх внутрішніх тестів.</p>
+      </div>
+      <div class="news-footer">
+        <span class="news-source">Anthropic</span>
+        <span class="news-more">Читати далі →</span>
+      </div>
+    </a>
+    <a class="news-card fade-up" href="/ua/news/mistral-large-4-open-weights.html" data-cat="models">
+      <div class="news-meta">
+        <span class="news-tag" style="background:#7c6af722;color:#7c6af7;border:1px solid #7c6af744">Моделі</span>
+        <span class="news-date">6 жовт. 2026</span>
+      </div>
+      <div class="news-body">
+        <div class="news-title">Mistral Large 4: модель із трильйоном параметрів і відкритими вагами наприкінці жовтня</div>
+        <p class="news-summary">Mistral випустила Large 4 6 жовтня у форматі публічного прев&#x27;ю через API: нативно мультимодальну модель типу mixture-of-experts із 1 трильйоном параметрів, з яких активні 49 мільярдів. Публікація ваг очікується наприкінці жовтня. Ціни на API становлять $1.36 за мільйон вхідних токенів і $4.18 за мільйон вихідних.</p>
+      </div>
+      <div class="news-footer">
+        <span class="news-source">Mistral AI</span>
+        <span class="news-more">Читати далі →</span>
+      </div>
+    </a>
+    <a class="news-card fade-up" href="/ua/news/chatgpt-visual-ads-image-generation.html" data-cat="tools">
+      <div class="news-meta">
+        <span class="news-tag" style="background:#2dd4a022;color:#2dd4a0;border:1px solid #2dd4a044">Інструменти</span>
+        <span class="news-date">5 жовт. 2026</span>
+      </div>
+      <div class="news-body">
+        <div class="news-title">ChatGPT почне показувати графічну рекламу поруч із згенерованими зображеннями</div>
+        <p class="news-summary">OpenAI оголосила 5 жовтня про новий формат візуальної реклами в ChatGPT, яка з&#x27;являтиметься поряд із зображеннями, що їх створює модель на запит користувачів. Тестування почнеться пізніше у жовтні, лише в США, із початковою групою рекламодавців. OpenAI стверджує, що реклама буде чітко позначена, не впливатиме на відповіді ChatGPT і підтримуватиме безкоштовний та недорогий тарифні плани.</p>
+      </div>
+      <div class="news-footer">
+        <span class="news-source">TechCrunch</span>
+        <span class="news-more">Читати далі →</span>
+      </div>
+    </a>
+<!-- SEO:homenews:end --></div>
   </section>
 
   <section class="section">
@@ -287,7 +330,6 @@
 <script src="/js/i18n.js"></script>
 <script src="/js/translations.js?v=263adb28"></script>
 <script src="/js/data.js?v=ac0ba935"></script>
-<script src="/js/news.js?v=50556081"></script>
 <script src="/js/db.js"></script>
 <script src="/js/main.js"></script>
 <script>
@@ -318,43 +360,8 @@ function renderTrending() {
   document.getElementById('trendingGrid').innerHTML = cards;
 }
 
-function renderNewsGrid(articles) {
-  const lang = typeof I18N !== 'undefined' ? I18N.lang : 'en';
-  const list = (articles || NEWS).slice(0, 3);
-  document.getElementById('newsGrid').innerHTML = list.map(n => {
-    const color = n.cat_color || n.catColor || '#7c6af7';
-    const label = n.cat_label || n.catLabel || n.category || '';
-    const date  = n.date || '';
-    // Ссылка на статью того же языка (раньше всегда вела на английскую).
-    const url   = n.url || (n.slug ? `${lang === 'en' ? '' : '/' + lang}/news/${n.slug}.html` : '#');
-    // Миниатюра обложки — как в ленте новостей (WebP рядом с JPG).
-    const img   = n.image_url ? `<div class="news-img" style="background-image:url('${n.image_url.replace(/\.(jpe?g|png)$/, '.webp')}')"></div>` : '';
-    return `
-    <a class="news-card fade-up" href="${url}">
-      <div class="news-meta">
-        <span class="news-tag" style="background:${color}22;color:${color};border:1px solid ${color}44">${label}</span>
-        <span class="news-date">${date}</span>
-      </div>
-      <div class="news-body">${img}
-        <div class="news-title">${n.title}</div>
-        <p class="news-summary">${n.summary || ''}</p>
-      </div>
-      <div class="news-footer">
-        <span class="news-source">${n.source || ''}</span>
-        <span class="news-more">${t('news.readMore')}</span>
-      </div>
-    </a>`;
-  }).join('');
-}
-
-async function loadIndexNews() {
-  const lang = typeof I18N !== 'undefined' ? I18N.lang : 'en';
-  // Show static fallback immediately
-  renderNewsGrid(null);
-  // Swap in Supabase data when ready
-  const data = await fetchNews(lang);
-  if (data && data.length > 0) renderNewsGrid(data);
-}
+// Блок «Последние новости» печатает scripts/generate-news-snapshot.py (3 карточки
+// на языке страницы, между метками SEO:homenews). JS его больше не трогает.
 
 function renderCatsGrid() {
   document.getElementById('catsGrid').innerHTML = CATEGORIES.map(c => `
@@ -590,14 +597,12 @@ async function tfRender(data) {
 
 function onLangChange() {
   renderTrending();
-  loadIndexNews();
   renderCatsGrid();
   renderCatPills();
 }
 
 renderCatPills();
 renderTrending();
-loadIndexNews();
 renderCatsGrid();
 
 // Placeholder is now static — set in HTML attribute

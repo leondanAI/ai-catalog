@@ -1,20 +1,25 @@
 #!/usr/bin/env python3
-"""
-Generate news snapshots from Supabase → static files.
-Outputs:
-  1. js/news.js — EN articles array (used by all pages as fallback/filter base)
-  2. SEO HTML block injected into news.html AND all [lang]/news.html pages
+"""Печатает ленты новостей из базы в HTML.
+
+  1. news.html и [lang]/news.html — все опубликованные новости языка, между
+     метками <!-- SEO:news:start/end -->. Вкладки категорий на странице только
+     прячут/показывают эти карточки (data-cat), в базу страница не ходит.
+  2. index.html и [lang]/index.html — 3 последние новости, между метками
+     <!-- SEO:homenews:start/end -->.
+
+До октября 2026 ленты ещё и перерисовывались в браузере из базы (и из
+js/news.js) — данные жили в двух местах, страница «перескакивала». Теперь
+источник один: база → этот скрипт → HTML.
 
 Run: python3 scripts/generate-news-snapshot.py
 """
 
-import urllib.request, json, os, re, html
-from datetime import datetime
+import html, os, re, sys
 
-SB_URL   = 'https://lbjdwkvkkndvofysyssy.supabase.co'
-SB_KEY   = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG'
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import sbread
+
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-
 ACTIVE_LANGS = ['en', 'es', 'de', 'ru', 'ua', 'he', 'fr', 'pt']
 
 CAT_META = {
@@ -26,99 +31,62 @@ CAT_META = {
     'product':    {'label': 'Product',    'color': '#e879f9'},
 }
 
-def sb_get(path):
-    req = urllib.request.Request(
-        f'{SB_URL}/rest/v1/{path}',
-        headers={'apikey': SB_KEY, 'Authorization': f'Bearer {SB_KEY}'}
-    )
-    with urllib.request.urlopen(req) as r:
-        return json.loads(r.read())
+# Тот же текст, что даёт t('news.readMore') в js/i18n.js.
+READ_MORE = {'en': 'Read more →', 'ru': 'Читать далее →', 'es': 'Leer más →', 'fr': 'Lire la suite →',
+             'de': 'Weiterlesen →', 'pt': 'Ler mais →', 'ua': 'Читати далі →', 'he': 'קרא עוד ←'}
 
-def fetch_news(lang):
-    return sb_get(f'news?lang=eq.{lang}&published=eq.true&order=date.desc&limit=50&select=id,slug,title,summary,date,source,category,cat_label,cat_color,image_url')
+MONTHS = {
+    'en': ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    'ru': ['янв.', 'февр.', 'мар.', 'апр.', 'мая', 'июн.', 'июл.', 'авг.', 'сент.', 'окт.', 'нояб.', 'дек.'],
+    'ua': ['січ.', 'лют.', 'бер.', 'квіт.', 'трав.', 'черв.', 'лип.', 'серп.', 'вер.', 'жовт.', 'лист.', 'груд.'],
+    'es': ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sept', 'oct', 'nov', 'dic'],
+    'fr': ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'],
+    'pt': ['jan.', 'fev.', 'mar.', 'abr.', 'mai.', 'jun.', 'jul.', 'ago.', 'set.', 'out.', 'nov.', 'dez.'],
+    'de': ['Jan.', 'Feb.', 'März', 'Apr.', 'Mai', 'Juni', 'Juli', 'Aug.', 'Sept.', 'Okt.', 'Nov.', 'Dez.'],
+    'he': ['בינו׳', 'בפבר׳', 'במרץ', 'באפר׳', 'במאי', 'ביוני', 'ביולי', 'באוג׳', 'בספט׳', 'באוק׳', 'בנוב׳', 'בדצמ׳'],
+}
 
-def format_date(date_str):
-    if not date_str:
-        return ''
-    if re.match(r'\d{4}-\d{2}-\d{2}', date_str):
-        dt = datetime.strptime(date_str[:10], '%Y-%m-%d')
-        return dt.strftime('%b %d, %Y').replace(' 0', ' ')
-    return date_str
+
+def format_date(date_str, lang):
+    m = re.match(r'(\d{4})-(\d{2})-(\d{2})', date_str or '')
+    if not m:
+        return date_str or ''
+    y, mo, d = int(m.group(1)), int(m.group(2)), int(m.group(3))
+    mon = MONTHS.get(lang, MONTHS['en'])[mo - 1]
+    if lang == 'en':
+        return f'{mon} {d}, {y}'
+    if lang == 'de':
+        return f'{d}. {mon} {y}'
+    if lang == 'pt':
+        return f'{d} de {mon} de {y}'
+    return f'{d} {mon} {y}'
+
 
 def esc(s):
     return html.escape(str(s or ''), quote=True)
 
-def article_url(lang, slug, article_id):
-    if not slug:
-        return f"/news-article.html?id={article_id}"
-    if lang == 'en':
-        return f"/news/{slug}.html"
-    return f"/{lang}/news/{slug}.html"
 
-def generate_news_js(articles):
-    """Generate js/news.js from EN Supabase data."""
-    lines = ['// Auto-generated from Supabase — do not edit manually.',
-             '// Run: python3 scripts/generate-news-snapshot.py', '',
-             'const NEWS = [']
-
-    for a in articles:
-        cat  = a.get('category', 'tools')
-        meta = CAT_META.get(cat, {'label': cat.title(), 'color': '#888'})
-        slug = a.get('slug', '')
-        url  = article_url('en', slug, a['id'])
-        title_js   = a['title'].replace("'", "\\'").replace('—', '—')
-        summary_js = a['summary'].replace("'", "\\'").replace('—', '—')
-        date_fmt   = format_date(a['date'])
-
-        lines.append(f"  {{ id:{a['id']}, slug:'{slug}', title:'{title_js}', "
-                     f"summary:'{summary_js}', "
-                     f"date:'{date_fmt}', source:'{esc(a['source'])}', "
-                     f"category:'{cat}', catLabel:'{meta['label']}', catColor:'{meta['color']}', "
-                     f"url:'{url}', image_url:'{a.get('image_url') or ''}' }},")
-
-    lines.append('];')
-    lines.append('')
-    lines.append("const NEWS_CATS = [")
-    lines.append("  { id:'all',        label: () => t('newscat.all'),        color:'' },")
-    lines.append("  { id:'models',     label: () => t('newscat.models'),     color:'#7c6af7' },")
-    lines.append("  { id:'tools',      label: () => t('newscat.tools'),      color:'#2dd4a0' },")
-    lines.append("  { id:'business',   label: () => t('newscat.business'),   color:'#f5a623' },")
-    lines.append("  { id:'research',   label: () => t('newscat.research'),   color:'#4aaef5' },")
-    lines.append("  { id:'regulation', label: () => t('newscat.regulation'), color:'#f56565' },")
-    lines.append("];")
-    lines.append('')
-
-    return '\n'.join(lines)
-
-# Тот же текст, что даёт t('news.readMore') в js/i18n.js: статическая лента и
-# лента, которую потом рисует JS, должны совпадать, иначе страница «перескакивает».
-READ_MORE = {'en': 'Read more →', 'ru': 'Читать далее →', 'es': 'Leer más →', 'fr': 'Lire la suite →',
-             'de': 'Weiterlesen →', 'pt': 'Ler mais →', 'ua': 'Читати далі →', 'he': 'קרא עוד ←'}
+def fetch_news(lang):
+    return sbread.get(f'news?lang=eq.{lang}&published=eq.true&order=date.desc,id.desc'
+                      '&select=id,slug,title,summary,date,source,category,cat_label,cat_color,image_url')
 
 
-def generate_seo_html(articles, lang):
-    """Generate SEO pre-rendered HTML cards for a given language.
+def article_url(lang, slug):
+    return f'/news/{slug}.html' if lang == 'en' else f'/{lang}/news/{slug}.html'
 
-    Вёрстка карточки — та же, что у JS-ленты в news.html (миниатюра справа в
-    .news-body), чтобы при подмене статики свежими данными ничего не прыгало.
-    """
-    cards = []
-    for a in articles:
-        cat   = a.get('category', 'tools')
-        meta  = CAT_META.get(cat, {'label': cat.title(), 'color': '#888'})
-        slug  = a.get('slug', '')
-        url   = article_url(lang, slug, a['id'])
-        color = a.get('cat_color') or meta['color']
-        label = a.get('cat_label') or meta['label']
-        date_fmt = format_date(a['date'])
-        img_url  = re.sub(r'\.(jpe?g|png)$', '.webp', a.get('image_url') or '')
-        img = f'<div class="news-img" style="background-image:url(\'{esc(img_url)}\')"></div>' if img_url else ''
 
-        cards.append(f'''
-    <a class="news-card fade-up" href="{url}">
+def card(a, lang):
+    cat = a.get('category') or 'tools'
+    meta = CAT_META.get(cat, {'label': cat.title(), 'color': '#888'})
+    color = a.get('cat_color') or meta['color']
+    label = a.get('cat_label') or meta['label']
+    img_url = re.sub(r'\.(jpe?g|png)$', '.webp', a.get('image_url') or '')
+    img = f'<div class="news-img" style="background-image:url(\'{esc(img_url)}\')"></div>' if img_url else ''
+    return f'''
+    <a class="news-card fade-up" href="{article_url(lang, a['slug'])}" data-cat="{esc(cat)}">
       <div class="news-meta">
         <span class="news-tag" style="background:{color}22;color:{color};border:1px solid {color}44">{esc(label)}</span>
-        <span class="news-date">{esc(date_fmt)}</span>
+        <span class="news-date">{esc(format_date(a.get('date'), lang))}</span>
       </div>
       <div class="news-body">{img}
         <div class="news-title">{esc(a['title'])}</div>
@@ -128,63 +96,30 @@ def generate_seo_html(articles, lang):
         <span class="news-source">{esc(a['source'])}</span>
         <span class="news-more">{READ_MORE.get(lang, READ_MORE['en'])}</span>
       </div>
-    </a>''')
+    </a>'''
 
-    return '\n'.join(cards)
 
-def inject_seo_block(seo_html, news_path):
-    """Replace content between SEO markers in a news.html file."""
-    with open(news_path, encoding='utf-8') as f:
+def inject(path, marker, inner):
+    with open(path, encoding='utf-8') as f:
         content = f.read()
-    pattern = r'(<!-- SEO:news:start -->)(.*?)(<!-- SEO:news:end -->)'
-    replacement = f'<!-- SEO:news:start -->{seo_html}\n<!-- SEO:news:end -->'
-    new_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
-    with open(news_path, 'w', encoding='utf-8') as f:
-        f.write(new_content)
+    pattern = rf'<!-- SEO:{marker}:start -->.*?<!-- SEO:{marker}:end -->'
+    if not re.search(pattern, content, flags=re.DOTALL):
+        sys.exit(f'Нет меток SEO:{marker} в {os.path.relpath(path, ROOT_DIR)}')
+    content = re.sub(pattern, lambda _: f'<!-- SEO:{marker}:start -->{inner}\n<!-- SEO:{marker}:end -->',
+                     content, flags=re.DOTALL)
+    with open(path, 'w', encoding='utf-8') as f:
+        f.write(content)
+
 
 def main():
-    print('Fetching news from Supabase for all languages...')
-
-    # 1. EN: generate js/news.js
-    en_articles = fetch_news('en')
-    print(f'  en: {len(en_articles)} articles')
-    news_js = generate_news_js(en_articles)
-    with open(os.path.join(ROOT_DIR, 'js', 'news.js'), 'w') as f:
-        f.write(news_js)
-    print(f'  ✓ js/news.js updated')
-
-    # 2. Inject SEO blocks for all languages
     for lang in ACTIVE_LANGS:
-        if lang == 'en':
-            articles  = en_articles
-            news_path = os.path.join(ROOT_DIR, 'news.html')
-        else:
-            articles  = fetch_news(lang)
-            news_path = os.path.join(ROOT_DIR, lang, 'news.html')
-            print(f'  {lang}: {len(articles)} articles')
+        articles = [a for a in fetch_news(lang) if a.get('slug')]
+        base = ROOT_DIR if lang == 'en' else os.path.join(ROOT_DIR, lang)
+        inject(os.path.join(base, 'news.html'), 'news', ''.join(card(a, lang) for a in articles))
+        inject(os.path.join(base, 'index.html'), 'homenews', ''.join(card(a, lang) for a in articles[:3]))
+        print(f'  ✓ {lang}: {len(articles)} новостей в ленте, 3 на главной')
+    print('Done.')
 
-        if not os.path.exists(news_path):
-            print(f'  SKIP {lang} — {news_path} not found')
-            continue
-
-        seo_html = generate_seo_html(articles, lang)
-        inject_seo_block(seo_html, news_path)
-        print(f'  ✓ {"news.html" if lang == "en" else lang+"/news.html"} — SEO block updated ({len(articles)} cards)')
-
-    # 3. Версия по содержимому в адресе js/news.js на всех языках: браузер
-    #    держал старую копию до 10 минут и показывал устаревшую ленту.
-    import hashlib
-    ver = hashlib.md5(news_js.encode('utf-8')).hexdigest()[:8]
-    for lang in ACTIVE_LANGS:
-        for page in ('news.html', 'index.html'):
-            p = os.path.join(ROOT_DIR, page) if lang == 'en' else os.path.join(ROOT_DIR, lang, page)
-            if os.path.exists(p):
-                t = open(p, encoding='utf-8').read()
-                t = re.sub(r'(src="/?js/news\.js)(\?v=[0-9a-f]+)?"', rf'\1?v={ver}"', t)
-                open(p, 'w', encoding='utf-8').write(t)
-    print(f'  ✓ js/news.js?v={ver} в news.html и index.html')
-
-    print('\nDone.')
 
 if __name__ == '__main__':
     main()
