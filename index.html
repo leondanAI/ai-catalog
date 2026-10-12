@@ -333,14 +333,18 @@ function renderNewsGrid(articles) {
     const date  = n.date || '';
     // Ссылка на статью того же языка (раньше всегда вела на английскую).
     const url   = n.url || (n.slug ? `${lang === 'en' ? '' : '/' + lang}/news/${n.slug}.html` : '#');
+    // Миниатюра обложки — как в ленте новостей (WebP рядом с JPG).
+    const img   = n.image_url ? `<div class="news-img" style="background-image:url('${n.image_url.replace(/\.(jpe?g|png)$/, '.webp')}')"></div>` : '';
     return `
     <a class="news-card fade-up" href="${url}">
       <div class="news-meta">
         <span class="news-tag" style="background:${color}22;color:${color};border:1px solid ${color}44">${label}</span>
         <span class="news-date">${date}</span>
       </div>
-      <div class="news-title">${n.title}</div>
-      <p class="news-summary">${n.summary || ''}</p>
+      <div class="news-body">${img}
+        <div class="news-title">${n.title}</div>
+        <p class="news-summary">${n.summary || ''}</p>
+      </div>
       <div class="news-footer">
         <span class="news-source">${n.source || ''}</span>
         <span class="news-more">${t('news.readMore')}</span>
