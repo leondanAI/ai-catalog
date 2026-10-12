@@ -75,6 +75,14 @@ def article_url(lang, slug):
     return f'/news/{slug}.html' if lang == 'en' else f'/{lang}/news/{slug}.html'
 
 
+def short(text, limit):
+    """Обрезать по границе слова, с многоточием."""
+    if len(text) <= limit:
+        return text
+    cut = text[:limit].rsplit(' ', 1)[0].rstrip(',;:—-')
+    return cut + '…'
+
+
 def card(a, lang):
     cat = a.get('category') or 'tools'
     meta = CAT_META.get(cat, {'label': cat.title(), 'color': '#888'})
@@ -82,15 +90,18 @@ def card(a, lang):
     label = a.get('cat_label') or meta['label']
     img_url = re.sub(r'\.(jpe?g|png)$', '.webp', a.get('image_url') or '')
     img = f'<div class="news-img" style="background-image:url(\'{esc(img_url)}\')"></div>' if img_url else ''
+    summary = a['summary'] or ''
+    if img:
+        summary = short(summary, 210)   # рядом с картинкой — короче, чтобы карточка не раздувалась
     return f'''
-    <a class="news-card fade-up" href="{article_url(lang, a['slug'])}" data-cat="{esc(cat)}">
+    <a class="news-card fade-up{' has-img' if img else ''}" href="{article_url(lang, a['slug'])}" data-cat="{esc(cat)}">
       <div class="news-meta">
         <span class="news-tag" style="background:{color}22;color:{color};border:1px solid {color}44">{esc(label)}</span>
         <span class="news-date">{esc(format_date(a.get('date'), lang))}</span>
       </div>
+      <div class="news-title">{esc(a['title'])}</div>
       <div class="news-body">{img}
-        <div class="news-title">{esc(a['title'])}</div>
-        <p class="news-summary">{esc(a['summary'])}</p>
+        <p class="news-summary">{esc(summary)}</p>
       </div>
       <div class="news-footer">
         <span class="news-source">{esc(a['source'])}</span>

@@ -140,12 +140,13 @@ img { max-width: 100%; }
 .tool-review:hover { background: #252525; color: var(--text); }
 
 /* ── NEWS CARD ── */
-/* Миниатюра обложки: справа (в RTL — слева), текст её обтекает. Карточка — flex,
-   а float внутри flex не работает, поэтому миниатюра лежит в .news-body. */
+/* Обложка в карточке новости: заголовок на всю ширину, ниже анонс, картинка —
+   справа от анонса (в RTL — слева), текст её обтекает. Анонс у карточек с
+   картинкой генератор укорачивает. Карточка — flex, а float внутри flex не
+   работает, поэтому картинка и анонс лежат в .news-body. */
 .news-body { display: block; }
 .news-body::after { content: ''; display: block; clear: both; }
-.news-body .news-title { margin-bottom: 8px; }
-.news-img { float: inline-end; width: 45%; max-width: 220px; aspect-ratio: 16 / 9; margin-inline-start: 12px; margin-bottom: 4px; border-radius: 8px; background-size: cover; background-position: center; }
+.news-img { float: inline-end; width: 52%; aspect-ratio: 3 / 2; margin-inline-start: 12px; margin-bottom: 6px; border-radius: 8px; background-size: cover; background-position: center; }
 .news-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; display: flex; flex-direction: column; gap: 8px; transition: border-color 0.15s, background 0.15s; }
 .news-card:hover { border-color: var(--border2); background: var(--bg3); }
 .news-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
