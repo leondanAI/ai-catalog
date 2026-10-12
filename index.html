@@ -290,33 +290,26 @@
 <script src="js/db.js"></script>
 <script src="js/main.js"></script>
 <script>
-const TRENDING_ITEMS = [
-  { name:'Claude',            badge:'🆕 Opus 4.8 — 96.7% USAMO, 1000 parallel agents', type:'update' },
-  { name:'ChatGPT',           badge:'🔥 GPT-5.5 Instant — −52% hallucinations', type:'update' },
-  { name:'Google Gemini',     badge:'🆕 Gemini 3.5 Flash — flagship at Flash speed', type:'update' },
-  { name:'Devin',             badge:'↓ $500 → $20/mo — AI agents for everyone', type:'growth' },
-  { name:'Amazon Q Developer',badge:'⚠️ Deprecated → replaced by Kiro', type:'update' },
-  { name:'Cursor',            badge:'🧠 Composer 2.5 — Opus-level at 14× lower cost', type:'update' },
-];
+// «Популярные» на главной. Только список slug — все тексты берутся из
+// проверенных карточек (js/data.js и js/translations.js, генерируются из базы).
+// Раньше здесь были захардкоженные плашки-новости («Opus 4.8 — 96.7% USAMO»),
+// которые устаревали и висели месяцами, вместе со снятым Amazon Q Developer.
+const TRENDING_SLUGS = ['claude', 'chatgpt', 'gemini', 'cursor', 'claude-code', 'nano-banana'];
 
 function renderTrending() {
-  const cards = TRENDING_ITEMS.map(h => {
-    const tool = ALL_TOOLS.find(t => t.name === h.name);
-    const domain = h.domain || (tool ? tool.url.replace('https://','').split('/')[0] : '');
-    const cat = tool ? CATEGORIES.find(c => c.tools.includes(tool)) : null;
+  const langBase = (typeof I18N !== 'undefined' && I18N.lang !== 'en') ? '/' + I18N.lang : '';
+  const cards = TRENDING_SLUGS.map(slug => ALL_TOOLS.find(t => t.slug === slug)).filter(Boolean).map(tool => {
+    const domain = tool.url.replace(/^https?:\/\//, '').split('/')[0];
+    const cat = CATEGORIES.find(c => c.tools.includes(tool));
     const color = cat ? cat.color : '#7c6af7';
-    const desc = tool ? (typeof getToolDesc === 'function' ? getToolDesc(tool) : tool.desc) : '';
-    const badgeText = tool ? tool.badge : 'free';
-    const slug = h.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
-    const langBase = (typeof I18N !== 'undefined' && I18N.lang !== 'en') ? '/' + I18N.lang : '';
-    const href = tool ? `${langBase}/tools/${slug}.html` : `${langBase}/directory.html`;
-    const badgeClass = h.type === 'update' ? 'update-badge' : 'growth-badge';
-    return `<a class="tool-card fade-up" href="${href}" style="border-color:${color}22">
+    const desc = typeof getToolDesc === 'function' ? getToolDesc(tool) : tool.desc;
+    const bestFor = typeof getToolBestFor === 'function' ? getToolBestFor(tool) : tool.bestFor;
+    return `<a class="tool-card fade-up" href="${langBase}/tools/${tool.slug}.html" style="border-color:${color}22">
       <div class="tool-card-top">
-        <div class="tool-avatar" style="background:${color}22;color:${color}"><img src="https://www.google.com/s2/favicons?sz=64&domain=${domain}" alt="${h.name} logo" width="28" height="28" style="border-radius:6px" onerror="this.style.display='none';this.parentNode.textContent='${h.name[0]}'"></div>
-        <div><div class="tool-name">${h.name}</div><span class="badge badge-${badgeText}">${badgeText}</span></div>
+        <div class="tool-avatar" style="background:${color}22;color:${color}"><img src="https://www.google.com/s2/favicons?sz=64&domain=${domain}" alt="${tool.name} logo" width="28" height="28" style="border-radius:6px" onerror="this.style.display='none';this.parentNode.textContent='${tool.name[0]}'"></div>
+        <div><div class="tool-name">${tool.name}</div><span class="badge badge-${tool.badge}">${tool.badge}</span></div>
       </div>
-      <span class="${badgeClass}">${h.badge}</span>
+      ${bestFor ? `<span class="update-badge">${bestFor}</span>` : ''}
       <p class="tool-desc">${desc}</p>
       <span style="font-size:12px;color:var(--accent);margin-top:auto;display:inline-block">Read more →</span>
     </a>`;

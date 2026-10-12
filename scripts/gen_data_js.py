@@ -87,6 +87,51 @@ def main():
     out.append('];\n')
     open(PATH, 'w', encoding='utf-8').write('\n'.join(out) + rest)
     print(f'js/data.js: {len(rows)} инструментов в {len(cats)} категориях')
+    write_translations({r['slug'] for r in rows})
+
+
+TR_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'js', 'translations.js')
+
+
+def write_translations(slugs):
+    """js/translations.js: описание и best_for инструментов на 7 языках из базы.
+
+    Раньше файл писался руками, не обновлялся с весны и местами был перепутан
+    (у Claude по-немецки стояло описание Uptrends.ai). Каталог, главная и
+    сравнение на неанглийских версиях брали описания отсюда.
+    """
+    run_sql.load_env()
+    conn = run_sql.connect()
+    cur = conn.cursor()
+    cur.execute("SELECT slug, lang, description, best_for FROM tools "
+                "WHERE published AND lang <> 'en' ORDER BY slug, lang")
+    tr = {}
+    for slug, lang, desc, best in cur.fetchall():
+        if slug in slugs:
+            tr.setdefault(slug, {})[lang] = {'desc': desc or '', 'bestFor': best or ''}
+    conn.close()
+    body = ',\n'.join(f'  {js(s)}: {js(v)}' for s, v in sorted(tr.items()))
+    open(TR_PATH, 'w', encoding='utf-8').write(
+        '// Описание и «лучше всего для» инструментов на 7 языках.\n'
+        '// СГЕНЕРИРОВАНО scripts/gen_data_js.py из таблицы tools — руками не править.\n'
+        '// Без перевода — английский текст из js/data.js.\n\n'
+        f'const TOOL_I18N = {{\n{body}\n}};\n\n'
+        'function _toolI18n(tool) {\n'
+        "  const lang = typeof I18N !== 'undefined' ? I18N.lang : 'en';\n"
+        "  if (lang === 'en') return null;\n"
+        '  const t = TOOL_I18N[tool.slug];\n'
+        '  return t && t[lang] ? t[lang] : null;\n'
+        '}\n\n'
+        '// helper used by renderToolCard in data.js\n'
+        'function getToolDesc(tool) {\n'
+        '  const t = _toolI18n(tool);\n'
+        '  return (t && t.desc) || tool.desc;\n'
+        '}\n\n'
+        'function getToolBestFor(tool) {\n'
+        '  const t = _toolI18n(tool);\n'
+        '  return (t && t.bestFor) || tool.bestFor;\n'
+        '}\n')
+    print(f'js/translations.js: {len(tr)} инструментов × {len({l for v in tr.values() for l in v})} языков')
 
 
 if __name__ == '__main__':
