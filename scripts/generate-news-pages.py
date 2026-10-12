@@ -202,9 +202,17 @@ def generate_page(article, lang, all_articles_for_lang, all_slugs_by_lang):
     <div class="related-grid">{cards}
     </div>'''
 
+    # Обложка. image_url — JPG (его понимают все соцсети); рядом лежит WebP
+    # того же имени — для страницы он вдвое легче. Размеры заданы заранее,
+    # чтобы при загрузке текст не прыгал.
     image_html = ''
     if image_url:
-        image_html = f'\n  <img src="{esc(image_url)}" style="width:100%;border-radius:10px;margin-bottom:1.5rem;max-height:400px;object-fit:cover" alt="{esc(title)}">'
+        webp = re.sub(r'\.(jpe?g|png)$', '.webp', image_url)
+        local_webp = os.path.join(os.path.dirname(__file__), '..', webp.replace(SITE_URL + '/', ''))
+        source = f'<source srcset="{esc(webp)}" type="image/webp">' if webp != image_url and os.path.exists(local_webp) else ''
+        image_html = (f'\n  <picture>{source}<img src="{esc(image_url)}" width="1280" height="720" '
+                      f'fetchpriority="high" style="width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;'
+                      f'border-radius:10px;margin-bottom:1.5rem" alt="{esc(title)}"></picture>')
 
     title_short = title[:50] + ('…' if len(title) > 50 else '')
     seo_title  = fit_title(title)
@@ -222,7 +230,9 @@ def generate_page(article, lang, all_articles_for_lang, all_slugs_by_lang):
         "datePublished": article.get('date', ''),
         "inLanguage": html_lang,
         "publisher": {"@type": "Organization", "name": "AItoolFit", "url": SITE_URL},
-        "mainEntityOfPage": canonical
+        "mainEntityOfPage": canonical,
+        # Своя обложка ≥1200 px — условие для крупной карточки в Google Discover.
+        **({"image": [og_image]} if image_url else {})
     }, ensure_ascii=False)
 
     return f'''<!DOCTYPE html>
@@ -233,6 +243,7 @@ def generate_page(article, lang, all_articles_for_lang, all_slugs_by_lang):
 <title>{esc(seo_title)}</title>
 <meta name="description" content="{esc(meta_desc)}">
 <link rel="canonical" href="{canonical}">
+<meta name="robots" content="max-image-preview:large">
 {hreflang_html}
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
