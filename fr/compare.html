@@ -403,8 +403,8 @@ async function updateCompare() {
   }
 
   // Update URL and page title to reflect the active comparison
-  const slugA = toSlug(a.name);
-  const slugB = toSlug(b.name);
+  const slugA = a.slug || toSlug(a.name);
+  const slugB = b.slug || toSlug(b.name);
   const basePath = window.location.pathname; // preserves /ru/compare.html etc.
   const newUrl = `${basePath}?a=${slugA}&b=${slugB}`;
   if (window.location.search !== `?a=${slugA}&b=${slugB}`) {
@@ -416,8 +416,8 @@ async function updateCompare() {
   document.getElementById('popularComparisons').style.display = 'none';
 
   const [infoA, infoB] = await Promise.all([
-    fetchToolInfo(toSlug(a.name)),
-    fetchToolInfo(toSlug(b.name))
+    fetchToolInfo(slugA),
+    fetchToolInfo(slugB)
   ]);
 
   const rows = [
@@ -430,8 +430,8 @@ async function updateCompare() {
     [t('compare.advantages'),  listHtml(infoA.dbTool.pros, '#2dd4a0', '✅'),                 listHtml(infoB.dbTool.pros, '#2dd4a0', '✅')],
     [t('compare.disadvantages'), listHtml(infoA.dbTool.cons, '#f56565', '❌'),               listHtml(infoB.dbTool.cons, '#f56565', '❌')],
     [t('compare.website')||'Website', a.url ? `<a href="${a.url}" target="_blank" rel="noopener" style="color:var(--accent)">${getDomain(a.url)}</a>` : '—', b.url ? `<a href="${b.url}" target="_blank" rel="noopener" style="color:var(--accent)">${getDomain(b.url)}</a>` : '—'],
-    ['',            `<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="${a.aff}" target="_blank" rel="noopener sponsored">${t('tool.open')}</a><a class="tool-review" href="${toolPageUrl(toSlug(a.name))}">${t('tool.review')}</a></div>`,
-                    `<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="${b.aff}" target="_blank" rel="noopener sponsored">${t('tool.open')}</a><a class="tool-review" href="${toolPageUrl(toSlug(b.name))}">${t('tool.review')}</a></div>`],
+    ['',            `<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="${a.aff}" target="_blank" rel="noopener sponsored">${t('tool.open')}</a><a class="tool-review" href="${toolPageUrl(slugA)}">${t('tool.review')}</a></div>`,
+                    `<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="${b.aff}" target="_blank" rel="noopener sponsored">${t('tool.open')}</a><a class="tool-review" href="${toolPageUrl(slugB)}">${t('tool.review')}</a></div>`],
   ];
 
   el.innerHTML = `<div class="compare-wrap fade-up">
@@ -462,7 +462,7 @@ function quickCompare(nameA, nameB) {
 }
 
 function slugToName(slug) {
-  return ALL_TOOLS.find(t => toSlug(t.name) === slug)?.name || null;
+  return ALL_TOOLS.find(t => (t.slug || toSlug(t.name)) === slug)?.name || null;
 }
 
 function loadFromUrl() {

@@ -1,0 +1,132 @@
+[
+ {
+  "slug": "fiscal-ai-vs-koyfin",
+  "before": {
+   "choose_a": "[\"✅ You want to ask natural language questions about a company's earnings calls and SEC filings\", \"✅ You research specific stocks and want AI to answer precise questions from financial documents\", \"✅ You analyze earnings reports, 10-Ks, and 10-Qs and need AI to extract key insights fast\", \"✅ You prefer conversational Q&A over dashboards for financial research\"]",
+   "choose_b": "[\"✅ You want a Bloomberg-style terminal for fundamental and market data at a fraction of the cost\", \"✅ You need comprehensive financial charts, screening tools, and peer comparison dashboards\", \"✅ You track portfolios, monitor news, and screen for investment ideas across thousands of stocks\", \"✅ You're a professional investor who needs a data-rich research platform, not just document Q&A\"]",
+   "faq": [
+    {
+     "a": "Fiscal.ai (also known as FinChat) is an AI-powered financial research tool that lets investors chat with company financial documents — earnings call transcripts, SEC filings, annual reports. Ask any question and get cited answers directly from source documents.",
+     "q": "What is Fiscal.ai / FinChat?"
+    },
+    {
+     "a": "Koyfin is a financial data and analytics platform positioned as an affordable alternative to Bloomberg Terminal. It provides fundamental data, financial charts, market data, portfolio tracking, and screening tools for individual investors and investment professionals.",
+     "q": "What is Koyfin?"
+    },
+    {
+     "a": "Koyfin has a free plan with limited features. The Plus plan is $19/month and Pro is $59/month, both offering significantly more data and features than free. It's considerably cheaper than Bloomberg ($24,000/year) or FactSet while covering most individual investor needs.",
+     "q": "Is Koyfin free?"
+    },
+    {
+     "a": "Fiscal.ai is best for deep-dive research on specific companies — querying their documents in detail. For comparing multiple companies simultaneously across quantitative metrics, Koyfin's screening and comparison tools are more efficient.",
+     "q": "Can Fiscal.ai analyze multiple companies at once?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want AI to analyze earnings call transcripts and surface management tone and key statements automatically",
+    "✅ You need natural language financial queries that generate charts and summaries directly from the data",
+    "✅ You research companies with deep KPI needs and want access to segment-level data for 2,500+ companies",
+    "✅ You're a platform or institution that wants to pipe financial data into your own AI tools via MCP or API"
+   ],
+   "choose_b": [
+    "✅ You want a usable free plan with real financials, charting, watchlists, and screens before paying anything",
+    "✅ You need to screen thousands of securities using 5,900+ fundamental, technical, and macro criteria",
+    "✅ You want fully customizable, Bloomberg-style dashboards for market and macro monitoring",
+    "✅ You're a financial advisor who needs dedicated Advisor Core or Advisor Pro tiers with client-facing tools"
+   ],
+   "faq": [
+    {
+     "q": "What is Fiscal.ai?",
+     "a": "Fiscal.ai, formerly FinChat.io, is an AI-powered financial research platform covering 100,000+ public companies, ETFs, and funds, combining structured financials with AI analysis of earnings transcripts and natural language queries. It also offers MCP and API data feeds for institutions."
+    },
+    {
+     "q": "What is Koyfin?",
+     "a": "Koyfin is a financial data and analytics platform positioned as an affordable Bloomberg Terminal alternative, offering market data, fundamentals, earnings transcripts, economic indicators, and screening tools with over 5,900 filter criteria."
+    },
+    {
+     "q": "Is Koyfin free?",
+     "a": "Yes, Koyfin has a Free plan with 2 years of financials, 1 year of estimates, advanced charting, 2 watchlists, and 2 screens. Paid plans start at $39/month for Plus and go up to $299/month for Advisor Pro."
+    },
+    {
+     "q": "Does Fiscal.ai have a free plan?",
+     "a": "No, Fiscal.ai has no free plan — only a 7-day trial that requires a credit card and auto-converts to a paid subscription starting at $49/month."
+    },
+    {
+     "q": "Which is better for screening and comparing many stocks at once?",
+     "a": "Koyfin is better suited for this, with 5,900+ screening criteria and customizable comparison dashboards built for scanning large numbers of securities. Fiscal.ai is more focused on deep AI-assisted analysis of individual companies' financials and transcripts."
+    },
+    {
+     "q": "Which is better for AI-assisted earnings call analysis?",
+     "a": "Fiscal.ai is purpose-built for this, using AI to analyze transcripts and answer natural language questions about company financials. Koyfin's homepage AI widget only forwards prompts to external chatbots rather than performing in-product analysis."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "tradingview-vs-fiscal-ai",
+  "before": {
+   "choose_a": "[\"✅ You use technical analysis — charts, indicators, patterns — to make trading decisions\", \"✅ You trade actively and need real-time price data, alerts, and charting tools\", \"✅ You want access to the world's largest trading community for ideas and shared strategies\", \"✅ You build and backtest custom indicators with Pine Script\"]",
+   "choose_b": "[\"✅ You research stocks fundamentally and want to ask AI questions about earnings calls and SEC filings\", \"✅ You want cited, AI-extracted answers from 10-Ks, 10-Qs, and financial statements\", \"✅ You're a fundamental investor who analyzes what companies say, not just their price charts\", \"✅ You want to quickly find specific information from financial documents without reading them manually\"]",
+   "faq": [
+    {
+     "a": "TradingView is a charting and technical analysis platform — it shows price data, indicators, and trading patterns. Fiscal.ai (FinChat) is a fundamental research tool — it lets you ask AI questions about company earnings calls and SEC filings. Technical traders use TradingView; fundamental investors use Fiscal.ai.",
+     "q": "What is the difference between TradingView and Fiscal.ai?"
+    },
+    {
+     "a": "TradingView has a feature-rich free plan with delayed data and up to 3 indicators per chart. Essential is $14.95/month, Plus is $29.95/month, and Premium is $59.95/month for real-time data, more indicators, and advanced features.",
+     "q": "Is TradingView free?"
+    },
+    {
+     "a": "Fiscal.ai, also known as FinChat, is an AI financial research tool that lets investors chat with company financial documents — earnings transcripts, SEC filings, annual reports. Ask a specific question and get a cited answer directly from the source document.",
+     "q": "What is FinChat / Fiscal.ai?"
+    },
+    {
+     "a": "TradingView has some fundamental data — financial statements, earnings estimates, and company metrics. However, it's primarily a charting tool. For deep fundamental analysis and AI-powered document research, Fiscal.ai, Koyfin, or Bloomberg are more appropriate.",
+     "q": "Can TradingView do fundamental analysis?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You rely on charts, indicators, and price patterns to make trading decisions across stocks, crypto, or forex",
+    "✅ You trade actively and need real-time charting, price alerts, and multi-timeframe analysis",
+    "✅ You want to build or backtest custom indicators using Pine Script",
+    "✅ You want to connect your broker account and place trades directly from the charting platform"
+   ],
+   "choose_b": [
+    "✅ You research companies fundamentally and want AI to analyze earnings call transcripts for you",
+    "✅ You want to ask natural-language questions about a company's financials and get charts generated automatically",
+    "✅ You need to compare a company against industry peers using structured financial and KPI data",
+    "✅ You're building a platform or internal tool and want to pipe financial data into your own AI workflows via API or MCP"
+   ],
+   "faq": [
+    {
+     "q": "What is the difference between TradingView and Fiscal.ai?",
+     "a": "TradingView is a charting and technical analysis platform used for stocks, crypto, forex, and other assets, while Fiscal.ai is an AI-powered fundamental research platform focused on company financials, KPIs, and earnings transcripts. Traders who read price charts tend to use TradingView; investors analyzing company fundamentals tend to use Fiscal.ai."
+    },
+    {
+     "q": "Which is better for active trading with real-time charts and alerts?",
+     "a": "TradingView is built for this, offering multi-timeframe and multi-symbol charts, price alerts, a large community indicator library, and broker connections for direct trading. Fiscal.ai does not offer charting or trade execution tools."
+    },
+    {
+     "q": "Is TradingView free?",
+     "a": "TradingView offers a free Basic plan, though it's limited to one chart per tab, two indicators per chart, and three price alerts. Paid tiers start at $14.95/month billed monthly (or $12.95/month billed annually) and add more indicators, alerts, and AI screener requests."
+    },
+    {
+     "q": "What is Fiscal.ai (formerly FinChat)?",
+     "a": "Fiscal.ai, rebranded from FinChat.io in 2025, is an AI financial research platform covering 100,000+ public companies, ETFs, and funds, with deeper KPI data for 2,500+ companies. It lets users ask natural-language questions about financials and earnings transcripts and get AI-generated summaries and charts in response."
+    },
+    {
+     "q": "Which is better for researching a company's earnings calls and financial statements?",
+     "a": "Fiscal.ai is purpose-built for this, with AI analysis of earnings transcripts, financial statements, and KPIs, plus natural language queries that generate charts and summaries. TradingView focuses on price charting rather than document-based fundamental research."
+    },
+    {
+     "q": "Does either tool have a free plan?",
+     "a": "TradingView has a free Basic plan with no credit card required, though it's quite limited. Fiscal.ai has no free plan, only a 7-day trial that requires a credit card and auto-converts to a paid subscription."
+    }
+   ]
+  }
+ }
+]

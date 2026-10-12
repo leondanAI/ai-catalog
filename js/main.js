@@ -169,5 +169,13 @@ function initClickTracking() {
       document.querySelector('h1.tool-title, h1')?.textContent?.trim() ||
       null;
     _trackClick(toolName, toolUrl);
+    // Вторая метрика проекта — переходы на сайт инструмента. Чтобы оно
+    // считалось в отчётах как конверсия, в GA4 его отмечают ключевым
+    // (Admin → Events → tool_visit → Mark as key event).
+    if (window.gtag) {
+      let domain = null;
+      try { domain = new URL(toolUrl).hostname; } catch (_) {}
+      gtag('event', 'tool_visit', { tool_name: toolName, link_domain: domain, lang: _getLang(), page_path: window.location.pathname });
+    }
   }, true);
 }

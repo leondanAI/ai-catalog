@@ -536,13 +536,16 @@ def generate_lang_page(html, lang, page, title, desc):
     html = re.sub(r'<meta name="description" content="[^"]*"',
                   f'<meta name="description" content="{desc}"', html)
 
-    # Update canonical
+    # Update canonical. Главная языка — /es/, а не /es/index.html: так она
+    # записана в sitemap и в hreflang. Иначе Ahrefs/Google видят в sitemap
+    # «неканоническую» страницу и hreflang на неканонический адрес.
+    page_url = f'{BASE_URL}/{lang}/' if page == 'index.html' else f'{BASE_URL}/{lang}/{page}'
     html = re.sub(r'<link rel="canonical"[^>]*>',
-                  f'<link rel="canonical" href="{BASE_URL}/{lang}/{page}">', html)
+                  f'<link rel="canonical" href="{page_url}">', html)
 
     # Update og:url
     html = re.sub(r'<meta property="og:url"[^>]*>',
-                  f'<meta property="og:url" content="{BASE_URL}/{lang}/{page}">', html)
+                  f'<meta property="og:url" content="{page_url}">', html)
 
     # Update og:title
     html = re.sub(r'<meta property="og:title"[^>]*>',

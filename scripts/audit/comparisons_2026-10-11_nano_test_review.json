@@ -1,0 +1,63 @@
+[
+ {
+  "slug": "nano-banana-vs-leonardo-ai",
+  "before": {
+   "choose_a": "[\"✅ You create AI influencer content and need consistent character generation across many images\", \"✅ You want AI image editing with precise control over specific characters\", \"✅ You're a content creator needing a consistent virtual persona for social media\", \"✅ You want specialized tools for AI character consistency rather than general image generation\"]",
+   "choose_b": "[\"✅ You create game assets, concept art, or design assets needing style consistency across a project\", \"✅ You want to fine-tune models on your own image sets for consistent style\", \"✅ You need a comprehensive platform with canvas editor, motion generation, and community models\", \"✅ You want a generous free tier — 150 daily tokens — for regular image generation\"]",
+   "faq": [
+    {
+     "a": "Nano Banana is an AI image generation platform specializing in character consistency and AI influencer creation. It's designed for creators who need to generate the same person or character across many different scenes, outfits, and settings while maintaining a consistent look.",
+     "q": "What is Nano Banana?"
+    },
+    {
+     "a": "Leonardo.ai is popular with game developers, concept artists, and designers who need consistent visual styles across multiple images. Its fine-tuning capabilities let you train on your own images. It's also widely used for general AI image generation with 150 free daily tokens.",
+     "q": "What is Leonardo.ai best for?"
+    },
+    {
+     "a": "Leonardo.ai has character reference features and IP Adapter controls for maintaining consistency across images. It's not as specialized for AI influencer creation as Nano Banana, but works well for consistent game characters and concept art series.",
+     "q": "Can Leonardo.ai maintain character consistency?"
+    },
+    {
+     "a": "Nano Banana offers a free plan with limited generations. Paid plans provide more credits and higher quality generations. It's a specialized tool — the free tier lets you test whether the character consistency meets your needs before subscribing.",
+     "q": "Is Nano Banana free?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want to generate and edit images for free directly inside the Gemini app using Nano Banana 2",
+    "✅ You need multi-turn conversational editing with character consistency across a series of images, especially with Nano Banana 2.1",
+    "✅ You need accurate text rendering or search-grounded generation that draws on Gemini's real-world knowledge",
+    "✅ You want studio-quality precision up to 4K output and are willing to use Nano Banana Pro via the Gemini API or AI Studio"
+   ],
+   "choose_b": [
+    "✅ You create game assets, concept art, or marketing visuals and want access to multiple proprietary and licensed models in one platform",
+    "✅ You want to train a personal AI model on your own images to keep a consistent style or character across a project",
+    "✅ You need image-to-video generation alongside still images, using models like Motion 2.0 or Hailuo 2.3",
+    "✅ You want a pay-as-you-go API with non-expiring credits and the ability to run up to 10 concurrent generations"
+   ],
+   "faq": [
+    {
+     "q": "What is Nano Banana?",
+     "a": "Nano Banana is Google's family of Gemini image generation and editing models, including Nano Banana 2, 2 Lite, 2.1 and Pro, accessible through the Gemini app, Google AI Studio and the Gemini API. It supports multi-turn conversational editing, character consistency, and output up to 4K."
+    },
+    {
+     "q": "What is Leonardo AI best for?",
+     "a": "Leonardo AI is built for game developers, concept artists, and creative teams who need high-volume image and video generation across multiple models, including sketch-to-image tools, a canvas editor, and a visual API workflow that exports production-ready code."
+    },
+    {
+     "q": "Which is better for character consistency across a series of images?",
+     "a": "Nano Banana 2.1 offers multi-turn character consistency directly through conversational editing in the Gemini app or API. Leonardo AI instead lets you train a personal AI model on your own images to maintain a consistent style or character, which suits project-based work like game asset series."
+    },
+    {
+     "q": "Is Nano Banana free to use?",
+     "a": "Nano Banana 2 is free to use in the Gemini app with no numeric usage limits published, but Nano Banana 2.1 and the Pro redo option require a paid Google AI plan. The Gemini API has no free tier and bills per output image for all models in the family."
+    },
+    {
+     "q": "Does Leonardo AI have a free plan?",
+     "a": "Yes, Leonardo AI's FREE plan gives 150 Fast Tokens per day with public-only creations and basic quality settings, which is enough to try the platform but limited for professional volume use."
+    }
+   ]
+  }
+ }
+]

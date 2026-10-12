@@ -35,7 +35,7 @@ COMPARISONS = [
     {'slug': 'microsoft-copilot-vs-chatgpt',         'a': 'microsoft-copilot',      'b': 'chatgpt',               'cat': 'chat',     'label': 'Microsoft Copilot vs ChatGPT'},
     {'slug': 'meta-ai-vs-chatgpt',                   'a': 'meta-ai',                'b': 'chatgpt',               'cat': 'chat',     'label': 'Meta AI vs ChatGPT'},
     {'slug': 'grok-vs-chatgpt',                      'a': 'grok',                   'b': 'chatgpt',               'cat': 'chat',     'label': 'Grok vs ChatGPT'},
-    {'slug': 'mistral-le-chat-vs-chatgpt',           'a': 'mistral-le-chat',        'b': 'chatgpt',               'cat': 'chat',     'label': 'Mistral Le Chat vs ChatGPT'},
+    {'slug': 'mistral-le-chat-vs-chatgpt',           'a': 'mistral-le-chat',        'b': 'chatgpt',               'cat': 'chat',     'label': 'Mistral Vibe (Le Chat) vs ChatGPT'},
     {'slug': 'character-ai-vs-chatgpt',              'a': 'character-ai',           'b': 'chatgpt',               'cat': 'chat',     'label': 'Character.AI vs ChatGPT'},
     # ── Agents (leader: Microsoft Copilot Studio, #2: Manus) ─────────────────
     {'slug': 'copilot-studio-vs-manus',              'a': 'microsoft-copilot-studio','b': 'manus',                'cat': 'agents',   'label': 'Copilot Studio vs Manus'},
@@ -47,14 +47,14 @@ COMPARISONS = [
     {'slug': 'make-vs-n8n',                          'a': 'make',                   'b': 'n8n',                   'cat': 'agents',   'label': 'Make vs n8n'},
     # ── Code (leader: GitHub Copilot, #2: Cursor) ────────────────────────────
     {'slug': 'cursor-vs-copilot',                    'a': 'cursor',                 'b': 'github-copilot',        'cat': 'code',     'label': 'Cursor vs GitHub Copilot'},
-    {'slug': 'windsurf-vs-cursor',                   'a': 'windsurf',               'b': 'cursor',                'cat': 'code',     'label': 'Windsurf vs Cursor'},
+    {'slug': 'windsurf-vs-cursor',                   'a': 'windsurf',               'b': 'cursor',                'cat': 'code',     'label': 'Devin Desktop (Windsurf) vs Cursor'},
     {'slug': 'claude-code-vs-github-copilot',        'a': 'claude-code',            'b': 'github-copilot',        'cat': 'code',     'label': 'Claude Code vs GitHub Copilot'},
     {'slug': 'replit-vs-github-copilot',             'a': 'replit',                 'b': 'github-copilot',        'cat': 'code',     'label': 'Replit vs GitHub Copilot'},
     {'slug': 'bolt-new-vs-cursor',                   'a': 'bolt-new',               'b': 'cursor',                'cat': 'code',     'label': 'Bolt.new vs Cursor'},
     {'slug': 'v0-by-vercel-vs-cursor',               'a': 'v0-by-vercel',           'b': 'cursor',                'cat': 'code',     'label': 'v0 by Vercel vs Cursor'},
     {'slug': 'cline-vs-github-copilot',              'a': 'cline',                  'b': 'github-copilot',        'cat': 'code',     'label': 'Cline vs GitHub Copilot'},
     {'slug': 'aider-vs-github-copilot',              'a': 'aider',                  'b': 'github-copilot',        'cat': 'code',     'label': 'Aider vs GitHub Copilot'},
-    {'slug': 'windsurf-vs-github-copilot',           'a': 'windsurf',               'b': 'github-copilot',        'cat': 'code',     'label': 'Windsurf vs GitHub Copilot'},
+    {'slug': 'windsurf-vs-github-copilot',           'a': 'windsurf',               'b': 'github-copilot',        'cat': 'code',     'label': 'Devin Desktop (Windsurf) vs GitHub Copilot'},
     # ── Writing (leader: DeepL, #2: Grammarly) ───────────────────────────────
     {'slug': 'deepl-vs-grammarly',                   'a': 'deepl',                  'b': 'grammarly',             'cat': 'writing',  'label': 'DeepL vs Grammarly'},
     {'slug': 'quillbot-vs-grammarly',                'a': 'quillbot',               'b': 'grammarly',             'cat': 'writing',  'label': 'QuillBot vs Grammarly'},
@@ -106,17 +106,17 @@ COMPARISONS = [
     {'slug': 'motion-vs-reclaim-ai',                 'a': 'motion',                 'b': 'reclaim-ai',            'cat': 'productivity','label': 'Motion vs Reclaim.ai'},
     {'slug': 'zapier-ai-vs-make',                    'a': 'zapier-ai',              'b': 'make',                  'cat': 'productivity','label': 'Zapier AI vs Make'},
     # ── Research (leader: Perplexity, #2: NotebookLM) ────────────────────────
-    {'slug': 'perplexity-vs-notebooklm',             'a': 'perplexity',             'b': 'notebooklm',            'cat': 'research',  'label': 'Perplexity vs NotebookLM'},
+    {'slug': 'perplexity-vs-notebooklm',             'a': 'perplexity',             'b': 'notebooklm',            'cat': 'research',  'label': 'Perplexity vs Gemini Notebook (NotebookLM)'},
     {'slug': 'elicit-vs-consensus',                  'a': 'elicit',                 'b': 'consensus',             'cat': 'research',  'label': 'Elicit vs Consensus'},
     {'slug': 'consensus-vs-perplexity',              'a': 'consensus',              'b': 'perplexity',            'cat': 'research',  'label': 'Consensus vs Perplexity'},
-    {'slug': 'notebooklm-vs-humata',                 'a': 'notebooklm',             'b': 'humata',                'cat': 'research',  'label': 'NotebookLM vs Humata'},
+    {'slug': 'notebooklm-vs-humata',                 'a': 'notebooklm',             'b': 'humata',                'cat': 'research',  'label': 'Gemini Notebook (NotebookLM) vs Humata'},
     {'slug': 'scite-vs-semantic-scholar',            'a': 'scite',                  'b': 'semantic-scholar',      'cat': 'research',  'label': 'Scite vs Semantic Scholar'},
     # ── Data (leader: Looker Studio, #2: Tableau AI) ─────────────────────────
-    {'slug': 'looker-studio-vs-tableau-ai',          'a': 'looker-studio',          'b': 'tableau-ai',            'cat': 'data',      'label': 'Looker Studio vs Tableau AI'},
-    {'slug': 'julius-ai-vs-looker-studio',           'a': 'julius-ai',              'b': 'looker-studio',         'cat': 'data',      'label': 'Julius AI vs Looker Studio'},
-    {'slug': 'hex-vs-looker-studio',                 'a': 'hex',                    'b': 'looker-studio',         'cat': 'data',      'label': 'Hex vs Looker Studio'},
+    {'slug': 'looker-studio-vs-tableau-ai',          'a': 'looker-studio',          'b': 'tableau-ai',            'cat': 'data',      'label': 'Data Studio (Looker Studio) vs Tableau AI'},
+    {'slug': 'julius-ai-vs-looker-studio',           'a': 'julius-ai',              'b': 'looker-studio',         'cat': 'data',      'label': 'Julius AI vs Data Studio (Looker Studio)'},
+    {'slug': 'hex-vs-looker-studio',                 'a': 'hex',                    'b': 'looker-studio',         'cat': 'data',      'label': 'Hex vs Data Studio (Looker Studio)'},
     {'slug': 'rows-vs-hex',                          'a': 'rows',                   'b': 'hex',                   'cat': 'data',      'label': 'Rows vs Hex'},
-    {'slug': 'retool-ai-vs-looker-studio',           'a': 'retool-ai',              'b': 'looker-studio',         'cat': 'data',      'label': 'Retool AI vs Looker Studio'},
+    {'slug': 'retool-ai-vs-looker-studio',           'a': 'retool-ai',              'b': 'looker-studio',         'cat': 'data',      'label': 'Retool AI vs Data Studio (Looker Studio)'},
     # ── No-Code (leader: Bubble, #2: Webflow) ────────────────────────────────
     {'slug': 'bubble-vs-webflow',                    'a': 'bubble',                 'b': 'webflow',               'cat': 'nocode',    'label': 'Bubble vs Webflow'},
     {'slug': 'lovable-vs-bubble',                    'a': 'lovable',                'b': 'bubble',                'cat': 'nocode',    'label': 'Lovable vs Bubble'},
@@ -128,7 +128,7 @@ COMPARISONS = [
     {'slug': 'photomath-vs-duolingo-max',            'a': 'photomath',              'b': 'duolingo-max',          'cat': 'education', 'label': 'Photomath vs Duolingo Max'},
     {'slug': 'khanmigo-vs-photomath',                'a': 'khanmigo',               'b': 'photomath',             'cat': 'education', 'label': 'Khanmigo vs Photomath'},
     {'slug': 'duolingo-max-vs-khanmigo',             'a': 'duolingo-max',           'b': 'khanmigo',              'cat': 'education', 'label': 'Duolingo Max vs Khanmigo'},
-    {'slug': 'youlearn-vs-notebooklm',               'a': 'youlearn',               'b': 'notebooklm',            'cat': 'education', 'label': 'YouLearn vs NotebookLM'},
+    {'slug': 'youlearn-vs-notebooklm',               'a': 'youlearn',               'b': 'notebooklm',            'cat': 'education', 'label': 'YouLearn vs Gemini Notebook (NotebookLM)'},
     {'slug': 'synthesis-vs-khanmigo',                'a': 'synthesis',              'b': 'khanmigo',              'cat': 'education', 'label': 'Synthesis vs Khanmigo'},
     # ── Presentations (leader: Gamma, #2: Slidesgo) ──────────────────────────
     {'slug': 'gamma-vs-beautiful-ai',                'a': 'gamma',                  'b': 'beautiful-ai',          'cat': 'presentations','label': 'Gamma vs Beautiful.ai'},

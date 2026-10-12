@@ -1,242 +1,185 @@
 // ============================================================
-// Cloudflare Worker — Anthropic API Proxy
-// Deploy at: https://dash.cloudflare.com → Workers & Pages
+// Cloudflare Worker — подбор AI-инструментов для главной AItoolFit
+// Worker: mypedia-toolfinder (https://mypedia-toolfinder.ldl-biz.workers.dev)
 // ============================================================
-// SETUP:
-//  1. Create a Worker and paste this file
-//  2. Go to Settings → Variables → add Secret:
-//     Name:  ANTHROPIC_API_KEY
-//     Value: sk-ant-api03-xxxx (your key from console.anthropic.com)
-//  3. Save & Deploy
-//  4. Copy your worker URL (e.g. https://toolfinder.YOUR-NAME.workers.dev)
-//     and paste it into toolfinder.html as PROXY_URL
+// Секреты (Settings → Variables): ANTHROPIC_API_KEY, SUPABASE_URL, SUPABASE_KEY.
+// SUPABASE_* нужны для записи запросов в tool_finder_logs.
+//
+// Источник фактов — проверенный каталог из Supabase (таблица tools), а не
+// список «актуальных версий» в подсказке: такой список устаревал и заставлял
+// модель называть пользователям старые модели и цены (2026-10).
 // ============================================================
 
 const ANTHROPIC_URL = 'https://api.anthropic.com/v1/messages';
+const MODEL = 'claude-opus-5-5';
 
-const SYSTEM_PROMPT = `You are an expert AI tool recommender. A user describes a task and you recommend the best AI tools.
+// Каталог читается публичным ключом только на чтение — тем же, что и на сайте.
+const CATALOG_URL = 'https://lbjdwkvkkndvofysyssy.supabase.co/rest/v1/tools'
+  + '?lang=eq.en&published=eq.true&order=slug.asc'
+  + '&select=slug,name,category,url,badge,users,best_for,description';
+const CATALOG_KEY = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG';
+const CATALOG_TTL_MS = 60 * 60 * 1000;
 
-Respond ONLY with valid JSON — no markdown fences, no text outside the JSON object.
+const RULES = `You recommend AI tools on AItoolFit. A user describes a task; you pick the 1-3 tools that fit it best and explain why.
 
-Schema:
-{
-  "primary": {
-    "name": "Tool Name",
-    "why": "2-3 sentences: exactly why this tool fits THIS specific task",
-    "pricing": "e.g. Free / Freemium / From $12/mo / Free trial",
-    "url": "https://real-homepage.com",
-    "pros": ["3-4 short bullet points, each 5-10 words", "..."],
-    "cons": ["3-4 short bullet points, each 5-10 words", "..."]
-  },
-  "alternatives": [
-    {
-      "name": "Tool Name",
-      "why": "1-2 sentences on why this is a good alternative",
-      "pricing": "...",
-      "url": "https://...",
-      "pros": ["3-4 short bullet points", "..."],
-      "cons": ["3-4 short bullet points", "..."]
+LANGUAGE: write every text field in the language the user wrote in. Keep product names in Latin script.
+
+SOURCE OF FACTS:
+- The CATALOG below lists tools whose facts were verified against vendor sites. Prefer catalog tools whenever one fits the task well.
+- For a catalog tool: copy its name, slug and url exactly. Take prices, plans, versions and limits ONLY from its catalog entry.
+- You may recommend a well-known tool that is not in the catalog only if no catalog tool fits. Then set slug to "" and do not state version numbers or exact prices you are not sure of; describe the pricing model instead (free plan / paid / free trial).
+
+VALID TOOLS: AI-powered products a non-developer can start using today (web, desktop or mobile apps, no-code platforms). Never recommend frameworks, libraries, SDKs or CLI tools that require coding, unless the user asks for developer tools. Never recommend discontinued products.
+
+SLOTS: the first tool is "BEST OVERALL". Add "BEST FREE" (a real permanent free plan usable for this task, not a trial) and/or "BEST PREMIUM" when they add value. Do not repeat a tool.
+
+USER CONSTRAINTS:
+- If the user asks for free tools (free, бесплатно, безкоштовно, gratis, kostenlos, gratuit, gratuito, grátis, חינם, no subscription, no credit card), include ONLY tools with a real permanent free plan usable for the task. If unsure, leave the tool out. Fewer tools is better than a wrong one.
+- Respect budget, platform (Mac, Windows, mobile, browser), language and open-source constraints, and say in why_it_fits how each tool meets them.
+
+QUALITY:
+- why_it_fits: 2-4 sentences about THIS task, not a generic description.
+- pros and cons: 3 each, specific and verifiable. No "easy to use", "powerful AI", "great for beginners".
+- best_for: 5-8 words.`;
+
+const SCHEMA = {
+  type: 'object',
+  additionalProperties: false,
+  required: ['tools'],
+  properties: {
+    tools: {
+      type: 'array',
+      items: {
+        type: 'object',
+        additionalProperties: false,
+        required: ['slot', 'name', 'slug', 'url', 'best_for', 'why_it_fits', 'pricing', 'pros', 'cons'],
+        properties: {
+          slot:        { type: 'string', enum: ['BEST OVERALL', 'BEST FREE', 'BEST PREMIUM'] },
+          name:        { type: 'string' },
+          slug:        { type: 'string' },
+          url:         { type: 'string' },
+          best_for:    { type: 'string' },
+          why_it_fits: { type: 'string' },
+          pricing:     { type: 'string' },
+          pros:        { type: 'array', items: { type: 'string' } },
+          cons:        { type: 'array', items: { type: 'string' } }
+        }
+      }
     }
-  ]
+  }
+};
+
+const FREE_KEYWORDS = /\bfree\b|бесплатн|безкоштовн|gratis|kostenlos|gratuit|gratuito|grátis|חינם|no subscription|no credit card/i;
+
+let catalogCache = { text: null, at: 0 };
+
+async function getCatalog() {
+  if (catalogCache.text && Date.now() - catalogCache.at < CATALOG_TTL_MS) return catalogCache.text;
+  const r = await fetch(CATALOG_URL, { headers: { apikey: CATALOG_KEY, Authorization: `Bearer ${CATALOG_KEY}` } });
+  if (!r.ok) {
+    if (catalogCache.text) return catalogCache.text;   // старый каталог лучше, чем никакого
+    throw new Error(`catalog ${r.status}`);
+  }
+  const rows = await r.json();
+  // Порядок строк фиксирован (order=slug): одинаковый текст — значит, кэш подсказки
+  // у Anthropic не сбрасывается между запросами.
+  const text = rows.map(t =>
+    [t.slug, t.name, t.category, t.badge, t.users || '', t.url, t.best_for || '', t.description || '']
+      .map(v => String(v).replace(/\s+/g, ' ').trim()).join(' | ')
+  ).join('\n');
+  catalogCache = { text, at: Date.now() };
+  return text;
 }
 
-Rules:
-- alternatives: 1–2 items max
-- Recommend real, well-known tools with accurate URLs
-- Be specific about WHY the tool fits the stated task
-- Keep pricing concise and accurate
-- pros/cons: ALWAYS provide 3-4 items each, concrete and verifiable, not generic platitudes
-- pros: focus on what makes this tool genuinely strong for this task
-- cons: real limitations users hit, not nitpicks
-
-CRITICAL — respect user constraints in the task description:
-- If the user mentions "free" / "бесплатно" / "gratis" / "kostenlos" / "no subscription" / "no credit card":
-  * Recommend ONLY tools that are TRULY usable for the task on a free plan
-  * "Truly usable" means: no time-limited trial, no one-shot demo, no per-month limit so tight it makes the task impractical (e.g. 1 video/month for "make videos" doesn't count as free)
-  * DO NOT invent or assume a free tier exists. If you are unsure whether a tool has a real free plan, EXCLUDE IT
-  * Examples of paid-only tools that should NOT be recommended for free queries: Synthesia (paid only, free demo doesn't count), Jasper, Midjourney (no free plan), Cursor Pro features, ChatGPT Plus features, GitHub Copilot
-  * Examples of genuinely free tools: DeepSeek, Claude (free tier with daily limit), ChatGPT (free tier), CapCut, Stable Diffusion (self-hosted), Whisper, Hemingway Editor, Krea (free tier), Flux (open weights)
-- If the user mentions a budget — recommended tools must fit it.
-- If the user mentions a platform constraint (Mac only, mobile, browser) — respect it.
-- If the user mentions language (e.g. "in Spanish", "на русском") — recommend tools that support that language.
-- If the user mentions "open-source" / "self-hosted" — only recommend open-source tools.
-- When constraints exist, mention how each tool meets them in the "why" field, and be specific (e.g. "free plan: 50 songs/day" — not just "free").
-- If you cannot find 3 tools that meet ALL constraints, return only as many as actually qualify (1 or 2 is fine — better than including non-qualifying tools).`;
-
-// ── V2 PROMPT ─────────────────────────────────────────────────────────────────
-const SYSTEM_PROMPT_V2 = `You are an expert AI tool recommender. Match the user's task to the best AI-powered tools.
-
-CRITICAL: Respond ONLY with a valid JSON object. No markdown, no code fences, no explanations — raw JSON only.
-
-LANGUAGE: Always respond in the same language the user used.
-
-VALID TOOLS ONLY:
-- AI-powered SaaS, no-code platforms, browser/desktop tools the user can start today
-- NEVER recommend: frameworks, libraries, SDKs, CLI tools requiring coding (no Flutter, React, LangChain, etc.)
-- NEVER recommend discontinued or shut-down tools
-
-SELECTION: Return 1-3 tools with these slots:
-- "BEST OVERALL": strongest fit
-- "BEST FREE": genuinely free permanent tier (not trial)
-- "BEST PREMIUM": best paid option
-
-FREE CONSTRAINT: If user asks for free/бесплатно/бесплатный/бесплатная/безкоштовно/безкоштовний/gratis/kostenlos/gratuit/gratuito/grátis/חינם/בחינם/no subscription/no credit card — ONLY include tools with a real permanent free tier usable for the stated task. If unsure whether a free tier exists, EXCLUDE the tool. Semrush, Ahrefs, Jasper, Midjourney, Synthesia are PAID-ONLY — never recommend them for free queries.
-
-OUTPUT FORMAT (return exactly this structure — ALL text fields in the user's language):
-{"tools":[{"slot":"BEST OVERALL","name":"Tool Name","url":"https://homepage.com","best_for":"5-8 words in user language","why_it_fits":"3-4 sentences in user language","pricing":"free tier / from $X/mo","pros":["specific verifiable fact in user language","specific verifiable fact in user language","specific verifiable fact in user language"],"cons":["real limitation in user language","real limitation in user language","real limitation in user language"]}]}
-
-QUALITY: pros/cons must be specific verifiable facts. No "easy to use", "powerful AI", "great for beginners".
-
-CURRENT VERSIONS (2026) — always use these, never outdated versions:
-Chat/Assistants: ChatGPT uses GPT-5.5 (not GPT-4o), Claude uses Claude 4 (Sonnet 4.6/Opus 4.7) with 1M context, Gemini uses Gemini 2.5 Pro / Gemini 3, Grok is Grok 4.3, DeepSeek is V4 (1.6T params, 1M context), Meta AI is powered by Llama 4
-Image generation: Midjourney V7, Stable Diffusion 3.5, Flux is FLUX.2, Ideogram 3.0, Adobe Firefly Image Model 4, Recraft V4
-Video generation: Runway Gen-4.5 (#1 on leaderboards), Kling AI 3.0 (native 4K), Google Veo 3.1, Pika 2.5, Luma Ray3/Ray3.14 (not Dream Machine), Sora 2, Seedance 2.0
-Music/Voice: Suno v4.5, Udio 1.5, ElevenLabs (Eleven Music + Conversational AI agents)
-Code: Claude Code (Claude 4), Cursor (Composer 2), Windsurf (SWE-1.5, acquired by Cognition), GitHub Copilot (GPT-5.2 + Claude option), Replit (Agent 4)
-Productivity/Research: Perplexity (45M+ users, Deep Research), NotebookLM (Cinematic Video Overviews, Plus $19.99/mo), Notion AI 3.0 (AI Agents, Workers for Agents), Gamma 3.0 (Gamma Agent, 70M+ users)
-Design: Canva AI 2.0 (220M+ users), Figma AI (Make feature), Framer (Basic $15/Pro $45/Scale $100)
-Marketing: Semrush One (AI Visibility Toolkit, tracks ChatGPT/Perplexity/Gemini rankings)`;
-
 export default {
-  async fetch(request, env) {
-
-    // Allow CORS preflight
-    if (request.method === 'OPTIONS') {
-      return corsResponse(null, 204);
-    }
+  async fetch(request, env, ctx) {
+    if (request.method === 'OPTIONS') return corsResponse(null, 204);
 
     const url = new URL(request.url);
 
-    // Debug: GET /models — lists available models for this API key
+    // Список моделей, доступных ключу (для проверки при обновлении модели).
     if (request.method === 'GET' && url.pathname === '/models') {
       const r = await fetch('https://api.anthropic.com/v1/models', {
         headers: { 'x-api-key': env.ANTHROPIC_API_KEY, 'anthropic-version': '2023-06-01' }
       });
-      const data = await r.json();
-      return corsResponse(JSON.stringify(data), r.status);
+      return corsResponse(await r.text(), r.status);
     }
 
-    // Debug: GET /test-log — test Supabase insert
-    if (request.method === 'GET' && url.pathname === '/test-log') {
-      const supabaseUrl = env.SUPABASE_URL || null;
-      const supabaseKey = env.SUPABASE_KEY ? 'set' : 'missing';
-      if (!supabaseUrl || !env.SUPABASE_KEY) {
-        return corsResponse(JSON.stringify({ error: 'Missing env vars', SUPABASE_URL: supabaseUrl, SUPABASE_KEY: supabaseKey }), 200);
-      }
-      try {
-        const r = await fetch(`${supabaseUrl}/rest/v1/tool_finder_logs`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'apikey': env.SUPABASE_KEY,
-            'Authorization': `Bearer ${env.SUPABASE_KEY}`,
-            'Prefer': 'return=representation'
-          },
-          body: JSON.stringify({ prompt: 'test prompt', primary_tool: 'TestTool', alternatives: ['Alt1'] })
-        });
-        const text = await r.text();
-        return corsResponse(JSON.stringify({ status: r.status, body: text }), 200);
-      } catch(e) {
-        return corsResponse(JSON.stringify({ error: e.message }), 200);
-      }
-    }
-
-    // Only accept POST to /recommend
     if (request.method !== 'POST' || url.pathname !== '/recommend') {
       return corsResponse(JSON.stringify({ error: 'Not found' }), 404);
     }
 
-    // Parse request body
     let body;
-    try {
-      body = await request.json();
-    } catch {
-      return corsResponse(JSON.stringify({ error: 'Invalid JSON body' }), 400);
-    }
+    try { body = await request.json(); } catch { return corsResponse(JSON.stringify({ error: 'Invalid JSON body' }), 400); }
+    const task = (body.task || '').trim().slice(0, 2000);
+    if (!task) return corsResponse(JSON.stringify({ error: 'Missing task field' }), 400);
 
-    const task = (body.task || '').trim();
-    if (!task) {
-      return corsResponse(JSON.stringify({ error: 'Missing task field' }), 400);
-    }
+    let catalog;
+    try { catalog = await getCatalog(); }
+    catch (e) { return corsResponse(JSON.stringify({ error: 'Catalog unavailable', detail: e.message }), 502); }
 
-    const useV2 = url.searchParams.get('v') === '2';
-    const activePrompt = useV2 ? SYSTEM_PROMPT_V2 : SYSTEM_PROMPT;
-
-    // Detect free constraint in any supported language
-    const FREE_KEYWORDS = /\bfree\b|бесплатн|безкоштовн|gratis|kostenlos|gratuit|gratuito|grátis|חינם|no subscription|no credit card/i;
-    const wantsFree = FREE_KEYWORDS.test(task);
-    const taskContent = wantsFree
-      ? `Task: ${task}\n\n[SYSTEM NOTE: User explicitly requested FREE tools only. You MUST only recommend tools with a real permanent free tier. Do NOT recommend Semrush, Ahrefs, Jasper, Midjourney, Synthesia, or any tool that requires payment to use for this task.]`
+    const userText = FREE_KEYWORDS.test(task)
+      ? `Task: ${task}\n\n(The user asked for free tools: include only tools with a real permanent free plan for this task.)`
       : `Task: ${task}`;
 
-    // Call Anthropic
     const anthropicRes = await fetch(ANTHROPIC_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'x-api-key': env.ANTHROPIC_API_KEY,
-        'anthropic-version': '2023-06-01'
+        'anthropic-version': '2023-06-01',
+        // При отказе модели запрос сам уходит на рекомендованную запасную.
+        'anthropic-beta': 'server-side-fallback-2026-07-01'
       },
       body: JSON.stringify({
-        model: 'claude-haiku-4-5-20251001',
-        max_tokens: 900,
+        model: MODEL,
+        max_tokens: 4000,
+        fallbacks: 'default',
+        // Opus 5.5 всегда думает; низкий effort — чтобы ответ приходил быстро.
+        output_config: { effort: 'low', format: { type: 'json_schema', schema: SCHEMA } },
         system: [
-          { type: 'text', text: activePrompt, cache_control: { type: 'ephemeral' } }
+          { type: 'text', text: RULES },
+          { type: 'text', text: `CATALOG (slug | name | category | pricing badge | price or audience | url | best for | description):\n${catalog}`,
+            cache_control: { type: 'ephemeral', ttl: '1h' } }
         ],
-        messages: [{ role: 'user', content: taskContent }]
+        messages: [{ role: 'user', content: userText }]
       })
     });
 
     if (!anthropicRes.ok) {
-      const err = await anthropicRes.text();
-      return corsResponse(JSON.stringify({ error: 'Upstream error', detail: err }), 502);
+      return corsResponse(JSON.stringify({ error: 'Upstream error', detail: await anthropicRes.text() }), 502);
     }
 
     const data = await anthropicRes.json();
-    const raw  = (data.content?.[0]?.text || '').replace(/```json|```/g, '').trim();
+    if (data.stop_reason === 'refusal') {
+      return corsResponse(JSON.stringify({ error: 'Request declined' }), 422);
+    }
+    // В ответе есть блоки thinking (пустые) и, при отказе основной модели,
+    // fallback — берём именно текстовый блок.
+    const raw = (data.content || []).find(b => b.type === 'text')?.text || '';
 
     let result;
-    try {
-      result = JSON.parse(raw);
-    } catch {
-      return corsResponse(JSON.stringify({ error: 'Failed to parse AI response', raw }), 502);
-    }
+    try { result = JSON.parse(raw); }
+    catch { return corsResponse(JSON.stringify({ error: 'Failed to parse AI response' }), 502); }
 
-    // Log prompt + recommendations to Supabase (fire and forget)
-    try {
-      let primary_tool = null, primary_url = null;
-      let alt1_tool = null, alt1_url = null;
-      let alt2_tool = null, alt2_url = null;
-
-      if (useV2 && Array.isArray(result.tools)) {
-        const t = result.tools;
-        primary_tool = t[0]?.name || null;
-        primary_url  = t[0]?.url  || null;
-        alt1_tool    = t[1]?.name || null;
-        alt1_url     = t[1]?.url  || null;
-        alt2_tool    = t[2]?.name || null;
-        alt2_url     = t[2]?.url  || null;
-      } else {
-        const alt0 = result.alternatives?.[0] || {};
-        const alt1 = result.alternatives?.[1] || {};
-        primary_tool = result.primary?.name || null;
-        primary_url  = result.primary?.url  || null;
-        alt1_tool    = alt0.name || null;
-        alt1_url     = alt0.url  || null;
-        alt2_tool    = alt1.name || null;
-        alt2_url     = alt1.url  || null;
-      }
-
-      await fetch(`${env.SUPABASE_URL}/rest/v1/tool_finder_logs`, {
+    // Запись запроса — после ответа пользователю, не задерживая его.
+    if (env.SUPABASE_URL && env.SUPABASE_KEY) {
+      const t = result.tools || [];
+      ctx.waitUntil(fetch(`${env.SUPABASE_URL}/rest/v1/tool_finder_logs`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'apikey': env.SUPABASE_KEY,
-          'Authorization': `Bearer ${env.SUPABASE_KEY}`
+          apikey: env.SUPABASE_KEY,
+          Authorization: `Bearer ${env.SUPABASE_KEY}`
         },
-        body: JSON.stringify({ prompt: task, primary_tool, primary_url, alt1_tool, alt1_url, alt2_tool, alt2_url })
-      });
-    } catch (_) {}
+        body: JSON.stringify({
+          prompt: task,
+          primary_tool: t[0]?.name || null, primary_url: t[0]?.url || null,
+          alt1_tool: t[1]?.name || null,    alt1_url: t[1]?.url || null,
+          alt2_tool: t[2]?.name || null,    alt2_url: t[2]?.url || null
+        })
+      }).catch(() => {}));
+    }
 
     return corsResponse(JSON.stringify(result), 200);
   }
@@ -247,7 +190,7 @@ function corsResponse(body, status) {
     status,
     headers: {
       'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*',         // Lock this to your domain in production
+      'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type'
     }

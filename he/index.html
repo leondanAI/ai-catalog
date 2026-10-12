@@ -10,10 +10,10 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/favicon-192.png">
-<link rel="canonical" href="https://aitoolfit.ai/he/index.html">
+<link rel="canonical" href="https://aitoolfit.ai/he/">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://aitoolfit.ai/he/index.html">
+<meta property="og:url" content="https://aitoolfit.ai/he/">
 <meta property="og:title" content="מאתר כלי AI: הכלי הטוב ביותר לכל משימה | AItoolFit">
 <meta property="og:description" content="Describe your task. Get 3 AI tools that work — not 500 you'll never open.">
 <meta property="og:image" content="https://aitoolfit.ai/og-image.png">
@@ -408,7 +408,10 @@ async function tfFind() {
     const data = await res.json();
     if (!res.ok || data.error) throw new Error(data.detail || data.error || 'Server error');
     tfRender(data);
+    // Главная метрика проекта. Текст запроса в GA не уходит — только длина.
+    if (window.gtag) gtag('event', 'prompt_submit', { lang: document.documentElement.lang || 'en', task_length: task.length });
   } catch(err) {
+    if (window.gtag) gtag('event', 'prompt_error', { lang: document.documentElement.lang || 'en' });
     errBox.textContent = t('ui.errGeneric') + ': ' + err.message;
     errBox.style.display = 'block';
   } finally {
@@ -422,14 +425,16 @@ const SB_ANON3 = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG';
 function tf3Slug(name) {
   return name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
 }
-function tf3ResolveSlug(aiName) {
+function tf3ResolveSlug(aiName, aiSlug) {
+  // Воркер возвращает slug инструмента из каталога — он точнее, чем поиск по имени.
+  if (aiSlug && ALL_TOOLS.some(t => t.slug === aiSlug)) return aiSlug;
   const n = aiName.toLowerCase().trim();
   const exact = ALL_TOOLS.find(t => t.name.toLowerCase() === n);
-  if (exact) return tf3Slug(exact.name);
+  if (exact) return exact.slug || tf3Slug(exact.name);
   const sub = ALL_TOOLS.find(t => n.includes(t.name.toLowerCase()));
-  if (sub) return tf3Slug(sub.name);
+  if (sub) return sub.slug || tf3Slug(sub.name);
   const rev = ALL_TOOLS.find(t => t.name.toLowerCase().includes(n));
-  if (rev) return tf3Slug(rev.name);
+  if (rev) return rev.slug || tf3Slug(rev.name);
   return tf3Slug(aiName);
 }
 function tf3Avatar(name, url) {
@@ -451,8 +456,8 @@ function tf3List(arr, icon, color) {
     `<div class="tf3-list-item"><span style="color:${color};flex-shrink:0">${icon}</span><span>${tfEsc(p)}</span></div>`
   ).join('');
 }
-async function tf3Fetch(name) {
-  const slug = tf3ResolveSlug(name);
+async function tf3Fetch(name, aiSlug) {
+  const slug = tf3ResolveSlug(name, aiSlug);
   const lang = (typeof I18N !== 'undefined' ? I18N.lang : null) || localStorage.getItem('lang') || 'en';
   const hdrs = { apikey: SB_ANON3, Authorization: `Bearer ${SB_ANON3}` };
   const sel = 'pros,cons,description,best_for,badge,url';
@@ -485,11 +490,11 @@ async function tfRender(data) {
     if (data.alternatives?.length) data.alternatives.slice(0,2).forEach(a => tools.push(a));
   }
 
-  const infos = await Promise.all(tools.map(tool => tf3Fetch(tool.name)));
+  const infos = await Promise.all(tools.map(tool => tf3Fetch(tool.name, tool.slug)));
 
   el.innerHTML = `<div class="tf3-grid">` + tools.map((tool, i) => {
     const info  = infos[i];
-    const slug  = tf3ResolveSlug(tool.name);
+    const slug  = tf3ResolveSlug(tool.name, tool.slug);
     const inCatalog = !!(info.db.pros || info.db.description);
 
     const inferBadge = (str) => {
