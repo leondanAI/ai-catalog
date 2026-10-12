@@ -191,6 +191,7 @@ OUT_DIR = os.path.join(os.path.dirname(__file__), '..', 'tools')
 # в переход с canonical на выжившую карточку.
 REDIRECTS = {
     'recraft': 'recraft-ai',   # одно имя, один сайт, две карточки
+    'finchat': 'fiscal-ai',    # старый слаг до ребрендинга FinChat → Fiscal.ai
 }
 
 

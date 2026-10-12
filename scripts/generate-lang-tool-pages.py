@@ -15,6 +15,7 @@ import urllib.request, json, os, sys, re
 # Список продублирован в generate-pages.py — при правке менять оба файла.
 REDIRECTS = {
     'recraft': 'recraft-ai',   # одно имя, один сайт, две карточки
+    'finchat': 'fiscal-ai',    # старый слаг до ребрендинга FinChat → Fiscal.ai
 }
 
 

@@ -18,6 +18,8 @@ ROOT = __file__.replace('scripts/sync.py', '')
 steps = [
     ('Tool pages (EN)',            ['python3', 'scripts/generate-pages.py']),
     ('Tool pages (7 langs)',       ['python3', 'scripts/generate-lang-tool-pages.py']),
+    # После генераторов карточек: они удаляют страницы снятых инструментов как «осиротевшие».
+    ('Retired tools → alternatives', ['python3', 'scripts/generate-retired-pages.py']),
     ('Language pages (42)',        ['python3', 'scripts/generate-lang-pages.py']),
     ('Static catalog (8 langs)',   ['python3', 'scripts/generate-static-content.py']),
     # Compare-страницы тянут данные инструментов (описания, best_for, last_updated
