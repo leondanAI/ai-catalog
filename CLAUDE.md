@@ -178,7 +178,12 @@ GitHub Action `Rebuild site from database` exists only as a manual fallback.
 Then always: `check_lang_links.py` (fails on links to the wrong language),
 `find_broken_links.py`, `generate-sitemap.py`, commit, push, `indexnow.py`
 for the changed URLs, and **check the live pages as a visitor in all 8
-languages** before saying "done".
+languages** (`scripts/verify_live.py` + a look in Leon's browser) before
+saying "done".
+
+Step-by-step commands: `/publish-changes` (any content change) and `/add-news`
+(news and stories: topic → facts → draft → ElevenLabs cover → translations →
+publish → verify; helper `scripts/news_story.py`).
 
 Never hand-write content into JS files or templates (`js/data.js`,
 `js/translations.js` are generated; homepage "Popular" is only a slug list).
