@@ -18,18 +18,58 @@ Priority tiers (language version = EN equivalent − 0.1):
     0.7  individual /lang/tools/<slug>.html review pages
     0.2  /lang/privacy, /lang/terms, /lang/contact
 
-fr and pt are NOT included — those languages are inactive
-(hidden in language picker, no maintenance).
+fr and pt are included (active since 2026-05-04).
+
+lastmod — дата последнего изменения содержимого страницы, а не дата сборки.
+Генераторы переписывают все файлы при каждом прогоне, поэтому раньше у всех
+2,6 тыс. адресов стояла сегодняшняя дата, и Google такой lastmod игнорирует.
+Git фиксирует только реальные изменения: берём дату последнего коммита,
+менявшего файл; для файлов, изменённых и ещё не закоммиченных, — сегодня.
 
 Run: python3 scripts/generate-sitemap.py
 """
 
 import os
+import subprocess
 from datetime import date
 
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 BASE_URL = 'https://aitoolfit.ai'
 TODAY    = date.today().isoformat()
+
+
+def _git_dates():
+    """{путь: YYYY-MM-DD последнего коммита, менявшего файл}."""
+    try:
+        log = subprocess.run(['git', 'log', '--format=>%cs', '--name-only', '--no-renames', '--', '*.html'],
+                             cwd=ROOT_DIR, capture_output=True, text=True, check=True).stdout
+        dirty = subprocess.run(['git', 'status', '--porcelain', '--', '*.html'],
+                               cwd=ROOT_DIR, capture_output=True, text=True, check=True).stdout
+    except Exception:
+        return {}, None
+    dates, cur = {}, None
+    for line in log.splitlines():
+        if line.startswith('>'):
+            cur = line[1:]
+        elif line and line not in dates:
+            dates[line] = cur
+    changed = {l[3:].strip().strip('"') for l in dirty.splitlines() if l.strip()}
+    return dates, changed
+
+
+_DATES, _CHANGED = _git_dates()
+
+
+def lastmod(rel):
+    """Дата изменения файла rel (путь от корня сайта); без git — сегодня."""
+    if _CHANGED is None or rel in _CHANGED:
+        return TODAY
+    return _DATES.get(rel, TODAY)
+
+
+def page_path(loc):
+    rel = loc.replace(BASE_URL + '/', '', 1)
+    return rel + 'index.html' if rel == '' or rel.endswith('/') else rel
 
 LANGS_ACTIVE = ['es', 'de', 'ru', 'ua', 'he', 'fr', 'pt']
 
@@ -39,11 +79,11 @@ UTILITY_SLUGS = {
     'password-generator', 'base64',
 }
 
-def url(loc, lastmod, changefreq, priority):
+def url(loc, changefreq, priority):
     return (
         f'  <url>\n'
         f'    <loc>{loc}</loc>\n'
-        f'    <lastmod>{lastmod}</lastmod>\n'
+        f'    <lastmod>{lastmod(page_path(loc))}</lastmod>\n'
         f'    <changefreq>{changefreq}</changefreq>\n'
         f'    <priority>{priority:.1f}</priority>\n'
         f'  </url>'
@@ -80,60 +120,60 @@ news_slugs = sorted(
 ) if os.path.isdir(news_dir) else []
 
 # ── EN main pages ─────────────────────────────────────────────────────────────
-entries.append(url(f'{BASE_URL}/',                 TODAY, 'daily',   1.0))
-entries.append(url(f'{BASE_URL}/directory.html',   TODAY, 'daily',   1.0))
-entries.append(url(f'{BASE_URL}/compare.html',     TODAY, 'weekly',  1.0))
-entries.append(url(f'{BASE_URL}/news.html',        TODAY, 'daily',   0.7))
+entries.append(url(f'{BASE_URL}/',                 'daily',   1.0))
+entries.append(url(f'{BASE_URL}/directory.html',   'daily',   1.0))
+entries.append(url(f'{BASE_URL}/compare.html',     'weekly',  1.0))
+entries.append(url(f'{BASE_URL}/news.html',        'daily',   0.7))
 # tools.html (Toolbox) удалён — страницы больше нет на диске, а sitemap
 # продолжал её отдавать: Google получал 404 прямо из карты сайта (8 языков).
-entries.append(url(f'{BASE_URL}/newsletter.html',  TODAY, 'monthly', 0.4))
-entries.append(url(f'{BASE_URL}/privacy.html',     TODAY, 'yearly',  0.3))
-entries.append(url(f'{BASE_URL}/terms.html',       TODAY, 'yearly',  0.3))
-entries.append(url(f'{BASE_URL}/contact.html',     TODAY, 'yearly',  0.3))
+entries.append(url(f'{BASE_URL}/newsletter.html',  'monthly', 0.4))
+entries.append(url(f'{BASE_URL}/privacy.html',     'yearly',  0.3))
+entries.append(url(f'{BASE_URL}/terms.html',       'yearly',  0.3))
+entries.append(url(f'{BASE_URL}/contact.html',     'yearly',  0.3))
 
 # ── EN individual tool pages ──────────────────────────────────────────────────
 for slug in tool_slugs:
     priority = 0.5 if slug in UTILITY_SLUGS else 0.8
-    entries.append(url(f'{BASE_URL}/tools/{slug}.html', TODAY, 'monthly', priority))
+    entries.append(url(f'{BASE_URL}/tools/{slug}.html', 'monthly', priority))
 
 # ── EN compare pages ──────────────────────────────────────────────────────────
 for slug in compare_slugs:
-    entries.append(url(f'{BASE_URL}/compare/{slug}.html', TODAY, 'weekly', 0.8))
+    entries.append(url(f'{BASE_URL}/compare/{slug}.html', 'weekly', 0.8))
 
 # ── EN individual news article pages ─────────────────────────────────────────
 for slug in news_slugs:
-    entries.append(url(f'{BASE_URL}/news/{slug}.html', TODAY, 'monthly', 0.75))
+    entries.append(url(f'{BASE_URL}/news/{slug}.html', 'monthly', 0.75))
 
 # ── Active language versions ──────────────────────────────────────────────────
 for lang in LANGS_ACTIVE:
-    entries.append(url(f'{BASE_URL}/{lang}/',                 TODAY, 'daily',   0.9))
-    entries.append(url(f'{BASE_URL}/{lang}/directory.html',   TODAY, 'daily',   0.9))
-    entries.append(url(f'{BASE_URL}/{lang}/compare.html',     TODAY, 'weekly',  0.9))
-    entries.append(url(f'{BASE_URL}/{lang}/news.html',        TODAY, 'daily',   0.6))
+    entries.append(url(f'{BASE_URL}/{lang}/',                 'daily',   0.9))
+    entries.append(url(f'{BASE_URL}/{lang}/directory.html',   'daily',   0.9))
+    entries.append(url(f'{BASE_URL}/{lang}/compare.html',     'weekly',  0.9))
+    entries.append(url(f'{BASE_URL}/{lang}/news.html',        'daily',   0.6))
     lang_news_dir = os.path.join(ROOT_DIR, lang, 'news')
     if os.path.isdir(lang_news_dir):
         for f in sorted(os.listdir(lang_news_dir)):
             if f.endswith('.html') and not f.startswith('_'):
-                entries.append(url(f'{BASE_URL}/{lang}/news/{f[:-5]}.html', TODAY, 'monthly', 0.65))
+                entries.append(url(f'{BASE_URL}/{lang}/news/{f[:-5]}.html', 'monthly', 0.65))
     # /{lang}/tools.html — см. комментарий выше, страница удалена
-    entries.append(url(f'{BASE_URL}/{lang}/newsletter.html',  TODAY, 'monthly', 0.3))
+    entries.append(url(f'{BASE_URL}/{lang}/newsletter.html',  'monthly', 0.3))
     add_if_exists(entries, f'{lang}/privacy.html',
-                  f'{BASE_URL}/{lang}/privacy.html', TODAY, 'yearly', 0.2)
+                  f'{BASE_URL}/{lang}/privacy.html', 'yearly', 0.2)
     add_if_exists(entries, f'{lang}/terms.html',
-                  f'{BASE_URL}/{lang}/terms.html', TODAY, 'yearly', 0.2)
+                  f'{BASE_URL}/{lang}/terms.html', 'yearly', 0.2)
     add_if_exists(entries, f'{lang}/contact.html',
-                  f'{BASE_URL}/{lang}/contact.html', TODAY, 'yearly', 0.2)
+                  f'{BASE_URL}/{lang}/contact.html', 'yearly', 0.2)
 
     for slug in tool_slugs:
         rel = f'{lang}/tools/{slug}.html'
         if os.path.exists(os.path.join(ROOT_DIR, rel)):
             priority = 0.4 if slug in UTILITY_SLUGS else 0.7
-            entries.append(url(f'{BASE_URL}/{rel}', TODAY, 'monthly', priority))
+            entries.append(url(f'{BASE_URL}/{rel}', 'monthly', priority))
 
     for slug in compare_slugs:
         rel = f'{lang}/compare/{slug}.html'
         if os.path.exists(os.path.join(ROOT_DIR, rel)):
-            entries.append(url(f'{BASE_URL}/{rel}', TODAY, 'weekly', 0.7))
+            entries.append(url(f'{BASE_URL}/{rel}', 'weekly', 0.7))
 
 # ── Write sitemap.xml ─────────────────────────────────────────────────────────
 sitemap = (
