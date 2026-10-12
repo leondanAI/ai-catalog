@@ -20,6 +20,9 @@ steps = [
     ('Tool pages (7 langs)',       ['python3', 'scripts/generate-lang-tool-pages.py']),
     # После генераторов карточек: они удаляют страницы снятых инструментов как «осиротевшие».
     ('Retired tools → alternatives', ['python3', 'scripts/generate-retired-pages.py']),
+    # js/data.js и js/translations.js — каталог для главной, /directory и /compare
+    # (на всех языках). До октября 2026 писались руками и отстали от базы на полгода.
+    ('Catalog JS from DB',         ['python3', 'scripts/gen_data_js.py']),
     ('Language pages (42)',        ['python3', 'scripts/generate-lang-pages.py']),
     ('Static catalog (8 langs)',   ['python3', 'scripts/generate-static-content.py']),
     # Compare-страницы тянут данные инструментов (описания, best_for, last_updated

@@ -35,7 +35,7 @@ def sb_get(path):
         return json.loads(r.read())
 
 def fetch_news(lang):
-    return sb_get(f'news?lang=eq.{lang}&published=eq.true&order=date.desc&limit=50&select=id,slug,title,summary,date,source,category,cat_label,cat_color')
+    return sb_get(f'news?lang=eq.{lang}&published=eq.true&order=date.desc&limit=50&select=id,slug,title,summary,date,source,category,cat_label,cat_color,image_url')
 
 def format_date(date_str):
     if not date_str:
@@ -74,7 +74,7 @@ def generate_news_js(articles):
                      f"summary:'{summary_js}', "
                      f"date:'{date_fmt}', source:'{esc(a['source'])}', "
                      f"category:'{cat}', catLabel:'{meta['label']}', catColor:'{meta['color']}', "
-                     f"url:'{url}' }},")
+                     f"url:'{url}', image_url:'{a.get('image_url') or ''}' }},")
 
     lines.append('];')
     lines.append('')
@@ -90,8 +90,18 @@ def generate_news_js(articles):
 
     return '\n'.join(lines)
 
+# Тот же текст, что даёт t('news.readMore') в js/i18n.js: статическая лента и
+# лента, которую потом рисует JS, должны совпадать, иначе страница «перескакивает».
+READ_MORE = {'en': 'Read more →', 'ru': 'Читать далее →', 'es': 'Leer más →', 'fr': 'Lire la suite →',
+             'de': 'Weiterlesen →', 'pt': 'Ler mais →', 'ua': 'Читати далі →', 'he': 'קרא עוד ←'}
+
+
 def generate_seo_html(articles, lang):
-    """Generate SEO pre-rendered HTML cards for a given language."""
+    """Generate SEO pre-rendered HTML cards for a given language.
+
+    Вёрстка карточки — та же, что у JS-ленты в news.html (миниатюра справа в
+    .news-body), чтобы при подмене статики свежими данными ничего не прыгало.
+    """
     cards = []
     for a in articles:
         cat   = a.get('category', 'tools')
@@ -101,6 +111,8 @@ def generate_seo_html(articles, lang):
         color = a.get('cat_color') or meta['color']
         label = a.get('cat_label') or meta['label']
         date_fmt = format_date(a['date'])
+        img_url  = re.sub(r'\.(jpe?g|png)$', '.webp', a.get('image_url') or '')
+        img = f'<div class="news-img" style="background-image:url(\'{esc(img_url)}\')"></div>' if img_url else ''
 
         cards.append(f'''
     <a class="news-card fade-up" href="{url}">
@@ -108,11 +120,13 @@ def generate_seo_html(articles, lang):
         <span class="news-tag" style="background:{color}22;color:{color};border:1px solid {color}44">{esc(label)}</span>
         <span class="news-date">{esc(date_fmt)}</span>
       </div>
-      <div class="news-title">{esc(a['title'])}</div>
-      <p class="news-summary">{esc(a['summary'])}</p>
+      <div class="news-body">{img}
+        <div class="news-title">{esc(a['title'])}</div>
+        <p class="news-summary">{esc(a['summary'])}</p>
+      </div>
       <div class="news-footer">
         <span class="news-source">{esc(a['source'])}</span>
-        <span class="news-more">Read more →</span>
+        <span class="news-more">{READ_MORE.get(lang, READ_MORE['en'])}</span>
       </div>
     </a>''')
 
@@ -156,6 +170,19 @@ def main():
         seo_html = generate_seo_html(articles, lang)
         inject_seo_block(seo_html, news_path)
         print(f'  ✓ {"news.html" if lang == "en" else lang+"/news.html"} — SEO block updated ({len(articles)} cards)')
+
+    # 3. Версия по содержимому в адресе js/news.js на всех языках: браузер
+    #    держал старую копию до 10 минут и показывал устаревшую ленту.
+    import hashlib
+    ver = hashlib.md5(news_js.encode('utf-8')).hexdigest()[:8]
+    for lang in ACTIVE_LANGS:
+        for page in ('news.html', 'index.html'):
+            p = os.path.join(ROOT_DIR, page) if lang == 'en' else os.path.join(ROOT_DIR, lang, page)
+            if os.path.exists(p):
+                t = open(p, encoding='utf-8').read()
+                t = re.sub(r'(src="/?js/news\.js)(\?v=[0-9a-f]+)?"', rf'\1?v={ver}"', t)
+                open(p, 'w', encoding='utf-8').write(t)
+    print(f'  ✓ js/news.js?v={ver} в news.html и index.html')
 
     print('\nDone.')
 

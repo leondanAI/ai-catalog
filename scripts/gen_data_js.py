@@ -20,7 +20,7 @@ js/data.js — каталог, из которого главная, directory.h
 import json, os, re, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import run_sql
+import sbread
 
 PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'js', 'data.js')
 
@@ -47,14 +47,8 @@ def main():
     for cid, block in zip([c[0] for c in cats], re.split(r"\n  \{\n    id: '", head)[1:]):
         old_order[cid] = [to_slug(n) for n in re.findall(r"name:'((?:[^'\\]|\\.)*)'", block)]
 
-    run_sql.load_env()
-    conn = run_sql.connect()
-    cur = conn.cursor()
-    cur.execute("SELECT slug, name, category, url, badge, users, best_for, description, pros, cons "
-                "FROM tools WHERE lang = 'en' AND published ORDER BY slug")
-    rows = [dict(zip(('slug', 'name', 'category', 'url', 'badge', 'users', 'best_for', 'description', 'pros', 'cons'), r))
-            for r in cur.fetchall()]
-    conn.close()
+    rows = sbread.get('tools?lang=eq.en&published=eq.true&order=slug.asc'
+                      '&select=slug,name,category,url,badge,users,best_for,description,pros,cons')
 
     known = {c[0] for c in cats}
     lost = [r['slug'] for r in rows if r['category'] not in known]
@@ -100,16 +94,10 @@ def write_translations(slugs):
     (у Claude по-немецки стояло описание Uptrends.ai). Каталог, главная и
     сравнение на неанглийских версиях брали описания отсюда.
     """
-    run_sql.load_env()
-    conn = run_sql.connect()
-    cur = conn.cursor()
-    cur.execute("SELECT slug, lang, description, best_for FROM tools "
-                "WHERE published AND lang <> 'en' ORDER BY slug, lang")
     tr = {}
-    for slug, lang, desc, best in cur.fetchall():
-        if slug in slugs:
-            tr.setdefault(slug, {})[lang] = {'desc': desc or '', 'bestFor': best or ''}
-    conn.close()
+    for r in sbread.get('tools?published=eq.true&lang=neq.en&order=slug.asc,lang.asc&select=slug,lang,description,best_for'):
+        if r['slug'] in slugs:
+            tr.setdefault(r['slug'], {})[r['lang']] = {'desc': r['description'] or '', 'bestFor': r['best_for'] or ''}
     body = ',\n'.join(f'  {js(s)}: {js(v)}' for s, v in sorted(tr.items()))
     open(TR_PATH, 'w', encoding='utf-8').write(
         '// Описание и «лучше всего для» инструментов на 7 языках.\n'

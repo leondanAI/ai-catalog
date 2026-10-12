@@ -17,7 +17,10 @@ Google ещё месяцами показывает эти адреса: в ок
 import html, os, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import run_sql
+import json
+import sbread
+
+CACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'retired_tools.json')
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 LANGS = ['en', 'es', 'de', 'ru', 'ua', 'he', 'fr', 'pt']
@@ -152,17 +155,25 @@ def page(lang, slug, name, alts):
 
 
 def main():
-    run_sql.load_env()
-    conn = run_sql.connect()
-    cur = conn.cursor()
-    cur.execute("SELECT slug, name, category, also_consider FROM tools WHERE lang = 'en' AND NOT published ORDER BY slug")
-    retired = [r for r in cur.fetchall() if r[0] not in SKIP]
-    cur.execute("SELECT slug, lang, name, category, badge, domain, best_for, description, rating "
-                "FROM tools WHERE published")
+    # Снятые карточки публичным ключом не видны (RLS), поэтому их список
+    # читается по паролю из .env и сохраняется в retired_tools.json. Без .env
+    # (сборка в GitHub Actions) берётся сохранённый список.
+    try:
+        import run_sql
+        run_sql.load_env()
+        conn = run_sql.connect()
+        cur = conn.cursor()
+        cur.execute("SELECT slug, name, category, also_consider FROM tools WHERE lang = 'en' AND NOT published ORDER BY slug")
+        retired = [list(r) for r in cur.fetchall()]
+        conn.close()
+        json.dump(retired, open(CACHE, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    except (SystemExit, Exception) as e:
+        retired = json.load(open(CACHE, encoding='utf-8'))
+        print(f'  без доступа к базе ({str(e)[:60]}), список снятых — из {os.path.basename(CACHE)}')
+    retired = [r for r in retired if r[0] not in SKIP]
     live = {}
-    for slug, lang, *rest in cur.fetchall():
-        live.setdefault(slug, {})[lang] = dict(zip(('name', 'category', 'badge', 'domain', 'best_for', 'description', 'rating'), rest), slug=slug)
-    conn.close()
+    for r in sbread.get('tools?published=eq.true&select=slug,lang,name,category,badge,domain,best_for,description,rating'):
+        live.setdefault(r['slug'], {})[r['lang']] = dict(r)
 
     n = 0
     for slug, name, cat, also in retired:
