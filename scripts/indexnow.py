@@ -3,6 +3,7 @@
 Submit updated URLs to IndexNow (Bing, Yandex, etc.)
 Run after content updates: python3 scripts/indexnow.py
 Or with specific slugs: python3 scripts/indexnow.py --slugs=chatgpt,claude
+Or everything changed since a date: python3 scripts/indexnow.py --since=2026-10-11
 """
 
 import urllib.request, json, sys, os
@@ -91,13 +92,23 @@ def submit(urls):
     print(f'\nTotal submitted: {total} URLs')
 
 
+def urls_since(day):
+    """Адреса из sitemap.xml с lastmod не раньше day (YYYY-MM-DD).
+    lastmod там — дата реального изменения страницы (см. generate-sitemap.py)."""
+    import re
+    xml = open(os.path.join(os.path.dirname(__file__), '..', 'sitemap.xml'), encoding='utf-8').read()
+    return [loc for loc, mod in re.findall(r'<loc>([^<]+)</loc>\s*<lastmod>([^<]+)</lastmod>', xml) if mod >= day]
+
+
 def main():
-    slugs = None
+    slugs = since = None
     for arg in sys.argv[1:]:
         if arg.startswith('--slugs='):
             slugs = arg.split('=', 1)[1].split(',')
+        elif arg.startswith('--since='):
+            since = arg.split('=', 1)[1]
 
-    urls = get_urls(slugs)
+    urls = urls_since(since) if since else get_urls(slugs)
     print(f'Submitting {len(urls)} URLs to IndexNow...')
     submit(urls)
 
