@@ -145,7 +145,7 @@ img { max-width: 100%; }
 .news-body { display: block; }
 .news-body::after { content: ''; display: block; clear: both; }
 .news-body .news-title { margin-bottom: 8px; }
-.news-img { float: inline-end; width: 128px; height: 72px; margin-inline-start: 12px; margin-bottom: 4px; border-radius: 8px; background-size: cover; background-position: center; }
+.news-img { float: inline-end; width: 45%; max-width: 220px; aspect-ratio: 16 / 9; margin-inline-start: 12px; margin-bottom: 4px; border-radius: 8px; background-size: cover; background-position: center; }
 .news-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; display: flex; flex-direction: column; gap: 8px; transition: border-color 0.15s, background 0.15s; }
 .news-card:hover { border-color: var(--border2); background: var(--bg3); }
 .news-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }

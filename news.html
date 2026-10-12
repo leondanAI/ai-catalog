@@ -817,7 +817,10 @@ function render() {
     const color = n.cat_color || n.catColor || '#7c6af7';
     const label = t('newscat.' + n.category) || n.cat_label || n.catLabel || n.category;
     const date  = n.date ? (typeof n.date === 'string' && n.date.includes('-') ? formatDate(n.date) : n.date) : '';
-    const url   = n.url || (n.slug ? `/news/${n.slug}.html` : '#');
+    // Ссылка — на статью того же языка. Раньше префикса языка не было, и из
+    // ru/he/… ленты все клики вели на английские статьи.
+    const _lang = typeof I18N !== 'undefined' ? I18N.lang : 'en';
+    const url   = n.url || (n.slug ? `${_lang === 'en' ? '' : '/' + _lang}/news/${n.slug}.html` : '#');
     // Рядом с JPG-обложкой лежит WebP того же имени — для ленты он легче.
     const img   = n.image_url ? `<div class="news-img" style="background-image:url('${n.image_url.replace(/\.(jpe?g|png)$/, '.webp')}')"></div>` : '';
     return `
