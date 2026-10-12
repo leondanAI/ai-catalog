@@ -100,7 +100,7 @@ def sb_get(path):
         return json.loads(r.read())
 
 def fetch_news(lang):
-    fields = 'id,slug,title,summary,body,date,source,category,cat_label,cat_color,image_url'
+    fields = 'id,slug,title,summary,body,date,source,source_url,category,cat_label,cat_color,image_url'
     return sb_get(f'news?lang=eq.{lang}&published=eq.true&order=date.desc&limit=100&select={fields}')
 
 def format_date(date_str):
@@ -135,6 +135,10 @@ def generate_page(article, lang, all_articles_for_lang, all_slugs_by_lang):
     body      = article.get('body') or f'<p>{htmlmod.escape(summary)}</p>'
     date_str  = format_date(article.get('date', ''))
     source    = article.get('source', '')
+    # Название источника — ссылка на первоисточник, если он записан.
+    _src_url  = article.get('source_url') or ''
+    source_html = (f'<a href="{esc(_src_url)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">{esc(source)}</a>'
+                   if _src_url.startswith('http') else esc(source))
     category  = article.get('category', 'tools')
     cat_label = article.get('cat_label') or category.title()
     cat_color = article.get('cat_color') or CAT_COLORS.get(category, '#7c6af7')
@@ -209,8 +213,8 @@ def generate_page(article, lang, all_articles_for_lang, all_slugs_by_lang):
     if image_url:
         webp = re.sub(r'\.(jpe?g|png)$', '.webp', image_url)
         local_webp = os.path.join(os.path.dirname(__file__), '..', webp.replace(SITE_URL + '/', ''))
-        source = f'<source srcset="{esc(webp)}" type="image/webp">' if webp != image_url and os.path.exists(local_webp) else ''
-        image_html = (f'\n  <picture>{source}<img src="{esc(image_url)}" width="1280" height="720" '
+        webp_tag = f'<source srcset="{esc(webp)}" type="image/webp">' if webp != image_url and os.path.exists(local_webp) else ''
+        image_html = (f'\n  <picture>{webp_tag}<img src="{esc(image_url)}" width="1280" height="720" '
                       f'fetchpriority="high" style="width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;'
                       f'border-radius:10px;margin-bottom:1.5rem" alt="{esc(title)}"></picture>')
 
@@ -325,7 +329,7 @@ def generate_page(article, lang, all_articles_for_lang, all_slugs_by_lang):
   <h1 class="article-title">{esc(title)}</h1>
   <div class="article-meta">
     <span class="news-tag" style="background:{cat_color}22;color:{cat_color};border:1px solid {cat_color}44">{esc(cat_label)}</span>
-    <span>{esc(date_str)}</span><span class="article-meta-dot">&middot;</span><span>{esc(source)}</span>
+    <span>{esc(date_str)}</span><span class="article-meta-dot">&middot;</span><span>{source_html}</span>
   </div>
   <div class="article-body">
     {body}
