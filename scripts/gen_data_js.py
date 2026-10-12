@@ -132,6 +132,27 @@ def write_translations(slugs):
         '  return (t && t.bestFor) || tool.bestFor;\n'
         '}\n')
     print(f'js/translations.js: {len(tr)} инструментов × {len({l for v in tr.values() for l in v})} языков')
+    bust_cache()
+
+
+def bust_cache():
+    """Версия по содержимому в адресах data.js и translations.js на страницах.
+
+    GitHub Pages разрешает кэшировать файлы 10 минут, и браузер держал старые
+    тексты после обновления. Новый ?v= — новый адрес, файл грузится сразу.
+    Языковые копии страниц generate-lang-pages.py делает из этих же файлов.
+    """
+    import hashlib
+    root = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
+    ver = {name: hashlib.md5(open(os.path.join(root, 'js', name), 'rb').read()).hexdigest()[:8]
+           for name in ('data.js', 'translations.js')}
+    for page in ('index.html', 'directory.html', 'compare.html'):
+        p = os.path.join(root, page)
+        t = open(p, encoding='utf-8').read()
+        for name, v in ver.items():
+            t = re.sub(rf'(src="/?js/{re.escape(name)})(\?v=[0-9a-f]+)?"', rf'\1?v={v}"', t)
+        open(p, 'w', encoding='utf-8').write(t)
+    print('версии файлов в страницах:', ver)
 
 
 if __name__ == '__main__':
