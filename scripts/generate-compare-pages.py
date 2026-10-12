@@ -198,6 +198,24 @@ BADGE_LABELS = {
     'he':{'free':'חינם','freemium':'Freemium','paid':'בתשלום'},
 }
 
+TITLE_MAX = 60
+
+
+def fit_title(template, a, b):
+    """Заголовок не длиннее TITLE_MAX: Google обрезает длинные многоточием.
+    Названия вроде «Devin Desktop (Windsurf)» не влезали — сначала убираем
+    слово «Сравнение», затем старое имя в скобках."""
+    full = template.format(a=a, b=b)
+    if len(full) <= TITLE_MAX:
+        return full
+    short_tpl = re.sub(r' — [^|]+\|', ' |', template)          # «— Comparison |» → «|»
+    t = short_tpl.format(a=a, b=b)
+    if len(t) <= TITLE_MAX:
+        return t
+    strip = lambda n: re.sub(r'\s*\([^)]*\)', '', n)
+    return short_tpl.format(a=strip(a), b=strip(b))
+
+
 # Per-language title and meta description templates ({a} and {b} are tool names)
 META_TEMPLATES = {
     'en': {
@@ -912,7 +930,7 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
     base        = '' if lang == 'en' else f'/{lang}'
     L           = LABELS.get(lang, LABELS['en'])
     M           = META_TEMPLATES.get(lang, META_TEMPLATES['en'])
-    title       = M['title'].format(a=a['name'], b=b['name'])
+    title       = fit_title(M['title'], a['name'], b['name'])
     description = pick_cat_desc(cmp['slug'], cmp.get('cat', ''), lang, a['name'], b['name'], a)
 
     hreflang_tags = '\n'.join(
