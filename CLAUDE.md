@@ -151,6 +151,40 @@ Fields: id, lang, title, description, description_long
 
 ---
 
+## Publishing changes (how content reaches the site)
+
+**The database is the only source of content. Pages are printed from it.**
+GitHub Pages has no server, so every content page (tools, comparisons, news
+articles, news lists, catalog, homepage blocks) is static HTML generated from
+Supabase by `scripts/sync.py`. Pages do not re-fetch or re-draw content in
+the browser. Only interactive features talk to the DB at runtime: the AI
+finder (worker), `compare.html?a=&b=` (any pair), comments and ratings,
+newsletter signup, click tracking.
+
+**Rule: after ANY content change in the DB, rebuild the affected pages in the
+same session, then deploy and verify.** Content changes about once a week and
+only through Claude — there is no scheduled rebuild (decision 2026-10-12). The
+GitHub Action `Rebuild site from database` exists only as a manual fallback.
+
+| Changed | Run |
+|---|---|
+| Tool card (any field) | `generate-pages.py`, `generate-lang-tool-pages.py`, `gen_data_js.py`, `generate-lang-pages.py`, `generate-static-content.py`, `generate-compare-pages.py` (comparisons embed tool data) |
+| Tool unpublished | the above + `generate-retired-pages.py` |
+| News (new or edited) | `generate-news-pages.py`, `generate-news-snapshot.py` (news lists + homepage block) |
+| Comparison content | `generate-compare-pages.py` |
+| Templates (`index.html`, `news.html`, …) | `generate-lang-pages.py`, then `generate-static-content.py`, `generate-news-snapshot.py` |
+| Unsure / many things | `python3 scripts/sync.py` (all steps, ~22 min) |
+
+Then always: `check_lang_links.py` (fails on links to the wrong language),
+`find_broken_links.py`, `generate-sitemap.py`, commit, push, `indexnow.py`
+for the changed URLs, and **check the live pages as a visitor in all 8
+languages** before saying "done".
+
+Never hand-write content into JS files or templates (`js/data.js`,
+`js/translations.js` are generated; homepage "Popular" is only a slug list).
+
+---
+
 ## Content Rules
 
 ### Tool descriptions
@@ -205,9 +239,11 @@ Never use emojis in `<title>` tags (OK in `<h1>` only).
 ---
 
 ## Comparison Pages
-Comparisons currently work dynamically via `compare.html?a=slug-a&b=slug-b`.
-Table `comparisons` in Supabase stores pre-built comparison content.
-Future: generate static HTML pages in `/compare/` folder for SEO (Google needs to read without JS).
+- `/compare/<a>-vs-<b>.html` (+ 7 languages): static pages printed by
+  `generate-compare-pages.py` from the `comparisons` table and the tool cards.
+  The list of pairs is `COMPARISONS` in that script.
+- `compare.html?a=slug-a&b=slug-b`: interactive tool for any pair, reads the DB
+  in the browser. Not meant for indexing.
 
 ---
 
