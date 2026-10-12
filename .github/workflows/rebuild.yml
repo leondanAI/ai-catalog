@@ -1,0 +1,52 @@
+# Пересборка сайта из базы: правки в Supabase попадают на сайт без ручного запуска.
+# База — единственный источник; HTML-страницы печатаются из неё scripts/sync.py.
+# Генераторы читают базу публичным ключом (только опубликованное), секреты не нужны.
+name: Rebuild site from database
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'   # каждые 6 часов
+  workflow_dispatch: {}       # кнопка «Run workflow» во вкладке Actions
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rebuild
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0       # нужна история: lastmod в sitemap берётся из git
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Rebuild pages
+        run: python3 scripts/sync.py
+
+      - name: Commit and push if anything changed
+        id: commit
+        run: |
+          git config user.name "aitoolfit-bot"
+          git config user.email "aitoolfit-bot@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Ничего не изменилось."
+            exit 0
+          fi
+          git commit -m "rebuild: страницы из базы $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Notify search engines (IndexNow)
+        if: steps.commit.outputs.changed == 'true'
+        run: python3 scripts/indexnow.py --since=$(date -u +%Y-%m-%d)
