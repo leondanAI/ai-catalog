@@ -13,3 +13,7 @@ scripts/REFRESH_PROGRESS.md
 
 # Резервные копии таблиц перед прогоном SQL (в comments есть почты)
 backups/
+
+# служебный кэш Python
+__pycache__/
+*.pyc
