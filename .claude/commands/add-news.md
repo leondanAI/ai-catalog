@@ -39,15 +39,19 @@
 
 1. `select_browser` → `fe4ae832-b8c1-4622-9f72-c174b5b85a1e` (браузер Leon, НЕ другой).
 2. elevenlabs.io/app/image-video → Image. Модель GPT Image 2.5 Sunburst, 16:9, 1K,
-   High, 4 варианта (~190 кредитов за картинку).
-3. Промпт: «Editorial cover illustration for an AI news website.» + **новая сцена под
-   тему** (каждый раз другая композиция и сюжет, не один и тот же персонаж) + стиль:
-   `deep charcoal (#0a0a0a), dominant violet light (#7c6af7), mint accents (#2dd4a0),
-   volumetric haze, subtle film grain, premium editorial look. Wide 16:9, subject on
-   the right half, calmer dark space on the left. No readable text, no letters, no
-   logos, no brand marks, no human faces.`
-   Узнаваемость компании — только намёком (цвет, форма), без логотипов.
-4. Показать Leon 4 варианта с рекомендацией; после выбора — скачать (иконка загрузки
+   High, **2 варианта** (переключатель количества рядом с High; по умолчанию стоит 4 —
+   варианты почти одинаковые, Leon: «двух достаточно»). ~190 кредитов за картинку.
+3. Промпт: **сюжет новости, понятный с первого взгляда** (метафора, которую не нужно
+   объяснять: суд → Фемида с весами; агент отправил форму → ИИ жмёт кнопку «отправить»).
+   Каждый раз новая сцена и композиция. **Не обязательно тёмный фирменный стиль**
+   (решение Leon 2026-10-12: тёмные картинки плохо видны в миниатюре) — светлая,
+   чёткая, с естественными цветами, читается даже маленькой. Базовые слова:
+   `Bright, clear editorial illustration for a tech news article. … natural daylight,
+   rich but natural colors, high detail, crisp and easy to read even as a small
+   thumbnail. Wide 16:9, subject slightly right of center. No readable text, no letters,
+   no logos, no brand marks.` Реальных людей не изображать (статуи, абстрактные фигуры
+   — можно). Узнаваемость компании — только намёком (цвет, форма), без логотипов.
+4. Показать Leon оба варианта с рекомендацией; после выбора — скачать (иконка загрузки
    в просмотрщике; файл в ~/Downloads/ElevenLabs_image_…png).
 5. `python3 scripts/news_story.py cover <slug> <png>` → `media/news/<slug>.jpg` и `.webp`.
 
