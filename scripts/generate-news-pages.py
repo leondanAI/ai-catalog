@@ -101,7 +101,10 @@ def sb_get(path):
 
 def fetch_news(lang):
     fields = 'id,slug,title,summary,body,date,source,source_url,category,cat_label,cat_color,image_url'
-    return sb_get(f'news?lang=eq.{lang}&published=eq.true&order=date.desc&limit=100&select={fields}')
+    # Все новости, постранично. Раньше стоял limit=100: на 101-й новости самая
+    # старая статья выпадала из выборки и её страница удалялась как «сирота».
+    import sbread
+    return sbread.get(f'news?lang=eq.{lang}&published=eq.true&order=date.desc&select={fields}')
 
 def format_date(date_str):
     if not date_str:
