@@ -1,0 +1,861 @@
+[
+ {
+  "slug": "bolt-new-vs-cursor",
+  "before": {
+   "choose_a": "[\"✅ You want to go from a text prompt to a deployed full-stack app without separately configuring a database, auth, or hosting.\", \"✅ You want to generate images for your app right inside the chat and export them as WebP for immediate use.\", \"✅ You want a team to collaborate on the same app build using shared workspaces, templates, and admin controls without a local dev setup.\", \"✅ You want external tools like Notion, Linear, or Git repos to feed directly into the app generation workflow through MCP.\"]",
+   "choose_b": "[\"✅ You're a professional developer who wants an AI agent working inside a full VS Code-based local environment.\", \"✅ You work on a codebase spanning multiple files or repos and need an agent that plans and executes multi-step changes.\", \"✅ You want automated PR review and bug-catching through Bugbot as part of your normal workflow.\", \"✅ You want to keep your existing VS Code extensions and keybindings while still being able to use third-party AI models.\"]",
+   "faq": [
+    {
+     "a": "Bolt.new is a browser-based AI app builder that generates and deploys full-stack web applications from natural language prompts, with a built-in database, auth, storage, edge functions, and hosting managed on its own platform.",
+     "q": "What is Bolt.new?"
+    },
+    {
+     "a": "Cursor is an AI-first code editor built on VS Code that adds agentic coding, multi-repo support, parallel agents, and automated PR review, with its own model lineup alongside support for third-party models.",
+     "q": "What is Cursor?"
+    },
+    {
+     "a": "Bolt.new is the better fit since it bundles database, authentication, storage, and hosting into one platform, so you never have to configure third-party services like Supabase or Firebase.",
+     "q": "Which is better for building a full-stack app quickly without setting up infrastructure?"
+    },
+    {
+     "a": "Cursor is built for this, offering multi-file and multi-repo agentic editing, automated code review, and cloud agents inside a familiar VS Code environment.",
+     "q": "Which is better for working on an existing professional codebase?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want to go from a prompt to a deployed full-stack app without separately configuring a database, auth, or hosting.",
+    "✅ You want to generate images directly in the chat and export them as WebP for immediate use in your app.",
+    "✅ You want a team to collaborate on the same build using shared workspaces, templates, and admin controls.",
+    "✅ You want external tools like Notion, Linear, or Git repos to feed into the generation workflow through MCP."
+   ],
+   "choose_b": [
+    "✅ You want an AI agent working inside a familiar VS Code-based editor for professional development.",
+    "✅ You work across multiple files or repos and need an agent that plans and executes multi-step changes.",
+    "✅ You want automated PR review and bug-catching through Bugbot as part of your normal workflow.",
+    "✅ You want to offload long-running tasks to cloud agents and cloud dev environments triggered with /in-cloud."
+   ],
+   "faq": [
+    {
+     "q": "What is Bolt.new?",
+     "a": "Bolt.new is a browser-based AI app builder that generates and deploys full-stack web applications from natural language prompts, bundling a database, authentication, storage, edge functions, and hosting on its own platform."
+    },
+    {
+     "q": "What is Cursor?",
+     "a": "Cursor is an AI-first code editor built on VS Code that adds agentic coding, multi-repo support, parallel agents, and automated PR review, and now enrolls new customers in The X Subscription, which bundles Cursor with Grok and X Premium."
+    },
+    {
+     "q": "Which is better for building a full-stack app quickly without setting up infrastructure?",
+     "a": "Bolt.new is the better fit since it bundles database, authentication, storage, and hosting into one platform, so you never have to configure third-party services separately."
+    },
+    {
+     "q": "Which is better for working on an existing professional codebase?",
+     "a": "Cursor is built for this, offering multi-file and multi-repo agentic editing, automated PR review via Bugbot, and cloud agents inside a familiar VS Code environment."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "character-ai-vs-chatgpt",
+  "before": {
+   "choose_a": "[\"✅ You want to chat with thousands of user-created AI characters and personas instead of a single general assistant.\", \"✅ You enjoy multi-turn roleplay and storytelling with fictional figures, helpers, or companions.\", \"✅ You want to build and voice your own custom AI characters for others to chat with.\", \"✅ You want unlimited free text messaging without needing a paid plan just to keep the conversation going.\"]",
+   "choose_b": "[\"✅ You need a general-purpose assistant for writing, coding, research, or data analysis.\", \"✅ You want one tool that handles text, images, voice, file uploads, and web browsing together.\", \"✅ You need to use the same AI assistant across web, desktop, mobile, and API.\", \"✅ You are under 18 and need an assistant that still supports open-ended conversation, since Character.AI now blocks minors from open-ended chat and roleplay.\"]",
+   "faq": [
+    {
+     "a": "Character.AI is a chat platform for talking with thousands of user-created AI personas, from fictional figures to helpers and companions, and for building your own characters with custom personas and voices. It's built around roleplay, storytelling, and creative character-driven conversation rather than general work tasks.",
+     "q": "What is Character.AI used for?"
+    },
+    {
+     "a": "No. Since November 25, 2025, users under 18 can no longer do open-ended chat or roleplay on Character.AI and are instead redirected to creating videos, stories, and streams, with age checked through the company's own age-estimation tools.",
+     "q": "Can minors use Character.AI for roleplay?"
+    },
+    {
+     "a": "ChatGPT is the better choice, since it's built as a general-purpose assistant with long-form writing, code generation, document and image analysis, web browsing, and data analysis across web, desktop, mobile, and API. Character.AI is focused on character-based conversation, not productivity tasks.",
+     "q": "Which is better for professional work like writing, coding, and research?"
+    },
+    {
+     "a": "Character.AI is purpose-built for this, offering a huge library of user-made characters, custom persona and voice creation, and multi-turn roleplay and storytelling tools. ChatGPT is a general assistant and isn't designed around persistent characters or fandom-style roleplay.",
+     "q": "Which is better for interactive character-based roleplay?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want to chat with thousands of user-created AI characters and personas instead of a single general assistant.",
+    "✅ You enjoy multi-turn roleplay and storytelling with fictional figures, helpers, or companions.",
+    "✅ You want to build and voice your own custom AI characters for others to chat with.",
+    "✅ You want unlimited free text messaging on the default PipSqueak 3 and ShortSqueak styles without needing a paid plan."
+   ],
+   "choose_b": [
+    "✅ You need a general-purpose assistant for writing, coding, research, or data analysis rather than character roleplay.",
+    "✅ You want one tool that handles text, images, voice, files, and web browsing together.",
+    "✅ You need to use the same AI assistant across web, desktop, mobile, and API.",
+    "✅ You want a service with a stable long-term outlook, since Character.AI is currently under Chapter 11 bankruptcy protection while it seeks a buyer."
+   ],
+   "faq": [
+    {
+     "q": "What is Character.AI used for?",
+     "a": "Character.AI is a chat platform for talking with thousands of user-created AI personas, from fictional figures to helpers and companions, and for building your own characters with custom personas and voices. It's built around roleplay, storytelling, and creative character-driven conversation rather than general work tasks."
+    },
+    {
+     "q": "Is Character.AI still safe to rely on long-term?",
+     "a": "Character.AI filed for Chapter 11 bankruptcy on October 12, 2026 while it seeks a buyer for its assets, with a sale expected to close by late November or early December 2026. The free and paid tiers are reportedly still active, but users are advised to export their chat data as a precaution."
+    },
+    {
+     "q": "Which is better for professional work like writing, coding, and research?",
+     "a": "ChatGPT is the better choice, since it's built as a general-purpose assistant with long-form writing, code generation, document and image analysis, web browsing, and data analysis across web, desktop, mobile, and API. Character.AI is focused on character-based conversation, not productivity tasks."
+    },
+    {
+     "q": "Which is better for interactive character-based roleplay?",
+     "a": "Character.AI is purpose-built for this, offering a huge library of user-made characters, custom persona and voice creation, and multi-turn roleplay and storytelling tools. ChatGPT is a general assistant and isn't designed around persistent characters or fandom-style roleplay."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "cursor-vs-copilot",
+  "before": {
+   "choose_a": "[\"✅ You want an in-house model lineup like Grok 4.7, Grok 4.6, Grok 4.5, and Composer 2.5 bundled into one usage pool.\", \"✅ You need to offload long-running work to cloud agents or spin up a cloud dev environment with /in-cloud.\", \"✅ You want to keep your existing VS Code extensions, keybindings, and workflows while adding agentic coding on top.\", \"✅ You want flexibility to plug in third-party models, MCP servers, custom rules, and hooks alongside Cursor's own models.\"]",
+   "choose_b": "[\"✅ You want an assistant that works across your editor, terminal, desktop app, and GitHub itself, not just inline completions.\", \"✅ You want to pick models per task from multiple vendors, including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot.\", \"✅ You want a genuinely free tier, or free Pro access if you're a verified teacher or maintainer of a popular open source project.\", \"✅ You're already living in the GitHub ecosystem and want code review, cloud agents, and chat tightly integrated with it.\"]",
+   "faq": [
+    {
+     "a": "Cursor is built around multi-repo support, parallel agents, and automated PR review, making it a strong fit for repo-wide agentic workflows. GitHub Copilot also has agent mode and cloud agents, but its strength is model choice and GitHub integration rather than multi-repo orchestration specifically. For dedicated multi-repo agent work, Cursor is the more purpose-built choice.",
+     "q": "Which is better for multi-repo agentic coding, Cursor or GitHub Copilot?"
+    },
+    {
+     "a": "Yes, Cursor has a free Hobby plan with no card required, though Agent requests and Composer access are limited on that tier. Paid individual and team plans unlock more usage and features.",
+     "q": "Is Cursor free?"
+    },
+    {
+     "a": "Yes, GitHub Copilot offers a free plan with roughly 2,000 inline suggestions a month and limited chat and agent access, but it excludes code review and cloud agents. Paid plans add cloud agents, code review, and larger AI Credit allowances.",
+     "q": "Is GitHub Copilot free?"
+    },
+    {
+     "a": "Cursor's in-house lineup includes Grok 4.7, Grok 4.6, Grok 4.5, and Composer 2.5, and it also supports third-party models. GitHub Copilot lets you choose models from multiple vendors, including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot.",
+     "q": "What models can I use with each tool?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You need an agent that can plan and execute multi-repo changes with parallel agents and automated PR review via Bugbot.",
+    "✅ You want to offload long-running tasks to cloud agents or spin up a cloud dev environment with /in-cloud.",
+    "✅ You're already comfortable in VS Code and want to keep your extensions, keybindings, and workflows while adding agentic coding on top.",
+    "✅ You want the flexibility to plug in third-party models, MCP servers, custom rules, and hooks alongside Cursor's bundled Grok access."
+   ],
+   "choose_b": [
+    "✅ You want to pick models per task from multiple vendors, including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot.",
+    "✅ You want an assistant that works across your editor, terminal, desktop app, and GitHub itself, not just inline completions.",
+    "✅ You want inline code completions and Next Edit suggestions that stay included and never draw down your usage allowance.",
+    "✅ You're a verified teacher or maintainer of a popular open source project and want free access to Pro-level features."
+   ],
+   "faq": [
+    {
+     "q": "Which is better for multi-repo agentic coding, Cursor or GitHub Copilot?",
+     "a": "Cursor's multi-repo support, parallel agents, and automated PR review via Bugbot make it purpose-built for repo-wide agentic workflows. GitHub Copilot's agent mode and cloud agents focus more on cross-vendor model choice and deep GitHub integration rather than multi-repo orchestration specifically. For dedicated multi-repo agent work, Cursor is the more purpose-built choice."
+    },
+    {
+     "q": "Is Cursor free?",
+     "a": "Yes, under The X Subscription Cursor offers a genuine Free tier that includes access to Cursor and Grok without payment. Paid tiers, Plus, Premium, Super, and Ultra, unlock more usage from a shared weekly pool with Grok."
+    },
+    {
+     "q": "Is GitHub Copilot free?",
+     "a": "Yes, GitHub Copilot has a Free plan with roughly 2,000 inline suggestions a month and limited chat and agent access, but it excludes code review and cloud agents. Paid plans add cloud agents, code review, and larger AI Credit allowances."
+    },
+    {
+     "q": "What models can I use with each tool?",
+     "a": "Cursor bundles Grok from xAI into every paid X Subscription tier and also supports third-party models such as Claude or GPT, billed separately at API price from prepaid credit. GitHub Copilot lets you choose models from multiple vendors, including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot, through its GitHub AI Credits billing."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "chatgpt-vs-claude",
+  "before": {
+   "choose_a": "[\"✅ You want unlimited GPT-6 Luna text chats on the free desktop app without hitting a hard paywall.\", \"✅ You need a single assistant that handles text, images, voice, files and live web browsing in one place.\", \"✅ You want to use the same assistant across web, desktop, mobile and API without switching tools.\", \"✅ You need the highest-tier compute available and are willing to pay for Pro plans up to $500/mo with GPT-6 Astra Ultrafast.\"]",
+   "choose_b": "[\"✅ You're working through a massive codebase or document set and need the 1M-token context window on Claude's newer models.\", \"✅ You want to pick a specific model tier, from Haiku to Opus, to balance cost against capability for each task.\", \"✅ You're doing long-form writing, analysis or agentic coding where careful, steerable output matters most.\", \"✅ You're setting up a small team account and want a low two-seat minimum instead of a large enterprise commitment.\"]",
+   "faq": [
+    {
+     "a": "Claude Opus 5.5 is built specifically for complex agentic coding and enterprise workflows, which suits larger or multi-step software projects. ChatGPT also supports coding across its GPT-6 model lineup and adds broader multimodal tools alongside it, so the choice often comes down to whether you want a coding specialist or a general-purpose assistant.",
+     "q": "Which is better for coding — ChatGPT or Claude?"
+    },
+    {
+     "a": "Both offer free plans. ChatGPT's free tier includes unlimited GPT-6 Luna text chats in the desktop app, subject to abuse limits, plus limited uploads, image creation, voice and other features. Claude's free plan includes chat, web search, file creation, code execution, memory and artifacts, all under usage caps.",
+     "q": "Which is free — ChatGPT or Claude?"
+    },
+    {
+     "a": "Yes, image generation is listed among ChatGPT's core capabilities. Claude's card does not mention image generation, focusing instead on file creation, code execution and text-based artifacts.",
+     "q": "Can ChatGPT generate images?"
+    },
+    {
+     "a": "Claude has the edge here, since its Claude 4.6-generation models and later support up to a 1M-token context window for large documents or codebases. ChatGPT's card does not specify a comparable context window size, so Claude is the safer pick for very long inputs.",
+     "q": "Which is better for working with very long documents?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want a free plan that still includes ChatGPT's new Intelligent UI, with on-the-spot charts, forms and interactive tools.",
+    "✅ You need voice conversations, web browsing and image generation handled by the same assistant.",
+    "✅ You want one tool that works the same way across web, desktop, mobile and API.",
+    "✅ You need an always-on agent like Dots that can browse and run tasks in its own cloud computer, if your plan, age and region qualify."
+   ],
+   "choose_b": [
+    "✅ You're working through a massive codebase or document set and want a 1M-token context window across all of Claude's current models.",
+    "✅ You want to pick a specific model tier, from Haiku to Opus to Fable, to balance cost against capability for each task.",
+    "✅ You're setting up a small team account and want a two-seat minimum instead of a large enterprise commitment.",
+    "✅ You want to cut your monthly cost by committing to annual billing, dropping Pro from $20 to $17 a month."
+   ],
+   "faq": [
+    {
+     "q": "Which is better for coding — ChatGPT or Claude?",
+     "a": "Claude's Opus 5.5 is built specifically for complex agentic coding and enterprise workflows, which suits larger or multi-step software projects. ChatGPT also supports coding across its GPT-6 model lineup and adds broader multimodal tools alongside it, so the choice often comes down to whether you want a coding specialist or a general-purpose assistant."
+    },
+    {
+     "q": "Which is free — ChatGPT or Claude?",
+     "a": "ChatGPT's free plan runs GPT-6 Luna with the new Intelligent UI at no cost. Claude's free plan gives access to the Sonnet and Haiku models, but both free tiers come with usage caps."
+    },
+    {
+     "q": "Can ChatGPT generate images?",
+     "a": "Yes, image generation is listed among ChatGPT's core capabilities. Claude's card does not mention image generation, focusing instead on writing, analysis, coding and long documents."
+    },
+    {
+     "q": "Which is better for working with very long documents?",
+     "a": "Claude has the edge here, since all four of its current models support a 1M-token context window for large documents or codebases. ChatGPT's card does not specify a comparable context window size, so Claude is the safer pick for very long inputs."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "deepseek-vs-chatgpt",
+  "before": {
+   "choose_a": "[\"✅ You need a very large context window for long documents or codebases, since both deepseek-flash and deepseek-v4-pro support 1M tokens of input with up to 384K tokens of output.\", \"✅ You want to control reasoning depth, picking low, high, or max effort in DeepSeek's default thinking mode for coding or analytical tasks.\", \"✅ You're a developer building agent workflows and want integrations like Claude Code, Codex, OpenCode, or DeepSeek's own Harness.\", \"✅ You want to minimize API costs for high-volume text tasks, since deepseek-flash's off-peak pricing is far cheaper than deepseek-v4-pro or most comparable paid APIs.\"]",
+   "choose_b": "[\"✅ You want one assistant that handles text, images, voice, files, and web browsing without switching tools.\", \"✅ You're a casual user who wants a free plan with unlimited GPT-6 Luna text chats in the desktop app, within abuse limits.\", \"✅ You need an assistant available everywhere — web, desktop, mobile, and API — rather than just a web chat and API.\", \"✅ You need heavier usage or advanced reasoning and are willing to pay for Plus or one of the Pro tiers, up to the $500/mo tier with GPT-6 Astra Ultrafast.\"]",
+   "faq": [
+    {
+     "a": "DeepSeek is the stronger fit here, since deepseek-flash and deepseek-v4-pro both offer a 1M-token context window with up to 384K tokens of output, plus selectable reasoning effort for technical work. ChatGPT's card does not specify a comparable context window.",
+     "q": "Which is better for coding with a very long context window?"
+    },
+    {
+     "a": "ChatGPT is the better choice, since it supports text, images, voice, files, and web browsing across web, desktop, mobile, and API. DeepSeek's vision support is limited to the deepseek-flash model and it does not offer voice or built-in web browsing.",
+     "q": "Which is better for general multimodal use, like images and voice?"
+    },
+    {
+     "a": "DeepSeek's deepseek-flash tier is priced per million tokens with off-peak discounts, for example $0.15/$0.30 input on a cache miss and $0.60/$1.20 output, which is clearly documented. ChatGPT's Plus and Go pricing could not be confirmed in USD at review time, so a direct cost comparison isn't fully possible from current data.",
+     "q": "Is DeepSeek's API actually cheaper than ChatGPT?"
+    },
+    {
+     "a": "The free status of DeepSeek's web chat interface could not be re-verified from a primary source at the time of writing. Its API is metered and billed per token, with lower-cost options available during off-peak UTC hours.",
+     "q": "Is DeepSeek free to use?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You need a very large context window for long documents or codebases, since both deepseek-flash and deepseek-v4-pro support 1M tokens of input with up to 384K tokens of output.",
+    "✅ You want to control reasoning depth, picking low, high, or max effort in DeepSeek's default thinking mode for coding or analytical tasks.",
+    "✅ You're a developer building agent workflows and want integrations like Claude Code, Codex, OpenCode, or DeepSeek's own Harness.",
+    "✅ You want to minimize API costs for high-volume text tasks, since deepseek-flash's off-peak pricing undercuts most comparable paid APIs."
+   ],
+   "choose_b": [
+    "✅ You want one assistant that handles text, images, voice, files, and web browsing without switching tools.",
+    "✅ You're a casual user who wants a free plan to start with, since ChatGPT's Free tier runs GPT-6 Luna at no cost.",
+    "✅ You need an assistant available everywhere, across web, desktop, mobile, and API, rather than just a web chat and API.",
+    "✅ You need heavier usage or advanced reasoning and are willing to pay for Plus or one of the Pro tiers, up to $500/mo with Ultrafast mode."
+   ],
+   "faq": [
+    {
+     "q": "Which is better for coding with a very long context window?",
+     "a": "DeepSeek is the stronger fit here, since both deepseek-flash and deepseek-v4-pro offer a 1M-token context window with up to 384K tokens of output, plus selectable reasoning effort for technical work. ChatGPT's card does not specify a comparable context window."
+    },
+    {
+     "q": "Which is better for general multimodal use, like images and voice?",
+     "a": "ChatGPT is the better choice, since it supports text, images, voice, files, and web browsing across web, desktop, mobile, and API. DeepSeek's vision support is limited to the deepseek-flash model and it does not offer voice or built-in web browsing."
+    },
+    {
+     "q": "Is DeepSeek's API actually cheaper than ChatGPT?",
+     "a": "DeepSeek's deepseek-flash tier is priced per million tokens with off-peak discounts, for example $0.15/$0.30 input on a cache miss and $0.60/$1.20 output. ChatGPT's API is also billed per million tokens but the rate varies by model, so a direct comparison depends on which model you'd choose."
+    },
+    {
+     "q": "Is DeepSeek free to use?",
+     "a": "The free status of DeepSeek's web chat interface could not be verified from a primary source at the time of writing. Its API is metered and billed per token, with cheaper rates during off-peak UTC hours, whereas ChatGPT has a confirmed free plan running GPT-6 Luna."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "gamma-vs-notion-ai",
+  "before": {
+   "choose_a": "[\"✅ You need to turn a prompt or outline into a finished presentation, document, or simple website rather than a text page.\", \"✅ You want to use Gamma Agent to restyle or rewrite an entire deck with plain-language commands instead of manual editing.\", \"✅ You want to start for free with 400 credits and no credit card, without being locked into a paid seat just to try AI generation.\", \"✅ You want your AI workflow to plug into ChatGPT or Claude, since Gamma now runs as an app inside ChatGPT.\"]",
+   "choose_b": "[\"✅ You already keep your notes, wikis, and project databases in Notion and want AI summoned right on the page instead of switching tools.\", \"✅ You want to ask questions across your entire workspace using Enterprise Search rather than searching one document at a time.\", \"✅ You need AI Meeting Notes with speaker identification or Research Mode, not just text generation.\", \"✅ You need to read or write Microsoft Office files like PPTX, XLSX, and DOCX, or orchestrate external agents like Claude and Cursor from Notion.\"]",
+   "faq": [
+    {
+     "a": "Gamma generates presentations, documents, and websites from a prompt, with Gamma Agent handling restyling and rewriting through natural-language commands. Notion AI is the assistant built into the Notion workspace, covering writing, workspace-wide search, meeting notes, and research across your existing pages and databases.",
+     "q": "What is the difference between Gamma and Notion AI?"
+    },
+    {
+     "a": "Gamma is built for this: you describe what you need and it generates a full presentation structure, writing, and layout. Notion AI can draft the outline or talking points, but it does not produce a designed slide deck.",
+     "q": "Which is better for building a slide deck for a client pitch?"
+    },
+    {
+     "a": "Probably not. Notion AI's value depends on already living in the Notion workspace, since it works by sitting inside your existing pages, wikis, and databases rather than functioning as a standalone tool.",
+     "q": "Is Notion AI worth it if I don't already use Notion?"
+    },
+    {
+     "a": "Yes, Gamma's Free plan costs $0, includes 400 credits with no time limit, and requires no credit card, though output carries a Made with Gamma badge until you upgrade.",
+     "q": "Does Gamma have a free plan?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You need to turn a prompt or outline into a finished presentation, document, or simple website rather than a text page.",
+    "✅ You want to use Gamma Agent to restyle or rewrite an entire deck with plain-language commands instead of manual editing.",
+    "✅ You want to start for free with 400 credits and no credit card, without being locked into a paid seat just to try AI generation.",
+    "✅ You want your AI workflow to plug into ChatGPT or Claude, since Gamma now runs as an app inside ChatGPT."
+   ],
+   "choose_b": [
+    "✅ You already keep your notes, wikis, and project databases in Notion and want AI summoned right on the page instead of switching tools.",
+    "✅ You want to ask questions across your entire workspace using Enterprise Search rather than searching one document at a time.",
+    "✅ You need AI Meeting Notes with speaker identification or Research Mode, not just text generation.",
+    "✅ You need to read or write Microsoft Office files like PPTX, XLSX, and DOCX, or orchestrate external agents like Claude and Cursor from Notion."
+   ],
+   "faq": [
+    {
+     "q": "What is the difference between Gamma and Notion AI?",
+     "a": "Gamma generates presentations, documents, and websites from a prompt, with Gamma Agent handling restyling and rewriting through natural-language commands. Notion AI is the assistant built into the Notion workspace, covering writing, workspace-wide search, meeting notes, and research across your existing pages and databases."
+    },
+    {
+     "q": "Which is better for building a slide deck for a client pitch?",
+     "a": "Gamma is built for this: you describe what you need and it generates a full presentation structure, writing, and layout. Notion AI can help draft outlines or talking points inside a page, but it does not produce a designed slide deck."
+    },
+    {
+     "q": "Is Notion AI worth it if I don't already use Notion?",
+     "a": "Probably not. Notion AI's value depends on already living in the Notion workspace, since it works by sitting inside your existing pages, wikis, and databases rather than functioning as a standalone tool."
+    },
+    {
+     "q": "Does Gamma have a free plan?",
+     "a": "Yes, Gamma's Free plan costs $0, includes 400 credits with no time limit, and requires no credit card, though output carries a Made with Gamma badge until you upgrade."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "grok-vs-chatgpt",
+  "before": {
+   "choose_a": "[\"✅ You want an assistant tightly integrated with X and able to pull in real-time posts and trending topics.\", \"✅ You need a dedicated coding model with a large 256k-token context window, accessible through the API or Cursor.\", \"✅ You want a more candid, less filtered conversational style than typical chat assistants.\", \"✅ You need very large context windows for long documents, with Grok 4.7 supporting up to 500k tokens.\"]",
+   "choose_b": "[\"✅ You want one assistant that handles text, images, voice, files and web browsing in a single product.\", \"✅ You need access across web, desktop, mobile and API rather than being tied to one platform.\", \"✅ You want a free plan that includes unlimited text chats on GPT-6 Luna through the desktop app.\", \"✅ You want a widely adopted platform with over a billion users and extensive real-world usage.\"]",
+   "faq": [
+    {
+     "a": "Grok is xAI's conversational AI assistant, available on grok.com and inside X, with its current flagship model being Grok 4.7. It also offers a dedicated coding model called Grok Build and image/video generation through Grok Imagine.",
+     "q": "What is Grok?"
+    },
+    {
+     "a": "ChatGPT has a free plan that includes unlimited text chats on GPT-6 Luna through the desktop app, subject to abuse limits, plus limited uploads, image creation and voice features. The free and Go tiers are ad-supported, and exact USD pricing for Go and Plus could not be confirmed.",
+     "q": "Is ChatGPT free?"
+    },
+    {
+     "a": "Grok offers Grok Build, a dedicated coding model with a 256k-token context window available via API and Cursor. ChatGPT also supports code generation and debugging and is accessible through more platforms, including ChatGPT Work and Codex for newer models.",
+     "q": "Which is better for coding, Grok or ChatGPT?"
+    },
+    {
+     "a": "Grok has an edge here due to its deep integration with X, giving it direct access to live posts and current events. ChatGPT can browse the web but is not natively built into a social platform the way Grok is.",
+     "q": "Which is better for real-time information, Grok or ChatGPT?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want an assistant deeply integrated with X, giving it direct access to real-time posts and trending topics.",
+    "✅ You need a dedicated coding model, Grok Build, with a 256k-token context window accessible via API or Cursor.",
+    "✅ You prefer a more candid, less filtered conversational style than typical chat assistants.",
+    "✅ You need to work with very long documents, since Grok 4.7 supports up to a 500k-token context window."
+   ],
+   "choose_b": [
+    "✅ You want one assistant that handles text, images, voice, files and web browsing in a single product.",
+    "✅ You need access across web, desktop, mobile and API rather than being tied to one bundle.",
+    "✅ You want a straightforward free plan without it being bundled into a wider subscription with other tools.",
+    "✅ You want a widely adopted platform, since ChatGPT reports over 1.2 billion users."
+   ],
+   "faq": [
+    {
+     "q": "What is Grok?",
+     "a": "Grok is xAI's conversational AI assistant, available on grok.com and inside X, with its current flagship model being Grok 4.7. It also offers a dedicated coding model called Grok Build and image/video generation through Grok Imagine."
+    },
+    {
+     "q": "Is ChatGPT free?",
+     "a": "Yes, ChatGPT has a Free plan at $0/mo that runs the GPT-6 Luna model. Paid tiers like Go and Plus unlock additional models and features for a monthly fee."
+    },
+    {
+     "q": "Which is better for coding, Grok or ChatGPT?",
+     "a": "Grok offers Grok Build, a dedicated coding model with a 256k-token context window available via API and Cursor. ChatGPT also supports code generation and debugging, with newer models available through ChatGPT Work and Codex."
+    },
+    {
+     "q": "Which is better for real-time information, Grok or ChatGPT?",
+     "a": "Grok has an edge here due to its deep integration with X, giving it direct access to live posts and current events. ChatGPT can browse the web but is not natively built into a social platform the way Grok is."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "gemini-vs-chatgpt",
+  "before": {
+   "choose_a": "[\"✅ You live inside Gmail, Docs, and Sheets and want an assistant built directly into those apps.\", \"✅ You want a free tier that already includes image and video generation, Deep Research, and real-time voice via Gemini Live.\", \"✅ You need native video generation and editing in 4K, not just text and images, through Gemini Omni.\", \"✅ You work with very long documents or large codebases and need the long-context reasoning of flagship Gemini 3.1 Pro.\"]",
+   "choose_b": "[\"✅ You want unlimited text chats on a free plan without a hard daily cap, via GPT-6 Luna in the desktop app.\", \"✅ You need one assistant that works the same way across web, desktop, mobile, and API.\", \"✅ You want Plus-tier extras like projects, scheduled tasks, custom GPTs, and more Codex usage.\", \"✅ You need the fastest top-end model available, GPT-6 Astra Ultrafast, on the highest Pro tier.\"]",
+   "faq": [
+    {
+     "a": "Gemini is the clear pick here since it's built natively into Gmail, Docs, and Sheets, while ChatGPT has no equivalent Workspace integration. If your daily work lives in Google's apps, Gemini saves you from switching tools.",
+     "q": "Which is better for working inside Google Workspace, Gemini or ChatGPT?"
+    },
+    {
+     "a": "Yes. The free tier includes Gemini 3.8 Flash, limited daily access to Gemini 3.1 Pro, image and video generation, Deep Research, and Gemini Live. Paid tiers add higher limits, starting at Google AI Plus for $7.99/mo up to Google AI Ultra at $100 or $200/mo.",
+     "q": "Is Gemini free?"
+    },
+    {
+     "a": "Yes, ChatGPT is genuinely multimodal and supports image generation alongside text, voice, file uploads, and web browsing. This is available across its free and paid tiers, though usage limits differ by plan.",
+     "q": "Can ChatGPT generate images?"
+    },
+    {
+     "a": "Gemini's free tier is broader out of the box, bundling image and video generation, Deep Research, and Gemini Live. ChatGPT's free plan offers unlimited text chats on GPT-6 Luna but only in the desktop app, with image, voice, and research features more limited and the plan ad-supported.",
+     "q": "Which has the more generous free plan, Gemini or ChatGPT?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You live inside Gmail, Docs, and Sheets and want an assistant built directly into those apps.",
+    "✅ You want a genuine free tier that runs a capable model, Flash-Lite, at no cost.",
+    "✅ You rely on connected external apps and want the Gemini app's tasks mode, which links to more than 40 external apps.",
+    "✅ You need strong reasoning and coding performance from a flagship model like Gemini 4 Argon, plus a dedicated image model in Nano Banana 2.1."
+   ],
+   "choose_b": [
+    "✅ You want one assistant that behaves the same way across web, desktop, mobile, and API.",
+    "✅ You need a single tool that handles text, images, voice, files, and web browsing without switching apps.",
+    "✅ You're a business user who wants discounted annual seat pricing at $20 per user per month versus $25 monthly.",
+    "✅ You need the highest-throughput option available and are willing to pay for Pro tiers up to $500/mo with Ultrafast mode for Codex and Work."
+   ],
+   "faq": [
+    {
+     "q": "Which is better for working inside Google Workspace, Gemini or ChatGPT?",
+     "a": "Gemini is built directly into Gmail, Docs, and Sheets, something ChatGPT does not offer. If your daily work lives in Google's apps, Gemini removes the need to switch tools."
+    },
+    {
+     "q": "Is Gemini free?",
+     "a": "Yes, Gemini has a free tier that runs the Flash-Lite model at no cost. Paid tiers add stronger models, including Google AI Plus at $4.99/mo, Google AI Pro at $19.99/mo (which includes the flagship Gemini 4 Argon), and Google AI Ultra at $99.99 or $199.99/mo for higher usage limits."
+    },
+    {
+     "q": "Is ChatGPT free?",
+     "a": "Yes, ChatGPT's Free plan runs GPT-6 Luna at no cost. Paid tiers include Go at $8/mo, Plus at $20/mo, and three Pro tiers ranging from $100 to $500/mo for higher usage and advanced features."
+    },
+    {
+     "q": "Which has broader multimodal capabilities, Gemini or ChatGPT?",
+     "a": "ChatGPT supports text, images, voice, files, and web browsing across its plans. Gemini's flagship model accepts text, images, video, audio, and PDF input, and pairs with a separate image model called Nano Banana 2.1."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "meta-ai-vs-chatgpt",
+  "before": {
+   "choose_a": "[\"✅ You already live inside WhatsApp, Instagram, Facebook, Messenger or Threads and want AI help without opening a separate app.\", \"✅ You want a free assistant for everyday chatting and quick questions, since Meta AI remains free for everyday use.\", \"✅ You use Meta's AI glasses and want the same assistant to follow you from your phone to your glasses.\", \"✅ You're fine with one built-in proprietary model (Muse Spark) and don't want to manage a separate AI app or subscription just to get started.\"]",
+   "choose_b": "[\"✅ You need a standalone workspace with web, desktop, mobile and API access instead of being tied to one social ecosystem.\", \"✅ You want multimodal tools in one place: text, image analysis, voice conversations, web browsing, data analysis and image generation.\", \"✅ You need heavier compute for professional work and are willing to pay for Pro tiers that scale up to $500/month, with the top tier adding GPT-6 Astra Ultrafast.\", \"✅ You want access to OpenAI's current flagship models like GPT-6 Astra for demanding writing, coding or research tasks.\"]",
+   "faq": [
+    {
+     "a": "Meta AI is Meta's assistant built into WhatsApp, Instagram, Facebook, Messenger and Threads, plus Meta's AI glasses, and it remains free for everyday use. As of April 2026 it runs on Muse Spark, Meta Superintelligence Labs' first proprietary model.",
+     "q": "What is Meta AI?"
+    },
+    {
+     "a": "Yes, Meta states the core Meta AI experience remains free for everyday use. Meta also sells paid Meta One tiers worldwide for heavier AI usage, though only euro pricing is officially confirmed.",
+     "q": "Is Meta AI free to use?"
+    },
+    {
+     "a": "ChatGPT is the stronger pick for professional tasks, with dedicated web, desktop, mobile and API access plus capabilities like code generation, document analysis and data analysis. Meta AI is built for quick in-app help rather than a dedicated work environment.",
+     "q": "Which is better for professional work like coding and research?"
+    },
+    {
+     "a": "Meta AI wins here since it sits directly inside WhatsApp, Instagram, Facebook, Messenger and Threads, so there's nothing extra to open. ChatGPT instead requires its own app, website or API to access.",
+     "q": "Which is better for staying inside the apps I already use?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You already live inside WhatsApp, Instagram, Facebook, Messenger or Threads and want AI help without opening a separate app.",
+    "✅ You want a free assistant for everyday chatting and quick questions inside the apps you already use.",
+    "✅ You use Meta's AI glasses and want the same assistant to follow you from your phone to your glasses.",
+    "✅ You want one built-in assistant running Meta's own Muse Spark models without juggling a separate app or account just to get started."
+   ],
+   "choose_b": [
+    "✅ You need a standalone workspace with web, desktop, mobile and API access instead of being tied to one social ecosystem.",
+    "✅ You want multimodal tools in one place: text, image analysis, voice conversations, web browsing, data analysis and image generation.",
+    "✅ You need higher usage quotas or business features and are willing to pay for Pro or Business plans built for that.",
+    "✅ You want access to OpenAI's flagship GPT-6 Astra model for demanding writing, coding or research tasks."
+   ],
+   "faq": [
+    {
+     "q": "What is Meta AI?",
+     "a": "Meta AI is Meta's assistant built into WhatsApp, Instagram, Facebook, Messenger, Threads and Meta's AI glasses, free to use within those apps. It now runs on Muse Spark, Meta's own proprietary model family that replaced the earlier Llama-based engine."
+    },
+    {
+     "q": "Is Meta AI free to use?",
+     "a": "Yes, chatting with Meta AI inside Meta's apps is free. Meta also offers a paid Meta One subscription with individual and single-app plans for people who want more compute-heavy image and video generation."
+    },
+    {
+     "q": "Which is better for professional work like coding and research?",
+     "a": "ChatGPT is the stronger pick, since it offers a dedicated web, desktop, mobile and API experience built for code generation, document analysis, data analysis and access to its flagship GPT-6 Astra model. Meta AI is designed for quick in-app help rather than a dedicated work environment."
+    },
+    {
+     "q": "Which is better for staying inside the apps I already use?",
+     "a": "Meta AI wins here, since it sits directly inside WhatsApp, Instagram, Facebook, Messenger and Threads, so there is nothing extra to install. ChatGPT instead requires its own app, website or API to access."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "mistral-le-chat-vs-chatgpt",
+  "before": {
+   "choose_a": "[\"✅ You want a European-built assistant running on an open-weight model (Mistral Medium 3.5) with a large 256k-token context window for long documents.\", \"✅ You need agent workflows that ask for your approval before taking sensitive actions, which Vibe Work provides as a built-in mode.\", \"✅ You want cloud-based coding agents (Vibe Code) and conversational chat (Vibe Chat) in one product instead of separate tools.\", \"✅ You're a verified student looking for the cheapest paid plan, since Vibe's Education tier runs $5.99/month for up to 12 months.\"]",
+   "choose_b": "[\"✅ You want one assistant that handles text, images, voice, files and web browsing without switching modes.\", \"✅ You need the widest access options, since ChatGPT runs on web, desktop, mobile and API.\", \"✅ You want access to the top-end reasoning model, GPT-6 Astra Ultrafast, available on the highest Pro tier.\", \"✅ You value a massive existing user base (1B+) when picking a widely adopted general-purpose assistant.\"]",
+   "faq": [
+    {
+     "a": "Mistral Vibe is the rebranded version of Mistral's consumer assistant Le Chat, renamed on August 12, 2026, with all URLs, logins and conversations carried over. It runs on Mistral Medium 3.5, a 128B-parameter open-weight model with a 256k-token context window, and splits into Vibe Chat, Vibe Work and Vibe Code modes.",
+     "q": "What is Mistral Vibe (Le Chat)?"
+    },
+    {
+     "a": "Mistral Vibe has a dedicated Vibe Code mode for asynchronous cloud coding agents built into its core product. ChatGPT offers coding through Codex usage included in paid plans, but some of its newest models are still rolling out there first rather than in standard chat.",
+     "q": "Which is better for coding tasks, Mistral Vibe or ChatGPT?"
+    },
+    {
+     "a": "Yes, Vibe has a free plan with limited messages, searches and coding sessions, plus some API credits. Paid tiers start at Pro for $14.99/month, Team at $24.99/user/month with a $50/month minimum, and custom-priced Enterprise plans.",
+     "q": "Is Mistral Vibe free?"
+    },
+    {
+     "a": "Yes, ChatGPT's Free plan is $0/month and includes unlimited GPT-6 Luna text chats in the desktop app, though it is ad-supported for logged-in adults in the US. Paid Go, Plus and Pro tiers add more usage and advanced reasoning, though exact USD pricing for Go and Plus could not be confirmed.",
+     "q": "Is ChatGPT free?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want a European-built assistant running on an open-weight model, Mistral Medium 3.5, with a large 256k-token context window for long documents.",
+    "✅ You need agent workflows that pause for your approval before taking sensitive actions, which Vibe Work provides as a built-in mode.",
+    "✅ You want cloud-based coding agents (Vibe Code) and conversational chat (Vibe Chat) bundled into one product instead of separate tools.",
+    "✅ You're a verified student looking for the cheapest paid plan, since Vibe's Education tier runs $5.99/month for up to 12 months."
+   ],
+   "choose_b": [
+    "✅ You want one assistant that handles text, images, voice, files and web browsing without switching modes.",
+    "✅ You need the widest access options, since ChatGPT runs on web, desktop, mobile and API.",
+    "✅ You're willing to pay for the highest Pro tier to get Ultrafast mode for Codex and Work tasks.",
+    "✅ You value a massive existing user base (1.2B+) when picking a widely adopted general-purpose assistant."
+   ],
+   "faq": [
+    {
+     "q": "What is Mistral Vibe (Le Chat)?",
+     "a": "Mistral Vibe is the rebranded version of Mistral's consumer assistant Le Chat, renamed on August 12, 2026, with all URLs, logins and conversations carried over. It runs on Mistral Medium 3.5, a 128B-parameter open-weight model with a 256k-token context window, and splits into Vibe Chat, Vibe Work and Vibe Code modes."
+    },
+    {
+     "q": "Which is better for coding tasks, Mistral Vibe or ChatGPT?",
+     "a": "Mistral Vibe has a dedicated Vibe Code mode built directly into its core product for asynchronous cloud coding agents. ChatGPT's newest model, GPT-6.1 Sol, is only available through its Work and Codex environments rather than the main chat interface, so Vibe's coding path is more unified."
+    },
+    {
+     "q": "Is Mistral Vibe free?",
+     "a": "Yes, Vibe has a free plan with limited messages, searches and coding sessions, plus some included API credits. Paid tiers start at Pro for $14.99/month, Team at $24.99/user/month with a $50/month minimum, and custom-priced Enterprise plans."
+    },
+    {
+     "q": "Is ChatGPT free?",
+     "a": "Yes, ChatGPT's Free plan costs $0/month and runs the GPT-6 Luna model. Paid tiers add more capability: Go at $8/month, Plus at $20/month, and Pro at $100, $200 or $500 per month depending on features."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "microsoft-copilot-vs-chatgpt",
+  "before": {
+   "choose_a": "[\"✅ You want AI built directly into Word, Excel, PowerPoint, and Outlook without switching to another app.\", \"✅ You want requests automatically routed between quick and deep reasoning modes instead of picking a model yourself.\", \"✅ You need access to Anthropic's Claude model for higher-reasoning tasks right inside Word.\", \"✅ You're already on a Microsoft 365 E7 enterprise plan and want Copilot licensing included by default.\"]",
+   "choose_b": "[\"✅ You want a free plan open to anyone, with unlimited text chats rather than needing a work subscription to unlock features.\", \"✅ You want one assistant that works the same way across web, desktop, mobile, and API.\", \"✅ You need a genuinely multimodal tool for text, images, voice, files, and web browsing in a single product.\", \"✅ You have demanding workloads and want a high-usage Pro tier with access to the fastest flagship model.\"]",
+   "faq": [
+    {
+     "a": "Microsoft Copilot is built into Windows, Edge, Bing, and the Microsoft 365 apps, routing requests through Auto, Quick response, and Think deeper modes, with Anthropic's Claude available in Word for higher-reasoning tasks. ChatGPT is OpenAI's standalone assistant available on web, desktop, mobile, and API, running its own GPT-6 model lineup. Pick Copilot if you want AI embedded in your Office documents and Windows workflow; pick ChatGPT for a flexible, single-provider experience across devices.",
+     "q": "What is the difference between Microsoft Copilot and ChatGPT?"
+    },
+    {
+     "a": "Copilot Chat (Basic) is included at no extra cost only for users with an eligible Microsoft 365 work subscription, not as a standalone free plan for the general public. The deeper features inside Word, Excel, PowerPoint, and Outlook require a paid Microsoft 365 Copilot license.",
+     "q": "Is Microsoft Copilot free?"
+    },
+    {
+     "a": "ChatGPT's Free tier is open to anyone at no cost, offering unlimited GPT-6 Luna text chats in the desktop app plus limited image creation, voice, and research, though it is ad-supported. Microsoft Copilot has no equivalent open free plan; its free chat access is bundled only with eligible Microsoft 365 work subscriptions.",
+     "q": "Which tool has a clearer free plan, Copilot or ChatGPT?"
+    },
+    {
+     "a": "Microsoft Copilot is the better fit for Office tasks because Microsoft 365 Copilot licensing lets it work directly inside Word, Excel, PowerPoint, and Outlook. ChatGPT isn't integrated into Office apps, so you'd need to copy content in and out manually, though it remains more flexible for general writing and research.",
+     "q": "Which is better for Office tasks, Copilot or ChatGPT?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want AI built directly into Word, Excel, PowerPoint, and Outlook through a Microsoft 365 Copilot license rather than switching to a separate app.",
+    "✅ You want requests automatically routed between quick and deep reasoning modes through the Auto, Quick response, and Think deeper selector instead of picking a model yourself.",
+    "✅ You need access to an Anthropic model for higher-reasoning tasks right inside Word.",
+    "✅ You're already on a Microsoft 365 E7 enterprise plan and want Copilot licensing included by default."
+   ],
+   "choose_b": [
+    "✅ You want to start on a public Free plan at no cost rather than needing an eligible work subscription to unlock chat access.",
+    "✅ You want one assistant that works the same way across web, desktop, mobile, and API.",
+    "✅ You need a genuinely multimodal tool for text, images, voice, files, and web browsing in a single product.",
+    "✅ You have demanding workloads and want clearly published Pro pricing tiers for heavier usage."
+   ],
+   "faq": [
+    {
+     "q": "What is the difference between Microsoft Copilot and ChatGPT?",
+     "a": "Microsoft Copilot is built into Windows, Edge, Bing, and the Microsoft 365 apps, routing requests through Auto, Quick response, and Think deeper modes, with an Anthropic model available in Word for higher-reasoning tasks. ChatGPT is OpenAI's standalone assistant available on web, desktop, mobile, and API, running its own GPT-6 model lineup. Pick Copilot if you want AI embedded in your Office documents and Windows workflow; pick ChatGPT for a flexible, single-provider experience across devices."
+    },
+    {
+     "q": "Is Microsoft Copilot free?",
+     "a": "Copilot Chat (Basic) is included at no extra cost only for users with an eligible Microsoft 365 work subscription, not as a standalone free plan for the general public. The deeper features inside Word, Excel, PowerPoint, and Outlook require a paid Microsoft 365 Copilot license."
+    },
+    {
+     "q": "Which tool has a clearer free plan, Copilot or ChatGPT?",
+     "a": "ChatGPT's Free plan is open to anyone at no cost, running GPT-6 Luna with the Intelligent UI. Microsoft Copilot has no equivalent open free plan; its free chat access is bundled only with eligible Microsoft 365 work subscriptions, not available to the general public."
+    },
+    {
+     "q": "Which is better for Office tasks, Copilot or ChatGPT?",
+     "a": "Microsoft Copilot is the better fit for Office tasks because a Microsoft 365 Copilot license lets it work directly inside Word, Excel, PowerPoint, and Outlook. ChatGPT isn't integrated into Office apps, so you'd need to copy content in and out manually, though it remains more flexible for general writing and research."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "notion-ai-vs-zapier-ai",
+  "before": {
+   "choose_a": "[\"✅ You want AI writing, summarization, and Q&A to happen right inside the Notion pages, wikis, and databases you already use\", \"✅ You need a model picker so workspace owners can choose among several AI vendors for different tasks\", \"✅ You want workspace-wide Enterprise Search, AI Meeting Notes with speaker identification, or Research Mode on top of basic writing help\", \"✅ You regularly handle Microsoft Office files or Outlook and want AI that can read and write PPTX, XLSX, DOCX directly\"]",
+   "choose_b": "[\"✅ You want to automate workflows across 9,000+ apps instead of just working inside one workspace\", \"✅ You want Zapier Copilot to build and maintain Zaps, Tables, Interfaces, or Agents from plain-language descriptions\", \"✅ You need external LLMs like Claude or GPT to trigger actions in your other apps through Zapier MCP\", \"✅ You want a real free tier to test automations before committing to a paid plan\"]",
+   "faq": [
+    {
+     "a": "Notion AI is an AI layer built into the Notion workspace for writing, search, meeting notes, and research on your own content. Zapier AI is built into a workflow automation platform that connects thousands of apps, using Copilot, Agents, and MCP to build and run automations rather than help you write documents.",
+     "q": "What is the difference between Notion AI and Zapier AI?"
+    },
+    {
+     "a": "Notion AI fits better here since it works directly inside your Notion pages, wikis, and databases, with workspace-wide search and meeting notes included. Zapier AI isn't built for drafting or organizing documents, so it wouldn't cover that need.",
+     "q": "Which is better for a team that writes and organizes most of its knowledge in one workspace?"
+    },
+    {
+     "a": "Zapier AI is the better fit, since it connects 9,000+ apps and uses Copilot and Agents to build and run multi-app automations. Notion AI only has basic built-in automations and isn't designed to orchestrate external apps at that scale.",
+     "q": "Which is better for connecting many different SaaS tools together?"
+    },
+    {
+     "a": "Yes for both in practice. Notion AI's ongoing access sits behind the Business plan, with Free and Plus limited to a capped trial, while Zapier's AI products like Agents and Chatbots are billed separately from its core automation plans.",
+     "q": "Do either of these tools require a paid plan to get real AI functionality?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want AI writing, summarization, and Q&A to happen right inside the Notion pages, wikis, and databases you already use",
+    "✅ You need a model picker so workspace owners can choose among models from several AI vendors, including OpenAI and Anthropic, per task",
+    "✅ You want workspace-wide Enterprise Search, AI Meeting Notes with speaker identification, or Research Mode on top of basic writing help",
+    "✅ You regularly handle Microsoft Office files or Outlook and want AI that can read and write PPTX, XLSX, DOCX directly"
+   ],
+   "choose_b": [
+    "✅ You want to automate workflows across 9,000+ apps instead of just working inside one workspace",
+    "✅ You want Zapier Copilot to build and maintain Zaps, Tables, Interfaces, or Agents from plain-language descriptions",
+    "✅ You need external LLMs like Claude or GPT to trigger actions in your other apps through Zapier MCP",
+    "✅ You want a real free tier to test automations before committing to a paid plan"
+   ],
+   "faq": [
+    {
+     "q": "What is the difference between Notion AI and Zapier AI?",
+     "a": "Notion AI is the AI layer built into the Notion workspace for writing, search, meeting notes, and research on your own content, with agent connections via MCP and a Skills API. Zapier AI is built into a workflow automation platform connecting 9,000+ apps, using Copilot, Agents, and its own MCP to build and run automations across apps rather than help you write documents."
+    },
+    {
+     "q": "Which is better for a team that writes and organizes most of its knowledge in one workspace?",
+     "a": "Notion AI fits better here since it works directly inside your Notion pages, wikis, and databases, with workspace-wide Enterprise Search and AI Meeting Notes included. Zapier AI isn't built for drafting or organizing documents; it's designed to move data and trigger actions between other apps."
+    },
+    {
+     "q": "Which is better for connecting many different SaaS tools together?",
+     "a": "Zapier AI is the better fit, since it connects 9,000+ apps and uses Copilot and Agents to build and run multi-app automations. Notion AI can orchestrate some external agents from shared boards, but it isn't designed to connect SaaS tools at that scale."
+    },
+    {
+     "q": "Do either of these tools require a paid plan to get real AI functionality?",
+     "a": "Yes for both in practice. Notion AI's ongoing AI access sits behind the Business plan, with Free and Plus limited to a capped trial, while Zapier's Free plan caps at 100 tasks a month and its AI products like Agents and Chatbots are billed separately from the core automation plans."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "v0-by-vercel-vs-cursor",
+  "before": {
+   "choose_a": "[\"✅ You want to go from a prompt straight to a deployed full-stack app inside the Vercel and Next.js ecosystem.\", \"✅ You want to edit both code and visuals in one place with the in-browser VS Code-style editor and Design Mode.\", \"✅ You want to try building real apps without a credit card using v0's free tier.\", \"✅ You want to pick between multiple model tiers (Mini, Pro, Max, Max Fast) to balance speed, quality, and cost.\"]",
+   "choose_b": "[\"✅ You need an AI-first editor with multi-repo support and parallel background agents for large codebases.\", \"✅ You want automated PR review and bug catching handled by Bugbot.\", \"✅ You want to keep your existing VS Code extensions, keybindings, and workflows intact.\", \"✅ You want built-in access to Grok and Composer 2.5 models while still being able to plug in third-party models and MCP servers.\"]",
+   "faq": [
+    {
+     "a": "v0 by Vercel is an AI agent that builds, runs, and deploys full-stack web apps from natural-language prompts, with Git integration and an in-browser editor.",
+     "q": "What is v0 by Vercel?"
+    },
+    {
+     "a": "Cursor is an AI-first code editor built on VS Code that uses agentic coding to plan and carry out multi-step changes across a repository, including automated PR review and parallel agents.",
+     "q": "What is Cursor?"
+    },
+    {
+     "a": "v0 by Vercel is purpose-built for this, taking a prompt through to a running, deployable app with Git integration and a sandbox runtime. Cursor can also build full-stack apps, but it's a general-purpose editor rather than a prompt-to-deploy pipeline.",
+     "q": "Which is better for going from idea to a deployed full-stack app?"
+    },
+    {
+     "a": "Both have free tiers: v0 offers about 7 messages a day on its free plan, while Cursor's Hobby tier is free but limits Agent requests and Composer access.",
+     "q": "Is either tool free to use?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want to go from a prompt straight to a deployed full-stack app inside the Vercel and Next.js ecosystem.",
+    "✅ You want to edit both code and visuals in one place with the in-browser VS Code-style editor and Design Mode.",
+    "✅ You want to try building real apps without a credit card using v0's free tier.",
+    "✅ You want to pick between multiple model tiers (Mini, Pro, Max, Max Fast) to balance speed, quality, and cost."
+   ],
+   "choose_b": [
+    "✅ You need an AI-first editor with multi-repo support and parallel background agents for large codebases.",
+    "✅ You want automated PR review and bug catching handled by Bugbot.",
+    "✅ You want to keep your existing VS Code extensions, keybindings, and workflows intact.",
+    "✅ You want to plug in third-party models, MCP servers, custom rules, and hooks alongside Grok bundled into your subscription."
+   ],
+   "faq": [
+    {
+     "q": "What is v0 by Vercel?",
+     "a": "v0 by Vercel is an AI agent for building web apps from natural-language prompts, now covering full-stack development with Git integration, a sandbox runtime, and an in-browser editor."
+    },
+    {
+     "q": "What is Cursor?",
+     "a": "Cursor is an AI-first code editor built on VS Code that plans and carries out multi-step changes across a repository, with cloud agents, automated code review, and Bugbot for PR review."
+    },
+    {
+     "q": "Which is better for going from idea to a deployed full-stack app?",
+     "a": "v0 by Vercel is purpose-built for this, taking a prompt through to a running, deployable app with Git integration and a sandbox runtime. Cursor can also build full-stack apps, but it's a general-purpose editor rather than a prompt-to-deploy pipeline."
+    },
+    {
+     "q": "Is either tool free to use?",
+     "a": "Both have free tiers: v0 offers about 7 messages a day plus a one-time credit grant for new users, while Cursor's Free tier under The X Subscription gives new users access to Cursor and Grok from a shared weekly usage pool."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "windsurf-vs-cursor",
+  "before": {
+   "choose_a": "[\"✅ You want unlimited Tab autocomplete and inline edits even while on the free plan.\", \"✅ You want to switch between multiple selectable agents, including Devin Local, Codex, Claude Agent, OpenCode and Cascade, in one picker.\", \"✅ You want Pro-tier access to frontier models from OpenAI, Anthropic, Google, SpaceXAI and leading open-source models.\", \"✅ You want a VS Code-style interface that's easy to adopt alongside a usable free tier for everyday light coding.\"]",
+   "choose_b": "[\"✅ You want agentic coding that spans multiple repositories with parallel agents and automated PR review.\", \"✅ You want to offload long-running work to cloud agents and dev environments triggered with /in-cloud.\", \"✅ You want freedom to bring third-party models, MCP servers, custom rules, and hooks instead of being locked into one model family.\", \"✅ You want newer team features like team marketplaces, Projects, self-hosted machines, and Security Review bots for larger organizations.\"]",
+   "faq": [
+    {
+     "a": "Devin Desktop is the renamed version of Windsurf, an AI-native code editor from Cognition that combines autocomplete, inline edits, and autonomous coding agents in a VS Code-style workspace. The rebrand happened on June 2, 2026, and its current in-house model is SWE-2.",
+     "q": "What is Devin Desktop (Windsurf)?"
+    },
+    {
+     "a": "Yes, there's a free plan with a light agent quota and limited model access, but Tab completions and inline edits are unlimited even for free users. Paid plans start at $20 per month for Pro, which adds full model access and Devin Cloud agents.",
+     "q": "Is Devin Desktop free?"
+    },
+    {
+     "a": "Cursor is the stronger fit here, since it's explicitly built for multi-repo agentic coding with parallel agents and automated PR review. Devin Desktop's agent picker is powerful but is framed around selecting a single agent per task rather than coordinating across repos.",
+     "q": "Which is better for working across multiple repositories with parallel agents?"
+    },
+    {
+     "a": "Cascade is one of the agents available in Devin Desktop's agent picker, alongside Devin Local, Codex, Claude Agent, and OpenCode. It's the original Windsurf agent and remains available rather than being retired after the rebrand.",
+     "q": "What is Cascade in Devin Desktop?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want unlimited Tab autocomplete and inline edits even on the free plan.",
+    "✅ You want to switch between multiple selectable agents, including Devin Local, Codex, Claude Agent, OpenCode and Cascade, from one picker.",
+    "✅ You want Pro-tier access to frontier models from OpenAI, Anthropic, Google, SpaceXAI and leading open-source models.",
+    "✅ You want a familiar VS Code-style interface with a free tier that's usable for everyday light coding."
+   ],
+   "choose_b": [
+    "✅ You want agentic coding that spans multiple repositories with parallel agents and automated PR review.",
+    "✅ You want to offload long-running work to cloud agents and dev environments triggered with /in-cloud.",
+    "✅ You want to bring your own third-party models, MCP servers, custom rules, and hooks instead of being tied to one model family.",
+    "✅ You want newer team-oriented features like Projects, self-hosted machines, and Security Review bots."
+   ],
+   "faq": [
+    {
+     "q": "What is Devin Desktop (Windsurf)?",
+     "a": "Devin Desktop is the renamed version of Windsurf, an AI-native code editor from Cognition that combines autocomplete, inline edits, and autonomous coding agents inside a VS Code-style workspace. The rebrand happened on June 2, 2026, and its current in-house model is SWE-2."
+    },
+    {
+     "q": "What is Cursor?",
+     "a": "Cursor is an AI-first code editor built on VS Code that has grown from autocomplete into a full agentic coding platform, with features like the Composer agent, cloud agents, and Bugbot for automated PR review. New customers are now enrolled by default in The X Subscription, which bundles Cursor with Grok from xAI and X Premium."
+    },
+    {
+     "q": "Which is better for working across multiple repositories with parallel agents?",
+     "a": "Cursor is the stronger fit here, since it's explicitly built for multi-repo agentic coding with parallel agents and automated PR review via Bugbot. Devin Desktop's agent picker lets you choose among several agents, but it's framed around picking one agent per task rather than coordinating across repos."
+    },
+    {
+     "q": "Is there a free tier on both tools?",
+     "a": "Yes, both offer a free tier. Devin Desktop's free plan gives a light agent quota and limited model access but unlimited Tab completions and inline edits, while Cursor's free tier under The X Subscription includes access to both Cursor and Grok without payment."
+    },
+    {
+     "q": "What is Cascade in Devin Desktop?",
+     "a": "Cascade is one of the agents available in Devin Desktop's agent picker, alongside Devin Local, Codex, Claude Agent, and OpenCode. It's the original Windsurf agent and remains available rather than being retired after the rebrand."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "zed-vs-cursor",
+  "before": {
+   "choose_a": "[\"✅ You want a faster, lighter editor since Zed is built in Rust instead of being an Electron or VS Code fork.\", \"✅ You want to run multiple AI agents at once on different parts of your codebase using Zed's Parallel Agents feature.\", \"✅ You want to plug external agents like Claude Agent, Codex, OpenCode, or Cursor directly into your editor via Zed's Agent Client Protocol.\", \"✅ You manage a team and want simple, published per-seat pricing for AI governance instead of juggling multiple usage pools.\"]",
+   "choose_b": "[\"✅ You want to stay in a VS Code-based environment so your existing extensions, keybindings, and workflows carry over.\", \"✅ You want automated PR review and bug-catching built in through Bugbot alongside agentic coding.\", \"✅ You want cloud agents and cloud dev environments you can trigger with /in-cloud to offload long-running tasks.\", \"✅ You want in-house Grok and Composer models plus the flexibility to add third-party models via MCP servers and custom rules.\"]",
+   "faq": [
+    {
+     "a": "Zed is a code editor built entirely in Rust for low-latency, native performance, as opposed to the Electron shell used by editors like VS Code and Cursor. Its 1.0 release introduced Parallel Agents, letting multiple AI agents work on different parts of a codebase at the same time.",
+     "q": "What is Zed?"
+    },
+    {
+     "a": "Zed has a free Personal plan, but it caps Zed-hosted AI use at 2,000 accepted edit predictions unless you bring your own API keys. Paid tiers are Pro at $10 per month and Business at $30 per seat per month for teams that need governance controls.",
+     "q": "Is Zed free?"
+    },
+    {
+     "a": "Both support running agents in parallel: Zed's Parallel Agents lets agents work on separate parts of a codebase simultaneously, while Cursor also offers parallel agents plus cloud agents for offloading longer tasks. If you specifically want external agents like Claude Agent or Codex running inside the editor itself, Zed's Agent Client Protocol gives it an edge.",
+     "q": "Which is better for running multiple AI agents at once, Zed or Cursor?"
+    },
+    {
+     "a": "Not fully — Zed's Rust-native architecture means some VS Code extensions aren't compatible, and its plugin ecosystem is still smaller than VS Code's. Cursor, being a VS Code fork, carries over most existing extensions and keybindings.",
+     "q": "Does Zed support VS Code extensions?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want a faster, lighter editor since Zed is built entirely in Rust instead of being an Electron or VS Code fork.",
+    "✅ You want to run multiple AI agents at once on different parts of your codebase using Zed's Parallel Agents feature.",
+    "✅ You want to plug external agents like Claude Agent, Codex, OpenCode, or Cursor directly into your editor via Zed's Agent Client Protocol.",
+    "✅ You manage a team and want simple, published per-seat pricing for AI governance instead of a shared usage pool tied to another product."
+   ],
+   "choose_b": [
+    "✅ You want to stay in a VS Code-based environment so your existing extensions, keybindings, and workflows carry over.",
+    "✅ You want automated PR review and bug-catching built in through Bugbot alongside agentic coding.",
+    "✅ You want cloud agents and cloud dev environments you can trigger with /in-cloud to offload long-running tasks.",
+    "✅ You want a bundled Grok model plus the flexibility to add third-party models via MCP servers and custom rules."
+   ],
+   "faq": [
+    {
+     "q": "What is Zed?",
+     "a": "Zed is a code editor built entirely in Rust for low-latency, native performance, as opposed to the Electron shell used by editors like VS Code and Cursor. Its 1.0 release introduced Parallel Agents, letting multiple AI agents work on different parts of a codebase at the same time."
+    },
+    {
+     "q": "Is Zed free?",
+     "a": "Zed has a free Personal plan, but it caps Zed-hosted AI use at 2,000 accepted edit predictions unless you bring your own API keys. Paid tiers are Pro at $10 per month and Business at $30 per seat per month for teams that need governance controls."
+    },
+    {
+     "q": "Which is better for running multiple AI agents at once, Zed or Cursor?",
+     "a": "Both support parallel agents: Zed's Parallel Agents lets agents work on separate parts of a codebase simultaneously, and Cursor also offers parallel agents plus cloud agents for offloading longer tasks. If you specifically want external agents like Claude Agent or Codex running inside the editor itself, Zed's Agent Client Protocol gives it an edge."
+    },
+    {
+     "q": "Does Zed support VS Code extensions?",
+     "a": "Not fully — Zed's Rust-native architecture means some VS Code extensions aren't compatible, and its plugin ecosystem is still smaller than VS Code's. Cursor, being a VS Code fork, carries over most existing extensions and keybindings."
+    }
+   ]
+  }
+ }
+]
