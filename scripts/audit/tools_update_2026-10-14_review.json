@@ -1,0 +1,887 @@
+[
+ {
+  "slug": "gemini",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "",
+   "best_for": "Google's AI assistant with deep Workspace integration and multimodal capabilities",
+   "description": "Google's flagship AI with the deepest Workspace integration. Gemini 3.8 Flash now leads the lineup for long-horizon agent work, alongside 3.6 Flash, Omni Flash with 4K video and dedicated transcription models covering 85+ languages. Still the most generous free tier in 2026.",
+   "description_long": "Gemini is Google's family of AI models and the consumer assistant built on top of them, available on the web, in the mobile app, and woven into Workspace apps like Gmail, Docs and Sheets. It handles conversation, long-document analysis, image and video generation, coding, and live voice interaction.\n\nAs of mid-2026 the default model is Gemini 3.8 Flash, which reached general availability on May 19, 2026 with strong agentic and coding performance. The heavier reasoning and coding work is handled by Gemini 3.1 Pro, now the flagship model. Google also shipped Gemini Omni for native video generation and editing (May 2026) and Gemini Spark, an autonomous agent (June 2026). Note that the Gemini 3.5 Pro general release slipped to July 2026.\n\nCapabilities span text and code generation, native image and video creation, Deep Research for multi-source reports, and Gemini Live for real-time spoken conversation. The models are natively multimodal and can work over very long contexts, which suits large codebases and long documents.\n\nPricing is freemium. The free tier costs nothing and includes Gemini 3.8 Flash, limited daily access to Gemini 3.1 Pro, image and video generation, Deep Research and Gemini Live. Google AI Plus is $7.99/mo, Google AI Pro is $19.99/mo (the former Gemini Advanced / Google AI Premium, with 2TB storage and higher limits), and Google AI Ultra now comes in two tiers: a $100/mo entry tier launched May 19, 2026 and a $200/mo top tier (cut from $250 at I/O 2026). The Gemini API is billed per token, roughly $2 per million input tokens and $12 per million output tokens for Gemini 3-class models.\n\nLimitations are worth noting: free-tier access to the strongest model is capped daily, the naming across models and subscription tiers is genuinely confusing, and the top-end features sit behind expensive Ultra plans. Availability of some newer features can also vary by region.\n\nGemini is a good fit for people already inside Google's ecosystem, for anyone who wants image and video generation plus chat in one place, and for developers who want to build on a pay-per-token multimodal API.",
+   "pros": [
+    "Deep integration with Gmail, Docs, Sheets and the rest of Google Workspace",
+    "Genuinely capable free tier including image/video generation, Deep Research and Gemini Live",
+    "Native video generation and editing via Gemini Omni, not just text and images",
+    "Flagship Gemini 3.1 Pro is strong at reasoning and coding, with very long context windows",
+    "Flexible pricing from a $7.99 Plus tier up to per-token API access"
+   ],
+   "cons": [
+    "Model and subscription naming (Flash, Pro, Ultra, Plus, Omni, Spark) is confusing",
+    "Access to the strongest model on the free tier is capped daily",
+    "Top-end capabilities require the expensive $100-$200/mo Ultra plans",
+    "Some newer features roll out unevenly by region",
+    "Gemini 3.5 Pro general availability was delayed to July 2026"
+   ],
+   "choose_if": [
+    "You live in Gmail, Docs and Google Workspace and want AI built in",
+    "You want strong chat plus native image and video generation in one tool",
+    "You need Deep Research or live voice conversation without paying upfront",
+    "You are a developer wanting a pay-per-token multimodal API",
+    "You want a capable free assistant before committing to a paid plan"
+   ],
+   "faq": [
+    {
+     "a": "On Google Workspace tasks, Gemini's deep integration with Gmail, Docs and Sheets makes it the more convenient choice. General capability comparisons with other assistants shift too often to declare a lasting winner. Gemini is the strongest fit for people already inside Google's ecosystem, while other assistants may appeal more for general use depending on their own feature sets.",
+     "q": "Is Gemini better than ChatGPT?"
+    },
+    {
+     "a": "Yes. The free tier includes Gemini 3.8 Flash, limited daily access to Gemini 3.1 Pro, image and video generation, Deep Research and Gemini Live. Paid plans add more: Google AI Plus is $7.99/month, Google AI Pro is $19.99/month with higher limits and 2TB storage, and Google AI Ultra now spans a $100/month entry tier and a $200/month top tier for the most demanding use.",
+     "q": "Is Gemini free?"
+    },
+    {
+     "a": "Yes. Gemini includes native image and video generation alongside its chat, coding and Deep Research capabilities. It's convenient for quick, integrated creation within the Google ecosystem rather than needing a separate tool.",
+     "q": "Can Gemini generate images?"
+    },
+    {
+     "a": "Bard was Google's original AI chatbot, rebranded as Gemini in February 2024. They are the same product — if you used Bard, you're now using Gemini. The rebrand accompanied a significant upgrade in model capabilities.",
+     "q": "What is the difference between Gemini and Google Bard?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": null,
+   "best_for": "Google's AI assistant with deep Workspace integration, now led by the Gemini 4 Argon flagship model",
+   "description": "Google's flagship AI assistant with deep Workspace integration, now topped by the Gemini 4 Argon model alongside the newer Gemini 3.8 Flash and Nano Banana 2.1 image model.",
+   "description_long": "Gemini is Google's family of AI models and the consumer assistant built on top of them, available on the web, in the mobile app, and inside Workspace apps like Gmail, Docs and Sheets. It handles conversation, document analysis, image generation, coding and live voice interaction.\n\nAs of October 2026 the flagship model is Gemini 4 Argon, announced September 30, 2026 for vetted cyber defenders and made generally available on October 13, 2026. The newest Flash model is Gemini 3.8 Flash, which reached general availability on September 2, 2026, and the current image model is Nano Banana 2.1, released October 6, 2026. The older Gemini 3.7 Flash and 3.5 Flash models were retired from the API on October 8, 2026.\n\nGemini 4 Argon accepts text, images, video, audio and PDF input and produces text output, with a combined input and output limit of roughly 1 million tokens. It is available in the Gemini app and in AI Mode in Google Search for AI Pro and AI Ultra subscribers. The Gemini app also added a tasks mode and connections to more than 40 external apps on October 13, 2026. In AI Studio and Antigravity, Argon is offered to AI Ultra subscribers, while AI Pro users need a separately paid API key to use it there.\n\nPricing in the Gemini app (US, monthly) runs: Free at $0, which includes the Flash-Lite model; Google AI Plus at $4.99, which includes the Flash model; Google AI Pro at $19.99, which includes Gemini 4 Argon plus Pro and Flash models; and Google AI Ultra at $99.99 for 5x AI Pro usage limits or $199.99 for 20x limits. Gemini 4 Argon is not available on the Free or Plus tiers. Through the API, Argon is billed at $2 per million input tokens and $10 per million output tokens until November 30, 2026, rising to $4 and $20 after that date; cached input is discounted, batch and flex processing is half price, and there is no free API tier for Argon.\n\nLimitations include confusing naming across models and tiers (Flash, Pro, Argon, Plus, Ultra), the fact that the flagship Argon model is locked behind the Pro or Ultra subscriptions, the need for a separate paid API key if AI Pro users want Argon in AI Studio or Antigravity, and a scheduled API price increase at the end of November 2026.\n\nGemini suits people already inside Google's Workspace ecosystem, those who want chat plus image generation in one place, and developers who want pay-per-token access to Google's current flagship model.",
+   "pros": [
+    "Deep integration with Gmail, Docs, Sheets and the rest of Google Workspace",
+    "A genuine free tier exists, running the Flash-Lite model at no cost",
+    "Flagship Gemini 4 Argon shows strong reasoning and coding benchmark results",
+    "Gemini app now connects to more than 40 external apps via its new tasks mode",
+    "Flexible pricing from a $4.99/mo Plus tier up to per-token API access"
+   ],
+   "cons": [
+    "Model and subscription naming (Flash, Pro, Argon, Plus, Ultra) is confusing",
+    "Gemini 4 Argon is not included on the Free or Plus tiers, only Pro and Ultra",
+    "Top-end Ultra plans cost $99.99 to $199.99 per month",
+    "No free API tier for Argon, and token pricing rises after November 30, 2026",
+    "AI Pro subscribers need a separate paid API key to use Argon in AI Studio or Antigravity"
+   ],
+   "choose_if": [
+    "You live in Gmail, Docs and Google Workspace and want AI built in",
+    "You want strong chat plus native image generation in one tool",
+    "You are a developer wanting pay-per-token access to Google's flagship model",
+    "You want a free assistant before committing to a paid plan",
+    "You need AI Mode in Search alongside a Pro or Ultra subscription"
+   ],
+   "faq": [
+    {
+     "q": "Is Gemini better than ChatGPT?",
+     "a": "On Google Workspace tasks, Gemini's deep integration with Gmail, Docs and Sheets makes it the more convenient choice. General capability comparisons with other assistants shift too often to declare a lasting winner. Gemini is the strongest fit for people already inside Google's ecosystem, while other assistants may appeal more for general use depending on their own feature sets."
+    },
+    {
+     "q": "Is Gemini free?",
+     "a": "There is a free plan, but it runs the Flash-Lite model only. Paid plans unlock more: Google AI Plus is $4.99/month with the Flash model, Google AI Pro is $19.99/month and includes the flagship Gemini 4 Argon model, and Google AI Ultra is $99.99/month or $199.99/month for higher usage limits."
+    },
+    {
+     "q": "Can Gemini generate images?",
+     "a": "Yes. Gemini includes native image generation through the Nano Banana 2.1 model, released October 2026, alongside its chat and coding capabilities."
+    },
+    {
+     "q": "What is the difference between Gemini and Google Bard?",
+     "a": "Bard was Google's original AI chatbot, rebranded as Gemini in February 2024. They are the same product — if you used Bard, you're now using Gemini. The rebrand accompanied a significant upgrade in model capabilities."
+    }
+   ],
+   "dropped": [
+    "Gemini 3.1 Pro as flagship model",
+    "Gemini Omni native video generation and 4K video",
+    "Gemini Spark autonomous agent",
+    "Gemini 3.5 Pro general availability delay to July 2026",
+    "Transcription models covering 85+ languages",
+    "'Most generous free tier in 2026' claim",
+    "Google AI Plus at $7.99/month (outdated price)",
+    "Google AI Ultra top tier at $250 or $200/month (outdated price)",
+    "2TB storage included with Google AI Pro",
+    "Gemini 3-class API pricing of $2/$12 per million tokens (superseded by Argon pricing)"
+   ]
+  }
+ },
+ {
+  "slug": "chatgpt",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "1B+",
+   "best_for": "General AI assistant, productivity, coding",
+   "description": "ChatGPT is OpenAI's conversational AI assistant for writing, coding, research and multimodal tasks, available via web, desktop, mobile and API. Its current model lineup includes GPT-6 (flagship Astra, plus Sol and Luna), alongside the older GPT-5.6 family and GPT-5 Thinking Mini.",
+   "description_long": "ChatGPT is OpenAI's flagship chat assistant for writing, coding, research, analysis and multimodal tasks. It works in the browser, in desktop and mobile apps, and through the API, and remains one of the most widely used consumer AI products.\n\nAs of October 2026, OpenAI's model picker lists GPT-6.1 Sol, GPT-6 Astra, GPT-6 Sol, and GPT-6 Luna alongside the older GPT-5.6 Sol, Sol Pro, Terra and Luna, plus GPT-5 Thinking Mini. GPT-6 Astra is the current flagship, released September 3, 2026; GPT-6 Sol and Luna followed on September 22, 2026. Per OpenAI, quoted by MacRumors, GPT-6 Sol and Luna are not yet available in standard Chat mode and currently launch first in ChatGPT Work and Codex. On Free and Go, GPT-6 Luna is available only in the desktop app. The exact default chat model was not independently verified.\n\nCapabilities span long-form and technical writing, code generation and debugging, document and image analysis, voice conversations, web browsing, data analysis, and image generation.\n\nPricing is tiered. Free is $0/mo, with unlimited text chats on GPT-6 Luna (desktop app only) subject to abuse limits, plus limited uploads, image creation, voice, deep research and Codex use; the free plan is ad-supported for logged-in adults in the US. A paid Go tier also exists and may include advertising, and a paid Plus tier adds advanced reasoning with GPT-6, projects, scheduled tasks, custom GPTs and more Codex usage; neither tier's USD price could be confirmed, since OpenAI's pricing page was geo-served in ILS at the time of checking. Above that, Pro is offered in three monthly-only tiers: $100, $200 and $500 per month, with only the $500 tier including GPT-6 Astra Ultrafast. Business and Enterprise plans exist but current verified USD pricing for them was not available.\n\nLimitations remain real: the model can still produce confident but incorrect answers, the free and Go tiers carry ads, and GPT-6 Sol and Luna are still rolling out, with full Chat-mode availability not yet confirmed. Go and Plus pricing is also not transparently published in USD everywhere, which can make budgeting harder for US buyers.\n\nChatGPT suits anyone who wants a general-purpose AI assistant, from casual users on the ad-supported free plan to professionals and teams who need the paid tiers for larger quotas, advanced reasoning or higher-usage Pro plans.",
+   "pros": [
+    "Free plan includes unlimited GPT-6 Luna text chats on the desktop app, subject to abuse limits",
+    "Genuinely multimodal: text, images, voice, files and web browsing",
+    "Available everywhere: web, desktop, mobile and API",
+    "Pro now spans three monthly tiers up to $500/mo, with the top tier adding GPT-6 Astra Ultrafast",
+    "Plus adds advanced reasoning with GPT-6, projects, scheduled tasks, custom GPTs and more Codex usage"
+   ],
+   "cons": [
+    "Free and Go tiers are ad-supported",
+    "Can still generate confident but incorrect answers",
+    "Go and Plus USD pricing could not be verified at time of review",
+    "GPT-6 Sol and Luna are not yet available in standard Chat mode, only via ChatGPT Work and Codex",
+    "Costs rise quickly once you move beyond Plus, with Pro tiers reaching $500/mo"
+   ],
+   "choose_if": [
+    "You want a capable general-purpose assistant and don't mind the ad-supported free plan",
+    "You want a low-cost paid step up via the Go tier, though its USD price isn't confirmed",
+    "You need the highest usage quotas or the ultrafast model via the $500/mo Pro tier",
+    "Your team needs a paid business plan, with pricing available on request from OpenAI"
+   ],
+   "faq": [
+    {
+     "a": "For work, research, and real tasks — yes, ChatGPT is far more capable. For entertainment, roleplay, and character-based conversations, Character.AI is purpose-built and has a larger character community. They serve completely different use cases.",
+     "q": "Is ChatGPT better than Character.AI?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "1.2B+",
+   "best_for": "General AI assistant, productivity, coding",
+   "description": "ChatGPT is OpenAI's conversational AI assistant for writing, coding, research and multimodal tasks, available via web, desktop, mobile and API. Its current lineup includes GPT-6 Astra (the flagship), GPT-6 Sol (paid plans) and GPT-6 Luna (Free and Go), with GPT-6.1 Sol available only in ChatGPT Work and Codex.",
+   "description_long": "ChatGPT is OpenAI's flagship chat assistant for writing, coding, research, analysis and multimodal tasks. It works in the browser, in desktop and mobile apps, and through the API.\n\nAs of October 2026, ChatGPT runs GPT-6 with a new Intelligent UI, which rolled out on October 7, 2026 to Plus, Pro, Business and Enterprise, and October 8 to Free and Go. Paid plans use GPT-6 Sol in the main chat, while Free and Go use GPT-6 Luna. GPT-6 Astra is OpenAI's most capable model. GPT-6.1 Sol, released September 29, 2026 at OpenAI's DevDay, is available only in ChatGPT Work and Codex for Plus, Pro, Business, Enterprise and Edu plans, not in the main chat interface. GPT-5.5 was retired from ChatGPT, Work and Codex on October 14, 2026.\n\nCapabilities span long-form and technical writing, code generation and debugging, document and image analysis, voice conversations, web browsing, data analysis and image generation. The Intelligent UI lets answers include graphics, tappable buttons, forms, charts, maps and small interactive tools such as calculators and games built on the spot. An always-on agent feature called Dots, with its own cloud computer and browser, is available on Pro for users over 18 outside the EEA, UK and Switzerland, as well as on Business Premium and Enterprise.\n\nPricing is tiered. Free costs $0/mo and runs GPT-6 Luna. Go costs $8/mo and Plus costs $20/mo. Pro is offered in three monthly tiers at $100, $200 and $500 per month, with the $500 tier adding Ultrafast mode for Codex and Work. Business costs $25 per user per month, or $20 per user per month billed annually. Enterprise and Edu pricing is available on request, and API usage is billed per 1 million tokens, varying by model.\n\nLimitations remain: the newest model, GPT-6.1 Sol, is not yet available in the main chat interface, only through Work and Codex. GPT-5.5's retirement removes an option some users relied on. The assistant can still produce confident but incorrect answers, and Dots is restricted by age, region and plan.\n\nChatGPT suits anyone who wants a general-purpose AI assistant, from individual users on the free plan to professionals and teams who need higher usage quotas, advanced reasoning or business and enterprise features.",
+   "pros": [
+    "Free plan available, running GPT-6 Luna with the new Intelligent UI",
+    "Genuinely multimodal: text, images, voice, files and web browsing",
+    "Available everywhere: web, desktop, mobile and API",
+    "Pro spans three monthly tiers up to $500/mo, with the top tier adding Ultrafast mode for Codex and Work",
+    "Business plan offers discounted annual billing at $20/user/mo versus $25/user/mo monthly"
+   ],
+   "cons": [
+    "GPT-6.1 Sol, the newest model, is not available in the main chat interface, only via ChatGPT Work and Codex",
+    "GPT-5.5 has been retired from ChatGPT, Work and Codex, reducing model choice",
+    "Costs rise quickly once you move beyond Plus, with Pro tiers reaching $500/mo",
+    "Can still generate confident but incorrect answers",
+    "Dots agent feature is restricted by age, region and plan tier"
+   ],
+   "choose_if": [
+    "You want a capable general-purpose assistant and can use the free plan running GPT-6 Luna",
+    "You want a low-cost paid step up via the $8/mo Go tier",
+    "You need the highest usage quotas or Ultrafast mode via the $500/mo Pro tier",
+    "Your team needs a business plan, at $25/user/mo or $20/user/mo billed annually"
+   ],
+   "faq": [
+    {
+     "q": "Is ChatGPT better than Character.AI?",
+     "a": "For work, research, and real tasks — yes, ChatGPT is far more capable. For entertainment, roleplay, and character-based conversations, Character.AI is purpose-built and has a larger character community. They serve completely different use cases."
+    }
+   ],
+   "dropped": [
+    "GPT-5.6 family model names (Sol, Sol Pro, Terra, Luna) - not confirmed, GPT-5.5 is the retired prior model",
+    "GPT-5 Thinking Mini model - not found on primary source",
+    "MacRumors-sourced claim that GPT-6 Sol and Luna launch first in Work/Codex - contradicted; paid plans run GPT-6 Sol and Free/Go run GPT-6 Luna in the main chat",
+    "Claim that the exact default chat model could not be verified - resolved by audit",
+    "Claim that Free and Go tiers are ad-supported - audit shows this has not started yet, only announced as a planned US test",
+    "Claim that Go and Plus USD pricing could not be verified - confirmed as $8/mo and $20/mo",
+    "Reference to 'GPT-6 Astra Ultrafast' as the $500 Pro tier model - audit specifies Ultrafast mode for Codex and Work, not tied to Astra specifically"
+   ]
+  }
+ },
+ {
+  "slug": "claude",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "",
+   "best_for": "Writing, coding, analysis, long documents",
+   "description": "Anthropic's AI assistant, known for careful reasoning, coding and long documents. Current models include the Claude Fable 5.1 flagship, Claude Opus 5.5 for agentic coding, Claude Sonnet 5.5, and Claude Haiku 4.5. Free plan plus Pro ($20/mo billed monthly, or $17/mo billed annually), Max, Team, and Enterprise plans.",
+   "description_long": "Claude is a conversational AI assistant from Anthropic, used through the web app, mobile apps, and the API. It handles long-form writing, analysis, coding, document reading, and multi-step reasoning, with an emphasis on careful, steerable responses.\n\nThe current model lineup is Claude Fable 5.1 (flagship), Claude Opus 5.5 for complex agentic coding and enterprise work, Claude Sonnet 5.5, and the lighter Claude Haiku 4.5. A separate Claude Mythos 5.1 exists but has limited availability through the invitation-only Project Glasswing program.\n\nContext window size varies by model: Claude 4.6-generation models and later support up to a 1M-token context window, which helps with large codebases, long documents, or full transcripts in one conversation. Haiku 4.5 predates that generation and does not carry the same context size. The models also support multimodal input and tool use across the product.\n\nPricing is tiered. The Free plan is $0, with usage caps, and includes web/desktop/mobile chat, web search, file creation, code execution, memory, connectors, and artifacts. Pro is $20/month billed monthly, or $17/month if billed annually ($200 charged up front). Max starts from $100/month for expanded usage; higher usage tiers are referenced on Anthropic's pricing page but a specific price above $100/month is not published. Team offers a Standard seat at $25/month billed monthly ($20/month billed annually) and a Premium seat at $125/month billed monthly ($100/month billed annually), with a two-seat minimum. Enterprise is listed at $20/seat/month plus usage billed at API rates, billed annually. API list pricing per million tokens is $10/$50 for Fable 5.1, $4/$20 for Opus 5.5, $2/$10 for Sonnet 5.5, $1/$5 for Haiku 4.5, and $10/$50 for Mythos 5.1 (invitation only).\n\nLimitations are worth noting. Free and paid plans carry usage caps that reset on a rolling basis, so heavy users can hit limits mid-session. Haiku 4.5 does not offer the larger context window available on newer models, and the top-end Mythos 5.1 is not openly available. As with any LLM, outputs still need checking for factual accuracy.\n\nClaude suits writers, developers, analysts, and teams who want strong reasoning, large-context handling on supported models, and a choice of models to balance cost against capability.",
+   "pros": [
+    "Free plan available with web/desktop/mobile chat, web search, code execution, memory, and artifacts",
+    "Claude 4.6-generation models and later offer up to a 1M-token context window for large codebases and documents",
+    "Clear model tiering (Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 4.5) lets you trade cost for capability",
+    "Strong at long-form writing, analysis, and agentic coding",
+    "Team plan has a low two-seat minimum, easier for small teams than many enterprise tools"
+   ],
+   "cons": [
+    "Usage caps apply even on paid plans and can interrupt heavy sessions",
+    "Haiku 4.5 lacks the 1M-token context window available on newer models",
+    "Top-end Claude Mythos 5.1 is invitation-only and not generally available",
+    "Outputs still require fact-checking like any LLM",
+    "Max plan pricing above the $100/month entry tier is not clearly published"
+   ],
+   "choose_if": [
+    "You need to work with large documents or codebases using models with up to 1M-token context",
+    "You want to pick a model that balances price against capability",
+    "You do long-form writing, analysis, or agentic coding",
+    "You want to start on a free plan and scale to Pro, Max, Team, or API access"
+   ],
+   "faq": [
+    {
+     "a": "It depends on the task. Claude generally produces strong long-form writing and can handle very long documents accurately on models with up to a 1M-token context window. ChatGPT has more features (image generation, voice, plugins) and a larger app ecosystem. Coding capability varies by model and task, so it's worth testing both for your specific workflow.",
+     "q": "Is Claude better than ChatGPT?"
+    },
+    {
+     "a": "Both have free plans. Claude's Free plan gives access to Claude at no cost, with usage caps that reset on a rolling basis. ChatGPT also offers a free tier with its own usage limits. Claude's paid entry point is the Pro plan at $20/month billed monthly, or $17/month if billed annually.",
+     "q": "Which is free — ChatGPT or Claude?"
+    },
+    {
+     "a": "Both are strong choices. Claude Opus 5.5 is built for complex agentic coding, with newer-generation models offering up to a 1M-token context window that helps across large codebases. ChatGPT with code interpreter excels at data analysis and running code. Which is better will depend on the specific coding task and workflow.",
+     "q": "Which AI is better for coding — ChatGPT or Claude?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": null,
+   "best_for": "Writing, coding, analysis, long documents",
+   "description": "Anthropic's AI assistant, known for careful reasoning, coding and long documents. Current models include Claude Fable 5.1 (most capable, widely released), Claude Opus 5.5, Claude Sonnet 5.5, and Claude Haiku 5.5, plus the limited-availability Claude Mythos 5.1. Free plan plus Pro ($20/mo billed monthly, or $17/mo billed annually), Max, Team, and Enterprise plans.",
+   "description_long": "Claude is a conversational AI assistant from Anthropic, used through the web app, mobile apps, and the API. It handles long-form writing, analysis, coding, document reading, and multi-step reasoning, with an emphasis on careful, steerable responses.\n\nThe current model lineup is Claude Fable 5.1 (the most capable widely released model), Claude Opus 5.5 for complex agentic coding and enterprise work, Claude Sonnet 5.5, and Claude Haiku 5.5, released October 7, 2026 as the first Haiku model with adjustable effort and now the default Haiku model in Claude Code. A separate Claude Mythos 5.1 exists but has limited availability through the invitation-only Cyber Verification Program.\n\nAll four current models, Fable 5.1, Opus 5.5, Sonnet 5.5, and Haiku 5.5, support a 1M-token context window, which helps with large codebases, long documents, or full transcripts in one conversation. The models also support multimodal input and tool use across the product.\n\nPricing is tiered. The Free plan is $0 and includes access to Sonnet and Haiku models, with usage caps. Pro is $20/month billed monthly, or $17/month if billed annually, and covers Opus, Sonnet, and Haiku plus Claude Code, with Fable 5.1 available through usage credits. Max starts from $100/month across 5x and 20x usage tiers, includes monthly API credits as of October 7, 2026, and allows Fable usage up to 50% of weekly limits; pricing above the $100 entry tier is not published. Team offers a Standard seat at $25/month billed monthly ($20/month billed annually) and a Premium seat at $125/month billed monthly ($100/month billed annually), with a two-seat minimum. Enterprise is $20/seat/month billed annually plus usage billed at API rates. API list pricing per million tokens is $10/$50 for Fable 5.1, $4/$20 for Opus 5.5, $2/$10 for Sonnet 5.5, and $0.10/$0.50 for Haiku 5.5 (prompts over 100K tokens: $0.50/$2.50).\n\nLimitations are worth noting. Free and paid plans carry usage caps that reset on a rolling basis, so heavy users can hit limits mid-session. Max pricing beyond the $100/month entry tier isn't publicly disclosed, and the top-end Mythos 5.1 is invitation-only and not generally available. As with any LLM, outputs still need checking for factual accuracy.\n\nClaude suits writers, developers, analysts, and teams who want strong reasoning, large-context handling across its current model lineup, and a choice of models to balance cost against capability.",
+   "pros": [
+    "Free plan available with access to Sonnet and Haiku models",
+    "All four current models (Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 5.5) offer a 1M-token context window for large codebases and documents",
+    "Clear model tiering lets you trade cost for capability",
+    "Strong at long-form writing, analysis, and agentic coding",
+    "Team plan has a low two-seat minimum, easier for small teams than many enterprise tools"
+   ],
+   "cons": [
+    "Usage caps apply even on paid plans and can interrupt heavy sessions",
+    "Claude Mythos 5.1 is invitation-only through the Cyber Verification Program, not generally available",
+    "Max plan pricing above the $100/month entry tier is not publicly disclosed",
+    "Fable 5.1 access on the Pro plan is usage-credit based rather than unlimited",
+    "Outputs still require fact-checking like any LLM"
+   ],
+   "choose_if": [
+    "You need to work with large documents or codebases using models with up to 1M-token context",
+    "You want to pick a model that balances price against capability",
+    "You do long-form writing, analysis, or agentic coding",
+    "You want to start on a free plan and scale to Pro, Max, Team, or API access"
+   ],
+   "faq": [
+    {
+     "q": "Is Claude better than ChatGPT?",
+     "a": "It depends on the task. Claude generally produces strong long-form writing and can handle very long documents accurately with its 1M-token context window. ChatGPT has more features (image generation, voice, plugins) and a larger app ecosystem. Coding capability varies by model and task, so it's worth testing both for your specific workflow."
+    },
+    {
+     "q": "Which is free — ChatGPT or Claude?",
+     "a": "Both have free plans. Claude's Free plan gives access to Sonnet and Haiku models at no cost, with usage caps that reset on a rolling basis. ChatGPT also offers a free tier with its own usage limits. Claude's paid entry point is the Pro plan at $20/month billed monthly, or $17/month if billed annually."
+    },
+    {
+     "q": "Which AI is better for coding — ChatGPT or Claude?",
+     "a": "Both are strong choices. Claude Opus 5.5 is built for complex agentic coding, with all current Claude models offering a 1M-token context window that helps across large codebases. ChatGPT with code interpreter excels at data analysis and running code. Which is better will depend on the specific coding task and workflow."
+    }
+   ],
+   "dropped": [
+    "Pro annual plan '$200 charged up front' figure, not confirmed by source",
+    "Claude Mythos 5.1 API pricing of $10/$50, not confirmed by source",
+    "Reference to a 'Haiku 4.5' model, corrected to Haiku 5.5",
+    "Claim that Haiku lacks the 1M-token context window available on newer models, contradicted — all four current models support it"
+   ]
+  }
+ },
+ {
+  "slug": "meta-ai",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "1B+",
+   "best_for": "AI assistant, WhatsApp/Instagram integration, camera AI, group chats",
+   "description": "Meta AI is Meta's assistant built into WhatsApp, Instagram, Facebook, Messenger, Threads and its AI glasses, and remains free for everyday use. As of April 2026 it runs on Muse Spark, Meta Superintelligence Labs' first proprietary model, replacing the earlier Llama-based engine.",
+   "description_long": "Meta AI is the conversational assistant that Meta ships across its apps rather than as a standalone product. You reach it inside WhatsApp, Instagram, Facebook, Messenger and Threads, and through Meta's AI glasses, so it sits wherever people already chat and browse.\n\nThe underlying model changed in 2026. Since an April 8, 2026 announcement, Meta AI runs on Muse Spark, the first proprietary large language model from Meta Superintelligence Labs, replacing the earlier Llama-based engine. In September 2026 Meta also launched Muse, a separate personal AI agent app also powered by Muse Spark, available at muse.ai and through WhatsApp with a US rollout.\n\nDay to day, the assistant answers questions, drafts and rewrites text, summarizes threads, and helps in group chats, acting on the context you are already looking at instead of forcing you into a separate window.\n\nMeta states that the core Meta AI experience remains free for everyday use. On September 15, 2026, Meta launched Meta One worldwide, a subscription system that adds more usage of compute-heavy AI features. It includes single-app \"Plus\" plans for WhatsApp, Instagram or Facebook, multi-app consumer bundles called Meta One Core and Meta One Premium, and business/creator tiers called Essential, Advanced, Expert and Max. Meta's own published prices are in euros; US-dollar figures circulating for these tiers come from third-party reports and are not confirmed on Meta's primary pricing pages.\n\nThe main limitations are the ones that come with a closed, platform-bound assistant: the shift to the proprietary Muse Spark ended the open-weight approach many developers relied on, the tier structure and naming are more complex now that single-app and multi-app plans coexist, and Meta AI is tied to Meta's ecosystem rather than being a standalone tool you can host yourself.\n\nIt is a natural fit if you already live in WhatsApp, Instagram or Messenger and want an assistant right there, and are fine with a proprietary model and Meta's data practices. If you specifically want open weights or a standalone workspace, look elsewhere.",
+   "pros": [
+    "Built directly into WhatsApp, Instagram, Facebook, Messenger and Threads, so there is nothing extra to install",
+    "Remains free for everyday use according to Meta's own statements",
+    "Runs on Muse Spark, Meta Superintelligence Labs' own proprietary model",
+    "Works across phones and Meta's AI glasses, staying in the context you are already in",
+    "Meta One paid tiers are now available worldwide for people who want more compute-heavy AI features, from single-app Plus plans up to business-level Expert and Max tiers"
+   ],
+   "cons": [
+    "No longer open-weight — the move to proprietary Muse Spark ended the Llama-based, developer-friendly approach",
+    "Meta's published Meta One prices are in euros; US-dollar pricing is not officially confirmed, only reported by third parties",
+    "Tier naming is complex, with separate single-app Plus plans and multi-app Meta One bundles (Core, Premium, Essential, Advanced, Expert, Max)",
+    "Locked to Meta's ecosystem; you cannot self-host or use it independently of the apps",
+    "Ties your usage to Meta's account and data practices"
+   ],
+   "choose_if": [
+    "You already spend your day in WhatsApp, Instagram or Messenger",
+    "You are comfortable with a proprietary model rather than open weights",
+    "You want a free assistant and might add a Meta One plan later for more features",
+    "You use Meta's AI glasses and want the assistant there too",
+    "You're curious about Muse, Meta's separate personal AI agent app, if it's available in your region"
+   ],
+   "faq": [
+    {
+     "a": "Meta AI is Meta's assistant built into WhatsApp, Instagram, Facebook, Messenger and Threads, plus Meta's AI glasses. As of April 2026 it runs on Muse Spark, Meta Superintelligence Labs' first proprietary model. It can answer questions, draft and rewrite text, summarize threads, and help in group chats, all without leaving Meta's apps. It remains free for everyday use, alongside optional paid Meta One plans.",
+     "q": "What is Meta AI?"
+    },
+    {
+     "a": "Yes, Meta states the core Meta AI experience remains free for everyday use. On September 15, 2026, Meta also launched Meta One worldwide, a subscription system for extra usage of compute-heavy features. It includes single-app Plus plans (WhatsApp, Instagram, Facebook) and multi-app bundles: Core and Premium for consumers, and Essential, Advanced, Expert and Max for businesses and creators. Meta's published prices are in euros; US-dollar figures are not officially confirmed.",
+     "q": "Is Meta AI free?"
+    },
+    {
+     "a": "Meta AI now runs on Muse Spark, Meta Superintelligence Labs' first proprietary model, replacing the earlier Llama-based engine. It's built for everyday conversation, drafting and summarizing directly inside Meta's apps, which makes it convenient if you already live in WhatsApp, Instagram or Messenger. There's no official benchmark comparison to other assistants in the current description, so it's best evaluated on convenience and integration rather than raw model performance.",
+     "q": "Is Meta AI as good as ChatGPT?"
+    },
+    {
+     "a": "Muse is a separate personal AI agent app that Meta launched in September 2026, powered by the same Muse Spark model as Meta AI. It is available at muse.ai and through WhatsApp, currently rolling out in the US, and is distinct from the Meta AI assistant built into Meta's main apps.",
+     "q": "What is Muse?"
+    }
+   ]
+  },
+  "after": {
+   "badge": "freemium",
+   "users": null,
+   "best_for": "AI assistant, WhatsApp/Instagram integration, camera AI, group chats",
+   "description": "Meta AI is Meta's assistant built into WhatsApp, Instagram, Facebook, Messenger, Threads and its AI glasses, offered free within those apps. It runs on Meta's own Muse Spark model family, which replaced the earlier Llama-based engine.",
+   "description_long": "Meta AI is the conversational assistant that Meta ships across its apps rather than as a standalone product. You reach it inside WhatsApp, Instagram, Facebook, Messenger and Threads, and through Meta's AI glasses, so it sits wherever people already chat and browse.\n\nThe underlying model changed in 2026. Meta AI now runs on Muse Spark, Meta Superintelligence Labs' own proprietary model family, replacing the earlier Llama-based engine; Meta updated the model again on July 24, 2026. In September 2026 Meta also launched Muse, a separate personal AI agent app powered by the same Muse Spark family, available at muse.ai and through WhatsApp with a US rollout. Meta's newest models, Muse Wonder and Muse Wonder Full, launched in October 2026 but are currently available only to developers through the Meta Model API and Muse Code subscriptions; Meta says Wonder will reach the Muse app for subscribers first, and it does not yet power Meta AI.\n\nDay to day, the assistant answers questions, drafts and rewrites text, summarizes threads, and helps in group chats, acting on the context you are already looking at instead of forcing you into a separate window.\n\nMeta AI chat itself is free to use inside Meta's apps. On September 15, 2026, Meta launched Meta One, a subscription system that adds more compute-heavy image and video generation. It includes individual bundles, Core at $7.99 per month and Premium at $19.99 per month, plus single-app plans: Instagram Plus and Facebook Plus at $3.99 per month each, and WhatsApp Plus at $2.99 per month. The separate Muse personal agent app has its own free tier, with paid Power ($20/mo) and Maximum ($100/mo) plans for heavier use.\n\nThe main limitations are the ones that come with a closed, platform-bound assistant: the shift to proprietary Muse Spark ended the open-weight approach many developers relied on, the tier structure now spans several similarly named add-on plans, Meta's most capable new models are developer-only for now, and Meta AI is tied to Meta's ecosystem rather than being a standalone tool you can host yourself.\n\nIt is a natural fit if you already live in WhatsApp, Instagram or Messenger and want an assistant right there, and are fine with a proprietary model and Meta's data practices. If you specifically want open weights or a standalone workspace, look elsewhere.",
+   "pros": [
+    "Built directly into WhatsApp, Instagram, Facebook, Messenger and Threads, so there is nothing extra to install",
+    "Free to use for everyday chat inside Meta's apps",
+    "Runs on Muse Spark, Meta Superintelligence Labs' own proprietary model family",
+    "Works across phones and Meta's AI glasses, staying in the context you are already in",
+    "Meta One add-on plans have clear, published US pricing, from WhatsApp Plus at $2.99/mo up to Premium at $19.99/mo, for people who want more image and video generation"
+   ],
+   "cons": [
+    "No longer open-weight — the move to proprietary Muse Spark ended the Llama-based, developer-friendly approach",
+    "Several similarly named add-on tiers (Core, Premium, Instagram Plus, Facebook Plus, WhatsApp Plus) can be confusing to compare",
+    "Locked to Meta's ecosystem; you cannot self-host or use it independently of the apps",
+    "Ties your usage to Meta's account and data practices",
+    "Meta's newest models, Muse Wonder and Wonder Full, are available only to developers so far and do not yet power Meta AI"
+   ],
+   "choose_if": [
+    "You already spend your day in WhatsApp, Instagram or Messenger",
+    "You are comfortable with a proprietary model rather than open weights",
+    "You want a free assistant and might add a Meta One plan later for extra image or video generation",
+    "You use Meta's AI glasses and want the assistant there too",
+    "You're curious about Muse, Meta's separate personal AI agent app, if it's available in your region"
+   ],
+   "faq": [
+    {
+     "q": "What is Meta AI?",
+     "a": "Meta AI is Meta's assistant built into WhatsApp, Instagram, Facebook, Messenger and Threads, plus Meta's AI glasses. It runs on Muse Spark, Meta Superintelligence Labs' proprietary model family. It can answer questions, draft and rewrite text, summarize threads, and help in group chats, all without leaving Meta's apps. It is free to use for everyday chat, alongside optional paid Meta One plans."
+    },
+    {
+     "q": "Is Meta AI free?",
+     "a": "Yes, Meta AI chat itself is free inside Meta's apps. On September 15, 2026, Meta launched Meta One, a subscription system for extra image and video generation. It includes individual bundles, Core at $7.99 per month and Premium at $19.99 per month, and single-app plans: Instagram Plus and Facebook Plus at $3.99 per month each, and WhatsApp Plus at $2.99 per month."
+    },
+    {
+     "q": "Is Meta AI as good as ChatGPT?",
+     "a": "Meta AI runs on Muse Spark, Meta Superintelligence Labs' proprietary model family, built for everyday conversation, drafting and summarizing directly inside Meta's apps, which makes it convenient if you already live in WhatsApp, Instagram or Messenger. There's no official benchmark comparison to OpenAI's ChatGPT in Meta's own materials, so it's best evaluated on convenience and integration rather than raw model performance."
+    },
+    {
+     "q": "What is Muse?",
+     "a": "Muse is a separate personal AI agent app that Meta launched in September 2026, powered by the Muse Spark model family. It is available at muse.ai and through WhatsApp, currently rolling out in the US. It has its own free tier plus paid Power ($20/mo) and Maximum ($100/mo) plans, and is distinct from the Meta AI assistant built into Meta's main apps."
+    }
+   ],
+   "dropped": [
+    "April 8, 2026 announcement date for Muse Spark (not confirmed by audit; Meta's confirmed update is July 24, 2026)",
+    "Claim that Meta One USD prices are unconfirmed third-party figures (audit verified specific USD monthly prices directly)",
+    "Business/creator tiers Essential, Advanced, Expert and Max (not found on Meta's primary pricing sources)",
+    "1B+ users figure (not verified by audit)"
+   ]
+  }
+ },
+ {
+  "slug": "cursor",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "1M+",
+   "best_for": "AI IDE, agentic coding, multi-repo, PR review, parallel agents",
+   "description": "Cursor is an AI-first code editor built on VS Code with agentic coding, multi-repo support, parallel agents, and automated PR review. Its in-house model lineup now includes Grok 4.7, Grok 4.6, Grok 4.5, and Composer 2.5, alongside supported third-party models.",
+   "description_long": "Cursor is an AI-first code editor that started as a VS Code fork and has grown into a full agentic coding platform. Instead of just autocompleting lines, it can plan and carry out multi-step changes across a repository, run its own review passes, and hand work off to background agents.\n\nThe current stable build is 3.23.23, as reported by Cursor's own update endpoint; the public changelog no longer shows version numbers. The major recent development is Cursor's acquisition by SpaceX, completed August 14, 2026, following an April 2026 training partnership. Cursor's in-house model line is now built around Grok (Grok 4.6 released August 2026, Grok 4.7 released September 2026), while Composer 2.5 remains available in the Cursor Models pool. Recent additions include Projects (beta), self-hosted machines, and Rollouts and Security Review bots for Teams and Enterprise customers.\n\nKey capabilities include the Composer agent for large edits, cloud agents and cloud dev environments triggered with /in-cloud, automatic code review, and Bugbot for automated PR review. It still supports third-party models, MCP servers, custom rules, and hooks, so you are not locked into any single model family.\n\nPricing is tiered. Hobby is free, with no card required but limited Agent requests and Composer access. Pro (Individual) is $20 per month and includes a Cursor Models usage pool (Grok 4.7, Grok 4.6, Grok 4.5, Composer 2.5) plus an Other Models pool for third-party models billed at API price, along with unlimited Tab, Bugbot, and Cloud Agents. Pro Plus is $60 per month, aimed at daily agent users, and Ultra is $200 per month for power users. Teams has two seat types: Standard at $40 per user per month (SSO, team marketplace, Bugbot, privacy mode) and Premium at $120 per user per month (higher agent limits). Enterprise pricing is custom and includes pooled usage, invoicing, and SCIM. A lower-cost regional plan is also available in India, billed monthly in local currency, with a reduced feature set.\n\nThe main limitations are cost and complexity. The split between Cursor Models and Other Models usage pools, plus usage-based Bugbot billing on individual plans, can make costs hard to predict. Being a VS Code fork, it occasionally lags behind upstream extensions, and the most capable features assume you are comfortable letting an agent make sweeping changes.\n\nCursor suits developers who want an agent that can take on real multi-file tasks, not just suggest snippets. It is a strong fit for professional teams already living in VS Code, and less compelling for people who only want lightweight autocomplete or work in a non-VS-Code editor.",
+   "pros": [
+    "In-house Grok and Composer 2.5 models are included in the paid plans' Cursor Models pool",
+    "Cloud agents and /in-cloud dev environments let you offload long-running tasks",
+    "Familiar VS Code base means most extensions, keybindings, and workflows carry over",
+    "Supports third-party models, MCP servers, custom rules, and hooks for flexibility",
+    "Newer collaboration features include team marketplaces, Projects, self-hosted machines, and Security Review bots for Teams and Enterprise"
+   ],
+   "cons": [
+    "Usage is split across a Cursor Models pool and an Other Models pool billed at API price, which can be hard to predict",
+    "Teams pricing is now split into two seat tiers ($40 and $120 per user per month), adding complexity",
+    "Bugbot is on usage-based billing for individual plans, which can add unpredictable cost",
+    "As a VS Code fork it can trail upstream on some extensions and updates",
+    "Agentic edits require trust and review; sweeping changes can introduce subtle bugs"
+   ],
+   "choose_if": [
+    "You want an AI agent that handles multi-file changes, not just autocomplete",
+    "You already work in VS Code and want to keep your setup",
+    "You want access to in-house models like Grok and Composer 2.5 alongside third-party options",
+    "Your team needs shared MCP servers, marketplaces, and cloud agents",
+    "You want automated code review via Bugbot"
+   ],
+   "faq": [
+    {
+     "a": "Cursor is an AI-native IDE based on VS Code. It gives AI full context of your codebase and can edit multiple files, run terminal commands, and complete tasks end-to-end as an agent.",
+     "q": "What is Cursor?"
+    },
+    {
+     "a": "Cursor has a free Hobby plan with limited Agent requests and no card required. Pro (Individual) is $20/month, Pro Plus is $60/month, and Ultra is $200/month, all drawing from a Cursor Models usage pool plus an Other Models pool billed at API price. Teams has a Standard seat at $40 per user per month and a Premium seat at $120 per user per month, and Enterprise pricing is custom.",
+     "q": "How much does Cursor cost?"
+    },
+    {
+     "a": "The current description doesn't detail specific privacy or compliance features, but Cursor does offer an Enterprise tier with custom terms, which is typically where stricter data controls and team-level governance would be handled.",
+     "q": "Is Cursor safe to use with my codebase?"
+    },
+    {
+     "a": "Cursor's in-house models are Grok 4.7, Grok 4.6, Grok 4.5, and Composer 2.5, available through the Cursor Models usage pool. Cursor also supports third-party models from vendors like OpenAI, Anthropic, and Google through its Other Models pool, and you can switch models per request in settings.",
+     "q": "What models does Cursor use?"
+    }
+   ]
+  },
+  "after": {
+   "badge": "freemium",
+   "users": null,
+   "best_for": "AI IDE, agentic coding, multi-repo, PR review, parallel agents",
+   "description": "Cursor is an AI-first code editor built on VS Code with agentic coding, multi-repo support, parallel agents, and automated PR review. New customers now sign up through The X Subscription, a bundle that pairs Cursor with Grok from xAI and X Premium, while other third-party models are billed separately at API price.",
+   "description_long": "Cursor is an AI-first code editor that started as a VS Code fork and has grown into a full agentic coding platform. Instead of just autocompleting lines, it can plan and carry out multi-step changes across a repository, run its own review passes, and hand work off to background agents.\n\nSince October 12, 2026, new Cursor customers are enrolled by default in The X Subscription, a bundle that combines Cursor with Grok from xAI, the Grok bot, and X Premium under the SpaceXSI banner. Grok and Cursor now share a single weekly usage pool for subscribers on this plan. Customers who were already on an older standalone Cursor plan can keep it, but switching to The X Subscription is optional and, once made, cannot be reversed.\n\nKey capabilities include the Composer agent for large edits, cloud agents and cloud dev environments triggered with /in-cloud, automatic code review, and Bugbot for automated PR review. It still supports third-party models, MCP servers, custom rules, and hooks, so you are not locked into any single model family. Recent additions include Projects (beta), self-hosted machines, and Rollouts and Security Review bots for Teams and Enterprise customers.\n\nUnder The X Subscription, Cursor is offered in five tiers: Free, Plus at $8 per month, Premium at $30 per month, Super at $100 per month, and Ultra at $200 per month. These tiers draw on a shared weekly usage pool for Grok and Cursor. Third-party models such as Claude or GPT are not included in any tier; using them in Cursor is billed separately at API list prices from prepaid credit.\n\nThe main limitations are cost unpredictability and the irreversible nature of the switch: once you move to The X Subscription you cannot go back to a standalone Cursor plan, and third-party model usage on top of any tier is billed at API price from prepaid credit, which can be hard to budget for. Being a VS Code fork, it occasionally lags behind upstream extensions, and the most capable features assume you are comfortable letting an agent make sweeping changes.\n\nCursor suits developers who want an agent that can take on real multi-file tasks, not just suggest snippets, and who are comfortable adopting the bundled Grok/X ecosystem. It is a strong fit for professional teams already living in VS Code, and less compelling for people who only want lightweight autocomplete, work outside VS Code, or want to avoid the X ecosystem's bundled pricing.",
+   "pros": [
+    "The X Subscription includes a genuine Free tier giving new users access to Cursor and Grok without payment",
+    "Grok from xAI is bundled directly into every paid X Subscription tier",
+    "Cloud agents and /in-cloud dev environments let you offload long-running tasks",
+    "Familiar VS Code base means most extensions, keybindings, and workflows carry over",
+    "Supports third-party models, MCP servers, custom rules, and hooks for flexibility"
+   ],
+   "cons": [
+    "Third-party models such as Claude or GPT are billed separately at API price from prepaid credit, on top of any subscription tier",
+    "Switching from an older standalone Cursor plan to The X Subscription cannot be undone",
+    "Grok and Cursor now share one weekly usage pool, which can run out faster for heavy users",
+    "As a VS Code fork it can trail upstream on some extensions and updates",
+    "Agentic edits require trust and review; sweeping changes can introduce subtle bugs"
+   ],
+   "choose_if": [
+    "You want an AI agent that handles multi-file changes, not just autocomplete",
+    "You already work in VS Code and want to keep your setup",
+    "You want built-in access to Grok through The X Subscription bundle",
+    "Your team needs shared MCP servers, marketplaces, and cloud agents",
+    "You want automated code review via Bugbot"
+   ],
+   "faq": [
+    {
+     "q": "What is Cursor?",
+     "a": "Cursor is an AI-native IDE based on VS Code. It gives AI full context of your codebase and can edit multiple files, run terminal commands, and complete tasks end-to-end as an agent."
+    },
+    {
+     "q": "How much does Cursor cost?",
+     "a": "New customers sign up through The X Subscription, which has five tiers: Free, Plus at $8 per month, Premium at $30 per month, Super at $100 per month, and Ultra at $200 per month. These tiers share a weekly usage pool between Grok and Cursor. Third-party models such as Claude or GPT are not included in any tier and are billed separately at API list prices from prepaid credit. Customers who already had an older Cursor plan can keep it, but switching to The X Subscription is optional and cannot be reversed."
+    },
+    {
+     "q": "Is Cursor safe to use with my codebase?",
+     "a": "The current description doesn't detail specific privacy or compliance features, but Cursor does offer an Enterprise tier with custom terms, which is typically where stricter data controls and team-level governance would be handled."
+    },
+    {
+     "q": "What models does Cursor use?",
+     "a": "Cursor's bundled model is Grok, from xAI, included in every tier of The X Subscription and sharing a weekly usage pool with Cursor. Cursor also supports third-party models from vendors such as OpenAI, Anthropic, and Google, billed separately at API price from prepaid credit, and you can switch models per request in settings."
+    }
+   ],
+   "dropped": [
+    "In-house model version numbers Grok 4.7, Grok 4.6, Grok 4.5, and Composer 2.5",
+    "Old Hobby/Pro/Pro Plus/Ultra pricing ($0/$20/$60/$200 per month)",
+    "Old Teams seat pricing ($40 and $120 per user per month) and custom Enterprise pricing as current figures",
+    "India regional discounted plan claim",
+    "Build version 3.23.23 claim",
+    "SpaceX acquisition and training-partnership narrative",
+    "1M+ user count (unverified)"
+   ]
+  }
+ },
+ {
+  "slug": "grok",
+  "before": {
+   "lang": "en",
+   "badge": "paid",
+   "users": "",
+   "best_for": "AI assistant, real-time X/Twitter data, code generation, TTS/STT API, Grok Build",
+   "description": "Grok is xAI's conversational AI, integrated with X and available at grok.com. The current flagship is Grok 4.7, also reachable through the xAI API and offered inside third-party tools such as Cursor.",
+   "description_long": "Grok is the chat assistant built by xAI. It lives both inside X (formerly Twitter) and as a standalone product at grok.com, and it is known for a looser, more opinionated conversational style than most rivals, plus tight access to real-time posts on X. xAI's documentation and news pages now also carry the 'SpaceXAI' label alongside the Grok branding.\n\nThe current flagship, announced September 21, 2026, is Grok 4.7, which xAI describes as 'the most capable model we've built.' It carries a 500k-token context window and a May 2026 knowledge cutoff, and is available through the xAI API as model grok-4.7. Earlier API models grok-4.6 and grok-4.5 remain available with the same 500k context window. xAI has also launched Grok Build, a dedicated coding model (grok-build-0.1) with a 256k-token context window, and Grok Bot, described as AI teammates bundled with SuperGrok subscription tiers and with Cursor plans.\n\nOn capabilities, Grok handles text chat, image and video understanding, web and X search, and image/video generation through Grok Imagine. Developers can reach the chat and coding models through the xAI API, and Grok 4.7 is also offered through Cursor and through intermediaries such as OpenRouter, Vercel, and Cloudflare.\n\nFor the API, grok-4.7 is priced at $2.00 per million input tokens, $0.50 per million cached input tokens, and $6.00 per million output tokens for prompts under 200k tokens, rising to $4.00 / $1.00 / $12.00 above 200k tokens; a faster variant costs up to twice as much. The older grok-4.3 model is cheaper, at $1.25 input / $2.50 output per million tokens under 200k tokens, with a 1M-token context window. xAI also sells consumer subscriptions named SuperGrok, SuperGrok Plus, and SuperGrok Heavy, but their current prices are not published on xAI's open plan pages as of this writing. xAI's Grok 4.7 announcement states that Grok Build can be tried for free, but it is unclear whether the main Grok chat assistant still has a free tier.\n\nThe main limitation right now is that consumer pricing and the status of any free tier for Grok chat could not be confirmed from xAI's own plan pages, which return access errors or load only via JavaScript. The model lineup also iterates quickly, with 4.5, 4.6, and 4.7 all shipping within a few months of each other, so capabilities and pricing can change fast.\n\nGrok suits developers who want API or Cursor access to xAI's models, people already active on X who want an assistant wired into live posts, and anyone who prefers a more candid, less filtered conversational style. Buyers should check xAI's own pricing pages directly before committing to a consumer plan, since current rates are not independently verifiable.",
+   "pros": [
+    "Flagship Grok 4.7 offers a 500k-token context window and a May 2026 knowledge cutoff",
+    "Deep integration with X gives strong real-time, current-events awareness",
+    "Tiered API pricing scales with context length, from $1.25 input/$2.50 output per million tokens on grok-4.3 up to $2.00/$6.00 on the flagship grok-4.7",
+    "Dedicated coding model, Grok Build, with a 256k-token context window, available via API and Cursor",
+    "More candid, less filtered conversational style than many competitors"
+   ],
+   "cons": [
+    "Consumer subscription pricing for SuperGrok, SuperGrok Plus, and SuperGrok Heavy is not published on xAI's open pages, making costs hard to compare",
+    "Whether the main Grok chat assistant has a free tier could not be confirmed from primary sources",
+    "Model lineup changes quickly (4.5, 4.6, 4.7 within months), so features and pricing can go stale fast",
+    "API pricing roughly doubles for prompts over 200k tokens, and fast variants cost up to twice as much",
+    "Looser guardrails and candid tone can produce less predictable answers"
+   ],
+   "choose_if": [
+    "You are active on X and want an assistant tied to live posts",
+    "You prefer a more candid, less filtered conversational style",
+    "You want API access to xAI's models for building apps",
+    "You want a coding model (Grok Build) integrated with Cursor"
+   ],
+   "faq": [
+    {
+     "a": "Grok is xAI's AI assistant built into X (Twitter) and also available as a standalone product at grok.com. It has real-time access to X posts and trending topics. The current flagship model is Grok 4.7, which has a 500k-token context window and a May 2026 knowledge cutoff.",
+     "q": "What is Grok AI?"
+    },
+    {
+     "a": "xAI offers several consumer subscription tiers, named SuperGrok, SuperGrok Plus, and SuperGrok Heavy, but their current prices are not published on xAI's open plan pages. xAI's coding product, Grok Build, can reportedly be tried for free according to xAI's own announcement, but it is unclear whether the main Grok chat assistant has a separate free tier.",
+     "q": "Is Grok free?"
+    },
+    {
+     "a": "No independently verified benchmark comparison is available. Grok's main differentiators are its real-time access to X/Twitter posts, its more candid and opinionated conversational style, and tiered API pricing for developers.",
+     "q": "Is Grok better than ChatGPT?"
+    },
+    {
+     "a": "Yes, Grok includes Grok Imagine for image and video generation. Access requires one of xAI's paid consumer plans; xAI does not publish whether this is available on a free tier.",
+     "q": "Does Grok generate images?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": null,
+   "best_for": "AI assistant, real-time X/Twitter data, code generation, TTS/STT API, Grok Build",
+   "description": "Grok is xAI's conversational AI, integrated with X and available at grok.com. It is now sold as part of The X Subscription, a bundle that also includes X Premium and the Cursor coding tool.",
+   "description_long": "Grok is the chat assistant built by xAI. It lives both inside X (formerly Twitter) and as a standalone product at grok.com, and it is known for a looser, more opinionated conversational style than most rivals, plus tight access to real-time posts on X. xAI's documentation and news pages also carry the 'SpaceXAI' label alongside the Grok branding.\n\nThe current flagship, announced September 21, 2026, is Grok 4.7, which xAI describes as 'the most capable model we've built.' It carries a 500k-token context window and a May 2026 knowledge cutoff, and is available through the xAI API as model grok-4.7. Earlier API models grok-4.6 and grok-4.5 remain available with the same 500k context window. xAI has also launched Grok Build, a dedicated coding model (grok-build-0.1) with a 256k-token context window, and Grok Bot, described as AI teammates now bundled into The X Subscription alongside Cursor.\n\nOn capabilities, Grok handles text chat, image and video understanding, web and X search, and image/video generation through Grok Imagine. Developers can reach the chat and coding models through the xAI API, and Grok 4.7 is also offered through Cursor and through intermediaries such as OpenRouter, Vercel, and Cloudflare.\n\nAs of October 12, 2026, xAI (under the SpaceXSI banner) folded Grok's consumer access into The X Subscription, a single bundle that also includes X Premium and the Cursor coding tool; Grok and Cursor share one weekly usage pool across the bundle. The X Subscription has five tiers: Free, Plus at $8 per month, Premium at $30 per month, Super at $100 per month, and Ultra at $200 per month. For developers, the xAI API still prices grok-4.7 separately at $2.00 per million input tokens, $0.50 per million cached input tokens, and $6.00 per million output tokens for prompts under 200k tokens, rising to $4.00 / $1.00 / $12.00 above 200k tokens; a faster variant costs up to twice as much. The older grok-4.3 model is cheaper, at $1.25 input / $2.50 output per million tokens under 200k tokens, with a 1M-token context window.\n\nThe main limitation now is that Grok is no longer available as its own standalone subscription for new buyers: it comes bundled with Cursor and X Premium inside The X Subscription, and Grok's usage shares a weekly cap with Cursor's. The model lineup also iterates quickly, with 4.5, 4.6, and 4.7 all shipping within a few months of each other, so capabilities and pricing can change fast.\n\nGrok suits developers who want API or Cursor access to xAI's models, people already active on X who want an assistant wired into live posts, and anyone who prefers a more candid, less filtered conversational style. Buyers who want Grok chat or Grok Build specifically, rather than the full X Subscription bundle, should check xAI's own pages to confirm current bundle terms before committing.",
+   "pros": [
+    "Flagship Grok 4.7 offers a 500k-token context window and a May 2026 knowledge cutoff",
+    "Deep integration with X gives strong real-time, current-events awareness",
+    "A Free tier is now available through The X Subscription, with paid tiers starting at $8/mo",
+    "Dedicated coding model, Grok Build, with a 256k-token context window, available via API and Cursor",
+    "More candid, less filtered conversational style than many competitors"
+   ],
+   "cons": [
+    "Grok is no longer sold as a standalone subscription; new buyers get it bundled with Cursor and X Premium in The X Subscription",
+    "Grok and Cursor share one weekly usage pool, which may limit heavy users of either tool",
+    "Model lineup changes quickly (4.5, 4.6, 4.7 within months), so features and pricing can go stale fast",
+    "API pricing roughly doubles for prompts over 200k tokens, and fast variants cost up to twice as much",
+    "Looser guardrails and candid tone can produce less predictable answers"
+   ],
+   "choose_if": [
+    "You are active on X and want an assistant tied to live posts",
+    "You prefer a more candid, less filtered conversational style",
+    "You want API access to xAI's models for building apps",
+    "You want a coding model (Grok Build) integrated with Cursor"
+   ],
+   "faq": [
+    {
+     "q": "What is Grok AI?",
+     "a": "Grok is xAI's AI assistant built into X (Twitter) and also available as a standalone product at grok.com. It has real-time access to X posts and trending topics. The current flagship model is Grok 4.7, which has a 500k-token context window and a May 2026 knowledge cutoff."
+    },
+    {
+     "q": "Is Grok free?",
+     "a": "Yes. Since October 12, 2026, Grok is included in The X Subscription, a bundle that also covers Cursor and X Premium. The bundle has five tiers: Free, Plus at $8/mo, Premium at $30/mo, Super at $100/mo, and Ultra at $200/mo, all billed monthly."
+    },
+    {
+     "q": "Is Grok better than ChatGPT?",
+     "a": "No independently verified benchmark comparison is available. Grok's main differentiators are its real-time access to X/Twitter posts, its more candid and opinionated conversational style, and tiered API pricing for developers."
+    },
+    {
+     "q": "Does Grok generate images?",
+     "a": "Yes, Grok includes Grok Imagine for image and video generation. Access depends on which tier of The X Subscription you hold, from Free up to Ultra."
+    }
+   ],
+   "dropped": [
+    "SuperGrok, SuperGrok Plus, and SuperGrok Heavy subscription names and their unpublished pricing",
+    "Claim that Grok Build can be tried for free as a standalone offer (superseded by The X Subscription bundling)"
+   ]
+  }
+ },
+ {
+  "slug": "character-ai",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "20M+",
+   "best_for": "Conversational AI roleplay with custom characters",
+   "description": "Character.AI is a conversational platform for chatting with user-created AI characters, running on its PipSqueak 3 default chat style alongside free ShortSqueak and premium DeepSqueak/LongSqueak options as of September 2026.",
+   "description_long": "Character.AI is a chat platform built around AI personas: you talk to thousands of user-made characters, from fictional figures to helpers and companions, or build your own. It has long been one of the most-used consumer chat apps outside the big general-purpose assistants.\n\nAs of September 28, 2026, the platform's default chat style is PipSqueak 3, with ShortSqueak available on the free tier and DeepSqueak and LongSqueak reserved for paid plans. The company has also been repositioning around image models for characters and messaging itself as an entertainment and fandom platform. A previously announced DeepSqueak 2 model has not been confirmed as released.\n\nCore capabilities include multi-turn roleplay and storytelling, custom character creation with personas and voices, voice calls, and tools for generating videos, stories and streams.\n\nPricing is freemium. The free plan offers unlimited messaging on PipSqueak 3 and ShortSqueak but shows ads. A new (c.ai) lite tier, introduced September 28, 2026, costs $4.99 per month or $2.49 per week (price may vary by region) and adds a daily allowance of premium messages on DeepSqueak and LongSqueak, fewer ads, a less restrictive slow mode, extra customization and more memory pins. A higher c.ai+ tier promises unlimited premium chats, zero ads and full memory features, but its price could not be confirmed on a primary source as of this writing.\n\nThe biggest limitation is a policy shift effective November 25, 2025: users under 18 can no longer do open-ended chat or roleplay and are redirected to creating videos, stories and streams, with age assurance handled through the company's own in-house age-estimation tools. This followed lawsuits and regulatory pressure. The exact cost of the top c.ai+ tier remains unverified, and the model lineup has changed multiple times in 2026.\n\nIt suits adults who want character-driven chat and roleplay, and creators building interactive personas and stories. Those who don't mind ads can use it for free, while budget-conscious users can get daily access to the better models for $4.99/month via (c.ai) lite. Minors and users wanting an unrestricted free experience should look elsewhere.",
+   "pros": [
+    "Free plan offers unlimited messaging on PipSqueak 3 and ShortSqueak",
+    "Huge library of user-made characters plus easy tools to create your own personas and voices",
+    "(c.ai) lite tier at $4.99/month (or $2.49/week) unlocks daily premium messages on DeepSqueak and LongSqueak, fewer ads and more memory pins",
+    "Supports voice calls and creating videos, stories and streams, not just text chat",
+    "c.ai+ tier promises unlimited premium chats and zero ads for the fullest experience"
+   ],
+   "cons": [
+    "Free tier shows ads by default",
+    "Under-18 users are banned from open-ended chat and roleplay since November 25, 2025, and redirected to video/story/stream creation",
+    "Pricing for the top c.ai+ tier could not be verified on a primary source",
+    "Model lineup has changed repeatedly in 2026 (PipSqueak 2, PipSqueak 3), making feature availability unstable",
+    "Best models (DeepSqueak, LongSqueak) require a paid plan"
+   ],
+   "choose_if": [
+    "You want to chat with or build AI characters for roleplay and storytelling",
+    "You are an adult and fine with age verification",
+    "You're okay with ads on the free tier",
+    "You will pay $4.99/month for daily access to premium models like DeepSqueak and LongSqueak",
+    "You value a large existing library of community-made characters"
+   ],
+   "faq": [
+    {
+     "a": "Character.AI is used for conversational roleplay with AI personas. Users chat with AI versions of celebrities, fictional characters, historical figures, or custom bots. It's primarily for entertainment, social interaction, and creative writing — not for work tasks.",
+     "q": "What is Character.AI used for?"
+    },
+    {
+     "a": "Character.AI restricts users under 18 from open-ended chat and roleplay as of 2025, following safety concerns, and uses its own in-house age-estimation tools for age assurance. Parents can get a weekly summary of their teen's activity through Parental Insights. Despite these measures, the platform has faced scrutiny over past inappropriate conversations with minors, so parents should still monitor use.",
+     "q": "Is Character.AI safe?"
+    },
+    {
+     "a": "Character.AI can have educational conversations but often prioritizes staying in character over factual accuracy. For homework help, ChatGPT, Claude, or Khanmigo are significantly more reliable and accurate.",
+     "q": "Can Character.AI help with homework?"
+    },
+    {
+     "a": "For work, research, and real tasks — yes, ChatGPT is far more capable. For entertainment, roleplay, and character-based conversations, Character.AI is purpose-built and has a larger character community. They serve completely different use cases.",
+     "q": "Is ChatGPT better than Character.AI?"
+    }
+   ]
+  },
+  "after": {
+   "badge": "freemium",
+   "users": null,
+   "best_for": "Conversational AI roleplay with custom characters",
+   "description": "Character.AI is a conversational platform for chatting with user-created AI characters, but as of October 2026 it is operating under Chapter 11 bankruptcy protection while it seeks a buyer for its assets.",
+   "description_long": "Character.AI is a chat platform built around AI personas: you talk to thousands of user-made characters, from fictional figures to helpers and companions, or build your own. It has long been one of the most-used consumer chat apps outside the big general-purpose assistants.\n\nAs of late September 2026, the platform's default chat style was PipSqueak 3, with ShortSqueak available on the free tier and DeepSqueak and LongSqueak reserved for paid plans. On October 12, 2026, the company filed for Chapter 11 bankruptcy in Delaware to sell its assets; Disney has made an initial bid of $20 million for a non-exclusive license to some of its technology, and a sale is expected to close by late November or early December 2026.\n\nCore capabilities include multi-turn roleplay and storytelling, custom character creation with personas and voices, voice calls, and tools for generating videos, stories and streams.\n\nPricing is freemium. The free plan offers unlimited messaging on PipSqueak 3 and ShortSqueak but shows ads. A (c.ai) lite tier costs $4.99 per month or $2.49 per week (price may vary by region) and adds a daily allowance of premium messages on DeepSqueak and LongSqueak, fewer ads, a less restrictive slow mode, extra customization and more memory pins. A higher c.ai+ tier promises unlimited premium chats, zero ads and full memory features, but its price could not be confirmed on a primary source. Paid subscriptions and the free tier are both reported to remain active during the bankruptcy process.\n\nSignificant limitations apply. Since November 25, 2025, users under 18 can no longer do open-ended chat or roleplay and are redirected to creating videos, stories and streams, with age assurance handled through the company's own in-house age-estimation tools. More urgently, the platform is currently under Chapter 11 bankruptcy and could be shut down entirely if no workable buyer emerges from the sale process; users are advised to export their chat data while the service remains operational.\n\nIt suits adults who want character-driven chat and roleplay, and creators building interactive personas and stories, but prospective users should be aware the platform's long-term survival is uncertain while the bankruptcy sale plays out. Minors and users wanting an unrestricted free experience should look elsewhere.",
+   "pros": [
+    "Free plan offers unlimited messaging on PipSqueak 3 and ShortSqueak",
+    "Huge library of user-made characters plus easy tools to create your own personas and voices",
+    "(c.ai) lite tier at $4.99/month (or $2.49/week) unlocks daily premium messages on DeepSqueak and LongSqueak, fewer ads and more memory pins",
+    "Supports voice calls and creating videos, stories and streams, not just text chat",
+    "Paid subscriptions and the free tier are both reported to remain active during the ongoing bankruptcy process"
+   ],
+   "cons": [
+    "Free tier shows ads by default",
+    "Under-18 users are banned from open-ended chat and roleplay since November 25, 2025, and redirected to video/story/stream creation",
+    "Pricing for the top c.ai+ tier could not be verified on a primary source",
+    "The company filed for Chapter 11 bankruptcy on October 12, 2026 and the platform could be shut down if no viable buyer is found in the sale process; users should export their data as a precaution",
+    "Best models (DeepSqueak, LongSqueak) require a paid plan"
+   ],
+   "choose_if": [
+    "You want to chat with or build AI characters for roleplay and storytelling",
+    "You are an adult and fine with age verification",
+    "You're okay with ads on the free tier",
+    "You will pay $4.99/month for daily access to premium models like DeepSqueak and LongSqueak",
+    "You value a large existing library of community-made characters",
+    "⚠️ You understand the platform is in Chapter 11 bankruptcy and may shut down if no buyer completes a sale"
+   ],
+   "faq": [
+    {
+     "q": "What is Character.AI used for?",
+     "a": "Character.AI is used for conversational roleplay with AI personas. Users chat with AI versions of celebrities, fictional characters, historical figures, or custom bots. It's primarily for entertainment, social interaction, and creative writing — not for work tasks."
+    },
+    {
+     "q": "Is Character.AI safe?",
+     "a": "Character.AI restricts users under 18 from open-ended chat and roleplay as of 2025, following safety concerns, and uses its own in-house age-estimation tools for age assurance. Parents can get a weekly summary of their teen's activity through Parental Insights. Despite these measures, the platform has faced scrutiny over past inappropriate conversations with minors, so parents should still monitor use."
+    },
+    {
+     "q": "Can Character.AI help with homework?",
+     "a": "Character.AI can have educational conversations but often prioritizes staying in character over factual accuracy. For homework help, ChatGPT, Claude, or Khanmigo are significantly more reliable and accurate."
+    },
+    {
+     "q": "Is ChatGPT better than Character.AI?",
+     "a": "For work, research, and real tasks — yes, ChatGPT is far more capable. For entertainment, roleplay, and character-based conversations, Character.AI is purpose-built and has a larger character community. They serve completely different use cases."
+    }
+   ],
+   "dropped": [
+    "20M+ user count (not verified in this audit)",
+    "model lineup churn as a standalone con, superseded by the bankruptcy risk"
+   ]
+  }
+ },
+ {
+  "slug": "notion-ai",
+  "before": {
+   "lang": "en",
+   "badge": "paid",
+   "users": "100M+",
+   "best_for": "Notes, knowledge base, docs, developer platform, AI agents",
+   "description": "Notion AI is the assistant built into the Notion workspace. As of version 3.7 (September 2026) it works as an agent system with a model picker spanning multiple AI vendors, and covers writing, workspace-wide search, meeting notes and research.",
+   "description_long": "Notion AI is the artificial-intelligence layer inside Notion, the document and database workspace. It lives directly in your pages, so instead of switching to a separate chatbot you summon it where your notes, wikis and project databases already are.\n\nThe current release is Notion 3.7, shipped September 15, 2026. It adds an agent Skills system with a skills library, the ability to export Skills to external tools such as Claude Code, Codex, Cursor, Gemini and Grok, Custom Agents that can call sub-agents, a Notion Agents iOS app, and a redesigned model picker that lets workspace owners choose which models are available to the built-in Notion Agent versus Custom Agents, drawing on several AI vendors. The prior 3.6 release (July 2026) introduced orchestration of External Agents such as Claude and Cursor from shared boards, AI-generated interactive HTML blocks, reading and writing Microsoft Office files (PPTX, XLSX, DOCX) and Outlook, AI Meeting Notes with speaker identification, Enterprise Search across connected apps, and a Research Mode.\n\nDay to day the AI can draft and rewrite text, translate, summarize long pages, fill and query databases, answer questions across your whole workspace, and run multi-step agent tasks. Custom Agents you build yourself are billed on a credit system, free to try and then $10 per 1,000 monthly Notion credits, and their activity can be tracked through audit logging on higher plans.\n\nPricing has four tiers. Free is $0 per member per month but only includes a capped trial of Notion AI, not ongoing access. Plus is $10 per seat per month billed annually (about $12 per seat per month if billed monthly) and also only includes the AI trial. Business is $20 per seat per month billed annually (about $24 per seat per month if billed monthly) and is the cheapest plan with full, ongoing AI, including the Notion Agent, AI Meeting Notes and Enterprise Search. Enterprise is custom-priced and adds zero data retention with LLM providers. Notion AI is not sold as a separate add-on; it is bundled into the Business and Enterprise seat price, with Custom Agent credits as an extra variable cost.\n\nThe main catch is that ongoing AI access sits behind the Business plan. Free and Plus users only get a capped AI trial, so casual users who expect free or cheap AI on their existing workspace will hit a wall quickly. Custom Agent credits are an added, usage-based cost on top of seat pricing, and some higher-end features such as audit logging are reserved for upper tiers.\n\nNotion AI makes most sense for teams already running their knowledge base, docs and projects in Notion who want AI in the same place and are on or willing to move to the Business tier. Solo note-takers on the free or Plus plan will find the AI too limited to rely on day to day.",
+   "pros": [
+    "Lives inside the same pages, wikis and databases you already work in, so there is no context switch",
+    "Model picker lets workspace owners choose among models from several AI vendors, plus an Auto option, per task",
+    "Workspace-wide Enterprise Search, AI Meeting Notes with speaker identification and Research Mode go well beyond basic text tools",
+    "Reads and writes Microsoft Office files (PPTX, XLSX, DOCX) and Outlook, and can orchestrate external agents like Claude and Cursor",
+    "No longer a separate add-on: on Business and Enterprise the AI is bundled into the seat price"
+   ],
+   "cons": [
+    "Ongoing AI requires the Business plan ($20/seat/month billed annually, about $24/seat/month monthly); Free and Plus only get a capped trial",
+    "Custom Agents cost extra on a credit system ($10 per 1,000 monthly credits after a free trial), a variable spend on top of seats",
+    "The shift from add-on to bundled pricing means some users lost the ability to buy AI cheaply on a lower plan",
+    "Value depends on already living in Notion; the AI is far less useful if your work sits in other tools",
+    "Enterprise-grade features like audit logging for Custom Agents are gated to higher tiers"
+   ],
+   "choose_if": [
+    "Your team already keeps its docs, wikis and projects in Notion",
+    "You are on or willing to move to the Business plan ($20/seat/month billed annually) for full AI",
+    "You want to switch between models from different AI vendors without leaving your notes",
+    "You need workspace-wide search, meeting notes or research inside one tool",
+    "You want to build and audit Custom Agents against your own content"
+   ],
+   "faq": [
+    {
+     "a": "Notion AI is an AI assistant built directly into Notion. It can write, summarize, translate, and answer questions using your workspace content as context.",
+     "q": "What is Notion AI?"
+    },
+    {
+     "a": "Notion AI is not a separate add-on. Free and Plus plans only include a capped trial of Notion AI. Full, ongoing AI is included in the Business plan ($20 per seat per month billed annually, about $24 per seat per month billed monthly) and in Enterprise, which is custom-priced.",
+     "q": "How much does Notion AI cost?"
+    },
+    {
+     "a": "Notion 3.7 (September 2026) introduced agent Skills and a skills library, with the ability to export Skills to external tools such as Claude Code, Codex, Cursor, Gemini and Grok, plus Custom Agents that can call sub-agents.",
+     "q": "What are Skills in Notion 3.7?"
+    },
+    {
+     "a": "Custom Agents are free to try, then cost $10 per 1,000 monthly Notion credits, billed on top of your regular seat price.",
+     "q": "How do Custom Agent credits work?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "paid",
+   "users": null,
+   "best_for": "Notes, knowledge base, docs, developer platform, AI agents",
+   "description": "Notion AI is the assistant built into the Notion workspace. As of version 3.8 (October 2026) it works as an agent system that can connect to outside AI assistants via MCP, sync Skills through a Skills API, and pick from models supplied by several AI vendors, covering writing, workspace-wide search, meeting notes and research.",
+   "description_long": "Notion AI is the artificial-intelligence layer inside Notion, the document and database workspace. It lives directly in your pages, so instead of switching to a separate chatbot you summon it where your notes, wikis and project databases already are.\n\nThe current release is Notion 3.8, shipped October 13, 2026, under the theme 'Context for your agents'. It lets outside AI agents connect into a workspace through MCP with admin controls, adds a Skills API that syncs Skills written in Notion out to assistants such as ChatGPT and Claude, brings in several new models from vendors including OpenAI and Anthropic, and lets Business and Enterprise workspaces connect a ChatGPT Plus or Pro plan to cover AI usage inside Notion.\n\nThe prior 3.7 release (September 2026) had added an agent Skills system with a skills library, the ability to export Skills to external tools such as Claude Code, Codex, Cursor, Gemini and Grok, Custom Agents that can call sub-agents, a Notion Agents iOS app, and a redesigned model picker letting workspace owners choose which models are available to the built-in Notion Agent versus Custom Agents. The 3.6 release before that (July 2026) introduced orchestration of External Agents such as Claude and Cursor from shared boards, AI-generated interactive HTML blocks, reading and writing Microsoft Office files (PPTX, XLSX, DOCX) and Outlook, AI Meeting Notes with speaker identification, Enterprise Search across connected apps, and a Research Mode.\n\nDay to day the AI can draft and rewrite text, translate, summarize long pages, fill and query databases, answer questions across your whole workspace, and run multi-step agent tasks. Custom Agents you build yourself are billed on a credit system, free to try and then $10 per 1,000 monthly Notion credits, and their activity can be tracked through audit logging on higher plans.\n\nPricing has four tiers. Free is $0 per member per month but only includes a capped trial of Notion AI, not ongoing access. Plus is $10 per seat per month billed annually (about $12 per seat per month if billed monthly) and also only includes the AI trial. Business is $20 per seat per month billed annually (about $24 per seat per month if billed monthly) and is the cheapest plan with full, ongoing AI, including the Notion Agent, AI Meeting Notes and Enterprise Search. Enterprise is custom-priced and adds zero data retention with LLM providers. Notion AI is not sold as a separate add-on; it is bundled into the Business and Enterprise seat price, with Custom Agent credits as an extra variable cost, and Business and Enterprise users can now also connect a ChatGPT Plus or Pro plan to help pay for usage.\n\nThe main catch is that ongoing AI access sits behind the Business plan. Free and Plus users only get a capped AI trial, so casual users who expect free or cheap AI on their existing workspace will hit a wall quickly. Custom Agent credits are an added, usage-based cost on top of seat pricing, and some higher-end features such as audit logging are reserved for upper tiers.\n\nNotion AI makes most sense for teams already running their knowledge base, docs and projects in Notion who want AI in the same place and are on or willing to move to the Business tier. Solo note-takers on the free or Plus plan will find the AI too limited to rely on day to day.",
+   "pros": [
+    "Lives inside the same pages, wikis and databases you already work in, so there is no context switch",
+    "Model picker lets workspace owners choose among models from several AI vendors, including OpenAI and Anthropic, per task",
+    "A Skills API syncs Skills built in Notion out to other AI assistants, and outside agents can connect into a workspace via MCP with admin controls",
+    "Workspace-wide Enterprise Search, AI Meeting Notes with speaker identification and Research Mode go well beyond basic text tools",
+    "Reads and writes Microsoft Office files (PPTX, XLSX, DOCX) and Outlook, and can orchestrate external agents like Claude and Cursor"
+   ],
+   "cons": [
+    "Ongoing AI requires the Business plan ($20/seat/month billed annually, about $24/seat/month monthly); Free and Plus only get a capped trial",
+    "Custom Agents cost extra on a credit system ($10 per 1,000 monthly credits after a free trial), a variable spend on top of seats",
+    "The shift from add-on to bundled pricing means some users lost the ability to buy AI cheaply on a lower plan",
+    "Value depends on already living in Notion; the AI is far less useful if your work sits in other tools",
+    "Enterprise-grade features like audit logging for Custom Agents are gated to higher tiers"
+   ],
+   "choose_if": [
+    "Your team already keeps its docs, wikis and projects in Notion",
+    "You are on or willing to move to the Business plan ($20/seat/month billed annually) for full AI",
+    "You want to switch between models from different AI vendors without leaving your notes",
+    "You need workspace-wide search, meeting notes or research inside one tool",
+    "You want to build and audit Custom Agents against your own content"
+   ],
+   "faq": [
+    {
+     "q": "What is Notion AI?",
+     "a": "Notion AI is an AI assistant built directly into Notion. It can write, summarize, translate, and answer questions using your workspace content as context."
+    },
+    {
+     "q": "How much does Notion AI cost?",
+     "a": "Notion AI is not a separate add-on. Free and Plus plans only include a capped trial of Notion AI. Full, ongoing AI is included in the Business plan ($20 per seat per month billed annually, about $24 per seat per month billed monthly) and in Enterprise, which is custom-priced."
+    },
+    {
+     "q": "What are Skills in Notion 3.7?",
+     "a": "Notion 3.7 (September 2026) introduced agent Skills and a skills library, with the ability to export Skills to external tools such as Claude Code, Codex, Cursor, Gemini and Grok, plus Custom Agents that can call sub-agents."
+    },
+    {
+     "q": "How do Custom Agent credits work?",
+     "a": "Custom Agents are free to try, then cost $10 per 1,000 monthly Notion credits, billed on top of your regular seat price."
+    }
+   ],
+   "dropped": [
+    "100M+ user count (not verified by audit)"
+   ]
+  }
+ },
+ {
+  "slug": "microsoft-copilot",
+  "before": {
+   "lang": "en",
+   "badge": "paid",
+   "users": "",
+   "best_for": "AI assistant, M365 integration, Windows AI, document drafting",
+   "description": "Microsoft Copilot (formerly the Microsoft 365 Copilot app) is Microsoft's AI assistant integrated across Windows, Edge, Bing, and the Microsoft 365 apps, with a model selector offering Auto, Quick response, and Think deeper modes.",
+   "description_long": "Microsoft Copilot is the AI assistant Microsoft has woven across Windows, Edge, Bing, and the Microsoft 365 apps. It was recently renamed: the Microsoft 365 Copilot app is now called Microsoft Copilot, and the Microsoft 365 Copilot Chat app is now called Microsoft Copilot Chat. It handles conversational chat, web search, image generation, document drafting, and in licensed tiers it works directly inside Word, Excel, PowerPoint, and Outlook.\n\nLicensing is organized into tiers: Copilot Chat (Basic), Microsoft 365 Copilot (Basic), which gives standard Copilot access inside Word, Excel, PowerPoint, and OneNote without a separate add-on, and Microsoft 365 Copilot (Premium), an add-on with expanded access. Microsoft has also introduced Copilot Cowork, a usage-based product for broader agentic work, and Microsoft 365 E7 enterprise plans include Copilot licensing by default.\n\nDay to day, Copilot routes requests through a model selector with Auto, Quick response, and Think deeper options rather than exposing specific model version numbers. Anthropic's Claude models are also available in applicable licensed experiences; Word's model menu, for example, now includes an Anthropic model as the default for higher-reasoning tasks. Copilot Cowork has also gained new image-generation capability from a third-party model provider.\n\nPricing could not be verified on Microsoft's own pricing pages at the time of this review, so specific dollar figures are omitted here. What is confirmed is the tier structure above: a basic chat experience, a basic in-app tier, a paid Premium add-on, and the newer usage-based Cowork product. Copilot Chat (Basic) is included at no extra cost for users with an eligible Microsoft 365 work subscription, but this is not a standalone free plan open to the general public.\n\nThe main limitations are that Microsoft's licensing and naming are genuinely hard to follow across consumer, Business, and enterprise SKUs, current pricing is not transparently published, and the strongest in-app features require a paid Microsoft 365 Copilot license rather than being available to casual users. Copilot makes the most sense for people and organizations already inside Microsoft 365 who want an assistant that reaches into their documents, mail, and calendar rather than a standalone chatbot.",
+   "pros": [
+    "Deep integration with Word, Excel, PowerPoint, and Outlook through Microsoft 365 Copilot licensing",
+    "Model selector (Auto, Quick response, Think deeper) routes requests automatically rather than requiring manual model picking",
+    "Anthropic's Claude is now offered as an option alongside Microsoft's own models inside Word for higher-reasoning tasks",
+    "New Copilot Cowork product adds usage-based billing for broader agentic workflows",
+    "Microsoft 365 E7 enterprise plans include Copilot licensing out of the box"
+   ],
+   "cons": [
+    "Current USD pricing could not be verified on Microsoft's official pricing pages",
+    "Confusing lineup of Copilot Chat, Microsoft 365 Copilot Basic, Premium add-on, and Cowork tiers with different access levels",
+    "No standalone free plan for individual consumers; free chat access is bundled only with eligible Microsoft 365 work subscriptions",
+    "Best document-embedded features require a paid Microsoft 365 Copilot license",
+    "Recent app renaming (Microsoft 365 Copilot to Microsoft Copilot) can cause confusion about product identity"
+   ],
+   "choose_if": [
+    "You already use Microsoft 365 and want AI inside Word, Excel, PowerPoint, and Outlook",
+    "You want access to Anthropic's Claude models alongside Microsoft's own inside Word",
+    "Your organization needs a Microsoft 365 Copilot license tied to enterprise admin controls",
+    "You want an assistant that routes queries automatically between quick and deep-reasoning modes"
+   ],
+   "faq": [
+    {
+     "a": "Microsoft Copilot is Microsoft's AI assistant integrated across Windows, Microsoft 365 (Word, Excel, Outlook, Teams), Edge, and Bing. It uses OpenAI's models by default, with Anthropic's Claude models also available in applicable licensed experiences, to assist with tasks across the Microsoft ecosystem.",
+     "q": "What is Microsoft Copilot?"
+    },
+    {
+     "a": "Copilot's licensing is split into tiers: Copilot Chat (Basic), Microsoft 365 Copilot (Basic) for in-app access to Word, Excel, PowerPoint, and OneNote, a Microsoft 365 Copilot (Premium) add-on, and the newer usage-based Copilot Cowork. Current dollar prices for these tiers could not be verified on Microsoft's pricing pages at the time of writing.",
+     "q": "How much does Microsoft Copilot cost?"
+    },
+    {
+     "a": "Copilot in Excel can generate formulas, create pivot tables, summarize data, create charts, and answer questions about your spreadsheet in natural language.",
+     "q": "What can Microsoft Copilot do in Excel?"
+    },
+    {
+     "a": "No. Microsoft Copilot is a general-purpose AI assistant for Windows and M365 apps. GitHub Copilot is a separate product focused on code completion and development, available at github.com/features/copilot.",
+     "q": "Is Microsoft Copilot the same as GitHub Copilot?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "paid",
+   "users": null,
+   "best_for": "AI assistant, M365 integration, Windows AI, document drafting",
+   "description": "Microsoft Copilot (formerly the Microsoft 365 Copilot app) is Microsoft's AI assistant integrated across Windows, Edge, Bing, and the Microsoft 365 apps, with a model selector offering Auto, Quick response, and Think deeper modes.",
+   "description_long": "Microsoft Copilot is the AI assistant Microsoft has woven across Windows, Edge, Bing, and the Microsoft 365 apps. It was recently renamed: the Microsoft 365 Copilot app is now called Microsoft Copilot, and the Microsoft 365 Copilot Chat app is now called Microsoft Copilot Chat.\n\nLicensing is organized into tiers: Copilot Chat (Basic), Microsoft 365 Copilot (Basic), which gives standard Copilot access inside Word, Excel, PowerPoint, and OneNote without a separate add-on, and Microsoft 365 Copilot (Premium), an add-on with expanded access. Microsoft has also introduced Copilot Cowork, a usage-based product for broader agentic work, and Microsoft 365 E7 enterprise plans include Copilot licensing by default. At a Windows event on October 7, 2026, Microsoft said it is repositioning Copilot on Windows away from a simple chat window toward an assistant that can use local context from a user's PC and take actions on it.\n\nDay to day, Copilot routes requests through a model selector with Auto, Quick response, and Think deeper options rather than exposing specific model version numbers. Anthropic's models are also available in applicable licensed experiences; Word's model menu, for example, now includes an Anthropic model as the default for higher-reasoning tasks. Microsoft has announced that Copilot will gain the ability to use local context and run local models, coming to Copilot+ PCs in the coming months, and it has shipped Microsoft Execution Containers, a policy-driven containment layer for AI agents running on Windows, which is now generally available.\n\nPricing could not be verified on Microsoft's own pricing pages at the time of this review, so specific dollar figures are omitted here. What is confirmed is the tier structure above: a basic chat experience, a basic in-app tier, a paid Premium add-on, and the newer usage-based Cowork product. Copilot Chat (Basic) is included at no extra cost for users with an eligible Microsoft 365 work subscription, but this is not a standalone free plan open to the general public.\n\nThe main limitations are that Microsoft's licensing and naming are genuinely hard to follow across consumer, Business, and enterprise SKUs, current pricing is not transparently published, and the strongest in-app features require a paid Microsoft 365 Copilot license rather than being available to casual users. The newly announced local-context and local-action features are not yet available and are only slated to arrive on Copilot+ PCs in the coming months.\n\nCopilot makes the most sense for people and organizations already inside Microsoft 365 who want an assistant that reaches into their documents, mail, and calendar rather than a standalone chatbot, and for Windows users watching Copilot evolve from a chat panel into a PC-level agent.",
+   "pros": [
+    "Deep integration with Word, Excel, PowerPoint, and Outlook through Microsoft 365 Copilot licensing",
+    "Model selector (Auto, Quick response, Think deeper) routes requests automatically rather than requiring manual model picking",
+    "Anthropic's models are now offered as an option alongside Microsoft's own inside Word for higher-reasoning tasks",
+    "Microsoft Execution Containers are now generally available, providing policy-driven containment for AI agents running on Windows",
+    "Microsoft 365 E7 enterprise plans include Copilot licensing out of the box"
+   ],
+   "cons": [
+    "Current USD pricing could not be verified on Microsoft's official pricing pages",
+    "Confusing lineup of Copilot Chat, Microsoft 365 Copilot Basic, Premium add-on, and Cowork tiers with different access levels",
+    "No standalone free plan for individual consumers; free chat access is bundled only with eligible Microsoft 365 work subscriptions",
+    "Best document-embedded features require a paid Microsoft 365 Copilot license",
+    "Announced local-context and local-action features for Copilot+ PCs are not yet available and are only slated for the coming months"
+   ],
+   "choose_if": [
+    "You already use Microsoft 365 and want AI inside Word, Excel, PowerPoint, and Outlook",
+    "You want access to Anthropic's models alongside Microsoft's own inside Word",
+    "Your organization needs a Microsoft 365 Copilot license tied to enterprise admin controls",
+    "You want an assistant that routes queries automatically between quick and deep-reasoning modes"
+   ],
+   "faq": [
+    {
+     "a": "Microsoft Copilot is Microsoft's AI assistant integrated across Windows, Microsoft 365 (Word, Excel, Outlook, Teams), Edge, and Bing. It uses OpenAI's models by default, with Anthropic's models also available in applicable licensed experiences, to assist with tasks across the Microsoft ecosystem.",
+     "q": "What is Microsoft Copilot?"
+    },
+    {
+     "a": "Copilot's licensing is split into tiers: Copilot Chat (Basic), Microsoft 365 Copilot (Basic) for in-app access to Word, Excel, PowerPoint, and OneNote, a Microsoft 365 Copilot (Premium) add-on, and the newer usage-based Copilot Cowork. Current dollar prices for these tiers could not be verified on Microsoft's pricing pages at the time of writing.",
+     "q": "How much does Microsoft Copilot cost?"
+    },
+    {
+     "a": "Copilot in Excel can generate formulas, create pivot tables, summarize data, create charts, and answer questions about your spreadsheet in natural language.",
+     "q": "What can Microsoft Copilot do in Excel?"
+    },
+    {
+     "a": "No. Microsoft Copilot is a general-purpose AI assistant for Windows and M365 apps. GitHub Copilot is a separate product focused on code completion and development, available at github.com/features/copilot.",
+     "q": "Is Microsoft Copilot the same as GitHub Copilot?"
+    }
+   ],
+   "dropped": []
+  }
+ }
+]

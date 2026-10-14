@@ -1,0 +1,243 @@
+[
+ {
+  "slug": "gemini",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Flagship: Gemini 4 Argon (model ID gemini-4-argon), announced Sept 30, 2026 for vetted cyber defenders, generally available Oct 13, 2026. Newest Flash model: Gemini 3.8 Flash (GA Sept 2). Image: Nano Banana 2.1 (GA Oct 6). Gemini 3.7 Flash and 3.5 Flash were retired from the API on Oct 8.",
+  "version_published": null,
+  "pricing": "Gemini app plans (US, monthly): Free $0 (Flash-Lite model); Google AI Plus $4.99 (Flash model); Google AI Pro $19.99 (Gemini 4 Argon, Pro and Flash models); Google AI Ultra $99.99 (5x AI Pro usage limits) or $199.99 (20x). Gemini 4 Argon is NOT in Free or AI Plus. Argon API: $2 input / $10 output per 1M tokens until Nov 30, 2026, then $4 / $20; cached input $0.10 (then $0.20); Batch/Flex half price; no free API tier for Argon.",
+  "free_tier": "Yes: Free plan with the Flash-Lite model in the Gemini app.",
+  "repositioning": "Gemini 4 Argon is now the flagship and is available in the Gemini app and AI Mode in Search for AI Pro and AI Ultra subscribers. Gemini app added a tasks mode and connections to more than 40 apps (Oct 13). In AI Studio and Antigravity, Argon is offered to AI Ultra subscribers; AI Pro users need a paid API key there.",
+  "card_errors": [
+   {
+    "claim": "Gemini 3.8 Flash leads the lineup",
+    "correction": "Gemini 4 Argon (GA Oct 13, 2026) is the flagship; 3.8 Flash is the newest Flash model."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+    "accessed": "2026-10-14"
+   },
+   {
+    "url": "https://gemini.google/subscriptions/?hl=en",
+    "accessed": "2026-10-14"
+   },
+   {
+    "url": "https://ai.google.dev/gemini-api/docs/pricing",
+    "accessed": "2026-10-14"
+   },
+   {
+    "url": "https://ai.google.dev/gemini-api/docs/changelog",
+    "accessed": "2026-10-14"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Argon accepts text, images, video, audio and PDF; outputs text; combined input+output limit about 1M tokens, 65,536 output tokens by default. Google reports 77.9% on DeepSWE v1.1 and #1 on the Vals Index. The card's current claim that Gemini 3.8 Flash 'leads the lineup' is outdated: Argon is the flagship. Previous AI Plus $7.99 and AI Ultra $249.99 prices are outdated.",
+  "domain_changed": false
+ },
+ {
+  "slug": "chatgpt",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "In ChatGPT chat: GPT-6 with Intelligent UI (rolled out Oct 7, 2026 to Plus/Pro/Business/Enterprise, Oct 8 to Free/Go); paid plans run GPT-6 Sol, Free and Go run GPT-6 Luna. GPT-6.1 Sol (released Sept 29 at DevDay) is in ChatGPT Work and Codex for Plus, Pro, Business, Enterprise and Edu, not in the main chat. GPT-6 Astra is the most capable model. GPT-5.5 is retired from ChatGPT, Work and Codex on Oct 14, 2026.",
+  "version_published": null,
+  "pricing": "Free $0; Go $8/mo; Plus $20/mo; Pro from $100/mo with tiers at $100, $200 and $500 per month (the $500 tier adds Ultrafast mode for Codex and Work); Business $25 per user monthly or $20 billed annually; Enterprise/Edu contact sales. API per 1M tokens: GPT-6 Astra $10/$50; GPT-6.1 Sol $2/$10; GPT-6 Sol $2/$10; GPT-6 Luna $0.10/$0.50.",
+  "free_tier": "Yes: Free plan (GPT-6 Luna) with Intelligent UI.",
+  "repositioning": "Intelligent UI: answers can include graphics, tappable buttons, forms, charts, maps and small interactive tools (calculators, bill splitters, games) built on the spot. Dots: an always-on agent with its own cloud computer and browser, available on Pro (users over 18, outside the EEA, UK and Switzerland), Business Premium and Enterprise. OpenAI says ChatGPT has more than 1.2 billion weekly users.",
+  "card_errors": [],
+  "sources": [
+   {
+    "url": "https://openai.com/index/gpt-6-for-everyone/",
+    "accessed": "2026-10-14"
+   },
+   {
+    "url": "https://learn.chatgpt.com/codex/pricing",
+    "accessed": "2026-10-14"
+   },
+   {
+    "url": "https://learn.chatgpt.com/codex/models",
+    "accessed": "2026-10-14"
+   },
+   {
+    "url": "https://developers.openai.com/api/docs/pricing",
+    "accessed": "2026-10-14"
+   }
+  ],
+  "confidence": "high",
+  "notes": "users label: '1.2B+' weekly users per OpenAI (Oct 7, 2026). Visual ads next to generated images are announced for a US test starting later in October (not started yet).",
+  "domain_changed": false
+ },
+ {
+  "slug": "claude",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Models: Claude Fable 5.1 (most capable widely released), Claude Opus 5.5, Claude Sonnet 5.5, and Claude Haiku 5.5 (released Oct 7, 2026; first Haiku with adjustable effort). Claude Mythos 5.1 is limited-availability through the Cyber Verification Program.",
+  "version_published": null,
+  "pricing": "Consumer: Free $0 (Sonnet and Haiku models); Pro $20/mo or $17/mo billed annually (Opus, Sonnet, Haiku, Claude Code; Fable via usage credits); Max from $100/mo in 5x and 20x tiers (includes monthly API credits since Oct 7; Fable up to 50% of weekly limits); Team standard seat $25 monthly or $20 annual, premium seat $125 monthly or $100 annual; Enterprise $20/seat/month billed annually plus usage at API rates. API per 1M tokens: Fable 5.1 $10/$50; Opus 5.5 $4/$20; Sonnet 5.5 $2/$10; Haiku 5.5 $0.10/$0.50 (prompts over 100K tokens: $0.50/$2.50). All four have a 1M-token context window.",
+  "free_tier": "Yes: Free plan with Sonnet and Haiku models.",
+  "repositioning": "Claude Haiku 5.5 is available to Free, Pro, Max, Team and Enterprise users on web, iOS and Android, and is now the default Haiku model in Claude Code.",
+  "card_errors": [],
+  "sources": [
+   {
+    "url": "https://www.anthropic.com/claude-haiku-5-5",
+    "accessed": "2026-10-14"
+   },
+   {
+    "url": "https://claude.com/pricing",
+    "accessed": "2026-10-14"
+   },
+   {
+    "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "accessed": "2026-10-14"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Do not state the Max 20x price as $200: Anthropic's pricing page only says 'From $100'. Do not claim which model is default for Free vs Pro in the app (not stated by Anthropic).",
+  "domain_changed": false
+ },
+ {
+  "slug": "meta-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "The Meta AI assistant (app, meta.ai, WhatsApp, Instagram, Facebook, Messenger, Threads, Ray-Ban/Oakley Meta glasses) runs on the Muse Spark family (Muse Spark 1.1 per Meta's July 24, 2026 update). Meta's newest models, Muse Wonder and Muse Wonder Full (Oct 12, 2026), are so far for developers: Muse Wonder via the Meta Model API ($4/$20 per 1M tokens), Wonder Full only in Muse Code subscriptions. Meta says Wonder will come to the Muse app first for subscribers.",
+  "version_published": null,
+  "pricing": "Meta AI chat is offered free in Meta's apps. Meta One subscription (Sept 15, 2026): individual bundles Core $7.99/mo and Premium $19.99/mo add more Meta AI image and video generation; single-app plans Instagram Plus $3.99, Facebook Plus $3.99, WhatsApp Plus $2.99. Separate products: Muse personal agent app (free tier; Power $20/mo, Maximum $100/mo, limited testing) and Muse Code ($50 and $200 plans).",
+  "free_tier": "Yes: Meta AI is free in Meta's apps; paid Meta One plans add more image/video generation.",
+  "repositioning": "Meta now has three separate offerings: the free Meta AI assistant in its apps, the Muse personal agent app (US, iOS/Android/muse.ai and inside WhatsApp), and developer access (Meta Model API, Muse Code).",
+  "card_errors": [],
+  "sources": [
+   {
+    "url": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/",
+    "accessed": "2026-10-14"
+   },
+   {
+    "url": "https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/",
+    "accessed": "2026-10-14"
+   },
+   {
+    "url": "https://about.fb.com/news/2026/07/meta-ai-muse-spark-doesnt-just-think-it-acts/",
+    "accessed": "2026-10-14"
+   },
+   {
+    "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+    "accessed": "2026-10-14"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Do not say Muse Wonder powers Meta AI or WhatsApp yet. Do not convert EUR prices; use the USD figures above.",
+  "domain_changed": false
+ },
+ {
+  "slug": "cursor",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Since Oct 12, 2026, new Cursor customers start on The X Subscription, which bundles Grok, the Grok bot, Cursor and X Premium (SpaceXSI). Grok and Cursor share one weekly usage pool.",
+  "version_published": null,
+  "pricing": "The X Subscription tiers: Free, Plus $8/mo, Premium $30/mo, Super $100/mo, Ultra $200/mo. Third-party models in Cursor, such as Claude or GPT, are NOT included in the plan: they are billed at API list prices from prepaid credit. Existing Cursor plans can be kept; switching to The X Subscription is optional but cannot be undone.",
+  "free_tier": "Yes: a Free tier exists in The X Subscription.",
+  "repositioning": "Pricing model changed: Cursor is now sold as part of the X bundle for new customers; using Claude or GPT in Cursor costs extra at API prices.",
+  "card_errors": [],
+  "sources": [
+   {
+    "url": "https://cursor.com/help/the-x-subscription/overview",
+    "accessed": "2026-10-14"
+   },
+   {
+    "url": "https://x.ai/news/x-subscription",
+    "accessed": "2026-10-14"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Keep the card's verified feature descriptions; update every price statement to the bundle model above. If the card states older Cursor plan prices as current for new customers, remove them.",
+  "domain_changed": false
+ },
+ {
+  "slug": "grok",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Grok is now sold as part of The X Subscription (launched Oct 12, 2026 by SpaceXSI), together with the Grok bot, Cursor and X Premium. Grok and Cursor share one weekly usage pool.",
+  "version_published": null,
+  "pricing": "The X Subscription tiers: Free, Plus $8/mo, Premium $30/mo, Super $100/mo, Ultra $200/mo.",
+  "free_tier": "Yes: a Free tier exists in The X Subscription.",
+  "repositioning": "Grok is no longer a separate subscription for new buyers: it comes in the X bundle with Cursor and X Premium.",
+  "card_errors": [],
+  "sources": [
+   {
+    "url": "https://x.ai/news/x-subscription",
+    "accessed": "2026-10-14"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Keep the card's model facts unless contradicted; replace standalone SuperGrok-style price claims with the X Subscription tiers. Note the card badge may need to become freemium since a Free tier exists.",
+  "domain_changed": false
+ },
+ {
+  "slug": "character-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Character.AI filed for Chapter 11 bankruptcy in the Delaware bankruptcy court on Oct 12, 2026 to sell its assets. Disney is the first bidder, offering $20 million for a non-exclusive license to some of its technology. The sale is expected to finish by late November or early December 2026.",
+  "version_published": null,
+  "pricing": "Paid subscriptions stay active during the process.",
+  "free_tier": "Unchanged during the process (the app keeps working).",
+  "repositioning": "The platform remains up and running and users can export their data; if no workable bid arrives, the platform will be shut down.",
+  "card_errors": [],
+  "sources": [
+   {
+    "url": "https://blog.character.ai/an-update-on-character-ai/",
+    "accessed": "2026-10-14"
+   },
+   {
+    "url": "https://techcrunch.com/2026/10/13/just-5-years-in-interactive-chatbot-platform-character-ai-files-for-bankruptcy/",
+    "accessed": "2026-10-14"
+   }
+  ],
+  "confidence": "high",
+  "notes": "The card must state the bankruptcy and the risk of shutdown prominently and advise users to export their chats. Keep other verified facts.",
+  "domain_changed": false
+ },
+ {
+  "slug": "notion-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Notion 3.8 (Oct 13, 2026), 'Context for your agents': outside AI agents can connect to a workspace through MCP with admin controls; a Skills API syncs Skills written in Notion to ChatGPT and Claude; seven models added, including GPT-6.1 Sol, Claude Opus 5.5 and Claude Sonnet 5.5; Business and Enterprise users can connect a ChatGPT Plus or Pro plan to pay for AI usage in Notion.",
+  "version_published": null,
+  "pricing": "No pricing change confirmed in 3.8.",
+  "free_tier": "Unchanged.",
+  "repositioning": "Notion positions itself as the shared context layer that works across AI assistants.",
+  "card_errors": [],
+  "sources": [
+   {
+    "url": "https://www.notion.com/releases/2026-10-13",
+    "accessed": "2026-10-14"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Update 'as of version 3.7' wording to 3.8 where the card states the current version.",
+  "domain_changed": false
+ },
+ {
+  "slug": "microsoft-copilot",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "At a Windows event on Oct 7, 2026, Microsoft said Copilot will be able to use local context from a user's PC, take actions on it and run local models (coverage: coming to Copilot+ PCs in the coming months). Microsoft Execution Containers, a containment layer for AI agents on Windows, are generally available. GitHub made local sandboxing for GitHub Copilot generally available at no extra cost the same day.",
+  "version_published": null,
+  "pricing": "No consumer pricing change confirmed.",
+  "free_tier": "Unchanged.",
+  "repositioning": "Copilot on Windows is moving from a chat window to an assistant that acts on the PC.",
+  "card_errors": [],
+  "sources": [
+   {
+    "url": "https://news.microsoft.com/source/emea/2026/10/building-windows-for-hybrid-intelligence/",
+    "accessed": "2026-10-14"
+   },
+   {
+    "url": "https://blogs.windows.com/windowsdeveloper/2026/10/07/microsoft-execution-containers-policy-driven-containment-for-ai-agents/",
+    "accessed": "2026-10-14"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Present local actions as announced/coming, not available now.",
+  "domain_changed": false
+ }
+]

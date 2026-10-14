@@ -1,0 +1,10 @@
+{
+ "slug": "windows-copilot-local-agents-sandbox",
+ "date": "2026-10-07",
+ "category": "tools",
+ "source": "Microsoft",
+ "source_url": "https://news.microsoft.com/source/emea/2026/10/building-windows-for-hybrid-intelligence/",
+ "title": "Copilot on Windows Will Act on Your PC, and AI Agents Get Their Own Sandboxes",
+ "summary": "At an October 7 Windows event, Microsoft said Copilot will be able to use local context from a user's PC, take actions on it and run local models, coming to Copilot+ PCs in the coming months. Microsoft Execution Containers, sandboxing for AI agents, are generally available now, and GitHub made local sandboxing for Copilot available at no extra cost.",
+ "body": "<p>At a Windows event on October 7, Microsoft described how <strong>Copilot</strong> on Windows is turning from a chat window into an assistant that works with your computer. Copilot will be able to use local context from a user's PC, take actions on it and run models locally. According to coverage of the event, this reaches Copilot+ PCs in the coming months.</p>\n<h2>Sandboxes for AI agents</h2>\n<p>Microsoft also made <strong>Microsoft Execution Containers</strong> generally available. They provide a containment layer for AI agents on Windows: agents run inside policy-controlled containers that limit what they can reach. On the same day GitHub made <strong>local sandboxing for GitHub Copilot</strong> generally available at no extra cost, so coding agents can run commands without free access to the whole machine.</p>\n<h2>New hardware</h2>\n<p>Microsoft also introduced the Surface Laptop Ultra with Nvidia's new chip, priced from about $2,600.</p>\n<h2>Why it matters</h2>\n<p>Agents that click, type and change files on your PC are useful and risky in equal measure, as recent reports of AI agents overstepping their tasks have shown. Built-in sandboxing is the part to watch: if you plan to let an assistant act on your computer, prefer tools that run it in a contained environment and ask before irreversible steps.</p>"
+}

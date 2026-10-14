@@ -55,9 +55,11 @@ def cover(slug, png):
 def check(lang, en, d):
     """Ошибки, которые ловили на живом сайте: теги, чужая письменность, имена продуктов."""
     errs = []
-    for tag in ('<p>', '<h2>', '<strong>'):
+    for tag in ('<p>', '<h2>', '<strong>', '<a href='):
         if d['body'].count(tag) != en['body'].count(tag):
             errs.append(f'{tag}: {d["body"].count(tag)} вместо {en["body"].count(tag)}')
+    if re.findall(r'href="([^"]+)"', d['body']) != re.findall(r'href="([^"]+)"', en['body']):
+        errs.append('ссылки в тексте не совпадают с EN')
     for k in ('title', 'summary', 'body'):
         m = FOREIGN.search(d[k])
         if m:

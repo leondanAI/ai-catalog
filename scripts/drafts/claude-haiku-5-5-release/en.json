@@ -1,0 +1,10 @@
+{
+ "slug": "claude-haiku-5-5-release",
+ "date": "2026-10-07",
+ "category": "models",
+ "source": "Anthropic",
+ "source_url": "https://www.anthropic.com/claude-haiku-5-5",
+ "title": "Claude Haiku 5.5: Anthropic's Cheapest and Fastest Model, Now in Free Claude Too",
+ "summary": "Anthropic released Claude Haiku 5.5 on October 7, calling it its cheapest, fastest and most capable small model. It costs $0.10 per million input tokens and $0.50 per million output for prompts up to 100,000 tokens, has a 1M-token context window, and is the first Haiku with an adjustable effort setting. It is available to Free, Pro, Max, Team and Enterprise users.",
+ "body": "<p>Anthropic released <strong>Claude Haiku 5.5</strong> on October 7, describing it as the cheapest, fastest and most capable small model it has released. It is aimed at high-volume, speed-sensitive work such as classification, extraction, routing, live customer support and browser use.</p>\n<h2>Price and limits</h2>\n<p>In the API, Haiku 5.5 costs <strong>$0.10 per million input tokens and $0.50 per million output</strong> for prompts up to 100,000 tokens. For longer prompts the whole request costs $0.50 and $2.50. It has a 1-million-token context window and up to 128,000 output tokens. The Batch API is half price.</p>\n<h2>What is new</h2>\n<p>It is the first Haiku model with an <strong>adjustable effort setting</strong>, from low to max, so developers can trade speed for more careful answers. Anthropic notes that Sonnet 5.5 and Opus 5.5 remain the better choice for complex agentic coding.</p>\n<h2>Where to use it</h2>\n<p>Free, Pro, Max, Team and Enterprise users can select Haiku 5.5 on Claude.ai, on the web, iOS and Android. In the API its model ID is claude-haiku-5-5, and it is also on Amazon Bedrock, Google Cloud and Microsoft Foundry. Claude Code switched its default Haiku model to 5.5 the same day.</p>\n<h2>Why it matters</h2>\n<p>Haiku 5.5 makes Anthropic's lineup cheaper at the bottom end: for tasks where speed and price matter more than depth, it is now one of the least expensive capable models available.</p>"
+}

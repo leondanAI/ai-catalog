@@ -133,6 +133,9 @@ def generate_page(article, lang, all_articles_for_lang, all_slugs_by_lang):
     title     = article.get('title', '')
     summary   = article.get('summary', '')
     body      = article.get('body') or f'<p>{htmlmod.escape(summary)}</p>'
+    # Ссылки на карточки и сравнения пишутся в тексте один раз, как в EN
+    # (href="/tools/x.html"); здесь они получают префикс языка страницы.
+    body      = re.sub(r'href="/(tools|compare)/', rf'href="{nav_prefix(lang)}/\1/', body)
     date_str  = format_date(article.get('date', ''))
     source    = article.get('source', '')
     # Название источника — ссылка на первоисточник, если он записан.
@@ -279,6 +282,7 @@ def generate_page(article, lang, all_articles_for_lang, all_slugs_by_lang):
   .article-body h2{{font-family:var(--font-display);font-size:20px;font-weight:600;color:var(--text);margin:2rem 0 .75rem}}
   .article-body h3{{font-family:var(--font-display);font-size:16px;font-weight:500;color:var(--text);margin:1.5rem 0 .5rem}}
   .article-body strong{{color:var(--text);font-weight:500}}
+  .article-body a{{color:var(--accent);text-decoration:underline;text-underline-offset:2px}}
   .article-divider{{border:none;border-top:1px solid var(--border);margin:2.5rem 0}}
   .related-title{{font-family:var(--font-display);font-size:16px;font-weight:600;margin-bottom:1.25rem}}
   .related-grid{{display:grid;grid-template-columns:1fr 1fr;gap:1rem}}
