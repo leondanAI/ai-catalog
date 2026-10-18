@@ -1,0 +1,779 @@
+[
+ {
+  "slug": "elevenlabs",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Eleven v4 and Eleven v4 Turbo (low-latency variant for agents), released Sep 28, 2026 (blog updated Oct 12). Both support more than 90 languages and are available in ElevenAgents, ElevenCreative and the ElevenAPI. Turbo: ~100ms median inference latency, ~150ms median time to first speech over WebSocket.",
+  "version_published": "2026-09-28",
+  "pricing": "Free $0 (10,000 credits/mo); Starter $6/mo ($5/mo annual, 30,000 credits, commercial license, instant cloning); Creator $22/mo ($18.33/mo annual, 121,000 credits, professional cloning); Pro $99/mo ($82.50 annual, 600,000 credits, 44.1kHz PCM via API); Scale $299/mo ($249.17 annual, 1.8M credits, 3 seats); Business $990/mo ($825 annual, 6M credits, 10 seats); Enterprise custom. Annual = two months free. First-month promos on the page: Creator $11 (50% off); Starter $1 'until Oct 18'.",
+  "free_tier": "Yes: 10,000 credits/month, up to 3 Studio projects, no credit rollover (TTS, STT, sound effects, voice design, music, image).",
+  "repositioning": null,
+  "card_errors": [
+   {
+    "claim": "It runs its own Eleven v3 voice models",
+    "correction": "Current flagship models are Eleven v4 and Eleven v4 Turbo (Sep 28, 2026)."
+   },
+   {
+    "claim": "The current model is Eleven v3, which hit general availability in February 2026.",
+    "correction": "v3 (GA Feb 2026) has been superseded by Eleven v4 and v4 Turbo, released Sep 28, 2026."
+   },
+   {
+    "claim": "Eleven v3 delivers highly natural, expressive speech across a wide and recently expanded set of languages",
+    "correction": "Eleven v4 is the current expressive model, supporting more than 90 languages; ElevenLabs says it ranks #1 on Artificial Analysis."
+   },
+   {
+    "claim": "Conversational v3 model enables real-time voice agents, not just prerecorded TTS",
+    "correction": "For agents the current low-latency model is Eleven v4 Turbo (~100ms median inference latency)."
+   },
+   {
+    "claim": "You want to build real-time voice agents with the Conversational v3 model",
+    "correction": "Use Eleven v4 Turbo, the current low-latency model for agents."
+   },
+   {
+    "claim": "ElevenLabs can clone your voice from as little as 1 minute of clean audio.",
+    "correction": "With v4, Instant Voice Clones need about 10 seconds of audio; Professional Voice Clones are also supported."
+   },
+   {
+    "claim": "Professional voice cloning (Instant Voice Clone) is available on the Starter plan ($5/month).",
+    "correction": "Instant Voice Clone is on Starter, which is $6/mo monthly ($5/mo billed annually). Professional Voice Clone needs Creator ($22/mo). The FAQ also mislabels Instant cloning as 'Professional'."
+   },
+   {
+    "claim": "ElevenLabs supports 32+ languages",
+    "correction": "Eleven v4 and v4 Turbo support more than 90 languages."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://elevenlabs.io/blog/eleven-v4",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://elevenlabs.io/pricing",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "high",
+  "notes": "The v4 blog doesn't mention pricing changes or deprecating v3, Turbo v2.5 or Flash, so v3 may still be selectable; the card should present it as the previous generation. The extracted pricing table credits 192kbps to Pro; the card says Creator. Not resolved, so not listed as an error. ARR, valuation and ElevenReader $11/mo were not re-verified.",
+  "domain_changed": false
+ },
+ {
+  "slug": "kling-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Kling 4.0. Kling 4.0 Flash went into early access on Sep 28, 2026 for Ultra yearly subscribers (3-20 s, 720p, 8-bit SDR). Kling's release note said the full Kling 4.0 would launch in October. Secondary reports (PandaDaily via LetsDataScience, Oct 16) say it is now generally available. I could not read this on kling.ai. Reported full-model specs: 3-30 s clips, up to 10 keyframes, Omni Reference up to 15 items, 720p/1080p/4K, two-channel stereo audio, prompts up to ~8,000 tokens. 10-bit HDR and video extension to ~2 min are 'coming soon'.",
+  "version_published": null,
+  "pricing": "Not re-verified: kling.ai would not load in the browser and returns no text to fetch. No pricing for 4.0 or Flash has been published (per secondary sources). The card's existing plan prices (Standard ~$10, Pro ~$37, Premier ~$92, Ultra ~$180 monthly) are unconfirmed this round.",
+  "free_tier": "Card states 66 daily credits; not re-verified this round.",
+  "repositioning": "Kling was reportedly spun off from Kuaishou as a separate unit ahead of a planned Hong Kong IPO (secondary source, unconfirmed). klingai.com now 301-redirects to kling.ai.",
+  "card_errors": [
+   {
+    "claim": "The current line is Kling 3.0 and 3.0 Omni, Kling 3.0 Turbo, Kling Image 3.0 and Kling Motion",
+    "correction": "Kling 4.0 is the new generation: 4.0 Flash in early access since Sep 28, 2026, and the full 4.0 reportedly generally available from mid-October 2026."
+   },
+   {
+    "claim": "Legacy models 1.0 through 2.1 Master, the Virtual Try-On API and 119 effect templates retire on September 15, 2026.",
+    "correction": "That date has passed. Write it in the past tense: the legacy 1.0-2.1 models were retired in September 2026."
+   },
+   {
+    "claim": "The current version is Kling 3.0, which launched on February 5, 2026 on the Omni One architecture.",
+    "correction": "The current version is Kling 4.0 (October 2026); Kling 3.0 is the previous generation."
+   },
+   {
+    "claim": "Even the top plans generate clips of up to about 15 seconds, not minutes",
+    "correction": "Kling 4.0 generates single clips of 3-30 seconds; extension to about 2 minutes is announced as 'coming soon'."
+   },
+   {
+    "claim": "Clips max out at around 15 seconds; there is no minutes-long generation",
+    "correction": "Kling 4.0 clips run up to 30 seconds (Flash: up to 20 s); multi-shot extension toward ~2 minutes is announced as coming soon."
+   },
+   {
+    "claim": "Kling AI offers a free tier with 66 daily credits. This allows significant usage without paying. The Pro plan starts at $6.99/month",
+    "correction": "Contradicts the card's own pricing: Standard is about $10/mo (~$6.60/mo billed annually) and Pro about $37/mo. $6.99 is not a Pro price."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.atlascloud.ai/blog/tips/kling-4-flash-vs-full",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://letsdatascience.com/news/kling-ai-opens-kling-40-to-all-users-d9dc6422",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://aiweekly.co/alerts/kuaishous-kling-ships-kling-40-flash-to-annual-subscribers-30-second-4khdr-ai",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "All 4.0 facts come from secondary sources quoting Kling's release note (kling.ai/release-note/release-notes/Kling_4); I couldn't open the primary page. Sources disagree on GA: Atlas Cloud (Oct 10) says 'October, no day announced'; LetsDataScience (Oct 16) says GA on klingai.com; CometAPI says Oct 15. 4K is also unclear: the spec table lists 4K, but LetsDataScience says 4K and 1080p 10-bit HDR are still pending. Atlas Cloud dates Kling 3.0 to Jan 31, 2026, while the card says Feb 5. Check on kling.ai before editing. Don't state a 4.0 price.",
+  "domain_changed": true
+ },
+ {
+  "slug": "krea-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Krea 3: default image model in the Krea app since Oct 16, 2026, billed in compute units. Krea 3 Ultra on Max plans and above. Krea 3 API in early access since Oct 15, 2026 (via sales) from $0.03 per image at 1K resolution. Also new: Topaz Starlight Fast 3 video enhancer (Starlight v1 retired, Oct 16), Wan 3.0 Prime (Oct 17), Krea Agent on every plan (Sep 10).",
+  "version_published": "2026-10-16",
+  "pricing": "Free $0 (100 compute units/day); Basic $9/mo or $5/mo yearly (5,000 units/mo); Pro $35/mo or $21/mo yearly (20,000 units); Max $105/mo or $63/mo yearly (60,000 units, unlimited image concurrency, LoRA up to 2,000 images); Business $200/mo or $160/mo yearly (80,000 units, up to 50 seats); Enterprise custom. Yearly = 40% off.",
+  "free_tier": "Yes: 100 compute units/day, no card, image concurrency 1, LoRA training up to 50 images, upscaling to 2K; the plan card lists access to all image, video and 3D/lipsync models plus a commercial license (the comparison table marks video as 'Limited').",
+  "repositioning": null,
+  "card_errors": [
+   {
+    "claim": "built around Krea 2, the company's first from-scratch foundation image model (May 2026), plus the roughly 2-second Krea 2 Turbo",
+    "correction": "Krea 3 replaced Krea 2 as the default image model on Oct 16, 2026; Krea 3 Ultra is on Max and above."
+   },
+   {
+    "claim": "The current flagship is Krea 2, released in May 2026",
+    "correction": "Current flagship is Krea 3 (default since Oct 16, 2026). Krea 2 (May 2026) is the previous generation."
+   },
+   {
+    "claim": "a Krea 2 API is available for developers",
+    "correction": "A Krea 3 API entered early access on Oct 15, 2026 (via sales), from $0.03 per image at 1K resolution."
+   },
+   {
+    "claim": "Krea 2, an in-house foundation image model, plus Krea 2 Turbo for roughly 2-second high-quality images",
+    "correction": "Krea 3 is the current in-house model, with Krea 3 Ultra on Max+."
+   },
+   {
+    "claim": "You need the newest Krea 2 model or roughly 2-second Turbo generations",
+    "correction": "The newest model is Krea 3 (Krea 3 Ultra on Max+)."
+   },
+   {
+    "claim": "The free plan costs nothing and gives 100 units per day with no credit card required, though it has no video generation and upscaling is capped at 2K.",
+    "correction": "The pricing page's Free card lists access to all image, video and 3D/lipsync models (video marked 'Limited' in the comparison table) and a commercial license. The 2K upscaling cap is still correct."
+   },
+   {
+    "claim": "Free daily allowance of 100 units is modest and excludes video generation entirely",
+    "correction": "The free plan is no longer listed as excluding video; video access is marked 'Limited'."
+   },
+   {
+    "claim": "Pro is $35 per month, or $21 per month billed yearly",
+    "correction": "Tiers now start with a new Basic plan at $9/mo ($5/mo yearly, 5,000 units). Pro remains $35/$21."
+   },
+   {
+    "claim": "Unlimited concurrency, higher LoRA limits, and top upscaling require the $105/month Max plan or above",
+    "correction": "Upscaling up to 22K is listed from the Basic plan. Max ($105) is still needed for unlimited image concurrency and LoRA training on up to 2,000 images."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.krea.ai/release-notes",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://www.krea.ai/pricing",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "high",
+  "notes": "API price unit: the release note says 'starts at $0.03 per 1K image', meaning one image at 1K resolution, not 1,000 images. The pricing page is internally inconsistent in places: Basic shows $5 in the cards and $5.25 in the table; SSO appears on the Business card while the FAQ says Enterprise. The card's 'SSO only on Enterprise' con was left as is. The users field 'Free / from $35/mo' should become 'from $9/mo'. On Oct 15, Krea 3 thinking_mode values instant/medium were renamed fast/high; the old values sunset Oct 23.",
+  "domain_changed": false
+ },
+ {
+  "slug": "flux",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "FLUX 3 family: FLUX 3 Image and FLUX 3 Video (announced Jul 23 / Aug 4, 2026); FLUX 3 Action (open weights, Sep 23, 2026); FLUX 3 Image Klein (Oct 15, 2026), a 5.6B-parameter open-weights model (base and distilled) under the FLUX Kommunity License, with API model id flux-3-image-klein. FLUX.2 lineup still offered.",
+  "version_published": "2026-10-15",
+  "pricing": "Pay-as-you-go, no subscriptions or seat fees. FLUX 3 Image Klein API from $0.009 per image at 1K resolution. Calculator default shows $0.048 per image (FLUX 3 Image, 1K). Self-hosting licenses: Builder (10K images/mo), Platform, Professional (100K images/mo), Enterprise and Synthetic Data tiers, prices not published.",
+  "free_tier": "No free hosted API tier. Free self-hosting: FLUX 3 Image Klein weights are free for commercial use by individuals and companies with annual revenue under $5M (FLUX Kommunity License); FLUX.1 [schnell] stays Apache 2.0.",
+  "repositioning": null,
+  "card_errors": [
+   {
+    "claim": "There is no free hosted API tier; the only free route is self-hosting an open-weight model such as FLUX.1 [schnell] (Apache 2.0) within its license terms, since FLUX.1 [dev] remains non-commercial.",
+    "correction": "FLUX 3 Image Klein (Oct 15, 2026) is open weights under the FLUX Kommunity License, which allows free commercial use for individuals and companies under $5M annual revenue."
+   },
+   {
+    "claim": "Open weights carry license restrictions; FLUX.1 [dev] remains non-commercial, and commercial self-hosting at volume needs a separate paid license",
+    "correction": "Add that FLUX 3 Image Klein is free for commercial use under $5M annual revenue. Larger organizations need a self-hosting license or the API."
+   },
+   {
+    "claim": "Open-weight variants (schnell, dev, klein) allow self-hosting and fine-tuning",
+    "correction": "The newest open-weight models are FLUX 3 Image Klein (5.6B, Oct 15, 2026) and FLUX 3 Action (Sep 23, 2026)."
+   },
+   {
+    "claim": "You want a self-hostable model, such as FLUX.2 [klein], built for consumer hardware",
+    "correction": "The newest consumer-hardware model is FLUX 3 Image Klein: the INT8 build runs on GeForce RTX GPUs with as little as 8GB VRAM (~4 s per 1MP image on an RTX 5090, under 9 s on an RTX 4070)."
+   },
+   {
+    "claim": "Open-weight variants such as FLUX.1 [schnell], FLUX.1 [dev], FLUX.2 [dev], and FLUX.2 [klein] are available on Hugging Face and can be run locally.",
+    "correction": "Also FLUX 3 Image Klein (black-forest-labs/flux-3-image-klein and -klein-base on Hugging Face), runnable via ComfyUI or Diffusers on 8GB-VRAM RTX GPUs."
+   },
+   {
+    "claim": "FLUX.2 lists starting per-image prices of about $0.014 (klein 4B), $0.015 (klein 9B), $0.03 (pro), $0.05 (flex), and $0.07 (max)",
+    "correction": "Add FLUX 3 Image Klein API from $0.009 per image at 1K, now the cheapest BFL API model."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://bfl.ai/blog/flux-3-image-klein",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://bfl.ai/blog",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://bfl.ai/pricing",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "high",
+  "notes": "'$0.009 per 1K images' means one image at 1K resolution: the main FLUX 3 Image price is $0.048 at 1k per image. The bfl.ai/pricing calculator now lists FLUX 3 Image, FLUX 3 Image Klein, FLUX.2 flex/pro/max/klein 4B/9B, Outpainting, Eraser and VTO, and no FLUX.1 tiers. Whether FLUX.1 Kontext and Pro Ultra are still sold via the API was not confirmed, so the card's FLUX.1 claims were not flagged. The FLUX 3 Video audio length ('about 20 seconds') was not re-checked. BFL says Klein tops blind evaluations for text-to-image, multi-reference and editing (vendor claim).",
+  "domain_changed": false
+ },
+ {
+  "slug": "recraft-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Recraft V4.1 family (released May 2026): V4.1 standard, Pro (2K), Vector, Pro Vector and Utility variants; Recraft V4.1 Flash added Sep 23, 2026 (separate fastest model, ~1.3 s median to image, raster only, no styles).",
+  "version_published": "2026-09-23",
+  "pricing": "Annual billing shown (save 20%): Basic $10/mo ($120/yr, 1,000 credits/mo, commercial rights, third-party image models); Pro from $16/mo ($192/yr, 2,000 credits; 4k/8k/16k credit tiers, video models); Teams $18/seat/mo ($211/yr, 2,000 credits per seat, shared workspace, SSO). API per image: V4.1 $0.035 (1K raster), V4.1 Vector $0.08, V4.1 Pro $0.21 (2K), Pro Vector $0.30, V4.1 Flash about $0.007.",
+  "free_tier": "Yes, but limited: 'limited free credits', 3 generations per style per day, 3 uploads/day, up to 2 images per generation, Recraft models only, no parallel generation; images are public, owned by Recraft, no commercial use.",
+  "repositioning": null,
+  "card_errors": [
+   {
+    "claim": "built around its Recraft V4.1 model (with a V4.1 Utility variant)",
+    "correction": "The V4.1 family now includes Flash (Sep 23, 2026, ~1.3 s per image), Pro (2K), Vector, Pro Vector and Utility variants."
+   },
+   {
+    "claim": "The current flagship model is Recraft V4.1, introduced around June 2026",
+    "correction": "Recraft's API docs date V4.1 to May 2026."
+   },
+   {
+    "claim": "The Free plan gives 30 credits per day",
+    "correction": "The pricing page now lists 'limited free credits': 3 generations per style per day, Recraft models only, no parallel generation."
+   },
+   {
+    "claim": "Recraft AI has a free plan with 50 generation credits. Pro plan is $12/month for 1,000 credits.",
+    "correction": "Free plan: limited free credits (3 generations per style per day). 1,000 credits/month is the Basic plan at $10/mo billed annually; Pro starts at $16/mo billed annually for 2,000 credits."
+   },
+   {
+    "claim": "The free plan is generous for light use.",
+    "correction": "The free plan is restricted: images are public, owned by Recraft, not licensed for commercial use, and limited to Recraft's own models."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.recraft.ai/blog/meet-recraft-v4-1-flash",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://www.recraft.ai/pricing",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://www.recraft.ai/docs/api-reference/models/recraft-v4-1",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://www.recraft.ai/docs/recraft-models/introduction",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "high",
+  "notes": "The pricing page shows annual prices only; monthly prices weren't captured. Third-party models listed now: image (Basic+) Nano Banana, Seedream, GPT Image, Flux; video (Pro+) Kling, Grok Imagine Video, Veo, Seedance. The card names Qwen Image 2.0, Flux 1 Schnell and Sora, which are not on the pricing page. They may still be in Studio, so not flagged as errors; drop Sora unless confirmed. Per-action credit costs (raster 1 / vector 2 / upscale 20) are no longer on the pricing page and weren't verified. 'V4.1 Vector' exists as API model recraftv4_1_vector (May 2026), not as a September launch.",
+  "domain_changed": false
+ },
+ {
+  "slug": "gamma",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Gamma 5, launched Oct 6, 2026 for every user on every plan: wider range of visual styles; switch between agent-led editing and a fully freeform canvas; a new agent that asks questions and keeps context across edits; enterprise connectors (examples: Slack threads, Granola transcripts); PowerPoint/PDF/infographic import with design preserved.",
+  "version_published": "2026-10-06",
+  "pricing": "Free $0 (400 credits at signup, up to 10 slides per prompt). Plus $12/seat/mo monthly or $9 annual ($108/yr), 1,000 credits/mo. Pro $25 monthly or $18 annual ($216/yr), 4,000 credits, API, 10 custom domains. Ultra $100 monthly or $90 annual ($1,080/yr), 20,000 credits, 100 domains. Business $40/seat/mo billed annually ($480/yr), 10,000 credits per seat, SSO. Enterprise custom (SCIM, priority support). Annual saves up to 28%.",
+  "free_tier": "Yes: 400 credits at signup, up to 10 slides per prompt, import from PDF and PPTX, export to PDF, PPTX, PNG and Google Slides, Gamma branding.",
+  "repositioning": "Gamma now says 'more than 100 million people have used Gamma to date'.",
+  "card_errors": [
+   {
+    "claim": "The current release, Gamma 3.0, adds Gamma Agent",
+    "correction": "The current release is Gamma 5 (Oct 6, 2026), with a new agent and a freeform editing canvas."
+   },
+   {
+    "claim": "The current version is Gamma 3.0, launched in September 2025; no later numbered release has been published.",
+    "correction": "Gamma 5 launched Oct 6, 2026, which Gamma calls 'the biggest product overhaul in our company's history'."
+   },
+   {
+    "claim": "Gamma's pricing page did not return per-seat dollar amounts for these three tiers at the time of review, so exact prices are not listed here",
+    "correction": "Prices are published: Plus $12/mo ($9 annual), Pro $25 ($18 annual), Ultra $100 ($90 annual) per seat."
+   },
+   {
+    "claim": "Business is confirmed at $40 per member per month, billed annually, with 6,000 monthly credits per member",
+    "correction": "Business is $40/seat/mo billed annually with 10,000 monthly credits per seat."
+   },
+   {
+    "claim": "Because Gamma's public pricing page was inaccessible at the time of review, Plus, Pro, and Ultra dollar prices could not be independently confirmed.",
+    "correction": "The pricing page is accessible and lists the prices above."
+   },
+   {
+    "claim": "Plus, Pro, and Ultra per-seat prices were not published on Gamma's pricing page at the time of review",
+    "correction": "They are published: $12/$25/$100 monthly, $9/$18/$90 per month billed annually."
+   },
+   {
+    "claim": "but per-seat prices for those tiers were not available on Gamma's pricing page at the time of review",
+    "correction": "Plus $12, Pro $25, Ultra $100 per seat per month (annual: $9/$18/$90)."
+   },
+   {
+    "claim": "Gamma Agent lets you restyle and rewrite an entire deck with plain-language commands instead of manual edits",
+    "correction": "In Gamma 5 the new agent develops the idea with you (asks questions, keeps context), and you can switch to a freeform canvas for manual edits."
+   },
+   {
+    "claim": "For traditional business presentations that may need PowerPoint export or a conventional slide-by-slide structure, Beautiful.ai gives more control.",
+    "correction": "Gamma exports to PPTX, PDF, PNG and Google Slides on every plan, including Free, and Gamma 5 imports PowerPoint/PDF with design preserved. PowerPoint export is not a differentiator for Beautiful.ai."
+   },
+   {
+    "claim": "Fine-grained visual and layout control is weaker than dedicated design software",
+    "correction": "Gamma 5 adds a fully freeform canvas for moving and arranging individual elements; soften this con."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://gamma.app/insights/introducing-gamma-5-your-story-your-style-your-tools",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://gamma.app/pricing",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Lead claims not found in Gamma's Gamma 5 post: built-in web research, '20+ models', '~20 connectors'. The post only says 'every frontier and image model under the hood' and 'new enterprise connectors' (Slack, Granola as examples). Treat these as unconfirmed. The users field '70M+' should become '100M+' (Gamma: 'More than 100 million people have used Gamma to date'). A pricing FAQ mentions 'Team and Business plans' for seat purchasing, but only Business and Enterprise appear as tiers, so the card's 'no separate Team plan' was left as is. Memory is announced as 'next', not shipped.",
+  "domain_changed": false
+ },
+ {
+  "slug": "opencode",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "OpenCode 2 is current: v2.0.32 (Oct 16, 2026; v2.0.0 tagged Sep 11, 2026; 'OpenCode 2.0' pinned announcement on X Oct 12). The site installer now points to opencode.ai/v2/install and Homebrew Core tracks 2.x. The legacy 1.x line continues: v1.19.3 (Oct 16, 2026). v1.19.0 (Oct 11) added the opt-in `opencode upgrade --major` and stopped automatic updates. v1.19.2 keeps 1.x installs on 1.x.",
+  "version_published": "2026-10-16",
+  "pricing": "Agent: free and open source (MIT). OpenCode Zen: pay-as-you-go balance (add $20, auto top-up at $5), priced per 1M tokens with zero markup and a public rate card in the docs; several models free. OpenCode Go: $10/month subscription (Go Plus $40/month) for curated low-cost open models with usage limits. Enterprise: contact sales, terms not published.",
+  "free_tier": "Yes: the agent is free; bring your own keys or subscription login, or use the free models in Zen/Go.",
+  "repositioning": "Session sharing was discontinued: v1.19.1 (Oct 15, 2026) disabled share links and share commands, and v2.0.30 removed the retired sharing backend and /share command. Security incident: on Oct 17, 2026, @opencode posted 'We had a security breach last night related to a large scale distillation attack that impacted 1.4% of OpenCode Console users' and said affected users were notified by email.",
+  "card_errors": [
+   {
+    "claim": "Limitations: no version number is currently published for the agent, so users cannot easily track release history.",
+    "correction": "Releases are versioned and published on GitHub and opencode.ai/changelog: OpenCode 2 is at v2.0.32 (Oct 16, 2026); the 1.x line at v1.19.3."
+   },
+   {
+    "claim": "No published version number for the current TypeScript implementation",
+    "correction": "Current version is OpenCode 2 (v2.0.32, Oct 16, 2026)."
+   },
+   {
+    "claim": "The tool supports running multiple agent sessions in parallel on the same project and generating shareable session links.",
+    "correction": "Session sharing was discontinued: share links stopped working in v1.19.1 (Oct 15, 2026), and /share was removed in v2.0.30. The homepage still lists 'Share links', which is outdated."
+   },
+   {
+    "claim": "Anomaly also offers OpenCode Zen, an optional first-party AI gateway of curated models billed per request against prepaid credits; no public per-model rate card was available at review time.",
+    "correction": "Zen publishes a per-1M-token rate card in its docs (opencode.ai/docs/zen), with zero markup and a prepaid pay-as-you-go balance ($20 top-ups); several models are free."
+   },
+   {
+    "claim": "Optional OpenCode Zen gateway is usage-based per request with no published per-model rate card",
+    "correction": "Zen's per-model prices per 1M tokens are published in the docs."
+   },
+   {
+    "claim": "Pricing has two layers.",
+    "correction": "There are three paid options besides the free agent: Zen (pay-as-you-go), OpenCode Go ($10/month; Go Plus $40/month) and Enterprise."
+   },
+   {
+    "claim": "Anomaly also offers OpenCode Zen, an optional paid gateway to curated models billed per request via prepaid credits, plus an Enterprise tier with unpublished pricing.",
+    "correction": "Also mention OpenCode Go, a $10/month subscription (Go Plus $40/month) for low-cost open models with usage limits."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://github.com/anomalyco/opencode/releases",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://opencode.ai/changelog",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://opencode.ai/",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://opencode.ai/go",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://opencode.ai/zen",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://opencode.ai/docs/zen",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://x.com/opencode",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://formulae.brew.sh/api/formula/opencode.json",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "high",
+  "notes": "The lead said 'latest v1.19.2'. In fact 1.x is at v1.19.3 (Oct 16) and OpenCode 2 at v2.0.32 (Oct 16). GitHub releases list only 1.x; 2.x is tagged in the same repo and published on opencode.ai/changelog. The breach is confirmed only by OpenCode's own X post (Oct 17, 2026, 18:08 UTC). It hit 1.4% of OpenCode Console users, 'a subset of users who had external providers'. Users who got no email were not affected. The advice to revoke keys and change passwords, and remediation with Google/OpenAI/Anthropic, come from secondary reports (HuggingNews) and are unconfirmed on an OpenCode-owned page. I couldn't open the full post text past 'Show more'. Site figures unchanged: 208K stars, 950 contributors, 16M monthly devs (live GitHub count ~215.8K stars). A separate RCE issue in `opencode serve` /global/upgrade was fixed in 1.18.22 (Mend WS-2026-0073, Sep 24; secondary).",
+  "domain_changed": false
+ },
+ {
+  "slug": "claude-code",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Claude Code CLI 2.1.302 (npm, Oct 16, 2026; 2.1.301 Oct 15). Default model Opus 5.5 on Pro, Max, Team, Enterprise and the Anthropic API. Docs: 'Claude Fable 5.1 and Claude Fable 5 are the most capable models in Claude Code' (not a default; select explicitly). Claude Haiku 5.5 added in 2.1.293 (Oct 7) as the default Haiku on the Anthropic API. Code Review generally available Oct 15, 2026 for Team and Enterprise, with Quick/Standard/Deep levels.",
+  "version_published": "2026-10-16",
+  "pricing": "Free: no Claude Code. Pro $20/mo or $17/mo annual ($200 up front). Max from $100/mo (5x or 20x, monthly only). Team Standard $25 monthly / $20 annual per seat (2-150 seats). Team Premium $125 / $100 per seat. Enterprise $20/seat/mo annual plus usage at API rates (20-seat minimum). API per MTok in/out: Fable 5.1 $10/$50; Opus 5.5 $4/$20 (fast mode $8/$40); Sonnet 5.5 $2/$10; Haiku 5.5 $0.10/$0.50 up to 100K-token prompts, $0.50/$2.50 above; Haiku 4.5 $1/$5.",
+  "free_tier": "No",
+  "repositioning": "Code Review (Team/Enterprise, GitHub PRs) left research preview on Oct 15, 2026. Reviews are ~3x faster (6-10 min) and admins pick Quick, Standard (default) or Deep per repository. Eligible Enterprise orgs can claim at least $10,000 in Code Review credits by Jan 15, 2027.",
+  "card_errors": [
+   {
+    "claim": "currently at CLI version 2.1.291 (October 2026)",
+    "correction": "Current CLI is 2.1.302 (Oct 16, 2026)."
+   },
+   {
+    "claim": "The current release is CLI 2.1.291.",
+    "correction": "Current release is 2.1.302 (Oct 16, 2026)."
+   },
+   {
+    "claim": "Default Claude Opus 5.5 is Anthropic's current flagship model for coding and computer use",
+    "correction": "Opus 5.5 is the default, but the Claude Code docs call Fable 5.1 and Fable 5 'the most capable models in Claude Code' (selectable via the fable/best alias, not a default)."
+   },
+   {
+    "claim": "and Haiku 4.5 at $1/$5",
+    "correction": "Haiku 5.5 is now the default Haiku on the Anthropic API (since 2.1.293), priced $0.10/$0.50 per MTok for prompts up to 100K tokens ($0.50/$2.50 above)."
+   },
+   {
+    "claim": "API pricing varies widely by model, from $1/$5 to $4/$20 per million tokens",
+    "correction": "Range is now $0.10/$0.50 (Haiku 5.5) to $10/$50 (Fable 5.1) per million tokens."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/CHANGELOG.md",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://code.claude.com/docs/en/model-config",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://code.claude.com/docs/en/code-review",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://claude.com/blog/code-review-is-now-generally-available",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://claude.com/pricing",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "high",
+  "notes": "The lead said 2.1.301, but 2.1.302 shipped Oct 16. Haiku alias by provider: Haiku 5.5 on the Anthropic API; Haiku 4.5 on Claude Platform on AWS, Bedrock, Google Cloud and Foundry. Foundry's default model is Sonnet 4.5, not Opus 5.5, so the card's 'default across ... the Anthropic API' wording is fine but shouldn't be extended to Foundry. GA per-review Code Review pricing isn't stated in the GA post (the preview-era post said ~$15-25 average, token-billed). Plan prices on claude.com/pricing match the card.",
+  "domain_changed": false
+ },
+ {
+  "slug": "remove-bg",
+  "alive": true,
+  "shutdown_note": "Confirmed on remove.bg's own FAQ (remove.bg/faq, linked from a site-wide banner): from 1 December 2026 at 9:00am CET, the standalone remove.bg website, accounts, self-service API, Photoshop plugin, desktop app and other integrations are discontinued. Background removal moves to Canva ('uses the same background-removal technology'); API access moves to Leonardo.ai (also Canva-owned); Enterprise API contracts are unaffected. Unused PAYG credits expire on 1 Dec 2026. Annual subscribers get an automatic pro-rata refund. Monthly subscriptions end automatically, and any final renewal on or after 1 Nov is free. Account data and invoices are accessible only until the cutoff.",
+  "current_version": "No public version numbering; service in wind-down ahead of the Dec 1, 2026 shutdown.",
+  "version_published": null,
+  "pricing": "Existing credit/subscription pricing still applies until Dec 1, 2026 (not re-verified). Replacement: Canva Background Remover (Canva help lists it on Canva Pro, Business, Education and Nonprofits plans). Leonardo.ai background-removal API reported at $0.1047 per image (secondary, unverified).",
+  "free_tier": "Until Dec 1, 2026 only (low-res previews, per the card); afterwards no standalone service.",
+  "repositioning": "Folded into Canva (web/bulk) and Leonardo.ai (API). Affinity (free, Canva-owned) has the same background removal built in, but it runs on Canva AI and requires Canva Pro.",
+  "card_errors": [
+   {
+    "claim": "There is no public version numbering, and nothing fundamental has changed recently.",
+    "correction": "remove.bg's standalone website, accounts, self-service API, apps and plugins close on 1 Dec 2026 at 9:00am CET; background removal moves to Canva and the API to Leonardo.ai."
+   },
+   {
+    "claim": "Pay-as-you-go credits never expire",
+    "correction": "Unused PAYG credits expire on 1 Dec 2026."
+   },
+   {
+    "claim": "Pay-as-you-go credits never expire, and per-image cost drops substantially at higher volumes",
+    "correction": "Unused PAYG credits expire on 1 Dec 2026, when the service closes."
+   },
+   {
+    "claim": "Broad access: web app, desktop and mobile apps, API, plus Photoshop and Figma integrations",
+    "correction": "All are discontinued on 1 Dec 2026. Use Canva (web/desktop, bulk), Leonardo.ai's API, or Affinity (needs Canva Pro for the feature)."
+   },
+   {
+    "claim": "The first 50 API or app calls each month are free, useful for testing before committing to a plan",
+    "correction": "The self-service API stops accepting requests on 1 Dec 2026; new integrations should target Leonardo.ai's API."
+   },
+   {
+    "claim": "You want an API or integration to remove backgrounds inside your own workflow",
+    "correction": "After 1 Dec 2026 the remove.bg self-service API and integrations are gone; use Leonardo.ai's background-removal API (Enterprise remove.bg contracts continue)."
+   },
+   {
+    "claim": "Canva owns Remove.bg, but the two tools are priced and sold separately.",
+    "correction": "Canva is consolidating them: remove.bg's background removal moves into Canva, and the standalone product ends on 1 Dec 2026."
+   },
+   {
+    "claim": "Remove.bg is generally considered more accurate, especially for complex subjects like hair, fur, and transparent objects. Canva's background remover is convenient but may require manual touch-ups on complex images.",
+    "correction": "remove.bg's FAQ says Canva's Background Remover 'uses the same background-removal technology as remove.bg'."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.remove.bg/faq",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://www.remove.bg/help",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://alternativeto.net/news/2026/9/end-of-an-era-remove-bg-shuts-down-standalone-service-and-moves-to-the-canva-ecosystem/",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://www.canva.com/help/background-remover/",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "high",
+  "notes": "The shutdown date and its effects come from remove.bg's own FAQ page and banner, read in the browser on Oct 18. The homepage (via WebFetch) shows no banner, but the help center does. The FAQ doesn't mention mobile apps or Figma by name; it says 'other integrations and plugins' end on 1 Dec 2026. Leonardo.ai's announcement (leonardo.ai/news/removebg-api-leonardo) returned 403, so its pricing ($0.1047/image) and rate limits (100 images/min) are secondary. Consider unpublishing the card after Dec 1, 2026 and pointing users to Canva and Leonardo.ai.",
+  "domain_changed": false
+ },
+ {
+  "slug": "whisper",
+  "alive": true,
+  "shutdown_note": "Hosted API only: OpenAI notified developers on Aug 26, 2026 that whisper-1, gpt-4o-transcribe, gpt-4o-mini-transcribe and gpt-4o-transcribe-diarize will be removed from the API on Feb 26, 2027. Recommended replacements are gpt-transcribe and gpt-live-transcribe. The open-source Whisper model (github.com/openai/whisper, MIT) is not affected and remains available.",
+  "current_version": "Open source: large-v3-turbo is still the newest checkpoint (last GitHub release v20250625; repo active, not archived). Hosted API: gpt-transcribe (files) and gpt-live-transcribe (live) are OpenAI's recommended transcription models. Secondary sources date them to Jul 28, 2026.",
+  "version_published": null,
+  "pricing": "Open-source: free (own compute). API per minute: gpt-transcribe $0.0045; gpt-live-transcribe $0.017; gpt-realtime-whisper $0.017; gpt-realtime-translate $0.034. Deprecated, until Feb 26, 2027: whisper-1 $0.006, gpt-4o-transcribe $0.006, gpt-4o-mini-transcribe $0.003, gpt-4o-transcribe-diarize $0.006.",
+  "free_tier": "Yes: open-source weights free to self-host (MIT).",
+  "repositioning": null,
+  "card_errors": [
+   {
+    "claim": "The original endpoint, whisper-1, has been joined by newer models: gpt-4o-transcribe, gpt-4o-mini-transcribe, and gpt-transcribe",
+    "correction": "whisper-1, gpt-4o-transcribe and gpt-4o-mini-transcribe are deprecated (announced Aug 26, 2026) and will be removed from the API on Feb 26, 2027; use gpt-transcribe or gpt-live-transcribe."
+   },
+   {
+    "claim": "Speaker diarization is handled by a separate model, gpt-4o-transcribe-diarize",
+    "correction": "gpt-4o-transcribe-diarize is also deprecated, with removal on Feb 26, 2027. OpenAI names gpt-transcribe/gpt-live-transcribe as replacements, but doesn't confirm they do diarization."
+   },
+   {
+    "claim": "Hosted API offers dedicated diarization (gpt-4o-transcribe-diarize) and live streaming (gpt-live-transcribe) models",
+    "correction": "gpt-4o-transcribe-diarize shuts down Feb 26, 2027; gpt-live-transcribe remains the live option."
+   },
+   {
+    "claim": "You prefer a managed API and are fine paying roughly $0.0045-0.006/min for gpt-transcribe, whisper-1, or gpt-4o-transcribe",
+    "correction": "whisper-1 and gpt-4o-transcribe are deprecated (removal Feb 26, 2027); the current file model is gpt-transcribe at $0.0045/min."
+   },
+   {
+    "claim": "You need live streaming transcription (gpt-live-transcribe) or speaker diarization (gpt-4o-transcribe-diarize) via OpenAI's hosted API",
+    "correction": "The diarization model is deprecated (removal Feb 26, 2027); no successor with diarization has been confirmed."
+   },
+   {
+    "claim": "Choose the hosted gpt-4o-transcribe-diarize or gpt-live-transcribe models if you need diarization or live streaming out of the box.",
+    "correction": "gpt-4o-transcribe-diarize is scheduled for removal on Feb 26, 2027."
+   },
+   {
+    "claim": "starting around $0.003/min for gpt-4o-mini-transcribe, with whisper-1 at $0.006/min",
+    "correction": "Both are deprecated (removal Feb 26, 2027); current recommended API model gpt-transcribe is $0.0045/min, gpt-live-transcribe $0.017/min."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://developers.openai.com/api/docs/deprecations",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://developers.openai.com/api/docs/pricing",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://developers.openai.com/api/docs/guides/transcription",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://github.com/openai/whisper",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Keep the API and open-source tracks separate. The deprecation affects only hosted OpenAI API endpoints, not the MIT-licensed open-source weights, which remain downloadable. gpt-realtime-whisper is not on the deprecations page and still appears on pricing ($0.017/min). The Jul 28, 2026 launch date of gpt-transcribe/gpt-live-transcribe comes from a secondary source (Spokenly); OpenAI's guide confirms gpt-transcribe is recommended for files and gpt-live-transcribe for live audio.",
+  "domain_changed": false
+ },
+ {
+  "slug": "adobe-podcast",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Adobe Podcast is now part of Adobe Firefly: Enhance Speech and Podcast Studio continue. Since Aug 30, 2026, Podcast Premium is no longer sold as a standalone plan; new paid access goes through Firefly Pro.",
+  "version_published": null,
+  "pricing": "Firefly Standard $9.99/mo (2,000 generative credits); Firefly Pro $19.99/mo (4,000 credits; includes everything Podcast Premium offered); Firefly Pro Plus $49.99/mo (10,000 credits; first-year offer $34.97 until Oct 21); Firefly Premium $199.99/mo (50,000 credits; first-year offer $139.91). Existing Podcast Premium subscribers keep their current price and got Firefly Standard added free (2,000 credits/mo).",
+  "free_tier": "Yes: Enhance Speech remains free with an Adobe account, subject to limits (free limits not re-verified this round).",
+  "repositioning": "Folded into Firefly (AI audio: music, sound effects, speech generation alongside Enhance Speech).",
+  "card_errors": [
+   {
+    "claim": "Some existing subscribers who joined under an older standalone $9.99-per-month Premium plan keep that pricing, but new signups go through Firefly Pro.",
+    "correction": "Per Adobe's FAQ, all existing Podcast Premium subscribers keep their current price and, from Aug 30, 2026, also get Firefly Standard (2,000 generative credits/month) at no extra cost. If they cancel after Aug 30, 2026, they must buy Firefly Pro to regain Premium features. The $9.99 figure is not on Adobe's FAQ."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://helpx.adobe.com/podcast/adobe-podcast-premium-plan-change-faq.html",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://www.adobe.com/products/firefly/plans.html",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "high",
+  "notes": "The card already reflects the Firefly Pro move. The FAQ (updated Jul 30, 2026) says checkout on podcast.adobe.com on or after Aug 30, 2026 prompts for Firefly Pro, and that Enhance Speech 'is not going anywhere'. The free-tier limits in the card (30 min/500 MB files, 1 hour enhancement per day, 2 Studio downloads per day) and the March 2026 source-separation update were not re-checked: podcast.adobe.com renders client-side. Firefly prices are US (seen via WebFetch); the browser showed Israeli NIS prices.",
+  "domain_changed": false
+ },
+ {
+  "slug": "relevance-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Invent 2.0 (agent for designing, building and managing AI agent workforces), announced Sep 29, 2026 (PR Newswire, San Francisco).",
+  "version_published": "2026-09-29",
+  "pricing": "Public pricing page: Enterprise only ('Talk to sales'). Docs pricing page: Pro $29/mo monthly or $19/mo annual (2,500 actions/mo, $20 vendor credits); Team $349/mo monthly or $234/mo annual (7,000 actions, $70 vendor credits); Enterprise custom. Top-ups: $80 per 1,000 actions; $20 per 10,000 vendor credits.",
+  "free_tier": "No: the Free plan is retired for new signups and existing accounts (docs).",
+  "repositioning": "'AI Workforce' enterprise positioning; Invent 2.0 maps processes, builds multi-agent architectures, sets benchmarks and monitors quality.",
+  "card_errors": [],
+  "sources": [
+   {
+    "url": "https://relevanceai.com/pricing",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://relevanceai.com/docs/get-started/pricing",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://relevanceai.com/docs/get-started/subscriptions/plans",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://www.webull.com/news/15661795987047424",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "high",
+  "notes": "No factual errors found: the card already says the public pricing page is Enterprise-only and that docs list Pro/Team. Missing: Invent 2.0 (Sep 29, 2026 per the PR Newswire release; the lead's Sep 25 date isn't supported). The press release doesn't say which plans get Invent 2.0. Docs are inconsistent on vendor credits: plan details say $20/$70 per month, the comparison table says 10,000/35,000 credits ($20 buys 10,000, so these may be equivalent); one docs example cites 3,000 vendor credits for Pro. Card figures left as is.",
+  "domain_changed": false
+ },
+ {
+  "slug": "copy-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "GTM AI platform ('The First AI-Native GTM Platform'), owned by Fullcast (acquired Oct 15, 2025). Copy.ai's acquisition page offers early access to workflows under 'Fullcast Propel (powered by Copy.ai)'. The copy.ai site itself still uses the Copy.ai brand.",
+  "version_published": null,
+  "pricing": "copy.ai/prices now shows two tabs. Self-Serve Chat: $29/mo billed monthly, 5 seats, unlimited words, OpenAI/Anthropic/Gemini models; annual toggle advertises '20% saving' (annual figure not captured). Enterprise: custom (guided implementation, API access and bulk workflow runs, 20+ integrations, unlimited workflows). No Growth/Expansion/Scale tiers are listed.",
+  "free_tier": "No",
+  "repositioning": "Being folded into Fullcast's RevOps platform as 'Fullcast Propel (powered by Copy.ai)', alongside Ebsta, Atrium and Commissionly (third-party reports; Copy.ai's own page mentions the Fullcast Propel name only for early-access workflows).",
+  "card_errors": [
+   {
+    "claim": "Team plans are billed annually: Growth is $1,000/mo billed annually ($12,000/yr, 75 seats, 20K workflow credits), Expansion is $2,000/mo billed annually ($24,000/yr, 150 seats, 45K credits) and Scale is $3,000/mo billed annually ($36,000/yr, 200 seats, 75K credits)",
+    "correction": "The current pricing page lists only Chat ($29/mo) and a custom-priced Enterprise tier; Growth/Expansion/Scale are no longer shown."
+   },
+   {
+    "claim": "The next tier is Growth at $1,000/mo billed annually.",
+    "correction": "The only tier above Chat on the pricing page is Enterprise (custom pricing, via demo)."
+   },
+   {
+    "claim": "You can justify team pricing starting at $1,000/mo",
+    "correction": "Team tiers are no longer published; above Chat, pricing is custom Enterprise."
+   },
+   {
+    "claim": "Large price jump from $29 Chat to $1,000+/mo team plans",
+    "correction": "Above $29 Chat there is only custom Enterprise pricing; no published $1,000 tier."
+   },
+   {
+    "claim": "with team plans starting at $1,000/mo billed annually",
+    "correction": "Team plans are no longer published; Enterprise is custom-priced."
+   },
+   {
+    "claim": "Team tiers demand a real commitment (75-200 seats) that small teams won't use",
+    "correction": "Seat-based Growth/Expansion/Scale tiers are no longer listed; Enterprise is custom."
+   },
+   {
+    "claim": "The site is now branded under Fullcast, with a Fullcast banner and Fullcast support email",
+    "correction": "The copy.ai site keeps the Copy.ai brand ('The First AI-Native GTM Platform'). Fullcast appears in the support email and banner link, not in visible branding. Copy.ai's acquisition page refers to 'Fullcast Propel (powered by Copy.ai)'."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.copy.ai/prices",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://www.copy.ai/",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://www.copy.ai/fullcast-acquires-copy-ai",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://app.dealroom.co/news/note/copy-ai-acquired-by-fullcast",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "The annual Chat price ($24/mo in the card) couldn't be confirmed: the toggle didn't switch in the browser. The page says '20% saving', which works out to about $23.20, so check before editing. The Fullcast acquisition date (Oct 15, 2025) is from Dealroom. The 'Fullcast Propel (powered by Copy.ai)' rebrand is confirmed only as an early-access product name on copy.ai/fullcast-acquires-copy-ai, which has no date. Whether the whole product is being renamed is unconfirmed. 'Trusted by 17 million users' is still on the pricing page.",
+  "domain_changed": false
+ },
+ {
+  "slug": "semrush",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "'SEO + AI Search' plan family (SEO, Starter, Pro+, Advanced) plus Free and Enterprise; owned by Adobe since Apr 28, 2026.",
+  "version_published": null,
+  "pricing": "Monthly: SEO $139, Starter $199, Pro+ $299; Advanced custom (request demo). Annually: $117.33 / $165.17 / $248.17 per month (save up to 17%). Free $0 (1 demo project, 10 reports/day). Enterprise custom. Add-ons: extra users from $45/mo, Lead Generation $90/mo, Base Report $10/mo, Pro Report $20/mo.",
+  "free_tier": "Yes: 1 demo project, 10 reports per day across vital tools, no credit card.",
+  "repositioning": "Adobe completed the acquisition on Apr 28, 2026 (~$1.9B, $12/share); Semrush is part of Adobe's CX Enterprise portfolio.",
+  "card_errors": [
+   {
+    "claim": "$549/mo for Advanced",
+    "correction": "Advanced is now custom-priced ('Request demo'); no public price."
+   },
+   {
+    "claim": "paying annually lowers these to about $117.33, $165.17, $248.17 and $455.67 per month respectively",
+    "correction": "Annual: $117.33 (SEO), $165.17 (Starter), $248.17 (Pro+). Advanced has no public annual price."
+   },
+   {
+    "claim": "Pricing is steep, with the Advanced plan reaching $549/mo on monthly billing ($455.67/mo if billed annually)",
+    "correction": "Advanced is custom-priced; the highest published plan is Pro+ at $299/mo ($248.17/mo annual)."
+   },
+   {
+    "claim": "SEMrush is generally considered worth its $139-$549/month price on monthly billing (about $117-$456/month if paid annually)",
+    "correction": "Published prices are $139-$299/month monthly ($117.33-$248.17 annual); Advanced is custom."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.semrush.com/pricing/seo-ai-search/",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://www.semrush.com/news/455963-faq-for-customers-adobe-acquires-semrush/",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://pulse2.com/adobe-completes-acquisition-of-semrush-expanding-brand-visibility-and-ai-search-capabilities/amp/",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "high",
+  "notes": "semrush.com/prices redirects to /pricing/seo-ai-search/. The pricing page doesn't use the name 'Semrush One'; plans are labelled 'SEO + AI Search'. Check whether 'Semrush One' is still official before keeping it in the description. Starter AI Visibility: 50 prompts/day, 1 domain, 300 AI visibility reports/day, plus MCP access. Pro+ adds 100 prompts/day; Advanced has unlimited prompts, 40+ websites, 5,000+ keywords and API. Adobe deal value: most sources say $1.9B, one says $1.5B; the card's $1.9B / $12 per share is consistent with the original agreement.",
+  "domain_changed": false
+ }
+]

@@ -1,0 +1,1320 @@
+[
+ {
+  "slug": "elevenlabs",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "",
+   "best_for": "Voice cloning, TTS, music and sound effects, image and video generation, lip sync, voice agents with a choice of LLM",
+   "description": "ElevenLabs is a multimodal AI studio on a single credit balance: speech, voice cloning, music, sound effects, transcription, dubbing, and now image and video generation with lip sync. It runs its own Eleven v3 voice models and aggregates third-party models from ByteDance, Google, OpenAI, Black Forest Labs and others, so one subscription covers most media formats.",
+   "description_long": "ElevenLabs is a voice-focused AI company best known for realistic text-to-speech and voice cloning. Beyond TTS it now spans audiobooks, music generation and voice agents, making it one of the more complete audio stacks available to developers and creators.\n\nThe current model is Eleven v3, which hit general availability in February 2026. Compared with the older Multilingual v2, v3 substantially expanded language coverage and added the Eleven v3 Conversational model built for voice agents, which can clone a voice from just a few seconds of audio. Around the same time the company launched ElevenMusic with a Music Marketplace for creator monetization, and ElevenReader, an audiobook product at $11/mo positioned against Audible.\n\nCore capabilities include high-quality multilingual TTS, instant and professional voice cloning, real-time conversational agents, music generation and an API with its own subscription tiers for production use.\n\nPricing runs from Free ($0/mo, 10k credits, roughly 10 minutes of TTS, no commercial rights and required attribution) up through Starter ($6/mo, commercial rights and instant cloning), Creator ($22/mo, professional cloning and 192kbps, often promoted at $11 for the first month), Pro ($99/mo), Scale ($299/mo, 3 seats), Business ($990/mo, 10 seats) and custom Enterprise. Annual billing gives two months free.\n\nThe main limitations are credit-based usage that can run out quickly on higher-volume work, no commercial rights or required attribution on the free plan, and costs that climb fast once you need many hours of audio or several seats. Voice cloning also raises consent and misuse concerns you have to manage yourself.\n\nElevenLabs suits creators, studios and developers who need natural-sounding voices in many languages, teams building voice agents, and anyone producing audiobooks or narration at scale. The company reached roughly $500M ARR by April 2026 and raised a $500M Series D at an $11B valuation, with a secondary sale in July 2026 reportedly targeting around $22B.",
+   "pros": [
+    "Eleven v3 delivers highly natural, expressive speech across a wide and recently expanded set of languages",
+    "Voice cloning ranges from instant (a few seconds of audio) to studio-grade professional cloning",
+    "Conversational v3 model enables real-time voice agents, not just prerecorded TTS",
+    "Broad product suite: TTS, music (ElevenMusic + Marketplace) and audiobooks (ElevenReader) under one roof",
+    "Solid API with dedicated subscription tiers for developers",
+    "Agents Platform lets you choose the reasoning model from OpenAI, Anthropic or Google, or connect your own LLM endpoint",
+    "One credit balance covers voice, music, sound effects, images, video and lip sync — no separate subscription per vendor"
+   ],
+   "cons": [
+    "Credit-based pricing can be consumed quickly, so heavy audio work gets expensive fast",
+    "Free plan has no commercial rights and requires attribution",
+    "Higher seat counts and long-form audio push you into the pricier Scale/Business tiers",
+    "Realistic voice cloning carries consent and misuse risks the user must manage",
+    "The $11 Creator promo is first-month only, then reverts to $22/mo"
+   ],
+   "choose_if": [
+    "You need natural multilingual TTS or narration for content at scale",
+    "You want to build real-time voice agents with the Conversational v3 model",
+    "You need instant or professional voice cloning",
+    "You are producing audiobooks or music and want it in one platform",
+    "You are a developer who wants a mature voice API"
+   ],
+   "faq": [
+    {
+     "a": "ElevenLabs produces higher quality, more natural-sounding voices and has superior voice cloning. Murf is better for e-learning and presentation voiceovers with its integrated video sync and team features. Choose ElevenLabs for quality; Murf for e-learning workflows.",
+     "q": "Is ElevenLabs better than Murf?"
+    },
+    {
+     "a": "Yes. ElevenLabs can clone your voice from as little as 1 minute of clean audio. Professional voice cloning (Instant Voice Clone) is available on the Starter plan ($5/month). High-quality cloning (Professional Voice Clone) requires the Creator plan ($22/month).",
+     "q": "Can ElevenLabs clone my voice?"
+    },
+    {
+     "a": "ElevenLabs supports 32+ languages including English, Spanish, French, German, Hindi, Arabic, Chinese, Japanese, and more. Voice quality varies by language — English and major European languages have the most natural output.",
+     "q": "What languages does ElevenLabs support?"
+    }
+   ]
+  },
+  "after": {
+   "badge": "freemium",
+   "users": null,
+   "best_for": "Voice cloning, TTS, music and sound effects, image and video generation, lip sync, voice agents with a choice of LLM",
+   "description": "ElevenLabs is a multimodal AI studio on a single credit balance: speech, voice cloning, music, sound effects, transcription, dubbing, and image and video generation with lip sync. It runs its own Eleven v4 and Eleven v4 Turbo voice models and aggregates third-party models from ByteDance, Google, OpenAI, Black Forest Labs and others, so one subscription covers most media formats.",
+   "description_long": "ElevenLabs is a voice-focused AI company best known for realistic text-to-speech and voice cloning. Beyond TTS it now spans audiobooks, music generation and voice agents, making it one of the more complete audio stacks available to developers and creators.\n\nThe current flagship models are Eleven v4 and Eleven v4 Turbo, released September 28, 2026. Both support more than 90 languages and are available across ElevenAgents, ElevenCreative and the ElevenAPI. Eleven v4 Turbo is the low-latency variant built for voice agents, with around 100ms median inference latency and roughly 150ms median time to first speech over WebSocket. The previous generation, Eleven v3, reached general availability in February 2026 and remains available but has been superseded by v4 for most use cases.\n\nCore capabilities include high-quality multilingual TTS, instant voice cloning from about 10 seconds of audio, professional studio-grade cloning, real-time conversational agents powered by Eleven v4 Turbo, music generation, and an API with its own subscription tiers for production use.\n\nThere is a free plan with 10,000 credits per month, up to 3 Studio projects and no credit rollover, covering TTS, speech-to-text, sound effects, voice design, music and image generation. Paid tiers are billed monthly or annually (annual billing gives two months free): Starter is $6/mo ($5/mo billed annually) with commercial rights and instant cloning; Creator is $22/mo ($18.33/mo billed annually) with professional cloning, sometimes promoted at a discounted first-month rate; Pro is $99/mo ($82.50/mo billed annually); Scale is $299/mo ($249.17/mo billed annually, 3 seats); and Business is $990/mo ($825/mo billed annually, 10 seats). Custom Enterprise pricing is also available.\n\nThe main limitations are credit-based usage that can run out quickly on higher-volume work, no commercial rights or required attribution on the free plan, and costs that climb fast once you need many hours of audio or several seats. Voice cloning also raises consent and misuse concerns you have to manage yourself.\n\nElevenLabs suits creators, studios and developers who need natural-sounding voices in many languages, teams building voice agents, and anyone producing audiobooks or narration at scale.",
+   "pros": [
+    "Eleven v4 delivers highly natural, expressive speech across more than 90 languages",
+    "Voice cloning ranges from instant (about 10 seconds of audio) to studio-grade professional cloning",
+    "Eleven v4 Turbo enables real-time voice agents with roughly 100ms median inference latency",
+    "Broad product suite: TTS, music and audiobooks under one roof",
+    "One credit balance covers voice, music, sound effects, images, video and lip sync, with no separate subscription per vendor",
+    "Agents Platform lets you choose the reasoning model from OpenAI, Anthropic or Google, or connect your own LLM endpoint"
+   ],
+   "cons": [
+    "Credit-based pricing can be consumed quickly, so heavy audio work gets expensive fast",
+    "Free plan has no commercial rights and requires attribution",
+    "Higher seat counts and long-form audio push you into the pricier Scale/Business tiers",
+    "Realistic voice cloning carries consent and misuse risks the user must manage",
+    "Discounted first-month promo pricing on paid tiers reverts to the standard monthly rate afterward"
+   ],
+   "choose_if": [
+    "You need natural multilingual TTS or narration for content at scale",
+    "You want to build real-time voice agents with the Eleven v4 Turbo model",
+    "You need instant or professional voice cloning",
+    "You are producing audiobooks or music and want it in one platform",
+    "You are a developer who wants a mature voice API"
+   ],
+   "faq": [
+    {
+     "q": "Is ElevenLabs better than Murf?",
+     "a": "ElevenLabs produces higher quality, more natural-sounding voices and has superior voice cloning. Murf is better for e-learning and presentation voiceovers with its integrated video sync and team features. Choose ElevenLabs for quality; Murf for e-learning workflows."
+    },
+    {
+     "q": "Can ElevenLabs clone my voice?",
+     "a": "Yes. ElevenLabs can create an Instant Voice Clone from about 10 seconds of clean audio, available on the Starter plan ($6/month, or $5/month billed annually). Professional Voice Clone, for higher-quality results, requires the Creator plan ($22/month, or $18.33/month billed annually)."
+    },
+    {
+     "q": "What languages does ElevenLabs support?",
+     "a": "ElevenLabs' current Eleven v4 and Eleven v4 Turbo models support more than 90 languages. Voice quality varies by language — English and major European languages have the most natural output."
+    }
+   ],
+   "dropped": [
+    "ARR of roughly $500M by April 2026",
+    "$500M Series D at an $11B valuation",
+    "Secondary sale reportedly targeting around $22B",
+    "ElevenReader priced at $11/mo",
+    "32+ languages (superseded by 90+ with current models)",
+    "Eleven v3 as the current/flagship model",
+    "Voice cloning possible from as little as 1 minute of audio",
+    "Starter plan $1 first-month promo (time-limited, unverified as stable price)"
+   ]
+  }
+ },
+ {
+  "slug": "kling-ai",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "",
+   "best_for": "Long AI video, 1080p/60fps, physics accuracy, enterprise video production",
+   "description": "Kling AI is a text- and image-to-video generator from Kuaishou. The current line is Kling 3.0 and 3.0 Omni, Kling 3.0 Turbo, Kling Image 3.0 and Kling Motion, with native multilingual audio, multi-shot storyboarding and up to 4K/60fps output. Legacy models 1.0 through 2.1 Master, the Virtual Try-On API and 119 effect templates retire on September 15, 2026.",
+   "description_long": "Kling AI is a video generation platform built by the Chinese company Kuaishou. You describe a scene in text, or feed it a still image, and it animates a short cinematic clip. Over the past two years it has grown from an experimental demo into one of the most widely used AI video tools.\n\nThe current version is Kling 3.0, which launched on February 5, 2026 on the Omni One architecture. It added native multilingual audio, multi-shot storyboarding of up to six connected shots, and output up to 4K at 60fps, alongside better character consistency and an improved Motion Brush. On June 17, 2026 Kuaishou followed up with Kling 3.0 Turbo, a faster and cheaper mode with synced audio starting around 0.8 yuan per second at 720p, plus a 3.0 Omni upgrade that brought 4K editing and 3-15 second durations.\n\nIn practice the strengths are motion quality, prompt adherence and the ability to string several shots into a coherent sequence rather than one isolated clip. The Kling 3.0 Pro model topped the ArtificialAnalysis text-to-video leaderboard in February 2026 with an Arena ELO of 1240.\n\nPricing is freemium. The free tier gives 66 credits a day (reset daily, no rollover, watermarked, roughly 5-second clips). Paid monthly plans run about $10/mo for Standard (660 credits), $37/mo for Pro (3,000 credits), $92/mo for Premier (8,000 credits) and $180/mo for Ultra (26,000 credits). Annual billing cuts roughly 34% off Standard through Premier, bringing the effective monthly cost to around $6.60, $24.42 and $60.72; Ultra has no annual option.\n\nThe main limitations are clip length and cost. Even the top plans generate clips of up to about 15 seconds, not minutes, so longer videos have to be assembled from multiple generations. Credits also drain quickly at higher resolutions, and the free tier's watermark and short clips make it more of a trial than a working tool.\n\nKling suits creators, marketers and video editors who want high-quality short clips for social content, ads or B-roll, and who are comfortable working shot by shot rather than expecting one long finished video.",
+   "pros": [
+    "Kling 3.0 delivers strong motion realism and topped the ArtificialAnalysis text-to-video leaderboard in Feb 2026",
+    "Native multilingual audio and multi-shot storyboarding (up to six connected shots) in one workflow",
+    "Output up to 4K at 60fps via the Omni One architecture",
+    "3.0 Turbo offers noticeably cheaper, faster generations with synced audio",
+    "Genuinely usable free tier with 66 daily credits for testing"
+   ],
+   "cons": [
+    "Clips max out at around 15 seconds; there is no minutes-long generation",
+    "Credits deplete fast at 4K, so heavy use pushes you toward the pricier plans",
+    "Free tier outputs are watermarked and capped at roughly 5 seconds",
+    "Ultra plan has no annual discount and costs about $180/mo",
+    "Longer videos must be stitched together from several separate clips"
+   ],
+   "choose_if": [
+    "You need high-quality short video clips for social media, ads or B-roll",
+    "You want synced audio and multi-shot sequences generated together",
+    "You're happy to work shot by shot rather than render one long video",
+    "You want to test a capable AI video tool free before committing",
+    "You value output up to 4K/60fps"
+   ],
+   "faq": [
+    {
+     "a": "CapCut is a video editor — you import existing video clips and edit them. Kling AI is a video generator — it creates video from text prompts or images. CapCut is for editing; Kling is for generating.",
+     "q": "What is the difference between CapCut and Kling AI?"
+    },
+    {
+     "a": "Yes. Kling AI offers a free tier with 66 daily credits. This allows significant usage without paying. The Pro plan starts at $6.99/month for higher quality and more credits.",
+     "q": "Is Kling AI free?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "paid",
+   "users": null,
+   "best_for": "Short-form AI video clips, multi-shot consistency, up to 4K resolution, enterprise video production",
+   "description": "Kling AI is a text- and image-to-video generator from Kuaishou. The current generation is Kling 4.0, with Kling 4.0 Flash in early access since September 2026; the legacy Kling 1.0 through 2.1 Master models, the Virtual Try-On API and the 119 effect templates were retired in September 2026.",
+   "description_long": "Kling AI is a video generation platform built by the Chinese company Kuaishou. You describe a scene in text, or feed it a still image, and it animates a short cinematic clip. Over the past two years it has grown from an experimental demo into one of the most widely used AI video tools.\n\nThe current generation is Kling 4.0, which succeeds Kling 3.0. Kling 4.0 Flash entered early access on September 28, 2026, available to Ultra yearly subscribers, generating clips of up to 20 seconds at 720p with 8-bit SDR. Kling's own release note said the full Kling 4.0 model would launch in October 2026; by mid-October, secondary reports suggested it had rolled out more broadly, but this could not be confirmed directly on Kling's own site at the time of writing. Kuaishou also retired the legacy Kling 1.0 through 2.1 Master models, the Virtual Try-On API and the 119 effect templates in September 2026.\n\nReported specifications for the full Kling 4.0 model include single clips from 3 to 30 seconds, up to 10 keyframes per generation, an Omni Reference feature supporting up to 15 reference items for consistent characters and objects, resolutions up to 4K, two-channel stereo audio, and prompts of up to roughly 8,000 tokens. Kuaishou has also announced 10-bit HDR output and a video-extension feature aimed at roughly two-minute videos, both listed as 'coming soon' rather than currently available.\n\nKling AI uses a tiered, credit-based subscription model, with separate plans such as Standard, Pro, Premier and Ultra that unlock larger monthly credit allowances, and annual billing available at a discount on some tiers. Specific current pricing for Kling 4.0 and Flash has not been published, and the previously published rates for the 3.0-era plans could not be reconfirmed at the time of this review.\n\nThe main limitations right now are the lack of published pricing for the new model, uncertainty about exactly when the full 4.0 model became generally available, and the fact that several headline features, including 10-bit HDR and the roughly two-minute video extension, are announced but not yet live. Kling 4.0 Flash early access is also gated behind an Ultra-tier yearly subscription.\n\nKling suits creators, marketers and video editors who want high-quality short clips for social content, ads or B-roll, and who are comfortable working shot by shot while Kuaishou finishes rolling out the newest model's full feature set.",
+   "pros": [
+    "Kling 3.0 Pro topped the ArtificialAnalysis text-to-video leaderboard in Feb 2026 with an Arena ELO of 1240",
+    "Kling 4.0 reportedly supports longer single clips (3-30 seconds) and up to 10 keyframes per generation",
+    "Omni Reference reportedly supports up to 15 reference items for consistent characters and objects across shots",
+    "Long-form prompts of up to roughly 8,000 tokens allow detailed scene direction",
+    "Two-channel stereo audio generation is built into the model"
+   ],
+   "cons": [
+    "Full Kling 4.0 rollout status is unclear: Kling's release note targeted October 2026, but sources disagree on whether it is fully live yet",
+    "10-bit HDR output and the announced roughly two-minute video extension feature are still 'coming soon', not yet available",
+    "Current pricing for Kling 4.0 and Flash has not been published",
+    "Kling 4.0 Flash early access requires an Ultra yearly subscription",
+    "Legacy 1.0-2.1 Master models, the Virtual Try-On API and the 119 effect templates were retired in September 2026, removing those workflows entirely"
+   ],
+   "choose_if": [
+    "You need high-quality short video clips for social media, ads or B-roll",
+    "You want synced audio and consistent characters across multiple shots",
+    "You're happy to work shot by shot rather than render one long video",
+    "You value resolution up to 4K",
+    "You're willing to use an early-access, still-rolling-out model"
+   ],
+   "faq": [
+    {
+     "q": "What is the difference between CapCut and Kling AI?",
+     "a": "CapCut is a video editor — you import existing video clips and edit them. Kling AI is a video generator — it creates video from text prompts or images. CapCut is for editing; Kling is for generating."
+    },
+    {
+     "q": "Is Kling AI free?",
+     "a": "No confirmed free plan could be verified. Kling AI runs on a paid, credit-based subscription model with tiers such as Standard, Pro, Premier and Ultra, though specific current pricing for the latest Kling 4.0 release was not published at the time of this review."
+    }
+   ],
+   "dropped": [
+    "66 daily credits free tier (unverified this round)",
+    "Specific monthly prices for Standard ($10), Pro ($37), Premier ($92) and Ultra ($180)",
+    "Annual billing discount percentages and effective monthly rates (~34% off, $6.60/$24.42/$60.72)",
+    "Kling 3.0 Turbo pricing of ~0.8 yuan per second at 720p (foreign currency, unverified in USD)",
+    "Kling 3.0 launch date of February 5, 2026 on the 'Omni One architecture' as the current version",
+    "4K/60fps output claim as a current-line capability",
+    "Multi-shot storyboarding of up to six connected shots as a current capability",
+    "$6.99/month Pro plan price (contradicted by the card's own pricing and unconfirmed)"
+   ]
+  }
+ },
+ {
+  "slug": "krea-ai",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "Free / from $35/mo",
+   "best_for": "AI image generation, style transfer, node workflows, region editing",
+   "description": "Krea AI is a web-based creative suite for AI image generation, built around Krea 2, the company's first from-scratch foundation image model (May 2026), plus the roughly 2-second Krea 2 Turbo. Alongside images it covers video, 3D generation, and AI upscaling.",
+   "description_long": "Krea AI is a web-based creative platform that started as a real-time image generation tool and has grown into a broader suite covering image, video, 3D, and upscaling. It combines its own models with a library of third-party ones, letting users move between styles and tasks without leaving the browser.\n\nThe current flagship is Krea 2, released in May 2026 as the company's first foundation image model built from scratch, described as a Diffusion Transformer. It was followed in June 2026 by Krea 2 Turbo, which generates high-quality images in roughly two seconds. Krea also published open-weights versions of the model, Krea-2-Raw and Krea-2-Turbo, on Hugging Face under a custom license, and a Krea 2 API is available for developers.\n\nOn top of the base models, Krea 2 adds Generative Sliders, launched in June 2026, for direct control over intensity, complexity, movement, and prompt creativity, LoRA training so users can teach it their own style or subject, and a Moodboard Gallery. The wider platform also includes text- and image-to-video generation, 3D generation, AI upscaling, and newer additions such as a Krea Agent, App Builder, and Nodes Agent for building automated workflows.\n\nPricing is tiered and metered in compute units. The free plan costs nothing and gives 100 units per day with no credit card required, though it has no video generation and upscaling is capped at 2K. Pro is $35 per month, or $21 per month billed yearly, with 20,000 units, image and video concurrency, all video models, and a commercial license. Max is $105 per month, or $63 per month billed yearly, with 60,000 units (adjustable up to 100,000), unlimited image concurrency, LoRA training on up to 2,000 images, and upscaling up to 22K. Business is $200 per month, or $160 per month billed yearly, with 80,000 units, up to 50 seats, and unlimited concurrency. Enterprise is custom-priced and is the only tier that adds SAML SSO, along with custom compute allowances and audit logs.\n\nThe main limits are practical. Everything is metered in compute units, so heavy use of video, 3D, or upscaling can burn through an allowance quickly, and the free daily cap is modest with no video access. The number of models and controls also makes the interface busy for newcomers, and higher concurrency or SSO require stepping up to the pricier plans.\n\nKrea suits people who want one place for image, video, 3D, and upscaling rather than separate tools, and who value fast iteration and fine-grained control. It is less suited to anyone who only needs occasional single images and would rather not think about a credit system, or who needs SSO without paying for the custom Enterprise tier.",
+   "pros": [
+    "Krea 2, an in-house foundation image model, plus Krea 2 Turbo for roughly 2-second high-quality images",
+    "One platform covers image, video, 3D generation, and AI upscaling (up to 22K on paid plans)",
+    "Generative Sliders and LoRA training give real control over style and output",
+    "Genuine free tier with 100 daily compute units and no card required",
+    "Open-weights Krea-2-Raw and Krea-2-Turbo releases on Hugging Face, plus a Krea 2 API for builders"
+   ],
+   "cons": [
+    "Everything is metered in compute units, and video, 3D, and upscaling drain them fast",
+    "Free daily allowance of 100 units is modest and excludes video generation entirely",
+    "The large model library and many controls make the interface busy for beginners",
+    "Unlimited concurrency, higher LoRA limits, and top upscaling require the $105/month Max plan or above",
+    "SAML SSO is available only on the custom-priced Enterprise plan, not on Business"
+   ],
+   "choose_if": [
+    "You want image, video, 3D, and upscaling in a single tool",
+    "You need the newest Krea 2 model or roughly 2-second Turbo generations",
+    "You want to train LoRAs on your own style or subject",
+    "You value slider-based control over prompt-only generation",
+    "You want to try a capable image model free before paying"
+   ],
+   "faq": [
+    {
+     "a": "Krea AI is an AI creative platform featuring real-time image generation (the image updates as you type), an AI canvas for editing and enhancing images, video generation, and AI training on your own images.",
+     "q": "What is Krea AI?"
+    },
+    {
+     "a": "Krea AI has a free plan with 100 compute units per day and no credit card required. The Pro plan costs $35/month ($21/month billed yearly), and the Max plan costs $105/month ($63/month billed yearly), for more units, faster processing, and higher concurrency.",
+     "q": "Is Krea AI free?"
+    },
+    {
+     "a": "Yes. Krea AI has video generation capabilities — text-to-video and image-to-video. Quality is competitive with other mid-tier tools but generally below Runway or Kling for professional video production.",
+     "q": "Can Krea AI generate video?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "Free / from $9/mo",
+   "best_for": "AI image generation, style transfer, node workflows, region editing",
+   "description": "Krea AI is a web-based creative suite for AI image generation, video generation, 3D generation, and AI upscaling, built around Krea 3, the company's in-house image model that became the default in the app on October 16, 2026, with a Krea 3 Ultra variant on Max plans and above.",
+   "description_long": "Krea AI is a web-based creative platform that started as a real-time image generation tool and has grown into a broader suite covering image, video, 3D, and upscaling. It combines its own models with a library of third-party ones, letting users move between styles and tasks without leaving the browser.\n\nThe current flagship is Krea 3, which became the default image model in the Krea app on October 16, 2026, replacing the previous-generation Krea 2 (released May 2026). A Krea 3 Ultra variant is available on Max plans and above. A Krea 3 API entered early access on October 15, 2026, available through sales, with pricing starting from $0.03 per image at 1K resolution. Krea had previously published open-weights versions of its prior model, Krea-2-Raw and Krea-2-Turbo, on Hugging Face under a custom license.\n\nOn top of the base models, the platform offers Generative Sliders for direct control over intensity, complexity, movement, and prompt creativity, LoRA training so users can teach it their own style or subject, and a Moodboard Gallery. It also covers text- and image-to-video generation using models from vendors such as Wan, AI upscaling with enhancers from vendors like Topaz, and 3D generation, along with a Krea Agent now included on every plan, plus an App Builder and Nodes Agent for building automated workflows.\n\nPricing is tiered and metered in compute units, with yearly billing discounted roughly 40% off monthly rates. The Free plan costs nothing and gives 100 units per day with no credit card required, with image concurrency of 1, LoRA training on up to 50 images, and upscaling capped at 2K; the plan is listed as including all image, video, and 3D/lipsync models and a commercial license, though a separate comparison table marks its video access as \"Limited.\" Basic is $9 per month, or $5 per month billed yearly, with 5,000 units. Pro is $35 per month, or $21 per month billed yearly, with 20,000 units, image and video concurrency, and a commercial license. Max is $105 per month, or $63 per month billed yearly, with 60,000 units (adjustable up to 100,000), unlimited image concurrency, LoRA training on up to 2,000 images, and upscaling up to 22K. Business is $200 per month, or $160 per month billed yearly, with 80,000 units and up to 50 seats. Enterprise is custom-priced and adds custom compute allowances, audit logs, and SAML SSO.\n\nThe main limits are practical. Everything is metered in compute units, so heavy use of video, 3D, or upscaling can burn through an allowance quickly, and the free daily cap is modest with only limited video access. The number of models and controls also makes the interface busy for newcomers, and unlimited image concurrency plus higher LoRA limits require stepping up to the $105/month Max plan or above.\n\nKrea suits people who want one place for image, video, 3D, and upscaling rather than separate tools, and who value fast iteration and fine-grained control. It is less suited to anyone who only needs occasional single images and would rather not think about a credit system, or who needs SSO without paying for the custom Enterprise tier.",
+   "pros": [
+    "Krea 3 is now the default in-house image model in the app, with a Krea 3 Ultra variant on Max plans and above",
+    "One platform covers image, video, 3D generation, and AI upscaling (up to 22K on paid plans)",
+    "Generative Sliders and LoRA training give real control over style and output",
+    "Free plan gives 100 daily compute units with no credit card required",
+    "Krea 3 API now in early access for developers, priced from $0.03 per image at 1K resolution"
+   ],
+   "cons": [
+    "Everything is metered in compute units, and video, 3D, and upscaling can drain them quickly",
+    "Free plan's 100 daily units are modest, with video access marked 'Limited' and upscaling capped at 2K",
+    "The large model library and many controls make the interface busy for beginners",
+    "Unlimited image concurrency and higher LoRA training limits require the $105/month Max plan or above",
+    "SAML SSO is available only on the custom-priced Enterprise plan, not on Business"
+   ],
+   "choose_if": [
+    "You want image, video, 3D, and upscaling in a single tool",
+    "You need the newest Krea 3 image model or its Ultra variant on Max plans",
+    "You want to train LoRAs on your own style or subject",
+    "You value slider-based control over prompt-only generation",
+    "You want to try a capable image model on a free plan before paying"
+   ],
+   "faq": [
+    {
+     "q": "What is Krea AI?",
+     "a": "Krea AI is an AI creative platform featuring real-time image generation (the image updates as you type), an AI canvas for editing and enhancing images, video generation, and AI training on your own images."
+    },
+    {
+     "q": "Is Krea AI free?",
+     "a": "Krea AI has a free plan with 100 compute units per day and no credit card required, though its video access is limited and upscaling is capped at 2K. Paid plans start at Basic for $9/month ($5/month billed yearly), with Pro at $35/month ($21/month billed yearly) and Max at $105/month ($63/month billed yearly) for more units, faster processing, and higher concurrency."
+    },
+    {
+     "q": "Can Krea AI generate video?",
+     "a": "Yes. Krea AI has video generation capabilities — text-to-video and image-to-video. Quality is competitive with other mid-tier tools but generally below Runway or Kling for professional video production."
+    }
+   ],
+   "dropped": [
+    "Krea 2 as the current flagship model (superseded by Krea 3 as of Oct 16, 2026)",
+    "Krea 2 Turbo's roughly 2-second generation claim (not verified for the current model)",
+    "Krea 2 API availability (replaced by a Krea 3 API in early access)",
+    "Free plan excluding video generation entirely (free plan now lists limited video access)"
+   ]
+  }
+ },
+ {
+  "slug": "flux",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": null,
+   "best_for": "AI image & video generation, native audio, text rendering, multi-reference editing",
+   "description": "Flux is an image, video, and world-model family from Black Forest Labs. The current generation is FLUX 3 (image, video with native audio, and action/robotics models), announced in 2026, with the FLUX.2 lineup still offered alongside it.",
+   "description_long": "Flux is a family of generative AI models built by Black Forest Labs, spanning top-tier API-only models and open-weight versions you can self-host and fine-tune. It originally focused on image generation and editing, but the company has since expanded well beyond images.\n\nThe current generation is FLUX 3, announced July 23, 2026, covering FLUX 3 Image, FLUX 3 Video (which adds native audio up to about 20 seconds), and FLUX 3 Action, an open-weights 7B model aimed at robotics, released September 2026. The earlier FLUX.2 lineup (pro, flex, max, dev, and the compact klein variant in 4B and 9B sizes, added January 2026) remains available, as do several legacy FLUX.1 tiers including Kontext Pro/Max and Pro Ultra.\n\nAcross the lineup, Flux models support multi-reference input (up to around 10 reference images) for character and style consistency, photorealistic image output up to 4 megapixels, and text rendering inside generated images. FLUX.2 [klein] is marketed as able to run on consumer hardware with sub-second inference. FLUX 3 Video adds synchronized audio generation.\n\n\nPricing is pay-as-you-go with no subscriptions or seat fees. FLUX 3 Image is billed per image: about $0.041 at 768 square, $0.048 at 1k, $0.100 at 2k, and $0.607 at 4k. FLUX 3 Video is billed per second, from roughly $0.06/s for drafts up to $0.17-$0.80/s depending on quality, with continuation generations at $0.41-$0.95/s. FLUX.2 lists starting per-image prices of about $0.014 (klein 4B), $0.015 (klein 9B), $0.03 (pro), $0.05 (flex), and $0.07 (max); the vendor's own pricing calculator has shown different default figures for some of these tiers, so exact per-image costs can vary. Legacy FLUX.1 tiers run roughly $0.04-$0.08 per image. Commercial self-hosting above certain volumes requires a separate annual Open Weights license (Builder, Platform, Professional, Enterprise tiers), with pricing not published on the vendor's pricing page.\n\nThere is no free hosted API tier; the only free route is self-hosting an open-weight model such as FLUX.1 [schnell] (Apache 2.0) within its license terms, since FLUX.1 [dev] remains non-commercial. The fast-expanding lineup, inconsistent per-image figures between docs and calculator, and license tiers for commercial self-hosting add complexity for buyers comparing options.\n\nFlux suits developers and studios that want either top-tier image or video generation through an API, or a self-hostable, fine-tunable model, and that are comfortable with pay-per-asset billing or managing an open-weights license.",
+   "pros": [
+    "FLUX 3 extends the lineup beyond images to video generation with native audio and open-weight action/robotics models",
+    "Multi-reference support (up to about 10 images) keeps characters and styles consistent across generations",
+    "FLUX.2 [klein] is built to run on consumer hardware with sub-second inference",
+    "Pay-as-you-go per-image and per-second pricing, with no subscriptions or seat fees",
+    "Open-weight variants (schnell, dev, klein) allow self-hosting and fine-tuning"
+   ],
+   "cons": [
+    "Top-tier FLUX 3 and FLUX.2 [pro]/[max] models are API-only and paid; there is no free hosted tier",
+    "Per-image and per-second billing scales with resolution and duration, reaching over $0.60/image at 4k and up to $0.80/second for FLUX 3 Video",
+    "The vendor's pricing calculator has shown different default figures than its published 'from' prices for some FLUX.2 tiers",
+    "Open weights carry license restrictions; FLUX.1 [dev] remains non-commercial, and commercial self-hosting at volume needs a separate paid license",
+    "A growing lineup across FLUX 3, FLUX.2, and legacy FLUX.1 tiers can be confusing when choosing a model"
+   ],
+   "choose_if": [
+    "You need photorealistic image or video generation through an API",
+    "You want consistent characters or styles across images using multiple references",
+    "You want a self-hostable model, such as FLUX.2 [klein], built for consumer hardware",
+    "You need text rendering inside generated images",
+    "You prefer per-image or per-second billing over a monthly subscription"
+   ],
+   "faq": [
+    {
+     "a": "Black Forest Labs' Flux models, now including FLUX 3, are generally regarded as producing sharper, more photorealistic results with better text and hand rendering than SDXL. Stable Diffusion still has a larger community ecosystem of fine-tuned models, LoRAs, and tools built around it.",
+     "q": "Is FLUX better than Stable Diffusion?"
+    },
+    {
+     "a": "Yes. Open-weight variants such as FLUX.1 [schnell], FLUX.1 [dev], FLUX.2 [dev], and FLUX.2 [klein] are available on Hugging Face and can be run locally. FLUX.2 [klein] is marketed as able to run on consumer hardware, including on-device laptops; VRAM requirements vary by model size and quantization.",
+     "q": "Can I run FLUX locally?"
+    },
+    {
+     "a": "FLUX.1 was Black Forest Labs' original model generation, released in August 2024, offered in Schnell (fast, open weights), Dev (open weights, non-commercial), and Pro (API only) tiers. It has since been superseded by FLUX.2 and FLUX 3, though FLUX.1 tiers such as Kontext and Pro Ultra remain listed and available.",
+     "q": "What is FLUX.1?"
+    }
+   ]
+  },
+  "after": {
+   "badge": "freemium",
+   "users": null,
+   "best_for": "AI image & video generation, native audio, text rendering, multi-reference editing, self-hostable open-weight models",
+   "description": "Flux is an image, video, and world-model family from Black Forest Labs. The current generation is FLUX 3 (image, video with native audio, an open-weights Action/robotics model, and the open-weights Image Klein variant), with the FLUX.2 lineup still offered alongside it.",
+   "description_long": "Flux is a family of generative AI models built by Black Forest Labs, spanning top-tier API-only models and open-weight versions you can self-host and fine-tune. It originally focused on image generation and editing, but the company has since expanded well beyond images.\n\nThe current generation is FLUX 3, announced July 23, 2026, covering FLUX 3 Image, FLUX 3 Video (which adds native audio), and FLUX 3 Action, an open-weights model aimed at robotics, released September 23, 2026. On October 15, 2026, Black Forest Labs added FLUX 3 Image Klein, a 5.6-billion-parameter open-weights model (base and distilled versions, API model id flux-3-image-klein) released under the FLUX Kommunity License. The earlier FLUX.2 lineup (pro, flex, max, dev, and the compact klein variant in 4B and 9B sizes, added January 2026) remains available, as do several legacy FLUX.1 tiers including Kontext Pro/Max and Pro Ultra.\n\nAcross the lineup, Flux models support multi-reference input (up to around 10 reference images) for character and style consistency, photorealistic image output up to 4 megapixels, and text rendering inside generated images. FLUX 3 Image Klein is built for consumer hardware: its INT8 build runs on GeForce RTX GPUs with as little as 8GB of VRAM, generating a 1-megapixel image in about 4 seconds on an RTX 5090 and under 9 seconds on an RTX 4070. FLUX 3 Video adds synchronized audio generation.\n\nPricing is pay-as-you-go with no subscriptions or seat fees. FLUX 3 Image is billed per image: about $0.041 at 768 square, $0.048 at 1k, $0.100 at 2k, and $0.607 at 4k. FLUX 3 Image Klein starts from $0.009 per image at 1k resolution, making it the cheapest model currently offered through Black Forest Labs' API. FLUX 3 Video is billed per second, from roughly $0.06/s for drafts up to $0.17-$0.80/s depending on quality, with continuation generations at $0.41-$0.95/s. FLUX.2 lists starting per-image prices of about $0.014 (klein 4B), $0.015 (klein 9B), $0.03 (pro), $0.05 (flex), and $0.07 (max); the vendor's own pricing calculator has shown different default figures for some of these tiers, so exact per-image costs can vary. Legacy FLUX.1 tiers run roughly $0.04-$0.08 per image. Commercial self-hosting above certain volumes requires a separate annual Open Weights license (Builder, up to 10,000 images/month; Platform; Professional, up to 100,000 images/month; Enterprise; and Synthetic Data tiers), with pricing not published on the vendor's pricing page.\n\nThere is no free hosted API tier. Free self-hosting is available for FLUX 3 Image Klein, whose weights are free for commercial use by individuals and companies with annual revenue under $5 million under the FLUX Kommunity License, and for FLUX.1 [schnell] (Apache 2.0); FLUX.1 [dev] remains non-commercial, and larger organizations need a paid self-hosting license or the API. The fast-expanding lineup, inconsistent per-image figures between docs and calculator, and license tiers for commercial self-hosting add complexity for buyers comparing options.\n\nFlux suits developers and studios that want either top-tier image or video generation through an API, or a self-hostable, fine-tunable model, and that are comfortable with pay-per-asset billing or managing an open-weights license.",
+   "pros": [
+    "FLUX 3 extends the lineup beyond images to video generation with native audio and open-weight Action/robotics and Image Klein models",
+    "Multi-reference support (up to about 10 images) keeps characters and styles consistent across generations",
+    "FLUX 3 Image Klein's INT8 build runs on consumer GeForce RTX GPUs with as little as 8GB VRAM, generating a 1MP image in about 4 seconds on an RTX 5090",
+    "Pay-as-you-go per-image and per-second pricing, with no subscriptions or seat fees, starting from $0.009 per image with FLUX 3 Image Klein",
+    "FLUX 3 Image Klein weights are free for commercial use for individuals and companies with annual revenue under $5M, alongside the Apache-2.0 FLUX.1 [schnell]"
+   ],
+   "cons": [
+    "Top-tier FLUX 3 Image/Video and FLUX.2 [pro]/[max] models are API-only and paid; there is no free hosted tier",
+    "Per-image and per-second billing scales with resolution and duration, reaching over $0.60/image at 4k and up to $0.80/second for FLUX 3 Video",
+    "The vendor's pricing calculator has shown different default figures than its published 'from' prices for some FLUX.2 tiers",
+    "Open weights carry license restrictions: FLUX 3 Image Klein's free commercial use applies only to companies with annual revenue under $5M, FLUX.1 [dev] remains non-commercial, and larger-scale self-hosting needs a separate paid license",
+    "A growing lineup across FLUX 3, FLUX.2, and legacy FLUX.1 tiers can be confusing when choosing a model"
+   ],
+   "choose_if": [
+    "You need photorealistic image or video generation through an API",
+    "You want consistent characters or styles across images using multiple references",
+    "You want a self-hostable model, such as FLUX 3 Image Klein, built to run on consumer GeForce RTX GPUs with as little as 8GB VRAM",
+    "You need text rendering inside generated images",
+    "You prefer per-image or per-second billing over a monthly subscription"
+   ],
+   "faq": [
+    {
+     "q": "Is FLUX better than Stable Diffusion?",
+     "a": "Black Forest Labs' Flux models, now including FLUX 3, are generally regarded as producing sharper, more photorealistic results with better text and hand rendering than SDXL. Stable Diffusion still has a larger community ecosystem of fine-tuned models, LoRAs, and tools built around it."
+    },
+    {
+     "q": "Can I run FLUX locally?",
+     "a": "Yes. Open-weight variants such as FLUX.1 [schnell], FLUX.2 [dev], FLUX.2 [klein], and FLUX 3 Image Klein (available on Hugging Face as black-forest-labs/flux-3-image-klein and -klein-base) can be run locally via ComfyUI or Diffusers, including on consumer GeForce RTX GPUs with as little as 8GB VRAM; other VRAM requirements vary by model size and quantization."
+    },
+    {
+     "q": "What is FLUX.1?",
+     "a": "FLUX.1 was Black Forest Labs' original model generation, released in August 2024, offered in Schnell (fast, open weights), Dev (open weights, non-commercial), and Pro (API only) tiers. It has since been superseded by FLUX.2 and FLUX 3, though FLUX.1 tiers such as Kontext and Pro Ultra remain listed and available."
+    }
+   ],
+   "dropped": []
+  }
+ },
+ {
+  "slug": "recraft-ai",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "3M+",
+   "best_for": "AI image generation, agentic design, MCP integration, vector art",
+   "description": "Recraft AI is a design-focused image generator built around its Recraft V4.1 model (with a V4.1 Utility variant). It produces photorealistic raster images, true SVG vectors, icons, mockups and product shots from text prompts.",
+   "description_long": "Recraft AI is an image-generation platform aimed at designers, marketers and product teams rather than casual users. It runs in a browser-based Studio where you write prompts, control style and export results as raster or editable vector files.\n\nThe current flagship model is Recraft V4.1, introduced around June 2026 on top of Recraft V4 (February 2026). This was a significant shift: earlier versions were known mainly for SVG vectors and icons, while V4 and V4.1 push into photorealistic imagery, production-quality raster, mockups and so-called utility shots. An Exploration Mode generates several visual directions from a single prompt.\n\nBeyond its own models, Recraft Studio integrates third-party image engines (GPT Image, Flux 1 Schnell, Qwen Image 2.0, Grok Imagine) and video models such as Kling, Sora and Veo, so you can compare outputs without switching tools.\n\nPricing is credit-based. The Free plan gives 30 credits per day, but generated images are public, owned by Recraft, and carry no commercial license. Basic is 1,000 credits/month at $10/month annually. Pro is credit-tiered from 2,000 credits ($16/mo annual) up to 16,000 credits ($128/mo annual), with Teams per-seat plans and custom Enterprise quotes. Actions cost differently: raster 1 credit, vector 2, upscale 20. Top-up packs of 200 to 1,600 credits never expire, and annual billing runs about 20% cheaper.\n\nThe main limitation is that the free tier is essentially a trial: no commercial rights, public gallery exposure, and Recraft ownership of your images. Serious use requires a paid plan, and heavy raster or upscaling work can burn credits quickly.\n\nRecraft suits teams that need both clean vectors and realistic raster from one platform, and value consistent style control. It is less suited to hobbyists who just want free, unrestricted images.",
+   "pros": [
+    "Produces genuine editable SVG vectors alongside photorealistic raster, which few competitors do well",
+    "Recraft V4.1 broadened the tool well beyond icons into mockups, product shots and utility imagery",
+    "Studio bundles third-party image and video models (Flux, Qwen, GPT Image, Kling, Sora, Veo) in one place",
+    "Strong, consistent style controls that keep brand looks coherent across a set of assets",
+    "Top-up credit packs never expire, so occasional users are not forced into a subscription"
+   ],
+   "cons": [
+    "Free tier grants no commercial license and makes your images public and owned by Recraft",
+    "Credit-based pricing gets expensive fast for upscaling (20 credits) and high-volume raster work",
+    "Steeper learning curve than one-click generators; it is built for designers, not casual users",
+    "Commercial rights and privacy only unlock on paid plans starting at $10/month",
+    "Quality of integrated third-party models varies, and they consume credits like native generations"
+   ],
+   "choose_if": [
+    "You need both editable SVG vectors and photorealistic raster from a single tool",
+    "You want brand-consistent icons, mockups and product shots at scale",
+    "You value trying multiple image and video models inside one Studio",
+    "You are on a paid plan and require clear commercial licensing",
+    "You produce assets regularly and can justify a credit subscription"
+   ],
+   "faq": [
+    {
+     "a": "Recraft AI is an AI image generator specialized in vector graphics and brand-consistent design. Unlike most AI tools that produce raster images, Recraft can generate true SVG vector files, icon sets, and scalable brand assets. It's popular with designers who need production-ready design files.",
+     "q": "What is Recraft AI?"
+    },
+    {
+     "a": "Yes. This is Recraft's primary differentiator — it generates true SVG (scalable vector graphics) files that can be scaled to any size without quality loss. This makes it essential for logo design, icon creation, and any print or large-format design work.",
+     "q": "Can Recraft AI generate SVG files?"
+    },
+    {
+     "a": "Recraft AI has a free plan with 50 generation credits. Pro plan is $12/month for 1,000 credits. Enterprise plans are available for teams. The free plan is generous for light use.",
+     "q": "Is Recraft AI free?"
+    },
+    {
+     "a": "Recraft is optimized for design assets — vectors, icons, consistent brand visuals. Midjourney is optimized for artistic image quality. Designers needing production files use Recraft; artists and creative professionals use Midjourney. Many designers use both for different purposes.",
+     "q": "What is the difference between Recraft and Midjourney for design work?"
+    }
+   ]
+  },
+  "after": {
+   "badge": "freemium",
+   "users": null,
+   "best_for": "AI image generation, agentic design, MCP integration, vector art",
+   "description": "Recraft AI is a design-focused image generator built around its Recraft V4.1 model family, including a fast Flash variant. It produces photorealistic raster images, true SVG vectors, icons, mockups and product shots from text prompts.",
+   "description_long": "Recraft AI is an image-generation platform aimed at designers, marketers and product teams rather than casual users. It runs in a browser-based Studio where you write prompts, control style and export results as raster or editable vector files.\n\nThe current model lineup is the Recraft V4.1 family, released in May 2026: a standard V4.1 model plus Pro (2K), Vector, Pro Vector and Utility variants. On September 23, 2026, Recraft added V4.1 Flash, a separate, faster raster-only model with a median generation time of about 1.3 seconds per image and no style controls. An Exploration Mode generates several visual directions from a single prompt.\n\nBeyond its own models, Recraft Studio integrates third-party image engines - Nano Banana, Seedream, GPT Image and Flux - available from the Basic plan up, and video models including Kling, Grok Imagine Video, Veo and Seedance, available from the Pro plan up, so you can compare outputs without switching tools.\n\nPricing is credit-based, and the figures below reflect annual billing, which Recraft discounts by about 20% compared to monthly. Basic costs $10/month billed annually ($120/year) for 1,000 credits per month and commercial usage rights. Pro starts at $16/month billed annually ($192/year) for 2,000 credits, with higher credit tiers available plus access to the video models. Teams costs $18/seat/month billed annually ($211/year) for 2,000 credits per seat, a shared workspace and SSO; Enterprise plans use custom quotes. Recraft also offers pay-per-image API pricing, from about $0.007 per image on V4.1 Flash up to $0.30 per image on Pro Vector. Top-up credit packs of 200 to 1,600 credits do not expire.\n\nThe free plan is restricted rather than a genuine alternative to paying: it offers limited free credits, capped at three generations per style per day, three uploads per day and up to two images per generation, using only Recraft's own models with no parallel generation. Images made on the free plan are public, owned by Recraft, and carry no commercial license, so serious use requires a paid plan. Heavy raster or upscaling work can also burn through credits quickly on the entry-level tiers.\n\nRecraft suits teams that need both clean vectors and realistic raster from one platform, and value consistent style control. It is less suited to hobbyists who just want free, unrestricted images.",
+   "pros": [
+    "Produces genuine editable SVG vectors alongside photorealistic raster, which few competitors do well",
+    "The V4.1 family, plus the fast new V4.1 Flash variant, extends the tool well beyond icons into mockups, product shots and utility imagery",
+    "Studio bundles third-party image models (Nano Banana, Seedream, GPT Image, Flux) and video models (Kling, Grok Imagine Video, Veo, Seedance) in one place",
+    "Strong, consistent style controls that keep brand looks coherent across a set of assets",
+    "Top-up credit packs never expire, so occasional users are not forced into a subscription"
+   ],
+   "cons": [
+    "Free tier is capped (three generations per style per day, Recraft's own models only) and generated images are public, owned by Recraft, with no commercial license",
+    "Credit-based pricing can get expensive fast for high-volume raster, vector or upscaling work",
+    "Steeper learning curve than one-click generators; it is built for designers, not casual users",
+    "Commercial rights and privacy only unlock on a paid plan, starting at $10/month billed annually",
+    "Quality of integrated third-party models varies, and they consume credits like native generations"
+   ],
+   "choose_if": [
+    "You need both editable SVG vectors and photorealistic raster from a single tool",
+    "You want brand-consistent icons, mockups and product shots at scale",
+    "You value trying multiple image and video models inside one Studio",
+    "You are on a paid plan and require clear commercial licensing",
+    "You produce assets regularly and can justify a credit subscription"
+   ],
+   "faq": [
+    {
+     "q": "What is Recraft AI?",
+     "a": "Recraft AI is an AI image generator specialized in vector graphics and brand-consistent design. Unlike most AI tools that produce raster images, Recraft can generate true SVG vector files, icon sets, and scalable brand assets. It's popular with designers who need production-ready design files."
+    },
+    {
+     "q": "Can Recraft AI generate SVG files?",
+     "a": "Yes. This is Recraft's primary differentiator — it generates true SVG (scalable vector graphics) files that can be scaled to any size without quality loss. This makes it essential for logo design, icon creation, and any print or large-format design work."
+    },
+    {
+     "q": "Is Recraft AI free?",
+     "a": "Recraft's free plan offers limited free credits: three generations per style per day, three uploads per day, up to two images per generation, and Recraft's own models only. Free-plan images are public, owned by Recraft, and not licensed for commercial use. Paid plans start at $10/month billed annually for Basic (1,000 credits/month with commercial rights), with Pro starting at $16/month billed annually for 2,000 credits, plus Teams and custom Enterprise options."
+    },
+    {
+     "q": "What is the difference between Recraft and Midjourney for design work?",
+     "a": "Recraft is optimized for design assets — vectors, icons, consistent brand visuals. Midjourney is optimized for artistic image quality. Designers needing production files use Recraft; artists and creative professionals use Midjourney. Many designers use both for different purposes."
+    }
+   ],
+   "dropped": [
+    "3M+ user count (unverified)",
+    "Free plan gives 30 credits per day (replaced with verified limited free-credit structure)",
+    "V4.1 introduced around June 2026 (API docs date it to May 2026)",
+    "Qwen Image 2.0 integration (not confirmed on current pricing/docs)",
+    "Sora video integration (not confirmed on current pricing/docs)",
+    "Pro tier up to 16,000 credits at $128/mo (unverified figure)",
+    "Per-action credit costs: raster 1 / vector 2 / upscale 20 credits (no longer listed, unverified)",
+    "Free plan with 50 credits and $12/month Pro plan described as 'generous for light use' (incorrect figures)"
+   ]
+  }
+ },
+ {
+  "slug": "gamma",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "70M+",
+   "best_for": "AI presentations, marketing assets, infographics, programmatic content",
+   "description": "Gamma is an AI tool for generating presentations, documents, and websites from a prompt. The current release, Gamma 3.0, adds Gamma Agent, a conversational AI that restyles and rewrites decks from natural-language instructions.",
+   "description_long": "Gamma is a web-based tool that turns a short prompt or an outline into a finished presentation, document, or simple website. Instead of arranging slides by hand, you describe what you want and Gamma builds the structure, writing, and layout for you to refine.\n\nThe current version is Gamma 3.0, launched in September 2025; no later numbered release has been published. Its headline addition is Gamma Agent, a conversational AI that restyles and rewrites a deck from plain-language commands rather than manual editing.\n\nOn the capability side, the Claude and ChatGPT connectors were improved to handle deck naming, card counts, brand colors, and plan checks, and Gamma is now available as an app inside ChatGPT. The editor gained 6-column layouts and gradient card backgrounds, and the public API can now delete decks.\n\nPricing is organized into Free, Plus, Pro, and Ultra individual plans, plus Business and Enterprise options. The Free plan costs $0, includes 400 credits with no time limit, and requires no credit card; it keeps a Made with Gamma badge and allows up to 10 cards per prompt. Plus adds about 1,000 monthly credits and removes the badge; Pro adds roughly 4,000 monthly credits, API access, and up to 10 custom domains; Ultra adds about 20,000 monthly credits, API access, up to 100 custom domains, and its top-tier image models. Gamma's pricing page did not return per-seat dollar amounts for these three tiers at the time of review, so exact prices are not listed here; the help center notes that annual billing carries a 28% discount versus monthly billing. Business is confirmed at $40 per member per month, billed annually, with 6,000 monthly credits per member, SSO, SOC 2 documentation, 100 custom domains, and a locked training opt-out; no separate Team plan currently appears in Gamma's help articles. Enterprise pricing is custom and adds SCIM, audit logs, and invoiced billing.\n\nCredits are consumed by AI generation, so heavy users can burn through an allowance quickly, and the Free plan's 400 credits are a fixed, one-time grant rather than a plan described as recurring. Because Gamma's public pricing page was inaccessible at the time of review, Plus, Pro, and Ultra dollar prices could not be independently confirmed. Fine visual control still lags behind traditional design tools.\n\nGamma suits people who need to produce decks, one-pagers, or landing pages fast and value speed over pixel-level control. It is a strong fit for founders, marketers, educators, and teams that want a consistent house style without a dedicated designer.",
+   "pros": [
+    "Gamma Agent lets you restyle and rewrite an entire deck with plain-language commands instead of manual edits",
+    "Generates presentations, documents, and websites from a single prompt or outline",
+    "Integrates with Claude and ChatGPT, and now runs as an app inside ChatGPT",
+    "Free plan includes 400 credits with no time limit and no credit card required",
+    "Paid tiers add more monthly credits, custom domains, and API access as you move from Plus to Ultra"
+   ],
+   "cons": [
+    "Credit-based usage means heavy generators can exhaust a plan's allowance quickly",
+    "Free plan output carries a Made with Gamma badge until you upgrade",
+    "Fine-grained visual and layout control is weaker than dedicated design software",
+    "Plus, Pro, and Ultra per-seat prices were not published on Gamma's pricing page at the time of review",
+    "No separate Team plan is currently listed; multi-seat accounts fall under Business or custom Enterprise pricing"
+   ],
+   "choose_if": [
+    "You want to turn a prompt or outline into a finished deck in minutes",
+    "You would rather restyle a presentation by describing changes than by editing slides",
+    "You need presentations, documents, and simple sites from one tool",
+    "You already work in Claude or ChatGPT and want Gamma connected",
+    "You want a free starting point before committing to a paid tier"
+   ],
+   "faq": [
+    {
+     "a": "Gamma is an AI presentation tool that generates complete, designed presentations from a text prompt. Unlike traditional slide builders, Gamma creates card-based web presentations that are shared as links. It generates content, layout, and visuals simultaneously in seconds.",
+     "q": "What is Gamma AI?"
+    },
+    {
+     "a": "Gamma has a free plan that grants 400 credits with no time limit and no credit card required, enough for several presentations. Paid tiers (Plus, Pro, and Ultra) provide more monthly credits for AI generation along with features like badge removal, custom domains, and API access, but per-seat prices for those tiers were not available on Gamma's pricing page at the time of review.",
+     "q": "Is Gamma free?"
+    },
+    {
+     "a": "For fast AI-generated presentations shared digitally, Gamma is faster and more modern. For traditional business presentations that may need PowerPoint export or a conventional slide-by-slide structure, Beautiful.ai gives more control. Both produce professional results.",
+     "q": "Which is better for business presentations — Gamma or Beautiful.ai?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "100M+",
+   "best_for": "AI presentations, marketing assets, infographics, programmatic content",
+   "description": "Gamma is an AI tool for generating presentations, documents, and websites from a prompt. The current release, Gamma 5, adds a new agent that asks questions and keeps context across edits, plus a fully freeform editing canvas.",
+   "description_long": "Gamma is a web-based tool that turns a short prompt or an outline into a finished presentation, document, or simple website. Instead of arranging slides by hand, you describe what you want and Gamma builds the structure, writing, and layout for you to refine.\n\nThe current version is Gamma 5, launched October 6, 2026, which Gamma describes as 'the biggest product overhaul in our company's history.' It rolled out to every user on every plan and replaces the earlier Gamma 3.0 release.\n\nGamma 5 widens the range of visual styles available and lets you switch between agent-led editing and a fully freeform canvas for arranging individual elements by hand. A new agent asks clarifying questions and keeps context across edits rather than requiring one detailed prompt upfront. The release also adds enterprise connectors, with Slack threads and Granola transcripts given as examples, and lets you import existing PowerPoint, PDF, or infographic files while preserving their original design.\n\nPricing is organized into Free, Plus, Pro, and Ultra individual plans, plus Business and Enterprise options. The Free plan costs $0, includes 400 credits at signup with no time limit, and requires no credit card; it allows up to 10 slides per prompt, carries Gamma branding, and can export to PDF, PPTX, PNG, and Google Slides. Plus costs $12 per seat per month billed monthly, or $9 per seat per month billed annually ($108 per year), with 1,000 monthly credits. Pro costs $25 per seat per month billed monthly, or $18 per seat per month billed annually ($216 per year), and adds API access, 4,000 monthly credits, and up to 10 custom domains. Ultra costs $100 per seat per month billed monthly, or $90 per seat per month billed annually ($1,080 per year), with 20,000 monthly credits and up to 100 custom domains. Business costs $40 per seat per month, billed annually only ($480 per year), with 10,000 monthly credits per seat, SSO, and up to 100 custom domains. Enterprise pricing is custom and adds SCIM and priority support. Annual billing saves up to 28% versus paying monthly.\n\nCredits are consumed by AI generation, so heavy users can burn through an allowance quickly, and the Free plan's 400 credits are a fixed, one-time grant rather than a recurring monthly allowance. Free plan output carries Gamma branding until you upgrade. No separate Team plan currently appears among Gamma's listed tiers; multi-seat use falls under Business or custom Enterprise pricing.\n\nGamma suits people who need to produce decks, one-pagers, or landing pages fast and value speed over pixel-level control, though the new freeform canvas narrows that gap. It is a strong fit for founders, marketers, educators, and teams that want a consistent house style without a dedicated designer.",
+   "pros": [
+    "The Gamma 5 agent asks clarifying questions and keeps context across edits, reducing the need for one perfect prompt",
+    "A freeform canvas lets you move and arrange individual elements by hand when you want more control",
+    "Generates presentations, documents, and websites from a single prompt or outline",
+    "Imports existing PowerPoint, PDF, and infographic files while preserving their original design",
+    "Free plan includes 400 credits with no time limit and no credit card required"
+   ],
+   "cons": [
+    "Credit-based usage means heavy generators can exhaust a plan's allowance quickly",
+    "Free plan output carries Gamma branding until you upgrade",
+    "Paid seat prices range from $12 to $100 per month depending on tier, with annual billing required to get the lower per-seat rate",
+    "Business requires annual billing at $40 per seat per month; no monthly Business option is listed",
+    "No separate Team plan is currently listed; multi-seat accounts fall under Business or custom Enterprise pricing"
+   ],
+   "choose_if": [
+    "You want to turn a prompt or outline into a finished deck in minutes",
+    "You want an AI agent that asks questions and keeps context while building your deck, with a freeform canvas when you need manual control",
+    "You need presentations, documents, and simple sites from one tool",
+    "You want to import an existing PowerPoint or PDF deck and keep working on it in Gamma",
+    "You want a free starting point before committing to a paid tier"
+   ],
+   "faq": [
+    {
+     "q": "What is Gamma AI?",
+     "a": "Gamma is an AI presentation tool that generates complete, designed presentations from a text prompt. Unlike traditional slide builders, Gamma creates card-based web presentations that are shared as links, generating content, layout, and visuals from your prompt. Gamma 5, the current release, adds an agent that asks questions and keeps context across edits, plus a freeform canvas for manual arrangement."
+    },
+    {
+     "q": "Is Gamma free?",
+     "a": "Gamma has a free plan that grants 400 credits at signup with no time limit and no credit card required, enough for several presentations, though output carries Gamma branding. Paid seats cost $12 (Plus), $25 (Pro), or $100 (Ultra) per month billed monthly, or $9, $18, and $90 per month respectively if billed annually. Business costs $40 per seat per month billed annually. Enterprise pricing is custom."
+    },
+    {
+     "q": "Which is better for business presentations — Gamma or Beautiful.ai?",
+     "a": "Both can produce professional results. Gamma exports to PowerPoint, PDF, PNG, and Google Slides on every plan, including Free, and Gamma 5 can import existing PowerPoint and PDF decks while preserving their design. Gamma suits fast, AI-generated decks shared as links, while Beautiful.ai focuses on template-based slide editing for teams that prefer a more traditional slide-by-slide workflow."
+    }
+   ],
+   "dropped": [
+    "Integrates with Claude and ChatGPT, and runs as an app inside ChatGPT (not confirmed for the current Gamma 5 release)"
+   ]
+  }
+ },
+ {
+  "slug": "opencode",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "16M+",
+   "best_for": "Developers wanting a free, open-source, provider-agnostic coding agent available across terminal, desktop, and IDE",
+   "description": "Open-source coding agent from Anomaly, available as a terminal interface, desktop app, and IDE extension, supporting 75+ LLM providers via Models.dev — the core agent is free to use with your own API keys or a supported subscription login.",
+   "description_long": "OpenCode is an open-source coding agent built by Anomaly, published under MIT license at github.com/anomalyco/opencode (the project was previously hosted at sst/opencode). The current implementation is written in TypeScript. Unlike earlier terminal-only tools in this space, OpenCode is available as a terminal interface, a desktop app, and an IDE extension.\n\nThe project has a large, active user base: the GitHub repo has drawn over 208,000 stars and 950+ contributors across 13,000+ commits, and Anomaly states OpenCode is used by over 16 million developers every month.\n\nOpenCode connects to 75+ LLM providers through Models.dev, including Claude, GPT, Gemini, and more, as well as local models. Instead of managing API keys, you can also log in with a GitHub Copilot account or a ChatGPT Plus/Pro subscription. The tool supports running multiple agent sessions in parallel on the same project and generating shareable session links. It integrates LSP (Language Server Protocol) for real-time diagnostics and code intelligence. Anomaly states that OpenCode does not store any of your code or context data.\n\nPricing has two layers. The OpenCode agent itself is completely free and open source — you pay only for the LLM API calls you make to your chosen provider, or nothing if you run local models. Anomaly also offers OpenCode Zen, an optional first-party AI gateway of curated models billed per request against prepaid credits; no public per-model rate card was available at review time. A separate Enterprise tier is listed on the site but its terms are not published.\n\nLimitations: no version number is currently published for the agent, so users cannot easily track release history. Some previously advertised details, such as a SQLite-backed client/server session persistence layer and a GitHub Actions '/opencode' comment trigger, could not be confirmed on the current site and are not included here. As with any agent, result quality depends heavily on which LLM you configure.\n\nOpenCode suits developers who want a free, open-source, provider-agnostic coding agent that isn't locked into a single interface or vendor, with the option to pay only for a managed model gateway (Zen) if they'd rather not handle their own API keys.",
+   "pros": [
+    "Fully open source (MIT licensed); the core agent is free to use beyond your own LLM costs",
+    "Supports 75+ LLM providers via Models.dev, including local models, GitHub Copilot, and ChatGPT Plus/Pro login",
+    "Available as a terminal interface, desktop app, and IDE extension, not limited to the command line",
+    "LSP integration for real-time code intelligence",
+    "Large, active community: 208K+ GitHub stars, 950+ contributors, and a vendor-claimed 16M+ monthly developers"
+   ],
+   "cons": [
+    "Optional OpenCode Zen gateway is usage-based per request with no published per-model rate card",
+    "Enterprise tier exists but pricing and terms are not publicly disclosed",
+    "No published version number for the current TypeScript implementation",
+    "Session persistence architecture (client/server, SQLite) advertised previously is unverified for the current build",
+    "Result quality depends entirely on the LLM provider you configure"
+   ],
+   "choose_if": [
+    "✅ You want a free, open-source coding agent with no subscription required for the base tool",
+    "✅ You want to connect to any AI provider — Claude, GPT, Gemini, local models — across terminal, desktop, or IDE",
+    "✅ You prefer open-source tools you can audit, fork, and contribute to",
+    "✅ You'd rather pay per request through a managed gateway (OpenCode Zen) than juggle your own API keys"
+   ],
+   "faq": [
+    {
+     "a": "OpenCode is an open-source AI coding agent built by Anomaly, available as a terminal interface, desktop app, and IDE extension. It supports 75+ LLM providers through Models.dev, including Claude, GPT, Gemini, and local models. The core agent is free — you bring your own API keys, or log in with a GitHub Copilot or ChatGPT Plus/Pro account.",
+     "q": "What is OpenCode?"
+    },
+    {
+     "a": "The OpenCode agent itself is free and open source — you pay only for the LLM API calls you make to your chosen provider, or nothing with local models. Anomaly also offers OpenCode Zen, an optional paid gateway to curated models billed per request via prepaid credits, plus an Enterprise tier with unpublished pricing.",
+     "q": "Is OpenCode free?"
+    },
+    {
+     "a": "Aider is a terminal-focused coding agent with a longer track record and strong git integration. OpenCode is newer and now available as a terminal interface, desktop app, and IDE extension, with support for 75+ LLM providers via Models.dev. Both are open source — try both to see which workflow fits better.",
+     "q": "What is the difference between OpenCode and Aider?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "16M+",
+   "best_for": "Developers wanting a free, open-source, provider-agnostic coding agent available across terminal, desktop, and IDE",
+   "description": "Open-source coding agent from Anomaly, available as a terminal interface, desktop app, and IDE extension, supporting 75+ LLM providers via Models.dev — the core agent is free to use with your own API keys or a supported subscription login.",
+   "description_long": "OpenCode is an open-source coding agent built by Anomaly, published under MIT license at github.com/anomalyco/opencode (the project was previously hosted at sst/opencode). The current implementation is written in TypeScript. Unlike earlier terminal-only tools in this space, OpenCode is available as a terminal interface, a desktop app, and an IDE extension.\n\nThe project is actively maintained and versioned: OpenCode 2 is the current line, at v2.0.32 as of October 16, 2026, with a parallel legacy 1.x line at v1.19.3. The GitHub repo has drawn over 208,000 stars and 950+ contributors across 13,000+ commits, and Anomaly states OpenCode is used by over 16 million developers every month.\n\nOpenCode connects to 75+ LLM providers through Models.dev, including Claude, GPT, Gemini, and more, as well as local models. Instead of managing API keys, you can also log in with a GitHub Copilot account or a ChatGPT Plus/Pro subscription. The tool supports running multiple agent sessions in parallel on the same project. It integrates LSP (Language Server Protocol) for real-time diagnostics and code intelligence. Anomaly states that OpenCode does not store any of your code or context data. Note that session sharing has been discontinued: share links stopped working and the /share command was removed from the current build, though the marketing site still references it.\n\nThe OpenCode agent itself is free and open source — you pay only for the LLM API calls you make to your chosen provider, or nothing if you run local models. Anomaly also offers two paid options for those who don't want to manage their own API keys: OpenCode Zen, a pay-as-you-go gateway to curated models billed per 1 million tokens at zero markup against a prepaid balance (starting at $20, with auto top-up at $5), with several models offered free; and OpenCode Go, a $10/month subscription (Go Plus at $40/month) giving access to curated low-cost open models with usage limits. A separate Enterprise tier is available by contacting sales, with terms not published.\n\nLimitations: Anomaly disclosed a security incident on October 17, 2026, describing a large-scale distillation attack that affected roughly 1.4% of OpenCode Console users, who were notified by email. Some previously advertised details, such as a SQLite-backed client/server session persistence layer, could not be confirmed on the current build and are not included here. As with any agent, result quality depends heavily on which LLM you configure.\n\nOpenCode suits developers who want a free, open-source, provider-agnostic coding agent that isn't locked into a single interface or vendor, with optional paid gateways (Zen or Go) for those who'd rather not handle their own API keys.",
+   "pros": [
+    "Fully open source (MIT licensed); the core agent is free to use beyond your own LLM costs",
+    "Supports 75+ LLM providers via Models.dev, including local models, GitHub Copilot, and ChatGPT Plus/Pro login",
+    "Available as a terminal interface, desktop app, and IDE extension, not limited to the command line",
+    "LSP integration for real-time code intelligence",
+    "OpenCode Zen publishes a transparent per-1M-token rate card with zero markup, including several free models"
+   ],
+   "cons": [
+    "Session sharing has been discontinued; the marketing site still references share links, which is outdated",
+    "Enterprise tier exists but pricing and terms are not publicly disclosed",
+    "OpenCode Go subscription tiers come with usage limits even at the $40/month Go Plus level",
+    "A disclosed security incident in October 2026 affected roughly 1.4% of OpenCode Console users",
+    "Result quality depends entirely on the LLM provider you configure"
+   ],
+   "choose_if": [
+    "✅ You want a free, open-source coding agent with no subscription required for the base tool",
+    "✅ You want to connect to any AI provider — Claude, GPT, Gemini, local models — across terminal, desktop, or IDE",
+    "✅ You prefer open-source tools you can audit, fork, and contribute to",
+    "✅ You'd rather pay per request through a managed gateway (OpenCode Zen) or a flat monthly plan (OpenCode Go) than juggle your own API keys"
+   ],
+   "faq": [
+    {
+     "a": "OpenCode is an open-source AI coding agent built by Anomaly, available as a terminal interface, desktop app, and IDE extension. It supports 75+ LLM providers through Models.dev, including Claude, GPT, Gemini, and local models. The core agent is free — you bring your own API keys, or log in with a GitHub Copilot or ChatGPT Plus/Pro account.",
+     "q": "What is OpenCode?"
+    },
+    {
+     "a": "The OpenCode agent itself is free and open source — you pay only for the LLM API calls you make to your chosen provider, or nothing with local models. Anomaly also offers OpenCode Zen, a pay-as-you-go gateway to curated models priced per 1 million tokens with zero markup, OpenCode Go, a $10/month subscription (Go Plus at $40/month) for curated low-cost open models with usage limits, and an Enterprise tier with unpublished pricing.",
+     "q": "Is OpenCode free?"
+    },
+    {
+     "a": "Aider is a terminal-focused coding agent with a longer track record and strong git integration. OpenCode is newer and now available as a terminal interface, desktop app, and IDE extension, with support for 75+ LLM providers via Models.dev. Both are open source — try both to see which workflow fits better.",
+     "q": "What is the difference between OpenCode and Aider?"
+    }
+   ],
+   "dropped": [
+    "generating shareable session links (session sharing has been discontinued)",
+    "no version number is currently published for the agent (versions are now published: OpenCode 2 v2.0.32, legacy v1.19.3)",
+    "no public per-model rate card for OpenCode Zen (a rate card is published in the docs)"
+   ]
+  }
+ },
+ {
+  "slug": "claude-code",
+  "before": {
+   "lang": "en",
+   "badge": "paid",
+   "users": "from $20/mo",
+   "best_for": "Complex multi-file refactoring and agentic workflows",
+   "description": "Claude Code is Anthropic's AI coding agent, currently at CLI version 2.1.291 (October 2026), with Claude Opus 5.5 as the default model. It runs across the terminal, VS Code, JetBrains, a desktop app and the web, and can drive cloud agents, subagents and computer use.",
+   "description_long": "Claude Code is Anthropic's agentic coding tool. It reads your codebase, edits files, runs commands and can carry a task from a plain-language request through to a working change, rather than just suggesting completions in an editor.\n\nThe current release is CLI 2.1.291. The default model is now Claude Opus 5.5 across Pro, Max, Team, Enterprise and the Anthropic API. Opus 4.8 had previously been the default only on the API, Max, Team Premium and Enterprise pay-as-you-go tiers for a period before being superseded.\n\nBeyond the terminal, Claude Code also runs as VS Code and JetBrains extensions, as a desktop app and on the web. It supports cloud agents, subagent orchestration, computer use, scheduled cloud agents (Routines), background subagents and an Auto mode available on Pro and on Bedrock, Google Cloud and Microsoft Foundry.\n\nPricing: the Free tier ($0) does not include Claude Code. It is bundled into Pro ($17/month billed annually or $20/month billed monthly), Max (from $100/month, billed monthly only, with a higher-usage tier also available), Team Standard ($20/seat/month billed annually or $25/seat/month billed monthly, for teams of 2 to 150) and Team Premium ($100/seat/month billed annually or $125/seat/month billed monthly). Enterprise is priced at $20/seat/month billed annually plus usage at API rates. Separate pay-as-you-go API pricing includes Opus 5.5 at $4/$20 per million input/output tokens, Sonnet 5.5 at $2/$10, and Haiku 4.5 at $1/$5; a faster mode for Opus 5.5 runs at roughly 2x standard pricing.\n\nLimitations are worth knowing. There is no free way to use Claude Code, usage caps apply even on paid plans, and heavy agentic runs on the API can get expensive. High-effort agent runs can also be slow and consume tokens quickly.\n\nIt suits professional developers and teams who want an agent that actually edits and ships code, especially those already on a Claude Pro, Max or Team plan who want coding included without a separate API bill.",
+   "pros": [
+    "Full agentic workflow: reads, edits and runs code, not just autocomplete",
+    "Default Claude Opus 5.5 is Anthropic's current flagship model for coding and computer use",
+    "Bundled into Pro from $17-20/month, a lower entry point than Max-only plans",
+    "Runs across terminal, VS Code, JetBrains, desktop and web with cloud agents and scheduled Routines"
+   ],
+   "cons": [
+    "Not available on the Free tier at all",
+    "Usage caps apply even on paid plans; heavy use can hit limits",
+    "API pricing varies widely by model, from $1/$5 to $4/$20 per million tokens",
+    "High-effort agent runs can be slow and burn through tokens",
+    "Deep feature set (subagents, workflows, computer use) has a learning curve"
+   ],
+   "choose_if": [
+    "You want an agent that edits and ships real code, not just suggestions",
+    "You already pay for Claude Pro, Max or Team and want coding included",
+    "You need cloud agents, scheduled Routines or multi-subagent workflows",
+    "You work across terminal, VS Code, JetBrains, desktop or web and want one consistent tool"
+   ],
+   "faq": [
+    {
+     "a": "Claude Code is Anthropic's official coding agent. It reads your codebase, writes code, runs commands, fixes bugs, and completes multi-file tasks autonomously, running from the terminal, VS Code, JetBrains, a desktop app or the web.",
+     "q": "What is Claude Code?"
+    },
+    {
+     "a": "Claude Code is included with Claude Pro (from $17/month billed annually, $20/month billed monthly), Max (from $100/month), Team Standard, Team Premium, and Enterprise plans. On these plans Claude Code shares the same usage pool as your Claude chats; separate pay-as-you-go API usage is also available through the Anthropic Console.",
+     "q": "How much does Claude Code cost?"
+    },
+    {
+     "a": "Claude Code also runs as VS Code and JetBrains extensions, a desktop app and on the web, not only in the terminal. It is built for developers who want an agent that reads, edits and runs code across their workflow, while Cursor is a full IDE built on VS Code with a visual interface.",
+     "q": "How is Claude Code different from Cursor?"
+    },
+    {
+     "a": "Claude Code can read and edit files, run shell commands, execute tests, search the codebase, manage git, and complete multi-step engineering tasks end-to-end with minimal prompting.",
+     "q": "What can Claude Code do autonomously?"
+    }
+   ]
+  },
+  "after": {
+   "best_for": "Complex multi-file refactoring and agentic workflows",
+   "description": "Claude Code is Anthropic's AI coding agent, currently at CLI version 2.1.302 (October 2026), with Claude Opus 5.5 as the default model. It runs across the terminal, VS Code, JetBrains, a desktop app and the web, and can drive cloud agents, subagents and computer use.",
+   "description_long": "Claude Code is Anthropic's agentic coding tool. It reads your codebase, edits files, runs commands and can carry a task from a plain-language request through to a working change, rather than just suggesting completions in an editor.\n\nThe current release is CLI 2.1.302, published October 16, 2026. The default model is Claude Opus 5.5 across Pro, Max, Team, Enterprise and the Anthropic API. Anthropic's own documentation describes Claude Fable 5.1 and Claude Fable 5 as the most capable models available in Claude Code, though they are not the default and must be selected explicitly.\n\nBeyond the terminal, Claude Code also runs as VS Code and JetBrains extensions, as a desktop app and on the web. It supports cloud agents, subagent orchestration, computer use, scheduled cloud agents (Routines), background subagents and an Auto mode available on Pro and on Bedrock, Google Cloud and Microsoft Foundry. Code Review, a GitHub pull-request review feature for Team and Enterprise plans, left research preview and became generally available on October 15, 2026, with Quick, Standard and Deep review levels that admins choose per repository.\n\nPricing: the Free tier ($0) does not include Claude Code. It is bundled into Pro ($17/month billed annually or $20/month billed monthly), Max (from $100/month, billed monthly only, with a higher-usage tier also available), Team Standard ($20/seat/month billed annually or $25/seat/month billed monthly, for teams of 2 to 150) and Team Premium ($100/seat/month billed annually or $125/seat/month billed monthly). Enterprise is priced at $20/seat/month billed annually (20-seat minimum) plus usage at API rates. Separate pay-as-you-go API pricing per million input/output tokens includes Claude Fable 5.1 at $10/$50 (selected explicitly, not default), Claude Opus 5.5 at $4/$20 (default; a faster mode runs at roughly 2x standard pricing, $8/$40), Claude Sonnet 5.5 at $2/$10, and Claude Haiku 5.5 at $0.10/$0.50 for prompts up to 100K tokens ($0.50/$2.50 above), now the default Haiku model on the Anthropic API.\n\nLimitations are worth knowing. There is no free way to use Claude Code, usage caps apply even on paid plans, and heavy agentic runs on the API can get expensive. High-effort agent runs can also be slow and consume tokens quickly.\n\nIt suits professional developers and teams who want an agent that actually edits and ships code, especially those already on a Claude Pro, Max or Team plan who want coding included without a separate API bill.",
+   "pros": [
+    "Full agentic workflow: reads, edits and runs code, not just autocomplete",
+    "Default model is Claude Opus 5.5, with Claude Fable 5.1 selectable for even more capable runs",
+    "Bundled into Pro from $17-20/month, a lower entry point than Max-only plans",
+    "Runs across terminal, VS Code, JetBrains, desktop and web with cloud agents and scheduled Routines",
+    "GitHub pull-request Code Review is now generally available for Team and Enterprise plans"
+   ],
+   "cons": [
+    "Not available on the Free tier at all",
+    "Usage caps apply even on paid plans; heavy use can hit limits",
+    "API pricing varies widely by model, from $0.10/$0.50 (Haiku 5.5) to $10/$50 (Fable 5.1) per million tokens",
+    "High-effort agent runs can be slow and burn through tokens",
+    "Deep feature set (subagents, workflows, computer use) has a learning curve"
+   ],
+   "choose_if": [
+    "You want an agent that edits and ships real code, not just suggestions",
+    "You already pay for Claude Pro, Max or Team and want coding included",
+    "You need cloud agents, scheduled Routines or multi-subagent workflows",
+    "You work across terminal, VS Code, JetBrains, desktop or web and want one consistent tool"
+   ],
+   "faq": [
+    {
+     "q": "What is Claude Code?",
+     "a": "Claude Code is Anthropic's official coding agent. It reads your codebase, writes code, runs commands, fixes bugs, and completes multi-file tasks autonomously, running from the terminal, VS Code, JetBrains, a desktop app or the web."
+    },
+    {
+     "q": "How much does Claude Code cost?",
+     "a": "Claude Code is included with Claude Pro (from $17/month billed annually, $20/month billed monthly), Max (from $100/month), Team Standard, Team Premium, and Enterprise plans. On these plans Claude Code shares the same usage pool as your Claude chats; separate pay-as-you-go API usage is also available through the Anthropic Console."
+    },
+    {
+     "q": "How is Claude Code different from Cursor?",
+     "a": "Claude Code also runs as VS Code and JetBrains extensions, a desktop app and on the web, not only in the terminal. It is built for developers who want an agent that reads, edits and runs code across their workflow, while Cursor is a full IDE built on VS Code with a visual interface."
+    },
+    {
+     "q": "What can Claude Code do autonomously?",
+     "a": "Claude Code can read and edit files, run shell commands, execute tests, search the codebase, manage git, and complete multi-step engineering tasks end-to-end with minimal prompting."
+    }
+   ],
+   "badge": "paid",
+   "users": "from $20/mo",
+   "dropped": []
+  }
+ },
+ {
+  "slug": "remove-bg",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "150M+",
+   "best_for": "Instant AI background removal from photos and product images",
+   "description": "Remove.bg is a Canva-owned AI tool that automatically removes backgrounds from images. There is no public version number; it runs a proprietary background-removal engine offered through free low-resolution previews plus a credit-based model for full-resolution downloads.",
+   "description_long": "Remove.bg is a specialized web service and API that isolates the subject of a photo and strips out the background in a single step. It is owned by Canva Austria GmbH and is aimed at people who need clean cutouts for product shots, portraits, and marketing graphics without opening an image editor.\n\nThere is no public version numbering, and nothing fundamental has changed recently. The tool still runs the same proprietary AI engine and keeps the long-standing structure of free previews, subscriptions, and pay-as-you-go credits. Ownership remains with Canva, and there has been no shift from free to paid or paid to free.\n\nIn practice you upload an image or paste a URL and get an automatic cutout in a few seconds. It handles hair, fur, and semi-transparent edges reasonably well, supports transparent PNG output, and offers a browser tool, desktop and mobile apps, an API, and integrations with tools like Photoshop and Figma.\n\nPricing is built around credits. A free account gives you low-resolution web previews capped at 0.25 MP, plus the first 50 API or app calls each month at no charge. Pay-as-you-go credits never expire; per-image cost ranges from about $1.00 on the smallest 3-credit pack down to roughly $0.21 on the largest 8,000-credit pack. Subscription plans can be billed monthly or at a lower per-month rate if paid annually, and subscription credits are valid only within their billing month with no rollover: the Personal tier is $9 per month billed monthly, or $8.10 per month billed yearly, for 40 credits; Professional plans range from 200 credits at $39 per month billed monthly (or $35.10 per month billed yearly) up to 5,000 credits at $589 per month billed monthly (or $530.10 per month billed yearly); and Business plans scale further, up to 75,000 credits at $5,450 per month billed monthly (or $4,905 per month billed yearly).\n\nThe main limitation is that the free tier is genuinely a preview: downloads are capped at 0.25 MP, so any full-resolution result requires paid credits. Complex edges, busy backgrounds, and low-contrast subjects can still need manual touch-ups, and pay-as-you-go pricing is expensive for small batches even though it improves at volume.\n\nRemove.bg suits e-commerce sellers, marketers, and designers who need fast, consistent cutouts at scale and are comfortable paying per image or by subscription for full-resolution output.",
+   "pros": [
+    "Fast, fully automatic background removal that usually needs no manual selection",
+    "Handles hair, fur, and soft edges better than most one-click tools",
+    "Broad access: web app, desktop and mobile apps, API, plus Photoshop and Figma integrations",
+    "Pay-as-you-go credits never expire, and per-image cost drops substantially at higher volumes",
+    "The first 50 API or app calls each month are free, useful for testing before committing to a plan"
+   ],
+   "cons": [
+    "The free web tool only outputs low-resolution previews up to 0.25 MP",
+    "Any full-resolution download requires paid credits",
+    "Pay-as-you-go pricing is steep for small batches, running about $1.00 per image on the smallest 3-credit pack",
+    "Subscription credits are valid only within their billing month and do not roll over",
+    "Tricky edges, cluttered backgrounds, or low contrast can still need manual cleanup"
+   ],
+   "choose_if": [
+    "You need many clean product or portrait cutouts quickly",
+    "You want an API or integration to remove backgrounds inside your own workflow",
+    "You are fine paying per image or by subscription for full-resolution output",
+    "You want reliable results on hair and soft edges without manual masking"
+   ],
+   "faq": [
+    {
+     "a": "Remove.bg is an AI-powered background removal tool that automatically detects and removes image backgrounds in seconds. It's a specialist tool for this task, known for accurate edge detection especially around hair and complex objects. It also offers a developer API for bulk processing.",
+     "q": "What is Remove.bg?"
+    },
+    {
+     "a": "Remove.bg allows a limited number of free background removals per month at reduced resolution, plus the first 50 API or app calls free each month. The full-resolution version requires credits or a subscription. Subscriptions start at around $9 per month billed monthly. The API is priced per image through the credit system.",
+     "q": "Is Remove.bg free?"
+    },
+    {
+     "a": "Canva offers its own built-in background remover as part of certain Canva plans; exact plan inclusion and pricing should be confirmed on Canva's own site. Canva owns Remove.bg, but the two tools are priced and sold separately.",
+     "q": "Does Canva remove backgrounds for free?"
+    },
+    {
+     "a": "Remove.bg is generally considered more accurate, especially for complex subjects like hair, fur, and transparent objects. Canva's background remover is convenient but may require manual touch-ups on complex images. For professional product photography, Remove.bg is the higher-quality choice.",
+     "q": "Which has better background removal quality?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": null,
+   "best_for": "Instant AI background removal from photos and product images",
+   "description": "Remove.bg is a Canva-owned AI tool that automatically removes backgrounds from images, but the standalone website, accounts, API, and apps are shutting down on December 1, 2026, with the technology moving into Canva and its API moving to Leonardo.ai.",
+   "description_long": "Remove.bg is a specialized web service and API that isolates the subject of a photo and strips out the background in a single step. It is owned by Canva Austria GmbH and is aimed at people who need clean cutouts for product shots, portraits, and marketing graphics without opening an image editor.\n\nAccording to remove.bg's own FAQ, the standalone service is being retired: from December 1, 2026 at 9:00am CET, the remove.bg website, accounts, self-service API, Photoshop plugin, desktop app, and other integrations and plugins will stop working. Background removal moves into Canva, which the FAQ says uses the same background-removal technology, while API access moves to Leonardo.ai, also owned by Canva. Enterprise API contracts with remove.bg are unaffected by the shutdown.\n\nUntil the shutdown, you can still upload an image or paste a URL and get an automatic cutout in a few seconds. It handles hair, fur, and semi-transparent edges reasonably well, supports transparent PNG output, and offers a browser tool, desktop and mobile apps, an API, and integrations such as Photoshop and Figma, all of which are scheduled to end on December 1, 2026.\n\nPricing is built around credits. A free account currently gives low-resolution web previews capped at 0.25 MP, plus the first 50 API or app calls each month at no charge, both of which disappear when the service closes. Pay-as-you-go credits remain valid only until the December 1, 2026 shutdown, when any unused credits expire; per-image cost ranges from about $1.00 on the smallest 3-credit pack down to roughly $0.21 on the largest 8,000-credit pack. Subscription plans can be billed monthly or at a lower per-month rate if paid annually, and subscription credits are valid only within their billing month with no rollover: the Personal tier is $9 per month billed monthly, or $8.10 per month billed yearly, for 40 credits; Professional plans range from 200 credits at $39 per month billed monthly (or $35.10 per month billed yearly) up to 5,000 credits at $589 per month billed monthly (or $530.10 per month billed yearly); and Business plans scale further, up to 75,000 credits at $5,450 per month billed monthly (or $4,905 per month billed yearly). Annual subscribers will get an automatic pro-rata refund when the service shuts down, and monthly subscriptions end automatically, with any final renewal on or after November 1, 2026 provided free.\n\nThe main limitation now is the looming shutdown itself: every standalone feature, including the free preview tier, stops working on December 1, 2026, and account data and invoices will only be accessible until that cutoff. Even before then, downloads require paid credits above the 0.25 MP preview cap, and complex edges, busy backgrounds, or low-contrast subjects can still need manual touch-ups.\n\nRemove.bg currently suits e-commerce sellers, marketers, and designers who need fast, consistent cutouts at scale right now, but anyone planning longer-term workflows should plan to move to Canva's built-in Background Remover (available on Canva Pro, Business, Education, and Nonprofits plans) or to Leonardo.ai's API before the December 1, 2026 shutdown.",
+   "pros": [
+    "Fast, fully automatic background removal that usually needs no manual selection",
+    "Handles hair, fur, and soft edges better than most one-click tools",
+    "The same background-removal technology continues inside Canva's Background Remover after the standalone service closes",
+    "Enterprise API contracts with remove.bg are unaffected by the shutdown",
+    "Clear wind-down terms: automatic pro-rata refunds for annual subscribers and a free final renewal for monthly subscribers after November 1, 2026"
+   ],
+   "cons": [
+    "The standalone remove.bg website, accounts, API, apps, and integrations shut down on December 1, 2026",
+    "The free web tool only outputs low-resolution previews up to 0.25 MP, and this free tier disappears entirely after the shutdown",
+    "Any full-resolution download requires paid credits, and unused pay-as-you-go credits expire on December 1, 2026 rather than lasting indefinitely",
+    "After the shutdown, the self-service API is discontinued; developers must migrate to Leonardo.ai's separate API",
+    "Tricky edges, cluttered backgrounds, or low contrast can still need manual cleanup"
+   ],
+   "choose_if": [
+    "You need many clean product or portrait cutouts quickly before remove.bg's standalone service closes on December 1, 2026",
+    "You already use Canva and can switch to its built-in Background Remover, which uses the same underlying technology",
+    "You need background-removal API access and are willing to migrate to Leonardo.ai before remove.bg's self-service API shuts down",
+    "You want reliable results on hair and soft edges without manual masking"
+   ],
+   "faq": [
+    {
+     "q": "What is Remove.bg?",
+     "a": "Remove.bg is an AI-powered background removal tool that automatically detects and removes image backgrounds in seconds, known for accurate edge detection especially around hair and complex objects, with a developer API for bulk processing. However, according to remove.bg's own FAQ, the standalone website, accounts, API, and apps are being discontinued on December 1, 2026, with the technology moving into Canva and the API moving to Leonardo.ai."
+    },
+    {
+     "q": "Is Remove.bg free?",
+     "a": "For now, a free account gives low-resolution web previews capped at 0.25 MP, plus the first 50 API or app calls each month at no charge; full-resolution results require credits or a subscription starting at $9 per month billed monthly. This free tier and the rest of the standalone service end on December 1, 2026, after which background removal continues only through Canva's own plans or the separate Leonardo.ai API."
+    },
+    {
+     "q": "Does Canva remove backgrounds for free?",
+     "a": "Canva's help center lists its own Background Remover as part of Canva Pro, Business, Education, and Nonprofits plans. Remove.bg's FAQ states this Canva feature uses the same background-removal technology as remove.bg, and Canva is consolidating the two: remove.bg's standalone product closes on December 1, 2026, with background removal moving fully into Canva."
+    },
+    {
+     "q": "Which has better background removal quality?",
+     "a": "According to remove.bg's own FAQ, Canva's Background Remover uses the same background-removal technology as remove.bg, so quality should be comparable rather than one being clearly superior. As remove.bg's standalone service winds down by December 1, 2026, Canva's integrated tool and Leonardo.ai's API become the ongoing ways to get this same technology."
+    }
+   ],
+   "dropped": [
+    "nothing fundamental has changed recently (contradicted by the confirmed Dec 1, 2026 shutdown)",
+    "pay-as-you-go credits never expire (they expire at the Dec 1, 2026 shutdown)",
+    "Canva owns Remove.bg, but the two tools are priced and sold separately (Canva is consolidating the two products)",
+    "Remove.bg is generally considered more accurate than Canva's background remover (remove.bg's own FAQ says Canva uses the same technology)",
+    "150M+ users figure (not verified by the audit)",
+    "Leonardo.ai per-image API price of $0.1047 (reported only by a secondary, unverified source)"
+   ]
+  }
+ },
+ {
+  "slug": "whisper",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "",
+   "best_for": "Open-source speech-to-text transcription — developer tool, not a consumer product",
+   "description": "Whisper is OpenAI's open-source speech-to-text model for transcription and translation. The latest open checkpoint is large-v3-turbo, an optimized version of large-v3 that runs roughly 8x faster with only a small accuracy trade-off.",
+   "description_long": "Whisper is a family of open-source speech recognition models released by OpenAI. It transcribes spoken audio into text and the multilingual large-v3 models can translate speech from many languages directly into English. The weights are published under the permissive MIT license, so you can download them and run them on your own hardware.\n\nThe current open release is large-v3-turbo, an optimized version of large-v3 released in September 2024. It keeps almost all of the accuracy of the full large-v3 model while running about 8x faster, which makes it far more practical for batch jobs and near-real-time use. The full large-v3 checkpoint is still available when you want the highest possible quality. Turbo itself is not trained for translation tasks; use the other multilingual large-v3 checkpoints for speech-to-English translation.\n\nAlongside the open models, OpenAI offers hosted transcription through its API. The original endpoint, whisper-1, has been joined by newer models: gpt-4o-transcribe, gpt-4o-mini-transcribe, and gpt-transcribe, which OpenAI now recommends as the default for recorded speech. Speaker diarization is handled by a separate model, gpt-4o-transcribe-diarize, and live streaming is handled by gpt-live-transcribe, with gpt-realtime-whisper and gpt-realtime-translate also listed on OpenAI's pricing page.\n\nPricing splits into two tracks. The open-source models are free to use — you only pay for your own compute. The hosted API is billed per minute of audio: whisper-1 and gpt-4o-transcribe are $0.006/min, gpt-4o-mini-transcribe is $0.003/min, gpt-transcribe is $0.0045/min, gpt-4o-transcribe-diarize is $0.006/min, gpt-live-transcribe and gpt-realtime-whisper are $0.017/min, and gpt-realtime-translate is $0.034/min.\n\nAccuracy varies a lot by language. Whisper was trained on around 99 languages, but quality is strongest for high-resource languages like English and drops noticeably for less common ones. Running the larger models locally also needs a capable GPU, and the model can occasionally hallucinate text during long silences.\n\nWhisper is a good fit if you want a free, self-hostable transcription engine, need broad multilingual coverage, or want a managed API without building your own pipeline. Choose the hosted gpt-4o-transcribe-diarize or gpt-live-transcribe models if you need diarization or live streaming out of the box.",
+   "pros": [
+    "Open-source under the MIT license, free to self-host with no usage fees",
+    "large-v3-turbo runs about 8x faster than large-v3 with only a small accuracy loss",
+    "Broad multilingual support, trained on roughly 99 languages, with speech-to-English translation available in the non-turbo large-v3 checkpoints",
+    "Flexible deployment: run the open weights locally or use the hosted OpenAI API",
+    "Hosted API offers dedicated diarization (gpt-4o-transcribe-diarize) and live streaming (gpt-live-transcribe) models"
+   ],
+   "cons": [
+    "Accuracy drops significantly for low-resource languages compared to English",
+    "The larger open models need a capable GPU for reasonable speed",
+    "Can hallucinate phantom text during long silences or noisy segments",
+    "Self-hosting requires technical setup; there is no official desktop app",
+    "large-v3-turbo is not trained for translation, so you need a different checkpoint for that"
+   ],
+   "choose_if": [
+    "You want a free, self-hosted transcription engine you fully control",
+    "You need to transcribe or translate audio across many languages using the large-v3 models",
+    "You prefer a managed API and are fine paying roughly $0.0045-0.006/min for gpt-transcribe, whisper-1, or gpt-4o-transcribe",
+    "You need live streaming transcription (gpt-live-transcribe) or speaker diarization (gpt-4o-transcribe-diarize) via OpenAI's hosted API",
+    "You want maximum throughput and pick large-v3-turbo for its ~8x speed, but don't need translation"
+   ],
+   "faq": [
+    {
+     "a": "Whisper is OpenAI's open-source speech recognition model. Released in 2022, it transcribes audio in around 99 languages with high accuracy. It's a developer tool — not a consumer app — that runs locally or via API. Many transcription apps are built on top of Whisper.",
+     "q": "What is OpenAI Whisper?"
+    },
+    {
+     "a": "Whisper's open-source weights are completely free to download and run locally. OpenAI also offers Whisper-based models through its API on a per-minute basis, starting around $0.003/min for gpt-4o-mini-transcribe, with whisper-1 at $0.006/min. Consumer apps built on Whisper typically charge their own subscription fees.",
+     "q": "Is Whisper free?"
+    },
+    {
+     "a": "This claim could not be verified against a primary source, so we cannot confirm whether Otter.ai is built on Whisper.",
+     "q": "Is Otter.ai built on Whisper?"
+    },
+    {
+     "a": "This comparison could not be verified against a primary source, so we cannot make a reliable accuracy comparison between Whisper and Otter.ai.",
+     "q": "Which is more accurate — Whisper or Otter.ai?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": null,
+   "best_for": "Open-source speech-to-text transcription — developer tool, not a consumer product",
+   "description": "Whisper is OpenAI's open-source speech-to-text model for transcription and translation. The latest open checkpoint is large-v3-turbo, an optimized version of large-v3 that runs roughly 8x faster with only a small accuracy trade-off.",
+   "description_long": "Whisper is a family of open-source speech recognition models released by OpenAI. It transcribes spoken audio into text and the multilingual large-v3 models can translate speech from many languages directly into English. The weights are published under the permissive MIT license, so you can download them and run them on your own hardware.\n\nThe current open release is large-v3-turbo, an optimized version of large-v3 released in September 2024. It keeps almost all of the accuracy of the full large-v3 model while running about 8x faster, which makes it far more practical for batch jobs and near-real-time use. The full large-v3 checkpoint is still available when you want the highest possible quality. Turbo itself is not trained for translation tasks; use the other multilingual large-v3 checkpoints for speech-to-English translation.\n\nAlongside the open models, OpenAI offers hosted transcription through its API. The original endpoint, whisper-1, along with gpt-4o-transcribe, gpt-4o-mini-transcribe, and gpt-4o-transcribe-diarize, were deprecated in August 2026 and are scheduled for removal from the API on February 26, 2027. OpenAI now recommends gpt-transcribe for file-based transcription and gpt-live-transcribe for live streaming audio. gpt-realtime-whisper and gpt-realtime-translate are also listed on OpenAI's pricing page.\n\nPricing splits into two tracks. The open-source models are free to use — you only pay for your own compute. The hosted API is billed per minute of audio: gpt-transcribe costs $0.0045/min, gpt-live-transcribe and gpt-realtime-whisper cost $0.017/min, and gpt-realtime-translate costs $0.034/min. The deprecated whisper-1, gpt-4o-transcribe, gpt-4o-mini-transcribe, and gpt-4o-transcribe-diarize models remain billable at their existing per-minute rates until they are removed on February 26, 2027.\n\nAccuracy varies a lot by language. Whisper was trained on around 99 languages, but quality is strongest for high-resource languages like English and drops noticeably for less common ones. Running the larger models locally also needs a capable GPU, and the model can occasionally hallucinate text during long silences.\n\nWhisper is a good fit if you want a free, self-hostable transcription engine, need broad multilingual coverage, or want a managed API without building your own pipeline. Choose the hosted gpt-transcribe or gpt-live-transcribe models if you need file-based or live transcription through OpenAI's API, and plan to migrate away from any integration still using the deprecated endpoints.",
+   "pros": [
+    "Open-source under the MIT license, free to self-host with no usage fees",
+    "large-v3-turbo runs about 8x faster than large-v3 with only a small accuracy loss",
+    "Broad multilingual support, trained on roughly 99 languages, with speech-to-English translation available in the non-turbo large-v3 checkpoints",
+    "Flexible deployment: run the open weights locally or use the hosted OpenAI API",
+    "Hosted API offers gpt-live-transcribe for live streaming transcription"
+   ],
+   "cons": [
+    "Accuracy drops significantly for low-resource languages compared to English",
+    "The larger open models need a capable GPU for reasonable speed",
+    "Can hallucinate phantom text during long silences or noisy segments",
+    "Self-hosting requires technical setup; there is no official desktop app",
+    "large-v3-turbo is not trained for translation, so you need a different checkpoint for that"
+   ],
+   "choose_if": [
+    "You want a free, self-hosted transcription engine you fully control",
+    "You need to transcribe or translate audio across many languages using the large-v3 models",
+    "You prefer a managed API and are fine paying $0.0045/min for gpt-transcribe",
+    "You need live streaming transcription via OpenAI's hosted API (gpt-live-transcribe)",
+    "You want maximum throughput and pick large-v3-turbo for its ~8x speed, but don't need translation"
+   ],
+   "faq": [
+    {
+     "a": "Whisper is OpenAI's open-source speech recognition model. Released in 2022, it transcribes audio in around 99 languages with high accuracy. It's a developer tool — not a consumer app — that runs locally or via API. Many transcription apps are built on top of Whisper.",
+     "q": "What is OpenAI Whisper?"
+    },
+    {
+     "a": "Whisper's open-source weights are completely free to download and run locally. OpenAI also offers Whisper-based models through its API on a per-minute basis, starting at $0.0045/min for gpt-transcribe. Consumer apps built on Whisper typically charge their own subscription fees.",
+     "q": "Is Whisper free?"
+    },
+    {
+     "a": "This claim could not be verified against a primary source, so we cannot confirm whether Otter.ai is built on Whisper.",
+     "q": "Is Otter.ai built on Whisper?"
+    },
+    {
+     "a": "This comparison could not be verified against a primary source, so we cannot make a reliable accuracy comparison between Whisper and Otter.ai.",
+     "q": "Which is more accurate — Whisper or Otter.ai?"
+    }
+   ],
+   "dropped": [
+    "whisper-1, gpt-4o-transcribe, and gpt-4o-mini-transcribe presented as current (non-deprecated) API models",
+    "gpt-4o-transcribe-diarize presented as an available diarization model (it is deprecated with no confirmed diarization successor)",
+    "Pricing of $0.003/min and $0.006/min for gpt-4o-mini-transcribe, whisper-1, and gpt-4o-transcribe presented as current rates"
+   ]
+  }
+ },
+ {
+  "slug": "adobe-podcast",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "",
+   "best_for": "AI audio enhancement and recording for podcasters and content creators",
+   "description": "Adobe Podcast is a browser-based audio tool whose flagship feature, Enhance Speech, cleans up spoken recordings and lets you separate and independently control speech, noise and background music. It has a limited free tier, with fuller access sold through Adobe Firefly Pro at $19.99/month.",
+   "description_long": "Adobe Podcast is a web app for recording and cleaning up spoken-word audio without a traditional editing suite. Its best-known feature, Enhance Speech, strips background noise and room echo from voice recordings and makes them sound as if they were captured with a studio microphone.\n\nA March 2026 update expanded Enhance Speech with source separation: you can independently adjust or remove background noise, isolate dialogue, and raise or lower background music with sliders, then download separate audio stems for speech, noise and music. The same update added remote recording and multitrack import support.\n\nThe Studio side of the product accepts multitrack audio and video uploads with automatic syncing, so podcast and interview recordings from several sources can be aligned and enhanced together.\n\nPricing is freemium. The free plan costs nothing but is audio-only with no video, no bulk uploads, files capped at 30 minutes and 500 MB, a one-hour-per-day enhancement limit, Studio downloads restricted to 30-minute projects twice a day, and no option to download the original recording. Advanced features are now sold as Adobe Firefly Pro at $19.99 per month, which bundles Podcast Premium: 4,000 generative credits a month, up to four hours of enhancement a day, files up to 1 GB, video support (MP4/MOV), batch uploads, adjustable speech/music/ambience strength, unlimited Studio downloads and speaker-separated stems. A free trial is offered. Some existing subscribers who joined under an older standalone $9.99-per-month Premium plan keep that pricing, but new signups go through Firefly Pro.\n\nThe main limitation is that the features most people want at scale, video, long files and bulk processing, sit behind the paid Firefly Pro tier, and the free daily caps are easy to hit in a real workflow.\n\nIt suits podcasters, interviewers, video creators and anyone who records voice in imperfect rooms and wants clean results fast; the free tier is fine for occasional short clips, while regular producers will need Firefly Pro.",
+   "pros": [
+    "Enhance Speech produces genuinely clean, studio-like voice from noisy or echoey recordings",
+    "Source separation lets you control speech, noise and music independently and export them as stems",
+    "Free tier available for occasional short-clip cleanup at no cost",
+    "Studio side supports multitrack audio and video uploads with automatic syncing",
+    "Runs entirely in the browser with no plugins or local processing"
+   ],
+   "cons": [
+    "No longer fully free: video, bulk uploads and strength control require the paid Firefly Pro tier",
+    "Free tier limits are tight: 30-minute/500 MB files, one hour of enhancement per day, and no download of the original recording",
+    "Studio downloads on the free plan are capped at two 30-minute projects daily",
+    "New paid access requires Adobe Firefly Pro at $19.99/month; the earlier standalone $9.99/month Premium plan is closed to new signups",
+    "Requires an Adobe account and a stable connection since everything is cloud-based"
+   ],
+   "choose_if": [
+    "You record voice, podcasts or interviews and want fast, clean results",
+    "You need to separate or rebalance speech, noise and music in a recording",
+    "You want to enhance video, not just audio (Firefly Pro)",
+    "You process files longer than 30 minutes or in bulk (Firefly Pro)",
+    "You only occasionally clean up short clips and can live with the free limits"
+   ],
+   "faq": [
+    {
+     "a": "Adobe Podcast offers the Enhance Speech feature free with a free Adobe account, subject to daily and file-size limits. Advanced features, including video enhancement, bulk uploads and unlimited Studio downloads, require an Adobe Firefly Pro subscription, which includes Podcast Premium.",
+     "q": "Is Adobe Podcast free?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": null,
+   "best_for": "AI audio enhancement and recording for podcasters and content creators",
+   "description": "Adobe Podcast is a browser-based audio tool whose flagship feature, Enhance Speech, cleans up spoken recordings to sound studio-quality. A free tier is available, with fuller access sold through Adobe Firefly plans starting at $9.99/month.",
+   "description_long": "Adobe Podcast is a web app for recording and cleaning up spoken-word audio without a traditional editing suite. Its best-known feature, Enhance Speech, strips background noise and room echo from voice recordings and makes them sound closer to a studio microphone capture.\n\nAdobe Podcast is now folded into Adobe Firefly, Adobe's broader AI platform. Enhance Speech and the Podcast Studio multitrack tool continue to operate, but since August 30, 2026 Podcast Premium is no longer sold as a standalone plan; new paid access goes through Firefly plans instead.\n\nThe Studio side of the product accepts multitrack audio and video uploads with automatic syncing, so podcast and interview recordings from several sources can be aligned and enhanced together.\n\nEnhance Speech remains free to use with an Adobe account, subject to usage limits that Adobe does not publish in a way that could be independently confirmed at the time of writing. Paid access is sold through four Firefly plans billed monthly: Firefly Standard at $9.99/month (2,000 generative credits), Firefly Pro at $19.99/month (4,000 credits, including everything Podcast Premium previously offered), Firefly Pro Plus at $49.99/month (10,000 credits), and Firefly Premium at $199.99/month (50,000 credits). Subscribers who were already on the old standalone Podcast Premium plan keep their existing price and, as of August 30, 2026, also receive Firefly Standard (2,000 credits/month) at no extra cost; if they cancel after that date they would need to buy Firefly Pro to regain Premium features.\n\nThe main limitation is that the features most people want at scale, such as video enhancement and bulk processing, sit behind a paid Firefly plan, and the exact boundaries of the free tier are not clearly documented. It suits podcasters, interviewers, video creators and anyone who records voice in imperfect rooms and wants clean results fast; the free tier works for occasional light use, while regular producers will need a paid Firefly plan.",
+   "pros": [
+    "Enhance Speech produces genuinely clean, studio-like voice from noisy or echoey recordings",
+    "A free tier is available for occasional audio cleanup at no cost",
+    "Podcast Studio supports multitrack audio and video uploads with automatic syncing",
+    "Runs entirely in the browser with no plugins or local processing",
+    "Existing Podcast Premium subscribers keep their old price and gain added Firefly Standard credits at no extra charge"
+   ],
+   "cons": [
+    "Advanced features like video enhancement and bulk uploads require a paid Firefly plan",
+    "Exact free-tier limits (file size, daily usage) are not clearly published by Adobe",
+    "Four separate paid tiers (Standard, Pro, Pro Plus, Premium) can make it hard to compare pricing",
+    "New paid access runs through Firefly plans rather than a standalone Podcast Premium subscription",
+    "Requires an Adobe account and a stable connection since everything is cloud-based"
+   ],
+   "choose_if": [
+    "You record voice, podcasts or interviews and want fast, clean results",
+    "You want to enhance video, not just audio (requires a paid Firefly plan)",
+    "You process files longer than the free tier allows, or in bulk (requires a paid Firefly plan)",
+    "You only occasionally clean up short clips and can live with the free tier's limits"
+   ],
+   "faq": [
+    {
+     "q": "Is Adobe Podcast free?",
+     "a": "Enhance Speech remains free to use with an Adobe account, subject to usage limits. Advanced features, including video enhancement, bulk uploads and higher usage caps, require a paid Adobe Firefly plan, which also includes the features formerly sold as Podcast Premium."
+    }
+   ],
+   "dropped": [
+    "Claim that users joined an older standalone $9.99/month Premium plan (figure not confirmed on Adobe's FAQ)",
+    "March 2026 source-separation update details (independent speech/noise/music control, stem downloads, remote recording, multitrack import addition) - not re-verified",
+    "Specific free-tier limits: 30-minute/500MB file cap, 1-hour daily enhancement limit, 2 Studio downloads per day - not re-verified this round"
+   ]
+  }
+ },
+ {
+  "slug": "relevance-ai",
+  "before": {
+   "lang": "en",
+   "badge": "paid",
+   "users": null,
+   "best_for": "Multi-agent teams, sales and support bots",
+   "description": "No-code platform to build AI agents and multi-agent teams for business workflows.",
+   "description_long": "Relevance AI is a no-code platform for building and deploying AI agents and multi-agent teams. Its specialty is multi-agent orchestration — systems where specialized agents (a researcher, a writer, a QA reviewer) collaborate to complete complex workflows that a single agent could not handle reliably.\n\nThe company has repositioned toward enterprise buyers under an 'AI Workforce' framing. Its public pricing page now shows only an Enterprise tier with a 'Talk to sales' call to action and no published numbers. Self-serve Pro and Team pricing still appears on the vendor's documentation pages. There is no free plan: the vendor's own docs state the Free plan is retired for both new signups and existing accounts.\n\nThe platform includes a visual workflow builder, fine-tuning on company-specific documents, and multi-agent orchestration that handles task delegation, result aggregation, and quality checking automatically. Agents connect to CRM systems, databases, Slack, and email, and the Enterprise tier advertises 2,000+ integrations.\n\nPricing is split into two components: Actions (what agents do) and Vendor Credits (model costs, passed through at wholesale with no markup). Per the vendor's docs, Pro is $19/month billed annually or $29/month billed monthly, including 2,500 actions and $20 of vendor credits per month. Team is $234/month billed annually or $349/month billed monthly, including 7,000 actions and $70 of vendor credits per month, plus calling agents, meeting agents, and an analytics dashboard. Enterprise is custom, quoted via sales, and adds unlimited agents, users, and projects, 2,000+ integrations, enterprise triggers, agent evaluations, A/B testing, SSO, RBAC, audit logs, and a dedicated account manager.\n\nLimitations: steeper learning curve than simpler tools like Lindy; the Team tier is expensive for small teams; the shift to an Enterprise-only public pricing page makes self-serve buying less transparent; and the two-currency (actions plus credits) pricing model can confuse new users. Best for revenue operations, marketing automation, and support teams — and increasingly enterprise buyers — who need multi-agent workflows handling complex, multi-step business processes.",
+   "pros": [
+    "Multi-agent orchestration — teams of specialized agents work together",
+    "Actions + Vendor Credits pricing passes model costs through at wholesale with no markup",
+    "Pro tier is a relatively affordable entry point ($19/month billed annually, $29/month billed monthly)",
+    "Team tier adds calling agents, meeting agents, and an analytics dashboard",
+    "Enterprise tier advertises 2,000+ integrations"
+   ],
+   "cons": [
+    "No free plan — retired for both new signups and existing accounts",
+    "Team plan is $234/month billed annually ($349/month billed monthly) — expensive for small teams",
+    "Steeper learning curve than simpler tools like Lindy",
+    "Public pricing page now shows only Enterprise 'Talk to sales' — less transparent for self-serve buyers",
+    "Two-currency model (actions + credits) confusing initially"
+   ],
+   "choose_if": [
+    "✅ You want to build multi-agent AI pipelines and autonomous AI workflows without deep coding",
+    "✅ You need AI agents that use tools, search the web, analyze documents, and call APIs",
+    "✅ You're building a sales AI agent, research agent, or support agent that completes tasks",
+    "✅ You want flexibility to choose any AI model (OpenAI, Anthropic, Gemini) for your agents"
+   ],
+   "faq": [
+    {
+     "a": "Relevance AI is a platform for building AI agents and multi-agent systems without deep coding. Agents can use tools, search the web, read documents, and call APIs to complete complex multi-step tasks. It's used for sales automation, research, customer support, and data enrichment.",
+     "q": "What is Relevance AI?"
+    },
+    {
+     "a": "No. Relevance AI's Free plan has been retired for both new signups and existing accounts. Per the vendor's docs, Pro starts at $19/month billed annually ($29/month billed monthly), and Team starts at $234/month billed annually ($349/month billed monthly). Enterprise pricing is custom and quoted via sales.",
+     "q": "Is Relevance AI free?"
+    },
+    {
+     "a": "Zapier automates fixed rule-based workflows between apps. Relevance AI builds AI agents that reason and adapt — they use AI models to decide what to do next. Zapier is deterministic automation; Relevance is autonomous AI decision-making.",
+     "q": "What is the difference between Relevance AI and Zapier?"
+    },
+    {
+     "a": "Copilot Studio can build agents that perform actions, but it's primarily designed for conversational chatbots within Microsoft's ecosystem. Relevance AI is more specialized for complex multi-step autonomous agents that can use many external tools.",
+     "q": "Can Copilot Studio build autonomous agents?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "paid",
+   "users": null,
+   "best_for": "Multi-agent teams, sales and support bots",
+   "description": "No-code platform to build AI agents and multi-agent teams for business workflows.",
+   "description_long": "Relevance AI is a no-code platform for building and deploying AI agents and multi-agent teams. Its specialty is multi-agent orchestration — systems where specialized agents (a researcher, a writer, a QA reviewer) collaborate to complete complex workflows that a single agent could not handle reliably.\n\nThe company has repositioned toward enterprise buyers under an 'AI Workforce' framing. In September 2026 it announced Invent 2.0, an agent for designing, building, and managing AI agent workforces that maps processes, assembles multi-agent architectures, sets benchmarks, and monitors quality. Its public pricing page now shows only an Enterprise tier with a 'Talk to sales' call to action and no published numbers. Self-serve Pro and Team pricing still appears on the vendor's documentation pages. There is no free plan: the vendor's own docs state the Free plan is retired for both new signups and existing accounts.\n\nThe platform includes a visual workflow builder, fine-tuning on company-specific documents, and multi-agent orchestration that handles task delegation, result aggregation, and quality checking automatically. Agents connect to CRM systems, databases, Slack, and email, and the Enterprise tier advertises 2,000+ integrations.\n\nPricing is split into two components: Actions (what agents do) and Vendor Credits (model costs, passed through at wholesale with no markup). Per the vendor's docs, Pro is $19/month billed annually or $29/month billed monthly, including 2,500 actions and $20 of vendor credits per month. Team is $234/month billed annually or $349/month billed monthly, including 7,000 actions and $70 of vendor credits per month, plus calling agents, meeting agents, and an analytics dashboard. Enterprise is custom, quoted via sales, and adds unlimited agents, users, and projects, 2,000+ integrations, enterprise triggers, agent evaluations, A/B testing, SSO, RBAC, audit logs, and a dedicated account manager.\n\nLimitations: steeper learning curve than simpler tools like Lindy; the Team tier is expensive for small teams; the shift to an Enterprise-only public pricing page makes self-serve buying less transparent; and the two-currency (actions plus credits) pricing model can confuse new users. Best for revenue operations, marketing automation, and support teams — and increasingly enterprise buyers — who need multi-agent workflows handling complex, multi-step business processes.",
+   "pros": [
+    "Multi-agent orchestration — teams of specialized agents work together",
+    "Actions + Vendor Credits pricing passes model costs through at wholesale with no markup",
+    "Pro tier is a relatively affordable entry point ($19/month billed annually, $29/month billed monthly)",
+    "Team tier adds calling agents, meeting agents, and an analytics dashboard",
+    "Enterprise tier advertises 2,000+ integrations"
+   ],
+   "cons": [
+    "No free plan — retired for both new signups and existing accounts",
+    "Team plan is $234/month billed annually ($349/month billed monthly) — expensive for small teams",
+    "Steeper learning curve than simpler tools like Lindy",
+    "Public pricing page now shows only Enterprise 'Talk to sales' — less transparent for self-serve buyers",
+    "Two-currency model (actions + credits) confusing initially"
+   ],
+   "choose_if": [
+    "✅ You want to build multi-agent AI pipelines and autonomous AI workflows without deep coding",
+    "✅ You need AI agents that use tools, search the web, analyze documents, and call APIs",
+    "✅ You're building a sales AI agent, research agent, or support agent that completes tasks",
+    "✅ You want flexibility to choose any AI model (OpenAI, Anthropic, Google) for your agents"
+   ],
+   "faq": [
+    {
+     "a": "Relevance AI is a platform for building AI agents and multi-agent systems without deep coding. Agents can use tools, search the web, read documents, and call APIs to complete complex multi-step tasks. It's used for sales automation, research, customer support, and data enrichment.",
+     "q": "What is Relevance AI?"
+    },
+    {
+     "a": "No. Relevance AI's Free plan has been retired for both new signups and existing accounts. Per the vendor's docs, Pro starts at $19/month billed annually ($29/month billed monthly), and Team starts at $234/month billed annually ($349/month billed monthly). Enterprise pricing is custom and quoted via sales.",
+     "q": "Is Relevance AI free?"
+    },
+    {
+     "a": "Zapier automates fixed rule-based workflows between apps. Relevance AI builds AI agents that reason and adapt — they use AI models to decide what to do next. Zapier is deterministic automation; Relevance is autonomous AI decision-making.",
+     "q": "What is the difference between Relevance AI and Zapier?"
+    },
+    {
+     "a": "Copilot Studio can build agents that perform actions, but it's primarily designed for conversational chatbots within Microsoft's ecosystem. Relevance AI is more specialized for complex multi-step autonomous agents that can use many external tools.",
+     "q": "Can Copilot Studio build autonomous agents?"
+    }
+   ],
+   "dropped": []
+  }
+ },
+ {
+  "slug": "copy-ai",
+  "before": {
+   "lang": "en",
+   "badge": "paid",
+   "users": "17M+",
+   "best_for": "AI content generation and GTM workflow automation for marketing teams",
+   "description": "Copy.ai is a GTM AI Platform (chat plus multi-step workflows and agents for sales, marketing and RevOps) built on OpenAI, Anthropic and Gemini models. There is no free plan; the entry tier is Chat at $29/mo.",
+   "description_long": "Copy.ai started life as an AI copywriting assistant and has since repositioned itself as a \"GTM AI Platform\" aimed at go-to-market teams rather than individual writers. Instead of a single proprietary model, it routes work across leading third-party models from OpenAI, Anthropic and Google.\n\nThe product changed meaningfully in mid-2025. Copy.ai sunset its free plan along with the old Starter ($49) and Advanced ($249) writing tiers, and replaced the entry point with a flat, un-metered Chat plan at $29/mo. The site is now branded under Fullcast, with a Fullcast banner and Fullcast support email, which is consistent with heavier RevOps focus.\n\nCore capabilities now split in two: a chat interface for everyday drafting (ads, emails, posts, briefs) and multi-step Workflows and agents that automate repetitive go-to-market tasks such as lead enrichment, account research and outbound sequences. The workflow layer is where the platform's real value sits.\n\nPricing has no free product tier. Chat is $29/mo (or $24/mo billed annually, $288/yr) with 5 seats and unlimited words. Team plans are billed annually: Growth is $1,000/mo billed annually ($12,000/yr, 75 seats, 20K workflow credits), Expansion is $2,000/mo billed annually ($24,000/yr, 150 seats, 45K credits) and Scale is $3,000/mo billed annually ($36,000/yr, 200 seats, 75K credits), with a custom Enterprise tier offering API access and 20+ integrations.\n\nThe main limitations are the pricing cliff between Chat and the team tiers, and the credit-metered workflows that can make heavier automation expensive to budget. Solo copywriters may also feel the tool has drifted away from them.\n\nCopy.ai suits sales and marketing teams that want to automate go-to-market work with agents and workflows, and can justify team pricing. Individual writers who just want cheap copy generation have better-value options elsewhere.",
+   "pros": [
+    "Un-metered Chat plan at $29/mo with unlimited words and 5 seats",
+    "Multi-step Workflows and agents automate real go-to-market tasks, not just copy",
+    "Model-agnostic: taps OpenAI, Anthropic and Gemini rather than one in-house model",
+    "Clear positioning for sales/marketing/RevOps teams under Fullcast ownership"
+   ],
+   "cons": [
+    "No free product tier since the 2025 sunset",
+    "Large price jump from $29 Chat to $1,000+/mo team plans",
+    "Workflow credits make heavier automation costs hard to predict",
+    "Repositioning away from solo copywriting leaves individual writers underserved",
+    "Team tiers demand a real commitment (75-200 seats) that small teams won't use"
+   ],
+   "choose_if": [
+    "You run a sales or marketing team that wants agents and workflows, not just a text generator",
+    "You can justify team pricing starting at $1,000/mo",
+    "You want a single tool spanning drafting and go-to-market automation",
+    "You prefer a platform that uses multiple frontier models under the hood",
+    "You need un-metered everyday writing at the $29 Chat level"
+   ],
+   "faq": [
+    {
+     "a": "Copy.ai is now positioned as a GTM AI Platform, combining a chat interface for drafting marketing content (ad copy, email subject lines, product descriptions, social posts) with multi-step Workflows and agents that automate go-to-market tasks for sales, marketing and RevOps teams.",
+     "q": "What is Copy.ai used for?"
+    },
+    {
+     "a": "No free plan. The entry tier is Chat at $29/mo (or $24/mo billed annually, $288/yr). The next tier is Growth at $1,000/mo billed annually.",
+     "q": "Is Copy.ai free?"
+    },
+    {
+     "a": "Copy.ai now focuses on GTM workflow automation for sales, marketing and RevOps teams, with team plans starting at $1,000/mo billed annually. Jasper focuses on brand-consistent long-form content for enterprise teams. Copy.ai is better suited to teams that need workflow and agent automation; Jasper is better for teams with strict brand guidelines.",
+     "q": "What is the difference between Copy.ai and Jasper?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "paid",
+   "users": "17M+",
+   "best_for": "AI content generation and GTM workflow automation for marketing teams",
+   "description": "Copy.ai is a GTM AI Platform (chat plus multi-step workflows and agents for sales, marketing and RevOps) built on OpenAI, Anthropic and Google models. There is no free plan; the entry tier is Chat at $29/mo, with a custom-priced Enterprise tier above it.",
+   "description_long": "Copy.ai started life as an AI copywriting assistant and has since repositioned itself as a \"GTM AI Platform\" aimed at go-to-market teams rather than individual writers. Instead of a single proprietary model, it routes work across leading third-party models from OpenAI, Anthropic and Google.\n\nIn October 2025, Copy.ai was acquired by Fullcast. The copy.ai website itself still carries the Copy.ai brand (\"The First AI-Native GTM Platform\"); Fullcast shows up in the support email and a banner link rather than in the main branding. Copy.ai's acquisition page also references early-access workflows under the name \"Fullcast Propel (powered by Copy.ai)\", though it is unclear whether the whole product will eventually be renamed.\n\nCore capabilities split in two: a chat interface for everyday drafting (ads, emails, posts, briefs) and multi-step Workflows and agents that automate repetitive go-to-market tasks such as lead enrichment, account research and outbound sequences. The workflow layer is where the platform's real value sits.\n\nThere is no free product tier. The current pricing page lists just two options: Self-Serve Chat at $29/mo billed monthly, with 5 seats and unlimited words, and a custom-priced Enterprise tier with guided implementation, API access, bulk workflow runs and 20+ integrations, available by demo. The previously published Growth, Expansion and Scale team tiers are no longer shown on the pricing page.\n\nThe main limitations are the pricing cliff between the $29 Chat plan and the custom Enterprise tier, with no published mid-range option, and the lack of transparent pricing for teams that need more than basic chat. Solo copywriters may also feel the tool has drifted away from them.\n\nCopy.ai suits sales and marketing teams that want to automate go-to-market work with agents and workflows and are willing to go through a sales process for anything beyond the entry Chat plan. Individual writers who just want cheap copy generation have better-value options elsewhere.",
+   "pros": [
+    "Un-metered Chat plan at $29/mo (billed monthly) with unlimited words and 5 seats",
+    "Multi-step Workflows and agents automate real go-to-market tasks, not just copy",
+    "Model-agnostic: taps OpenAI, Anthropic and Google models rather than one in-house model",
+    "Enterprise tier offers API access, bulk workflow runs and 20+ integrations",
+    "Backed by Fullcast following its October 2025 acquisition, adding RevOps platform reach"
+   ],
+   "cons": [
+    "No free product tier since the 2025 sunset",
+    "Large, unpublished gap between the $29 Chat plan and custom Enterprise pricing, with no mid-tier option shown",
+    "Enterprise pricing is only available by demo, so costs aren't transparent upfront",
+    "Repositioning away from solo copywriting leaves individual writers underserved",
+    "Site branding still reads as Copy.ai rather than Fullcast, which can obscure who actually runs the product"
+   ],
+   "choose_if": [
+    "You run a sales or marketing team that wants agents and workflows, not just a text generator",
+    "You're ready to go through a sales process for Enterprise pricing once you outgrow Chat",
+    "You want a single tool spanning drafting and go-to-market automation",
+    "You prefer a platform that uses multiple frontier models under the hood",
+    "You need un-metered everyday writing at the $29/mo Chat level"
+   ],
+   "faq": [
+    {
+     "q": "What is Copy.ai used for?",
+     "a": "Copy.ai is now positioned as a GTM AI Platform, combining a chat interface for drafting marketing content (ad copy, email subject lines, product descriptions, social posts) with multi-step Workflows and agents that automate go-to-market tasks for sales, marketing and RevOps teams."
+    },
+    {
+     "q": "Is Copy.ai free?",
+     "a": "No free plan. The entry tier is Chat at $29/mo billed monthly. Above that, the only published option is a custom-priced Enterprise tier available by demo."
+    },
+    {
+     "q": "What is the difference between Copy.ai and Jasper?",
+     "a": "Copy.ai now focuses on GTM workflow automation for sales, marketing and RevOps teams, with a $29/mo Chat plan and custom Enterprise pricing above it. Jasper focuses on brand-consistent long-form content for enterprise teams. Copy.ai is better suited to teams that need workflow and agent automation; Jasper is better for teams with strict brand guidelines."
+    }
+   ],
+   "dropped": [
+    "Chat annual price of $24/mo ($288/yr) — not confirmed, pricing toggle could not be verified",
+    "Growth tier at $1,000/mo billed annually ($12,000/yr, 75 seats, 20K workflow credits) — no longer listed",
+    "Expansion tier at $2,000/mo billed annually ($24,000/yr, 150 seats, 45K credits) — no longer listed",
+    "Scale tier at $3,000/mo billed annually ($36,000/yr, 200 seats, 75K credits) — no longer listed",
+    "Claim that the site is now branded under Fullcast with a Fullcast banner and support email — site still uses Copy.ai branding"
+   ]
+  }
+ },
+ {
+  "slug": "semrush",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "1.16M+",
+   "best_for": "All-in-one SEO and competitive intelligence platform for digital marketers",
+   "description": "Semrush is a marketing and SEO platform for keyword research, competitor analysis, site audits and content optimization. The current version, Semrush One (2026), adds an AI Visibility Toolkit that tracks how your brand shows up in ChatGPT, Gemini, Perplexity and Google AI Overviews.",
+   "description_long": "Semrush is one of the longest-running online-visibility platforms, built around keyword research, rank tracking, backlink and traffic analysis, technical site audits and content tools. Marketers, agencies and SEO teams use it to size up competitors and plan campaigns across search and paid channels.\n\nIn 2026 the product was repositioned around AI search under the Semrush One plan family, which runs Free, SEO, Starter, Pro+, Advanced and a custom Enterprise tier. That same year Adobe completed its acquisition of Semrush, on April 28, 2026, for roughly $1.9 billion at $12 per share, and has since launched Adobe Brand Visibility, which combines Semrush with Adobe's own products.\n\nThe current toolkit bundles the classic SEO features with a new AI Visibility Toolkit that monitors brand mentions across ChatGPT, Gemini, Perplexity and Google AI Overviews, alongside a newer LLM Gap Analyzer app and Bot and Agent Analytics that show which AI crawlers are hitting your site.\n\nOn monthly billing the Semrush One tiers are $139/mo for SEO, $199/mo for Starter (which adds AI Visibility and 50 prompts/day), $299/mo for Pro+ and $549/mo for Advanced; paying annually lowers these to about $117.33, $165.17, $248.17 and $455.67 per month respectively. Enterprise pricing is custom, and additional user seats are billed separately starting at $45/mo. A free account (one demo project, 10 reports per day across the vital tools, no credit card) and a 7-day trial are also available.\n\nThe main drawbacks are cost and complexity: entry pricing is high for freelancers, extra seats and add-ons stack up quickly, and the breadth of tools and renamed plan tiers create a real learning curve. The most useful AI-visibility features sit on the Starter plan and above, not the base SEO tier.\n\nSemrush fits agencies, in-house marketing teams and serious SEO practitioners who want one platform covering both traditional search rankings and the newer question of how a brand surfaces inside AI answers.",
+   "pros": [
+    "Very deep data set for keywords, backlinks, traffic and competitor research in one place",
+    "AI Visibility Toolkit tracks brand presence across ChatGPT, Gemini, Perplexity and Google AI Overviews",
+    "LLM Gap Analyzer and Bot and Agent Analytics add genuinely new AI-era capabilities",
+    "Free account (10 reports/day, 1 demo project) plus a 7-day trial let you test before committing",
+    "Covers both technical SEO audits and content optimization workflows"
+   ],
+   "cons": [
+    "Pricing is steep, with the Advanced plan reaching $549/mo on monthly billing ($455.67/mo if billed annually)",
+    "AI Visibility features require at least the Starter plan, not the base SEO tier",
+    "Free account is limited to 10 reports per day across tools and a single demo project",
+    "Extra user seats cost extra, starting at $45/mo per seat",
+    "Wide feature set and reworked plan names (SEO, Starter, Pro+, Advanced) make onboarding slow"
+   ],
+   "choose_if": [
+    "You need to track brand visibility in AI answers, not just Google rankings",
+    "You run an agency or in-house team managing multiple domains",
+    "You want keyword, backlink and competitor data in a single platform",
+    "You can justify a higher monthly spend for depth of data",
+    "You want to combine classic SEO audits with new AI-search monitoring"
+   ],
+   "faq": [
+    {
+     "a": "For serious SEO professionals and agencies, SEMrush is generally considered worth its $139-$549/month price on monthly billing (about $117-$456/month if paid annually). It replaces multiple standalone tools (keyword research, backlink checker, site audit, rank tracking). For small businesses doing basic SEO, cheaper alternatives like Ubersuggest may suffice.",
+     "q": "Is SEMrush worth the price?"
+    },
+    {
+     "a": "No. Frase focuses on content optimization — it doesn't do full keyword research, backlink analysis, or technical SEO audits the way SEMrush does. Frase is often used alongside SEMrush: SEMrush for strategy and keyword research, Frase for content creation and optimization.",
+     "q": "Can Frase replace SEMrush?"
+    }
+   ]
+  },
+  "after": {
+   "badge": "freemium",
+   "users": null,
+   "best_for": "All-in-one SEO and competitive intelligence platform for digital marketers",
+   "description": "Semrush is a marketing and SEO platform for keyword research, competitor analysis, site audits and content optimization. In 2026 Adobe acquired Semrush and the product was repositioned around an 'SEO + AI Search' plan family that adds an AI Visibility Toolkit tracking how brands show up in ChatGPT, Gemini, Perplexity and Google AI Overviews.",
+   "description_long": "Semrush is one of the longest-running online-visibility platforms, built around keyword research, rank tracking, backlink and traffic analysis, technical site audits and content tools. Marketers, agencies and SEO teams use it to size up competitors and plan campaigns across search and paid channels.\n\nAdobe completed its acquisition of Semrush on April 28, 2026, for roughly $1.9 billion at $12 per share, and Semrush now sits inside Adobe's CX Enterprise portfolio. Around the same time the product line was reorganized into an 'SEO + AI Search' plan family covering Free, SEO, Starter, Pro+, Advanced and a custom Enterprise tier.\n\nThe current toolkit bundles the classic SEO features with an AI Visibility Toolkit that monitors brand mentions across ChatGPT, Gemini, Perplexity and Google AI Overviews, an LLM Gap Analyzer app, and Bot and Agent Analytics that show which AI crawlers are hitting your site. AI visibility depth scales by tier: Starter includes 50 prompts/day and 300 AI visibility reports/day on one domain plus MCP access, Pro+ raises that to 100 prompts/day, and Advanced offers unlimited prompts across 40+ websites with 5,000+ tracked keywords and API access.\n\nOn monthly billing the published SEO + AI Search tiers are $139/mo for SEO, $199/mo for Starter and $299/mo for Pro+; paying annually lowers these to about $117.33, $165.17 and $248.17 per month respectively, saving up to 17%. Advanced is custom-priced and requires requesting a demo, as is Enterprise. A free account (one demo project, 10 reports per day across the vital tools, no credit card) is also available, along with add-ons such as extra user seats from $45/mo, Lead Generation at $90/mo, and Base and Pro Reports at $10 and $20 per month.\n\nThe main drawbacks are cost and complexity: entry pricing is high for freelancers, the top Advanced tier has no public price and requires a sales conversation, add-ons stack up quickly, and the breadth of tools and plan names create a real learning curve. The most useful AI-visibility features sit on the Starter plan and above, not the base SEO tier.\n\nSemrush fits agencies, in-house marketing teams and serious SEO practitioners who want one platform covering both traditional search rankings and the newer question of how a brand surfaces inside AI answers.",
+   "pros": [
+    "Very deep data set for keywords, backlinks, traffic and competitor research in one place",
+    "AI Visibility Toolkit tracks brand presence across ChatGPT, Gemini, Perplexity and Google AI Overviews",
+    "LLM Gap Analyzer and Bot and Agent Analytics add genuinely new AI-era capabilities",
+    "Free account (10 reports/day, 1 demo project) lets you test core tools before committing",
+    "Covers both technical SEO audits and content optimization workflows"
+   ],
+   "cons": [
+    "Advanced plan is custom-priced and requires contacting sales, with Pro+ at $299/mo being the highest published monthly tier",
+    "AI Visibility features require at least the Starter plan, not the base SEO tier",
+    "Free account is limited to 10 reports per day across tools and a single demo project",
+    "Extra user seats and add-ons (Lead Generation, Base/Pro Reports) cost extra on top of plan price",
+    "Wide feature set and plan names (SEO, Starter, Pro+, Advanced) make onboarding slow"
+   ],
+   "choose_if": [
+    "You need to track brand visibility in AI answers, not just Google rankings",
+    "You run an agency or in-house team managing multiple domains",
+    "You want keyword, backlink and competitor data in a single platform",
+    "You can justify a higher monthly spend for depth of data",
+    "You want to combine classic SEO audits with new AI-search monitoring"
+   ],
+   "faq": [
+    {
+     "q": "Is SEMrush worth the price?",
+     "a": "For serious SEO professionals and agencies, SEMrush is generally considered worth its published $139-$299/month price on monthly billing (about $117-$248/month if paid annually). The top Advanced tier is custom-priced and requires contacting sales. It replaces multiple standalone tools (keyword research, backlink checker, site audit, rank tracking). For small businesses doing basic SEO, cheaper alternatives like Ubersuggest may suffice."
+    },
+    {
+     "q": "Can Frase replace SEMrush?",
+     "a": "No. Frase focuses on content optimization — it doesn't do full keyword research, backlink analysis, or technical SEO audits the way SEMrush does. Frase is often used alongside SEMrush: SEMrush for strategy and keyword research, Frase for content creation and optimization."
+    }
+   ],
+   "dropped": [
+    "$549/mo price for the Advanced plan (now custom-priced, 'request demo')",
+    "'Semrush One' branding (not confirmed as current official plan family name)",
+    "user count of 1.16M+ (not verified by audit)"
+   ]
+  }
+ }
+]

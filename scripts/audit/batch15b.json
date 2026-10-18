@@ -1,0 +1,651 @@
+[
+ {
+  "slug": "perplexity",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "No version numbering. Perplexity Computer (agentic assistant) with Deep Research; models listed on perplexity.ai/pro include GPT-6.1 Sol, Gemini 3.8 Flash, Claude Sonnet 5.5, Kimi K3, GLM 5.3 and Grok 4.7.",
+  "version_published": null,
+  "pricing": "Free $0. Pro $20/month or $200/year (perplexity.ai/pro shows this as '$17/month or equivalent, when billed annually'); includes 4,000 bonus Computer credits. Max $200/month or $2,000/year ('$167/month or equivalent, when billed annually'); 10,000 monthly Computer credits plus 35,000 bonus credits; Max annual billing only on the web. Enterprise Pro $40/seat/month or $400/seat/year (education/nonprofit $30/$300); Enterprise Max $325/seat/month or $3,250/seat/year. Education Pro $10/month with SheerID verification.",
+  "free_tier": "Yes: Free plan.",
+  "repositioning": "No change in positioning: AI answer engine plus agentic Computer assistant. Monthly billing exists for both Pro and Max; the /pro page simply displays the annual-equivalent monthly price.",
+  "card_errors": [
+   {
+    "claim": "Pro is listed at $17 a month when billed annually ... a separate monthly-billing price is not published on the site.",
+    "correction": "Perplexity's Help Center lists Pro at $20/month or $200/year. $17 is only the annual plan shown per month."
+   },
+   {
+    "claim": "Max is listed at $167 a month when billed annually",
+    "correction": "Max is $200/month or $2,000/year ($167/month is the annual price shown per month)."
+   },
+   {
+    "claim": "An Enterprise plan is also listed, with pricing available on request.",
+    "correction": "Enterprise prices are published per seat: Enterprise Pro $40/month or $400/year, Enterprise Max $325/month or $3,250/year."
+   },
+   {
+    "claim": "The site only publishes annual-billing rates for Pro and Max, so there is no visible month-to-month option above the free tier",
+    "correction": "Monthly billing exists: Pro $20/month and Max $200/month."
+   },
+   {
+    "claim": "heavier users should expect to commit to an annual Pro or Max plan",
+    "correction": "Pro and Max can both be paid month to month ($20 / $200), and annual billing is optional."
+   },
+   {
+    "claim": "Pro ($17/mo) and Max ($167/mo) prices shown on the site are billed annually; no monthly-billing price is published",
+    "correction": "Pro $20/month or $200/year; Max $200/month or $2,000/year. Replace this con, for example: 'Max costs $200/month'."
+   },
+   {
+    "claim": "You need Sora 2 Pro video or Nano Banana Pro image generation and are willing to commit to the annual Max tier",
+    "correction": "Max can be paid monthly ($200). Also, the current /pro page no longer lists Sora 2 Pro or Nano Banana Pro under Max (see notes)."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.perplexity.ai/help-center/en/articles/12167980-using-the-connector-for-slack",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://www.perplexity.ai/help-center/en/articles/11680686-perplexity-max",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://www.perplexity.ai/pro",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Price strings quoted from Perplexity's Help Center: Slack connector article 'Our plans start at: Perplexity Pro $20/month or $200/year; Perplexity Max $200/month or $2,000/year; Enterprise Pro $40/month or $400/year per seat; Enterprise Max $325/month or $3,250/year per seat'. The Max article says '$200/monthly or $2000/annually'. The /pro page itself shows only annual-equivalent prices ($17, $167) and limited-time credit promos (+$40 / +$450), which should not go into the card. Max features on the current /pro page: Maximum Computer usage, 35,000 bonus credits, 10,000 monthly credits, expert-level research, frontier AI models, highest limits, priority access. The page no longer lists Model Council, Sora 2 Pro, Nano Banana Pro or unlimited Labs, but I did not confirm they were removed, so I would drop those names rather than assert either way. The card says Deep Research on Pro and Max is 'powered by models from Anthropic'; I could not confirm this this round.",
+  "domain_changed": false
+ },
+ {
+  "slug": "suno",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Music model v6 (Sept 9, 2026), with v6 and v6-wild on paid plans and v6-mini on Free. New: Suno Speech (beta), launched Oct 1, 2026, generates spoken voice and original music together as one track.",
+  "version_published": null,
+  "pricing": "Free $0 (50 credits/day, v6-mini, no regular monthly downloads, no commercial use). Pro $10/month or $8/month billed annually ($96/yr): 2,500 credits, 20 downloads/month, commercial use, 2 stem types. Premier $30/month or $24/month billed annually ($288/yr): 10,000 credits, 60 downloads/month, 3 stem types, Suno Studio. Unchanged from the card.",
+  "free_tier": "Yes: 50 credits per day, personal non-commercial use.",
+  "repositioning": "Suno is no longer music-only: Speech (beta) creates spoken audio (an idea, a poem or your own text) over original background music in one generated track, open to all users in the Suno app.",
+  "card_errors": [
+   {
+    "claim": "Suno is a text-to-music tool that writes, arranges and performs a song from a short description or your own lyrics.",
+    "correction": "Incomplete as of Oct 1, 2026: Suno also offers Speech (beta), which generates spoken voice and music together as one track from an idea or your own writing. It is open to all users. Add it to description, description_long and best_for."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://suno.com/blog/introducing-speech-beta",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://suno.com/pricing",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://suno.com/blog",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Speech blog post (Oct 1, 2026, CPO Jack Brody): it was tested with a small group for about a month, then 'Now we're opening the beta to everyone.' Suno calls it 'the first audio model that generates voice and music together as one cohesive track'. The post does not name platforms (web/mobile), plan limits or credit cost, so don't state those. The pricing page does not mention Speech. On pricing: the page's annual savings of $24 (Pro) and $72 (Premier) match the card's $10/$8 and $30/$24, so the card is correct. Don't read the $8/$24 shown on the page as monthly prices. The litigation facts in the card were not re-verified this round.",
+  "domain_changed": false
+ },
+ {
+  "slug": "synthesia",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Synthesia 3.0 platform (Express-2 avatars, Video Agents). New: Syren (beta, Oct 9, 2026), an AI video creation tool that builds motion graphics, avatars and voiceover from a prompt, a preset or a branded document.",
+  "version_published": null,
+  "pricing": "Basic $0 (500 credits/month, 10 min video or dubbing, 9 avatars, watermark). Starter $29/month or $18/month billed annually (1,250 credits/month or 15,000/year, 125+ avatars, 3 personal avatars). Pro $89/month or $64/month billed annually (6,000 credits/month, 180+ avatars, 5 personal avatars). Enterprise custom. Roleplay learner seat $29/month or $25 annual. Studio Express-1 avatar $1,000/year (annual plans). Syren is credit-based: a 1-minute video typically uses 1,000-2,000 credits, and Basic gets 2,000 promo Syren credits for a limited time (watermarked). Unchanged from the card apart from Syren.",
+  "free_tier": "Yes: Basic plan (10 min/month, watermark); Syren is also available on Basic with limited-time launch credits.",
+  "repositioning": "Synthesia now covers motion-graphics video too, not only avatar presenter video: Syren generates the video as code, renders it live in the browser, and edits through chat. Videos up to 3 minutes, horizontal or vertical. It is aimed at launch videos, explainers and marketing clips, while the standard editor remains for exact, repeatable content like compliance training. Syren is available to self-serve users (including free) and all Enterprise customers, and Enterprise admins can turn it off.",
+  "card_errors": [
+   {
+    "claim": "The current release, Synthesia 3.0, introduces the Express-2 full-body avatar engine with natural hand and body gestures, along with interactive Video Agents.",
+    "correction": "Still accurate for 3.0, but no longer the newest: Syren launched in beta on Oct 9, 2026. It makes full videos with motion graphics, avatars and voiceover from a prompt, preset or document. Mention it."
+   },
+   {
+    "claim": "Avatar-led format fits explainers, not cinematic or emotionally nuanced video",
+    "correction": "Partly stale: Syren (beta) produces motion-graphics videos for launch videos and marketing clips, not only avatar talking heads. Reword, e.g. 'Syren is still in beta and limited to videos of up to 3 minutes'."
+   },
+   {
+    "claim": "avatar-led video suits explanatory content far better than cinematic or emotionally nuanced storytelling",
+    "correction": "Same as above. Syren extends the product to motion-graphics marketing video (beta, up to 3 minutes)."
+   },
+   {
+    "claim": "It is less suited to creators chasing highly produced, cinematic output.",
+    "correction": "Soften: with Syren (beta), Synthesia now targets fast creative content such as launch videos and marketing clips, although still with a 3-minute limit."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.synthesia.io/post/syren-studio",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://www.synthesia.io/blog",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://www.synthesia.io/pricing",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "high",
+  "notes": "The Syren post exists at /post/syren-studio (not 404). It says 'Today we're launching Syren in beta, a new way to create video from a prompt, a preset, or a branded document', and that 'Launch credits let every customer create a first video.' Learning a company's brand from its existing videos is announced as coming 'soon', so don't state it as live. The pricing page has internal inconsistencies in a recommendation block ('$29/month, billed yearly'), so I used the plan cards. The Studio avatar add-on is named 'Studio Express-1 avatar' on the pricing page.",
+  "domain_changed": false
+ },
+ {
+  "slug": "microsoft-copilot-studio",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Rolling monthly updates, no version number. September 2026 updates (post of Oct 7, 2026): Apps (public preview), Copilot Managed Runtime (public preview), Hooks for GitHub Copilot harness agents (preview), Foundry IQ integration (GA), Review panel (GA), expanded evaluations. Oct 15, 2026: agent accounts, @mentions in Teams, Outlook, Word, Excel and PowerPoint, business process memory and triggers, rolling out through the Frontier program.",
+  "version_published": null,
+  "pricing": "Copilot Credits: capacity pack $200/pack/month for 25,000 credits; pay-as-you-go billed at month end (per-credit rate not shown on the page); up to 20% saving with prepaid Copilot Credit Commit Units; Microsoft 365 Copilot $30/user/month billed yearly. Free Azure account gives $200 credit. Unchanged from the card.",
+  "free_tier": "No free production tier (time-limited trial only).",
+  "repositioning": "Moving from building chatbots and agents to persistent, proactive agents that run shared business processes. Agents get their own Microsoft 365 credentials (agent accounts), can be @mentioned in Teams, Outlook and Office comments, keep business process memory across cycles, and start on triggers (an email or a schedule) without a prompt. Copilot Studio can now also build apps from natural language (Apps, public preview), hosted on Copilot Managed Runtime.",
+  "card_errors": [
+   {
+    "claim": "Recent additions documented by Microsoft include computer-using agents reaching general availability and real-time voice agents arriving as a preview for Dynamics 365 Contact Center.",
+    "correction": "Stale as 'recent'. The latest updates: Apps, which builds apps from natural language (public preview); Copilot Managed Runtime (public preview); Foundry IQ integration (GA), both Oct 7, 2026. Oct 15, 2026: agent accounts with their own Microsoft 365 identity, @mentions in Teams, Outlook, Word, Excel and PowerPoint, business process memory and triggers, rolling out via the Frontier program."
+   },
+   {
+    "claim": "Copilot Studio is Microsoft's no-code platform for building custom AI chatbots and agents.",
+    "correction": "Microsoft positions it as a low-code agent platform (it now also builds apps from natural language in preview). Say 'low-code' to match the rest of the card, and say 'agents' rather than 'chatbots'."
+   },
+   {
+    "claim": "plus computer-using agents and voice agent capabilities",
+    "correction": "Incomplete: add that it now also builds apps from natural language (public preview), and that agents can have their own Microsoft 365 accounts and be @mentioned in Teams and Outlook (Frontier program)."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.microsoft.com/en-us/copilot/blog/copilot-studio/new-and-improved-build-apps-extend-agents-and-transform-business-processes-in-microsoft-copilot-studio/",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://www.microsoft.com/en-us/copilot/blog/copilot-studio/delegate-shared-business-processes-to-agents-that-are-more-persistent-and-proactive-with-microsoft-copilot-studio/",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/pricing/copilot-studio",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Statuses as Microsoft states them: Apps 'now available in public preview'; Copilot Managed Runtime 'now in public preview' (announced Sept 25, and it hosts apps across Copilot Studio, Copilot Cowork and Copilot Code); Foundry IQ integration 'is now generally available'; Hooks 'now in preview'. The Oct 15 features are 'rolling out now through the Frontier program'. Do not call them GA. Agent refinements, extra admin and cost policies, and a browser-enabled cloud computer for agents are announced as upcoming only. Neither post mentions licensing or pricing changes. Microsoft Ignite is Nov 17-20, 2026, when more changes are likely.",
+  "domain_changed": false
+ },
+ {
+  "slug": "fireflies-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "No version numbering. New: Fireflies Talk (Sept 29, 2026), free unlimited voice dictation in the Fireflies desktop app for Mac and Windows, 90+ languages, on every plan including Free.",
+  "version_published": null,
+  "pricing": "Free $0 (400 mins storage/team, 20 AI credits, limited AI summaries). Pro $10/seat/month annual or $18 monthly (8,000 mins/seat, 20 AI credits). Business $19/seat/month annual or $29 monthly (unlimited storage, 30 AI credits). Enterprise $39/seat/month, annual only (50 AI credits, SSO, SCIM, HIPAA, audit logs). Unchanged from the card.",
+  "free_tier": "Yes: Free forever plan; Fireflies Talk dictation is unlimited on Free too.",
+  "repositioning": "Fireflies now goes beyond meetings: Talk is a system-wide dictation tool. Hold Fn on Mac or Ctrl+Win on Windows, speak, and the text appears at the cursor in any app. It removes filler words, formats for the target app and turns spoken names into Slack @mentions. Dictations are stored on the device and not used for training.",
+  "card_errors": [
+   {
+    "claim": "Fireflies.ai is an AI meeting assistant that records, transcribes and summarizes calls across Zoom, Google Meet, Teams and more.",
+    "correction": "Incomplete since Sept 29, 2026: Fireflies also offers Fireflies Talk, free unlimited voice dictation into any app on Mac and Windows (90+ languages, all plans including Free). Add it to the description and description_long."
+   },
+   {
+    "claim": "The biggest recent change is the move to a dynamic AI Credits model",
+    "correction": "The newest addition is Fireflies Talk (Sept 29, 2026). The AI Credits model still applies."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://fireflies.ai/blog/introducing-fireflies-talk",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://fireflies.ai/pricing",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Talk post quote: 'included in every Fireflies plan, including the free one, with no limit on how much you dictate.' The pricing page now advertises 'Transcription in 100+ languages' for meetings. Talk's 90+ languages is a separate figure, so don't mix them up. Recording limits per meeting from the pricing table: Free 2 h, Pro 2 h, Business 3 h, Enterprise 4 h. All card prices re-checked and match.",
+  "domain_changed": false
+ },
+ {
+  "slug": "tradingview",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "No version numbering. New: AI Copilot (Sept 28, 2026), an AI assistant in the Supercharts side panel, sold as a paid add-on for every paid plan. Web and desktop only, not mobile yet.",
+  "version_published": null,
+  "pricing": "Annual billing per month: Essential $12.95, Plus $29.95, Premium $59.95, Ultimate $199.95. Monthly billing: $14.95 / $34.95 / $69.95 / $239.95 (derived from the page's 'Save $24/$60/$120/$480 a year'). Basic free. AI screener requests: Essential 100, Plus 150, Premium 250, Ultimate 500, none listed for Basic. AI Copilot is a separate add-on that renews monthly; its price is not published on the pricing page or in the blog/support articles.",
+  "free_tier": "Yes: Basic plan (1 chart per tab, 2 indicators per chart). The pricing table lists no AI screener requests for Basic, and AI Copilot is for paid plans only.",
+  "repositioning": "TradingView now sells a native AI assistant: AI Copilot sees your chart and TradingView data (quotes, indicators, financials, news, earnings, screener). It can switch symbols and layouts, add indicators, draw levels, create alerts and watchlists, and write and apply Pine Script. It was first released as a browser-extension public beta and is now built into the platform. Monthly usage limit; Pine Script requests use more of it.",
+  "card_errors": [
+   {
+    "claim": "Its AI capabilities are now presented on the pricing page as a metered 'AI screener requests' allowance that scales by tier",
+    "correction": "Stale: since Sept 28, 2026 TradingView's main AI product is AI Copilot. It is a paid add-on for every paid plan (Essential, Plus, Premium, Ultimate), runs in the Supercharts side panel on web and desktop (not mobile), and works with Pine Script. AI screener requests remain a separate per-plan allowance."
+   },
+   {
+    "claim": "Plus is $34.95 per month billed monthly, or $29.95 per month billed annually, with more charts and 100 AI screener requests.",
+    "correction": "Plus includes 150 AI screener requests (Essential 100, Premium 250, Ultimate 500)."
+   },
+   {
+    "claim": "100 requests per month on Essential up to 500 on Ultimate",
+    "correction": "Correct range, but add AI Copilot (paid add-on) as the new AI feature."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.tradingview.com/blog/en/ai-copilot-now-on-tradingview-61231/",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://www.tradingview.com/support/solutions/43000795131-getting-started-with-ai-copilot/",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://www.tradingview.com/pricing/",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Lead claims I could NOT confirm: (1) 'extension beta discontinued'. The blog only says the assistant was previously a browser-extension public beta and is now native. It does not say the extension was shut down. (2) 'Basic free gets 100 AI screener requests'. The pricing table's AI screener row is blank for Basic and reads 100/150/250/500 for Essential/Plus/Premium/Ultimate. AI Copilot add-on price is not public, so don't state one. TradingView sometimes grants a one-time 30-day promotional add-on trial (support article 43000795139). The blog says AI Copilot 'may occasionally make mistakes', so keep a not-financial-advice caveat.",
+  "domain_changed": false
+ },
+ {
+  "slug": "webflow",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "No version numbering. Recent: Oct 15, 2026 the MCP server works in Google Gemini, and agents can read Analyze, Optimize and AEO Analytics data. Oct 13 Box element plus 19 global tag selectors. Oct 7 shared global tag styles in Libraries. Sept 29 agentic translation in Localize and the Algolia app. Sept 21 MCP adds interactions, faster CMS access and Webflow Cloud. Sept 2 Source by Webflow (limited research preview), visual editing of AI code components, components in CMS rich text, breakpoint canvas. Legacy Editor fully deprecated Oct 5, 2026.",
+  "version_published": null,
+  "pricing": "Site plans (yearly billing): Starter free; Basic $15/mo; Premium $25/mo; Team platform plan $2,500/mo (annual contract); Enterprise custom. Add-ons: Optimize from $299/mo, Analyze from $9/mo, Localize Essential from $9/mo, Localize Advanced from $29/mo. Site plan prices match the card. Workspace plan prices were not re-verified this round.",
+  "free_tier": "Yes: Starter site plan (webflow.io domain, 2 static pages, limited CMS, MCP server) and free Starter Workspace.",
+  "repositioning": "Homepage title is still 'The agentic web platform for modern businesses'. Webflow Conf 2026 (September) added Source, 'the platform for modern marketing teams and agents', which connects a codebase and martech stack and orchestrates always-on agents (limited research preview, phased enrollment). Also Campaigns (beta: brief to landing pages, variants and matched ads) and Assets (agentic on-brand creative built on the acquired Vidoso, announced to enter beta in October). Releases (site branching) and AEO content agents were announced too.",
+  "card_errors": [],
+  "sources": [
+   {
+    "url": "https://webflow.com/updates",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://webflow.com/",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://webflow.com/pricing",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://help.webflow.com/hc/en-us/articles/48412420902675-Legacy-Editor-deprecation-FAQ",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://webflow.com/blog/webflow-conf-2026-announcements",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "No current card statement is wrong: the site plan prices, 'agentic web platform' wording, MCP on Starter and AEO agents all still check out. The card is just missing the newer features (Source, MCP in Gemini, Box element, agentic Localize translation). The lead's 'agentic marketing platform' wording is NOT on the homepage, which says 'agentic web platform', so keep the card's wording. Legacy Editor: CONFIRMED by Webflow's Help Center: 'As of October 5, 2026, the legacy Editor is fully deprecated and can no longer be accessed', and editing via ?edit is disabled. Editors need a Workspace seat (client or limited seats). Campaigns/Assets status comes from a search summary of the Conf recap post, not read in full, so treat it as medium confidence. Assets was 'entering beta this October', and I found no notice that it has gone live.",
+  "domain_changed": false
+ },
+ {
+  "slug": "relume",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "No version numbering. Relume Publish (website builder and hosting) in beta since Aug 24, 2026. Relume Publish MCP (Oct 14, 2026): build, publish and update a full website in Relume from inside Claude or ChatGPT, then hand off to Webflow. Component Day Oct 5, 2026 (animated hero headers, new sections).",
+  "version_published": null,
+  "pricing": "Build with Relume: Free (no card, unlimited websites, relume.live hosting with 1,500 page views/month, badge, 20 form submissions/month); Pro from $14/month. Custom-domain hosting ('Launch') from $12/project/month. Site Builder: Free (30 Webflow + 30 React components, 1,000+ Figma components); Starter from $18/mo; Pro from $40/mo; Team from $36/mo per user (min 3 users); Enterprise custom. Matches the card.",
+  "free_tier": "Yes: free plans on both Build with Relume and Site Builder.",
+  "repositioning": "Relume is moving from planning and wireframing to a full site builder with hosting (Publish, beta), and can now be driven from AI chat assistants through the Publish MCP.",
+  "card_errors": [
+   {
+    "claim": "url: https://relume.io / domain: relume.io",
+    "correction": "relume.io redirects to https://www.relume.ai/. Update url to https://www.relume.ai and domain to relume.ai (the card text already says the primary domain moved)."
+   },
+   {
+    "claim": "Relume also ships a Library MCP for pulling components into other AI tools.",
+    "correction": "Incomplete: since Oct 14, 2026 there is also Relume Publish MCP, which builds, publishes and updates a complete website from inside Claude or ChatGPT, with handoff to Webflow."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.relume.ai/whats-new",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://www.relume.ai/pricing",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Publish is still labelled beta (Aug 24 entry; no GA notice since). The Publish MCP entry does not say which plans include it, so don't state plan availability. No pricing changes on the What's New page. Annual prices are not shown on the pricing page, which matches the card's 'no annual discount published'.",
+  "domain_changed": true
+ },
+ {
+  "slug": "n8n",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Stable n8n@2.43.7 (Oct 16, 2026); beta n8n@2.44.3 (Oct 16). The 1.x line is still patched: n8n@1.123.85 (Oct 14). 2.43 (Oct 6) released Browser Use to all users. 2.42 (Sept 29) renamed the Azure OpenAI Chat Model node to Azure AI Foundry Chat Model and added Anthropic prompt caching. n8n Agents launched Sept 25, 2026 (preview).",
+  "version_published": null,
+  "pricing": "Cloud (billed annually, EUR): Starter 20 EUR/mo (2.5K executions, 1,600 Assistant credits); Pro 50 EUR/mo (10K executions, up to 9,600 Assistant credits); Business 667 EUR/mo (40K executions, self-hosted only, cloud waitlist); Enterprise custom. Free trial: 1,000 executions, no card. Community Edition self-hosted free. Startup plan: 50% off Business for under 20 employees. Annual saves 17%. Matches the card.",
+  "free_tier": "Yes: self-hosted Community Edition free; cloud has a free trial only.",
+  "repositioning": "n8n Agents (Sept 25, 2026): describe a task, pick a model, give it tools and workflows, and the agent works out the steps itself. It runs in Slack, on a schedule or from any workflow. One agent turn counts as one execution, and tool calls to workflows and sub-agents are not counted separately. Available on n8n Cloud for everyone on the latest stable version and on Community self-hosted with extra setup; Enterprise is in preview. The existing AI Agent nodes are unchanged.",
+  "card_errors": [
+   {
+    "claim": "The current stable release is n8n@2.42.3 (October 2026), with 2.43.0 available as a beta build.",
+    "correction": "Current stable is n8n@2.43.7 (Oct 16, 2026); beta is n8n@2.44.3."
+   },
+   {
+    "claim": "The current stable release is n8n@2.42.3, published October 5, 2026, with n8n@2.43.0 available as a beta build.",
+    "correction": "Stable n8n@2.43.7 (Oct 16, 2026), beta n8n@2.44.3 (Oct 16, 2026). Consider avoiding patch numbers in the card ('n8n 2.43 stable, 2.44 beta, October 2026'), because they change several times a week."
+   },
+   {
+    "claim": "with 1.123.83 released in late September 2026",
+    "correction": "Latest 1.x patch is n8n@1.123.85 (Oct 14, 2026)."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://api.github.com/repos/n8n-io/n8n/releases",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://docs.n8n.io/release-notes/",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://blog.n8n.io/introducing-n8n-agents/",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://n8n.io/pricing/",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Agents status: the blog says 'Everyone on Cloud can use agents and they work' and that n8n is 'improving them release by release'. It is effectively preview, not GA. Building an agent with n8n Assistant uses AI credits. Browser Use in 2.43 is controlled by an admin setting and is on by default. The card's AI Agent node provider list does not mention Azure, so the rename does not affect current card text.",
+  "domain_changed": false
+ },
+ {
+  "slug": "retool-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "No version numbering. The app builder has been rebuilt as AI-native: describe what you need and it generates a working app. The previous builder is now the 'classic app builder'. Agent harness (Oct 6, 2026): an agent for every employee in Slack, Microsoft Teams and Google Chat, governed centrally. Early access with waitlist.",
+  "version_published": null,
+  "pricing": "Free: up to 5 users, 500 workflow runs/mo, 5GB DB, 5GB storage, 250 AI credits/mo, up to 20 agent hours/mo. Team: Builder $10/mo annual or $12 monthly, Internal user $5 / $7; 1,000 AI credits (750 base + 250 bonus), 5,000 workflow runs. Business: Builder $50 / $65, Internal user $15 / $18, External users free up to 50, then tiered from $8/$10; 3,000 AI credits (1,500 + 1,500 bonus). Enterprise custom (1,000 AI credits per builder + 4,000 pooled). Agents billed hourly, separately from AI credits, at rates that vary by model, with 20 free hours. Seat prices match the card.",
+  "free_tier": "Yes: Free plan up to 5 users with 250 AI credits and up to 20 agent hours per month.",
+  "repositioning": "Retool is now AI-first. Its new AI-native app builder generates apps from a description, and the agent harness gives each employee a governed agent in their chat tool. A company-controlled gateway enforces limits on tools, data and models outside the model itself.",
+  "card_errors": [
+   {
+    "claim": "The drag-and-drop builder creates UIs while pre-built components handle common patterns.",
+    "correction": "Stale: Retool has 'entirely rebuilt the app builder from the ground up'. The new builder is AI-native and generates a working app from a description. The drag-and-drop experience is now called the classic app builder, and apps built with it still work."
+   },
+   {
+    "claim": "Low-code platform for building internal business tools — dashboards, admin panels, data editors — with AI components and agentic workflows.",
+    "correction": "Incomplete: add the AI-native app builder (prompt to working app) and the agent harness (early access, Oct 6, 2026: an agent for every employee in Slack, Teams and Google Chat)."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://retool.com/blog/introducing-agent-harness",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://retool.com/pricing",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "high",
+  "notes": "The agent harness is early access only: Retool says it has run it internally for about 4 months and is rolling access to 'the next hundred customers over the coming weeks', with a waitlist at retool.com/agents-waitlist. No pricing is published for it, so don't present it as generally available. On the pricing page, agent hourly rates say 'See docs'. Agent execution pauses when free hours run out until you upgrade, and bring-your-own model key is supported. The card's users field is empty.",
+  "domain_changed": false
+ },
+ {
+  "slug": "elicit",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "No version numbering. Sept 30, 2026: Routines (the Research Agent runs recurring work on a schedule and emails updates), and Find Papers and Extract Data now run as skills inside the Research Agent. Alerts are retired on Oct 31, 2026 (no new Alerts since Sept 30). Sept 17: Library collections searchable by the Agent. Sept 1: Skills, Collaborative Sessions and Shared Projects. Aug 5: Research Agent.",
+  "version_published": null,
+  "pricing": "Basic free. Pro $49/user/month billed annually ($588/yr) or $75/user/month billed monthly. Scale $169/user/month billed annually ($2,028/yr) or $279/user/month billed monthly. Enterprise custom.",
+  "free_tier": "Yes: Basic plan with unlimited search, summaries and chat with papers; limited Research Agent and Reports usage.",
+  "repositioning": "Elicit's search and extraction tools now live inside the Research Agent as skills, and Routines replace Alerts for ongoing evidence monitoring.",
+  "card_errors": [
+   {
+    "claim": "Standalone monthly-billing prices for Pro and Scale are not published on the pricing page.",
+    "correction": "They are published: with the Monthly toggle, Pro is $75 and Scale $279 per user per month. Annual: $49 ($588/yr) and $169 ($2,028/yr)."
+   },
+   {
+    "claim": "Published Pro and Scale prices are billed annually; standalone monthly pricing isn't publicly confirmed",
+    "correction": "Monthly pricing is published: Pro $75/user/month, Scale $279/user/month (annual equivalents $49 and $169)."
+   },
+   {
+    "claim": "Paid plans are Pro at $49 per user per month (billed annually, $588/year) and Scale at $169 per user per month (billed annually, $2,028/year)",
+    "correction": "Add the monthly prices: Pro $75 and Scale $279 per user per month when billed monthly."
+   },
+   {
+    "claim": "added Routines in September 2026",
+    "correction": "Correct, but add: Find Papers and Extract Data now run as skills inside the Research Agent (Sept 30, 2026), and the legacy Alerts tool is retired on Oct 31, 2026. Users should convert Alerts to Routines."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://support.elicit.com/en/articles/14823097-changelog",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://elicit.com/pricing",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://elicit.com/",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://support.elicit.com/en/articles/14757570-elicit-alerts-legacy-tool",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Monthly prices were read from elicit.com/pricing after switching the Monthly/Yearly toggle: 'Pro ... $75 Per user/month, billed monthly'; 'Scale ... $279 Per user/month, billed monthly'. Routines are listed under Pro ('Access to Routines'), and the help article says Pro, Scale and Enterprise. The card's 'shifting the product from workflow-based limits to a monthly usage pool' was not re-verified this round, since the Aug-Oct changelog entries mention no pricing or usage changes. User count: homepage body says 'over 5 million researchers' while its meta description says 'over 7 million', so keep 5M+ until it is consistent. The 138M papers figure is still on the pricing page. The 545K clinical-trials figure comes from the July 15 changelog and was not re-checked.",
+  "domain_changed": false
+ },
+ {
+  "slug": "consensus",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "No version numbering. Oct 5, 2026: Skills, four ready-to-run workflows that run in Deep mode (Literature Review, Citation Snowballing, Reverse Citation Search, Verify Citations). Sept 24: figures and tables from cited papers shown in answers. Sept 22: Research Gaps Matrix. Sept 21: AAAS partnership. Sept 14: Consensus Everywhere, running inside ChatGPT, Claude and Microsoft 365 Copilot.",
+  "version_published": null,
+  "pricing": "Free $0: basic paper search, 10 Pro messages/month, up to 3 Deep reviews/month. Pro $20/month or $144/year ($12/mo): unlimited Pro messages, 15 Deep reviews/month, 500 API & MCP uses/month (then $0.05/use up to 1,000). Deep $65/month or $540/year ($45/mo): 200 Deep reviews/month, 2,000 API & MCP uses/month (then $0.05/use up to 10,000). Up to 40% off for students, faculty and US clinicians (NPI). Team/Enterprise on a separate tab (not checked).",
+  "free_tier": "Yes: 10 Pro messages and up to 3 Deep reviews per month, plus basic paper search.",
+  "repositioning": "Consensus positions itself as an AI workspace for scientific research, usable inside other assistants through MCP.",
+  "card_errors": [
+   {
+    "claim": "Pricing is freemium, though exact free-tier quotas are not published on the vendor's site.",
+    "correction": "Free quotas are published: basic paper search, 10 Pro messages per month, and up to 3 Deep reviews per month."
+   },
+   {
+    "claim": "Free-tier usage limits are not published, making it hard to know how much you get before hitting a paywall",
+    "correction": "Published: Free gets 10 Pro messages and up to 3 Deep reviews per month. Replace this con."
+   },
+   {
+    "claim": "Consensus has a free plan, though its exact usage limits aren't published.",
+    "correction": "The free plan includes 10 Pro messages and up to 3 Deep reviews per month."
+   },
+   {
+    "claim": "users: 1M+",
+    "correction": "The pricing page says 'Over 5 million researchers, students, and clinicians trust Consensus'. Use 5M+."
+   },
+   {
+    "claim": "Pro includes 15 Deep Searches per month ... adds up to 200 Deep Searches per month",
+    "correction": "Numbers are correct, but the pricing page now calls them 'Deep reviews'. Pro also includes 500 API & MCP uses/month and Deep 2,000 (then $0.05/use)."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://consensus.app/pricing/",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://consensus.app/home/blog/",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://consensus.app/home/blog/introducing-skills/",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Monthly prices ($20 Pro, $65 Deep) were confirmed by switching the pricing toggle to Monthly. Annual view shows $12/mo ($144) and $45/mo ($540). The Skills post does not say which plans include Skills. The Literature Review skill 'runs up to 20 searches in parallel, reads up to 100 papers, and follows their citations', so the card's 'synthesizes across as many as 50 papers' may be outdated for Deep mode. That is unconfirmed, so I would soften it rather than replace it. Team and Enterprise prices were not checked.",
+  "domain_changed": false
+ },
+ {
+  "slug": "claude-design",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Claude Design works inside any Claude conversation, in Claude Code and from the Artifacts tab (since Sept 16, 2026). Out of beta since Oct 8, 2026, on every plan including Free. Enterprise: on by default from Oct 15, 2026 (except HIPAA-enabled orgs). The standalone claude.ai/design closes Dec 14, 2026. Anthropic does not name the underlying model.",
+  "version_published": null,
+  "pricing": "No separate price. Included in every Claude plan, including Free ($0), Pro ($20/mo or $17/mo annual), Max (from $100/mo), Team and Enterprise. Since the move into chat, usage counts toward the plan's shared limits, and the old separate weekly Claude Design allowance is gone. Larger requests (a full design or deck) use more of the limit.",
+  "free_tier": "Yes: available on the Free plan (counts toward Free plan limits).",
+  "repositioning": "Claude Design is no longer a separate paid-only research-preview app. It is a built-in capability of Claude chat (alongside Claude Slides and Claude Docs), available on every plan.",
+  "card_errors": [
+   {
+    "claim": "Claude Design is Anthropic's design assistant, included only in paid Claude plans",
+    "correction": "Available on every plan including Free (Anthropic, Oct 8, 2026: 'Docs, Slides, and Design are out of beta and available on every plan, including Free')."
+   },
+   {
+    "claim": "It launched on April 17, 2026 as a research preview running on the Claude Opus 4.7 vision model.",
+    "correction": "Historical. Current status: out of beta since Oct 8, 2026, and it works in any Claude chat, in Claude Code and from the Artifacts tab. Anthropic does not name the current model."
+   },
+   {
+    "claim": "bundled into paid Claude subscriptions rather than sold as a standalone product",
+    "correction": "Bundled into every Claude plan, including Free."
+   },
+   {
+    "claim": "Anthropic's current product page no longer uses the 'research preview' label and does not name an underlying model, so its present status and the model powering it are unconfirmed.",
+    "correction": "Status is confirmed: out of beta (Oct 8, 2026). Only the model is unnamed."
+   },
+   {
+    "claim": "For Team and Enterprise accounts, an admin must enable the feature in Organization settings.",
+    "correction": "The support article says it is 'on by default'. For Enterprise it turned on by default on Oct 15, 2026 (except HIPAA-enabled organizations), and admins can still control it."
+   },
+   {
+    "claim": "Access is included with paid Claude plans and metered against each plan's usage limits",
+    "correction": "Included with all plans, Free included, and counted against the plan's shared usage limits. The separate weekly Claude Design allowance was removed."
+   },
+   {
+    "claim": "The Free $0 plan does not include Claude Design.",
+    "correction": "Free includes Claude Design."
+   },
+   {
+    "claim": "Included with paid Claude plans, so no separate design-tool subscription is needed",
+    "correction": "Included with every Claude plan, including Free."
+   },
+   {
+    "claim": "Requires a paid Claude subscription; not available on the Free $0 tier",
+    "correction": "Wrong: available on Free. A possible replacement con: the standalone claude.ai/design site closes Dec 14, 2026, so work moves into regular Claude chats."
+   },
+   {
+    "claim": "Current feature status and underlying model are unconfirmed, since the original research-preview label and model name no longer appear on Anthropic's product page",
+    "correction": "Status confirmed: out of beta since Oct 8, 2026. The model is still unnamed."
+   },
+   {
+    "claim": "Team and Enterprise admins must manually enable the feature in Organization settings before anyone can use it",
+    "correction": "On by default; Enterprise default-on since Oct 15, 2026 (except HIPAA-enabled orgs)."
+   },
+   {
+    "claim": "You already pay for a Claude plan (Pro, Max, Team or Enterprise)",
+    "correction": "Any Claude plan, including Free."
+   },
+   {
+    "claim": "You are comfortable using a feature whose availability and underlying model may change without notice",
+    "correction": "Stale framing: it is out of beta. Replace with e.g. 'You want to design inside the same Claude chat or Claude Code session you already use'."
+   },
+   {
+    "claim": "It is not available on the Free plan.",
+    "correction": "It is available on the Free plan (counts toward Free usage limits)."
+   },
+   {
+    "claim": "badge: paid",
+    "correction": "Should be freemium (or free): it is included on the Free plan."
+   },
+   {
+    "claim": "users: from $20/mo",
+    "correction": "Wrong price label: it is included from the Free plan. Use e.g. 'Free plan included'."
+   },
+   {
+    "claim": "Claude Design exports to PPTX, PDF or HTML",
+    "correction": "The support article lists downloads as .zip, PDF, PPTX, Google Slides and standalone HTML, with more integrations: Adobe Experience Manager, Adobe for Creativity, Adobe Journey Optimizer, Base44, Canva, Gamma, HubSpot, Hyperframes, Lovable, Miro, Netlify, Replit, v0, Vercel, Wix."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://support.claude.com/en/articles/14604416-get-started-with-claude-design",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://claude.com/product/design",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://claude.com/resources/articles/dashboards-and-motion",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://support.claude.com/en/articles/12138966-release-notes",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Timeline: Sept 16, 2026 release note 'Create designs, decks, and docs in any conversation' made them available on every plan including Free, in beta and off by default until an owner turned them on. Oct 8, 2026 article (dashboards-and-motion): 'out of beta and available on every plan, including Free'. Support article: 'All Claude Design activity now counts toward your plan's shared limits' and 'The standalone version at claude.ai/design closes on December 14, 2026.' Claude Dashboards (beta, paid plans) and Claude Motion (beta, Team/Enterprise) are separate and still in beta, so don't attribute them to Claude Design. Handoff to Claude Code is via /design-sync or /design. Design-system import works from a GitHub repo, design files or a codebase, and admins can lock a team to one approved design system. Card url claude.com/product/design is still live. The 'Direct Figma export is not available' line was not verified either way.",
+  "domain_changed": false
+ },
+ {
+  "slug": "figma-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "No version numbering. The Figma agent (on-canvas) and Weave tools moved from open beta to GA on Oct 6, 2026 and now consume AI credits. Oct 15, 2026 ('Build by design'): Code layers (open beta, all plans), Specs (open beta, paid plans, web/desktop/mobile), Guidelines (open beta, paid plans), Code sources from GitHub/npm (closed beta, paid plans), Payload CMS inside Figma Make (rolling out to all plans).",
+  "version_published": null,
+  "pricing": "Starter free: 150 AI credits/day, up to 500/month. Professional: Full $16, Dev $12, Collab $3 per month billed annually, or $20 / $15 / $5 billed monthly; Full seat +3,000 AI credits/mo, Dev and Collab +500. Organization (billed annually): Full $55 (+3,500 credits), Dev $25, Collab $5. Enterprise (billed annually): Full $90 (+4,250 credits), Dev $35, Collab $5. AI credit add-ons were raised on Aug 25, 2026 to 2x credits on Professional and 1.6x on Organization/Enterprise at the same price.",
+  "free_tier": "Yes: Starter plan with 150 AI credits/day, up to 500/month. The Figma agent has limited availability on Starter.",
+  "repositioning": "Figma is moving toward agent-driven design: the GA Figma agent plus code-backed canvas (Code layers), shared context for agents (Specs, Guidelines) and Payload CMS in Make.",
+  "card_errors": [
+   {
+    "claim": "Professional seats at $16 (Full), $12 (Dev) and $3 (Collab) per month, though whether that figure reflects monthly or annual billing could not be confirmed.",
+    "correction": "Confirmed on the pricing page toggle: $16/$12/$3 is annual billing. Monthly billing is $20 (Full), $15 (Dev), $5 (Collab)."
+   },
+   {
+    "claim": "Billing periods for Professional-tier pricing are also unclear on Figma's own pricing page, making cost comparisons harder.",
+    "correction": "Not unclear: the pricing page has a Monthly/Annual toggle. Annual $16/$12/$3, monthly $20/$15/$5."
+   },
+   {
+    "claim": "Professional-seat pricing on Figma's own pricing page does not clearly state whether listed prices are billed monthly or annually",
+    "correction": "Wrong now: annual $16/$12/$3, monthly $20/$15/$5. Replace this con."
+   },
+   {
+    "claim": "Figma's pricing page also now lists a Figma agent for on-canvas chat-based design generation",
+    "correction": "The Figma agent became generally available on Oct 6, 2026 (with Weave tools) and now consumes AI credits; usage during the beta was free."
+   },
+   {
+    "claim": "Paid seats add more credits: Figma's pricing page lists Professional seats at $16 (Full)",
+    "correction": "Add the Professional Full seat allotment: +3,000 AI credits/month (Dev and Collab +500)."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.figma.com/blog/build-by-design/",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://www.figma.com/pricing/",
+    "accessed": "2026-10-18"
+   },
+   {
+    "url": "https://help.figma.com/hc/en-us/articles/42614902212887-AI-credit-updates-FAQ",
+    "accessed": "2026-10-18"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Professional prices were read from figma.com/pricing in both toggle states. Annual is the default: Full $16, Dev $12, Collab $3. Monthly: $20, $15, $5. Help Center quote: 'We also moved the agent in Figma Design and Weave tools from open beta to general availability on October 6, 2026. They now consume Figma AI credits.' Figma agent seat access, per a search summary of Figma's Oct 6 post (not read directly): Full seats on Professional, Organization, Enterprise and some Education plans; limited on Starter; Collab/Dev/View seats in drafts. The Oct 15 post mentions no pricing changes.",
+  "domain_changed": false
+ }
+]

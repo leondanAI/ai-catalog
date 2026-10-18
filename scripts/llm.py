@@ -48,9 +48,10 @@ def ask(client, model, system, user, max_tokens=None, tries=3, think=None):
     if system:
         extra['system'] = system
     last = None
+    prompt = user
     for _ in range(tries):
         msg = client.messages.create(model=model, max_tokens=max_tokens,
-                                     messages=[{'role': 'user', 'content': user}], **extra)
+                                     messages=[{'role': 'user', 'content': prompt}], **extra)
         with _lock:   # скрипты вызывают ask() из нескольких потоков
             u = _usage.setdefault(model, {'in': 0, 'out': 0, 'calls': 0})
             u['in'] += msg.usage.input_tokens
@@ -63,6 +64,12 @@ def ask(client, model, system, user, max_tokens=None, tries=3, think=None):
         except Exception as e:
             last = e
             print('   повтор разбора:', str(e)[:60], '| stop_reason:', msg.stop_reason)
+            # Чаще всего ломают JSON кавычки внутри текста (немецкие „…“, цитаты в
+            # португальском): тот же запрос три раза подряд падал одинаково (kling-ai,
+            # 2026-10-18). Повтор теперь говорит модели, что именно не так.
+            prompt = (user + f'\n\nYour previous answer was not valid JSON ({str(e)[:80]}). '
+                      'Return valid JSON only: escape every double quote inside string values '
+                      'as \\" or use typographic quotes instead.')
     raise RuntimeError(f'модель не вернула корректный JSON: {last}')
 
 

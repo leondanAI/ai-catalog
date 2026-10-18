@@ -1,0 +1,87 @@
+[
+ {
+  "slug": "kling-ai",
+  "before": {
+   "lang": "en",
+   "badge": "paid",
+   "users": "",
+   "best_for": "Short-form AI video clips, multi-shot consistency, up to 4K resolution, enterprise video production",
+   "description": "Kling AI is a text- and image-to-video generator from Kuaishou. The current generation is Kling 4.0, with Kling 4.0 Flash in early access since September 2026; the legacy Kling 1.0 through 2.1 Master models, the Virtual Try-On API and the 119 effect templates were retired in September 2026.",
+   "description_long": "Kling AI is a video generation platform built by the Chinese company Kuaishou. You describe a scene in text, or feed it a still image, and it animates a short cinematic clip. Over the past two years it has grown from an experimental demo into one of the most widely used AI video tools.\n\nThe current generation is Kling 4.0, which succeeds Kling 3.0. Kling 4.0 Flash entered early access on September 28, 2026, available to Ultra yearly subscribers, generating clips of up to 20 seconds at 720p with 8-bit SDR. Kling's own release note said the full Kling 4.0 model would launch in October 2026; by mid-October, secondary reports suggested it had rolled out more broadly, but this could not be confirmed directly on Kling's own site at the time of writing. Kuaishou also retired the legacy Kling 1.0 through 2.1 Master models, the Virtual Try-On API and the 119 effect templates in September 2026.\n\nReported specifications for the full Kling 4.0 model include single clips from 3 to 30 seconds, up to 10 keyframes per generation, an Omni Reference feature supporting up to 15 reference items for consistent characters and objects, resolutions up to 4K, two-channel stereo audio, and prompts of up to roughly 8,000 tokens. Kuaishou has also announced 10-bit HDR output and a video-extension feature aimed at roughly two-minute videos, both listed as 'coming soon' rather than currently available.\n\nKling AI uses a tiered, credit-based subscription model, with separate plans such as Standard, Pro, Premier and Ultra that unlock larger monthly credit allowances, and annual billing available at a discount on some tiers. Specific current pricing for Kling 4.0 and Flash has not been published, and the previously published rates for the 3.0-era plans could not be reconfirmed at the time of this review.\n\nThe main limitations right now are the lack of published pricing for the new model, uncertainty about exactly when the full 4.0 model became generally available, and the fact that several headline features, including 10-bit HDR and the roughly two-minute video extension, are announced but not yet live. Kling 4.0 Flash early access is also gated behind an Ultra-tier yearly subscription.\n\nKling suits creators, marketers and video editors who want high-quality short clips for social content, ads or B-roll, and who are comfortable working shot by shot while Kuaishou finishes rolling out the newest model's full feature set.",
+   "pros": [
+    "Kling 3.0 Pro topped the ArtificialAnalysis text-to-video leaderboard in Feb 2026 with an Arena ELO of 1240",
+    "Kling 4.0 reportedly supports longer single clips (3-30 seconds) and up to 10 keyframes per generation",
+    "Omni Reference reportedly supports up to 15 reference items for consistent characters and objects across shots",
+    "Long-form prompts of up to roughly 8,000 tokens allow detailed scene direction",
+    "Two-channel stereo audio generation is built into the model"
+   ],
+   "cons": [
+    "Full Kling 4.0 rollout status is unclear: Kling's release note targeted October 2026, but sources disagree on whether it is fully live yet",
+    "10-bit HDR output and the announced roughly two-minute video extension feature are still 'coming soon', not yet available",
+    "Current pricing for Kling 4.0 and Flash has not been published",
+    "Kling 4.0 Flash early access requires an Ultra yearly subscription",
+    "Legacy 1.0-2.1 Master models, the Virtual Try-On API and the 119 effect templates were retired in September 2026, removing those workflows entirely"
+   ],
+   "choose_if": [
+    "You need high-quality short video clips for social media, ads or B-roll",
+    "You want synced audio and consistent characters across multiple shots",
+    "You're happy to work shot by shot rather than render one long video",
+    "You value resolution up to 4K",
+    "You're willing to use an early-access, still-rolling-out model"
+   ],
+   "faq": [
+    {
+     "a": "CapCut is a video editor — you import existing video clips and edit them. Kling AI is a video generator — it creates video from text prompts or images. CapCut is for editing; Kling is for generating.",
+     "q": "What is the difference between CapCut and Kling AI?"
+    },
+    {
+     "a": "No confirmed free plan could be verified. Kling AI runs on a paid, credit-based subscription model with tiers such as Standard, Pro, Premier and Ultra, though specific current pricing for the latest Kling 4.0 release was not published at the time of this review.",
+     "q": "Is Kling AI free?"
+    }
+   ]
+  },
+  "after": {
+   "badge": "paid",
+   "users": null,
+   "best_for": "Short-form AI video clips, multi-shot consistency, enterprise video production",
+   "description": "Kling AI is a text- and image-to-video generator from Kuaishou. The current generation is Kling 4.0, with Kling 4.0 Flash in early access since September 28, 2026; the legacy Kling 1.0 through 2.1 Master models, the Virtual Try-On API and the 119 effect templates were retired in September 2026.",
+   "description_long": "Kling AI is a video generation platform built by the Chinese company Kuaishou. You describe a scene in text, or feed it a still image, and it animates a short cinematic clip. Over the past two years it has grown from an experimental demo into one of the most widely used AI video tools.\n\nThe current generation is Kling 4.0, which succeeds Kling 3.0. Kling 4.0 Flash entered early access on September 28, 2026, available to Ultra yearly subscribers, generating clips of up to 20 seconds at 720p with 8-bit SDR. Kling's own release note said the full Kling 4.0 model would launch in October 2026; by mid-October, secondary reports suggested it had rolled out more broadly, but this could not be confirmed directly on Kling's own site at the time of writing. Kuaishou also retired the legacy Kling 1.0 through 2.1 Master models, the Virtual Try-On API and the 119 effect templates in September 2026.\n\nReported specifications for the full Kling 4.0 model include single clips from 3 to 30 seconds, up to 10 keyframes per generation, an Omni Reference feature supporting up to 15 reference items for consistent characters and objects, two-channel stereo audio, and prompts of up to roughly 8,000 tokens. Kuaishou has also announced 10-bit HDR output and a video-extension feature aimed at roughly two-minute videos, both listed as 'coming soon' rather than currently available.\n\nKling AI uses a tiered, credit-based subscription model, with separate plans such as Standard, Pro, Premier and Ultra that unlock larger monthly credit allowances, and annual billing available at a discount on some tiers. Specific current pricing for Kling 4.0 and Flash has not been published, and the previously published rates for the 3.0-era plans could not be reconfirmed at the time of this review.\n\nThe main limitations right now are the lack of published pricing for the new model, uncertainty about exactly when the full 4.0 model became generally available, inconsistent reporting across sources about which resolutions (including 4K) are actually live versus still pending, and the fact that several headline features, including 10-bit HDR and the roughly two-minute video extension, are announced but not yet available. Kling 4.0 Flash early access is also gated behind an Ultra-tier yearly subscription.\n\nKling suits creators, marketers and video editors who want high-quality short clips for social content, ads or B-roll, and who are comfortable working shot by shot while Kuaishou finishes rolling out the newest model's full feature set.",
+   "pros": [
+    "Kling 3.0 Pro topped the ArtificialAnalysis text-to-video leaderboard in Feb 2026 with an Arena ELO of 1240",
+    "Kling 4.0 reportedly supports longer single clips (3-30 seconds) and up to 10 keyframes per generation",
+    "Omni Reference reportedly supports up to 15 reference items for consistent characters and objects across shots",
+    "Long-form prompts of up to roughly 8,000 tokens allow detailed scene direction",
+    "Two-channel stereo audio generation is built into the model"
+   ],
+   "cons": [
+    "Full Kling 4.0 rollout status and resolution support (including whether 4K is actually live) are unclear: Kling's release note targeted October 2026, but sources disagree on what is fully available",
+    "10-bit HDR output and the announced roughly two-minute video extension feature are still 'coming soon', not yet available",
+    "Current pricing for Kling 4.0 and Flash has not been published",
+    "Kling 4.0 Flash early access requires an Ultra yearly subscription",
+    "Legacy 1.0-2.1 Master models, the Virtual Try-On API and the 119 effect templates were retired in September 2026, removing those workflows entirely"
+   ],
+   "choose_if": [
+    "You need high-quality short video clips for social media, ads or B-roll",
+    "You want synced audio and consistent characters across multiple shots",
+    "You're happy to work shot by shot rather than render one long video",
+    "You want long, detailed prompts for precise scene direction (up to roughly 8,000 tokens)",
+    "You're willing to use an early-access, still-rolling-out model"
+   ],
+   "faq": [
+    {
+     "a": "CapCut is a video editor — you import existing video clips and edit them. Kling AI is a video generator — it creates video from text prompts or images. CapCut is for editing; Kling is for generating.",
+     "q": "What is the difference between CapCut and Kling AI?"
+    },
+    {
+     "a": "No confirmed free plan could be verified. Kling AI runs on a paid, credit-based subscription model with tiers such as Standard, Pro, Premier and Ultra, though specific current pricing for the latest Kling 4.0 release was not published at the time of this review.",
+     "q": "Is Kling AI free?"
+    }
+   ],
+   "dropped": [
+    "up to 4K resolution as a confirmed spec (sources disagree on whether 4K is live or still pending, and the primary site could not be checked)",
+    "specific Standard/Pro/Premier/Ultra dollar prices (not re-verifiable this round; primary pricing page would not load)",
+    "66 daily free credits claim (no free plan could be verified)"
+   ]
+  }
+ }
+]
