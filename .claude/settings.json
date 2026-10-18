@@ -6,7 +6,6 @@
       "Write(//Users/leondanilov/Desktop/AI-catalog/**)",
       "Edit(//Users/leondanilov/.claude/projects/-Users-leondanilov-Desktop-AI-catalog/**)",
       "Write(//Users/leondanilov/.claude/projects/-Users-leondanilov-Desktop-AI-catalog/**)",
-
       "Bash",
       "Bash(ls:*)",
       "Bash(pwd)",
@@ -32,13 +31,11 @@
       "Bash(mkdir:*)",
       "Bash(cp:*)",
       "Bash(mv:*)",
-
       "Bash(python3:*)",
       "Bash(pip install:*)",
       "Bash(pip3 install:*)",
       "Bash(node:*)",
       "Bash(npx:*)",
-
       "Bash(git status:*)",
       "Bash(git log:*)",
       "Bash(git diff:*)",
@@ -54,12 +51,9 @@
       "Bash(git restore:*)",
       "Bash(git checkout:*)",
       "Bash(git stash:*)",
-
       "Bash(curl -s https://lbjdwkvkkndvofysyssy.supabase.co/*)",
-
       "WebSearch",
       "WebFetch",
-
       "mcp__claude-in-chrome__list_connected_browsers",
       "mcp__claude-in-chrome__select_browser",
       "mcp__claude-in-chrome__switch_browser",
@@ -73,7 +67,9 @@
       "mcp__claude-in-chrome__find",
       "mcp__claude-in-chrome__read_console_messages",
       "mcp__claude-in-chrome__read_network_requests",
-      "mcp__claude-in-chrome__resize_window"
+      "mcp__claude-in-chrome__resize_window",
+      "mcp__Claude_Browser",
+      "mcp__claude-in-chrome"
     ],
     "deny": [
       "Bash(rm -rf:*)",

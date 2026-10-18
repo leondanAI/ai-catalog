@@ -64,7 +64,7 @@ def check(lang, en, d):
         m = FOREIGN.search(d[k])
         if m:
             errs.append(f'чужие символы в {k}: «{d[k][max(0, m.start() - 15):m.end() + 5]}»')
-    if lang == 'he' and re.search(r'קלוד|ג׳מיני|ג\'מיני', d['title'] + d['body']):
+    if lang == 'he' and re.search(r'קלוד|ג׳מיני|ג\'מיני|אנתרופיק|אופן ?איי ?איי', d['title'] + d['summary'] + d['body']):
         errs.append('имена продуктов на иврите записаны ивритом — нужны латиницей')
     return errs
 
