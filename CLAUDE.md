@@ -170,6 +170,7 @@ GitHub Action `Rebuild site from database` exists only as a manual fallback.
 |---|---|
 | Tool card (any field) | `generate-pages.py`, `generate-lang-tool-pages.py`, `gen_data_js.py`, `generate-lang-pages.py`, `generate-static-content.py`, `generate-compare-pages.py` (comparisons embed tool data) |
 | Tool unpublished | the above + `generate-retired-pages.py` |
+| A page/URL removed (comparison, utility, language) | add it to `MOVED` in `generate-redirects.py` (redirect stub, so Google gets no 404) |
 | News (new or edited) | `generate-news-pages.py`, `generate-news-snapshot.py` (news lists + homepage block) |
 | Comparison content | `generate-compare-pages.py` |
 | Templates (`index.html`, `news.html`, …) | `generate-lang-pages.py`, then `generate-static-content.py`, `generate-news-snapshot.py` |

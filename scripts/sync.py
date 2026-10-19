@@ -33,6 +33,7 @@ steps = [
     ('News SEO block (8 langs)',   ['python3', 'scripts/generate-news-snapshot.py']),
     # Ссылки с языковых версий на английскую (лента новостей так вела в EN 5 месяцев).
     ('Language links check',       ['python3', 'scripts/check_lang_links.py']),
+    ('Redirects for removed URLs', ['python3', 'scripts/generate-redirects.py']),
     ('Sitemap',                    ['python3', 'scripts/generate-sitemap.py']),
 ]
 

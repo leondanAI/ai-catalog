@@ -111,6 +111,7 @@ compare_dir = os.path.join(ROOT_DIR, 'compare')
 compare_slugs = sorted(
     f[:-5] for f in os.listdir(compare_dir)
     if f.endswith('.html') and not f.startswith('_')
+    and not _is_redirect(os.path.join(compare_dir, f))   # см. generate-redirects.py
 )
 
 news_dir = os.path.join(ROOT_DIR, 'news')
