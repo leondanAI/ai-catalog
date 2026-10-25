@@ -14,6 +14,11 @@
 | Шаблон (index/news/directory/compare.html, css, js) | `generate-lang-pages.py`, затем `generate-static-content.py`, `generate-news-snapshot.py` |
 | Много всего / не уверен | `python3 scripts/sync.py` (все шаги по порядку, ~22 мин) |
 
+**После `generate-pages.py` / `generate-lang-tool-pages.py` / `generate-compare-pages.py` всегда
+запускать `generate-retired-pages.py` и `generate-redirects.py`:** эти генераторы удаляют из
+tools/ и compare/ всё, чего нет в базе, — вместе со страницами закрытых сервисов и переадресациями
+(2026-10-25 так пропали 160 страниц, вернули до выкладки).
+
 Порядок важен: языковые копии страниц (`generate-lang-pages.py`) — до тех, кто
 вписывает в них блоки (`generate-static-content.py`, `generate-news-snapshot.py`).
 

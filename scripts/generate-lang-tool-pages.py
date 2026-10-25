@@ -67,6 +67,29 @@ def _load_seo_overrides():
     return overrides
 
 SEO_OVERRIDES = _load_seo_overrides()
+
+# Название в местной письменности (scripts/local_names.json): люди ищут «семраш»,
+# «סמראש», «прези», а у нас было только латиницей — Search Console 2026-10-25
+# показал такие запросы без единого совпадения. Добавляем один раз: в <title>,
+# если влезает, иначе в начало описания.
+try:
+    with open(os.path.join(os.path.dirname(__file__), 'local_names.json'), encoding='utf-8') as _f:
+        LOCAL_NAMES = json.load(_f)
+except Exception:
+    LOCAL_NAMES = {}
+
+
+def add_local_name(lang, slug, name, title, meta):
+    local = (LOCAL_NAMES.get(slug) or {}).get(lang)
+    if not local or local.lower() in (title + meta).lower():
+        return title, meta
+    if title.startswith(name) and len(title) + len(local) + 3 <= 70:
+        return title.replace(name, f'{name} ({local})', 1), meta
+    if len(meta) + len(local) + 3 <= 165:
+        if meta.startswith(name):
+            return title, f'{name} ({local}){meta[len(name):]}'
+        return title, f'{name} ({local}): {meta}'
+    return title, meta
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 BASE_URL = 'https://aitoolfit.ai'
 
@@ -295,6 +318,7 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
     _meta_raw  = _seo.get('meta') or f'{name} 2026 — {raw_desc}'
     meta_desc  = _meta_raw[:157] + '...' if len(_meta_raw) > 160 else _meta_raw
     page_title = _seo.get('title') or TITLE_TEMPLATES.get(lang, lambda n: f'{n} 2026 | AItoolFit')(name)
+    page_title, meta_desc = add_local_name(lang, slug, name, page_title, meta_desc)
 
     pros_html = '\n'.join(f'        <li>{esc(p)}</li>' for p in pros)
     cons_html = '\n'.join(f'        <li>{esc(p)}</li>' for p in cons)
