@@ -84,6 +84,19 @@ def get(q):
     return json.load(urllib.request.urlopen(r))
 
 
+def read_hidden(slug):
+    import run_sql
+    run_sql.load_env()
+    conn = run_sql.connect()
+    try:
+        cur = conn.cursor()
+        cols = ['lang', 'badge', 'users'] + FIELDS
+        cur.execute(f"SELECT {', '.join(cols)} FROM tools WHERE slug = %s", (slug,))
+        return [dict(zip(cols, r)) for r in cur.fetchall()]
+    finally:
+        conn.close()
+
+
 def sqlq(s):
     tag = 'x'
     while f'${tag}$' in s:
@@ -144,6 +157,10 @@ def main():
             print(f'[{i}/{len(audit)}] {slug}: недоступен, снимаем с публикации')
             continue
         rows = get(f'tools?slug=eq.{slug}&select=lang,badge,users,' + ','.join(FIELDS))
+        if not rows:
+            # Новый инструмент ещё скрыт (published = false), а публичный ключ скрытое
+            # не видит — читаем базу напрямую, как run_sql.py.
+            rows = read_hidden(slug)
         cards = {r['lang']: r for r in rows}
         en = cards.get('en')
         if not en:

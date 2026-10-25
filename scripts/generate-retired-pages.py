@@ -32,9 +32,9 @@ ALTS = {
     'playht': ['elevenlabs', 'murf-ai', 'speechify'],     # озвучка текста
     'rows':   ['julius-ai', 'looker-studio', 'hex'],       # таблицы и анализ данных без кода
     'obviously-ai': ['julius-ai', 'akkio', 'hex'],         # аналитика и прогнозы без кода
-    # remove.bg закрывается 1 декабря 2026: фон удаляют Canva (туда переезжает сам remove.bg),
-    # Leonardo (туда переезжает API remove.bg) и Recraft (бесплатный инструмент, API $0.01)
-    'remove-bg': ['canva-ai', 'leonardo-ai', 'recraft-ai'],
+    # remove.bg закрывается 1 декабря 2026: фон удаляют Photoroom (крупнейший специализированный),
+    # Canva (туда переезжает сам remove.bg) и Recraft (бесплатный инструмент, API $0.01)
+    'remove-bg': ['photoroom', 'canva-ai', 'recraft-ai'],
 }
 
 T = {

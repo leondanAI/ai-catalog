@@ -1,0 +1,765 @@
+[
+ {
+  "slug": "openai-codex",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "5M+",
+   "best_for": "Agentic coding across desktop app, CLI, IDE and cloud, plus automatic PR review",
+   "description": "OpenAI Codex is OpenAI's coding agent that writes, fixes, refactors and reviews code from the ChatGPT apps, the open-source Codex CLI, an IDE extension and Codex cloud. It is included in ChatGPT plans, with full access starting at Plus for $20 a month.",
+   "description_long": "OpenAI Codex is a software engineering agent rather than an autocomplete tool. You hand it a task, such as tracking down a bug, refactoring a module, adding a feature or writing tests, and it works through the codebase, runs commands and returns changes for you to review. The same agent is available in the ChatGPT desktop, web and mobile apps, in the terminal through the Codex CLI, in an IDE extension and in Codex cloud, all connected through your ChatGPT account.\n\nAs of October 2026, OpenAI's Codex pricing page lists GPT-6.1 Sol, GPT-6 Sol, GPT-6 Luna and GPT-6 Astra as the models used in Codex. GPT-5.5 was retired from Codex for ChatGPT sign-in on October 14, 2026. In June 2026 OpenAI said Codex had more than 5 million weekly active users, and JetBrains research published in August 2026 put Codex's work adoption at 16% in May to July 2026, up from 3% in January.\n\nCodex can run several agents in parallel, use computer and browser tools to check its own work, and keep working on cloud tasks after you close your laptop, with reusable cloud environments for each repository. It can automatically review pull requests, surface findings and answer questions about them. It connects to GitHub, GitLab (beta), Slack and Linear and can be extended with plugins. The Codex CLI is open source under the Apache-2.0 license and installs on macOS, Linux and Windows, and a Codex SDK and the codex exec command support scripting.\n\nCodex is included in ChatGPT plans. Free ($0) and Go ($8 a month) include lightweight Codex use in the desktop app with GPT-6 Luna, subject to rollout. Plus ($20 a month) adds Codex on the web, in the CLI, the IDE extension and on iOS, with GPT-6.1 Sol and GPT-6 Luna. Pro costs $100, $200 or $500 a month and currently has no five-hour usage limit. Business is $20 per user per month billed annually for 2 or more users, or $25 per user billed monthly, and Enterprise and Edu are priced through sales. Plus, Pro and Business users can buy extra credits, and Codex can also run with an API key at standard API rates.\n\nThe main limitation is usage. On Plus and Business, Codex is capped per five-hour window, and heavier models use the allowance much faster: OpenAI estimates roughly 15 to 160 local messages per five hours with GPT-6.1 Sol, against 350 to 3,000 with GPT-6 Luna. Free and Go only get the lightweight Luna model in the desktop app. Codex works only with OpenAI models, and as with any coding agent, its changes and its shell and repository access need careful review and permission settings.\n\nCodex suits developers and teams who already pay for ChatGPT and want one agent across the terminal, the editor and the cloud, and teams that want AI review on every pull request. Developers who prefer Anthropic's models or want to switch between vendors should also look at Claude Code, Cursor or GitHub Copilot.",
+   "pros": [
+    "Included in ChatGPT plans, so Plus, Pro and Business subscribers get Codex without a separate subscription",
+    "One agent across the ChatGPT apps, CLI, IDE extension and Codex cloud, tied to one ChatGPT account",
+    "Runs agents in parallel and keeps cloud tasks going after you close your laptop",
+    "Automatic pull request review plus GitHub, GitLab (beta), Slack and Linear integrations",
+    "Open-source Codex CLI (Apache-2.0) for macOS, Linux and Windows"
+   ],
+   "cons": [
+    "Plus and Business usage is capped per five-hour window, and GPT-6.1 Sol uses the allowance fastest",
+    "Free and Go plans only get the lightweight GPT-6 Luna model in the desktop app",
+    "Heavy daily use pushes you toward Pro at $100 to $500 a month or extra credits",
+    "Works only with OpenAI models, unlike multi-vendor tools such as Cursor or GitHub Copilot",
+    "Agent changes and shell access still need careful review and permission settings"
+   ],
+   "choose_if": [
+    "✅ You already pay for ChatGPT Plus, Pro or Business and want a coding agent included",
+    "✅ You want to hand off whole tasks, such as bug fixes, refactors and tests, and review the result",
+    "✅ You want automatic AI review on every pull request",
+    "✅ You move between terminal, editor and cloud and want the same agent everywhere"
+   ],
+   "faq": [
+    {
+     "a": "OpenAI Codex is OpenAI's coding agent. It takes tasks such as fixing bugs, refactoring, adding features and writing tests, works through your repository and returns changes for review. It runs in the ChatGPT apps, the Codex CLI, an IDE extension and Codex cloud, and can also review pull requests automatically.",
+     "q": "What is OpenAI Codex?"
+    },
+    {
+     "a": "Partly. The ChatGPT Free plan and Go ($8 a month) include lightweight Codex use in the desktop app with the GPT-6 Luna model, subject to rollout. Full Codex on the web, CLI, IDE extension and iOS starts with ChatGPT Plus at $20 a month. Pro costs $100, $200 or $500 a month, and Business is $20 per user per month billed annually or $25 billed monthly.",
+     "q": "Is OpenAI Codex free?"
+    },
+    {
+     "a": "As of October 2026, OpenAI lists GPT-6.1 Sol, GPT-6 Sol, GPT-6 Luna and GPT-6 Astra for Codex. Plus users get GPT-6.1 Sol and GPT-6 Luna. GPT-5.5 was retired from Codex for ChatGPT sign-in on October 14, 2026.",
+     "q": "Which models does Codex use?"
+    },
+    {
+     "a": "On Plus and Business, Codex usage is measured per five-hour window. OpenAI estimates about 15 to 160 local messages per five hours with GPT-6.1 Sol and 350 to 3,000 with GPT-6 Luna. Pro currently has no five-hour limit, and Plus, Pro and Business users can buy extra credits.",
+     "q": "What are the Codex usage limits?"
+    }
+   ]
+  },
+  "after": {
+   "best_for": "Agentic coding across desktop app, CLI, IDE and cloud, plus automatic PR review",
+   "description": "OpenAI Codex is OpenAI's coding agent that writes, fixes, refactors and reviews code from the ChatGPT apps, the open-source Codex CLI, an IDE extension and Codex cloud. It is included in ChatGPT plans, with full access starting at Plus for $20 a month.",
+   "description_long": "OpenAI Codex is a software engineering agent rather than an autocomplete tool. You hand it a task, such as tracking down a bug, refactoring a module, adding a feature or writing tests, and it works through the codebase, runs commands and returns changes for you to review. The same agent is available in the ChatGPT desktop, web and mobile apps, in the terminal through the Codex CLI, in an IDE extension and in Codex cloud, all connected through your ChatGPT account.\n\nAs of October 2026, OpenAI's Codex pricing page lists GPT-6.1 Sol, GPT-6 Sol, GPT-6 Luna and GPT-6 Astra as the models used in Codex. GPT-5.5 was retired from Codex for ChatGPT sign-in on October 14, 2026. In June 2026 OpenAI said Codex had more than 5 million weekly active users, and JetBrains research published in August 2026 put Codex's work adoption at 16% in May to July 2026, up from 3% in January.\n\nCodex can run several agents in parallel, use computer and browser tools to check its own work, and keep working on cloud tasks after you close your laptop, with reusable cloud environments for each repository. It can automatically review pull requests, surface findings and answer questions about them. It connects to GitHub, GitLab (beta), Slack and Linear and can be extended with plugins. The Codex CLI is open source under the Apache-2.0 license and installs on macOS, Linux and Windows, and a Codex SDK and the codex exec command support scripting.\n\nCodex is included in ChatGPT plans. Free ($0) and Go ($8 a month) include lightweight Codex use in the desktop app with GPT-6 Luna, subject to rollout. Plus ($20 a month) adds Codex on the web, in the CLI, the IDE extension and on iOS, with GPT-6.1 Sol and GPT-6 Luna. Pro costs $100, $200 or $500 a month and currently has no five-hour usage limit. Business is $20 per user per month billed annually for 2 or more users, or $25 per user billed monthly, and Enterprise and Edu are priced through sales. Plus, Pro and Business users can buy extra credits, and Codex can also run with an API key at standard API rates.\n\nThe main limitation is usage. On Plus and Business, Codex is capped per five-hour window, and heavier models use the allowance much faster: OpenAI estimates roughly 15 to 160 local messages per five hours with GPT-6.1 Sol, against 350 to 3,000 with GPT-6 Luna. Free and Go only get the lightweight Luna model in the desktop app. Codex works only with OpenAI models, and as with any coding agent, its changes and its shell and repository access need careful review and permission settings.\n\nCodex suits developers and teams who already pay for ChatGPT and want one agent across the terminal, the editor and the cloud, and teams that want AI review on every pull request. Developers who prefer Anthropic's models or want to switch between vendors should also look at Claude Code, Cursor or GitHub Copilot.",
+   "pros": [
+    "Included in ChatGPT plans, so Plus, Pro and Business subscribers get Codex without a separate subscription",
+    "One agent across the ChatGPT apps, CLI, IDE extension and Codex cloud, tied to one ChatGPT account",
+    "Runs agents in parallel and keeps cloud tasks going after you close your laptop",
+    "Automatic pull request review plus GitHub, GitLab (beta), Slack and Linear integrations",
+    "Open-source Codex CLI (Apache-2.0) for macOS, Linux and Windows"
+   ],
+   "cons": [
+    "Plus and Business usage is capped per five-hour window, and GPT-6.1 Sol uses the allowance fastest",
+    "Free and Go plans only get the lightweight GPT-6 Luna model in the desktop app",
+    "Heavy daily use pushes you toward Pro at $100 to $500 a month or extra credits",
+    "Works only with OpenAI models, unlike multi-vendor tools such as Cursor or GitHub Copilot",
+    "Agent changes and shell access still need careful review and permission settings"
+   ],
+   "choose_if": [
+    "✅ You already pay for ChatGPT Plus, Pro or Business and want a coding agent included",
+    "✅ You want to hand off whole tasks, such as bug fixes, refactors and tests, and review the result",
+    "✅ You want automatic AI review on every pull request",
+    "✅ You move between terminal, editor and cloud and want the same agent everywhere"
+   ],
+   "faq": [
+    {
+     "a": "OpenAI Codex is OpenAI's coding agent. It takes tasks such as fixing bugs, refactoring, adding features and writing tests, works through your repository and returns changes for review. It runs in the ChatGPT apps, the Codex CLI, an IDE extension and Codex cloud, and can also review pull requests automatically.",
+     "q": "What is OpenAI Codex?"
+    },
+    {
+     "a": "Partly. The ChatGPT Free plan and Go ($8 a month) include lightweight Codex use in the desktop app with the GPT-6 Luna model, subject to rollout. Full Codex on the web, CLI, IDE extension and iOS starts with ChatGPT Plus at $20 a month. Pro costs $100, $200 or $500 a month, and Business is $20 per user per month billed annually or $25 billed monthly.",
+     "q": "Is OpenAI Codex free?"
+    },
+    {
+     "a": "As of October 2026, OpenAI lists GPT-6.1 Sol, GPT-6 Sol, GPT-6 Luna and GPT-6 Astra for Codex. Plus users get GPT-6.1 Sol and GPT-6 Luna. GPT-5.5 was retired from Codex for ChatGPT sign-in on October 14, 2026.",
+     "q": "Which models does Codex use?"
+    },
+    {
+     "a": "On Plus and Business, Codex usage is measured per five-hour window. OpenAI estimates about 15 to 160 local messages per five hours with GPT-6.1 Sol and 350 to 3,000 with GPT-6 Luna. Pro currently has no five-hour limit, and Plus, Pro and Business users can buy extra credits.",
+     "q": "What are the Codex usage limits?"
+    }
+   ],
+   "badge": "freemium",
+   "users": "5M+",
+   "dropped": []
+  }
+ },
+ {
+  "slug": "higgsfield",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "32M+",
+   "best_for": "AI video and image ads, social clips and AI influencers using Kling, Seedance, Veo and Nano Banana in one place",
+   "description": "Higgsfield is an AI creative platform that bundles third-party video and image models, such as Kling, Seedance, Google Veo and Nano Banana, with its own tools for ads, social clips and AI influencers. The company says it has more than 32 million users and passed a $1 billion annualized revenue run rate in September 2026.",
+   "description_long": "Higgsfield is a web-based creative platform for making AI video, images and audio in one workspace. Instead of relying on one model, it gives subscribers access to many third-party models, including Kling 3.0, Seedance 2.0 and 2.5, Google Veo 3.1, Wan, MiniMax Hailuo, Nano Banana Pro and Nano Banana 2, FLUX.2 and GPT Image, alongside its own models and tools such as Soul image generation, DoP video, Cinema Studio, Ads Studio, AI Influencer and Genjutsu.\n\nOn September 24, 2026, Higgsfield said it had crossed a $1 billion annualized revenue run rate, about 18 months after launching its creative suite. The company calculates this as the latest four weeks of revenue multiplied by 13, so it is a projection of current pace, not revenue earned over a year, and it is not audited. Higgsfield reports more than 32 million users in 238 countries, nearly 1 million paying subscribers and work for 390 Fortune 500 companies. It raised a $400 million Series B at a $5.4 billion valuation in August 2026.\n\nThe platform covers text-to-video, image-to-video, motion control, image generation and editing, face and character swap, product placement and ad templates. You pick a model for each job and pay in credits. Higgsfield also offers an API, an MCP server, a Canvas workspace and Supercomputer, and team workspaces with pooled credits, admin spend controls, priority processing and custom SSO.\n\nPricing in US dollars, per month: a Free plan with limited use; Starter at $19 billed annually (the same as monthly) with a fixed 270 credits; Plus at $47 billed annually or $59 billed monthly with 1,200 credits and access to all models and features; and Ultra at $99 billed annually or $129 billed monthly with 3,000 credits, plus larger credit options. Team plans start at $65 per seat per month for 2 to 15 seats with pooled credits. Plus and Ultra include 7-day unlimited windows on selected models such as Kling 3.0 and Nano Banana 2. Credit costs vary widely: about 7 credits per 5 seconds of Kling 3.0 at 720p versus about 60 credits per 5 seconds of Seedance 2.0 at 1080p. Prices exclude VAT.\n\nThe credit system takes effort to budget, because cost depends on model, resolution and clip length. The unlimited offers are time-limited, apply only on higgsfield.ai (not via MCP, CLI, Canvas or Supercomputer) and can be slowed during high traffic. Starter only includes selected models. Most of the underlying models are made by other companies and can also be used directly, and the revenue and growth figures are the company's own unaudited claims.\n\nHiggsfield suits marketers, agencies and creators who produce ads and social video at volume and want many leading models under one subscription, with ready-made workflows for product shots and AI presenters. If you only need one model, a direct subscription to Kling AI or Runway can be simpler.",
+   "pros": [
+    "Many leading video and image models (Kling, Seedance, Veo, Nano Banana, FLUX) under one subscription",
+    "Purpose-built tools for ads, product placement, AI influencers and cinematic shots",
+    "Team plans with pooled credits, admin spend controls and custom SSO",
+    "API and MCP access for automating production",
+    "Free plan for trying the platform before paying"
+   ],
+   "cons": [
+    "Credit costs vary widely by model, resolution and clip length, so budgets are hard to predict",
+    "Unlimited offers are 7-day windows on selected models, web-only, and can be slowed at peak times",
+    "Starter includes only selected models and a fixed 270 credits a month",
+    "Most of the underlying models come from other companies and are available directly elsewhere",
+    "Revenue and growth figures are company-reported and unaudited"
+   ],
+   "choose_if": [
+    "✅ You produce ads or social video at volume and want many models in one place",
+    "✅ You want to test Kling, Seedance, Veo and others on the same brief without separate subscriptions",
+    "✅ Your team needs pooled credits, spend controls and SSO",
+    "✅ You want ready-made ad, product-placement and AI-influencer workflows"
+   ],
+   "faq": [
+    {
+     "a": "Higgsfield is an AI creative platform for video, images and audio. It combines third-party models such as Kling, Seedance, Google Veo and Nano Banana with its own tools for ads, social clips, product placement and AI influencers, and is used by creators, brands and agencies.",
+     "q": "What is Higgsfield?"
+    },
+    {
+     "a": "There is a Free plan with limited use. Starter is $19 a month with 270 credits. Plus is $47 a month billed annually or $59 billed monthly with 1,200 credits. Ultra is $99 a month billed annually or $129 billed monthly with 3,000 credits. Team plans start at $65 per seat per month. Prices exclude VAT.",
+     "q": "How much does Higgsfield cost?"
+    },
+    {
+     "a": "Only partly. Plus and Ultra include 7-day unlimited windows on selected models such as Kling 3.0 and Nano Banana 2. These apply only on higgsfield.ai, not via MCP, CLI, Canvas or Supercomputer, and speed can be reduced during high traffic. Everything else uses credits.",
+     "q": "Is Higgsfield really unlimited?"
+    },
+    {
+     "a": "In September 2026 Higgsfield said it had passed a $1 billion annualized revenue run rate, calculated as four weeks of revenue times 13, with more than 32 million users and nearly 1 million paying subscribers. These are the company's own, unaudited figures.",
+     "q": "How big is Higgsfield?"
+    }
+   ]
+  },
+  "after": {
+   "badge": "freemium",
+   "users": "32M+",
+   "best_for": "AI video and image ads, social clips and AI influencers using Kling, Seedance, Veo and Nano Banana in one place",
+   "description": "Higgsfield is an AI creative platform that bundles third-party video and image models, such as Kling, Seedance, Google Veo and Nano Banana, with its own tools for ads, social clips and AI influencers. The company says it has more than 32 million users and passed a $1 billion annualized revenue run rate in September 2026.",
+   "description_long": "Higgsfield is a web-based creative platform for making AI video, images and audio in one workspace. Instead of relying on one model, it gives subscribers access to many third-party models, including Kling, Seedance, Google Veo, Wan, MiniMax Hailuo, Nano Banana, FLUX and GPT Image, alongside its own models and tools such as Soul image generation, DoP video, Cinema Studio, Ads Studio, AI Influencer and Genjutsu.\n\nOn September 24, 2026, Higgsfield said it had crossed a $1 billion annualized revenue run rate, about 18 months after launching its creative suite. The company calculates this as the latest four weeks of revenue multiplied by 13, so it is a projection of current pace, not revenue earned over a year, and it is not audited. Higgsfield reports more than 32 million users in 238 countries, nearly 1 million paying subscribers and work for 390 Fortune 500 companies. It raised a $400 million Series B at a $5.4 billion valuation in August 2026.\n\nThe platform covers text-to-video, image-to-video, motion control, image generation and editing, face and character swap, product placement and ad templates. You pick a model for each job and pay in credits. Higgsfield also offers an API, an MCP server, a Canvas workspace and Supercomputer, and team workspaces with pooled credits, admin spend controls, priority processing and custom SSO.\n\nPricing in US dollars, per month: a Free plan with limited use; Starter at $19, the same price whether billed monthly or annually, with a fixed 270 credits; Plus at $47 billed annually or $59 billed monthly with 1,200 credits and access to all models and features; and Ultra at $99 billed annually or $129 billed monthly with 3,000 credits, plus larger credit options. Team plans start at $65 per seat per month for 2 to 15 seats with pooled credits. Plus and Ultra include 7-day unlimited windows on selected models such as Kling and Nano Banana. Credit costs vary widely: about 7 credits per 5 seconds of Kling at 720p versus about 60 credits per 5 seconds of Seedance at 1080p. Prices exclude VAT.\n\nThe credit system takes effort to budget, because cost depends on model, resolution and clip length. The unlimited offers are time-limited, apply only on higgsfield.ai (not via MCP, CLI, Canvas or Supercomputer) and can be slowed during high traffic. Starter only includes selected models. Most of the underlying models are made by other companies and can also be used directly, and the revenue and growth figures are the company's own unaudited claims.\n\nHiggsfield suits marketers, agencies and creators who produce ads and social video at volume and want many leading models under one subscription, with ready-made workflows for product shots and AI presenters. If you only need one model, a direct subscription to Kling AI or Runway can be simpler.",
+   "pros": [
+    "Many leading video and image models (Kling, Seedance, Veo, Nano Banana, FLUX) under one subscription",
+    "Purpose-built tools for ads, product placement, AI influencers and cinematic shots",
+    "Team plans with pooled credits, admin spend controls and custom SSO",
+    "API and MCP access for automating production",
+    "Free plan for trying the platform before paying"
+   ],
+   "cons": [
+    "Credit costs vary widely by model, resolution and clip length, so budgets are hard to predict",
+    "Unlimited offers are 7-day windows on selected models, web-only, and can be slowed at peak times",
+    "Starter includes only selected models and a fixed 270 credits a month",
+    "Most of the underlying models come from other companies and are available directly elsewhere",
+    "Revenue and growth figures are company-reported and unaudited"
+   ],
+   "choose_if": [
+    "✅ You produce ads or social video at volume and want many models in one place",
+    "✅ You want to test Kling, Seedance, Veo and others on the same brief without separate subscriptions",
+    "✅ Your team needs pooled credits, spend controls and SSO",
+    "✅ You want ready-made ad, product-placement and AI-influencer workflows"
+   ],
+   "faq": [
+    {
+     "q": "What is Higgsfield?",
+     "a": "Higgsfield is an AI creative platform for video, images and audio. It combines third-party models such as Kling, Seedance, Google Veo and Nano Banana with its own tools for ads, social clips, product placement and AI influencers, and is used by creators, brands and agencies."
+    },
+    {
+     "q": "How much does Higgsfield cost?",
+     "a": "There is a Free plan with limited use. Starter is $19 a month, the same price billed monthly or annually, with 270 credits. Plus is $47 a month billed annually or $59 billed monthly with 1,200 credits. Ultra is $99 a month billed annually or $129 billed monthly with 3,000 credits. Team plans start at $65 per seat per month. Prices exclude VAT."
+    },
+    {
+     "q": "Is Higgsfield really unlimited?",
+     "a": "Only partly. Plus and Ultra include 7-day unlimited windows on selected models such as Kling and Nano Banana. These apply only on higgsfield.ai, not via MCP, CLI, Canvas or Supercomputer, and speed can be reduced during high traffic. Everything else uses credits."
+    },
+    {
+     "q": "How big is Higgsfield?",
+     "a": "In September 2026 Higgsfield said it had passed a $1 billion annualized revenue run rate, calculated as four weeks of revenue times 13, with more than 32 million users and nearly 1 million paying subscribers. These are the company's own, unaudited figures."
+    }
+   ],
+   "dropped": []
+  }
+ },
+ {
+  "slug": "granola",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "Free / from $14/mo",
+   "best_for": "Bot-free AI meeting notes, pre-meeting briefs, chat across meetings, MCP for AI tools",
+   "description": "Granola is an AI notepad that transcribes meetings from your device's audio without a bot joining the call, then combines your rough notes and the transcript into structured notes, action items and follow-ups. It runs on Mac, Windows, iPhone, Android and Apple Watch.",
+   "description_long": "Granola is an AI notepad for people in back-to-back meetings. Instead of sending a bot into the call, it captures audio from your own device, so it works with Zoom, Google Meet, Microsoft Teams, Slack huddles and in-person conversations. You can type rough notes during the meeting, and Granola combines them with the transcript to produce structured notes, action items and follow-ups.\n\nGranola shipped a steady run of updates in 2026: the Granola MCP connector in February, which brings meeting notes into Claude, ChatGPT, Cursor and other AI tools; a $125 million funding round in March, announced together with Spaces with team chat, personal and enterprise APIs and enterprise controls; a rebuilt agentic Chat with inline citations and Recipes in April; Briefs that prepare you for the next meeting in May; an Android app in July; an Apple Watch app on July 28; and support for 32 languages in September.\n\nBeyond notes, Granola offers AI chat within a meeting and across all your meetings, custom note templates, shared folders, pre-meeting briefs on attendees and earlier discussions, and one-click follow-up emails. Paid plans connect to Attio, Notion, HubSpot, Affinity and Zapier, and Enterprise adds Salesforce. MCP and API access let other apps and agents use your meeting history.\n\nPricing is per user per month. Basic is free and includes AI meeting notes, chat, shared folders, templates and multi-language support, but only shows the last 30 days of meeting history and uses automatic model selection. Business costs $14 per user per month and adds unlimited history, pre-meeting briefs, follow-up emails, model choice including advanced thinking models, integrations, MCP and API access, and centralized billing. Enterprise costs $35 per user per month and adds SSO, SCIM, workspace policies for retention and sharing, HIPAA-compliant workspaces, usage analytics, an audit API and admin controls for MCP and API. Granola's pricing page does not say whether these rates are for monthly or annual billing.\n\nThe free plan's 30-day history makes it more of a trial for regular users. Because there is no bot, other participants do not see a notetaker join, so getting consent is up to you; an organization-wide notification that Granola is in use is still a pilot feature on Enterprise. SSO and admin controls require Enterprise, and as with any transcription tool, results depend on audio quality.\n\nGranola suits founders, managers, investors and sales or customer teams who sit in many meetings, dislike meeting bots and want to keep taking their own notes with AI filling in the gaps. Teams that want a bot-based recorder with video replay may prefer Otter.ai or Fireflies.ai.",
+   "pros": [
+    "No bot joins the call: captures audio from your device across Zoom, Meet, Teams, huddles and in-person meetings",
+    "Builds on your own rough notes instead of replacing them with a generic summary",
+    "Apps for Mac, Windows, iPhone, Android and Apple Watch",
+    "MCP connector and API bring meeting notes into Claude, ChatGPT and Cursor",
+    "Supports 32 languages since September 2026"
+   ],
+   "cons": [
+    "Free Basic plan only shows the last 30 days of meeting history",
+    "Pre-meeting briefs, follow-up emails, integrations and API need the $14 Business plan",
+    "SSO, SCIM and admin controls only on the $35 Enterprise plan",
+    "With no bot, other participants are not automatically told they are being transcribed; the org-wide notice is still a pilot"
+   ],
+   "choose_if": [
+    "✅ You dislike meeting bots and want notes captured quietly from your own device",
+    "✅ You like to take your own notes and want AI to fill in the gaps",
+    "✅ You want your meeting history available in Claude, ChatGPT or Cursor through MCP",
+    "✅ Your team wants shared folders and chat across everyone's meetings"
+   ],
+   "faq": [
+    {
+     "a": "Granola is an AI notepad for meetings. It transcribes audio from your computer or phone without a bot joining the call and turns your rough notes plus the transcript into structured notes, action items and follow-ups. It works with Zoom, Google Meet, Teams, Slack huddles and in-person meetings.",
+     "q": "What is Granola?"
+    },
+    {
+     "a": "Yes, the Basic plan is free and includes AI meeting notes, chat, shared folders and templates, but you can only see the last 30 days of meeting history. Business costs $14 per user per month for unlimited history, briefs, follow-up emails, integrations, MCP and API access. Enterprise costs $35 per user per month.",
+     "q": "Is Granola free?"
+    },
+    {
+     "a": "No. Granola records audio from your own device, so no bot appears in the call. That also means other participants are not automatically notified, so you should tell them you are taking AI notes. An organization-wide notification is available as a pilot on Enterprise.",
+     "q": "Does Granola use a meeting bot?"
+    },
+    {
+     "a": "Granola has apps for macOS, Windows, iOS and Android, plus an Apple Watch app launched in July 2026. It also connects to AI tools such as Claude, ChatGPT and Cursor through its MCP connector.",
+     "q": "Which platforms does Granola support?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "Free / from $14/mo",
+   "best_for": "Bot-free AI meeting notes, pre-meeting briefs, chat across meetings, MCP for AI tools",
+   "description": "Granola is an AI notepad that transcribes meetings from your device's audio without a bot joining the call, then combines your rough notes and the transcript into structured notes, action items and follow-ups. It runs on Mac, Windows, iPhone, Android and Apple Watch.",
+   "description_long": "Granola is an AI notepad for people in back-to-back meetings. Instead of sending a bot into the call, it captures audio from your own device, so it works with Zoom, Google Meet, Microsoft Teams, Slack huddles and in-person conversations. You can type rough notes during the meeting, and Granola combines them with the transcript to produce structured notes, action items and follow-ups.\n\nGranola shipped a steady run of updates in 2026: the Granola MCP connector in February, which brings meeting notes into Claude, ChatGPT, Cursor and other AI tools; a $125 million funding round in March, announced together with Spaces with team chat, personal and enterprise APIs and enterprise controls; a rebuilt agentic Chat with inline citations and Recipes in April; Briefs that prepare you for the next meeting in May; an Android app in July; an Apple Watch app on July 28; and support for 32 languages in September.\n\nBeyond notes, Granola offers AI chat within a meeting and across all your meetings, custom note templates, shared folders, pre-meeting briefs on attendees and earlier discussions, and one-click follow-up emails. Paid plans connect to Attio, Notion, HubSpot, Affinity and Zapier, and Enterprise adds Salesforce. MCP and API access let other apps and agents use your meeting history.\n\nPricing is per user per month. Basic is free and includes AI meeting notes, chat, shared folders, templates and multi-language support, but only shows the last 30 days of meeting history and uses automatic model selection. Business costs $14 per user per month and adds unlimited history, pre-meeting briefs, follow-up emails, model choice including advanced thinking models, integrations, MCP and API access, and centralized billing. Enterprise costs $35 per user per month and adds SSO, SCIM, workspace policies for retention and sharing, HIPAA-compliant workspaces, usage analytics, an audit API and admin controls for MCP and API. Granola's pricing page does not say whether these rates are for monthly or annual billing.\n\nThe free plan's 30-day history makes it more of a trial for regular users. Because there is no bot, other participants do not see a notetaker join, so getting consent is up to you; an organization-wide notification that Granola is in use is still a pilot feature on Enterprise. SSO and admin controls require Enterprise, and as with any transcription tool, results depend on audio quality.\n\nGranola suits founders, managers, investors and sales or customer teams who sit in many meetings, dislike meeting bots and want to keep taking their own notes with AI filling in the gaps. Teams that want a bot-based recorder with video replay may prefer Otter.ai or Fireflies.ai.",
+   "pros": [
+    "No bot joins the call: captures audio from your device across Zoom, Meet, Teams, huddles and in-person meetings",
+    "Builds on your own rough notes instead of replacing them with a generic summary",
+    "Apps for Mac, Windows, iPhone, Android and Apple Watch",
+    "MCP connector and API bring meeting notes into Claude, ChatGPT and Cursor",
+    "Supports 32 languages since September 2026"
+   ],
+   "cons": [
+    "Free Basic plan only shows the last 30 days of meeting history",
+    "Pre-meeting briefs, follow-up emails, integrations and API need the $14 Business plan",
+    "SSO, SCIM and admin controls only on the $35 Enterprise plan",
+    "With no bot, other participants are not automatically told they are being transcribed; the org-wide notice is still a pilot"
+   ],
+   "choose_if": [
+    "✅ You dislike meeting bots and want notes captured quietly from your own device",
+    "✅ You like to take your own notes and want AI to fill in the gaps",
+    "✅ You want your meeting history available in Claude, ChatGPT or Cursor through MCP",
+    "✅ Your team wants shared folders and chat across everyone's meetings"
+   ],
+   "faq": [
+    {
+     "a": "Granola is an AI notepad for meetings. It transcribes audio from your computer or phone without a bot joining the call and turns your rough notes plus the transcript into structured notes, action items and follow-ups. It works with Zoom, Google Meet, Teams, Slack huddles and in-person meetings.",
+     "q": "What is Granola?"
+    },
+    {
+     "a": "Yes, the Basic plan is free and includes AI meeting notes, chat, shared folders and templates, but you can only see the last 30 days of meeting history. Business costs $14 per user per month for unlimited history, briefs, follow-up emails, integrations, MCP and API access. Enterprise costs $35 per user per month.",
+     "q": "Is Granola free?"
+    },
+    {
+     "a": "No. Granola records audio from your own device, so no bot appears in the call. That also means other participants are not automatically notified, so you should tell them you are taking AI notes. An organization-wide notification is available as a pilot on Enterprise.",
+     "q": "Does Granola use a meeting bot?"
+    },
+    {
+     "a": "Granola has apps for macOS, Windows, iOS and Android, plus an Apple Watch app launched in July 2026. It also connects to AI tools such as Claude, ChatGPT and Cursor through its MCP connector.",
+     "q": "Which platforms does Granola support?"
+    }
+   ],
+   "dropped": []
+  }
+ },
+ {
+  "slug": "photoroom",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "80M+",
+   "best_for": "E-commerce product photos: background removal, AI backgrounds and models, batch editing, API",
+   "description": "Photoroom is an AI photo editor for product photography that removes backgrounds, adds shadows and AI-generated scenes, and batch-edits catalog images on mobile, web and through an API. The company says it is trusted by more than 80 million users and 1 million businesses.",
+   "description_long": "Photoroom is an AI photo editor built for people who sell online, from marketplace sellers and small shops to large retailers. It started as a background remover and now covers the whole product-image workflow: cutting out the product, adding shadows, staging it in AI-generated scenes, putting clothing on AI fashion models and producing short product videos for ads.\n\nAs of October 2026, Photoroom offers a Free plan and four paid plans: Pro, Max, Ultra and Enterprise. Paid plans combine unlimited core tools (within fair use) with a monthly pool of AI credits for heavier generation features. On its website the company says it is trusted by 80M+ users and 1M+ businesses.\n\nCore tools include the Background Remover, Retouch, AI Product Fixer, preset AI Shadows, AI Fill, AI Expand and Resize, Image Enhancer and Recolor. Credit-based tools include AI Backgrounds Studio, AI Fashion Models, AI Images, Edit with AI, adjustable AI shadows and the Video Generator. Batch editing handles thousands of images in one job, Spaces let teams of up to 50 seats share designs and a Brand Kit, Max and Ultra connect to Shopify, and a REST API and MCP server bring Photoroom into your own systems and AI assistants. The apps run on iOS, Android and the web.\n\nUS prices: Pro costs $12.99 a month billed monthly or $89.99 a year, with 8,000 AI credits and 1,000 exports a month. Max costs $34.99 a month or $249.99 a year, with 25,000 credits, 3,000 exports, the Video Generator and Shopify integration. Ultra costs $99 a month or $990 a year, with 75,000 credits, 10,000 exports and 4K image and video output. Enterprise is a custom annual contract with one shared balance across the apps and API. Pro and Max yearly plans include a 7-day free trial, each paid plan includes an API and MCP credit wallet worth the plan's price, and prices and credit amounts vary by country.\n\nThe Free plan has limited features, lower credit and export limits, no API access and is for personal, non-commercial use only. Exports on paid plans are capped each month and pause when you hit the limit. Credit-heavy features run out fast: Max allows up to about 50 video generations a month, and 4K output is only on Ultra.\n\nPhotoroom suits online sellers, e-commerce teams and marketplaces that need consistent, high-volume product photos and listing images. For general graphic design and social layouts, Canva is broader; for full creative control, Adobe Firefly and Photoshop go further.",
+   "pros": [
+    "Fast, accurate background removal plus shadows, retouching and AI product fixes on every paid plan",
+    "AI backgrounds, fashion models and product videos built specifically for listings and ads",
+    "Batch editing for thousands of images and a Shopify integration on Max and Ultra",
+    "Available on iOS, Android and web, with a REST API and MCP server",
+    "Paid plans include an API credit wallet worth the plan price"
+   ],
+   "cons": [
+    "Free plan is for personal, non-commercial use only and has no API access",
+    "Monthly export caps pause downloads until the next billing cycle",
+    "Video and high-resolution generation use credits quickly; 4K is only on Ultra at $99 a month",
+    "Prices and monthly credit allowances vary by country"
+   ],
+   "choose_if": [
+    "✅ You sell online and need clean product photos with white or AI-generated backgrounds",
+    "✅ You edit large catalogs and want batch processing or a Shopify connection",
+    "✅ You want clothing shown on AI models without a photo shoot",
+    "✅ You want to automate product images through an API or an AI assistant"
+   ],
+   "faq": [
+    {
+     "a": "Photoroom is used to create product photos for online stores and marketplaces. It removes backgrounds, adds shadows, places products in AI-generated scenes, puts clothing on AI fashion models, makes short product videos and batch-edits whole catalogs.",
+     "q": "What is Photoroom used for?"
+    },
+    {
+     "a": "There is a Free plan with limited features and lower credit and export limits, for personal, non-commercial use only and without API access. In the US, Pro costs $12.99 a month or $89.99 a year, Max $34.99 a month or $249.99 a year, and Ultra $99 a month or $990 a year. Pro and Max yearly plans include a 7-day free trial.",
+     "q": "Is Photoroom free?"
+    },
+    {
+     "a": "AI credits pay for the heavier tools, such as the Video Generator, AI Fashion Models, AI Backgrounds Studio and Edit with AI. Pro includes 8,000 credits a month, Max 25,000 and Ultra 75,000. Core tools like the Background Remover and Retouch do not use credits on paid plans.",
+     "q": "What are Photoroom AI credits?"
+    },
+    {
+     "a": "Yes. Photoroom offers a REST API and an MCP server for tools like Claude. Each paid plan includes a wallet of API and MCP credits worth the plan's price, and API usage does not count against your export allowance. The Free plan has no API access.",
+     "q": "Does Photoroom have an API?"
+    }
+   ]
+  },
+  "after": {
+   "best_for": "E-commerce product photos: background removal, AI backgrounds and models, batch editing, API",
+   "description": "Photoroom is an AI photo editor for product photography that removes backgrounds, adds shadows and AI-generated scenes, and batch-edits catalog images on mobile, web and through an API. The company says it is trusted by more than 80 million users and 1 million businesses.",
+   "description_long": "Photoroom is an AI photo editor built for people who sell online, from marketplace sellers and small shops to large retailers. It started as a background remover and now covers the whole product-image workflow: cutting out the product, adding shadows, staging it in AI-generated scenes, putting clothing on AI fashion models and producing short product videos for ads.\n\nAs of October 2026, Photoroom offers a Free plan and four paid plans: Pro, Max, Ultra and Enterprise. Paid plans combine unlimited core tools (within fair use) with a monthly pool of AI credits for heavier generation features. On its website the company says it is trusted by 80M+ users and 1M+ businesses.\n\nCore tools include the Background Remover, Retouch, AI Product Fixer, preset AI Shadows, AI Fill, AI Expand and Resize, Image Enhancer and Recolor. Credit-based tools include AI Backgrounds Studio, AI Fashion Models, AI Images, Edit with AI, adjustable AI shadows and the Video Generator. Batch editing handles thousands of images in one job, Spaces let teams of up to 50 seats share designs and a Brand Kit, Max and Ultra connect to Shopify, and a REST API and MCP server bring Photoroom into your own systems and AI assistants. The apps run on iOS, Android and the web.\n\nUS prices: Pro costs $12.99 a month billed monthly or $89.99 a year, with 8,000 AI credits and 1,000 exports a month. Max costs $34.99 a month or $249.99 a year, with 25,000 credits, 3,000 exports, the Video Generator and Shopify integration. Ultra costs $99 a month or $990 a year, with 75,000 credits, 10,000 exports and 4K image and video output. Enterprise is a custom annual contract with one shared balance across the apps and API. Pro and Max yearly plans include a 7-day free trial, each paid plan includes an API and MCP credit wallet worth the plan's price, and prices and credit amounts vary by country.\n\nThe Free plan has limited features, lower credit and export limits, no API access and is for personal, non-commercial use only. Exports on paid plans are capped each month and pause when you hit the limit. Credit-heavy features run out fast: Max allows up to about 50 video generations a month, and 4K output is only on Ultra.\n\nPhotoroom suits online sellers, e-commerce teams and marketplaces that need consistent, high-volume product photos and listing images. For general graphic design and social layouts, Canva is broader; for full creative control, Adobe Firefly and Photoshop go further.",
+   "pros": [
+    "Fast, accurate background removal plus shadows, retouching and AI product fixes on every paid plan",
+    "AI backgrounds, fashion models and product videos built specifically for listings and ads",
+    "Batch editing for thousands of images and a Shopify integration on Max and Ultra",
+    "Available on iOS, Android and web, with a REST API and MCP server",
+    "Paid plans include an API credit wallet worth the plan price"
+   ],
+   "cons": [
+    "Free plan is for personal, non-commercial use only and has no API access",
+    "Monthly export caps pause downloads until the next billing cycle",
+    "Video and high-resolution generation use credits quickly; 4K is only on Ultra at $99 a month",
+    "Prices and monthly credit allowances vary by country"
+   ],
+   "choose_if": [
+    "✅ You sell online and need clean product photos with white or AI-generated backgrounds",
+    "✅ You edit large catalogs and want batch processing or a Shopify connection",
+    "✅ You want clothing shown on AI models without a photo shoot",
+    "✅ You want to automate product images through an API or an AI assistant"
+   ],
+   "faq": [
+    {
+     "q": "What is Photoroom used for?",
+     "a": "Photoroom is used to create product photos for online stores and marketplaces. It removes backgrounds, adds shadows, places products in AI-generated scenes, puts clothing on AI fashion models, makes short product videos and batch-edits whole catalogs."
+    },
+    {
+     "q": "Is Photoroom free?",
+     "a": "There is a Free plan with limited features and lower credit and export limits, for personal, non-commercial use only and without API access. In the US, Pro costs $12.99 a month or $89.99 a year, Max $34.99 a month or $249.99 a year, and Ultra $99 a month or $990 a year. Pro and Max yearly plans include a 7-day free trial."
+    },
+    {
+     "q": "What are Photoroom AI credits?",
+     "a": "AI credits pay for the heavier tools, such as the Video Generator, AI Fashion Models, AI Backgrounds Studio and Edit with AI. Pro includes 8,000 credits a month, Max 25,000 and Ultra 75,000. Core tools like the Background Remover and Retouch do not use credits on paid plans."
+    },
+    {
+     "q": "Does Photoroom have an API?",
+     "a": "Yes. Photoroom offers a REST API and an MCP server for tools like Claude. Each paid plan includes a wallet of API and MCP credits worth the plan's price, and API usage does not count against your export allowance. The Free plan has no API access."
+    }
+   ],
+   "badge": "freemium",
+   "users": "80M+",
+   "dropped": []
+  }
+ },
+ {
+  "slug": "quizlet",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "Free / from $7.99/mo",
+   "best_for": "Flashcards, AI study guides from notes and lectures, practice tests, spaced repetition",
+   "description": "Quizlet is a study platform that turns notes, recorded lectures and your own material into flashcards, study guides, practice tests and games. Studying with flashcards is free, while Quizlet Plus adds more practice tests, Learn rounds, expert textbook solutions and ad-free studying.",
+   "description_long": "Quizlet, founded in 2005 and based in San Francisco, is one of the best-known study platforms for students and teachers. It began with digital flashcards and now turns any study material, whether recorded, written or typed, into study guides, flashcards, practice tests and games. Teachers can use it for free and assign activities through Google Classroom.\n\nQuizlet added several AI features in 2026. In February it introduced tools that explain study material and then generate practice materials from it. In March it launched as an app inside ChatGPT, where users can create flashcard sets. In August it released Audio Recording, which turns live lectures into study guides and flashcards, Podcasts, which convert notes, sets and study guides into conversational audio, and a spaced repetition system with retention insights that brings back the terms you need to review.\n\nCore study modes include Learn, which adapts questions to what you know, practice tests built from your own material, games for quick review, and Expert Solutions with step-by-step, expert-written answers for textbook problems. Study sessions can be done alone or with friends, and the mobile apps make short reviews easy on the go.\n\nQuizlet has a free plan and two paid tiers. Quizlet Plus includes 3 practice tests, 3 Q&A or textbook solutions and 20 rounds of Learn questions per month, with ad-free studying. Quizlet Plus Unlimited removes those caps, with complete access to practice tests, millions of textbook solutions and unlimited Learn rounds. In the US, Plus is about $7.99 a month or $35.99 a year and Plus Unlimited about $9.99 a month or $44.99 a year. Annual plans come with a 7-day free trial and renew automatically, monthly plans have no trial, prices differ by country and in the app stores, and schools and businesses can get group pricing.\n\nThe free plan is limited on the AI-driven and test features that make Quizlet most useful before exams, and even Plus caps practice tests and Learn rounds each month. Expert textbook solutions cover English-language textbooks only. Annual subscriptions auto-renew unless cancelled before the renewal date.\n\nQuizlet suits high school and university students who learn by active recall and want flashcards and practice tests built from their own notes and lectures, as well as teachers looking for low-prep classroom activities. Learners who mainly want an AI tutor to explain concepts might also try Khanmigo or NotebookLM.",
+   "pros": [
+    "Turns notes, documents and recorded lectures into flashcards, study guides and practice tests",
+    "Spaced repetition and retention insights resurface exactly what you need to review",
+    "Podcasts turn your notes and study guides into audio for review on the go",
+    "Free for teachers, with Google Classroom integration and a ChatGPT app",
+    "Huge library of existing study sets and expert textbook solutions"
+   ],
+   "cons": [
+    "Quizlet Plus still caps practice tests, Learn rounds and textbook solutions each month",
+    "Unlimited access requires the more expensive Plus Unlimited tier",
+    "Expert textbook solutions cover English-language textbooks only",
+    "Annual plans auto-renew, and prices differ between the website, app stores and countries"
+   ],
+   "choose_if": [
+    "✅ You study by active recall and want flashcards and practice tests from your own notes",
+    "✅ You want recorded lectures turned into study guides automatically",
+    "✅ You want spaced repetition to tell you what to review before an exam",
+    "✅ You are a teacher who needs free, low-prep study activities for a class"
+   ],
+   "faq": [
+    {
+     "a": "Quizlet is a study platform for students and teachers. It turns your notes, documents and recorded lectures into flashcards, study guides, practice tests and games, and offers adaptive Learn mode, spaced repetition and expert textbook solutions.",
+     "q": "What is Quizlet?"
+    },
+    {
+     "a": "Yes, Quizlet has a free plan, and it is free for teachers. Quizlet Plus adds 3 practice tests, 3 Q&A or textbook solutions and 20 Learn rounds a month with no ads, and Plus Unlimited removes those caps. In the US, Plus is about $7.99 a month or $35.99 a year and Plus Unlimited about $9.99 a month or $44.99 a year.",
+     "q": "Is Quizlet free?"
+    },
+    {
+     "a": "Quizlet can explain study material and generate practice materials from it, turn recorded lectures into study guides and flashcards, convert notes into conversational podcasts, and schedule reviews with spaced repetition. It also has an app inside ChatGPT for creating flashcard sets.",
+     "q": "What AI features does Quizlet have?"
+    },
+    {
+     "a": "Yes, annual Quizlet Plus plans include a 7-day free trial, after which you are billed for the year unless you cancel. Monthly plans are not eligible for the trial.",
+     "q": "Does Quizlet Plus have a free trial?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": null,
+   "best_for": "Flashcards, AI study guides from notes and lectures, practice tests, spaced repetition",
+   "description": "Quizlet is a study platform that turns notes, recorded lectures and your own material into flashcards, study guides, practice tests and games. Studying with flashcards is free, while Quizlet Plus adds more practice tests, Learn rounds, expert textbook solutions and ad-free studying.",
+   "description_long": "Quizlet, founded in 2005 and based in San Francisco, is one of the best-known study platforms for students and teachers. It began with digital flashcards and now turns any study material, whether recorded, written or typed, into study guides, flashcards, practice tests and games. Teachers can use it for free and assign activities through Google Classroom.\n\nQuizlet added several AI features in 2026. In February it introduced tools that explain study material and then generate practice materials from it. In March it launched as an app inside ChatGPT, where users can create flashcard sets. In August it released Audio Recording, which turns live lectures into study guides and flashcards, Podcasts, which convert notes, sets and study guides into conversational audio, and a spaced repetition system with retention insights that brings back the terms you need to review.\n\nCore study modes include Learn, which adapts questions to what you know, practice tests built from your own material, games for quick review, and Expert Solutions with step-by-step, expert-written answers for textbook problems. Study sessions can be done alone or with friends, and the mobile apps make short reviews easy on the go.\n\nQuizlet has a free plan and two paid tiers. Quizlet Plus includes 3 practice tests, 3 Q&A or textbook solutions and 20 rounds of Learn questions per month, with ad-free studying. Quizlet Plus Unlimited removes those caps, with complete access to practice tests, millions of textbook solutions and unlimited Learn rounds. Pricing is shown per country and billed monthly or annually, with annual plans costing less per month than monthly billing; annual plans come with a 7-day free trial and renew automatically, while monthly plans have no trial. Schools and businesses can get group pricing.\n\nThe free plan is limited on the AI-driven and test features that make Quizlet most useful before exams, and even Plus caps practice tests and Learn rounds each month. Expert textbook solutions cover English-language textbooks only. Annual subscriptions auto-renew unless cancelled before the renewal date.\n\nQuizlet suits high school and university students who learn by active recall and want flashcards and practice tests built from their own notes and lectures, as well as teachers looking for low-prep classroom activities. Learners who mainly want an AI tutor to explain concepts might also try Khanmigo or NotebookLM.",
+   "pros": [
+    "Turns notes, documents and recorded lectures into flashcards, study guides and practice tests",
+    "Spaced repetition and retention insights resurface exactly what you need to review",
+    "Podcasts turn your notes and study guides into audio for review on the go",
+    "Free for teachers, with Google Classroom integration and a ChatGPT app",
+    "Huge library of existing study sets and expert textbook solutions"
+   ],
+   "cons": [
+    "Quizlet Plus still caps practice tests, Learn rounds and textbook solutions each month",
+    "Unlimited access requires the more expensive Plus Unlimited tier",
+    "Expert textbook solutions cover English-language textbooks only",
+    "Annual plans auto-renew, and prices differ between the website, app stores and countries"
+   ],
+   "choose_if": [
+    "✅ You study by active recall and want flashcards and practice tests from your own notes",
+    "✅ You want recorded lectures turned into study guides automatically",
+    "✅ You want spaced repetition to tell you what to review before an exam",
+    "✅ You are a teacher who needs free, low-prep study activities for a class"
+   ],
+   "faq": [
+    {
+     "q": "What is Quizlet?",
+     "a": "Quizlet is a study platform for students and teachers. It turns your notes, documents and recorded lectures into flashcards, study guides, practice tests and games, and offers adaptive Learn mode, spaced repetition and expert textbook solutions."
+    },
+    {
+     "q": "Is Quizlet free?",
+     "a": "Yes, Quizlet has a free plan, and it is free for teachers. Quizlet Plus adds 3 practice tests, 3 Q&A or textbook solutions and 20 Learn rounds a month with no ads, and Plus Unlimited removes those caps. Pricing varies by country and whether you choose monthly or annual billing."
+    },
+    {
+     "q": "What AI features does Quizlet have?",
+     "a": "Quizlet can explain study material and generate practice materials from it, turn recorded lectures into study guides and flashcards, convert notes into conversational podcasts, and schedule reviews with spaced repetition. It also has an app inside ChatGPT for creating flashcard sets."
+    },
+    {
+     "q": "Does Quizlet Plus have a free trial?",
+     "a": "Yes, annual Quizlet Plus plans include a 7-day free trial, after which you are billed for the year unless you cancel. Monthly plans are not eligible for the trial."
+    }
+   ],
+   "dropped": [
+    "Specific US dollar monthly and annual prices for Quizlet Plus and Plus Unlimited (only confirmed via third-party pages, not quizlet.com directly)",
+    "User count figure (no current primary-source number found)"
+   ]
+  }
+ },
+ {
+  "slug": "power-bi",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "Free / from $14/mo",
+   "best_for": "Business dashboards and reports with Copilot for questions, summaries and DAX",
+   "description": "Microsoft Power BI is a business intelligence tool for building interactive reports and dashboards, with Copilot to answer data questions, summarize reports and write DAX. Sharing needs Pro at $14 per user per month, and Copilot requires a paid Fabric (F2 or higher) or Premium (P1 or higher) capacity.",
+   "description_long": "Microsoft Power BI is Microsoft's business intelligence platform. Analysts build data models and interactive reports in Power BI Desktop, a free Windows app, and publish them to the Power BI service on the web, where colleagues view dashboards in the browser, in Microsoft Teams or on mobile. Power BI is part of Microsoft Fabric, Microsoft's broader data and analytics platform, and connects to hundreds of data sources.\n\nCopilot is now built into Power BI. According to Microsoft's documentation (updated August 2026), the Copilot pane on reports is generally available, while the standalone, full-screen Power BI agent, Copilot in apps and Copilot in web modeling are in preview. Prompts can be up to 10,000 characters. Microsoft was named a Leader in Gartner's 2026 Magic Quadrant for Analytics and Business Intelligence Platforms.\n\nFor business users, Copilot answers questions about data, summarizes a report or topic, finds relevant reports and models, and can add summaries to report subscriptions. For report authors it can create and edit report pages, add narrative summary visuals, write DAX queries and draft descriptions for measures. For model owners, Copilot in web modeling flags unclear structures and naming and suggests improvements. Microsoft recommends preparing your semantic model for AI first, because without it Copilot can return generic or inaccurate answers.\n\nPricing: a free account (no credit card) lets you build reports for yourself, but sharing requires a paid license. Power BI Pro costs $14 per user per month paid yearly and is included in Microsoft 365 E5 and Office 365 E5. Premium Per User costs $24 per user per month paid yearly and adds larger models and more frequent refreshes. Microsoft Fabric capacity is sold pay-as-you-go or as a yearly reservation, which Microsoft says saves about 40.5%, and Power BI Embedded is priced separately. Copilot is not included with Pro or Premium Per User alone: it needs a paid Fabric capacity of F2 or higher or Power BI Premium P1 or higher, and its usage is billed against that capacity.\n\nCopilot is not available on free or trial capacities or in sovereign clouds, some Copilot experiences are not yet offered in several Azure regions, and prompts in languages other than English are not officially supported. Copilot results depend heavily on a well-prepared data model, Power BI Desktop runs only on Windows, and building good models still requires learning DAX and data modeling.\n\nPower BI suits companies already using Microsoft 365, Teams or Azure that want governed, shareable dashboards and are ready to pay for Fabric capacity to use Copilot. Small teams that only need quick AI analysis of a spreadsheet may find Julius AI or Looker Studio simpler, and Tableau is the main enterprise alternative.",
+   "pros": [
+    "Copilot answers data questions, summarizes reports, builds report pages and writes DAX",
+    "Free Power BI Desktop and free account for building reports",
+    "Pro at $14 per user per month is included in Microsoft 365 E5 and Office 365 E5",
+    "Deep integration with Microsoft 365, Teams, Excel, Azure and Microsoft Fabric",
+    "Named a Leader in Gartner's 2026 Magic Quadrant for analytics and BI"
+   ],
+   "cons": [
+    "Copilot needs a paid Fabric F2+ or Premium P1+ capacity; a Pro or Premium Per User license alone is not enough",
+    "Standalone Copilot, Copilot in apps and Copilot in web modeling are still in preview",
+    "Non-English prompts are not officially supported, and some regions and sovereign clouds lack Copilot",
+    "Power BI Desktop is Windows-only, and good models still require DAX and data-modeling skills",
+    "Sharing reports requires paid licenses for creators and viewers outside capacity plans"
+   ],
+   "choose_if": [
+    "✅ Your company runs on Microsoft 365, Teams or Azure and needs shared dashboards",
+    "✅ You want business users to ask questions about data in plain English",
+    "✅ You already have or plan to buy Microsoft Fabric capacity for Copilot",
+    "✅ You need governed reporting with row-level access across a large organization"
+   ],
+   "faq": [
+    {
+     "a": "Power BI is Microsoft's business intelligence tool for connecting to data, building data models and publishing interactive reports and dashboards. Reports are built in Power BI Desktop and shared through the Power BI service, Teams and mobile apps. It is part of Microsoft Fabric.",
+     "q": "What is Microsoft Power BI?"
+    },
+    {
+     "a": "A free account lets you create reports for your own use. Power BI Pro costs $14 per user per month paid yearly and is included in Microsoft 365 E5. Premium Per User costs $24 per user per month paid yearly. Fabric capacity is priced pay-as-you-go or by yearly reservation.",
+     "q": "How much does Power BI cost?"
+    },
+    {
+     "a": "No. Copilot in Power BI requires the report or workspace to be on a paid Microsoft Fabric capacity of F2 or higher or Power BI Premium P1 or higher. A Pro or Premium Per User license alone is not enough, and trial capacities are not supported.",
+     "q": "Is Copilot included in Power BI Pro?"
+    },
+    {
+     "a": "Copilot can answer questions about your data, summarize reports, find reports and models, create and edit report pages, add narrative visuals, write DAX queries and suggest improvements to semantic models. The report Copilot pane is generally available; the standalone agent and some other experiences are in preview.",
+     "q": "What can Copilot do in Power BI?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": null,
+   "best_for": "Business dashboards and reports with Copilot for questions, summaries and DAX",
+   "description": "Microsoft Power BI is a business intelligence tool for building interactive reports and dashboards, with Copilot to answer data questions, summarize reports and write DAX. Sharing requires Power BI Pro, billed annually at $14 per user per month, and Copilot requires a paid Fabric (F2 or higher) or Premium (P1 or higher) capacity.",
+   "description_long": "Microsoft Power BI is Microsoft's business intelligence platform. Analysts build data models and interactive reports in Power BI Desktop, a free Windows app, and publish them to the Power BI service on the web, where colleagues view dashboards in the browser, in Microsoft Teams or on mobile. Power BI is part of Microsoft Fabric, Microsoft's broader data and analytics platform, and connects to hundreds of data sources.\n\nCopilot is now built into Power BI. According to Microsoft's documentation (updated August 2026), the Copilot pane on reports is generally available, while the standalone, full-screen Power BI agent, Copilot in apps and Copilot in web modeling are in preview. Prompts can be up to 10,000 characters. Microsoft was named a Leader in Gartner's 2026 Magic Quadrant for Analytics and Business Intelligence Platforms.\n\nFor business users, Copilot answers questions about data, summarizes a report or topic, finds relevant reports and models, and can add summaries to report subscriptions. For report authors it can create and edit report pages, add narrative summary visuals, write DAX queries and draft descriptions for measures. For model owners, Copilot in web modeling flags unclear structures and naming and suggests improvements. Microsoft recommends preparing your semantic model for AI first, because without it Copilot can return generic or inaccurate answers.\n\nPricing: a free account (no credit card) lets you build reports for yourself, but sharing requires a paid license, and the free account does not include Copilot. Power BI Pro costs $14 per user per month, billed annually, and is included in Microsoft 365 E5 and Office 365 E5. Premium Per User costs $24 per user per month, billed annually. Microsoft Fabric capacity is sold pay-as-you-go or as a yearly reservation, which Microsoft says saves about 40.5%, and Power BI Embedded is priced separately. Copilot is not included with Pro or Premium Per User alone: it needs a paid Fabric capacity of F2 or higher or Power BI Premium P1 or higher, and its usage is billed against that capacity.\n\nCopilot is not available on free or trial capacities or in sovereign clouds, some Copilot experiences are not yet offered in several Azure regions, and prompts in languages other than English are not officially supported. Copilot results depend heavily on a well-prepared data model, Power BI Desktop runs only on Windows, and building good models still requires learning DAX and data modeling.\n\nPower BI suits companies already using Microsoft 365, Teams or Azure that want governed, shareable dashboards and are ready to pay for Fabric capacity to use Copilot. Small teams that only need quick AI analysis of a spreadsheet may find Julius AI or Looker Studio simpler, and Tableau is the main enterprise alternative.",
+   "pros": [
+    "Copilot answers data questions, summarizes reports, builds report pages and writes DAX",
+    "Free Power BI Desktop and free account for building reports (no sharing or Copilot)",
+    "Power BI Pro, billed annually at $14 per user per month, is included in Microsoft 365 E5 and Office 365 E5",
+    "Deep integration with Microsoft 365, Teams, Excel, Azure and Microsoft Fabric",
+    "Named a Leader in Gartner's 2026 Magic Quadrant for analytics and BI"
+   ],
+   "cons": [
+    "Copilot needs a paid Fabric F2+ or Premium P1+ capacity; a Pro or Premium Per User license alone is not enough",
+    "Standalone Copilot, Copilot in apps and Copilot in web modeling are still in preview",
+    "Non-English prompts are not officially supported, and some regions and sovereign clouds lack Copilot",
+    "Power BI Desktop is Windows-only, and good models still require DAX and data-modeling skills",
+    "Sharing reports requires paid licenses for creators and viewers outside capacity plans"
+   ],
+   "choose_if": [
+    "✅ Your company runs on Microsoft 365, Teams or Azure and needs shared dashboards",
+    "✅ You want business users to ask questions about data in plain English",
+    "✅ You already have or plan to buy Microsoft Fabric capacity for Copilot",
+    "✅ You need governed reporting with row-level access across a large organization"
+   ],
+   "faq": [
+    {
+     "a": "Power BI is Microsoft's business intelligence tool for connecting to data, building data models and publishing interactive reports and dashboards. Reports are built in Power BI Desktop and shared through the Power BI service, Teams and mobile apps. It is part of Microsoft Fabric.",
+     "q": "What is Microsoft Power BI?"
+    },
+    {
+     "a": "A free account lets you create reports for your own use but does not allow sharing or Copilot. Power BI Pro costs $14 per user per month, billed annually, and is included in Microsoft 365 E5. Premium Per User costs $24 per user per month, billed annually. Fabric capacity is priced pay-as-you-go or by yearly reservation.",
+     "q": "How much does Power BI cost?"
+    },
+    {
+     "a": "No. Copilot in Power BI requires the report or workspace to be on a paid Microsoft Fabric capacity of F2 or higher or Power BI Premium P1 or higher. A Pro or Premium Per User license alone is not enough, and trial capacities are not supported.",
+     "q": "Is Copilot included in Power BI Pro?"
+    },
+    {
+     "a": "Copilot can answer questions about your data, summarize reports, find reports and models, create and edit report pages, add narrative visuals, write DAX queries and suggest improvements to semantic models. The report Copilot pane is generally available; the standalone agent and some other experiences are in preview.",
+     "q": "What can Copilot do in Power BI?"
+    }
+   ],
+   "dropped": [
+    "Removed the 'Free / from $14/mo' monthly price label: Power BI Pro's $14 figure is billed annually, not monthly, so no verified monthly-billed USD price exists for the badge."
+   ]
+  }
+ },
+ {
+  "slug": "base44",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "Free / from $16/mo",
+   "best_for": "Building full-stack apps, websites and AI agents from a prompt, with backend and hosting built in",
+   "description": "Base44 is Wix's AI app builder that creates full-stack web apps, websites and AI agents from plain-language prompts, with database, authentication, payments and hosting built in. The free plan includes 25 message credits a month, and paid plans start at $16 a month billed annually.",
+   "description_long": "Base44 is an AI platform for building apps, websites and AI agents by describing them in plain language, with no coding required. It generates the frontend and backend together, including the database, user authentication, payments and hosting, so apps run on production infrastructure rather than in a sandbox. It connects to tools such as Gmail, Slack, Notion, Google Drive, HubSpot and Salesforce, and to external services through APIs.\n\nBase44 was founded by Maor Shlomo, came out of stealth in March 2025 and was acquired by Wix in June 2025; it continues to run as its own product. In June 2026 Base44 launched Base 1, its own language model, which the company says is already serving users on the platform. Wix has said Base44 reached about $100 million in annual recurring revenue within a year of its founding.\n\nBeyond apps, Base44 builds websites with AI-generated design, custom domains and SEO and GEO tools, and Superagents that automate workflows across your connected tools. Every plan includes a responsive visual editor, analytics dashboard, cloud storage, marketing tools, debugging tools and multi-user editing. Paid plans add in-app code edits, and higher tiers add model selection, GitHub integration and early access to beta features. Developers can also use an SDK, CLI and MCP server.\n\nPricing uses message credits for AI building and integration credits for actions your app performs. Free costs $0 with 25 message credits and 100 integration credits a month and up to 5 apps. Starter is $20 a month billed monthly or $16 billed annually, with 100 message and 2,000 integration credits and unlimited apps. Builder is $50 or $40, with 250 and 10,000 credits plus model selection and GitHub integration. Pro is $100 or $80, with 500 and 20,000 credits and early beta access. Elite is $200 or $160, with 1,200 and 50,000 credits and premium support. Enterprise is custom, with SSO and advanced security controls. Annual billing saves 20%.\n\nMessage credits go quickly: 25 a month on the free plan and 100 on Starter leave little room for iteration on a larger app. Apps run on Base44's own backend and hosting, which simplifies launch but ties you to the platform, and GitHub integration starts only on the Builder plan. Complex apps still require you to understand the logic well enough to debug what the AI builds. Base44 states that you own everything you build.\n\nBase44 suits founders, small businesses and non-developers who want a working app with login, data and payments without setting up a backend, and teams building internal tools fast. Developers who want more control over the code may prefer Lovable, Bolt.new or Replit.",
+   "pros": [
+    "Builds full-stack apps from a prompt, with database, authentication, payments and hosting included",
+    "Integrations with Gmail, Slack, Notion, Google Drive, HubSpot and Salesforce",
+    "Free plan with up to 5 apps, and every plan includes multi-user editing",
+    "Superagents and in-app AI agents for automating workflows",
+    "Backed by Wix, with its own Base 1 model in production since June 2026"
+   ],
+   "cons": [
+    "Only 25 message credits a month on Free and 100 on Starter, which limits iteration",
+    "Apps run on Base44's backend and hosting, creating platform lock-in",
+    "GitHub integration and model selection start on the $40-a-month Builder plan",
+    "Complex apps still require debugging skills to fix what the AI generates"
+   ],
+   "choose_if": [
+    "✅ You want a working app with login, database and payments without setting up a backend",
+    "✅ You are a founder or small business validating an idea quickly",
+    "✅ You need internal tools connected to Gmail, Slack, Notion or your CRM",
+    "✅ You prefer an all-in-one platform over managing hosting yourself"
+   ],
+   "faq": [
+    {
+     "a": "Base44 is an AI app builder owned by Wix. You describe the app, website or AI agent you want in plain language, and Base44 builds the frontend, backend, database, authentication and hosting so it can go live right away.",
+     "q": "What is Base44?"
+    },
+    {
+     "a": "Yes. The Free plan includes 25 message credits and 100 integration credits a month and up to 5 apps. Paid plans start with Starter at $16 a month billed annually or $20 billed monthly, and go up to Elite at $160 a month billed annually or $200 monthly.",
+     "q": "Is Base44 free?"
+    },
+    {
+     "a": "Wix acquired Base44 in June 2025. Base44 continues to operate as its own product, and in June 2026 it launched Base 1, its own AI model.",
+     "q": "Who owns Base44?"
+    },
+    {
+     "a": "Base44 states that you own everything you build on the platform. Apps run on Base44's built-in backend and hosting, and GitHub integration is available from the Builder plan.",
+     "q": "Do I own the apps I build on Base44?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "Free / from $20/mo",
+   "best_for": "Building full-stack apps, websites and AI agents from a prompt, with backend and hosting built in",
+   "description": "Base44 is Wix's AI app builder that creates full-stack web apps, websites and AI agents from plain-language prompts, with database, authentication, payments and hosting built in. The free plan includes 25 message credits a month, and paid plans start at $20 a month billed monthly or $16 a month billed annually.",
+   "description_long": "Base44 is an AI platform for building apps, websites and AI agents by describing them in plain language, with no coding required. It generates the frontend and backend together, including the database, user authentication, payments and hosting, so apps run on production infrastructure rather than in a sandbox. It connects to tools such as Gmail, Slack, Notion, Google Drive, HubSpot and Salesforce, and to external services through APIs.\n\nBase44 was founded by Maor Shlomo, came out of stealth in March 2025 and was acquired by Wix in June 2025; it continues to run as its own product. In June 2026 Base44 launched Base 1, its own language model, which the company says is already serving users on the platform. Wix has said Base44 reached about $100 million in annual recurring revenue within a year of its founding.\n\nBeyond apps, Base44 builds websites with AI-generated design, custom domains and SEO and GEO tools, and Superagents that automate workflows across your connected tools. Every plan includes a responsive visual editor, analytics dashboard, cloud storage, marketing tools, debugging tools and multi-user editing. Paid plans add in-app code edits, and higher tiers add model selection, GitHub integration and early access to beta features. Developers can also use an SDK, CLI and MCP server.\n\nPricing uses message credits for AI building and integration credits for actions your app performs. Free costs $0 with 25 message credits and 100 integration credits a month and up to 5 apps. Starter is $20 a month billed monthly or $16 a month billed annually, with 100 message and 2,000 integration credits and unlimited apps. Builder is $50 or $40 a month (monthly or annual billing), with 250 and 10,000 credits plus model selection and GitHub integration. Pro is $100 or $80 a month, with 500 and 20,000 credits and early beta access. Elite is $200 or $160 a month, with 1,200 and 50,000 credits and premium support. Enterprise is custom, with SSO and advanced security controls. Annual billing saves 20%.\n\nMessage credits go quickly: 25 a month on the free plan and 100 on Starter leave little room for iteration on a larger app. Apps run on Base44's own backend and hosting, which simplifies launch but ties you to the platform, and GitHub integration starts only on the Builder plan. Complex apps still require you to understand the logic well enough to debug what the AI builds. Base44 states that you own everything you build.\n\nBase44 suits founders, small businesses and non-developers who want a working app with login, data and payments without setting up a backend, and teams building internal tools fast. Developers who want more control over the code may prefer Lovable, Bolt.new or Replit.",
+   "pros": [
+    "Builds full-stack apps from a prompt, with database, authentication, payments and hosting included",
+    "Integrations with Gmail, Slack, Notion, Google Drive, HubSpot and Salesforce",
+    "Free plan with up to 5 apps, and every plan includes multi-user editing",
+    "Superagents and in-app AI agents for automating workflows",
+    "Backed by Wix, with its own Base 1 model in production since June 2026"
+   ],
+   "cons": [
+    "Only 25 message credits a month on Free and 100 on Starter, which limits iteration",
+    "Apps run on Base44's backend and hosting, creating platform lock-in",
+    "GitHub integration and model selection start on the $40-a-month (annual) Builder plan",
+    "Complex apps still require debugging skills to fix what the AI generates"
+   ],
+   "choose_if": [
+    "✅ You want a working app with login, database and payments without setting up a backend",
+    "✅ You are a founder or small business validating an idea quickly",
+    "✅ You need internal tools connected to Gmail, Slack, Notion or your CRM",
+    "✅ You prefer an all-in-one platform over managing hosting yourself"
+   ],
+   "faq": [
+    {
+     "a": "Base44 is an AI app builder owned by Wix. You describe the app, website or AI agent you want in plain language, and Base44 builds the frontend, backend, database, authentication and hosting so it can go live right away.",
+     "q": "What is Base44?"
+    },
+    {
+     "a": "Yes. The Free plan includes 25 message credits and 100 integration credits a month and up to 5 apps. Paid plans start with Starter at $20 a month billed monthly or $16 a month billed annually, and go up to Elite at $200 a month billed monthly or $160 a month billed annually.",
+     "q": "Is Base44 free?"
+    },
+    {
+     "a": "Wix acquired Base44 in June 2025. Base44 continues to operate as its own product, and in June 2026 it launched Base 1, its own AI model.",
+     "q": "Who owns Base44?"
+    },
+    {
+     "a": "Base44 states that you own everything you build on the platform. Apps run on Base44's built-in backend and hosting, and GitHub integration is available from the Builder plan.",
+     "q": "Do I own the apps I build on Base44?"
+    }
+   ],
+   "dropped": []
+  }
+ },
+ {
+  "slug": "freepik",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "1M+",
+   "best_for": "AI image, video and audio generation across 30+ models, plus 250M+ stock assets",
+   "description": "Magnific, the name Freepik has used since April 2026, is an AI creative platform that combines image, video and audio generation across 30+ models with a library of more than 250 million stock assets. A free account allows a limited number of AI generations per day, while paid plans add credits, unlimited generation on selected models and a commercial license.",
+   "description_long": "Freepik started in Málaga in 2010 as a search engine for free graphic resources and grew into one of the largest stock libraries for photos, vectors, icons and templates. On April 28, 2026 it rebranded as Magnific, the name of the AI upscaling startup it acquired in May 2024, to bring its stock library, generative AI tools and upscalers under one brand. freepik.com now redirects to magnific.com.\n\nMagnific says it has more than 1 million subscribers. Rather than relying only on its own models, it gives subscribers access to leading third-party models, including Kling 4.0 and 3.0, Seedance 2.5, Google Veo 3.1, Gemini Omni, MiniMax, Nano Banana 2 and Nano Banana Pro, FLUX.2, Recraft and Ideogram for images and video, plus Google Lyria 3 and ElevenLabs for music. In October 2026 it added Magnific One, its own image model, together with a Brand Kit feature.\n\nBeyond generation, Magnific includes Spaces, a shared canvas for building workflows, pro editing tools for image, video and design, the Magnific image and video upscalers, music, voice and sound effect generation, custom AI characters on paid plans, an MCP server and plugins, a ComfyUI integration, API access and metadata export. The stock library of more than 250 million photos, videos, vectors and PSDs is part of the same subscription.\n\nThe Free plan has no credits but allows daily use of basic AI tools, including up to 20 image generations a day, plus 10 stock downloads a day, for personal use with attribution. Premium includes 20,000 credits a month (240,000 a year on annual billing), all premium stock, 100 downloads a day and a commercial license. Premium+ includes 45,000 credits a month (600,000 a year), unlimited generation on most image models and the option to buy extra credits. Pro comes in two tiers with 112,500 or 300,000 credits a month and adds a merchandise license and early access. Business covers teams of up to 100 seats, and Enterprise is custom. Prices are shown in local currency and vary by region, annual billing is much cheaper than monthly, promotions are frequent, and there is a 30-day refund guarantee.\n\nThere is no single published price list in US dollars, so check the pricing page for your region before subscribing. Credit costs vary widely: a Nano Banana 2 image at 2K uses 75 credits, while 4 seconds of Seedance 2.5 video at 1080p uses 4,400. Unlimited generation covers most image models, but video, audio and editing tools still use credits. Free use is personal only and requires attribution, and the rebrand means older Freepik links and guides now point to Magnific.\n\nMagnific suits designers, marketers and agencies who want stock content and many AI models in one subscription, especially for high volumes of images. If you only need one image model, Midjourney, Leonardo AI or Krea AI may be simpler, and Adobe Firefly fits teams already using Adobe Creative Cloud.",
+   "pros": [
+    "30+ image, video and audio models plus 250M+ stock assets in one subscription",
+    "Unlimited generation on most image models from Premium+",
+    "Built-in Magnific upscalers, Spaces workflows, MCP, ComfyUI and API access",
+    "Free plan with up to 20 AI image generations and 10 stock downloads a day",
+    "Commercial license on all paid plans, with a merchandise license on Pro"
+   ],
+   "cons": [
+    "No single published USD price list; prices vary by region and promotions change often",
+    "Video, audio and editing tools always use credits, and video is credit-intensive",
+    "Free use is personal only and requires attribution",
+    "Extra credits cannot be bought on Premium, only on Premium+ and above",
+    "The April 2026 rebrand from Freepik to Magnific can confuse existing users"
+   ],
+   "choose_if": [
+    "✅ You need both stock assets and AI generation from one subscription",
+    "✅ You generate many images and want unlimited use of models like Nano Banana",
+    "✅ You want to try many video models, such as Kling, Seedance and Veo, in one place",
+    "✅ You need built-in upscaling for print or high-resolution work"
+   ],
+   "faq": [
+    {
+     "a": "Yes. On April 28, 2026 Freepik rebranded as Magnific, uniting its stock library, AI generation tools and the Magnific upscaler under one name. freepik.com now redirects to magnific.com.",
+     "q": "Is Freepik now called Magnific?"
+    },
+    {
+     "a": "There is a free plan with no credits but daily limits, such as up to 20 AI image generations and 10 stock downloads per day, for personal use with attribution. Paid plans (Premium, Premium+, Pro, Business) add monthly credits, premium stock and a commercial license; prices are shown in local currency and vary by region.",
+     "q": "Is Magnific (Freepik) free?"
+    },
+    {
+     "a": "Magnific offers 30+ models, including Kling, Seedance, Google Veo, Nano Banana 2 and Nano Banana Pro, FLUX.2, Recraft and Ideogram, plus its own Magnific One image model and music models such as Google Lyria 3 and ElevenLabs.",
+     "q": "Which AI models does Magnific include?"
+    },
+    {
+     "a": "Premium+ and Pro include unlimited generation on most image models and some video models. Some premium models and all video, audio and editing tools still consume credits, and speed can be limited during busy periods.",
+     "q": "What does unlimited mean on Magnific?"
+    }
+   ]
+  },
+  "after": {
+   "badge": "freemium",
+   "users": "1M+",
+   "best_for": "AI image, video and audio generation across many leading third-party models, plus 250M+ stock assets",
+   "description": "Magnific, the name Freepik has used since April 2026, is an AI creative platform that combines image, video and audio generation using many leading third-party models with a library of more than 250 million stock assets. A free account allows limited daily AI generations, while paid plans add credits, unlimited generation on selected models and a commercial license.",
+   "description_long": "Freepik started in Málaga in 2010 as a search engine for free graphic resources and grew into one of the largest stock libraries for photos, vectors, icons and templates. On April 28, 2026 it rebranded as Magnific, the name of the AI upscaling startup it acquired in May 2024, to bring its stock library, generative AI tools and upscalers under one brand. freepik.com now redirects to magnific.com.\n\nMagnific says it has more than 1 million subscribers. Rather than relying only on its own models, it gives subscribers access to leading third-party models, including Kling, Seedance, Google Veo, Gemini Omni, MiniMax, Nano Banana, FLUX, Recraft, Ideogram and Grok for images and video, plus Google Lyria and ElevenLabs for music and sound effects. In October 2026 it added Magnific One, its own image model, together with a Brand Kit feature.\n\nBeyond generation, Magnific includes Spaces, a shared canvas for building workflows, pro editing tools for image, video and design, the Magnific image and video upscalers, music, voice and sound effect generation, custom AI characters on paid plans, an MCP server and plugins, a ComfyUI integration, API access and metadata export. The stock library of more than 250 million photos, videos, vectors and PSDs is part of the same subscription.\n\nThe Free plan has no credits but allows daily use of basic AI tools: up to 20 image generations, 40 sketch-to-image conversions, 3 retouch, expand or reimagine actions, 1 background removal and 1 icon generation a day, plus 10 stock downloads a day, for personal use with attribution. Premium includes 20,000 credits a month (240,000 a year on annual billing), all premium stock, 100 downloads a day and a commercial license, with no option to buy extra credits. Premium+ includes 45,000 credits a month (600,000 a year), unlimited generation on most image models, music rights and the option to buy extra credits. Pro comes in two tiers with 112,500 or 300,000 credits a month (1.5 million or 4 million a year) and adds a merchandise license and early access. Business covers teams of up to 100 seats at 45,000 credits per seat a month, and Enterprise is custom. Prices are shown in local currency and vary by region, annual billing is much cheaper than monthly, and promotions are frequent.\n\nThere is no single published price list in US dollars, so check the pricing page for your region before subscribing. Credit costs vary widely: a Nano Banana image at 2K resolution uses 75 credits, while 4 seconds of Seedance video at 1080p uses 4,400 credits. Unlimited generation covers most image models, but video, audio and editing tools still use credits. Free use is personal only and requires attribution, and the rebrand means older Freepik links and guides now point to Magnific.\n\nMagnific suits designers, marketers and agencies who want stock content and many AI models in one subscription, especially for high volumes of images. If you only need one image model, Midjourney, Leonardo AI or Krea AI may be simpler, and Adobe Firefly fits teams already using Adobe Creative Cloud.",
+   "pros": [
+    "Many leading image, video and audio models plus 250M+ stock assets in one subscription",
+    "Unlimited generation on most image models from Premium+",
+    "Built-in Magnific upscalers, Spaces workflows, MCP, ComfyUI and API access",
+    "Free plan with daily AI generation allowances and 10 stock downloads a day",
+    "Commercial license on all paid plans, with a merchandise license on Pro"
+   ],
+   "cons": [
+    "No single published USD price list; prices vary by region and promotions change often",
+    "Video, audio and editing tools always use credits, and video is credit-intensive",
+    "Free use is personal only and requires attribution",
+    "Extra credits cannot be bought on Premium, only on Premium+ and above",
+    "The April 2026 rebrand from Freepik to Magnific can confuse existing users"
+   ],
+   "choose_if": [
+    "✅ You need both stock assets and AI generation from one subscription",
+    "✅ You generate many images and want unlimited use of models like Nano Banana",
+    "✅ You want to try many video models, such as Kling, Seedance and Veo, in one place",
+    "✅ You need built-in upscaling for print or high-resolution work"
+   ],
+   "faq": [
+    {
+     "q": "Is Freepik now called Magnific?",
+     "a": "Yes. On April 28, 2026 Freepik rebranded as Magnific, uniting its stock library, AI generation tools and the Magnific upscaler under one name. freepik.com now redirects to magnific.com."
+    },
+    {
+     "q": "Is Magnific (Freepik) free?",
+     "a": "There is a free plan with no credits but daily limits, such as up to 20 AI image generations and 10 stock downloads a day, for personal use with attribution. Paid plans (Premium, Premium+, Pro, Business) add monthly credits, premium stock and a commercial license; prices are shown in local currency and vary by region."
+    },
+    {
+     "q": "Which AI models does Magnific include?",
+     "a": "Magnific offers many leading third-party models, including Kling, Seedance, Google Veo, Gemini Omni, MiniMax, Nano Banana, FLUX, Recraft, Ideogram and Grok, plus its own Magnific One image model and music and sound tools from Google Lyria and ElevenLabs."
+    },
+    {
+     "q": "What does unlimited mean on Magnific?",
+     "a": "Premium+ and Pro include unlimited generation on most image models and some video models. Some premium models and all video, audio and editing tools still consume credits, and speed can be limited during busy periods."
+    }
+   ],
+   "dropped": [
+    "'30+ models' claim (audit lists about 18 distinct model families, not confirmed as 30+)"
+   ]
+  }
+ }
+]

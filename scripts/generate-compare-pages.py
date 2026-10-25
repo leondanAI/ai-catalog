@@ -168,6 +168,20 @@ COMPARISONS = [
     {'slug': 'adcreative-ai-vs-canva-ai',           'a': 'adcreative-ai',          'b': 'canva-ai',              'cat': 'marketing',     'label': 'AdCreative.ai vs Canva AI'},
     # ── Data (new) ────────────────────────────────────────────────────────────
     {'slug': 'akkio-vs-julius-ai',                  'a': 'akkio',                  'b': 'julius-ai',             'cat': 'data',          'label': 'Akkio vs Julius AI'},
+    # ── Новые инструменты по популярности, 2026-10-25 ─────────────────────────
+    {'slug': 'openai-codex-vs-claude-code', 'a': 'openai-codex', 'b': 'claude-code', 'cat': 'code', 'label': "OpenAI Codex vs Claude Code"},
+    {'slug': 'openai-codex-vs-github-copilot', 'a': 'openai-codex', 'b': 'github-copilot', 'cat': 'code', 'label': "OpenAI Codex vs GitHub Copilot"},
+    {'slug': 'higgsfield-vs-kling-ai', 'a': 'higgsfield', 'b': 'kling-ai', 'cat': 'video', 'label': "Higgsfield vs Kling AI"},
+    {'slug': 'granola-vs-otter-ai', 'a': 'granola', 'b': 'otter-ai', 'cat': 'productivity', 'label': "Granola vs Otter.ai"},
+    {'slug': 'granola-vs-fireflies-ai', 'a': 'granola', 'b': 'fireflies-ai', 'cat': 'productivity', 'label': "Granola vs Fireflies.ai"},
+    {'slug': 'photoroom-vs-remove-bg', 'a': 'photoroom', 'b': 'remove-bg', 'cat': 'design', 'label': "Photoroom vs Remove.bg"},
+    {'slug': 'photoroom-vs-canva-ai', 'a': 'photoroom', 'b': 'canva-ai', 'cat': 'design', 'label': "Photoroom vs Canva AI"},
+    {'slug': 'quizlet-vs-khanmigo', 'a': 'quizlet', 'b': 'khanmigo', 'cat': 'education', 'label': "Quizlet vs Khanmigo"},
+    {'slug': 'power-bi-vs-tableau-ai', 'a': 'power-bi', 'b': 'tableau-ai', 'cat': 'data', 'label': "Microsoft Power BI vs Tableau AI"},
+    {'slug': 'power-bi-vs-looker-studio', 'a': 'power-bi', 'b': 'looker-studio', 'cat': 'data', 'label': "Microsoft Power BI vs Data Studio (Looker Studio)"},
+    {'slug': 'base44-vs-lovable', 'a': 'base44', 'b': 'lovable', 'cat': 'nocode', 'label': "Base44 vs Lovable"},
+    {'slug': 'freepik-vs-midjourney', 'a': 'freepik', 'b': 'midjourney', 'cat': 'image', 'label': "Magnific (formerly Freepik) vs Midjourney"},
+    {'slug': 'higgsfield-vs-runway', 'a': 'higgsfield', 'b': 'runway', 'cat': 'video', 'label': "Higgsfield vs Runway"},
     # ── Agents (new) ──────────────────────────────────────────────────────────
     {'slug': 'autogpt-vs-manus',                    'a': 'autogpt',                'b': 'manus',                 'cat': 'agents',        'label': 'AutoGPT vs Manus'},
     # ── Education (new) ───────────────────────────────────────────────────────

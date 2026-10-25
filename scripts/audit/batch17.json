@@ -1,0 +1,262 @@
+[
+ {
+  "slug": "openai-codex",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Models in Codex (Oct 2026): GPT-6.1 Sol, GPT-6 Sol, GPT-6 Luna, GPT-6 Astra (GPT-5.6 Sol/Terra/Luna still in the credit rate table). GPT-5.5 retired from Codex with ChatGPT sign-in on Oct 14, 2026. Surfaces: ChatGPT desktop (macOS, Windows, Linux pages), web, mobile/iOS, Codex CLI (open source, Apache-2.0), IDE extension, Codex cloud, Codex SDK / codex exec.",
+  "version_published": null,
+  "pricing": "Included in ChatGPT plans (US): Free $0 and Go $8/mo = desktop app only with GPT-6 Luna, subject to rollout; Plus $20/mo = web, CLI, IDE extension, iOS with GPT-6.1 Sol and GPT-6 Luna; Pro $100, $200 or $500/mo (no five-hour limit currently; Ultrafast mode on $500); Business $20/user/mo billed annually (2+ users) or $25/user billed monthly; Enterprise/Edu via sales. Extra credits for Plus/Pro/Business (price per credit not published; GPT-6.1 Sol input 50 credits per 1M tokens, GPT-6 Luna 2.5). API-key use billed at standard API pricing.",
+  "free_tier": "Yes, limited: ChatGPT Free includes quick Codex tasks in the desktop app with GPT-6 Luna at Standard speed, subject to rollout.",
+  "repositioning": "Codex is now one agent across ChatGPT apps, CLI, IDE and cloud with parallel agents, computer/browser tools, plugins and automatic PR review.",
+  "card_errors": [],
+  "sources": [
+   {
+    "url": "https://learn.chatgpt.com/docs/pricing",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://learn.chatgpt.com/docs",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://openai.com/codex/",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://github.com/openai/codex",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://constellationr.com/insights/news/openai-touts-broadening-codex-usage-5-million-weekly-active-users",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://blog.jetbrains.com/research/2026/08/ai-coding-agent-adoption-2026/",
+    "accessed": "2026-10-25"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Pricing and models from OpenAI's own Codex pricing page (learn.chatgpt.com, redirected from developers.openai.com/codex/pricing). The 5M+ weekly active users figure is OpenAI's (June 2026), relayed by Constellation Research citing openai.com/index/codex-for-knowledge-work; later reports of ~10M combine Codex with ChatGPT Work, so not used. JetBrains 3% (Jan 2026) -> 16% (May-Jul 2026) work adoption from the JetBrains Research blog (Aug 2026; page returned 403, figures taken from search excerpts of that post). openai.com/codex shows prices in ILS from Israel; USD taken from learn.chatgpt.com. No default model is stated by OpenAI, so the card does not name one. Plus usage limits: GPT-6 Astra 5-45, GPT-6.1 Sol 15-160, GPT-6 Sol 15-150, GPT-6 Luna 350-3,000 local messages per 5 hours.",
+  "domain_changed": false
+ },
+ {
+  "slug": "higgsfield",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Multi-model platform. Video: Kling 3.0 / Omni 3 / 2.6 Motion Control, Seedance 2.0 / 2.0 Fast / 2.5, Google Veo 3.1, Wan 2.6 / 3.0, MiniMax Hailuo 2.3, Grok Video, own DoP. Image: Nano Banana Pro, Nano Banana 2, own Soul 2.0, Seedream, FLUX.2, GPT Image. Products: Cinema Studio, Ads Studio, AI Influencer, Genjutsu, Canvas, Supercomputer, MCP, API.",
+  "version_published": null,
+  "pricing": "Individual (USD/mo): Free (limited use); Starter $19 billed annually, 'no difference compared to monthly', 270 credits/mo fixed; Plus $47 billed annually / $59 monthly, 1,200 credits; Ultra $99 billed annually / $129 monthly, 3,000 credits (6,000 and 9,000 options shown). Teams from $65/seat/mo, 2-15 seats, up to 37,500 pooled credits, up to 30% off annually. Prices exclude VAT. Promotional banners (30% off, 30-day unlimited Seedance 2.5 on business plans) were running on Oct 25.",
+  "free_tier": "Yes: Free plan, 'limited use'; free generations on some tools (e.g. 10 Genjutsu Lite, 10 AI Influencer, 10 Ads Studio).",
+  "repositioning": null,
+  "card_errors": [],
+  "sources": [
+   {
+    "url": "https://higgsfield.ai/pricing",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://higgsfield.ai/blog/higgsfield-1b-annualized-revenue-run-rate",
+    "accessed": "2026-10-25"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Pricing read from the rendered page in the in-app browser (WebFetch got no plan text); page showed USD. Revenue run rate ($1B, Sep 24, 2026) is the company's own figure = last 4 weeks x 13, unaudited; 32M+ users in 238 countries, ~1M paying subscribers, 390 Fortune 500 companies, $400M Series B at $5.4B led by DST Global (Aug 2026) - all from Higgsfield's blog. 'Unlimited' models and free generations are web-only (not MCP/CLI, Canvas, Supercomputer) and subject to dynamic speed adjustments. Ultra monthly price $129 inferred from the strikethrough next to $99 and 'Save $360 compared to monthly' (12 x $30), Plus $59 from 'Save $144' (12 x $12).",
+  "domain_changed": false
+ },
+ {
+  "slug": "granola",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "No numbered version (Granola 2.0 was May 2025). 2026 launches: Granola MCP (Feb 4), new brand (Feb 2), $125M raise + Spaces/team chat + personal & enterprise APIs (Mar 25), agentic Chat with citations and Recipes (Apr 21), Briefs (May 20), Android (Jul 1), Apple Watch (Jul 28), 32 languages (Sep 2), Snapshots (Oct 6).",
+  "version_published": null,
+  "pricing": "Basic $0; Business $14 per user per month; Enterprise $35 per user per month. Pricing page does not state monthly vs annual billing. An older Granola docs FAQ mentioned a $12 annual rate for Business and $40 for Enterprise - outdated/unconfirmed, not used.",
+  "free_tier": "Yes: Basic $0 - AI notes, chat, shared folders, templates; meeting history limited to 30 days; auto model selection only; no briefs, follow-ups, integrations or API.",
+  "repositioning": null,
+  "card_errors": [],
+  "sources": [
+   {
+    "url": "https://www.granola.ai/pricing",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://www.granola.ai/",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://www.granola.ai/blog",
+    "accessed": "2026-10-25"
+   }
+  ],
+  "confidence": "high",
+  "notes": "No company-stated user count found, so users field uses price style. Valuation of the March 2026 round ($1.5B, Index Ventures lead) appears only in secondary press (implicator.ai), so the card mentions only the $125M amount from Granola's own blog. The brief's claim that Ramp ranked Granola the #1 AI notetaker (Oct 2026) could not be verified from a primary Ramp source and was left out. Customer logos on the homepage include PostHog, Intercom, Figma, Brex, Ramp, Linear, Vercel.",
+  "domain_changed": false
+ },
+ {
+  "slug": "photoroom",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Plans: Free, Pro, Max, Ultra, Enterprise (credit-based model). Tools: Background Remover, Retouch, AI Product Fixer, AI Shadows, AI Fill, Expand/Resize, Image Enhancer, Recolor, AI Backgrounds Studio, AI Fashion Models (1K/2K/4K), AI Images, Edit with AI, Video Generator; REST API and MCP server; iOS, Android, web.",
+  "version_published": null,
+  "pricing": "US (tier-1 USD): Pro $12.99/mo monthly or $89.99/yr (~$7.50/mo), 8,000 AI credits + 1,000 exports/mo; Max $34.99/mo or $249.99/yr (~$20.83/mo), 25,000 credits + 3,000 exports, Video Generator, Shopify; Ultra $99/mo or $990/yr ($82.50/mo), 75,000 credits + 10,000 exports, 4K. Up to 50 seats per Space. Enterprise: custom annual contract, shared balance across apps and API. Pro and Max yearly include a 7-day free trial. Each paid plan includes an API/MCP credit wallet worth the plan price. Credits vary by country/region.",
+  "free_tier": "Yes: Free plan with limited features, lower AI credit and export limits, no API access, personal non-commercial use only.",
+  "repositioning": null,
+  "card_errors": [],
+  "sources": [
+   {
+    "url": "https://www.photoroom.com/pricing",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://www.photoroom.com/",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://help.photoroom.com/en/articles/6976012-what-are-photoroom-s-plans",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://pricingsaas.com/companies/photoroom",
+    "accessed": "2026-10-25"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "The pricing page is geo-priced and showed ILS from Israel. USD figures come from Photoroom's own pricing JS bundle (photoroom.com/_astro/app-pricing.*.js: Pro tier1 usd 1299/8999, Max ('business') tier1 usd 3499/24999, Ultra usd 9900/99000) - the ILS amounts on the live page match the same tier-1 price IDs - and agree with the PricingSaaS tracker (verified Jul 31, 2026). That US = tier 1 is inferred (mapping not in that bundle), hence medium. 80M+ users (background remover claim) and 1M+ businesses are from photoroom.com homepage. Free plan export limit is unclear (help center weekly limit vs blog '250/month'), so no number is given. Trackers report credit allowances were cut and then restored in Aug 2026.",
+  "domain_changed": false
+ },
+ {
+  "slug": "quizlet",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "2026 AI features: AI explanations + generated practice materials (Feb 2026), Quizlet app in ChatGPT (Mar 11, 2026), Audio Recording of lectures, Podcasts, Spaced Repetition with retention insights (Aug 4, 2026, alongside 'How America Learns' report). Core: Learn, practice tests, games, Expert Solutions, Google Classroom integration.",
+  "version_published": null,
+  "pricing": "Plans: Free; Quizlet Plus (3 practice tests/mo, 3 Q&A or textbook solutions/mo, 20 Learn rounds/mo, ad-free); Quizlet Plus Unlimited (complete practice tests, millions of textbook solutions - English only, unlimited Learn, ad-free). Official page (seen from Israel): Plus ILS 104.99/yr, Plus Unlimited ILS 129.90/yr. US prices per third-party checks of quizlet.com/upgrade (Sep 2026): Plus $7.99/mo or $35.99/yr; Plus Unlimited $9.99/mo or $44.99/yr. 7-day trial on annual plans only. Group pricing for schools/businesses.",
+  "free_tier": "Yes: free plan (flashcards, games, limited study modes); free for teachers.",
+  "repositioning": null,
+  "card_errors": [],
+  "sources": [
+   {
+    "url": "https://quizlet.com/upgrade",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://quizlet.com/",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://thejournal.com/articles/2026/02/13/quizlet-adds-ai-powered-tools-for-active-practice-notetaking.aspx",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://www.streetinsider.com/PRNewswire/Quizlet+Launches+as+Native+App+in+ChatGPT+to+Transform+AI-Powered+Learning/26142955.html",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://www.mindomax.com/quizlet-plus-cost",
+    "accessed": "2026-10-25"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "quizlet.com is geo-priced and bot-protected (WebFetch 403; /mission blocked in browser), so USD prices could only be taken from third-party pages that say they checked quizlet.com/upgrade on 2026-09-08 - verify on a US connection before publishing; the card words them as 'about'. Plan feature limits are from the official upgrade page. No current company-stated user count found (older boilerplate 'tens of millions'; third parties say 60M+ monthly users), so users field uses price style. The Aug 2026 launch details come from the PR Newswire release summaries (press page returned 403). Free-plan specifics are not itemized by Quizlet, so the card avoids numbers for it.",
+  "domain_changed": false
+ },
+ {
+  "slug": "power-bi",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Copilot for Power BI: report Copilot pane GA; standalone Power BI agent (preview); app-scoped Copilot (preview); Copilot in web modeling (preview); 10,000-character prompts. Docs updated 2026-08-24/31. Gartner MQ for Analytics & BI 2026 Leader (report dated 29 June 2026).",
+  "version_published": null,
+  "pricing": "Free account (no credit card; sharing requires Pro or Premium). Power BI Pro $14/user/mo paid yearly (included in M365 E5 / O365 E5). Premium Per User $24/user/mo paid yearly ($14 add-on for Pro/E5 users). Power BI Embedded: variable. Fabric capacity: pay-as-you-go or annual reservation (~40.5% saving). Copilot requires paid Fabric F2+ or Power BI Premium P1+; Pro/PPU alone insufficient; Copilot usage billed in capacity units.",
+  "free_tier": "Yes: free account and free Power BI Desktop; no sharing, no Copilot (trial and free SKUs not supported).",
+  "repositioning": null,
+  "card_errors": [],
+  "sources": [
+   {
+    "url": "https://www.microsoft.com/en-us/power-platform/products/power-bi/pricing",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-introduction",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://www.microsoft.com/en-us/power-platform/products/power-bi",
+    "accessed": "2026-10-25"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Microsoft does not publish a Power BI user count on the product page, so users field uses price style. Domain set to powerbi.com for the favicon (Microsoft's Power BI service domain); the official product URL is on microsoft.com - switch domain to microsoft.com if favicon lookup fails. Fabric F2 dollar price not captured (Azure page renders prices client-side), so the card does not state it. 'Desktop is Windows-only' is long-standing Microsoft documentation, not re-checked on a page today.",
+  "domain_changed": false
+ },
+ {
+  "slug": "base44",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "AI app/website/agent builder; own LLM 'Base 1' launched late June 2026 (company says in production). Superagents; SDK, CLI, MCP server; owned by Wix (acquired Jun 18, 2025, ~$80M + earn-outs).",
+  "version_published": null,
+  "pricing": "Free $0: 25 message + 100 integration credits/mo, up to 5 apps. Starter $20/mo monthly or $16/mo annual: 100 msg / 2,000 integration, unlimited apps, in-app code edits, custom domain. Builder $50 / $40: 250 / 10,000, + AI model select, GitHub integration. Pro $100 / $80: 500 / 20,000, + early beta access. Elite $200 / $160: 1,200 / 50,000, + premium support. Enterprise custom (custom credits, SSO, dedicated architect). Annual = 20% off.",
+  "free_tier": "Yes: 25 message credits and 100 integration credits per month, up to 5 apps, core features (auth, database, analytics).",
+  "repositioning": null,
+  "card_errors": [],
+  "sources": [
+   {
+    "url": "https://base44.com/pricing",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://base44.com/",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://docs.base44.com/",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://en.globes.co.il/en/article-wix-acquires-israeli-vibe-coding-co-base44-1001513267",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://aithority.com/machine-learning/base44-becomes-first-app-creation-platform-to-launch-its-own-proprietary-llm-base-1-marking-a-major-milestone-in-the-companys-technology-vision/",
+    "accessed": "2026-10-25"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Monthly prices read after switching the toggle on the live pricing page; annual from the default view. No company-stated user count found (only third-party traffic estimates), so users field uses price style. ~$100M ARR is from Wix's Q4 2025 earnings call as reported by press; a $150M-by-May-2026 figure appears only in a transcript summary and was not used. Base 1 launch date (June 29/30, 2026) from the company press release as syndicated (AiThority); no independent benchmarks. Ownership: footer '(c) 2026 Wix.com Ltd.' plus press coverage of the June 18, 2025 acquisition.",
+  "domain_changed": false
+ },
+ {
+  "slug": "freepik",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Rebranded Freepik -> Magnific on Apr 28, 2026 (freepik.com/pricing 301 -> magnific.com/pricing). Own image model Magnific One + Brand Kit (Oct 2026). Third-party models on platform: Kling 4.0 / 3.0 Pro / 2.5, Seedance 2.5 / 2.0, Veo 3.1, Gemini Omni 1.1, MiniMax H3 / Hailuo 2.3, Nano Banana 2 / Pro / 2 Lite, FLUX.2 Pro / Max, Recraft V4.1, Ideogram, Grok; audio: Google Lyria 3, ElevenLabs Music, SFX.",
+  "version_published": "2026-04-28",
+  "pricing": "Plans: Free (no credits; daily caps: 20 image gens, 40 sketch-to-image, 3 retouch/expand/reimagine, 1 background removal, 1 icon gen; 10 stock downloads/day; personal use + attribution). Premium 20,000 credits/mo (240K/yr annual), 100 downloads/day, commercial license, no extra credit purchase. Premium+ 45,000/mo (600K/yr), unlimited on most image models, extra credits purchasable, music rights. Pro (2 tiers) 112,500 or 300,000/mo (1.5M or 4M/yr), merchandise license, early access. Business up to 100 seats, 45,000 credits/seat/mo. Enterprise custom. Live page (Israel, ILS, annual, ex VAT): Premium 59 -> 20 promo (50% off ends Oct 26), Premium+ 132 -> 99, Pro Starter 322 -> 241.50 per month. USD not shown to us; third-party reports conflict ($16/$37/$90 vs $20/$45/$110 monthly).",
+  "free_tier": "Yes: free account with daily AI tool caps (up to 20 image generations/day) and 10 stock downloads/day, personal use with attribution.",
+  "repositioning": "Freepik is now Magnific: stock library + AI generation + upscalers under one brand, positioned as an AI creative platform; Spaces canvas, MCP, ComfyUI, plugins, desktop and mobile apps.",
+  "card_errors": [],
+  "sources": [
+   {
+    "url": "https://www.magnific.com/pricing",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://www.magnific.com/ai/docs/plans-and-pricing",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://www.magnific.com/ai/docs/how-can-i-use-the-ai-tools-as-a-free-user",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://tech.eu/2026/04/28/freepik-rebrands-as-magnific-unifying-its-ai-creative-stack-as-enterprise-and-no-collar-growth-accelerates/",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Magnific",
+    "accessed": "2026-10-25"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "IMPORTANT: Freepik rebranded to Magnific on 2026-04-28; freepik.com redirects to magnific.com. Kept slug 'freepik' as requested (brand-search value), but name/url/domain point to Magnific - decide whether to use slug 'magnific' instead before publishing (also update seo_* files accordingly). Pricing is geo-localized; we could only see ILS from Israel, and third-party USD figures conflict, so the card deliberately gives no USD prices - re-check on a US connection and add them. 1M+ subscribers is company-stated on the pricing page; ~$230M ARR and ~400 employees (Apr 2026) come from press via Wikipedia and were not used. Model lineup changes frequently.",
+  "domain_changed": true
+ }
+]
