@@ -181,6 +181,9 @@ TOOL_COMPARE = {
     'fiscal-ai':              ('fiscal-ai-vs-koyfin',             'Koyfin'),
     'koyfin':                   ('koyfin-vs-tradingview',           'TradingView'),
 }
+# Ссылка «Сравнить» — из общего списка пар (compare_links.py); словарь выше — только предпочтения
+import compare_links as _cl, sbread as _sb
+TOOL_COMPARE = _cl.tool_compare_map({r['slug']: r['name'] for r in _sb.get('tools?lang=eq.en&published=eq.true&select=slug,name')}, TOOL_COMPARE)
 
 SB_URL  = 'https://lbjdwkvkkndvofysyssy.supabase.co'
 SB_ANON = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG'

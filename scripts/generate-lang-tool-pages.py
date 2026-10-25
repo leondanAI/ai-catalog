@@ -68,6 +68,16 @@ def _load_seo_overrides():
 
 SEO_OVERRIDES = _load_seo_overrides()
 
+
+_CMP_NAMES = None
+def _tool_compare_map(preferred):
+    """Ссылка «Сравнить» — из общего списка пар (compare_links.py), ручной словарь — только предпочтения."""
+    global _CMP_NAMES
+    import compare_links, sbread
+    if _CMP_NAMES is None:
+        _CMP_NAMES = {r['slug']: r['name'] for r in sbread.get('tools?lang=eq.en&published=eq.true&select=slug,name')}
+    return compare_links.tool_compare_map(_CMP_NAMES, preferred)
+
 # Название в местной письменности (scripts/local_names.json): люди ищут «семраш»,
 # «סמראש», «прези», а у нас было только латиницей — Search Console 2026-10-25
 # показал такие запросы без единого совпадения. Добавляем один раз: в <title>,
@@ -542,6 +552,7 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
         'coursera-coach':           ('coursera-coach-vs-khanmigo',      'Khanmigo'),
         'socratic-by-google':       ('socratic-vs-khanmigo',            'Khanmigo'),
     }
+    TOOL_COMPARE = _tool_compare_map(TOOL_COMPARE)
     COMPARE_LABELS = {
         'ru': ('📊 Как сравнивается {}?', 'Все сравнения'),
         'es': ('📊 ¿Cómo se compara {}?', 'Ver todas'),
