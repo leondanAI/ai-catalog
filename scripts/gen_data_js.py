@@ -37,6 +37,15 @@ def js(v):
     return json.dumps(v, ensure_ascii=False)
 
 
+CATEGORY_ORDER = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'category_order.json'), encoding='utf-8'))
+
+
+def category_rank(cid, r):
+    order = CATEGORY_ORDER.get(cid, [])
+    pos = order.index(r['slug']) if r['slug'] in order else len(order)
+    return (pos, -float(r.get('rating') or 0), r['name'].lower())
+
+
 def main():
     src = open(PATH, encoding='utf-8').read()
     end = src.index('\n];\n') + len('\n];\n')
@@ -48,7 +57,7 @@ def main():
         old_order[cid] = [to_slug(n) for n in re.findall(r"name:'((?:[^'\\]|\\.)*)'", block)]
 
     rows = sbread.get('tools?lang=eq.en&published=eq.true&order=slug.asc'
-                      '&select=slug,name,category,url,badge,users,best_for,description,pros,cons')
+                      '&select=slug,name,category,url,badge,users,best_for,description,pros,cons,rating')
 
     known = {c[0] for c in cats}
     lost = [r['slug'] for r in rows if r['category'] not in known]
@@ -58,14 +67,11 @@ def main():
     out = ['const CATEGORIES = [']
     for cid, title, icon, color in cats:
         tools = [r for r in rows if r['category'] == cid]
-        order = old_order.get(cid, [])
-        # старое имя могло давать другой slug (Recraft AI → recraft-ai): сверяем и по имени, и по slug
-        def pos(r):
-            for key in (r['slug'], to_slug(r['name'])):
-                if key in order:
-                    return order.index(key)
-            return len(order) + 1
-        tools.sort(key=lambda r: (pos(r), r['name'].lower()))
+        # Порядок — редакционный, из category_order.json: первые три видны на
+        # странице сразу. Раньше порядок брался из старого data.js по шаблону
+        # name:'…', а файл давно пишется с name:"…" — шаблон ничего не находил,
+        # и категории шли по алфавиту (в «Чатах» первым стоял Character.AI).
+        tools.sort(key=lambda r: category_rank(cid, r))
         out.append('  {')
         out.append(f"    id: '{cid}', title: '{title}', icon: '{icon}', color: '{color}',")
         out.append('    tools: [')

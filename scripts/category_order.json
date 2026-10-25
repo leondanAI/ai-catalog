@@ -1,0 +1,156 @@
+{
+  "_about": "Порядок внутри категории на странице «Лучшие AI-инструменты» — по популярности (Similarweb сентябрь 2026, данные компаний, опросы JetBrains/Stack Overflow); первые три видны сразу. Обоснование и цифры: scripts/category_order.md. Пересматривать раз в месяц.",
+  "chat": [
+    "chatgpt",
+    "gemini",
+    "claude",
+    "deepseek",
+    "meta-ai",
+    "grok",
+    "perplexity",
+    "microsoft-copilot",
+    "character-ai",
+    "mistral-le-chat"
+  ],
+  "code": [
+    "claude-code",
+    "github-copilot",
+    "cursor",
+    "openai-codex",
+    "replit",
+    "opencode",
+    "windsurf",
+    "cline",
+    "kiro",
+    "bolt-new",
+    "v0-by-vercel",
+    "aider",
+    "zed"
+  ],
+  "agents": [
+    "n8n",
+    "microsoft-copilot-studio",
+    "manus",
+    "devin",
+    "make",
+    "lindy",
+    "relevance-ai",
+    "autogpt"
+  ],
+  "image": [
+    "chatgpt-images",
+    "nano-banana",
+    "midjourney",
+    "comfyui",
+    "flux",
+    "stable-diffusion",
+    "leonardo-ai",
+    "krea-ai",
+    "ideogram",
+    "recraft-ai"
+  ],
+  "video": [
+    "capcut",
+    "kling-ai",
+    "google-veo-3",
+    "heygen",
+    "synthesia",
+    "seedance-2-0",
+    "runway",
+    "luma-ai",
+    "pika"
+  ],
+  "voice": [
+    "elevenlabs",
+    "suno",
+    "descript",
+    "whisper",
+    "speechify",
+    "murf-ai",
+    "adobe-podcast",
+    "udio"
+  ],
+  "design": [
+    "canva-ai",
+    "figma-ai",
+    "adobe-firefly",
+    "google-stitch",
+    "framer-ai",
+    "claude-design",
+    "whimsical-ai",
+    "looka",
+    "uxpilot",
+    "uizard",
+    "relume",
+    "remove-bg"
+  ],
+  "writing": [
+    "deepl",
+    "grammarly",
+    "quillbot",
+    "hemingway-editor",
+    "jasper",
+    "writesonic"
+  ],
+  "productivity": [
+    "notion-ai",
+    "otter-ai",
+    "zapier-ai",
+    "fireflies-ai",
+    "reclaim-ai",
+    "motion"
+  ],
+  "presentations": [
+    "gamma",
+    "prezi",
+    "slidesgo",
+    "pitch",
+    "beautiful-ai"
+  ],
+  "research": [
+    "notebooklm",
+    "semantic-scholar",
+    "consensus",
+    "elicit",
+    "scite",
+    "humata"
+  ],
+  "data": [
+    "looker-studio",
+    "tableau-ai",
+    "retool-ai",
+    "hex",
+    "julius-ai",
+    "akkio"
+  ],
+  "nocode": [
+    "lovable",
+    "webflow",
+    "bubble",
+    "flutterflow",
+    "glide",
+    "softr"
+  ],
+  "marketing": [
+    "semrush",
+    "copy-ai",
+    "adcreative-ai",
+    "surferseo",
+    "frase",
+    "clearscope"
+  ],
+  "education": [
+    "duolingo-max",
+    "coursera-coach",
+    "photomath",
+    "youlearn",
+    "khanmigo",
+    "synthesis"
+  ],
+  "business-investment": [
+    "tradingview",
+    "koyfin",
+    "fiscal-ai",
+    "tickeron"
+  ]
+}

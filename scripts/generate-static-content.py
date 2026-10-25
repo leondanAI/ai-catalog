@@ -131,6 +131,16 @@ def render_tool_card(tool, color, lang='en', tr=None):
     </div>'''
 
 
+# Тот же редакционный порядок, что и в js/data.js (gen_data_js.py): лучшие — первыми.
+_ORDER = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'category_order.json'), encoding='utf-8'))
+
+
+def category_rank(cid, t):
+    order = _ORDER.get(cid, [])
+    pos = order.index(t.get('slug')) if t.get('slug') in order else len(order)
+    return (pos, -float(t.get('rating') or 0), (t.get('name') or '').lower())
+
+
 def build_catalog_html(tools, lang='en', tr=None):
     tr = tr or {}
     by_cat = {}
@@ -140,7 +150,7 @@ def build_catalog_html(tools, lang='en', tr=None):
 
     html = ''
     for cat_id, cat_label, cat_icon, cat_color in CATEGORIES:
-        cat_tools = by_cat.get(cat_id, [])
+        cat_tools = sorted(by_cat.get(cat_id, []), key=lambda t: category_rank(cat_id, t))
         if not cat_tools:
             continue
         cat_label = tr.get(f'cat.{cat_id}') or cat_label   # локализованное название категории
@@ -210,7 +220,7 @@ def main():
     print('\nInjecting catalog for every language…')
     for lang in LANGS:
         tools = fetch(f'tools?lang=eq.{lang}&published=eq.true&order=name.asc&limit=200'
-                      '&select=slug,name,url,domain,category,badge,users,description')
+                      '&select=slug,name,url,domain,category,badge,users,description,rating')
         if not tools:
             print(f'  ! {lang}: инструментов не найдено — пропуск')
             continue
