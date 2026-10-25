@@ -37,7 +37,7 @@
 - `en.json` — `{slug, date: "YYYY-MM-DD", category, source, source_url, title, summary, body}`.
   category: models / tools / business / research / regulation. body — HTML: `<p>`, `<h2>`,
   `<strong>`, `<em>`, без markdown. Ссылки на наши карточки и сравнения —
-  `<a href="/tools/<slug>.html">`, `<a href="/compare/<a>-vs-<b>.html">` (без языка:
+  `<a href="/tools/<slug>.html">`, `<a href="/compare/<a>-vs-<b>.html">`, `<a href="/news/<slug>.html">` (без языка:
   генератор сам ставит префикс; перевод проверяет, что ссылки совпадают с EN).
   Сначала убедиться, что страницы есть на всех 8 языках.
 - `ru.json` — `{title, summary, body}`: пишу сам, для показа Leon.

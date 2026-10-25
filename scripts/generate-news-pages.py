@@ -138,7 +138,7 @@ def generate_page(article, lang, all_articles_for_lang, all_slugs_by_lang):
     body      = article.get('body') or f'<p>{htmlmod.escape(summary)}</p>'
     # Ссылки на карточки и сравнения пишутся в тексте один раз, как в EN
     # (href="/tools/x.html"); здесь они получают префикс языка страницы.
-    body      = re.sub(r'href="/(tools|compare)/', rf'href="{nav_prefix(lang)}/\1/', body)
+    body      = re.sub(r'href="/(tools|compare|news)/', rf'href="{nav_prefix(lang)}/\1/', body)
     date_str  = format_date(article.get('date', ''))
     source    = article.get('source', '')
     # Название источника — ссылка на первоисточник, если он записан.
