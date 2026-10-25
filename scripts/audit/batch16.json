@@ -1,0 +1,583 @@
+[
+ {
+  "slug": "notion-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Notion 3.8 (Oct 13, 2026) is still the latest numbered release. The Oct 19, 2026 release 'Agents, rebuilt to do more for less' has no version number: new AI credit system, upgraded Auto model router, Notion Agents with their own computer and browser that can work up to 24 hours, ChatGPT plan connection for the personal Notion Agent, BYOK in private alpha for Enterprise.",
+  "version_published": "2026-10-19",
+  "pricing": "Seats (notion.com/pricing): Free $0 and Plus $10/seat/mo (both only a Notion AI trial), Business $20/seat/mo (full Notion Agent, AI Meeting Notes, Enterprise Search), Enterprise custom; up to 20% off yearly. New AI credit system (Oct 19, 2026): each Business and Enterprise seat includes 1,500 Standard credits/mo (used when Notion picks the model, e.g. Auto) and 500 Select credits/mo (used when you pick the model or run Custom Agents). Live now for new customers; existing customers move on Nov 2, 2026 (not-yet-renewed contracts also move Nov 2, with credits set at renewal). Admins can buy additional workspace credits; the blog gives no price, while the pricing page still says Custom Agents are 'Free to try, then $10 per 1,000 monthly Notion credits'.",
+  "free_tier": "Free plan $0 with only a capped trial of Notion AI.",
+  "repositioning": "All AI usage (Notion Agent, Custom Agents, outside AI tools) moves onto one credit system. Auto router reportedly matches Opus 5.5 / Astra quality on 20+ common tasks at about 90% lower average cost (credits go about 10x further, per Notion). Agents get a computer and browser, 'Review for me' mode, and can run up to 24 hours. ChatGPT Plus, Pro or Go can be connected to a personal Notion Agent (not Custom Agents yet). BYOK private alpha for Enterprise. AI Command Center (usage by person/feature/agent, spending limits) coming soon.",
+  "card_errors": [
+   {
+    "claim": "lets Business and Enterprise workspaces connect a ChatGPT Plus or Pro plan to cover AI usage inside Notion",
+    "correction": "Since Oct 19, 2026 a ChatGPT Plus, Pro or Go account can be connected to a user's personal Notion Agent; it does not yet work with Custom Agents. (Notion's own FAQ on the blog lists only Plus and Pro, so the Go mention is inconsistent on Notion's side.)"
+   },
+   {
+    "claim": "Business and Enterprise users can now also connect a ChatGPT Plus or Pro plan to help pay for usage",
+    "correction": "Same as above: Plus, Pro or Go, personal Notion Agent only, not Custom Agents."
+   },
+   {
+    "claim": "Custom Agents you build yourself are billed on a credit system, free to try and then $10 per 1,000 monthly Notion credits",
+    "correction": "New credit system from Oct 19, 2026 (existing customers from Nov 2): each Business/Enterprise seat includes 1,500 Standard + 500 Select credits per month; Custom Agents can be built and tried with the included Select credits without buying credits first, and runs cost about 30% less in Notion's testing. Admins can buy more credits; the pricing page still lists $10 per 1,000 credits for Custom Agents."
+   },
+   {
+    "claim": "Custom Agents cost extra on a credit system ($10 per 1,000 monthly credits after a free trial), a variable spend on top of seats",
+    "correction": "Custom Agents now draw first on the 500 Select credits included per Business/Enterprise seat; extra purchased credits are needed only beyond that."
+   },
+   {
+    "claim": "Custom Agents are free to try, then cost $10 per 1,000 monthly Notion credits, billed on top of your regular seat price.",
+    "correction": "Business and Enterprise seats now include 1,500 Standard + 500 Select AI credits per month (new customers from Oct 19, existing from Nov 2, 2026); Custom Agents use Select credits, and admins can buy more for the workspace."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.notion.com/releases/2026-10-19",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://www.notion.com/blog/notion-ai-more-for-less",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://www.notion.com/pricing",
+    "accessed": "2026-10-25"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Release page and blog agree on dates; blog gives the 1,500/500 credit figures. No dollar price for additional credits in the Oct 19 materials; the pricing page's '$10 per 1,000 monthly Notion credits' line is still live, so keep it only as the add-on price. Mobile chats load up to 50% faster. Notion MCP memory sync is live; Skills via MCP coming soon. Did not re-verify the card's monthly-billing seat figures ($12 Plus / $24 Business); the pricing page read returned $10 and $20 without a clear billing label.",
+  "domain_changed": false
+ },
+ {
+  "slug": "canva-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Canva Craft, Canva's first in-house image generation model, built by Canva Research, launched Oct 22, 2026. Canva AI 2.0 (Canva Create 2026) remains the conversational layer on the Canva Design Model.",
+  "version_published": "2026-10-22",
+  "pricing": "canva.com/pricing (shown in US$, yearly): Free $0; Pro US$120/year for one person; Business US$210/year per person; Enterprise custom. Plans share a monthly AI allowance across Standard, Premium and Ultra AI tools; AI Pass is a monthly add-on for Pro and Business (40x more AI than Pro, 20x more than Business). Prices are localized by region.",
+  "free_tier": "Yes: Free plan $0 with a limited AI allowance; Canva Craft is available to all Canva users globally via Dream Lab.",
+  "repositioning": "Craft uses a two-stage architecture (planning model writes a composition plan, rendering model draws it) at up to 2K resolution across 30+ aspect ratios, text in 55 languages, output suited to Magic Layers. Available in Canva (Dream Lab, bottom-left panel) and via the Public API; Canva MCP access 'coming soon'. Faster variants Craft-fast and Craft-ultrafast are announced as upcoming. Canva says Craft debuted 4th on DesignArena and makes Canva Research the 2nd-ranked lab for image generation.",
+  "card_errors": [],
+  "sources": [
+   {
+    "url": "https://www.canva.com/newsroom/news/canva-craft/",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://www.canva.com/pricing/",
+    "accessed": "2026-10-25"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Card is not wrong but omits Craft; Dream Lab is described only as 'image generation with style transfer'. Card says Pro/Business prices could not be confirmed; the pricing page now shows US$120/yr (Pro) and US$210/yr per person (Business) for this viewer's region; monthly figures were not captured. The card's statement that Canva AI 2.0 is still a rolling research preview was not re-checked. The lead's 'API' is the Public API; MCP is not live yet.",
+  "domain_changed": false
+ },
+ {
+  "slug": "perplexity",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Perplexity Computer can now run fully locally on Apple-silicon Macs (Oct 20, 2026): model, orchestration harness and task execution on-device in the Perplexity Mac app; launch local models Qwen 3.6 and PPLX Pro (post-trained Qwen).",
+  "version_published": "2026-10-20",
+  "pricing": "Free $0; Pro $20/mo or $200/yr ($17/mo equivalent) with 4,000 bonus Computer credits (shown as +$40 free Computer credits); Max $200/mo or $2,000/yr ($167/mo equivalent) with 10,000 monthly Computer credits plus 35,000 bonus credits. Enterprise Pro/Max prices on the card were not re-checked this pass.",
+  "free_tier": "Yes: Free plan $0.",
+  "repositioning": "Local mode for Pro, Max and Enterprise subscribers on supported Apple-silicon Macs, 36GB+ RAM recommended. Local files/apps (Notes, Messages, Mail, Numbers) only with permission; code and tools run in sandboxes; the local orchestrator can escalate to 15+ cloud frontier models only if the user authorizes it. Local runs give more control over credit spend.",
+  "card_errors": [],
+  "sources": [
+   {
+    "url": "https://www.perplexity.ai/hub/blog/perplexity-computer-now-runs-fully-local-on-mac",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://www.perplexity.ai/pro",
+    "accessed": "2026-10-25"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Card has no wrong statement on this; it simply lacks local Computer. Help Center (older) gives 24GB minimum / 32GB best for local models; the Oct 20 launch post and hybrid-compute product page recommend 36GB+ for fully local mode. Pro/Max figures on perplexity.ai/pro match the card.",
+  "domain_changed": false
+ },
+ {
+  "slug": "elevenlabs",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "TTS flagship Eleven v4 / v4 Turbo (Sept 28, 2026). New Oct 20, 2026: Eleven Realtime, speech-to-speech voice-agent models Eleven Realtime v1 Mini (default, lowest latency/cost; eleven_realtime_v1_mini) and v1 Max (reasons before answering; eleven_realtime_v1_max).",
+  "version_published": "2026-10-20",
+  "pricing": "elevenlabs.io/pricing: Free $0 (10,000 credits/mo); Starter $6/mo ($5/mo annual, 30,000 credits; $1 first month until Nov 1); Creator $22/mo ($18.33/mo annual, 121,000 credits; $11 first month); Pro $99/mo ($82.50, 600,000); Scale $299/mo ($249.17, 1.8M, 3 seats); Business $990/mo ($825, 6M, 10 seats); Enterprise custom. Eleven Realtime API (elevenlabs.io/pricing/api): connected audio $0.080/min for both models (burst $0.160/min above concurrency); tokens per 1M: v1 Mini $0.20 in / $6.00 out, v1 Max $1.80 in / $9.00 out.",
+  "free_tier": "Yes: 10,000 credits/month, no commercial license.",
+  "repositioning": "Eleven Realtime: each model is a complete voice agent; OpenAI Realtime API-compatible (change endpoint and model name; WebSocket only); available in ElevenAgents (recommended) or the standalone Realtime API; 90+ languages and 17,000+ library voices.",
+  "card_errors": [],
+  "sources": [
+   {
+    "url": "https://elevenlabs.io/blog/realtime",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://elevenlabs.io/pricing/api",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://elevenlabs.io/pricing",
+    "accessed": "2026-10-25"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Card plan prices match. Card says real-time agents run on Eleven v4 Turbo; still true, but Eleven Realtime v1 Mini/Max are now the dedicated speech-to-speech agent models and worth adding. Vendor benchmarks: time to first audio 0.57s (Max) / 0.62s (Mini); Big Bench Audio 98.8% / 75.9%. Mini is not available under Zero Retention Mode or HIPAA; Max is not available with India or Singapore data residency.",
+  "domain_changed": false
+ },
+ {
+  "slug": "zapier-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Oct 6, 2026: 'Zapier Agents is now AI by Zapier' — agent capability moved into a single AI by Zapier step inside the Zap editor (prompt field, tools picker, Zap trigger, per-tool approval, model tiers Standard/Advanced/Premium or a named model, runs in Zap History).",
+  "version_published": "2026-10-06",
+  "pricing": "Core plans unchanged: Free $0 (100 tasks/mo); Professional from $19.99/mo annual ($29.99 monthly) for 750 tasks, up to 2M tasks; Team from $69/mo annual ($103.50 monthly) at 2,000 tasks; Enterprise custom. AI by Zapier is included on Pro, Team and Enterprise (not Free) and bills as tasks from the shared pool: default models free, other tiers cost multipliers so an AI step can cost 1, 3 or 5 tasks; default per-run limit 75 tasks (admins can raise to 500). The legacy Zapier Agents add-on (Free 400 activities, Pro ~$33.33/mo annual) and Chatbots add-on (Free 2 bots, ~$13.33 and ~$66.67/mo annual) still appear on the pricing page. Zapier MCP on all plans, tool calls use tasks.",
+  "free_tier": "Yes: Free plan, 100 tasks/month, two-step Zaps, MCP; AI by Zapier not included on Free.",
+  "repositioning": "Standalone Agents (agents.zapier.com) are being migrated to AI by Zapier steps; no separate Agents subscription or add-on fee needed for AI by Zapier. Zapier has not set a date to turn off Agents and will email users with notice. Migration means recreating each agent as an AI step; eligible agents show a banner with a guide.",
+  "card_errors": [
+   {
+    "claim": "Zapier Agents act autonomously",
+    "correction": "Since Oct 6, 2026 Zapier Agents is now AI by Zapier: agent capability lives in an AI step inside a Zap (prompt, tools, Zap trigger), with standalone Agents being migrated."
+   },
+   {
+    "claim": "Zapier Agents are AI teammates that can take action without waiting for a trigger",
+    "correction": "Agents now run as an AI by Zapier step and start from the Zap trigger; on-demand/chat runs use a webhook trigger, agent-to-agent calls use Sub-Zaps."
+   },
+   {
+    "claim": "The AI products are billed separately: Agents (a free tier with 400 activities/month, a Pro tier at $33.33/month billed annually, and custom Enterprise pricing)",
+    "correction": "AI by Zapier bills as regular tasks from the plan's pool (1, 3 or 5 tasks per AI step depending on model tier; default models free), included on Pro, Team and Enterprise. The old Agents activities add-on is still listed but is being phased into AI by Zapier."
+   },
+   {
+    "claim": "AI products (Agents, Chatbots) are billed separately from the core plans",
+    "correction": "Agent work now draws on the core task quota via AI by Zapier; only Chatbots remains a separately priced add-on (plus the legacy Agents add-on during migration)."
+   },
+   {
+    "claim": "You want autonomous Agents or to expose actions to Claude/GPT via MCP",
+    "correction": "Should say AI by Zapier agent steps inside Zaps (the former Zapier Agents) or Zapier MCP."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://zapier.com/blog/zapier-agents-is-now-ai-by-zapier/",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://help.zapier.com/hc/en-us/articles/47402591569805",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://zapier.com/pricing",
+    "accessed": "2026-10-25"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Date Oct 6, 2026 from search-result metadata/secondary coverage; the blog page itself showed no date. Knowledge sources HubSpot, Asana, Zendesk, Zoom and Jira not yet supported in AI by Zapier. Full-Zap tests consume tasks like production runs. Per-tier task rates are on zapier.com/pricing/rates (not read). The '66,000+ triggers and actions' MCP figure was not re-verified.",
+  "domain_changed": false
+ },
+ {
+  "slug": "windsurf",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Devin Desktop (formerly Windsurf) with SWE-2 as the latest in-house model ('SWE-2, our latest model, is now available').",
+  "version_published": null,
+  "pricing": "devin.ai/pricing: Free $0 (light agent quota, limited models); Pro $20/mo (increased quotas, frontier models, Devin Cloud agents, 'Free use of SWE-2' with no end date shown); Max $200/mo (significantly higher quotas); Teams $80/mo base + $40/mo per full dev seat, up to 200 users; Enterprise custom (SAML/OIDC SSO, dedicated deployment, dedicated account management). Paid quotas refresh daily and weekly; extra usage can be bought at API pricing.",
+  "free_tier": "Yes: Free $0 with a light agent quota and limited model availability.",
+  "repositioning": null,
+  "card_errors": [
+   {
+    "claim": "free use of SWE-2 through October 16, 2026 as a limited-time offer",
+    "correction": "The pricing page now lists 'Free use of SWE-2' on Pro with no end date and no limited-time wording."
+   },
+   {
+    "claim": "the free access to SWE-2 on Pro is time-limited rather than permanent",
+    "correction": "No end date is shown any more; free SWE-2 is listed as a Pro feature."
+   },
+   {
+    "claim": "Free access to the SWE-2 model on Pro is time-limited, ending October 16, 2026",
+    "correction": "October 16 has passed and the pricing page still lists free SWE-2 on Pro without an end date."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://devin.ai/pricing",
+    "accessed": "2026-10-25"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Prices Free / Pro $20 / Max $200 / Teams $80 + $40/seat confirmed. The comparison table has a 'Free SWE-2' row but does not clearly show which tiers include it. Card's 'up to 10 concurrent sessions' on Pro and 'VPC deployment' wording for Enterprise were not found on the pricing page this pass (Enterprise says 'dedicated deployment'); not flagged as errors.",
+  "domain_changed": false
+ },
+ {
+  "slug": "replit",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Agent 4 platform. New: Monitoring Agent (changelog Oct 23, 2026) investigates production issues from app logs and metrics, then attempts and validates fixes. Agent models added Oct 2, 2026: GPT-6.1 Sol (Max Mode) and Claude Sonnet 5.5 (Power Mode).",
+  "version_published": "2026-10-23",
+  "pricing": "replit.com/pricing: Core $20/mo or $18/mo annual ($20 credits, up to 30 hours of Free Mode chat and 60 Free Mode projects); Pro $100/mo or $90/mo annual ($100 credits, more Free Mode usage, 10 parallel agents, premium support, up to 15 collaborators, 50 viewers, 28-day database rollback); Enterprise custom (SSO, SCIM and audit logs, advanced privacy controls, centralized security, single-tenant and private networking, dedicated support). No free account tier listed.",
+  "free_tier": "No standalone free tier on the pricing page; Free Mode is a usage mode inside paid plans.",
+  "repositioning": "Monitoring Agent: enable Monitoring alerts and Auto-fix (opt-in) for background triage; otherwise fixes are reviewed and published by the user; experimental Auto-republish publishes validated fixes automatically. Same changelog: Agent can create/update workspace skills, chat and asset sharing, Stripe Atlas incorporation (20% off), and eligible top-up customers can keep published apps running at zero credits up to an overage limit.",
+  "card_errors": [],
+  "sources": [
+   {
+    "url": "https://docs.replit.com/updates/2026/10/23/changelog",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://docs.replit.com/updates/2026/10/02/changelog",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://replit.com/pricing",
+    "accessed": "2026-10-25"
+   }
+  ],
+  "confidence": "high",
+  "notes": "OpenAI as 'preferred partner' for Replit Agent is reported by TechCrunch (Oct 17/20, 2026) from CEO Amjad Masad's comments, but I found no Replit primary source (blog/docs/changelog) confirming it; the Oct 2 changelog only adds GPT-6.1 Sol and Claude Sonnet 5.5. Do not put it in the card. Card's Enterprise wording 'static outbound IPs' is not on the current pricing page (now 'single-tenant and private networking options', 'SSO, SCIM & audit logs'); minor, not flagged.",
+  "domain_changed": false
+ },
+ {
+  "slug": "claude",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Models unchanged: Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 5.5 (Oct 7), Mythos 5.1 limited. New: Claude Duet research preview (Oct 21, 2026); unified Claude (chat + Cowork) GA for Claude Enterprise (Oct 23, 2026); Opus 5.5 fast mode out of research preview on the API (Oct 15) and on Google Cloud (Oct 22).",
+  "version_published": "2026-10-21",
+  "pricing": "Free $0; Pro $20/mo or $17/mo annual ($200 up front); Max from $100/mo (5x or 20x Pro usage, $100-$200/mo API credits); Team Standard $25/seat monthly ($20 annual), Premium $125 ($100 annual), 2-150 users, up to $500/mo pooled API credits; Enterprise $20/seat/mo annual + usage at API rates, 20-seat minimum. API per 1M tokens: Fable 5.1 $10/$50; Opus 5.5 $4/$20, fast mode $8/$40 (2x, up to 2.5x faster); Sonnet 5.5 $2/$10; Haiku 5.5 $0.10/$0.50 (>100K prompt $0.50/$2.50).",
+  "free_tier": "Yes: Free plan with usage caps.",
+  "repositioning": "Claude Duet: standalone proactive-agent app (iOS, Android, claude.ai) for US Pro and Max subscribers by waitlist, runs on Opus 5.5, no extra cost but uses plan limits; Team/Enterprise not included yet. Enterprise: chat and Cowork merged into one Claude experience (off by default in existing orgs, on by default Nov 16, 2026; not for ZDR/HIPAA/CMEK orgs).",
+  "card_errors": [],
+  "sources": [
+   {
+    "url": "https://claude.com/resources/articles/claude-duet",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://support.claude.com/en/articles/17631495-get-started-with-claude-duet",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://claude.com/resources/articles/unified-claude-enterprise",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://support.claude.com/en/articles/17444462-set-up-and-manage-the-new-unified-claude-experience-for-your-enterprise-organization",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://platform.claude.com/docs/en/release-notes/overview",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://claude.com/pricing",
+    "accessed": "2026-10-25"
+   }
+  ],
+  "confidence": "high",
+  "notes": "All card prices match claude.com/pricing. Lead said Opus 5.5 Fast Mode 'GA Oct 22': the release notes say it left research preview on Oct 15 (no beta header needed, default rate limits); Oct 22 is the Google Cloud availability. Fast mode is not on the Batch API; in Claude Code subscriptions it is usage-credit only. Card could add the Enterprise 20-seat minimum. Duet admitted users get one full limit reset until Nov 30, 2026.",
+  "domain_changed": false
+ },
+ {
+  "slug": "surferseo",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "No numbered version. Product now branded 'Positive Surfer – AI Visibility Platform'; surferseo.com 301-redirects to surfer.ai. Surfer was acquired by Positive Group (announced Oct 28, 2025).",
+  "version_published": null,
+  "pricing": "surfer.ai/pricing (yearly / monthly, USD per month): AI Search Analytics $82 / $95 (50 AI prompts daily, 5 brand spaces, MCP); Discovery $49 / $59 (120 documents, no AI prompt tracking); Standard $99 / $119 (25 ChatGPT prompts weekly, 360 documents); Pro $182 / $219 (50 prompts daily across ChatGPT, Perplexity, Google AI Mode, AI Overviews, Gemini; 360 documents; MCP); Peace of Mind $299 / $359 (100 prompts daily, unlimited* documents, API access); Enterprise custom.",
+  "free_tier": "No free plan; 'Start for Free' trial buttons and a free AI visibility report.",
+  "repositioning": "Fully positioned as an AI Visibility Platform ('Be the answer'), tracking ChatGPT, Perplexity, Google AI Mode, AI Overviews and Gemini, with MCP connection; legal entity remains Surfer Sp. z o.o. (Wrocław).",
+  "card_errors": [
+   {
+    "claim": "url: https://surferseo.com",
+    "correction": "https://surfer.ai (surferseo.com returns 301 to surfer.ai, including /pricing/)."
+   },
+   {
+    "claim": "domain: surferseo.com",
+    "correction": "surfer.ai"
+   },
+   {
+    "claim": "name: Surfer SEO",
+    "correction": "The site now brands the product 'Positive Surfer' (page title 'Positive Surfer - AI Visibility Platform for maximum organic growth'); body copy still calls it 'Surfer'."
+   },
+   {
+    "claim": "Pro at $182/mo billed yearly ($226/mo billed monthly) and Peace of Mind at $299/mo billed yearly ($419/mo billed monthly)",
+    "correction": "Monthly billing is now $219/mo for Pro and $359/mo for Peace of Mind (yearly $182 and $299 unchanged)."
+   },
+   {
+    "claim": "standalone AI Search Analytics tier at $82/mo billed yearly ($98/mo billed monthly)",
+    "correction": "AI Search Analytics is $82/mo billed yearly or $95/mo billed monthly."
+   },
+   {
+    "claim": "Headline prices are annual-billing rates; paying monthly costs 20-40% more",
+    "correction": "Monthly billing now costs about 16-20% more than yearly on every tier."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://surfer.ai/",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://surfer.ai/pricing/",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://positivegroup.com/news/positive-acquires-surfer",
+    "accessed": "2026-10-25"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Redirect checked with curl (HTTP 301 surferseo.com -> https://surfer.ai/). Monthly prices read by switching the billing toggle on surfer.ai/pricing in the browser. 'Positive' is Positive Group, which acquired Surfer (Oct 28, 2025); I found no official announcement of the 'Positive Surfer' rename itself, only the live site branding. Discovery and Standard monthly prices ($59, $119) match the card. 150,000+ users still claimed.",
+  "domain_changed": true
+ },
+ {
+  "slug": "seedance-2-0",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Seedance 2.5 (ByteDance Seed blog Jul 31, 2026; rolled out first on Jimeng AI and Doubao Pro; API on BytePlus ModelArk, BytePlus blog Aug 6, 2026; Dreamina announcement dated Oct 23, 2026).",
+  "version_published": "2026-07-31",
+  "pricing": "No ByteDance list price for the model. Dreamina (ByteDance's international app) sells credit subscriptions (shown in local currency, e.g. Basic ILS 59/mo with 1,575 credits up to Ultra ILS 1,918/mo with 59,000 credits; first-month promos); Seedance 2.5 on Dreamina is for subscriber accounts. BytePlus ModelArk API pricing not captured.",
+  "free_tier": "Not confirmed: Dreamina offers 'Get started for free', but Seedance 2.5 there is limited to subscriber accounts.",
+  "repositioning": "Seedance 2.5: up to 30 s per single generation (up from 15 s in 2.0), extendable (Seed page: 'extend twice'; Dreamina: beta long-video mode up to 180 s), up to 50 multimodal references (Seed blog: up to 30 images, 10 video clips, 10 audio clips), joint audio-video generation, timestamp-level, green-screen, camera-perspective and reference-based editing. Also offered via Dola and partners such as Higgsfield, Runway and DreamBench.",
+  "card_errors": [
+   {
+    "claim": "Seedance 2.0 is an AI video generation model ... one of the most capable open-access video generation models available",
+    "correction": "The current generation is Seedance 2.5 (Jul 31, 2026); the long description, pros, cons, choose_if and FAQ still describe only 2.0."
+   },
+   {
+    "claim": "Seedance 2.0 accepts up to 12 assets per generation request",
+    "correction": "Seedance 2.5 accepts up to 50 multimodal references per clip (up to 30 images, 10 video clips, 10 audio clips per ByteDance Seed)."
+   },
+   {
+    "claim": "enabling consistent characters across clips up to 60 seconds in length",
+    "correction": "ByteDance says 2.5 generates up to 30 s per pass, up from 15 s in the previous version; longer videos come from extensions."
+   },
+   {
+    "claim": "Maximum 60-second clips — not suitable for long-form or full-scene video production",
+    "correction": "Single-pass maximum is 30 s on 2.5 (15 s on 2.0); clips can be extended (Dreamina beta long-video mode up to 180 s)."
+   },
+   {
+    "claim": "The free tier includes commercial rights and outputs without watermarks",
+    "correction": "BytePlus lists visible watermarks and C2PA Content Credentials as safeguards; Dreamina uses invisible watermarks, C2PA and visible AI labels. No free, watermark-free commercial tier is confirmed."
+   },
+   {
+    "claim": "badge: free",
+    "correction": "Not confirmed as free: Seedance 2.5 on Dreamina is for subscriber accounts and the API is paid via BytePlus ModelArk; 'freemium' or 'paid' fits better."
+   },
+   {
+    "claim": "There's no dedicated Seedance consumer product — it's an underlying model accessed through other platforms.",
+    "correction": "ByteDance ships Seedance in its own apps (Jimeng AI, Doubao, Dreamina, Dola) and the BytePlus ModelArk API, besides third-party platforms."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://seed.bytedance.com/en/seedance2_5",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://www.byteplus.com/en/blog/dreamina-seedance2-5",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://dreamina.capcut.com/resource/seedance-2-5-launch",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://dreamina.capcut.com/seedance/seedance-2-5",
+    "accessed": "2026-10-25"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "4K: advertised on Dreamina's Seedance 2.5 marketing page but not on ByteDance Seed or BytePlus pages, and Dreamina pricing tiers list resolution as a paid upgrade; keep 4K out unless confirmed. Lead said 2.5 launched on Dreamina Jul 31; ByteDance Seed's Jul 31 post names Jimeng and Doubao Pro, and Dreamina's own post is dated Oct 23, 2026, saying rollout starts 'in the coming week' for subscribers over 16 in Europe, Asia, the Middle East and South America (not US). BytePlus is not available in the US. 'Temporal Anchor', the Feb 12, 2026 release date, 1080p native, and Krea/HeyGen/ComfyUI integration claims in the card could not be found on ByteDance pages (HeyGen's own card says it integrated Seedance 2.0). The card description's 'Video Edit' / 'Video Extend' names and the list '2.0, 2.0 Fast, 2.0 Mini and 1.5 Pro still offered' were not found on the Seed pages either. Card choose_if mentions CapCut/fal.ai access; unverified. Slug seedance-2-0 now covers 2.5.",
+  "domain_changed": false
+ },
+ {
+  "slug": "heygen",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Avatar V remains the flagship avatar model. HeyGen Voice (heygen-voice-1) is HeyGen's in-house voice model; Oct 2026 added a Turbo variant (heygen-voice-1-turbo) and instant voices.",
+  "version_published": null,
+  "pricing": "heygen.com/pricing: Free $0 (3 videos/mo, 1 min, watermarked, 1 custom avatar, 30+ languages); Creator $29/mo ($24/mo annual), 600 credits, 30 min, 1080p, 175+ languages, limited Avatar V, up to 10 h HeyGen Voice TTS; Pro $49/mo, 1,000 credits (tiers up to 100,000 credits at $4,300/mo), 30 min, 4K, Avatar V, 16+ h HeyGen Voice; Business $149/mo + $20/seat, 1,500 credits, 60 min, 4K, 5+ custom avatars, SSO; Enterprise custom (SCIM, MFA). HeyGen Voice API prices conflict between HeyGen pages (see notes).",
+  "free_tier": "Yes: 3 videos/month up to 1 minute, watermarked; HeyGen Voice usable free in-app with 4 voices and 1,000 characters per take.",
+  "repositioning": "HeyGen Voice: TTS that adapts delivery to surrounding sentences, speech-to-speech via API, Instant Voice (up to 60 s of audio), Professional Voice Clone (30 min-2 h of audio; add-on from $29/mo), voice from a picture, cross-language with accent kept; 12 languages in the playground. HeyGen claims #1 on Artificial Analysis' voice leaderboard.",
+  "card_errors": [
+   {
+    "claim": "a library of 500+ stock avatars",
+    "correction": "The pricing page lists 700+ stock avatars on paid plans (500+ presenters on Free)."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.heygen.com/models/heygen-voice",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://www.heygen.com/blog/heygen-voice-turbo",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://www.heygen.com/pricing",
+    "accessed": "2026-10-25"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Lead said HeyGen Voice launched Oct 9 with API in private preview: neither the Oct 9 date nor 'private preview' was confirmed on heygen.com. The model page says speech-to-speech is 'available via the HeyGen API' with REST/streaming endpoints; the Turbo blog (updated Oct 21) says instant voice creation is free 'during the preview'. API prices conflict: model page says HeyGen Voice $30 and Turbo $15 per 1M characters; Turbo blog says HeyGen Voice $15, Turbo $4, and a Turbo Free model at $0 through Nov 30, 2026. Don't publish API prices until consistent. Pro annual price not stated on the page. Card plan prices otherwise match.",
+  "domain_changed": false
+ },
+ {
+  "slug": "kling-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Kling 4.0, officially launched Oct 15, 2026 (Kuaishou press release Oct 16, 2026). Kling 4.0 Flash had early access from Sept 28 for Ultra yearly subscribers.",
+  "version_published": "2026-10-15",
+  "pricing": "Not re-verified: no Kling 4.0 plan or credit prices found in the official launch materials.",
+  "free_tier": "Not confirmed.",
+  "repositioning": "Kling 4.0: native single-pass generation up to 30 s (spec table 3-30 s), Omni Reference with up to 15 references (up to 10 images, 5 videos, 7 subjects), up to 10 keyframes, 8,000-token prompts, two-channel stereo audio, 21:9 support; integrated with Kling MCP and CLI; API for enterprises and developers 'soon' (developer page mentions early access). Video extension up to two minutes 'will soon' be supported.",
+  "card_errors": [
+   {
+    "claim": "by mid-October, secondary reports suggested it had rolled out more broadly, but this could not be confirmed directly on Kling's own site at the time of writing",
+    "correction": "Kuaishou's own press release (Oct 16, 2026) says Kling 4.0 officially launched on October 15, 2026."
+   },
+   {
+    "claim": "Full Kling 4.0 rollout status and resolution support (including whether 4K is actually live) are unclear: Kling's release note targeted October 2026, but sources disagree on what is fully available",
+    "correction": "Full launch is confirmed (Oct 15, 2026). The press release says Kling 4.0 'will also support 4K, 1080p and the 21:9' format, so 4K is still described as upcoming there."
+   },
+   {
+    "claim": "Reported specifications for the full Kling 4.0 model include single clips from 3 to 30 seconds, up to 10 keyframes per generation, an Omni Reference feature supporting up to 15 reference items",
+    "correction": "These are now confirmed by Kuaishou/Kling official materials, not just reported: up to 30 s single pass, 10 keyframes, 15 references (up to 10 images, 5 videos, 7 subjects), 8,000-token prompts."
+   },
+   {
+    "claim": "Kling 4.0 reportedly supports longer single clips (3-30 seconds) and up to 10 keyframes per generation",
+    "correction": "Confirmed officially; 'reportedly' can be dropped."
+   },
+   {
+    "claim": "You're willing to use an early-access, still-rolling-out model",
+    "correction": "Kling 4.0 is fully launched since Oct 15, 2026; only Flash was early access."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-officially-launches-next-generation-kling-40-raising",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://kling.ai/dev/model-release/kling-4",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://bernama.com/en/press/news.php?id=2622471",
+    "accessed": "2026-10-25"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "HDR is inconsistent: the Oct 16 press release says Kling 4.0 'supports output of up to 10-bit HDR', while the earlier kling.ai model-release note (still saying 4.0 'will officially launch in October') says 10-bit HDR at 4K and 1080p is 'coming soon' and lists 720p/1080p/4K in its spec table. Keep HDR/4K as announced, not confirmed live. Availability to all users/plans not stated in the press release; a secondary report says all users. Pricing not checked on a Kling pricing page.",
+  "domain_changed": false
+ },
+ {
+  "slug": "deepseek",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "deepseek-flash is now served by DeepSeek-V4.1-Flash-1017 (Oct 17, 2026), calling method unchanged; deepseek-v4-pro is DeepSeek-V4-Pro-0813. Open weights on Hugging Face/ModelScope, MIT license, 763B params.",
+  "version_published": "2026-10-17",
+  "pricing": "Unchanged, per 1M tokens off-peak/peak: deepseek-flash input cache hit $0.003/$0.006, cache miss $0.15/$0.30, output $0.60/$1.20; deepseek-v4-pro cache hit $0.022/$0.044, cache miss $0.66/$1.32, output $1.98/$3.96. Peak 01:00-04:00 and 06:00-10:00 UTC Mon-Fri, excluding Chinese public holidays. New standalone Search and Fetch APIs: $0.75 per 1,000 successful requests each; server-side tool calls via DeepSeek Harness, Claude Code or Codex free until Nov 1, 2026 00:00 Beijing time (Oct 31 16:00 UTC).",
+  "free_tier": "Web/app chat available; free status not stated on API docs. API is paid (granted balance used first).",
+  "repositioning": "V4.1-Flash-1017: better benchmarks, faster task completion and shorter outputs; RL with self-feedback for end-to-end project development; optimized for DeepSeek Harness (v0.2.1-rc.1+), Tencent CodeBuddy and WorkBuddy; live on website, app and API.",
+  "card_errors": [
+   {
+    "claim": "now running on DeepSeek-V4.1-Flash (API name deepseek-flash, released September 10, 2026)",
+    "correction": "deepseek-flash is now served by DeepSeek-V4.1-Flash-1017, an update released October 17, 2026 (same model name and prices)."
+   },
+   {
+    "claim": "deepseek-flash, now on the V4.1-Flash architecture released September 10, 2026",
+    "correction": "Current version is DeepSeek-V4.1-Flash-1017 (Oct 17, 2026); the Sept 10 V4.1-Flash is superseded."
+   },
+   {
+    "claim": "legacy aliases deepseek-v4-flash and deepseek-v4-flash-vision-exp are still accepted but now route to V4.1-Flash",
+    "correction": "They are still accepted; the underlying models are retired and requests are served by DeepSeek-V4.1-Flash-1017 at the Flash price."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://api-docs.deepseek.com/news/news261017",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://api-docs.deepseek.com/quick_start/pricing",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "accessed": "2026-10-25"
+   }
+  ],
+  "confidence": "high",
+  "notes": "Model prices, 1M context, 384K max output, vision on Flash only, concurrency 2,500/500 all unchanged and match the card. License (MIT) and size (763B) come from the Hugging Face model card; the news page doesn't state the license. Search & Fetch billing start: news page says Oct 31, 2026 16:00 UTC, pricing page says Nov 1 00:00 Beijing time (same moment).",
+  "domain_changed": false
+ },
+ {
+  "slug": "github-copilot",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Oct 19, 2026: Copilot retired Gemini 3.7 Flash, GPT-5.5, GPT-5.4, GPT-5.4 mini, GPT-5 mini and Grok 4.5 (replacements Gemini 3.8 Flash, GPT-6.1 Sol, GPT-6 Luna, Grok 4.7). Supported-models page still lists Anthropic, OpenAI, Google, xAI, Microsoft (MAI-Code-1.1-Flash) and Moonshot (Kimi K3).",
+  "version_published": "2026-10-19",
+  "pricing": "github.com/features/copilot/plans: Free $0 (2,000 completions/mo, limited chat and agent, entry-level models); Pro $10/mo with $15 total included usage ($10 base + $5 flex; 1,000 + 500 credits); Pro+ $39/mo with $70 included ($39 + $31); Max $100/mo with $200 included ($100 + $100). 1 AI credit = $0.01; extra credits purchasable on paid plans. Flex allotments are included at no extra cost but may vary over time. Business/Enterprise prices not shown on the plans page this pass.",
+  "free_tier": "Yes: Free $0 with 2,000 completions/month and limited chat/agent usage.",
+  "repositioning": null,
+  "card_errors": [
+   {
+    "claim": "Pro at $10 per month in base credits plus $5 per month in flex credits for $15 per month total (1,500 AI Credits ...), Pro+ at $39 per month base plus $31 per month flex for $70 per month total ..., or Max at $100 per month base plus $100 per month flex for $200 per month total",
+    "correction": "The prices are $10, $39 and $100 per month. $15, $70 and $200 are the total included usage (base + flex) at the same price, not what you pay; GitHub: Pro and Pro+ 'include more total usage at the same price through a new flex allotment'."
+   },
+   {
+    "claim": "Advertised base prices for Pro, Pro+ and Max do not include the extra flex credit allowance, which roughly doubles the real monthly cost on some tiers",
+    "correction": "Wrong: flex is extra included usage at no additional charge; the subscription price stays $10 / $39 / $100. Flex amounts can change over time."
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://docs.github.com/en/copilot/reference/ai-models/supported-models",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://github.com/features/copilot/plans",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://github.blog/news-insights/company-news/github-copilot-individual-plans-introducing-flex-allotments-in-pro-and-pro-and-a-new-max-plan/",
+    "accessed": "2026-10-25"
+   }
+  ],
+  "confidence": "high",
+  "notes": "The card names no retired model, so the Oct 19 deprecation needs no card fix; vendor list (Anthropic, OpenAI, Google, xAI, Microsoft, Moonshot) is still accurate. The supported-models page (first 100K chars read) still listed Grok 4.5; deprecation note says no action is needed to remove deprecated models. The 'cost predictability' con is fine for overage, but should not say flex adds cost. Business $19 (1,900 credits) and Enterprise $39 (3,900 credits) and the Student plan were not visible on the plans page this pass; not flagged.",
+  "domain_changed": false
+ },
+ {
+  "slug": "lovable",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "No numbered version; agentic Build/Plan modes on a credit system.",
+  "version_published": null,
+  "pricing": "lovable.dev/pricing: Free $0; Pro $25/mo or $21/mo billed annually (100 monthly credits, credit rollovers, top-ups, custom domains, user roles, remove badge); Business $50/mo or $42/mo annually (100 Business credits, team workspace, role-based access, workspace publish, SSO, security center); Enterprise platform fee + volume pricing (SCIM, audit logs, EU inference, etc.). Yearly = '2 months free'. Grants (docs): Free 5 build credits/day capped at 30/month; Free, Pro and Business each get 20 Cloud, 4 AI and 1 connector credit per month plus a daily chat allowance. Chat is priced per message (typically a fraction of a credit). The chat pricing model and daily chat allowance apply 'through October 31, 2026'; the monthly Cloud/AI/connector grants are 'a temporary offering and subject to change'.",
+  "free_tier": "Yes: 5 build credits/day (max 30/month), 20 Cloud and 4 AI credits per month (temporary grants).",
+  "repositioning": null,
+  "card_errors": [],
+  "sources": [
+   {
+    "url": "https://docs.lovable.dev/introduction/credits-and-usage",
+    "accessed": "2026-10-25"
+   },
+   {
+    "url": "https://lovable.dev/pricing",
+    "accessed": "2026-10-25"
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Card prices ($25/$21, $50/$42, 5 daily build credits up to 30/month, 20 Cloud, 4 AI credits) match. Risk: the card presents the 20 Cloud / 4 AI monthly credits as permanent, but Lovable labels them temporary, and the chat pricing ends Oct 31, 2026; re-check after Nov 1 (no post-Oct-31 pricing is published yet). Not verified this pass: top-ups '$15 per 50 credits' (Pro) and '$30 per 50' (Business), top tiers ~$2,250 and ~$4,300/mo, 'Lovable API' and 'opt-out of data training by default' on Business; the docs give plan credit rates of $0.25 (Pro) and $0.50 (Business) per credit for converting old balances.",
+  "domain_changed": false
+ }
+]

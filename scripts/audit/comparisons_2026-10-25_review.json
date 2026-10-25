@@ -1,0 +1,1915 @@
+[
+ {
+  "slug": "canva-ai-vs-figma-ai",
+  "before": {
+   "choose_a": "[\"✅ You want to describe a design in text or voice and get back an editable layout without opening a professional design tool.\", \"✅ You're a marketer, social media manager, or non-designer who needs on-brand social posts, presentations, and documents fast.\", \"✅ You want one toolkit that covers templates, image generation, copywriting, and data-to-chart creation through Magic Design, Dream Lab, Magic Write, and Magic Charts.\", \"✅ You want AI-generated posters to stay editable as separate layers instead of flattening into one image, thanks to Magic Layers.\"]",
+   "choose_b": "[\"✅ You're designing UI/UX interfaces and want AI output to land directly inside your existing Figma files.\", \"✅ You want to turn a written prompt into a working interactive prototype and connect it to a Supabase backend with Figma Make.\", \"✅ You need AI across a wide range of tasks in one editor, from first drafts and image generation to rewriting, translation, and the Weave suite for imagery, video, and audio.\", \"✅ You want AI agents or outside tools to work directly with your design files through the Figma MCP server and connectors.\"]",
+   "faq": [
+    {
+     "a": "Canva offers a free plan alongside paid Pro, Business, and custom Enterprise tiers, but the free plan's AI credit allowance is limited and the exact cap isn't published. Pro and Business pricing is region-dependent, so check Canva's pricing page for your country.",
+     "q": "Is Canva AI free?"
+    },
+    {
+     "a": "Figma's free Starter plan includes AI credits, capped at 150 per day and 500 per month, with unlimited drafts. Paid Professional, Organization, and Enterprise seats add larger monthly credit allotments at increasing price points.",
+     "q": "Is Figma AI free?"
+    },
+    {
+     "a": "Figma AI, since Figma Make can turn a prompt into a working interactive prototype with a real Supabase backend connection, and every AI output lands directly inside your Figma design files.",
+     "q": "Which is better for UI/UX design and prototyping?"
+    },
+    {
+     "a": "Canva AI, since its Magic Studio toolkit bundles templates, image generation, copywriting, and chart creation specifically for fast, on-brand marketing assets rather than UI design work.",
+     "q": "Which is better for marketing content like social posts and presentations?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want to describe a design in text or voice and get back a fully editable layout built on Canva's own Design Model, without opening a professional design tool.",
+    "✅ You're a marketer, social media manager, or non-designer who needs on-brand social posts, presentations, and documents fast.",
+    "✅ You want one toolkit that covers templates, image generation, copywriting, and data-to-chart creation through Magic Design, Dream Lab with Canva Craft, Magic Write, and Magic Charts.",
+    "✅ You want AI-generated posters to stay editable as separate layers instead of flattening into one image, thanks to Magic Layers, which also works inside ChatGPT and Gemini."
+   ],
+   "choose_b": [
+    "✅ You're designing UI/UX interfaces and want AI output to land directly inside your existing Figma files with no export/import step.",
+    "✅ You want to turn a written prompt into a working interactive prototype and connect it to a Supabase backend with Figma Make.",
+    "✅ You need AI across a wide range of tasks in one editor, from first drafts and image generation to rewriting, translation, and the now generally available Weave suite for imagery, video, and audio.",
+    "✅ You want AI agents or outside tools to work directly with your design files through the Figma MCP server and connectors."
+   ],
+   "faq": [
+    {
+     "q": "Is Canva AI free?",
+     "a": "Canva offers a free plan with a limited, shared AI allowance across its Standard, Premium, and Ultra AI tools, alongside paid Pro and Business annual plans and a custom-priced Enterprise tier. The exact free-plan AI cap isn't published, and Pro/Business pricing can vary by region."
+    },
+    {
+     "q": "Is Figma AI free?",
+     "a": "Figma's free Starter plan includes AI credits capped at 150 per day and 500 per month, with unlimited drafts. Paid Professional, Organization, and Enterprise seats add larger monthly credit allotments at higher price points."
+    },
+    {
+     "q": "Which is better for UI/UX design and prototyping?",
+     "a": "Figma AI, since Figma Make can turn a prompt into a working interactive prototype with a Supabase backend connection, and AI output lands directly inside your existing Figma design files."
+    },
+    {
+     "q": "Which is better for marketing content like social posts and presentations?",
+     "a": "Canva AI, since its Magic Studio toolkit bundles templates, image generation via Canva Craft, copywriting, and chart creation specifically for fast, on-brand marketing assets rather than interface design work."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "consensus-vs-perplexity",
+  "before": {
+   "choose_a": "[\"✅ You need answers grounded specifically in peer-reviewed academic and scientific literature rather than general web sources.\", \"✅ You want Deep Search to break a question into sub-questions and scan up to roughly 1,000 papers in wide-coverage mode.\", \"✅ You want to use AI-powered literature search inside ChatGPT, Claude, or Microsoft 365 Copilot through Consensus Everywhere.\", \"✅ You're running a literature review or citation search and want ready-made Skills workflows plus a Research Gaps Matrix.\"]",
+   "choose_b": "[\"✅ You want an agentic Deep Research mode that asks clarifying questions, takes mid-run follow-ups, and shows live source tracking.\", \"✅ You want one subscription that gives you access to multiple AI models from vendors like OpenAI, Anthropic, and Google.\", \"✅ You want an AI-assisted browsing experience through the Comet browser alongside your searches.\", \"✅ You need a general-purpose answer engine for everyday questions, not just academic literature.\"]",
+   "faq": [
+    {
+     "a": "Consensus is an AI research engine that searches peer-reviewed academic and scientific literature to answer questions with cited evidence, and has expanded into an AI workspace with features like Skills, a Research Gaps Matrix, and integrations with ChatGPT, Claude, and Microsoft 365 Copilot.",
+     "q": "What is Consensus?"
+    },
+    {
+     "a": "Yes, Consensus has a free tier that includes basic paper search, 10 Pro messages per month, and up to 3 Deep reviews per month. Paid plans start at $20 a month (or $144 a year billed annually) for Pro, with a higher Deep plan at $65 a month (or $540 a year).",
+     "q": "Is Consensus free?"
+    },
+    {
+     "a": "Consensus is purpose-built for peer-reviewed scientific literature, with Deep Search synthesizing across many papers and linking directly to sources. Perplexity is a broader AI answer engine with agentic Deep Research and multi-model access, better suited to general or current-events research than literature-specific work.",
+     "q": "Which is better for academic research, Consensus or Perplexity?"
+    },
+    {
+     "a": "Perplexity's Free tier costs $0 a month. Pro is $20 a month or $200 a year (about $17 a month billed annually), and Max is $200 a month or $2,000 a year (about $167 a month billed annually).",
+     "q": "How much does Perplexity cost?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You need answers grounded specifically in peer-reviewed academic and scientific literature rather than general web sources.",
+    "✅ You want Deep Search to break a question into sub-questions and scan up to roughly 1,000 papers in wide-coverage mode.",
+    "✅ You want ready-made Skills workflows for literature review, citation snowballing, reverse citation search, or verifying citations.",
+    "✅ You want to use Consensus's research capabilities inside ChatGPT, Claude, or Microsoft 365 Copilot through Consensus Everywhere."
+   ],
+   "choose_b": [
+    "✅ You want an agentic Deep Research mode that asks clarifying questions, takes mid-run follow-ups, and shows live source tracking.",
+    "✅ You want one subscription that gives you access to multiple AI models from vendors like OpenAI, Anthropic, and Google.",
+    "✅ You want Computer to run fully locally on an Apple-silicon Mac so tasks and models stay on-device.",
+    "✅ You want AI-assisted browsing through the Comet browser alongside your research work."
+   ],
+   "faq": [
+    {
+     "q": "What is Consensus?",
+     "a": "Consensus is an AI research engine that searches peer-reviewed academic and scientific literature to answer questions with cited evidence. It has expanded into an AI workspace with Skills workflows, a Research Gaps Matrix, and integrations with ChatGPT, Claude, and Microsoft 365 Copilot."
+    },
+    {
+     "q": "Is Consensus free?",
+     "a": "Yes, Consensus has a free tier with basic paper search, 10 Pro messages per month, and up to 3 Deep reviews per month. Pro costs $20 a month ($144 a year billed annually), and a higher Deep plan costs $65 a month ($540 a year billed annually), with discounts up to 40% for students, faculty, and US clinicians."
+    },
+    {
+     "q": "Which is better for academic literature research, Consensus or Perplexity?",
+     "a": "Consensus is purpose-built for peer-reviewed scientific literature, with Deep Search scanning up to about 1,000 papers and Skills workflows for tasks like literature review and citation snowballing. Perplexity is a broader answer engine with agentic Deep Research and multi-model access, better suited to general or current research than literature-specific work."
+    },
+    {
+     "q": "How much does Perplexity cost?",
+     "a": "Perplexity's Free tier costs $0 a month. Pro is $20 a month or $200 a year (about $17 a month billed annually) with 4,000 bonus Computer credits, and Max is $200 a month or $2,000 a year (about $167 a month billed annually) with 10,000 monthly Computer credits plus 35,000 bonus credits."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "capcut-vs-kling-ai",
+  "before": {
+   "choose_a": "[\"✅ You need to cut, trim, and arrange existing footage rather than generate new video from scratch.\", \"✅ You want a free tier that already includes multi-track editing, keyframes, chroma key, basic AI voiceover, and 1080p export.\", \"✅ You switch between phone, laptop, and browser and want a project that carries over across devices.\", \"✅ You want a large built-in library of templates, transitions, fonts, and stock audio to speed up social video edits.\"]",
+   "choose_b": "[\"✅ You want to generate a short clip purely from a text prompt or a still image, with no existing footage to edit.\", \"✅ You're building a multi-shot sequence and need Omni Reference to keep characters or objects consistent across up to 15 reference items.\", \"✅ You care about motion realism and prompt adherence, since Kling 3.0 Pro topped the ArtificialAnalysis text-to-video leaderboard in February 2026.\", \"✅ You need very detailed scene direction, since Kling AI accepts prompts of up to roughly 8,000 tokens and generates built-in two-channel stereo audio.\"]",
+   "faq": [
+    {
+     "a": "CapCut is a video editor: you import footage and cut, arrange, and polish it on a timeline, with built-in AI tools like Seedream and Seedance for generation alongside that. Kling AI is a dedicated generator: you describe a scene in text or feed it an image and it produces a new short clip from scratch.",
+     "q": "What is the core difference between CapCut and Kling AI?"
+    },
+    {
+     "a": "Kling AI, since generating video from text or images is its core function, with features like Omni Reference for multi-shot consistency and long-form prompts of up to roughly 8,000 tokens. CapCut's Seedream and Seedance tools sit alongside a traditional editor rather than being the main focus.",
+     "q": "Which is better for turning a text prompt into a finished short video?"
+    },
+    {
+     "a": "Yes, CapCut has a genuinely capable free tier with multi-track editing, keyframes, chroma key, basic AI voiceover, and 1080p export. The fuller AI toolkit and 4K export are reserved for the paid Pro tier, and CapCut does not publish fixed prices for it.",
+     "q": "Is CapCut free to use?"
+    },
+    {
+     "a": "No free tier is listed for Kling AI; it runs on a credit-based subscription with tiers such as Standard, Pro, Premier, and Ultra, and current pricing for Kling 4.0 and Flash has not been published.",
+     "q": "Is Kling AI free to use?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You need to cut, trim and arrange existing footage rather than generate new video from scratch.",
+    "✅ You want a free tier that already includes multi-track editing, keyframes, chroma key, basic AI voiceover and 1080p export.",
+    "✅ You switch between phone, laptop and browser and want a project that carries over across devices.",
+    "✅ You want a large built-in library of templates, transitions, fonts and stock audio to speed up social video edits."
+   ],
+   "choose_b": [
+    "✅ You want to generate a short clip purely from a text prompt or a still image, with no existing footage to edit.",
+    "✅ You're building a multi-shot sequence and need Omni Reference to keep characters or objects consistent across up to 15 reference items.",
+    "✅ You care about motion realism and prompt adherence, since Kling 3.0 Pro topped the ArtificialAnalysis text-to-video leaderboard in February 2026.",
+    "✅ You need very detailed scene direction, since Kling AI accepts prompts of up to roughly 8,000 tokens and generates built-in two-channel stereo audio."
+   ],
+   "faq": [
+    {
+     "q": "What is the core difference between CapCut and Kling AI?",
+     "a": "CapCut is a video editor: you import footage and cut, arrange and polish it on a timeline, with built-in AI tools like Seedream and Seedance for generation alongside that. Kling AI is a dedicated generator: you describe a scene in text or feed it an image and it produces a new short clip from scratch."
+    },
+    {
+     "q": "Which is better for turning a text prompt into a finished short video?",
+     "a": "Kling AI, since generating video from text or images is its core function, with features like Omni Reference for multi-shot consistency and prompts of up to roughly 8,000 tokens. CapCut's Seedream and Seedance tools sit alongside a traditional editor rather than being the main focus."
+    },
+    {
+     "q": "Is CapCut free to use?",
+     "a": "Yes, CapCut has a genuinely capable free tier with multi-track editing, keyframes, chroma key, basic AI voiceover and 1080p export. The fuller AI toolkit and 4K export are reserved for the paid Pro tier, and CapCut does not publish fixed prices for it."
+    },
+    {
+     "q": "Is Kling AI free to use?",
+     "a": "No free plan is confirmed for Kling AI; it runs on a credit-based subscription with tiers such as Standard, Pro, Premier and Ultra, and current pricing for Kling 4.0 and Flash has not been published. Early access to Kling 4.0 Flash is also gated behind an Ultra yearly subscription."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "elevenlabs-vs-murf-ai",
+  "before": {
+   "choose_a": "[\"✅ You want to clone a voice from as little as about 10 seconds of audio, with an option to upgrade to studio-grade professional cloning.\", \"✅ You're building a real-time voice agent and want to pick the reasoning model from OpenAI, Anthropic or Google, or plug in your own LLM endpoint.\", \"✅ You need one credit balance that covers voice, music, sound effects, image and video generation with lip sync instead of separate subscriptions.\", \"✅ You need natural, expressive speech across more than 90 languages for narration or audiobook-style content.\"]",
+   "choose_b": "[\"✅ You're producing e-learning courses or explainer videos and need a built-in editor that syncs voiceover to slides and video.\", \"✅ You want a large, ready-made voice library with 200+ voices across 30+ languages and accents, plus style, pitch and emphasis controls.\", \"✅ You're building a real-time conversational app and want the Falcon-based API advertising sub-100ms time-to-first-audio.\", \"✅ You want a Studio plan with commercial rights and full access to the voice library for ongoing production work.\"]",
+   "faq": [
+    {
+     "a": "Murf AI is the stronger fit because Studio includes a built-in editor that syncs voiceover to slides and video, along with style, pitch and emphasis controls built for presentations. ElevenLabs can generate the narration but doesn't offer that same video-sync editor.",
+     "q": "Which is better for e-learning and explainer videos?"
+    },
+    {
+     "a": "Yes. ElevenLabs offers instant voice cloning from about 10 seconds of audio, plus a professional studio-grade cloning option for higher quality; cloning raises consent and misuse concerns you need to manage yourself.",
+     "q": "Can ElevenLabs clone my voice?"
+    },
+    {
+     "a": "Studio has a free plan with 10 projects and 10 minutes of voice generation per month with no downloads or commercial rights, a Creator plan at $19/month billed annually with 24 hours of voice generation per year and commercial rights, and a Business plan at $66/month billed annually with 96 hours per year but no voice cloning or extra seats; Enterprise is custom-priced.",
+     "q": "How does Murf AI's Studio pricing work?"
+    },
+    {
+     "a": "Yes. Beyond TTS and voice cloning, ElevenLabs covers music generation, sound effects, image and video generation with lip sync, and conversational voice agents, all drawn from a single credit balance.",
+     "q": "Does ElevenLabs do more than text-to-speech?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want to clone a voice from about 10 seconds of audio, with an option to upgrade to studio-grade professional cloning.",
+    "✅ You're building a real-time voice agent and want to choose the reasoning model from OpenAI, Anthropic or Google, or connect your own LLM endpoint.",
+    "✅ You need one credit balance that covers voice, music, sound effects, image and video generation with lip sync instead of juggling separate subscriptions.",
+    "✅ You need natural, expressive speech across more than 90 languages for narration or audiobook-style content."
+   ],
+   "choose_b": [
+    "✅ You're producing e-learning courses or explainer videos and need a built-in editor that syncs voiceover to slides and video.",
+    "✅ You want a large, ready-made voice library with 200+ voices across 30+ languages and accents, plus style, pitch and emphasis controls.",
+    "✅ You're building a real-time conversational app and want the Falcon-based API advertising sub-100ms time-to-first-audio.",
+    "✅ You want a Studio plan with commercial rights and full access to the voice library for ongoing production work."
+   ],
+   "faq": [
+    {
+     "q": "Which is better for e-learning and explainer videos?",
+     "a": "Murf AI is the stronger fit because Studio includes a built-in editor that syncs voiceover to slides and video, along with style, pitch and emphasis controls built for presentations. ElevenLabs can generate the narration but doesn't offer that same video-sync editor."
+    },
+    {
+     "q": "Can ElevenLabs clone my voice?",
+     "a": "Yes. ElevenLabs offers instant voice cloning from about 10 seconds of audio, plus a professional studio-grade cloning option for higher quality; cloning raises consent and misuse concerns you need to manage yourself."
+    },
+    {
+     "q": "How does Murf AI's Studio pricing work?",
+     "a": "Studio has a free plan with 10 projects and 10 minutes of voice generation per month with no downloads or commercial rights, a Creator plan at $19/month billed annually with an annual pool of 24 hours of voice generation and commercial rights, and a Business plan at $66/month billed annually with 96 hours per year but no voice cloning and only one editor seat; Enterprise is custom-priced."
+    },
+    {
+     "q": "Does ElevenLabs do more than text-to-speech?",
+     "a": "Yes. Beyond TTS and voice cloning, ElevenLabs covers music generation, sound effects, image and video generation with lip sync, and real-time conversational voice agents, all drawn from a single credit balance."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "perplexity-vs-notebooklm",
+  "before": {
+   "choose_a": "[\"✅ You want cited, up-to-date answers pulled from the live web instead of from files you upload yourself.\", \"✅ You need an agentic Deep Research mode that asks clarifying questions, takes mid-run follow-ups, and shows live source tracking.\", \"✅ You want multi-model access to systems from OpenAI, Anthropic, Google and other vendors in one subscription.\", \"✅ You want AI-assisted browsing through the Comet browser rather than managing a notebook of documents.\"]",
+   "choose_b": "[\"✅ You have your own PDFs, slides, or notes and want answers grounded only in those sources with citations back to the text.\", \"✅ You want to turn your uploaded material into Audio or Video Overviews for easier review.\", \"✅ You need to export results as editable PDFs, PowerPoint, Excel, or CSV/JSON files.\", \"✅ You want a capable research tool that's free to use with any Google account for its core features.\"]",
+   "faq": [
+    {
+     "a": "Perplexity searches the live web and returns cited, up-to-date answers, with an agentic Deep Research mode and access to multiple AI models. Gemini Notebook only answers from documents you upload yourself, citing back to your source text, and adds tools like Audio/Video Overviews and, for higher-tier plans, a secure cloud computer for code execution.",
+     "q": "What is the difference between Perplexity and Gemini Notebook?"
+    },
+    {
+     "a": "Gemini Notebook is the better fit, since it's built to ground every answer strictly in the PDFs, slides, or notes you upload and cites the original text. Perplexity is designed for open web research rather than working from a fixed set of your own files.",
+     "q": "Which is better for analyzing your own documents?"
+    },
+    {
+     "a": "Yes, Perplexity has a free tier at $0 a month. Paid tiers include Pro at $20/month (or $200/year) and Max at $200/month (or $2,000/year), with Enterprise plans also available.",
+     "q": "Is Perplexity free?"
+    },
+    {
+     "a": "Yes, Gemini Notebook is free to use with any Google account for its core features. Higher source and notebook limits, plus advanced features like the cloud computer, come through paid Google AI plans such as Google AI Pro at $19.99/month or Google AI Ultra at $99.99 or $199.99/month.",
+     "q": "Is Gemini Notebook free?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want answers pulled from the live web with inline citations instead of from files you upload yourself.",
+    "✅ You need an agentic Deep Research mode that asks clarifying questions, takes mid-run follow-ups, and shows live source tracking.",
+    "✅ You want multi-model access to systems from OpenAI, Anthropic, Google and other vendors in one subscription.",
+    "✅ You want AI-assisted browsing through the Comet browser or a fully local Computer assistant on a supported Mac."
+   ],
+   "choose_b": [
+    "✅ You have your own PDFs, slides, or notes and want answers grounded only in those sources with citations back to the text.",
+    "✅ You want to turn your uploaded material into Audio or Video Overviews for easier review.",
+    "✅ You need to export results as editable PDFs, PowerPoint, Excel, or CSV/JSON files.",
+    "✅ You want a free research notebook tied to your Google account, with a secure cloud computer for code execution on higher tiers."
+   ],
+   "faq": [
+    {
+     "q": "What is the difference between Perplexity and Gemini Notebook?",
+     "a": "Perplexity searches the live web and returns cited, up-to-date answers, with an agentic Deep Research mode and access to multiple AI models. Gemini Notebook only answers from documents you upload yourself, citing back to your source text, and adds tools like Audio/Video Overviews and, on higher tiers, a secure cloud computer for code execution."
+    },
+    {
+     "q": "Which is better for analyzing your own documents?",
+     "a": "Gemini Notebook is the better fit, since it's built to ground every answer strictly in the PDFs, slides, or notes you upload and cites the original text. Perplexity is designed for open web research rather than working from a fixed set of your own files."
+    },
+    {
+     "q": "Is Perplexity free?",
+     "a": "Yes, Perplexity has a free tier at $0 a month. Paid tiers include Pro at $20/month (or $200/year) and Max at $200/month (or $2,000/year)."
+    },
+    {
+     "q": "Is Gemini Notebook free?",
+     "a": "Yes, Gemini Notebook is free to use with any Google account for its core features. Higher source and notebook limits, plus advanced features like the cloud computer, come through paid Google AI plans such as Google AI Pro at $19.99/month or Google AI Ultra at $99.99 or $199.99/month."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "figma-ai-vs-canva-ai",
+  "before": {
+   "choose_a": "[\"✅ You need to turn a prompt into an interactive prototype that can connect to a Supabase backend for a working app.\", \"✅ You want AI output to land directly inside your existing Figma design files instead of exporting from a separate tool.\", \"✅ You're building a product interface and want a Figma MCP server and connectors so AI agents can work directly with your files.\", \"✅ You want access to a broad set of AI tools—first drafts, image generation, rewriting, translation, and the Weave suite—all within one editor.\"]",
+   "choose_b": "[\"✅ You're a solo creator or small marketing team who wants good-looking, on-brand assets fast without learning a professional design tool.\", \"✅ You want one toolkit that covers text-to-design, image generation with style transfer, copywriting, and data-to-chart visualization.\", \"✅ You want AI-generated designs to stay fully editable afterward instead of being flattened into a single image, thanks to Magic Layers.\", \"✅ You want a conversational assistant with persistent memory that keeps output consistent with your brand across projects.\"]",
+   "faq": [
+    {
+     "a": "Figma AI is the better fit since Figma Make turns prompts into interactive prototypes that can connect to a Supabase backend, and all output lands directly in your Figma files. Canva AI is built around common design formats like social posts and presentations rather than product interfaces.",
+     "q": "Which is better for UI/UX design and prototyping?"
+    },
+    {
+     "a": "Canva AI, through its Magic Studio toolkit, is built specifically for Magic Design templates, Dream Lab image generation, and Magic Write copy, which suit marketing and social assets. Figma AI's strengths are centered on product design and prototyping instead.",
+     "q": "Which is better for marketing and social content?"
+    },
+    {
+     "a": "Not really, based on how each tool is built. Figma AI is woven into a dedicated design editor with prototyping and developer-facing features like an MCP server, while Canva AI is a conversational assistant layered over a broader design-for-everyone platform.",
+     "q": "Can Canva AI replace Figma AI?"
+    },
+    {
+     "a": "Figma offers a free Starter plan that includes a monthly AI credit allotment, capped at 150 credits per day and 500 per month. Heavier or sustained use requires a paid seat with a larger credit allowance, plus the option to add more credits as a paid add-on.",
+     "q": "Is Figma AI free to use?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want to turn a written prompt into an interactive prototype that can connect to a Supabase backend for a working app, using Figma Make.",
+    "✅ You want AI output to land directly inside your existing Figma design files instead of exporting from a separate tool.",
+    "✅ You're building a product interface and want a Figma MCP server and connectors so AI agents can work directly with your files.",
+    "✅ You want one editor that covers first drafts, prompt-to-prototype, image generation and editing, rewriting, translation, and the Weave suite for imagery, video and audio."
+   ],
+   "choose_b": [
+    "✅ You're a solo creator or small marketing team who wants good-looking, on-brand assets fast without learning a professional design tool.",
+    "✅ You want one toolkit that covers text-to-design, image generation, copywriting, and data-to-chart visualization in Magic Studio.",
+    "✅ You want AI-generated designs to stay fully editable afterward instead of being flattened into a single image, thanks to Magic Layers.",
+    "✅ You need high-resolution image generation with text rendering across many languages, via Canva Craft in Dream Lab."
+   ],
+   "faq": [
+    {
+     "q": "Which is better for UI/UX design and prototyping?",
+     "a": "Figma AI is the better fit since Figma Make turns prompts into interactive prototypes that can connect to a Supabase backend, and all output lands directly in your Figma files. Canva AI is built around common design formats like social posts and presentations rather than product interfaces."
+    },
+    {
+     "q": "Which is better for marketing and social content?",
+     "a": "Canva AI, through its Magic Studio toolkit, is built specifically for Magic Design templates, Dream Lab image generation with Canva Craft, and Magic Write copy, which suit marketing and social assets. Figma AI's strengths are centered on product design and prototyping instead."
+    },
+    {
+     "q": "Can Canva AI replace Figma AI?",
+     "a": "Not really, based on how each tool is built. Figma AI is woven into a dedicated design editor with prototyping and developer-facing features like an MCP server, while Canva AI is a conversational assistant layered over a broader design-for-everyone platform."
+    },
+    {
+     "q": "Is Figma AI free to use?",
+     "a": "Figma offers a free Starter plan that includes a monthly AI credit allotment, capped at 150 credits per day and up to 500 per month. Heavier or sustained use requires a paid seat with a larger credit allowance, plus the option to add more credits as a paid add-on."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "replit-vs-github-copilot",
+  "before": {
+   "choose_a": "[\"✅ You want to build an app entirely in the browser with no local setup required.\", \"✅ You want parallel agents building authentication, database, backend, and frontend components at the same time.\", \"✅ You want built-in vulnerability scanning with three scan levels, including a free dependency and static analysis pass.\", \"✅ You want to go from writing code to a deployed, running app inside the same environment.\"]",
+   "choose_b": "[\"✅ You already work inside VS Code or the GitHub ecosystem and want AI integrated into your existing workflow.\", \"✅ You want a genuine free plan to try an AI coding assistant before paying anything.\", \"✅ You want to pick from multiple model vendors like Anthropic, OpenAI, Google, xAI, Microsoft, and Moonshot depending on the task.\", \"✅ You want automated code review and cloud agents built into your pull request and merge process.\"]",
+   "faq": [
+    {
+     "a": "Replit is a browser-based development platform that combines a cloud IDE, AI coding agent, and instant deployment in one environment, so you write, run, and ship code without any local setup. Its current Agent 4 runs parallel agents that build authentication, database, backend, and frontend components at once, and includes a Security Agent that scans codebases for vulnerabilities.",
+     "q": "What is Replit?"
+    },
+    {
+     "a": "No, Replit has no listed free account tier. Its cheapest paid plan, Core, costs $20/month billed monthly or $18/month billed annually, and includes $20 in monthly credits plus a Free Mode allowance of up to 30 hours of chat and 60 projects.",
+     "q": "Is Replit free to use?"
+    },
+    {
+     "a": "GitHub Copilot is an agentic, multi-model coding assistant with chat, agent mode, cloud agents, automated code review, and a CLI, letting you choose models from vendors including Anthropic, OpenAI, Google, xAI, Microsoft, and Moonshot. It offers a free plan alongside paid individual and organization tiers billed through GitHub AI Credits.",
+     "q": "What is GitHub Copilot?"
+    },
+    {
+     "a": "Replit's Pro plan supports up to 15 collaborators and 50 viewers working together directly inside its browser-based IDE, which suits teams that want to code live in one shared space. GitHub Copilot instead layers AI into workflows teams already run on GitHub, such as pull requests and code review, so it fits teams whose collaboration already happens there.",
+     "q": "Which is better for team collaboration, Replit or GitHub Copilot?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want parallel agents building authentication, database, backend, and frontend components all at the same time.",
+    "✅ You want to write, run, and deploy code entirely in the browser without any local setup.",
+    "✅ You want built-in vulnerability scanning with three scan levels, including a free dependency and static analysis pass.",
+    "✅ You want an agent that can investigate production issues from app logs and metrics and attempt validated fixes."
+   ],
+   "choose_b": [
+    "✅ You already work inside VS Code or the GitHub ecosystem and want AI integrated into your existing workflow.",
+    "✅ You want a genuine free plan to try an AI coding assistant before paying anything.",
+    "✅ You want to pick from multiple model vendors like Anthropic, OpenAI, Google, xAI, Microsoft, and Moonshot depending on the task.",
+    "✅ You want automated code review and cloud agents built into your pull request and merge process."
+   ],
+   "faq": [
+    {
+     "q": "What is Replit?",
+     "a": "Replit is a browser-based development platform combining a cloud IDE, AI coding agent, and instant deployment, so you write, run, and ship code without local setup. Its Agent 4 runs parallel agents for authentication, database, backend, and frontend work, plus a Security Agent for vulnerability scanning and a Monitoring Agent for production issues."
+    },
+    {
+     "q": "Is Replit free to use?",
+     "a": "No, Replit has no listed free account tier. Its cheapest plan, Core, costs $20/month billed monthly or $18/month billed annually, and includes a Free Mode allowance that resets every 5 hours and uses automatic model routing."
+    },
+    {
+     "q": "What is GitHub Copilot?",
+     "a": "GitHub Copilot is an agentic, multi-model coding assistant offering chat, agent mode, cloud agents, automated code review, and a CLI, with models available from vendors including Anthropic, OpenAI, Google, xAI, Microsoft, and Moonshot. It has a free plan plus paid individual and organization tiers billed through GitHub AI Credits."
+    },
+    {
+     "q": "Which is better for team collaboration, Replit or GitHub Copilot?",
+     "a": "Replit's Pro plan supports up to 15 collaborators and 50 viewers working together live inside its browser-based IDE, which suits teams that want to code in one shared space. GitHub Copilot instead layers AI into workflows teams already run on GitHub, like pull requests and code review, so it fits teams whose collaboration already happens there."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "surferseo-vs-semrush",
+  "before": {
+   "choose_a": "[\"✅ You write SEO content and want a built-in Content Editor that scores drafts against pages already ranking in Google.\", \"✅ You want AI-visibility tracking across ChatGPT, Perplexity, Google AI and Gemini bundled with a drafting assistant, Surfy, and a humanizer in one workflow.\", \"✅ You want to track AI-search visibility without paying for a full SEO suite, using Surfer SEO's standalone AI Search Analytics tier.\", \"✅ You want the lowest entry price, since Surfer SEO's Discovery tier at $49/mo billed yearly undercuts Semrush's cheapest paid SEO tier.\"]",
+   "choose_b": "[\"✅ You need deep keyword research, backlink analysis and technical site audits alongside AI-visibility tracking in one platform.\", \"✅ You want to see which AI crawlers are hitting your site and spot content gaps using Bot and Agent Analytics and the LLM Gap Analyzer.\", \"✅ You're an agency managing multiple clients and need competitive intelligence covering both traditional rankings and AI answer engines.\", \"✅ You want to test core tools first with a free account before committing to a paid plan.\"]",
+   "faq": [
+    {
+     "a": "Surfer SEO centers on a Content Editor for on-page optimization plus AI-visibility tracking across ChatGPT, Perplexity, Google AI and Gemini, with a built-in Surfy assistant and humanizer. Semrush is a much broader platform covering keyword research, backlinks, technical audits, rank tracking and its own AI Visibility Toolkit for the same AI engines. Many teams use Semrush for overall SEO strategy and Surfer SEO for content drafting and AI-visibility tracking.",
+     "q": "What is the difference between Surfer SEO and Semrush?"
+    },
+    {
+     "a": "Both track mentions across ChatGPT, Perplexity, Google AI and Gemini. Surfer SEO ties this tracking closely to its content workflow and also sells a standalone AI Search Analytics tier, while Semrush bundles it with its LLM Gap Analyzer and Bot and Agent Analytics starting at the Starter plan. Pick Surfer SEO if you want AI-visibility linked to content writing, or Semrush if you want it alongside deeper competitive and technical SEO data.",
+     "q": "Which is better for tracking brand mentions in AI answer engines like ChatGPT and Perplexity?"
+    },
+    {
+     "a": "Semrush, since keyword research, backlink analysis, technical audits and competitive intelligence are its core strengths. Surfer SEO doesn't offer this depth of competitor or backlink data; its focus is content scoring and AI-visibility tracking.",
+     "q": "Which is better for competitor research and backlink analysis?"
+    },
+    {
+     "a": "Surfer SEO's entry tier, Discovery, starts at $49/mo billed yearly, while Semrush's cheapest paid SEO tier runs $139/mo on monthly billing (about $117.33/mo billed yearly), and its AI Visibility features require at least the Starter plan. Semrush does offer a free account with limited daily reports so you can test it before paying.",
+     "q": "Is Surfer SEO or Semrush cheaper to start with?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You write SEO content and want a built-in Content Editor that scores drafts against pages already ranking in Google.",
+    "✅ You want AI-visibility tracking across ChatGPT, Perplexity, Google AI Overviews, AI Mode and Gemini bundled with a drafting assistant, Surfy, and a content humanizer in one workflow.",
+    "✅ You only need AI-search visibility monitoring, not a full SEO suite, and prefer Surfer SEO's standalone AI Search Analytics tier.",
+    "✅ You want the lowest published entry price, since Surfer SEO's Discovery tier at $49/mo billed yearly undercuts Semrush's cheapest paid SEO tier."
+   ],
+   "choose_b": [
+    "✅ You need deep keyword research, backlink analysis and technical site audits alongside AI-visibility tracking in one platform.",
+    "✅ You want to see which AI crawlers are hitting your site and spot content gaps using Bot and Agent Analytics and the LLM Gap Analyzer.",
+    "✅ You run an agency managing multiple clients and need competitive intelligence covering both traditional rankings and AI answer engines.",
+    "✅ You want to try core tools for free before committing, using Semrush's free account with limited daily reports."
+   ],
+   "faq": [
+    {
+     "q": "What is the difference between Surfer SEO and Semrush?",
+     "a": "Surfer SEO is built around an AI Visibility Platform that tracks brand mentions across ChatGPT, Perplexity, Google AI Overviews, AI Mode and Gemini, alongside its original Content Editor, a Surfy AI assistant and a humanizer. Semrush is a much broader platform covering keyword research, backlinks, technical audits, rank tracking and its own AI Visibility Toolkit for the same AI engines, plus an LLM Gap Analyzer and Bot and Agent Analytics. Many teams use Semrush for overall SEO strategy and Surfer SEO for content drafting paired with AI-visibility tracking."
+    },
+    {
+     "q": "Which is better for tracking brand mentions in AI answer engines like ChatGPT and Perplexity?",
+     "a": "Both track mentions across ChatGPT, Perplexity, Google AI Overviews and Gemini, with Surfer SEO also covering Google AI Mode. Surfer SEO ties this tracking closely to its content workflow and sells a standalone AI Search Analytics tier, while Semrush bundles it with its LLM Gap Analyzer and Bot and Agent Analytics starting at the Starter plan. Pick Surfer SEO if you want AI-visibility linked to content writing, or Semrush if you want it alongside deeper competitive and technical SEO data."
+    },
+    {
+     "q": "Which is better for competitor research and backlink analysis?",
+     "a": "Semrush, since keyword research, backlink analysis, technical audits and competitive intelligence are its core strengths. Surfer SEO doesn't offer this depth of competitor or backlink data; its focus is content scoring and AI-visibility tracking."
+    },
+    {
+     "q": "Is Surfer SEO or Semrush cheaper to start with?",
+     "a": "Surfer SEO's entry tier, Discovery, starts at $49/mo billed yearly ($59/mo billed monthly), while Semrush's cheapest paid SEO tier is $139/mo billed monthly (about $117.33/mo billed yearly) and its AI Visibility Toolkit requires at least the Starter plan at $199/mo monthly. Semrush also offers a free account with 10 reports per day across its core tools so you can test it before paying."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "chatgpt-vs-claude",
+  "before": {
+   "choose_a": "[\"✅ You want a free plan that still includes ChatGPT's new Intelligent UI, with on-the-spot charts, forms and interactive tools.\", \"✅ You need voice conversations, web browsing and image generation handled by the same assistant.\", \"✅ You want one tool that works the same way across web, desktop, mobile and API.\", \"✅ You need an always-on agent like Dots that can browse and run tasks in its own cloud computer, if your plan, age and region qualify.\"]",
+   "choose_b": "[\"✅ You're working through a massive codebase or document set and want a 1M-token context window across all of Claude's current models.\", \"✅ You want to pick a specific model tier, from Haiku to Opus to Fable, to balance cost against capability for each task.\", \"✅ You're setting up a small team account and want a two-seat minimum instead of a large enterprise commitment.\", \"✅ You want to cut your monthly cost by committing to annual billing, dropping Pro from $20 to $17 a month.\"]",
+   "faq": [
+    {
+     "a": "Claude's Opus 5.5 is built specifically for complex agentic coding and enterprise workflows, which suits larger or multi-step software projects. ChatGPT also supports coding across its GPT-6 model lineup and adds broader multimodal tools alongside it, so the choice often comes down to whether you want a coding specialist or a general-purpose assistant.",
+     "q": "Which is better for coding — ChatGPT or Claude?"
+    },
+    {
+     "a": "ChatGPT's free plan runs GPT-6 Luna with the new Intelligent UI at no cost. Claude's free plan gives access to the Sonnet and Haiku models, but both free tiers come with usage caps.",
+     "q": "Which is free — ChatGPT or Claude?"
+    },
+    {
+     "a": "Yes, image generation is listed among ChatGPT's core capabilities. Claude's card does not mention image generation, focusing instead on writing, analysis, coding and long documents.",
+     "q": "Can ChatGPT generate images?"
+    },
+    {
+     "a": "Claude has the edge here, since all four of its current models support a 1M-token context window for large documents or codebases. ChatGPT's card does not specify a comparable context window size, so Claude is the safer pick for very long inputs.",
+     "q": "Which is better for working with very long documents?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want a free plan that still includes ChatGPT's new Intelligent UI, with on-the-spot charts, forms and interactive tools.",
+    "✅ You need voice conversations, image generation and web browsing handled by the same assistant.",
+    "✅ You want one assistant that works the same way across web, desktop, mobile and API.",
+    "✅ You want an always-on agent like Dots to browse and run tasks in its own cloud computer, if your plan, age and region qualify."
+   ],
+   "choose_b": [
+    "✅ You're working through a massive codebase or document set and want a 1M-token context window across all of Claude's current models.",
+    "✅ You want to pick a specific model tier, from Haiku to Opus to Fable, to balance cost against capability for each task.",
+    "✅ You're setting up a small team and want seats starting at just 2 users instead of a large enterprise commitment.",
+    "✅ You want to lower your monthly cost by committing to annual billing, dropping Claude Pro from $20 to $17 a month."
+   ],
+   "faq": [
+    {
+     "q": "Which is better for coding — ChatGPT or Claude?",
+     "a": "Claude is positioned as strong for agentic coding and analysis across its model lineup, including Opus 5.5. ChatGPT also generates and debugs code across its GPT-6 models while adding broader multimodal tools like voice and image generation. The right pick depends on whether you want a coding-focused assistant or an all-purpose one."
+    },
+    {
+     "q": "Which is free — ChatGPT or Claude?",
+     "a": "ChatGPT's free plan runs GPT-6 Luna with the new Intelligent UI at no cost. Claude's free plan gives access to the Sonnet and Haiku models. Both free tiers come with usage caps."
+    },
+    {
+     "q": "Can ChatGPT generate images?",
+     "a": "Yes, image generation is listed among ChatGPT's core capabilities. Claude's card does not mention image generation, focusing instead on writing, analysis, coding and long documents."
+    },
+    {
+     "q": "Which is better for working with very long documents?",
+     "a": "Claude has the edge here, since all four of its current models support a 1M-token context window for large documents or codebases. ChatGPT's card does not specify a comparable context window size."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "cursor-vs-copilot",
+  "before": {
+   "choose_a": "[\"✅ You need an agent that can plan and execute multi-repo changes with parallel agents and automated PR review via Bugbot.\", \"✅ You want to offload long-running tasks to cloud agents or spin up a cloud dev environment with /in-cloud.\", \"✅ You're already comfortable in VS Code and want to keep your extensions, keybindings, and workflows while adding agentic coding on top.\", \"✅ You want the flexibility to plug in third-party models, MCP servers, custom rules, and hooks alongside Cursor's bundled Grok access.\"]",
+   "choose_b": "[\"✅ You want to pick models per task from multiple vendors, including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot.\", \"✅ You want an assistant that works across your editor, terminal, desktop app, and GitHub itself, not just inline completions.\", \"✅ You want inline code completions and Next Edit suggestions that stay included and never draw down your usage allowance.\", \"✅ You're a verified teacher or maintainer of a popular open source project and want free access to Pro-level features.\"]",
+   "faq": [
+    {
+     "a": "Cursor's multi-repo support, parallel agents, and automated PR review via Bugbot make it purpose-built for repo-wide agentic workflows. GitHub Copilot's agent mode and cloud agents focus more on cross-vendor model choice and deep GitHub integration rather than multi-repo orchestration specifically. For dedicated multi-repo agent work, Cursor is the more purpose-built choice.",
+     "q": "Which is better for multi-repo agentic coding, Cursor or GitHub Copilot?"
+    },
+    {
+     "a": "Yes, under The X Subscription Cursor offers a genuine Free tier that includes access to Cursor and Grok without payment. Paid tiers, Plus, Premium, Super, and Ultra, unlock more usage from a shared weekly pool with Grok.",
+     "q": "Is Cursor free?"
+    },
+    {
+     "a": "Yes, GitHub Copilot has a Free plan with roughly 2,000 inline suggestions a month and limited chat and agent access, but it excludes code review and cloud agents. Paid plans add cloud agents, code review, and larger AI Credit allowances.",
+     "q": "Is GitHub Copilot free?"
+    },
+    {
+     "a": "Cursor bundles Grok from xAI into every paid X Subscription tier and also supports third-party models such as Claude or GPT, billed separately at API price from prepaid credit. GitHub Copilot lets you choose models from multiple vendors, including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot, through its GitHub AI Credits billing.",
+     "q": "What models can I use with each tool?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You need an agent that can plan and execute multi-file, multi-repo changes with parallel agents and automated PR review via Bugbot.",
+    "✅ You want to offload long-running tasks to cloud agents or spin up a cloud dev environment with /in-cloud.",
+    "✅ You're already comfortable in VS Code and want to keep your extensions, keybindings, and workflows while adding agentic coding on top.",
+    "✅ You want Grok from xAI bundled directly into your subscription alongside support for third-party models, MCP servers, custom rules, and hooks."
+   ],
+   "choose_b": [
+    "✅ You want to pick models per task from multiple vendors, including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot.",
+    "✅ You want an assistant that works across your editor, terminal, desktop app, and GitHub itself, not just inline completions.",
+    "✅ You want inline code completions and Next Edit suggestions that stay included and never draw down your usage allowance.",
+    "✅ You're a verified teacher or maintainer of a popular open source project and want free access to Pro-level features."
+   ],
+   "faq": [
+    {
+     "q": "Which is better for multi-repo agentic coding, Cursor or GitHub Copilot?",
+     "a": "Cursor's multi-repo support, parallel agents, and automated PR review via Bugbot make it purpose-built for repo-wide agentic workflows, while GitHub Copilot's agent mode and cloud agents focus more on cross-vendor model choice and deep GitHub integration. For dedicated multi-repo agent orchestration, Cursor is the more purpose-built choice."
+    },
+    {
+     "q": "Is Cursor free?",
+     "a": "Yes, new customers join through The X Subscription, which includes a genuine Free tier giving access to Cursor and Grok without payment; paid tiers (Plus, Premium, Super, Ultra) draw from a shared weekly usage pool with Grok."
+    },
+    {
+     "q": "Is GitHub Copilot free?",
+     "a": "Yes, GitHub Copilot has a Free plan with roughly 2,000 inline suggestions a month and limited chat and agent access, but it excludes code review and cloud agents; paid plans add cloud agents, code review, and larger AI Credit allowances."
+    },
+    {
+     "q": "What models can I use with each tool?",
+     "a": "Cursor bundles Grok from xAI into every paid X Subscription tier and also supports third-party models such as Claude or GPT, billed separately at API price from prepaid credit. GitHub Copilot lets you choose models from multiple vendors, including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot, billed through GitHub AI Credits."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "deepseek-vs-chatgpt",
+  "before": {
+   "choose_a": "[\"✅ You need a very large context window for long documents or codebases, since both deepseek-flash and deepseek-v4-pro support 1M tokens of input with up to 384K tokens of output.\", \"✅ You want to control reasoning depth, picking low, high, or max effort in DeepSeek's default thinking mode for coding or analytical tasks.\", \"✅ You're a developer building agent workflows and want integrations like Claude Code, Codex, OpenCode, or DeepSeek's own Harness.\", \"✅ You want to minimize API costs for high-volume text tasks, since deepseek-flash's off-peak pricing undercuts most comparable paid APIs.\"]",
+   "choose_b": "[\"✅ You want one assistant that handles text, images, voice, files, and web browsing without switching tools.\", \"✅ You're a casual user who wants a free plan to start with, since ChatGPT's Free tier runs GPT-6 Luna at no cost.\", \"✅ You need an assistant available everywhere, across web, desktop, mobile, and API, rather than just a web chat and API.\", \"✅ You need heavier usage or advanced reasoning and are willing to pay for Plus or one of the Pro tiers, up to $500/mo with Ultrafast mode.\"]",
+   "faq": [
+    {
+     "a": "DeepSeek is the stronger fit here, since both deepseek-flash and deepseek-v4-pro offer a 1M-token context window with up to 384K tokens of output, plus selectable reasoning effort for technical work. ChatGPT's card does not specify a comparable context window.",
+     "q": "Which is better for coding with a very long context window?"
+    },
+    {
+     "a": "ChatGPT is the better choice, since it supports text, images, voice, files, and web browsing across web, desktop, mobile, and API. DeepSeek's vision support is limited to the deepseek-flash model and it does not offer voice or built-in web browsing.",
+     "q": "Which is better for general multimodal use, like images and voice?"
+    },
+    {
+     "a": "DeepSeek's deepseek-flash tier is priced per million tokens with off-peak discounts, for example $0.15/$0.30 input on a cache miss and $0.60/$1.20 output. ChatGPT's API is also billed per million tokens but the rate varies by model, so a direct comparison depends on which model you'd choose.",
+     "q": "Is DeepSeek's API actually cheaper than ChatGPT?"
+    },
+    {
+     "a": "The free status of DeepSeek's web chat interface could not be verified from a primary source at the time of writing. Its API is metered and billed per token, with cheaper rates during off-peak UTC hours, whereas ChatGPT has a confirmed free plan running GPT-6 Luna.",
+     "q": "Is DeepSeek free to use?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You are working with long documents or large codebases, since both deepseek-flash and deepseek-v4-pro offer a 1M-token context window with up to 384K tokens of output.",
+    "✅ You want fine-grained control over reasoning depth, choosing low, high, or max effort in DeepSeek's default thinking mode for coding or analytical work.",
+    "✅ You want to self-host or inspect the model, since deepseek-flash's weights are published under an MIT license on Hugging Face and ModelScope.",
+    "✅ You need to keep API costs down for high-volume text tasks, since deepseek-flash's off-peak pricing is well below its own peak rates and offers cache-hit discounts."
+   ],
+   "choose_b": [
+    "✅ You want to start for free without committing to a paid plan, since ChatGPT's Free tier runs GPT-6 Luna at no cost.",
+    "✅ You need a single assistant for text, images, voice, files, and web browsing instead of juggling separate tools.",
+    "✅ You want the same assistant everywhere, since ChatGPT is available on web, desktop, mobile, and API, not just a web chat and API.",
+    "✅ You need headroom to scale usage or reasoning power, since ChatGPT's Pro tiers go up to $500/mo with Ultrafast mode for Codex and Work."
+   ],
+   "faq": [
+    {
+     "q": "Which is better for coding with a very long context window?",
+     "a": "DeepSeek is the stronger fit here, since both deepseek-flash and deepseek-v4-pro offer a 1M-token context window with up to 384K tokens of output, plus selectable reasoning effort for technical work. ChatGPT's card does not specify a comparable context window."
+    },
+    {
+     "q": "Which is better for general multimodal use, like images and voice?",
+     "a": "ChatGPT is the better choice, since it supports text, images, voice, files, and web browsing across web, desktop, mobile, and API. DeepSeek's vision support is limited to the deepseek-flash model, and it does not offer voice or built-in web browsing."
+    },
+    {
+     "q": "Is DeepSeek's API actually cheaper than ChatGPT?",
+     "a": "DeepSeek's deepseek-flash tier is priced per million tokens with off-peak discounts, for example $0.15/$0.30 input on a cache miss and $0.60/$1.20 output. ChatGPT's API is also billed per million tokens but its rate varies by model and isn't broken out in detail, so a direct cost comparison isn't possible from the available facts."
+    },
+    {
+     "q": "Is DeepSeek free to use?",
+     "a": "Whether DeepSeek's web chat interface is free could not be confirmed from a primary source. Its API is metered and billed per token with cheaper off-peak rates, whereas ChatGPT has a confirmed free plan running GPT-6 Luna."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "adcreative-ai-vs-canva-ai",
+  "before": {
+   "choose_a": "[\"✅ You run paid advertising campaigns and need AI to generate conversion-optimized ad creatives across Facebook, Google, and banner formats.\", \"✅ You want a performance score predicting conversion potential before spending money on media.\", \"✅ You need product or fashion photography and video ads generated specifically for ad campaigns, plus competitor analysis and a compliance checker.\", \"✅ You want to publish creatives directly to Meta Ads and Google Ads without leaving the platform.\"]",
+   "choose_b": "[\"✅ You need a single platform for broader marketing content like social posts, presentations, and documents, not just ads.\", \"✅ You want to describe a design in text or voice and get back an editable layout built on Canva's own Design Model.\", \"✅ You want to try AI design tools without committing to a paid plan, since Canva offers a free tier.\", \"✅ You want AI-generated posters that stay editable as separate layers instead of flattening into one image, via Magic Layers.\"]",
+   "faq": [
+    {
+     "a": "AdCreative.ai is an AI platform that generates conversion-optimized ad creatives, social posts, product and fashion photography, and video ads, with a performance scoring model and direct publishing to Meta Ads and Google Ads. It was acquired by Appier in a deal that closed March 2025.",
+     "q": "What is AdCreative.ai?"
+    },
+    {
+     "a": "Canva AI is the conversational AI layer inside Canva's Magic Studio, letting you describe a design in text or voice and get an editable layout built on Canva's own Design Model. It launched as a research preview at Canva Create 2026 and includes tools like Magic Design, Dream Lab, Magic Write, and Magic Layers.",
+     "q": "What is Canva AI?"
+    },
+    {
+     "a": "AdCreative.ai is purpose-built for ads, with performance scoring trained on advertising data and direct publishing integrations with Meta Ads and Google Ads. Canva AI can design ad visuals through Magic Studio but doesn't offer conversion prediction or ad-platform publishing, so it's better suited for general marketing content.",
+     "q": "Which is better for running paid ad campaigns?"
+    },
+    {
+     "a": "AdCreative.ai runs on a credit system: Starter is $39/month, Professional is $249/month, and Ultimate is $999/month, with no permanent free plan but a 7-day free trial. Canva AI is bundled into Canva's free plan plus paid Pro, Business, and custom Enterprise tiers, though exact Pro and Business pricing is region-dependent and not confirmed as a single USD figure.",
+     "q": "How much do they cost?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You run paid advertising campaigns and need AI to generate conversion-optimized ad creatives across Facebook, Google, and banner formats.",
+    "✅ You want a performance score predicting a creative's conversion potential before you spend on media.",
+    "✅ You need product or fashion photography and video ads built specifically for campaigns, plus competitor analysis and a compliance checker.",
+    "✅ You want to publish creatives directly to Meta Ads and Google Ads without leaving the platform."
+   ],
+   "choose_b": [
+    "✅ You need one platform for broader marketing content like social posts, presentations, and documents, not just ad creatives.",
+    "✅ You want to describe a design in text or voice and get back an editable layout built on Canva's own Design Model.",
+    "✅ You want to try AI design tools without paying, since Canva AI is available on a free plan.",
+    "✅ You want AI-generated posters that stay editable as separate layers instead of flattening into one image, via Magic Layers."
+   ],
+   "faq": [
+    {
+     "q": "What is AdCreative.ai?",
+     "a": "AdCreative.ai is an AI platform that generates conversion-optimized ad creatives, social posts, product and fashion photography, and video ads, with a performance scoring model and direct publishing to Meta Ads and Google Ads. It was acquired by Appier in a deal that closed March 2025."
+    },
+    {
+     "q": "What is Canva AI?",
+     "a": "Canva AI is the conversational AI layer inside Canva's Magic Studio, letting you describe a design in text or voice and get an editable layout built on Canva's own Design Model. It includes tools like Magic Design, Dream Lab (now powered by Canva Craft), Magic Write, and Magic Layers."
+    },
+    {
+     "q": "Which is better for running paid ad campaigns?",
+     "a": "AdCreative.ai is purpose-built for ads, with performance scoring trained on advertising data and direct publishing integrations with Meta Ads and Google Ads. Canva AI can produce ad visuals through Magic Studio but has no conversion prediction or ad-platform publishing, so it fits general marketing content better."
+    },
+    {
+     "q": "How much do they cost?",
+     "a": "AdCreative.ai runs on a credit system: Starter is $39/month, Professional is $249/month, and Ultimate is $999/month, with no permanent free plan but a 7-day free trial. Canva AI is included in Canva's free plan plus paid Pro ($120/year per person) and Business ($210/year per person) tiers, with custom Enterprise pricing and regional variation."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "gamma-vs-notion-ai",
+  "before": {
+   "choose_a": "[\"✅ You need to turn a prompt or outline into a finished presentation, document, or simple website rather than a workspace page.\", \"✅ You want an agent that asks clarifying questions and keeps context across edits instead of needing one perfect prompt upfront.\", \"✅ You need to import an existing PowerPoint, PDF, or infographic file and have Gamma preserve its original design.\", \"✅ You want to try AI generation for free with 400 credits and no credit card before committing to a paid seat.\"]",
+   "choose_b": "[\"✅ You already keep your notes, wikis, and project databases in Notion and want AI summoned right on the page instead of switching tools.\", \"✅ You want to ask questions across your entire workspace using Enterprise Search rather than generate standalone documents.\", \"✅ You need AI Meeting Notes with speaker identification or Research Mode built into your daily workspace.\", \"✅ You need to read or write Microsoft Office files like PPTX, XLSX, and DOCX, or orchestrate external agents like Claude and Cursor from Notion.\"]",
+   "faq": [
+    {
+     "a": "Gamma generates presentations, documents, and websites from a prompt, with an agent that asks clarifying questions and keeps context across edits. Notion AI is the assistant built into the Notion workspace, covering writing, workspace-wide search, meeting notes, and research across your existing pages and databases.",
+     "q": "What is the difference between Gamma and Notion AI?"
+    },
+    {
+     "a": "Gamma is built for this: you describe what you need and it generates a full presentation structure, writing, and layout, or imports an existing deck while keeping its design. Notion AI can help draft outlines or talking points inside a page, but it does not produce a designed slide deck.",
+     "q": "Which is better for building a slide deck for a client pitch?"
+    },
+    {
+     "a": "Probably not. Notion AI's value depends on already living in the Notion workspace, since it works by sitting inside your existing pages, wikis, and databases rather than functioning as a standalone tool.",
+     "q": "Is Notion AI worth it if I don't already use Notion?"
+    },
+    {
+     "a": "Yes, Gamma's Free plan costs $0, includes 400 credits with no time limit, and requires no credit card, though output carries Gamma branding until you upgrade.",
+     "q": "Does Gamma have a free plan?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You need to turn a prompt or outline into a finished presentation, document, or website rather than editing a workspace page.",
+    "✅ You want an agent that asks clarifying questions and keeps context across edits instead of needing one perfect prompt upfront.",
+    "✅ You need to import an existing PowerPoint, PDF, or infographic file and have the tool preserve its original design.",
+    "✅ You want to try AI generation for free with 400 credits and no credit card before committing to a paid plan."
+   ],
+   "choose_b": [
+    "✅ You already keep your notes, wikis, and project databases in Notion and want AI summoned right on the page instead of switching tools.",
+    "✅ You want to pick among models from multiple AI vendors or let an Auto router choose the model for you automatically.",
+    "✅ You need an agent that can run tasks for up to 24 hours with its own computer and browser for multi-step work like research.",
+    "✅ You need to read or write Microsoft Office files like PPTX, XLSX, and DOCX, or get AI Meeting Notes with speaker identification."
+   ],
+   "faq": [
+    {
+     "q": "What is the difference between Gamma and Notion AI?",
+     "a": "Gamma generates presentations, documents, and websites from a prompt, with an agent that asks clarifying questions and keeps context across edits. Notion AI is the assistant built into the Notion workspace, offering a multi-vendor model picker, a Skills API, MCP connections, and agents that can run tasks for up to 24 hours across your existing pages and databases."
+    },
+    {
+     "q": "Which is better for building a slide deck for a client pitch?",
+     "a": "Gamma is built for this: you describe what you need and it generates a full presentation structure, writing, and layout, or imports an existing deck while keeping its design. Notion AI can help draft outlines or talking points inside a page, but it does not produce a designed slide deck."
+    },
+    {
+     "q": "Is Notion AI worth it if I don't already use Notion?",
+     "a": "Probably not. Notion AI's value depends on already living inside your existing Notion pages, wikis, and databases rather than functioning as a standalone tool, and ongoing AI access also requires the Business plan."
+    },
+    {
+     "q": "Does Gamma have a free plan?",
+     "a": "Yes, Gamma's Free plan costs $0, includes 400 credits with no time limit, and requires no credit card, though output carries Gamma branding until you upgrade and is capped at 10 slides per prompt."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "clearscope-vs-surferseo",
+  "before": {
+   "choose_a": "[\"✅ You need unlimited team members and projects without the bill growing, since Clearscope includes this on every tier.\", \"✅ You want to see exactly when your pages are cited in ChatGPT, Gemini or Claude answers, using Clearscope's Query Tracking.\", \"✅ You want an optimization report that turns straight into a usable first draft with Draft with AI.\", \"✅ You want to test the platform risk-free before paying, since Clearscope offers a 14-day free trial.\"]",
+   "choose_b": "[\"✅ You want to start on a tighter budget, since Surfer SEO's Discovery tier begins at $49/mo billed yearly.\", \"✅ You want the broadest AI-engine coverage, since Surfer SEO tracks mentions across ChatGPT, Perplexity, Google AI and Gemini.\", \"✅ You want drafting and editing help built into the same platform, using Surfer SEO's Surfy assistant and content humanizer.\", \"✅ You want a fuller on-page SEO toolkit alongside AI visibility, since Surfer SEO still includes its Content Editor, keyword research and audits.\"]",
+   "faq": [
+    {
+     "a": "Both track this, but they cover different engines: Clearscope's Query Tracking watches ChatGPT, Gemini and Claude, while Surfer SEO tracks ChatGPT, Perplexity, Google AI and Gemini. If you want the widest engine coverage, Surfer SEO covers one more surface (Perplexity and Google AI) than Clearscope.",
+     "q": "Which is better for tracking brand mentions across AI engines like ChatGPT and Gemini?"
+    },
+    {
+     "a": "It depends on budget and needs: Surfer SEO bundles on-page content optimization, AI-visibility tracking, an AI assistant and a humanizer in one subscription, starting at $49/mo billed yearly. Teams that want all of that in one place will likely find it worthwhile, but monthly billing adds a real cost premium over the yearly rate.",
+     "q": "Is SurferSEO worth it?"
+    },
+    {
+     "a": "Yes. Clearscope's Draft with AI feature turns a content optimization report directly into a first draft, though it is built around its optimization workflow rather than being a standalone AI writer.",
+     "q": "Does Clearscope have AI writing features?"
+    },
+    {
+     "a": "Clearscope has no free tier; paid plans start at $129/month for the Essentials tier, billed monthly, with a 14-day free trial to evaluate the platform first.",
+     "q": "How much does Clearscope cost?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want unlimited team members and projects without the bill growing, since Clearscope includes this on every tier.",
+    "✅ You need to see exactly when your pages are cited in ChatGPT, Gemini or Claude answers, using Clearscope's Query Tracking.",
+    "✅ You want an optimization report that turns straight into a usable first draft with Draft with AI.",
+    "✅ You want to test the platform risk-free before paying, since Clearscope offers a 14-day free trial."
+   ],
+   "choose_b": [
+    "✅ You want the broadest AI-engine coverage, since Surfer SEO tracks mentions across ChatGPT, Perplexity, Google AI Overviews, AI Mode and Gemini.",
+    "✅ You want to start on a tighter budget, since Surfer SEO's Discovery tier begins at $49/mo billed yearly.",
+    "✅ You want drafting and editing help built into the same platform, using Surfer SEO's Surfy assistant and content humanizer.",
+    "✅ You want a fuller on-page SEO toolkit alongside AI visibility, since Surfer SEO still includes its Content Editor, keyword research and audit tools."
+   ],
+   "faq": [
+    {
+     "q": "Which is better for tracking brand mentions across AI engines like ChatGPT and Gemini?",
+     "a": "Both track this, but they cover different engines: Clearscope's Query Tracking watches ChatGPT, Gemini and Claude, while Surfer SEO tracks ChatGPT, Perplexity, Google AI Overviews, AI Mode and Gemini. If you want the widest engine coverage, Surfer SEO covers more surfaces than Clearscope."
+    },
+    {
+     "q": "Is Surfer SEO worth it?",
+     "a": "It depends on budget and needs: Surfer SEO bundles on-page content optimization, AI-visibility tracking across five engines, a built-in assistant and a humanizer, starting at $49/mo billed yearly on the Discovery tier. Teams that want all of that in one place may find it worthwhile, but monthly billing costs more than the yearly rate and higher AI-prompt limits sit behind pricier tiers."
+    },
+    {
+     "q": "Does Clearscope have AI writing features?",
+     "a": "Yes. Clearscope's Draft with AI feature turns a content optimization report directly into a first draft, though it is built around its optimization workflow rather than being a standalone AI writer."
+    },
+    {
+     "q": "How much does Clearscope cost?",
+     "a": "Clearscope has no free tier; paid plans start at $129/month for the Essentials tier, billed monthly, with a 14-day free trial to evaluate the platform first."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "notion-ai-vs-zapier-ai",
+  "before": {
+   "choose_a": "[\"✅ You want AI writing, summarization, and Q&A to happen right inside the Notion pages, wikis, and databases you already use\", \"✅ You need a model picker so workspace owners can choose among models from several AI vendors, including OpenAI and Anthropic, per task\", \"✅ You want workspace-wide Enterprise Search, AI Meeting Notes with speaker identification, or Research Mode on top of basic writing help\", \"✅ You regularly handle Microsoft Office files or Outlook and want AI that can read and write PPTX, XLSX, DOCX directly\"]",
+   "choose_b": "[\"✅ You want to automate workflows across 9,000+ apps instead of just working inside one workspace\", \"✅ You want Zapier Copilot to build and maintain Zaps, Tables, Interfaces, or Agents from plain-language descriptions\", \"✅ You need external LLMs like Claude or GPT to trigger actions in your other apps through Zapier MCP\", \"✅ You want a real free tier to test automations before committing to a paid plan\"]",
+   "faq": [
+    {
+     "a": "Notion AI is the AI layer built into the Notion workspace for writing, search, meeting notes, and research on your own content, with agent connections via MCP and a Skills API. Zapier AI is built into a workflow automation platform connecting 9,000+ apps, using Copilot, Agents, and its own MCP to build and run automations across apps rather than help you write documents.",
+     "q": "What is the difference between Notion AI and Zapier AI?"
+    },
+    {
+     "a": "Notion AI fits better here since it works directly inside your Notion pages, wikis, and databases, with workspace-wide Enterprise Search and AI Meeting Notes included. Zapier AI isn't built for drafting or organizing documents; it's designed to move data and trigger actions between other apps.",
+     "q": "Which is better for a team that writes and organizes most of its knowledge in one workspace?"
+    },
+    {
+     "a": "Zapier AI is the better fit, since it connects 9,000+ apps and uses Copilot and Agents to build and run multi-app automations. Notion AI can orchestrate some external agents from shared boards, but it isn't designed to connect SaaS tools at that scale.",
+     "q": "Which is better for connecting many different SaaS tools together?"
+    },
+    {
+     "a": "Yes for both in practice. Notion AI's ongoing AI access sits behind the Business plan, with Free and Plus limited to a capped trial, while Zapier's Free plan caps at 100 tasks a month and its AI products like Agents and Chatbots are billed separately from the core automation plans.",
+     "q": "Do either of these tools require a paid plan to get real AI functionality?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want AI writing, summarization, and Q&A to happen right inside the Notion pages, wikis, and databases you already use",
+    "✅ You want a model picker with an Auto router that aims to match top-tier model quality on common tasks at a fraction of the credit cost",
+    "✅ You want Notion Agents that get their own computer and browser and can run tasks for up to 24 hours, with a 'Review for me' mode",
+    "✅ You need workspace-wide Enterprise Search, AI Meeting Notes with speaker identification, or Research Mode, plus the ability to read and write Microsoft Office files and Outlook"
+   ],
+   "choose_b": [
+    "✅ You want to automate workflows across 9,000+ apps instead of working inside a single workspace",
+    "✅ You want Zapier Copilot to build and edit Zaps, Tables, Interfaces, Chatbots, or agent steps from plain-language descriptions",
+    "✅ You want agent-style automation to run as a step inside your existing Zaps, with per-tool approval and a choice of model tiers",
+    "✅ You want a real free tier, with 100 tasks a month and unlimited two-step Zaps, to test automations before paying"
+   ],
+   "faq": [
+    {
+     "q": "What is the difference between Notion AI and Zapier AI?",
+     "a": "Notion AI is the AI layer built into the Notion workspace for writing, search, meeting notes, and agent tasks on your own content, connecting to outside assistants via MCP and a Skills API. Zapier AI is built into a workflow automation platform connecting 9,000+ apps, using Copilot and AI by Zapier steps to build and run automations across apps rather than help you write documents."
+    },
+    {
+     "q": "Which is better for a team that writes and organizes most of its knowledge in one workspace?",
+     "a": "Notion AI fits better here since it works directly inside your Notion pages, wikis, and databases, with workspace-wide Enterprise Search and AI Meeting Notes included. Zapier AI isn't built for drafting or organizing documents; it's designed to move data and trigger actions between other apps."
+    },
+    {
+     "q": "Which is better for connecting many different SaaS tools together?",
+     "a": "Zapier AI is the better fit, since it connects 9,000+ apps and uses Copilot and AI by Zapier steps to build and run multi-app automations. Notion AI can connect to outside agents via MCP, but it isn't designed to link SaaS tools at that scale."
+    },
+    {
+     "q": "Do either of these tools require a paid plan to get real AI functionality?",
+     "a": "Yes for both in practice. Notion AI's ongoing AI access sits behind the Business plan, with Free and Plus limited to a capped trial, while Zapier's AI by Zapier is not available on its Free plan and only comes with Professional, Team, or Enterprise."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "windsurf-vs-cursor",
+  "before": {
+   "choose_a": "[\"✅ You want unlimited Tab autocomplete and inline edits even on the free plan.\", \"✅ You want to switch between multiple selectable agents, including Devin Local, Codex, Claude Agent, OpenCode and Cascade, from one picker.\", \"✅ You want Pro-tier access to frontier models from OpenAI, Anthropic, Google, SpaceXAI and leading open-source models.\", \"✅ You want a familiar VS Code-style interface with a free tier that's usable for everyday light coding.\"]",
+   "choose_b": "[\"✅ You want agentic coding that spans multiple repositories with parallel agents and automated PR review.\", \"✅ You want to offload long-running work to cloud agents and dev environments triggered with /in-cloud.\", \"✅ You want to bring your own third-party models, MCP servers, custom rules, and hooks instead of being tied to one model family.\", \"✅ You want newer team-oriented features like Projects, self-hosted machines, and Security Review bots.\"]",
+   "faq": [
+    {
+     "a": "Devin Desktop is the renamed version of Windsurf, an AI-native code editor from Cognition that combines autocomplete, inline edits, and autonomous coding agents inside a VS Code-style workspace. The rebrand happened on June 2, 2026, and its current in-house model is SWE-2.",
+     "q": "What is Devin Desktop (Windsurf)?"
+    },
+    {
+     "a": "Cursor is an AI-first code editor built on VS Code that has grown from autocomplete into a full agentic coding platform, with features like the Composer agent, cloud agents, and Bugbot for automated PR review. New customers are now enrolled by default in The X Subscription, which bundles Cursor with Grok from xAI and X Premium.",
+     "q": "What is Cursor?"
+    },
+    {
+     "a": "Cursor is the stronger fit here, since it's explicitly built for multi-repo agentic coding with parallel agents and automated PR review via Bugbot. Devin Desktop's agent picker lets you choose among several agents, but it's framed around picking one agent per task rather than coordinating across repos.",
+     "q": "Which is better for working across multiple repositories with parallel agents?"
+    },
+    {
+     "a": "Yes, both offer a free tier. Devin Desktop's free plan gives a light agent quota and limited model access but unlimited Tab completions and inline edits, while Cursor's free tier under The X Subscription includes access to both Cursor and Grok without payment.",
+     "q": "Is there a free tier on both tools?"
+    },
+    {
+     "a": "Cascade is one of the agents available in Devin Desktop's agent picker, alongside Devin Local, Codex, Claude Agent, and OpenCode. It's the original Windsurf agent and remains available rather than being retired after the rebrand.",
+     "q": "What is Cascade in Devin Desktop?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want unlimited Tab autocomplete and inline edits even on the free plan.",
+    "✅ You want to switch between multiple selectable agents, including Devin Local, Codex, Claude Agent, OpenCode and Cascade, from one picker.",
+    "✅ You want Pro-tier access to frontier models from OpenAI, Anthropic, Google, SpaceXAI and leading open-source models.",
+    "✅ You want a familiar VS Code-style interface with a free tier that's usable for everyday light coding."
+   ],
+   "choose_b": [
+    "✅ You want agentic coding that spans multiple repositories with parallel agents and automated PR review.",
+    "✅ You want to offload long-running work to cloud agents and dev environments triggered with /in-cloud.",
+    "✅ You want to bring your own third-party models, MCP servers, custom rules, and hooks instead of being tied to one model family.",
+    "✅ You want newer team-oriented features like Projects, self-hosted machines, and Security Review bots."
+   ],
+   "faq": [
+    {
+     "q": "What is Devin Desktop (Windsurf)?",
+     "a": "Devin Desktop is the renamed version of Windsurf, an AI-native code editor from Cognition that combines autocomplete, inline edits, and autonomous coding agents inside a VS Code-style workspace. The rebrand happened on June 2, 2026, and its current in-house model is SWE-2."
+    },
+    {
+     "q": "What is Cursor?",
+     "a": "Cursor is an AI-first code editor built on VS Code that has grown from autocomplete into a full agentic coding platform, with features like the Composer agent, cloud agents, and Bugbot for automated PR review. New customers are now enrolled by default in The X Subscription, which bundles Cursor with Grok from xAI and X Premium."
+    },
+    {
+     "q": "Which is better for working across multiple repositories with parallel agents?",
+     "a": "Cursor is the stronger fit here, since it's explicitly built for multi-repo agentic coding with parallel agents and automated PR review via Bugbot. Devin Desktop's agent picker lets you choose among several agents, but it's framed around picking one agent per task rather than coordinating across repos."
+    },
+    {
+     "q": "Is there a free tier on both tools?",
+     "a": "Yes, both offer a free tier. Devin Desktop's free plan gives a light agent quota and limited model access but unlimited Tab completions and inline edits, while Cursor's free tier under The X Subscription includes access to both Cursor and Grok without payment."
+    },
+    {
+     "q": "What is Cascade in Devin Desktop?",
+     "a": "Cascade is one of the agents available in Devin Desktop's agent picker, alongside Devin Local, Codex, Claude Agent, and OpenCode. It's the original Windsurf agent and remains available rather than being retired after the rebrand."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "heygen-vs-synthesia",
+  "before": {
+   "choose_a": "[\"✅ You need lip-synced video translation into 175+ languages for localization at scale.\", \"✅ You want a highly realistic avatar built from just a 15-second recording, with full upper-body motion and multi-angle consistency.\", \"✅ You need to reuse one avatar recording across different outfits or backgrounds with multi-look generation.\", \"✅ You want a larger stock avatar library, with 500+ avatars to choose from.\"]",
+   "choose_b": "[\"✅ You need full-body avatars with natural hand and body gestures instead of static talking heads.\", \"✅ You want interactive Video Agents so your videos can respond rather than just play back.\", \"✅ You need enterprise-grade SAML/SSO and SCORM export for LMS-based training delivery.\", \"✅ You want an avatar catalog and personal avatar allowance that scales predictably as you move up plans.\"]",
+   "faq": [
+    {
+     "a": "HeyGen centers on avatar-driven video with voice cloning and lip-synced translation into 175+ languages, built around its Avatar V model that creates a lifelike digital twin from a 15-second recording. Synthesia centers on text-to-video with full-body Express-2 avatars, interactive Video Agents, and a new beta tool called Syren for prompt-based motion-graphics videos.",
+     "q": "What is the difference between HeyGen and Synthesia?"
+    },
+    {
+     "a": "Synthesia is purpose-built for L&D, HR and corporate communications, with full-body gestures from its Express-2 engine, interactive Video Agents, and SAML/SSO plus SCORM export on its Enterprise plan. HeyGen can also produce training-style videos, but it is positioned more broadly around avatar realism, voice cloning and translation.",
+     "q": "Which is better for corporate training videos?"
+    },
+    {
+     "a": "Yes, voice cloning is part of HeyGen's core toolkit alongside avatar generation and lip-synced video translation.",
+     "q": "Does HeyGen offer voice cloning?"
+    },
+    {
+     "a": "Yes, Synthesia's free Basic plan gives you 10 minutes of video creation or dubbing per month with 9 AI avatars, though it includes a watermark and offers no personal avatars or downloads.",
+     "q": "Is Synthesia free to use?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You need lip-synced video translation into 175+ languages for localization at scale.",
+    "✅ You want an avatar built from a single 15-second recording with full upper-body motion and multi-angle consistency.",
+    "✅ You need voice cloning tools like an Instant Voice clone built from under a minute of audio.",
+    "✅ You want to reuse one recording across different outfits or backgrounds using multi-look generation."
+   ],
+   "choose_b": [
+    "✅ You need full-body avatars with natural hand and body gestures instead of static talking heads.",
+    "✅ You want interactive Video Agents so viewers can engage with the video rather than just watch it.",
+    "✅ You want to turn a prompt or branded document into a motion-graphics marketing video using the beta Syren tool.",
+    "✅ You need enterprise-grade SAML/SSO and SCORM export for LMS-based training delivery."
+   ],
+   "faq": [
+    {
+     "q": "What is the difference between HeyGen and Synthesia?",
+     "a": "HeyGen centers on avatar-driven video with voice cloning and lip-synced translation into 175+ languages, built around its Avatar V model that creates an avatar from a single 15-second recording. Synthesia centers on text-to-video with full-body Express-2 avatars, interactive Video Agents, and a new beta tool called Syren for prompt-based motion-graphics videos."
+    },
+    {
+     "q": "Which is better for corporate training videos?",
+     "a": "Synthesia is built for this use case, with full-body gestures from its Express-2 engine, interactive Video Agents, and SAML/SSO plus SCORM export on its Enterprise plan for LMS delivery. HeyGen can also produce training-style videos, but it is positioned more around avatar realism, voice cloning and translation."
+    },
+    {
+     "q": "Does HeyGen offer voice cloning?",
+     "a": "Yes, HeyGen Voice includes an Instant Voice clone built from under a minute of audio, plus a higher-fidelity Professional Voice Clone add-on built from 30 minutes to 2 hours of audio."
+    },
+    {
+     "q": "Is Synthesia free to use?",
+     "a": "Yes, Synthesia's free Basic plan includes 10 minutes of video creation or dubbing per month with 9 AI avatars, though output is watermarked and there are no personal avatars or downloads."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "kling-vs-runway",
+  "before": {
+   "choose_a": "[\"✅ You need single clips up to 30 seconds long with as many as 10 keyframes in one generation.\", \"✅ You want consistent characters or objects across shots using Omni Reference's support for up to 15 reference items.\", \"✅ You're writing detailed, long-form prompts (up to roughly 8,000 tokens) and want built-in two-channel stereo audio with the output.\", \"✅ You care about past leaderboard performance, since Kling 3.0 Pro topped the ArtificialAnalysis text-to-video leaderboard in February 2026.\"]",
+   "choose_b": "[\"✅ You want to compare outputs from multiple models like Nano Banana Pro, Kling, Seedance, Seed Audio, and Lyria without leaving the platform.\", \"✅ You need the current top-ranked model, since Gen-4.5 took the No. 1 spot on the Artificial Analysis Video Arena leaderboard at launch.\", \"✅ You want one platform that handles image generation, video, and native audio instead of switching tools.\", \"✅ You prefer transparent monthly pricing, since Runway's paid plans start at $12/mo billed annually with a published credit allowance.\"]",
+   "faq": [
+    {
+     "a": "Runway's Gen-4.5 took the No. 1 spot on the Artificial Analysis Video Arena leaderboard when it launched in December 2025, while Kling 3.0 Pro had topped a different ArtificialAnalysis text-to-video leaderboard back in February 2026. Since both companies update models frequently, check the current leaderboard for the latest standings.",
+     "q": "Which is better for getting the highest-ranked video quality?"
+    },
+    {
+     "a": "No, Kling AI is a paid, credit-based subscription product with tiers like Standard, Pro, Premier and Ultra; there's no free plan listed on its current pricing structure.",
+     "q": "Can I use Kling AI for free?"
+    },
+    {
+     "a": "Yes, Runway's Free plan gives you 125 one-time credits and 5GB of storage with a limited selection of models, so it works more as a trial than an ongoing free quota.",
+     "q": "Can I use Runway for free?"
+    },
+    {
+     "a": "Runway is the better fit here, since it hosts third-party models like Nano Banana Pro, Kling, Seedance, Seed Audio, and Lyria alongside its own Gen-4.5, letting you compare outputs in one platform. Kling AI only offers its own Kling model family.",
+     "q": "Which is better for working across multiple AI models in one subscription?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You need a single-pass clip up to 30 seconds long with as many as 10 keyframes in one generation.",
+    "✅ You want consistent characters or objects across shots using Omni Reference's support for up to 15 reference items (images, videos and subjects combined).",
+    "✅ You're writing long, detailed prompts (up to roughly 8,000 tokens) and want built-in two-channel stereo audio generated with the clip.",
+    "✅ You care about past leaderboard results, since Kling 3.0 Pro topped the ArtificialAnalysis text-to-video leaderboard with an Arena ELO of 1240 in February 2026."
+   ],
+   "choose_b": [
+    "✅ You want to compare outputs from multiple models like Nano Banana Pro, Kling, Seedance, Seed Audio, and Lyria without leaving the platform.",
+    "✅ You need a current top-ranked model, since Gen-4.5 took the No. 1 spot on the Artificial Analysis Video Arena leaderboard at launch.",
+    "✅ You want one platform that handles image generation, video, and native audio instead of switching tools.",
+    "✅ You want to try the interface before paying, since Runway's Free plan gives 125 one-time credits and 5GB of storage."
+   ],
+   "faq": [
+    {
+     "q": "Which is better for getting the highest-ranked video quality?",
+     "a": "Runway's Gen-4.5 took the No. 1 spot on the Artificial Analysis Video Arena leaderboard at launch, while Kling 3.0 Pro had topped a separate ArtificialAnalysis text-to-video leaderboard back in February 2026. Both companies update models frequently, so check the current leaderboard for the latest standings."
+    },
+    {
+     "q": "Can I use Kling AI for free?",
+     "a": "No, Kling AI runs on a tiered, credit-based subscription with plans like Standard, Pro, Premier and Ultra, and no free plan is confirmed. Current pricing for the Kling 4.0 generation has not been published."
+    },
+    {
+     "q": "Can I use Runway for free?",
+     "a": "Yes, Runway's Free plan gives you 125 one-time credits and 5GB of storage with a limited selection of models, so it works more as a trial than an ongoing free quota."
+    },
+    {
+     "q": "Which is better for working across multiple AI models in one subscription?",
+     "a": "Runway is the better fit here, since it hosts third-party models like Nano Banana Pro, Kling, Seedance, Seed Audio, and Lyria alongside its own Gen-4.5, letting you compare outputs in one platform. Kling AI only offers its own Kling model family."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "pika-vs-kling-ai",
+  "before": {
+   "choose_a": "[\"✅ You want to combine Pika's own video model with third-party video, image, and audio models from vendors like Google and ElevenLabs in one platform.\", \"✅ You need camera-direction control when generating clips with Pika 2.5.\", \"✅ You're building a custom workflow and want to connect Pika's models through its developer API or MCP integration.\", \"✅ You prefer topping up with one-time credit packs instead of committing to a subscription.\"]",
+   "choose_b": "[\"✅ You need a single clip longer than Pika's native 5 to 10 seconds, since Kling 4.0 reportedly supports clips from 3 to 30 seconds.\", \"✅ You want to keep the same character or object consistent across shots using Omni Reference's support for up to 15 reference items.\", \"✅ You want audio generated together with the video instead of adding it afterward, since Kling 4.0 includes two-channel stereo audio.\", \"✅ You need to give the model a very detailed, long-form prompt, since Kling 4.0 reportedly accepts prompts of up to roughly 8,000 tokens.\"]",
+   "faq": [
+    {
+     "a": "Pika is a web-based AI creation platform that generates short video clips, images, and audio from text or image prompts. It combines its own Pika 2.5 video model with third-party video, image, and audio models from vendors like Google and ElevenLabs on a credit-based platform.",
+     "q": "What is Pika?"
+    },
+    {
+     "a": "Not really. Free accounts get 0 monthly credits and must buy one-off credit packs to generate anything, and those packs carry no commercial license. A commercial license only comes with the paid Creator plan or above.",
+     "q": "Is Pika free to use?"
+    },
+    {
+     "a": "Kling AI is the better fit here: Kling 4.0 reportedly supports single clips from 3 to 30 seconds, while Pika's native clip length is about 5 seconds from a text prompt or 5 to 10 seconds from a photo before any extension.",
+     "q": "Which is better for longer single video clips, Pika or Kling AI?"
+    },
+    {
+     "a": "This isn't confirmed. Reporting on Kling 4.0's rollout is inconsistent about which resolutions, including 4K, are actually live versus still pending, so current resolution support can't be stated with confidence.",
+     "q": "Does Kling AI generate 4K video?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want one platform that combines Pika's own Pika 2.5 video model with third-party video, image, and audio models from vendors like Google and ElevenLabs.",
+    "✅ You need camera-direction control when generating clips with Pika 2.5.",
+    "✅ You're building a custom workflow and want to connect Pika's models through its developer API or MCP integration.",
+    "✅ You prefer topping up with one-time credit packs instead of committing to a subscription."
+   ],
+   "choose_b": [
+    "✅ You need a single clip longer than Pika's native 5 to 10 seconds, since Kling 4.0 supports single-pass clips of up to 30 seconds.",
+    "✅ You want to keep the same character or object consistent across shots using Omni Reference's support for up to 15 reference items.",
+    "✅ You want audio generated together with the video instead of adding it afterward, since Kling 4.0 includes built-in two-channel stereo audio.",
+    "✅ You need to give the model a very detailed, long-form prompt, since Kling 4.0 accepts prompts of up to roughly 8,000 tokens."
+   ],
+   "faq": [
+    {
+     "q": "What is Pika?",
+     "a": "Pika is a web-based AI creation platform that generates short video clips, images, and audio from text or image prompts. It combines its own Pika 2.5 video model with third-party video, image, and audio models from vendors like Google and ElevenLabs on a credit-based platform."
+    },
+    {
+     "q": "Is Pika free to use?",
+     "a": "Not really. Free accounts get 0 monthly credits and must buy one-off credit packs to generate anything, and those packs carry no commercial license. A commercial license only comes with the paid Creator plan or above."
+    },
+    {
+     "q": "Which is better for longer single video clips, Pika or Kling AI?",
+     "a": "Kling AI is the better fit here: Kling 4.0 supports single-pass clips of up to 30 seconds, while Pika's native clip length is about 5 seconds from a text prompt or 5 to 10 seconds from a photo before any extension."
+    },
+    {
+     "q": "Does Kling AI generate 4K video?",
+     "a": "This isn't confirmed for all plans. Kuaishou's own materials describe 4K and HDR output inconsistently, with some notes listing them as 'coming soon' rather than confirmed live, so current resolution support can't be stated with confidence."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "recraft-vs-canva-ai",
+  "before": {
+   "choose_a": "[\"✅ You need true editable SVG vector files rather than flat raster images for logos, icons, or illustrations.\", \"✅ You want photorealistic raster images, mockups, and product shots generated from a dedicated design-focused model family like Recraft V4.1.\", \"✅ You want to compare outputs across third-party image models like Nano Banana, Seedream, GPT Image, and Flux, plus video models like Kling, Veo, and Seedance, in one studio.\", \"✅ You only generate images occasionally and want credit packs that never expire instead of a recurring subscription.\"]",
+   "choose_b": "[\"✅ You want to describe a design in text or voice and get back a fully editable layout instead of a flat image.\", \"✅ You need an all-in-one toolkit for social posts, presentations, and marketing copy, covering Magic Design, Dream Lab, and Magic Write.\", \"✅ You want an AI-generated poster split into separate editable layers with Magic Layers instead of a single flattened image.\", \"✅ You're a non-designer who wants fast, brand-aware visuals without learning a professional design tool.\"]",
+   "faq": [
+    {
+     "a": "Recraft is an image-generation studio built around its own Recraft V4.1 model family, producing true SVG vectors and photorealistic raster images alongside integrated third-party models. Canva AI is the conversational assistant inside Canva's Magic Studio, turning text or voice prompts into fully editable designs like social posts and presentations.",
+     "q": "What is the difference between Recraft and Canva AI?"
+    },
+    {
+     "a": "Yes, true editable SVG vector output is one of Recraft's core strengths, alongside photorealistic raster images, icons, mockups, and product shots.",
+     "q": "Can Recraft generate SVG files?"
+    },
+    {
+     "a": "Recraft is the better fit since it produces genuine editable SVG vector files, a capability Canva AI's card does not describe.",
+     "q": "Which is better for creating a logo or icon set?"
+    },
+    {
+     "a": "Canva AI offers a free plan alongside paid Pro, Business, and custom Enterprise tiers, though the free plan's AI credit allowance is limited and the exact cap isn't published.",
+     "q": "Is Canva AI free to use?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You need true editable SVG vector files for logos, icons, or illustrations rather than flat raster images.",
+    "✅ You want photorealistic raster images, mockups, and product shots generated from a dedicated design model family like Recraft V4.1, including the fast V4.1 Flash variant.",
+    "✅ You want to compare outputs across third-party image models like Nano Banana, Seedream, GPT Image, and Flux, plus video models like Kling, Veo, and Seedance, in one studio.",
+    "✅ You only generate images occasionally and prefer credit packs that never expire over a recurring subscription."
+   ],
+   "choose_b": [
+    "✅ You want to describe a design in text or voice and get back a fully editable layout instead of a flat image.",
+    "✅ You need an all-in-one toolkit covering Magic Design, Dream Lab, Magic Write, Canva Sheets, and Magic Charts for social posts, presentations, and marketing assets.",
+    "✅ You want an AI-generated poster split into separate editable layers with Magic Layers, which also works inside ChatGPT and Gemini.",
+    "✅ You're a non-designer who wants fast, brand-aware visuals without learning a professional design tool."
+   ],
+   "faq": [
+    {
+     "q": "What is the difference between Recraft and Canva AI?",
+     "a": "Recraft is an image-generation studio built around its own Recraft V4.1 model family, producing true SVG vectors and photorealistic raster images alongside integrated third-party image and video models. Canva AI is the conversational assistant inside Canva's Magic Studio, turning text or voice prompts into fully editable designs and now including its own image model, Canva Craft."
+    },
+    {
+     "q": "Can Recraft generate SVG files?",
+     "a": "Yes, true editable SVG vector output is one of Recraft's core strengths, alongside photorealistic raster images, icons, mockups, and product shots."
+    },
+    {
+     "q": "Which is better for creating a logo or icon set?",
+     "a": "Recraft is the better fit since it produces genuine editable SVG vector files, a capability Canva AI's card does not describe."
+    },
+    {
+     "q": "Is Canva AI free to use?",
+     "a": "Canva AI has a free plan with a limited AI allowance shared across its Standard, Premium, and Ultra AI tools, alongside paid Pro, Business, and custom Enterprise tiers."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "speechify-vs-elevenlabs",
+  "before": {
+   "choose_a": "[\"✅ You want to listen to articles, PDFs, emails, or web pages read aloud instead of reading them yourself.\", \"✅ You want access to a huge library of 1000+ voices across 60+ languages for everyday reading.\", \"✅ You want to get through long documents fast using playback speeds up to 5x on paid plans.\", \"✅ You want voice-first extras like a Voice AI Assistant, AI Podcasts, and Voice Typing built into your reading app.\"]",
+   "choose_b": "[\"✅ You need to clone a voice from about 10 seconds of audio for narration or content creation.\", \"✅ You want to generate music, sound effects, images, and video with lip sync, all from one credit balance.\", \"✅ You're building real-time conversational voice agents and want to choose the underlying LLM from OpenAI, Google, Anthropic or your own endpoint.\", \"✅ You need natural, expressive speech in more than 90 languages for creative or studio work.\"]",
+   "faq": [
+    {
+     "a": "Speechify is a text-to-speech reading assistant for documents, PDFs, and web pages, built on its proprietary SIMBA 3.x voice models with playback up to 5x speed on paid plans.",
+     "q": "What is Speechify best for?"
+    },
+    {
+     "a": "ElevenLabs is a multimodal AI studio covering speech, voice cloning, music, sound effects, transcription, dubbing, and image and video generation with lip sync, running its own Eleven v4 and Eleven v4 Turbo models alongside third-party models.",
+     "q": "What is ElevenLabs best for?"
+    },
+    {
+     "a": "Speechify, since it's built specifically as a reading assistant with a large voice library and fast playback speeds for consuming written content.",
+     "q": "Which is better for reading your own documents and PDFs aloud?"
+    },
+    {
+     "a": "ElevenLabs, because it offers instant and professional voice cloning plus real-time conversational agents powered by Eleven v4 Turbo, features Speechify does not offer.",
+     "q": "Which is better for voice cloning or building voice agents?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want to listen to articles, PDFs, emails, or web pages read aloud instead of reading them yourself.",
+    "✅ You want access to a huge library of 1000+ voices across many languages for everyday reading.",
+    "✅ You want to get through long documents fast using playback speeds up to 5x on paid plans.",
+    "✅ You want voice-first extras like a Voice AI Assistant, AI Podcasts, and Voice Typing built into your reading app."
+   ],
+   "choose_b": [
+    "✅ You need to clone a voice from about 10 seconds of audio for narration or content creation.",
+    "✅ You want to generate music, sound effects, images, and video with lip sync, all from one credit balance.",
+    "✅ You're building real-time conversational voice agents and want to choose the underlying LLM from OpenAI, Google, Anthropic or your own endpoint.",
+    "✅ You need natural, expressive speech in more than 90 languages for creative or studio work."
+   ],
+   "faq": [
+    {
+     "q": "What is Speechify best for?",
+     "a": "Speechify is a text-to-speech reading assistant for documents, PDFs, and web pages, built on its proprietary SIMBA 3.x voice models with playback up to 5x speed on paid plans."
+    },
+    {
+     "q": "What is ElevenLabs best for?",
+     "a": "ElevenLabs is a multimodal AI studio covering speech, voice cloning, music, sound effects, transcription, dubbing, and image and video generation with lip sync, running its own Eleven v4 and Eleven v4 Turbo models alongside third-party models."
+    },
+    {
+     "q": "Which is better for reading your own documents and PDFs aloud?",
+     "a": "Speechify, since it's built specifically as a reading assistant with a large voice library and fast playback speeds for consuming written content."
+    },
+    {
+     "q": "Which is better for voice cloning or building voice agents?",
+     "a": "ElevenLabs, because it offers instant and professional voice cloning plus real-time conversational agents built on Eleven Realtime or Eleven v4 Turbo, features Speechify does not offer."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "suno-vs-elevenlabs",
+  "before": {
+   "choose_a": "[\"✅ You want to generate a complete song with vocals and instrumentation from a single text prompt in about a minute.\", \"✅ You want to turn a poem or your own writing into a spoken-voice track paired with original music using Suno Speech (beta).\", \"✅ You want to clone your own singing voice or fine-tune the model to your own catalogue with Suno's Voices and Custom Models.\", \"✅ You want to try song generation on a free plan before committing to a paid subscription.\"]",
+   "choose_b": "[\"✅ You need natural-sounding, multilingual text-to-speech or voice cloning rather than full song generation.\", \"✅ You're building real-time voice agents and want to choose the underlying reasoning model from OpenAI, Anthropic or Google, or connect your own LLM.\", \"✅ You want one credit balance that covers voice, music, sound effects, images, video and lip sync instead of juggling separate tools.\", \"✅ You want a paid plan with commercial rights and instant voice cloning without needing a full song generator.\"]",
+   "faq": [
+    {
+     "a": "Suno is an AI music generator that turns a text prompt into a complete song with vocals and instruments, and now also offers spoken-voice generation through Suno Speech (beta). ElevenLabs is a multimodal studio centered on speech and voice cloning that also covers music, sound effects, transcription, dubbing, and image or video generation with lip sync.",
+     "q": "What is the difference between Suno and ElevenLabs?"
+    },
+    {
+     "a": "Suno is purpose-built for this: it writes, arranges and performs a complete track with vocals and instrumentation from a short prompt. ElevenLabs can generate music, but its core strength remains speech and voice cloning rather than songwriting.",
+     "q": "Which is better for generating a full song with vocals from a text prompt?"
+    },
+    {
+     "a": "Yes, ElevenLabs includes music generation alongside its speech, voice cloning, sound effects, transcription, dubbing, and image or video tools under one credit balance. Suno is still the more dedicated option for composing full songs with lyrics and vocals.",
+     "q": "Can ElevenLabs generate music, not just speech?"
+    },
+    {
+     "a": "Suno's paid plans grant commercial use rights, but the company faces active copyright litigation, and a US judge denied its motion to dismiss claims in September 2026. That adds legal uncertainty around commercial use regardless of plan.",
+     "q": "Is Suno safe to use for commercial projects?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want to generate a complete song with vocals and instrumentation from a single text prompt in about a minute.",
+    "✅ You want to turn a poem or your own writing into a spoken-voice track paired with original music using Suno Speech (beta).",
+    "✅ You want to clone your own singing voice or fine-tune the model to your own catalogue with Suno's Voices and Custom Models on Pro or Premier.",
+    "✅ You want to experiment with song generation on a free plan before committing to a paid subscription."
+   ],
+   "choose_b": [
+    "✅ You need natural-sounding, multilingual text-to-speech or voice cloning rather than full song generation.",
+    "✅ You're building real-time voice agents and want to choose the underlying reasoning model from OpenAI, Anthropic or Google, or connect your own LLM.",
+    "✅ You want one credit balance that covers voice, music, sound effects, images, video and lip sync instead of juggling separate tools.",
+    "✅ You want instant voice cloning from about 10 seconds of audio for quick turnaround work rather than generating full songs."
+   ],
+   "faq": [
+    {
+     "q": "What is the difference between Suno and ElevenLabs?",
+     "a": "Suno is an AI music generator that turns a text prompt into a complete song with vocals and instruments, and now also offers spoken-voice generation through Suno Speech (beta). ElevenLabs is a multimodal studio centered on speech and voice cloning that also covers music, sound effects, transcription, dubbing, and image or video generation with lip sync."
+    },
+    {
+     "q": "Which is better for generating a full song with vocals from a text prompt?",
+     "a": "Suno is purpose-built for this: it writes, arranges and performs a complete track with vocals and instrumentation from a short prompt. ElevenLabs can generate music, but its core strength remains speech and voice cloning rather than songwriting."
+    },
+    {
+     "q": "Can ElevenLabs generate music, not just speech?",
+     "a": "Yes, ElevenLabs includes music generation alongside its speech, voice cloning, sound effects, transcription, dubbing, and image or video tools under one credit balance. Suno is still the more dedicated option for composing full songs with lyrics and vocals."
+    },
+    {
+     "q": "Is Suno safe to use for commercial projects?",
+     "a": "Suno's paid plans grant commercial use rights, but the company faces active copyright litigation, and a US judge denied its motion to dismiss claims in September 2026. That adds legal uncertainty around commercial use regardless of plan."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "aider-vs-github-copilot",
+  "before": {
+   "choose_a": "[\"✅ You want every AI change automatically committed to git so you can review, diff, or revert it with standard git commands.\", \"✅ You want to bring your own API key and freely switch between models from Anthropic, OpenAI, Google, DeepSeek, or local Ollama models.\", \"✅ You're tackling a large refactor where the AI needs an accurate repo map to edit correctly across many files.\", \"✅ You want a completely free, open-source tool with no subscription and no vendor lock-in.\"]",
+   "choose_b": "[\"✅ You want one platform that combines chat, agent mode, cloud agents, code review and a CLI instead of piecing tools together.\", \"✅ You want to try an AI coding assistant for free before committing to a paid plan.\", \"✅ You want to pick from models across multiple vendors, including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot, within the same tool.\", \"✅ You're on a team that wants automated code review and cloud agents working asynchronously on tasks.\"]",
+   "faq": [
+    {
+     "a": "Aider is an open-source AI pair programmer that runs entirely in the terminal. It builds a repo map of your codebase, edits multiple files at once, and automatically commits every AI change to git for full auditability.",
+     "q": "What is Aider?"
+    },
+    {
+     "a": "Aider is built for this: its repo map gives the AI an accurate semantic index of the codebase, so changes across many files stay consistent, and every edit is auto-committed to git for easy review. Copilot's agent mode can also edit across files, but it's part of a broader platform rather than a tool purpose-built around git-tracked refactors.",
+     "q": "Which is better for a large multi-file refactor?"
+    },
+    {
+     "a": "Aider itself is free and open source. You only pay for the API calls to whichever LLM provider you connect it to, or nothing extra if you run local models via Ollama.",
+     "q": "Is Aider free?"
+    },
+    {
+     "a": "GitHub Copilot offers a Free plan at $0 per month, Pro at $15 per month total, Pro+ at $70 per month total, and Max at $200 per month total for individuals, billed through GitHub AI Credits. Organizations can choose Business at $19 per user per month or Enterprise at $39 per user per month.",
+     "q": "How much does GitHub Copilot cost?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want every AI change automatically committed to git so you can review, diff, or revert it with standard git commands.",
+    "✅ You want to bring your own API key and freely switch between models from Anthropic, OpenAI, Google, DeepSeek, or local Ollama models.",
+    "✅ You're tackling a large refactor where the AI needs an accurate repo map to edit correctly across many files.",
+    "✅ You want a completely free, open-source tool with no subscription and no vendor lock-in."
+   ],
+   "choose_b": [
+    "✅ You want one platform that combines chat, agent mode, cloud agents, code review and a CLI instead of piecing tools together.",
+    "✅ You want to try an AI coding assistant for free before committing to a paid plan.",
+    "✅ You want to pick from models across multiple vendors, including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot, within the same tool.",
+    "✅ You want deep integration with GitHub and VS Code so completions, chat and reviews stay in your existing workflow."
+   ],
+   "faq": [
+    {
+     "q": "What is Aider?",
+     "a": "Aider is an open-source AI pair programmer that runs entirely in the terminal. It builds a repo map of your codebase, edits multiple files at once, and automatically commits every AI change to git for full auditability."
+    },
+    {
+     "q": "What is GitHub Copilot?",
+     "a": "GitHub Copilot is an agentic, multi-model coding assistant that lives in your editor, terminal and a desktop app, offering chat, agent mode, cloud agents, code review and a CLI, with models from vendors like Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot."
+    },
+    {
+     "q": "Which is better for a large multi-file refactor?",
+     "a": "Aider is built for this: its repo map gives the AI an accurate semantic index of the codebase, so changes across many files stay consistent, and every edit is auto-committed to git for easy review. Copilot's agent mode can also edit across files, but it's part of a broader platform rather than a tool purpose-built around git-tracked refactors."
+    },
+    {
+     "q": "How much does GitHub Copilot cost?",
+     "a": "GitHub Copilot offers a Free plan at $0 per month, Pro at $10 per month (including about $15 of usage), Pro+ at $39 per month (including about $70 of usage), and Max at $100 per month (including about $200 of usage), all billed through GitHub AI Credits."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "claude-code-vs-github-copilot",
+  "before": {
+   "choose_a": "[\"✅ You are doing complex multi-file refactoring or agentic workflows that need an agent to actually edit and run code, not just suggest it.\", \"✅ You want Claude Opus 5.5 driving your coding agent by default, with Claude Fable 5.1 selectable for even more capable runs.\", \"✅ You want one agent that works across terminal, VS Code, JetBrains, desktop app and web, including cloud agents and scheduled Routines.\", \"✅ You are already paying for Claude Pro, Max, Team or Enterprise and want coding included without a separate API bill.\"]",
+   "choose_b": "[\"✅ You want a genuinely free tier to try an agentic coding assistant before paying anything.\", \"✅ You want to pick from models across multiple vendors, including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot, depending on the task.\", \"✅ Your team already lives in GitHub and wants agent mode, cloud agents and code review tied directly into PRs and issues.\", \"✅ You want inline code completions and Next Edit suggestions that stay included on every plan and never draw down your AI Credits.\"]",
+   "faq": [
+    {
+     "a": "Claude Code is Anthropic's agentic coding tool, currently at CLI version 2.1.302, that reads your codebase, edits files and runs commands to carry a task through to a working change. It runs in the terminal, VS Code, JetBrains, a desktop app and the web, with Claude Opus 5.5 as the default model and support for cloud agents, subagents and computer use.",
+     "q": "What is Claude Code?"
+    },
+    {
+     "a": "Claude Code is built around deep agentic workflows with Claude Opus 5.5 as the default model, making it a strong fit for complex, multi-file refactoring. GitHub Copilot is the stronger pick if you want agent mode, cloud agents and code review tied directly into your GitHub repos and PRs, with the flexibility to choose models from several vendors.",
+     "q": "Which is better for complex multi-file refactoring versus everyday GitHub-integrated coding?"
+    },
+    {
+     "a": "Claude Code is not available on Anthropic's Free tier. It is bundled into Pro ($17/month billed annually or $20/month billed monthly), Max (from $100/month), Team Standard, Team Premium, and Enterprise, with separate pay-as-you-go API pricing that varies by model, from Haiku 5.5 up to Fable 5.1.",
+     "q": "How much does Claude Code cost?"
+    },
+    {
+     "a": "Yes. GitHub Copilot is a multi-model platform offering models from vendors including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot, and higher tiers can delegate work to third-party agents such as Claude by Anthropic, currently in preview.",
+     "q": "Does GitHub Copilot let me use Claude?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You are doing complex multi-file refactoring or agentic workflows that need an agent to actually edit and run code, not just suggest it.",
+    "✅ You want Claude Opus 5.5 driving your coding agent by default, with Claude Fable 5.1 selectable for even more capable runs.",
+    "✅ You want one agent that works across terminal, VS Code, JetBrains, desktop app and web, including cloud agents and scheduled Routines.",
+    "✅ You are already paying for Claude Pro, Max, Team or Enterprise and want coding included without a separate API bill."
+   ],
+   "choose_b": [
+    "✅ You want a genuinely free tier to try an agentic coding assistant before paying anything.",
+    "✅ You want to pick from models across multiple vendors, including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot, depending on the task.",
+    "✅ Your team already lives in GitHub and wants agent mode, cloud agents and code review tied directly into PRs and issues.",
+    "✅ You want inline code completions and Next Edit suggestions that stay included on every plan and never draw down your AI Credits."
+   ],
+   "faq": [
+    {
+     "q": "What is Claude Code?",
+     "a": "Claude Code is Anthropic's agentic coding tool, currently at CLI version 2.1.302, that reads your codebase, edits files and runs commands to carry a task through to a working change. It runs in the terminal, VS Code, JetBrains, a desktop app and the web, with Claude Opus 5.5 as the default model and support for cloud agents, subagents and computer use."
+    },
+    {
+     "q": "Which is better for complex multi-file refactoring versus everyday GitHub-integrated coding?",
+     "a": "Claude Code is built around deep agentic workflows with Claude Opus 5.5 as the default model, making it a strong fit for complex, multi-file refactoring. GitHub Copilot is the stronger pick if you want agent mode, cloud agents and code review tied directly into your GitHub repos and PRs, with the flexibility to choose models from several vendors."
+    },
+    {
+     "q": "How much does Claude Code cost?",
+     "a": "Claude Code is not available on Anthropic's Free tier. It is bundled into Pro ($17/month billed annually or $20/month billed monthly), Max (from $100/month), Team Standard, Team Premium, and Enterprise, with separate pay-as-you-go API pricing that varies by model, from Haiku 5.5 up to Fable 5.1."
+    },
+    {
+     "q": "Does GitHub Copilot let me use Claude?",
+     "a": "Yes. GitHub Copilot is a multi-model platform offering models from vendors including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot, and higher tiers can delegate work to third-party agents such as Claude by Anthropic, currently in preview."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "cline-vs-github-copilot",
+  "before": {
+   "choose_a": "[\"✅ You want to use the same autonomous coding agent across VS Code, JetBrains, a CLI, and a native desktop app instead of being tied to one editor.\", \"✅ You want step-by-step approval over every file edit, terminal command, or browser action the agent takes before it runs.\", \"✅ You want to pick from a catalog of 6,400+ models across 200+ providers, including running local models via Ollama for free.\", \"✅ You want native MCP support with an MCP marketplace to plug in custom tool integrations for your agent.\"]",
+   "choose_b": "[\"✅ You want cloud agents that can work on coding tasks asynchronously, not just an agent tied to your open editor.\", \"✅ You want automated code review built in alongside chat, agent mode, and a CLI in one platform.\", \"✅ You want a real free tier to try an agentic assistant before committing to a paid plan.\", \"✅ You want deep integration with GitHub itself, since Copilot lives inside issues, PRs, and the wider GitHub ecosystem.\"]",
+   "faq": [
+    {
+     "a": "Cline is an open-source autonomous coding agent available as a VS Code extension, JetBrains plugin, CLI, and native desktop app. It proposes actions like creating files, running commands, or using a browser, and waits for your approval before executing each one.",
+     "q": "What is Cline?"
+    },
+    {
+     "a": "The core Cline extension, CLI, MCP marketplace, and multi-root workspace support are free and open source. You only pay for AI inference, either by bringing your own API key, using Cline's own inference provider, or running local models via Ollama at no cost.",
+     "q": "Is Cline free to use?"
+    },
+    {
+     "a": "GitHub Copilot has a Free plan at $0/month, Pro at $10/month base plus $5/month flex ($15 total), Pro+ at $39 base plus $31 flex ($70 total), and Max at $100 base plus $100 flex ($200 total). Organizations choose Business at $19 per user/month or Enterprise at $39 per user/month, all billed through usage-based GitHub AI Credits.",
+     "q": "How much does GitHub Copilot cost?"
+    },
+    {
+     "a": "GitHub Copilot is the better fit here, since it adds agent mode, cloud agents, and automated code review directly inside the GitHub workflow you already use. Cline is a strong alternative if you want an editor-agnostic agent with full step-by-step control instead.",
+     "q": "Which is better for a team already living inside GitHub for issues, PRs, and reviews?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want to use the same autonomous coding agent across VS Code, JetBrains, a CLI, and a native desktop app instead of being tied to one editor.",
+    "✅ You want step-by-step approval over every file edit, terminal command, or browser action the agent takes before it runs.",
+    "✅ You want to pick from a catalog of 6,400+ models across 200+ providers, including running local models via Ollama for free.",
+    "✅ You want native MCP support with an MCP marketplace to plug in custom tool integrations for your agent."
+   ],
+   "choose_b": [
+    "✅ You want cloud agents that can work on coding tasks asynchronously, not just an agent tied to your open editor.",
+    "✅ You want automated code review built in alongside chat, agent mode, and a CLI in one platform.",
+    "✅ You want a real free tier to try an agentic coding assistant before committing to a paid plan.",
+    "✅ You want to choose from models across multiple vendors, including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot, depending on the task."
+   ],
+   "faq": [
+    {
+     "q": "What is Cline?",
+     "a": "Cline is an open-source autonomous coding agent available as a VS Code extension, JetBrains plugin, CLI, and native desktop app. It proposes actions like creating files, running commands, or using a browser, and waits for your step-by-step approval before executing each one."
+    },
+    {
+     "q": "Is Cline free to use?",
+     "a": "The core Cline extension, CLI, MCP marketplace, and multi-root workspace support are free and open source. You only pay for AI inference, either by bringing your own API key, using Cline's own inference provider, or running local models via Ollama at no cost."
+    },
+    {
+     "q": "How much does GitHub Copilot cost?",
+     "a": "GitHub Copilot has a Free plan at $0/month, Pro at $10/month (about $15 of usage, roughly 1,500 AI Credits), Pro+ at $39/month (about $70 of usage, roughly 7,000 AI Credits), and Max at $100/month (about $200 of usage, roughly 20,000 AI Credits). Usage is billed through consumption-based GitHub AI Credits, and extra credits can be purchased if you exceed your included allotment."
+    },
+    {
+     "q": "Which is better for a team already living inside GitHub for issues, PRs, and reviews?",
+     "a": "GitHub Copilot is the better fit here, since it adds agent mode, cloud agents, and automated code review directly inside the GitHub workflow you already use, with a desktop app built around taking issues to merge. Cline is a strong alternative if you want an editor-agnostic agent with full step-by-step control instead."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "framer-ai-vs-canva-ai",
+  "before": {
+   "choose_a": "[\"✅ You want to publish a complete, live website with hosting, a CMS, and a custom domain built in.\", \"✅ You want to co-edit your site directly on the canvas with Framer Agents instead of only generating a flat design from a prompt.\", \"✅ You want to drive site-building from external tools like Claude Code, Codex, Cursor, or a terminal.\", \"✅ You want to choose between different AI model families, like GPT, Sonnet, Opus, or Fable, for different editing tasks.\"]",
+   "choose_b": "[\"✅ You need to create marketing graphics, social posts, presentations, or printed materials rather than a website.\", \"✅ You want a conversational assistant that turns a text or voice prompt into an editable design using Magic Studio.\", \"✅ You want AI-generated posters to stay editable as separate layers instead of flattening into one image, via Magic Layers.\", \"✅ You want brand-aware, persistent-memory AI help that keeps visuals consistent across many projects and formats.\"]",
+   "faq": [
+    {
+     "a": "Framer AI is the AI layer inside Framer, a browser-based website builder. Framer Agents let you co-edit your site directly on the canvas, handling tasks like building components, fixing layouts, generating SEO metadata, and managing CMS collections.",
+     "q": "What is Framer AI?"
+    },
+    {
+     "a": "Canva AI's documented features focus on design assets, presentations, and brand tools rather than site-building, though its best-for list does mention web experiences without further detail. If you specifically need hosting, a CMS, and a custom domain, Framer AI is purpose-built for that.",
+     "q": "Can Canva AI build a full website like Framer?"
+    },
+    {
+     "a": "Framer AI is the better fit, since it combines AI generation with built-in hosting, a CMS, SEO tools, and custom domains on paid plans. Canva AI is built for producing design assets rather than publishing a full site.",
+     "q": "Which is better for publishing a live marketing website?"
+    },
+    {
+     "a": "Framer has a free plan that includes 500 AI credits to try Agents, 1 GB bandwidth, a free Framer domain, up to 3 editors, and 10 CMS collections, but it is limited to non-commercial use with no custom domain. Paid Basic, Pro, and Enterprise tiers add more credits, a custom domain, and higher limits.",
+     "q": "Is Framer AI free to use?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want to publish a complete, live website with built-in hosting, a CMS, and a custom domain on paid plans.",
+    "✅ You want to co-edit your site directly on the canvas with Framer Agents instead of only generating a flat design from a prompt.",
+    "✅ You want to drive site-building from external tools like Claude Code, Codex, Cursor, or a terminal.",
+    "✅ You want to choose between different AI model families, like GPT, Sonnet, Opus, or Fable, for different editing tasks."
+   ],
+   "choose_b": [
+    "✅ You need to create marketing graphics, social posts, presentations, or documents rather than a website.",
+    "✅ You want a conversational assistant that turns a text or voice prompt into an editable design across Canva's Magic Studio toolkit.",
+    "✅ You want AI-generated posters to stay editable as separate layers instead of flattening into one image, via Magic Layers.",
+    "✅ You want high-resolution AI image generation with Canva Craft, with text rendering across many languages and aspect ratios."
+   ],
+   "faq": [
+    {
+     "q": "What is Framer AI?",
+     "a": "Framer AI is the AI layer inside Framer, a browser-based website builder now at version 3.0. Framer Agents let you co-edit your site directly on the canvas, handling tasks like building components, fixing layouts, generating SEO metadata, and managing CMS collections."
+    },
+    {
+     "q": "What is Canva AI?",
+     "a": "Canva AI is the conversational core of Canva's Magic Studio, built on Canva's own Design Model, that turns a text or voice description into an editable design. It also powers Canva Craft, Canva's in-house image-generation model, available inside Dream Lab."
+    },
+    {
+     "q": "Which is better for publishing a live marketing website?",
+     "a": "Framer AI is the better fit, since it pairs AI generation with built-in hosting, a CMS, SEO tools, and custom domains on paid plans. Canva AI is built for producing design assets rather than publishing a full site."
+    },
+    {
+     "q": "Which is better for creating social media graphics and presentations?",
+     "a": "Canva AI is the better choice, with Magic Studio tools like Magic Design, Dream Lab, and Magic Write built specifically for fast, on-brand marketing assets. Framer AI is focused on building and publishing websites rather than standalone graphics."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "kiro-vs-github-copilot",
+  "before": {
+   "choose_a": "[\"✅ You want the AI to write out structured requirements, design and task specs before touching any code, so you can review the plan before implementation starts.\", \"✅ You need the flexibility to run tasks across Anthropic, OpenAI, DeepSeek and Qwen models, with Auto mode picking the right one per task.\", \"✅ You want one agent that follows you across IDE, CLI, web browser, mobile app, and the open-source Kiro Crew workspace.\", \"✅ You're building inside an AWS-centric shop and want an agentic tool designed to fit that kind of workflow.\"]",
+   "choose_b": "[\"✅ You want a full agentic platform with chat, agent mode, cloud agents, automated code review and a CLI in one product.\", \"✅ You already live in GitHub and VS Code and want an assistant that's deeply wired into that ecosystem.\", \"✅ You rely on inline code completions and Next Edit suggestions and don't want them eating into your usage allowance.\", \"✅ You want to pick models from a wide vendor spread including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot.\"]",
+   "faq": [
+    {
+     "a": "Kiro, since it's built specifically to produce requirements, design and task specs before generating any code.",
+     "q": "Which is better for spec-driven development?"
+    },
+    {
+     "a": "GitHub Copilot, given its deep integration with GitHub, VS Code, and the wider GitHub ecosystem.",
+     "q": "Which is better for teams already working in GitHub and VS Code?"
+    },
+    {
+     "a": "Yes. Kiro offers Anthropic, OpenAI, DeepSeek, Qwen and open-weight models with an Auto mode, while Copilot offers models from Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot.",
+     "q": "Do both tools let you choose between different AI model providers?"
+    },
+    {
+     "a": "Kiro spans an IDE, CLI, web app, mobile app and the Kiro Crew workspace, while Copilot lives in the editor, terminal, a desktop app, and on GitHub itself.",
+     "q": "Which tool works beyond a desktop IDE?"
+    },
+    {
+     "a": "Neither is fully predictable: Kiro uses a credit model with pay-as-you-go overage, and Copilot bills through consumption-based AI Credits split into base and flex allowances, both of which can grow with usage.",
+     "q": "Which has clearer, more predictable costs for heavy users?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want the AI to write structured requirements, design and task specs before any code is generated, so you can review the plan first.",
+    "✅ You need to switch between Anthropic, OpenAI, DeepSeek and Qwen models within one agent, with Auto mode picking per task.",
+    "✅ You want one agentic tool that works the same way across IDE, CLI, web browser, mobile app, and the open-source Kiro Crew workspace.",
+    "✅ You're working in an AWS-centric shop and want an agentic coding tool built with that context in mind."
+   ],
+   "choose_b": [
+    "✅ You want a single platform that bundles agent mode, cloud agents, chat, automated code review and a CLI.",
+    "✅ You already work inside GitHub and VS Code and want an assistant tightly integrated with that ecosystem.",
+    "✅ You rely on inline completions and Next Edit suggestions and want those to stay outside your usage allowance.",
+    "✅ You want model choice across a wide vendor spread including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot."
+   ],
+   "faq": [
+    {
+     "q": "Which is better for spec-driven development?",
+     "a": "Kiro, since it's built specifically to produce requirements, design and task specs before generating any code."
+    },
+    {
+     "q": "Which is better for teams already working in GitHub and VS Code?",
+     "a": "GitHub Copilot, given its deep integration with GitHub, VS Code, and the wider GitHub ecosystem."
+    },
+    {
+     "q": "Do both tools let you choose between different model providers?",
+     "a": "Yes. Kiro offers Anthropic, OpenAI, DeepSeek, Qwen and open-weight models with an Auto mode, while Copilot offers models from Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot."
+    },
+    {
+     "q": "Which tool works beyond a desktop IDE?",
+     "a": "Kiro spans an IDE, CLI, web app, mobile app and the Kiro Crew workspace, while Copilot lives in the editor, terminal, a desktop app, and on GitHub itself."
+    },
+    {
+     "q": "Which has clearer, more predictable costs for heavy users?",
+     "a": "Neither is fully predictable: Kiro uses a credit model with pay-as-you-go overage, and Copilot bills through consumption-based AI Credits that can exceed the base subscription once you buy extra credits beyond your included allotment."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "looka-vs-canva-ai",
+  "before": {
+   "choose_a": "[\"✅ You specifically need a logo and want AI to generate, customize and preview multiple concepts before paying anything.\", \"✅ You want downloadable vector files (SVG, EPS, PDF) for print and large-scale use once you purchase the Premium package.\", \"✅ You want one logo to expand into a matching brand kit of 300+ templates and marketing assets.\", \"✅ You want an AI-generated hosted website built directly from your chosen brand identity.\"]",
+   "choose_b": "[\"✅ You need ongoing design work across many formats like social posts, presentations and documents, not just a logo.\", \"✅ You want to describe a design in text or voice and get an editable layout back through a conversational assistant.\", \"✅ You want AI-generated posters that stay editable as separate layers instead of a single flattened image.\", \"✅ You want a broad toolkit in one place, from image generation and copywriting to data-to-chart design.\"]",
+   "faq": [
+    {
+     "a": "Looka is an AI logo maker and branding platform where you answer a few questions about your company and style, then get a range of AI-generated logo concepts to customize in a browser editor. Designing, previewing and saving are free, but downloading any file requires a one-time purchase or subscription.",
+     "q": "What is Looka?"
+    },
+    {
+     "a": "Canva AI is the conversational AI layer inside Canva's Magic Studio, built on Canva's own Design Model, that turns a text or voice description into an editable design. It is part of Canva's broader Magic Studio toolkit covering image generation, copywriting, data visualization and more.",
+     "q": "What is Canva AI?"
+    },
+    {
+     "a": "Looka is purpose-built for logo generation, offering vector file exports and a Brand Kit of matching templates once you pay. Canva AI's card does not describe dedicated logo-focused features, so Looka is the more specialized choice specifically for logo design.",
+     "q": "Which is better for creating a logo, Looka or Canva AI?"
+    },
+    {
+     "a": "You can design, customize, preview and save logos in Looka for free, but downloading any usable file requires either a one-time purchase or an annual Brand Kit subscription.",
+     "q": "Is Looka free to use?"
+    },
+    {
+     "a": "Yes, Canva offers a free plan alongside paid Pro and Business tiers and a custom-priced Enterprise tier, though the free plan's AI credit allowance is limited and not publicly specified.",
+     "q": "Does Canva AI have a free plan?"
+    },
+    {
+     "a": "Canva AI is better suited here, since it covers a wide range of formats like social posts, presentations and documents with tools such as Magic Design, Dream Lab and Magic Write. Looka is focused specifically on logos and brand kit assets rather than broad ongoing content creation.",
+     "q": "Which tool is better for ongoing marketing content beyond a logo?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You need a dedicated logo and want to generate, customize and preview multiple AI concepts before paying anything.",
+    "✅ You want downloadable vector files (SVG, EPS, PDF) for print and large-format use once you buy the Premium Logo package.",
+    "✅ You want one chosen logo to expand into a Brand Kit of 300+ matching marketing templates and assets.",
+    "✅ You want an AI-generated hosted website built directly from your logo and brand identity."
+   ],
+   "choose_b": [
+    "✅ You need ongoing design work across many formats like social posts, presentations, documents and charts, not just a logo.",
+    "✅ You want to describe a design in text or voice and get back an editable layout through a conversational assistant.",
+    "✅ You want AI-generated posters or images that stay editable as separate layers instead of one flattened image.",
+    "✅ You want a broad all-in-one toolkit covering image generation, copywriting, data visualization and layout redesign."
+   ],
+   "faq": [
+    {
+     "q": "What is Looka?",
+     "a": "Looka is an AI logo maker and branding platform where you answer questions about your company and style preferences, then get AI-generated logo concepts to customize in a browser editor. Designing, previewing and saving are free, but downloading any file requires a one-time purchase or annual subscription."
+    },
+    {
+     "q": "What is Canva AI?",
+     "a": "Canva AI is the conversational AI layer inside Canva's Magic Studio, built on Canva's own Design Model, that turns a text or voice description into an editable design. It also powers tools like Magic Layers, Dream Lab with Canva Craft, Magic Write and Canva Sheets."
+    },
+    {
+     "q": "Which is better for creating a logo, Looka or Canva AI?",
+     "a": "Looka is purpose-built for logo generation, offering vector file exports and a Brand Kit of matching templates once you pay. Canva AI's card does not describe dedicated logo-focused features, so Looka is the more specialized choice for logo design specifically."
+    },
+    {
+     "q": "Is Looka free to use?",
+     "a": "You can design, customize, preview and save logos in Looka for free, but downloading any usable file requires either a one-time purchase or an annual Brand Kit subscription."
+    },
+    {
+     "q": "Does Canva AI have a free plan?",
+     "a": "Yes, Canva offers a free plan with a limited, shared AI allowance alongside paid Pro, Business, and custom-priced Enterprise tiers."
+    },
+    {
+     "q": "Which tool is better for ongoing marketing content beyond a single logo?",
+     "a": "Canva AI is better suited here, since it covers a wide range of formats like social posts, presentations, documents and data visualizations through tools such as Magic Design, Dream Lab and Magic Write. Looka is focused specifically on logos and the brand assets built from them, not broad ongoing content creation."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "lovable-vs-bubble",
+  "before": {
+   "choose_a": "[\"✅ You want an AI agent to build a working web app autonomously from a plain-language prompt, including debugging and self-validation.\", \"✅ You want to preview intended changes, including diffs, with Plan Mode before any code is generated.\", \"✅ You want a managed backend (Lovable Cloud) that handles database, auth, and hosting without wiring up raw services yourself.\", \"✅ You want paid tiers that unlock code editing, code download, and custom domains alongside automatic subagents handling research and review in parallel.\"]",
+   "choose_b": "[\"✅ You need to ship a native iOS and Android app, not just a web app, from the same platform.\", \"✅ You want a fully visual no-code builder with a drag-and-drop editor, relational database, and point-and-click workflow logic in one tool.\", \"✅ You want access to a large plugin marketplace and API connector to integrate third-party services without custom code.\", \"✅ You want a free plan to prototype your app in development mode before committing to a paid tier.\"]",
+   "faq": [
+    {
+     "a": "Lovable is an agentic no-code platform that turns plain-language prompts into working web apps, building autonomously through its Agent/Build mode and a managed Supabase-based backend called Lovable Cloud.",
+     "q": "What is Lovable?"
+    },
+    {
+     "a": "Bubble is a no-code platform for visually building web and native mobile apps, with a built-in database, workflow editor, and an in-editor AI agent called Agent 2.",
+     "q": "What is Bubble?"
+    },
+    {
+     "a": "Bubble, since it includes a dedicated native mobile app builder that publishes to iOS and Android, while Lovable focuses on building web apps.",
+     "q": "Which is better for building a native mobile app?"
+    },
+    {
+     "a": "Lovable, because its Agent/Build mode runs autonomously end to end, including web search, debugging, and self-validation, whereas Bubble's Agent 2 assists within a visual editor you still operate directly.",
+     "q": "Which is better for letting AI build the app with minimal manual steering?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want an AI agent to build a working app autonomously from a plain-language prompt, including web search, debugging, and self-validation.",
+    "✅ You want to preview intended changes, including diffs, with Plan Mode before any code is generated.",
+    "✅ You want a managed backend, Lovable Cloud, that handles database, auth, and hosting without wiring up raw services yourself.",
+    "✅ You want automatic, read-only subagents handling research and review in parallel, plus private projects included even on the free plan."
+   ],
+   "choose_b": [
+    "✅ You need to ship a native iOS and Android app, not just a web app, from the same platform.",
+    "✅ You want a fully visual no-code builder with a drag-and-drop editor, relational database, and point-and-click workflow logic in one tool.",
+    "✅ You want access to a large plugin marketplace and API connector to integrate third-party services without custom code.",
+    "✅ You want a free plan to build and prototype your app in development mode before committing to a paid tier."
+   ],
+   "faq": [
+    {
+     "q": "What is Lovable?",
+     "a": "Lovable is an agentic no-code platform that turns plain-language prompts into working web apps, building autonomously through its Agent/Build mode and a managed backend called Lovable Cloud."
+    },
+    {
+     "q": "What is Bubble?",
+     "a": "Bubble is a no-code platform for visually building web and native mobile apps, with a built-in database, workflow editor, and an in-editor AI agent called Agent 2."
+    },
+    {
+     "q": "Which is better for building a native mobile app?",
+     "a": "Bubble, since it includes a dedicated native mobile app builder that publishes to iOS and Android, while Lovable focuses on building web apps."
+    },
+    {
+     "q": "Which is better for letting AI build the app with minimal manual steering?",
+     "a": "Lovable, because its Agent/Build mode runs autonomously end to end, including web search, debugging, and self-validation, whereas Bubble's Agent 2 assists within a visual editor you still operate directly."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "remove-bg-vs-canva-ai",
+  "before": {
+   "choose_a": "[\"✅ You need to strip a background from a photo automatically in a few seconds without opening a design editor.\", \"✅ You're processing large batches of product or portrait photos through remove.bg's API or app integration before the standalone service shuts down.\", \"✅ You need clean handling of tricky edges like hair, fur, or semi-transparent objects.\", \"✅ You have an enterprise API contract with remove.bg, since those agreements keep working even after the December 2026 shutdown.\"]",
+   "choose_b": "[\"✅ You want to describe a full design in text or voice and get back an editable layout rather than just a cutout.\", \"✅ You need one platform that also handles templates, copywriting, charts, and image generation alongside editing.\", \"✅ You want AI-generated posters to stay split into separate, editable layers instead of one flattened image.\", \"✅ You want a tool with a longer runway, since Canva AI isn't scheduled to shut down the way remove.bg's standalone service is.\"]",
+   "faq": [
+    {
+     "a": "Remove.bg is a Canva-owned AI tool that automatically removes backgrounds from photos through a web app, desktop and mobile apps, or an API, producing transparent PNG cutouts.",
+     "q": "What is Remove.bg?"
+    },
+    {
+     "a": "Yes, the standalone remove.bg website, accounts, self-service API, and apps are scheduled to stop working on December 1, 2026, with the underlying technology moving into Canva and API access moving to Leonardo.ai; enterprise API contracts are unaffected.",
+     "q": "Is Remove.bg shutting down?"
+    },
+    {
+     "a": "Canva AI is the conversational assistant inside Canva's Magic Studio, built on Canva's own Design Model, that turns a text or voice prompt into an editable design and bundles tools like Magic Design, Dream Lab, and Magic Write.",
+     "q": "What is Canva AI?"
+    },
+    {
+     "a": "Remove.bg is the better fit right now, since it is a dedicated background-removal specialist with strong handling of hair and edges, though anyone building long-term workflows should plan to move to Canva's built-in Background Remover before remove.bg's standalone service closes.",
+     "q": "Which is better for removing backgrounds from product photos?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You need a quick, automatic cutout from a single photo without opening a full design editor.",
+    "✅ You're running large batches of product or portrait photos through remove.bg's API or app integration before the standalone service shuts down on December 1, 2026.",
+    "✅ You need strong handling of tricky edges like hair, fur, or semi-transparent objects in a single-purpose tool.",
+    "✅ You hold an enterprise API contract with remove.bg, since those agreements keep working even after the shutdown."
+   ],
+   "choose_b": [
+    "✅ You want to describe a design in text or voice and get back a fully editable layout rather than just a cutout.",
+    "✅ You want one platform that also covers templates, copywriting, charts, and image generation alongside editing.",
+    "✅ You want AI-generated posters to stay split into separate, editable layers through Magic Layers instead of one flattened image.",
+    "✅ You want access to a newer in-house image model, Canva Craft, that renders up to 2K across 30+ aspect ratios with text in 55 languages."
+   ],
+   "faq": [
+    {
+     "q": "What is Remove.bg?",
+     "a": "Remove.bg is a Canva-owned AI tool that automatically removes backgrounds from photos through a web app, desktop and mobile apps, or an API, producing transparent PNG cutouts."
+    },
+    {
+     "q": "Is Remove.bg shutting down?",
+     "a": "Yes, the standalone remove.bg website, accounts, self-service API, and apps are scheduled to stop working on December 1, 2026, with the underlying technology moving into Canva and API access moving to Leonardo.ai; enterprise API contracts are unaffected."
+    },
+    {
+     "q": "What is Canva AI?",
+     "a": "Canva AI is the conversational assistant inside Canva's Magic Studio, built on Canva's own Design Model, that turns a text or voice prompt into an editable design and bundles tools like Magic Design, Dream Lab, Magic Write, and Canva Sheets."
+    },
+    {
+     "q": "Which is better for removing backgrounds from product photos?",
+     "a": "Remove.bg is the better fit today since it's a dedicated background-removal specialist with strong handling of hair and edges, but anyone building long-term workflows should plan to move to Canva's built-in Background Remover, since remove.bg's standalone service closes December 1, 2026."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "seedance-vs-runway",
+  "before": {
+   "choose_a": "[\"✅ You need a character to stay visually consistent across a clip up to 60 seconds long, thanks to Temporal Anchor.\", \"✅ You want to combine text, reference images, audio, and video into a single generation request using up to 12 assets.\", \"✅ You want to edit or extend an existing clip by description instead of regenerating it from scratch, using Video Edit or Video Extend.\", \"✅ You want commercial rights and watermark-free output without paying, since Seedance's free tier includes both.\"]",
+   "choose_b": "[\"✅ You want one platform that handles image, video, and native audio generation together.\", \"✅ You want to compare outputs from multiple models like Nano Banana Pro, Kling, Seedance, Seed Audio, and Lyria without leaving the platform.\", \"✅ You want access to Gen-4.5, which ranked No. 1 on the Artificial Analysis Video Arena leaderboard at launch.\", \"✅ You want predictable paid tiers, with Standard starting at $12/mo billed annually.\"]",
+   "faq": [
+    {
+     "a": "Seedance is ByteDance's text-, image- and video-to-video generator, now on version 2.5, which adds Video Edit and Video Extend for modifying or continuing existing clips. It's distributed mainly through third-party platforms like Krea AI, HeyGen, and ComfyUI rather than its own storefront.",
+     "q": "What is Seedance?"
+    },
+    {
+     "a": "Seedance is built specifically for this with its Temporal Anchor technology, which maintains character and object consistency for up to 60 seconds. Runway also supports character consistency across shots, but it's one feature among many rather than its core differentiator.",
+     "q": "Which is better for keeping a character consistent across a generated clip?"
+    },
+    {
+     "a": "Seedance is available through third-party platforms including Krea AI, HeyGen, and ComfyUI, rather than through a dedicated Seedance product or storefront.",
+     "q": "How do I access Seedance?"
+    },
+    {
+     "a": "Runway's credit-based pricing means heavy use adds up, and its free plan gives only 125 one-time credits rather than a recurring quota. Seedance's free tier includes commercial rights and no watermark, but Runway offers a broader platform with multiple models and native audio generation in one place.",
+     "q": "Is Runway worth the cost compared to Seedance's free tier?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want to combine up to 50 multimodal references, including 30 images, 10 video clips and 10 audio clips, into a single generation request.",
+    "✅ You need a single-pass video generation up to 30 seconds long, or extended to as much as 180 seconds using Dreamina's beta long-video mode.",
+    "✅ You want joint audio-video generation plus timestamp-level, green-screen, camera-perspective and reference-based editing built into one model.",
+    "✅ You're already working inside Jimeng AI, Doubao, Dreamina or BytePlus ModelArk and want native access to the latest Seedance model."
+   ],
+   "choose_b": [
+    "✅ You're located in the US, where Seedance 2.5 is not yet available through Dreamina or BytePlus.",
+    "✅ You want to generate and compare outputs from multiple models, including Nano Banana Pro, Kling, Seedance, Seed Audio and Lyria, in one place.",
+    "✅ You want clear published pricing, with Standard starting at $12/mo billed annually instead of unpublished model pricing.",
+    "✅ You want access to Gen-4.5, which ranked No. 1 on the Artificial Analysis Video Arena leaderboard at launch."
+   ],
+   "faq": [
+    {
+     "q": "What is Seedance?",
+     "a": "Seedance is ByteDance's AI video generation model line, now at version 2.5, which accepts text, image, audio and video inputs through ByteDance's own apps and the BytePlus ModelArk API, as well as third-party platforms like Runway."
+    },
+    {
+     "q": "Which is better for long single-pass video generation?",
+     "a": "Seedance 2.5 supports single-pass generations up to 30 seconds, with an extended beta mode on Dreamina reaching up to 180 seconds. Runway's card doesn't specify a per-generation duration limit, so Seedance is the clearer choice if long single-pass clips matter to you."
+    },
+    {
+     "q": "How do I access Seedance?",
+     "a": "Seedance is available through ByteDance's own apps, including Jimeng AI, Doubao, Dreamina and Dola, as well as the BytePlus ModelArk API and partner platforms like Higgsfield, Runway and DreamBench."
+    },
+    {
+     "q": "Which is better for users based in the US?",
+     "a": "Runway is the better option for US-based users, since Seedance 2.5's rollout on Dreamina excludes the US and BytePlus does not operate there."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "zapier-ai-vs-make",
+  "before": {
+   "choose_a": "[\"✅ You need the widest app coverage — Zapier AI connects 9,000+ apps, more than Make's 3,000+.\", \"✅ You want AI to draft and maintain your automations from plain language with Zapier Copilot.\", \"✅ You want to expose your automation library to external LLMs like Claude or GPT through Zapier MCP's 66,000+ triggers and actions.\", \"✅ You want more than connectors — Tables, Interfaces, and Chatbots let you build lightweight apps inside the same Zapier account.\"]",
+   "choose_b": "[\"✅ You need complex multi-step logic with branching, routers, and iterators that Make's visual canvas is built to handle.\", \"✅ You want a lower entry price — Make's Core plan starts at $9/month versus Zapier AI's Professional plan at $19.99/month.\", \"✅ You want AI agents built directly into your scenarios using Make's own built-in AI provider without separate billing.\", \"✅ You want a bigger starting allowance on the free plan — Make gives 1,000 credits versus Zapier AI's 100 tasks per month.\"]",
+   "faq": [
+    {
+     "a": "Zapier AI centers on Zaps across 9,000+ apps, with Copilot generating automations from plain language and Zapier MCP exposing its library to outside LLMs. Make is a visual, credit-based automation platform covering 3,000+ apps, with Make AI Agents as a beta feature for building agents directly inside scenarios.",
+     "q": "What is the difference between Zapier AI and Make?"
+    },
+    {
+     "a": "Make's drag-and-drop canvas, with routers, iterators, and branching, is purpose-built for intricate multi-step logic. Zapier AI supports multi-step Zaps too, but its interface is less visual once a workflow has many branches.",
+     "q": "Which is better for building complex multi-step automations?"
+    },
+    {
+     "a": "Make's Core plan starts at $9/month (about $7.65/month billed annually) with 10,000 credits, while Zapier AI's Professional plan starts at $19.99/month billed annually. They meter usage differently, credits versus tasks, so actual cost depends on how AI-heavy or complex your workflows are.",
+     "q": "Is Make cheaper than Zapier AI?"
+    },
+    {
+     "a": "Zapier AI connects 9,000+ apps, compared to Make's 3,000+, so Zapier AI is the safer bet if you need a specific niche integration.",
+     "q": "Which tool connects to more apps?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You need the widest possible app coverage, since Zapier AI connects to 9,000+ apps versus Make's 3,000+.",
+    "✅ You want AI to draft, edit, and maintain your automations from plain language, which Zapier Copilot does across Zaps, Tables, Interfaces, and Chatbots.",
+    "✅ You want to expose your automation library to external LLMs like Claude or ChatGPT, which Zapier MCP is built to do.",
+    "✅ You want more than connectors, since Tables, Interfaces, and Chatbots let you build lightweight apps inside the same Zapier account."
+   ],
+   "choose_b": [
+    "✅ You need complex multi-step logic with branching, routers, and iterators, which Make's visual drag-and-drop canvas is designed to handle.",
+    "✅ You want a lower entry price, since Make's Core plan starts at $9/month (about $7.65/month billed annually) compared to Zapier AI's Professional plan starting at $19.99/month billed annually.",
+    "✅ You want AI agents built directly into your workflows using Make's own built-in AI provider, available on any plan including Free.",
+    "✅ You want the flexibility to connect your own LLM key to power AI Agents instead of relying on a built-in provider."
+   ],
+   "faq": [
+    {
+     "q": "What is the difference between Zapier AI and Make?",
+     "a": "Zapier AI centers on Zaps across 9,000+ apps, with Zapier Copilot generating automations from plain language and Zapier MCP exposing its actions to outside LLMs. Make is a visual, credit-based automation platform covering 3,000+ apps, with Make AI Agents, currently in beta, for building autonomous agents directly inside scenarios."
+    },
+    {
+     "q": "Which is better for building complex multi-step automations?",
+     "a": "Make's drag-and-drop canvas, with routers, iterators, filters, and branching, is purpose-built for intricate multi-step logic. Zapier AI also supports multi-step Zaps with filters and paths, but its editor is less visual once a workflow has many branches."
+    },
+    {
+     "q": "Is Make cheaper than Zapier AI?",
+     "a": "Make's Core plan starts at $9/month billed monthly (about $7.65/month billed annually) with 10,000 credits, while Zapier AI's Professional plan starts at $19.99/month billed annually for 750 tasks. They meter usage differently, credits versus tasks, so actual cost depends on how heavy and AI-intensive your workflows are."
+    },
+    {
+     "q": "Which tool connects to more apps?",
+     "a": "Zapier AI connects to 9,000+ apps, compared to Make's 3,000+, so Zapier AI is the safer bet if you need a specific niche integration."
+    }
+   ]
+  }
+ },
+ {
+  "slug": "windsurf-vs-github-copilot",
+  "before": {
+   "choose_a": "[\"✅ You want unlimited Tab autocomplete and inline edits included even on the free plan.\", \"✅ You want to switch between several selectable agents, including Devin Local, Codex, Claude Agent, OpenCode and Cascade, inside one editor.\", \"✅ You want access to Cognition's own software-engineering-optimized SWE-2 model alongside frontier models from other vendors.\", \"✅ You want a VS Code-style interface built agent-first rather than an extension bolted onto an existing editor.\"]",
+   "choose_b": "[\"✅ You already live inside GitHub and want agent mode, cloud agents and code review wired directly into issues and PRs.\", \"✅ You want a CLI plus chat and agent mode so you can drive coding tasks outside the editor too.\", \"✅ You want to pick models per task from multiple vendors, including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot.\", \"✅ You want inline completions and Next Edit suggestions that never draw down your usage allowance, keeping a predictable baseline cost.\"]",
+   "faq": [
+    {
+     "a": "Devin Desktop is a full AI-native code editor with its own agent picker (Devin Local, Codex, Claude Agent, OpenCode, Cascade) and an in-house SWE-2 model, while GitHub Copilot is an agentic assistant that plugs into your existing editor, GitHub and terminal, offering chat, agent mode, cloud agents and code review.",
+     "q": "What is the difference between Devin Desktop (Windsurf) and GitHub Copilot?"
+    },
+    {
+     "a": "Yes, its Free tier includes unlimited Tab completions and inline edits plus a light agent quota, and Pro costs $20 per month for higher quotas and full model access.",
+     "q": "Is Devin Desktop free?"
+    },
+    {
+     "a": "GitHub Copilot lets you choose models from vendors including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot, while Devin Desktop's Pro tier unlocks models from OpenAI, Anthropic, Google, SpaceXAI and leading open-source models alongside its own SWE-2; both offer multi-vendor choice, so check which specific vendors you need.",
+     "q": "Which is better for picking from multiple AI model vendors in one place?"
+    },
+    {
+     "a": "GitHub Copilot offers dedicated Business and Enterprise per-user plans tied to GitHub Enterprise Cloud, while Devin Desktop offers a Teams plan plus custom Enterprise pricing with SSO and VPC deployment; the right pick depends on whether your workflow centers on GitHub or the Devin/Cognition ecosystem.",
+     "q": "Which is better for enterprise teams — Devin Desktop or GitHub Copilot?"
+    }
+   ]
+  },
+  "after": {
+   "choose_a": [
+    "✅ You want unlimited Tab autocomplete and inline edits included even on the free plan.",
+    "✅ You want to switch between several selectable agents, including Devin Local, Codex, Claude Agent, OpenCode and Cascade, inside one editor.",
+    "✅ You want access to Cognition's own SWE-2 model alongside frontier models from OpenAI, Anthropic, Google, SpaceXAI and leading open-source models.",
+    "✅ You want a VS Code-style workspace built agent-first rather than an extension layered onto an existing editor."
+   ],
+   "choose_b": [
+    "✅ You already work inside GitHub and VS Code and want agent mode, cloud agents and code review wired into your existing workflow.",
+    "✅ You want to pick models per task from multiple vendors, including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot.",
+    "✅ You want a real free tier, with free Pro access available for verified teachers and maintainers of popular open source projects.",
+    "✅ You want inline completions and Next Edit suggestions that never draw down your AI Credits, keeping a predictable usage baseline."
+   ],
+   "faq": [
+    {
+     "q": "What is the difference between Devin Desktop (Windsurf) and GitHub Copilot?",
+     "a": "Devin Desktop is a full AI-native code editor with its own agent picker (Devin Local, Codex, Claude Agent, OpenCode, Cascade) and an in-house SWE-2 model, while GitHub Copilot is an agentic assistant built into GitHub, VS Code and the terminal, offering chat, agent mode, cloud agents, code review and a CLI across models from multiple vendors."
+    },
+    {
+     "q": "Is Devin Desktop free?",
+     "a": "Yes, its Free tier is $0 per month with a light agent quota, limited model access, and unlimited Tab completions and inline edits; Pro costs $20 per month for higher quotas, full model access and free use of SWE-2."
+    },
+    {
+     "q": "Which is better for picking from multiple AI model vendors in one place?",
+     "a": "GitHub Copilot lets you choose models from Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot, while Devin Desktop's Pro tier unlocks models from OpenAI, Anthropic, Google, SpaceXAI and leading open-source models alongside its own SWE-2; both give multi-vendor choice, so check which specific vendors you actually need."
+    },
+    {
+     "q": "Which is better for enterprise teams — Devin Desktop or GitHub Copilot?",
+     "a": "Devin Desktop offers a Teams plan at $80 per month plus $40 per developer seat for up to 200 users, plus custom Enterprise pricing with SAML/OIDC SSO and dedicated deployment; GitHub Copilot's organization-level pricing wasn't confirmed for this card, so you'd need to check GitHub directly to compare."
+    }
+   ]
+  }
+ }
+]

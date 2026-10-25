@@ -1,0 +1,1414 @@
+[
+ {
+  "slug": "notion-ai",
+  "before": {
+   "lang": "en",
+   "badge": "paid",
+   "users": "100M+",
+   "best_for": "Notes, knowledge base, docs, developer platform, AI agents",
+   "description": "Notion AI is the assistant built into the Notion workspace. As of version 3.8 (October 2026) it works as an agent system that can connect to outside AI assistants via MCP, sync Skills through a Skills API, and pick from models supplied by several AI vendors, covering writing, workspace-wide search, meeting notes and research.",
+   "description_long": "Notion AI is the artificial-intelligence layer inside Notion, the document and database workspace. It lives directly in your pages, so instead of switching to a separate chatbot you summon it where your notes, wikis and project databases already are.\n\nThe current release is Notion 3.8, shipped October 13, 2026, under the theme 'Context for your agents'. It lets outside AI agents connect into a workspace through MCP with admin controls, adds a Skills API that syncs Skills written in Notion out to assistants such as ChatGPT and Claude, brings in several new models from vendors including OpenAI and Anthropic, and lets Business and Enterprise workspaces connect a ChatGPT Plus or Pro plan to cover AI usage inside Notion.\n\nThe prior 3.7 release (September 2026) had added an agent Skills system with a skills library, the ability to export Skills to external tools such as Claude Code, Codex, Cursor, Gemini and Grok, Custom Agents that can call sub-agents, a Notion Agents iOS app, and a redesigned model picker letting workspace owners choose which models are available to the built-in Notion Agent versus Custom Agents. The 3.6 release before that (July 2026) introduced orchestration of External Agents such as Claude and Cursor from shared boards, AI-generated interactive HTML blocks, reading and writing Microsoft Office files (PPTX, XLSX, DOCX) and Outlook, AI Meeting Notes with speaker identification, Enterprise Search across connected apps, and a Research Mode.\n\nDay to day the AI can draft and rewrite text, translate, summarize long pages, fill and query databases, answer questions across your whole workspace, and run multi-step agent tasks. Custom Agents you build yourself are billed on a credit system, free to try and then $10 per 1,000 monthly Notion credits, and their activity can be tracked through audit logging on higher plans.\n\nPricing has four tiers. Free is $0 per member per month but only includes a capped trial of Notion AI, not ongoing access. Plus is $10 per seat per month billed annually (about $12 per seat per month if billed monthly) and also only includes the AI trial. Business is $20 per seat per month billed annually (about $24 per seat per month if billed monthly) and is the cheapest plan with full, ongoing AI, including the Notion Agent, AI Meeting Notes and Enterprise Search. Enterprise is custom-priced and adds zero data retention with LLM providers. Notion AI is not sold as a separate add-on; it is bundled into the Business and Enterprise seat price, with Custom Agent credits as an extra variable cost, and Business and Enterprise users can now also connect a ChatGPT Plus or Pro plan to help pay for usage.\n\nThe main catch is that ongoing AI access sits behind the Business plan. Free and Plus users only get a capped AI trial, so casual users who expect free or cheap AI on their existing workspace will hit a wall quickly. Custom Agent credits are an added, usage-based cost on top of seat pricing, and some higher-end features such as audit logging are reserved for upper tiers.\n\nNotion AI makes most sense for teams already running their knowledge base, docs and projects in Notion who want AI in the same place and are on or willing to move to the Business tier. Solo note-takers on the free or Plus plan will find the AI too limited to rely on day to day.",
+   "pros": [
+    "Lives inside the same pages, wikis and databases you already work in, so there is no context switch",
+    "Model picker lets workspace owners choose among models from several AI vendors, including OpenAI and Anthropic, per task",
+    "A Skills API syncs Skills built in Notion out to other AI assistants, and outside agents can connect into a workspace via MCP with admin controls",
+    "Workspace-wide Enterprise Search, AI Meeting Notes with speaker identification and Research Mode go well beyond basic text tools",
+    "Reads and writes Microsoft Office files (PPTX, XLSX, DOCX) and Outlook, and can orchestrate external agents like Claude and Cursor"
+   ],
+   "cons": [
+    "Ongoing AI requires the Business plan ($20/seat/month billed annually, about $24/seat/month monthly); Free and Plus only get a capped trial",
+    "Custom Agents cost extra on a credit system ($10 per 1,000 monthly credits after a free trial), a variable spend on top of seats",
+    "The shift from add-on to bundled pricing means some users lost the ability to buy AI cheaply on a lower plan",
+    "Value depends on already living in Notion; the AI is far less useful if your work sits in other tools",
+    "Enterprise-grade features like audit logging for Custom Agents are gated to higher tiers"
+   ],
+   "choose_if": [
+    "Your team already keeps its docs, wikis and projects in Notion",
+    "You are on or willing to move to the Business plan ($20/seat/month billed annually) for full AI",
+    "You want to switch between models from different AI vendors without leaving your notes",
+    "You need workspace-wide search, meeting notes or research inside one tool",
+    "You want to build and audit Custom Agents against your own content"
+   ],
+   "faq": [
+    {
+     "a": "Notion AI is an AI assistant built directly into Notion. It can write, summarize, translate, and answer questions using your workspace content as context.",
+     "q": "What is Notion AI?"
+    },
+    {
+     "a": "Notion AI is not a separate add-on. Free and Plus plans only include a capped trial of Notion AI. Full, ongoing AI is included in the Business plan ($20 per seat per month billed annually, about $24 per seat per month billed monthly) and in Enterprise, which is custom-priced.",
+     "q": "How much does Notion AI cost?"
+    },
+    {
+     "a": "Notion 3.7 (September 2026) introduced agent Skills and a skills library, with the ability to export Skills to external tools such as Claude Code, Codex, Cursor, Gemini and Grok, plus Custom Agents that can call sub-agents.",
+     "q": "What are Skills in Notion 3.7?"
+    },
+    {
+     "a": "Custom Agents are free to try, then cost $10 per 1,000 monthly Notion credits, billed on top of your regular seat price.",
+     "q": "How do Custom Agent credits work?"
+    }
+   ]
+  },
+  "after": {
+   "badge": "paid",
+   "users": null,
+   "best_for": "Notes, knowledge base, docs, developer platform, AI agents",
+   "description": "Notion AI is the assistant built into the Notion workspace. Its October 2026 updates turned it into an agent system that connects to outside AI assistants via MCP, syncs Skills through a Skills API, draws on models from several AI vendors, and now includes Notion Agents with their own computer and browser for tasks lasting up to 24 hours.",
+   "description_long": "Notion AI is the artificial-intelligence layer inside Notion, the document and database workspace. It lives directly in your pages, so instead of switching to a separate chatbot you summon it where your notes, wikis and project databases already are.\n\nThe latest numbered release is Notion 3.8, shipped October 13, 2026, under the theme 'Context for your agents'. It lets outside AI agents connect into a workspace through MCP with admin controls, adds a Skills API that syncs Skills written in Notion out to assistants such as ChatGPT and Claude, and brings in new models from vendors including OpenAI and Anthropic. On October 19, 2026 Notion shipped a further, unnumbered update, 'Agents, rebuilt to do more for less', which introduced a single AI credit system covering the Notion Agent, Custom Agents and connected outside tools, an upgraded Auto model router that Notion says matches top-tier model quality on common tasks at a fraction of the credit cost, Notion Agents that get their own computer and browser and can run for up to 24 hours, a 'Review for me' mode, the ability to connect a ChatGPT Plus, Pro or Go account to a user's personal Notion Agent (not yet Custom Agents), and a private alpha of bring-your-own-key for Enterprise. The new credit system is live for new customers now and rolls out to existing customers on November 2, 2026.\n\nEarlier, the 3.7 release (September 2026) had added an agent Skills system with a skills library, the ability to export Skills to external tools such as Claude Code, Codex, Cursor, Gemini and Grok, Custom Agents that can call sub-agents, a Notion Agents iOS app, and a redesigned model picker. The 3.6 release before that (July 2026) introduced orchestration of External Agents such as Claude and Cursor from shared boards, AI-generated interactive HTML blocks, reading and writing Microsoft Office files (PPTX, XLSX, DOCX) and Outlook, AI Meeting Notes with speaker identification, Enterprise Search across connected apps, and a Research Mode.\n\nDay to day the AI can draft and rewrite text, translate, summarize long pages, fill and query databases, answer questions across your whole workspace, and run multi-step agent tasks. Under the new credit system, each Business and Enterprise seat includes 1,500 Standard credits a month, used when Notion's Auto router picks the model, and 500 Select credits a month, used when you pick the model yourself or run Custom Agents you build. Workspace admins can buy additional credits for the whole workspace; Notion's pricing page still lists this at $10 per 1,000 monthly Notion credits. Custom Agent activity can be tracked through audit logging on higher plans.\n\nPricing has four tiers, listed per seat per month on notion.com/pricing, with up to 20% off for yearly billing. Free is $0 per seat per month but only includes a capped trial of Notion AI, not ongoing access. Plus is $10 per seat per month and also only includes the AI trial. Business is $20 per seat per month and is the cheapest plan with full, ongoing AI, including the Notion Agent, AI Meeting Notes, Enterprise Search, and the new monthly credit allotment. Enterprise is custom-priced and adds a private alpha of bring-your-own-key plus zero data retention with LLM providers. Notion AI is not sold as a separate add-on; it is bundled into the Business and Enterprise seat price, with extra purchased credits as a variable cost on top. A user's personal Notion Agent can also be connected to a ChatGPT Plus, Pro or Go account to help cover its usage, though this does not yet extend to Custom Agents.\n\nThe main catch is that ongoing AI access sits behind the Business plan: Free and Plus users only get a capped AI trial, so casual users who expect free or cheap AI on their existing workspace will hit a wall quickly. Even on Business and Enterprise, heavy AI or Custom Agent use can exceed the included Standard and Select credits, requiring admins to buy more at an added, usage-based cost, and some higher-end features such as audit logging and bring-your-own-key remain reserved for upper tiers or in alpha. Notion AI makes most sense for teams already running their knowledge base, docs and projects in Notion who want AI in the same place and are on or willing to move to the Business tier; solo note-takers on the Free or Plus plan will find the AI too limited to rely on day to day.",
+   "pros": [
+    "Lives inside the same pages, wikis and databases you already work in, so there is no context switch",
+    "A model picker lets workspace owners choose among models from several AI vendors, including OpenAI and Anthropic, and an upgraded Auto router aims to match top-tier model quality on common tasks at a fraction of the credit cost",
+    "A Skills API syncs Skills built in Notion out to other AI assistants, and outside agents can connect into a workspace via MCP with admin controls",
+    "Newer Notion Agents get their own computer and browser and can run tasks for up to 24 hours, with a 'Review for me' mode",
+    "Workspace-wide Enterprise Search, AI Meeting Notes with speaker identification and Research Mode go well beyond basic text tools, and Notion can read and write Microsoft Office files and Outlook"
+   ],
+   "cons": [
+    "Ongoing AI requires the Business plan ($20/seat/month); Free and Plus only get a capped trial",
+    "All AI usage now runs on a shared credit system (1,500 Standard plus 500 Select credits per seat per month); heavy use requires buying more credits, listed at $10 per 1,000 on Notion's pricing page",
+    "Connecting a ChatGPT Plus, Pro or Go account only covers the personal Notion Agent, not Custom Agents",
+    "Value depends on already living in Notion; the AI is far less useful if your work sits in other tools",
+    "Bring-your-own-key is only in private alpha for Enterprise, and audit logging for agents is gated to higher tiers"
+   ],
+   "choose_if": [
+    "Your team already keeps its docs, wikis and projects in Notion",
+    "You are on or willing to move to the Business plan ($20/seat/month) for full AI",
+    "You want to switch between models from different AI vendors without leaving your notes",
+    "You need workspace-wide search, meeting notes or research inside one tool",
+    "You want to build and audit Custom Agents against your own content"
+   ],
+   "faq": [
+    {
+     "q": "What is Notion AI?",
+     "a": "Notion AI is an AI assistant built directly into Notion. It can write, summarize, translate, and answer questions using your workspace content as context."
+    },
+    {
+     "q": "How much does Notion AI cost?",
+     "a": "Notion AI is not a separate add-on. Free and Plus plans only include a capped trial of Notion AI. Full, ongoing AI is included in the Business plan ($20 per seat per month) and in Enterprise, which is custom-priced; yearly billing can save up to 20%."
+    },
+    {
+     "q": "What are Skills in Notion 3.7?",
+     "a": "Notion 3.7 (September 2026) introduced agent Skills and a skills library, with the ability to export Skills to external tools such as Claude Code, Codex, Cursor, Gemini and Grok, plus Custom Agents that can call sub-agents."
+    },
+    {
+     "q": "How do Custom Agent credits work?",
+     "a": "Business and Enterprise seats include 1,500 Standard credits and 500 Select credits per month; Custom Agents draw on the Select credits. Workspace admins can buy additional credits for the workspace, which Notion's pricing page lists at $10 per 1,000 monthly credits."
+    }
+   ],
+   "dropped": [
+    "Plus priced as $10/seat/month billed annually with an about-$12/month if billed monthly figure (billing period unverified)",
+    "Business priced as $20/seat/month billed annually with an about-$24/month if billed monthly figure (billing period unverified)",
+    "100M+ user count (not verified by audit)",
+    "Custom Agents described as free to try then flat $10 per 1,000 monthly credits as the only cost (superseded by new per-seat credit allotment)",
+    "ChatGPT Plus or Pro connection framed as a Business/Enterprise workspace-wide benefit (it is personal-Notion-Agent only, and includes Go, not just Plus/Pro)"
+   ]
+  }
+ },
+ {
+  "slug": "canva-ai",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "220M+",
+   "best_for": "AI design, agentic editing, brand consistency, web experiences",
+   "description": "Canva AI 2.0 is the conversational core of Canva's Magic Studio, announced at Canva Create 2026 as a research preview that is rolling out over the following weeks: you describe a design in text or voice and it returns an editable layout, built on Canva's own Design Model.",
+   "description_long": "Canva AI is the AI layer inside Canva, the browser-based design platform used for social posts, presentations, documents, and marketing assets. Rather than a single feature, it is now a conversational assistant that sits on top of the whole editor.\n\nCanva AI 2.0, unveiled at Canva Create 2026, recasts Canva as a conversational, agentic assistant that Canva positions as part of a broader 'Creative Operating System,' adding connectors, scheduling, web research, brand intelligence, Sheets AI, and Canva Code 2.0. It launched as a research preview and is rolling out to accounts over the following weeks. It runs on the Canva Design Model, a design-specific foundation model, and introduces Magic Layers, which splits an AI-generated poster back into separate, editable layers; Magic Layers is also available inside ChatGPT and Gemini.\n\nMagic Studio bundles the rest: Magic Design for templates, Dream Lab for image generation with style transfer, Magic Write for copy, Canva Sheets and Magic Charts for data-to-visualization plus Magic Insights, and Magic Switch, which now does AI-driven layout redesign rather than simple resizing. The assistant also keeps persistent memory and stays aware of your brand assets.\n\nCanva offers a free plan alongside paid Pro and Business tiers and a custom-priced Enterprise tier. Canva localizes pricing by region, and exact monthly or annual dollar figures for Pro and Business could not be confirmed from a direct read of Canva's pricing page at the time of this review, so check canva.com/pricing for current rates in your country.\n\nThe limits are worth knowing. The free plan's AI credit allowance is limited, though the exact cap isn't published; generation quality still varies and often needs manual cleanup; the conversational assistant is best for common formats rather than highly bespoke design work; and because Canva AI 2.0 is a rolling research-preview release, some features may not yet be available on every account.\n\nIt suits solo creators, small marketing teams, social media managers, and non-designers who want good-looking, on-brand assets fast without learning a professional design tool.",
+   "pros": [
+    "Conversational assistant turns a text or voice prompt into a fully editable design, built on the Canva Design Model",
+    "Broad Magic Studio toolkit in one place: Magic Design, Dream Lab, Magic Write, Canva Sheets, Magic Charts",
+    "Magic Layers keeps AI-generated posters editable instead of flattening them into a single image, and also works inside ChatGPT and Gemini",
+    "Brand-aware workflows and persistent memory keep output consistent across projects",
+    "Free plan available alongside paid Pro, Business, and custom Enterprise tiers"
+   ],
+   "cons": [
+    "Free-plan AI credits are limited, and the exact allowance isn't published",
+    "Image and layout quality still varies and often needs manual touch-up",
+    "Best for common formats; struggles with highly custom or precision design work",
+    "Pro and Business pricing is region-dependent and not confirmed as a single USD figure",
+    "Canva AI 2.0 is still a rolling research-preview release, so some features may not be on every account yet"
+   ],
+   "choose_if": [
+    "You want to generate on-brand designs by describing them instead of building from scratch",
+    "You are a solo creator or small team that needs social, presentation, and marketing assets quickly",
+    "You want image generation, copywriting, and data charts inside one editor",
+    "You're comparing Canva's free plan against its paid Pro, Business, or Enterprise tiers rather than a full professional design suite",
+    "You value editable AI output (Magic Layers) over one-shot flattened images"
+   ],
+   "faq": [
+    {
+     "a": "Canva offers a free plan with limited AI features. Paid Pro, Business, and Enterprise plans unlock more AI tools such as Dream Lab image generation and Magic Write, but exact pricing is region-dependent and not published as a single USD figure.",
+     "q": "Is Canva AI free?"
+    },
+    {
+     "a": "Figma AI (launched 2024) includes AI-generated layers and designs from text prompts, AI rename for layers, first draft generation, and prototype generation. It's built into Figma and available to all paid plan users.",
+     "q": "What AI features does Figma have?"
+    },
+    {
+     "a": "No. Canva and Figma serve different purposes. Canva is for creating marketing content and presentations. Figma is for designing UI/UX interfaces and product prototypes. Designers use Figma; content creators use Canva.",
+     "q": "Can Canva replace Figma?"
+    },
+    {
+     "a": "Canva is significantly easier for beginners — it's designed for non-designers with drag-and-drop simplicity. Figma has a steeper learning curve and is designed for professional designers. For quick graphics, start with Canva.",
+     "q": "Which is better for beginners — Canva or Figma?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": null,
+   "best_for": "AI design, agentic editing, brand consistency, web experiences",
+   "description": "Canva AI 2.0 is the conversational core of Canva's Magic Studio, introduced at Canva Create 2026: you describe a design in text or voice and it returns an editable layout, built on Canva's own Design Model. Canva Craft, Canva's first in-house image-generation model, launched inside Dream Lab on October 22, 2026.",
+   "description_long": "Canva AI is the AI layer inside Canva, the browser-based design platform used for social posts, presentations, documents, and marketing assets. Rather than a single feature, it is a conversational assistant that sits on top of the whole editor. Canva AI 2.0, unveiled at Canva Create 2026, recast Canva as a conversational, agentic assistant that Canva positions as part of a broader 'Creative Operating System,' adding connectors, scheduling, web research, brand intelligence, Sheets AI, and Canva Code 2.0. It runs on the Canva Design Model and introduced Magic Layers, which splits an AI-generated poster back into separate, editable layers; Magic Layers is also available inside ChatGPT and Gemini.\n\nThe most recent addition is Canva Craft, Canva's first in-house image-generation model, built by Canva Research and launched October 22, 2026, available to all Canva users globally through Dream Lab. Craft uses a two-stage architecture, in which a planning model writes a composition plan and a rendering model draws it, producing images at up to 2K resolution across 30 or more aspect ratios with text rendering in 55 languages, built to work well with Magic Layers. Craft is also reachable through Canva's Public API, with access via Canva's MCP server listed as coming soon. Canva says Craft debuted 4th on the DesignArena image-generation leaderboard, which it describes as making Canva Research the 2nd-ranked lab for image generation.\n\nMagic Studio bundles the rest of the toolkit: Magic Design for templates, Dream Lab (now powered by Craft) for image generation, Magic Write for copy, Canva Sheets and Magic Charts for data-to-visualization plus Magic Insights, and Magic Switch, which does AI-driven layout redesign rather than simple resizing. The assistant keeps persistent memory and stays aware of your brand assets.\n\nCanva's pricing page lists a Free plan at $0 with a limited AI allowance shared across its Standard, Premium, and Ultra AI tools. Paid plans are billed annually: Pro is US$120 per year for one person, and Business is US$210 per year per person; Enterprise is custom-priced. Canva also sells AI Pass, a monthly add-on for Pro and Business accounts that multiplies the monthly AI allowance. Canva localizes pricing by region, so these US dollar figures, taken from canva.com/pricing, may differ outside the US, and no monthly US-dollar price for Pro or Business has been separately confirmed.\n\nThe limits are worth knowing. The free plan's shared AI allowance is capped, though the exact number isn't published; generation quality still varies and often needs manual cleanup; the conversational assistant is best for common formats rather than highly bespoke design work; and MCP access for Canva Craft is listed as coming soon rather than live today.\n\nIt suits solo creators, small marketing teams, social media managers, and non-designers who want good-looking, on-brand assets fast without learning a professional design tool.",
+   "pros": [
+    "Conversational assistant turns a text or voice prompt into a fully editable design, built on the Canva Design Model",
+    "Broad Magic Studio toolkit in one place: Magic Design, Dream Lab (now powered by Canva Craft), Magic Write, Canva Sheets, Magic Charts",
+    "Magic Layers keeps AI-generated posters editable instead of flattening them into a single image, and also works inside ChatGPT and Gemini",
+    "Canva Craft renders up to 2K resolution across 30+ aspect ratios with text in 55 languages, and is reachable via Canva's Public API",
+    "Free plan available alongside paid Pro, Business, and custom Enterprise tiers"
+   ],
+   "cons": [
+    "Free-plan AI allowance is limited and shared across Standard, Premium, and Ultra AI tools, with no published cap",
+    "Image and layout quality still varies and often needs manual touch-up",
+    "Best for common formats; struggles with highly custom or precision design work",
+    "Pro (US$120/year for one person) and Business (US$210/year per person) are annual rates that vary by region; no monthly USD price is confirmed",
+    "MCP access for Canva Craft is listed as coming soon and is not yet available"
+   ],
+   "choose_if": [
+    "You want to generate on-brand designs by describing them instead of building from scratch",
+    "You are a solo creator or small team that needs social, presentation, and marketing assets quickly",
+    "You want image generation, copywriting, and data charts inside one editor",
+    "You're comparing Canva's free plan against its paid annual Pro, Business, or custom Enterprise tiers rather than a full professional design suite",
+    "You value editable AI output (Magic Layers) over one-shot flattened images"
+   ],
+   "faq": [
+    {
+     "q": "Is Canva AI free?",
+     "a": "Canva has a Free plan with a limited AI allowance shared across its Standard, Premium, and Ultra AI tools. Paid Pro (US$120/year for one person) and Business (US$210/year per person) plans unlock more AI tools such as Dream Lab image generation (powered by Canva Craft) and Magic Write, plus an optional monthly AI Pass add-on for extra AI usage; Enterprise is custom-priced. Pricing is localized by region."
+    },
+    {
+     "q": "What AI features does Figma have?",
+     "a": "Figma AI (launched 2024) includes AI-generated layers and designs from text prompts, AI rename for layers, first draft generation, and prototype generation. It's built into Figma and available to all paid plan users."
+    },
+    {
+     "q": "Can Canva replace Figma?",
+     "a": "No. Canva and Figma serve different purposes. Canva is for creating marketing content and presentations. Figma is for designing UI/UX interfaces and product prototypes. Designers use Figma; content creators use Canva."
+    },
+    {
+     "q": "Which is better for beginners — Canva or Figma?",
+     "a": "Canva is significantly easier for beginners — it's designed for non-designers with drag-and-drop simplicity. Figma has a steeper learning curve and is designed for professional designers. For quick graphics, start with Canva."
+    }
+   ],
+   "dropped": [
+    "220M+ user count (not reverified by audit)",
+    "Claim that Pro/Business USD pricing could not be confirmed (annual USD figures are now confirmed; monthly figures remain unconfirmed)",
+    "Claim that Canva AI 2.0 is still a rolling research-preview release (not re-checked by audit)"
+   ]
+  }
+ },
+ {
+  "slug": "perplexity",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "45M+",
+   "best_for": "AI search, deep research, agentic computer control, finance and study tools",
+   "description": "Perplexity is an AI-powered answer engine that returns cited, up-to-date sources instead of a list of links, with an agentic Deep Research mode and multi-model access to systems from OpenAI, Anthropic, Google and other vendors.",
+   "description_long": "Perplexity is a conversational search tool that answers questions with cited, up-to-date sources instead of a list of links. It sits somewhere between a chatbot and a search engine, and it has leaned hard into research and agentic work.\n\nThe headline feature is Advanced Deep Research. It runs agentically inside Perplexity's Computer assistant, asks clarifying questions before it starts, accepts follow-ups mid-run, and shows live source and progress tracking.\n\nBeyond research, Perplexity gives you multi-model access to systems from OpenAI, Anthropic, Google and other vendors, plus the Comet browser for AI-assisted browsing.\n\nPricing is tiered. Free costs $0 a month. Pro costs $20 a month or $200 a year billed annually, and includes 4,000 bonus Computer credits; Perplexity's own pricing page shows the annual plan's per-month equivalent as $17. Max costs $200 a month or $2,000 a year billed annually, shown as an annual-equivalent $167 a month, and includes 10,000 monthly Computer credits plus 35,000 bonus credits. Enterprise Pro costs $40 per seat per month or $400 per seat per year (education/nonprofit pricing is lower), and Enterprise Max costs $325 per seat per month or $3,250 per seat per year. An Education Pro plan is available at $10 a month with SheerID student verification.\n\nThe limitations are worth knowing. Like any AI system it can still misread or over-trust weak sources, so citations need checking. The free tier is limited for frequent use, and agentic Computer work is metered by a monthly credit budget that heavy users can exhaust. Juggling multiple models also adds a learning curve for some users.\n\nPerplexity is a strong pick if you do a lot of source-backed research, want agentic Deep Research, or like having access to several AI models in one subscription. Casual users who just need a few answers a day can stay on Free, while heavier users can choose either monthly or annual billing on Pro or Max.",
+   "pros": [
+    "Advanced Deep Research is genuinely agentic: it asks clarifying questions, takes mid-run follow-ups, and shows live sources and progress",
+    "Answers come with inline citations, making them easier to verify than a plain chatbot reply",
+    "Multi-model access to systems from OpenAI, Anthropic, Google and other vendors",
+    "Both Pro and Max are available on monthly billing ($20/month and $200/month) as well as annual billing, so you are not forced into a yearly commitment",
+    "A genuine free tier exists for occasional use at no cost"
+   ],
+   "cons": [
+    "Like all AI tools it can still misread or over-trust weak sources, so citations need a second look",
+    "Free tier is limited for people who search frequently",
+    "Max costs $200/month ($2,000/year), a steep step up from Pro's $20/month ($200/year)",
+    "Agentic Computer work is metered by monthly credits, which heavy users can exhaust",
+    "Multiple models and the Comet browser add complexity for people who just want a quick answer"
+   ],
+   "choose_if": [
+    "You do frequent research and want answers backed by live, checkable sources",
+    "You want agentic Deep Research with clarifying questions and live progress tracking",
+    "You want access to multiple AI models from different vendors in one subscription",
+    "You need the highest usage limits and priority access and are comfortable with Max's $200/month or $2,000/year price"
+   ],
+   "faq": [
+    {
+     "a": "Perplexity searches the web including academic sources, but it doesn't specialize in peer-reviewed papers the way Consensus does. For academic research requiring study citations and evidence quality, Consensus is more reliable. Perplexity is better for broad current-events research.",
+     "q": "Is Perplexity good for academic research?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": null,
+   "best_for": "AI search, deep research, agentic computer control, finance and study tools",
+   "description": "Perplexity is an AI-powered answer engine that returns cited, up-to-date sources instead of a list of links, with an agentic Deep Research mode and multi-model access to systems from OpenAI, Anthropic, Google and other vendors.",
+   "description_long": "Perplexity is a conversational search tool that answers questions with cited, up-to-date sources instead of a list of links. It sits somewhere between a chatbot and a search engine, and it has leaned hard into research and agentic work.\n\nAs of October 2026, Perplexity's Computer assistant can run fully locally on Apple-silicon Macs, with 36GB or more of RAM recommended. In local mode the model, orchestration harness, and task execution all stay on-device; it can touch local files and apps such as Notes, Messages, Mail and Numbers only with the user's permission, runs code and tools in sandboxes, and can escalate to more than 15 cloud frontier models only if the user authorizes it. Local mode uses local models including one from Qwen and a Perplexity-trained model called PPLX Pro, and is available to Pro, Max and Enterprise subscribers, giving them more control over credit spend.\n\nThe other headline feature is Advanced Deep Research. It runs agentically inside Perplexity's Computer assistant, asks clarifying questions before it starts, accepts follow-ups mid-run, and shows live source and progress tracking.\n\nBeyond research, Perplexity gives you multi-model access to systems from OpenAI, Anthropic, Google and other vendors, plus the Comet browser for AI-assisted browsing.\n\nPricing is tiered. Free costs $0 a month. Pro costs $20 a month or $200 a year billed annually, shown by Perplexity as a $17-a-month equivalent, and includes 4,000 bonus Computer credits. Max costs $200 a month or $2,000 a year billed annually, shown as a $167-a-month equivalent, and includes 10,000 monthly Computer credits plus 35,000 bonus credits.\n\nThe limitations are worth knowing. Like any AI system it can still misread or over-trust weak sources, so citations need checking. The free tier is limited for frequent use, agentic Computer work is metered by a monthly credit budget that heavy users can exhaust, and fully local Computer mode is restricted to Apple-silicon Macs with substantial RAM. Juggling multiple models also adds a learning curve for some users. Perplexity suits people who do a lot of source-backed research, want agentic Deep Research, or like having several AI models in one subscription, while casual users who need only a few answers a day can stay on the free tier.",
+   "pros": [
+    "Advanced Deep Research is genuinely agentic: it asks clarifying questions, takes mid-run follow-ups, and shows live sources and progress",
+    "Answers come with inline citations, making them easier to verify than a plain chatbot reply",
+    "Multi-model access to systems from OpenAI, Anthropic, Google and other vendors",
+    "Computer can now run fully locally on supported Apple-silicon Macs, keeping the model and task execution on-device and giving users more control over credit spend",
+    "A genuine free tier exists for occasional use at no cost"
+   ],
+   "cons": [
+    "Like all AI tools it can still misread or over-trust weak sources, so citations need a second look",
+    "Free tier is limited for people who search frequently",
+    "Max costs $200/month ($2,000/year), a steep step up from Pro's $20/month ($200/year)",
+    "Agentic Computer work is metered by monthly credits, which heavy users can exhaust",
+    "Fully local Computer mode requires an Apple-silicon Mac with 36GB+ RAM recommended, so it isn't available to everyone"
+   ],
+   "choose_if": [
+    "You do frequent research and want answers backed by live, checkable sources",
+    "You want agentic Deep Research with clarifying questions and live progress tracking",
+    "You want access to multiple AI models from different vendors in one subscription",
+    "You have a capable Apple-silicon Mac and want Computer tasks to run fully on-device for privacy and credit control",
+    "You need the highest usage limits and priority access and are comfortable with Max's $200/month or $2,000/year price"
+   ],
+   "faq": [
+    {
+     "a": "Perplexity searches the web including academic sources, but it doesn't specialize in peer-reviewed papers the way Consensus does. For academic research requiring study citations and evidence quality, Consensus is more reliable. Perplexity is better for broad current-events research.",
+     "q": "Is Perplexity good for academic research?"
+    }
+   ],
+   "dropped": [
+    "Enterprise Pro pricing ($40/seat/month or $400/seat/year) - not re-verified",
+    "Enterprise Max pricing ($325/seat/month or $3,250/seat/year) - not re-verified",
+    "Education Pro plan ($10/month with SheerID verification) - not re-verified",
+    "45M+ users figure - not verified by audit"
+   ]
+  }
+ },
+ {
+  "slug": "elevenlabs",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "",
+   "best_for": "Voice cloning, TTS, music and sound effects, image and video generation, lip sync, voice agents with a choice of LLM",
+   "description": "ElevenLabs is a multimodal AI studio on a single credit balance: speech, voice cloning, music, sound effects, transcription, dubbing, and image and video generation with lip sync. It runs its own Eleven v4 and Eleven v4 Turbo voice models and aggregates third-party models from ByteDance, Google, OpenAI, Black Forest Labs and others, so one subscription covers most media formats.",
+   "description_long": "ElevenLabs is a voice-focused AI company best known for realistic text-to-speech and voice cloning. Beyond TTS it now spans audiobooks, music generation and voice agents, making it one of the more complete audio stacks available to developers and creators.\n\nThe current flagship models are Eleven v4 and Eleven v4 Turbo, released September 28, 2026. Both support more than 90 languages and are available across ElevenAgents, ElevenCreative and the ElevenAPI. Eleven v4 Turbo is the low-latency variant built for voice agents, with around 100ms median inference latency and roughly 150ms median time to first speech over WebSocket. The previous generation, Eleven v3, reached general availability in February 2026 and remains available but has been superseded by v4 for most use cases.\n\nCore capabilities include high-quality multilingual TTS, instant voice cloning from about 10 seconds of audio, professional studio-grade cloning, real-time conversational agents powered by Eleven v4 Turbo, music generation, and an API with its own subscription tiers for production use.\n\nThere is a free plan with 10,000 credits per month, up to 3 Studio projects and no credit rollover, covering TTS, speech-to-text, sound effects, voice design, music and image generation. Paid tiers are billed monthly or annually (annual billing gives two months free): Starter is $6/mo ($5/mo billed annually) with commercial rights and instant cloning; Creator is $22/mo ($18.33/mo billed annually) with professional cloning, sometimes promoted at a discounted first-month rate; Pro is $99/mo ($82.50/mo billed annually); Scale is $299/mo ($249.17/mo billed annually, 3 seats); and Business is $990/mo ($825/mo billed annually, 10 seats). Custom Enterprise pricing is also available.\n\nThe main limitations are credit-based usage that can run out quickly on higher-volume work, no commercial rights or required attribution on the free plan, and costs that climb fast once you need many hours of audio or several seats. Voice cloning also raises consent and misuse concerns you have to manage yourself.\n\nElevenLabs suits creators, studios and developers who need natural-sounding voices in many languages, teams building voice agents, and anyone producing audiobooks or narration at scale.",
+   "pros": [
+    "Eleven v4 delivers highly natural, expressive speech across more than 90 languages",
+    "Voice cloning ranges from instant (about 10 seconds of audio) to studio-grade professional cloning",
+    "Eleven v4 Turbo enables real-time voice agents with roughly 100ms median inference latency",
+    "Broad product suite: TTS, music and audiobooks under one roof",
+    "One credit balance covers voice, music, sound effects, images, video and lip sync, with no separate subscription per vendor",
+    "Agents Platform lets you choose the reasoning model from OpenAI, Anthropic or Google, or connect your own LLM endpoint"
+   ],
+   "cons": [
+    "Credit-based pricing can be consumed quickly, so heavy audio work gets expensive fast",
+    "Free plan has no commercial rights and requires attribution",
+    "Higher seat counts and long-form audio push you into the pricier Scale/Business tiers",
+    "Realistic voice cloning carries consent and misuse risks the user must manage",
+    "Discounted first-month promo pricing on paid tiers reverts to the standard monthly rate afterward"
+   ],
+   "choose_if": [
+    "You need natural multilingual TTS or narration for content at scale",
+    "You want to build real-time voice agents with the Eleven v4 Turbo model",
+    "You need instant or professional voice cloning",
+    "You are producing audiobooks or music and want it in one platform",
+    "You are a developer who wants a mature voice API"
+   ],
+   "faq": [
+    {
+     "a": "ElevenLabs produces higher quality, more natural-sounding voices and has superior voice cloning. Murf is better for e-learning and presentation voiceovers with its integrated video sync and team features. Choose ElevenLabs for quality; Murf for e-learning workflows.",
+     "q": "Is ElevenLabs better than Murf?"
+    },
+    {
+     "a": "Yes. ElevenLabs can create an Instant Voice Clone from about 10 seconds of clean audio, available on the Starter plan ($6/month, or $5/month billed annually). Professional Voice Clone, for higher-quality results, requires the Creator plan ($22/month, or $18.33/month billed annually).",
+     "q": "Can ElevenLabs clone my voice?"
+    },
+    {
+     "a": "ElevenLabs' current Eleven v4 and Eleven v4 Turbo models support more than 90 languages. Voice quality varies by language — English and major European languages have the most natural output.",
+     "q": "What languages does ElevenLabs support?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": null,
+   "best_for": "Voice cloning, TTS, music and sound effects, image and video generation, lip sync, real-time voice agents with a choice of LLM",
+   "description": "ElevenLabs is a multimodal AI studio on a single credit balance: speech, voice cloning, music, sound effects, transcription, dubbing, and image and video generation with lip sync. It runs its own Eleven v4 and Eleven v4 Turbo voice models and aggregates third-party models from ByteDance, Google, OpenAI, Black Forest Labs and others, so one subscription covers most media formats.",
+   "description_long": "ElevenLabs is a voice-focused AI company best known for realistic text-to-speech and voice cloning. Beyond TTS it now spans audiobooks, music generation and voice agents, making it one of the more complete audio stacks available to developers and creators.\n\nThe flagship text-to-speech models are Eleven v4 and Eleven v4 Turbo, released September 28, 2026, supporting more than 90 languages across ElevenAgents, ElevenCreative and the ElevenAPI; v4 Turbo is the low-latency variant built for voice agents, with around 100ms median inference latency and roughly 150ms median time to first speech over WebSocket. The earlier Eleven v3, which reached general availability in February 2026, remains available but has been superseded by v4 for most use cases. On October 20, 2026, ElevenLabs added Eleven Realtime, a pair of dedicated speech-to-speech voice-agent models: Eleven Realtime v1 Mini, the default choice for lowest latency and cost, and v1 Max, which reasons before responding. Both are OpenAI Realtime API-compatible, WebSocket-only, available through ElevenAgents or a standalone Realtime API, and support more than 90 languages plus a library of over 17,000 voices. Vendor benchmarks put time to first audio at about 0.57 seconds for Max and 0.62 seconds for Mini, with Big Bench Audio scores of 98.8% and 75.9% respectively.\n\nCore capabilities include high-quality multilingual TTS, instant voice cloning from about 10 seconds of audio, professional studio-grade cloning, real-time conversational agents built on Eleven Realtime or Eleven v4 Turbo, music generation, and an API with its own subscription tiers for production use. Mini is not available under Zero Retention Mode or HIPAA compliance, and Max is not offered with India or Singapore data residency.\n\nThere is a free plan with 10,000 credits per month and no commercial license, covering TTS, speech-to-text, sound effects, voice design, music and image generation. Paid tiers are billed monthly or annually (annual billing gives two months free): Starter is $6/mo ($5/mo billed annually, 30,000 credits), currently discounted to $1 for the first month until November 1; Creator is $22/mo ($18.33/mo billed annually, 121,000 credits), with a promotional $11 first month; Pro is $99/mo ($82.50/mo billed annually, 600,000 credits); Scale is $299/mo ($249.17/mo billed annually, 1.8M credits, 3 seats); and Business is $990/mo ($825/mo billed annually, 6M credits, 10 seats). Custom Enterprise pricing is also available. The separate Eleven Realtime API is billed at $0.080 per minute of connected audio for both models (burst rate $0.160/min above your concurrency limit), plus token costs of $0.20 per 1M input and $6.00 per 1M output tokens for Mini, or $1.80 per 1M input and $9.00 per 1M output for Max.\n\nThe main limitations are credit-based usage that can run out quickly on higher-volume work, no commercial rights on the free plan, and costs that climb fast once you need many hours of audio or several seats. Promotional first-month pricing on Starter and Creator reverts to the standard monthly rate afterward, and voice cloning raises consent and misuse concerns you have to manage yourself.\n\nElevenLabs suits creators, studios and developers who need natural-sounding voices in many languages, teams building voice agents, and anyone producing audiobooks or narration at scale.",
+   "pros": [
+    "Eleven v4 delivers highly natural, expressive speech across more than 90 languages",
+    "Voice cloning ranges from instant (about 10 seconds of audio) to studio-grade professional cloning",
+    "Eleven Realtime adds dedicated speech-to-speech voice-agent models, with v1 Max reaching about 0.57s time-to-first-audio and a 98.8% Big Bench Audio score",
+    "One credit balance covers voice, music, sound effects, images, video and lip sync, with no separate subscription per vendor",
+    "Agents Platform lets you choose the reasoning model from OpenAI, Anthropic or Google, or connect your own LLM endpoint"
+   ],
+   "cons": [
+    "Credit-based pricing can be consumed quickly, so heavy audio work gets expensive fast",
+    "Free plan has no commercial rights",
+    "Higher seat counts and long-form audio push you into the pricier Scale/Business tiers",
+    "Realistic voice cloning carries consent and misuse risks the user must manage",
+    "Eleven Realtime v1 Mini isn't available under Zero Retention Mode or HIPAA, and v1 Max isn't offered with India or Singapore data residency"
+   ],
+   "choose_if": [
+    "You need natural multilingual TTS or narration for content at scale",
+    "You want to build real-time voice agents using Eleven Realtime or Eleven v4 Turbo models",
+    "You need instant or professional voice cloning",
+    "You are producing audiobooks or music and want it in one platform",
+    "You are a developer who wants a mature voice API"
+   ],
+   "faq": [
+    {
+     "a": "ElevenLabs produces higher quality, more natural-sounding voices and has superior voice cloning. Murf is better for e-learning and presentation voiceovers with its integrated video sync and team features. Choose ElevenLabs for quality; Murf for e-learning workflows.",
+     "q": "Is ElevenLabs better than Murf?"
+    },
+    {
+     "a": "Yes. ElevenLabs can create an Instant Voice Clone from about 10 seconds of clean audio, available on the Starter plan ($6/month, or $5/month billed annually). Professional Voice Clone, for higher-quality results, requires the Creator plan ($22/month, or $18.33/month billed annually).",
+     "q": "Can ElevenLabs clone my voice?"
+    },
+    {
+     "a": "ElevenLabs' current models — Eleven v4, Eleven v4 Turbo, and the newer Eleven Realtime voice-agent models — support more than 90 languages. Voice quality varies by language — English and major European languages have the most natural output.",
+     "q": "What languages does ElevenLabs support?"
+    }
+   ],
+   "dropped": [
+    "free plan attribution requirement (not confirmed by audit)",
+    "Business plan seat count corrected from 10 to 6 per vendor pricing page"
+   ]
+  }
+ },
+ {
+  "slug": "zapier-ai",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "2M+",
+   "best_for": "AI-powered workflow automation connecting 9,000+ apps",
+   "description": "Zapier is a workflow automation platform that connects 9,000+ apps and has become AI-first: Zapier Copilot builds and maintains automations from plain language, Zapier Agents act autonomously, and Zapier MCP exposes 66,000+ triggers and actions to external LLMs such as Claude and GPT.",
+   "description_long": "Zapier is a cloud automation service that links the apps you already use so data and tasks move between them without manual copy-paste. You build workflows called Zaps, which run on triggers and actions, and you can also create Tables, Interfaces, and Chatbots inside the same account.\n\nThe platform has shifted toward AI. Zapier Copilot, listed in Beta on every plan, turns plain-language descriptions into working Zaps, Tables, Interfaces, Chatbots, and Agents. Zapier Agents are AI teammates that can take action without waiting for a trigger, and Zapier MCP exposes Zapier's triggers and actions to outside models such as Claude and GPT, with each MCP tool call drawing from the plan's task quota.\n\nIntegration coverage stands at 9,000+ apps, on top of multi-step Zaps, filters, paths, formatting, and webhooks, plus the Tables and Interfaces tools that push Zapier closer to a lightweight app builder than a simple connector.\n\nPricing is freemium. The Free plan is $0/month with 100 tasks per month, unlimited two-step Zaps, Tables, and Forms, and a limited-message version of Copilot. Professional starts at $19.99/month billed annually (or $29.99/month billed monthly), with 750 tasks that scale up to 2 million tasks. Team starts at $69/month billed annually (or $103.50/month billed monthly) for 25 users with 2,000 tasks at entry. Enterprise pricing is custom. The AI products are billed separately: Agents (a free tier with 400 activities/month, a Pro tier at $33.33/month billed annually, and custom Enterprise pricing) and Chatbots (a free tier with 2 bots, a Pro tier at $13.33/month billed annually, an Advanced tier at $66.67/month billed annually, and custom pricing).\n\nThe main limitation is cost at scale: tasks are metered, and busy workflows or the separately billed AI products can add up quickly. Advanced logic can get fiddly, and autonomous Agents and Copilot output still benefit from human review before you rely on them unattended.\n\nZapier fits teams and solo operators who want to automate across many SaaS tools without code, and who want AI to draft and maintain those automations. If you need only one or two heavy, high-volume pipelines, a cheaper task model elsewhere may serve you better.",
+   "pros": [
+    "Connects 9,000+ apps, one of the widest integration libraries available",
+    "Zapier Copilot builds and edits Zaps, Tables, Interfaces, and Agents from plain language",
+    "Zapier MCP exposes 66,000+ triggers and actions to external LLMs like Claude and GPT",
+    "Real free tier ($0/month, 100 tasks, unlimited two-step Zaps) lets you test automations before paying",
+    "Goes beyond connecting apps with Tables, Interfaces, and Chatbots for lightweight apps"
+   ],
+   "cons": [
+    "Task-metered pricing gets expensive as workflow volume grows",
+    "AI products (Agents, Chatbots) are billed separately from the core plans",
+    "Autonomous Agents and Copilot output still need human review before you trust them unattended",
+    "Free plan is limited to 100 tasks/month and two-step Zaps",
+    "Advanced multi-step logic (paths, filters, formatting) has a learning curve"
+   ],
+   "choose_if": [
+    "You want to automate across many SaaS apps without writing code",
+    "You want AI (Copilot) to draft and maintain your automations",
+    "You want autonomous Agents or to expose actions to Claude/GPT via MCP",
+    "You prefer starting on a genuine free tier before committing",
+    "You need Tables, Interfaces, or Chatbots alongside your automations"
+   ],
+   "faq": [
+    {
+     "a": "Zapier AI is the AI layer within Zapier that lets you build automated workflows using natural language. You describe what you want to automate, and Zapier AI generates the workflow connecting 9,000+ apps.",
+     "q": "What is Zapier AI?"
+    },
+    {
+     "a": "Zapier has a free plan with 100 tasks/month and unlimited two-step Zaps. Professional starts at $19.99/month billed annually ($29.99/month billed monthly) with 750 tasks. Team starts at $69/month billed annually ($103.50/month billed monthly) for 25 users. Enterprise is custom.",
+     "q": "How much does Zapier cost?"
+    },
+    {
+     "a": "Zapier AI can automate email responses, CRM updates, social media posting, data entry, lead routing, and any repetitive task across 9,000+ connected apps — triggered by events or on a schedule.",
+     "q": "What can Zapier AI automate?"
+    },
+    {
+     "a": "Zapier is a no-code SaaS with the largest app integration library. n8n is open-source and self-hostable, offering more flexibility and lower cost at scale for technical users.",
+     "q": "How is Zapier AI different from n8n?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": null,
+   "best_for": "AI-powered workflow automation connecting 9,000+ apps",
+   "description": "Zapier is a workflow automation platform connecting 9,000+ apps, with Zapier Copilot building automations from plain language, AI by Zapier running AI-driven steps inside Zaps, and Zapier MCP exposing Zapier's actions to external LLMs such as Claude and ChatGPT.",
+   "description_long": "Zapier is a cloud automation service that connects the apps you already use, moving data and tasks between them without manual copy-paste. You build workflows called Zaps that run on triggers and actions, and the same account also offers Tables, Interfaces, and Chatbots.\n\nAs of October 2026, Zapier folded its standalone Zapier Agents product into a new feature called AI by Zapier: agent-style automation now lives inside a Zap as an AI step with a prompt field, a tools picker, and per-tool approval, triggered like any other Zap and run on a choice of model tiers (Standard, Advanced, Premium) or a named model. Standalone Agents built in the old product are being migrated to this step-based format; Zapier has not announced a shutdown date for the legacy Agents experience and says it will notify users by email.\n\nAlongside AI by Zapier, Zapier Copilot (in Beta on every plan) builds and edits Zaps, Tables, Interfaces, Chatbots, and agent steps from plain-language descriptions. Zapier MCP exposes Zapier's triggers and actions to external large language models such as Claude and ChatGPT, with each MCP tool call drawing from the plan's task quota. Core integration coverage stands at 9,000+ apps, with multi-step Zaps, filters, paths, formatting, and webhooks available throughout.\n\nZapier's core plans are Free ($0/month, 100 tasks/month, unlimited two-step Zaps, Tables, and Forms), Professional (from $19.99/month billed annually, or $29.99/month billed monthly, starting at 750 tasks and scaling to 2 million), Team (from $69/month billed annually, or $103.50/month billed monthly, for 25 users starting at 2,000 tasks), and custom-priced Enterprise. AI by Zapier is included on Professional, Team, and Enterprise plans, not on Free, and bills out of the same task pool: steps using Zapier's default models are free, while other model tiers cost a multiplier of 1, 3, or 5 tasks per run, with runs capped at 75 tasks by default (admins can raise this to 500). A separate Chatbots add-on remains on the pricing page (a free tier with 2 bots, a Pro tier around $13.33/month billed annually, and an Advanced tier around $66.67/month billed annually), and the legacy stand-alone Agents add-on (a free tier with 400 activities/month and a Pro tier around $33.33/month billed annually) is still listed but is being phased out as Agents migrates into AI by Zapier.\n\nThe main limitation is cost at scale: tasks meter everything, and AI steps on non-default models consume extra tasks quickly. Advanced logic can get fiddly, and the newly reorganized AI by Zapier steps still benefit from per-tool human approval before you let them run unattended, especially during the migration period while legacy Agents are moved over.\n\nZapier fits teams and solo operators who want to automate across many SaaS tools without code and who want AI to draft, run, and maintain those automations from inside the same Zap editor. If you need only one or two heavy, high-volume pipelines, a cheaper task model elsewhere may serve you better.",
+   "pros": [
+    "Connects 9,000+ apps, one of the widest integration libraries available",
+    "Zapier Copilot builds and edits Zaps, Tables, Interfaces, Chatbots, and AI by Zapier steps from plain language",
+    "AI by Zapier runs agent-style steps directly inside Zaps, with per-tool approval and a choice of model tiers",
+    "Real free tier ($0/month, 100 tasks, unlimited two-step Zaps) lets you test automations before paying",
+    "Goes beyond connecting apps with Tables, Interfaces, and Chatbots for lightweight apps"
+   ],
+   "cons": [
+    "Task-metered pricing gets expensive as workflow volume grows, especially with non-default AI model tiers that cost multiple tasks per run",
+    "AI by Zapier is not available on the Free plan; Chatbots (and the legacy Agents add-on) remain separately priced",
+    "Per-tool human approval and review are still needed since AI by Zapier steps can take real actions",
+    "Free plan is limited to 100 tasks/month and two-step Zaps",
+    "Advanced multi-step logic (paths, filters, formatting) has a learning curve"
+   ],
+   "choose_if": [
+    "You want to automate across many SaaS apps without writing code",
+    "You want AI (Copilot) to draft and maintain your automations",
+    "You want AI by Zapier agent steps inside your Zaps, or to expose actions to Claude/ChatGPT via MCP",
+    "You prefer starting on a genuine free tier before committing",
+    "You need Tables, Interfaces, or Chatbots alongside your automations"
+   ],
+   "faq": [
+    {
+     "q": "What is Zapier AI?",
+     "a": "Zapier AI is the AI layer within Zapier that lets you build automated workflows using natural language. You describe what you want to automate, and Zapier AI generates the workflow connecting 9,000+ apps."
+    },
+    {
+     "q": "How much does Zapier cost?",
+     "a": "Zapier has a free plan with 100 tasks/month and unlimited two-step Zaps. Professional starts at $19.99/month billed annually ($29.99/month billed monthly) with 750 tasks. Team starts at $69/month billed annually ($103.50/month billed monthly) for 25 users. Enterprise is custom."
+    },
+    {
+     "q": "What can Zapier AI automate?",
+     "a": "Zapier AI can automate email responses, CRM updates, social media posting, data entry, lead routing, and any repetitive task across 9,000+ connected apps — triggered by events or on a schedule."
+    },
+    {
+     "q": "How is Zapier AI different from n8n?",
+     "a": "Zapier is a no-code SaaS with the largest app integration library. n8n is open-source and self-hostable, offering more flexibility and lower cost at scale for technical users."
+    }
+   ],
+   "badge_computed": "freemium",
+   "dropped": [
+    "Zapier MCP exposes 66,000+ triggers and actions (figure not re-verified)",
+    "Zapier Agents act autonomously / are AI teammates that act without waiting for a trigger (superseded by AI by Zapier, which runs from a Zap trigger)",
+    "2M+ users audience figure (not verified by audit)"
+   ]
+  }
+ },
+ {
+  "slug": "windsurf",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "1M+",
+   "best_for": "Agentic coding with a proprietary software-engineering-optimized model",
+   "description": "AI coding IDE formerly known as Windsurf, rebranded to Devin Desktop on June 2, 2026 after Cognition and Windsurf came together. Its agent picker includes Devin Local, Codex, Claude Agent, OpenCode and Cascade, with SWE-2 as the current in-house model.",
+   "description_long": "Devin Desktop, formerly known as Windsurf, is an AI-native code editor built by Cognition. It combines an autocomplete engine (Tab), inline edits, and autonomous coding agents inside a VS Code-style workspace. Windsurf for JetBrains continues to be offered under the original Windsurf name.\n\nThe product was renamed from Windsurf to Devin Desktop on June 2, 2026, after Cognition and Windsurf came together. windsurf.com and codeium.com/windsurf now redirect to devin.ai/desktop. The in-editor agent picker currently lists several selectable agents, including Devin Local, Codex, Claude Agent, OpenCode and Cascade, so the original Cascade agent is still available rather than retired.\n\nOn the model side, SWE-2 is the current in-house model, released September 10, 2026, replacing the earlier SWE-1.6. Paid tiers also unlock access to models from OpenAI, Anthropic, Google, SpaceXAI, and leading open-source models, along with Devin Cloud agents for longer background tasks and Devin Review for automated code review.\n\nPricing runs on daily and weekly quotas rather than the older credit system. Free is $0 per month with a light agent quota, limited model access, and unlimited Tab completions and inline edits. Pro is $20 per month with increased quotas, full model access, Devin Cloud agents, up to 10 concurrent sessions, and free use of SWE-2 through October 16, 2026 as a limited-time offer. Max is $200 per month with significantly higher quotas. Teams costs $80 per month as a base plus $40 per month per developer seat for up to 200 users, and Enterprise pricing is custom with SSO and VPC deployment.\n\nThe main caveats are churn and lock-in: the rebrand from Windsurf to Devin Desktop, and the move from credits to quotas, mean workflows and limits have shifted within the same year. Heavy agent use can burn through quotas quickly, and the free access to SWE-2 on Pro is time-limited rather than permanent. Much of the product's value now sits behind the Devin ecosystem.\n\nIt suits developers who want an agent-first editor with strong autocomplete and are comfortable working inside the Cognition/Devin ecosystem. Anyone still looking for the original Windsurf branding or credit-based pricing should know those have changed, though Windsurf branding persists in the JetBrains plugin.",
+   "pros": [
+    "Fast, high-quality Tab autocomplete and inline edits that stay unlimited even on the free plan",
+    "Agent-first workflow with multiple selectable agents, including Devin Local, Codex, Claude Agent, OpenCode and Cascade",
+    "Pro unlocks frontier models from OpenAI, Anthropic, Google, SpaceXAI and leading open-source models",
+    "Familiar VS Code-style interface that is easy to adopt for existing developers",
+    "Free tier is usable for light, everyday coding"
+   ],
+   "cons": [
+    "Rebranding churn: Windsurf became Devin Desktop on June 2, 2026, and old domains now just redirect to devin.ai/desktop",
+    "Daily/weekly quota system (replacing the older credit model) can throttle intensive agent sessions",
+    "Free access to the SWE-2 model on Pro is time-limited, ending October 16, 2026",
+    "The highest quotas sit behind the $200/month Max tier",
+    "Growing dependence on the Devin ecosystem increases vendor lock-in"
+   ],
+   "choose_if": [
+    "You want an agent-first editor and are fine living inside the Cognition/Devin ecosystem",
+    "You rely heavily on autocomplete and inline edits and want them unlimited on the free plan",
+    "You need access to models from OpenAI, Anthropic, Google, SpaceXAI and open-source providers from one paid plan",
+    "You want cloud agents and automated code review bundled starting at Pro"
+   ],
+   "faq": [
+    {
+     "a": "Windsurf is now called Devin Desktop, an AI-native code editor from Cognition that evolved from Codeium/Windsurf. Its flagship capability is an agent command center offering autonomous coding agents such as Devin Local, Devin Cloud, Codex, Claude Agent, OpenCode and Cascade, with awareness of your codebase.",
+     "q": "What is Windsurf?"
+    },
+    {
+     "a": "Devin Desktop (formerly Windsurf) has a free tier with a light agent quota, limited model access, and unlimited Tab completions and inline edits. Pro costs $20 per month for more quota and full model access.",
+     "q": "Is Windsurf free?"
+    },
+    {
+     "a": "Both are strong AI IDEs and the gap between them is narrowing. Cursor has more features, a larger community, and more model options. Devin Desktop's multi-agent setup and free tier are advantages. Many developers try both; the best choice often comes down to personal workflow preference.",
+     "q": "Is Windsurf better than Cursor?"
+    },
+    {
+     "a": "Cascade is one of several selectable coding agents available in Devin Desktop, alongside Devin Local, Codex, Claude Agent and OpenCode. It was the original Windsurf agent and can still plan and execute multi-step changes across a project.",
+     "q": "What is Cascade in Windsurf?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": null,
+   "best_for": "Agentic coding with a proprietary software-engineering-optimized model",
+   "description": "AI coding IDE formerly known as Windsurf, rebranded to Devin Desktop on June 2, 2026 after Cognition and Windsurf came together. Its agent picker includes Devin Local, Codex, Claude Agent, OpenCode and Cascade, with SWE-2 as the current in-house model.",
+   "description_long": "Devin Desktop, formerly known as Windsurf, is an AI-native code editor built by Cognition. It combines an autocomplete engine (Tab), inline edits, and autonomous coding agents inside a VS Code-style workspace. Windsurf for JetBrains continues to be offered under the original Windsurf name.\n\nThe product was renamed from Windsurf to Devin Desktop on June 2, 2026, after Cognition and Windsurf came together. windsurf.com and codeium.com/windsurf now redirect to devin.ai/desktop. The in-editor agent picker currently lists several selectable agents, including Devin Local, Codex, Claude Agent, OpenCode and Cascade, so the original Cascade agent is still available rather than retired.\n\nOn the model side, SWE-2 is the current in-house model, released September 10, 2026, replacing the earlier SWE-1.6. Paid tiers also unlock access to models from OpenAI, Anthropic, Google, SpaceXAI, and leading open-source models, along with Devin Cloud agents for longer background tasks and Devin Review for automated code review.\n\nPricing runs on daily and weekly quotas rather than the older credit system. Free is $0 per month with a light agent quota, limited model access, and unlimited Tab completions and inline edits. Pro is $20 per month with increased quotas, full model access, Devin Cloud agents, and free use of SWE-2 listed as a current Pro feature. Max is $200 per month with significantly higher quotas. Teams costs $80 per month as a base plus $40 per month per developer seat for up to 200 users, and Enterprise pricing is custom with SAML/OIDC SSO, dedicated deployment, and dedicated account management.\n\nThe main caveats are churn and lock-in: the rebrand from Windsurf to Devin Desktop, and the move from credits to quotas, mean workflows and limits have shifted within the same year. Heavy agent use can burn through quotas quickly, extra usage beyond quota must be purchased at API pricing, and much of the product's value now sits behind the Devin ecosystem.\n\nIt suits developers who want an agent-first editor with strong autocomplete and are comfortable working inside the Cognition/Devin ecosystem. Anyone still looking for the original Windsurf branding or credit-based pricing should know those have changed, though Windsurf branding persists in the JetBrains plugin.",
+   "pros": [
+    "Fast, high-quality Tab autocomplete and inline edits that stay unlimited even on the free plan",
+    "Agent-first workflow with multiple selectable agents, including Devin Local, Codex, Claude Agent, OpenCode and Cascade",
+    "Pro unlocks frontier models from OpenAI, Anthropic, Google, SpaceXAI and leading open-source models",
+    "Familiar VS Code-style interface that is easy to adopt for existing developers",
+    "Free tier is usable for light, everyday coding"
+   ],
+   "cons": [
+    "Rebranding churn: Windsurf became Devin Desktop on June 2, 2026, and old domains now just redirect to devin.ai/desktop",
+    "Daily/weekly quota system (replacing the older credit model) can throttle intensive agent sessions",
+    "The highest quotas sit behind the $200/month Max tier",
+    "Growing dependence on the Devin ecosystem increases vendor lock-in",
+    "Usage beyond the included quota must be purchased separately at API pricing"
+   ],
+   "choose_if": [
+    "You want an agent-first editor and are fine living inside the Cognition/Devin ecosystem",
+    "You rely heavily on autocomplete and inline edits and want them unlimited on the free plan",
+    "You need access to models from OpenAI, Anthropic, Google, SpaceXAI and open-source providers from one paid plan",
+    "You want cloud agents and automated code review bundled starting at Pro"
+   ],
+   "faq": [
+    {
+     "a": "Windsurf is now called Devin Desktop, an AI-native code editor from Cognition that evolved from Codeium/Windsurf. Its flagship capability is an agent command center offering autonomous coding agents such as Devin Local, Devin Cloud, Codex, Claude Agent, OpenCode and Cascade, with awareness of your codebase.",
+     "q": "What is Windsurf?"
+    },
+    {
+     "a": "Devin Desktop (formerly Windsurf) has a free tier with a light agent quota, limited model access, and unlimited Tab completions and inline edits. Pro costs $20 per month for more quota and full model access.",
+     "q": "Is Windsurf free?"
+    },
+    {
+     "a": "Both are strong AI IDEs and the gap between them is narrowing. Cursor has more features, a larger community, and more model options. Devin Desktop's multi-agent setup and free tier are advantages. Many developers try both; the best choice often comes down to personal workflow preference.",
+     "q": "Is Windsurf better than Cursor?"
+    },
+    {
+     "a": "Cascade is one of several selectable coding agents available in Devin Desktop, alongside Devin Local, Codex, Claude Agent and OpenCode. It was the original Windsurf agent and can still plan and execute multi-step changes across a project.",
+     "q": "What is Cascade in Windsurf?"
+    }
+   ],
+   "dropped": [
+    "free use of SWE-2 through October 16, 2026 as a limited-time offer (no end date is shown on the pricing page)",
+    "up to 10 concurrent sessions on Pro (not found on the pricing page)",
+    "VPC deployment for Enterprise (pricing page says 'dedicated deployment')",
+    "1M+ users (not verified by audit)"
+   ]
+  }
+ },
+ {
+  "slug": "replit",
+  "before": {
+   "lang": "en",
+   "badge": "paid",
+   "users": "50M+",
+   "best_for": "AI app building, cloud IDE",
+   "description": "Replit Agent 4 runs parallel agents that build authentication, database, backend, and frontend components simultaneously, and includes a Security Agent that scans codebases for vulnerabilities.",
+   "description_long": "Replit is a browser-based development platform that combines a cloud IDE, AI coding agent, and instant deployment into a single environment. No local setup is required — users write, run, and ship code entirely in the browser, making it accessible for beginners and fast for prototyping.\n\nThe current generation, Agent 4, repositions Replit from an AI coding agent toward a broader creative agent, described by Replit as turning ideas into apps, designs, slides, and more, with design variants generated on an infinite canvas as a headline feature.\n\nAgent 4 introduces multi-task parallelism: instead of building an app sequentially, it spins up parallel agents that handle authentication, database setup, backend logic, and frontend code at the same time, with progress visible in a dedicated panel. The Security Agent performs codebase scanning at three levels: a free dependency and static code analysis pass, a white-box scan, and a combined white-box plus black-box scan; Replit has not published scan duration figures.\n\nPricing, read from replit.com/pricing, has no listed $0 account tier. Core costs $20/month billed monthly, or $18/month billed annually, and includes $20 in monthly credits plus a Free Mode allowance of up to 30 hours of chat and 60 projects. Pro costs $100/month billed monthly, or $90/month billed annually, includes $100 in credits, 10 parallel agents, up to 15 collaborators and 50 viewers, and 28-day database rollback. Enterprise pricing is custom and adds SSO/SAML, single-tenant environments, and static outbound IPs.\n\nFree Mode, included inside the paid tiers, resets its usage allowance every 5 hours and always uses automatic intelligent model routing rather than manual model selection, which is reserved for Power/Max modes. Generated code across all tiers often needs review before production use, and the browser-based environment can feel slower than local editors for large projects.\n\nReplit suits developers who want to go from idea to deployed app quickly, students learning full-stack development, and small teams that need built-in collaboration and automated security scanning without managing their own infrastructure, provided they are willing to pay for a Core or Pro plan since no free account tier is currently offered.",
+   "pros": [
+    "Agent 4 runs parallel agents for auth, database, backend, and frontend simultaneously",
+    "Security Agent offers three scan levels, including a free dependency and static analysis pass",
+    "Zero local setup — write, run, and deploy entirely in the browser",
+    "Pro plan supports up to 15 collaborators and 50 viewers with 28-day database rollback",
+    "Annual billing gives roughly a 10% discount on both Core and Pro plans"
+   ],
+   "cons": [
+    "No published free account tier — Free Mode is a usage mode inside paid plans, not a standalone free plan",
+    "Free Mode usage resets every 5 hours and only supports automatic model routing, not manual model choice",
+    "Pro plan at $100/month billed monthly is expensive for solo developers who don't exhaust their credits",
+    "Browser-based environment is slower for large projects than local editors like Cursor or Zed",
+    "Generated code often requires review and cleanup before production deployment"
+   ],
+   "choose_if": [
+    "✅ You want to code entirely in the browser — no installation, no local setup",
+    "✅ You're learning to code and need an environment that's instantly ready with any language",
+    "✅ You want to deploy web apps directly from your development environment with one click",
+    "✅ You build and share interactive projects and want a live URL for your running app"
+   ],
+   "faq": [
+    {
+     "a": "Replit is a browser-based IDE and cloud development platform. You write, run, and deploy code entirely in the browser — no local installation needed. It supports many programming languages and Replit Agent provides AI coding assistance.",
+     "q": "What is Replit?"
+    },
+    {
+     "a": "Replit's pricing page does not currently list a free account tier. Free Mode is a usage mode inside the paid Core and Pro plans, with limited hours and project counts that reset every 5 hours. Core starts at $20/month billed monthly, or $18/month billed annually.",
+     "q": "Is Replit free?"
+    },
+    {
+     "a": "Yes. Replit has built-in deployments — you can deploy web apps, APIs, and databases directly from your Replit environment. Apps run on Replit's infrastructure at a .replit.app subdomain or custom domain.",
+     "q": "Can Replit deploy web apps?"
+    },
+    {
+     "a": "Yes. Replit is one of the more accessible platforms for beginners — no setup required, works in any browser, and supports many programming languages. The AI agent helps explain code and fix errors. Many coding bootcamps and schools use Replit for this reason.",
+     "q": "Is Replit good for beginners?"
+    }
+   ]
+  },
+  "after": {
+   "badge": "paid",
+   "users": null,
+   "best_for": "AI app building, cloud IDE",
+   "description": "Replit Agent 4 runs parallel agents that build authentication, database, backend, and frontend components simultaneously, and includes a Security Agent that scans codebases for vulnerabilities. A newer Monitoring Agent can investigate production issues from app logs and metrics and attempt validated fixes.",
+   "description_long": "Replit is a browser-based development platform that combines a cloud IDE, AI coding agent, and instant deployment into a single environment. No local setup is required — users write, run, and ship code entirely in the browser, making it accessible for beginners and fast for prototyping.\n\nThe current generation, Agent 4, repositions Replit from an AI coding agent toward a broader creative agent, described by Replit as turning ideas into apps, designs, slides, and more, with design variants generated on an infinite canvas as a headline feature. A newer Monitoring Agent, introduced in October 2026, investigates production issues using app logs and metrics, then attempts and validates fixes; users can enable Monitoring alerts and an opt-in Auto-fix feature for background triage, while an experimental Auto-republish option can publish validated fixes automatically. Otherwise, fixes are reviewed and published by the user.\n\nAgent 4 introduces multi-task parallelism: instead of building an app sequentially, it spins up parallel agents that handle authentication, database setup, backend logic, and frontend code at the same time, with progress visible in a dedicated panel. The Security Agent performs codebase scanning at three levels: a free dependency and static code analysis pass, a white-box scan, and a combined white-box plus black-box scan; Replit has not published scan duration figures. Higher-tier Power and Max modes let users manually select a model from third-party providers including OpenAI and Anthropic, while Free Mode always uses automatic intelligent model routing. The Agent can also create and update workspace skills, supports chat and asset sharing, and offers a discounted Stripe Atlas incorporation service.\n\nPricing, read from replit.com/pricing, has no listed $0 account tier. Core costs $20/month billed monthly, or $18/month billed annually, and includes $20 in monthly credits plus a Free Mode allowance of up to 30 hours of chat and 60 projects. Pro costs $100/month billed monthly, or $90/month billed annually, includes $100 in credits, 10 parallel agents, up to 15 collaborators and 50 viewers, and 28-day database rollback. Enterprise pricing is custom and adds SSO, SCIM and audit logs, advanced privacy controls, centralized security, and single-tenant and private networking options.\n\nFree Mode, included inside the paid tiers, resets its usage allowance every 5 hours and always uses automatic intelligent model routing rather than manual model selection, which is reserved for Power and Max modes. Generated code across all tiers often needs review before production use, and the browser-based environment can feel slower than local editors for large projects.\n\nReplit suits developers who want to go from idea to deployed app quickly, students learning full-stack development, and small teams that need built-in collaboration and automated security scanning without managing their own infrastructure, provided they are willing to pay for a Core or Pro plan since no free account tier is currently offered.",
+   "pros": [
+    "Agent 4 runs parallel agents for auth, database, backend, and frontend simultaneously",
+    "Security Agent offers three scan levels, including a free dependency and static analysis pass",
+    "New Monitoring Agent can investigate production issues from logs and metrics and attempt validated fixes",
+    "Zero local setup — write, run, and deploy entirely in the browser",
+    "Annual billing gives roughly a 10% discount on both Core and Pro plans"
+   ],
+   "cons": [
+    "No published free account tier — Free Mode is a usage mode inside paid plans, not a standalone free plan",
+    "Free Mode usage resets every 5 hours and only supports automatic model routing, not manual model choice",
+    "Manual model selection in Power/Max modes relies on third-party models from OpenAI and Anthropic rather than Replit's own",
+    "Pro plan at $100/month billed monthly is expensive for solo developers who don't exhaust their credits",
+    "Browser-based environment is slower for large projects than local editors like Cursor or Zed"
+   ],
+   "choose_if": [
+    "✅ You want to code entirely in the browser — no installation, no local setup",
+    "✅ You're learning to code and need an environment that's instantly ready with any language",
+    "✅ You want to deploy web apps directly from your development environment with one click",
+    "✅ You build and share interactive projects and want a live URL for your running app"
+   ],
+   "faq": [
+    {
+     "q": "What is Replit?",
+     "a": "Replit is a browser-based IDE and cloud development platform. You write, run, and deploy code entirely in the browser — no local installation needed. It supports many programming languages and Replit Agent provides AI coding assistance."
+    },
+    {
+     "q": "Is Replit free?",
+     "a": "Replit's pricing page does not currently list a free account tier. Free Mode is a usage mode inside the paid Core and Pro plans, with limited hours and project counts that reset every 5 hours. Core starts at $20/month billed monthly, or $18/month billed annually."
+    },
+    {
+     "q": "Can Replit deploy web apps?",
+     "a": "Yes. Replit has built-in deployments — you can deploy web apps, APIs, and databases directly from your Replit environment. Apps run on Replit's infrastructure at a .replit.app subdomain or custom domain."
+    },
+    {
+     "q": "Is Replit good for beginners?",
+     "a": "Yes. Replit is one of the more accessible platforms for beginners — no setup required, works in any browser, and supports many programming languages. The AI agent helps explain code and fix errors. Many coding bootcamps and schools use Replit for this reason."
+    }
+   ],
+   "dropped": [
+    "50M+ user count (not verified by audit)",
+    "Enterprise 'static outbound IPs' wording (outdated; current pricing page lists SSO, SCIM and audit logs, single-tenant and private networking instead)"
+   ]
+  }
+ },
+ {
+  "slug": "claude",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "",
+   "best_for": "Writing, coding, analysis, long documents",
+   "description": "Anthropic's AI assistant, known for careful reasoning, coding and long documents. Current models include Claude Fable 5.1 (most capable, widely released), Claude Opus 5.5, Claude Sonnet 5.5, and Claude Haiku 5.5, plus the limited-availability Claude Mythos 5.1. Free plan plus Pro ($20/mo billed monthly, or $17/mo billed annually), Max, Team, and Enterprise plans.",
+   "description_long": "Claude is a conversational AI assistant from Anthropic, used through the web app, mobile apps, and the API. It handles long-form writing, analysis, coding, document reading, and multi-step reasoning, with an emphasis on careful, steerable responses.\n\nThe current model lineup is Claude Fable 5.1 (the most capable widely released model), Claude Opus 5.5 for complex agentic coding and enterprise work, Claude Sonnet 5.5, and Claude Haiku 5.5, released October 7, 2026 as the first Haiku model with adjustable effort and now the default Haiku model in Claude Code. A separate Claude Mythos 5.1 exists but has limited availability through the invitation-only Cyber Verification Program.\n\nAll four current models, Fable 5.1, Opus 5.5, Sonnet 5.5, and Haiku 5.5, support a 1M-token context window, which helps with large codebases, long documents, or full transcripts in one conversation. The models also support multimodal input and tool use across the product.\n\nPricing is tiered. The Free plan is $0 and includes access to Sonnet and Haiku models, with usage caps. Pro is $20/month billed monthly, or $17/month if billed annually, and covers Opus, Sonnet, and Haiku plus Claude Code, with Fable 5.1 available through usage credits. Max starts from $100/month across 5x and 20x usage tiers, includes monthly API credits as of October 7, 2026, and allows Fable usage up to 50% of weekly limits; pricing above the $100 entry tier is not published. Team offers a Standard seat at $25/month billed monthly ($20/month billed annually) and a Premium seat at $125/month billed monthly ($100/month billed annually), with a two-seat minimum. Enterprise is $20/seat/month billed annually plus usage billed at API rates. API list pricing per million tokens is $10/$50 for Fable 5.1, $4/$20 for Opus 5.5, $2/$10 for Sonnet 5.5, and $0.10/$0.50 for Haiku 5.5 (prompts over 100K tokens: $0.50/$2.50).\n\nLimitations are worth noting. Free and paid plans carry usage caps that reset on a rolling basis, so heavy users can hit limits mid-session. Max pricing beyond the $100/month entry tier isn't publicly disclosed, and the top-end Mythos 5.1 is invitation-only and not generally available. As with any LLM, outputs still need checking for factual accuracy.\n\nClaude suits writers, developers, analysts, and teams who want strong reasoning, large-context handling across its current model lineup, and a choice of models to balance cost against capability.",
+   "pros": [
+    "Free plan available with access to Sonnet and Haiku models",
+    "All four current models (Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 5.5) offer a 1M-token context window for large codebases and documents",
+    "Clear model tiering lets you trade cost for capability",
+    "Strong at long-form writing, analysis, and agentic coding",
+    "Team plan has a low two-seat minimum, easier for small teams than many enterprise tools"
+   ],
+   "cons": [
+    "Usage caps apply even on paid plans and can interrupt heavy sessions",
+    "Claude Mythos 5.1 is invitation-only through the Cyber Verification Program, not generally available",
+    "Max plan pricing above the $100/month entry tier is not publicly disclosed",
+    "Fable 5.1 access on the Pro plan is usage-credit based rather than unlimited",
+    "Outputs still require fact-checking like any LLM"
+   ],
+   "choose_if": [
+    "You need to work with large documents or codebases using models with up to 1M-token context",
+    "You want to pick a model that balances price against capability",
+    "You do long-form writing, analysis, or agentic coding",
+    "You want to start on a free plan and scale to Pro, Max, Team, or API access"
+   ],
+   "faq": [
+    {
+     "a": "It depends on the task. Claude generally produces strong long-form writing and can handle very long documents accurately with its 1M-token context window. ChatGPT has more features (image generation, voice, plugins) and a larger app ecosystem. Coding capability varies by model and task, so it's worth testing both for your specific workflow.",
+     "q": "Is Claude better than ChatGPT?"
+    },
+    {
+     "a": "Both have free plans. Claude's Free plan gives access to Sonnet and Haiku models at no cost, with usage caps that reset on a rolling basis. ChatGPT also offers a free tier with its own usage limits. Claude's paid entry point is the Pro plan at $20/month billed monthly, or $17/month if billed annually.",
+     "q": "Which is free — ChatGPT or Claude?"
+    },
+    {
+     "a": "Both are strong choices. Claude Opus 5.5 is built for complex agentic coding, with all current Claude models offering a 1M-token context window that helps across large codebases. ChatGPT with code interpreter excels at data analysis and running code. Which is better will depend on the specific coding task and workflow.",
+     "q": "Which AI is better for coding — ChatGPT or Claude?"
+    }
+   ]
+  },
+  "after": {
+   "best_for": "Writing, coding, analysis, long documents",
+   "description": "Anthropic's AI assistant, known for careful reasoning, coding, and long documents. Current models include Claude Fable 5.1 (most capable, widely released), Claude Opus 5.5, Claude Sonnet 5.5, and Claude Haiku 5.5, plus the limited-availability Claude Mythos 5.1. Free plan plus Pro ($20/mo billed monthly, or $17/mo billed annually), Max, Team, and Enterprise plans.",
+   "description_long": "Claude is a conversational AI assistant from Anthropic, used through the web app, mobile apps, and the API. It handles long-form writing, analysis, coding, document reading, and multi-step reasoning, with an emphasis on careful, steerable responses.\n\nAs of October 2026, the model lineup is unchanged: Claude Fable 5.1 (the most capable widely released model), Claude Opus 5.5, Claude Sonnet 5.5, and Claude Haiku 5.5 (released October 7, 2026, the first Haiku model with adjustable effort and now the default Haiku model in Claude Code), plus the limited-availability Claude Mythos 5.1 through the invitation-only Cyber Verification Program. Anthropic has also introduced Claude Duet, a standalone proactive-agent app for iOS, Android, and claude.ai, currently in research preview for US Pro and Max subscribers via waitlist; it runs on Opus 5.5 and uses the subscriber's existing plan limits at no extra cost, and is not yet available on Team or Enterprise plans. For Enterprise customers, Anthropic has merged the chat and Cowork experiences into a single unified Claude interface, generally available since October 23, 2026 (off by default for existing organizations until it becomes the default on November 16, 2026; not available for ZDR, HIPAA, or CMEK organizations).\n\nAll four current models, Fable 5.1, Opus 5.5, Sonnet 5.5, and Haiku 5.5, support a 1M-token context window, which helps with large codebases, long documents, or full transcripts in one conversation. The models also support multimodal input and tool use across the product. Opus 5.5 gained a fast mode that left research preview on the API on October 15, 2026, and became available on Google Cloud on October 22, 2026, running at roughly double the price for up to 2.5x faster responses.\n\nPricing is tiered. The Free plan is $0 and includes access to Sonnet and Haiku models, with usage caps. Pro is $20/month billed monthly, or $17/month if billed annually, and covers Opus, Sonnet, and Haiku plus Claude Code, with Fable 5.1 available through usage credits. Max starts from $100/month across 5x and 20x usage tiers and includes $100-$200/month in API credits; pricing above the $100 entry tier is not published. Team offers a Standard seat at $25/month billed monthly ($20/month billed annually) and a Premium seat at $125/month billed monthly ($100/month billed annually), for 2 to 150 users, with up to $500/month in pooled API credits. Enterprise costs $20/seat/month billed annually plus usage billed at API rates, with a 20-seat minimum. API list pricing per million tokens is $10/$50 for Fable 5.1, $4/$20 for Opus 5.5 (fast mode $8/$40), $2/$10 for Sonnet 5.5, and $0.10/$0.50 for Haiku 5.5 (prompts over 100K tokens: $0.50/$2.50).\n\nLimitations are worth noting. Free and paid plans carry usage caps that reset on a rolling basis, so heavy users can hit limits mid-session. Max pricing beyond the $100/month entry tier isn't publicly disclosed, and the top-end Mythos 5.1 is invitation-only and not generally available. Opus 5.5 fast mode isn't available on the Batch API and is usage-credit only within Claude Code subscriptions. Enterprise requires a 20-seat minimum, which raises the entry cost for smaller organizations. As with any LLM, outputs still need checking for factual accuracy.\n\nClaude suits writers, developers, analysts, and teams who want strong reasoning, large-context handling across its current model lineup, and a choice of models and plans, including the new proactive Duet agent for subscribers who want hands-off task assistance.",
+   "pros": [
+    "Free plan available with access to Sonnet and Haiku models",
+    "All four current models (Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 5.5) offer a 1M-token context window for large codebases and documents",
+    "Opus 5.5 now has a fast mode, generally available via the API and on Google Cloud, for up to 2.5x faster responses",
+    "Clear model tiering lets you trade cost for capability",
+    "Strong at long-form writing, analysis, and agentic coding"
+   ],
+   "cons": [
+    "Usage caps apply even on paid plans and can interrupt heavy sessions",
+    "Claude Mythos 5.1 remains invitation-only through the Cyber Verification Program, not generally available",
+    "Enterprise requires a 20-seat minimum, raising the entry cost for smaller organizations",
+    "Opus 5.5 fast mode isn't available on the Batch API and is usage-credit only within Claude Code subscriptions",
+    "Max plan pricing above the $100/month entry tier is not publicly disclosed"
+   ],
+   "choose_if": [
+    "You need to work with large documents or codebases using models with up to 1M-token context",
+    "You want to pick a model that balances price against capability",
+    "You do long-form writing, analysis, or agentic coding",
+    "You want to start on a free plan and scale to Pro, Max, Team, or API access"
+   ],
+   "faq": [
+    {
+     "q": "Is Claude better than ChatGPT?",
+     "a": "It depends on the task. Claude generally produces strong long-form writing and can handle very long documents accurately with its 1M-token context window. ChatGPT has more features (image generation, voice, plugins) and a larger app ecosystem. Coding capability varies by model and task, so it's worth testing both for your specific workflow."
+    },
+    {
+     "q": "Which is free — ChatGPT or Claude?",
+     "a": "Both have free plans. Claude's Free plan gives access to Sonnet and Haiku models at no cost, with usage caps that reset on a rolling basis. ChatGPT also offers a free tier with its own usage limits. Claude's paid entry point is the Pro plan at $20/month billed monthly, or $17/month if billed annually."
+    },
+    {
+     "q": "Which AI is better for coding — ChatGPT or Claude?",
+     "a": "Both are strong choices. Claude Opus 5.5 is built for complex agentic coding, with all current Claude models offering a 1M-token context window that helps across large codebases. ChatGPT with code interpreter excels at data analysis and running code. Which is better will depend on the specific coding task and workflow."
+    }
+   ],
+   "badge": "freemium",
+   "users": null,
+   "dropped": []
+  }
+ },
+ {
+  "slug": "surferseo",
+  "before": {
+   "lang": "en",
+   "badge": "paid",
+   "users": "150K+",
+   "best_for": "AI Search Optimization, brand monitoring in AI, content refreshing",
+   "description": "SurferSEO is a marketing platform that has shifted from classic on-page content optimization toward AI-search visibility, tracking how brands are mentioned across ChatGPT, Perplexity, Google AI and Gemini, alongside its Surfy AI assistant and content humanizer.",
+   "description_long": "SurferSEO started as an on-page SEO tool built around a Content Editor that scored draft articles against the pages already ranking in Google, giving writers a checklist of terms, headings and length targets to hit.\n\nAs of mid-2026 the product has repositioned around Generative Engine Optimization (GEO). The headline capability is now tracking brand and page mentions inside AI answer engines such as ChatGPT, Perplexity, Google AI and Gemini, rather than only Google's blue links. There is no numbered version; Surfer ships continuously.\n\nAlongside the AI-visibility tracking, Surfer added Surfy, a built-in AI assistant, and an AI content humanizer meant to make machine-drafted text read less obviously generated. The older Content Editor, keyword research and audit tools remain part of the suite.\n\nPricing is structured into Discovery at $49/mo billed yearly ($59/mo billed monthly), Standard at $99/mo billed yearly ($119/mo billed monthly), Pro at $182/mo billed yearly ($226/mo billed monthly) and Peace of Mind at $299/mo billed yearly ($419/mo billed monthly), plus a custom Enterprise tier. There is also a standalone AI Search Analytics tier at $82/mo billed yearly ($98/mo billed monthly) aimed at teams that want AI-visibility tracking without the Content Editor. Plan value is now defined largely by the number of tracked AI prompts rather than just the count of Content Editor articles.\n\nThe main limitations are cost, which climbs quickly for teams that need more tracked prompts or monthly billing, and the fact that the GEO metrics are still a young discipline where methodology and reliability are evolving. The AI humanizer also does not guarantee content will pass every detector.\n\nSurfer suits content teams, agencies and in-house marketers who already do serious SEO work and now want to measure and influence how they show up in AI-generated answers, not just traditional search results.",
+   "pros": [
+    "Tracks brand and page mentions across ChatGPT, Perplexity, Google AI and Gemini in one place",
+    "Content Editor still gives writers concrete, ranking-based guidance for on-page SEO",
+    "Built-in Surfy assistant and humanizer keep drafting and editing inside the tool",
+    "Continuous updates mean no waiting for major numbered releases",
+    "Clear tier ladder from solo ($49/mo billed yearly) up to agency-scale Enterprise"
+   ],
+   "cons": [
+    "Gets expensive fast; higher AI-prompt limits sit behind the $182 and $299 tiers",
+    "GEO/AI-visibility tracking is a new field with still-evolving methodology and reliability",
+    "Plan value tied to tracked prompt counts can feel restrictive for broad monitoring",
+    "AI humanizer does not guarantee text passes every AI detector",
+    "Headline prices are annual-billing rates; paying monthly costs 20-40% more"
+   ],
+   "choose_if": [
+    "You want to measure how your brand appears in ChatGPT, Perplexity and Gemini answers",
+    "You already run serious SEO and want to add AI-search visibility",
+    "You value ranking-based on-page guidance from the Content Editor",
+    "You want AI drafting and humanizing built into your SEO workflow",
+    "You can commit to annual billing for the best price"
+   ],
+   "faq": [
+    {
+     "a": "Both are AI content optimization tools but with different strengths. Clearscope excels at content grading and topic depth analysis. SurferSEO offers a more complete platform with a real-time content editor, keyword research, and AI writing. Clearscope is deeper for content quality; Surfer is broader as an all-in-one tool.",
+     "q": "What is the difference between Clearscope and SurferSEO?"
+    },
+    {
+     "a": "For content marketers publishing regularly, SurferSEO is generally considered worth the cost. It reduces content optimization time significantly and its recommendations correlate well with ranking improvements. The Standard plan, priced at $99/month when billed yearly ($119/month billed monthly), works for most small teams.",
+     "q": "Is SurferSEO worth it?"
+    }
+   ]
+  },
+  "after": {
+   "best_for": "AI Search Optimization, brand monitoring in AI, content refreshing",
+   "description": "SurferSEO, rebranded Positive Surfer after its October 2025 acquisition by Positive Group, is a marketing platform that has shifted from classic on-page content optimization toward AI-search visibility, tracking how brands are mentioned across ChatGPT, Perplexity, Google AI Overviews, AI Mode and Gemini, alongside its Surfy AI assistant and content humanizer.",
+   "description_long": "SurferSEO started as an on-page SEO tool built around a Content Editor that scored draft articles against the pages already ranking in Google, giving writers a checklist of terms, headings and length targets to hit.\n\nIn late 2025 Surfer was acquired by Positive Group, and the product is now branded Positive Surfer, positioned as an AI Visibility Platform under the tagline 'Be the answer.' There is no numbered version; the legal entity remains Surfer Sp. z o.o. and the product ships continuously. The former surferseo.com domain now redirects to surfer.ai.\n\nThe headline capability is tracking brand and page mentions inside AI answer engines such as ChatGPT, Perplexity, Google AI Overviews, AI Mode and Gemini, including an MCP connection for feeding these signals into other workflows. Alongside this, Surfer still offers Surfy, a built-in AI assistant, an AI content humanizer, and the original Content Editor, keyword research and audit tools.\n\nPricing is structured into Discovery at $49/mo billed yearly ($59/mo billed monthly, 120 documents, no AI prompt tracking), Standard at $99/mo billed yearly ($119/mo billed monthly, 25 ChatGPT prompts weekly, 360 documents), Pro at $182/mo billed yearly ($219/mo billed monthly, 50 daily prompts across ChatGPT, Perplexity, Google AI Mode, AI Overviews and Gemini, 360 documents, MCP), and Peace of Mind at $299/mo billed yearly ($359/mo billed monthly, 100 daily prompts, unlimited documents, API access), plus a custom Enterprise tier. There is also a standalone AI Search Analytics tier at $82/mo billed yearly ($95/mo billed monthly, 50 daily AI prompts, 5 brand spaces, MCP) for teams that want AI-visibility tracking without the Content Editor. There is no free plan, though Surfer offers a free AI visibility report and trial buttons on its pricing page.\n\nThe main limitations are cost, which climbs quickly for teams that need more tracked prompts, and the fact that monthly billing costs roughly 16-20% more than the yearly rate on every tier. GEO metrics are still a young discipline where methodology and reliability are evolving, and the AI humanizer does not guarantee content will pass every detector.\n\nSurfer suits content teams, agencies and in-house marketers who already do serious SEO work and now want to measure and influence how they show up in AI-generated answers, not just traditional search results.",
+   "pros": [
+    "Tracks brand and page mentions across ChatGPT, Perplexity, Google AI Overviews, AI Mode and Gemini in one place",
+    "Content Editor still gives writers concrete, ranking-based guidance for on-page SEO",
+    "Built-in Surfy assistant and humanizer keep drafting and editing inside the tool",
+    "Continuous updates mean no waiting for major numbered releases",
+    "Clear tier ladder from Discovery ($49/mo billed yearly) up to agency-scale Enterprise"
+   ],
+   "cons": [
+    "Gets expensive fast; higher AI-prompt limits sit behind the $182 and $299 tiers",
+    "GEO/AI-visibility tracking is a new field with still-evolving methodology and reliability",
+    "Plan value tied to tracked prompt counts can feel restrictive for broad monitoring",
+    "AI humanizer does not guarantee text passes every AI detector",
+    "Monthly billing costs about 16-20% more than the yearly rate on every tier, and there is no free plan"
+   ],
+   "choose_if": [
+    "You want to measure how your brand appears in ChatGPT, Perplexity, Google AI Overviews, AI Mode and Gemini answers",
+    "You already run serious SEO and want to add AI-search visibility",
+    "You value ranking-based on-page guidance from the Content Editor",
+    "You want AI drafting and humanizing built into your SEO workflow",
+    "You can commit to annual billing for the best price"
+   ],
+   "faq": [
+    {
+     "a": "Both are AI content optimization tools but with different strengths. Clearscope excels at content grading and topic depth analysis. SurferSEO offers a more complete platform with a real-time content editor, keyword research, and AI writing. Clearscope is deeper for content quality; Surfer is broader as an all-in-one tool.",
+     "q": "What is the difference between Clearscope and SurferSEO?"
+    },
+    {
+     "a": "For content marketers publishing regularly, SurferSEO is generally considered worth the cost. It reduces content optimization time significantly and its recommendations correlate well with ranking improvements. The Standard plan, priced at $99/month when billed yearly ($119/month billed monthly), works for most small teams.",
+     "q": "Is SurferSEO worth it?"
+    }
+   ],
+   "badge": "paid",
+   "users": "150K+",
+   "dropped": []
+  }
+ },
+ {
+  "slug": "seedance-2-0",
+  "before": {
+   "lang": "en",
+   "badge": "free",
+   "users": "",
+   "best_for": "AI video generation, multi-modal input, character consistency, 1080p",
+   "description": "Seedance is ByteDance's text-, image- and video-to-video generator. The line has moved on to Seedance 2.5, joined by Video Edit for changing an existing clip by description and Video Extend for continuing one, with 2.0, 2.0 Fast, 2.0 Mini and 1.5 Pro still offered for lower cost. It is distributed mainly through third-party platforms rather than a storefront of its own.",
+   "description_long": "Seedance 2.0 is an AI video generation model developed by ByteDance, the parent company of TikTok. Released February 12, 2026, it is one of the most capable open-access video generation models available, notable for accepting a wide range of input modalities and for its Temporal Anchor technology that addresses character consistency across frames.\n\nSeedance 2.0 accepts up to 12 assets per generation request, spanning text prompts, reference images, audio tracks, and existing video clips. This multimodal input capability allows creators to anchor a generation with visual references, add a specific audio track, and direct the narrative with text — all in a single request. Few competing video generation models support this breadth of input types simultaneously.\n\nTemporal Anchor is the key technical differentiator in Seedance 2.0. It is a framework for maintaining consistent character appearance, object identity, and scene continuity across the full length of a generated clip. Earlier video generation models suffered from morphing and flickering — where a character's face or an object's appearance would change subtly or abruptly between frames. Temporal Anchor eliminates this, enabling consistent characters across clips up to 60 seconds in length.\n\nOutput is 1080p native, with no upscaling required. Generation speed is 30–40% faster than Seedance 1.0, making the model more practical for iterative production workflows. The free tier includes commercial rights and outputs without watermarks — a significant advantage over competitors that restrict commercial use to paid plans.\n\nSeedance 2.0 is integrated into Krea AI, HeyGen, and ComfyUI, allowing users to access its capabilities within those platforms' own workflows and interfaces without managing a separate API integration.\n\nSeedance 2.0 is best for video creators, marketers, and developers who need consistent-character video generation at 1080p with no watermark and commercial rights included at no cost, and for teams that use Krea AI, HeyGen, or ComfyUI in their existing workflows.",
+   "pros": [
+    "Accepts up to 12 mixed inputs (text, image, audio, video) in a single generation request",
+    "Temporal Anchor eliminates morphing and flickering — consistent characters up to 60 seconds",
+    "The 2.5 generation adds Video Edit and Video Extend, so an existing clip can be changed or continued instead of regenerated from scratch",
+    "Free tier includes commercial rights and no watermark — rare among AI video generators",
+    "Integrated into Krea AI, HeyGen, and ComfyUI — available within existing workflows"
+   ],
+   "cons": [
+    "Less established brand recognition compared to Kling AI, Runway, or Sora",
+    "ByteDance origin may raise data privacy concerns for some enterprise users",
+    "Maximum 60-second clips — not suitable for long-form or full-scene video production",
+    "Community and third-party documentation is still maturing compared to more established tools"
+   ],
+   "choose_if": [
+    "✅ You want ByteDance's latest video AI model known for cinematic quality and motion realism",
+    "✅ You access video generation through CapCut or developer APIs (fal.ai) at competitive pricing",
+    "✅ You need high-quality video generation integrated into existing ByteDance/TikTok creative workflows",
+    "✅ You want a strong Runway alternative at lower cost with comparable output quality"
+   ],
+   "faq": [
+    {
+     "a": "Seedance 2.0 is ByteDance's AI video generation model, known for high-quality video output with realistic motion. It's the model underlying some CapCut AI video features and is available to developers via APIs like fal.ai. ByteDance developed it as a direct competitor to Runway and Kling.",
+     "q": "What is Seedance 2.0?"
+    },
+    {
+     "a": "Seedance 2.0 produces video quality competitive with Runway Gen-4.5 at potentially lower API costs. However, Runway offers a complete production platform with multiple models, editing tools, and professional workflows that Seedance alone doesn't match. For raw generation quality, they're comparable; for production use, Runway has more tools.",
+     "q": "Is Seedance better than Runway?"
+    },
+    {
+     "a": "Seedance 2.0 is primarily accessible through developer APIs (fal.ai, Replicate) or indirectly through CapCut's AI video features. There's no dedicated Seedance consumer product — it's an underlying model accessed through other platforms.",
+     "q": "How do I access Seedance 2.0?"
+    }
+   ]
+  },
+  "after": {
+   "best_for": "AI video generation, multi-modal input, long single-pass clips, reference-based video editing",
+   "description": "Seedance is ByteDance's AI video generation model line, now at version 2.5, which accepts text, image, audio and video inputs through ByteDance's own apps and the BytePlus ModelArk API as well as third-party platforms.",
+   "description_long": "Seedance is an AI video generation model developed by ByteDance. The current version, Seedance 2.5, was announced July 31, 2026, rolling out first on Jimeng AI and Doubao Pro, with API access through BytePlus ModelArk. Dreamina, ByteDance's international app, began offering it to subscribers in Europe, Asia, the Middle East and South America starting late October 2026; it is not yet available in the US, where BytePlus also does not operate.\n\nSeedance 2.5 accepts up to 50 multimodal references in a single generation request, combining up to 30 images, 10 video clips and 10 audio clips. A single generation pass runs up to 30 seconds, double the 15-second limit of the prior version, and clips can be extended; Dreamina's beta long-video mode reportedly reaches up to 180 seconds. The model also supports joint audio-video generation along with timestamp-level, green-screen, camera-perspective and reference-based editing.\n\nBeyond ByteDance's own apps (Jimeng AI, Doubao, Dreamina, Dola) and the BytePlus ModelArk API, Seedance is also offered through partners including Higgsfield, Runway and DreamBench.\n\nByteDance has not published a list price for the Seedance model itself. Access is bundled into Dreamina's credit-based subscription plans, shown in local currency with tiers from a lower-credit Basic plan to a higher-credit Ultra plan; using Seedance 2.5 on Dreamina requires a paid subscriber account. Pricing for the BytePlus ModelArk API was not published at time of review.\n\nOutputs carry visible watermarks and C2PA Content Credentials on BytePlus, or invisible watermarks, C2PA and visible AI labels on Dreamina; no free, watermark-free commercial tier is confirmed. The model is also not currently accessible in the US through either Dreamina or BytePlus, and independent documentation remains limited.\n\nSeedance 2.5 suits video creators, marketers and developers outside the US who want long single-pass generation, multimodal input, and built-in extension and editing tools, particularly those already working within Jimeng, Doubao, Dreamina or BytePlus ModelArk.",
+   "pros": [
+    "Accepts up to 50 multimodal references per generation request, combining up to 30 images, 10 video clips and 10 audio clips",
+    "Single-pass generations run up to 30 seconds, double the prior version's 15-second limit, with extension options reaching up to 180 seconds in Dreamina's beta long-video mode",
+    "Supports joint audio-video generation plus timestamp-level, green-screen, camera-perspective and reference-based editing",
+    "Available across ByteDance's own apps (Jimeng AI, Doubao, Dreamina, Dola) and the BytePlus ModelArk API, plus partners like Higgsfield, Runway and DreamBench"
+   ],
+   "cons": [
+    "No published list price for the model itself; Dreamina pricing is shown in local currency and not confirmed in USD",
+    "Using Seedance 2.5 on Dreamina requires a paid subscriber account; no free access to the model is confirmed",
+    "Not available in the US: Dreamina's 2.5 rollout excludes the US and BytePlus does not operate there",
+    "Outputs carry visible or invisible watermarks and C2PA labeling",
+    "Less established brand recognition and third-party documentation compared to Kling AI, Runway, or Sora"
+   ],
+   "choose_if": [
+    "✅ You want ByteDance's latest video model with long single-pass generation and built-in editing tools",
+    "✅ You're outside the US and can access Dreamina, Jimeng AI, Doubao, or BytePlus ModelArk",
+    "✅ You need multimodal input — text, image, audio and video — combined in one generation request",
+    "✅ You want extension and reference-based editing beyond simple text-to-video"
+   ],
+   "faq": [
+    {
+     "q": "What is Seedance?",
+     "a": "Seedance is ByteDance's AI video generation model line. The current version, Seedance 2.5, launched July 31, 2026, first on Jimeng AI and Doubao Pro, with API access via BytePlus ModelArk, later extending to Dreamina for subscribers outside the US."
+    },
+    {
+     "q": "How much does Seedance cost?",
+     "a": "ByteDance has not published a list price for the Seedance model itself. Access comes through Dreamina's credit-based subscription plans, priced in local currency with tiers ranging from a Basic plan to a higher-credit Ultra plan; using Seedance 2.5 on Dreamina requires a paid subscriber account. Pricing for the BytePlus ModelArk API was not published at time of review."
+    },
+    {
+     "q": "How do I access Seedance?",
+     "a": "Seedance is available through ByteDance's own apps — Jimeng AI, Doubao, Dreamina, and Dola — through the BytePlus ModelArk API, and through third-party partners such as Higgsfield, Runway, and DreamBench. As of late October 2026, Dreamina access is limited to subscribers outside the US, and BytePlus does not operate in the US."
+    }
+   ],
+   "badge": "paid",
+   "users": null,
+   "dropped": [
+    "\"one of the most capable open-access video generation models available\"",
+    "Temporal Anchor technology claim",
+    "accepts up to 12 assets per request (replaced with confirmed 50-reference limit)",
+    "consistent characters across clips up to 60 seconds (replaced with confirmed 30s/180s figures)",
+    "free tier includes commercial rights and no watermark",
+    "February 12, 2026 release date",
+    "1080p native output claim",
+    "30-40% faster than Seedance 1.0 claim",
+    "integration into Krea AI, HeyGen, and ComfyUI",
+    "access via CapCut and fal.ai claims",
+    "claim that there's no dedicated Seedance consumer product",
+    "quality/cost comparison with Runway Gen-4.5"
+   ]
+  }
+ },
+ {
+  "slug": "heygen",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "2M+",
+   "best_for": "AI avatars, studio-quality video, video dubbing, credit-based plans",
+   "description": "HeyGen is an AI video platform for creating avatar-driven videos, voice cloning and translation. Its current flagship model, Avatar V, builds a lifelike digital twin from a 15-second recording.",
+   "description_long": "HeyGen is a browser-based platform for producing videos that are presented by AI avatars. You type or paste a script, pick or create an avatar, choose a voice, and the system generates a talking-head video without a camera crew or studio.\n\nThe current flagship is Avatar V, announced in April 2026, the most realistic avatar model HeyGen offers. It is created from a single 15-second recording and adds full upper-body motion, multi-angle consistency and long-form identity stability, so the same avatar stays believable across longer scripts. Multi-look generation lets you change outfit or background while preserving the original movement. HeyGen has also integrated Seedance 2.0 for more cinematic AI video generation, and language coverage has grown to 175+ on paid plans (30+ on the free plan).\n\nBeyond avatars, the core toolkit covers voice cloning, video translation with lip-sync, a library of 500+ stock avatars, and an API for programmatic generation.\n\nPricing runs on a credit system across five tiers. Free is $0/month (3 videos/month, up to 1 minute each, 1080p, 1 custom avatar, 30+ languages). Creator is $29/month ($24/month billed annually) with 600 credits/month, videos up to 30 minutes, 1080p, voice cloning and 175+ languages. Pro is $49/month with 1,000 credits/month, videos up to 30 minutes and 4K output. Business is $149/month plus $20 per additional seat, with 1,500 credits/month, videos up to 60 minutes, 5+ custom avatars, SSO/SAML and LMS integrations. Enterprise pricing is custom.\n\nThe main limitation is the credit system itself: how fast credits are consumed varies by avatar model and feature, so real monthly cost is harder to predict than a flat per-video price, and heavier users on lower tiers can run out of allowance before the month ends.\n\nHeyGen suits marketers, training teams, localization teams and creators who need frequent talking-head video without filming, and who can work within a credit budget.",
+   "pros": [
+    "Avatar V (announced April 2026) produces highly realistic avatars from just a 15-second recording, with full upper-body motion and multi-angle consistency",
+    "Multi-look generation reuses one recording to change outfit or background while keeping natural movement",
+    "175+ languages on paid plans with lip-synced translation, useful for localization at scale",
+    "A free plan (3 videos/month, 1 custom avatar) lets you test the platform before paying"
+   ],
+   "cons": [
+    "The credit system makes real costs harder to predict than a flat per-video price, since consumption varies by avatar model and feature",
+    "Free plan caps videos at 1 minute and only 3 per month",
+    "Highest realism and longer videos require the Pro or Business tier",
+    "Advanced controls like SSO/SAML and LMS integrations are locked to the Business tier and up"
+   ],
+   "choose_if": [
+    "You need frequent talking-head videos without filming or a studio",
+    "You want to localize content into many languages with lip-sync",
+    "You can build a fast digital twin from a short recording",
+    "You have API/automation needs and can work within a credit budget",
+    "You want to start free before committing to a paid credit plan"
+   ],
+   "faq": [
+    {
+     "a": "HeyGen leads on video translation (lip-synced dubbing in 175+ languages) and natural-looking avatar quality. Synthesia leads on enterprise features, compliance, and LMS integration for corporate training. HeyGen targets marketing; Synthesia targets L&D teams.",
+     "q": "What is the difference between HeyGen and Synthesia?"
+    },
+    {
+     "a": "Yes. HeyGen can clone your voice and create an AI avatar that looks and sounds like you from a short recording. This is used for video translation — your avatar speaks in other languages with your cloned voice.",
+     "q": "Can HeyGen clone my voice?"
+    },
+    {
+     "a": "HeyGen's Creator plan is $29/month ($24/month if billed annually) with 600 credits/month. Business is $149/month plus $20 per additional seat, with 1,500 credits/month. Enterprise pricing is custom.",
+     "q": "How much does HeyGen cost?"
+    }
+   ]
+  },
+  "after": {
+   "badge": "freemium",
+   "users": null,
+   "best_for": "AI avatars, AI voice cloning, video dubbing, credit-based plans",
+   "description": "HeyGen is an AI video platform for creating avatar-driven videos, voice cloning, and translation. Its flagship avatar model, Avatar V, builds a lifelike digital twin from a single 15-second recording.",
+   "description_long": "HeyGen is a browser-based platform for producing videos presented by AI avatars. You type or paste a script, pick or create an avatar, choose a voice, and the system generates a talking-head video without a camera crew or studio.\n\nAvatar V remains HeyGen's flagship avatar model. It is built from a single 15-second recording and adds full upper-body motion, multi-angle consistency and long-form identity stability, so the same avatar stays believable across longer scripts. Multi-look generation lets you change outfit or background while preserving the original movement. Language coverage runs to 175+ languages on paid plans and 30+ on the free plan.\n\nBeyond avatars, the toolkit includes HeyGen Voice, HeyGen's in-house text-to-speech and voice cloning model, with a faster Turbo variant added in October 2026. It supports speech-to-speech via API, an Instant Voice clone built from under a minute of audio, a higher-fidelity Professional Voice Clone built from 30 minutes to 2 hours of audio (available as an add-on from $29/month), voice generation from a picture, and cross-language delivery that keeps the speaker's accent. HeyGen also offers video translation with lip-sync, a library of 700+ stock avatars on paid plans (500+ on the free plan), and an API for programmatic generation.\n\nPricing runs on a credit system across five tiers. Free is $0/month: 3 videos/month, up to 1 minute each, watermarked, 1 custom avatar, 30+ languages. Creator is $29/month ($24/month billed annually) with 600 credits/month, videos up to 30 minutes, 1080p, limited access to Avatar V, up to 10 hours of HeyGen Voice TTS, and 175+ languages. Pro is $49/month with 1,000 credits/month (higher tiers scale up to 100,000 credits for $4,300/month), videos up to 30 minutes, 4K output, full Avatar V access, and 16+ hours of HeyGen Voice. Business is $149/month plus $20 per additional seat, with 1,500 credits/month, videos up to 60 minutes, 4K, 5+ custom avatars and SSO. Enterprise pricing is custom and adds SCIM and MFA.\n\nThe credit system means real monthly cost is harder to predict than a flat per-video price, since consumption varies by avatar model and feature, and heavier users on lower tiers can run out of allowance before the month ends. Separately, HeyGen's own pages currently give conflicting per-character prices for the HeyGen Voice API, so API costs should be confirmed directly with HeyGen before committing to that usage.\n\nHeyGen suits marketers, training teams, localization teams and creators who need frequent talking-head video and voice generation without filming, and who can work within a credit budget.",
+   "pros": [
+    "Avatar V, HeyGen's flagship avatar model, produces realistic avatars from a single 15-second recording, with full upper-body motion and multi-angle consistency",
+    "Multi-look generation reuses one recording to change outfit or background while keeping natural movement",
+    "HeyGen Voice (plus a faster Turbo variant) adds TTS and voice cloning, including speech-to-speech, an under-a-minute Instant Voice clone, and cross-language delivery that keeps the speaker's accent",
+    "175+ languages on paid plans with lip-synced translation, useful for localization at scale",
+    "A free plan (3 videos/month, 1 custom avatar) lets you test the platform before paying, though outputs are watermarked"
+   ],
+   "cons": [
+    "The credit system makes real costs harder to predict than a flat per-video price, since consumption varies by avatar model and feature",
+    "Free plan caps videos at 1 minute, 3 per month, and adds a watermark",
+    "Full access to Avatar V and longer videos require the Pro tier or above; Creator only gets limited Avatar V access",
+    "Advanced controls like SSO, SCIM and MFA are locked to the Business tier and up",
+    "HeyGen's own pages quote conflicting per-character prices for the HeyGen Voice API, making API cost estimation unreliable until clarified"
+   ],
+   "choose_if": [
+    "You need frequent talking-head videos without filming or a studio",
+    "You want to localize content into many languages with lip-sync",
+    "You can build a fast digital twin from a short recording",
+    "You have API/automation needs and can work within a credit budget",
+    "You want to try the platform on a limited free plan before paying"
+   ],
+   "faq": [
+    {
+     "q": "What is the difference between HeyGen and Synthesia?",
+     "a": "HeyGen leads on video translation (lip-synced dubbing in 175+ languages) and natural-looking avatar quality. Synthesia leads on enterprise features, compliance, and LMS integration for corporate training. HeyGen targets marketing; Synthesia targets L&D teams."
+    },
+    {
+     "q": "Can HeyGen clone my voice?",
+     "a": "Yes. HeyGen's in-house voice model, HeyGen Voice, can create an Instant Voice clone from under a minute of audio, or a higher-fidelity Professional Voice Clone from 30 minutes to 2 hours of audio (add-on from $29/month). Cloned voices are used in video translation, so your avatar can speak other languages in your own voice."
+    },
+    {
+     "q": "How much does HeyGen cost?",
+     "a": "HeyGen's Creator plan is $29/month ($24/month billed annually) with 600 credits/month. Pro is $49/month with 1,000 credits/month, scaling up to 100,000 credits for $4,300/month. Business is $149/month plus $20 per additional seat, with 1,500 credits/month. Enterprise pricing is custom."
+    }
+   ],
+   "dropped": [
+    "Avatar V announced in April 2026 (date not confirmed on primary source)",
+    "HeyGen integrated Seedance 2.0 for cinematic video generation (not confirmed on primary source)",
+    "500+ stock avatars (corrected to 700+ on paid plans, 500+ on free)",
+    "2M+ users (audience size not verified)",
+    "Specific per-character HeyGen Voice/Turbo API prices (conflicting across HeyGen's own pages)"
+   ]
+  }
+ },
+ {
+  "slug": "kling-ai",
+  "before": {
+   "lang": "en",
+   "badge": "paid",
+   "users": "",
+   "best_for": "Short-form AI video clips, multi-shot consistency, enterprise video production",
+   "description": "Kling AI is a text- and image-to-video generator from Kuaishou. The current generation is Kling 4.0, with Kling 4.0 Flash in early access since September 28, 2026; the legacy Kling 1.0 through 2.1 Master models, the Virtual Try-On API and the 119 effect templates were retired in September 2026.",
+   "description_long": "Kling AI is a video generation platform built by the Chinese company Kuaishou. You describe a scene in text, or feed it a still image, and it animates a short cinematic clip. Over the past two years it has grown from an experimental demo into one of the most widely used AI video tools.\n\nThe current generation is Kling 4.0, which succeeds Kling 3.0. Kling 4.0 Flash entered early access on September 28, 2026, available to Ultra yearly subscribers, generating clips of up to 20 seconds at 720p with 8-bit SDR. Kling's own release note said the full Kling 4.0 model would launch in October 2026; by mid-October, secondary reports suggested it had rolled out more broadly, but this could not be confirmed directly on Kling's own site at the time of writing. Kuaishou also retired the legacy Kling 1.0 through 2.1 Master models, the Virtual Try-On API and the 119 effect templates in September 2026.\n\nReported specifications for the full Kling 4.0 model include single clips from 3 to 30 seconds, up to 10 keyframes per generation, an Omni Reference feature supporting up to 15 reference items for consistent characters and objects, two-channel stereo audio, and prompts of up to roughly 8,000 tokens. Kuaishou has also announced 10-bit HDR output and a video-extension feature aimed at roughly two-minute videos, both listed as 'coming soon' rather than currently available.\n\nKling AI uses a tiered, credit-based subscription model, with separate plans such as Standard, Pro, Premier and Ultra that unlock larger monthly credit allowances, and annual billing available at a discount on some tiers. Specific current pricing for Kling 4.0 and Flash has not been published, and the previously published rates for the 3.0-era plans could not be reconfirmed at the time of this review.\n\nThe main limitations right now are the lack of published pricing for the new model, uncertainty about exactly when the full 4.0 model became generally available, inconsistent reporting across sources about which resolutions (including 4K) are actually live versus still pending, and the fact that several headline features, including 10-bit HDR and the roughly two-minute video extension, are announced but not yet available. Kling 4.0 Flash early access is also gated behind an Ultra-tier yearly subscription.\n\nKling suits creators, marketers and video editors who want high-quality short clips for social content, ads or B-roll, and who are comfortable working shot by shot while Kuaishou finishes rolling out the newest model's full feature set.",
+   "pros": [
+    "Kling 3.0 Pro topped the ArtificialAnalysis text-to-video leaderboard in Feb 2026 with an Arena ELO of 1240",
+    "Kling 4.0 reportedly supports longer single clips (3-30 seconds) and up to 10 keyframes per generation",
+    "Omni Reference reportedly supports up to 15 reference items for consistent characters and objects across shots",
+    "Long-form prompts of up to roughly 8,000 tokens allow detailed scene direction",
+    "Two-channel stereo audio generation is built into the model"
+   ],
+   "cons": [
+    "Full Kling 4.0 rollout status and resolution support (including whether 4K is actually live) are unclear: Kling's release note targeted October 2026, but sources disagree on what is fully available",
+    "10-bit HDR output and the announced roughly two-minute video extension feature are still 'coming soon', not yet available",
+    "Current pricing for Kling 4.0 and Flash has not been published",
+    "Kling 4.0 Flash early access requires an Ultra yearly subscription",
+    "Legacy 1.0-2.1 Master models, the Virtual Try-On API and the 119 effect templates were retired in September 2026, removing those workflows entirely"
+   ],
+   "choose_if": [
+    "You need high-quality short video clips for social media, ads or B-roll",
+    "You want synced audio and consistent characters across multiple shots",
+    "You're happy to work shot by shot rather than render one long video",
+    "You want long, detailed prompts for precise scene direction (up to roughly 8,000 tokens)",
+    "You're willing to use an early-access, still-rolling-out model"
+   ],
+   "faq": [
+    {
+     "a": "CapCut is a video editor — you import existing video clips and edit them. Kling AI is a video generator — it creates video from text prompts or images. CapCut is for editing; Kling is for generating.",
+     "q": "What is the difference between CapCut and Kling AI?"
+    },
+    {
+     "a": "No confirmed free plan could be verified. Kling AI runs on a paid, credit-based subscription model with tiers such as Standard, Pro, Premier and Ultra, though specific current pricing for the latest Kling 4.0 release was not published at the time of this review.",
+     "q": "Is Kling AI free?"
+    }
+   ]
+  },
+  "after": {
+   "best_for": "Short-form AI video clips, multi-shot consistency, enterprise video production",
+   "description": "Kling AI is a text- and image-to-video generator from Kuaishou. Kling 4.0 officially launched on October 15, 2026, with Kling 4.0 Flash in early access since September 28, 2026 for Ultra yearly subscribers; the legacy Kling 1.0 through 2.1 Master models, the Virtual Try-On API and the 119 effect templates were retired in September 2026.",
+   "description_long": "Kling AI is a video generation platform built by the Chinese company Kuaishou. You describe a scene in text, or feed it a still image, and it animates a short cinematic clip. Over the past two years it has grown from an experimental demo into one of the most widely used AI video tools.\n\nThe current generation is Kling 4.0, which succeeded Kling 3.0 and officially launched on October 15, 2026, according to Kuaishou's own press release. Kling 4.0 Flash entered early access on September 28, 2026, available to Ultra yearly subscribers, generating clips of up to 20 seconds at 720p with 8-bit SDR. Kuaishou also retired the legacy Kling 1.0 through 2.1 Master models, the Virtual Try-On API and the 119 effect templates in September 2026.\n\nKuaishou's official materials for Kling 4.0 list single-pass clips of up to 30 seconds, up to 10 keyframes per generation, an Omni Reference feature supporting up to 15 reference items (up to 10 images, 5 videos and 7 subjects) for consistent characters and objects, two-channel stereo audio, support for a 21:9 aspect ratio, and prompts of up to roughly 8,000 tokens. The press release also describes 4K, 1080p and 21:9 output and up to 10-bit HDR, though an earlier Kling model-release note still lists 4K and HDR as 'coming soon' rather than confirmed live across all plans. A video-extension feature aimed at roughly two-minute videos, and a developer API for enterprises, are both described as coming soon rather than currently available.\n\nKling AI uses a tiered, credit-based subscription model, with separate plans such as Standard, Pro, Premier and Ultra that unlock larger monthly credit allowances, and annual billing available at a discount on some tiers. Specific current pricing for Kling 4.0 and Flash has not been published in Kuaishou's launch materials, and the previously published rates for the 3.0-era plans could not be reconfirmed at the time of this review.\n\nThe main limitations right now are the lack of published pricing for the new model, inconsistency across Kuaishou's own materials about whether 4K and HDR output are actually live for all users or still rolling out, and the fact that the roughly two-minute video extension and a full developer API are announced but not yet available. Kling 4.0 Flash early access is also gated behind an Ultra-tier yearly subscription, and no free plan was confirmed.\n\nKling suits creators, marketers and video editors who want high-quality short clips for social content, ads or B-roll, and who are comfortable working shot by shot while some advanced output options such as full HDR and 4K continue to roll out.",
+   "pros": [
+    "Kling 3.0 Pro topped the ArtificialAnalysis text-to-video leaderboard in Feb 2026 with an Arena ELO of 1240",
+    "Kling 4.0 supports single-pass clips of up to 30 seconds and up to 10 keyframes per generation",
+    "Omni Reference supports up to 15 reference items (up to 10 images, 5 videos, 7 subjects) for consistent characters and objects across shots",
+    "Long-form prompts of up to roughly 8,000 tokens allow detailed scene direction",
+    "Two-channel stereo audio generation is built into the model"
+   ],
+   "cons": [
+    "4K and 10-bit HDR output are described in Kuaishou's own materials as upcoming or inconsistent across sources, rather than confirmed live for all plans",
+    "The announced roughly two-minute video extension feature and a developer API are not yet available",
+    "Current pricing for Kling 4.0 and Flash has not been published",
+    "Kling 4.0 Flash early access requires an Ultra yearly subscription",
+    "Legacy 1.0-2.1 Master models, the Virtual Try-On API and the 119 effect templates were retired in September 2026, removing those workflows entirely"
+   ],
+   "choose_if": [
+    "You need high-quality short video clips for social media, ads or B-roll",
+    "You want synced audio and consistent characters across multiple shots",
+    "You're happy to work shot by shot rather than render one long video",
+    "You want long, detailed prompts for precise scene direction (up to roughly 8,000 tokens)"
+   ],
+   "faq": [
+    {
+     "a": "CapCut is a video editor — you import existing video clips and edit them. Kling AI is a video generator — it creates video from text prompts or images. CapCut is for editing; Kling is for generating.",
+     "q": "What is the difference between CapCut and Kling AI?"
+    },
+    {
+     "a": "No confirmed free plan could be verified. Kling AI runs on a paid, credit-based subscription model with tiers such as Standard, Pro, Premier and Ultra, though specific current pricing for the latest Kling 4.0 release was not published at the time of this review.",
+     "q": "Is Kling AI free?"
+    }
+   ],
+   "badge": "paid",
+   "users": null,
+   "dropped": []
+  }
+ },
+ {
+  "slug": "deepseek",
+  "before": {
+   "lang": "en",
+   "badge": "paid",
+   "users": "96M+",
+   "best_for": "Open-source reasoning, long-context, low-cost API",
+   "description": "DeepSeek is a Chinese AI lab offering a web chat assistant and a metered API, now running on DeepSeek-V4.1-Flash (API name deepseek-flash, released September 10, 2026) and DeepSeek-V4-Pro (general availability August 13, 2026).",
+   "description_long": "DeepSeek is a conversational AI assistant from the Chinese lab of the same name. It offers a web chat interface at chat.deepseek.com alongside a metered API that developers can build on. It handles general chat, coding, reasoning, and long-document work.\n\nThe API currently serves two model families: deepseek-flash, now on the V4.1-Flash architecture released September 10, 2026 with a native multimodal design, and deepseek-v4-pro, which reached general availability on August 13, 2026. Older model names such as deepseek-chat and deepseek-reasoner no longer appear on the pricing page; legacy aliases deepseek-v4-flash and deepseek-v4-flash-vision-exp are still accepted but now route to V4.1-Flash. DeepSeek has iterated on its model lineup rapidly over the past few months, so names and pricing have changed more than once in a short period.\n\nBoth models offer a 1M-token context window with output up to 384K tokens, and a default thinking mode with selectable low, high, and max reasoning effort. Vision input is supported on deepseek-flash but not on deepseek-v4-pro. DeepSeek documents agent integrations including Claude Code, Codex, OpenCode, and its own DeepSeek Harness.\n\nAPI pricing is billed per 1 million tokens and varies by peak and off-peak UTC hours, with off-peak priced at half the peak rate. Peak hours are 01:00-04:00 and 06:00-10:00 UTC, Monday to Friday, excluding Chinese public holidays. For deepseek-flash: input on a cache miss is $0.15 off-peak / $0.30 peak, input on a cache hit is $0.003 off-peak / $0.006 peak, and output is $0.60 off-peak / $1.20 peak. For deepseek-v4-pro: input on a cache miss is $0.66 off-peak / $1.32 peak, input on a cache hit is $0.022 off-peak / $0.044 peak, and output is $1.98 off-peak / $3.96 peak. The pricing page also references a 'granted balance' used before any topped-up balance, but does not explain how or when it is granted. Pricing for the web chat interface could not be confirmed on a primary page at time of writing.\n\n\nLimitations to keep in mind: whether the web chat remains free could not be re-verified today, the 'granted balance' mechanism is unclear, concurrency is capped at 2,500 requests for deepseek-flash and 500 for deepseek-v4-pro, vision is Flash-only, the model lineup has changed several times in recent months, and as a China-based service it may raise data-residency or compliance questions for some organizations.\n\nDeepSeek suits developers who want a low-cost, long-context API for coding, reasoning, or high-volume tasks, and who are comfortable tracking peak/off-peak pricing and occasional model migrations.",
+   "pros": [
+    "Low-cost deepseek-flash API tier with off-peak discounts, e.g. $0.15/$0.30 input (cache miss) and $0.60/$1.20 output per 1M tokens",
+    "1M-token context window with output up to 384K tokens on both deepseek-flash and deepseek-v4-pro",
+    "Default thinking mode with selectable low, high, and max reasoning effort",
+    "Vision support on deepseek-flash",
+    "Agent integrations including Claude Code, Codex, OpenCode, and DeepSeek Harness"
+   ],
+   "cons": [
+    "API pricing varies by peak/off-peak UTC windows, adding complexity to cost estimates",
+    "deepseek-v4-pro costs several times more than deepseek-flash across all token types",
+    "Free status of the web chat interface could not be re-verified from a primary source",
+    "'Granted balance' mentioned on the pricing page is not explained",
+    "Model names and pricing have changed multiple times in recent months, which can require migration"
+   ],
+   "choose_if": [
+    "You need a low-cost API for coding or high-volume tasks",
+    "You work with very long documents and need a 1M-token context",
+    "You are building agentic workflows with tools like Claude Code, Codex, or OpenCode",
+    "You want to choose between a cheaper fast tier and a stronger premium tier"
+   ],
+   "faq": [
+    {
+     "a": "DeepSeek is a capable assistant for text reasoning, coding, and long-document work, offered through a web chat and a paid, metered API. It's a strong option if you want an inexpensive way to access capable AI models via API. ChatGPT has more built-in features (images, voice, plugins) and broader ecosystem support.",
+     "q": "Is DeepSeek better than ChatGPT?"
+    },
+    {
+     "a": "DeepSeek is developed by a Chinese AI lab. As a China-based service, it may raise data-residency or compliance questions for some organizations, so it's worth checking your organization's policies before sending sensitive data through the web chat or API.",
+     "q": "Is DeepSeek safe to use?"
+    },
+    {
+     "a": "DeepSeek's API is a paid, metered service billed per million tokens, with separate peak and off-peak rates. For example, the deepseek-flash tier costs $0.15 per million input tokens on a cache miss during off-peak hours (as low as $0.003 on a cache hit) and $0.60 per million output tokens off-peak, roughly double during peak hours. The pricing page also mentions a 'granted balance' used before any topped-up balance, but does not explain how it is granted. Whether the web chat interface remains free could not be confirmed on a primary page at time of writing.",
+     "q": "Is DeepSeek free?"
+    },
+    {
+     "a": "Reasoning is built into DeepSeek's current API as a default thinking mode, available in both deepseek-flash and deepseek-v4-pro, with selectable low, high, and max effort levels for different depths of reasoning.",
+     "q": "What is DeepSeek's reasoning model?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "paid",
+   "users": null,
+   "best_for": "Open-source reasoning, long-context, low-cost API",
+   "description": "DeepSeek is a Chinese AI lab offering a web chat assistant and a paid, metered API, currently running deepseek-flash (served by DeepSeek-V4.1-Flash-1017, released October 17, 2026) and deepseek-v4-pro (DeepSeek-V4-Pro-0813).",
+   "description_long": "DeepSeek is a conversational AI assistant from the Chinese lab of the same name. It offers a web chat interface at chat.deepseek.com alongside a metered API that developers can build on. It handles general chat, coding, reasoning, and long-document work.\n\nThe API currently serves two model families: deepseek-flash, now served by the DeepSeek-V4.1-Flash-1017 model released October 17, 2026, and deepseek-v4-pro, running DeepSeek-V4-Pro-0813. Older model names such as deepseek-chat and deepseek-reasoner no longer appear on the pricing page; legacy aliases deepseek-v4-flash and deepseek-v4-flash-vision-exp are still accepted, but the underlying models are retired and requests are now served by DeepSeek-V4.1-Flash-1017 at the deepseek-flash price. The V4.1-Flash-1017 update brings better benchmark results, faster task completion, shorter outputs, and reinforcement learning with self-feedback for end-to-end project development, and is optimized for DeepSeek Harness (v0.2.1-rc.1 and later), Tencent CodeBuddy, and WorkBuddy.\n\nBoth models offer a 1M-token context window with output up to 384K tokens, and a default thinking mode with selectable low, high, and max reasoning effort. Vision input is supported on deepseek-flash but not on deepseek-v4-pro. Model weights for the deepseek-flash family are published on Hugging Face and ModelScope under an MIT license, with 763 billion parameters. DeepSeek documents agent integrations including Claude Code, Codex, OpenCode, and its own DeepSeek Harness, and has added standalone Search and Fetch APIs.\n\nAPI pricing is billed per 1 million tokens and varies by peak and off-peak UTC hours, with off-peak priced at half the peak rate. Peak hours are 01:00-04:00 and 06:00-10:00 UTC, Monday to Friday, excluding Chinese public holidays. For deepseek-flash: input on a cache miss is $0.15 off-peak / $0.30 peak, input on a cache hit is $0.003 off-peak / $0.006 peak, and output is $0.60 off-peak / $1.20 peak. For deepseek-v4-pro: input on a cache miss is $0.66 off-peak / $1.32 peak, input on a cache hit is $0.022 off-peak / $0.044 peak, and output is $1.98 off-peak / $3.96 peak. The new Search and Fetch APIs cost $0.75 per 1,000 successful requests each, though calls routed through DeepSeek Harness, Claude Code, or Codex are free of charge until November 1, 2026 at 00:00 Beijing time (October 31, 2026, 16:00 UTC). The pricing page also references a 'granted balance' used before any topped-up balance, but does not explain how or when it is granted. Pricing for the web chat interface could not be confirmed on a primary page at time of writing.\n\nLimitations to keep in mind: whether the web chat remains free could not be re-verified today, the 'granted balance' mechanism is unclear, concurrency is capped at 2,500 requests for deepseek-flash and 500 for deepseek-v4-pro, vision is Flash-only, the model lineup has changed several times in recent months, and as a China-based service it may raise data-residency or compliance questions for some organizations.\n\nDeepSeek suits developers who want a low-cost, long-context API for coding, reasoning, or high-volume tasks, who may want to self-host the open-weight deepseek-flash model, and who are comfortable tracking peak/off-peak pricing and occasional model migrations.",
+   "pros": [
+    "Low-cost deepseek-flash API tier with off-peak discounts, e.g. $0.15/$0.30 input (cache miss) and $0.60/$1.20 output per 1M tokens",
+    "1M-token context window with output up to 384K tokens on both deepseek-flash and deepseek-v4-pro",
+    "Default thinking mode with selectable low, high, and max reasoning effort",
+    "Open weights (MIT license, 763B parameters) available on Hugging Face and ModelScope",
+    "Agent integrations including Claude Code, Codex, OpenCode, and DeepSeek Harness"
+   ],
+   "cons": [
+    "API pricing varies by peak/off-peak UTC windows, adding complexity to cost estimates",
+    "deepseek-v4-pro costs several times more than deepseek-flash across all token types",
+    "Vision input is limited to deepseek-flash; deepseek-v4-pro has no vision support",
+    "'Granted balance' mentioned on the pricing page is not explained",
+    "Whether the web chat interface is free could not be confirmed on a primary source"
+   ],
+   "choose_if": [
+    "You need a low-cost API for coding or high-volume tasks",
+    "You work with very long documents and need a 1M-token context",
+    "You are building agentic workflows with tools like Claude Code, Codex, or OpenCode",
+    "You want to choose between a cheaper fast tier and a stronger premium tier"
+   ],
+   "faq": [
+    {
+     "q": "Is DeepSeek better than ChatGPT?",
+     "a": "DeepSeek is a capable assistant for text reasoning, coding, and long-document work, offered through a web chat and a paid, metered API. It's a strong option if you want an inexpensive way to access capable AI models via API. ChatGPT has more built-in features (images, voice, plugins) and broader ecosystem support."
+    },
+    {
+     "q": "Is DeepSeek safe to use?",
+     "a": "DeepSeek is developed by a Chinese AI lab. As a China-based service, it may raise data-residency or compliance questions for some organizations, so it's worth checking your organization's policies before sending sensitive data through the web chat or API."
+    },
+    {
+     "q": "Is DeepSeek free?",
+     "a": "DeepSeek's API is a paid, metered service billed per million tokens, with separate peak and off-peak rates. For example, the deepseek-flash tier (currently served by DeepSeek-V4.1-Flash-1017) costs $0.15 per million input tokens on a cache miss during off-peak hours (as low as $0.003 on a cache hit) and $0.60 per million output tokens off-peak, roughly double during peak hours. New standalone Search and Fetch APIs cost $0.75 per 1,000 successful requests each, though calls made through DeepSeek Harness, Claude Code, or Codex are free until November 1, 2026 (00:00 Beijing time). The pricing page also mentions a 'granted balance' used before any topped-up balance, but does not explain how it is granted. Whether the web chat interface remains free could not be confirmed on a primary page at time of writing."
+    },
+    {
+     "q": "What is DeepSeek's reasoning model?",
+     "a": "Reasoning is built into DeepSeek's current API as a default thinking mode, available in both deepseek-flash and deepseek-v4-pro, with selectable low, high, and max effort levels for different depths of reasoning."
+    }
+   ],
+   "dropped": [
+    "96M+ users figure (not verified by audit)"
+   ]
+  }
+ },
+ {
+  "slug": "github-copilot",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "10M+",
+   "best_for": "AI coding in VS Code, cloud agents, code review, model choice across vendors",
+   "description": "GitHub Copilot is an agentic, multi-model coding assistant that goes beyond autocomplete, offering chat, an agent mode, cloud agents, code review and a CLI, with models available from vendors including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot. It bills usage through GitHub AI Credits, with tiers running from a free plan up to individual and organization plans.",
+   "description_long": "GitHub Copilot started as an in-editor autocomplete tool, but the current product is a full multi-model coding platform. It lives inside your editor, in the terminal, in a desktop app, and on GitHub itself, handling code completion, chat, an agent mode that edits across files, cloud agents that work on tasks asynchronously, and automated code review.\n\nGitHub has repositioned Copilot around a new desktop app pitched as taking issues all the way to merge, and billing now runs on consumption-based GitHub AI Credits rather than flat request units. Paid plans include both a base monthly credit allowance and an optional flex allowance, and higher tiers can now delegate work to third-party coding agents such as Claude by Anthropic and OpenAI Codex, currently in preview.\n\nThe core capabilities are agent mode, cloud agents, chat, code review, a CLI, and the ability to pick from models across multiple vendors including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot. Inline code completions and Next Edit suggestions stay included on every plan and do not draw down your AI Credits allowance.\n\nOn pricing, individuals can choose Free at $0 per month (about 2,000 inline suggestions, limited chat and agent usage, no code review or cloud agents), Pro at $10 per month in base credits plus $5 per month in flex credits for $15 per month total (1,500 AI Credits, unlimited inline suggestions, code review and cloud agents), Pro+ at $39 per month base plus $31 per month flex for $70 per month total (3,900 plus 3,100 credits, adds delegation to third-party coding agents), or Max at $100 per month base plus $100 per month flex for $200 per month total (10,000 plus 10,000 credits, priority access to premium models). A separate Copilot Student plan gives verified students their own AI Credits allowance, and verified teachers and maintainers of popular open source projects can get Pro for free. Organizations pick Business at $19 per user per month (1,900 AI Credits per user) or Enterprise at $39 per user per month (3,900 AI Credits per user, requires GitHub Enterprise Cloud).\n\nThe main limitation is cost predictability: usage-based AI Credits billing, split into base and flex allotments, means heavy agent, chat or premium-model use can push real monthly cost well past the advertised base price. Admin budgets and spending caps help organizations control this, but teams still need to monitor consumption closely.\n\nCopilot is a strong fit if you already work in GitHub and VS Code, want an agentic assistant rather than plain autocomplete, and value being able to choose from models across different vendors. The free tier is a low-risk way to try it, while Pro+ and Max suit heavier users who want premium models and third-party agent delegation.",
+   "pros": [
+    "Genuinely agentic: agent mode, cloud agents, chat, code review and a CLI, not just autocomplete",
+    "Lets you pick models from multiple vendors, including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot, per task",
+    "Real free tier, plus free Pro access for verified teachers and maintainers of popular open source projects",
+    "Deep integration with GitHub, VS Code and the wider GitHub ecosystem",
+    "Inline code completions and Next Edit suggestions stay included and never consume AI Credits"
+   ],
+   "cons": [
+    "Usage-based AI Credits billing, split into base and flex credits, makes monthly cost harder to predict for heavy users",
+    "Third-party agent delegation and the largest credit allowances are gated behind the pricier Pro+ and Max tiers",
+    "Free tier is capped at roughly 2,000 inline suggestions with limited chat and agent access and no code review or cloud agents",
+    "Organization plans add further per-user-per-month costs on top of the individual tier structure",
+    "Advertised base prices for Pro, Pro+ and Max do not include the extra flex credit allowance, which roughly doubles the real monthly cost on some tiers"
+   ],
+   "choose_if": [
+    "You already build on GitHub and want the assistant embedded in that workflow",
+    "You want an agentic coding tool, not just line-by-line autocomplete",
+    "You want to choose from models across multiple vendors for different tasks",
+    "You are a verified teacher or maintain a popular open source project and want free Pro access",
+    "You need admin budget and spending caps to control team AI spend"
+   ],
+   "faq": [
+    {
+     "a": "They serve different workflows. Aider is better for autonomous multi-file refactoring from the command line. Copilot is better for real-time inline suggestions inside an IDE. Many developers use both.",
+     "q": "Is Aider better than GitHub Copilot?"
+    },
+    {
+     "a": "GitHub Copilot requires a GitHub account but works in VS Code, JetBrains, Neovim, and Visual Studio regardless of where your code is hosted. You don't need to push code to GitHub to use it.",
+     "q": "Does GitHub Copilot work without GitHub?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": null,
+   "best_for": "AI coding in VS Code, cloud agents, code review, model choice across vendors",
+   "description": "GitHub Copilot is an agentic, multi-model coding assistant that goes beyond autocomplete, offering chat, an agent mode, cloud agents, code review and a CLI, with models available from vendors including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot. It bills usage through GitHub AI Credits, with tiers running from a free plan up to individual and organization plans.",
+   "description_long": "GitHub Copilot started as an in-editor autocomplete tool, but the current product is a full multi-model coding platform. It lives inside your editor, in the terminal, in a desktop app, and on GitHub itself, handling code completion, chat, an agent mode that edits across files, cloud agents that work on tasks asynchronously, and automated code review.\n\nGitHub has repositioned Copilot around a new desktop app pitched as taking issues all the way to merge, and billing now runs on consumption-based GitHub AI Credits rather than flat request units. Paid plans include both a base monthly credit allowance and an optional flex allowance that adds extra included usage at no additional charge, and higher tiers can now delegate work to third-party coding agents such as Claude by Anthropic and OpenAI Codex, currently in preview.\n\nThe core capabilities are agent mode, cloud agents, chat, code review, a CLI, and the ability to pick from models across multiple vendors including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot. Inline code completions and Next Edit suggestions stay included on every plan and do not draw down your AI Credits allowance.\n\nOn pricing, individuals can choose Free at $0 per month (about 2,000 inline suggestions, limited chat and agent usage, no code review or cloud agents), Pro at $10 per month (includes $15 worth of usage through a base plus flex allotment, roughly 1,500 AI Credits, with unlimited inline suggestions, code review and cloud agents), Pro+ at $39 per month (includes $70 worth of usage, roughly 7,000 AI Credits, and adds delegation to third-party coding agents), or Max at $100 per month (includes $200 worth of usage, roughly 20,000 AI Credits, with priority access to premium models). One AI Credit equals $0.01, and additional credits can be purchased on paid plans if you exceed your included allotment. Verified teachers and maintainers of popular open source projects can get Pro for free.\n\nThe main limitation is cost predictability once you exceed your included AI Credits: extra credits are billed separately, so heavy agent, chat or premium-model use can cost more than the listed subscription price. GitHub also notes that flex allotments may change over time, so the amount of included usage isn't fixed. Admin budgets and spending caps can help organizations control this, but teams still need to monitor consumption closely.\n\nCopilot is a strong fit if you already work in GitHub and VS Code, want an agentic assistant rather than plain autocomplete, and value being able to choose from models across different vendors. The free tier is a low-risk way to try it, while Pro+ and Max suit heavier users who want premium models and third-party agent delegation.",
+   "pros": [
+    "Genuinely agentic: agent mode, cloud agents, chat, code review and a CLI, not just autocomplete",
+    "Lets you pick models from multiple vendors, including Anthropic, OpenAI, Google, xAI, Microsoft and Moonshot, per task",
+    "Real free tier, plus free Pro access for verified teachers and maintainers of popular open source projects",
+    "Deep integration with GitHub, VS Code and the wider GitHub ecosystem",
+    "Inline code completions and Next Edit suggestions stay included and never consume AI Credits"
+   ],
+   "cons": [
+    "Usage-based AI Credits billing means cost can exceed the base subscription price once you buy additional credits beyond your included allotment, making monthly spend harder to predict for heavy users",
+    "Third-party agent delegation and the largest credit allowances are gated behind the pricier Pro+ and Max tiers",
+    "Free tier is capped at roughly 2,000 inline suggestions with limited chat and agent access and no code review or cloud agents",
+    "Organization (Business and Enterprise) pricing is separate from the individual tier structure and was not confirmed for this card",
+    "Flex credit allotments are included at no extra charge, but GitHub says the amount may change over time, so total included usage isn't guaranteed to stay fixed"
+   ],
+   "choose_if": [
+    "You already build on GitHub and want the assistant embedded in that workflow",
+    "You want an agentic coding tool, not just line-by-line autocomplete",
+    "You want to choose from models across multiple vendors for different tasks",
+    "You are a verified teacher or maintain a popular open source project and want free Pro access",
+    "You need admin budget and spending caps to control team AI spend"
+   ],
+   "faq": [
+    {
+     "q": "Is Aider better than GitHub Copilot?",
+     "a": "They serve different workflows. Aider is better for autonomous multi-file refactoring from the command line. Copilot is better for real-time inline suggestions inside an IDE. Many developers use both."
+    },
+    {
+     "q": "Does GitHub Copilot work without GitHub?",
+     "a": "GitHub Copilot requires a GitHub account but works in VS Code, JetBrains, Neovim, and Visual Studio regardless of where your code is hosted. You don't need to push code to GitHub to use it."
+    }
+   ],
+   "dropped": [
+    "Business at $19 per user per month org pricing (not confirmed on current plans page)",
+    "Enterprise at $39 per user per month org pricing (not confirmed on current plans page)",
+    "Copilot Student plan details (not confirmed on current plans page)",
+    "Claim that flex credits roughly double the real monthly cost on paid tiers (flex is included extra usage at no added charge)",
+    "10M+ users figure (not verified by audit)"
+   ]
+  }
+ },
+ {
+  "slug": "lovable",
+  "before": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": "500K+",
+   "best_for": "AI app builder, no-code, visual bug testing, voice input",
+   "description": "Lovable is an agentic no-code platform that turns plain-language prompts into working web apps. It builds autonomously through a default Agent/Build mode, with Plan Mode for previewing changes and automatic subagents handling parallel research and review work, all metered by a unified credit system.",
+   "description_long": "Lovable lets you describe an app in everyday language and have it built for you, including the interface, logic, and a managed backend. It is aimed at founders, product people, and developers who want to go from idea to a deployable app without writing everything by hand.\n\nThe product runs on a fully agentic, credit-based model rather than a versioned release cycle. Agent Mode (also called Build mode) is the default and runs autonomously: it reads your codebase, searches the web, debugs, generates images, and validates its own output. Plan Mode lets you preview intended changes before any code is written, now with diffs and revision history, and Lovable also runs automatic, read-only subagents that handle research and review work in parallel. As of late 2026, builds can run for extended periods per message under a '/goal' mode, and in-app AI features can use Anthropic's Claude models without you supplying your own API key.\n\nOn capabilities, the backend is branded Lovable Cloud, a managed layer built on Supabase under the hood, with Lovable AI handling in-app AI features. You get database, auth, and hosting without wiring raw services yourself. Workspace-private projects are included even on the free plan, while code editing, code download, and custom domains are reserved for paid tiers.\n\nPricing is credit-based across both building and running apps. Free is $0/mo with 5 build credits per day (up to about 30/month), 20 Cloud credits per month, and 4 in-app AI credits per month. Pro is $25/mo billed monthly, or $21/mo billed annually ($250/year) at the 100-credit tier, scaling up to roughly $2,250/mo for 10,000 credits, and adds code editing, code download, and custom domains, with top-ups available at $15 per 50 credits. Business is $50/mo billed monthly, or $42/mo billed annually ($500/year) at the 100-credit tier, scaling up to roughly $4,300/mo, and adds SSO, role-based access, the Lovable API, internal publishing, and opt-out of data training by default, with top-ups at $30 per 50 credits. Enterprise pricing is custom and quote-based, with SCIM, audit logs, publishing and sharing controls, and EU inference options.\n\nThe main limitation is the credit model itself: because credits cover building, deployed-app runtime, and in-app AI, costs can be hard to predict on active projects, and the free tier runs out quickly. Autonomous generation is fast but still needs review, and heavy customization eventually pushes you into editing code directly.\n\nChoose Lovable if you want an AI agent to do most of the building and you are comfortable steering it, and budget for credit consumption if your app is more than a prototype.",
+   "pros": [
+    "Agent/Build mode builds autonomously end to end, including web search, debugging, and self-validation",
+    "Plan Mode lets you preview intended changes, including diffs, before any code is generated",
+    "Managed Lovable Cloud backend covers database, auth, and hosting without wiring raw services",
+    "Paid tiers add code editing, code download, and custom domains, while private projects are included even on the free plan",
+    "Automatic, read-only subagents handle research and review work in parallel for faster iteration"
+   ],
+   "cons": [
+    "Unified credits cover building, runtime, and in-app AI, so costs are hard to predict",
+    "Free tier is tight at 5 build credits per day and runs out fast",
+    "Autonomous output still needs human review and can require rework",
+    "Deep customization eventually forces you into editing the underlying code",
+    "Credit tiers scale steeply, reaching thousands of dollars per month at higher usage levels"
+   ],
+   "choose_if": [
+    "You want an AI agent to do most of the building while you steer",
+    "You need a managed backend without wiring Supabase yourself",
+    "You are prototyping and want fast idea-to-app turnaround",
+    "You can budget for credit-based usage on active projects",
+    "You want to preview changes with Plan Mode before code is written"
+   ],
+   "faq": [
+    {
+     "a": "Lovable (formerly GPT Engineer) is an AI app builder where you describe what you want and it generates a complete React/TypeScript web application. Unlike no-code tools, it produces actual code. Developers can edit the code directly or continue chatting with the AI to make changes.",
+     "q": "What is Lovable?"
+    },
+    {
+     "a": "Lovable has a free plan with 5 build credits per day (up to about 30 per month), 20 Cloud credits, and 4 in-app AI credits per month. Paid plans start at $25/mo (Pro) or $21/mo billed annually, and $50/mo (Business) or $42/mo billed annually, both for a 100-credit base that scales up to higher tiers. Credits, not messages, are consumed when generating or modifying code.",
+     "q": "Is Lovable free?"
+    },
+    {
+     "a": "Bubble is generally better for non-developers who want to build without writing code. Lovable generates actual code which, while impressive, can require developer knowledge to debug and maintain. For non-technical founders, Bubble's visual editor is more accessible.",
+     "q": "Is Lovable better than Bubble for non-developers?"
+    },
+    {
+     "a": "Yes. Lovable can connect to Supabase for database and authentication, generating full-stack applications with a React frontend and PostgreSQL backend. It's popular for building SaaS prototypes and MVPs quickly.",
+     "q": "Can Lovable build full-stack apps?"
+    }
+   ]
+  },
+  "after": {
+   "lang": "en",
+   "badge": "freemium",
+   "users": null,
+   "best_for": "AI app builder, no-code, visual bug testing, voice input",
+   "description": "Lovable is an agentic no-code platform that turns plain-language prompts into working web apps. It builds autonomously through a default Agent/Build mode, with Plan Mode for previewing changes and automatic subagents handling parallel research and review work, all metered by a unified credit system.",
+   "description_long": "Lovable lets you describe an app in everyday language and have it built for you, including the interface, logic, and a managed backend. It is aimed at founders, product people, and developers who want to go from idea to a deployable app without writing everything by hand.\n\nThe product runs on a fully agentic, credit-based model rather than a versioned release cycle. Agent Mode (also called Build mode) is the default and runs autonomously: it reads your codebase, searches the web, debugs, generates images, and validates its own output. Plan Mode lets you preview intended changes before any code is written, now with diffs and revision history, and Lovable also runs automatic, read-only subagents that handle research and review work in parallel. As of late 2026, builds can run for extended periods per message under a '/goal' mode, and in-app AI features can use Anthropic's Claude models without you supplying your own API key.\n\nOn capabilities, the backend is branded Lovable Cloud, a managed layer built on Supabase under the hood, with Lovable AI handling in-app AI features. You get database, auth, and hosting without wiring raw services yourself. Workspace-private projects are included even on the free plan.\n\nPricing is credit-based across both building and running apps. Free is $0 with 5 build credits per day (capped at about 30 per month), plus a shared monthly allowance of 20 Cloud credits, 4 in-app AI credits, and 1 connector credit that Lovable also extends to paid tiers. Pro costs $25/mo billed monthly, or $21/mo billed annually, for a 100-credit plan, and adds credit rollovers, top-ups, custom domains, user roles, and badge removal. Business costs $50/mo billed monthly, or $42/mo billed annually, for a 100-credit plan, and adds team workspace features, role-based access, workspace publishing, SSO, and a security center. Enterprise pricing is a custom platform fee plus volume pricing, with SCIM, audit logs, and EU inference options.\n\nThe main limitation is the credit model itself: because credits cover building, deployed-app runtime, and in-app AI, costs can be hard to predict on active projects, and the free tier runs out quickly. Lovable also describes the monthly Cloud, AI, and connector credit grants, along with the current per-message chat pricing, as temporary arrangements subject to change. Autonomous generation is fast but still needs review, and heavy customization eventually pushes you into editing code directly.\n\nChoose Lovable if you want an AI agent to do most of the building and you are comfortable steering it, and budget for credit consumption if your app is more than a prototype.",
+   "pros": [
+    "Agent/Build mode builds autonomously end to end, including web search, debugging, and self-validation",
+    "Plan Mode lets you preview intended changes, including diffs, before any code is generated",
+    "Managed Lovable Cloud backend covers database, auth, and hosting without wiring raw services",
+    "Paid tiers add custom domains, user roles, and credit rollovers, while private projects are included even on the free plan",
+    "Automatic, read-only subagents handle research and review work in parallel for faster iteration"
+   ],
+   "cons": [
+    "Unified credits cover building, runtime, and in-app AI, so costs are hard to predict",
+    "Free tier is tight at 5 build credits per day and runs out fast",
+    "Autonomous output still needs human review and can require rework",
+    "Deep customization eventually forces you into editing the underlying code",
+    "Monthly Cloud and AI credit grants are described as temporary and subject to change, adding pricing uncertainty"
+   ],
+   "choose_if": [
+    "You want an AI agent to do most of the building while you steer",
+    "You need a managed backend without wiring Supabase yourself",
+    "You are prototyping and want fast idea-to-app turnaround",
+    "You can budget for credit-based usage on active projects",
+    "You want to preview changes with Plan Mode before code is written"
+   ],
+   "faq": [
+    {
+     "q": "What is Lovable?",
+     "a": "Lovable (formerly GPT Engineer) is an AI app builder where you describe what you want and it generates a complete React/TypeScript web application. Unlike no-code tools, it produces actual code. Developers can edit the code directly or continue chatting with the AI to make changes."
+    },
+    {
+     "q": "Is Lovable free?",
+     "a": "Lovable has a free plan with 5 build credits per day (up to about 30 per month), plus 20 Cloud credits and 4 in-app AI credits per month. Paid plans start at $25/mo (Pro) or $21/mo billed annually, and $50/mo (Business) or $42/mo billed annually, both for a 100-credit base that scales up to higher tiers. Credits, not messages, are consumed when generating or modifying code."
+    },
+    {
+     "q": "Is Lovable better than Bubble for non-developers?",
+     "a": "Bubble is generally better for non-developers who want to build without writing code. Lovable generates actual code which, while impressive, can require developer knowledge to debug and maintain. For non-technical founders, Bubble's visual editor is more accessible."
+    },
+    {
+     "q": "Can Lovable build full-stack apps?",
+     "a": "Yes. Lovable can connect to Supabase for database and authentication, generating full-stack applications with a React frontend and PostgreSQL backend. It's popular for building SaaS prototypes and MVPs quickly."
+    }
+   ],
+   "dropped": [
+    "Pro tier top-up pricing claim ($15 per 50 credits)",
+    "Business tier top-up pricing claim ($30 per 50 credits)",
+    "Pro tier top-of-range pricing claim (~$2,250/mo for 10,000 credits)",
+    "Business tier top-of-range pricing claim (~$4,300/mo)",
+    "Lovable API access on Business tier",
+    "Opt-out of data training by default on Business tier",
+    "Code editing and code download as confirmed Pro-tier features",
+    "Annual billing total figures ($250/year, $500/year)",
+    "500K+ users figure"
+   ]
+  }
+ }
+]
