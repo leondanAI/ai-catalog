@@ -76,6 +76,23 @@ def translate(slug, langs):
     en = json.load(open(os.path.join(draft_dir(slug), 'en.json'), encoding='utf-8'))
     client = anthropic.Anthropic()
 
+    # Ссылки на карточки модель иногда выкидывала целиком (nvidia-nemotron-transcribe,
+    # 2026-10-30: 0 из 3 на пяти языках, три попытки подряд). Перед переводом
+    # заменяем <a href="…">текст</a> на ⟦n⟧текст⟦/n⟧ и возвращаем ссылки после.
+    hrefs = re.findall(r'<a href="([^"]+)">', en['body'])
+    body_marked = en['body']
+    for n, h in enumerate(hrefs, 1):
+        body_marked = body_marked.replace(f'<a href="{h}">', f'⟦{n}⟧', 1)
+    i = 0
+    while '</a>' in body_marked:
+        i += 1
+        body_marked = body_marked.replace('</a>', f'⟦/{i}⟧', 1)
+
+    def unmark(text):
+        for n, h in enumerate(hrefs, 1):
+            text = text.replace(f'⟦{n}⟧', f'<a href="{h}">').replace(f'⟦/{n}⟧', '</a>')
+        return text
+
     def one(lang):
         # Ответ в тегах-разделителях, а не в JSON: кавычки в тексте (иврит ארה"ב,
         # цитаты) ломали JSON-ответы на каждой третьей новости.
@@ -85,7 +102,8 @@ def translate(slug, langs):
                   + '\n- Keep titles of reports or papers in <em>…</em> in their original language.'
                   + ('\n- In Ukrainian, write "ШІ" for AI (ШІ-агенти, ШІ-модель), as on the rest of the site.' if lang == 'ua' else '')
                   + '\n\nReturn exactly three blocks and nothing else:\n<title>...</title>\n<summary>...</summary>\n<body>...</body>\n\n'
-                  + f'HEADLINE: {en["title"]}\nSUMMARY: {en["summary"]}\nBODY: {en["body"]}')
+                  + '\n- Markers like ⟦1⟧…⟦/1⟧ wrap links: keep every marker exactly, in the same order, around the translated words.'
+                  + f'HEADLINE: {en["title"]}\nSUMMARY: {en["summary"]}\nBODY: {body_marked}')
         for attempt in range(3):
             m = client.messages.create(model=llm.TRANSLATE, max_tokens=12000,
                                        thinking={'type': 'disabled'},
@@ -98,6 +116,7 @@ def translate(slug, langs):
             text = next(b.text for b in m.content if b.type == 'text')
             try:
                 d = {k: re.search(rf'<{k}>(.*?)</{k}>', text, re.S).group(1).strip() for k in ('title', 'summary', 'body')}
+                d['body'] = unmark(d['body'])
             except AttributeError:
                 continue
             errs = check(lang, en, d)
