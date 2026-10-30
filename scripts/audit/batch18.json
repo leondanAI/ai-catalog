@@ -1,0 +1,343 @@
+[
+ {
+  "slug": "chatgpt",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "GPT-6 Astra remains OpenAI's most capable model; main Chat uses GPT-6 Sol on paid plans and GPT-6 Luna on Free and Go. GPT-6.1 Terra (medium tier, replaces GPT-5.6 Terra) launched Oct 26, 2026 in ChatGPT Work and Codex for Plus, Pro, Business, Enterprise and Edu, not in main Chat; API model gpt-6.1-terra. GPT-6.1 Sol (Sept 29) is also Work/Codex only.",
+  "version_published": "2026-10-26",
+  "pricing": "Unchanged: Free $0, Go $8/mo, Plus $20/mo, Pro $100, $200 or $500/mo (Ultrafast mode only on $500), Business $25/user/mo monthly or $20/user/mo annual, Enterprise/Edu via sales. Oct 29: Pro $100 and Pro $500 Work and Codex allowances doubled; the planned Pro $200 allowance reduction (announced Sept 29) was cancelled and Pro $200 subscribers also get double their previous allowance from Oct 29. GPT-6.1 Terra API: $1 input / $0.05 cached input / $5 output per 1M tokens (OpenAI says 50% below GPT-5.6 Terra and GPT-6.1 Sol).",
+  "free_tier": "Yes: Free plan with GPT-6 Luna in Chat.",
+  "repositioning": "Two models (GPT-6.1 Sol, GPT-6.1 Terra) are now Work/Codex-only. Terra brings visual reasoning and computer use to Work and Codex. Texting your dot (iMessage/RCS) entered beta for US Pro users Oct 28-30.",
+  "card_errors": [
+   {
+    "claim": "description: \"with GPT-6.1 Sol available only in ChatGPT Work and Codex\"",
+    "correction": "Incomplete since Oct 26, 2026: GPT-6.1 Terra (replaces GPT-5.6 Terra) is also available only in ChatGPT Work and Codex for Plus, Pro, Business, Enterprise and Edu, and in the API as gpt-6.1-terra ($1/$5 per 1M tokens)."
+   },
+   {
+    "claim": "description_long: \"Limitations remain: the newest model, GPT-6.1 Sol, is not yet available in the main chat interface, only through Work and Codex.\"",
+    "correction": "GPT-6.1 Sol is no longer the newest model: GPT-6.1 Terra launched Oct 26, 2026. Both GPT-6.1 models are available only in Work and Codex, not in main Chat."
+   },
+   {
+    "claim": "cons: \"GPT-6.1 Sol, the newest model, is not available in the main chat interface, only via ChatGPT Work and Codex\"",
+    "correction": "The newest model is GPT-6.1 Terra (Oct 26, 2026); GPT-6.1 Sol and GPT-6.1 Terra are both Work/Codex-only."
+   }
+  ],
+  "sources": [
+   {"url": "https://releasebot.io/updates/openai", "accessed": "2026-10-30"},
+   {"url": "https://learn.chatgpt.com/docs/pricing", "accessed": "2026-10-30"},
+   {"url": "https://bleepingcomputer.com/news/artificial-intelligence/openai-launches-gpt-61-terra-with-3x-faster-ai-agents-50-percent-lower-pricing", "accessed": "2026-10-30"},
+   {"url": "https://openai.com/index/introducing-gpt-6-1-terra/", "accessed": "2026-10-30"}
+  ],
+  "confidence": "high",
+  "notes": "openai.com and help.openai.com return 403 to the fetcher; facts confirmed via the releasebot.io mirror of OpenAI release notes (Oct 26 Terra announcement and models notes, Oct 29 Pro allowance note) and OpenAI's Codex pricing page (learn.chatgpt.com, lists GPT-6.1 Terra). Terra does not support UAE inference residency. Oct 29 note also updated GPT-6 in Chat for more concise replies (Free, Go, signed-out; on Plus/Pro only the fallback model). The card does not state allowance sizes, so the Oct 29 doubling makes nothing on the card wrong, but it can be added. Oct 26: new custom GPT creation disabled in affected Enterprise/Edu workspaces (except FedRAMP).",
+  "domain_changed": false
+ },
+ {
+  "slug": "openai-codex",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Codex models (pricing page): GPT-6 Astra, GPT-6.1 Sol, GPT-6.1 Terra, GPT-6 Sol, GPT-6 Luna. GPT-6.1 Terra added Oct 26, 2026; Codex CLI 0.165.0 (Oct 27) added Terra to the model catalogs plus a built-in Google Cloud Vertex AI provider; 0.166.0 (Oct 29) added Terra to the bundled, Vertex AI and Bedrock catalogs.",
+  "version_published": "2026-10-29",
+  "pricing": "Free $0 and Go $8/mo: GPT-6 Luna in the desktop app (subject to rollout). Plus $20/mo and Business ($20/user/mo annual for 2+ users, $25 monthly): GPT-6 Astra, GPT-6.1 Sol, GPT-6.1 Terra, GPT-6 Sol, GPT-6 Luna. Pro $100/$200/$500 same models, Ultrafast only on $500, no five-hour limit currently; Oct 29 Pro Work and Codex allowances doubled (Pro $200 reduction cancelled). Enterprise/Edu via sales (GPT-6.1 Sol off by default until admin enables; Terra depends on workspace). Estimated local messages per 5 hours on Plus/Standard Business: Astra 5-45, 6.1 Sol 15-160, 6.1 Terra 35-285, 6 Sol 15-150, Luna 350-3,000. Credit rates per 1M input tokens: Astra 250, 6.1 Sol 50, 6.1 Terra 25, 6 Sol 50, Luna 2.5.",
+  "free_tier": "Partial: Free and Go get lightweight Codex with GPT-6 Luna in the desktop app, subject to rollout.",
+  "repositioning": "GPT-6.1 Terra (visual reasoning, computer use) is a cheaper mid-tier option in Codex; memory v2 on by default for fresh CLI profiles (0.165.0).",
+  "card_errors": [
+   {
+    "claim": "description_long: \"OpenAI's Codex pricing page lists GPT-6.1 Sol, GPT-6 Sol, GPT-6 Luna and GPT-6 Astra as the models used in Codex\"",
+    "correction": "The Codex pricing page now also lists GPT-6.1 Terra (added Oct 26, 2026): GPT-6 Astra, GPT-6.1 Sol, GPT-6.1 Terra, GPT-6 Sol, GPT-6 Luna."
+   },
+   {
+    "claim": "description_long: \"Plus ($20 a month) adds Codex on the web, in the CLI, the IDE extension and on iOS, with GPT-6.1 Sol and GPT-6 Luna\"",
+    "correction": "Plus (and Business) now lists GPT-6 Astra, GPT-6.1 Sol, GPT-6.1 Terra, GPT-6 Sol and GPT-6 Luna for Codex."
+   },
+   {
+    "claim": "description_long: \"heavier models use the allowance much faster: OpenAI estimates roughly 15 to 160 local messages per five hours with GPT-6.1 Sol, against 350 to 3,000 with GPT-6 Luna\" and cons: \"GPT-6.1 Sol uses the allowance fastest\"",
+    "correction": "The figures for Sol and Luna are still right, but GPT-6 Astra uses the allowance fastest (5-45 local messages per five hours); GPT-6.1 Terra is 35-285."
+   },
+   {
+    "claim": "faq \"Which models does Codex use?\": \"OpenAI lists GPT-6.1 Sol, GPT-6 Sol, GPT-6 Luna and GPT-6 Astra for Codex. Plus users get GPT-6.1 Sol and GPT-6 Luna.\"",
+    "correction": "Add GPT-6.1 Terra (Oct 26, 2026); Plus users get GPT-6 Astra, GPT-6.1 Sol, GPT-6.1 Terra, GPT-6 Sol and GPT-6 Luna."
+   },
+   {
+    "claim": "faq \"What are the Codex usage limits?\": \"OpenAI estimates about 15 to 160 local messages per five hours with GPT-6.1 Sol and 350 to 3,000 with GPT-6 Luna.\"",
+    "correction": "Still accurate for those two models but incomplete: Astra 5-45, GPT-6.1 Terra 35-285, GPT-6 Sol 15-150. Pro Work and Codex allowances were doubled on Oct 29, 2026."
+   }
+  ],
+  "sources": [
+   {"url": "https://learn.chatgpt.com/docs/pricing", "accessed": "2026-10-30"},
+   {"url": "https://releasebot.io/updates/openai", "accessed": "2026-10-30"}
+  ],
+  "confidence": "high",
+  "notes": "developers.openai.com/codex/pricing now 308-redirects to learn.chatgpt.com/docs/pricing. It is unclear from the page whether GPT-6 Astra was already on Plus before this audit; either way the card's Plus model list is now incomplete. Pro 'no five-hour limit' is still stated on the pricing page.",
+  "domain_changed": false
+ },
+ {
+  "slug": "github-copilot",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Oct 28, 2026 (GitHub Universe): Copilot Fusion GA on all Copilot plans (Standard, High, Max effort; replaces the auto, HydraFusion and HydraFusion Max research-preview options; VS Code, Copilot app, Copilot CLI, JetBrains). Image generation and editing in chat in public preview (Pro, Pro+, Business, Enterprise; GPT Image 2.5 Flare; billed in AI Credits). Computer use in the Copilot app in public preview (macOS, Windows). GitHub Agentic Workflows GA. GPT-6.1 Terra GA (gradual rollout) Oct 26 on Pro, Pro+, Max, Business, Enterprise.",
+  "version_published": "2026-10-28",
+  "pricing": "Individual plans unchanged: Free $0 (2,000 inline suggestions, limited chat/agent), Pro $10/mo ($15 of usage: $10 base + $5 flex), Pro+ $39/mo ($70: $39 + $31), Max $100/mo ($200: $100 + $100); 1 AI Credit = $0.01. New Oct 28: GitHub Enterprise Cloud customers working with a GitHub/Microsoft account team can get Copilot included for every licensed user (Copilot Enterprise features and models, no monthly AI credits per seat; usage metered from the first request against the enterprise budget; completions and next edit suggestions keep working with no budget; Chat, code review and cloud agent need budget). Copilot Standalone: $10/user/month for enterprise-account users without a GitHub Enterprise license. Self-serve rollout in stages, dates to come. Copilot Business and Copilot Enterprise remain on sale. Fusion: 30% off model costs on paid plans for a limited time (no end date given).",
+  "free_tier": "Yes: Copilot Free.",
+  "repositioning": "Enterprise licensing shifts from per-seat Copilot to Copilot-included-with-GHE plus usage budget; Fusion routing becomes the default way to pick models.",
+  "card_errors": [
+   {
+    "claim": "cons: \"Organization (Business and Enterprise) pricing is separate from the individual tier structure and was not confirmed for this card\"",
+    "correction": "Stale: since Oct 28, 2026 GitHub Enterprise Cloud can include Copilot for every licensed user (usage metered against the enterprise budget, no per-seat AI credits), with Copilot Standalone at $10/user/month for enterprise users without a GHE license; Copilot Business and Enterprise remain available. Self-serve availability is still being phased in."
+   }
+  ],
+  "sources": [
+   {"url": "https://github.blog/changelog/2026-10-28-github-enterprise-now-includes-access-to-github-copilot/", "accessed": "2026-10-30"},
+   {"url": "https://github.com/features/copilot/plans", "accessed": "2026-10-30"},
+   {"url": "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion", "accessed": "2026-10-30"},
+   {"url": "https://github.blog/changelog/2026-10-28-generate-and-edit-images-directly-in-copilot", "accessed": "2026-10-30"},
+   {"url": "https://github.blog/changelog/2026-10-28-github-copilot-app-universe-releases", "accessed": "2026-10-30"},
+   {"url": "https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available", "accessed": "2026-10-30"},
+   {"url": "https://github.blog/changelog/2026-10-26-gpt-6-1-terra-in-github-copilot", "accessed": "2026-10-30"}
+  ],
+  "confidence": "high",
+  "notes": "Memory GA on paid plans NOT confirmed: no Oct 26-30 changelog entry found, and the docs still label Copilot Memory public preview; keep out of the card. Image generation is listed for Pro, Pro+, Business and Enterprise (Max not named in that entry). Other Oct 28 items: Copilot Automations, Copilot Projects (public preview), Agent Merge, GitHub Copilot SDK becoming Microsoft Copilot SDK, Copilot code review Max level. The card does not mention Fusion, Standalone or the enterprise change, so those are additions rather than errors. The plans page still shows Free/Pro $10/Pro+ $39/Max $100 and third-party agent delegation as Preview on Pro+ and Max.",
+  "domain_changed": false
+ },
+ {
+  "slug": "gemini",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Gemini 4 Argon (GA Oct 13, 2026) remains the most capable generally available model and the one in the Gemini app (AI Pro, AI Ultra). Gemini 4 Carbon announced Oct 28, 2026 as Google's strongest model (#1 on Artificial Analysis Intelligence Index v5.0, score 59), at first only for a small group of cyber defenders, then trusted partners through the Fairwind Program; developers, businesses and consumers later with no date. Newest Flash: Gemini 3.8 Flash (GA Sept 2). Image: Nano Banana 2.1.",
+  "version_published": "2026-10-28",
+  "pricing": "App plans unchanged (US, monthly): Free $0 (Flash-Lite); AI Plus $4.99 (Flash); AI Pro $19.99 (Gemini 4 Argon, Pro, Flash); AI Ultra from $99.99 (5x) or $199.99 (20x). Carbon intro API price $2 input / $10 output per 1M tokens (cached input 95% less), later $4 / $20 — same as Argon.",
+  "free_tier": "Yes: Free plan with the Flash-Lite model.",
+  "repositioning": "Oct 29, 2026: Gemini app users can generate, preview and edit documents, PDFs, presentations, spreadsheets and code inside a chat, for all users in all languages where the app is available (PDF on web and mobile; other formats web-only). Builds on in-chat file generation from April 2026.",
+  "card_errors": [
+   {
+    "claim": "description: \"now topped by the Gemini 4 Argon model alongside the newer Gemini 3.8 Flash\"",
+    "correction": "Gemini 3.8 Flash (GA Sept 2, 2026) is older than Argon (GA Oct 13), not newer. Also, since Oct 28 Google's strongest model is Gemini 4 Carbon, though it is limited to cyber defenders and Fairwind partners; Argon remains the most capable model available to the public."
+   },
+   {
+    "claim": "description_long: \"As of October 2026 the flagship model is Gemini 4 Argon\"",
+    "correction": "Should note Gemini 4 Carbon, announced Oct 28, 2026 as Google's strongest model (#1 Artificial Analysis Intelligence Index v5.0, score 59), not yet available to consumers or developers; Argon stays the flagship in the Gemini app and public API."
+   }
+  ],
+  "sources": [
+   {"url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/", "accessed": "2026-10-30"},
+   {"url": "https://gemini.google/subscriptions/?hl=en", "accessed": "2026-10-30"},
+   {"url": "https://ai.google.dev/gemini-api/docs/changelog", "accessed": "2026-10-30"},
+   {"url": "https://www.digitaltrends.com/computing/google-gemini-can-now-create-and-edit-pdfs-documents-and-more-right-inside-your-chat/", "accessed": "2026-10-30"},
+   {"url": "https://www.sammyfans.com/2026/10/29/google-makes-document-editing-easier-with-new-gemini-features/", "accessed": "2026-10-30"}
+  ],
+  "confidence": "high",
+  "notes": "Carbon is not in the Gemini API changelog or the subscriptions page yet. The Oct 29 file-editing feature is confirmed by several news reports but not found on gemini.google/release-notes (newest visible entry Oct 13) — medium confidence on exact scope; one report notes .docx/.xlsx are not listed among previewable/editable formats. Carbon benchmarks (vendor-reported): SEC-bench Pro 88.2%, ExploitGym 54.8%, CWE-bench 71.0%, WebDev Arena #4 (1768 Elo).",
+  "domain_changed": false
+ },
+ {
+  "slug": "canva-ai",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Canva AI 2.0 (Canva Create 2026) with the Canva Design Model; Canva Craft image model (Oct 22, 2026, Dream Lab); Canva Brush, Canva Research's first vision-language model for editing existing designs (single text elements up to whole decks), launched Oct 29-30, 2026.",
+  "version_published": "2026-10-30",
+  "pricing": "Not re-checked in this batch (canva.com blocks the fetcher). Card's Free / Pro US$120/yr / Business US$210/yr per person / Enterprise custom / AI Pass add-on left as is. No separate Brush price reported.",
+  "free_tier": "Yes: Free plan with a limited shared AI allowance.",
+  "repositioning": "Canva Brush: Canva says up to 69% faster on general design-editing tasks and 46% lower cost per edit than its previous design agent; it writes and runs code to modify design elements, checks the result and iterates.",
+  "card_errors": [
+   {
+    "claim": "description_long: \"The most recent addition is Canva Craft, Canva's first in-house image-generation model\"",
+    "correction": "Canva Brush, a design-editing vision-language model from Canva Research, launched about a week after Craft (Oct 29-30, 2026), so Craft is no longer the most recent addition."
+   }
+  ],
+  "sources": [
+   {"url": "https://www.canva.com/newsroom/news/canva-brush/", "accessed": "2026-10-30"},
+   {"url": "https://www.capitalbrief.com/briefing/canva-launches-ai-design-editing-model-brush-48352e11-c62c-4319-973a-490efa945f92/", "accessed": "2026-10-30"},
+   {"url": "https://cryptobriefing.com/canva-unveils-brush-vision-language-model/", "accessed": "2026-10-30"}
+  ],
+  "confidence": "medium",
+  "notes": "Primary newsroom page returns 403/Cloudflare challenge; Brush facts confirmed via Capital Brief (dated Oct 30, 2026) and other secondary coverage. The 69%/46% figures are Canva's own claims against its previous design agent. Availability is UNCONFIRMED: secondary reports say Canva Pro subscribers inside Canva AI with wider availability 'coming soon', and no public API — do not put plan availability on the card until confirmed. Card users '220M+' looks low (multiple outlets report 260-265M monthly users) but no primary source checked; not flagged as an error since the card says '+'.",
+  "domain_changed": false
+ },
+ {
+  "slug": "n8n",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Stable: n8n 2.45.6 (Oct 29, 2026; 2.45.4 Oct 26). Beta 2.x: 2.46.2 (2.46.0 Oct 27). n8n 3.0.0 beta released Oct 27 (3.0.1 Oct 28, both pre-release), stable 3.x expected early December 2026. 1.x still patched (1.123.90, Oct 29).",
+  "version_published": "2026-10-29",
+  "pricing": "Not re-checked; card's Community Edition free self-hosted, cloud trial only, Starter/Pro/Business annual in EUR, Enterprise custom left as is.",
+  "free_tier": "Yes: free self-hosted Community Edition; cloud has only a trial.",
+  "repositioning": "n8n 3.0 breaking changes: self-hosting requires Docker (npm and npx n8n installs no longer supported; one-line setup script offered; Kubernetes/Helm unaffected); Function, Function Item, Item Lists, Cron, Interval, the legacy OpenAI node, older AI Agent modes and nodes for discontinued services removed; Chat Hub off by default (can be re-enabled); Import from URL and the Code node Ask AI tab removed; Code node task runner timeout 5 min -> 1 min (configurable); 1.x must upgrade to 2.x first; upgrade to 3.x is one-way; Migration Report (2.39+) flags affected workflows.",
+  "card_errors": [
+   {
+    "claim": "description: \"As of October 2026 the stable line is n8n 2.43, with 2.44 in beta\"",
+    "correction": "Stable is now 2.45.x (2.45.6, Oct 29, 2026), beta 2.46.x, and n8n 3.0 is in beta since Oct 27 (stable 3.x expected early December)."
+   },
+   {
+    "claim": "description_long: \"the current stable release is n8n 2.43, with 2.44 available as a beta build\"",
+    "correction": "Current stable is 2.45.6 (Oct 29, 2026) with 2.46.2 as 2.x beta; n8n 3.0.0 beta (Oct 27) brings breaking changes (Docker-only self-hosting, removed legacy nodes, one-way upgrade)."
+   }
+  ],
+  "sources": [
+   {"url": "https://blog.n8n.io/introducing-n8n-v3/", "accessed": "2026-10-30"},
+   {"url": "https://docs.n8n.io/release-notes/", "accessed": "2026-10-30"},
+   {"url": "https://github.com/n8n-io/n8n/releases", "accessed": "2026-10-30"}
+  ],
+  "confidence": "high",
+  "notes": "GitHub releases: 'stable' tag = n8n@2.45.6 (Oct 29), 'beta' tag = n8n@2.46.2; 3.0.0 and 3.0.1 marked pre-release. On n8n Cloud 3.0 is offered as '3.0.0 Beta (early access)'. The '1.x line continues to receive patches' statement is still true. Version numbers move almost daily; consider wording the card as '2.45.x stable, 3.0 in beta'.",
+  "domain_changed": false
+ },
+ {
+  "slug": "mistral-le-chat",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Vibe (formerly Le Chat) built around Mistral Medium 3.5. Mistral Large 4: hosted public preview from Oct 6, 2026; open weights now on Hugging Face as mistralai/Mistral-Large-4-1T-A52B plus an NVFP4 checkpoint (mistralai/Mistral-Large-4-1T-A52B-NVFP4, for Blackwell GPUs, vLLM/SGLang). About 1T total parameters, about 52B active (49B excluding embeddings/output), MoE 128 experts + 1 shared, text+image input, 1M-token context. API id mistral-large-4.",
+  "version_published": null,
+  "pricing": "Vibe plans not re-checked. Large 4 API: $0.70 input / $0.07 cached input / $2.10 output per 1M tokens.",
+  "free_tier": "Yes: free Vibe plan.",
+  "repositioning": "Large 4 can be tried in Vibe Code (chat.mistral.ai/code) on your own repositories. Licence: Mistral Ecosystem Open-Weight License, a modified MIT licence allowing commercial use; offering it as a Model-as-a-Service needs a separate commercial licence from Mistral.",
+  "card_errors": [
+   {
+    "claim": "description_long: \"Mistral separately announced a newer model, Large 4, in October 2026, but it is not confirmed whether this has replaced Medium 3.5 as Vibe's default.\"",
+    "correction": "Large 4 is no longer only announced: its open weights are published on Hugging Face (Mistral-Large-4-1T-A52B, plus NVFP4) under a modified MIT licence, API $0.70/$2.10 per 1M tokens, and it is available in Vibe Code. Whether it is the default in Vibe Chat is still not confirmed."
+   }
+  ],
+  "sources": [
+   {"url": "https://mistral.ai/news/mistral-large-4-oss", "accessed": "2026-10-30"},
+   {"url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B", "accessed": "2026-10-30"},
+   {"url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B-NVFP4", "accessed": "2026-10-30"}
+  ],
+  "confidence": "high",
+  "notes": "Mistral's post gives no explicit date (says the preview came 'earlier this month'); HF repos are public and ungated, last modified Oct 29, 2026 (repo created Sept 30, NVFP4 Oct 15 — likely private until release). Secondary reports had targeted Oct 27 for the weights. Card's FAQ on open models (Large, Medium 3.5 etc. under Apache 2.0 or modified MIT) is still OK.",
+  "domain_changed": false
+ },
+ {
+  "slug": "higgsfield",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Oct 23, 2026: Series B extension with TCV and NVIDIA joining (amount and valuation not disclosed); company reports more than 40 million users in 238 countries and territories and >$1B annualized revenue run rate (reached September). Oct 25-26: Higgsfield Playable launched — Playable Games (all plans; also via Claude with Higgsfield MCP) and Playable Ads (Enterprise only).",
+  "version_published": "2026-10-23",
+  "pricing": "Not re-checked; card prices left as is.",
+  "free_tier": "Yes: Free plan with limited use.",
+  "repositioning": "Adds interactive output: browser mini-games and playable ads created from a text idea, artwork or gameplay recording.",
+  "card_errors": [
+   {
+    "claim": "users: \"32M+\"",
+    "correction": "40M+ (company-reported, Oct 23, 2026)."
+   },
+   {
+    "claim": "description: \"The company says it has more than 32 million users\"",
+    "correction": "Higgsfield now reports more than 40 million users (Oct 23, 2026 Series B extension announcement with TCV and NVIDIA)."
+   },
+   {
+    "claim": "description_long: \"Higgsfield reports more than 32 million users in 238 countries\"",
+    "correction": "More than 40 million users across 238 countries and territories (Oct 23, 2026). Add: the August Series B was extended in October with TCV and NVIDIA."
+   },
+   {
+    "claim": "faq \"How big is Higgsfield?\": \"with more than 32 million users\"",
+    "correction": "More than 40 million users (company-reported, Oct 2026)."
+   }
+  ],
+  "sources": [
+   {"url": "https://higgsfield.ai/blog/higgsfield-series-b-extension-tcv-nvidia", "accessed": "2026-10-30"},
+   {"url": "https://higgsfield.ai/blog/higgsfield-playable-ads-and-games", "accessed": "2026-10-30"},
+   {"url": "https://higgsfield.ai/playable-intro", "accessed": "2026-10-30"}
+  ],
+  "confidence": "high",
+  "notes": "The Oct 23 post does not repeat 'nearly 1 million paying subscribers' or '390 Fortune 500 companies'; those card claims are from earlier company statements and are not contradicted. New post says revenue under contract from business customers is up tenfold since June. Playable launch: blog post dated Oct 25, some coverage says Oct 26; plan split (Games on all plans, Ads Enterprise-only) comes from search summaries of the Higgsfield blog — fetch the blog post before putting plan details on the card.",
+  "domain_changed": false
+ },
+ {
+  "slug": "claude-code",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "CLI 2.1.314 (npm 'latest', published Oct 30, 2026); 2.1.312 Oct 27, 2.1.311 Oct 26; npm 'stable' dist-tag is 2.1.308 (Oct 22). Since 2.1.311, 'ultrathink' in the interactive terminal runs its turn at xhigh effort on Opus 5.5, Sonnet 5.5, Haiku 5.5 and Fable 5.1 via Anthropic's API.",
+  "version_published": "2026-10-30",
+  "pricing": "Not re-checked in this batch; card values left as is.",
+  "free_tier": "No: not included in Claude Free.",
+  "repositioning": null,
+  "card_errors": [
+   {
+    "claim": "description: \"currently at CLI version 2.1.302 (October 2026)\"",
+    "correction": "Latest CLI is 2.1.314 (Oct 30, 2026); the npm 'stable' channel is 2.1.308."
+   },
+   {
+    "claim": "description_long: \"The current release is CLI 2.1.302, published October 16, 2026.\"",
+    "correction": "Current release is 2.1.314, published October 30, 2026 (2.1.312 on Oct 27)."
+   }
+  ],
+  "sources": [
+   {"url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md", "accessed": "2026-10-30"},
+   {"url": "https://registry.npmjs.org/@anthropic-ai/claude-code", "accessed": "2026-10-30"}
+  ],
+  "confidence": "high",
+  "notes": "Minor: version churn is near-daily; consider dropping the exact version number from the card or saying '2.1.3xx'. 2.1.314 adds permissions.blockWritesOutsideWorkingDirectories and idle compaction in VS Code / Claude Desktop Code tab.",
+  "domain_changed": false
+ },
+ {
+  "slug": "cursor",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Cursor (Anysphere) is a wholly owned subsidiary of SpaceX: the $60B all-stock merger closed August 14, 2026 (SpaceX 10-Q / 8-K). New customers default to The X Subscription since Oct 12, 2026.",
+  "version_published": null,
+  "pricing": "Not re-checked; card's X Subscription tiers (Free, Plus $8, Premium $30, Super $100, Ultra $200; third-party models billed at API price) left as is.",
+  "free_tier": "Yes: Free tier of The X Subscription.",
+  "repositioning": "Ownership: SpaceX (SEC filings name SpaceX as parent; Wikipedia says SpaceXAI).",
+  "card_errors": [],
+  "sources": [
+   {"url": "https://www.sec.gov/Archives/edgar/data/0001181412/000162828026066880/spcx-20260930.htm", "accessed": "2026-10-30"},
+   {"url": "https://www.sec.gov/Archives/edgar/data/0001181412/000162828026066482/spaceexplorationtechnologi.htm", "accessed": "2026-10-30"},
+   {"url": "https://thenextweb.com/news/spacex-cursor-acquisition-completed-gpu-fleet", "accessed": "2026-10-30"}
+  ],
+  "confidence": "medium",
+  "notes": "The card does not state ownership at all (it only says The X Subscription runs 'under the SpaceXSI banner'), so nothing is wrong; adding 'Cursor has been a wholly owned SpaceX subsidiary since the acquisition closed on August 14, 2026' would explain the Grok/X bundle. Closing date and structure come from search summaries of the SpaceX 10-Q/8-K (not opened directly); implied equity value $60B, GAAP purchase consideration $42.5B. Cursor's own X post not opened.",
+  "domain_changed": false
+ },
+ {
+  "slug": "photoroom",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Plans: Free, Pro, Max, Ultra, Enterprise.",
+  "version_published": null,
+  "pricing": "USD (schema.org Offer data on photoroom.com/pricing): Pro $12.99/mo or $89.99/yr; Max $34.99/mo or $250.00/yr; Ultra $99/mo or $990/yr; Enterprise custom annual. AI credits per month: Pro 8,000, Max 25,000, Ultra 75,000; exports per month: 1,000 / 3,000 / 10,000. Credit amounts may vary by country.",
+  "free_tier": "Yes: Free plan, personal non-commercial use, no API.",
+  "repositioning": null,
+  "card_errors": [
+   {
+    "claim": "description_long: \"Max costs $34.99 a month or $249.99 a year\"",
+    "correction": "Max yearly is $250.00 (schema.org offer on photoroom.com/pricing)."
+   },
+   {
+    "claim": "faq \"Is Photoroom free?\": \"Max $34.99 a month or $249.99 a year\"",
+    "correction": "Max is $34.99 a month or $250 a year."
+   }
+  ],
+  "sources": [
+   {"url": "https://www.photoroom.com/pricing", "accessed": "2026-10-30"}
+  ],
+  "confidence": "high",
+  "notes": "All other prices and credit/export numbers on the card match. The string '249.99' does not appear anywhere in the pricing page HTML. Visible prices are rendered client-side; the structured data is the only machine-readable USD source.",
+  "domain_changed": false
+ },
+ {
+  "slug": "freepik",
+  "alive": true,
+  "shutdown_note": null,
+  "current_version": "Magnific (formerly Freepik). Individual plans on magnific.com/pricing: Premium, Premium+ ('Best value') and Pro Starter ('Expert choice'). Magnific One image model and Brand Kit included in all paid plans.",
+  "version_published": null,
+  "pricing": "Web pricing is shown in local currency (fetched from IL: Premium ₪59/mo or ₪40/mo billed annually; Premium+ ₪132 / ₪99; Pro Starter ₪322 / ₪241.50; excl. VAT). Annual credits: Premium 240K/yr, Premium+ 600K/yr, Pro Starter 1.5M/yr (Nano Banana 2 2K) or 4M/yr (Nano Banana 2 2K + Nano Banana Pro); 'Credits valid for 1 year, no monthly resets'. US App Store in-app prices (Magnific - AI Video & Image, seller Freepik Company S.L.U.): Premium $26.00/mo or $234.99/yr; Premium+ $55.00/mo or $494.99/yr. Web USD prices not confirmed.",
+  "free_tier": "Free plan exists per earlier audit; current pricing page does not list it.",
+  "repositioning": null,
+  "card_errors": [
+   {
+    "claim": "description_long: \"Pro comes in two tiers with 112,500 or 300,000 credits a month (1.5 million or 4 million a year) and adds a merchandise license and early access.\"",
+    "correction": "The pricing page now lists this tier as 'Pro Starter' (Everything in Premium+, with 1.5M or 4M credits a year). The merchandise license is not shown in the current Pro Starter feature list; 'early access to AI features' appears in all plans' lists."
+   },
+   {
+    "claim": "description_long: \"Pro comes in two tiers\" / faq \"Paid plans (Premium, Premium+, Pro, Business)\"",
+    "correction": "Individual plans are now Premium, Premium+ and Pro Starter; Business and Enterprise are on the Teams tab."
+   }
+  ],
+  "sources": [
+   {"url": "https://www.magnific.com/pricing", "accessed": "2026-10-30"},
+   {"url": "https://apps.apple.com/us/app/id1664092086", "accessed": "2026-10-30"}
+  ],
+  "confidence": "medium",
+  "notes": "UNCONFIRMED, notes only: (1) each plan's feature list on the pricing page includes 'Top up credits anytime', which may contradict the card's 'no option to buy extra credits' on Premium (cons: 'Extra credits cannot be bought on Premium'), but the extracted text does not show which features are ticked per plan; (2) 'Unlimited, all year' list (Nano Banana 2, Kling 2.5, Nano Banana Pro) appears under all three plans, with 'All year' labels only on Premium+ and Pro Starter — unclear whether Premium now gets unlimited models; (3) annual plans say credits valid 1 year with no monthly resets — card's '20,000 credits a month' wording is right only as an average; monthly-billing credits not checked; (4) merchandise license may still exist but is not in the extracted feature list. App Store USD prices are in-app prices and may differ from web prices; if used on the card, label them 'App Store (US)'. Card con 'No single published USD price list' is still true for the web. Search results also report regional App Store prices (AED 179.99/mo Premium+ in UAE).",
+  "domain_changed": false
+ }
+]
