@@ -1,0 +1,63 @@
+{
+ "title": "Mejor IA para SEO",
+ "tile": "Haz crecer tu SEO y tu visibilidad en IA",
+ "meta_desc": "Mejora tu posicionamiento en Google y en respuestas de IA con Semrush, Surfer SEO y Frase: datos SEO, puntuación de contenido y visibilidad en IA.",
+ "answer": "Usa <b>Semrush</b> si quieres una sola plataforma para investigación de palabras clave, rankings y seguimiento de menciones en IA, elige <b>Surfer SEO</b> para escribir páginas evaluadas tanto frente a páginas bien posicionadas como frente a motores de respuesta de IA, y opta por <b>Frase</b> si quieres un agente que investigue, redacte y publique contenido puntuado tanto para SEO como para citas en IA.",
+ "picks": [
+  {
+   "slug": "semrush",
+   "label": "Todo en uno: SEO y seguimiento de IA",
+   "why": "Semrush te da investigación de palabras clave, seguimiento de rankings, datos de backlinks y auditorías de sitio, junto con herramientas que vigilan cómo aparece tu marca en las respuestas de IA. Creas un proyecto, lanzas una auditoría del sitio, armas listas de palabras clave y luego revisas los informes de visibilidad en IA para ver dónde te mencionan. Abarca mucho terreno, así que te llevará algo de tiempo ubicarte entre tantas funciones."
+  },
+  {
+   "slug": "surferseo",
+   "label": "Escribe páginas y rastrea menciones en IA",
+   "why": "Surfer SEO combina su Content Editor, que puntúa tu borrador comparándolo con páginas que ya posicionan, con el seguimiento de menciones de marca dentro de los motores de respuesta de IA. Escribes o editas dentro del editor para cumplir los objetivos on-page y luego revisas los informes de visibilidad en IA para ver si tus páginas son citadas. El seguimiento de respuestas de IA todavía es un campo nuevo, así que toma los datos como orientación, no como veredicto final."
+  },
+  {
+   "slug": "frase",
+   "label": "Un agente redacta y publica contenido",
+   "why": "Frase ejecuta un agente que investiga un tema, redacta el artículo, lo puntúa tanto para SEO como para su potencial de cita en IA, y puede publicarlo directamente en tu sitio. Le das un tema, dejas que arme el contenido y luego revisas la doble puntuación antes de publicarlo. Los límites de artículos y páginas según el plan hacen que quienes publican mucho deban vigilar su uso."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🔍",
+   "text": "Quieres un solo panel para palabras clave, backlinks y menciones en IA",
+   "slug": "semrush"
+  },
+  {
+   "icon": "✍️",
+   "text": "Estás escribiendo páginas y quieres una puntuación frente a la competencia que ya posiciona",
+   "slug": "surferseo"
+  },
+  {
+   "icon": "🤖",
+   "text": "Quieres que un agente investigue, redacte y publique contenido por ti",
+   "slug": "frase"
+  },
+  {
+   "icon": "📊",
+   "text": "Ya gestionas un inventario de contenido y quieres sumarle visibilidad en LLM",
+   "slug": "clearscope"
+  }
+ ],
+ "steps": [
+  "Elige un tema o palabra clave que tu audiencia realmente busque.",
+  "Investiga qué está posicionando ya y qué citan actualmente las respuestas de IA.",
+  "Redacta u optimiza tu página usando la puntuación o el editor de la herramienta.",
+  "Publica la página y revisa su rendimiento tanto en los rankings de Google como en los informes de visibilidad en IA.",
+  "Vuelve a la página y actualízala con el tiempo a medida que cambien los rankings y las menciones en IA."
+ ],
+ "faq": [
+  {
+   "q": "¿Todavía tengo que escribir para Google si las respuestas de IA están ganando terreno en las búsquedas?",
+   "a": "Sí. Los motores de respuesta de IA toman información de páginas que ya posicionan bien y transmiten confianza, así que un buen SEO sigue siendo la base."
+  },
+  {
+   "q": "¿En qué se diferencia optimizar para respuestas de IA del SEO tradicional?",
+   "a": "El SEO tradicional busca posicionar páginas para palabras clave. La optimización para respuestas de IA también se fija en si tu contenido es citado dentro de herramientas como ChatGPT o las AI Overviews de Google, lo cual depende de la claridad, la estructura y las señales de confianza."
+  }
+ ],
+ "query": "Quiero aumentar el tráfico de mi sitio web desde Google y aparecer en respuestas de IA como ChatGPT."
+}

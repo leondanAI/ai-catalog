@@ -1,0 +1,63 @@
+{
+ "title": "Meilleure IA pour faire une voix off",
+ "tile": "Ajouter une voix off à une vidéo",
+ "meta_desc": "Comparez ElevenLabs, Murf AI et Speechify pour ajouter une voix off IA naturelle à vos vidéos de narration, promo ou explicatives, et trouvez l'outil adapté.",
+ "answer": "Utilisez <b>ElevenLabs</b> pour la voix la plus naturelle et multilingue sur des vidéos de narration, promo ou explicatives, <b>Murf AI</b> si vous voulez un éditeur intégré pour synchroniser la voix avec des slides ou une vidéo, et <b>Speechify</b> si vous avez surtout besoin de transformer rapidement un script ou un document écrit en audio.",
+ "picks": [
+  {
+   "slug": "elevenlabs",
+   "label": "La voix multilingue la plus naturelle",
+   "why": "ElevenLabs transforme un script en voix réaliste dans de nombreuses langues, et vous pouvez même cloner une voix pour garder un narrateur cohérent d'une vidéo à l'autre. Vous tapez ou collez votre script, choisissez une voix, générez l'audio, puis l'intégrez dans votre logiciel de montage. L'usage fonctionne avec des crédits, donc les projets longs peuvent épuiser votre quota plus vite que prévu."
+  },
+  {
+   "slug": "murf-ai",
+   "label": "Une voix synchronisée avec votre vidéo",
+   "why": "Murf AI propose un éditeur studio où vous pouvez aligner une voix off avec vos slides ou votre chronologie vidéo, et ajuster le rythme, l'emphase et le ton. Pensé pour les vidéos explicatives et de formation, il permet d'affiner le timing sans quitter l'application. Le plan gratuit ne permet pas de télécharger l'audio ni de l'utiliser commercialement, donc il sert surtout à tester."
+  },
+  {
+   "slug": "speechify",
+   "label": "Du script à la voix, rapidement",
+   "why": "Speechify est conçu pour transformer un texte écrit en audio rapidement, ce qui est pratique pour convertir un script ou un document directement en piste de voix off. Vous collez votre texte, choisissez une voix, puis exportez l'audio pour l'utiliser dans votre vidéo. Les meilleures voix et les vitesses de lecture plus rapides sont réservées au plan payant."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🎙️",
+   "text": "Vous voulez la voix la plus naturelle possible dans plusieurs langues",
+   "slug": "elevenlabs"
+  },
+  {
+   "icon": "🎬",
+   "text": "Vous devez synchroniser précisément la narration avec des slides ou une vidéo",
+   "slug": "murf-ai"
+  },
+  {
+   "icon": "📄",
+   "text": "Vous avez déjà un script ou un document écrit à transformer en audio",
+   "slug": "speechify"
+  },
+  {
+   "icon": "🧑‍💻",
+   "text": "Vous voulez un avatar IA qui parle à l'écran, pas juste une voix off",
+   "slug": "heygen"
+  }
+ ],
+ "steps": [
+  "Rédigez ou finalisez le script que vous voulez faire narrer.",
+  "Choisissez une voix qui correspond au ton de votre vidéo.",
+  "Générez la voix off et ajustez le rythme, l'emphase ou la prononciation si besoin.",
+  "Synchronisez l'audio avec la chronologie de votre vidéo et vérifiez que les niveaux correspondent aux visuels.",
+  "Réécoutez la vidéo complète et corrigez les mots mal prononcés ou les pauses gênantes avant d'exporter."
+ ],
+ "faq": [
+  {
+   "q": "La voix IA va-t-elle sonner robotique ?",
+   "a": "Les voix IA modernes comme celles-ci sont conçues pour paraître naturelles, avec un rythme et une intonation réalistes. La qualité varie selon la voix, donc essayez plusieurs options et choisissez celle qui correspond au ton de votre script."
+  },
+  {
+   "q": "Puis-je utiliser ces voix pour des projets commerciaux ?",
+   "a": "La plupart de ces outils autorisent l'usage commercial des voix off générées sur les plans payants, mais les plans gratuits restreignent souvent cet usage, donc vérifiez les conditions du plan avant de publier votre vidéo."
+  }
+ ],
+ "query": "J'ai besoin d'une voix IA naturelle pour narrer ma vidéo explicative"
+}

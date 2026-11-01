@@ -1,0 +1,63 @@
+{
+ "title": "Mejor IA para hacer presentaciones",
+ "tile": "Hacer una presentación",
+ "meta_desc": "¿Necesitas hacer una presentación? Descubre cómo Gamma, Canva AI y Pitch convierten un simple texto en diapositivas y elige la mejor para tu equipo.",
+ "answer": "Elige <b>Gamma</b> para convertir un esquema rápido en una presentación terminada en poco tiempo, <b>Canva AI</b> si buscas un diseño visual acorde a tu marca en varios formatos, y <b>Pitch</b> si tu equipo necesita colaborar en tiempo real en presentaciones con tu identidad de marca.",
+ "picks": [
+  {
+   "slug": "gamma",
+   "label": "La más rápida desde cero",
+   "why": "Gamma convierte un texto breve o un esquema en una presentación completa, con la estructura, el texto y el diseño ya resueltos. Describes el tema y luego ajustas el texto y las imágenes directamente en la página, o puedes pasar al lienzo libre para tener más control manual. Si la usas mucho, puedes agotar rápido los créditos disponibles, así que conviene revisar cuánto te dura tu plan antes de depender de ella a diario."
+  },
+  {
+   "slug": "canva-ai",
+   "label": "La mejor para visuales con tu marca",
+   "why": "Canva AI está integrada en el editor de Canva, así que la presentación generada queda junto al resto de tus recursos de marca, como publicaciones para redes o documentos. Describes lo que quieres y el asistente crea diapositivas editables que puedes ajustar en la misma herramienta. Funciona bien con los formatos de diapositiva más comunes, pero puede tener dificultades con diseños muy personalizados."
+  },
+  {
+   "slug": "pitch",
+   "label": "La mejor para colaborar en equipo",
+   "why": "Pitch Agent crea una presentación completa a partir de un texto y de los archivos que subas, usando las plantillas aprobadas por tu equipo para mantener la identidad de marca. Tus compañeros pueden comentar y editar la misma presentación en tiempo real, y puedes ver quién abre un enlace compartido. Solo sirve para presentaciones, así que necesitarás otra herramienta para documentos u hojas de cálculo."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "📝",
+   "text": "No tienes ninguna presentación todavía y quieres un primer borrador completo a partir de un texto",
+   "slug": "gamma"
+  },
+  {
+   "icon": "🎨",
+   "text": "Quieres diapositivas que combinen con el resto de tus recursos de marca",
+   "slug": "canva-ai"
+  },
+  {
+   "icon": "👥",
+   "text": "Tu equipo necesita editar y comentar juntos la misma presentación",
+   "slug": "pitch"
+  },
+  {
+   "icon": "✨",
+   "text": "Quieres diapositivas que se formateen solas a medida que añades contenido",
+   "slug": "beautiful-ai"
+  }
+ ],
+ "steps": [
+  "Escribe un esquema breve o pega tus notas para que la IA tenga algo con qué trabajar.",
+  "Elige una herramienta y deja que genere un primer borrador de toda la presentación.",
+  "Revisa cada diapositiva para mejorar el texto, cambiar imágenes y corregir diseños poco claros.",
+  "Antes de compartirla, comprueba que no haya errores de datos, cifras equivocadas o colores y fuentes que no correspondan a tu marca.",
+  "Exporta o comparte la presentación en el formato que necesite tu audiencia, como un PDF o un enlace en directo."
+ ],
+ "faq": [
+  {
+   "q": "¿Puede la IA escribir el contenido de mis diapositivas y no solo el diseño?",
+   "a": "Sí. Gamma, Canva AI y Pitch pueden redactar el texto de las diapositivas a partir de un texto o un esquema, pero conviene revisarlo y editarlo para que suene a ti y sea correcto."
+  },
+  {
+   "q": "¿Una presentación hecha con IA se verá genérica?",
+   "a": "Depende de la herramienta y de cuánto la guíes. Dar un esquema claro, usar tus propias imágenes y los colores de tu marca ayuda a que el resultado se parezca menos a una plantilla y más a tu propia presentación."
+  }
+ ],
+ "query": "Necesito convertir mis notas de una reunión en una presentación bien hecha rápidamente"
+}

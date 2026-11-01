@@ -49,7 +49,7 @@ Site runs in 8 active languages. Every content update MUST be applied to ALL 8:
 
 ---
 
-## Supabase Database — 7 tables
+## Supabase Database — 8 tables
 
 ### 1. tools (PK: slug + lang)
 ~115 tools × 8 languages = ~920 rows
@@ -136,6 +136,18 @@ changes, check all of them:
 ### 6. tool_translations (LEGACY)
 Data migrated into `tools` table by lang. Do not write new data here.
 
+### 8. ai_for (PK: slug + lang) — section «AI for…» (/ai-for/<slug>.html)
+One row per task and language: `grp`, `sort`, `title` (H1, search phrasing — RU
+«Нейросеть для…»), `tile`, `meta_desc`, `answer` (with `<b>` around tool names),
+`picks` JSONB [{slug,label,why}], `choose` JSONB [{icon,text,slug}], `steps`,
+`faq`, `also`, `compare`, `query` (finder prefill), `image_url`.
+**Task text never contains prices, versions, dates or user counts** — those come
+from `tools` at build time (`ai_for.py` refuses them), so pages stay fresh when
+cards change. The «free?» FAQ is built from `badge`. If a picked tool is
+unpublished, `generate-ai-for-pages.py` stops: revise the task. Brief for new
+tasks: `scripts/ai_for_brief.json`; covers: ElevenLabs brand kit «AItoolFit»,
+`media/ai-for/<slug>.jpg/.webp`.
+
 ### 7. toolbox (10 utilities)
 IDs: token-counter, json-formatter, case-converter, text-diff, word-counter, regex-tester, csv-json, markdown-preview, password-generator, base64
 Fields: id, lang, title, description, description_long
@@ -168,9 +180,10 @@ GitHub Action `Rebuild site from database` exists only as a manual fallback.
 
 | Changed | Run |
 |---|---|
-| Tool card (any field) | `generate-pages.py`, `generate-lang-tool-pages.py`, `gen_data_js.py`, `generate-lang-pages.py`, `generate-static-content.py`, `generate-compare-pages.py` (comparisons embed tool data) |
+| Tool card (any field) | `generate-pages.py`, `generate-lang-tool-pages.py`, `gen_data_js.py`, `generate-lang-pages.py`, `generate-static-content.py`, `generate-compare-pages.py` (comparisons embed tool data), `generate-ai-for-pages.py` (AI for… pages embed tool data) |
 | Tool unpublished | the above + `generate-retired-pages.py` |
 | A page/URL removed (comparison, utility, language) | add it to `MOVED` in `generate-redirects.py` (redirect stub, so Google gets no 404) |
+| AI for… page (new or edited) | `scripts/ai_for.py draft/translate/sql` → run_sql → `generate-ai-for-pages.py` |
 | News (new or edited) | `generate-news-pages.py`, `generate-news-snapshot.py` (news lists + homepage block) |
 | Comparison content | `generate-compare-pages.py` |
 | Templates (`index.html`, `news.html`, …) | `generate-lang-pages.py`, then `generate-static-content.py`, `generate-news-snapshot.py` |

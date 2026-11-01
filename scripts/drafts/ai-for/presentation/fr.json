@@ -1,0 +1,63 @@
+{
+ "title": "Meilleure IA pour faire des présentations",
+ "tile": "Créer une présentation",
+ "meta_desc": "Besoin de faire une présentation ? Découvrez comment Gamma, Canva AI et Pitch transforment un prompt en slides, pour choisir l'outil adapté à votre équipe.",
+ "answer": "Choisissez <b>Gamma</b> pour transformer rapidement un plan en présentation terminée, <b>Canva AI</b> si vous voulez un design visuel cohérent avec votre marque sur tous les formats, et <b>Pitch</b> si votre équipe a besoin de collaborer en temps réel sur des slides à l'image de votre marque.",
+ "picks": [
+  {
+   "slug": "gamma",
+   "label": "Le plus rapide pour partir de zéro",
+   "why": "Gamma transforme un court prompt ou plan en une présentation complète, avec structure, texte et mise en page déjà faits. Vous décrivez le sujet, puis vous affinez le texte et les images directement sur la page, ou passez au canevas libre pour un contrôle manuel. Une utilisation intensive peut vite épuiser le quota de crédits, donc vérifiez la capacité de votre forfait avant d'en faire un usage quotidien."
+  },
+  {
+   "slug": "canva-ai",
+   "label": "Idéal pour des visuels cohérents avec votre marque",
+   "why": "Canva AI s'intègre directement dans l'éditeur Canva, donc une présentation générée cohabite avec vos autres assets de marque comme les posts sur les réseaux sociaux ou les documents. Vous décrivez ce que vous voulez et l'assistant rédige des slides modifiables que vous pouvez ajuster dans le même outil. Il gère bien les formats de slides courants mais peut avoir du mal avec des mises en page très personnalisées."
+  },
+  {
+   "slug": "pitch",
+   "label": "Idéal pour le travail d'équipe",
+   "why": "Pitch Agent rédige une présentation complète à partir d'un prompt et des fichiers que vous téléversez, en s'appuyant sur les modèles validés par votre équipe pour rester cohérent avec votre marque. Les coéquipiers peuvent commenter et modifier la même présentation en direct, et vous pouvez voir qui ouvre un lien partagé. Il ne gère que les présentations, il vous faudra donc un autre outil pour les documents ou les tableurs."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "📝",
+   "text": "Vous n'avez encore aucune slide et voulez un premier jet complet à partir d'un prompt",
+   "slug": "gamma"
+  },
+  {
+   "icon": "🎨",
+   "text": "Vous voulez des slides qui correspondent à vos autres assets de marque",
+   "slug": "canva-ai"
+  },
+  {
+   "icon": "👥",
+   "text": "Votre équipe doit coéditer et commenter la même présentation",
+   "slug": "pitch"
+  },
+  {
+   "icon": "✨",
+   "text": "Vous voulez des slides qui se mettent en forme automatiquement au fur et à mesure",
+   "slug": "beautiful-ai"
+  }
+ ],
+ "steps": [
+  "Rédigez un court plan ou collez vos notes pour donner une base de travail à l'IA.",
+  "Choisissez un outil et laissez-le générer un premier jet de la présentation complète.",
+  "Parcourez chaque slide pour affiner le texte, remplacer les images et corriger les mises en page maladroites.",
+  "Vérifiez le brouillon pour détecter les erreurs factuelles, les chiffres incorrects et les couleurs ou polices qui ne correspondent pas à votre marque avant de le partager.",
+  "Exportez ou partagez la présentation dans le format attendu par votre audience, comme un PDF ou un lien en direct."
+ ],
+ "faq": [
+  {
+   "q": "L'IA peut-elle rédiger le contenu de mes slides, pas seulement le design ?",
+   "a": "Oui. Gamma, Canva AI et Pitch peuvent tous rédiger le texte des slides à partir d'un prompt ou d'un plan, mais vous devez quand même le relire et le modifier pour qu'il vous ressemble et soit exact."
+  },
+  {
+   "q": "Une présentation créée par IA aura-t-elle un rendu générique ?",
+   "a": "Cela dépend de l'outil et de la précision de vos indications. Fournir un plan clair, vos propres images et les couleurs de votre marque aide à obtenir un résultat qui ressemble moins à un modèle type et plus à votre propre présentation."
+  }
+ ],
+ "query": "Je dois transformer mes notes de réunion en une présentation soignée rapidement"
+}

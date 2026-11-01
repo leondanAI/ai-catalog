@@ -1,0 +1,63 @@
+{
+ "title": "Melhor IA para transcrever reuniões",
+ "tile": "Transcreva reuniões e receba os pontos de ação",
+ "meta_desc": "Precisa transcrever uma reunião e extrair os principais pontos e ações? Compare Otter.ai, Granola e Fireflies.ai para achar a melhor opção para seu time.",
+ "answer": "Use <b>Otter.ai</b> se você quer transcrição ao vivo e histórico pesquisável de reuniões nas principais ferramentas de vídeo, <b>Granola</b> se prefere não usar um bot na reunião e continuar fazendo suas próprias anotações, e <b>Fireflies.ai</b> se quer notas automáticas com integração a CRM e Slack.",
+ "picks": [
+  {
+   "slug": "otter-ai",
+   "label": "Transcrição ao vivo e histórico",
+   "why": "O Otter.ai entra na sua chamada do Zoom, Google Meet ou Microsoft Teams e transforma a conversa em uma transcrição pesquisável, com resumo e pontos de ação. Você abre o app antes da reunião, deixa ele gravar e depois pode buscar reuniões antigas para encontrar o que foi combinado. Alguns recursos mais avançados, como certas integrações com CRM, ficam nos planos superiores, mas a transcrição e as notas básicas funcionam bem nos planos mais simples."
+  },
+  {
+   "slug": "granola",
+   "label": "Sem bot, suas próprias anotações",
+   "why": "O Granola grava o áudio direto do seu dispositivo em vez de mandar um bot para a chamada, então nada entra visivelmente na reunião. Você vai fazendo algumas anotações rápidas durante a conversa, e ele combina tudo com a transcrição para gerar notas estruturadas e pontos de ação assim que a chamada termina. Como não há um bot visível, é responsabilidade sua avisar os outros participantes que você está gravando."
+  },
+  {
+   "slug": "fireflies-ai",
+   "label": "Notas automáticas e integração com CRM",
+   "why": "O Fireflies.ai manda um bot para a sua reunião, transcreve tudo e gera notas pesquisáveis e pontos de ação que você pode consultar depois pelo assistente embutido. Ele também consegue enviar as informações direto para o seu CRM ou postar no Slack, o que é útil para times de vendas e atendimento ao cliente. Alguns recursos de IA mais avançados usam um limite mensal de créditos, então vale ficar de olho se o uso for intenso."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🎥",
+   "text": "Seu time já faz reuniões no Zoom, Google Meet ou Microsoft Teams e você quer um bot que entre e transcreva automaticamente",
+   "slug": "otter-ai"
+  },
+  {
+   "icon": "🤫",
+   "text": "Você tem reuniões o dia todo e não quer um bot entrando visivelmente em cada chamada",
+   "slug": "granola"
+  },
+  {
+   "icon": "📇",
+   "text": "Você precisa que as notas e os pontos de ação vão direto para o seu CRM ou Slack",
+   "slug": "fireflies-ai"
+  },
+  {
+   "icon": "🧑‍💻",
+   "text": "Você é desenvolvedor e só precisa de reconhecimento de fala puro para construir sua própria ferramenta em cima",
+   "slug": "whisper"
+  }
+ ],
+ "steps": [
+  "Ative o notetaker de IA antes da reunião começar, ou deixe que ele entre na sua chamada automaticamente.",
+  "Faça a reunião normalmente na sua ferramenta de vídeo de costume; a maioria dos notetakers funciona com Zoom, Google Meet e Microsoft Teams.",
+  "Depois da chamada, leia o resumo e os pontos de ação gerados com atenção, já que nenhuma ferramenta captura todos os detalhes perfeitamente.",
+  "Edite ou complete o que a IA deixou passar, e então compartilhe ou exporte as notas para quem precisar delas.",
+  "Busque reuniões antigas depois, em vez de rolar notas antigas para encontrar o que foi decidido."
+ ],
+ "faq": [
+  {
+   "q": "Todo mundo na chamada sabe que está sendo gravado?",
+   "a": "Depende da ferramenta. As que usam bot entram visivelmente na chamada como participante, o que geralmente indica que está gravando. Já as que gravam pelo dispositivo captam o áudio discretamente, sem um bot visível, então cabe a você avisar as outras pessoas na reunião."
+  },
+  {
+   "q": "As transcrições de reuniões por IA são precisas?",
+   "a": "A precisão costuma ser boa com áudio claro e conversa normal, mas pode cair bastante com sotaques fortes, ruído de fundo ou várias pessoas falando ao mesmo tempo. Vale a pena revisar a transcrição e os pontos de ação antes de confiar neles."
+  }
+ ],
+ "query": "Preciso de algo que entre na minha reunião, transcreva tudo e me dê os principais pontos e ações depois."
+}

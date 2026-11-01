@@ -1,0 +1,63 @@
+{
+ "title": "Beste KI, um Blogartikel in Videos zu verwandeln",
+ "tile": "Einen Blogartikel in ein Video verwandeln",
+ "meta_desc": "Verwandle Blogartikel in kurze Social-Videos: Synthesia für Avatar-Erklärvideos, HeyGen für Lokalisierung mit geklonter Stimme oder CapCut für schnelle KI-Schnitte.",
+ "answer": "Nutze <b>Synthesia</b> oder <b>HeyGen</b>, um aus einem Skript schnell ein Video mit Avatar zu erstellen, und schneide, untertitel und formatiere es anschließend mit <b>CapCut</b> für Social-Media-Feeds.",
+ "picks": [
+  {
+   "slug": "synthesia",
+   "label": "Skript schnell in Avatar-Video umwandeln",
+   "why": "Füge deinen Blogtext als Skript ein, wähle einen Avatar und eine Stimme aus, und Synthesia erstellt daraus ein Video im Präsentationsstil – ganz ohne Kamera oder Studio. Das funktioniert gut für Erklärvideos auf Social Media und kann dasselbe Video auch in andere Sprachen übersetzen. Die Videolänge ist durch monatliche Minuten begrenzt, ein langer Artikel muss also eventuell vorher gekürzt werden."
+  },
+  {
+   "slug": "heygen",
+   "label": "Geklonte Stimme und Lokalisierung",
+   "why": "Verwandle dein Skript in ein Avatar-Video und nutze das Voice-Cloning von HeyGen, um über mehrere Clips hinweg eine konsistente Sprecherstimme beizubehalten. Es deckt viele Sprachen mit lippensynchroner Übersetzung ab, praktisch, wenn du Inhalte für unterschiedliche Zielgruppen wiederverwenden willst. Die Nutzung läuft über Credits, bei aufwendigerer Bearbeitung kann dein monatliches Kontingent schnell aufgebraucht sein."
+  },
+  {
+   "slug": "capcut",
+   "label": "Für Social Media schneiden und formatieren",
+   "why": "Lade dein Filmmaterial oder Avatar-Video in CapCut, um es zu kürzen und auf einer echten Multi-Track-Timeline mit Untertiteln, Musik und Übergängen zu versehen. Es gibt außerdem KI-Tools, die ein längeres Video in kurze Clips aufteilen und Voiceover-Texte generieren können. Das vollständige KI-Toolkit und der saubere 4K-Export sind allerdings der kostenpflichtigen Stufe vorbehalten."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🎤",
+   "text": "Du hast nur geschriebenen Text und noch kein Filmmaterial",
+   "slug": "synthesia"
+  },
+  {
+   "icon": "🌍",
+   "text": "Du brauchst dasselbe Video in mehreren Sprachen mit einer geklonten Stimme",
+   "slug": "heygen"
+  },
+  {
+   "icon": "✂️",
+   "text": "Du hast bereits ein Video oder einen Avatar-Clip und musst daraus einen kurzen, untertitelten Clip machen",
+   "slug": "capcut"
+  },
+  {
+   "icon": "📢",
+   "text": "Du willst mit mehreren KI-Modellen an einem Ort hochwertige Video-Anzeigen oder Social-Clips erstellen",
+   "slug": "higgsfield"
+  }
+ ],
+ "steps": [
+  "Wähle die wichtigsten Punkte aus deinem Blogartikel aus und formuliere sie als kurzes Skript um, eine Idee pro Satz.",
+  "Wähle einen Avatar und eine Stimme aus oder nimm Filmmaterial auf und lade es hoch, dann erstelle einen ersten Videoentwurf.",
+  "Kürze den Entwurf auf die Länge, die auf deiner Plattform gut funktioniert, und füge Untertitel hinzu.",
+  "Exportiere im passenden Format – vertikal für Reels und TikTok, quadratisch oder horizontal für andere Feeds.",
+  "Schau dir das fertige Video komplett an und prüfe Tempo, Untertitel und Aussprache, bevor du es veröffentlichst."
+ ],
+ "faq": [
+  {
+   "q": "Muss ich selbst etwas filmen?",
+   "a": "Nein. Synthesia und HeyGen erstellen das Video aus einem Avatar und deinem Skript, eine Kamera ist nicht nötig. CapCut dient zum Bearbeiten von Material, das du bereits hast, einschließlich avatargenerierter Videos."
+  },
+  {
+   "q": "Wie lang sollte ein Blog-zu-Video-Clip für Social Media sein?",
+   "a": "Die meisten Social-Media-Plattformen bevorzugen kurze Clips, oft unter einer Minute. Kürze dein Skript auf die Kernaussage und lass das Tool den Rest zuschneiden."
+  }
+ ],
+ "query": "Ich möchte meinen Blogartikel in ein kurzes Video für Instagram und TikTok verwandeln"
+}

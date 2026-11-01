@@ -1,0 +1,63 @@
+{
+ "title": "Beste KI zur Bildgenerierung",
+ "tile": "Text in ein Bild verwandeln",
+ "meta_desc": "Verwandle einen Text-Prompt in ein Bild mit Nano Banana, ChatGPT Images oder Midjourney. Vergleiche kostenlose Bearbeitung, Chat-Workflows und Top-Bildqualität.",
+ "answer": "Nutze <b>Nano Banana</b> für schnelle, kostenlose Bildbearbeitung direkt in Googles Chat-App, <b>ChatGPT Images</b>, wenn du ohnehin mit ChatGPT arbeitest und präzisen Text oder UI-Elemente im Bild brauchst, und <b>Midjourney</b>, wenn die künstlerische Qualität des fertigen Bildes am wichtigsten ist.",
+ "picks": [
+  {
+   "slug": "nano-banana",
+   "label": "Kostenlose Bearbeitung per Chat",
+   "why": "Du beschreibst das gewünschte Bild in einfacher Sprache direkt in Googles Chat-App und kannst dann in mehreren Schritten weiter daran feilen. Das Tool hält Charaktere oder Motive über mehrere Änderungen hinweg gut konsistent. Der Haken: Kostenlose Bilder haben zusätzlich zum unsichtbaren Wasserzeichen auch ein sichtbares."
+  },
+  {
+   "slug": "chatgpt-images",
+   "label": "Direkt in deinen ChatGPT-Workflow integriert",
+   "why": "Du gibst eine Beschreibung in ChatGPT ein und bekommst sofort ein Bild, ohne das Tool zu wechseln, oder lädst ein Bild hoch und bittest um eine bestimmte Änderung. Es stellt kleine Texte, Icons und komplexe Layouts deutlich besser dar als die meisten anderen Tools. Der kostenlose Zugang ist begrenzt, und die künstlerische Bandbreite ist kleiner als bei einem spezialisierten Kunst-Tool."
+  },
+  {
+   "slug": "midjourney",
+   "label": "Höchste künstlerische Bildqualität",
+   "why": "Du gibst einen Prompt ein und erhältst detailreiche, ausgefeilte Artworks, die von Designern oft als die optisch besten KI-Ergebnisse überhaupt eingestuft werden. Ein Raw-Modus sorgt dafür, dass dein Prompt wörtlicher umgesetzt wird statt im typischen stilisierten Look des Tools. Es gibt keinen kostenlosen Plan, du brauchst also ein Abo, um es auszuprobieren."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "💬",
+   "text": "Du willst kostenlos Bilder in einer Chat-App generieren und bearbeiten",
+   "slug": "nano-banana"
+  },
+  {
+   "icon": "✍️",
+   "text": "Du brauchst ein Bild mit lesbarem Text, Icons oder komplexem Layout",
+   "slug": "chatgpt-images"
+  },
+  {
+   "icon": "🎨",
+   "text": "Du willst das ausgefeilteste Artwork für ein Portfolio oder den Druck",
+   "slug": "midjourney"
+  },
+  {
+   "icon": "🖼️",
+   "text": "Du willst viele verschiedene KI-Kunststile an einem Ort ausprobieren",
+   "slug": "freepik"
+  }
+ ],
+ "steps": [
+  "Schreibe eine klare Beschreibung des gewünschten Bildes, inklusive Motiv, Stil und Umgebung.",
+  "Wähle ein Tool passend zu deinem Bedarf: schnelle kostenlose Bearbeitung, Chat-Komfort oder Top-Bildqualität.",
+  "Erzeuge eine erste Version und schau dir Gesichter, Hände, Text und kleine Details genau an.",
+  "Passe deine Formulierung an oder bitte um eine bestimmte Korrektur, falls etwas falsch aussieht.",
+  "Lade das fertige Bild herunter, sobald du mit dem Ergebnis zufrieden bist."
+ ],
+ "faq": [
+  {
+   "q": "Kann ich ein vorhandenes Foto bearbeiten, statt bei null anzufangen?",
+   "a": "Ja. Sowohl Nano Banana als auch ChatGPT Images akzeptieren ein bestehendes Bild zusammen mit deinen Textanweisungen, sodass du die gewünschte Änderung beschreiben kannst, statt ein völlig neues Bild zu erzeugen."
+  },
+  {
+   "q": "Warum sehen Gesichter oder Hände in KI-Bildern manchmal falsch aus?",
+   "a": "Bildmodelle tun sich bei feinen Details wie Händen, Text und kleinen Objekten noch schwer. Schau dir diese Bereiche genau an und bitte das Tool, nur diesen Teil neu zu erstellen oder zu korrigieren, falls etwas nicht stimmt."
+  }
+ ],
+ "query": "Ich möchte eine Textbeschreibung in ein Bild einer gemütlichen Waldhütte verwandeln"
+}

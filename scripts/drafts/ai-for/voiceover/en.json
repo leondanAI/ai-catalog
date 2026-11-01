@@ -1,0 +1,63 @@
+{
+ "title": "Best AI for voiceovers",
+ "tile": "Add voiceover to a video",
+ "meta_desc": "Compare ElevenLabs, Murf AI and Speechify for adding natural AI voiceover to narration, promo and explainer videos, and see which fits your workflow.",
+ "answer": "Use <b>ElevenLabs</b> for the most natural, multilingual voice across narration, promo and explainer videos, <b>Murf AI</b> if you want a built-in editor to sync voice with slides or video, and <b>Speechify</b> if you mainly need to turn a written script or document into spoken audio fast.",
+ "picks": [
+  {
+   "slug": "elevenlabs",
+   "label": "Most natural multilingual voice",
+   "why": "ElevenLabs turns a script into lifelike speech in many languages, and you can clone a voice if you want a consistent narrator across videos. You type or paste your script, pick a voice, generate the audio, then drop it into your video editor. Usage is credit-based, so long-form projects can use up your allowance faster than you'd expect."
+  },
+  {
+   "slug": "murf-ai",
+   "label": "Voice synced to your video",
+   "why": "Murf AI gives you a studio editor where you can line up a voiceover with your slides or video timeline, and adjust pacing, emphasis and tone. It's built with explainer and training content in mind, so you can fine-tune timing without leaving the app. The free plan won't let you download the audio or use it commercially, so it's mainly for testing."
+  },
+  {
+   "slug": "speechify",
+   "label": "Script to speech, fast",
+   "why": "Speechify is built to turn written text into spoken audio quickly, which makes it handy for turning a script or document straight into a voiceover track. You paste in your text, choose a voice, and export the audio to use in your video. The best voices and faster playback speeds sit behind the paid plan."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🎙️",
+   "text": "You want the most natural-sounding voice in multiple languages",
+   "slug": "elevenlabs"
+  },
+  {
+   "icon": "🎬",
+   "text": "You need to sync narration precisely with slides or video timing",
+   "slug": "murf-ai"
+  },
+  {
+   "icon": "📄",
+   "text": "You already have a written script or document to turn into audio",
+   "slug": "speechify"
+  },
+  {
+   "icon": "🧑‍💻",
+   "text": "You want an AI avatar speaking on screen, not just a voiceover",
+   "slug": "heygen"
+  }
+ ],
+ "steps": [
+  "Write or finalize the script you want narrated.",
+  "Pick a voice that matches the tone of your video.",
+  "Generate the voiceover and adjust pacing, emphasis or pronunciation where needed.",
+  "Sync the audio to your video timeline and check the levels match your visuals.",
+  "Listen back to the full video and fix any mispronounced words or awkward pauses before exporting."
+ ],
+ "faq": [
+  {
+   "q": "Will the AI voice sound robotic?",
+   "a": "Modern AI voices like these are designed to sound natural, with realistic pacing and intonation. Quality varies by voice, so try a few options and pick the one that fits your script's tone."
+  },
+  {
+   "q": "Can I use these voices for commercial projects?",
+   "a": "Most of these tools allow commercial use of generated voiceovers on paid plans, but free plans often restrict commercial use, so check the specific plan's terms before publishing your video."
+  }
+ ],
+ "query": "I need a natural-sounding AI voice to narrate my explainer video"
+}

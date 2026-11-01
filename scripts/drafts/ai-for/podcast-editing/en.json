@@ -1,0 +1,63 @@
+{
+ "title": "Best AI to edit podcasts and add subtitles",
+ "tile": "Edit a podcast and add subtitles",
+ "meta_desc": "Edit a podcast and add subtitles using AI. Descript edits by transcript, Adobe Podcast cleans up audio, and CapCut adds captions and exports video fast.",
+ "answer": "If you want to edit by rewriting a transcript and let AI handle cleanup and clips, use <b>Descript</b>; if your main problem is noisy or echoey audio, run it through <b>Adobe Podcast</b> first; and if you need quick captions and a polished cut for social platforms, finish in <b>CapCut</b>.",
+ "picks": [
+  {
+   "slug": "descript",
+   "label": "Transcript-based editing and cleanup",
+   "why": "Descript turns your podcast recording into a text transcript, so you cut and rearrange the conversation by editing words instead of dragging audio on a timeline. It can also remove filler words, reduce noise, and generate subtitles and show notes from the same transcript. The AI features run on a metered credit system, so heavy use can mean buying more credits."
+  },
+  {
+   "slug": "adobe-podcast",
+   "label": "Clean up noisy recordings first",
+   "why": "Adobe Podcast focuses on making voice recordings sound clear, stripping background noise and room echo so the episode sounds like it was recorded in a quiet studio. It also handles multitrack recordings from several speakers, syncing them automatically. Deep editing and subtitles aren't its focus, so people often pair it with another tool afterward."
+  },
+  {
+   "slug": "capcut",
+   "label": "Fast captions and social-ready export",
+   "why": "CapCut adds automatic captions to your podcast video and gives you a full timeline to trim, arrange and polish the episode for sharing. Templates, transitions and stock audio help turn a long recording into a short clip quickly. The deeper AI tools and higher-resolution export sit behind a paid tier, so the free version can feel limited for longer episodes."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🎙️",
+   "text": "You want to cut and edit your episode by changing the text of its transcript",
+   "slug": "descript"
+  },
+  {
+   "icon": "🧹",
+   "text": "Your recording has background noise or echo that needs cleaning up first",
+   "slug": "adobe-podcast"
+  },
+  {
+   "icon": "📱",
+   "text": "You want to turn the episode into a short captioned video for social media",
+   "slug": "capcut"
+  },
+  {
+   "icon": "📝",
+   "text": "You just need a plain transcript of the recording, nothing else",
+   "slug": "otter-ai"
+  }
+ ],
+ "steps": [
+  "Record or import your podcast audio and video into an editor.",
+  "Clean up the sound, removing background noise, echo and long pauses.",
+  "Edit the episode by trimming, reordering or cutting sections, using the transcript to speed this up.",
+  "Generate captions or subtitles automatically, then read them against the actual audio to fix misheard words and timing.",
+  "Export the finished episode and check it plays back correctly on the platform you'll publish it to."
+ ],
+ "faq": [
+  {
+   "q": "Can I edit a podcast without touching a timeline?",
+   "a": "Yes. Tools like Descript let you cut and rearrange the recording by editing a text transcript, and the audio and video follow your changes automatically."
+  },
+  {
+   "q": "Do automatic subtitles need to be checked afterward?",
+   "a": "Yes. Automatic captions can mishear names, technical terms and background noise, so it's worth reading them against the audio before you publish."
+  }
+ ],
+ "query": "I need to edit my podcast episode and add subtitles before publishing."
+}

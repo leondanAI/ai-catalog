@@ -1,0 +1,63 @@
+{
+ "title": "Mejor IA para locuciones",
+ "tile": "Añadir locución a un vídeo",
+ "meta_desc": "Compara ElevenLabs, Murf AI y Speechify para añadir locuciones con IA a narraciones, vídeos promocionales y explicativos, y descubre cuál se adapta mejor a ti.",
+ "answer": "Usa <b>ElevenLabs</b> para conseguir la voz multilingüe más natural en narraciones, vídeos promocionales y explicativos, <b>Murf AI</b> si quieres un editor integrado para sincronizar la voz con diapositivas o vídeo, y <b>Speechify</b> si lo que necesitas sobre todo es convertir un guion o documento escrito en audio rápidamente.",
+ "picks": [
+  {
+   "slug": "elevenlabs",
+   "label": "La voz multilingüe más natural",
+   "why": "ElevenLabs convierte un guion en voz realista en muchos idiomas, y puedes clonar una voz si quieres un narrador consistente en varios vídeos. Escribes o pegas tu guion, eliges una voz, generas el audio y lo incorporas a tu editor de vídeo. El uso se basa en créditos, así que los proyectos largos pueden agotar tu cuota más rápido de lo que esperas."
+  },
+  {
+   "slug": "murf-ai",
+   "label": "Voz sincronizada con tu vídeo",
+   "why": "Murf AI te ofrece un editor tipo estudio donde puedes ajustar la locución a tus diapositivas o a la línea de tiempo del vídeo, y modificar el ritmo, el énfasis y el tono. Está pensado para contenido explicativo y formativo, así que puedes afinar los tiempos sin salir de la aplicación. El plan gratuito no permite descargar el audio ni usarlo comercialmente, así que es principalmente para probar."
+  },
+  {
+   "slug": "speechify",
+   "label": "De guion a voz, rápido",
+   "why": "Speechify está diseñado para convertir texto escrito en audio rápidamente, lo que lo hace muy útil para transformar un guion o documento directamente en una pista de locución. Pegas tu texto, eliges una voz y exportas el audio para usarlo en tu vídeo. Las mejores voces y las velocidades de reproducción más rápidas están disponibles en el plan de pago."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🎙️",
+   "text": "Quieres la voz con sonido más natural en varios idiomas",
+   "slug": "elevenlabs"
+  },
+  {
+   "icon": "🎬",
+   "text": "Necesitas sincronizar la narración con precisión con diapositivas o el tiempo del vídeo",
+   "slug": "murf-ai"
+  },
+  {
+   "icon": "📄",
+   "text": "Ya tienes un guion o documento escrito que quieres convertir en audio",
+   "slug": "speechify"
+  },
+  {
+   "icon": "🧑‍💻",
+   "text": "Quieres un avatar con IA hablando en pantalla, no solo una locución",
+   "slug": "heygen"
+  }
+ ],
+ "steps": [
+  "Escribe o da los últimos retoques al guion que quieres narrar.",
+  "Elige una voz que encaje con el tono de tu vídeo.",
+  "Genera la locución y ajusta el ritmo, el énfasis o la pronunciación donde haga falta.",
+  "Sincroniza el audio con la línea de tiempo de tu vídeo y comprueba que los niveles coinciden con las imágenes.",
+  "Escucha el vídeo completo y corrige cualquier palabra mal pronunciada o pausa extraña antes de exportarlo."
+ ],
+ "faq": [
+  {
+   "q": "¿Sonará robótica la voz de la IA?",
+   "a": "Las voces de IA modernas como estas están pensadas para sonar naturales, con un ritmo y una entonación realistas. La calidad varía según la voz, así que prueba varias opciones y elige la que mejor encaje con el tono de tu guion."
+  },
+  {
+   "q": "¿Puedo usar estas voces en proyectos comerciales?",
+   "a": "La mayoría de estas herramientas permiten el uso comercial de las locuciones generadas en los planes de pago, pero los planes gratuitos suelen restringirlo, así que revisa las condiciones del plan concreto antes de publicar tu vídeo."
+  }
+ ],
+ "query": "Necesito una voz de IA con sonido natural para narrar mi vídeo explicativo"
+}

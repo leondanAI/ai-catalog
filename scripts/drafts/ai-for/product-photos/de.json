@@ -1,0 +1,63 @@
+{
+ "title": "Beste KI für Produktfotos",
+ "tile": "Produktfotos erstellen",
+ "meta_desc": "Vergleiche Photoroom, Krea AI und Canva AI für Online-Shop-Fotos: weiße Hintergründe, Lifestyle-Szenen, KI-Models und Stapelverarbeitung für ganze Produktkataloge.",
+ "answer": "Nutze <b>Photoroom</b> für saubere Fotos mit weißem Hintergrund und die Stapelbearbeitung ganzer Kataloge, <b>Krea AI</b>, wenn du kreative Lifestyle-Szenen rund um das Produkt möchtest, und <b>Canva AI</b>, um diese Fotos in markengerechte Angebots- und Marketing-Layouts zu verwandeln.",
+ "picks": [
+  {
+   "slug": "photoroom",
+   "label": "Gemacht für Produktfotos",
+   "why": "Photoroom entfernt Hintergründe, fügt realistische Schatten hinzu und platziert dein Produkt mit nur einem Upload in KI-generierten Szenen. Du kannst einen ganzen Katalog auf einmal stapelverarbeiten und mit deinem Shop verbinden, was bei sich wiederholenden Produktfotos viel Zeit spart. Die kostenlose Option ist nur für den privaten Gebrauch gedacht, für den Massenexport braucht ein Shop also einen bezahlten Plan."
+  },
+  {
+   "slug": "krea-ai",
+   "label": "Am besten für Lifestyle-Szenen",
+   "why": "Krea AI generiert komplette Lifestyle-Hintergründe und Stile rund um dein Produkt, mit Reglern, die du so lange anpassen kannst, bis die Stimmung passt. Du lädst dein Produktfoto hoch, beschreibst oder steuerst die Szene und probierst schnell verschiedene Looks aus. Intensive Nutzung von Video oder hochauflösenden Ausgaben verbraucht schnell dein Kontingent, daher eignet es sich eher für gelegentliche kreative Szenen als für tägliche Massenbearbeitung."
+  },
+  {
+   "slug": "canva-ai",
+   "label": "Am einfachsten für Katalog-Layouts",
+   "why": "Canva AI nimmt ein fertiges Produktfoto und hilft dir, das passende Material drumherum zu gestalten, etwa Social-Media-Posts, Angebots-Banner und Katalogseiten, einfach indem du beschreibst, was du möchtest. KI-generierte Designs bleiben dabei bearbeitbar statt starr, sodass du Text oder Farben später anpassen kannst. Es eignet sich besser zum Zusammenstellen und Präsentieren von Fotos als zum Erstellen des ursprünglichen Fotos mit weißem Hintergrund."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🛒",
+   "text": "Du verkaufst auf einem Marktplatz und brauchst schnell Hunderte saubere Fotos mit weißem Hintergrund",
+   "slug": "photoroom"
+  },
+  {
+   "icon": "🌅",
+   "text": "Du möchtest dein Produkt in einer gestalteten Szene statt vor einfachem Hintergrund zeigen",
+   "slug": "krea-ai"
+  },
+  {
+   "icon": "🎨",
+   "text": "Du musst fertige Fotos in Social-Media-Posts und Katalogseiten verwandeln",
+   "slug": "canva-ai"
+  },
+  {
+   "icon": "🍌",
+   "text": "Du möchtest schnelle, einheitliche Bearbeitungen eines bestehenden Fotos mit einfachen Prompts",
+   "slug": "nano-banana"
+  }
+ ],
+ "steps": [
+  "Mach oder sammle deine Roh-Produktfotos mit möglichst gutem Licht und einem neutralen Hintergrund.",
+  "Nutze ein KI-Tool, um den Hintergrund zu entfernen und einen sauberen weißen oder individuellen Hintergrund einzusetzen.",
+  "Erzeuge eine Lifestyle- oder gestaltete Szene rund um das Produkt, wenn du mehr Kontext als einen schlichten Hintergrund möchtest.",
+  "Bearbeite den Rest deines Katalogs im Stapel, sobald du mit einem Ergebnis zufrieden bist, damit alle Fotos zusammenpassen.",
+  "Prüfe das Ergebnis vor der Veröffentlichung auf verzerrte Kanten, seltsame Schatten oder falsche Farben und korrigiere nötigenfalls per Hand."
+ ],
+ "faq": [
+  {
+   "q": "Kann KI Produktfotos ganz ohne echtes Fotoshooting erstellen?",
+   "a": "Nicht ganz. Die meisten Tools brauchen immer noch ein echtes Foto deines Produkts als Grundlage; sie entfernen den Hintergrund, fügen Schatten hinzu und platzieren es in einer neuen Szene. Produkte, die komplett ohne Quellfoto von der KI erfunden werden, wirken meist weniger genau."
+  },
+  {
+   "q": "Sehen KI-bearbeitete Produktfotos im gesamten Katalog einheitlich aus?",
+   "a": "Das können sie, wenn du für jedes Bild dasselbe Tool und dieselben Einstellungen verwendest und sie als Stapel statt einzeln bearbeitest. Unterschiedliche Tools zu mischen oder die Einstellungen für jedes Foto neu anzupassen, ist der Hauptgrund für uneinheitlich wirkende Kataloge."
+  }
+ ],
+ "query": "Ich muss Hintergründe entfernen und Fotos mit weißem Hintergrund sowie Lifestyle-Fotos für meinen Online-Shop-Katalog erstellen."
+}

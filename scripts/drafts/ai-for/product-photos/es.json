@@ -1,0 +1,63 @@
+{
+ "title": "Mejor IA para fotos de productos",
+ "tile": "Crear fotos de productos",
+ "meta_desc": "Compara Photoroom, Krea AI y Canva AI para fotos de tienda online: fondos blancos, escenas de estilo de vida, modelos con IA y edición masiva de catálogos.",
+ "answer": "Usa <b>Photoroom</b> para fotos con fondo blanco limpio y edición masiva de catálogos, <b>Krea AI</b> cuando quieras escenas creativas de estilo de vida alrededor del producto, y <b>Canva AI</b> para convertir esas fotos en publicaciones y materiales de marketing acordes a tu marca.",
+ "picks": [
+  {
+   "slug": "photoroom",
+   "label": "Pensado para fotos de productos",
+   "why": "Photoroom elimina fondos, añade sombras realistas y coloca tu producto en escenas creadas por IA a partir de una sola imagen. Puedes procesar todo un catálogo de una vez y conectarlo a tu tienda, lo que ahorra horas en fotos de productos repetitivas. Su opción gratuita es solo para uso personal, así que una tienda necesitará un plan de pago para exportar en masa."
+  },
+  {
+   "slug": "krea-ai",
+   "label": "Lo mejor para escenas de estilo de vida",
+   "why": "Krea AI genera fondos y estilos completos de estilo de vida alrededor de tu producto, con controles deslizantes que puedes ajustar hasta lograr el ambiente deseado. Subes la foto de tu producto, describes o guías la escena, y pruebas rápidamente distintos looks. El uso intensivo de video o resultados de alta resolución puede agotar tu cuota rápido, por lo que es más adecuado para escenas creativas ocasionales que para edición masiva diaria."
+  },
+  {
+   "slug": "canva-ai",
+   "label": "El más fácil para maquetar catálogos",
+   "why": "Canva AI toma una foto de producto ya lista y te ayuda a crear el material alrededor de ella, como publicaciones para redes sociales, banners de producto y páginas de catálogo, solo con describir lo que quieres. Mantiene los diseños generados por IA editables en lugar de aplanarlos, así que puedes ajustar el texto o los colores después. Es mejor para armar y presentar fotos que para generar la foto original con fondo blanco."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🛒",
+   "text": "Vendes en un marketplace y necesitas cientos de fotos con fondo blanco limpio rápidamente",
+   "slug": "photoroom"
+  },
+  {
+   "icon": "🌅",
+   "text": "Quieres mostrar tu producto en una escena con estilo en vez de un fondo liso",
+   "slug": "krea-ai"
+  },
+  {
+   "icon": "🎨",
+   "text": "Necesitas convertir fotos terminadas en publicaciones sociales y páginas de catálogo",
+   "slug": "canva-ai"
+  },
+  {
+   "icon": "🍌",
+   "text": "Quieres ediciones rápidas y consistentes de una foto existente con prompts sencillos",
+   "slug": "nano-banana"
+  }
+ ],
+ "steps": [
+  "Toma o reúne tus fotos de producto en bruto con buena iluminación y, si es posible, un fondo liso.",
+  "Usa una herramienta de IA para eliminar el fondo y colocar uno blanco limpio o personalizado.",
+  "Genera una escena de estilo de vida o con ambientación alrededor del producto si quieres darle contexto más allá de un fondo liso.",
+  "Procesa el resto del catálogo en lote una vez que estés satisfecho con un resultado, para que todas las fotos coincidan.",
+  "Revisa el resultado por si hay bordes deformados, sombras extrañas o colores incorrectos antes de publicar, y corrige a mano si hace falta."
+ ],
+ "faq": [
+  {
+   "q": "¿Puede la IA crear fotos de productos sin una sesión de fotos real?",
+   "a": "No del todo. La mayoría de herramientas todavía necesitan una foto real de tu producto como base; eliminan el fondo, añaden sombras y lo colocan en una nueva escena. Los productos inventados completamente por IA sin foto de origen suelen verse menos precisos."
+  },
+  {
+   "q": "¿Las fotos de productos editadas con IA se verán consistentes en todo mi catálogo?",
+   "a": "Sí, pueden lograrlo si usas la misma herramienta y configuración para cada imagen y las procesas en lote en vez de una por una. Mezclar herramientas o rehacer la configuración en cada foto es la principal razón por la que los catálogos terminan viéndose inconsistentes."
+  }
+ ],
+ "query": "Necesito eliminar fondos y crear fotos con fondo blanco y de estilo de vida para el catálogo de mi tienda online."
+}

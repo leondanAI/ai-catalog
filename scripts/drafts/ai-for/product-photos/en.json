@@ -1,0 +1,63 @@
+{
+ "title": "Best AI for product photos",
+ "tile": "Create product photos",
+ "meta_desc": "Compare Photoroom, Krea AI and Canva AI for online store photos: white backgrounds, lifestyle scenes, AI models and batch editing for whole product catalogs.",
+ "answer": "Use <b>Photoroom</b> for clean white-background shots and batch catalog editing, <b>Krea AI</b> when you want creative lifestyle scenes built around the product, and <b>Canva AI</b> to turn those photos into on-brand listing and marketing layouts.",
+ "picks": [
+  {
+   "slug": "photoroom",
+   "label": "Built for product photos",
+   "why": "Photoroom removes backgrounds, adds realistic shadows and places your product into AI-made scenes from one upload. You can batch-process a whole catalog at once and connect it to your store, which saves hours on repetitive listing photos. Its free option is for personal use only, so a store will need a paid plan to export in bulk."
+  },
+  {
+   "slug": "krea-ai",
+   "label": "Best for lifestyle scenes",
+   "why": "Krea AI generates full lifestyle backgrounds and styles around your product, with sliders you can nudge until the mood feels right. You upload your product shot, describe or steer the scene, and iterate quickly across many looks. Heavy use of video or high-resolution output can use up your allowance fast, so it suits occasional creative scenes more than daily bulk editing."
+  },
+  {
+   "slug": "canva-ai",
+   "label": "Easiest for catalog layouts",
+   "why": "Canva AI takes a finished product photo and helps you build the material around it, like social posts, listing banners and catalog pages, just by describing what you want. It keeps AI-generated designs editable instead of flattening them, so you can adjust text or colors later. It's better for assembling and presenting photos than for generating the original white-background shot itself."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🛒",
+   "text": "You sell on a marketplace and need hundreds of clean white-background photos fast",
+   "slug": "photoroom"
+  },
+  {
+   "icon": "🌅",
+   "text": "You want your product shown in a styled scene instead of a plain background",
+   "slug": "krea-ai"
+  },
+  {
+   "icon": "🎨",
+   "text": "You need to turn finished photos into social posts and catalog pages",
+   "slug": "canva-ai"
+  },
+  {
+   "icon": "🍌",
+   "text": "You want quick, consistent edits to an existing photo with simple prompts",
+   "slug": "nano-banana"
+  }
+ ],
+ "steps": [
+  "Shoot or gather your raw product photos with decent lighting and a plain backdrop if you can.",
+  "Use an AI tool to remove the background and drop in a clean white or custom backdrop.",
+  "Generate a lifestyle or styled scene around the product if you want context beyond a plain background.",
+  "Batch-process the rest of your catalog once you're happy with one result, so every photo matches.",
+  "Check the result for warped edges, odd shadows or wrong colors before publishing, and fix by hand if needed."
+ ],
+ "faq": [
+  {
+   "q": "Can AI create product photos without a real photo shoot?",
+   "a": "Not entirely. Most tools still need a real photo of your product to work from; they remove the background, add shadows and place it in a new scene. Products invented fully by AI with no source photo tend to look less accurate."
+  },
+  {
+   "q": "Will AI-edited product photos look consistent across my whole catalog?",
+   "a": "They can, if you use the same tool and settings for every image and run them as a batch rather than one by one. Mixing tools or redoing settings for each photo is the main reason catalogs end up looking inconsistent."
+  }
+ ],
+ "query": "I need to remove backgrounds and create white-background and lifestyle photos for my online store catalog."
+}

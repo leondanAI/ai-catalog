@@ -1,0 +1,21 @@
+{
+  "_about": "Бриф для страниц раздела «ИИ для…» (/ai-for/<slug>.html). Источник запросов — tool_finder_logs (2026-04…10) и поисковый спрос. Из брифа ai_for.py draft пишет EN-тексты по карточкам, дальше перевод и SQL в таблицу ai_for. После вставки источник — база, бриф только для новых страниц.",
+  "tasks": [
+    {"slug": "product-photos", "group": "design", "brief": "Beautiful product photos for an online store (white background, lifestyle scenes, catalog batches)", "picks": ["photoroom", "krea-ai", "canva-ai"], "also": ["freepik", "adobe-firefly", "nano-banana"], "compare": "photoroom-vs-canva-ai"},
+    {"slug": "remove-background", "group": "design", "brief": "Remove the background from a photo", "picks": ["photoroom", "canva-ai", "recraft-ai"], "also": ["adobe-firefly", "freepik", "remove-bg"], "compare": "photoroom-vs-remove-bg"},
+    {"slug": "logo", "group": "design", "brief": "Make a logo for a small business or startup", "picks": ["looka", "canva-ai", "recraft-ai"], "also": ["ideogram", "adobe-firefly", "figma-ai"], "compare": "looka-vs-canva-ai"},
+    {"slug": "presentation", "group": "design", "brief": "Make a presentation / slide deck", "picks": ["gamma", "canva-ai", "pitch"], "also": ["chatgpt", "beautiful-ai", "microsoft-copilot"], "compare": "gamma-vs-pitch"},
+    {"slug": "image-generation", "group": "design", "brief": "Generate an image or picture from a text description", "picks": ["nano-banana", "chatgpt-images", "midjourney"], "also": ["freepik", "ideogram", "leonardo-ai"]},
+    {"slug": "blog-to-video", "group": "video", "brief": "Turn blog posts or text into short videos for social media", "picks": ["synthesia", "heygen", "capcut"], "also": ["descript", "higgsfield", "runway"], "compare": "heygen-vs-synthesia"},
+    {"slug": "video-generation", "group": "video", "brief": "Generate a video from text or a photo (AI video clips, ads)", "picks": ["kling-ai", "google-veo-3", "higgsfield"], "also": ["runway", "capcut", "luma-ai"], "compare": "higgsfield-vs-kling-ai"},
+    {"slug": "podcast-editing", "group": "video", "brief": "Edit a podcast and add subtitles", "picks": ["descript", "adobe-podcast", "capcut"], "also": ["elevenlabs", "whisper", "otter-ai"], "compare": "descript-vs-adobe-podcast"},
+    {"slug": "voiceover", "group": "video", "brief": "Voice over a video with a natural AI voice (narration, promo, explainer)", "picks": ["elevenlabs", "murf-ai", "speechify"], "also": ["descript", "heygen", "synthesia"], "compare": "elevenlabs-vs-murf-ai"},
+    {"slug": "meeting-notes", "group": "work", "brief": "Transcribe a meeting and get the key points and action items", "picks": ["otter-ai", "granola", "fireflies-ai"], "also": ["notion-ai", "whisper", "microsoft-copilot"], "compare": "granola-vs-otter-ai"},
+    {"slug": "resume", "group": "work", "brief": "Write or improve a resume / CV and cover letter", "picks": ["chatgpt", "claude", "grammarly"], "also": ["canva-ai", "quillbot", "gemini"], "compare": "chatgpt-vs-claude"},
+    {"slug": "cold-email", "group": "work", "brief": "Write cold emails and client emails that actually get replies", "picks": ["claude", "chatgpt", "grammarly"], "also": ["copy-ai", "jasper", "gemini"], "compare": "chatgpt-vs-claude"},
+    {"slug": "landing-page", "group": "business", "brief": "Build a landing page or simple website for a shop or small business, with payments, without coding", "picks": ["lovable", "framer-ai", "webflow"], "also": ["base44", "bubble", "softr"], "compare": "base44-vs-lovable"},
+    {"slug": "seo", "group": "business", "brief": "Grow a website in Google search and AI answers (SEO)", "picks": ["semrush", "surferseo", "frase"], "also": ["clearscope", "chatgpt", "perplexity"], "compare": "surferseo-vs-semrush"},
+    {"slug": "mobile-app", "group": "business", "brief": "Make a mobile app without a programmer (no-code). Be explicit which tool publishes real App Store / Google Play apps and which build web apps that open on a phone", "picks": ["flutterflow", "lovable", "glide"], "also": ["base44", "bubble", "replit"], "compare": "flutterflow-vs-bubble"},
+    {"slug": "coding", "group": "dev", "brief": "An AI assistant for writing code (for developers)", "picks": ["claude-code", "github-copilot", "cursor"], "also": ["openai-codex", "windsurf", "cline"], "compare": "claude-code-vs-github-copilot"}
+  ]
+}

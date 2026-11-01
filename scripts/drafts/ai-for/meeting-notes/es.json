@@ -1,0 +1,63 @@
+{
+ "title": "Mejor IA para notas de reuniones",
+ "tile": "Transcribe reuniones y obtén tareas pendientes",
+ "meta_desc": "¿Necesitas transcribir una reunión y extraer los puntos clave y tareas pendientes? Compara Otter.ai, Granola y Fireflies.ai para elegir la mejor opción.",
+ "answer": "Usa <b>Otter.ai</b> si quieres transcripción en vivo y un historial de reuniones buscable en las herramientas de videollamada más comunes, <b>Granola</b> si prefieres evitar el bot de reunión y seguir tomando tus propias notas, y <b>Fireflies.ai</b> si quieres notas automáticas con seguimiento integrado en tu CRM y Slack.",
+ "picks": [
+  {
+   "slug": "otter-ai",
+   "label": "Transcripción en vivo e historial",
+   "why": "Otter.ai se une a tu llamada de Zoom, Google Meet o Microsoft Teams y convierte la conversación en una transcripción buscable con un resumen y tareas pendientes. Abres la app antes de la reunión, dejas que grabe, y luego buscas en reuniones anteriores para encontrar lo que se acordó. Algunas funciones más avanzadas, como ciertas integraciones con CRM, están disponibles solo en los planes superiores, pero la transcripción y las notas básicas funcionan bien en los planes gratuitos."
+  },
+  {
+   "slug": "granola",
+   "label": "Sin bot, tus propias notas",
+   "why": "Granola graba el audio directamente desde tu dispositivo en lugar de enviar un bot a la llamada, así que nada se une de forma visible a la reunión. Vas anotando ideas sueltas mientras hablas, y la herramienta las combina con la transcripción para generar notas estructuradas y tareas pendientes al terminar la llamada. Como no hay un bot visible, depende de ti avisar a los demás participantes de que estás grabando."
+  },
+  {
+   "slug": "fireflies-ai",
+   "label": "Notas automáticas y sincronización con CRM",
+   "why": "Fireflies.ai envía un bot a tu reunión, la transcribe y genera notas buscables y tareas pendientes sobre las que luego puedes hacer preguntas a través de su asistente integrado. También puede enviar los detalles directamente a tu CRM o publicarlos en Slack, lo que lo hace ideal para equipos de ventas o de atención al cliente. Algunas funciones de IA más avanzadas dependen de un límite mensual de créditos, así que conviene vigilar su uso si lo aprovechas mucho."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🎥",
+   "text": "Tu equipo ya se reúne por Zoom, Google Meet o Microsoft Teams y quieres un bot que se una y transcriba automáticamente",
+   "slug": "otter-ai"
+  },
+  {
+   "icon": "🤫",
+   "text": "Tienes reuniones una tras otra y no quieres que un bot se una visiblemente a cada llamada",
+   "slug": "granola"
+  },
+  {
+   "icon": "📇",
+   "text": "Necesitas que las notas y tareas pendientes de las reuniones pasen directo a tu CRM o a Slack",
+   "slug": "fireflies-ai"
+  },
+  {
+   "icon": "🧑‍💻",
+   "text": "Eres desarrollador y solo necesitas voz a texto en bruto para crear tu propia herramienta",
+   "slug": "whisper"
+  }
+ ],
+ "steps": [
+  "Activa el asistente de notas con IA antes de que comience la reunión, o deja que se una automáticamente a tu llamada.",
+  "Realiza la reunión en tu herramienta de videollamada habitual; la mayoría de estos asistentes funcionan con Zoom, Google Meet y Microsoft Teams.",
+  "Después de la llamada, revisa con atención el resumen y las tareas pendientes generados, ya que ninguna herramienta capta todos los detalles a la perfección.",
+  "Edita o añade lo que la IA haya pasado por alto, y comparte o exporta las notas a quienes las necesiten.",
+  "Busca en reuniones anteriores en lugar de desplazarte por notas antiguas para encontrar lo que se decidió."
+ ],
+ "faq": [
+  {
+   "q": "¿Todos los participantes saben que se está grabando la llamada?",
+   "a": "Depende de la herramienta. Las que usan un bot se unen a la llamada como un participante visible, lo cual suele indicar que se está grabando. Las que graban desde el dispositivo capturan el audio de forma discreta sin un bot visible, así que depende de ti avisar a los demás."
+  },
+  {
+   "q": "¿Qué tan precisas son las transcripciones de reuniones hechas con IA?",
+   "a": "La precisión suele ser buena con audio claro y una conversación normal, pero puede bajar con acentos marcados, ruido de fondo o varias personas hablando a la vez. Conviene revisar la transcripción y las tareas pendientes antes de darlas por definitivas."
+  }
+ ],
+ "query": "Necesito algo que se una a mi reunión, la transcriba y me dé los puntos clave y las tareas pendientes al final."
+}

@@ -1,0 +1,63 @@
+{
+ "title": "Mejor IA para convertir artículos de blog en vídeos",
+ "tile": "Convierte un artículo de blog en un video",
+ "meta_desc": "Convierte artículos de blog en videos cortos para redes con Synthesia para avatares, HeyGen para voces clonadas, o CapCut para ediciones rápidas con IA.",
+ "answer": "Usa <b>Synthesia</b> o <b>HeyGen</b> para convertir un guion en un video con avatar rápidamente, y luego usa <b>CapCut</b> para cortarlo, subtitularlo y ajustarlo al formato de redes sociales.",
+ "picks": [
+  {
+   "slug": "synthesia",
+   "label": "De guion a video con avatar en minutos",
+   "why": "Pega el texto de tu blog como guion, elige un avatar y una voz, y Synthesia genera un video estilo presentador sin necesidad de cámara ni estudio. Funciona muy bien para clips explicativos en redes y puede traducir el mismo video a otros idiomas. Los videos tienen un límite de minutos mensuales, así que un artículo largo puede necesitar recortes antes."
+  },
+  {
+   "slug": "heygen",
+   "label": "Voz clonada y localización",
+   "why": "Convierte tu guion en un video con avatar y usa la clonación de voz de HeyGen para mantener una voz constante en varios clips. Admite muchos idiomas con traducción sincronizada labial, ideal si reutilizas contenido para distintas audiencias. El uso se basa en créditos, así que las ediciones más intensas pueden agotar tu cuota mensual."
+  },
+  {
+   "slug": "capcut",
+   "label": "Edita y adapta el formato para redes",
+   "why": "Importa tu metraje o video con avatar a CapCut para recortarlo, añadir subtítulos, música y transiciones en una línea de tiempo multipista real. También tiene herramientas de IA para convertir un video largo en clips cortos y generar texto para locución. Las herramientas de IA más completas y la exportación limpia en 4K están en el plan de pago."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🎤",
+   "text": "Solo tienes texto escrito y todavía no tienes metraje",
+   "slug": "synthesia"
+  },
+  {
+   "icon": "🌍",
+   "text": "Necesitas el mismo video en varios idiomas con una voz clonada",
+   "slug": "heygen"
+  },
+  {
+   "icon": "✂️",
+   "text": "Ya tienes un video o clip con avatar y necesitas convertirlo en un clip corto y subtitulado",
+   "slug": "capcut"
+  },
+  {
+   "icon": "📢",
+   "text": "Quieres anuncios en video o clips para redes pulidos usando varios modelos de IA en un solo lugar",
+   "slug": "higgsfield"
+  }
+ ],
+ "steps": [
+  "Elige los puntos clave de tu artículo de blog y reescríbelos como un guion corto, una idea por oración.",
+  "Elige un avatar y una voz, o graba y sube tu propio metraje, y genera un primer borrador del video.",
+  "Recorta el borrador hasta la duración que favorece tu plataforma y añade subtítulos.",
+  "Exporta en el formato correcto: vertical para Reels y TikTok, cuadrado u horizontal para otras redes.",
+  "Revisa el video completo y comprueba el ritmo, los subtítulos y la pronunciación antes de publicarlo."
+ ],
+ "faq": [
+  {
+   "q": "¿Necesito grabar algo yo mismo?",
+   "a": "No. Synthesia y HeyGen generan el video a partir de un avatar y tu guion, así que no necesitas cámara. CapCut sirve para editar metraje que ya tienes, incluido el video generado con avatar."
+  },
+  {
+   "q": "¿Cuánto debe durar un video hecho a partir de un blog para redes sociales?",
+   "a": "La mayoría de las plataformas favorecen los clips cortos, a menudo de menos de un minuto. Reduce tu guion a la idea principal y deja que la herramienta recorte el resto."
+  }
+ ],
+ "query": "Quiero convertir mi artículo de blog en un video corto para Instagram y TikTok"
+}

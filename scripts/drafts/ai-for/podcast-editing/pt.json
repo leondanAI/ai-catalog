@@ -1,0 +1,63 @@
+{
+ "title": "Melhor IA para editar podcast e adicionar legendas",
+ "tile": "Editar um podcast e adicionar legendas",
+ "meta_desc": "Edite um podcast e adicione legendas com IA. O Descript edita por transcrição, o Adobe Podcast limpa o áudio e o CapCut adiciona legendas e exporta vídeo rápido.",
+ "answer": "Se você quer editar reescrevendo a transcrição e deixar a IA cuidar da limpeza e dos cortes, use o <b>Descript</b>; se o seu maior problema é áudio com ruído ou eco, passe antes pelo <b>Adobe Podcast</b>; e se precisa de legendas rápidas e um corte caprichado para redes sociais, finalize no <b>CapCut</b>.",
+ "picks": [
+  {
+   "slug": "descript",
+   "label": "Edição por transcrição e limpeza de áudio",
+   "why": "O Descript transforma a gravação do seu podcast em uma transcrição de texto, então você corta e reorganiza a conversa editando palavras em vez de arrastar áudio na linha do tempo. Ele também remove vícios de linguagem, reduz ruído e gera legendas e notas do episódio a partir da mesma transcrição. Os recursos de IA funcionam com um sistema de créditos medidos, então o uso intenso pode exigir a compra de mais créditos."
+  },
+  {
+   "slug": "adobe-podcast",
+   "label": "Limpar gravações com ruído primeiro",
+   "why": "O Adobe Podcast foca em deixar as gravações de voz mais claras, removendo ruído de fundo e eco de ambiente para que o episódio soe como se tivesse sido gravado em um estúdio silencioso. Ele também lida com gravações multitrilha de vários locutores, sincronizando-as automaticamente. Edição mais profunda e legendas não são o foco, então muitas pessoas o combinam com outra ferramenta depois."
+  },
+  {
+   "slug": "capcut",
+   "label": "Legendas rápidas e exportação pronta para redes sociais",
+   "why": "O CapCut adiciona legendas automáticas ao vídeo do seu podcast e oferece uma linha do tempo completa para cortar, organizar e finalizar o episódio para compartilhar. Modelos, transições e áudios prontos ajudam a transformar uma gravação longa em um clipe curto rapidamente. Os recursos de IA mais avançados e a exportação em resolução maior ficam no plano pago, então a versão gratuita pode parecer limitada para episódios mais longos."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🎙️",
+   "text": "Você quer cortar e editar o episódio alterando o texto da transcrição",
+   "slug": "descript"
+  },
+  {
+   "icon": "🧹",
+   "text": "Sua gravação tem ruído de fundo ou eco que precisa ser limpo antes",
+   "slug": "adobe-podcast"
+  },
+  {
+   "icon": "📱",
+   "text": "Você quer transformar o episódio em um vídeo curto com legendas para redes sociais",
+   "slug": "capcut"
+  },
+  {
+   "icon": "📝",
+   "text": "Você só precisa de uma transcrição simples da gravação, nada além disso",
+   "slug": "otter-ai"
+  }
+ ],
+ "steps": [
+  "Grave ou importe o áudio e o vídeo do seu podcast em um editor.",
+  "Limpe o som, removendo ruído de fundo, eco e pausas longas.",
+  "Edite o episódio cortando, reordenando ou removendo trechos, usando a transcrição para agilizar o processo.",
+  "Gere legendas automaticamente e depois confira se elas batem com o áudio real para corrigir palavras mal compreendidas e o tempo de exibição.",
+  "Exporte o episódio finalizado e verifique se ele reproduz corretamente na plataforma onde você vai publicá-lo."
+ ],
+ "faq": [
+  {
+   "q": "Dá para editar um podcast sem mexer na linha do tempo?",
+   "a": "Sim. Ferramentas como o Descript permitem cortar e reorganizar a gravação editando uma transcrição de texto, e o áudio e o vídeo acompanham suas alterações automaticamente."
+  },
+  {
+   "q": "As legendas automáticas precisam ser revisadas depois?",
+   "a": "Sim. As legendas automáticas podem errar nomes, termos técnicos e ruídos de fundo, por isso vale a pena conferi-las junto com o áudio antes de publicar."
+  }
+ ],
+ "query": "Preciso editar o episódio do meu podcast e adicionar legendas antes de publicar."
+}

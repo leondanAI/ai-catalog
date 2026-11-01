@@ -1,0 +1,63 @@
+{
+ "title": "Beste KI, um ein Logo zu erstellen",
+ "tile": "Erstelle ein Logo für dein Unternehmen",
+ "meta_desc": "Brauchst du ein Logo für dein Kleinunternehmen oder Startup? Vergleiche Looka, Canva AI und Recraft, um dein Logo schnell zu erstellen und zu gestalten.",
+ "answer": "Wenn du ein schnelles, günstiges Logo mit fertigen Brand-Assets willst, starte mit <b>Looka</b>; wenn du bereits in <b>Canva AI</b> gestaltest und dein Logo zu deinen anderen Marketingmaterialien passen soll, erstelle es dort; wenn du echte Vektordateien und mehr Kontrolle über den Stil brauchst, nutze <b>Recraft</b>.",
+ "picks": [
+  {
+   "slug": "looka",
+   "label": "Schnelles Logo-Paket mit Branding",
+   "why": "Looka fragt nach deinem Firmennamen, deiner Branche und deinem Stil und generiert dann mehrere Logo-Entwürfe, die du im Editor anpassen kannst — Schriften, Farben, Layout und Icons. Sobald du eine Richtung gewählt hast, verwandelt das Brand Kit das Logo in passende Social-Media-Posts, Visitenkarten und andere Marketingmaterialien. Der Haken: Du kannst keine nutzbare Datei herunterladen, ohne zu bezahlen, also teste mehrere Richtungen, bevor du dich festlegst."
+  },
+  {
+   "slug": "canva-ai",
+   "label": "Logo direkt in deinem Design-Kit",
+   "why": "Mit Canva AI beschreibst du dein Logo in einfachen Worten und erhältst ein bearbeitbares Design direkt im selben Editor, den du für Social-Media-Posts, Präsentationen und andere Marketingmaterialien nutzt. Das ist praktisch, wenn dein Logo von Anfang an zu allem anderen passen soll, was du für dein Unternehmen erstellst. Am besten funktioniert das für klare, einfache Logos statt aufwendiger Illustrationen."
+  },
+  {
+   "slug": "recraft-ai",
+   "label": "Echte Vektor-Logodateien",
+   "why": "Recraft erstellt sowohl Rasterbilder als auch echte, bearbeitbare Vektordateien — wichtig für ein Logo, das du für Schilder, Verpackungen und Druck in verschiedenen Größen brauchst. Du schreibst einen Prompt, wählst einen Stil und verfeinerst das Ergebnis im Studio mit präzisen Stilkontrollen, damit die Varianten einheitlich bleiben. Die Lernkurve ist etwas steiler als bei den anderen beiden, daher eignet es sich eher für Leute, die mit Designtools vertraut sind."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🚀",
+   "text": "Du willst schnell mehrere Logo-Optionen und weißt nicht, wo du anfangen sollst",
+   "slug": "looka"
+  },
+  {
+   "icon": "🎨",
+   "text": "Du nutzt bereits Canva für deine Flyer, Posts und Präsentationen",
+   "slug": "canva-ai"
+  },
+  {
+   "icon": "🖼️",
+   "text": "Du brauchst eine echte Vektordatei für Druck oder Beschilderung",
+   "slug": "recraft-ai"
+  },
+  {
+   "icon": "✍️",
+   "text": "Der Text soll sauber ins Logo-Bild selbst eingearbeitet werden",
+   "slug": "ideogram"
+  }
+ ],
+ "steps": [
+  "Notiere dir deinen Firmennamen, deine Branche und drei Wörter, die deinen Stil beschreiben, wie modern, verspielt oder klassisch.",
+  "Generiere mehrere Logo-Entwürfe in deinem gewählten Tool und speichere die, die dir gefallen.",
+  "Verfeinere deinen Favoriten, indem du Farben, Schriften, Icon und Layout anpasst, bis es passt.",
+  "Prüfe das Logo in kleiner Größe, etwa als Favicon, und auf dunklem Hintergrund, um sicherzugehen, dass es noch gut erkennbar ist.",
+  "Lade die benötigten Dateiformate herunter — Vektor für den Druck, PNG fürs Web — und speichere deine Markenfarben und Schriften für später."
+ ],
+ "faq": [
+  {
+   "q": "Gehört mir das Logo, das ein KI-Tool für mich erstellt?",
+   "a": "In der Regel ja, sobald du eine kostenpflichtige Datei heruntergeladen hast — prüfe aber die Nutzungsbedingungen jedes Tools, da manche kostenlose oder öffentliche Designs nicht für die kommerzielle Nutzung freigeben."
+  },
+  {
+   "q": "Sieht ein KI-generiertes Logo aus wie das von allen anderen?",
+   "a": "Das kann passieren, wenn du das erste Ergebnis einfach übernimmst. Generiere mehrere Optionen und passe dann Farben, Schriften und Icons an, damit das fertige Logo wirklich zu deinem Unternehmen passt."
+  }
+ ],
+ "query": "Ich brauche ein Logo für mein neues Café, einfach und schlicht"
+}

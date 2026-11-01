@@ -1,0 +1,63 @@
+{
+ "title": "Beste KI, um Videos zu erstellen",
+ "tile": "Ein Video aus Text oder Foto erstellen",
+ "meta_desc": "Text oder Foto in Videoclips und Werbespots verwandeln. Kling AI, Google Veo und Higgsfield im Vergleich, von Kinoaufnahmen bis zu Multi-Modell-Workflows.",
+ "answer": "Wähle <b>Kling AI</b> für ausgefeilte kurze Clips, die du Einstellung für Einstellung aufbaust, <b>Google Veo</b>, wenn du Audio direkt mitgeneriert haben willst, und <b>Higgsfield</b>, wenn du mehrere Video-Modelle, einschließlich beider, in einem auf Werbung ausgerichteten Arbeitsbereich testen möchtest.",
+ "picks": [
+  {
+   "slug": "kling-ai",
+   "label": "Filmreife Clips, Einstellung für Einstellung",
+   "why": "Kling AI verwandelt eine Textbeschreibung oder ein Foto in einen kurzen, ausgefeilten Videoclip. Du beschreibst die Szene, fügst bei Bedarf Referenzbilder hinzu, damit dieselbe Figur oder dasselbe Produkt in mehreren Einstellungen auftaucht, und Kling erzeugt den Clip mit eigener Tonspur. Am besten geeignet, wenn du ein Video Einstellung für Einstellung aufbauen möchtest, statt eine durchgehende lange Aufnahme zu brauchen."
+  },
+  {
+   "slug": "google-veo-3",
+   "label": "Kurze Clips mit eingebautem Ton",
+   "why": "Google Veo erstellt kurze Clips aus einem Text-Prompt oder einem einzelnen Foto und erzeugt dazu passenden Ton, etwa Dialoge, Effekte und Atmosphäre, im selben Schritt, sodass du den Ton nicht separat hinzufügen musst. Es ist in Google Flow und der Gemini-App integriert, und Entwickler können es über eine API mit klarer Abrechnung pro Nutzung ansteuern. Der Nachteil: Jeder Clip ist kurz, längere Werbespots müssen aus mehreren Generierungen zusammengesetzt werden."
+  },
+  {
+   "slug": "higgsfield",
+   "label": "Ein Abo, viele Video-Modelle",
+   "why": "Higgsfield ist ein Arbeitsbereich, in dem du für jeden Job ein Modell auswählst, darunter Kling und Google Veo, statt jedes einzeln zu abonnieren. Es bietet fertige Tools für Werbung, Produktplatzierung und KI-Präsentatoren, sodass du vom Briefing bis zum fertigen Spot alles auf einer Plattform erledigst. Die Kosten laufen über Credits, die je nach Modell und Auflösung variieren, weshalb etwas Planung nötig ist, um das Budget im Griff zu behalten."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🎬",
+   "text": "Du willst einen kurzen, ausgefeilten Clip und hast nichts dagegen, ihn Einstellung für Einstellung zu steuern",
+   "slug": "kling-ai"
+  },
+  {
+   "icon": "🔊",
+   "text": "Der Clip soll bereits mit passendem Ton geliefert werden",
+   "slug": "google-veo-3"
+  },
+  {
+   "icon": "📢",
+   "text": "Du produzierst Werbung oder Social-Clips in großer Zahl und willst mehrere Modelle an einem Ort",
+   "slug": "higgsfield"
+  },
+  {
+   "icon": "✂️",
+   "text": "Du hast bereits Filmmaterial und musst es nur noch mit Untertiteln und Übergängen schneiden",
+   "slug": "capcut"
+  }
+ ],
+ "steps": [
+  "Schreibe eine kurze, klare Beschreibung der Szene oder wähle ein Foto zum Animieren aus.",
+  "Wähle ein Tool danach aus, ob du eingebauten Ton, mehrere Einstellungen mit derselben Figur oder mehrere Modelle an einem Ort brauchst.",
+  "Erstelle einen ersten Clip und überprüfe Timing, Bewegung und mögliche visuelle Fehler.",
+  "Passe deinen Prompt oder die Referenzbilder an und generiere erneut, bis das Ergebnis deinem Briefing entspricht.",
+  "Exportiere den Clip und prüfe ihn auf der Plattform, auf der du ihn tatsächlich veröffentlichst, da Zuschnitt und Ton dort anders wirken können."
+ ],
+ "faq": [
+  {
+   "q": "Kann ich ein einzelnes Foto in ein bewegtes Video verwandeln?",
+   "a": "Ja. Kling AI, Google Veo und Higgsfield unterstützen alle Image-to-Video: Du lädst ein Standbild hoch, und das Tool animiert es basierend auf deinem Prompt zu einem kurzen Clip."
+  },
+  {
+   "q": "Wird der Clip mit Ton geliefert, oder muss ich ihn separat hinzufügen?",
+   "a": "Google Veo erzeugt Audio im selben Schritt wie das Video. Auch Kling AI liefert Ton direkt mit den Clips. Bei Higgsfield hängt es davon ab, welches zugrunde liegende Modell du für den jeweiligen Job auswählst."
+  }
+ ],
+ "query": "Ich möchte ein Produktfoto in einen kurzen Werbe-Videoclip mit Ton verwandeln"
+}

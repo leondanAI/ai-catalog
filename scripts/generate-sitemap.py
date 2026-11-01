@@ -120,6 +120,12 @@ news_slugs = sorted(
     if f.endswith('.html') and not f.startswith('_')
 ) if os.path.isdir(news_dir) else []
 
+# Раздел «ИИ для…» (generate-ai-for-pages.py)
+ai_for_dir = os.path.join(ROOT_DIR, 'ai-for')
+ai_for_slugs = sorted(
+    f[:-5] for f in os.listdir(ai_for_dir) if f.endswith('.html')
+) if os.path.isdir(ai_for_dir) else []
+
 # ── EN main pages ─────────────────────────────────────────────────────────────
 entries.append(url(f'{BASE_URL}/',                 'daily',   1.0))
 entries.append(url(f'{BASE_URL}/directory.html',   'daily',   1.0))
@@ -131,6 +137,10 @@ entries.append(url(f'{BASE_URL}/newsletter.html',  'monthly', 0.4))
 entries.append(url(f'{BASE_URL}/privacy.html',     'yearly',  0.3))
 entries.append(url(f'{BASE_URL}/terms.html',       'yearly',  0.3))
 entries.append(url(f'{BASE_URL}/contact.html',     'yearly',  0.3))
+
+add_if_exists(entries, 'ai-for.html', f'{BASE_URL}/ai-for.html', 'weekly', 0.9)
+for slug in ai_for_slugs:
+    entries.append(url(f'{BASE_URL}/ai-for/{slug}.html', 'weekly', 0.9))
 
 # ── EN individual tool pages ──────────────────────────────────────────────────
 for slug in tool_slugs:
@@ -164,6 +174,12 @@ for lang in LANGS_ACTIVE:
                   f'{BASE_URL}/{lang}/terms.html', 'yearly', 0.2)
     add_if_exists(entries, f'{lang}/contact.html',
                   f'{BASE_URL}/{lang}/contact.html', 'yearly', 0.2)
+
+    add_if_exists(entries, f'{lang}/ai-for.html', f'{BASE_URL}/{lang}/ai-for.html', 'weekly', 0.8)
+    for slug in ai_for_slugs:
+        rel = f'{lang}/ai-for/{slug}.html'
+        if os.path.exists(os.path.join(ROOT_DIR, rel)):
+            entries.append(url(f'{BASE_URL}/{rel}', 'weekly', 0.8))
 
     for slug in tool_slugs:
         rel = f'{lang}/tools/{slug}.html'

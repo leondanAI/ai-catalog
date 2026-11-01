@@ -1,0 +1,63 @@
+{
+ "title": "Meilleure IA pour les comptes-rendus de réunion",
+ "tile": "Transcrire vos réunions et obtenir les actions à suivre",
+ "meta_desc": "Besoin de transcrire une réunion et d'en extraire les points clés ? Comparez Otter.ai, Granola et Fireflies.ai pour trouver l'outil adapté à votre équipe.",
+ "answer": "Utilisez <b>Otter.ai</b> si vous voulez une transcription en direct et un historique de réunions consultable sur les outils de visio courants, <b>Granola</b> si vous préférez éviter le bot et continuer à prendre vos propres notes, et <b>Fireflies.ai</b> si vous voulez des notes automatiques avec synchronisation CRM et Slack intégrée.",
+ "picks": [
+  {
+   "slug": "otter-ai",
+   "label": "Transcription en direct & historique",
+   "why": "Otter.ai rejoint votre appel Zoom, Google Meet ou Microsoft Teams et transforme la conversation en une transcription consultable avec résumé et actions à suivre. Vous ouvrez l'application avant la réunion, le laissez enregistrer, puis recherchez plus tard dans les réunions passées ce qui a été décidé. Certaines fonctionnalités plus poussées, comme certaines intégrations CRM, sont réservées aux offres supérieures, mais la transcription et les notes de base fonctionnent bien dans les formules de départ."
+  },
+  {
+   "slug": "granola",
+   "label": "Sans bot, vos propres notes",
+   "why": "Granola enregistre l'audio directement depuis votre appareil au lieu d'envoyer un bot dans l'appel, donc rien ne rejoint visiblement la réunion. Vous notez quelques points au fil de l'eau, et l'outil les combine avec la transcription pour créer des notes structurées et des actions à suivre une fois l'appel terminé. Comme aucun bot n'est visible, c'est à vous de prévenir les autres participants que vous enregistrez."
+  },
+  {
+   "slug": "fireflies-ai",
+   "label": "Notes automatiques & synchronisation CRM",
+   "why": "Fireflies.ai envoie un bot dans votre réunion, la transcrit et produit des notes consultables et des actions à suivre sur lesquelles vous pouvez ensuite poser des questions grâce à son assistant intégré. Il peut aussi envoyer les informations directement dans votre CRM ou les publier sur Slack, ce qui convient bien aux équipes commerciales et en contact avec les clients. Certaines fonctionnalités d'IA plus avancées puisent dans un quota mensuel limité, donc mieux vaut surveiller votre usage en cas d'utilisation intensive."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🎥",
+   "text": "Votre équipe se réunit déjà sur Zoom, Google Meet ou Microsoft Teams et vous voulez un bot qui rejoint l'appel et transcrit automatiquement",
+   "slug": "otter-ai"
+  },
+  {
+   "icon": "🤫",
+   "text": "Vous enchaînez les réunions et ne voulez pas d'un bot qui rejoint visiblement chaque appel",
+   "slug": "granola"
+  },
+  {
+   "icon": "📇",
+   "text": "Vous avez besoin que les notes et actions à suivre remontent directement dans votre CRM ou sur Slack",
+   "slug": "fireflies-ai"
+  },
+  {
+   "icon": "🧑‍💻",
+   "text": "Vous êtes développeur et avez juste besoin d'une transcription brute pour créer votre propre outil",
+   "slug": "whisper"
+  }
+ ],
+ "steps": [
+  "Activez l'assistant de prise de notes IA avant le début de la réunion, ou laissez-le rejoindre automatiquement votre appel.",
+  "Tenez la réunion sur votre outil de visio habituel ; la plupart des assistants fonctionnent avec Zoom, Google Meet et Microsoft Teams.",
+  "Après l'appel, relisez attentivement le résumé et les actions à suivre générés, car aucun outil ne capte parfaitement tous les détails.",
+  "Corrigez ou complétez ce que l'IA a pu manquer, puis partagez ou exportez les notes aux personnes concernées.",
+  "Recherchez plus tard dans les réunions passées au lieu de parcourir d'anciennes notes pour retrouver ce qui a été décidé."
+ ],
+ "faq": [
+  {
+   "q": "Est-ce que tout le monde sait que la réunion est enregistrée ?",
+   "a": "Cela dépend de l'outil. Les outils avec bot rejoignent visiblement l'appel en tant que participant, ce qui signale généralement l'enregistrement. Les outils basés sur l'appareil captent l'audio discrètement sans bot visible, donc c'est à vous d'en informer les autres participants."
+  },
+  {
+   "q": "Les transcriptions IA de réunions sont-elles fiables ?",
+   "a": "La précision est généralement bonne avec un son clair et une conversation normale, mais elle peut baisser avec des accents marqués, du bruit de fond, ou plusieurs personnes qui parlent en même temps. Mieux vaut relire la transcription et les actions à suivre avant de s'y fier entièrement."
+  }
+ ],
+ "query": "J'ai besoin d'un outil qui rejoint ma réunion, la transcrit, puis me donne les points clés et les actions à suivre."
+}

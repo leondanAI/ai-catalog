@@ -7,10 +7,11 @@
 
 | Что менялось | Команды |
 |---|---|
-| Карточка инструмента | `generate-pages.py`, `generate-lang-tool-pages.py`, `gen_data_js.py`, `generate-lang-pages.py`, `generate-static-content.py`, `generate-compare-pages.py` (~12 мин) |
+| Карточка инструмента | `generate-pages.py`, `generate-lang-tool-pages.py`, `gen_data_js.py`, `generate-lang-pages.py`, `generate-static-content.py`, `generate-compare-pages.py`, `generate-ai-for-pages.py` (~12 мин) |
 | Инструмент снят | то же + `generate-retired-pages.py` (после генераторов карточек) |
 | Новость | `generate-news-pages.py`, `generate-news-snapshot.py` |
 | Сравнение | `generate-compare-pages.py` |
+| Страница «ИИ для…» | `generate-ai-for-pages.py` |
 | Шаблон (index/news/directory/compare.html, css, js) | `generate-lang-pages.py`, затем `generate-static-content.py`, `generate-news-snapshot.py` |
 | Много всего / не уверен | `python3 scripts/sync.py` (все шаги по порядку, ~22 мин) |
 

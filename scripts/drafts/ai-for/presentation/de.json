@@ -1,0 +1,63 @@
+{
+ "title": "Beste KI für Präsentationen",
+ "tile": "Präsentation erstellen",
+ "meta_desc": "Du willst eine Präsentation erstellen? Erfahre, wie Gamma, Canva AI und Pitch aus einem Prompt Folien machen – finde das passende Tool für dein Team.",
+ "answer": "Nimm <b>Gamma</b>, um aus einer kurzen Gliederung schnell eine fertige Präsentation zu machen, <b>Canva AI</b>, wenn du markengerechtes visuelles Design über mehrere Formate hinweg willst, und <b>Pitch</b>, wenn dein Team in Echtzeit an Präsentationen mit Corporate Design zusammenarbeiten muss.",
+ "picks": [
+  {
+   "slug": "gamma",
+   "label": "Am schnellsten von Grund auf",
+   "why": "Gamma verwandelt einen kurzen Prompt oder eine Gliederung in eine komplette Präsentation mit fertiger Struktur, Text und Layout. Du beschreibst das Thema, verfeinerst dann Text und Bilder direkt auf der Seite oder wechselst für manuelle Kontrolle zur freien Leinwand. Bei intensiver Nutzung kann das Credit-Kontingent schnell aufgebraucht sein, also prüfe vorher, wie weit dein Plan reicht, wenn du es täglich nutzen willst."
+  },
+  {
+   "slug": "canva-ai",
+   "label": "Am besten für markengerechte Visuals",
+   "why": "Canva AI ist direkt in den Canva-Editor integriert, sodass eine generierte Präsentation neben deinen anderen Markenmaterialien wie Social-Media-Posts und Dokumenten existiert. Du beschreibst, was du willst, und der Assistent entwirft bearbeitbare Folien, die du im selben Tool anpassen kannst. Gängige Folienformate meistert es gut, bei sehr individuellen Layouts kann es aber an seine Grenzen stoßen."
+  },
+  {
+   "slug": "pitch",
+   "label": "Am besten für Teamarbeit",
+   "why": "Pitch Agent erstellt aus einem Prompt und hochgeladenen Dateien einen kompletten Foliensatz, basierend auf den vom Team freigegebenen Vorlagen, damit alles markenkonform bleibt. Teammitglieder können live kommentieren und dieselbe Präsentation gemeinsam bearbeiten, und du siehst, wer einen geteilten Link öffnet. Es deckt nur Präsentationen ab, für Dokumente oder Tabellen brauchst du ein anderes Tool."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "📝",
+   "text": "Du hast noch keine Präsentation und willst einen kompletten Entwurf aus einem Prompt",
+   "slug": "gamma"
+  },
+  {
+   "icon": "🎨",
+   "text": "Du willst Folien, die zu deinen anderen Markenmaterialien passen",
+   "slug": "canva-ai"
+  },
+  {
+   "icon": "👥",
+   "text": "Dein Team muss gemeinsam an derselben Präsentation arbeiten und kommentieren",
+   "slug": "pitch"
+  },
+  {
+   "icon": "✨",
+   "text": "Du willst Folien, die sich beim Hinzufügen von Inhalten automatisch formatieren",
+   "slug": "beautiful-ai"
+  }
+ ],
+ "steps": [
+  "Schreib eine kurze Gliederung oder füge deine Notizen ein, damit die KI eine Grundlage hat.",
+  "Wähl ein Tool und lass es einen ersten Entwurf der kompletten Präsentation erstellen.",
+  "Geh jede Folie durch, feile am Text, tausche Bilder aus und korrigiere unschöne Layouts.",
+  "Prüfe den Entwurf vor dem Teilen auf Sachfehler, falsche Zahlen und Farben oder Schriften, die nicht zur Marke passen.",
+  "Exportiere oder teile die Präsentation in dem Format, das dein Publikum braucht, etwa als PDF oder Live-Link."
+ ],
+ "faq": [
+  {
+   "q": "Kann KI auch den Inhalt meiner Folien schreiben, nicht nur das Design?",
+   "a": "Ja. Gamma, Canva AI und Pitch können alle Folientexte aus einem Prompt oder einer Gliederung entwerfen, aber du solltest sie trotzdem durchlesen und anpassen, damit sie nach dir klingen und inhaltlich stimmen."
+  },
+  {
+   "q": "Sieht eine KI-erstellte Präsentation generisch aus?",
+   "a": "Das hängt vom Tool und davon ab, wie genau du es steuerst. Eine klare Gliederung, eigene Bilder und deine Markenfarben sorgen dafür, dass das Ergebnis weniger nach Vorlage und mehr nach deiner eigenen Präsentation aussieht."
+  }
+ ],
+ "query": "Ich muss meine Meeting-Notizen schnell in eine ansprechende Präsentation verwandeln"
+}

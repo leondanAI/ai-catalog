@@ -1,0 +1,63 @@
+{
+ "title": "Best AI for SEO",
+ "tile": "Grow your SEO and AI visibility",
+ "meta_desc": "Grow your site in Google search and AI answers with Semrush, Surfer SEO and Frase — tools for SEO data, content scoring and AI visibility tracking.",
+ "answer": "Use <b>Semrush</b> if you want one platform for keyword research, rankings and AI-answer tracking together, pick <b>Surfer SEO</b> to write pages graded against both ranking pages and AI answer engines, and choose <b>Frase</b> if you want an agent that researches, drafts and publishes content scored for both SEO and AI citation.",
+ "picks": [
+  {
+   "slug": "semrush",
+   "label": "All-in-one SEO and AI tracking",
+   "why": "Semrush gives you keyword research, rank tracking, backlink data and site audits alongside a toolkit that watches how your brand shows up in AI answers. You set up a project, pull a site audit, build keyword lists, then check the AI visibility reports to see where you're mentioned. It covers a lot of ground, so expect some time to learn where everything lives."
+  },
+  {
+   "slug": "surferseo",
+   "label": "Write pages, track AI mentions",
+   "why": "Surfer SEO pairs its Content Editor, which scores your draft against pages already ranking, with tracking of brand mentions inside AI answer engines. You write or edit inside the editor to hit the on-page targets, then check the AI visibility reports to see if your pages get cited. AI-answer tracking is still a new field, so treat the numbers as a guide, not a final verdict."
+  },
+  {
+   "slug": "frase",
+   "label": "Agent drafts and publishes content",
+   "why": "Frase runs an agent that researches a topic, drafts the article, scores it for both SEO and AI-citation potential, and can publish it straight to your site. You give it a topic, let it build the piece, then review the dual score before it goes live. Article and page limits per plan mean heavy publishers may need to watch their usage."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🔍",
+   "text": "You want one dashboard for keywords, backlinks and AI mentions",
+   "slug": "semrush"
+  },
+  {
+   "icon": "✍️",
+   "text": "You're writing pages and want a score against ranking competitors",
+   "slug": "surferseo"
+  },
+  {
+   "icon": "🤖",
+   "text": "You want an agent to research, draft and publish content for you",
+   "slug": "frase"
+  },
+  {
+   "icon": "📊",
+   "text": "You already manage a content inventory and want LLM visibility added to it",
+   "slug": "clearscope"
+  }
+ ],
+ "steps": [
+  "Pick a topic or keyword your audience actually searches for.",
+  "Research what's already ranking and what AI answers currently cite.",
+  "Draft or optimize your page using the tool's scoring or editor.",
+  "Publish the page and check how it performs in both Google rankings and AI visibility reports.",
+  "Revisit and update the page over time as rankings and AI mentions shift."
+ ],
+ "faq": [
+  {
+   "q": "Do I still need to write for Google if AI answers are taking over search?",
+   "a": "Yes. AI answer engines pull from pages that already rank well and look trustworthy, so solid SEO still comes first."
+  },
+  {
+   "q": "How is optimizing for AI answers different from normal SEO?",
+   "a": "Normal SEO targets ranking pages for keywords. AI-answer optimization also looks at whether your content gets cited inside tools like ChatGPT or Google AI Overviews, which depends on clarity, structure and trust signals."
+  }
+ ],
+ "query": "I want to grow my website's traffic from Google and show up in AI answers like ChatGPT."
+}

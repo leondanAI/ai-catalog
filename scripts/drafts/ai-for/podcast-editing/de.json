@@ -1,0 +1,63 @@
+{
+ "title": "Beste KI, um Podcasts zu schneiden und Untertitel hinzuzufügen",
+ "tile": "Podcast schneiden und Untertitel hinzufügen",
+ "meta_desc": "Podcast mit KI schneiden und Untertitel hinzufügen. Descript schneidet per Transkript, Adobe Podcast säubert den Ton, CapCut fügt Untertitel hinzu und exportiert schnell.",
+ "answer": "Wenn du per Transkript schneiden und die KI Aufräumarbeiten und Clips übernehmen lassen willst, nimm <b>Descript</b>; wenn dein Hauptproblem verrauschtes oder halliges Audio ist, lass es zuerst durch <b>Adobe Podcast</b> laufen; und wenn du schnelle Untertitel und einen polierten Schnitt für Social-Media-Plattformen brauchst, schließe mit <b>CapCut</b> ab.",
+ "picks": [
+  {
+   "slug": "descript",
+   "label": "Transkriptbasiertes Schneiden und Aufräumen",
+   "why": "Descript verwandelt deine Podcast-Aufnahme in ein Text-Transkript, sodass du das Gespräch durch Bearbeiten von Wörtern schneidest und umstellst, statt Audio auf einer Zeitleiste zu verschieben. Es kann außerdem Füllwörter entfernen, Rauschen reduzieren und aus demselben Transkript Untertitel und Shownotes erstellen. Die KI-Funktionen laufen über ein Credit-System, sodass intensive Nutzung bedeuten kann, dass du mehr Credits kaufen musst."
+  },
+  {
+   "slug": "adobe-podcast",
+   "label": "Verrauschte Aufnahmen zuerst säubern",
+   "why": "Adobe Podcast konzentriert sich darauf, Sprachaufnahmen klar klingen zu lassen, indem Hintergrundgeräusche und Raumhall entfernt werden, sodass die Episode klingt, als wäre sie in einem ruhigen Studio aufgenommen worden. Es verarbeitet auch Mehrspur-Aufnahmen von mehreren Sprechern und synchronisiert sie automatisch. Tiefgehendes Schneiden und Untertitel sind nicht der Fokus, daher kombinieren viele es im Anschluss mit einem anderen Tool."
+  },
+  {
+   "slug": "capcut",
+   "label": "Schnelle Untertitel und Export für Social Media",
+   "why": "CapCut fügt deinem Podcast-Video automatische Untertitel hinzu und gibt dir eine vollständige Zeitleiste, um die Episode zu kürzen, umzustellen und für das Teilen aufzupolieren. Vorlagen, Übergänge und Stock-Audio helfen, aus einer langen Aufnahme schnell einen kurzen Clip zu machen. Die tieferen KI-Funktionen und der Export in höherer Auflösung liegen in einer kostenpflichtigen Stufe, sodass sich die kostenlose Version bei längeren Episoden eingeschränkt anfühlen kann."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🎙️",
+   "text": "Du willst deine Episode schneiden, indem du den Text des Transkripts änderst",
+   "slug": "descript"
+  },
+  {
+   "icon": "🧹",
+   "text": "Deine Aufnahme hat Hintergrundgeräusche oder Hall, die zuerst bereinigt werden müssen",
+   "slug": "adobe-podcast"
+  },
+  {
+   "icon": "📱",
+   "text": "Du willst die Episode in ein kurzes Video mit Untertiteln für Social Media verwandeln",
+   "slug": "capcut"
+  },
+  {
+   "icon": "📝",
+   "text": "Du brauchst nur ein einfaches Transkript der Aufnahme, sonst nichts",
+   "slug": "otter-ai"
+  }
+ ],
+ "steps": [
+  "Nimm dein Podcast-Audio und -Video auf oder importiere es in einen Editor.",
+  "Bereinige den Ton, indem du Hintergrundgeräusche, Hall und lange Pausen entfernst.",
+  "Schneide die Episode, indem du Abschnitte kürzt, umstellst oder entfernst, und nutze das Transkript, um das zu beschleunigen.",
+  "Erstelle automatisch Untertitel, und gleiche sie dann mit dem tatsächlichen Audio ab, um falsch erkannte Wörter und das Timing zu korrigieren.",
+  "Exportiere die fertige Episode und prüfe, ob sie auf der Plattform, auf der du veröffentlichen willst, korrekt abgespielt wird."
+ ],
+ "faq": [
+  {
+   "q": "Kann ich einen Podcast schneiden, ohne eine Zeitleiste anzufassen?",
+   "a": "Ja. Tools wie Descript lassen dich die Aufnahme per Bearbeiten eines Text-Transkripts schneiden und umstellen, und Audio sowie Video passen sich automatisch deinen Änderungen an."
+  },
+  {
+   "q": "Müssen automatische Untertitel danach kontrolliert werden?",
+   "a": "Ja. Automatische Untertitel können Namen, Fachbegriffe und Hintergrundgeräusche falsch erkennen, daher lohnt es sich, sie vor der Veröffentlichung mit dem Audio abzugleichen."
+  }
+ ],
+ "query": "Ich muss meine Podcast-Episode schneiden und vor der Veröffentlichung Untertitel hinzufügen."
+}

@@ -1,0 +1,63 @@
+{
+ "title": "Meilleure IA pour créer un logo",
+ "tile": "Créez un logo pour votre entreprise",
+ "meta_desc": "Besoin d'un logo pour votre petite entreprise ou startup ? Comparez Looka, Canva AI et Recraft pour trouver l'IA idéale pour générer et personnaliser votre logo.",
+ "answer": "Si vous voulez un logo rapide et abordable avec des éléments de marque prêts à l'emploi, commencez par <b>Looka</b>; si vous utilisez déjà <b>Canva AI</b> pour vos autres supports marketing et voulez un logo assorti, créez-le directement là-bas; si vous avez besoin de vrais fichiers vectoriels et de plus de contrôle sur le style, utilisez <b>Recraft</b>.",
+ "picks": [
+  {
+   "slug": "looka",
+   "label": "Kit de logo de marque rapide",
+   "why": "Looka vous pose des questions sur le nom de votre entreprise, votre secteur et votre style, puis génère plusieurs concepts de logo que vous pouvez ajuster dans son éditeur — polices, couleurs, mise en page et icônes. Une fois votre direction choisie, le Brand Kit transforme le logo en posts réseaux sociaux, cartes de visite et autres supports marketing assortis. Le hic, c'est qu'on ne peut télécharger un fichier utilisable qu'après avoir payé, donc testez plusieurs pistes avant de vous décider."
+  },
+  {
+   "slug": "canva-ai",
+   "label": "Un logo intégré à votre kit de design",
+   "why": "Canva AI vous permet de décrire un logo en langage simple et d'obtenir un design modifiable dans le même éditeur que celui utilisé pour vos posts, présentations et autres supports marketing. C'est pratique si vous voulez que le logo s'accorde dès le départ avec tout ce que vous créez pour votre entreprise. L'outil convient mieux à des logos épurés et simples qu'à des illustrations très personnalisées."
+  },
+  {
+   "slug": "recraft-ai",
+   "label": "De vrais fichiers de logo vectoriels",
+   "why": "Recraft génère à la fois des images matricielles et de véritables fichiers vectoriels modifiables, ce qui compte pour un logo que vous redimensionnerez pour des enseignes, des emballages ou de l'impression. Vous écrivez un prompt, choisissez un style, puis affinez le résultat dans son Studio grâce à des outils de contrôle de style puissants pour garder des variations cohérentes. La courbe d'apprentissage est plus raide que pour les deux autres outils, donc c'est plutôt adapté à ceux à l'aise avec les outils de design."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🚀",
+   "text": "Vous voulez plusieurs options de logo rapidement et ne savez pas par où commencer",
+   "slug": "looka"
+  },
+  {
+   "icon": "🎨",
+   "text": "Vous utilisez déjà Canva pour vos flyers, posts et présentations",
+   "slug": "canva-ai"
+  },
+  {
+   "icon": "🖼️",
+   "text": "Vous avez besoin d'un vrai fichier vectoriel pour l'impression ou une enseigne",
+   "slug": "recraft-ai"
+  },
+  {
+   "icon": "✍️",
+   "text": "Vous voulez un texte bien intégré directement dans l'image du logo",
+   "slug": "ideogram"
+  }
+ ],
+ "steps": [
+  "Notez le nom de votre entreprise, votre secteur d'activité et trois mots qui décrivent votre style, comme moderne, ludique ou classique.",
+  "Générez plusieurs concepts de logo avec l'outil choisi et enregistrez ceux que vous préférez.",
+  "Affinez votre favori en ajustant les couleurs, les polices, l'icône et la mise en page jusqu'à ce que le résultat vous convienne.",
+  "Vérifiez le logo en petite taille, comme un favicon, et sur un fond sombre pour vous assurer qu'il reste lisible.",
+  "Téléchargez les formats de fichiers dont vous avez besoin — vectoriel pour l'impression, PNG pour le web — et conservez vos couleurs et polices de marque pour plus tard."
+ ],
+ "faq": [
+  {
+   "q": "Est-ce que je possède les droits sur le logo créé par une IA ?",
+   "a": "Généralement oui, une fois que vous avez téléchargé un fichier payant — vérifiez les conditions de chaque outil, car certains designs gratuits ou publics ne sont pas autorisés pour un usage commercial."
+  },
+  {
+   "q": "Est-ce qu'un logo fait par IA ressemblera à tous les autres ?",
+   "a": "Ça peut arriver si vous vous contentez du premier résultat. Générez plusieurs options, puis personnalisez les couleurs, polices et icônes pour que le logo final soit vraiment unique à votre entreprise."
+  }
+ ],
+ "query": "J'ai besoin d'un logo pour mon nouveau café, quelque chose de simple et épuré"
+}

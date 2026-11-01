@@ -1,0 +1,63 @@
+{
+ "title": "Meilleure IA pour générer des vidéos",
+ "tile": "Générer une vidéo à partir d'un texte ou d'une photo",
+ "meta_desc": "Transformez un texte ou une photo en vidéo. Découvrez Kling AI, Google Veo et Higgsfield pour vos clips et pubs, du plan cinématographique au workflow multi-modèles.",
+ "answer": "Choisissez <b>Kling AI</b> pour des clips courts et soignés que vous construisez plan par plan, <b>Google Veo</b> quand vous avez besoin d'un son généré en même temps que la vidéo, et <b>Higgsfield</b> si vous voulez tester plusieurs modèles vidéo, dont ces deux-là, dans un espace de travail pensé pour la pub.",
+ "picks": [
+  {
+   "slug": "kling-ai",
+   "label": "Des clips cinématographiques, plan par plan",
+   "why": "Kling AI transforme une description textuelle ou une photo en un court clip vidéo soigné. Vous décrivez la scène, ajoutez des images de référence si vous voulez que le même personnage ou produit apparaisse dans plusieurs plans, et Kling génère le clip avec sa propre piste audio. C'est idéal si vous acceptez de construire une vidéo plan par plan plutôt que d'obtenir un seul long plan continu."
+  },
+  {
+   "slug": "google-veo-3",
+   "label": "Des clips courts avec son intégré",
+   "why": "Google Veo crée des clips courts à partir d'un prompt textuel ou d'une seule photo, et génère un son correspondant, dialogues, effets, ambiance, directement à l'étape de création, sans que vous ayez à l'ajouter séparément. L'outil est intégré à Google Flow et à l'application Gemini, et les développeurs peuvent y accéder via une API avec une tarification claire à l'usage. Le principal compromis, c'est que chaque clip est court, donc les publicités plus longues demandent d'enchaîner plusieurs générations."
+  },
+  {
+   "slug": "higgsfield",
+   "label": "Un seul abonnement, plusieurs modèles vidéo",
+   "why": "Higgsfield est un espace de travail où vous choisissez un modèle, dont Kling et Google Veo, pour chaque projet, plutôt que de vous abonner à chacun séparément. L'outil propose aussi des fonctions prêtes à l'emploi pour les pubs, le placement de produit et les présentateurs IA, de quoi passer d'un brief à une pub finalisée sans quitter la plateforme. Les coûts fonctionnent par crédits qui varient selon le modèle et la résolution, ce qui demande un peu d'organisation pour garder un budget stable."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🎬",
+   "text": "Vous voulez un clip court et soigné et ça ne vous dérange pas de le diriger plan par plan",
+   "slug": "kling-ai"
+  },
+  {
+   "icon": "🔊",
+   "text": "Vous avez besoin que le clip arrive avec un son déjà intégré",
+   "slug": "google-veo-3"
+  },
+  {
+   "icon": "📢",
+   "text": "Vous produisez des pubs ou des clips pour les réseaux sociaux en volume et voulez plusieurs modèles au même endroit",
+   "slug": "higgsfield"
+  },
+  {
+   "icon": "✂️",
+   "text": "Vous avez déjà des images et avez juste besoin de les monter avec des sous-titres et des transitions",
+   "slug": "capcut"
+  }
+ ],
+ "steps": [
+  "Rédigez une description courte et claire de la scène, ou choisissez une photo à animer.",
+  "Choisissez un outil selon que vous avez besoin d'un son intégré, de plusieurs plans avec le même personnage, ou de plusieurs modèles au même endroit.",
+  "Générez un premier clip et vérifiez le rythme, le mouvement et d'éventuels défauts visuels.",
+  "Ajustez votre prompt ou vos images de référence et régénérez jusqu'à obtenir un résultat conforme à votre brief.",
+  "Exportez le clip et vérifiez-le sur la plateforme où vous allez réellement le publier, car le recadrage et le son peuvent y être différents."
+ ],
+ "faq": [
+  {
+   "q": "Puis-je transformer une simple photo en vidéo animée ?",
+   "a": "Oui. Kling AI, Google Veo et Higgsfield prennent tous en charge l'image-to-video : vous importez une photo fixe et l'outil l'anime en un court clip basé sur votre prompt."
+  },
+  {
+   "q": "Le clip arrive-t-il avec du son, ou dois-je l'ajouter séparément ?",
+   "a": "Google Veo génère le son à la même étape que la vidéo. Kling AI produit aussi de l'audio avec ses clips. Sur Higgsfield, le son intégré ou non dépend du modèle sous-jacent que vous choisissez pour le projet."
+  }
+ ],
+ "query": "Je dois transformer une photo de produit en courte vidéo publicitaire avec du son"
+}

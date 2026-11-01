@@ -1,0 +1,63 @@
+{
+ "title": "Best AI for meeting notes",
+ "tile": "Transcribe meetings & get action items",
+ "meta_desc": "Need to transcribe a meeting and pull out key points and action items? Compare Otter.ai, Granola and Fireflies.ai to find the best fit for your team.",
+ "answer": "Use <b>Otter.ai</b> if you want live transcription plus searchable meeting history across common video tools, <b>Granola</b> if you'd rather skip the meeting bot and keep taking your own notes, and <b>Fireflies.ai</b> if you want automatic notes with CRM and Slack follow-up built in.",
+ "picks": [
+  {
+   "slug": "otter-ai",
+   "label": "Live transcription & history",
+   "why": "Otter.ai joins your Zoom, Google Meet or Microsoft Teams call and turns the conversation into a searchable transcript with a summary and action items. You open the app before the meeting, let it record, then search past meetings later to find what was agreed. Some deeper features, like certain CRM integrations, sit on higher plans, but core transcription and notes work fine on the basic tiers."
+  },
+  {
+   "slug": "granola",
+   "label": "No bot, your own notes",
+   "why": "Granola records audio from your own device instead of sending a bot into the call, so nothing visibly joins the meeting. You jot a few rough notes as you go, and it combines them with the transcript into structured notes and action items once the call ends. Because there's no visible bot, it's on you to let other participants know you're recording."
+  },
+  {
+   "slug": "fireflies-ai",
+   "label": "Automatic notes & CRM sync",
+   "why": "Fireflies.ai sends a bot into your meeting, transcribes it, and produces searchable notes and action items you can later ask questions about through its built-in assistant. It can also push details straight into your CRM or post them to Slack, which suits sales and customer-facing teams. Some of the deeper AI features draw from a limited monthly credit pool, so heavy use is worth keeping an eye on."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🎥",
+   "text": "Your team already meets on Zoom, Google Meet or Microsoft Teams and you want a bot that joins and transcribes automatically",
+   "slug": "otter-ai"
+  },
+  {
+   "icon": "🤫",
+   "text": "You're in back-to-back meetings and don't want a bot visibly joining each call",
+   "slug": "granola"
+  },
+  {
+   "icon": "📇",
+   "text": "You need meeting notes and action items to flow straight into your CRM or Slack",
+   "slug": "fireflies-ai"
+  },
+  {
+   "icon": "🧑‍💻",
+   "text": "You're a developer who just needs raw speech-to-text to build your own tool on top of",
+   "slug": "whisper"
+  }
+ ],
+ "steps": [
+  "Turn on the AI notetaker before the meeting starts, or let it join your call automatically.",
+  "Hold the meeting on your usual video tool; most notetakers work with Zoom, Google Meet and Microsoft Teams.",
+  "After the call, read the generated summary and action items carefully, since no tool catches every detail perfectly.",
+  "Edit or add anything the AI missed, then share or export the notes to the people who need them.",
+  "Search past meetings later instead of scrolling through old notes to find what was decided."
+ ],
+ "faq": [
+  {
+   "q": "Does everyone on the call know they're being recorded?",
+   "a": "It depends on the tool. Bot-based tools visibly join the call as a participant, which usually signals that it's recording. Device-based tools capture audio quietly without a visible bot, so it's up to you to tell other people on the call."
+  },
+  {
+   "q": "How accurate are AI meeting transcripts?",
+   "a": "Accuracy is generally good for clear audio and normal conversation, but it can drop with strong accents, background noise, or several people talking over each other. It's worth skimming the transcript and action items before you rely on them."
+  }
+ ],
+ "query": "I need something to join my meeting, transcribe it, and give me the key points and action items afterward."
+}

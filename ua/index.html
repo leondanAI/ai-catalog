@@ -414,7 +414,7 @@ async function tfFind() {
     if (!res.ok || data.error) throw new Error(data.detail || data.error || 'Server error');
     tfRender(data);
     // Главная метрика проекта. Текст запроса в GA не уходит — только длина.
-    if (window.gtag) gtag('event', 'prompt_submit', { lang: document.documentElement.lang || 'en', task_length: task.length });
+    if (window.gtag) gtag('event', 'prompt_submit', { lang: document.documentElement.lang || 'en', task_length: task.length, source: window.tfSource || 'home' });
   } catch(err) {
     if (window.gtag) gtag('event', 'prompt_error', { lang: document.documentElement.lang || 'en' });
     errBox.textContent = t('ui.errGeneric') + ': ' + err.message;
@@ -424,6 +424,14 @@ async function tfFind() {
     btn.disabled = false;
   }
 }
+// Поле «опишите задачу» на страницах «ИИ для…» ведёт сюда с ?q= — сразу подбираем
+document.addEventListener('DOMContentLoaded', () => {
+  const q = new URLSearchParams(location.search).get('q');
+  if (!q) return;
+  document.getElementById('tfInput').value = q.slice(0, 500);
+  window.tfSource = 'ai_for';
+  tfFind();
+});
 const SB_URL3  = 'https://lbjdwkvkkndvofysyssy.supabase.co';
 const SB_ANON3 = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG';
 

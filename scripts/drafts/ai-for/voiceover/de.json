@@ -1,0 +1,63 @@
+{
+ "title": "Beste KI für Voiceovers",
+ "tile": "Voiceover zu einem Video hinzufügen",
+ "meta_desc": "Vergleiche ElevenLabs, Murf AI und Speechify für natürliche KI-Voiceovers in Erklärvideos, Werbevideos und Narration – finde das passende Tool für dich.",
+ "answer": "Nutze <b>ElevenLabs</b> für die natürlichste, mehrsprachige Stimme bei Narration, Werbevideos und Erklärvideos, <b>Murf AI</b>, wenn du einen integrierten Editor brauchst, um die Stimme mit Folien oder Video zu synchronisieren, und <b>Speechify</b>, wenn du hauptsächlich ein geschriebenes Skript oder Dokument schnell in gesprochenes Audio umwandeln willst.",
+ "picks": [
+  {
+   "slug": "elevenlabs",
+   "label": "Natürlichste mehrsprachige Stimme",
+   "why": "ElevenLabs verwandelt ein Skript in lebensechte Sprache in vielen Sprachen, und du kannst eine Stimme klonen, wenn du einen durchgängigen Erzähler über mehrere Videos hinweg willst. Du tippst oder fügst dein Skript ein, wählst eine Stimme, erstellst das Audio und legst es dann in deinem Videoeditor ab. Die Nutzung läuft über Credits, sodass längere Projekte dein Kontingent schneller aufbrauchen können als gedacht."
+  },
+  {
+   "slug": "murf-ai",
+   "label": "Stimme synchron zum Video",
+   "why": "Murf AI bietet dir einen Studio-Editor, in dem du ein Voiceover mit deinen Folien oder der Video-Timeline abstimmen und Tempo, Betonung und Tonfall anpassen kannst. Es ist auf Erklär- und Schulungsinhalte ausgelegt, sodass du das Timing feinjustieren kannst, ohne die App zu verlassen. Im kostenlosen Plan kannst du das Audio weder herunterladen noch kommerziell nutzen – er eignet sich also hauptsächlich zum Testen."
+  },
+  {
+   "slug": "speechify",
+   "label": "Skript zu Sprache, schnell",
+   "why": "Speechify ist darauf ausgelegt, geschriebenen Text schnell in gesprochenes Audio umzuwandeln, was praktisch ist, um ein Skript oder Dokument direkt in eine Voiceover-Spur zu verwandeln. Du fügst deinen Text ein, wählst eine Stimme aus und exportierst das Audio zur Nutzung in deinem Video. Die besten Stimmen und schnellere Wiedergabegeschwindigkeiten gibt es nur im kostenpflichtigen Plan."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🎙️",
+   "text": "Du willst die natürlichste klingende Stimme in mehreren Sprachen",
+   "slug": "elevenlabs"
+  },
+  {
+   "icon": "🎬",
+   "text": "Du musst die Narration präzise mit Folien oder Video-Timing synchronisieren",
+   "slug": "murf-ai"
+  },
+  {
+   "icon": "📄",
+   "text": "Du hast bereits ein geschriebenes Skript oder Dokument, das zu Audio werden soll",
+   "slug": "speechify"
+  },
+  {
+   "icon": "🧑‍💻",
+   "text": "Du willst einen KI-Avatar, der auf dem Bildschirm spricht, nicht nur ein Voiceover",
+   "slug": "heygen"
+  }
+ ],
+ "steps": [
+  "Schreibe oder finalisiere das Skript, das vertont werden soll.",
+  "Wähle eine Stimme, die zum Ton deines Videos passt.",
+  "Erstelle das Voiceover und passe bei Bedarf Tempo, Betonung oder Aussprache an.",
+  "Synchronisiere das Audio mit der Video-Timeline und prüfe, ob die Lautstärke zu den Bildern passt.",
+  "Höre dir das komplette Video an und korrigiere falsch ausgesprochene Wörter oder unpassende Pausen vor dem Export."
+ ],
+ "faq": [
+  {
+   "q": "Klingt die KI-Stimme robotisch?",
+   "a": "Moderne KI-Stimmen wie diese sind auf natürlichen Klang ausgelegt, mit realistischem Tempo und Betonung. Die Qualität variiert je nach Stimme, probiere also mehrere Optionen aus und wähle die, die am besten zum Ton deines Skripts passt."
+  },
+  {
+   "q": "Darf ich diese Stimmen für kommerzielle Projekte nutzen?",
+   "a": "Die meisten dieser Tools erlauben die kommerzielle Nutzung erstellter Voiceovers in kostenpflichtigen Plänen, aber kostenlose Pläne schränken die kommerzielle Nutzung oft ein – prüfe also vor der Veröffentlichung die Bedingungen des jeweiligen Plans."
+  }
+ ],
+ "query": "Ich brauche eine natürlich klingende KI-Stimme für mein Erklärvideo"
+}

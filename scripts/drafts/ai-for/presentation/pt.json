@@ -1,0 +1,63 @@
+{
+ "title": "Melhor IA para apresentações",
+ "tile": "Criar uma apresentação",
+ "meta_desc": "Precisa criar uma apresentação? Veja como Gamma, Canva AI e Pitch transformam um prompt em slides e descubra a melhor opção para sua equipe e estilo de deck.",
+ "answer": "Escolha <b>Gamma</b> para transformar um esboço rápido em um deck pronto em pouco tempo, <b>Canva AI</b> se quiser um design visual alinhado à sua marca em vários formatos, e <b>Pitch</b> se sua equipe precisa colaborar em tempo real em decks com identidade visual própria.",
+ "picks": [
+  {
+   "slug": "gamma",
+   "label": "Mais rápido para começar do zero",
+   "why": "O Gamma transforma um prompt curto ou um esboço em um deck completo, já com estrutura, texto e layout prontos. Você descreve o tema, e depois ajusta o texto e as imagens na página ou muda para o modo livre para ter controle manual. O uso intenso pode consumir os créditos rapidamente, então vale conferir até onde o seu plano aguenta antes de depender dele no dia a dia."
+  },
+  {
+   "slug": "canva-ai",
+   "label": "Melhor para visuais alinhados à marca",
+   "why": "O Canva AI funciona dentro do editor do Canva, então o deck gerado fica junto com seus outros materiais de marca, como posts de redes sociais e documentos. Você descreve o que quer e o assistente cria slides editáveis que podem ser ajustados na mesma ferramenta. Ele lida bem com formatos de slide comuns, mas pode ter dificuldade com layouts muito personalizados."
+  },
+  {
+   "slug": "pitch",
+   "label": "Melhor para colaboração em equipe",
+   "why": "O Pitch Agent cria uma apresentação completa a partir de um prompt e dos arquivos que você enviar, usando os modelos aprovados pela sua equipe para manter a identidade visual. Os colegas podem comentar e editar o mesmo deck em tempo real, e dá para ver quem abriu um link compartilhado. Ele só funciona para apresentações, então você vai precisar de outra ferramenta para documentos ou planilhas."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "📝",
+   "text": "Você ainda não tem um deck e quer um rascunho completo a partir de um prompt",
+   "slug": "gamma"
+  },
+  {
+   "icon": "🎨",
+   "text": "Você quer slides que combinem com seus outros materiais de marca",
+   "slug": "canva-ai"
+  },
+  {
+   "icon": "👥",
+   "text": "Sua equipe precisa editar e comentar juntos no mesmo deck",
+   "slug": "pitch"
+  },
+  {
+   "icon": "✨",
+   "text": "Você quer slides que se formatam automaticamente conforme adiciona conteúdo",
+   "slug": "beautiful-ai"
+  }
+ ],
+ "steps": [
+  "Escreva um esboço curto ou cole suas anotações para a IA ter algo como ponto de partida.",
+  "Escolha uma ferramenta e deixe ela gerar um primeiro rascunho do deck completo.",
+  "Revise cada slide, ajuste o texto, troque imagens e corrija layouts estranhos.",
+  "Confira o rascunho em busca de erros de informação, números incorretos e cores ou fontes fora do padrão da marca antes de compartilhar.",
+  "Exporte ou compartilhe o deck no formato que seu público precisa, como PDF ou um link ao vivo."
+ ],
+ "faq": [
+  {
+   "q": "A IA pode escrever o conteúdo dos meus slides, não só o design?",
+   "a": "Sim. Gamma, Canva AI e Pitch conseguem criar o texto dos slides a partir de um prompt ou esboço, mas vale sempre revisar e editar para garantir que soe como você e esteja tudo correto."
+  },
+  {
+   "q": "Um deck feito por IA vai parecer genérico?",
+   "a": "Depende da ferramenta e de quanto você a orienta. Dar um esboço claro, usar suas próprias imagens e as cores da sua marca ajuda o resultado a parecer menos um modelo pronto e mais um deck realmente seu."
+  }
+ ],
+ "query": "Preciso transformar minhas anotações de reunião em uma apresentação de slides bem-feita rapidamente"
+}

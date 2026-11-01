@@ -1,0 +1,63 @@
+{
+ "title": "Meilleure IA pour monter un podcast et ajouter des sous-titres",
+ "tile": "Monter un podcast et ajouter des sous-titres",
+ "meta_desc": "Montez un podcast et ajoutez des sous-titres avec l'IA. Descript monte via la transcription, Adobe Podcast nettoie le son, CapCut sous-titre et exporte.",
+ "answer": "Si vous voulez monter en réécrivant une transcription et laisser l'IA gérer le nettoyage et les coupes, utilisez <b>Descript</b> ; si votre problème principal est un son bruité ou avec de l'écho, passez-le d'abord dans <b>Adobe Podcast</b> ; et si vous avez besoin de sous-titres rapides et d'un montage soigné pour les réseaux sociaux, finalisez avec <b>CapCut</b>.",
+ "picks": [
+  {
+   "slug": "descript",
+   "label": "Montage par transcription et nettoyage",
+   "why": "Descript transforme l'enregistrement de votre podcast en transcription texte, ce qui vous permet de couper et réorganiser la conversation en modifiant les mots plutôt qu'en manipulant l'audio sur une timeline. L'outil peut aussi supprimer les mots de remplissage, réduire le bruit et générer des sous-titres et des notes d'épisode à partir de cette même transcription. Les fonctions d'IA fonctionnent avec un système de crédits limité, donc un usage intensif peut nécessiter d'en racheter."
+  },
+  {
+   "slug": "adobe-podcast",
+   "label": "Nettoyer d'abord les enregistrements bruités",
+   "why": "Adobe Podcast se concentre sur la clarté des enregistrements vocaux, en supprimant le bruit de fond et l'écho de la pièce pour que l'épisode sonne comme s'il avait été enregistré dans un studio silencieux. L'outil gère aussi les enregistrements multipistes de plusieurs intervenants, en les synchronisant automatiquement. Le montage poussé et les sous-titres ne sont pas son point fort, donc on l'associe souvent à un autre outil ensuite."
+  },
+  {
+   "slug": "capcut",
+   "label": "Sous-titres rapides et export prêt pour les réseaux sociaux",
+   "why": "CapCut ajoute des sous-titres automatiques à la vidéo de votre podcast et propose une timeline complète pour couper, organiser et peaufiner l'épisode avant de le partager. Les modèles, transitions et musiques libres de droits aident à transformer rapidement un long enregistrement en un court extrait. Les outils d'IA les plus poussés et l'export en haute résolution sont réservés à une offre payante, donc la version gratuite peut sembler limitée pour les épisodes longs."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🎙️",
+   "text": "Vous voulez couper et monter votre épisode en modifiant le texte de sa transcription",
+   "slug": "descript"
+  },
+  {
+   "icon": "🧹",
+   "text": "Votre enregistrement a du bruit de fond ou de l'écho à nettoyer d'abord",
+   "slug": "adobe-podcast"
+  },
+  {
+   "icon": "📱",
+   "text": "Vous voulez transformer l'épisode en une courte vidéo sous-titrée pour les réseaux sociaux",
+   "slug": "capcut"
+  },
+  {
+   "icon": "📝",
+   "text": "Vous avez juste besoin d'une simple transcription de l'enregistrement, rien de plus",
+   "slug": "otter-ai"
+  }
+ ],
+ "steps": [
+  "Enregistrez ou importez l'audio et la vidéo de votre podcast dans un logiciel de montage.",
+  "Nettoyez le son en supprimant le bruit de fond, l'écho et les longs silences.",
+  "Montez l'épisode en coupant, réorganisant ou supprimant des passages, en utilisant la transcription pour aller plus vite.",
+  "Générez automatiquement les sous-titres, puis relisez-les en les comparant à l'audio pour corriger les mots mal compris et le minutage.",
+  "Exportez l'épisode terminé et vérifiez qu'il se lit correctement sur la plateforme où vous allez le publier."
+ ],
+ "faq": [
+  {
+   "q": "Peut-on monter un podcast sans utiliser de timeline ?",
+   "a": "Oui. Des outils comme Descript permettent de couper et réorganiser l'enregistrement en modifiant une transcription texte, l'audio et la vidéo suivant automatiquement vos changements."
+  },
+  {
+   "q": "Faut-il vérifier les sous-titres automatiques après coup ?",
+   "a": "Oui. Les sous-titres automatiques peuvent mal comprendre les noms, les termes techniques et le bruit de fond, donc mieux vaut les relire en les comparant à l'audio avant de publier."
+  }
+ ],
+ "query": "Je dois monter mon épisode de podcast et ajouter des sous-titres avant de le publier."
+}

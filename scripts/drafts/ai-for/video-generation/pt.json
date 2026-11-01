@@ -1,0 +1,63 @@
+{
+ "title": "Melhor IA para gerar vídeos",
+ "tile": "Gere um vídeo a partir de texto ou foto",
+ "meta_desc": "Transforme texto ou foto em vídeos e anúncios. Veja por que Kling AI, Google Veo e Higgsfield se destacam, de cenas cinematográficas a fluxos com vários modelos.",
+ "answer": "Escolha <b>Kling AI</b> para clipes curtos e bem acabados que você monta cena por cena, <b>Google Veo</b> quando precisar de áudio gerado junto com o vídeo, e <b>Higgsfield</b> se quiser testar vários modelos de vídeo, incluindo os dois anteriores, dentro de um só workspace focado em anúncios.",
+ "picks": [
+  {
+   "slug": "kling-ai",
+   "label": "Cenas cinematográficas, uma a uma",
+   "why": "O Kling AI transforma uma descrição em texto ou uma foto em um clipe de vídeo curto e bem acabado. Você escreve a cena, adiciona imagens de referência se quiser que o mesmo personagem ou produto apareça em várias cenas, e o Kling gera o clipe com sua própria trilha de áudio. Funciona melhor quando você não se importa em montar o vídeo cena por cena em vez de ter uma única tomada contínua mais longa."
+  },
+  {
+   "slug": "google-veo-3",
+   "label": "Clipes curtos com áudio incluído",
+   "why": "O Google Veo cria clipes curtos a partir de um prompt de texto ou de uma única foto, e gera o áudio correspondente, como diálogos, efeitos e ambientação, na mesma etapa, então você não precisa adicionar som separadamente. Ele funciona dentro do Google Flow e do app Gemini, e desenvolvedores podem acessá-lo por API com preços claros por uso. A principal desvantagem é que cada clipe é curto, então anúncios mais longos exigem várias gerações combinadas."
+  },
+  {
+   "slug": "higgsfield",
+   "label": "Uma assinatura, vários modelos de vídeo",
+   "why": "O Higgsfield é um workspace onde você escolhe um modelo, incluindo Kling e Google Veo, para cada tarefa, em vez de assinar cada um separadamente. Ele traz ferramentas prontas para anúncios, inserção de produtos e apresentadores de IA, então dá para ir do briefing ao anúncio finalizado sem sair da plataforma. Os custos funcionam por créditos que variam conforme o modelo e a resolução, então exige um pouco de planejamento para manter o orçamento sob controle."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🎬",
+   "text": "Você quer um clipe curto e bem acabado e não se importa em dirigi-lo cena por cena",
+   "slug": "kling-ai"
+  },
+  {
+   "icon": "🔊",
+   "text": "Você precisa que o clipe já venha com som correspondente incluído",
+   "slug": "google-veo-3"
+  },
+  {
+   "icon": "📢",
+   "text": "Você produz anúncios ou clipes para redes sociais em volume e quer vários modelos em um só lugar",
+   "slug": "higgsfield"
+  },
+  {
+   "icon": "✂️",
+   "text": "Você já tem as imagens e só precisa editar com legendas e transições",
+   "slug": "capcut"
+  }
+ ],
+ "steps": [
+  "Escreva uma descrição curta e clara da cena, ou escolha uma foto para animar.",
+  "Escolha uma ferramenta de acordo com a necessidade de áudio incluído, várias cenas com o mesmo personagem, ou vários modelos em um só lugar.",
+  "Gere um primeiro clipe e avalie o ritmo, o movimento e possíveis falhas visuais.",
+  "Ajuste seu prompt ou imagens de referência e gere novamente até o resultado corresponder ao briefing.",
+  "Exporte o clipe e confira na plataforma onde ele será publicado de fato, já que o corte e o som podem aparecer diferentes lá."
+ ],
+ "faq": [
+  {
+   "q": "Posso transformar uma única foto em um vídeo em movimento?",
+   "a": "Sim. Kling AI, Google Veo e Higgsfield oferecem a função de imagem para vídeo, então você envia uma foto estática e a ferramenta a anima em um clipe curto com base no seu prompt."
+  },
+  {
+   "q": "O clipe já vem com som ou preciso adicionar separadamente?",
+   "a": "O Google Veo gera áudio na mesma etapa do vídeo. O Kling AI também produz áudio junto com seus clipes. No Higgsfield, ter ou não áudio incluído depende de qual modelo subjacente você escolher para a tarefa."
+  }
+ ],
+ "query": "Preciso transformar a foto de um produto em um anúncio em vídeo curto com som"
+}

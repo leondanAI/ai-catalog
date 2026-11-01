@@ -29,6 +29,7 @@ steps = [
     # для dateModified). Их не было в sync.py, поэтому после любого обновления
     # каталога 928 страниц оставались со старыми данными до ручного прогона.
     ('Compare pages (928)',        ['python3', 'scripts/generate-compare-pages.py']),
+    ('AI for… pages (8 langs)',    ['python3', 'scripts/generate-ai-for-pages.py']),
     ('News pages + snapshot',      ['python3', 'scripts/generate-news-pages.py']),
     ('News SEO block (8 langs)',   ['python3', 'scripts/generate-news-snapshot.py']),
     # Ссылки с языковых версий на английскую (лента новостей так вела в EN 5 месяцев).

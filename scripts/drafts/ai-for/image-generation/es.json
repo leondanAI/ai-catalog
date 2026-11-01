@@ -1,0 +1,63 @@
+{
+ "title": "Mejor IA para generar imágenes",
+ "tile": "Convierte texto en imagen",
+ "meta_desc": "Convierte un texto en imagen con Nano Banana, ChatGPT Images o Midjourney. Compara edición gratuita, flujo de trabajo en el chat y la mejor calidad artística.",
+ "answer": "Usa <b>Nano Banana</b> para editar imágenes rápido y gratis dentro del chat de Google, <b>ChatGPT Images</b> si ya trabajas en ChatGPT y necesitas texto o interfaces precisas en tu imagen, y <b>Midjourney</b> cuando lo que más importa es la calidad artística del resultado final.",
+ "picks": [
+  {
+   "slug": "nano-banana",
+   "label": "Edición conversacional gratuita",
+   "why": "Describes la imagen que quieres en lenguaje natural dentro del chat de Google, y luego sigues conversando con la IA para ir ajustando el resultado en varios pasos. Se le da bien mantener el mismo personaje o sujeto de forma consistente mientras haces cambios. El problema es que las imágenes gratuitas llevan una marca de agua visible, además de la invisible habitual."
+  },
+  {
+   "slug": "chatgpt-images",
+   "label": "Integrado en tu flujo de trabajo de ChatGPT",
+   "why": "Escribes una descripción en ChatGPT y recibes una imagen sin cambiar de herramienta, o subes una foto y pides un cambio concreto. Destaca frente a otras opciones a la hora de renderizar bien textos pequeños, iconos y diseños recargados. El acceso gratuito es limitado y su rango artístico es más estrecho que el de una herramienta especializada."
+  },
+  {
+   "slug": "midjourney",
+   "label": "La mejor calidad artística",
+   "why": "Escribes un prompt y obtienes ilustraciones muy detalladas y pulidas que muchos diseñadores consideran de lo mejor que puede dar una IA. Un modo \"raw\" permite pedir una interpretación literal de tu prompt en lugar del estilo propio de la herramienta. No tiene plan gratuito, así que necesitas una suscripción para poder probarla."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "💬",
+   "text": "Quieres generar y editar imágenes gratis dentro de una app de chat",
+   "slug": "nano-banana"
+  },
+  {
+   "icon": "✍️",
+   "text": "Necesitas una imagen con texto legible, iconos o un diseño recargado",
+   "slug": "chatgpt-images"
+  },
+  {
+   "icon": "🎨",
+   "text": "Quieres la ilustración más rica y pulida para un portfolio o impresión",
+   "slug": "midjourney"
+  },
+  {
+   "icon": "🖼️",
+   "text": "Quieres probar muchos estilos de arte con IA en un solo lugar",
+   "slug": "freepik"
+  }
+ ],
+ "steps": [
+  "Escribe una descripción clara de la imagen que quieres, incluyendo sujeto, estilo y ambientación.",
+  "Elige una herramienta según lo que necesites: ediciones rápidas y gratis, comodidad dentro del chat o la mejor calidad artística.",
+  "Genera una primera versión y revisa con atención caras, manos, texto y detalles pequeños.",
+  "Ajusta tu descripción o pide un cambio concreto para corregir lo que no se vea bien.",
+  "Descarga la imagen final cuando estés conforme con el resultado."
+ ],
+ "faq": [
+  {
+   "q": "¿Puedo editar una foto que ya tengo en vez de partir de cero?",
+   "a": "Sí. Tanto Nano Banana como ChatGPT Images aceptan una imagen existente junto con tus instrucciones de texto, así que puedes describir el cambio que quieres en lugar de generar una imagen completamente nueva."
+  },
+  {
+   "q": "¿Por qué las caras o manos a veces salen mal en las imágenes generadas por IA?",
+   "a": "Los modelos de imagen todavía tienen dificultades con detalles finos como manos, texto y objetos pequeños. Revisa bien esas zonas y pide a la herramienta que rehaga o corrija solo esa parte si ves algo raro."
+  }
+ ],
+ "query": "Quiero convertir una descripción en texto en una imagen de una cabaña acogedora en el bosque"
+}

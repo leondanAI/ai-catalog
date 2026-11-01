@@ -1,0 +1,63 @@
+{
+ "title": "Mejor IA para editar podcasts y añadir subtítulos",
+ "tile": "Editar un podcast y añadir subtítulos",
+ "meta_desc": "Edita un podcast y añade subtítulos con IA. Descript edita por transcripción, Adobe Podcast limpia el audio, y CapCut añade subtítulos y exporta vídeo rápido.",
+ "answer": "Si quieres editar reescribiendo una transcripción y dejar que la IA se encargue de la limpieza y los cortes, usa <b>Descript</b>; si tu principal problema es un audio con ruido o eco, pásalo antes por <b>Adobe Podcast</b>; y si necesitas subtítulos rápidos y un corte pulido para redes sociales, termina en <b>CapCut</b>.",
+ "picks": [
+  {
+   "slug": "descript",
+   "label": "Edición basada en transcripción y limpieza",
+   "why": "Descript convierte la grabación de tu podcast en una transcripción de texto, así que cortas y reorganizas la conversación editando palabras en lugar de arrastrar audio en una línea de tiempo. También puede eliminar muletillas, reducir el ruido y generar subtítulos y notas del episodio a partir de la misma transcripción. Las funciones de IA funcionan con un sistema de créditos medidos, así que un uso intensivo puede implicar comprar más créditos."
+  },
+  {
+   "slug": "adobe-podcast",
+   "label": "Limpiar primero las grabaciones con ruido",
+   "why": "Adobe Podcast se centra en hacer que las grabaciones de voz suenen claras, eliminando el ruido de fondo y el eco de la sala para que el episodio suene como si se hubiera grabado en un estudio silencioso. También gestiona grabaciones multipista de varios hablantes, sincronizándolas automáticamente. No se centra en la edición profunda ni en los subtítulos, así que suele combinarse con otra herramienta después."
+  },
+  {
+   "slug": "capcut",
+   "label": "Subtítulos rápidos y exportación lista para redes",
+   "why": "CapCut añade subtítulos automáticos al vídeo de tu podcast y te da una línea de tiempo completa para recortar, organizar y pulir el episodio antes de compartirlo. Las plantillas, transiciones y audio de stock ayudan a convertir una grabación larga en un clip corto rápidamente. Las herramientas de IA más avanzadas y la exportación en mayor resolución están en el plan de pago, así que la versión gratuita puede resultar limitada para episodios largos."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🎙️",
+   "text": "Quieres cortar y editar tu episodio cambiando el texto de su transcripción",
+   "slug": "descript"
+  },
+  {
+   "icon": "🧹",
+   "text": "Tu grabación tiene ruido de fondo o eco que necesitas limpiar primero",
+   "slug": "adobe-podcast"
+  },
+  {
+   "icon": "📱",
+   "text": "Quieres convertir el episodio en un vídeo corto con subtítulos para redes sociales",
+   "slug": "capcut"
+  },
+  {
+   "icon": "📝",
+   "text": "Solo necesitas una transcripción simple de la grabación, nada más",
+   "slug": "otter-ai"
+  }
+ ],
+ "steps": [
+  "Graba o importa el audio y vídeo de tu podcast en un editor.",
+  "Limpia el sonido, eliminando el ruido de fondo, el eco y las pausas largas.",
+  "Edita el episodio recortando, reordenando o cortando secciones, usando la transcripción para agilizar el proceso.",
+  "Genera subtítulos automáticamente y luego compáralos con el audio real para corregir palabras mal interpretadas y problemas de sincronización.",
+  "Exporta el episodio terminado y comprueba que se reproduce correctamente en la plataforma donde lo vas a publicar."
+ ],
+ "faq": [
+  {
+   "q": "¿Puedo editar un podcast sin tocar una línea de tiempo?",
+   "a": "Sí. Herramientas como Descript te permiten cortar y reorganizar la grabación editando una transcripción de texto, y el audio y el vídeo siguen tus cambios automáticamente."
+  },
+  {
+   "q": "¿Hay que revisar los subtítulos automáticos después?",
+   "a": "Sí. Los subtítulos automáticos pueden confundir nombres, términos técnicos y ruido de fondo, así que conviene revisarlos comparándolos con el audio antes de publicar."
+  }
+ ],
+ "query": "Necesito editar mi episodio de podcast y añadir subtítulos antes de publicarlo."
+}

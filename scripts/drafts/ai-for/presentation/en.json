@@ -1,0 +1,63 @@
+{
+ "title": "Best AI for presentations",
+ "tile": "Make a presentation",
+ "meta_desc": "Making a presentation? See how Gamma, Canva AI, and Pitch each turn a prompt into slides, so you can pick the fastest fit for your team and deck style.",
+ "answer": "Pick <b>Gamma</b> to turn a quick outline into a finished deck fast, <b>Canva AI</b> if you want on-brand visual design across formats, and <b>Pitch</b> if your team needs real-time collaboration on branded decks.",
+ "picks": [
+  {
+   "slug": "gamma",
+   "label": "Fastest from scratch",
+   "why": "Gamma turns a short prompt or outline into a full deck with structure, writing, and layout already done. You describe the topic, then refine the text and images on the page or switch to the freeform canvas for manual control. Heavy use can burn through the credit allowance quickly, so check how far your plan stretches before relying on it daily."
+  },
+  {
+   "slug": "canva-ai",
+   "label": "Best for on-brand visuals",
+   "why": "Canva AI sits inside the Canva editor, so a generated deck lives alongside your other brand assets like social posts and documents. You describe what you want and the assistant drafts editable slides you can tweak in the same tool. It handles common slide formats well but can struggle with highly custom layouts."
+  },
+  {
+   "slug": "pitch",
+   "label": "Best for team collaboration",
+   "why": "Pitch Agent drafts a full presentation from a prompt and any files you upload, built from your team's approved templates so it stays on-brand. Teammates can comment and edit the same deck live, and you can see who opens a shared link. It only handles presentations, so you'll need another tool for documents or spreadsheets."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "📝",
+   "text": "You have no deck yet and want a full draft from a prompt",
+   "slug": "gamma"
+  },
+  {
+   "icon": "🎨",
+   "text": "You want slides that match your other brand assets",
+   "slug": "canva-ai"
+  },
+  {
+   "icon": "👥",
+   "text": "Your team needs to co-edit and comment on the same deck",
+   "slug": "pitch"
+  },
+  {
+   "icon": "✨",
+   "text": "You want slides that auto-format as you add content",
+   "slug": "beautiful-ai"
+  }
+ ],
+ "steps": [
+  "Write a short outline or paste your notes so the AI has something to work from.",
+  "Pick a tool and let it generate a first draft of the full deck.",
+  "Go through each slide and tighten the wording, swap images, and fix awkward layouts.",
+  "Check the draft for factual mistakes, wrong numbers, and off-brand colors or fonts before sharing it.",
+  "Export or share the deck in the format your audience needs, like a PDF or a live link."
+ ],
+ "faq": [
+  {
+   "q": "Can AI write the content of my slides, not just the design?",
+   "a": "Yes. Gamma, Canva AI, and Pitch can all draft slide text from a prompt or outline, but you should still read it over and edit it so it sounds like you and is accurate."
+  },
+  {
+   "q": "Will an AI-made deck look generic?",
+   "a": "It depends on the tool and how much you guide it. Giving a clear outline, your own images, and your brand colors helps the result look less like a template and more like your own deck."
+  }
+ ],
+ "query": "I need to turn my meeting notes into a polished slide deck quickly"
+}

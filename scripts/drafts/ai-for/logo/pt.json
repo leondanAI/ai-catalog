@@ -1,0 +1,63 @@
+{
+ "title": "Melhor IA para criar logo",
+ "tile": "Crie um logo para seu negócio",
+ "meta_desc": "Precisa de um logo para sua pequena empresa ou startup? Compare Looka, Canva AI e Recraft e encontre ferramentas de IA para gerar e editar seu logo rápido.",
+ "answer": "Se você quer um logo rápido e barato com identidade visual pronta, comece pelo <b>Looka</b>; se já cria seus materiais no <b>Canva AI</b> e quer que o logo combine com o resto, monte ele por lá; se precisa de arquivos vetoriais de verdade e mais controle sobre o estilo, use o <b>Recraft</b>.",
+ "picks": [
+  {
+   "slug": "looka",
+   "label": "Kit de logo pronto rapidinho",
+   "why": "O Looka pergunta o nome da sua empresa, o setor e o estilo que você prefere, e gera várias opções de logo que você pode ajustar no editor — fontes, cores, layout e ícones. Depois de escolher uma direção, o Brand Kit transforma o logo em posts para redes sociais, cartões e outros materiais de divulgação já combinando entre si. O detalhe é que você só baixa o arquivo utilizável depois de pagar, então vale testar algumas direções antes de decidir."
+  },
+  {
+   "slug": "canva-ai",
+   "label": "Logo dentro do seu kit de design",
+   "why": "No Canva AI você descreve o logo que imagina em poucas palavras e recebe um design editável dentro do mesmo editor que já usa para posts, slides e outros materiais. Isso é útil se você quer que o logo combine com tudo que você cria para o negócio desde o início. Funciona melhor para marcas simples e limpas do que para ilustrações bem elaboradas."
+  },
+  {
+   "slug": "recraft-ai",
+   "label": "Arquivos vetoriais de verdade",
+   "why": "O Recraft gera tanto imagens raster quanto arquivos vetoriais editáveis de verdade, o que importa muito para um logo que vai ser redimensionado para placas, embalagens e impressos. Você escreve um prompt, escolhe um estilo e refina o resultado no Studio, com controles de estilo fortes para manter as variações consistentes. A curva de aprendizado é mais alta que a dos outros dois, então combina com quem já tem alguma intimidade com ferramentas de design."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🚀",
+   "text": "Você quer várias opções de logo rápido e não sabe por onde começar",
+   "slug": "looka"
+  },
+  {
+   "icon": "🎨",
+   "text": "Você já usa o Canva para seus flyers, posts e slides",
+   "slug": "canva-ai"
+  },
+  {
+   "icon": "🖼️",
+   "text": "Você precisa de um arquivo vetorial de verdade para impressão ou placas",
+   "slug": "recraft-ai"
+  },
+  {
+   "icon": "✍️",
+   "text": "Você quer o texto bem integrado na própria imagem do logo",
+   "slug": "ideogram"
+  }
+ ],
+ "steps": [
+  "Anote o nome do seu negócio, o setor e três palavras que descrevam seu estilo, tipo moderno, descontraído ou clássico.",
+  "Gere várias opções de logo na ferramenta escolhida e salve as que mais gostar.",
+  "Refine sua favorita ajustando cores, fontes, ícone e layout até ficar do jeito que você quer.",
+  "Confira o logo em tamanho pequeno, tipo favicon, e também em fundo escuro, para garantir que continua legível.",
+  "Baixe os formatos de arquivo que você precisa — vetorial para impressão, PNG para web — e guarde as cores e fontes da sua marca para usar depois."
+ ],
+ "faq": [
+  {
+   "q": "O logo criado por uma ferramenta de IA é meu mesmo?",
+   "a": "Normalmente sim, depois que você baixa a versão paga — confira os termos de cada ferramenta, já que algumas não liberam uso comercial para designs gratuitos ou públicos."
+  },
+  {
+   "q": "Um logo feito por IA vai parecer igual ao de todo mundo?",
+   "a": "Pode parecer, se você aceitar o primeiro resultado. Gere várias opções e depois personalize cores, fontes e ícones para o logo final ter a cara do seu negócio."
+  }
+ ],
+ "query": "Preciso de um logo para minha cafeteria nova, algo simples e clean"
+}

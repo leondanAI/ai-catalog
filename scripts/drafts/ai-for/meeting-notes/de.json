@@ -1,0 +1,63 @@
+{
+ "title": "Beste KI für Meeting-Notizen",
+ "tile": "Meetings transkribieren & Aufgaben erfassen",
+ "meta_desc": "Meeting transkribieren und Kernpunkte sowie Aufgaben automatisch erfassen? Vergleiche Otter.ai, Granola und Fireflies.ai und finde die beste Lösung für dein Team.",
+ "answer": "Nutze <b>Otter.ai</b>, wenn du eine Live-Transkription plus durchsuchbaren Meeting-Verlauf über gängige Videotools möchtest, <b>Granola</b>, wenn du lieber auf einen Meeting-Bot verzichtest und deine eigenen Notizen weiterschreiben willst, und <b>Fireflies.ai</b>, wenn du automatische Notizen mit integrierter CRM- und Slack-Anbindung brauchst.",
+ "picks": [
+  {
+   "slug": "otter-ai",
+   "label": "Live-Transkription & Verlauf",
+   "why": "Otter.ai klinkt sich in deinen Zoom-, Google-Meet- oder Microsoft-Teams-Call ein und verwandelt das Gespräch in ein durchsuchbares Transkript mit Zusammenfassung und Aufgabenliste. Du öffnest die App vor dem Meeting, lässt sie mitschneiden und kannst später vergangene Meetings durchsuchen, um nachzuschauen, was vereinbart wurde. Manche tiefergehenden Funktionen, etwa bestimmte CRM-Integrationen, sind höheren Tarifen vorbehalten, aber die grundlegende Transkription und Notizen funktionieren bereits in den Basistarifen gut."
+  },
+  {
+   "slug": "granola",
+   "label": "Kein Bot, eigene Notizen",
+   "why": "Granola nimmt Audio direkt von deinem eigenen Gerät auf, statt einen Bot in den Call zu schicken – es tritt also sichtbar niemand dem Meeting bei. Du machst dir während des Gesprächs ein paar grobe Notizen, und am Ende kombiniert Granola diese mit dem Transkript zu strukturierten Notizen und Aufgaben. Da kein sichtbarer Bot dabei ist, liegt es an dir, die anderen Teilnehmer über die Aufzeichnung zu informieren."
+  },
+  {
+   "slug": "fireflies-ai",
+   "label": "Automatische Notizen & CRM-Anbindung",
+   "why": "Fireflies.ai schickt einen Bot in dein Meeting, transkribiert es und erstellt durchsuchbare Notizen und Aufgaben, zu denen du über den integrierten Assistenten später Fragen stellen kannst. Außerdem kann das Tool Details direkt ins CRM übertragen oder in Slack posten, was sich besonders für Sales- und Kundenteams eignet. Einige der tiefergehenden KI-Funktionen greifen auf ein begrenztes monatliches Guthaben zurück, bei intensiver Nutzung lohnt sich also ein Blick darauf."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🎥",
+   "text": "Dein Team trifft sich bereits über Zoom, Google Meet oder Microsoft Teams und du möchtest einen Bot, der automatisch beitritt und transkribiert",
+   "slug": "otter-ai"
+  },
+  {
+   "icon": "🤫",
+   "text": "Du hast ein Meeting nach dem anderen und willst keinen sichtbaren Bot in jedem Call",
+   "slug": "granola"
+  },
+  {
+   "icon": "📇",
+   "text": "Meeting-Notizen und Aufgaben sollen direkt in dein CRM oder Slack einfließen",
+   "slug": "fireflies-ai"
+  },
+  {
+   "icon": "🧑‍💻",
+   "text": "Du bist Entwickler und brauchst nur rohe Sprache-zu-Text-Funktionalität, um darauf dein eigenes Tool aufzubauen",
+   "slug": "whisper"
+  }
+ ],
+ "steps": [
+  "Schalte den KI-Notizdienst ein, bevor das Meeting beginnt, oder lass ihn automatisch deinem Call beitreten.",
+  "Halte das Meeting wie gewohnt über dein Videotool ab; die meisten Notiz-Tools funktionieren mit Zoom, Google Meet und Microsoft Teams.",
+  "Lies nach dem Call die generierte Zusammenfassung und die Aufgaben sorgfältig durch, da kein Tool jedes Detail perfekt erfasst.",
+  "Ergänze oder korrigiere, was die KI übersehen hat, und teile oder exportiere die Notizen an die betroffenen Personen.",
+  "Durchsuche später vergangene Meetings, statt alte Notizen durchzublättern, um nachzuvollziehen, was entschieden wurde."
+ ],
+ "faq": [
+  {
+   "q": "Wissen alle Teilnehmer, dass das Meeting aufgezeichnet wird?",
+   "a": "Das hängt vom Tool ab. Bot-basierte Tools treten sichtbar als Teilnehmer dem Call bei, was meist signalisiert, dass aufgezeichnet wird. Geräte-basierte Tools nehmen Audio unauffällig auf, ohne sichtbaren Bot – hier liegt es an dir, die anderen Teilnehmer zu informieren."
+  },
+  {
+   "q": "Wie genau sind KI-Meeting-Transkripte?",
+   "a": "Bei klarem Audio und normalem Gesprächsverlauf ist die Genauigkeit meist gut, kann aber bei starkem Akzent, Hintergrundgeräuschen oder mehreren gleichzeitig sprechenden Personen nachlassen. Es lohnt sich, Transkript und Aufgaben vor der Nutzung noch einmal zu überfliegen."
+  }
+ ],
+ "query": "Ich brauche etwas, das meinem Meeting beitritt, es transkribiert und mir danach die Kernpunkte und Aufgaben liefert."
+}

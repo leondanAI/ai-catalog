@@ -22,7 +22,7 @@ import datetime, decimal, json, os, re, sys
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 # subscribers не копируем намеренно: там почты подписчиков, а скрипты контента
 # эту таблицу не трогают. Если файл всё же её меняет — остановимся.
-SAFE_TABLES = {'tools', 'news', 'comments', 'comparisons', 'toolbox'}
+SAFE_TABLES = {'tools', 'news', 'comments', 'comparisons', 'toolbox', 'ai_for'}
 
 
 def load_env():
@@ -84,6 +84,10 @@ def backup(conn, tables, stamp):
     os.makedirs(out, exist_ok=True)
     with conn.cursor() as cur:
         for t in sorted(tables):
+            cur.execute('SELECT to_regclass(%s)', (t,))
+            if cur.fetchone()[0] is None:   # файл сам создаёт таблицу (ai_for, 2026-11-01)
+                print(f'  {t}: таблицы ещё нет, копировать нечего')
+                continue
             cur.execute(f'SELECT * FROM {t}')
             cols = [c.name for c in cur.description]
             rows = [dict(zip(cols, r)) for r in cur.fetchall()]

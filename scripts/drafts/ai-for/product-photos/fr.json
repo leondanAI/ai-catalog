@@ -1,0 +1,63 @@
+{
+ "title": "Meilleure IA pour photos de produits",
+ "tile": "Créer des photos de produits",
+ "meta_desc": "Comparatif Photoroom, Krea AI et Canva AI pour vos photos de boutique en ligne : fond blanc, mises en scène, mannequins IA et retouche par lot.",
+ "answer": "Utilisez <b>Photoroom</b> pour des photos fond blanc impeccables et une retouche par lot de tout votre catalogue, <b>Krea AI</b> quand vous voulez des mises en scène créatives autour du produit, et <b>Canva AI</b> pour transformer ces photos en visuels de fiche produit et de marketing à votre image.",
+ "picks": [
+  {
+   "slug": "photoroom",
+   "label": "Conçu pour les photos de produits",
+   "why": "Photoroom supprime les arrière-plans, ajoute des ombres réalistes et place votre produit dans des décors générés par IA à partir d'une seule photo. Vous pouvez traiter tout un catalogue en une fois et le connecter à votre boutique, ce qui fait gagner des heures sur des photos de fiches répétitives. Son option gratuite est réservée à un usage personnel, donc une boutique aura besoin d'un forfait payant pour exporter en masse."
+  },
+  {
+   "slug": "krea-ai",
+   "label": "Idéal pour les mises en scène",
+   "why": "Krea AI génère des décors et des ambiances complets autour de votre produit, avec des curseurs à ajuster jusqu'à obtenir le rendu voulu. Vous importez votre photo produit, décrivez ou orientez la scène, et itérez rapidement sur de nombreux styles. Un usage intensif de la vidéo ou des exports haute résolution peut épuiser votre quota rapidement, ce qui convient mieux à des créations ponctuelles qu'à une retouche en masse au quotidien."
+  },
+  {
+   "slug": "canva-ai",
+   "label": "Le plus simple pour les mises en page de catalogue",
+   "why": "Canva AI part d'une photo produit terminée et vous aide à construire les supports autour, comme des posts réseaux sociaux, des bannières de fiche produit et des pages de catalogue, simplement en décrivant ce que vous voulez. Il garde les créations générées par IA modifiables plutôt que de les figer, pour pouvoir ajuster le texte ou les couleurs plus tard. Il est plus adapté pour assembler et présenter des photos que pour générer la photo fond blanc d'origine."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🛒",
+   "text": "Vous vendez sur une marketplace et avez besoin de centaines de photos fond blanc rapidement",
+   "slug": "photoroom"
+  },
+  {
+   "icon": "🌅",
+   "text": "Vous voulez montrer votre produit dans une mise en scène plutôt que sur un fond uni",
+   "slug": "krea-ai"
+  },
+  {
+   "icon": "🎨",
+   "text": "Vous devez transformer des photos terminées en posts réseaux sociaux et pages de catalogue",
+   "slug": "canva-ai"
+  },
+  {
+   "icon": "🍌",
+   "text": "Vous voulez des retouches rapides et cohérentes d'une photo existante avec des prompts simples",
+   "slug": "nano-banana"
+  }
+ ],
+ "steps": [
+  "Prenez ou rassemblez vos photos produits brutes avec un bon éclairage et un fond neutre si possible.",
+  "Utilisez un outil IA pour supprimer l'arrière-plan et insérer un fond blanc propre ou personnalisé.",
+  "Générez une mise en scène autour du produit si vous voulez un contexte au-delà d'un fond uni.",
+  "Traitez le reste de votre catalogue par lot une fois satisfait d'un premier résultat, pour que toutes les photos soient cohérentes.",
+  "Vérifiez le résultat pour détecter des bords déformés, des ombres étranges ou des couleurs incorrectes avant publication, et corrigez à la main si besoin."
+ ],
+ "faq": [
+  {
+   "q": "L'IA peut-elle créer des photos de produits sans vraie séance photo ?",
+   "a": "Pas totalement. La plupart des outils ont encore besoin d'une vraie photo de votre produit pour travailler : ils suppriment l'arrière-plan, ajoutent des ombres et le placent dans un nouveau décor. Les produits entièrement inventés par l'IA sans photo source ont tendance à être moins fidèles."
+  },
+  {
+   "q": "Les photos de produits retouchées par IA resteront-elles cohérentes sur tout mon catalogue ?",
+   "a": "Oui, si vous utilisez le même outil et les mêmes réglages pour chaque image et que vous les traitez par lot plutôt qu'une par une. Mélanger les outils ou refaire les réglages pour chaque photo est la principale cause d'incohérence dans un catalogue."
+  }
+ ],
+ "query": "J'ai besoin de supprimer des arrière-plans et de créer des photos fond blanc et en mise en scène pour le catalogue de ma boutique en ligne."
+}

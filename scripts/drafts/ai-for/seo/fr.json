@@ -1,0 +1,63 @@
+{
+ "title": "Meilleure IA pour le SEO",
+ "tile": "Développez votre SEO et votre visibilité dans l'IA",
+ "meta_desc": "Boostez votre référencement Google et votre visibilité dans l'IA avec Semrush, Surfer SEO et Frase : données SEO, scoring de contenu et suivi IA.",
+ "answer": "Utilisez <b>Semrush</b> si vous voulez une seule plateforme pour la recherche de mots-clés, le suivi des positions et la visibilité dans l'IA, choisissez <b>Surfer SEO</b> pour rédiger des pages notées à la fois par rapport aux pages bien classées et aux moteurs de réponse IA, et optez pour <b>Frase</b> si vous voulez un agent qui recherche, rédige et publie du contenu noté à la fois pour le SEO et la citation par l'IA.",
+ "picks": [
+  {
+   "slug": "semrush",
+   "label": "Tout-en-un pour le SEO et le suivi IA",
+   "why": "Semrush vous donne la recherche de mots-clés, le suivi des positions, les données de backlinks et les audits de site, en plus d'un outil qui surveille comment votre marque apparaît dans les réponses de l'IA. Vous créez un projet, lancez un audit de site, construisez des listes de mots-clés, puis consultez les rapports de visibilité IA pour voir où vous êtes mentionné. L'outil couvre beaucoup de terrain, donc prévoyez du temps pour vous familiariser avec son fonctionnement."
+  },
+  {
+   "slug": "surferseo",
+   "label": "Rédigez vos pages, suivez vos mentions IA",
+   "why": "Surfer SEO associe son éditeur de contenu, qui note votre texte par rapport aux pages déjà bien classées, à un suivi des mentions de marque dans les moteurs de réponse IA. Vous rédigez ou modifiez votre texte dans l'éditeur pour atteindre les objectifs on-page, puis vous consultez les rapports de visibilité IA pour voir si vos pages sont citées. Le suivi des réponses IA est encore un domaine récent, donc prenez ces chiffres comme un indicateur, pas une vérité absolue."
+  },
+  {
+   "slug": "frase",
+   "label": "Un agent rédige et publie le contenu",
+   "why": "Frase fait tourner un agent qui recherche un sujet, rédige l'article, le note à la fois pour le SEO et son potentiel de citation par l'IA, et peut le publier directement sur votre site. Vous lui donnez un sujet, le laissez construire l'article, puis vérifiez le double score avant la mise en ligne. Les limites d'articles et de pages selon la formule peuvent poser problème aux gros producteurs de contenu."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🔍",
+   "text": "Vous voulez un seul tableau de bord pour les mots-clés, les backlinks et les mentions IA",
+   "slug": "semrush"
+  },
+  {
+   "icon": "✍️",
+   "text": "Vous rédigez des pages et voulez un score face aux concurrents bien classés",
+   "slug": "surferseo"
+  },
+  {
+   "icon": "🤖",
+   "text": "Vous voulez un agent qui recherche, rédige et publie du contenu pour vous",
+   "slug": "frase"
+  },
+  {
+   "icon": "📊",
+   "text": "Vous gérez déjà un inventaire de contenu et voulez y ajouter la visibilité dans les LLM",
+   "slug": "clearscope"
+  }
+ ],
+ "steps": [
+  "Choisissez un sujet ou un mot-clé que votre audience recherche réellement.",
+  "Étudiez ce qui est déjà bien classé et ce que les réponses IA citent actuellement.",
+  "Rédigez ou optimisez votre page avec le scoring ou l'éditeur de l'outil.",
+  "Publiez la page et vérifiez ses performances à la fois dans le classement Google et dans les rapports de visibilité IA.",
+  "Revenez régulièrement sur la page pour la mettre à jour, à mesure que les classements et les mentions IA évoluent."
+ ],
+ "faq": [
+  {
+   "q": "Dois-je encore écrire pour Google si les réponses IA prennent le dessus sur la recherche ?",
+   "a": "Oui. Les moteurs de réponse IA s'appuient sur des pages déjà bien classées et jugées fiables, donc un bon SEO reste la base."
+  },
+  {
+   "q": "En quoi l'optimisation pour les réponses IA diffère-t-elle du SEO classique ?",
+   "a": "Le SEO classique vise à bien positionner des pages sur des mots-clés. L'optimisation pour l'IA regarde aussi si votre contenu est cité par des outils comme ChatGPT ou les aperçus IA de Google, ce qui dépend de la clarté, de la structure et des signaux de confiance."
+  }
+ ],
+ "query": "Je veux augmenter le trafic de mon site depuis Google et apparaître dans les réponses IA comme ChatGPT."
+}

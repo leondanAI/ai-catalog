@@ -1,0 +1,63 @@
+{
+ "title": "Best AI to generate images",
+ "tile": "Turn text into an image",
+ "meta_desc": "Turn a text prompt into an image using Nano Banana, ChatGPT Images or Midjourney. Compare free editing, in-chat workflows and top-tier art quality.",
+ "answer": "Use <b>Nano Banana</b> for fast, free image editing inside Google's chat app, <b>ChatGPT Images</b> if you already work in ChatGPT and need accurate text or UI in your picture, and <b>Midjourney</b> when the artistic quality of the final image matters most.",
+ "picks": [
+  {
+   "slug": "nano-banana",
+   "label": "Free conversational editing",
+   "why": "You describe the picture you want in plain language inside Google's chat app, then keep talking to it to refine the result over several turns. It's good at keeping the same character or subject consistent as you make changes. The catch is that free images carry a visible watermark on top of the usual invisible one."
+  },
+  {
+   "slug": "chatgpt-images",
+   "label": "Built into your ChatGPT workflow",
+   "why": "You type a description in ChatGPT and get an image back without switching tools, or upload a picture and ask for a specific change. It's notably better than most at rendering small text, icons and busy layouts correctly. Free access is limited, and its artistic range is narrower than a dedicated art tool."
+  },
+  {
+   "slug": "midjourney",
+   "label": "Highest visual art quality",
+   "why": "You type a prompt and get richly detailed, polished artwork that designers often rate as the best-looking AI output around. A raw mode lets you ask for a literal reading of your prompt instead of the tool's default stylised look. There's no free plan, so you need a subscription before you can try it."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "💬",
+   "text": "You want to generate and edit images for free inside a chat app",
+   "slug": "nano-banana"
+  },
+  {
+   "icon": "✍️",
+   "text": "You need an image with readable text, icons or a busy layout",
+   "slug": "chatgpt-images"
+  },
+  {
+   "icon": "🎨",
+   "text": "You want the richest, most polished artwork for a portfolio or print",
+   "slug": "midjourney"
+  },
+  {
+   "icon": "🖼️",
+   "text": "You want to try many different AI art styles in one place",
+   "slug": "freepik"
+  }
+ ],
+ "steps": [
+  "Write a clear description of the picture you want, including subject, style and setting.",
+  "Pick a tool that matches your need: fast free edits, in-chat convenience, or top art quality.",
+  "Generate a first version and look closely at faces, hands, text and small details.",
+  "Refine your wording or ask for a specific edit to fix anything that looks wrong.",
+  "Download the final image once you're happy with the result."
+ ],
+ "faq": [
+  {
+   "q": "Can I edit a photo I already have instead of starting from nothing?",
+   "a": "Yes. Nano Banana and ChatGPT Images both accept an existing image alongside your text instructions, so you can describe the change you want instead of generating a brand new picture."
+  },
+  {
+   "q": "Why do faces or hands sometimes look wrong in AI images?",
+   "a": "Image models can still struggle with fine detail like hands, text and small objects. Check these areas closely and ask the tool to redo or fix just that part if something looks off."
+  }
+ ],
+ "query": "I want to turn a text description into a picture of a cosy cabin in the woods"
+}

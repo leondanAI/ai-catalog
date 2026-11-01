@@ -1,0 +1,63 @@
+{
+ "title": "Melhor IA para fotos de produtos",
+ "tile": "Criar fotos de produtos",
+ "meta_desc": "Compare Photoroom, Krea AI e Canva AI para fotos de loja online: fundo branco, cenas lifestyle, modelos com IA e edição em lote de catálogos inteiros.",
+ "answer": "Use o <b>Photoroom</b> para fotos com fundo branco limpo e edição de catálogo em lote, o <b>Krea AI</b> quando quiser cenas lifestyle criativas em torno do produto, e o <b>Canva AI</b> para transformar essas fotos em layouts de anúncios e marketing com a cara da sua marca.",
+ "picks": [
+  {
+   "slug": "photoroom",
+   "label": "Feito para fotos de produtos",
+   "why": "O Photoroom remove fundos, adiciona sombras realistas e coloca seu produto em cenas criadas por IA a partir de um único upload. Você pode processar um catálogo inteiro em lote e conectar tudo à sua loja, o que economiza horas de fotos repetitivas para anúncios. A opção gratuita é só para uso pessoal, então uma loja vai precisar de um plano pago para exportar em massa."
+  },
+  {
+   "slug": "krea-ai",
+   "label": "Melhor para cenas lifestyle",
+   "why": "O Krea AI gera fundos e estilos lifestyle completos em torno do seu produto, com controles que você ajusta até o clima ficar do jeito certo. Você envia a foto do produto, descreve ou direciona a cena, e testa vários visuais rapidamente. O uso intenso de vídeo ou saída em alta resolução pode consumir rápido seu limite, então combina mais com cenas criativas ocasionais do que com edição em massa diária."
+  },
+  {
+   "slug": "canva-ai",
+   "label": "Mais fácil para layouts de catálogo",
+   "why": "O Canva AI pega uma foto de produto pronta e ajuda a criar o material em volta dela, como posts para redes sociais, banners de anúncio e páginas de catálogo, só descrevendo o que você quer. Ele mantém os designs gerados por IA editáveis em vez de achatá-los, então dá para ajustar texto ou cores depois. É melhor para montar e apresentar fotos do que para gerar a foto original com fundo branco."
+  }
+ ],
+ "choose": [
+  {
+   "icon": "🛒",
+   "text": "Você vende em marketplace e precisa de centenas de fotos com fundo branco limpo rapidamente",
+   "slug": "photoroom"
+  },
+  {
+   "icon": "🌅",
+   "text": "Você quer mostrar seu produto em uma cena estilizada em vez de um fundo liso",
+   "slug": "krea-ai"
+  },
+  {
+   "icon": "🎨",
+   "text": "Você precisa transformar fotos prontas em posts para redes sociais e páginas de catálogo",
+   "slug": "canva-ai"
+  },
+  {
+   "icon": "🍌",
+   "text": "Você quer edições rápidas e consistentes em uma foto existente com comandos simples",
+   "slug": "nano-banana"
+  }
+ ],
+ "steps": [
+  "Tire ou reúna suas fotos brutas do produto com boa iluminação e um fundo liso, se possível.",
+  "Use uma ferramenta de IA para remover o fundo e colocar um fundo branco limpo ou personalizado.",
+  "Gere uma cena lifestyle ou estilizada em torno do produto se quiser dar contexto além de um fundo liso.",
+  "Processe o restante do catálogo em lote assim que estiver satisfeito com um resultado, para que todas as fotos combinem.",
+  "Confira o resultado em busca de bordas distorcidas, sombras estranhas ou cores erradas antes de publicar, e corrija manualmente se precisar."
+ ],
+ "faq": [
+  {
+   "q": "A IA consegue criar fotos de produtos sem um ensaio fotográfico real?",
+   "a": "Não totalmente. A maioria das ferramentas ainda precisa de uma foto real do seu produto como base; elas removem o fundo, adicionam sombras e colocam o produto em uma nova cena. Produtos totalmente inventados pela IA, sem foto de origem, tendem a ficar menos precisos."
+  },
+  {
+   "q": "As fotos de produtos editadas por IA vão ficar consistentes em todo o meu catálogo?",
+   "a": "Podem ficar, se você usar a mesma ferramenta e as mesmas configurações para todas as imagens e processá-las em lote em vez de uma por uma. Misturar ferramentas ou refazer configurações para cada foto é o principal motivo de catálogos ficarem inconsistentes."
+  }
+ ],
+ "query": "Preciso remover fundos e criar fotos com fundo branco e cenas lifestyle para o catálogo da minha loja online."
+}
