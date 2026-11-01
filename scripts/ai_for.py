@@ -9,6 +9,7 @@
   python3 scripts/ai_for.py draft [slug,…]      → drafts/ai-for/<slug>/en.json по брифу и карточкам
   python3 scripts/ai_for.py translate [slug,…]  → остальные 7 языков (только недостающие)
   python3 scripts/ai_for.py sql [slug,…]        → scripts/ai_for_<дата>.sql (DELETE + INSERT)
+  python3 scripts/ai_for.py cover <slug> <png>  → media/ai-for/<slug>.webp/.jpg + scripts/ai_for_cover_<slug>.sql
 
 После sql: run_sql.py (сначала --dry-run), затем generate-ai-for-pages.py.
 """
@@ -256,7 +257,25 @@ def sql(slugs):
     print(f'  {os.path.relpath(p, os.path.join(ROOT, ".."))}')
 
 
+def cover(slug, png):
+    """Картинка в шапку: ElevenLabs, фирменный набор «AItoolFit», 16:9, от 1200 px."""
+    from PIL import Image
+    im = Image.open(png).convert('RGB')
+    if im.width < 1200:
+        sys.exit(f'Ширина {im.width}px — для крупного превью нужно от 1200.')
+    base = os.path.join(ROOT, '..', 'media', 'ai-for', slug)
+    os.makedirs(os.path.dirname(base), exist_ok=True)
+    im.save(base + '.webp', 'WEBP', quality=82, method=6)
+    im.save(base + '.jpg', 'JPEG', quality=84, optimize=True, progressive=True)
+    url = f'https://aitoolfit.ai/media/ai-for/{slug}.jpg'
+    p = os.path.join(ROOT, f'ai_for_cover_{slug}.sql')
+    open(p, 'w', encoding='utf-8').write(f"UPDATE ai_for SET image_url = '{url}' WHERE slug = '{slug}';\n")
+    print(f'  media/ai-for/{slug}.webp {os.path.getsize(base + ".webp") // 1024} KB, .jpg {os.path.getsize(base + ".jpg") // 1024} KB → {os.path.basename(p)}')
+
+
 def main():
+    if len(sys.argv) >= 4 and sys.argv[1] == 'cover':
+        return cover(sys.argv[2], sys.argv[3])
     if len(sys.argv) < 2 or sys.argv[1] not in ('draft', 'translate', 'sql'):
         sys.exit(__doc__)
     slugs = set(sys.argv[2].split(',')) if len(sys.argv) > 2 else None

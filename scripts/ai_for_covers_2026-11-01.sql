@@ -1,0 +1,11 @@
+-- Картинки в шапку раздела «ИИ для…» (ElevenLabs, набор AItoolFit)
+UPDATE ai_for SET image_url = 'https://aitoolfit.ai/media/ai-for/seo.jpg' WHERE slug = 'seo';
+UPDATE ai_for SET image_url = 'https://aitoolfit.ai/media/ai-for/meeting-notes.jpg' WHERE slug = 'meeting-notes';
+UPDATE ai_for SET image_url = 'https://aitoolfit.ai/media/ai-for/voiceover.jpg' WHERE slug = 'voiceover';
+UPDATE ai_for SET image_url = 'https://aitoolfit.ai/media/ai-for/podcast-editing.jpg' WHERE slug = 'podcast-editing';
+UPDATE ai_for SET image_url = 'https://aitoolfit.ai/media/ai-for/blog-to-video.jpg' WHERE slug = 'blog-to-video';
+UPDATE ai_for SET image_url = 'https://aitoolfit.ai/media/ai-for/video-generation.jpg' WHERE slug = 'video-generation';
+UPDATE ai_for SET image_url = 'https://aitoolfit.ai/media/ai-for/image-generation.jpg' WHERE slug = 'image-generation';
+UPDATE ai_for SET image_url = 'https://aitoolfit.ai/media/ai-for/logo.jpg' WHERE slug = 'logo';
+UPDATE ai_for SET image_url = 'https://aitoolfit.ai/media/ai-for/product-photos.jpg' WHERE slug = 'product-photos';
+UPDATE ai_for SET image_url = 'https://aitoolfit.ai/media/ai-for/presentation.jpg' WHERE slug = 'presentation';

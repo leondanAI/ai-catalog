@@ -454,7 +454,27 @@ def main():
             hub_page(lang, tasks, T, header, footer))
     if problems:
         sys.exit('Страницы «ИИ для…» не собраны — пересмотрите дела (scripts/ai_for.py):\n  ' + '\n  '.join(problems))
-    print(f'Done — {written} страниц дел и {len(LANGS)} страниц раздела')
+    write_llms_txt([r for r in rows if r['lang'] == 'en'])
+    print(f'Done — {written} страниц дел и {len(LANGS)} страниц раздела, llms.txt')
+
+
+def write_llms_txt(tasks):
+    """/llms.txt — короткая карта сайта для ИИ-поисковиков (llmstxt.org).
+    Пишется здесь, потому что главное в ней — список дел из ai_for."""
+    lines = ['# AItoolFit', '',
+             '> Task-based AI tool finder. Describe a task and get 3 AI tools that fit it, with the reason for each. '
+             'Tool data (pricing, versions, plans) is updated when vendors change it, and every page shows the date it was last verified. '
+             'No paid placements. Available in English, Spanish, German, Russian, Ukrainian, Hebrew, French and Portuguese.', '',
+             '## AI for a task', '',
+             f'- [AI for every task]({SITE}/ai-for.html): all tasks with three picks each']
+    lines += [f"- [{t['title']}]({SITE}/ai-for/{t['slug']}.html): {t['meta_desc']}" for t in tasks]
+    lines += ['', '## Catalog and comparisons', '',
+              f'- [Best AI tools by category]({SITE}/directory.html): curated list ordered by real-world popularity',
+              f'- [AI tool comparisons]({SITE}/compare.html): side-by-side comparisons with verdicts',
+              f'- [Find a tool]({SITE}/): free AI finder — describe your task in plain words', '',
+              '## News', '',
+              f'- [AI news]({SITE}/news.html): weekly AI industry news and stories, with sources', '']
+    open(os.path.join(ROOT, 'llms.txt'), 'w', encoding='utf-8').write('\n'.join(lines))
 
 
 if __name__ == '__main__':
