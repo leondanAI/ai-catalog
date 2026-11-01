@@ -101,6 +101,7 @@ def add_local_name(lang, slug, name, title, meta):
         return title, f'{name} ({local}): {meta}'
     return title, meta
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+CATEGORY_ORDER = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'category_order.json'), encoding='utf-8'))
 BASE_URL = 'https://aitoolfit.ai'
 
 LANG_FLAGS = {
@@ -391,11 +392,15 @@ def render_page(tool, all_tools, lang, L, trans, ratings):
     else:
         faq_html = ''
 
-    also = [a for a in all_tools if a['category'] == category and a['slug'] != slug][:3]
+    # Лидеры категории по category_order.json, описание — на языке страницы
+    # (до 2026-11-01 брались первые три по алфавиту с английским best_for).
+    order = CATEGORY_ORDER.get(category, [])
+    also = sorted((a for a in all_tools if a['category'] == category and a['slug'] != slug),
+                  key=lambda a: order.index(a['slug']) if a['slug'] in order else len(order))[:3]
     also_html = ''.join(
         f'    <a class="also-card" href="/{lang}/tools/{esc(a["slug"])}.html">\n'
         f'      <div class="also-card-name">{esc(a["name"])}</div>\n'
-        f'      <div class="also-card-desc">{esc(a.get("best_for") or "")}</div>\n'
+        f'      <div class="also-card-desc">{esc(trans.get(a["slug"], {}).get("best_for") or a.get("best_for") or "")}</div>\n'
         f'    </a>\n' for a in also
     )
 
