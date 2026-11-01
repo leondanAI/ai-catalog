@@ -41,7 +41,7 @@ UI = {
                hub_lead="Presentation, product photos, a video, a logo — for each task, three AI tools that handle it well, and why. Don't see yours? Describe it in your own words.",
                hub_meta='Pick the right AI for a specific task: presentations, product photos, video, voiceover, logos, meeting notes and SEO. Three tested tools per task, with reasons.',
                groups=['Images & design', 'Video & audio', 'Work & meetings', 'Website & business', 'Development'],
-               home='Home', open='Open {name} →', more='Review, pricing & cons', picked='Picked by AItoolFit · tool data checked {date}',
+               home='Home', open='Open {name} →', more='{name} review', picked='Picked by AItoolFit · tool data checked {date}',
                choose_h='What to choose', steps_h='How to do it with AI',
                finder_p="Your task is different? Describe it in your own words and we'll pick 3 tools for exactly that.", finder_btn='Find tools →',
                faq_h='FAQ', also_h='Also worth trying', related_h='More tasks', compare='Detailed comparison: {label} →',
@@ -54,7 +54,7 @@ UI = {
                hub_lead='Презентация, фото товаров, ролик, логотип — для каждого дела три нейросети, которые с ним справятся, и объяснение, почему именно они. Не нашли своё? Опишите своими словами.',
                hub_meta='Какую нейросеть выбрать под задачу: презентации, фото товаров, видео, озвучка, логотип, расшифровка встреч и SEO. По три проверенных инструмента с объяснением.',
                groups=['Картинки и дизайн', 'Видео и звук', 'Работа и встречи', 'Сайт и бизнес', 'Разработка'],
-               home='Главная', open='Открыть {name} →', more='Обзор, цены и минусы', picked='Подобрано AItoolFit · данные инструментов проверены {date}',
+               home='Главная', open='Открыть {name} →', more='Обзор {name}', picked='Подобрано AItoolFit · данные инструментов проверены {date}',
                choose_h='Что выбрать', steps_h='Как сделать с помощью ИИ',
                finder_p='Задача другая? Опишите её своими словами — подберём 3 инструмента именно под неё.', finder_btn='Подобрать →',
                faq_h='Частые вопросы', also_h='Ещё можно попробовать', related_h='Другие задачи', compare='Подробное сравнение: {label} →',
@@ -67,7 +67,7 @@ UI = {
                hub_lead='Презентація, фото товарів, ролик, логотип — для кожної справи три нейромережі, які з нею впораються, і пояснення, чому саме вони. Не знайшли свою? Опишіть своїми словами.',
                hub_meta='Яку нейромережу обрати під задачу: презентації, фото товарів, відео, озвучка, логотип, розшифровка зустрічей і SEO. По три перевірені інструменти з поясненням.',
                groups=['Зображення і дизайн', 'Відео і звук', 'Робота і зустрічі', 'Сайт і бізнес', 'Розробка'],
-               home='Головна', open='Відкрити {name} →', more='Огляд, ціни та мінуси', picked='Підібрано AItoolFit · дані інструментів перевірено {date}',
+               home='Головна', open='Відкрити {name} →', more='Огляд {name}', picked='Підібрано AItoolFit · дані інструментів перевірено {date}',
                choose_h='Що обрати', steps_h='Як зробити за допомогою ШІ',
                finder_p='Задача інша? Опишіть її своїми словами — підберемо 3 інструменти саме під неї.', finder_btn='Підібрати →',
                faq_h='Часті питання', also_h='Ще можна спробувати', related_h='Інші задачі', compare='Детальне порівняння: {label} →',
@@ -80,7 +80,7 @@ UI = {
                hub_lead='Una presentación, fotos de producto, un vídeo, un logo: para cada tarea, tres herramientas de IA que la resuelven bien, y por qué. ¿No ves la tuya? Descríbela con tus palabras.',
                hub_meta='Elige la IA adecuada para cada tarea: presentaciones, fotos de producto, vídeo, locución, logos, notas de reuniones y SEO. Tres herramientas probadas por tarea.',
                groups=['Imagen y diseño', 'Vídeo y audio', 'Trabajo y reuniones', 'Web y negocio', 'Desarrollo'],
-               home='Inicio', open='Abrir {name} →', more='Reseña, precios y contras', picked='Seleccionado por AItoolFit · datos de las herramientas verificados el {date}',
+               home='Inicio', open='Abrir {name} →', more='Reseña de {name}', picked='Seleccionado por AItoolFit · datos de las herramientas verificados el {date}',
                choose_h='Qué elegir', steps_h='Cómo hacerlo con IA',
                finder_p='¿Tu tarea es otra? Descríbela con tus palabras y te sugerimos 3 herramientas justo para ella.', finder_btn='Buscar →',
                faq_h='Preguntas frecuentes', also_h='También puedes probar', related_h='Más tareas', compare='Comparación detallada: {label} →',
@@ -93,7 +93,7 @@ UI = {
                hub_lead='Präsentation, Produktfotos, Video, Logo: Für jede Aufgabe drei KI-Tools, die sie gut erledigen, und warum. Deine Aufgabe fehlt? Beschreib sie in eigenen Worten.',
                hub_meta='Die passende KI für jede Aufgabe: Präsentationen, Produktfotos, Video, Voiceover, Logos, Meeting-Notizen und SEO. Drei geprüfte Tools pro Aufgabe, mit Begründung.',
                groups=['Bild & Design', 'Video & Audio', 'Arbeit & Meetings', 'Website & Business', 'Entwicklung'],
-               home='Startseite', open='{name} öffnen →', more='Test, Preise & Nachteile', picked='Ausgewählt von AItoolFit · Tool-Daten geprüft am {date}',
+               home='Startseite', open='{name} öffnen →', more='{name} im Test', picked='Ausgewählt von AItoolFit · Tool-Daten geprüft am {date}',
                choose_h='Was wählen', steps_h='So geht es mit KI',
                finder_p='Andere Aufgabe? Beschreib sie in eigenen Worten – wir finden 3 Tools genau dafür.', finder_btn='Tools finden →',
                faq_h='Häufige Fragen', also_h='Ebenfalls einen Blick wert', related_h='Weitere Aufgaben', compare='Ausführlicher Vergleich: {label} →',
@@ -106,7 +106,7 @@ UI = {
                hub_lead="Présentation, photos produit, vidéo, logo : pour chaque tâche, trois outils d'IA qui la font bien, et pourquoi. Votre tâche n'y est pas ? Décrivez-la avec vos mots.",
                hub_meta="Choisissez la bonne IA pour chaque tâche : présentations, photos produit, vidéo, voix off, logos, comptes rendus de réunion et SEO. Trois outils testés par tâche.",
                groups=['Image et design', 'Vidéo et audio', 'Travail et réunions', 'Site web et business', 'Développement'],
-               home='Accueil', open='Ouvrir {name} →', more='Avis, prix et limites', picked='Sélection AItoolFit · données des outils vérifiées le {date}',
+               home='Accueil', open='Ouvrir {name} →', more='Avis sur {name}', picked='Sélection AItoolFit · données des outils vérifiées le {date}',
                choose_h='Que choisir', steps_h="Comment faire avec l'IA",
                finder_p='Votre tâche est différente ? Décrivez-la avec vos mots, nous trouverons 3 outils exactement pour elle.', finder_btn='Trouver →',
                faq_h='Questions fréquentes', also_h='À essayer aussi', related_h='Autres tâches', compare='Comparatif détaillé : {label} →',
@@ -119,7 +119,7 @@ UI = {
                hub_lead='Apresentação, fotos de produto, vídeo, logo: para cada tarefa, três ferramentas de IA que dão conta do recado, e o porquê. Não encontrou a sua? Descreva com suas palavras.',
                hub_meta='Escolha a IA certa para cada tarefa: apresentações, fotos de produto, vídeo, narração, logos, atas de reunião e SEO. Três ferramentas testadas por tarefa.',
                groups=['Imagem e design', 'Vídeo e áudio', 'Trabalho e reuniões', 'Site e negócios', 'Desenvolvimento'],
-               home='Início', open='Abrir {name} →', more='Análise, preços e contras', picked='Selecionado pelo AItoolFit · dados das ferramentas verificados em {date}',
+               home='Início', open='Abrir {name} →', more='Análise do {name}', picked='Selecionado pelo AItoolFit · dados das ferramentas verificados em {date}',
                choose_h='O que escolher', steps_h='Como fazer com IA',
                finder_p='Sua tarefa é outra? Descreva com suas palavras e indicamos 3 ferramentas exatamente para ela.', finder_btn='Encontrar →',
                faq_h='Perguntas frequentes', also_h='Também vale testar', related_h='Mais tarefas', compare='Comparação detalhada: {label} →',
@@ -132,7 +132,7 @@ UI = {
                hub_lead='מצגת, תמונות מוצר, סרטון, לוגו: לכל משימה שלושה כלי AI שעושים אותה טוב, ולמה דווקא הם. לא מצאתם את שלכם? תארו אותה במילים שלכם.',
                hub_meta='בחרו את כלי ה-AI הנכון לכל משימה: מצגות, תמונות מוצר, וידאו, קריינות, לוגו, סיכומי פגישות ו-SEO. שלושה כלים נבחרים לכל משימה, עם הסבר.',
                groups=['תמונות ועיצוב', 'וידאו ואודיו', 'עבודה ופגישות', 'אתר ועסק', 'פיתוח'],
-               home='דף הבית', open='לפתוח את {name} ←', more='סקירה, מחירים וחסרונות', picked='נבחר על ידי AItoolFit · נתוני הכלים נבדקו ב-{date}',
+               home='דף הבית', open='לפתוח את {name} ←', more='סקירה של {name}', picked='נבחר על ידי AItoolFit · נתוני הכלים נבדקו ב-{date}',
                choose_h='מה לבחור', steps_h='איך עושים את זה עם AI',
                finder_p='המשימה שלכם אחרת? תארו אותה במילים שלכם ונמצא 3 כלים בדיוק בשבילה.', finder_btn='מצאו כלים ←',
                faq_h='שאלות נפוצות', also_h='שווה לנסות גם', related_h='משימות נוספות', compare='השוואה מפורטת: {label} ←',
@@ -322,7 +322,7 @@ def task_page(d, lang, T, tasks, comp_label, header, footer, alternates):
     <p class="pick-desc">{esc(first)}</p>
     <div class="pick-actions">
       <a class="btn-visit" href="{esc(t['url'])}" target="_blank" rel="noopener" data-tool="{x['slug']}">{esc(u['open'].format(name=t['name']))}</a>
-      <a class="pick-more" href="{p}/tools/{x['slug']}.html">{esc(u['more'])}</a>
+      <a class="pick-more" href="{p}/tools/{x['slug']}.html">{esc(u['more'].format(name=t['name']))}</a>
     </div>
   </section>''')
 
