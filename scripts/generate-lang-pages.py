@@ -529,6 +529,7 @@ def generate_lang_page(html, lang, page, title, desc):
     # Remove English SEO pre-rendered blocks — JS will fetch translated content from Supabase
     html = re.sub(r'<!-- SEO:news:start -->.*?<!-- SEO:news:end -->', '<!-- SEO:news:start --><!-- SEO:news:end -->', html, flags=re.DOTALL)
     html = re.sub(r'<!-- SEO:catalog:start -->.*?<!-- SEO:catalog:end -->', '<!-- SEO:catalog:start --><!-- SEO:catalog:end -->', html, flags=re.DOTALL)
+    html = re.sub(r'<!-- SEO:aifor:start -->.*?<!-- SEO:aifor:end -->', '<!-- SEO:aifor:start --><!-- SEO:aifor:end -->', html, flags=re.DOTALL)
 
     # Fix relative CSS/JS paths to absolute so they work from subdirectory
     html = html.replace('href="css/', 'href="/css/')

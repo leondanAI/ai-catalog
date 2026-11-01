@@ -124,7 +124,7 @@ def render_tool_card(tool, color, lang='en', tr=None):
       <div class="tool-footer">
         <span class="tool-domain">{esc(domain)}</span>
         <div style="display:flex;align-items:center;gap:6px">
-          <a class="tool-review" href="{base}/tools/{sl}.html">{esc(lbl_review)}</a>
+          <a class="tool-review" href="{base}/tools/{sl}.html">{esc(lbl_review.replace('{name}', name))}</a>
           <a class="tool-aff" href="{esc(url)}" target="_blank" rel="noopener sponsored">{esc(lbl_open)}</a>
         </div>
       </div>

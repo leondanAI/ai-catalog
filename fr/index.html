@@ -184,6 +184,15 @@
 </style>
 
 <div class="wrap">
+  <!-- Раздел «ИИ для…»: печатает scripts/generate-ai-for-pages.py из таблицы ai_for -->
+  <!-- SEO:aifor:start --><style>
+.af-home .tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.af-home .task-tile{display:block;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:border-color .15s,background .15s}
+.af-home .task-tile:hover{border-color:var(--accent);background:var(--bg3)}
+.af-home .task-tile img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.af-home .tt-title{font-family:var(--font-display);font-size:15px;font-weight:600;color:var(--text);padding:.7rem .9rem .8rem;line-height:1.3}
+</style><section class="section af-home" style="padding-top:1rem"><div class="section-head"><h2 class="section-title">Quelle IA pour votre tâche</h2><a href="/fr/ai-for.html" class="section-more">Toutes les tâches →</a></div><div class="tgrid"><a class="task-tile" href="/fr/ai-for/product-photos.html"><picture><source srcset="https://aitoolfit.ai/media/ai-for/product-photos.webp" type="image/webp"><img class="tt-img" src="https://aitoolfit.ai/media/ai-for/product-photos.jpg" alt="Créer des photos produit" width="1280" height="720" loading="lazy"></picture><div class="tt-title">Créer des photos produit</div></a><a class="task-tile" href="/fr/ai-for/logo.html"><picture><source srcset="https://aitoolfit.ai/media/ai-for/logo.webp" type="image/webp"><img class="tt-img" src="https://aitoolfit.ai/media/ai-for/logo.jpg" alt="Créer un logo" width="1280" height="720" loading="lazy"></picture><div class="tt-title">Créer un logo</div></a><a class="task-tile" href="/fr/ai-for/presentation.html"><picture><source srcset="https://aitoolfit.ai/media/ai-for/presentation.webp" type="image/webp"><img class="tt-img" src="https://aitoolfit.ai/media/ai-for/presentation.jpg" alt="Créer une présentation" width="1280" height="720" loading="lazy"></picture><div class="tt-title">Créer une présentation</div></a><a class="task-tile" href="/fr/ai-for/image-generation.html"><picture><source srcset="https://aitoolfit.ai/media/ai-for/image-generation.webp" type="image/webp"><img class="tt-img" src="https://aitoolfit.ai/media/ai-for/image-generation.jpg" alt="Transformer un texte en image" width="1280" height="720" loading="lazy"></picture><div class="tt-title">Transformer un texte en image</div></a><a class="task-tile" href="/fr/ai-for/blog-to-video.html"><picture><source srcset="https://aitoolfit.ai/media/ai-for/blog-to-video.webp" type="image/webp"><img class="tt-img" src="https://aitoolfit.ai/media/ai-for/blog-to-video.jpg" alt="Transformer un article de blog en vidéo" width="1280" height="720" loading="lazy"></picture><div class="tt-title">Transformer un article de blog en vidéo</div></a><a class="task-tile" href="/fr/ai-for/video-generation.html"><picture><source srcset="https://aitoolfit.ai/media/ai-for/video-generation.webp" type="image/webp"><img class="tt-img" src="https://aitoolfit.ai/media/ai-for/video-generation.jpg" alt="Créer une vidéo à partir d&#x27;un texte ou d&#x27;une photo" width="1280" height="720" loading="lazy"></picture><div class="tt-title">Créer une vidéo à partir d&#x27;un texte ou d&#x27;une photo</div></a><a class="task-tile" href="/fr/ai-for/podcast-editing.html"><picture><source srcset="https://aitoolfit.ai/media/ai-for/podcast-editing.webp" type="image/webp"><img class="tt-img" src="https://aitoolfit.ai/media/ai-for/podcast-editing.jpg" alt="Monter un podcast et ajouter des sous-titres" width="1280" height="720" loading="lazy"></picture><div class="tt-title">Monter un podcast et ajouter des sous-titres</div></a><a class="task-tile" href="/fr/ai-for/voiceover.html"><picture><source srcset="https://aitoolfit.ai/media/ai-for/voiceover.webp" type="image/webp"><img class="tt-img" src="https://aitoolfit.ai/media/ai-for/voiceover.jpg" alt="Ajouter une voix off à une vidéo" width="1280" height="720" loading="lazy"></picture><div class="tt-title">Ajouter une voix off à une vidéo</div></a><a class="task-tile" href="/fr/ai-for/meeting-notes.html"><picture><source srcset="https://aitoolfit.ai/media/ai-for/meeting-notes.webp" type="image/webp"><img class="tt-img" src="https://aitoolfit.ai/media/ai-for/meeting-notes.jpg" alt="Transcrire une réunion" width="1280" height="720" loading="lazy"></picture><div class="tt-title">Transcrire une réunion</div></a><a class="task-tile" href="/fr/ai-for/seo.html"><picture><source srcset="https://aitoolfit.ai/media/ai-for/seo.webp" type="image/webp"><img class="tt-img" src="https://aitoolfit.ai/media/ai-for/seo.jpg" alt="Gagner du trafic depuis Google et l&#x27;IA" width="1280" height="720" loading="lazy"></picture><div class="tt-title">Gagner du trafic depuis Google et l&#x27;IA</div></a></div></section><!-- SEO:aifor:end -->
+
   <section class="section" style="padding-top:1rem">
     <div class="section-head">
       <h2 class="section-title" data-i18n="section.trending">Tendances</h2>
@@ -354,7 +363,7 @@ function renderTrending() {
       </div>
       ${bestFor ? `<span class="update-badge">${bestFor}</span>` : ''}
       <p class="tool-desc">${desc}</p>
-      <span style="font-size:12px;color:var(--accent);margin-top:auto;display:inline-block">En savoir plus →</span>
+      <span style="font-size:12px;color:var(--accent);margin-top:auto;display:inline-block">${t('tool.review').replace('{name}', tool.name)}</span>
     </a>`;
   }).join('');
   document.getElementById('trendingGrid').innerHTML = cards;
@@ -554,7 +563,7 @@ async function tfRender(data) {
     const _lang = localStorage.getItem('lang') || 'en';
     const reviewHref = _lang === 'en' ? `/tools/${slug}.html` : `/${_lang}/tools/${slug}.html`;
     const footerHtml = inCatalog
-      ? `<a class="tool-review" href="${reviewHref}">${t('tool.review')}</a>
+      ? `<a class="tool-review" href="${reviewHref}">${t('tool.review').replace('{name}', tfEsc(tool.name || ''))}</a>
          <a class="tool-aff" href="${tfEsc(tool.url)}" target="_blank" rel="noopener sponsored">${t('tool.open')}</a>`
       : `<a class="tool-aff" href="${tfEsc(tool.url)}" target="_blank" rel="noopener sponsored" style="flex:1">${t('tool.open')}</a>`;
 

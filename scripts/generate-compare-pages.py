@@ -191,14 +191,14 @@ COMPARISONS = [
 
 # Per-language UI labels — baked into HTML at build time
 LABELS = {
-    'en': {'ov':'Overview','pr':'Pricing','us':'Users','bf':'Best for','rt':'Rating','ad':'Advantages','ds':'Disadvantages','wb':'Website','vt':'Visit','rv':'Full review','nr':'No reviews yet','vd':'Verdict: Which Should You Choose?','ci_pre':'Choose','ci_suf':'if…','fq':'Frequently Asked Questions'},
-    'ru': {'ov':'Обзор','pr':'Цена','us':'Пользователи','bf':'Лучше для','rt':'Рейтинг','ad':'Преимущества','ds':'Недостатки','wb':'Сайт','vt':'Посетить','rv':'Полный обзор','nr':'Нет отзывов','vd':'Вердикт: что выбрать?','ci_pre':'Выбирайте','ci_suf':'если…','fq':'Часто задаваемые вопросы'},
-    'es': {'ov':'Descripción','pr':'Precio','us':'Usuarios','bf':'Mejor para','rt':'Calificación','ad':'Ventajas','ds':'Desventajas','wb':'Sitio web','vt':'Visitar','rv':'Reseña completa','nr':'Sin reseñas','vd':'Veredicto: ¿cuál elegir?','ci_pre':'Elige','ci_suf':'si…','fq':'Preguntas frecuentes'},
-    'fr': {'ov':'Aperçu','pr':'Prix','us':'Utilisateurs','bf':'Idéal pour','rt':'Évaluation','ad':'Avantages','ds':'Inconvénients','wb':'Site web','vt':'Visiter','rv':'Avis complet','nr':'Aucun avis','vd':'Verdict : lequel choisir ?','ci_pre':'Choisissez','ci_suf':'si…','fq':'Questions fréquentes'},
-    'de': {'ov':'Überblick','pr':'Preis','us':'Nutzer','bf':'Am besten für','rt':'Bewertung','ad':'Vorteile','ds':'Nachteile','wb':'Website','vt':'Besuchen','rv':'Vollständige Bewertung','nr':'Noch keine Bewertungen','vd':'Fazit: Was sollten Sie wählen?','ci_pre':'Wählen Sie','ci_suf':'wenn…','fq':'Häufig gestellte Fragen'},
-    'pt': {'ov':'Visão geral','pr':'Preço','us':'Usuários','bf':'Melhor para','rt':'Avaliação','ad':'Vantagens','ds':'Desvantagens','wb':'Site','vt':'Visitar','rv':'Avaliação completa','nr':'Sem avaliações','vd':'Veredicto: qual escolher?','ci_pre':'Escolha','ci_suf':'se…','fq':'Perguntas frequentes'},
-    'ua': {'ov':'Огляд','pr':'Ціна','us':'Користувачі','bf':'Краще для','rt':'Рейтинг','ad':'Переваги','ds':'Недоліки','wb':'Сайт','vt':'Відвідати','rv':'Повний огляд','nr':'Немає відгуків','vd':'Вердикт: що обрати?','ci_pre':'Обирайте','ci_suf':'якщо…','fq':'Часті запитання'},
-    'he': {'ov':'סקירה','pr':'תמחור','us':'משתמשים','bf':'הטוב ביותר עבור','rt':'דירוג','ad':'יתרונות','ds':'חסרונות','wb':'אתר','vt':'בקר','rv':'סקירה מלאה','nr':'אין ביקורות עדיין','vd':'פסיקה: מה לבחור?','ci_pre':'בחר','ci_suf':'אם…','fq':'שאלות נפוצות'},
+    'en': {'ov':'Overview','pr':'Pricing','us':'Users','bf':'Best for','rt':'Rating','ad':'Advantages','ds':'Disadvantages','wb':'Website','vt':'Visit','rv':'{name} review','nr':'No reviews yet','vd':'Verdict: Which Should You Choose?','ci_pre':'Choose','ci_suf':'if…','fq':'Frequently Asked Questions'},
+    'ru': {'ov':'Обзор','pr':'Цена','us':'Пользователи','bf':'Лучше для','rt':'Рейтинг','ad':'Преимущества','ds':'Недостатки','wb':'Сайт','vt':'Посетить','rv':'Обзор {name}','nr':'Нет отзывов','vd':'Вердикт: что выбрать?','ci_pre':'Выбирайте','ci_suf':'если…','fq':'Часто задаваемые вопросы'},
+    'es': {'ov':'Descripción','pr':'Precio','us':'Usuarios','bf':'Mejor para','rt':'Calificación','ad':'Ventajas','ds':'Desventajas','wb':'Sitio web','vt':'Visitar','rv':'Reseña de {name}','nr':'Sin reseñas','vd':'Veredicto: ¿cuál elegir?','ci_pre':'Elige','ci_suf':'si…','fq':'Preguntas frecuentes'},
+    'fr': {'ov':'Aperçu','pr':'Prix','us':'Utilisateurs','bf':'Idéal pour','rt':'Évaluation','ad':'Avantages','ds':'Inconvénients','wb':'Site web','vt':'Visiter','rv':'Avis sur {name}','nr':'Aucun avis','vd':'Verdict : lequel choisir ?','ci_pre':'Choisissez','ci_suf':'si…','fq':'Questions fréquentes'},
+    'de': {'ov':'Überblick','pr':'Preis','us':'Nutzer','bf':'Am besten für','rt':'Bewertung','ad':'Vorteile','ds':'Nachteile','wb':'Website','vt':'Besuchen','rv':'{name} im Test','nr':'Noch keine Bewertungen','vd':'Fazit: Was sollten Sie wählen?','ci_pre':'Wählen Sie','ci_suf':'wenn…','fq':'Häufig gestellte Fragen'},
+    'pt': {'ov':'Visão geral','pr':'Preço','us':'Usuários','bf':'Melhor para','rt':'Avaliação','ad':'Vantagens','ds':'Desvantagens','wb':'Site','vt':'Visitar','rv':'Análise do {name}','nr':'Sem avaliações','vd':'Veredicto: qual escolher?','ci_pre':'Escolha','ci_suf':'se…','fq':'Perguntas frequentes'},
+    'ua': {'ov':'Огляд','pr':'Ціна','us':'Користувачі','bf':'Краще для','rt':'Рейтинг','ad':'Переваги','ds':'Недоліки','wb':'Сайт','vt':'Відвідати','rv':'Огляд {name}','nr':'Немає відгуків','vd':'Вердикт: що обрати?','ci_pre':'Обирайте','ci_suf':'якщо…','fq':'Часті запитання'},
+    'he': {'ov':'סקירה','pr':'תמחור','us':'משתמשים','bf':'הטוב ביותר עבור','rt':'דירוג','ad':'יתרונות','ds':'חסרונות','wb':'אתר','vt':'בקר','rv':'סקירה של {name}','nr':'אין ביקורות עדיין','vd':'פסיקה: מה לבחור?','ci_pre':'בחר','ci_suf':'אם…','fq':'שאלות נפוצות'},
 }
 
 BADGE_LABELS = {
@@ -775,8 +775,8 @@ def comparison_table_html(a, b, lang):
          f'<a href="{esc(visit_a)}" target="_blank" rel="noopener" style="color:var(--accent)">{esc(dom_a)}</a>' if dom_a else '—',
          f'<a href="{esc(visit_b)}" target="_blank" rel="noopener" style="color:var(--accent)">{esc(dom_b)}</a>' if dom_b else '—'),
         ('',
-         f'<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="{esc(visit_a)}" target="_blank" rel="noopener">{L["vt"]} →</a><a class="tool-review" href="{review_a}">{L["rv"]}</a></div>',
-         f'<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="{esc(visit_b)}" target="_blank" rel="noopener">{L["vt"]} →</a><a class="tool-review" href="{review_b}">{L["rv"]}</a></div>'),
+         f'<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="{esc(visit_a)}" target="_blank" rel="noopener">{L["vt"]} →</a><a class="tool-review" href="{review_a}">{L["rv"].replace("{name}", esc(a.get("name") or ""))}</a></div>',
+         f'<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="{esc(visit_b)}" target="_blank" rel="noopener">{L["vt"]} →</a><a class="tool-review" href="{review_b}">{L["rv"].replace("{name}", esc(b.get("name") or ""))}</a></div>'),
     ]
     rows_html = '\n'.join(
         f'<tr><th>{th}</th><td class="hl">{va}</td><td class="hl">{vb}</td></tr>'

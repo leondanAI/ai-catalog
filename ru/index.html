@@ -184,6 +184,15 @@
 </style>
 
 <div class="wrap">
+  <!-- Раздел «ИИ для…»: печатает scripts/generate-ai-for-pages.py из таблицы ai_for -->
+  <!-- SEO:aifor:start --><style>
+.af-home .tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.af-home .task-tile{display:block;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:border-color .15s,background .15s}
+.af-home .task-tile:hover{border-color:var(--accent);background:var(--bg3)}
+.af-home .task-tile img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.af-home .tt-title{font-family:var(--font-display);font-size:15px;font-weight:600;color:var(--text);padding:.7rem .9rem .8rem;line-height:1.3}
+</style><section class="section af-home" style="padding-top:1rem"><div class="section-head"><h2 class="section-title">Какой ИИ взять для вашего дела</h2><a href="/ru/ai-for.html" class="section-more">Все задачи →</a></div><div class="tgrid"><a class="task-tile" href="/ru/ai-for/product-photos.html"><picture><source srcset="https://aitoolfit.ai/media/ai-for/product-photos.webp" type="image/webp"><img class="tt-img" src="https://aitoolfit.ai/media/ai-for/product-photos.jpg" alt="Сделать фото товаров" width="1280" height="720" loading="lazy"></picture><div class="tt-title">Сделать фото товаров</div></a><a class="task-tile" href="/ru/ai-for/logo.html"><picture><source srcset="https://aitoolfit.ai/media/ai-for/logo.webp" type="image/webp"><img class="tt-img" src="https://aitoolfit.ai/media/ai-for/logo.jpg" alt="Сделать логотип" width="1280" height="720" loading="lazy"></picture><div class="tt-title">Сделать логотип</div></a><a class="task-tile" href="/ru/ai-for/presentation.html"><picture><source srcset="https://aitoolfit.ai/media/ai-for/presentation.webp" type="image/webp"><img class="tt-img" src="https://aitoolfit.ai/media/ai-for/presentation.jpg" alt="Сделать презентацию" width="1280" height="720" loading="lazy"></picture><div class="tt-title">Сделать презентацию</div></a><a class="task-tile" href="/ru/ai-for/image-generation.html"><picture><source srcset="https://aitoolfit.ai/media/ai-for/image-generation.webp" type="image/webp"><img class="tt-img" src="https://aitoolfit.ai/media/ai-for/image-generation.jpg" alt="Превратить текст в картинку" width="1280" height="720" loading="lazy"></picture><div class="tt-title">Превратить текст в картинку</div></a><a class="task-tile" href="/ru/ai-for/blog-to-video.html"><picture><source srcset="https://aitoolfit.ai/media/ai-for/blog-to-video.webp" type="image/webp"><img class="tt-img" src="https://aitoolfit.ai/media/ai-for/blog-to-video.jpg" alt="Превратить статью в видео" width="1280" height="720" loading="lazy"></picture><div class="tt-title">Превратить статью в видео</div></a><a class="task-tile" href="/ru/ai-for/video-generation.html"><picture><source srcset="https://aitoolfit.ai/media/ai-for/video-generation.webp" type="image/webp"><img class="tt-img" src="https://aitoolfit.ai/media/ai-for/video-generation.jpg" alt="Сделать видео из текста или фото" width="1280" height="720" loading="lazy"></picture><div class="tt-title">Сделать видео из текста или фото</div></a><a class="task-tile" href="/ru/ai-for/podcast-editing.html"><picture><source srcset="https://aitoolfit.ai/media/ai-for/podcast-editing.webp" type="image/webp"><img class="tt-img" src="https://aitoolfit.ai/media/ai-for/podcast-editing.jpg" alt="Смонтировать подкаст и добавить субтитры" width="1280" height="720" loading="lazy"></picture><div class="tt-title">Смонтировать подкаст и добавить субтитры</div></a><a class="task-tile" href="/ru/ai-for/voiceover.html"><picture><source srcset="https://aitoolfit.ai/media/ai-for/voiceover.webp" type="image/webp"><img class="tt-img" src="https://aitoolfit.ai/media/ai-for/voiceover.jpg" alt="Озвучить видео" width="1280" height="720" loading="lazy"></picture><div class="tt-title">Озвучить видео</div></a><a class="task-tile" href="/ru/ai-for/meeting-notes.html"><picture><source srcset="https://aitoolfit.ai/media/ai-for/meeting-notes.webp" type="image/webp"><img class="tt-img" src="https://aitoolfit.ai/media/ai-for/meeting-notes.jpg" alt="Расшифровать встречу" width="1280" height="720" loading="lazy"></picture><div class="tt-title">Расшифровать встречу</div></a><a class="task-tile" href="/ru/ai-for/seo.html"><picture><source srcset="https://aitoolfit.ai/media/ai-for/seo.webp" type="image/webp"><img class="tt-img" src="https://aitoolfit.ai/media/ai-for/seo.jpg" alt="Привести трафик из Google и ИИ" width="1280" height="720" loading="lazy"></picture><div class="tt-title">Привести трафик из Google и ИИ</div></a></div></section><!-- SEO:aifor:end -->
+
   <section class="section" style="padding-top:1rem">
     <div class="section-head">
       <h2 class="section-title" data-i18n="section.trending">Популярные</h2>
@@ -354,7 +363,7 @@ function renderTrending() {
       </div>
       ${bestFor ? `<span class="update-badge">${bestFor}</span>` : ''}
       <p class="tool-desc">${desc}</p>
-      <span style="font-size:12px;color:var(--accent);margin-top:auto;display:inline-block">Подробнее →</span>
+      <span style="font-size:12px;color:var(--accent);margin-top:auto;display:inline-block">${t('tool.review').replace('{name}', tool.name)}</span>
     </a>`;
   }).join('');
   document.getElementById('trendingGrid').innerHTML = cards;
@@ -554,7 +563,7 @@ async function tfRender(data) {
     const _lang = localStorage.getItem('lang') || 'en';
     const reviewHref = _lang === 'en' ? `/tools/${slug}.html` : `/${_lang}/tools/${slug}.html`;
     const footerHtml = inCatalog
-      ? `<a class="tool-review" href="${reviewHref}">${t('tool.review')}</a>
+      ? `<a class="tool-review" href="${reviewHref}">${t('tool.review').replace('{name}', tfEsc(tool.name || ''))}</a>
          <a class="tool-aff" href="${tfEsc(tool.url)}" target="_blank" rel="noopener sponsored">${t('tool.open')}</a>`
       : `<a class="tool-aff" href="${tfEsc(tool.url)}" target="_blank" rel="noopener sponsored" style="flex:1">${t('tool.open')}</a>`;
 

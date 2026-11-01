@@ -37,7 +37,7 @@ def pre(lang):
 
 GROUPS = ['design', 'video', 'work', 'business', 'dev']
 UI = {
-    'en': dict(section='AI for…', hub_title='AI for every task: which one to choose', hub_h1='Which AI to use for your task',
+    'en': dict(all_tasks='All tasks →', section='AI for…', hub_title='AI for every task: which one to choose', hub_h1='Which AI to use for your task',
                hub_lead="Presentation, product photos, a video, a logo — for each task, three AI tools that handle it well, and why. Don't see yours? Describe it in your own words.",
                hub_meta='Pick the right AI for a specific task: presentations, product photos, video, voiceover, logos, meeting notes and SEO. Three tested tools per task, with reasons.',
                groups=['Images & design', 'Video & audio', 'Work & meetings', 'Website & business', 'Development'],
@@ -50,7 +50,7 @@ UI = {
                paid1='{list} is paid only.', paidN='{list} are paid only.',
                none='Not with these three: all of them are paid. Current prices are on each tool page.',
                note='Free plans usually come with usage limits; details are on each tool page.', conj=' and '),
-    'ru': dict(section='ИИ для…', hub_title='Нейросети для любой задачи: какую выбрать', hub_h1='Какой ИИ взять для вашего дела',
+    'ru': dict(all_tasks='Все задачи →', section='ИИ для…', hub_title='Нейросети для любой задачи: какую выбрать', hub_h1='Какой ИИ взять для вашего дела',
                hub_lead='Презентация, фото товаров, ролик, логотип — для каждого дела три нейросети, которые с ним справятся, и объяснение, почему именно они. Не нашли своё? Опишите своими словами.',
                hub_meta='Какую нейросеть выбрать под задачу: презентации, фото товаров, видео, озвучка, логотип, расшифровка встреч и SEO. По три проверенных инструмента с объяснением.',
                groups=['Картинки и дизайн', 'Видео и звук', 'Работа и встречи', 'Сайт и бизнес', 'Разработка'],
@@ -63,7 +63,7 @@ UI = {
                paid1='{list} — только платно.', paidN='{list} — только платно.',
                none='С этими тремя — нет: все они платные. Актуальные цены — на странице каждого инструмента.',
                note='На бесплатных планах обычно есть лимиты — подробности на странице каждого инструмента.', conj=' и '),
-    'ua': dict(section='ШІ для…', hub_title='Нейромережі для будь-якої задачі: яку обрати', hub_h1='Який ШІ обрати для вашої справи',
+    'ua': dict(all_tasks='Усі задачі →', section='ШІ для…', hub_title='Нейромережі для будь-якої задачі: яку обрати', hub_h1='Який ШІ обрати для вашої справи',
                hub_lead='Презентація, фото товарів, ролик, логотип — для кожної справи три нейромережі, які з нею впораються, і пояснення, чому саме вони. Не знайшли свою? Опишіть своїми словами.',
                hub_meta='Яку нейромережу обрати під задачу: презентації, фото товарів, відео, озвучка, логотип, розшифровка зустрічей і SEO. По три перевірені інструменти з поясненням.',
                groups=['Зображення і дизайн', 'Відео і звук', 'Робота і зустрічі', 'Сайт і бізнес', 'Розробка'],
@@ -76,7 +76,7 @@ UI = {
                paid1='{list} — лише платно.', paidN='{list} — лише платно.',
                none='З цими трьома — ні: усі вони платні. Актуальні ціни — на сторінці кожного інструмента.',
                note='На безкоштовних планах зазвичай є ліміти — подробиці на сторінці кожного інструмента.', conj=' і '),
-    'es': dict(section='IA para…', hub_title='IA para cada tarea: cuál elegir', hub_h1='Qué IA usar para tu tarea',
+    'es': dict(all_tasks='Todas las tareas →', section='IA para…', hub_title='IA para cada tarea: cuál elegir', hub_h1='Qué IA usar para tu tarea',
                hub_lead='Una presentación, fotos de producto, un vídeo, un logo: para cada tarea, tres herramientas de IA que la resuelven bien, y por qué. ¿No ves la tuya? Descríbela con tus palabras.',
                hub_meta='Elige la IA adecuada para cada tarea: presentaciones, fotos de producto, vídeo, locución, logos, notas de reuniones y SEO. Tres herramientas probadas por tarea.',
                groups=['Imagen y diseño', 'Vídeo y audio', 'Trabajo y reuniones', 'Web y negocio', 'Desarrollo'],
@@ -89,7 +89,7 @@ UI = {
                paid1='{list} es solo de pago.', paidN='{list} son solo de pago.',
                none='Con estas tres, no: todas son de pago. Los precios actuales están en la página de cada herramienta.',
                note='Los planes gratuitos suelen tener límites de uso; los detalles están en la página de cada herramienta.', conj=' y '),
-    'de': dict(section='KI für…', hub_title='KI für jede Aufgabe: welche passt', hub_h1='Welche KI für deine Aufgabe',
+    'de': dict(all_tasks='Alle Aufgaben →', section='KI für…', hub_title='KI für jede Aufgabe: welche passt', hub_h1='Welche KI für deine Aufgabe',
                hub_lead='Präsentation, Produktfotos, Video, Logo: Für jede Aufgabe drei KI-Tools, die sie gut erledigen, und warum. Deine Aufgabe fehlt? Beschreib sie in eigenen Worten.',
                hub_meta='Die passende KI für jede Aufgabe: Präsentationen, Produktfotos, Video, Voiceover, Logos, Meeting-Notizen und SEO. Drei geprüfte Tools pro Aufgabe, mit Begründung.',
                groups=['Bild & Design', 'Video & Audio', 'Arbeit & Meetings', 'Website & Business', 'Entwicklung'],
@@ -102,7 +102,7 @@ UI = {
                paid1='{list} ist nur kostenpflichtig.', paidN='{list} sind nur kostenpflichtig.',
                none='Mit diesen dreien nicht: alle sind kostenpflichtig. Aktuelle Preise stehen auf der Seite des jeweiligen Tools.',
                note='Kostenlose Pläne haben meist Nutzungslimits; Details stehen auf der Seite des jeweiligen Tools.', conj=' und '),
-    'fr': dict(section='IA pour…', hub_title='IA pour chaque tâche : laquelle choisir', hub_h1='Quelle IA pour votre tâche',
+    'fr': dict(all_tasks='Toutes les tâches →', section='IA pour…', hub_title='IA pour chaque tâche : laquelle choisir', hub_h1='Quelle IA pour votre tâche',
                hub_lead="Présentation, photos produit, vidéo, logo : pour chaque tâche, trois outils d'IA qui la font bien, et pourquoi. Votre tâche n'y est pas ? Décrivez-la avec vos mots.",
                hub_meta="Choisissez la bonne IA pour chaque tâche : présentations, photos produit, vidéo, voix off, logos, comptes rendus de réunion et SEO. Trois outils testés par tâche.",
                groups=['Image et design', 'Vidéo et audio', 'Travail et réunions', 'Site web et business', 'Développement'],
@@ -115,7 +115,7 @@ UI = {
                paid1='{list} est uniquement payant.', paidN='{list} sont uniquement payants.',
                none='Pas avec ces trois outils : ils sont tous payants. Les prix actuels sont sur la page de chaque outil.',
                note="Les offres gratuites ont généralement des limites d'utilisation ; les détails sont sur la page de chaque outil.", conj=' et '),
-    'pt': dict(section='IA para…', hub_title='IA para cada tarefa: qual escolher', hub_h1='Qual IA usar para a sua tarefa',
+    'pt': dict(all_tasks='Todas as tarefas →', section='IA para…', hub_title='IA para cada tarefa: qual escolher', hub_h1='Qual IA usar para a sua tarefa',
                hub_lead='Apresentação, fotos de produto, vídeo, logo: para cada tarefa, três ferramentas de IA que dão conta do recado, e o porquê. Não encontrou a sua? Descreva com suas palavras.',
                hub_meta='Escolha a IA certa para cada tarefa: apresentações, fotos de produto, vídeo, narração, logos, atas de reunião e SEO. Três ferramentas testadas por tarefa.',
                groups=['Imagem e design', 'Vídeo e áudio', 'Trabalho e reuniões', 'Site e negócios', 'Desenvolvimento'],
@@ -128,7 +128,7 @@ UI = {
                paid1='{list} é somente pago.', paidN='{list} são somente pagos.',
                none='Com estas três, não: todas são pagas. Os preços atuais estão na página de cada ferramenta.',
                note='Planos gratuitos costumam ter limites de uso; os detalhes estão na página de cada ferramenta.', conj=' e '),
-    'he': dict(section='AI ל…', hub_title='AI לכל משימה: איזה כלי לבחור', hub_h1='איזה AI מתאים למשימה שלכם',
+    'he': dict(all_tasks='כל המשימות ←', section='AI ל…', hub_title='AI לכל משימה: איזה כלי לבחור', hub_h1='איזה AI מתאים למשימה שלכם',
                hub_lead='מצגת, תמונות מוצר, סרטון, לוגו: לכל משימה שלושה כלי AI שעושים אותה טוב, ולמה דווקא הם. לא מצאתם את שלכם? תארו אותה במילים שלכם.',
                hub_meta='בחרו את כלי ה-AI הנכון לכל משימה: מצגות, תמונות מוצר, וידאו, קריינות, לוגו, סיכומי פגישות ו-SEO. שלושה כלים נבחרים לכל משימה, עם הסבר.',
                groups=['תמונות ועיצוב', 'וידאו ואודיו', 'עבודה ופגישות', 'אתר ועסק', 'פיתוח'],
@@ -417,6 +417,36 @@ def hub_page(lang, tasks, T, header, footer):
     return head(lang, f"{u['hub_title']} | AItoolFit", u['hub_meta'], 'ai-for.html', f'{SITE}/og-image.png', ld, LANGS) + body + tail(footer)
 
 
+HOME_CSS = """<style>
+.af-home .tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.af-home .task-tile{display:block;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:border-color .15s,background .15s}
+.af-home .task-tile:hover{border-color:var(--accent);background:var(--bg3)}
+.af-home .task-tile img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.af-home .tt-title{font-family:var(--font-display);font-size:15px;font-weight:600;color:var(--text);padding:.7rem .9rem .8rem;line-height:1.3}
+</style>"""
+
+
+def home_block(lang, tasks):
+    """Блок на главной: плитки дел со ссылками на /ai-for/ (внутренние ссылки для поиска)."""
+    u = UI[lang]
+    p = pre(lang)
+    tiles = ''.join(f'<a class="task-tile" href="{p}/ai-for/{t["slug"]}.html">{picture(t.get("image_url"), t["tile"], "tt-img")}'
+                    f'<div class="tt-title">{esc(t["tile"])}</div></a>' for t in sorted(tasks, key=lambda t: t['sort']))
+    return (f'{HOME_CSS}<section class="section af-home" style="padding-top:1rem"><div class="section-head">'
+            f'<h2 class="section-title">{esc(u["hub_h1"])}</h2><a href="{p}/ai-for.html" class="section-more">{esc(u["all_tasks"])}</a></div>'
+            f'<div class="tgrid">{tiles}</div></section>')
+
+
+def put_home_block(lang, tasks):
+    path = os.path.join(ROOT, pre(lang).lstrip('/'), 'index.html')
+    html_ = open(path, encoding='utf-8').read()
+    new = re.sub(r'<!-- SEO:aifor:start -->.*?<!-- SEO:aifor:end -->',
+                 lambda m: '<!-- SEO:aifor:start -->' + home_block(lang, tasks) + '<!-- SEO:aifor:end -->', html_, flags=re.S)
+    if new == html_ and '<!-- SEO:aifor:start -->' not in html_:
+        sys.exit(f'{path}: нет меток SEO:aifor — сначала generate-lang-pages.py')
+    open(path, 'w', encoding='utf-8').write(new)
+
+
 def main():
     rows = sbread.get('ai_for?published=eq.true&order=sort.asc&select=*')
     if not rows:
@@ -452,6 +482,7 @@ def main():
                 print(f'  удалена {pre(lang)}/ai-for/{f}')
         open(os.path.join(ROOT, pre(lang).lstrip('/'), 'ai-for.html'), 'w', encoding='utf-8').write(
             hub_page(lang, tasks, T, header, footer))
+        put_home_block(lang, tasks)
     if problems:
         sys.exit('Страницы «ИИ для…» не собраны — пересмотрите дела (scripts/ai_for.py):\n  ' + '\n  '.join(problems))
     write_llms_txt([r for r in rows if r['lang'] == 'en'])

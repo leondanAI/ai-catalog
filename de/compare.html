@@ -430,8 +430,8 @@ async function updateCompare() {
     [t('compare.advantages'),  listHtml(infoA.dbTool.pros, '#2dd4a0', '✅'),                 listHtml(infoB.dbTool.pros, '#2dd4a0', '✅')],
     [t('compare.disadvantages'), listHtml(infoA.dbTool.cons, '#f56565', '❌'),               listHtml(infoB.dbTool.cons, '#f56565', '❌')],
     [t('compare.website')||'Website', a.url ? `<a href="${a.url}" target="_blank" rel="noopener" style="color:var(--accent)">${getDomain(a.url)}</a>` : '—', b.url ? `<a href="${b.url}" target="_blank" rel="noopener" style="color:var(--accent)">${getDomain(b.url)}</a>` : '—'],
-    ['',            `<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="${a.aff}" target="_blank" rel="noopener sponsored">${t('tool.open')}</a><a class="tool-review" href="${toolPageUrl(slugA)}">${t('tool.review')}</a></div>`,
-                    `<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="${b.aff}" target="_blank" rel="noopener sponsored">${t('tool.open')}</a><a class="tool-review" href="${toolPageUrl(slugB)}">${t('tool.review')}</a></div>`],
+    ['',            `<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="${a.aff}" target="_blank" rel="noopener sponsored">${t('tool.open')}</a><a class="tool-review" href="${toolPageUrl(slugA)}">${t('tool.review').replace('{name}', a.name)}</a></div>`,
+                    `<div style="display:flex;gap:8px;flex-wrap:wrap"><a class="tool-aff" href="${b.aff}" target="_blank" rel="noopener sponsored">${t('tool.open')}</a><a class="tool-review" href="${toolPageUrl(slugB)}">${t('tool.review').replace('{name}', b.name)}</a></div>`],
   ];
 
   el.innerHTML = `<div class="compare-wrap fade-up">
