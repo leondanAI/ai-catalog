@@ -227,10 +227,18 @@ img { max-width: 100%; }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
   .footer-inner { grid-template-columns: 1fr 1fr; }
 }
-@media (max-width: 600px) {
-  .nav-links { display: none; }
+/* Шесть пунктов меню с длинными подписями (RU/DE) не влезают в шапку на планшетах:
+   сначала уплотняем, ниже 900px — гамбургер, как на телефоне. */
+@media (max-width: 1200px) {
+  .nav-link { padding: 6px 8px; font-size: 13px; }
   .search-wrap { display: none; }
+}
+@media (max-width: 900px) {
+  .nav-links { display: none; }
   .btn-hamburger { display: flex; }
+}
+@media (max-width: 600px) {
+  .search-wrap { display: none; }
   .hero { padding: 2.5rem 1rem 2rem; }
   .hero .sub { font-size: 14px; }
   .tf-input { min-height: 100px; font-size: 16px; padding: 1rem 5rem 1rem 1rem; border-radius: 12px; }
