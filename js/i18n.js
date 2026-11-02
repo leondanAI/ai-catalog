@@ -16,6 +16,7 @@ const I18N = (() => {
       // nav
       'nav.home':         'Find AI',
       'nav.directory':    'Best AI Tools',
+      'nav.aifor':        'AI for…',
       'nav.news':         'News',
       'nav.compare':      'Compare',
       'nav.newsletter':   'Newsletter',
@@ -192,6 +193,7 @@ const I18N = (() => {
     ru: {
       'nav.home':         'Найти ИИ',
       'nav.directory':    'Лучшие AI-инструменты',
+      'nav.aifor':        'ИИ для…',
       'nav.news':         'Новости',
       'nav.compare':      'Сравнение',
       'nav.newsletter':   'Рассылка',
@@ -347,6 +349,7 @@ const I18N = (() => {
     es: {
       'nav.home':         'Buscar IA',
       'nav.directory':    'Mejores herramientas IA',
+      'nav.aifor':        'IA para…',
       'nav.news':         'Noticias',
       'nav.compare':      'Comparar',
       'nav.newsletter':   'Newsletter',
@@ -501,6 +504,7 @@ const I18N = (() => {
     fr: {
       'nav.home':         'Trouver IA',
       'nav.directory':    'Meilleurs outils IA',
+      'nav.aifor':        'IA pour…',
       'nav.news':         'Actualités',
       'nav.compare':      'Comparer',
       'nav.newsletter':   'Newsletter',
@@ -652,6 +656,7 @@ const I18N = (() => {
     de: {
       'nav.home':         'KI finden',
       'nav.directory':    'Beste KI-Tools',
+      'nav.aifor':        'KI für…',
       'nav.news':         'Neuigkeiten',
       'nav.compare':      'Vergleichen',
       'nav.newsletter':   'Newsletter',
@@ -806,6 +811,7 @@ const I18N = (() => {
     pt: {
       'nav.home':         'Buscar IA',
       'nav.directory':    'Melhores ferramentas IA',
+      'nav.aifor':        'IA para…',
       'nav.news':         'Notícias',
       'nav.compare':      'Comparar',
       'nav.newsletter':   'Newsletter',
@@ -2061,6 +2067,7 @@ const I18N = (() => {
     ua: {
       'nav.home':         'Знайти ШІ',
       'nav.directory':    'Кращі AI-інструменти',
+      'nav.aifor':        'ШІ для…',
       'nav.news':         'Новини',
       'nav.compare':      'Порівняння',
       'nav.newsletter':   'Розсилка',
@@ -2215,6 +2222,7 @@ const I18N = (() => {
     he: {
       'nav.home':         'מצא AI',
       'nav.directory':    'כלי AI הטובים ביותר',
+      'nav.aifor':        'AI ל…',
       'nav.news':         'חדשות',
       'nav.compare':      'השוואה',
       'nav.newsletter':   'ניוזלטר',

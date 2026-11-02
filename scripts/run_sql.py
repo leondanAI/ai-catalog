@@ -22,7 +22,7 @@ import datetime, decimal, json, os, re, sys
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 # subscribers не копируем намеренно: там почты подписчиков, а скрипты контента
 # эту таблицу не трогают. Если файл всё же её меняет — остановимся.
-SAFE_TABLES = {'tools', 'news', 'comments', 'comparisons', 'toolbox', 'ai_for'}
+SAFE_TABLES = {'tools', 'news', 'comments', 'comparisons', 'toolbox', 'ai_for', 'categories'}
 
 
 def load_env():

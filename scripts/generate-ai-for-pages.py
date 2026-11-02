@@ -167,6 +167,7 @@ def chrome(lang):
     """Шапка и подвал со страницы инструмента того же языка — меню как на всём сайте."""
     src = open(os.path.join(ROOT, pre(lang).lstrip('/'), 'tools', 'chatgpt.html'), encoding='utf-8').read()
     header = src[src.index('<header class="site-header">'):src.index('</header>') + 9].replace(' active"', '"')
+    header = header.replace('class="nav-link" data-nav="ai-for.html"', 'class="nav-link active" data-nav="ai-for.html"')
     footer = src[src.index('<footer class="site-footer">'):src.index('</footer>') + 9]
     # колонка «Compare» в подвале относится к конкретному инструменту
     footer = re.sub(r'\s*<div><div class="footer-col-title">Compare</div>.*?</div></div>', '', footer)
@@ -499,8 +500,11 @@ def write_llms_txt(tasks):
              '## AI for a task', '',
              f'- [AI for every task]({SITE}/ai-for.html): all tasks with three picks each']
     lines += [f"- [{t['title']}]({SITE}/ai-for/{t['slug']}.html): {t['meta_desc']}" for t in tasks]
+    cats = sbread.get('categories?lang=eq.en&published=eq.true&order=sort.asc&select=slug,h1,meta_desc')
+    lines += ['', '## Best AI tools by category', '']
+    lines += [f"- [{c['h1']}]({SITE}/best/{c['slug']}.html): {c['meta_desc']}" for c in cats]
     lines += ['', '## Catalog and comparisons', '',
-              f'- [Best AI tools by category]({SITE}/directory.html): curated list ordered by real-world popularity',
+              f'- [All AI tools]({SITE}/directory.html): curated list ordered by real-world popularity',
               f'- [AI tool comparisons]({SITE}/compare.html): side-by-side comparisons with verdicts',
               f'- [Find a tool]({SITE}/): free AI finder — describe your task in plain words', '',
               '## News', '',

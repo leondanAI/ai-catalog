@@ -12,6 +12,9 @@ Then: python3 scripts/generate-sitemap.py
 
 import urllib.request, json, os, html as htmlmod, re
 from datetime import datetime
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from nav_i18n import bake as bake_nav
 
 SB_URL   = 'https://lbjdwkvkkndvofysyssy.supabase.co'
 SB_KEY   = 'sb_publishable_tdDKX99tgBeQxM5OjDK_NQ_yQVavNUG'
@@ -309,6 +312,7 @@ def generate_page(article, lang, all_articles_for_lang, all_slugs_by_lang):
     <nav class="nav-links">
       <a href="{base}/" class="nav-link" data-i18n="nav.home">Find AI</a>
       <a href="{base}/directory.html" class="nav-link" data-i18n="nav.directory">Best AI Tools</a>
+      <a href="{base}/ai-for.html"    class="nav-link" data-i18n="nav.aifor">AI for…</a>
       <a href="{base}/compare.html" class="nav-link" data-i18n="nav.compare">Compare</a>
       <a href="{base}/news.html" class="nav-link active" data-i18n="nav.news">News</a>
     </nav>
@@ -321,6 +325,7 @@ def generate_page(article, lang, all_articles_for_lang, all_slugs_by_lang):
   <nav class="mobile-menu" id="mobileMenu">
     <a href="{base}/" class="nav-link" data-i18n="nav.home">Find AI</a>
     <a href="{base}/directory.html" class="nav-link" data-i18n="nav.directory">Best AI Tools</a>
+    <a href="{base}/ai-for.html"    class="nav-link" data-i18n="nav.aifor">AI for…</a>
     <a href="{base}/compare.html" class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="{base}/news.html" class="nav-link" data-i18n="nav.news">News</a>
   </nav>
@@ -441,7 +446,7 @@ def main():
             html = generate_page(article, lang, articles, all_slugs_by_lang)
             path = os.path.join(news_dir, f'{slug}.html')
             with open(path, 'w', encoding='utf-8') as f:
-                f.write(html)
+                f.write(bake_nav(html, lang))
             lang_count += 1
             total += 1
 

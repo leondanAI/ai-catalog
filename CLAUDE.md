@@ -49,7 +49,7 @@ Site runs in 8 active languages. Every content update MUST be applied to ALL 8:
 
 ---
 
-## Supabase Database — 8 tables
+## Supabase Database — 9 tables
 
 ### 1. tools (PK: slug + lang)
 ~115 tools × 8 languages = ~920 rows
@@ -148,6 +148,15 @@ unpublished, `generate-ai-for-pages.py` stops: revise the task. Brief for new
 tasks: `scripts/ai_for_brief.json`; covers: ElevenLabs brand kit «AItoolFit»,
 `media/ai-for/<slug>.jpg/.webp`.
 
+### 9. categories (PK: slug + lang) — category pages (/best/<slug>.html)
+`h1` (search phrasing — RU «Лучшие нейросети для …»), `meta_desc`, `intro`, `sort`.
+Same rule as ai_for: no prices, versions, dates or numbers (`categories.py` refuses
+them). The tool list (in `category_order.json` order = popularity), «which are free»
+FAQ, comparisons and AI-for links are built from the DB by
+`generate-category-pages.py`. Category display names stay in `js/i18n.js` (`cat.*`).
+The catalog filter `directory.html?cat=` is JS-only and disallowed in robots.txt —
+all category links (footer, breadcrumbs, homepage tiles) point to `/best/`.
+
 ### 7. toolbox (10 utilities)
 IDs: token-counter, json-formatter, case-converter, text-diff, word-counter, regex-tester, csv-json, markdown-preview, password-generator, base64
 Fields: id, lang, title, description, description_long
@@ -180,10 +189,11 @@ GitHub Action `Rebuild site from database` exists only as a manual fallback.
 
 | Changed | Run |
 |---|---|
-| Tool card (any field) | `generate-pages.py`, `generate-lang-tool-pages.py`, `gen_data_js.py`, `generate-lang-pages.py`, `generate-static-content.py`, `generate-compare-pages.py` (comparisons embed tool data), `generate-ai-for-pages.py` (AI for… pages embed tool data) |
+| Tool card (any field) | `generate-pages.py`, `generate-lang-tool-pages.py`, `gen_data_js.py`, `generate-lang-pages.py`, `generate-static-content.py`, `generate-compare-pages.py` (comparisons embed tool data), `generate-ai-for-pages.py` (AI for… pages embed tool data), `generate-category-pages.py` |
 | Tool unpublished | the above + `generate-retired-pages.py` |
 | A page/URL removed (comparison, utility, language) | add it to `MOVED` in `generate-redirects.py` (redirect stub, so Google gets no 404) |
 | AI for… page (new or edited) | `scripts/ai_for.py draft/translate/sql` → run_sql → `generate-ai-for-pages.py` |
+| Category page text / category order | edit `scripts/drafts/categories/<lang>.json` → `scripts/categories.py sql` → run_sql → `generate-category-pages.py`; order lives in `category_order.json` (also rerun `gen_data_js.py`, `generate-static-content.py`) |
 | News (new or edited) | `generate-news-pages.py`, `generate-news-snapshot.py` (news lists + homepage block) |
 | Comparison content | `generate-compare-pages.py` |
 | Templates (`index.html`, `news.html`, …) | `generate-lang-pages.py`, then `generate-static-content.py`, `generate-news-snapshot.py` |
@@ -270,6 +280,7 @@ Never use emojis in `<title>` tags (OK in `<h1>` only).
 ## Navigation (current labels)
 - Find a Tool → /
 - AI Catalog → /directory.html
+- AI for… → /ai-for.html (RU «ИИ для…»; key `nav.aifor` in i18n.js)
 - Compare → /compare.html
 - News → /news.html
 - ~~Toolbox → /tools.html~~ — страница удалена (2026-07), ссылок в навигации быть не должно

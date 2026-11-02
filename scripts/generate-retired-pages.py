@@ -42,42 +42,42 @@ T = {
                desc='{n} is no longer available. Compare 3 actively maintained AI tools that cover the same tasks, with verified pricing.',
                h1='{n} is no longer available',
                sub='{n} was discontinued or replaced, so we removed it from the AItoolFit catalog. These tools cover the same tasks and are actively maintained:',
-               review='Read review', find='Find a tool for your task', home='Home', dir='AI Directory', news='News', cmp='Compare'),
+               review='Read review', find='Find a tool for your task', home='Home', dir='AI Directory', aifor='AI for…', news='News', cmp='Compare'),
     'es': dict(title='{n} ya no está disponible: alternativas en 2026',
                desc='{n} ya no está disponible. Compara 3 herramientas de IA activas que cubren las mismas tareas, con precios verificados.',
                h1='{n} ya no está disponible',
                sub='{n} fue descontinuado o reemplazado, por eso lo retiramos del catálogo de AItoolFit. Estas herramientas cubren las mismas tareas y siguen activas:',
-               review='Ver reseña', find='Encuentra una herramienta para tu tarea', home='Inicio', dir='Directorio IA', news='Noticias', cmp='Comparar'),
+               review='Ver reseña', find='Encuentra una herramienta para tu tarea', home='Inicio', dir='Directorio IA', aifor='IA para…', news='Noticias', cmp='Comparar'),
     'de': dict(title='{n} wurde eingestellt: Alternativen 2026',
                desc='{n} ist nicht mehr verfügbar. Vergleiche 3 aktiv gepflegte KI-Tools für dieselben Aufgaben, mit geprüften Preisen.',
                h1='{n} ist nicht mehr verfügbar',
                sub='{n} wurde eingestellt oder ersetzt, deshalb haben wir es aus dem AItoolFit-Katalog entfernt. Diese Tools decken dieselben Aufgaben ab und werden aktiv weiterentwickelt:',
-               review='Zum Test', find='Finde ein Tool für deine Aufgabe', home='Start', dir='KI-Verzeichnis', news='News', cmp='Vergleich'),
+               review='Zum Test', find='Finde ein Tool für deine Aufgabe', home='Start', dir='KI-Verzeichnis', aifor='KI für…', news='News', cmp='Vergleich'),
     'ru': dict(title='{n} закрыт: чем заменить в 2026',
                desc='{n} больше недоступен. Сравните 3 работающих ИИ-инструмента для тех же задач с проверенными ценами.',
                h1='{n} больше недоступен',
                sub='{n} закрыт или заменён другим продуктом, поэтому мы убрали его из каталога AItoolFit. Эти инструменты решают те же задачи и активно развиваются:',
-               review='Читать обзор', find='Подобрать инструмент под задачу', home='Главная', dir='Каталог ИИ', news='Новости', cmp='Сравнить'),
+               review='Читать обзор', find='Подобрать инструмент под задачу', home='Главная', dir='Каталог ИИ', aifor='ИИ для…', news='Новости', cmp='Сравнить'),
     'ua': dict(title='{n} закрито: чим замінити у 2026',
                desc='{n} більше недоступний. Порівняйте 3 робочі ШІ-інструменти для тих самих завдань із перевіреними цінами.',
                h1='{n} більше недоступний',
                sub='{n} закрито або замінено іншим продуктом, тому ми прибрали його з каталогу AItoolFit. Ці інструменти виконують ті самі завдання й активно розвиваються:',
-               review='Читати огляд', find='Підібрати інструмент під завдання', home='Головна', dir='Каталог ШІ', news='Новини', cmp='Порівняти'),
+               review='Читати огляд', find='Підібрати інструмент під завдання', home='Головна', dir='Каталог ШІ', aifor='ШІ для…', news='Новини', cmp='Порівняти'),
     'he': dict(title='{n} הופסק: חלופות מומלצות ב-2026',
                desc='{n} כבר לא זמין. השוו 3 כלי AI פעילים שמבצעים את אותן משימות, עם מחירים מאומתים.',
                h1='{n} כבר לא זמין',
                sub='{n} הופסק או הוחלף, ולכן הסרנו אותו מהקטלוג של AItoolFit. הכלים האלה מבצעים את אותן משימות וממשיכים להתפתח:',
-               review='לסקירה', find='מצאו כלי למשימה שלכם', home='ראשי', dir='מדריך AI', news='חדשות', cmp='השוואה'),
+               review='לסקירה', find='מצאו כלי למשימה שלכם', home='ראשי', dir='מדריך AI', aifor='AI ל…', news='חדשות', cmp='השוואה'),
     'fr': dict(title="{n} n'est plus disponible : alternatives 2026",
                desc="{n} n'est plus disponible. Comparez 3 outils d'IA activement maintenus pour les mêmes tâches, avec des prix vérifiés.",
                h1="{n} n'est plus disponible",
                sub="{n} a été arrêté ou remplacé, nous l'avons donc retiré du catalogue AItoolFit. Ces outils couvrent les mêmes tâches et sont activement maintenus :",
-               review="Lire l'avis", find='Trouver un outil pour votre tâche', home='Accueil', dir='Annuaire IA', news='Actualités', cmp='Comparer'),
+               review="Lire l'avis", find='Trouver un outil pour votre tâche', home='Accueil', dir='Annuaire IA', aifor='IA pour…', news='Actualités', cmp='Comparer'),
     'pt': dict(title='{n} foi descontinuado: alternativas em 2026',
                desc='{n} não está mais disponível. Compare 3 ferramentas de IA ativas para as mesmas tarefas, com preços verificados.',
                h1='{n} não está mais disponível',
                sub='{n} foi descontinuado ou substituído, por isso o removemos do catálogo AItoolFit. Estas ferramentas cobrem as mesmas tarefas e seguem ativas:',
-               review='Ler análise', find='Encontre uma ferramenta para sua tarefa', home='Início', dir='Diretório IA', news='Notícias', cmp='Comparar'),
+               review='Ler análise', find='Encontre uma ferramenta para sua tarefa', home='Início', dir='Diretório IA', aifor='IA para…', news='Notícias', cmp='Comparar'),
 }
 
 GA = ('<script async src="https://www.googletagmanager.com/gtag/js?id=G-WW59K11Y2Z"></script>\n'
@@ -138,6 +138,7 @@ def page(lang, slug, name, alts):
     <nav class="nav-links">
       <a href="{pre}/" class="nav-link">{e(s['home'])}</a>
       <a href="{pre}/directory.html" class="nav-link">{e(s['dir'])}</a>
+      <a href="{pre}/ai-for.html" class="nav-link">{e(s['aifor'])}</a>
       <a href="{pre}/news.html" class="nav-link">{e(s['news'])}</a>
       <a href="{pre}/compare.html" class="nav-link">{e(s['cmp'])}</a>
     </nav>

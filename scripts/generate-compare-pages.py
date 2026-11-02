@@ -10,6 +10,9 @@ Usage:  python3 scripts/generate-compare-pages.py
 
 import os, re, json, html as _html, hashlib, socket, time
 import urllib.request, urllib.parse, urllib.error
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from nav_i18n import bake as bake_nav
 
 ROOT     = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 BASE_URL = 'https://aitoolfit.ai'
@@ -1012,6 +1015,7 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
     <nav class="nav-links">
       <a href="{base}/"                class="nav-link" data-i18n="nav.home">Find AI</a>
       <a href="{base}/directory.html"  class="nav-link" data-i18n="nav.directory">Best AI Tools</a>
+      <a href="{base}/ai-for.html"     class="nav-link" data-i18n="nav.aifor">AI for…</a>
       <a href="{base}/compare.html"    class="nav-link active" data-i18n="nav.compare">Compare</a>
       <a href="{base}/news.html"       class="nav-link" data-i18n="nav.news">News</a>
     </nav>
@@ -1024,6 +1028,7 @@ def build_page(cmp, lang, canonical_url, flag, label, rtl=False):
   <nav class="mobile-menu" id="mobileMenu">
     <a href="{base}/"                class="nav-link" data-i18n="nav.home">Find AI</a>
     <a href="{base}/directory.html"  class="nav-link" data-i18n="nav.directory">Best AI Tools</a>
+    <a href="{base}/ai-for.html"     class="nav-link" data-i18n="nav.aifor">AI for…</a>
     <a href="{base}/compare.html"    class="nav-link active" data-i18n="nav.compare">Compare</a>
     <a href="{base}/news.html"       class="nav-link" data-i18n="nav.news">News</a>
   </nav>
@@ -1097,7 +1102,7 @@ def main():
         html = build_page(cmp, 'en', f'{BASE_URL}/compare/{cmp["slug"]}.html', '🇬🇧', 'EN')
         if html:
             with open(os.path.join(compare_dir, f'{cmp["slug"]}.html'), 'w', encoding='utf-8') as f:
-                f.write(html)
+                f.write(bake_nav(html, 'en'))
             written.setdefault(compare_dir, set()).add(f'{cmp["slug"]}.html')
             total += 1
         else:
@@ -1113,7 +1118,7 @@ def main():
             html = build_page(cmp, lang, f'{BASE_URL}/{lang}/compare/{cmp["slug"]}.html', flag, label, rtl)
             if html:
                 with open(os.path.join(lang_dir, f'{cmp["slug"]}.html'), 'w', encoding='utf-8') as f:
-                    f.write(html)
+                    f.write(bake_nav(html, lang))
                 written.setdefault(lang_dir, set()).add(f'{cmp["slug"]}.html')
                 total += 1
             else:

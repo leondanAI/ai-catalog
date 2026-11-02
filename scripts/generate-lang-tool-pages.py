@@ -114,7 +114,7 @@ LANG_LABELS = {
 
 LANGUAGES = {
     'ru': {
-        'nav': {'home':'Главная','dir':'Каталог','news':'Новости','tools':'Инструменты','compare':'Сравнение','nl':'Рассылка'},
+        'nav': {'home':'Главная','dir':'Каталог','aifor':'ИИ для…','news':'Новости','tools':'Инструменты','compare':'Сравнение','nl':'Рассылка'},
         'ui':  {'about':'О сервисе','pros':'Преимущества','cons':'Недостатки','also':'Также рассмотрите',
                 'reviews':'Отзывы пользователей','leave':'Оставить отзыв','name_ph':'Ваше имя',
                 'email_ph':'Email (не публикуется)','text_ph':'Расскажите о вашем опыте с',
@@ -128,7 +128,7 @@ LANGUAGES = {
         'date_locale': 'ru-RU',
     },
     'es': {
-        'nav': {'home':'Inicio','dir':'Directorio','news':'Noticias','tools':'Herramientas','compare':'Comparar','nl':'Boletín'},
+        'nav': {'home':'Inicio','dir':'Directorio','aifor':'IA para…','news':'Noticias','tools':'Herramientas','compare':'Comparar','nl':'Boletín'},
         'ui':  {'about':'Acerca de','pros':'Ventajas','cons':'Desventajas','also':'También considera',
                 'reviews':'Reseñas de usuarios','leave':'Dejar una reseña','name_ph':'Tu nombre',
                 'email_ph':'Email (no publicado)','text_ph':'Comparte tu experiencia con',
@@ -142,7 +142,7 @@ LANGUAGES = {
         'date_locale': 'es-ES',
     },
     'de': {
-        'nav': {'home':'Startseite','dir':'Verzeichnis','news':'Neuigkeiten','tools':'Werkzeuge','compare':'Vergleichen','nl':'Newsletter'},
+        'nav': {'home':'Startseite','dir':'Verzeichnis','aifor':'KI für…','news':'Neuigkeiten','tools':'Werkzeuge','compare':'Vergleichen','nl':'Newsletter'},
         'ui':  {'about':'Über','pros':'Vorteile','cons':'Nachteile','also':'Auch erwägen',
                 'reviews':'Nutzerbewertungen','leave':'Bewertung abgeben','name_ph':'Ihr Name',
                 'email_ph':'E-Mail (nicht veröffentlicht)','text_ph':'Teilen Sie Ihre Erfahrung mit',
@@ -156,7 +156,7 @@ LANGUAGES = {
         'date_locale': 'de-DE',
     },
     'ua': {
-        'nav': {'home':'Головна','dir':'Каталог','news':'Новини','tools':'Інструменти','compare':'Порівняння','nl':'Розсилка'},
+        'nav': {'home':'Головна','dir':'Каталог','aifor':'ШІ для…','news':'Новини','tools':'Інструменти','compare':'Порівняння','nl':'Розсилка'},
         'ui':  {'about':'Про сервіс','pros':'Переваги','cons':'Недоліки','also':'Також розгляньте',
                 'reviews':'Відгуки користувачів','leave':'Залишити відгук','name_ph':'Ваше ім\'я',
                 'email_ph':'Email (не публікується)','text_ph':'Розкажіть про ваш досвід з',
@@ -170,7 +170,7 @@ LANGUAGES = {
         'date_locale': 'uk-UA',
     },
     'he': {
-        'nav': {'home':'דף הבית','dir':'ספריה','news':'חדשות','tools':'כלים','compare':'השוואה','nl':'ניוזלטר'},
+        'nav': {'home':'דף הבית','dir':'ספריה','aifor':'AI ל…','news':'חדשות','tools':'כלים','compare':'השוואה','nl':'ניוזלטר'},
         'ui':  {'about':'אודות','pros':'יתרונות','cons':'חסרונות','also':'שקול גם',
                 'reviews':'ביקורות משתמשים','leave':'השאר ביקורת','name_ph':'שמך',
                 'email_ph':'אימייל (לא מפורסם)','text_ph':'שתף את החוויה שלך עם',
@@ -184,7 +184,7 @@ LANGUAGES = {
         'date_locale': 'he-IL',
     },
     'fr': {
-        'nav': {'home':'Accueil','dir':'Répertoire','news':'Actualités','tools':'Outils','compare':'Comparer','nl':'Newsletter'},
+        'nav': {'home':'Accueil','dir':'Répertoire','aifor':'IA pour…','news':'Actualités','tools':'Outils','compare':'Comparer','nl':'Newsletter'},
         'ui':  {'about':'À propos','pros':'Avantages','cons':'Inconvénients','also':'Considérez aussi',
                 'reviews':'Avis des utilisateurs','leave':'Laisser un avis','name_ph':'Votre nom',
                 'email_ph':'Email (non publié)','text_ph':'Partagez votre expérience avec',
@@ -198,7 +198,7 @@ LANGUAGES = {
         'date_locale': 'fr-FR',
     },
     'pt': {
-        'nav': {'home':'Início','dir':'Diretório','news':'Notícias','tools':'Ferramentas','compare':'Comparar','nl':'Newsletter'},
+        'nav': {'home':'Início','dir':'Diretório','aifor':'IA para…','news':'Notícias','tools':'Ferramentas','compare':'Comparar','nl':'Newsletter'},
         'ui':  {'about':'Sobre','pros':'Vantagens','cons':'Desvantagens','also':'Considere também',
                 'reviews':'Avaliações dos usuários','leave':'Deixar avaliação','name_ph':'Seu nome',
                 'email_ph':'Email (não publicado)','text_ph':'Compartilhe sua experiência com',
@@ -738,6 +738,7 @@ textarea.form-input{{resize:vertical;min-height:90px}}
     <nav class="nav-links">
       <a href="/{lang}/"               class="nav-link" data-nav="index.html"      data-i18n="nav.home">{nav['home']}</a>
       <a href="/{lang}/directory.html"  class="nav-link active" data-nav="directory.html"  data-i18n="nav.directory">{nav['dir']}</a>
+      <a href="/{lang}/ai-for.html"     class="nav-link" data-nav="ai-for.html"  data-i18n="nav.aifor">{nav['aifor']}</a>
       <a href="/{lang}/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">{nav['compare']}</a>
       <a href="/{lang}/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">{nav['news']}</a>
       <a href="/{lang}/newsletter.html" class="nav-link" data-nav="newsletter.html" data-i18n="nav.newsletter">{nav['nl']}</a>
@@ -751,6 +752,7 @@ textarea.form-input{{resize:vertical;min-height:90px}}
   <nav class="mobile-menu" id="mobileMenu">
     <a href="/{lang}/"               class="nav-link" data-i18n="nav.home">{nav['home']}</a>
     <a href="/{lang}/directory.html"  class="nav-link" data-i18n="nav.directory">{nav['dir']}</a>
+    <a href="/{lang}/ai-for.html"     class="nav-link" data-i18n="nav.aifor">{nav['aifor']}</a>
     <a href="/{lang}/compare.html"    class="nav-link" data-i18n="nav.compare">{nav['compare']}</a>
     <a href="/{lang}/news.html"       class="nav-link" data-i18n="nav.news">{nav['news']}</a>
     <a href="/{lang}/newsletter.html" class="nav-link" data-i18n="nav.newsletter">{nav['nl']}</a>
@@ -760,7 +762,7 @@ textarea.form-input{{resize:vertical;min-height:90px}}
   <nav class="breadcrumb">
     <a href="/{lang}/">{nav['home']}</a> <span>›</span>
     <a href="/{lang}/directory.html">{nav['dir']}</a> <span>›</span>
-    <a href="/{lang}/directory.html?cat={esc(category)}">{esc(cat_label)}</a> <span>›</span>
+    <a href="/{lang}/best/{esc(category)}.html">{esc(cat_label)}</a> <span>›</span>
     <span>{esc(name)}</span>
   </nav>
   <div class="tool-hero">
@@ -838,11 +840,11 @@ textarea.form-input{{resize:vertical;min-height:90px}}
     <div>
       <div class="footer-col-title">{ui['footer_cats']}</div>
       <div class="footer-col-links">
-        <a href="/{lang}/directory.html?cat=chat">{cats['chat']}</a>
-        <a href="/{lang}/directory.html?cat=code">{cats['code']}</a>
-        <a href="/{lang}/directory.html?cat=image">{cats['image']}</a>
-        <a href="/{lang}/directory.html?cat=video">{cats['video']}</a>
-        <a href="/{lang}/directory.html?cat=voice">{cats['voice']}</a>
+        <a href="/{lang}/best/chat.html">{cats['chat']}</a>
+        <a href="/{lang}/best/code.html">{cats['code']}</a>
+        <a href="/{lang}/best/image.html">{cats['image']}</a>
+        <a href="/{lang}/best/video.html">{cats['video']}</a>
+        <a href="/{lang}/best/voice.html">{cats['voice']}</a>
         <a href="/{lang}/directory.html" style="color:var(--accent);margin-top:4px">More →</a>
       </div>
     </div>

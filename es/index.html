@@ -121,6 +121,7 @@
     <nav class="nav-links">
       <a href="/es/"               class="nav-link" data-nav="index.html"      data-i18n="nav.home">Buscar IA</a>
       <a href="/es/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">Mejores herramientas IA</a>
+      <a href="/es/ai-for.html"     class="nav-link" data-nav="ai-for.html"  data-i18n="nav.aifor">IA para…</a>
       <a href="/es/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Comparar</a>
       <a href="/es/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Noticias</a>
     </nav>
@@ -133,6 +134,7 @@
   <nav class="mobile-menu" id="mobileMenu">
     <a href="/es/"               class="nav-link" data-i18n="nav.home">Buscar IA</a>
     <a href="/es/directory.html"  class="nav-link" data-i18n="nav.directory">Mejores herramientas IA</a>
+    <a href="/es/ai-for.html"     class="nav-link" data-i18n="nav.aifor">IA para…</a>
     <a href="/es/compare.html"    class="nav-link" data-i18n="nav.compare">Comparar</a>
     <a href="/es/news.html"       class="nav-link" data-i18n="nav.news">Noticias</a>
   </nav>
@@ -296,12 +298,12 @@
     <div>
       <div class="footer-col-title">CATEGORÍAS</div>
       <div class="footer-col-links">
-        <a href="directory.html?cat=chat">AI Chat</a>
-        <a href="directory.html?cat=code">Development</a>
-        <a href="directory.html?cat=image">Image Gen</a>
-        <a href="directory.html?cat=video">Video Gen</a>
-        <a href="directory.html?cat=voice">Voice & Audio</a>
-        <a href="directory.html?cat=data">Data & Analytics</a>
+        <a href="/es/best/chat.html">AI Chat</a>
+        <a href="/es/best/code.html">Development</a>
+        <a href="/es/best/image.html">Image Gen</a>
+        <a href="/es/best/video.html">Video Gen</a>
+        <a href="/es/best/voice.html">Voice & Audio</a>
+        <a href="/es/best/data.html">Data & Analytics</a>
       </div>
     </div>
     <!-- Languages -->
@@ -374,7 +376,7 @@ function renderTrending() {
 
 function renderCatsGrid() {
   document.getElementById('catsGrid').innerHTML = CATEGORIES.map(c => `
-    <a class="cat-card fade-up" href="directory.html?cat=${c.id}">
+    <a class="cat-card fade-up" href="/es/best/${c.id}.html">
       <div class="cat-icon-box" style="background:${c.color}22;color:${c.color}">${c.icon}</div>
       <div>
         <div class="cat-card-name">${catTitle(c.id)}</div>
@@ -386,7 +388,7 @@ function renderCatsGrid() {
 function renderCatPills() {
   const all = [{ id:'all', icon:'✦' }, ...CATEGORIES];
   document.getElementById('heroCatPills').innerHTML = all.map(c =>
-    `<a class="hero-cat-pill" href="directory.html${c.id === 'all' ? '' : '?cat=' + c.id}">
+    `<a class="hero-cat-pill" href="${c.id === 'all' ? 'directory.html' : 'best/' + c.id + '.html'}">
       ${c.icon ? `<span>${c.icon}</span>` : ''}${c.id === 'all' ? t('dir.all') : catTitle(c.id)}
     </a>`
   ).join('');

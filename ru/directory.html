@@ -45,6 +45,7 @@
   .cat-head { display:flex; align-items:center; gap:10px; margin-bottom:1rem; }
   .cat-head-icon { width:34px; height:34px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:16px; }
   .cat-head-name { font-family:var(--font-display); font-size:15px; font-weight:500; flex:1; }
+  a.cat-head-name { color:var(--text); } a.cat-head-name:hover { color:var(--accent); }
   .cat-head-count { font-size:12px; color:var(--text3); }
 </style>
 <!--  -->
@@ -67,6 +68,7 @@
     <nav class="nav-links">
       <a href="/ru/"               class="nav-link" data-nav="index.html"      data-i18n="nav.home">Найти ИИ</a>
       <a href="/ru/directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">Лучшие AI-инструменты</a>
+      <a href="/ru/ai-for.html"     class="nav-link" data-nav="ai-for.html"  data-i18n="nav.aifor">ИИ для…</a>
       <a href="/ru/compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Сравнение</a>
       <a href="/ru/news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">Новости</a>
     </nav>
@@ -79,6 +81,7 @@
   <nav class="mobile-menu" id="mobileMenu">
     <a href="/ru/"               class="nav-link" data-i18n="nav.home">Найти ИИ</a>
     <a href="/ru/directory.html"  class="nav-link" data-i18n="nav.directory">Лучшие AI-инструменты</a>
+    <a href="/ru/ai-for.html"     class="nav-link" data-i18n="nav.aifor">ИИ для…</a>
     <a href="/ru/compare.html"    class="nav-link" data-i18n="nav.compare">Сравнение</a>
     <a href="/ru/news.html"       class="nav-link" data-i18n="nav.news">Новости</a>
   </nav>
@@ -103,7 +106,7 @@
 <div class="cat-section" data-cat="chat">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#7c6af722;color:#7c6af7">💬</div>
-        <span class="cat-head-name">Чат и ассистенты</span>
+        <a class="cat-head-name" href="/ru/best/chat.html">Чат и ассистенты →</a>
         <span class="cat-head-count">10</span>
       </div>
       <div class="grid-auto">
@@ -302,7 +305,7 @@
 <div class="cat-section" data-cat="agents">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#ff6b3522;color:#ff6b35">🤖</div>
-        <span class="cat-head-name">ИИ-агенты и автоматизация</span>
+        <a class="cat-head-name" href="/ru/best/agents.html">ИИ-агенты и автоматизация →</a>
         <span class="cat-head-count">8</span>
       </div>
       <div class="grid-auto">
@@ -463,7 +466,7 @@
 <div class="cat-section" data-cat="code">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#2dd4a022;color:#2dd4a0">💻</div>
-        <span class="cat-head-name">ИИ для разработчиков</span>
+        <a class="cat-head-name" href="/ru/best/code.html">ИИ для разработчиков →</a>
         <span class="cat-head-count">13</span>
       </div>
       <div class="grid-auto">
@@ -719,7 +722,7 @@
 <div class="cat-section" data-cat="writing">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#5b8af022;color:#5b8af0">✍️</div>
-        <span class="cat-head-name">Текст и копирайтинг</span>
+        <a class="cat-head-name" href="/ru/best/writing.html">Текст и копирайтинг →</a>
         <span class="cat-head-count">6</span>
       </div>
       <div class="grid-auto">
@@ -842,7 +845,7 @@
 <div class="cat-section" data-cat="marketing">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#e6394622;color:#e63946">📈</div>
-        <span class="cat-head-name">Маркетинг и SEO</span>
+        <a class="cat-head-name" href="/ru/best/marketing.html">Маркетинг и SEO →</a>
         <span class="cat-head-count">6</span>
       </div>
       <div class="grid-auto">
@@ -965,7 +968,7 @@
 <div class="cat-section" data-cat="image">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#e05bb522;color:#e05bb5">🎨</div>
-        <span class="cat-head-name">Генерация изображений</span>
+        <a class="cat-head-name" href="/ru/best/image.html">Генерация изображений →</a>
         <span class="cat-head-count">11</span>
       </div>
       <div class="grid-auto">
@@ -1183,7 +1186,7 @@
 <div class="cat-section" data-cat="video">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#f5656522;color:#f56565">🎬</div>
-        <span class="cat-head-name">Генерация видео</span>
+        <a class="cat-head-name" href="/ru/best/video.html">Генерация видео →</a>
         <span class="cat-head-count">10</span>
       </div>
       <div class="grid-auto">
@@ -1382,7 +1385,7 @@
 <div class="cat-section" data-cat="design">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#f5658022;color:#f56580">🖌️</div>
-        <span class="cat-head-name">Дизайн и UI/UX</span>
+        <a class="cat-head-name" href="/ru/best/design.html">Дизайн и UI/UX →</a>
         <span class="cat-head-count">13</span>
       </div>
       <div class="grid-auto">
@@ -1638,7 +1641,7 @@
 <div class="cat-section" data-cat="voice">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#4aaef522;color:#4aaef5">🎙️</div>
-        <span class="cat-head-name">Голос и аудио</span>
+        <a class="cat-head-name" href="/ru/best/voice.html">Голос и аудио →</a>
         <span class="cat-head-count">8</span>
       </div>
       <div class="grid-auto">
@@ -1799,7 +1802,7 @@
 <div class="cat-section" data-cat="productivity">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#f5a62322;color:#f5a623">⚡</div>
-        <span class="cat-head-name">Продуктивность</span>
+        <a class="cat-head-name" href="/ru/best/productivity.html">Продуктивность →</a>
         <span class="cat-head-count">7</span>
       </div>
       <div class="grid-auto">
@@ -1941,7 +1944,7 @@
 <div class="cat-section" data-cat="research">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#9b6ef522;color:#9b6ef5">🔬</div>
-        <span class="cat-head-name">Исследования</span>
+        <a class="cat-head-name" href="/ru/best/research.html">Исследования →</a>
         <span class="cat-head-count">6</span>
       </div>
       <div class="grid-auto">
@@ -2064,7 +2067,7 @@
 <div class="cat-section" data-cat="data">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#38c9b022;color:#38c9b0">📊</div>
-        <span class="cat-head-name">Данные и аналитика</span>
+        <a class="cat-head-name" href="/ru/best/data.html">Данные и аналитика →</a>
         <span class="cat-head-count">7</span>
       </div>
       <div class="grid-auto">
@@ -2206,7 +2209,7 @@
 <div class="cat-section" data-cat="nocode">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#457b9d22;color:#457b9d">🏗️</div>
-        <span class="cat-head-name">No-Code конструкторы</span>
+        <a class="cat-head-name" href="/ru/best/nocode.html">No-Code конструкторы →</a>
         <span class="cat-head-count">7</span>
       </div>
       <div class="grid-auto">
@@ -2348,7 +2351,7 @@
 <div class="cat-section" data-cat="education">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#2a9d8f22;color:#2a9d8f">🎓</div>
-        <span class="cat-head-name">Образование</span>
+        <a class="cat-head-name" href="/ru/best/education.html">Образование →</a>
         <span class="cat-head-count">7</span>
       </div>
       <div class="grid-auto">
@@ -2490,7 +2493,7 @@
 <div class="cat-section" data-cat="presentations">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#8338ec22;color:#8338ec">🖥️</div>
-        <span class="cat-head-name">Презентации</span>
+        <a class="cat-head-name" href="/ru/best/presentations.html">Презентации →</a>
         <span class="cat-head-count">5</span>
       </div>
       <div class="grid-auto">
@@ -2594,7 +2597,7 @@
 <div class="cat-section" data-cat="business-investment">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#10b98122;color:#10b981">💰</div>
-        <span class="cat-head-name">Бизнес и инвестиции</span>
+        <a class="cat-head-name" href="/ru/best/business-investment.html">Бизнес и инвестиции →</a>
         <span class="cat-head-count">4</span>
       </div>
       <div class="grid-auto">
@@ -2701,12 +2704,12 @@
     <div>
       <div class="footer-col-title">КАТЕГОРИИ</div>
       <div class="footer-col-links">
-        <a href="directory.html?cat=chat">AI Chat</a>
-        <a href="directory.html?cat=code">Development</a>
-        <a href="directory.html?cat=image">Image Gen</a>
-        <a href="directory.html?cat=video">Video Gen</a>
-        <a href="directory.html?cat=voice">Voice & Audio</a>
-        <a href="directory.html?cat=data">Data & Analytics</a>
+        <a href="/ru/best/chat.html">AI Chat</a>
+        <a href="/ru/best/code.html">Development</a>
+        <a href="/ru/best/image.html">Image Gen</a>
+        <a href="/ru/best/video.html">Video Gen</a>
+        <a href="/ru/best/voice.html">Voice & Audio</a>
+        <a href="/ru/best/data.html">Data & Analytics</a>
       </div>
     </div>
     <div>

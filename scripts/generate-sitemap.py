@@ -126,6 +126,12 @@ ai_for_slugs = sorted(
     f[:-5] for f in os.listdir(ai_for_dir) if f.endswith('.html')
 ) if os.path.isdir(ai_for_dir) else []
 
+# Страницы категорий «Лучшие нейросети для …» (generate-category-pages.py)
+best_dir = os.path.join(ROOT_DIR, 'best')
+best_slugs = sorted(
+    f[:-5] for f in os.listdir(best_dir) if f.endswith('.html')
+) if os.path.isdir(best_dir) else []
+
 # ── EN main pages ─────────────────────────────────────────────────────────────
 entries.append(url(f'{BASE_URL}/',                 'daily',   1.0))
 entries.append(url(f'{BASE_URL}/directory.html',   'daily',   1.0))
@@ -141,6 +147,8 @@ entries.append(url(f'{BASE_URL}/contact.html',     'yearly',  0.3))
 add_if_exists(entries, 'ai-for.html', f'{BASE_URL}/ai-for.html', 'weekly', 0.9)
 for slug in ai_for_slugs:
     entries.append(url(f'{BASE_URL}/ai-for/{slug}.html', 'weekly', 0.9))
+for slug in best_slugs:
+    entries.append(url(f'{BASE_URL}/best/{slug}.html', 'weekly', 0.9))
 
 # ── EN individual tool pages ──────────────────────────────────────────────────
 for slug in tool_slugs:
@@ -178,6 +186,10 @@ for lang in LANGS_ACTIVE:
     add_if_exists(entries, f'{lang}/ai-for.html', f'{BASE_URL}/{lang}/ai-for.html', 'weekly', 0.8)
     for slug in ai_for_slugs:
         rel = f'{lang}/ai-for/{slug}.html'
+        if os.path.exists(os.path.join(ROOT_DIR, rel)):
+            entries.append(url(f'{BASE_URL}/{rel}', 'weekly', 0.8))
+    for slug in best_slugs:
+        rel = f'{lang}/best/{slug}.html'
         if os.path.exists(os.path.join(ROOT_DIR, rel)):
             entries.append(url(f'{BASE_URL}/{rel}', 'weekly', 0.8))
 

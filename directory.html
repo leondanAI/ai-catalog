@@ -45,6 +45,7 @@
   .cat-head { display:flex; align-items:center; gap:10px; margin-bottom:1rem; }
   .cat-head-icon { width:34px; height:34px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:16px; }
   .cat-head-name { font-family:var(--font-display); font-size:15px; font-weight:500; flex:1; }
+  a.cat-head-name { color:var(--text); } a.cat-head-name:hover { color:var(--accent); }
   .cat-head-count { font-size:12px; color:var(--text3); }
 </style>
 <!--  -->
@@ -67,6 +68,7 @@
     <nav class="nav-links">
       <a href="/"               class="nav-link" data-nav="index.html"      data-i18n="nav.home">Find AI</a>
       <a href="directory.html"  class="nav-link" data-nav="directory.html"  data-i18n="nav.directory">Best AI Tools</a>
+      <a href="ai-for.html"     class="nav-link" data-nav="ai-for.html"  data-i18n="nav.aifor">AI for…</a>
       <a href="compare.html"    class="nav-link" data-nav="compare.html"    data-i18n="nav.compare">Compare</a>
       <a href="news.html"       class="nav-link" data-nav="news.html"       data-i18n="nav.news">News</a>
     </nav>
@@ -79,6 +81,7 @@
   <nav class="mobile-menu" id="mobileMenu">
     <a href="/"               class="nav-link" data-i18n="nav.home">Find AI</a>
     <a href="directory.html"  class="nav-link" data-i18n="nav.directory">Best AI Tools</a>
+    <a href="ai-for.html"     class="nav-link" data-i18n="nav.aifor">AI for…</a>
     <a href="compare.html"    class="nav-link" data-i18n="nav.compare">Compare</a>
     <a href="news.html"       class="nav-link" data-i18n="nav.news">News</a>
   </nav>
@@ -103,7 +106,7 @@
 <div class="cat-section" data-cat="chat">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#7c6af722;color:#7c6af7">💬</div>
-        <span class="cat-head-name">AI Chat & Assistants</span>
+        <a class="cat-head-name" href="/best/chat.html">AI Chat & Assistants →</a>
         <span class="cat-head-count">10</span>
       </div>
       <div class="grid-auto">
@@ -302,7 +305,7 @@
 <div class="cat-section" data-cat="agents">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#ff6b3522;color:#ff6b35">🤖</div>
-        <span class="cat-head-name">AI Agents & Automation</span>
+        <a class="cat-head-name" href="/best/agents.html">AI Agents & Automation →</a>
         <span class="cat-head-count">8</span>
       </div>
       <div class="grid-auto">
@@ -463,7 +466,7 @@
 <div class="cat-section" data-cat="code">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#2dd4a022;color:#2dd4a0">💻</div>
-        <span class="cat-head-name">AI for Development</span>
+        <a class="cat-head-name" href="/best/code.html">AI for Development →</a>
         <span class="cat-head-count">13</span>
       </div>
       <div class="grid-auto">
@@ -719,7 +722,7 @@
 <div class="cat-section" data-cat="writing">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#5b8af022;color:#5b8af0">✍️</div>
-        <span class="cat-head-name">Text & Copywriting</span>
+        <a class="cat-head-name" href="/best/writing.html">Text & Copywriting →</a>
         <span class="cat-head-count">6</span>
       </div>
       <div class="grid-auto">
@@ -842,7 +845,7 @@
 <div class="cat-section" data-cat="marketing">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#e6394622;color:#e63946">📈</div>
-        <span class="cat-head-name">Marketing & SEO</span>
+        <a class="cat-head-name" href="/best/marketing.html">Marketing & SEO →</a>
         <span class="cat-head-count">6</span>
       </div>
       <div class="grid-auto">
@@ -965,7 +968,7 @@
 <div class="cat-section" data-cat="image">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#e05bb522;color:#e05bb5">🎨</div>
-        <span class="cat-head-name">Image Generation</span>
+        <a class="cat-head-name" href="/best/image.html">Image Generation →</a>
         <span class="cat-head-count">11</span>
       </div>
       <div class="grid-auto">
@@ -1183,7 +1186,7 @@
 <div class="cat-section" data-cat="video">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#f5656522;color:#f56565">🎬</div>
-        <span class="cat-head-name">Video Generation</span>
+        <a class="cat-head-name" href="/best/video.html">Video Generation →</a>
         <span class="cat-head-count">10</span>
       </div>
       <div class="grid-auto">
@@ -1382,7 +1385,7 @@
 <div class="cat-section" data-cat="design">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#f5658022;color:#f56580">🖌️</div>
-        <span class="cat-head-name">Design & UI/UX</span>
+        <a class="cat-head-name" href="/best/design.html">Design & UI/UX →</a>
         <span class="cat-head-count">13</span>
       </div>
       <div class="grid-auto">
@@ -1638,7 +1641,7 @@
 <div class="cat-section" data-cat="voice">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#4aaef522;color:#4aaef5">🎙️</div>
-        <span class="cat-head-name">Voice & Audio</span>
+        <a class="cat-head-name" href="/best/voice.html">Voice & Audio →</a>
         <span class="cat-head-count">8</span>
       </div>
       <div class="grid-auto">
@@ -1799,7 +1802,7 @@
 <div class="cat-section" data-cat="productivity">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#f5a62322;color:#f5a623">⚡</div>
-        <span class="cat-head-name">Productivity</span>
+        <a class="cat-head-name" href="/best/productivity.html">Productivity →</a>
         <span class="cat-head-count">7</span>
       </div>
       <div class="grid-auto">
@@ -1941,7 +1944,7 @@
 <div class="cat-section" data-cat="research">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#9b6ef522;color:#9b6ef5">🔬</div>
-        <span class="cat-head-name">Research</span>
+        <a class="cat-head-name" href="/best/research.html">Research →</a>
         <span class="cat-head-count">6</span>
       </div>
       <div class="grid-auto">
@@ -2064,7 +2067,7 @@
 <div class="cat-section" data-cat="data">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#38c9b022;color:#38c9b0">📊</div>
-        <span class="cat-head-name">Data & Analytics</span>
+        <a class="cat-head-name" href="/best/data.html">Data & Analytics →</a>
         <span class="cat-head-count">7</span>
       </div>
       <div class="grid-auto">
@@ -2206,7 +2209,7 @@
 <div class="cat-section" data-cat="nocode">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#457b9d22;color:#457b9d">🏗️</div>
-        <span class="cat-head-name">No-Code App Builders</span>
+        <a class="cat-head-name" href="/best/nocode.html">No-Code App Builders →</a>
         <span class="cat-head-count">7</span>
       </div>
       <div class="grid-auto">
@@ -2348,7 +2351,7 @@
 <div class="cat-section" data-cat="education">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#2a9d8f22;color:#2a9d8f">🎓</div>
-        <span class="cat-head-name">Education & Learning</span>
+        <a class="cat-head-name" href="/best/education.html">Education & Learning →</a>
         <span class="cat-head-count">7</span>
       </div>
       <div class="grid-auto">
@@ -2490,7 +2493,7 @@
 <div class="cat-section" data-cat="presentations">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#8338ec22;color:#8338ec">🖥️</div>
-        <span class="cat-head-name">Presentations & Slides</span>
+        <a class="cat-head-name" href="/best/presentations.html">Presentations & Slides →</a>
         <span class="cat-head-count">5</span>
       </div>
       <div class="grid-auto">
@@ -2594,7 +2597,7 @@
 <div class="cat-section" data-cat="business-investment">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:#10b98122;color:#10b981">💰</div>
-        <span class="cat-head-name">Business & Investment</span>
+        <a class="cat-head-name" href="/best/business-investment.html">Business & Investment →</a>
         <span class="cat-head-count">4</span>
       </div>
       <div class="grid-auto">
@@ -2701,12 +2704,12 @@
     <div>
       <div class="footer-col-title">CATEGORIES</div>
       <div class="footer-col-links">
-        <a href="directory.html?cat=chat">AI Chat</a>
-        <a href="directory.html?cat=code">Development</a>
-        <a href="directory.html?cat=image">Image Gen</a>
-        <a href="directory.html?cat=video">Video Gen</a>
-        <a href="directory.html?cat=voice">Voice & Audio</a>
-        <a href="directory.html?cat=data">Data & Analytics</a>
+        <a href="/best/chat.html">AI Chat</a>
+        <a href="/best/code.html">Development</a>
+        <a href="/best/image.html">Image Gen</a>
+        <a href="/best/video.html">Video Gen</a>
+        <a href="/best/voice.html">Voice & Audio</a>
+        <a href="/best/data.html">Data & Analytics</a>
       </div>
     </div>
     <div>

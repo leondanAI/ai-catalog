@@ -158,7 +158,7 @@ def build_catalog_html(tools, lang='en', tr=None):
         html += f'''<div class="cat-section" data-cat="{cat_id}">
       <div class="cat-head">
         <div class="cat-head-icon" style="background:{cat_color}22;color:{cat_color}">{cat_icon}</div>
-        <span class="cat-head-name">{cat_label}</span>
+        <a class="cat-head-name" href="{'' if lang == 'en' else '/' + lang}/best/{cat_id}.html">{cat_label} →</a>
         <span class="cat-head-count">{len(cat_tools)}</span>
       </div>
       <div class="grid-auto">{cards}

@@ -170,6 +170,10 @@ def fix_nav_links(html, lang):
     # Юридические страницы в подвале. Их делает gen_legal_pages.py на всех языках,
     # но в PAGES их нет, и подвал вёл на английские версии — а оттуда же его
     # берут страницы сравнений (113 на язык).
+    # Раздел «ИИ для…» печатает generate-ai-for-pages.py, в PAGES его нет
+    html = re.sub(r'href="/?ai-for\.html"', f'href="/{lang}/ai-for.html"', html)
+    # Страницы категорий (generate-category-pages.py), в т.ч. в JS-шаблонах плиток главной
+    html = html.replace('href="/best/', f'href="/{lang}/best/')
     for page in ('privacy.html', 'terms.html', 'contact.html'):
         html = re.sub(rf'href="/?{page}"', f'href="/{lang}/{page}"', html)
     # Static comparison subpages: href="/compare/chatgpt-vs-claude.html" → href="/ru/compare/chatgpt-vs-claude.html"

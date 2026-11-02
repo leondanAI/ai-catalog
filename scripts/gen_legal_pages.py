@@ -21,8 +21,8 @@ FLAG = {'en': '🇬🇧 EN', 'es': '🇪🇸 ES', 'de': '🇩🇪 DE', 'ru': '�
 # html lang attribute — Ukrainian uses the ISO code "uk" even though the folder is /ua/
 HTML_LANG = {'ua': 'uk'}
 
-NAV = [('', 'Find AI'), ('directory.html', 'Best AI Tools'), ('compare.html', 'Compare'),
-       ('news.html', 'News'), ('directory.html', 'Toolbox'), ('newsletter.html', 'Newsletter')]
+NAV = [('', 'Find AI'), ('directory.html', 'Best AI Tools'), ('ai-for.html', 'AI for…'),
+       ('compare.html', 'Compare'), ('news.html', 'News'), ('newsletter.html', 'Newsletter')]
 
 
 def make_page(lang, page, title, desc, body):
