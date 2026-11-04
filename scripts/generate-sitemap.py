@@ -118,6 +118,7 @@ news_dir = os.path.join(ROOT_DIR, 'news')
 news_slugs = sorted(
     f[:-5] for f in os.listdir(news_dir)
     if f.endswith('.html') and not f.startswith('_')
+    and not _is_redirect(os.path.join(news_dir, f))
 ) if os.path.isdir(news_dir) else []
 
 # Раздел «ИИ для…» (generate-ai-for-pages.py)
@@ -172,7 +173,8 @@ for lang in LANGS_ACTIVE:
     lang_news_dir = os.path.join(ROOT_DIR, lang, 'news')
     if os.path.isdir(lang_news_dir):
         for f in sorted(os.listdir(lang_news_dir)):
-            if f.endswith('.html') and not f.startswith('_'):
+            if (f.endswith('.html') and not f.startswith('_')
+                    and not _is_redirect(os.path.join(lang_news_dir, f))):
                 entries.append(url(f'{BASE_URL}/{lang}/news/{f[:-5]}.html', 'monthly', 0.65))
     # /{lang}/tools.html — см. комментарий выше, страница удалена
     entries.append(url(f'{BASE_URL}/{lang}/newsletter.html',  'monthly', 0.3))

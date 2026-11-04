@@ -28,6 +28,12 @@ MOVED = {
     'compare/rows-vs-hex.html': 'tools/hex.html',
     'compare/socratic-vs-khanmigo.html': 'tools/khanmigo.html',
     'compare/uptrends-ai-vs-koyfin.html': 'tools/koyfin.html',
+    'tools/chatgpt-images-2-0.html': 'tools/chatgpt-images.html',
+    # Новость о несуществующей Kling v3.5, снята 2026-09
+    'news/kling-v35-1080p-60fps-2min.html': 'tools/kling-ai.html',
+    # Относительные ссылки из меню на старых страницах сравнений (2026-05)
+    **{f'compare/{p}.html': f'{p}.html' for p in ('news', 'newsletter', 'directory', 'compare')},
+    'compare/tools.html': '',
     # Toolbox удалён в 2026-07
     'tools.html': '',
     **{f'tools/{t}.html': '' for t in (
@@ -37,6 +43,7 @@ MOVED = {
 # Только английские адреса (черновики и старый каталог)
 MOVED_EN = {
     'ai-catalog.html': 'directory.html',
+    'tools/index.html': 'directory.html',
     'index-preview.html': '',
     'index-test.html': '',
     'index-tf-preview.html': '',

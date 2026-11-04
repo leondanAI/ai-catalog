@@ -459,6 +459,10 @@ def main():
                   if a.get('slug') and a.get('body')}
         for fname in os.listdir(news_dir):
             if fname.endswith('.html') and not fname.startswith('_') and fname not in wanted:
+                # Переадресацию из generate-redirects.py не трогаем — она не сирота
+                with open(os.path.join(news_dir, fname), encoding='utf-8', errors='ignore') as f:
+                    if 'http-equiv="refresh"' in f.read(600):
+                        continue
                 os.remove(os.path.join(news_dir, fname))
                 removed += 1
                 print(f'    − удалена осиротевшая страница: {lang}/{fname}')
