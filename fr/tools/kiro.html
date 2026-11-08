@@ -266,7 +266,7 @@ async function submitComment(){
     ['authorName','authorEmail','commentText'].forEach(id=>document.getElementById(id).value='');
     ratingVal.value=0;highlight(0);
   }catch(e){showMsg('Erreur : '+e.message,'#f56565');}
-  finally{btn.disabled=false;btn.textContent='Envoyer l'avis';}
+  finally{btn.disabled=false;btn.textContent='Envoyer l\'avis';}
 }
 function showMsg(t,c){const el=document.getElementById('formMsg');el.textContent=t;el.style.color=c;el.style.display='block';}
 async function loadComments(){

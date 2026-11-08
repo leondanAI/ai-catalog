@@ -275,6 +275,10 @@ def fetch_ratings():
 def esc(s):
     return str(s or '').replace('&','&amp;').replace('<','&lt;').replace('>','&gt;').replace('"','&quot;')
 
+def js_str(s):
+    """Строка интерфейса внутри '…' в скрипте: апостроф в ua и fr («ім'я», «l'avis») ломал весь скрипт отзывов."""
+    return s.replace('\\', '\\\\').replace("'", "\\'")
+
 def render_page(tool, all_tools, lang, L, trans, ratings):
     slug     = tool['slug']
     name     = tool['name']
@@ -866,19 +870,19 @@ const SB_URL='https://lbjdwkvkkndvofysyssy.supabase.co',SB_ANON='sb_publishable_
 async function submitComment(){{
   const name=document.getElementById('authorName').value.trim(),email=document.getElementById('authorEmail').value.trim(),
         text=document.getElementById('commentText').value.trim(),rating=+document.getElementById('ratingVal').value;
-  if(!name||!text){{showMsg('{ui["err_name"]}','#f56565');return;}}
-  if(rating<1){{showMsg('{ui["err_rating"]}','#f56565');return;}}
-  const btn=document.querySelector('.btn-submit');btn.disabled=true;btn.textContent='{ui["submitting"]}';
+  if(!name||!text){{showMsg('{js_str(ui["err_name"])}','#f56565');return;}}
+  if(rating<1){{showMsg('{js_str(ui["err_rating"])}','#f56565');return;}}
+  const btn=document.querySelector('.btn-submit');btn.disabled=true;btn.textContent='{js_str(ui["submitting"])}';
   try{{
     const r=await fetch(`${{SB_URL}}/rest/v1/comments`,{{method:'POST',
       headers:{{'Content-Type':'application/json','apikey':SB_ANON,'Authorization':`Bearer ${{SB_ANON}}`}},
       body:JSON.stringify({{tool_slug:TOOL_SLUG,author_name:name,author_email:email||null,content:text,rating,approved:false}})}});
     if(!r.ok)throw new Error(await r.text());
-    showMsg('{ui["thanks"]}','#2dd4a0');
+    showMsg('{js_str(ui["thanks"])}','#2dd4a0');
     ['authorName','authorEmail','commentText'].forEach(id=>document.getElementById(id).value='');
     ratingVal.value=0;highlight(0);
-  }}catch(e){{showMsg('{ui["err"]}'+e.message,'#f56565');}}
-  finally{{btn.disabled=false;btn.textContent='{ui["submit"]}';}}
+  }}catch(e){{showMsg('{js_str(ui["err"])}'+e.message,'#f56565');}}
+  finally{{btn.disabled=false;btn.textContent='{js_str(ui["submit"])}';}}
 }}
 function showMsg(t,c){{const el=document.getElementById('formMsg');el.textContent=t;el.style.color=c;el.style.display='block';}}
 async function loadComments(){{

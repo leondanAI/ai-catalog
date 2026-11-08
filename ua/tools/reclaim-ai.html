@@ -255,7 +255,7 @@ const SB_URL='https://lbjdwkvkkndvofysyssy.supabase.co',SB_ANON='sb_publishable_
 async function submitComment(){
   const name=document.getElementById('authorName').value.trim(),email=document.getElementById('authorEmail').value.trim(),
         text=document.getElementById('commentText').value.trim(),rating=+document.getElementById('ratingVal').value;
-  if(!name||!text){showMsg('Будь ласка, введіть ім'я та текст відгуку.','#f56565');return;}
+  if(!name||!text){showMsg('Будь ласка, введіть ім\'я та текст відгуку.','#f56565');return;}
   if(rating<1){showMsg('Будь ласка, оберіть оцінку.','#f56565');return;}
   const btn=document.querySelector('.btn-submit');btn.disabled=true;btn.textContent='Надсилання…';
   try{
@@ -263,7 +263,7 @@ async function submitComment(){
       headers:{'Content-Type':'application/json','apikey':SB_ANON,'Authorization':`Bearer ${SB_ANON}`},
       body:JSON.stringify({tool_slug:TOOL_SLUG,author_name:name,author_email:email||null,content:text,rating,approved:false})});
     if(!r.ok)throw new Error(await r.text());
-    showMsg('Дякуємо! Ваш відгук з'явиться після модерації.','#2dd4a0');
+    showMsg('Дякуємо! Ваш відгук з\'явиться після модерації.','#2dd4a0');
     ['authorName','authorEmail','commentText'].forEach(id=>document.getElementById(id).value='');
     ratingVal.value=0;highlight(0);
   }catch(e){showMsg('Помилка: '+e.message,'#f56565');}
