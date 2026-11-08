@@ -113,6 +113,11 @@ changes, check all of them:
 | approved | boolean — must be true to show |
 | created_at | timestamp |
 
+There is no `status` column. `admin-comments.html` moderates by `approved`: false =
+Pending, true = Approved, Reject = delete the row (only while unapproved). Ids 3–39
+are seeded placeholder reviews (`seed-reviews.sql`): the page hides them and they
+must never be published.
+
 ### 4. subscribers (PK: email)
 | Field | Type |
 |---|---|
@@ -196,6 +201,7 @@ GitHub Action `Rebuild site from database` exists only as a manual fallback.
 | Category page text / category order | edit `scripts/drafts/categories/<lang>.json` → `scripts/categories.py sql` → run_sql → `generate-category-pages.py`; order lives in `category_order.json` (also rerun `gen_data_js.py`, `generate-static-content.py`) |
 | News (new or edited) | `generate-news-pages.py`, `generate-news-snapshot.py` (news lists + homepage block) |
 | Comparison content | `generate-compare-pages.py` |
+| Comment approved or unapproved (`aggregateRating` is embedded at build time) | `generate-pages.py`, `generate-lang-tool-pages.py` |
 | Templates (`index.html`, `news.html`, …) | `generate-lang-pages.py`, then `generate-static-content.py`, `generate-news-snapshot.py` |
 | Unsure / many things | `python3 scripts/sync.py` (all steps, ~22 min) |
 
