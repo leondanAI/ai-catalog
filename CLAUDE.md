@@ -232,7 +232,7 @@ Never hand-write content into JS files or templates (`js/data.js`,
 ### Pricing accuracy
 Check pricing pages before updating. Common mistakes to avoid:
 - ChatGPT: Free / Go $8 / Plus $20 / Pro $100, $200 or $500 / Business $25 monthly ($20 annual) (as of Oct 2026)
-- Claude: Free / Pro $20 ($17 annual) / Max "from $100" (5x and 20x tiers; don't state $200 — the page doesn't) (Oct 2026)
+- Claude: Free / Pro $20 ($17 annual) / Max $100 (5x) / Ultra $200 (10x weekly, no 5-hour limit; replaced "Max 20x") — Max and Ultra monthly only (Nov 2026)
 - Gemini: Free / AI Plus $4.99 / AI Pro $19.99 / AI Ultra $99.99 (5x) or $199.99 (20x) (Oct 2026)
 - These go stale fast — always re-check the vendor's pricing page.
 
