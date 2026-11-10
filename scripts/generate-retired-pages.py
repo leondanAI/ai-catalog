@@ -117,6 +117,16 @@ def page(lang, slug, name, alts):
 <title>{e(s['title'])}</title>
 <meta name="description" content="{e(s['desc'])}">
 <link rel="canonical" href="{url(lang, f'tools/{slug}.html')}">
+<meta property="og:title" content="{e(s['title'])}">
+<meta property="og:description" content="{e(s['desc'])}">
+<meta property="og:url" content="{url(lang, f'tools/{slug}.html')}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AItoolFit">
+<meta property="og:image" content="https://aitoolfit.ai/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{e(s['title'])}">
+<meta name="twitter:description" content="{e(s['desc'])}">
+<meta name="twitter:image" content="https://aitoolfit.ai/og-image.png">
 {hreflang}
 {GA}
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">

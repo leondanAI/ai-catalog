@@ -244,7 +244,7 @@ def head(lang, title, desc, path, image, ld, alternates):
     alts += f'<link rel="alternate" hreflang="x-default" href="{SITE}/{path}">\n'
     lds = ''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>\n' for x in ld)
     return f'''<!DOCTYPE html>
-<html lang="{lang}"{' dir="rtl"' if lang == 'he' else ''}>
+<html lang="{HREFLANG.get(lang, lang)}"{' dir="rtl"' if lang == 'he' else ''}>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
