@@ -953,9 +953,15 @@ def main():
         # Снятый с публикации инструмент раньше продолжал жить страницей
         # на каждом языке — генератор их не удалял. См. generate-pages.py.
         wanted = {f'{t["slug"]}.html' for t in tools} | {f'{o}.html' for o in REDIRECTS}
+        # Страницы снятых инструментов и переадресации не сироты — см. generate-pages.py.
+        with open(os.path.join(ROOT_DIR, 'scripts', 'retired_tools.json'), encoding='utf-8') as f:
+            wanted |= {f'{r[0]}.html' for r in json.load(f)}
         removed = 0
         for fname in os.listdir(out_dir):
             if fname.endswith('.html') and not fname.startswith('_') and fname not in wanted:
+                with open(os.path.join(out_dir, fname), encoding='utf-8', errors='ignore') as f:
+                    if 'http-equiv="refresh"' in f.read(600):
+                        continue
                 os.remove(os.path.join(out_dir, fname))
                 removed += 1
                 print(f'  − удалена осиротевшая страница: {lang}/tools/{fname}')

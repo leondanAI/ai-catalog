@@ -1140,6 +1140,10 @@ def main():
             continue
         for fname in os.listdir(d):
             if fname.endswith('.html') and not fname.startswith('_') and fname not in keep:
+                # Переадресацию из generate-redirects.py не трогаем — она не сирота
+                with open(os.path.join(d, fname), encoding='utf-8', errors='ignore') as f:
+                    if 'http-equiv="refresh"' in f.read(600):
+                        continue
                 os.remove(os.path.join(d, fname))
                 removed += 1
                 print(f'  − удалена осиротевшая страница: {os.path.relpath(os.path.join(d, fname), ROOT)}')

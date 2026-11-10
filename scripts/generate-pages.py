@@ -831,9 +831,17 @@ def main():
     # и в sitemap: генератор только писал файлы и никогда их не убирал.
     # То же самое уже ловили в новостях — см. generate-news-pages.py.
     wanted = {f'{s}.html' for s in generated} | {f'{o}.html' for o in REDIRECTS}
+    # Страницы снятых инструментов («чем заменить») — полноценные страницы из
+    # generate-retired-pages.py, по содержимому их не отличить; список — его же.
+    with open(os.path.join(os.path.dirname(__file__), 'retired_tools.json'), encoding='utf-8') as f:
+        wanted |= {f'{r[0]}.html' for r in json.load(f)}
     removed = 0
     for fname in os.listdir(OUT_DIR):
         if fname.endswith('.html') and not fname.startswith('_') and fname not in wanted:
+            # Переадресацию из generate-redirects.py не трогаем — она не сирота
+            with open(os.path.join(OUT_DIR, fname), encoding='utf-8', errors='ignore') as f:
+                if 'http-equiv="refresh"' in f.read(600):
+                    continue
             os.remove(os.path.join(OUT_DIR, fname))
             removed += 1
             print(f'  − удалена осиротевшая страница: tools/{fname}')
