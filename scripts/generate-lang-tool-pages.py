@@ -95,11 +95,11 @@ def add_local_name(lang, slug, name, title, meta):
         return title, meta
     if title.startswith(name) and len(title) + len(local) + 3 <= 70:
         return title.replace(name, f'{name} ({local})', 1), meta
-    if len(meta) + len(local) + 3 <= 165:
-        if meta.startswith(name):
-            return title, f'{name} ({local}){meta[len(name):]}'
-        return title, f'{name} ({local}): {meta}'
-    return title, meta
+    # Длину проверяем у готовой строки: префикс «Имя (местное):» раньше не
+    # учитывался, и описание Magnific (formerly Freepik) выходило за 180 символов.
+    new = (f'{name} ({local}){meta[len(name):]}' if meta.startswith(name)
+           else f'{name} ({local}): {meta}')
+    return (title, new) if len(new) <= 160 else (title, meta)
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 CATEGORY_ORDER = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'category_order.json'), encoding='utf-8'))
 BASE_URL = 'https://aitoolfit.ai'

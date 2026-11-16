@@ -53,7 +53,7 @@ def check(d):
             errs.append(f'нет {k}')
         elif STALE.search(d[k]):
             errs.append(f'{k}: цена/версия/дата/число «{STALE.search(d[k]).group(0)}»')
-    if d.get('meta_desc') and not 110 <= len(d['meta_desc']) <= 175:
+    if d.get('meta_desc') and not 110 <= len(d['meta_desc']) <= 160:
         errs.append(f'meta_desc {len(d["meta_desc"])} символов')
     return errs
 

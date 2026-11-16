@@ -64,7 +64,7 @@ def check(d, task, en=None):
             errs.append('число пунктов не совпадает с EN')
         if d['answer'].count('<b>') != en['answer'].count('<b>'):
             errs.append('<b> в ответе не совпадает с EN')
-    if not 120 <= len(d['meta_desc']) <= 170:
+    if not 120 <= len(d["meta_desc"]) <= 160:
         errs.append(f'meta_desc {len(d["meta_desc"])} символов')
     return errs
 
