@@ -43,11 +43,13 @@
 - `ru.json` — `{title, summary, body}`: пишу сам, для показа Leon.
 - Для **истории**: показать Leon русский черновик (сделать читаемый `ЧЕРНОВИК-ru.md` и
   отправить SendUserFile) и **ждать его «ок»** до публикации. Новость — по ситуации.
+  **В автоматическом прогоне** (задача «AItoolFit: обзор пн/чт») Leon не участвует:
+  не ждать «ок», выбирать самому, публиковать и коротко отчитаться в конце.
 
 ## 4. Обложка (ElevenLabs, браузер Leon)
 
 1. `select_browser` → `fe4ae832-b8c1-4622-9f72-c174b5b85a1e` (браузер Leon, НЕ другой).
-2. elevenlabs.io/app/image-video → Image. Модель GPT Image 2.5 Sunburst, 16:9, 1K,
+2. elevenlabs.io/app/image-video → Image. Модель GPT Image 2.6 Sunburst (самая новая из GPT Image), 16:9, 1K,
    High, **2 варианта** (переключатель количества рядом с High; по умолчанию стоит 4 —
    варианты почти одинаковые, Leon: «двух достаточно»). ~190 кредитов за картинку.
 3. Промпт: **сюжет новости, понятный с первого взгляда** (метафора, которую не нужно
@@ -60,8 +62,15 @@
    thumbnail. Wide 16:9, subject slightly right of center. No readable text, no letters,
    no logos, no brand marks.` Реальных людей не изображать (статуи, абстрактные фигуры
    — можно). Узнаваемость компании — только намёком (цвет, форма), без логотипов.
-4. Показать Leon оба варианта с рекомендацией; после выбора — скачать (иконка загрузки
-   в просмотрщике; файл в ~/Downloads/ElevenLabs_image_…png).
+4. Выбрать вариант (в ручном режиме — показать Leon оба с рекомендацией). Выбранный:
+   ⋮ → Save to assets → папка **AItoolFit**, затем в Assets → AItoolFit «…» → Rename в
+   `news-<slug>`. Brand Kit не включать.
+   **Скачивать из Assets → AItoolFit** (elevenlabs.io/app/files → папка AItoolFit → клик по
+   строке → иконка ↓ вверху слева в окне просмотра): файл приходит как
+   `~/Downloads/news-<slug>.png`. Проверено 2026-11-16. Кнопка загрузки в истории
+   Image & Video моими кликами до ~/Downloads не доходит. После клика подождать и
+   проверить `ls ~/Downloads/news-<slug>.png`; если Chrome держит несколько загрузок
+   подряд — качать по одной, с паузой.
 5. `python3 scripts/news_story.py cover <slug> <png>` → `media/news/<slug>.jpg` и `.webp`.
 
 ## 5. Переводы
