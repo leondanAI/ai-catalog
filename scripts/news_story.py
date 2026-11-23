@@ -11,6 +11,9 @@
       → media/news/<slug>.jpg (соцсети, разметка) и .webp (страница, лента)
   python3 scripts/news_story.py translate <slug> [--langs=es,de,…]
       → drafts/<slug>/<lang>.json для языков, которых ещё нет
+      (нужен ANTHROPIC_API_KEY в .env; без него переводят субагенты, см. /add-news)
+  python3 scripts/news_story.py check <slug>
+      → проверка всех переводов: теги, ссылки, чужие символы, имена ивритом
   python3 scripts/news_story.py sql <slug>
       → scripts/news_<дата>_<slug>.sql (DELETE + INSERT на 8 языков)
 
@@ -183,6 +186,16 @@ def main():
         translate(slug, langs)
     elif cmd == 'sql':
         sql(slug)
+    elif cmd == 'check':
+        d = draft_dir(slug)
+        en = json.load(open(os.path.join(d, 'en.json'), encoding='utf-8'))
+        bad = 0
+        for lang in [l for l in LANGS if l != 'en']:
+            f = os.path.join(d, f'{lang}.json')
+            errs = check(lang, en, json.load(open(f, encoding='utf-8'))) if os.path.exists(f) else ['нет файла']
+            bad += bool(errs)
+            print(f'  {lang}: {"; ".join(errs) if errs else "ок"}')
+        sys.exit(1 if bad else 0)
     else:
         sys.exit(__doc__)
 
