@@ -74,6 +74,13 @@ def translate(slug, langs):
     import llm
     from translate_missing_news import LANG_NAME, RULES
     en = json.load(open(os.path.join(draft_dir(slug), 'en.json'), encoding='utf-8'))
+    # Ключ берём из .env проекта (строка ANTHROPIC_API_KEY=…), как пароль базы:
+    # плановый прогон стартует без переменных окружения терминала.
+    if not os.environ.get('ANTHROPIC_API_KEY'):
+        from run_sql import load_env
+        load_env()
+    if not os.environ.get('ANTHROPIC_API_KEY'):
+        sys.exit('Нет ANTHROPIC_API_KEY: добавь строку ANTHROPIC_API_KEY=… в .env проекта.')
     client = anthropic.Anthropic()
 
     # Ссылки на карточки модель иногда выкидывала целиком (nvidia-nemotron-transcribe,
