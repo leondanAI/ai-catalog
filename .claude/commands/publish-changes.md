@@ -29,7 +29,7 @@ tools/ и compare/ всё, чего нет в базе, — вместе со с
 ```bash
 python3 scripts/check_lang_links.py     # ссылки не на тот язык → остановиться и чинить
 python3 scripts/find_broken_links.py    # должно быть 0
-python3 scripts/generate-sitemap.py     # lastmod — по реальным изменениям (git)
+python3 scripts/generate-sitemap.py     # lastmod — по изменению текста (scripts/page_dates.json, даты не в счёт)
 ```
 
 ## 3. Выложить

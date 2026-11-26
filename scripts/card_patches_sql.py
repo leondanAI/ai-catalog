@@ -11,12 +11,16 @@
 
     python3 scripts/card_patches_sql.py <папка с out_*.json> scripts/tools_update_<дата>.sql
 """
-import datetime, glob, json, os, sys
+import datetime, glob, json, os, re, sys
 
 LANGS = ['en', 'es', 'de', 'ru', 'ua', 'he', 'fr', 'pt']
 TOOL_ARRAYS = {'pros', 'cons'}
 TOOL_JSON = {'choose_if', 'faq'}
 CMP_JSON = {'table_data', 'best_a', 'best_b', 'faq'}
+# Иероглифы/хангыль/арабица внутри текста — брак перевода («одиночный創атор»,
+# «відео та世界-моделей»: 5 таких мест нашлось на сайте 2026-11-26). Тот же
+# набор, что news_story.py check.
+FOREIGN = re.compile(r'[぀-ヿ㐀-鿿가-힯؀-ۿ�]')
 
 
 def dq(s):
@@ -53,6 +57,10 @@ def main(src, out):
             fields = patch.get(lang) or {}
             if not fields:
                 continue
+            for f, v in fields.items():
+                m = FOREIGN.search(json.dumps(v, ensure_ascii=False))
+                if m:
+                    raise SystemExit(f'{table} {slug} {lang}.{f}: чужие символы «{m.group()}» — перевести заново')
             sets = [f'{f} = {value(f, v, table)}' for f, v in fields.items()]
             if table == 'tools':
                 sets.append(f"last_updated = '{today}'")
