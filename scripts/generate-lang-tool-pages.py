@@ -10,6 +10,7 @@ Usage:
 """
 
 import urllib.request, json, os, sys, re
+import ai_for_links
 
 # Карточки, снятые с публикации как дубли: старый слаг → актуальный.
 # Список продублирован в generate-pages.py — при правке менять оба файла.
@@ -804,7 +805,7 @@ textarea.form-input{{resize:vertical;min-height:90px}}
   </div>
   {choose_if_html}
   {faq_html}
-  <div class="section-title-sm">{ui['also']}</div>
+  {ai_for_links.block(lang, slug)}<div class="section-title-sm">{ui['also']}</div>
   <div class="also-grid">{also_html}</div>
   <div class="comments-section">
     <div class="section-title-sm">{ui['reviews']}</div>

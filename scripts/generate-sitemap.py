@@ -20,16 +20,26 @@ Priority tiers (language version = EN equivalent − 0.1):
 
 fr and pt are included (active since 2026-05-04).
 
-lastmod — дата последнего изменения содержимого страницы, а не дата сборки.
-Генераторы переписывают все файлы при каждом прогоне, поэтому раньше у всех
-2,6 тыс. адресов стояла сегодняшняя дата, и Google такой lastmod игнорирует.
-Git фиксирует только реальные изменения: берём дату последнего коммита,
-менявшего файл; для файлов, изменённых и ещё не закоммиченных, — сегодня.
+lastmod — дата последнего изменения ТЕКСТА страницы, а не дата сборки и не
+дата сверки. Раньше брали дату коммита, менявшего файл, но сверка карточек
+по пн/чт сдвигает «Обновлено: 2026-…» и dateModified у всех проверенных
+инструментов, и в одном прогоне (26.11.2026) так «менялись» ~1000 страниц без
+нового текста. Google обходит сайт ~36 страниц в день, 98% обхода — повторный
+(Search Console → Статистика сканирования), и тратил его на эти страницы, а
+1,4 тыс. новых адресов оставались «обнаружены, не проиндексированы». IndexNow
+(scripts/indexnow.py --since) берёт даты отсюда же.
+
+Теперь: хэш страницы без дат (YYYY-MM-DD вырезаются) хранится в
+scripts/page_dates.json вместе с датой; дата меняется, только когда меняется
+хэш. Если файла нет — он восстанавливается по истории git (seed_from_git).
 
 Run: python3 scripts/generate-sitemap.py
 """
 
+import hashlib
+import json
 import os
+import re
 import subprocess
 from datetime import date
 
@@ -38,33 +48,70 @@ BASE_URL = 'https://aitoolfit.ai'
 TODAY    = date.today().isoformat()
 
 
-def _git_dates():
-    """{путь: YYYY-MM-DD последнего коммита, менявшего файл}."""
-    try:
-        log = subprocess.run(['git', 'log', '--format=>%cs', '--name-only', '--no-renames', '--', '*.html'],
-                             cwd=ROOT_DIR, capture_output=True, text=True, check=True).stdout
-        dirty = subprocess.run(['git', 'status', '--porcelain', '--', '*.html'],
-                               cwd=ROOT_DIR, capture_output=True, text=True, check=True).stdout
-    except Exception:
-        return {}, None
-    dates, cur = {}, None
+DATES_FILE = os.path.join(ROOT_DIR, 'scripts', 'page_dates.json')
+_DATE_RE = re.compile(rb'\d{4}-\d{2}-\d{2}')
+
+
+def content_hash(data):
+    """Хэш HTML без дат: смена одной лишь даты сверки — не изменение страницы."""
+    return hashlib.sha1(_DATE_RE.sub(b'D', data)).hexdigest()[:16]
+
+
+def seed_from_git():
+    """{путь: [хэш, дата]} по истории git: дата — коммит, с которого текст
+    страницы (без дат) такой же, как сейчас. Нужен один раз, дальше — page_dates.json."""
+    log = subprocess.run(['git', 'log', '--format=>%H %cs', '--name-only', '--no-renames', '--', '*.html'],
+                         cwd=ROOT_DIR, capture_output=True, text=True, check=True).stdout
+    history, cur = {}, None
     for line in log.splitlines():
         if line.startswith('>'):
-            cur = line[1:]
-        elif line and line not in dates:
-            dates[line] = cur
-    changed = {l[3:].strip().strip('"') for l in dirty.splitlines() if l.strip()}
-    return dates, changed
+            cur = line[1:].split()
+        elif line:
+            history.setdefault(line, []).append(cur)
+    cat = subprocess.Popen(['git', 'cat-file', '--batch'], cwd=ROOT_DIR,
+                           stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+
+    def blob(sha, path):
+        cat.stdin.write(f'{sha}:{path}\n'.encode())
+        cat.stdin.flush()
+        head = cat.stdout.readline().split()
+        if len(head) < 3 or head[1] == b'missing':
+            return None
+        data = cat.stdout.read(int(head[2]))
+        cat.stdout.read(1)
+        return data
+
+    out = {}
+    for path, commits in history.items():
+        full = os.path.join(ROOT_DIR, path)
+        if not os.path.exists(full):
+            continue
+        h = content_hash(open(full, 'rb').read())
+        day = TODAY
+        for sha, cs in commits[:80]:
+            data = blob(sha, path)
+            if data is None or content_hash(data) != h:
+                break
+            day = cs
+        out[path] = [h, day]
+    cat.stdin.close()
+    cat.wait()
+    return out
 
 
-_DATES, _CHANGED = _git_dates()
+_DATES = json.load(open(DATES_FILE, encoding='utf-8')) if os.path.exists(DATES_FILE) else seed_from_git()
 
 
 def lastmod(rel):
-    """Дата изменения файла rel (путь от корня сайта); без git — сегодня."""
-    if _CHANGED is None or rel in _CHANGED:
+    """Дата последнего изменения текста файла rel (путь от корня сайта)."""
+    full = os.path.join(ROOT_DIR, rel)
+    if not os.path.exists(full):
         return TODAY
-    return _DATES.get(rel, TODAY)
+    h = content_hash(open(full, 'rb').read())
+    old = _DATES.get(rel)
+    if not old or old[0] != h:
+        _DATES[rel] = [h, TODAY]
+    return _DATES[rel][1]
 
 
 def page_path(loc):
@@ -97,9 +144,11 @@ entries = []
 
 tools_dir = os.path.join(ROOT_DIR, 'tools')
 def _is_redirect(path):
+    """Заглушка-редирект или страница с noindex (старые новости) — не для sitemap."""
     with open(path, encoding='utf-8', errors='ignore') as _f:
-        snippet = _f.read(512)
-    return 'http-equiv="refresh"' in snippet or 'location.replace' in snippet
+        snippet = _f.read(2048)
+    return ('http-equiv="refresh"' in snippet or 'location.replace' in snippet
+            or re.search(r'<meta name="robots" content="[^"]*noindex', snippet) is not None)
 
 tool_slugs = sorted(
     f[:-5] for f in os.listdir(tools_dir)
@@ -218,5 +267,9 @@ sitemap = (
 out = os.path.join(ROOT_DIR, 'sitemap.xml')
 with open(out, 'w', encoding='utf-8') as f:
     f.write(sitemap)
+
+with open(DATES_FILE, 'w', encoding='utf-8') as f:
+    json.dump(dict(sorted(_DATES.items())), f, ensure_ascii=False, indent=0)
+    f.write('\n')
 
 print(f'Done — {len(entries)} URLs written to sitemap.xml')

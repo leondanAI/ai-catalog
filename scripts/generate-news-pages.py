@@ -117,6 +117,23 @@ def format_date(date_str):
         return dt.strftime('%b %d, %Y').replace(' 0', ' ')
     return date_str
 
+# Индексируем только свежие новости. За 3 месяца (авг–ноя 2026) 1 240 страниц
+# новостей дали в Google 7 показов, а 1,4 тыс. адресов сайта висели в «обнаружено,
+# не проиндексировано»: Google обходит ~36 страниц в день и тратил обход на архив.
+# Старые статьи остаются на сайте и в ленте, ссылки с них работают (follow), но
+# из индекса и из sitemap.xml уходят (generate-sitemap.py пропускает noindex).
+NEWS_INDEX_DAYS = 60
+
+
+def robots_meta(date_str):
+    import datetime
+    try:
+        age = (datetime.date.today() - datetime.date.fromisoformat(str(date_str)[:10])).days
+    except ValueError:
+        age = 0
+    return 'noindex, follow' if age > NEWS_INDEX_DAYS else 'max-image-preview:large'
+
+
 def truncate_meta(text, max_len=155):
     text = re.sub(r'<[^>]+>', '', text or '')
     if len(text) <= max_len:
@@ -256,7 +273,7 @@ def generate_page(article, lang, all_articles_for_lang, all_slugs_by_lang):
 <title>{esc(seo_title)}</title>
 <meta name="description" content="{esc(meta_desc)}">
 <link rel="canonical" href="{canonical}">
-<meta name="robots" content="max-image-preview:large">
+<meta name="robots" content="{robots_meta(article.get('date', ''))}">
 {hreflang_html}
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">

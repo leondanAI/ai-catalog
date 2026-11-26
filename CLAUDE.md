@@ -205,6 +205,13 @@ GitHub Action `Rebuild site from database` exists only as a manual fallback.
 | Templates (`index.html`, `news.html`, …) | `generate-lang-pages.py`, then `generate-static-content.py`, `generate-news-snapshot.py` |
 | Unsure / many things | `python3 scripts/sync.py` (all steps, ~22 min) |
 
+**Indexing rules (2026-11-26).** Google crawls ~36 pages/day, 98% of it refresh,
+so: sitemap `lastmod` changes only when a page's text changes — dates are stripped
+before hashing, hashes live in `scripts/page_dates.json` (commit it with the pages).
+News older than 60 days get `noindex, follow` and drop out of the sitemap
+(`NEWS_INDEX_DAYS` in `generate-news-pages.py`). Tool pages link to the «AI for…»
+pages that pick them (`scripts/ai_for_links.py`).
+
 Then always: `check_lang_links.py` (fails on links to the wrong language),
 `find_broken_links.py`, `generate-sitemap.py`, commit, push, `indexnow.py`
 for the changed URLs, and **check the live pages as a visitor in all 8

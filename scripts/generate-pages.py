@@ -5,6 +5,7 @@ Run: python3 scripts/generate-pages.py
 """
 
 import urllib.request, json, os, re
+import ai_for_links
 
 # Verified starting price (USD/month) for paid tools whose `users` field carries
 # no price. Fill with real, checked prices only; a paid tool left out simply
@@ -645,7 +646,7 @@ textarea.form-input {{ resize: vertical; min-height: 90px; }}
   {choose_if_html}
   {faq_html}
 
-  <div class="section-title-sm">Also consider</div>
+  {ai_for_links.block('en', slug)}<div class="section-title-sm">Also consider</div>
   <div class="also-grid">
 {also_html}  </div>
 
