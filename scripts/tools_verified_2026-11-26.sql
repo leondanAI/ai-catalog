@@ -1,0 +1,2 @@
+-- Сверено с сайтами вендоров 2026-11-26 без изменений фактов: обновляем дату проверки
+UPDATE tools SET last_updated = '2026-11-26' WHERE slug IN ('humata','khanmigo','koyfin','leonardo-ai','semantic-scholar','udio','uizard','photomath','aider','akkio','beautiful-ai','bolt-new','clearscope','descript','glide','grammarly','jasper','lindy','midjourney','motion','reclaim-ai','runway','softr','stable-diffusion','character-ai','grok','recraft-ai','remove-bg');
